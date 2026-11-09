@@ -36,3 +36,11 @@ details.conv .weight { color: #d0a000; font-size: .8em; }
 .topics .year h2 { border-bottom: none; margin-bottom: .2em; }
 details.profile-year { margin: .5em 0; }
 details.profile-year > summary { cursor: pointer; }
+ul.cross-topics { list-style: none; padding: 0; columns: 2; column-gap: 2em; }
+@media (max-width: 600px) { ul.cross-topics { columns: 1; } }
+ul.cross-topics li { break-inside: avoid; margin: 0 0 .7em; }
+ul.cross-topics .scope { color: #666; font-size: .85em; }
+.topic-year { margin-top: 1.4em; }
+.topic-year h3 { font-size: 1.02em; margin: 1em 0 .2em; }
+.topic-year .subsum { margin: .2em 0 .5em; color: #333; }
+a.cross { font-size: .9em; }
