@@ -145,3 +145,8 @@ body { width: auto; max-width: 700px; padding: 0 16px; }
 .index-info { clear: both; padding-top: 15px; }
 table.pages { border-collapse: collapse; }
 table.pages td, table.pages th { padding: 2px 10px; text-align: left; }
+
+/* search box on the index page (search.html is built by search_index.py) */
+form.search-box { margin: 1em 0; display: flex; gap: .5em; }
+form.search-box input { flex: 1; font-size: 1em; padding: .4em; }
+form.search-box button { font-size: 1em; padding: .4em .8em; }
