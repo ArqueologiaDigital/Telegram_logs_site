@@ -5557,12 +5557,12 @@
   }
  ],
  "taxonomy": {
-  "intro": "No primeiro ano, de novembro de 2017 a outubro de 2018, o grupo funcionou como um grupo de estudos para preservar hardware histórico, com o resgate do Patinho Feio entre os principais projetos. Boa parte do trabalho aconteceu no acervo de computadores da Poli/USP: lá foram examinados os terminais e o PC-XT Nexus 2600 da Scopus, com explicações de DQ, ex-funcionário da empresa, e foram encontradas uma teletype e a leitora de fita perfurada Facit 4021. Com o MAME, o grupo emulou máquinas nacionais como o Sagitta, o Nexus 2600, o CP-500 e o CP-400, transcreveu para netlist os esquemáticos do Atari Gran Trak 10 e montou réplicas, entre elas a placa de decodificação de opcodes do Patinho Feio e o Golly Ghost. No mesmo período foram criados a organização ArqueologiaDigital no GitHub e o site arqueologiadigital.org, ROMs, manuais e imagens de disco foram publicados, e começaram os encontros e as oficinas no Garoa Hacker Clube.",
+  "intro": "No primeiro ano, de novembro de 2017 a outubro de 2018, o grupo funcionou como um grupo de estudos para preservar hardware histórico, com o resgate do Patinho Feio entre os principais projetos. Boa parte do trabalho aconteceu no acervo de computadores da Poli/USP: lá foram examinados os terminais e o PC-XT Nexus 2600 da Scopus, com explicações de DQ, ex-funcionário da empresa; ao acervo chegou uma teletype, e Affonso encontrou ali a leitora de fita perfurada Facit 4021. Com o MAME, o grupo trabalhou na emulação de máquinas nacionais como o Sagitta, o Nexus 2600, o CP-500 e o CP-400, e Felipe transcreveu para netlist grande parte dos esquemáticos do Atari Gran Trak 10. Também foram montadas réplicas, entre elas a placa de decodificação de opcodes do Patinho Feio e o Golly Ghost. No mesmo período foram criados a organização ArqueologiaDigital no GitHub e o site arqueologiadigital.org, ROMs, manuais e imagens de disco foram publicados, e começaram os encontros e as oficinas no Garoa Hacker Clube.",
   "themes": [
    {
     "slug": "patinho-feio",
     "title": "Patinho Feio",
-    "summary": "O Patinho Feio, computador construído na USP em 1971, é um dos principais projetos citados na descrição do grupo. Ao longo do ano foram encomendadas as PCBs da CDE-3, foi montada uma réplica da placa de decodificação de opcodes e a leitora de fita perfurada Facit 4021 foi ligada a um Arduino para ler fitas. O driver do MAME ganhou um fork para receber um sistema de slots de E/S. Também foram reunidas fontes históricas, como os esquemáticos de Edson Fregni, os cadernos de Guido Stolfi e um relatório de 1972 sobre o ensino de computação no Brasil.",
+    "summary": "O Patinho Feio, computador construído na USP em 1971, é um dos principais projetos citados na descrição do grupo. Ao longo do ano foram encomendadas as PCBs da CDE-3, foi montada uma réplica da placa de decodificação de opcodes e a leitora de fita perfurada Facit 4021 foi ligada a um Arduino para ler fitas. Para dar ao driver do MAME um sistema de slots de E/S, foi criado o fork ArqueologiaDigital/mame. Também foram reunidas fontes históricas, como as pranchas do livro de Edson Fregni, os cadernos de Guido Stolfi e um relatório de 1972 sobre o ensino de computação no Brasil.",
     "subtopics": [
      {
       "slug": "painel-e-cde-3",
@@ -5577,7 +5577,7 @@
      {
       "slug": "slots-de-es-no-mame",
       "title": "Slots de E/S no driver do MAME",
-      "summary": "No driver do MAME, a DECwriter e a Teletype estavam fixas no código. Para substituí-las por um sistema de slots de E/S, Affonso e Felipe criaram o fork ArqueologiaDigital/mame e estudaram as instruções FNC, SAL e ENT, as placas FIN-8 e os esquemáticos do livro de Fregni e da tese de 1972.",
+      "summary": "No driver do MAME, a DECwriter e a Teletype estavam fixas no código. Affonso e Felipe decidiram criar um sistema de slots de E/S, e para isso foi criado o fork ArqueologiaDigital/mame, onde Affonso abriu um primeiro rascunho. Os dois estudaram as instruções FNC, SAL e ENT e as placas FIN-8, consultando as pranchas do livro de Fregni e a tese de 1972.",
       "conversation_ids": [
        4528,
        4710,
@@ -5587,7 +5587,7 @@
      {
       "slug": "fitas-perfuradas-facit-4021",
       "title": "Fitas perfuradas, teletype e a leitora Facit 4021",
-      "summary": "Uma teletype e uma leitora Facit 4021 de 1974 foram encontradas no acervo da Poli. Affonso publicou os manuais da Facit no Internet Archive. A leitora foi ligada a um Arduino e levada a uma visita com Sebastião Barreto, a quem se pediu que trouxesse suas fitas da época do Patinho Feio. Restaram erros periódicos de leitura, que Felipe atribuiu a um problema mecânico.",
+      "summary": "Uma teletype chegou ao acervo da Poli, e Affonso encontrou ali uma leitora de fita perfurada Facit 4021, de 1974, cujos manuais publicou no Internet Archive. Felipe organizou uma visita ao acervo com Sebastião Barreto e lhe pediu que levasse suas fitas perfuradas da época do Patinho Feio. A leitora foi ligada a um Arduino, mas restaram erros periódicos de leitura, que Felipe atribuiu a um problema mecânico.",
       "conversation_ids": [
        2916,
        3312,
@@ -5599,7 +5599,7 @@
      {
       "slug": "sintetizador-guido-stolfi",
       "title": "Sintetizador do Guido Stolfi",
-      "summary": "O professor Guido Stolfi ligou o sintetizador, que voltou a funcionar parcialmente e seria demonstrado num evento de equipamentos eletrônicos antigos. Affonso leu os cadernos do professor, escaneados por Felipe. Pelo código da fita #011, Felipe suspeitou que o sintetizador usava mais de um slot de E/S.",
+      "summary": "O professor Guido Stolfi ligou o sintetizador, que voltou a funcionar parcialmente e seria demonstrado num evento de equipamentos eletrônicos antigos. Affonso contou que estava lendo os cadernos do professor, escaneados por Felipe. Pelo código da fita #011, Felipe suspeitou que o sintetizador usava mais de um slot de E/S.",
       "conversation_ids": [
        4463,
        4490,
@@ -5609,7 +5609,7 @@
      {
       "slug": "boot-memoria-e-fontes-historicas",
       "title": "Boot, memória e fontes históricas",
-      "summary": "Felipe explicou o micro-pré-loader que o operador insere pelas chaves do painel, sequência lembrada pelo prof. João José Neto, e o grupo discutiu se a memória de núcleo de ferrite é volátil. Foi compartilhado um relatório de 1972 que menciona o Patinho Feio. Felipe contou ainda que o prof. Edson Fregni guarda placas originais e pretende doá-las.",
+      "summary": "Felipe explicou o micro-pré-loader que o operador insere pelas chaves do painel, sequência lembrada pelo prof. João José Neto, e o grupo discutiu se a memória de núcleo de ferrite é volátil. Foi compartilhado um relatório de 1972 que menciona o Patinho Feio. Felipe contou ainda que o prof. Edson Fregni guarda placas originais e pretende doá-las a ele.",
       "conversation_ids": [
        3888,
        4275,
@@ -5619,7 +5619,7 @@
      {
       "slug": "palestras-patinho-feio",
       "title": "Palestras e divulgação",
-      "summary": "Felipe apresentou no Roadsec o resgate dos computadores pioneiros do Brasil, tema também de um post no Fiozera. Depois fez uma palestra sobre o Patinho Feio na UFABC, e membros do WikiLab que assistiram entraram no grupo.",
+      "summary": "Felipe compartilhou o post do Fiozera sobre o resgate histórico dos computadores pioneiros do Brasil e fotos da sua apresentação no Roadsec. Depois fez uma palestra sobre o Patinho Feio na UFABC, e membros do WikiLab que assistiram entraram no grupo.",
       "conversation_ids": [
        635,
        6410
@@ -5630,12 +5630,12 @@
    {
     "slug": "scopus",
     "title": "Scopus: terminais e o PC-XT Nexus 2600",
-    "summary": "Os equipamentos da Scopus guardados no acervo da USP foram o assunto técnico mais frequente do ano. DQ, que trabalhou na empresa de 1981 a 1986, explicou boa parte deles. O driver do Sagitta 150/180 foi proposto ao MAME, e a EPROM do Lepus 200 passou por dump e disassembly. O Nexus 2600 foi posto para funcionar e teve ROMs, PROMs e disco rígido copiados; a imagem do HD deu boot no DOS 3.3 dentro do MAME.",
+    "summary": "Os equipamentos da Scopus guardados no acervo da USP foram tema de muitas conversas técnicas do ano. DQ, que trabalhou na empresa de 1981 a 1986, explicou boa parte deles. O driver do Sagitta 150/180 foi proposto ao MAME, e a EPROM do Lepus 200 passou por dump e por um disassembly parcial. O Nexus 2600 foi posto para funcionar e teve ROMs, PROMs e disco rígido copiados; a imagem do HD deu boot no DOS 3.3 dentro do MAME.",
     "subtopics": [
      {
       "slug": "sagitta-150-180",
       "title": "Terminais Sagitta 150 e 180",
-      "summary": "Felipe e Werner prepararam a energização do terminal, e Felipe inspecionou a placa do Sagitta 150 na USP. O driver, ainda não funcional, foi proposto no PR #2776, que aguardava as alterações pedidas na revisão. Compilado localmente, ele rodou, mas não respondia ao teclado.",
+      "summary": "Felipe e Werner planejaram a energização do terminal, e Felipe inspecionou a placa do Sagitta 150 na USP. O driver, ainda não funcional, foi proposto no PR #2776, que aguardava as alterações pedidas na revisão. Compilado por Werner, ele rodou, mas não respondia ao teclado.",
       "conversation_ids": [
        194,
        333,
@@ -5646,7 +5646,7 @@
      {
       "slug": "lepus-200",
       "title": "Terminal Lepus 200",
-      "summary": "Felipe distribuiu o dump da EPROM, e DQ publicou um disassembly parcial. Nele, DQ mostrou como o firmware simula o DMA com sequências de POP e como lê a matriz do teclado e a porta E000. Também foi combinada uma gravação com DQ para o Happy Hacking Video Blog.",
+      "summary": "Felipe distribuiu o dump da EPROM, e DQ publicou um disassembly parcial. Nele, DQ mostrou como o firmware simula o DMA com sequências de POP, como lê a matriz do teclado e como usa a porta E000. Também foi combinada uma gravação com DQ para o Happy Hacking Video Blog.",
       "conversation_ids": [
        1078,
        1161,
@@ -5656,7 +5656,7 @@
      {
       "slug": "nexus-2600-roms-e-bios",
       "title": "Nexus 2600: funcionamento, ROMs e BIOS",
-      "summary": "Com o teclado da Scopus, que não segue o padrão IBM, o Nexus 2600 deu boot no PC-DOS 3.3. As ROMs foram extraídas com o DEBUG, e as quatro PROMs TBP28L22N foram lidas com um leitor feito com Arduino. Um branch do MAME começou a emular o BIOS, que escreve em portas fora do padrão do XT, como a D550h, que seleciona o clock.",
+      "summary": "Com o teclado da Scopus, que não segue o padrão IBM, o Nexus 2600 deu boot no PC-DOS 3.3. As ROMs foram extraídas com o DEBUG, e as quatro PROMs TBP28L22N foram lidas com um leitor feito com Arduino. Felipe publicou um branch do MAME para o Nexus 2600, cujo BIOS escreve em portas fora do padrão do XT, como a D550h, que segundo DQ seleciona o clock.",
       "conversation_ids": [
        2783,
        2995,
@@ -5684,7 +5684,7 @@
      {
       "slug": "historia-da-scopus",
       "title": "História da Scopus contada por DQ",
-      "summary": "DQ contou seu trabalho na Scopus com firmware de terminais e com o BIOS e o sistema operacional do Nexus. Explicou também a origem do SISNE e do BASIC do Nexus e os testes de compatibilidade com CGA. Felipe digitalizou a publicação \"Tecnologia Scopus\", de 1983, trazida por DQ.",
+      "summary": "DQ contou seu trabalho na Scopus com firmware de terminais e com o BIOS e o sistema operacional do Nexus. Explicou também a origem do SISNE e do BASIC do Nexus e os testes de compatibilidade feitos na Scopus com o jogo Sailing, cuja proteção contra cópia falhava a 8 MHz. Felipe digitalizou a publicação \"Tecnologia Scopus\", de 1983, trazida por DQ.",
       "conversation_ids": [
        1135,
        1555,
@@ -5707,12 +5707,12 @@
    {
     "slug": "acervo-poli-usp",
     "title": "Acervo de computadores da Poli/USP",
-    "summary": "Depois da conversa com o professor Fernando, o grupo passou a frequentar o acervo não exposto da Poli/USP, onde Affonso Amendola era estagiário. Além dos projetos do Patinho Feio e da Scopus, o grupo definiu prioridades, examinou drives de 8 polegadas, investigou o defeito de um TK3000 IIe e registrou peças que chegaram ao acervo do projeto Paideia (LASSU/CEDIR). Começou também um projeto de entrevistas com pioneiros da computação na Poli.",
+    "summary": "Depois da conversa com o professor Fernando, o grupo passou a frequentar o acervo não exposto da Poli/USP, onde Affonso Amendola era estagiário. Além dos projetos do Patinho Feio e da Scopus, o grupo definiu prioridades, examinou drives de 8 polegadas, investigou o defeito de um TK3000 IIe e registrou peças que chegaram ao acervo do projeto Paideia (LASSU/CEDIR). Também se discutiu um projeto de entrevistas com pioneiros da computação ligados à Poli.",
     "subtopics": [
      {
       "slug": "acesso-e-prioridades",
       "title": "Acesso ao acervo e prioridades",
-      "summary": "Ficou combinado que o grupo organizaria a sala do acervo não exposto, inspecionaria máquinas e escreveria emuladores. Felipe e Affonso escolheram três projetos prioritários: o Patinho Feio, o CP-500 e o Nexus 2600. Os projetos de emulação para a USP passaram a ser organizados no repositório EmuHC.",
+      "summary": "Felipe contou que o grupo passaria a frequentar o espaço da USP para organizar a sala do acervo não exposto, inspecionar máquinas e escrever emuladores. Felipe e Affonso escolheram três projetos prioritários: o Patinho Feio, o CP-500 e o Nexus 2600. Os projetos de emulação para a USP passaram a ser organizados no repositório EmuHC.",
       "conversation_ids": [
        477,
        1406,
@@ -5762,7 +5762,7 @@
      {
       "slug": "entrevistas-com-pioneiros",
       "title": "Entrevistas com pioneiros da computação",
-      "summary": "Guilherme Kenzo propôs uma abordagem acadêmica para as entrevistas e depois retomou o projeto com os contatos de professores e engenheiros da Poli. Felipe relatou uma visita ao prof. João José Neto, que contou a história do prof. Orsini e do HP2116B.",
+      "summary": "Guilherme Kenzo propôs uma abordagem acadêmica para as entrevistas e depois retomou o projeto, pedindo a Felipe os contatos que ele tinha de professores e engenheiros ligados à Poli. Felipe relatou uma visita ao prof. João José Neto, que contou a história do prof. Orsini e do HP2116B.",
       "conversation_ids": [
        1804,
        2775,
@@ -5774,7 +5774,7 @@
    {
     "slug": "mame-computadores",
     "title": "Emulação de computadores no MAME",
-    "summary": "O MAME foi a principal ferramenta de emulação do grupo. Werner aprendeu a compilar o emulador, trabalhou nos drivers do CP-500 e do CP-400 Color II e decidiu tentar emular o G-10, um computador microprogramado. Felipe mostrou drivers como o do ZAP e divulgou cada nova versão do MAME, apontando as contribuições de brasileiros.",
+    "summary": "O MAME foi a principal ferramenta de emulação do grupo. Werner conseguiu compilar o emulador no Windows, discutiu com Felipe o driver do CP-500 e decidiu tentar emular o G-10, um computador microprogramado. Felipe documentou as teclas extras do CP-400 Color II no driver, mostrou drivers como o do ZAP e divulgou as novas versões do MAME, apontando contribuições de brasileiros.",
     "subtopics": [
      {
       "slug": "compilando-o-mame",
@@ -5829,7 +5829,7 @@
      {
       "slug": "lancamentos-do-mame",
       "title": "Lançamentos do MAME",
-      "summary": "O grupo acompanhou as versões 0.192 a 0.202. Nelas apareceram o Gran Trak 10 em TTL, uma contribuição do grupo marcada como NOT_WORKING no 0.194 e trabalhos dos brasileiros Wellington Uemura e Leonard Oliveira.",
+      "summary": "O grupo acompanhou as versões 0.192 a 0.202. O 0.192 trouxe o Gran Trak 10 em TTL, marcado como não funcional, e o 0.194, uma contribuição do grupo marcada como NOT_WORKING. Felipe citou contribuições recentes do brasileiro Wellington Uemura, e o 0.202 trouxe trabalho do brasileiro Leonard Oliveira.",
       "conversation_ids": [
        2008,
        2724,
@@ -5843,7 +5843,7 @@
    {
     "slug": "arcades",
     "title": "Arcades: réplicas funcionais e circuitos sem CPU",
-    "summary": "O trabalho com arcades teve três frentes. A primeira foi a análise da CPU de motores do Galaxy Force 2 Super Deluxe, para uma réplica em miniatura movida por um Raspberry Pi. A segunda foi a réplica funcional do Golly Ghost, controlada pelo MAME. A terceira foi a transcrição dos esquemáticos do Atari Gran Trak 10, um jogo sem CPU, para o sistema de netlist do MAME, que entrou no MAME 0.201 como documentação parcial do circuito.",
+    "summary": "O trabalho com arcades teve três frentes principais. A primeira foi a análise da CPU de motores do Galaxy Force 2 Super Deluxe, para uma réplica em miniatura movida por um Raspberry Pi. A segunda foi a réplica funcional do Golly Ghost, controlada pelo MAME. A terceira foi a transcrição dos esquemáticos do Atari Gran Trak 10, um jogo sem CPU, para o sistema de netlist do MAME, que entrou no MAME 0.201 como documentação parcial do circuito.",
     "subtopics": [
      {
       "slug": "galaxy-force-2",
@@ -5865,7 +5865,7 @@
      {
       "slug": "gran-trak-10",
       "title": "Atari Gran Trak 10 em netlist",
-      "summary": "Felipe transcreveu os esquemáticos do Gran Trak 10 (1974), primeiro no KiCad e depois no sistema de netlist do MAME. Foi corrigindo sinais até o sprite do carro aparecer. O trabalho virou o PR #3795 e entrou no MAME 0.201.",
+      "summary": "Felipe transcreveu os esquemáticos do Gran Trak 10 (1974), primeiro no KiCad e depois no sistema de netlist do MAME. Foi corrigindo sinais até o sprite do carro aparecer. O trabalho virou o PR #3795, com grande parte dos esquemáticos, e entrou no MAME 0.201 como documentação parcial do circuito.",
       "conversation_ids": [
        1837,
        3861,
@@ -5885,7 +5885,7 @@
      {
       "slug": "placas-e-monitores-de-arcade",
       "title": "Placas e monitores de arcade",
-      "summary": "Felipe contou como recuperou uma placa CPS2 de Street Fighter Zero 2 achada numa central de reciclagem. Compartilhou também esquemáticos de monitores de arcade e um vídeo sobre como adicionar entrada RGB a uma TV comum, técnica que sugeriu usar para montar um chicote JAMMA.",
+      "summary": "Felipe indicou seu post no blog do MAMEdev sobre como recuperou uma placa CPS2 de Street Fighter Zero 2 achada numa central de reciclagem. Compartilhou também esquemáticos de monitores de arcade e um vídeo sobre como adicionar entrada RGB a uma TV comum, técnica que sugeriu usar para montar um chicote JAMMA.",
       "conversation_ids": [
        574,
        4214,
@@ -5936,7 +5936,7 @@
    {
     "slug": "demoscene-e-retroprogramacao",
     "title": "Demoscene e retroprogramação",
-    "summary": "O grupo organizou uma pequena demoparty no Garoa em dezembro de 2017, que recebeu do grupo argentino PVM a demo de Commodore 64 \"Brazil Bits\". Em 2018 Felipe publicou o PortableWumpus, versão em C do Hunt the Wumpus de Affonso, e começou a conduzir oficinas de programação para Mega Drive no Garoa. Também circularam referências de arte computacional e de ASCII art.",
+    "summary": "Felipe anunciou uma pequena demoparty no Garoa em 2 de dezembro de 2017, para a qual o grupo argentino PVM enviou a demo de Commodore 64 \"Brazil Bits\". Em 2018 Felipe publicou o PortableWumpus, versão em C do Hunt the Wumpus de Affonso, e organizou oficinas de programação para Mega Drive no Garoa. Também circularam referências de arte computacional e de ASCII art.",
     "subtopics": [
      {
       "slug": "demoparty-no-garoa",
@@ -5951,7 +5951,7 @@
      {
       "slug": "oficinas-de-mega-drive",
       "title": "PortableWumpus e oficinas de Mega Drive",
-      "summary": "Affonso escreveu um Hunt the Wumpus para o modo VGA 13h, e Felipe fez dele o PortableWumpus, em C portável. O jogo serviu de base às oficinas de Mega Drive no Garoa, com GCC cruzado para 68k e testes no console com um cartucho Everdrive. FTMaciel ofereceu um clone de Mega Drive para as oficinas.",
+      "summary": "Affonso escreveu um Hunt the Wumpus para o modo VGA 13h, e Felipe fez dele o PortableWumpus, em C portável. Felipe também organizou no Garoa oficinas de programação para Mega Drive, com o GCC cruzado para 68k e um teste no console com um cartucho Everdrive; segundo Luciana Marques, o jogo de Affonso chegou a rodar no console. FTMaciel ofereceu um clone de Mega Drive para as oficinas.",
       "conversation_ids": [
        5143,
        5918,
@@ -5983,7 +5983,7 @@
    {
     "slug": "pense-bem-e-engenharia-reversa",
     "title": "Pense Bem e engenharia reversa de chips",
-    "summary": "O Pense Bem voltou a ser discutido por três caminhos: a documentação antiga de Felipe na wiki do Garoa, a ideia de fazer o decapping do Z8 com ROM de máscara e as falhas do simulador no cálculo das respostas. A conversa levou a recomendações de segurança para o decapping com ácido nítrico e a outras ferramentas de engenharia reversa.",
+    "summary": "O Pense Bem voltou a ser discutido por três caminhos: a documentação antiga de Felipe na wiki do Garoa, a ideia de fazer o decapping do Z8 com ROM de máscara e as falhas do simulador no cálculo das respostas. Em outras conversas foram discutidas a segurança do decapping de CIs com ácido nítrico e ferramentas de engenharia reversa.",
     "subtopics": [
      {
       "slug": "pense-bem",
@@ -6010,12 +6010,12 @@
    {
     "slug": "restauracao-e-eletronica",
     "title": "Restauração de hardware e eletrônica",
-    "summary": "Fora do acervo da USP, os participantes trouxeram casos de restauração e montagem de hardware: placas corroídas por bateria, um NEC 286F com backlight queimado, terminais com teclados proprietários, sync-on-green numa VAXstation e computadores homebrew. Também se falou da degradação dos plásticos de gabinetes e de conceitos de eletrônica.",
+    "summary": "Fora do acervo da USP, os participantes trouxeram casos de restauração e montagem de hardware: uma placa corroída por bateria, um NEC 286F com backlight queimado, terminais com teclados proprietários, sync-on-green numa VAXstation e computadores homebrew. Também se falou da degradação dos plásticos de gabinetes e de conceitos de eletrônica.",
     "subtopics": [
      {
       "slug": "restauracao-de-placas",
       "title": "Restauração de placas e máquinas",
-      "summary": "FTMaciel descreveu como restaurou uma placa Itautec corroída pelo vazamento de uma bateria NiCd. O Wikilab pediu sugestões para restaurar um NEC 286F e para documentar o trabalho, e o Fórum Fiozera foi sugerido. Circulou ainda uma reportagem sobre um engenheiro que restaura computadores antigos.",
+      "summary": "FTMaciel descreveu como restaurou uma placa Itautec corroída pelo vazamento de uma bateria NiCd. Silas pediu sugestões para restaurar um NEC 286F do Wikilab e para documentar o trabalho, e o Fórum Fiozera foi sugerido. Circulou ainda uma reportagem sobre um engenheiro que restaura computadores antigos.",
       "conversation_ids": [
        4273,
        5856,
@@ -6035,7 +6035,7 @@
      {
       "slug": "computadores-homebrew",
       "title": "Computadores homebrew",
-      "summary": "Foram mostrados um MSX2 em placas empilhadas, o SimpleZ80 do Wikilab, o RC2014 e a adaptação do RC2014 para ZX81. Felipe disse que homebrew com tecnologia antiga é bem-vindo no grupo, embora não seja arqueologia.",
+      "summary": "Foram mostrados ou comentados um MSX2 em placas empilhadas, o SimpleZ80 do Wikilab, o RC2014 e a adaptação do RC2014 para ZX81. Felipe disse que homebrew com tecnologia antiga é bem-vindo no grupo, embora não seja arqueologia.",
       "conversation_ids": [
        7514,
        7682
@@ -6077,7 +6077,7 @@
    {
     "slug": "preservacao-digital-e-historia",
     "title": "Preservação digital e história da computação",
-    "summary": "O grupo usou o Internet Archive como depósito e acompanhou outras iniciativas de preservação, como a recuperação das fitas do Bally Astrocade feita por Ronaldo. Os participantes também lembraram micros nacionais, como os da Unitron, o TK82-C e o MSX, e compartilharam notícias sobre a história da computação no exterior, publicações e podcasts sobre a memória dos videogames e eventos de retrocomputação.",
+    "summary": "O grupo usou o Internet Archive como depósito e acompanhou outras iniciativas de preservação, como a recuperação das fitas do Bally Astrocade feita por Ronaldo. Os participantes também lembraram micros nacionais, como os da Unitron e o TK82-C, e o padrão MSX, e compartilharam notícias sobre a história da computação no exterior, livros, revistas, podcasts e eventos de retrocomputação.",
     "subtopics": [
      {
       "slug": "internet-archive-e-iniciativas",
@@ -6116,7 +6116,7 @@
      {
       "slug": "historia-internacional",
       "title": "História e notícias internacionais",
-      "summary": "Foram compartilhados materiais sobre o Xerox Alto, a liberação do código do Lisa OS e do MS-DOS, a Lisp Machine CADR do MIT, processadores feitos com componentes discretos como o MOnSter 6502, o BBC Micro e a história da ARM, entre outros.",
+      "summary": "Foram compartilhados materiais sobre o Xerox Alto, o anúncio da liberação do código do Lisa OS, a liberação de código-fonte do MS-DOS, a Lisp Machine CADR do MIT, processadores feitos com componentes discretos como o MOnSter 6502, o BBC Micro e a história da ARM, entre outros.",
       "conversation_ids": [
        1204,
        2731,
@@ -6165,11 +6165,11 @@
    },
    {
     "first_id": 333,
-    "why": "O driver do terminal Scopus Sagitta 150/180 é proposto ao MAME no PR #2776, enquanto Felipe inspeciona a placa na USP."
+    "why": "O driver ainda não funcional do terminal Scopus Sagitta 150/180 está no PR #2776 do MAME, enquanto Felipe inspeciona a placa na USP."
    },
    {
     "first_id": 1161,
-    "why": "O dump da EPROM do Lepus 200 é distribuído e DQ publica o primeiro disassembly do firmware."
+    "why": "O dump da EPROM do Lepus 200 é distribuído e DQ publica um disassembly parcial do firmware."
    },
    {
     "first_id": 1317,
@@ -6185,7 +6185,7 @@
    },
    {
     "first_id": 3398,
-    "why": "Na visita ao acervo com Sebastião Barreto, a leitora Facit 4021 é preparada para ler fitas perfuradas da época do Patinho Feio."
+    "why": "Felipe organiza uma visita ao acervo da Poli com Sebastião Barreto e lhe pede que leve suas fitas perfuradas da época do Patinho Feio; depois publica fotos, vídeos e o repositório Facit4021."
    },
    {
     "first_id": 4528,
@@ -6197,7 +6197,7 @@
    },
    {
     "first_id": 5387,
-    "why": "Fica pronta a réplica funcional do Golly Ghost, com MAME, Arduino e solenoides, e ela é apresentada numa palestra."
+    "why": "A réplica funcional do Golly Ghost, com MAME, Arduino e solenoides, é mostrada em vídeo e apresentada numa palestra."
    },
    {
     "first_id": 5683,
@@ -6205,8 +6205,702 @@
    },
    {
     "first_id": 6423,
-    "why": "Os esquemáticos do Gran Trak 10 transcritos para netlist entram no MAME 0.201 pelo PR #3795."
+    "why": "Grande parte dos esquemáticos do Gran Trak 10, transcrita para netlist, entra no MAME 0.201 pelo PR #3795 como documentação parcial do circuito."
    }
   ]
+ },
+ "taxonomy_check": {
+  "corrections": [
+   "Intro: 'foram encontradas uma teletype e a leitora' trocado: a teletype chegou ao acervo (#2916) e Affonso encontrou a Facit 4021 (#3312).",
+   "Intro: 'o grupo emulou máquinas nacionais' era forte demais (driver do Sagitta não funcional, BIOS do Nexus quebrava no branch, CP-400 só teve teclas documentadas); trocado por 'trabalhou na emulação'.",
+   "Intro: a transcrição do Gran Trak 10 era atribuída ao grupo; passou a Felipe, com 'grande parte dos esquemáticos' (#6161, #6423). A frase das réplicas virou frase própria, na voz passiva.",
+   "Tema patinho-feio: 'O driver do MAME ganhou um fork' reescrito como 'foi criado o fork ArqueologiaDigital/mame' (#4528); 'esquemáticos de Edson Fregni' trocado por 'pranchas do livro de Edson Fregni' (#4710).",
+   "Subtópico slots-de-es-no-mame: a criação do fork deixou de ser atribuída aos dois (o resumo #4528 diz 'foi criado'); acrescentado o rascunho de Affonso (PR #1); 'esquemáticos ... da tese de 1972' trocado por 'pranchas do livro de Fregni e a tese de 1972', como em #4710.",
+   "Subtópico fitas-perfuradas-facit-4021: a leitora não foi 'levada' à visita com Sebastião; a visita foi ao acervo onde ela estava, e Felipe pediu a Sebastião que levasse as fitas (#3398). Corrigido também que a teletype chegou ao acervo e que Affonso encontrou a Facit (#2916, #3312).",
+   "Subtópico sintetizador-guido-stolfi: 'Affonso leu os cadernos' trocado por 'contou que estava lendo' (#4490).",
+   "Subtópico boot-memoria-e-fontes-historicas: acrescentado que Fregni pretende doar as placas a Felipe (#4275).",
+   "Subtópico palestras-patinho-feio: o tema da apresentação no Roadsec não aparece no resumo #635; agora diz que Felipe compartilhou o post do Fiozera e fotos da apresentação.",
+   "Tema scopus: 'o assunto técnico mais frequente do ano' não tem apoio para o ano todo; trocado por 'tema de muitas conversas técnicas do ano'. 'dump e disassembly' passou a 'disassembly parcial' (#1161).",
+   "Subtópico sagitta-150-180: 'prepararam a energização' trocado por 'planejaram' (#194); 'Compilado localmente' passou a 'Compilado por Werner' (#760).",
+   "Subtópico lepus-200: 'lê ... a porta E000' trocado por 'usa a porta E000', porque o firmware também escreve nela (#1814).",
+   "Subtópico nexus-2600-roms-e-bios: a função da porta D550h (seleção de clock) é sugestão de DQ e passou a ser atribuída a ele; o branch passou a ser atribuído a Felipe (#3029, #3425).",
+   "Subtópico historia-da-scopus: 'testes de compatibilidade com CGA' estava errado; DQ relatou testes de compatibilidade com o jogo Sailing, cuja proteção falhava a 8 MHz (#3509).",
+   "Tema acervo-poli-usp: 'Começou também um projeto de entrevistas ... na Poli' trocado por 'Também se discutiu um projeto de entrevistas com pioneiros da computação ligados à Poli' (#1804, #2775).",
+   "Subtópico acesso-e-prioridades: 'Ficou combinado que o grupo organizaria...' trocado pelo que diz #477: Felipe contou que o grupo passaria a frequentar o espaço com esses objetivos.",
+   "Subtópico entrevistas-com-pioneiros: 'retomou o projeto com os contatos' precisado: Guilherme pediu a Felipe os contatos, e Felipe listou nomes (#2775).",
+   "Tema mame-computadores: 'Werner aprendeu a compilar o emulador' trocado por 'conseguiu compilar o emulador no Windows' (#644); Werner não trabalhou no driver do CP-400 Color II (quem documentou as teclas foi Felipe, #1580), então a frase foi separada; 'cada nova versão' trocado por 'as novas versões'.",
+   "Subtópico lancamentos-do-mame: o Gran Trak 10 em TTL saiu no 0.192 marcado como não funcional (#2008); Wellington Uemura foi citado por Felipe como autor de contribuições recentes, não como parte de um lançamento (#2724); Leonard Oliveira ficou ligado ao 0.202 (#7702).",
+   "Tema arcades: 'teve três frentes' passou a 'três frentes principais', já que os subtópicos tratam também de CPS2, monitores, netlist e FPGA.",
+   "Subtópico gran-trak-10: acrescentado que o PR #3795 trazia grande parte dos esquemáticos e que entrou no 0.201 como documentação parcial (#6423).",
+   "Subtópico placas-e-monitores-de-arcade: 'Felipe contou como recuperou' trocado por 'indicou seu post no blog do MAMEdev sobre como recuperou' (#574).",
+   "Tema demoscene-e-retroprogramacao: 'O grupo organizou uma pequena demoparty ... que recebeu' trocado por 'Felipe anunciou uma pequena demoparty no Garoa em 2 de dezembro de 2017, para a qual o grupo argentino PVM enviou a demo' (#1931, #4412); 'começou a conduzir oficinas' trocado por 'organizou oficinas' (#6519).",
+   "Subtópico oficinas-de-mega-drive: 'O jogo serviu de base às oficinas' não tem apoio; agora diz que Felipe organizou as oficinas (GCC cruzado, um teste com Everdrive) e que, segundo Luciana Marques, o jogo de Affonso chegou a rodar no console (#6519).",
+   "Tema pense-bem-e-engenharia-reversa: 'A conversa levou a recomendações de segurança para o decapping...' afirmava uma relação causal sem apoio (#6959 é uma conversa separada); trocado por 'Em outras conversas foram discutidas...'.",
+   "Tema restauracao-e-eletronica: 'placas corroídas por bateria' trocado por 'uma placa corroída por bateria' (#5856).",
+   "Subtópico restauracao-de-placas: 'O Wikilab pediu sugestões' trocado por 'Silas pediu sugestões para restaurar um NEC 286F do Wikilab' (#7711).",
+   "Subtópico computadores-homebrew: 'Foram mostrados' passou a 'Foram mostrados ou comentados', porque o SimpleZ80 foi descrito e o RC2014 comentado, não mostrados (#7514, #7682).",
+   "Tema preservacao-digital-e-historia: o MSX não é micro nacional e saiu dessa lista ('e o padrão MSX'); 'publicações e podcasts sobre a memória dos videogames' trocado por 'livros, revistas, podcasts', porque parte do material (FORTRAN, MICRO80) não trata de videogames.",
+   "Subtópico historia-internacional: no caso do Lisa OS foi compartilhado o anúncio de que o código seria liberado (#2731), não a liberação; texto precisado.",
+   "Destaque 333: acrescentado que o driver no PR #2776 ainda não funcionava (#333).",
+   "Destaque 1161: 'o primeiro disassembly' trocado por 'um disassembly parcial' (#1161).",
+   "Destaque 3398: 'a leitora Facit 4021 é preparada para ler fitas perfuradas' não tem apoio; agora diz que Felipe organiza a visita, pede a Sebastião que leve as fitas e depois publica fotos, vídeos e o repositório Facit4021 (#3398).",
+   "Destaque 5387: 'Fica pronta a réplica' trocado pelo que diz #5387: a réplica é mostrada em vídeo e apresentada numa palestra.",
+   "Destaque 6423: acrescentado que entrou grande parte dos esquemáticos, como documentação parcial do circuito.",
+   "Verificação estrutural: todos os ids de subtópicos e destaques pertencem ao ano; cada uma das 190 conversas aparece em pelo menos um subtópico (644 e 4710 aparecem em dois); os slugs são ascii minúsculos com hífens e únicos. Nada a mudar."
+  ],
+  "by": "topics/workflow_years.js (run wf_2ca9e325-052, resumed after the null-stage fix: one agent, the year-1 taxonomy check)",
+  "before": {
+   "intro": "No primeiro ano, de novembro de 2017 a outubro de 2018, o grupo funcionou como um grupo de estudos para preservar hardware histórico, com o resgate do Patinho Feio entre os principais projetos. Boa parte do trabalho aconteceu no acervo de computadores da Poli/USP: lá foram examinados os terminais e o PC-XT Nexus 2600 da Scopus, com explicações de DQ, ex-funcionário da empresa, e foram encontradas uma teletype e a leitora de fita perfurada Facit 4021. Com o MAME, o grupo emulou máquinas nacionais como o Sagitta, o Nexus 2600, o CP-500 e o CP-400, transcreveu para netlist os esquemáticos do Atari Gran Trak 10 e montou réplicas, entre elas a placa de decodificação de opcodes do Patinho Feio e o Golly Ghost. No mesmo período foram criados a organização ArqueologiaDigital no GitHub e o site arqueologiadigital.org, ROMs, manuais e imagens de disco foram publicados, e começaram os encontros e as oficinas no Garoa Hacker Clube.",
+   "themes": [
+    {
+     "slug": "patinho-feio",
+     "title": "Patinho Feio",
+     "summary": "O Patinho Feio, computador construído na USP em 1971, é um dos principais projetos citados na descrição do grupo. Ao longo do ano foram encomendadas as PCBs da CDE-3, foi montada uma réplica da placa de decodificação de opcodes e a leitora de fita perfurada Facit 4021 foi ligada a um Arduino para ler fitas. O driver do MAME ganhou um fork para receber um sistema de slots de E/S. Também foram reunidas fontes históricas, como os esquemáticos de Edson Fregni, os cadernos de Guido Stolfi e um relatório de 1972 sobre o ensino de computação no Brasil.",
+     "subtopics": [
+      {
+       "slug": "painel-e-cde-3",
+       "title": "Painel emulado e placas da CDE-3",
+       "summary": "Felipe encomendou as PCBs da CDE-3 e de debug, e o painel emulado e essas placas foram definidos como prioridades de curto prazo. Depois ele montou uma réplica soquetada da placa de decodificação de opcodes. Um erro de layout exigiu 33 remendos, e a placa terminou funcionando.",
+       "conversation_ids": [
+        1320,
+        1747,
+        2741
+       ]
+      },
+      {
+       "slug": "slots-de-es-no-mame",
+       "title": "Slots de E/S no driver do MAME",
+       "summary": "No driver do MAME, a DECwriter e a Teletype estavam fixas no código. Para substituí-las por um sistema de slots de E/S, Affonso e Felipe criaram o fork ArqueologiaDigital/mame e estudaram as instruções FNC, SAL e ENT, as placas FIN-8 e os esquemáticos do livro de Fregni e da tese de 1972.",
+       "conversation_ids": [
+        4528,
+        4710,
+        4822
+       ]
+      },
+      {
+       "slug": "fitas-perfuradas-facit-4021",
+       "title": "Fitas perfuradas, teletype e a leitora Facit 4021",
+       "summary": "Uma teletype e uma leitora Facit 4021 de 1974 foram encontradas no acervo da Poli. Affonso publicou os manuais da Facit no Internet Archive. A leitora foi ligada a um Arduino e levada a uma visita com Sebastião Barreto, a quem se pediu que trouxesse suas fitas da época do Patinho Feio. Restaram erros periódicos de leitura, que Felipe atribuiu a um problema mecânico.",
+       "conversation_ids": [
+        2916,
+        3312,
+        3398,
+        3731,
+        3986
+       ]
+      },
+      {
+       "slug": "sintetizador-guido-stolfi",
+       "title": "Sintetizador do Guido Stolfi",
+       "summary": "O professor Guido Stolfi ligou o sintetizador, que voltou a funcionar parcialmente e seria demonstrado num evento de equipamentos eletrônicos antigos. Affonso leu os cadernos do professor, escaneados por Felipe. Pelo código da fita #011, Felipe suspeitou que o sintetizador usava mais de um slot de E/S.",
+       "conversation_ids": [
+        4463,
+        4490,
+        4710
+       ]
+      },
+      {
+       "slug": "boot-memoria-e-fontes-historicas",
+       "title": "Boot, memória e fontes históricas",
+       "summary": "Felipe explicou o micro-pré-loader que o operador insere pelas chaves do painel, sequência lembrada pelo prof. João José Neto, e o grupo discutiu se a memória de núcleo de ferrite é volátil. Foi compartilhado um relatório de 1972 que menciona o Patinho Feio. Felipe contou ainda que o prof. Edson Fregni guarda placas originais e pretende doá-las.",
+       "conversation_ids": [
+        3888,
+        4275,
+        5154
+       ]
+      },
+      {
+       "slug": "palestras-patinho-feio",
+       "title": "Palestras e divulgação",
+       "summary": "Felipe apresentou no Roadsec o resgate dos computadores pioneiros do Brasil, tema também de um post no Fiozera. Depois fez uma palestra sobre o Patinho Feio na UFABC, e membros do WikiLab que assistiram entraram no grupo.",
+       "conversation_ids": [
+        635,
+        6410
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "scopus",
+     "title": "Scopus: terminais e o PC-XT Nexus 2600",
+     "summary": "Os equipamentos da Scopus guardados no acervo da USP foram o assunto técnico mais frequente do ano. DQ, que trabalhou na empresa de 1981 a 1986, explicou boa parte deles. O driver do Sagitta 150/180 foi proposto ao MAME, e a EPROM do Lepus 200 passou por dump e disassembly. O Nexus 2600 foi posto para funcionar e teve ROMs, PROMs e disco rígido copiados; a imagem do HD deu boot no DOS 3.3 dentro do MAME.",
+     "subtopics": [
+      {
+       "slug": "sagitta-150-180",
+       "title": "Terminais Sagitta 150 e 180",
+       "summary": "Felipe e Werner prepararam a energização do terminal, e Felipe inspecionou a placa do Sagitta 150 na USP. O driver, ainda não funcional, foi proposto no PR #2776, que aguardava as alterações pedidas na revisão. Compilado localmente, ele rodou, mas não respondia ao teclado.",
+       "conversation_ids": [
+        194,
+        333,
+        531,
+        760
+       ]
+      },
+      {
+       "slug": "lepus-200",
+       "title": "Terminal Lepus 200",
+       "summary": "Felipe distribuiu o dump da EPROM, e DQ publicou um disassembly parcial. Nele, DQ mostrou como o firmware simula o DMA com sequências de POP e como lê a matriz do teclado e a porta E000. Também foi combinada uma gravação com DQ para o Happy Hacking Video Blog.",
+       "conversation_ids": [
+        1078,
+        1161,
+        1814
+       ]
+      },
+      {
+       "slug": "nexus-2600-roms-e-bios",
+       "title": "Nexus 2600: funcionamento, ROMs e BIOS",
+       "summary": "Com o teclado da Scopus, que não segue o padrão IBM, o Nexus 2600 deu boot no PC-DOS 3.3. As ROMs foram extraídas com o DEBUG, e as quatro PROMs TBP28L22N foram lidas com um leitor feito com Arduino. Um branch do MAME começou a emular o BIOS, que escreve em portas fora do padrão do XT, como a D550h, que seleciona o clock.",
+       "conversation_ids": [
+        2783,
+        2995,
+        3029,
+        3191,
+        3425,
+        3634,
+        3948,
+        4330
+       ]
+      },
+      {
+       "slug": "nexus-2600-imagem-do-hd",
+       "title": "Nexus 2600: imagem do disco rígido",
+       "summary": "Affonso escreveu o xt-hd-imager para enviar os setores do HD pela serial. A primeira imagem, publicada no Internet Archive, perdia um bit de cada byte. Depois de corrigida a serial e a ordem de leitura CHS, a imagem deu boot no DOS 3.3 do Nexus dentro do MAME.",
+       "conversation_ids": [
+        3165,
+        4383,
+        4903,
+        5040,
+        5092,
+        5171
+       ]
+      },
+      {
+       "slug": "historia-da-scopus",
+       "title": "História da Scopus contada por DQ",
+       "summary": "DQ contou seu trabalho na Scopus com firmware de terminais e com o BIOS e o sistema operacional do Nexus. Explicou também a origem do SISNE e do BASIC do Nexus e os testes de compatibilidade com CGA. Felipe digitalizou a publicação \"Tecnologia Scopus\", de 1983, trazida por DQ.",
+       "conversation_ids": [
+        1135,
+        1555,
+        3153,
+        3287,
+        3509
+       ]
+      },
+      {
+       "slug": "outros-equipamentos-scopus",
+       "title": "Outros terminais e pendências",
+       "summary": "Affonso planejou fazer o dump das ROMs dos terminais recém-chegados e tentou, sem sucesso, ligar o terminal TVA80 a um PC pela serial. O Scopus Spectrum ED, de 1985, foi apontado como emulação pendente.",
+       "conversation_ids": [
+        2457,
+        4840
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "acervo-poli-usp",
+     "title": "Acervo de computadores da Poli/USP",
+     "summary": "Depois da conversa com o professor Fernando, o grupo passou a frequentar o acervo não exposto da Poli/USP, onde Affonso Amendola era estagiário. Além dos projetos do Patinho Feio e da Scopus, o grupo definiu prioridades, examinou drives de 8 polegadas, investigou o defeito de um TK3000 IIe e registrou peças que chegaram ao acervo do projeto Paideia (LASSU/CEDIR). Começou também um projeto de entrevistas com pioneiros da computação na Poli.",
+     "subtopics": [
+      {
+       "slug": "acesso-e-prioridades",
+       "title": "Acesso ao acervo e prioridades",
+       "summary": "Ficou combinado que o grupo organizaria a sala do acervo não exposto, inspecionaria máquinas e escreveria emuladores. Felipe e Affonso escolheram três projetos prioritários: o Patinho Feio, o CP-500 e o Nexus 2600. Os projetos de emulação para a USP passaram a ser organizados no repositório EmuHC.",
+       "conversation_ids": [
+        477,
+        1406,
+        3415,
+        3793,
+        7233
+       ]
+      },
+      {
+       "slug": "drives-de-8-polegadas",
+       "title": "Drives e disquetes de 8 polegadas",
+       "summary": "Ronaldo descreveu seu Flexidisk DS 800, e Affonso identificou o Tandon TM848 do acervo e projetou um conversor de interface para ele. O grupo também trocou cuidados para ler mídias antigas sem danificá-las.",
+       "conversation_ids": [
+        3978,
+        5613,
+        6733,
+        6939
+       ]
+      },
+      {
+       "slug": "tk3000-iie",
+       "title": "TK3000 IIe e clones de Apple II",
+       "summary": "O TK3000 IIe de Affonso mostrava só uma mensagem e não respondia ao teclado. O grupo investigou o defeito com o autoteste, o esquema elétrico e comparações com outros TK3000, mas a causa ficou em aberto. Nos testes de vídeo, um monitor de fósforo verde acabou queimando.",
+       "conversation_ids": [
+        5165,
+        6048,
+        6866,
+        7667
+       ]
+      },
+      {
+       "slug": "pecas-do-acervo",
+       "title": "Peças encontradas e doadas",
+       "summary": "Affonso mostrou itens do depósito e doações: um Mac Color Classic, uma caixa de Macintosh LC II, um analisador lógico HP 5000A, um monitor PVM-1350 salvo do descarte, placas de Apple II do projeto Paideia e fichas telefônicas. O Prológica Solution 16 doado por Sebastião não deu boot.",
+       "conversation_ids": [
+        3989,
+        4101,
+        4189,
+        4245,
+        5550,
+        5607,
+        6235,
+        6770,
+        7271
+       ]
+      },
+      {
+       "slug": "entrevistas-com-pioneiros",
+       "title": "Entrevistas com pioneiros da computação",
+       "summary": "Guilherme Kenzo propôs uma abordagem acadêmica para as entrevistas e depois retomou o projeto com os contatos de professores e engenheiros da Poli. Felipe relatou uma visita ao prof. João José Neto, que contou a história do prof. Orsini e do HP2116B.",
+       "conversation_ids": [
+        1804,
+        2775,
+        3819
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "mame-computadores",
+     "title": "Emulação de computadores no MAME",
+     "summary": "O MAME foi a principal ferramenta de emulação do grupo. Werner aprendeu a compilar o emulador, trabalhou nos drivers do CP-500 e do CP-400 Color II e decidiu tentar emular o G-10, um computador microprogramado. Felipe mostrou drivers como o do ZAP e divulgou cada nova versão do MAME, apontando as contribuições de brasileiros.",
+     "subtopics": [
+      {
+       "slug": "compilando-o-mame",
+       "title": "Compilando o MAME",
+       "summary": "Werner tentou compilar o MAME numa VM Kali Linux, que acabou perdida, e depois conseguiu no Windows reinstalando o MinGW. Felipe explicou o build parcial com SUBTARGET e SOURCES e os critérios para aceitar dumps de ROM.",
+       "conversation_ids": [
+        18,
+        644
+       ]
+      },
+      {
+       "slug": "cp-500",
+       "title": "CP-500 e o driver trs80",
+       "summary": "Werner e Felipe discutiram o mapeamento do teclado, a falta de suporte a imagens JV3/DMK e variantes de ROM, como o CP-500/M80. Investigaram também uma falha esporádica na tela de boot, que Felipe não conseguiu reproduzir.",
+       "conversation_ids": [
+        644,
+        804,
+        905
+       ]
+      },
+      {
+       "slug": "cp-400-color-ii",
+       "title": "CP-400 Color II",
+       "summary": "Com informações de Manoel Lemos, Felipe documentou no driver do MAME as quatro teclas extras do CP-400 Color II. Werner propôs ainda um CP-400 portátil com LCD de vídeo composto.",
+       "conversation_ids": [
+        1580,
+        1670
+       ]
+      },
+      {
+       "slug": "g-10",
+       "title": "G-10 e microprogramação",
+       "summary": "Partindo da tese de Edit Grassiani (1975), Werner decidiu emular o G-10 tomando como base o driver do Patinho Feio. Felipe explicou a diferença entre CPU microprogramada e hardwired e propôs depurar no MAME tanto no nível de micro-instrução quanto no de instrução.",
+       "conversation_ids": [
+        601,
+        673
+       ]
+      },
+      {
+       "slug": "outros-drivers",
+       "title": "Outros drivers e ideias de emulação",
+       "summary": "Felipe mostrou o driver do ZAP, cuja ROM digitou a partir do livro de Steve Ciarcia, e o da impressora 3D Replicator, limitado pelos timers incompletos do AVR8. Outras conversas trataram dos livros da Letron, da ideia de emular uma máquina de café, do emulador de qmusica e da falta de emulador para as estações Silicon Graphics.",
+       "conversation_ids": [
+        871,
+        991,
+        1002,
+        1565,
+        2737,
+        5992
+       ]
+      },
+      {
+       "slug": "lancamentos-do-mame",
+       "title": "Lançamentos do MAME",
+       "summary": "O grupo acompanhou as versões 0.192 a 0.202. Nelas apareceram o Gran Trak 10 em TTL, uma contribuição do grupo marcada como NOT_WORKING no 0.194 e trabalhos dos brasileiros Wellington Uemura e Leonard Oliveira.",
+       "conversation_ids": [
+        2008,
+        2724,
+        3813,
+        5032,
+        7702
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "arcades",
+     "title": "Arcades: réplicas funcionais e circuitos sem CPU",
+     "summary": "O trabalho com arcades teve três frentes. A primeira foi a análise da CPU de motores do Galaxy Force 2 Super Deluxe, para uma réplica em miniatura movida por um Raspberry Pi. A segunda foi a réplica funcional do Golly Ghost, controlada pelo MAME. A terceira foi a transcrição dos esquemáticos do Atari Gran Trak 10, um jogo sem CPU, para o sistema de netlist do MAME, que entrou no MAME 0.201 como documentação parcial do circuito.",
+     "subtopics": [
+      {
+       "slug": "galaxy-force-2",
+       "title": "Galaxy Force 2 Super Deluxe e MAME no Raspberry Pi",
+       "summary": "Felipe analisou o assembly do Z80 que controla os motores do cockpit (SEGA Y-Board) e citou PRs seus no MAME sobre essa CPU. Para a réplica em miniatura, compilou o MAME num Raspberry Pi 3, o que só foi possível com swap em ZRAM. Sob o X o desempenho foi ruim, e a tentativa com DirectFB terminou em segfault.",
+       "conversation_ids": [
+        2094,
+        2313
+       ]
+      },
+      {
+       "slug": "golly-ghost",
+       "title": "Réplica do Golly Ghost",
+       "summary": "Num laptop, o MAME emula a placa Namco System 2 e envia o estado de displays, LEDs e solenoides, por um script Python, a um Arduino Mega. O projeto foi apresentado numa palestra.",
+       "conversation_ids": [
+        5387
+       ]
+      },
+      {
+       "slug": "gran-trak-10",
+       "title": "Atari Gran Trak 10 em netlist",
+       "summary": "Felipe transcreveu os esquemáticos do Gran Trak 10 (1974), primeiro no KiCad e depois no sistema de netlist do MAME. Foi corrigindo sinais até o sprite do carro aparecer. O trabalho virou o PR #3795 e entrou no MAME 0.201.",
+       "conversation_ids": [
+        1837,
+        3861,
+        6161,
+        6423
+       ]
+      },
+      {
+       "slug": "netlist-ttl-fpga",
+       "title": "Netlist, TTL e FPGA",
+       "summary": "Uma busca no código do MAME encontrou 23 jogos NETLIST_CPU, que rodam com desempenho baixo. Felipe apresentou a libstickbridge, que liga software a hardware numa FPGA iCE40, e compartilhou o projeto Ambush TTL.",
+       "conversation_ids": [
+        6018,
+        7260
+       ]
+      },
+      {
+       "slug": "placas-e-monitores-de-arcade",
+       "title": "Placas e monitores de arcade",
+       "summary": "Felipe contou como recuperou uma placa CPS2 de Street Fighter Zero 2 achada numa central de reciclagem. Compartilhou também esquemáticos de monitores de arcade e um vídeo sobre como adicionar entrada RGB a uma TV comum, técnica que sugeriu usar para montar um chicote JAMMA.",
+       "conversation_ids": [
+        574,
+        4214,
+        7890
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "organizacao-do-grupo",
+     "title": "Organização do grupo, site e encontros",
+     "summary": "O grupo virou supergrupo, ganhou uma descrição fixada e passou a ter um log público das conversas. Foram criados a organização ArqueologiaDigital no GitHub e o site arqueologiadigital.org, pensado como índice para o material no Internet Archive, no GitHub, no Fiozera e no YouTube. Perto do fim do primeiro ano começaram os encontros presenciais no Garoa Hacker Clube.",
+     "subtopics": [
+      {
+       "slug": "descricao-e-log-publico",
+       "title": "Descrição do grupo e log público",
+       "summary": "A mensagem fixada apresenta o grupo como um grupo de estudos para preservar hardware histórico, com o resgate do Patinho Feio entre os principais projetos. O chat tem um log público no GitHub Pages, que é indicado aos novos membros.",
+       "conversation_ids": [
+        3,
+        1665,
+        4833
+       ]
+      },
+      {
+       "slug": "github-e-site",
+       "title": "GitHub e site arqueologiadigital.org",
+       "summary": "Felipe criou a organização ArqueologiaDigital no GitHub e registrou o domínio, e Werner fez a primeira versão da página. O site foi pensado como portal de curadoria manual. Lincoln se ofereceu para refazê-lo como site estático, e depois Felipe ajustou a página principal.",
+       "conversation_ids": [
+        1317,
+        1892,
+        4024,
+        4704
+       ]
+      },
+      {
+       "slug": "encontros-no-garoa",
+       "title": "Encontros no Garoa Hacker Clube",
+       "summary": "Felipe propôs encontros periódicos, e ficou combinado que seriam no Garoa, com idas à USP só quando fosse preciso examinar o acervo. O primeiro encontro foi marcado para uma quinta-feira. Felipe também explicou como o clube funciona.",
+       "conversation_ids": [
+        5014,
+        5490,
+        5683,
+        5852
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "demoscene-e-retroprogramacao",
+     "title": "Demoscene e retroprogramação",
+     "summary": "O grupo organizou uma pequena demoparty no Garoa em dezembro de 2017, que recebeu do grupo argentino PVM a demo de Commodore 64 \"Brazil Bits\". Em 2018 Felipe publicou o PortableWumpus, versão em C do Hunt the Wumpus de Affonso, e começou a conduzir oficinas de programação para Mega Drive no Garoa. Também circularam referências de arte computacional e de ASCII art.",
+     "subtopics": [
+      {
+       "slug": "demoparty-no-garoa",
+       "title": "Demoparty no Garoa e o grupo PVM",
+       "summary": "Felipe preparou o emulador VICE para exibir demos de Commodore 64 e recebeu do grupo PVM a demo \"Brazil Bits\", um music disk com músicas brasileiras. O PVM organizou depois a FlashParty 2018.",
+       "conversation_ids": [
+        1931,
+        2185,
+        4412
+       ]
+      },
+      {
+       "slug": "oficinas-de-mega-drive",
+       "title": "PortableWumpus e oficinas de Mega Drive",
+       "summary": "Affonso escreveu um Hunt the Wumpus para o modo VGA 13h, e Felipe fez dele o PortableWumpus, em C portável. O jogo serviu de base às oficinas de Mega Drive no Garoa, com GCC cruzado para 68k e testes no console com um cartucho Everdrive. FTMaciel ofereceu um clone de Mega Drive para as oficinas.",
+       "conversation_ids": [
+        5143,
+        5918,
+        6519,
+        7211
+       ]
+      },
+      {
+       "slug": "mega-drive-e-consoles",
+       "title": "Mega Drive TecToy e outros consoles",
+       "summary": "Felipe comprou por engano o Mega Drive de 2017 da TecToy, em que só cerca de 4 dos seus 10 cartuchos funcionaram, e depois um modelo original. Circulou também a notícia de jogos de SNES rodando num NES com um Raspberry Pi dentro do cartucho.",
+       "conversation_ids": [
+        5067,
+        6548
+       ]
+      },
+      {
+       "slug": "arte-computacional",
+       "title": "Arte computacional e ASCII art",
+       "summary": "Alexandre Villares compartilhou referências de arte computacional e preparou uma oficina de ASCII art com impressora matricial. Na conversa da oficina foram sugeridas técnicas de conversão e citado o trabalho de Waldemar Cordeiro e Giorgio Moscati na USP. A quem procurava arte em caracteres de Videotexto, Felipe indicou a demo \"Nothing but PETSCII\".",
+       "conversation_ids": [
+        3394,
+        4186,
+        7477
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "pense-bem-e-engenharia-reversa",
+     "title": "Pense Bem e engenharia reversa de chips",
+     "summary": "O Pense Bem voltou a ser discutido por três caminhos: a documentação antiga de Felipe na wiki do Garoa, a ideia de fazer o decapping do Z8 com ROM de máscara e as falhas do simulador no cálculo das respostas. A conversa levou a recomendações de segurança para o decapping com ácido nítrico e a outras ferramentas de engenharia reversa.",
+     "subtopics": [
+      {
+       "slug": "pense-bem",
+       "title": "Pense Bem",
+       "summary": "Felipe ofereceu o rascunho de esquemático e o repositório garoa/PenseBem a quem quisesse continuá-los. Participantes acharam erros no simulador, DQ concluiu que o gerador de respostas não foi decifrado e foi proposto ler todas as combinações do chip original com um Arduino. Um participante também relatou experiências de circuit bending no aparelho.",
+       "conversation_ids": [
+        6426,
+        6654,
+        7034
+       ]
+      },
+      {
+       "slug": "decapping-e-ferramentas",
+       "title": "Decapping e ferramentas de análise",
+       "summary": "Para o decapping de CIs com ácido nítrico, o grupo recomendou supervisão treinada e proteção. Gustavo Romero lembrou que a lei brasileira permite a engenharia reversa de CIs para pesquisa. Ismael Luceno descreveu ferramentas para analisar código de BIOS, e Felipe publicou um descompilador da linguagem VTT Talk, usada em hinting TrueType.",
+       "conversation_ids": [
+        5448,
+        6959,
+        7042
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "restauracao-e-eletronica",
+     "title": "Restauração de hardware e eletrônica",
+     "summary": "Fora do acervo da USP, os participantes trouxeram casos de restauração e montagem de hardware: placas corroídas por bateria, um NEC 286F com backlight queimado, terminais com teclados proprietários, sync-on-green numa VAXstation e computadores homebrew. Também se falou da degradação dos plásticos de gabinetes e de conceitos de eletrônica.",
+     "subtopics": [
+      {
+       "slug": "restauracao-de-placas",
+       "title": "Restauração de placas e máquinas",
+       "summary": "FTMaciel descreveu como restaurou uma placa Itautec corroída pelo vazamento de uma bateria NiCd. O Wikilab pediu sugestões para restaurar um NEC 286F e para documentar o trabalho, e o Fórum Fiozera foi sugerido. Circulou ainda uma reportagem sobre um engenheiro que restaura computadores antigos.",
+       "conversation_ids": [
+        4273,
+        5856,
+        7711
+       ]
+      },
+      {
+       "slug": "terminais-e-video",
+       "title": "Terminais, monitores e sinais de vídeo",
+       "summary": "O grupo discutiu o ajuste da imagem e o teclado proprietário de um terminal HP 700/46 e o sync-on-green da placa LCSPX de uma VAXstation 4000/90. Falou também de opções para montar terminais burros com Raspberry Pi e microcontroladores.",
+       "conversation_ids": [
+        5955,
+        6789,
+        7545
+       ]
+      },
+      {
+       "slug": "computadores-homebrew",
+       "title": "Computadores homebrew",
+       "summary": "Foram mostrados um MSX2 em placas empilhadas, o SimpleZ80 do Wikilab, o RC2014 e a adaptação do RC2014 para ZX81. Felipe disse que homebrew com tecnologia antiga é bem-vindo no grupo, embora não seja arqueologia.",
+       "conversation_ids": [
+        7514,
+        7682
+       ]
+      },
+      {
+       "slug": "motorola-mdt-9100t",
+       "title": "Terminal policial Motorola MDT-9100T",
+       "summary": "L. mostrou um terminal de viatura com 386SX, Windows 3.1 e memória flash no lugar do HD. Felipe sugeriu fazer o dump da flash e da BIOS para o MAME.",
+       "conversation_ids": [
+        7597
+       ]
+      },
+      {
+       "slug": "preservacao-fisica",
+       "title": "Preservação física de gabinetes e mídias",
+       "summary": "A partir de uma reportagem sobre peças de plástico que se desfazem, Felipe defendeu escanear em 3D os gabinetes dos equipamentos. Ronaldo e Felipe defenderam copiar os dados de fitas magnéticas, como uma de IBM 4381 posta à venda, em vez de usá-las como objeto decorativo.",
+       "conversation_ids": [
+        5373,
+        7449
+       ]
+      },
+      {
+       "slug": "eletronica-e-componentes",
+       "title": "Eletrônica e componentes",
+       "summary": "Felipe montou no Garoa um divisor de frequência com um oscilador de 25,175 MHz e perguntou como ler o esquemático interno de CIs analógicos. Outras conversas trataram de displays nixie e numitron, adaptadores USB-serial no GNU/Linux, uma proposta de dispositivo USB de porta paralela, um PC antigo que perde os dados do RTC e a recriação da placa do Amiga 1200 a partir de fotos.",
+       "conversation_ids": [
+        541,
+        3373,
+        4870,
+        5483,
+        6152,
+        6465,
+        7491
+       ]
+      }
+     ]
+    },
+    {
+     "slug": "preservacao-digital-e-historia",
+     "title": "Preservação digital e história da computação",
+     "summary": "O grupo usou o Internet Archive como depósito e acompanhou outras iniciativas de preservação, como a recuperação das fitas do Bally Astrocade feita por Ronaldo. Os participantes também lembraram micros nacionais, como os da Unitron, o TK82-C e o MSX, e compartilharam notícias sobre a história da computação no exterior, publicações e podcasts sobre a memória dos videogames e eventos de retrocomputação.",
+     "subtopics": [
+      {
+       "slug": "internet-archive-e-iniciativas",
+       "title": "Internet Archive e outras iniciativas",
+       "summary": "Felipe propôs fazer uma cópia do acervo do Datassette no Internet Archive, onde já havia montado uma coleção de demos de MS-DOS. Ronaldo contou como recuperou programas de fitas de 300 baud do Astrocade. Circularam notícias sobre o Internet Arcade, o Flashpoint, o Software Heritage, a retirada de ROMs do EmuParadise e o catálogo Games BR.",
+       "conversation_ids": [
+        1023,
+        3690,
+        4185,
+        6920,
+        6927,
+        7035,
+        7445,
+        7659,
+        7695,
+        7784,
+        7812,
+        7865
+       ]
+      },
+      {
+       "slug": "micros-nacionais-e-msx",
+       "title": "Micros nacionais e MSX",
+       "summary": "As conversas lembraram os clones de Apple II da Unitron, o TK82-C de DQ, o CCE MC1000 e o padrão MSX, cujas variantes do VDP Ronaldo explicou. Foi relatada também a venda do equipamento de desenvolvimento e dos fontes do jogo Zorax, para MSX, a um comprador desconhecido.",
+       "conversation_ids": [
+        1983,
+        4227,
+        5077,
+        7314,
+        7426,
+        7468,
+        7732,
+        7926
+       ]
+      },
+      {
+       "slug": "historia-internacional",
+       "title": "História e notícias internacionais",
+       "summary": "Foram compartilhados materiais sobre o Xerox Alto, a liberação do código do Lisa OS e do MS-DOS, a Lisp Machine CADR do MIT, processadores feitos com componentes discretos como o MOnSter 6502, o BBC Micro e a história da ARM, entre outros.",
+       "conversation_ids": [
+        1204,
+        2731,
+        2974,
+        3629,
+        4259,
+        4319,
+        4481,
+        5090,
+        5140,
+        5369,
+        5492,
+        7731
+       ]
+      },
+      {
+       "slug": "livros-revistas-e-podcasts",
+       "title": "Livros, revistas e podcasts",
+       "summary": "Circularam o podcast e a revista Jogos 80, o projeto MICRO80 de Marcus, o livro de David L. Heiserman sobre jogos de TV e a evolução do FORTRAN, explicada por DQ. Affonso sugeriu digitalizar livros e manuais do acervo no scanner da Biblioteca Brasiliana.",
+       "conversation_ids": [
+        2717,
+        3781,
+        3983,
+        4210,
+        5531,
+        7793,
+        7952
+       ]
+      },
+      {
+       "slug": "eventos-de-retrocomputacao",
+       "title": "Eventos de retrocomputação",
+       "summary": "Eduardo Loos divulgou o 3º RetroSC, realizado em 27 de outubro de 2018 em Florianópolis, e depois compartilhou o vídeo e as fotos do evento.",
+       "conversation_ids": [
+        5979,
+        8012
+       ]
+      }
+     ]
+    }
+   ],
+   "highlights": [
+    {
+     "first_id": 3,
+     "why": "O grupo vira supergrupo e fixa a descrição que o define como grupo de estudos para preservar hardware histórico, com o resgate do Patinho Feio entre os principais projetos."
+    },
+    {
+     "first_id": 333,
+     "why": "O driver do terminal Scopus Sagitta 150/180 é proposto ao MAME no PR #2776, enquanto Felipe inspeciona a placa na USP."
+    },
+    {
+     "first_id": 1161,
+     "why": "O dump da EPROM do Lepus 200 é distribuído e DQ publica o primeiro disassembly do firmware."
+    },
+    {
+     "first_id": 1317,
+     "why": "São criados a organização ArqueologiaDigital no GitHub e o site arqueologiadigital.org."
+    },
+    {
+     "first_id": 2741,
+     "why": "A réplica da placa de decodificação de opcodes do Patinho Feio é montada e funciona."
+    },
+    {
+     "first_id": 2995,
+     "why": "Com o teclado da Scopus, o Nexus 2600 do acervo da Poli dá boot no PC-DOS 3.3."
+    },
+    {
+     "first_id": 3398,
+     "why": "Na visita ao acervo com Sebastião Barreto, a leitora Facit 4021 é preparada para ler fitas perfuradas da época do Patinho Feio."
+    },
+    {
+     "first_id": 4528,
+     "why": "O fork ArqueologiaDigital/mame é criado para dar ao driver do Patinho Feio um sistema de slots de E/S."
+    },
+    {
+     "first_id": 5171,
+     "why": "Depois da correção da ordem CHS, a imagem do HD do Nexus 2600 dá boot no DOS 3.3 dentro do MAME."
+    },
+    {
+     "first_id": 5387,
+     "why": "Fica pronta a réplica funcional do Golly Ghost, com MAME, Arduino e solenoides, e ela é apresentada numa palestra."
+    },
+    {
+     "first_id": 5683,
+     "why": "O grupo combina encontros periódicos no Garoa Hacker Clube."
+    },
+    {
+     "first_id": 6423,
+     "why": "Os esquemáticos do Gran Trak 10 transcritos para netlist entram no MAME 0.201 pelo PR #3795."
+    }
+   ]
+  }
  }
 }

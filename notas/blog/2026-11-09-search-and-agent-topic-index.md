@@ -61,7 +61,7 @@ The checkers were busy (`topics/stats.py`):
 | what was checked                                | items | corrections |
 |-------------------------------------------------|-------|-------------|
 | conversations, against the messages (years 1-9) | 1653  | 804         |
-| year summaries, themes, highlights (years 2-9)  | 8     | 315         |
+| year summaries, themes, highlights (years 1-9)  | 9     | 351         |
 
 About one correction for every two conversations. The typical error is not invention but
 inflation: a pull request "reached MAME" while it was still open, someone "learned to compile
@@ -72,7 +72,9 @@ The second row is the lesson. In the first-year pilot, the step that wrote theme
 not checked, on the reasoning that it only read conversation summaries that had been checked
 already. It still brought back a claim a checker had removed ("Werner aprendeu a compilar o
 MAME"). Every step that writes text needs its own check, including steps that only rewrite
-checked text. The full run added that check; it made 25 to 48 corrections per year.
+checked text. The full run added that check; it made 25 to 48 corrections per year. Run on the
+first year too, it caught that sentence and a second error the pilot had shipped: the same
+theme credited Werner with work on the CP-400 Color II driver that Felipe had done.
 
 The render step found no broken message links in any year.
 
@@ -82,6 +84,7 @@ The render step found no broken message links in any year.
 |---------------|----------|--------|-----------|--------|
 | pilot, year 1 | 7808     | 9      | 1,356,191 | 14 min |
 | years 2-9     | 32,664   | 68     | 8,329,065 | 49 min |
+| year 1 check  |          | 1      |           |        |
 
 Roughly 240 tokens of agent work per message, six to seven times the size of the transcripts
 (about 230k tokens for year 1, 1.23M for years 2-9, as estimated by `topics/transcript.py`):
