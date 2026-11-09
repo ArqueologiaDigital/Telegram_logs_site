@@ -485,6 +485,17 @@ def mark_phones(d, opts):
     return unreviewed
 
 
+def masked_text(raw):
+    """Message text as plain text, with phone tags marked by mark_phones() replaced."""
+    text = raw.get("message") or ""
+    for e in sorted(raw.get("entities") or [], key=lambda e: -e["offset"]):
+        if e["_"] == "MessageEntityPhone" and e.get("_mask"):
+            b = text.encode("utf-16-le")
+            text = (b[:2 * e["offset"]] + "[phone number]".encode("utf-16-le")
+                    + b[2 * (e["offset"] + e["length"]):]).decode("utf-16-le")
+    return text
+
+
 def build_plaintext(d, out, opts):
     pdir = os.path.join(out, "formatted", "plaintext", LEGACY_NAME)
     days = defaultdict(list)
@@ -504,12 +515,7 @@ def build_plaintext(d, out, opts):
         if dl and opts.deleted == "placeholder":
             days[when.date()].append(f"[{ts}] {who}: [message {deletion_note(dl, d)}]")
             continue
-        text = raw.get("message") or ""
-        for e in sorted(raw.get("entities") or [], key=lambda e: -e["offset"]):
-            if e["_"] == "MessageEntityPhone" and e.get("_mask"):
-                b = text.encode("utf-16-le")
-                text = (b[:2 * e["offset"]] + "[phone number]".encode("utf-16-le")
-                        + b[2 * (e["offset"] + e["length"]):]).decode("utf-16-le")
+        text = masked_text(raw)
         entry = d.media.get(rec["id"])
         if entry:
             url = media_url(entry, opts) or "(not yet published)"
