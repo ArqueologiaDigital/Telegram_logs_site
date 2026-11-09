@@ -161,7 +161,7 @@ const years = args.years.map(y => ({ ...y, chunks: y.chunks.map(c => ({ ...c, pa
 const results = await pipeline(
   [{ year: 1, existing: true }, ...years],
   async y => {
-    if (y.existing) return null
+    if (y.existing) return { existing: true }   // not null: a null stage result drops the item
     const chunks = await pipeline(
       y.chunks,
       c => agent(segmentPrompt(c), { label: `segment ${c.label}`, phase: 'Segment', schema: SEGMENT }),

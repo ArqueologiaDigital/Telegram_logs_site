@@ -1,0 +1,2481 @@
+{
+ "meta": {
+  "year": 3,
+  "from": "2019-11",
+  "to": "2020-10",
+  "period": "2019-11..2020-10",
+  "messages": 1202,
+  "made": "2026-11-09",
+  "model": "claude-opus-5-5 (workflow agents, inherited from the session)",
+  "workflow": "topics/workflow_years.js (run wf_2ca9e325-052: 68 agents for years 1-9, 8329065 tokens, 49 min)",
+  "transcripts": "topics/transcript.py --years 2018-11..2026-10 --target 60"
+ },
+ "chunks": [
+  {
+   "overview": "Entre novembro de 2019 e outubro de 2020 o grupo funcionou sobretudo como espaço de troca de links e relatos sobre retrocomputação, e a quarentena de 2020 aparece nas conversas como tempo livre para projetos pessoais. Os principais trabalhos técnicos relatados foram de Felipe \"Juca\" Sanches: a desmontagem de um Itautec I-7000-G e a limpeza de sua placa-mãe, com a intenção de completar a emulação no MAME; o relato sobre seu emulador parcial do Zezinho (ITA); a expansão do disassembler ExecTrace; a emulação do mixer de vídeo Sony DFS-500 no MAME (PR #7346); e o plano de extrair a mask ROM do Zilog Z8 do Pense Bem pelo modo de teste do chip, que avançou até a dessoldagem do chip. O driver do Pense Bem de 2017 (ATmega) foi enviado ao MAME. L. escreveu em Python um conversor para levar o código-fonte do GW-BASIC, recém-liberado pela Microsoft, de 8086 para Z80. O grupo também tratou da fonte da ROM do PC portátil Corona/Cordata, do Sega Teradrive, da máquina Canon Typestar, do scroll fino em EGA/CGA no PC, do Microsoft Comic Chat, da disassembly comentada do Metal Gear do MSX2 compartilhada por RicBit, do espelhamento do acervo do Datassette no archive.org e de eventos como MSX SP 2019, RetroSC e o curso de arqueojogos da USP. Em agosto de 2020, Felipe \"Juca\" Sanches registrou que o grupo, criado para coordenar documentação e emulação, vinha servindo mais como espaço de conversa.",
+   "conversations": [
+    {
+     "first_id": 10447,
+     "last_id": 10512,
+     "key_ids": [
+      10449,
+      10504,
+      10508
+     ],
+     "title": "Desmontagem e limpeza do Itautec I-7000-G",
+     "summary": "Felipe \"Juca\" Sanches recebeu um Itautec I-7000-G com ROM de outubro de 1985 e contou que anos antes tinha escrito no MAME um emulador incompleto, baseado em suposições, a partir dos dumps de Alexandre Tabajara. Ele documentou com fotos a desmontagem das três placas e a limpeza da placa-mãe com álcool isopropílico, e identificou chips compatíveis com os da Intel (8259, 8255, 8237), numa arquitetura que lembra um PC-XT com Z80. FTMaciel compartilhou uma pasta com material da Itautec já escaneado, que não incluía o I-7000, e informou que esperava obter os esquemas da máquina.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "FTMaciel"
+     ],
+     "tags": [
+      "Itautec I-7000",
+      "MAME",
+      "dump de ROM",
+      "esquemáticos"
+     ],
+     "resources": [
+      {
+       "ref": "https://drive.google.com/drive/mobile/folders/1ZQ3iU3NeAmI_fZT6c916Rg2KuOGhnHPF?usp=sharing",
+       "what": "Pasta com material da Itautec já escaneado"
+      }
+     ],
+     "weight": 3
+    },
+    {
+     "first_id": 11389,
+     "last_id": 11464,
+     "key_ids": [
+      11436,
+      11462,
+      11422
+     ],
+     "title": "Emulação do mixer de vídeo Sony DFS-500 no MAME",
+     "summary": "Felipe \"Juca\" Sanches contou que comprou equipamentos de vídeo profissionais da Sony (unidades da mesa de controle PVE-500, VCRs UVW e U-Matic e o switcher DFS-500) e que estava emulando esses aparelhos no MAME. Ele já tinha emulado parcialmente a PVE-500, doada anos antes, e passou ao DFS-500. Relatou a limpeza de uma placa com bateria vazada, os primeiros testes do hardware e o uso de duas CPUs NEC V20 e uma NEC V30. O emulador já gerava sinal de vídeo a partir de uma imagem estática, e o driver foi enviado ao MAME como \"non-working\" no PR #7346.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "RicBit",
+      "Leonardo Roman",
+      "pitanga"
+     ],
+     "tags": [
+      "MAME",
+      "Sony DFS-500",
+      "Sony PVE-500",
+      "equipamento de vídeo"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/mamedev/mame/pull/7346",
+       "what": "PR com o driver não funcional do Sony DFS-500 DME Video Mixer (1994)"
+      },
+      {
+       "ref": "https://youtu.be/URKQDis9XfM?t=572",
+       "what": "Vídeo que demonstra os efeitos de transição do DFS-500"
+      },
+      {
+       "ref": "https://www.montagar.com/~patj/dfs.htm",
+       "what": "Artigo sobre diagnóstico de switchers de efeitos digitais de vídeo"
+      }
+     ],
+     "weight": 3
+    },
+    {
+     "first_id": 11415,
+     "last_id": 11520,
+     "key_ids": [
+      11418,
+      11512,
+      11519
+     ],
+     "title": "Plano de dump da mask ROM do Z8 do Pense Bem",
+     "summary": "Felipe \"Juca\" Sanches encontrou num documento da Zilog o modo de teste do Z8: 7,5 V no pino /RESET durante 6 ciclos após o reset permitem executar código lido da porta P1. Ele comprou unidades de Pense Bem para os testes e compartilhou um programa já usado, a partir de uma ROM externa, para extrair a ROM interna de um Z8 num jogo de xadrez emulado no MAME. Também dessoldou o Z8 de um Pense Bem e instalou um soquete, e o aparelho continuou funcionando. Felipe apostou que o gerador pseudoaleatório do brinquedo seria um LFSR, e RicBit observou que nesse caso bastaria medir a saída e interpolar o polinômio.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L.",
+      "Leonardo Roman",
+      "RicBit",
+      "Hugo (Agaelebê)"
+     ],
+     "tags": [
+      "Pense Bem",
+      "Zilog Z8",
+      "dump de ROM",
+      "mask ROM"
+     ],
+     "resources": [
+      {
+       "ref": "http://www.bitsavers.org/components/zilog/z8/Z8_MCU_Test_Mode_Jun82.pdf",
+       "what": "Documento da Zilog sobre o modo de teste do MCU Z8"
+      },
+      {
+       "ref": "https://github.com/mamedev/mame/blob/master/src/mame/drivers/fidel_msc.cpp",
+       "what": "Driver do MAME cujo Z8 foi extraído com um programa em ROM externa"
+      }
+     ],
+     "weight": 3
+    },
+    {
+     "first_id": 11023,
+     "last_id": 11151,
+     "key_ids": [
+      11043,
+      11068,
+      11151
+     ],
+     "title": "Conversão do GW-BASIC de 8086 para Z80",
+     "summary": "L. divulgou a liberação do código-fonte do GW-BASIC sob licença MIT e começou a escrever em Python um conversor do assembly 8086 para Z80, pensando no MSX. A conversa tratou do mapeamento de registradores (AX/AH não têm equivalente direto no Z80) e das rotinas de I/O que precisariam ser escritas à mão. Depois L. publicou um post sobre a conversão.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches",
+      "Ismael Luceno",
+      "pitanga"
+     ],
+     "tags": [
+      "GW-BASIC",
+      "Z80",
+      "MSX",
+      "tradução de código"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/microsoft/gw-basic",
+       "what": "Código-fonte original do GW-BASIC (1983) liberado pela Microsoft"
+      },
+      {
+       "ref": "https://github.com/lpereira/GW-BASIC/blob/master/conv.py",
+       "what": "Conversor de x86 para Z80 escrito por L."
+      },
+      {
+       "ref": "https://tia.mat.br/posts/2020/06/21/converting-gwbasic-to-z80.html",
+       "what": "Post sobre a conversão do GW-BASIC para Z80"
+      }
+     ],
+     "weight": 3
+    },
+    {
+     "first_id": 10390,
+     "last_id": 10428,
+     "key_ids": [
+      10406,
+      10420,
+      10426
+     ],
+     "title": "Selos dos Correios e emulação do Zezinho (ITA)",
+     "summary": "Felipe \"Juca\" Sanches mostrou os selos dos Correios sobre a história da computação brasileira. A partir deles explicou o que foi o Zezinho, do ITA: dois PDFs do início dos anos 60 sobre a máquina estão no repositório do Patinho Feio, e em novembro de 2017 ele começou a emular a máquina no MAME. Disse que a emulação é parcial, que os documentos são difíceis de ler por causa da má qualidade do scan e sugeriu escanear de novo os originais, que estariam na biblioteca do ITA.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Eduardo Loos",
+      "L.",
+      "Fractal"
+     ],
+     "tags": [
+      "Zezinho",
+      "ITA",
+      "MAME",
+      "Patinho Feio"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/ArqueologiaDigital/PatinhoFeio/tree/master/Zezinho%20-%20ITA",
+       "what": "Documentos técnicos do Zezinho no repositório do Patinho Feio"
+      },
+      {
+       "ref": "https://github.com/felipesanches/mame/blob/zezinho/src/devices/cpu/zezinho/zezinho.cpp",
+       "what": "Emulação parcial da CPU do Zezinho num branch do MAME"
+      },
+      {
+       "ref": "https://github.com/felipesanches/mame/blob/zezinho/src/mame/drivers/zezinho.cpp",
+       "what": "Driver do Zezinho no branch do MAME"
+      },
+      {
+       "ref": "https://pt.wikipedia.org/wiki/Zezinho",
+       "what": "Artigo da Wikipedia sobre o Zezinho"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 11524,
+     "last_id": 11529,
+     "key_ids": [
+      11524,
+      11527,
+      11528
+     ],
+     "title": "Driver MAME do Pense Bem de 2017 (ATmega)",
+     "summary": "Felipe \"Juca\" Sanches enviou ao MAME (PR #7407) o driver do relançamento do Pense Bem de 2017, que usa um ATmega. O driver estava quase completo, mas o som tinha ruído por causa da implementação ineficiente do core AVR8. Ele esclareceu que o modelo original, com o Zilog Z8, continuava sem dump.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "pitanga"
+     ],
+     "tags": [
+      "Pense Bem",
+      "MAME",
+      "AVR8"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/mamedev/mame/pull/7407",
+       "what": "PR com o driver do Pense Bem 2017"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 10540,
+     "last_id": 10706,
+     "key_ids": [
+      10552,
+      10693,
+      10700
+     ],
+     "title": "Fonte da ROM do PC portátil Corona/Cordata",
+     "summary": "Ricardo Bánffy procurou as ROMs do PC portátil Corona/Cordata (coppc400.zip) para estudar sua fonte. Felipe \"Juca\" Sanches localizou o arquivo pelo histórico de versões do MAME e o compartilhou. Depois Ricardo compartilhou uma thread de Foone sobre o dump do gerador de caracteres; segundo a leitura de Felipe da descrição de Lord Nightmare, a fonte tem resolução vertical dupla e dados entrelaçados entre duas ROMs.",
+     "participants": [
+      "Ricardo Bánffy",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Corona PPC-400",
+      "fontes bitmap",
+      "MAME",
+      "dump de ROM"
+     ],
+     "resources": [
+      {
+       "ref": "coppc400.zip",
+       "what": "ROMs do PC portátil Corona/Cordata"
+      },
+      {
+       "ref": "https://archive.org/download/coronadatasystemsppc400firmwares/",
+       "what": "Dumps de firmware do Corona PPC-400 no Internet Archive"
+      },
+      {
+       "ref": "https://github.com/mamedev/mame/blob/8de1502e81c325166bbb4a6ee819ce939772f94b/src/mame/drivers/pc.cpp#L1711",
+       "what": "Entrada da máquina no driver pc.cpp do MAME"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 10801,
+     "last_id": 10831,
+     "key_ids": [
+      10816,
+      10822,
+      10826
+     ],
+     "title": "Apoio ao Datassette e espelhamento no archive.org",
+     "summary": "Eduardo Loos divulgou um pedido de apoio ao Datassette. Leonardo Roman explicou que parte do acervo já está no archive.org, mas a maior parte não, e que um torrent é publicado a cada seis meses. Ricardo Bánffy se ofereceu para baixar o torrent e subir o material. Felipe \"Juca\" Sanches explicou como pediu uma coleção temática no archive.org e usou a API em Python para enviar cerca de 4 mil itens de demoscene MS-DOS extraídos do pouet.net.",
+     "participants": [
+      "Eduardo Loos",
+      "Ricardo Bánffy",
+      "Leonardo Roman",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Datassette",
+      "Internet Archive",
+      "demoscene"
+     ],
+     "resources": [
+      {
+       "ref": "https://archive.org/details/msdos_demoscene",
+       "what": "Coleção de demoscene MS-DOS no archive.org"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 10609,
+     "last_id": 10670,
+     "key_ids": [
+      10620,
+      10627,
+      10660
+     ],
+     "title": "Sega Teradrive com overclock improvisado",
+     "summary": "FTMaciel mostrou a placa de um Sega Teradrive em que o dono anterior havia trocado a CPU e o cristal, rompendo várias trilhas. O grupo comentou placas de upgrade 486 para 286, uma thread arquivada sobre o upgrade para 486DX, a comparação com o Amstrad Mega PC e o uso pretendido do Teradrive como ambiente de desenvolvimento para o Mega Drive.",
+     "participants": [
+      "FTMaciel",
+      "Erin Pinheiro 🐿",
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "Sega Teradrive",
+      "Mega Drive",
+      "restauração"
+     ],
+     "resources": [
+      {
+       "ref": "http://www.cpushack.com/2014/08/30/improve-technologies-make-it-486-286-upgrade/",
+       "what": "Placa de upgrade Make-it 486 para 286"
+      },
+      {
+       "ref": "https://assemblergames.org/viewtopic.php?f=81&t=42083&p=629803",
+       "what": "Thread arquivada sobre o upgrade do Teradrive para 486DX"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 10727,
+     "last_id": 10899,
+     "key_ids": [
+      10730,
+      10845,
+      10895
+     ],
+     "title": "Máquina de escrever Canon Typestar 10-II",
+     "summary": "Erin Pinheiro 🐿 consertou uma Canon Typestar 10-II, de impressão térmica, e mostrou o interior; Felipe \"Juca\" Sanches pediu um dump da ROM. Depois de L. sugerir controlar a máquina pela matriz do teclado, Erin disse que pretende usar um Arduino Leonardo como interface serial para a matriz e assim usar a máquina como tty. Mais tarde informou que a ROM visível parece ser só o dicionário do corretor ortográfico.",
+     "participants": [
+      "Erin Pinheiro 🐿",
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "Canon Typestar",
+      "dump de ROM",
+      "engenharia reversa"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 11193,
+     "last_id": 11204,
+     "key_ids": [
+      11195,
+      11200,
+      11201
+     ],
+     "title": "ExecTrace: disassembler com suporte a 286",
+     "summary": "Felipe \"Juca\" Sanches contou que estava escrevendo em Python um disassembler de 286, consultando o do MAME, como extensão do ExecTrace. A ferramenta já suportava o 8048 do Odyssey², o Z80 (com funções para a BIOS do MSX) e passaria a suportar x86, para retomar a engenharia reversa do Pinball Fantasies. L. observou que as instruções do 8086 se agrupam de 8 em 8 quando vistas em octal.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "ExecTrace",
+      "disassembler",
+      "x86",
+      "Pinball Fantasies"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/felipesanches/ExecTrace",
+       "what": "ExecTrace, disassembler genérico com análise de caminhos de código"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 11277,
+     "last_id": 11368,
+     "key_ids": [
+      11297,
+      11299,
+      11364
+     ],
+     "title": "Scroll fino em EGA/CGA e Dangerous Dave",
+     "summary": "Lord Spy pediu referências sobre a implementação do scroll fino no PC por Carmack em Dangerous Dave in Copyright Infringement. Consultando um manual, o código do MAME e o datasheet, RicBit concluiu que o CGA permite emular scroll fino por set scroll e que o MAME não implementa esse recurso no CGA, ressalvando que só o hardware confirmaria. Mais tarde Lord Spy relatou que Carmack trabalhou por tentativa e erro, sem documentação das placas, e aparentemente sem usar os registradores de scroll.",
+     "participants": [
+      "Lord Spy",
+      "RicBit",
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "EGA",
+      "CGA",
+      "Dangerous Dave",
+      "scroll fino"
+     ],
+     "resources": [
+      {
+       "ref": "http://www.techhelpmanual.com/90-video_initialization_table.html",
+       "what": "Tabela de inicialização de vídeo do PC"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 11319,
+     "last_id": 11361,
+     "key_ids": [
+      11340,
+      11341,
+      11360
+     ],
+     "title": "Microsoft Comic Chat e seu protocolo",
+     "summary": "Felipe \"Juca\" Sanches perguntou se seria possível reativar o Microsoft Comic Chat original depois do fim dos servidores da Microsoft. L. e Erin Pinheiro 🐿 explicaram que se trata de um cliente IRC comum, que codifica as informações dos quadrinhos num prefixo em texto nas mensagens. L. também indicou um cliente web com servidor node.js baseado no Comic Chat.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L.",
+      "Erin Pinheiro 🐿",
+      "Ismael Luceno",
+      "Leonardo Roman",
+      "Eduardo Loos"
+     ],
+     "tags": [
+      "Microsoft Comic Chat",
+      "IRC",
+      "protocolos"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.kurlander.net/DJ/Projects/ComicChat/resources.html",
+       "what": "Recursos sobre o Comic Chat no site de David Kurlander"
+      },
+      {
+       "ref": "https://github.com/gyng/comicchat",
+       "what": "Cliente web e servidor node.js baseados no Microsoft Comic Chat"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 11494,
+     "last_id": 11505,
+     "key_ids": [
+      11500,
+      11501,
+      11502
+     ],
+     "title": "Disassembly comentada do Metal Gear (MSX2)",
+     "summary": "RicBit compartilhou a disassembly totalmente comentada do Metal Gear do MSX2, que começou a otimizar. Ele explicou que o jogo pressupõe 64 KB de VRAM e descomprime dados durante o jogo, e que os 64 KB a mais presentes na maioria dos MSX2 permitiriam guardar esses dados em cache e reduzir o tempo entre telas.",
+     "participants": [
+      "RicBit",
+      "L.",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "MSX",
+      "Metal Gear",
+      "disassembly",
+      "Konami"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/ricbit/MetalGear",
+       "what": "Disassembly comentada do Metal Gear (MSX2, Konami, 1987)"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 11455,
+     "last_id": 11461,
+     "key_ids": [
+      11455,
+      11460
+     ],
+     "title": "Emulador de floppy de firmware livre e o firmware do Technics KN5000",
+     "summary": "Felipe \"Juca\" Sanches compartilhou uma alternativa de código aberto ao Gotek USB floppy. Ele explicou que pretende usá-la num ataque \"man-in-the-middle\" para entender o protocolo de atualização de firmware do teclado Technics SX-KN5000, cujos disquetes de update usam um formato que ele desconhece.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "Gotek",
+      "Technics KN5000",
+      "firmware",
+      "emulação de floppy"
+     ],
+     "resources": [
+      {
+       "ref": "http://oldplayers.com.br/wp/2020/10/11/uma-alternativa-de-codigo-aberto-ao-gotek-usb-floppy/",
+       "what": "Artigo sobre uma alternativa de código aberto ao Gotek"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 11231,
+     "last_id": 11245,
+     "key_ids": [
+      11233,
+      11235
+     ],
+     "title": "Propósito do grupo e documentos do Patinho Feio a escanear",
+     "summary": "Depois de uma pergunta sobre netplay, Felipe \"Juca\" Sanches lembrou que o grupo foi criado para coordenar a documentação e a emulação de computadores antigos, mas que na prática virou um espaço de conversa sem projetos ativos. Ele mencionou o trabalho de Ricardo Bánffy com fontes bitmap de terminais seriais antigos e documentos do Patinho Feio ainda não escaneados, que encaixotou por causa de uma mudança.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Deleted Account",
+      "L.",
+      "pitanga"
+     ],
+     "tags": [
+      "Patinho Feio",
+      "organização do grupo"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 11254,
+     "last_id": 11318,
+     "key_ids": [
+      11255,
+      11262,
+      11308
+     ],
+     "title": "Curso \"Arqueologia dos Jogos na Era do Atari\" (USP)",
+     "summary": "Felipe \"Juca\" Sanches repassou a divulgação de um curso online e gratuito sobre archaeogaming tendo o Atari 2600 como objeto, organizado pelo museu de arqueologia da USP. Felipe e Lord Spy discutiram o conteúdo e o jargão da descrição. Depois ambos relataram que tiveram a inscrição negada, e Felipe estranhou a falta de vagas numa atividade online.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Lord Spy",
+      "FTMaciel",
+      "pitanga"
+     ],
+     "tags": [
+      "Atari 2600",
+      "archaeogaming",
+      "USP"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 10911,
+     "last_id": 10947,
+     "key_ids": [
+      10913,
+      10945
+     ],
+     "title": "Computador homebrew com Motorola MC6800",
+     "summary": "Emerson Moura perguntou se computadores homebrew feitos com tecnologia antiga cabiam no tema do grupo, e L. e Felipe \"Juca\" Sanches responderam que sim. Emerson mostrou depois o andamento de seu projeto com o processador Motorola MC6800, e Felipe sugeriu documentar o progresso no fórum Fiozera.",
+     "participants": [
+      "Emerson Moura",
+      "L.",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Motorola 6800",
+      "computador homebrew"
+     ],
+     "resources": [
+      {
+       "ref": "https://forum.fiozera.com.br/",
+       "what": "Fórum Fiozera"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 10337,
+     "last_id": 10362,
+     "key_ids": [
+      10338,
+      10357,
+      10358
+     ],
+     "title": "Conversa com Fabien Sanglard e o projeto de placa do Another World",
+     "summary": "Felipe \"Juca\" Sanches contou que fez uma chamada de vídeo com Fabien Sanglard sobre a VM do jogo Another World. Perguntado por Ismael Luceno sobre a parte de vídeo do projeto de placa para o jogo, disse que Fabien o incentivou a retomá-lo, que ainda não tinha avanços e que tinha uma nova placa FPGA para experimentar com saída VGA.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L.",
+      "Ismael Luceno"
+     ],
+     "tags": [
+      "Another World",
+      "Fabien Sanglard",
+      "FPGA"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 10519,
+     "last_id": 10784,
+     "key_ids": [
+      10519,
+      10708,
+      10784
+     ],
+     "title": "Vídeos do projeto Another World VM",
+     "summary": "Felipe \"Juca\" Sanches compartilhou os episódios 10 (\"JAMMA Arcade\") e 11 da série de vídeos \"Another World VM\". Quando Hugo (Agaelebê) perguntou pelo projeto em FPGA, respondeu que estava avançando devagar.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Hugo (Agaelebê)"
+     ],
+     "tags": [
+      "Another World",
+      "JAMMA",
+      "FPGA"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.youtube.com/watch?v=hFxIBoNP-_s",
+       "what": "Another World VM - JAMMA Arcade - EP. 10"
+      },
+      {
+       "ref": "https://www.youtube.com/watch?v=iWdZzkVIbSI",
+       "what": "Another World VM Update - EP. 11"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 10883,
+     "last_id": 10888,
+     "key_ids": [
+      10884,
+      10885
+     ],
+     "title": "Restauração do verbete de João José Neto na Wikipedia",
+     "summary": "Felipe \"Juca\" Sanches informou que o verbete do professor João José Neto na Wikipedia em português, apagado em outubro de 2019, foi restaurado por ele. Ele pediu ajuda do grupo para melhorar o texto.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "Wikipedia",
+      "João José Neto"
+     ],
+     "resources": [
+      {
+       "ref": "https://pt.wikipedia.org/wiki/Jo%C3%A3o_Jos%C3%A9_Neto",
+       "what": "Verbete de João José Neto na Wikipedia"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 10384,
+     "last_id": 10715,
+     "key_ids": [
+      10384,
+      10389,
+      10431
+     ],
+     "title": "Série de artigos de Fabien Sanglard sobre os polígonos do Another World",
+     "summary": "L. compartilhou os artigos de Fabien Sanglard sobre a renderização de polígonos do Another World nas versões original, PC DOS, SNES e Jaguar.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Another World",
+      "Fabien Sanglard"
+     ],
+     "resources": [
+      {
+       "ref": "http://fabiensanglard.net/another_world_polygons/index.html",
+       "what": "Artigo sobre os polígonos do Another World"
+      },
+      {
+       "ref": "http://fabiensanglard.net/another_world_polygons_PC_DOS/index.html",
+       "what": "Versão PC DOS"
+      },
+      {
+       "ref": "http://fabiensanglard.net/another_world_polygons_SNES/index.html",
+       "what": "Versão SNES"
+      },
+      {
+       "ref": "http://fabiensanglard.net/another_world_polygons_Jaguar/index.html",
+       "what": "Versão Jaguar"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10709,
+     "last_id": 11452,
+     "key_ids": [
+      10892,
+      11205,
+      11451
+     ],
+     "title": "Decapagem e leitura de mask ROMs por imagem (John McMaster, zorrom)",
+     "summary": "FTMaciel indicou a Felipe \"Juca\" Sanches um vídeo sobre decapagem de chips sem produtos químicos e depois uma palestra de John McMaster sobre captura de mask ROMs. L. indicou o zorrom, utilitários para decodificar mask ROMs que, segundo ele, processam a saída de ferramentas que tratam fotos. Felipe lembrou a ideia de usar ácido no Z8 do Pense Bem, e L. disse que um dia mandaria um Z8 para alguém com equipamento para isso. L. também mencionou que McMaster vinha extraindo por imagens a ROM de boot do Game Boy.",
+     "participants": [
+      "FTMaciel",
+      "L.",
+      "Felipe \"Juca\" Sanches",
+      "Aylons Hazzud"
+     ],
+     "tags": [
+      "mask ROM",
+      "decapagem",
+      "Pense Bem"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.youtube.com/watch?v=ZQeHHYJYWXo",
+       "what": "Chips a la Antoine: an IC chip de-capping recipe without chemicals"
+      },
+      {
+       "ref": "https://hardwear.io/virtual-con-2020/speakers/capturing-mask-roms.php",
+       "what": "Palestra Capturing Mask ROMs (John McMaster)"
+      },
+      {
+       "ref": "https://github.com/SiliconAnalysis/zorrom/",
+       "what": "zorrom, utilitários para decodificar mask ROM"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10301,
+     "last_id": 10554,
+     "key_ids": [
+      10346,
+      10523,
+      10521
+     ],
+     "title": "Livro Arcade Game Typography",
+     "summary": "Alexandre Villares compartilhou a notícia do livro sobre tipografia de jogos arcade, com tiragem de mil cópias. Felipe \"Juca\" Sanches, que conhece o autor de conferências de tipografia, mostrou o exemplar quando chegou, e Lord Spy comprou o seu.",
+     "participants": [
+      "Alexandre Villares",
+      "Ismael Luceno",
+      "Felipe \"Juca\" Sanches",
+      "Lord Spy"
+     ],
+     "tags": [
+      "tipografia",
+      "arcade"
+     ],
+     "resources": [
+      {
+       "ref": "https://designyoutrust.com/2019/10/this-book-is-dedicated-to-arcade-game-typography-and-only-1000-copies-available/",
+       "what": "Notícia sobre o livro Arcade Game Typography"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10298,
+     "last_id": 10364,
+     "key_ids": [
+      10299,
+      10327,
+      10364
+     ],
+     "title": "Evento MSX SP 2019",
+     "summary": "Fractal divulgou o MSX SP 2019, realizado em 7 e 8 de dezembro, com inscrições, rifa, expositores e a exibição do curta \"Obsoleto\".",
+     "participants": [
+      "Fractal",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "MSX",
+      "MSX SP",
+      "eventos"
+     ],
+     "resources": [
+      {
+       "ref": "http://www.msx.sampa.br/2019/",
+       "what": "Programação do MSX SP 2019"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10303,
+     "last_id": 10531,
+     "key_ids": [
+      10303,
+      10437,
+      10446
+     ],
+     "title": "Eventos RetroSC e Encontro Canal3",
+     "summary": "Eduardo Loos divulgou o canal do RetroSC no YouTube, o 42º Encontro Canal3 SP na PUC-SP e o 6º encontro RetroSC em Balneário Camboriú, a partir do qual os eventos passaram a adotar a doação de alimentos como ingresso.",
+     "participants": [
+      "Eduardo Loos"
+     ],
+     "tags": [
+      "RetroSC",
+      "Canal3",
+      "eventos"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.youtube.com/channel/UCgRVsz6lrbA4x7Y9Y4IYLtg/videos",
+       "what": "Canal do RetroSC no YouTube"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11281,
+     "last_id": 11517,
+     "key_ids": [
+      11281,
+      11511
+     ],
+     "title": "RetroSC 7 em edição online",
+     "summary": "Eduardo Loos divulgou o teaser e a programação do RetroSC 7, feito em lives nos canais Warpzone, Oldplayers e Clube MSX.",
+     "participants": [
+      "Eduardo Loos"
+     ],
+     "tags": [
+      "RetroSC",
+      "eventos"
+     ],
+     "resources": [
+      {
+       "ref": "https://youtu.be/DQ6sjz_PbRA",
+       "what": "Teaser do 7º RetroSC Online"
+      },
+      {
+       "ref": "https://www.youtube.com/watch?v=YkiCDogPYeo&feature=youtu.be",
+       "what": "Live Oldplayers e RetroSC 7"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11530,
+     "last_id": 11531,
+     "key_ids": [
+      11531
+     ],
+     "title": "Campanha de financiamento do Datassette no Apoia.se",
+     "summary": "Eduardo Loos divulgou a campanha no Apoia.se para custear o Datassette, que há 17 anos mantém um acervo de revistas, livros, software e informações técnicas.",
+     "participants": [
+      "Eduardo Loos"
+     ],
+     "tags": [
+      "Datassette",
+      "financiamento"
+     ],
+     "resources": [
+      {
+       "ref": "apoia.se/datassette",
+       "what": "Página de apoio ao Datassette"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10439,
+     "last_id": 10444,
+     "key_ids": [
+      10440,
+      10441,
+      10443
+     ],
+     "title": "Preservação de jogos em Flash e direitos autorais",
+     "summary": "Felipe \"Juca\" Sanches criticou o fato de o projeto que reuniu 36 mil jogos e animações em Flash aceitar remover itens a pedido de detentores de direitos. Leonardo Roman perguntou se o MAME suporta Flash, e L. comentou que existem engines de Flash livres, mas que o MAME provavelmente não aceitaria uma por não ser a emulação de uma máquina real.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Leonardo Roman",
+      "L."
+     ],
+     "tags": [
+      "Flash",
+      "direitos autorais",
+      "preservação"
+     ],
+     "resources": [
+      {
+       "ref": "https://jovemnerd.com.br/nerdbunker/projeto-compila-36-mil-jogos-e-animacoes-em-flash-antes-do-fim-do-suporte-ao-formato/",
+       "what": "Notícia sobre a compilação de jogos em Flash"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10331,
+     "last_id": 10336,
+     "key_ids": [
+      10331,
+      10333
+     ],
+     "title": "UltraHLE e a emulação de Nintendo 64",
+     "summary": "Felipe \"Juca\" Sanches compartilhou um vídeo do MVG sobre o UltraHLE. L. lembrou que o código do emulador vazou e continha trechos sob GPL.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L.",
+      "pitanga"
+     ],
+     "tags": [
+      "Nintendo 64",
+      "UltraHLE"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.youtube.com/watch?v=2NF5sU_n0uk",
+       "what": "How UltraHLE changed Nintendo 64 emulation forever | MVG"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10321,
+     "last_id": 10322,
+     "key_ids": [
+      10321
+     ],
+     "title": "Guia para rodar BeOS 5.0 no PCem",
+     "summary": "Erin Pinheiro 🐿 compartilhou um guia que escreveu com as configurações necessárias para rodar o BeOS 5.0 Professional no emulador PCem.",
+     "participants": [
+      "Erin Pinheiro 🐿"
+     ],
+     "tags": [
+      "BeOS",
+      "PCem"
+     ],
+     "resources": [
+      {
+       "ref": "https://hackaday.io/page/6640-getting-beos-50-professional-to-work-on-pcem",
+       "what": "Guia para rodar o BeOS 5.0 no PCem"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10328,
+     "last_id": 10329,
+     "key_ids": [
+      10328
+     ],
+     "title": "Devroom de retrocomputação na FOSDEM",
+     "summary": "L. avisou que a FOSDEM teria uma devroom de retrocomputação que também aceita temas de emulação.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "FOSDEM",
+      "eventos"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 10365,
+     "last_id": 10366,
+     "key_ids": [
+      10365,
+      10366
+     ],
+     "title": "Reimplementação do Space Invaders em C",
+     "summary": "L. compartilhou um projeto que reimplementa o Space Invaders em C usando os assets das ROMs originais.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "Space Invaders",
+      "reimplementação"
+     ],
+     "resources": [
+      {
+       "ref": "http://blog.loadzero.com/blog/si78c/",
+       "what": "Space Invaders in C"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10370,
+     "last_id": 10373,
+     "key_ids": [
+      10370,
+      10371
+     ],
+     "title": "IDE 8bitworkshop",
+     "summary": "FTMaciel compartilhou a IDE web 8bitworkshop. Felipe \"Juca\" Sanches contou que já a usou e que a mencionou no vídeo mais recente do Happy Hacking Video Blog, ainda a ser publicado.",
+     "participants": [
+      "FTMaciel",
+      "Felipe \"Juca\" Sanches",
+      "Leandro Lameiro"
+     ],
+     "tags": [
+      "8bitworkshop",
+      "desenvolvimento retrô"
+     ],
+     "resources": [
+      {
+       "ref": "https://8bitworkshop.com/",
+       "what": "IDE 8bitworkshop"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10435,
+     "last_id": 10557,
+     "key_ids": [
+      10435,
+      10557
+     ],
+     "title": "Descompilações de Super Mario 64 e GoldenEye 007",
+     "summary": "L. compartilhou os projetos de descompilação de Super Mario 64 e GoldenEye 007 para Nintendo 64.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "Nintendo 64",
+      "descompilação"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/n64decomp/sm64",
+       "what": "Descompilação do Super Mario 64"
+      },
+      {
+       "ref": "https://github.com/n64decomp/007",
+       "what": "Descompilação do GoldenEye 007"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10558,
+     "last_id": 10561,
+     "key_ids": [
+      10559
+     ],
+     "title": "Código-fonte do Apollo 11 AGC e correções",
+     "summary": "Hugo (Agaelebê) compartilhou o código-fonte do computador de guiagem da Apollo 11, e Felipe \"Juca\" Sanches citou um PR seu que corrige um erro de digitação da transcrição.",
+     "participants": [
+      "Hugo (Agaelebê)",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Apollo Guidance Computer"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/chrislgarry/Apollo-11",
+       "what": "Código-fonte do Apollo 11 AGC"
+      },
+      {
+       "ref": "https://github.com/chrislgarry/Apollo-11/pull/76",
+       "what": "PR de correção de erro de digitação"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10567,
+     "last_id": 10570,
+     "key_ids": [
+      10567,
+      10570
+     ],
+     "title": "Microcomputador da USP e esquemáticos do Caninos Loucos",
+     "summary": "Felipe \"Juca\" Sanches compartilhou uma reportagem sobre o microcomputador do tamanho de uma moeda desenvolvido na USP e indicou uma issue que pede a publicação dos esquemáticos do hardware.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Leonardo Roman"
+     ],
+     "tags": [
+      "Caninos Loucos",
+      "USP"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/caninos-loucos/CaninosSDK/issues/1",
+       "what": "Issue que pede os esquemáticos do hardware"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10575,
+     "last_id": 10606,
+     "key_ids": [
+      10576,
+      10582,
+      10600
+     ],
+     "title": "Doação de um 486 e palestra na LibrePlanet",
+     "summary": "pitanga ia se desfazer do seu primeiro computador, um 486, e Felipe \"Juca\" Sanches pediu o conjunto completo, com monitor CRT e disquetes. Na conversa, Felipe mencionou que daria uma palestra na LibrePlanet 2020.",
+     "participants": [
+      "pitanga",
+      "Felipe \"Juca\" Sanches",
+      "L.",
+      "Ismael Luceno"
+     ],
+     "tags": [
+      "PC 486",
+      "doação de equipamento"
+     ],
+     "resources": [
+      {
+       "ref": "https://libreplanet.org/2020/speakers/#2778",
+       "what": "Página de palestrante da LibrePlanet 2020"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10710,
+     "last_id": 10716,
+     "key_ids": [
+      10710,
+      10716
+     ],
+     "title": "Símbolos de computadores antigos no Unicode 13 e 14",
+     "summary": "Ricardo Bánffy informou que o Unicode 13 incluiu símbolos de videotexto, ATASCII e PETSCII e que as propostas para o Unicode 14 incluem caracteres usados no Itautec I-7000.",
+     "participants": [
+      "Ricardo Bánffy",
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "Unicode",
+      "Itautec I-7000"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 10737,
+     "last_id": 10759,
+     "key_ids": [
+      10737,
+      10759
+     ],
+     "title": "PiDP-11 em funcionamento",
+     "summary": "L. mostrou seu PiDP-11, que usa um Raspberry Pi, funcionando pela primeira vez.",
+     "participants": [
+      "L.",
+      "Erin Pinheiro 🐿",
+      "Deleted Account"
+     ],
+     "tags": [
+      "PDP-11",
+      "PiDP-11",
+      "réplica"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 10750,
+     "last_id": 10785,
+     "key_ids": [
+      10750,
+      10785
+     ],
+     "title": "Demo \"Memories\" de 256 bytes",
+     "summary": "L. compartilhou a intro \"Memories\" para MS-DOS, de 256 bytes, e depois uma wiki que explica seu funcionamento.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches",
+      "Erin Pinheiro 🐿"
+     ],
+     "tags": [
+      "demoscene",
+      "MS-DOS",
+      "sizecoding"
+     ],
+     "resources": [
+      {
+       "ref": "https://youtu.be/Imquk_3oFf4",
+       "what": "\"Memories\" - intro MS-DOS de 256 bytes"
+      },
+      {
+       "ref": "http://www.sizecoding.org/wiki/Memories",
+       "what": "Explicação do código da intro"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10760,
+     "last_id": 10767,
+     "key_ids": [
+      10760
+     ],
+     "title": "Vectrex com osciloscópio (TubeTime)",
+     "summary": "L. compartilhou o projeto de TubeTime que reproduz um Vectrex usando um osciloscópio como tela, já rodando um jogo.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Vectrex",
+      "osciloscópio"
+     ],
+     "resources": [
+      {
+       "ref": "https://twitter.com/TubeTimeUS/status/1244763264203902978",
+       "what": "Projeto de Vectrex com osciloscópio"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10768,
+     "last_id": 10779,
+     "key_ids": [
+      10770,
+      10774
+     ],
+     "title": "Placas FPGA OrangeCrab e ULX3S",
+     "summary": "L. e Felipe \"Juca\" Sanches compararam as placas FPGA OrangeCrab e ULX3S, e Felipe destacou a saída HDMI da ULX3S. L. comprou as duas.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "FPGA",
+      "ULX3S"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.crowdsupply.com/radiona/ulx3s",
+       "what": "Crowdfunding da ULX3S"
+      },
+      {
+       "ref": "https://groupgets.com/campaigns/710-orangecrab",
+       "what": "Campanha da OrangeCrab"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10781,
+     "last_id": 10782,
+     "key_ids": [
+      10781,
+      10782
+     ],
+     "title": "Proteção do Sega System 16",
+     "summary": "Hugo (Agaelebê) compartilhou os dois artigos da série \"Deconstructing Sega's System 16 Security\".",
+     "participants": [
+      "Hugo (Agaelebê)"
+     ],
+     "tags": [
+      "Sega System 16",
+      "arcade"
+     ],
+     "resources": [
+      {
+       "ref": "https://arcadehacker.blogspot.com/2019/10/deconstructing-sega-system16-security-part1.html",
+       "what": "Parte 1"
+      },
+      {
+       "ref": "https://arcadehacker.blogspot.com/2020/04/deconstructing-segas-system-16-security-part2.html",
+       "what": "Parte 2"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10803,
+     "last_id": 10814,
+     "key_ids": [
+      10803,
+      10811
+     ],
+     "title": "Montagem de um projeto inspirado no Pense Bem",
+     "summary": "L. mostrou componentes de um projeto que Felipe \"Juca\" Sanches identificou como um Pense Bem, com display de matriz de LED e um teclado de 32 teclas lido por apenas 2 pinos.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Pense Bem"
+     ],
+     "resources": [
+      {
+       "ref": "keypad2.png",
+       "what": "Esquema do teclado de 32 teclas com 2 pinos"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10861,
+     "last_id": 11315,
+     "key_ids": [
+      10905,
+      11097,
+      11314
+     ],
+     "title": "Livro de Mechner em capa dura",
+     "summary": "L. mostrou um livro em capa dura lançado no fim de abril de 2020, que Felipe \"Juca\" Sanches não conseguiu comprar inicialmente por não haver envio para o Brasil. Lord Spy comentou que tem esse livro e o diário do Karateka em formato Kindle. No início de setembro, Felipe contou que tinha comprado o livro, que chegara na semana anterior, e o recomendou.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches",
+      "Ismael Luceno",
+      "Lord Spy"
+     ],
+     "tags": [
+      "Jordan Mechner",
+      "livros"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 10876,
+     "last_id": 10882,
+     "key_ids": [
+      10876
+     ],
+     "title": "EmuOS: emuladores no navegador",
+     "summary": "Foi compartilhado o EmuOS, um simulador de Windows ME no navegador com vários emuladores e jogos embutidos.",
+     "participants": [
+      "Deleted Account",
+      "Eduardo Loos"
+     ],
+     "tags": [
+      "emulação no navegador"
+     ],
+     "resources": [
+      {
+       "ref": "https://emupedia.net/beta/emuos/",
+       "what": "EmuOS"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10915,
+     "last_id": 11102,
+     "key_ids": [
+      10915,
+      10973,
+      11101
+     ],
+     "title": "Quadro decorativo com disquetes coloridos",
+     "summary": "L. compartilhou um quadro feito com disquetes coloridos e montou o seu. Felipe \"Juca\" Sanches sugeriu gravar nos disquetes uma mensagem com redundância para alguém que tente lê-los no futuro.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches",
+      "Leonardo Roman",
+      "Lord Spy",
+      "Eduardo Loos"
+     ],
+     "tags": [
+      "disquetes"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 10948,
+     "last_id": 10955,
+     "key_ids": [
+      10951,
+      10954
+     ],
+     "title": "Restauração de notebooks Toshiba",
+     "summary": "Erin Pinheiro 🐿 relatou o diagnóstico da tela de um Toshiba Satellite Pro 420CDT, possivelmente danificada pela falha do inversor. FTMaciel contou que testaria galvanoplastia com níquel para tratar a ferrugem de um Toshiba T4500.",
+     "participants": [
+      "Erin Pinheiro 🐿",
+      "FTMaciel"
+     ],
+     "tags": [
+      "Toshiba",
+      "restauração"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 10956,
+     "last_id": 10963,
+     "key_ids": [
+      10956
+     ],
+     "title": "CPU de 8 bits com lógica 74LS",
+     "summary": "L. compartilhou o projeto de uma CPU de 8 bits construída com lógica 74LS, com esquemas e código.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "CPU discreta",
+      "computador homebrew"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/vascofazza/8bit-cpu",
+       "what": "Esquemas e código da CPU MK1 de 8 bits"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10964,
+     "last_id": 10966,
+     "key_ids": [
+      10966
+     ],
+     "title": "História do Zork e da Infocom",
+     "summary": "Felipe \"Juca\" Sanches encaminhou mensagens com um texto do MIT sobre a história do Zork e da Infocom.",
+     "participants": [
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Infocom",
+      "Zork"
+     ],
+     "resources": [
+      {
+       "ref": "http://web.mit.edu/6.933/www/Fall2000/infocom/",
+       "what": "Texto sobre a história da Infocom"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10967,
+     "last_id": 10968,
+     "key_ids": [
+      10968
+     ],
+     "title": "DOjS: programação criativa no MS-DOS",
+     "summary": "Alexandre Villares compartilhou o DOjS, uma plataforma de programação criativa em JavaScript para MS-DOS.",
+     "participants": [
+      "Alexandre Villares"
+     ],
+     "tags": [
+      "MS-DOS",
+      "programação criativa"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/SuperIlu/DOjS",
+       "what": "DOjS"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11016,
+     "last_id": 11021,
+     "key_ids": [
+      11017,
+      11021
+     ],
+     "title": "Peróxido de hidrogênio para retrobright",
+     "summary": "tarh̭untaš perguntou onde comprar água oxigenada de 40 volumes para retrobright. FTMaciel indicou peróxido de hidrogênio e recomendou equipamento de proteção.",
+     "participants": [
+      "tarh̭untaš",
+      "FTMaciel"
+     ],
+     "tags": [
+      "retrobright",
+      "restauração"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 11100,
+     "last_id": 11100,
+     "key_ids": [
+      11100
+     ],
+     "title": "Convite para a Flashparty argentina",
+     "summary": "Felipe \"Juca\" Sanches repassou o convite para participar da demoparty argentina Flashparty, prevista para julho de 2020.",
+     "participants": [
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "demoscene",
+      "eventos"
+     ],
+     "resources": [
+      {
+       "ref": "http://flashparty.dx.am/index.php?lang=en",
+       "what": "Site da Flashparty"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11103,
+     "last_id": 11114,
+     "key_ids": [
+      11104,
+      11114
+     ],
+     "title": "Terminal portátil Motorola MDT9100T",
+     "summary": "Perguntado por Leonardo Roman, L. identificou seu aparelho como um Motorola MDT9100T, um 386 portátil usado como terminal serial. FTMaciel comentou o uso desses terminais em viaturas policiais nos EUA e disse que a primeira versão da criptografia era fraca demais.",
+     "participants": [
+      "Leonardo Roman",
+      "L.",
+      "FTMaciel"
+     ],
+     "tags": [
+      "Motorola MDT9100T"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 11122,
+     "last_id": 11141,
+     "key_ids": [
+      11124,
+      11137
+     ],
+     "title": "Modelo 3D do Expertinho",
+     "summary": "L. mostrou a foto de um Expertinho, cujo modelo 3D foi feito por Raul Tabajara, irmão de RicBit, e está em sua página no Gumroad. Felipe \"Juca\" Sanches se interessou em imprimi-lo em resina.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "MSX",
+      "Gradiente Expert",
+      "impressão 3D"
+     ],
+     "resources": [
+      {
+       "ref": "https://gumroad.com/rtabajara?recommended_by=library",
+       "what": "Página de Raul Tabajara no Gumroad"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11142,
+     "last_id": 11379,
+     "key_ids": [
+      11142,
+      11211,
+      11237
+     ],
+     "title": "Artigos de Ken Shirriff sobre o 8086 e o HP Nanoprocessor",
+     "summary": "L. compartilhou artigos de Ken Shirriff sobre a engenharia reversa do die do 8086 (registradores, latches do registrador de instrução) e do HP Nanoprocessor. RicBit comentou os 6 bytes de cache de código do 8086.",
+     "participants": [
+      "L.",
+      "RicBit"
+     ],
+     "tags": [
+      "Intel 8086",
+      "Ken Shirriff",
+      "engenharia reversa de chips"
+     ],
+     "resources": [
+      {
+       "ref": "http://www.righto.com/2020/06/a-look-at-die-of-8086-processor.html?m=1",
+       "what": "A look at the die of the 8086 processor"
+      },
+      {
+       "ref": "http://www.righto.com/2020/07/the-intel-8086-processors-registers.html",
+       "what": "Os registradores do 8086"
+      },
+      {
+       "ref": "http://www.righto.com/2020/08/latches-inside-reverse-engineering.html",
+       "what": "Latches do registrador de instrução do 8086"
+      },
+      {
+       "ref": "https://www.righto.com/2020/09/hp-nanoprocessor-part-ii-reverse.html",
+       "what": "HP Nanoprocessor parte II"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11145,
+     "last_id": 11240,
+     "key_ids": [
+      11145,
+      11240
+     ],
+     "title": "Montagem do kit RC2014",
+     "summary": "L. comprou o novo kit RC2014, um computador Z80 homebrew, e fez uma live soldando o kit.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "RC2014",
+      "Z80"
+     ],
+     "resources": [
+      {
+       "ref": "https://youtu.be/4s379q4fF8I",
+       "what": "Live de montagem do RC2014"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11161,
+     "last_id": 11173,
+     "key_ids": [
+      11163,
+      11173
+     ],
+     "title": "Laptops educativos da VTech e o Pense Bem",
+     "summary": "A partir de um vídeo sobre os laptops da VTech, que Felipe \"Juca\" Sanches confirmou ser a fabricante original do Pense Bem, pitanga lembrou de cartuchos falsos que pareciam apenas selecionar programas embutidos. Felipe comparou esse recurso ao primeiro Odyssey da Magnavox.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L.",
+      "Leonardo Roman",
+      "pitanga"
+     ],
+     "tags": [
+      "VTech",
+      "Pense Bem",
+      "Odyssey"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.youtube.com/watch?v=9F4it_DH6ps",
+       "what": "VTech Laptops: Better than you Think | Nostalgia Nerd"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11177,
+     "last_id": 11185,
+     "key_ids": [
+      11181,
+      11183
+     ],
+     "title": "Clone finlandês do Apple II e Mitsumi Quick Disk",
+     "summary": "A partir da foto de um clone do Apple II+, Erin Pinheiro 🐿 identificou o drive de dois lados como um Mitsumi Quick Disk ou outro drive de 3 polegadas, e FTMaciel confirmou o Quick Disk.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches",
+      "FTMaciel",
+      "Erin Pinheiro 🐿"
+     ],
+     "tags": [
+      "Apple II",
+      "Mitsumi Quick Disk"
+     ],
+     "resources": [
+      {
+       "ref": "http://hascomuter.blogspot.com/2012/03/3-inch-compact-floppy-disk.html",
+       "what": "Artigo sobre o disquete compacto de 3 polegadas"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11248,
+     "last_id": 11250,
+     "key_ids": [
+      11248,
+      11249
+     ],
+     "title": "Hack Chat sobre recriação de retrocomputadores e emulador de 286 em JS",
+     "summary": "L. divulgou um Hack Chat sobre a recriação de computadores clássicos e um emulador de 286 em JavaScript que roda o Windows interceptando chamadas a drivers.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "emulação no navegador",
+      "Hackaday"
+     ],
+     "resources": [
+      {
+       "ref": "https://hackaday.com/2020/08/10/recreating-retrocomputers-hack-chat/",
+       "what": "Recreating Retrocomputers Hack Chat"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11265,
+     "last_id": 11272,
+     "key_ids": [
+      11268,
+      11270
+     ],
+     "title": "Série documental GDLK (Netflix)",
+     "summary": "Felipe \"Juca\" Sanches compartilhou a série, e Lord Spy a considerou superficial. Felipe observou que Becky, que aparece no primeiro episódio, fez o port do Another World para o SNES.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Lord Spy"
+     ],
+     "tags": [
+      "história dos videogames",
+      "documentários"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 11381,
+     "last_id": 11388,
+     "key_ids": [
+      11384
+     ],
+     "title": "Vazamento do código-fonte do Windows XP",
+     "summary": "O grupo comentou o vazamento do código do Windows XP. L. lembrou que a possibilidade de uso de código vazado já prejudicou o ReactOS.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Eduardo Loos",
+      "L.",
+      "Aylons Hazzud"
+     ],
+     "tags": [
+      "Windows",
+      "código vazado"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 11220,
+     "last_id": 11223,
+     "key_ids": [
+      11220,
+      11222
+     ],
+     "title": "Mesa digitalizadora Wacom anterior ao USB",
+     "summary": "Alexandre Villares ofereceu uma mesa digitalizadora Wacom antiga, e Felipe \"Juca\" Sanches indicou um projeto com Teensy para interface Apple Desktop Bus.",
+     "participants": [
+      "Alexandre Villares",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Wacom",
+      "Apple Desktop Bus"
+     ],
+     "resources": [
+      {
+       "ref": "http://teensy-blogging.blogspot.com/2014/02/apple-desktop-bus.html",
+       "what": "Projeto de Apple Desktop Bus com Teensy"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11372,
+     "last_id": 11377,
+     "key_ids": [
+      11372,
+      11375
+     ],
+     "title": "Emulador de ZX Spectrum no cartucho do GoldenEye e vídeo sobre o código do Contra",
+     "summary": "Felipe \"Juca\" Sanches compartilhou um vídeo sobre o emulador de ZX Spectrum escondido no cartucho do GoldenEye 007 e o vídeo \"Contra - Behind the Code\", cujo formato pensa em usar no Happy Hacking Video Blog.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "ZX Spectrum",
+      "Nintendo 64"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.youtube.com/watch?v=Yhf8VaNlMO4",
+       "what": "Vídeo do MVG sobre o emulador de ZX Spectrum no GoldenEye 007"
+      },
+      {
+       "ref": "https://www.youtube.com/watch?v=8LnwsYL7Apk",
+       "what": "Contra - Behind the Code"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11448,
+     "last_id": 11449,
+     "key_ids": [
+      11448
+     ],
+     "title": "Xv6 numa CPU caseira com compilador C próprio",
+     "summary": "L. compartilhou o relato de um grupo que rodou o Xv6 numa CPU feita em casa usando um compilador C escrito para ela.",
+     "participants": [
+      "L.",
+      "RicBit"
+     ],
+     "tags": [
+      "CPU homebrew",
+      "Xv6"
+     ],
+     "resources": [
+      {
+       "ref": "https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/",
+       "what": "Relato do port do Xv6"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11506,
+     "last_id": 11507,
+     "key_ids": [
+      11506
+     ],
+     "title": "ISASTM: placas ISA antigas via USB",
+     "summary": "Emerson Moura compartilhou o ISASTM, que permite usar placas ISA antigas por USB.",
+     "participants": [
+      "Emerson Moura",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "ISA"
+     ],
+     "resources": [
+      {
+       "ref": "https://hackaday.com/2020/10/16/isastm-runs-vintage-cards-over-usb/",
+       "what": "ISASTM Runs Vintage Cards Over USB"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11532,
+     "last_id": 11535,
+     "key_ids": [
+      11533
+     ],
+     "title": "Coleção eXoDOS",
+     "summary": "L. compartilhou o eXoDOS, projeto que cataloga e torna jogáveis os jogos de DOS e PC Booter a partir da mídia original, com DOSBox e ScummVM.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "MS-DOS",
+      "DOSBox",
+      "preservação"
+     ],
+     "resources": [
+      {
+       "ref": "http://exodos.the-eye.us/",
+       "what": "eXoDOS"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11536,
+     "last_id": 11539,
+     "key_ids": [
+      11536,
+      11537
+     ],
+     "title": "Arcade Components: loja de CIs antigos",
+     "summary": "Flávio Amieiro indicou a Arcade Components, loja com estoque de circuitos integrados antigos.",
+     "participants": [
+      "Flávio Amieiro",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "componentes eletrônicos",
+      "arcade"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.arcadecomponents.com/index.html",
+       "what": "Arcade Components"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11144,
+     "last_id": 11144,
+     "key_ids": [
+      11144
+     ],
+     "title": "Recuperação do SimRefinery",
+     "summary": "L. compartilhou a notícia de que o SimRefinery foi recuperado.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "SimRefinery",
+      "preservação de software"
+     ],
+     "resources": [
+      {
+       "ref": "https://blog.adafruit.com/2020/06/19/gaming-archeology-simrefinery-recovered-gaming-vintagecomputing/",
+       "what": "Notícia sobre a recuperação do SimRefinery"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11157,
+     "last_id": 11157,
+     "key_ids": [
+      11157
+     ],
+     "title": "AtomBusMon: ICE livre para processadores de 8 bits",
+     "summary": "L. compartilhou o AtomBusMon, um ICE de código aberto para processadores de 8 bits.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "ICE",
+      "depuração de hardware"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/hoglet67/AtomBusMon/wiki",
+       "what": "Wiki do AtomBusMon"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 11224,
+     "last_id": 11224,
+     "key_ids": [
+      11224
+     ],
+     "title": "Grupo de pesquisa Loop/Ufes",
+     "summary": "Alexandre Villares indicou o grupo de pesquisa Loop, da Universidade Federal do Espírito Santo.",
+     "participants": [
+      "Alexandre Villares"
+     ],
+     "tags": [
+      "Ufes",
+      "pesquisa acadêmica"
+     ],
+     "resources": [
+      {
+       "ref": "https://twitter.com/LoopUfes/status/1267575538555764736?s=20",
+       "what": "Tweet do grupo Loop/Ufes"
+      }
+     ],
+     "weight": 1
+    }
+   ],
+   "corrections": [
+    "Overview: 'retomada do emulador parcial do Zezinho' corrigido; em #10428 Felipe só diz que precisa rever os documentos, não que retomou o emulador.",
+    "Overview: 'L. converteu o GW-BASIC' trocado por 'escreveu um conversor'; a conversão estava em andamento (#11051, #11063), não concluída.",
+    "Overview: a limpeza do Itautec foi só da placa-mãe (#10507), e completar a emulação era uma intenção (#10512); texto ajustado. 'Pandemia' trocado por 'quarentena', como dizem as mensagens (#10833, #10836).",
+    "Overview: 'disassembly feita por RicBit' trocado por 'compartilhada por RicBit'; ele diz apenas 'disasm comentado' (#11499).",
+    "Itautec: só a placa-mãe foi limpa (#10507), não as três placas. Registrado que o I-7000 não estava na pasta de FTMaciel (#10460). L. removido dos participantes: a única mensagem dele no intervalo (#10463) trata do SOX, não do Itautec.",
+    "Sony DFS-500: a PVE-500 já tinha sido emulada parcialmente anos antes, depois de ser doada (#11436); as CPUs são duas NEC V20 e uma V30 (#11395); resumo ajustado.",
+    "Z8 do Pense Bem: acrescentados os '6 ciclos' do modo de teste (#11418). 'Fidelity' retirado porque o nome não aparece no transcript (só 'jogo de xadrez' e fidel_msc.cpp). A discussão sobre o LFSR foi atribuída a quem falou: aposta de Felipe (#11474), observação de RicBit (#11482).",
+    "Zezinho: '2017' precisado para 'novembro de 2017' (#10424), e a explicação da emulação incompleta foi reescrita para ficar fiel a #10423/#10428.",
+    "Corona/Cordata: a thread de Foone foi compartilhada por Ricardo Bánffy (#10671). A descrição da ROM é a leitura de Felipe da explicação de Lord Nightmare (#10700) e agora aparece como tal.",
+    "Datassette: acrescentado que a maior parte do acervo ainda não está no archive.org (#10816) e que os itens de demoscene vieram do pouet.net (#10823).",
+    "Canon Typestar: Erin mostrou o interior (#10732) antes de Felipe pedir o dump (#10741), não 'a pedido' dele. A ideia da matriz do teclado veio primeiro de L. (#10745).",
+    "Scroll fino: 'John Carmack' trocado por 'Carmack', que é como o transcript o chama. Acrescentada a ressalva de RicBit de que só o hardware confirmaria (#11303).",
+    "Comic Chat: 'cliente web livre' trocado por 'cliente web com servidor node.js'; nada no transcript diz que é livre. Eduardo Loos adicionado aos participantes (#11325).",
+    "Metal Gear: 'sua disassembly' e 'a cada troca de tela' ajustados ao que RicBit diz em #11494-#11505.",
+    "KN5000: 'formato desconhecido' trocado por 'formato que ele desconhece' (#11460).",
+    "Curso de arqueojogos: retirados 'Museu de Arqueologia e Etnologia' e 'MAE-USP', que não aparecem no texto (#11262 diz 'museu de arqueologia da usp'). A divulgação foi um repasse de Felipe (#11254-11255), não 'o grupo'.",
+    "Fabien Sanglard: acrescentado que Felipe disse ainda não ter avanços (#10357).",
+    "Another World VM: retirada a afirmação de que a série trata da implementação 'numa placa JAMMA', que é uma inferência a partir do título do EP. 10; título da conversa ajustado.",
+    "João José Neto: last_id passado de 10887 para 10888, porque L. (participante listado) só postou em #10888.",
+    "Mask ROMs: first_id movido para #10709, onde FTMaciel indica a Felipe um vídeo de decapagem; recurso desse vídeo adicionado. A descrição do zorrom agora segue o que L. diz (#11205). key_id #11450 trocado por #11451, que traz a informação. last_id passado para #11452.",
+    "Livro de Mechner: 'Jordan' retirado do título, porque o transcript só diz 'Mechner'. O livro foi comprado antes de setembro e chegou no fim de agosto (#11314), então o resumo foi corrigido. 'Lançado em abril' precisado para 'fim de abril'. last_id passado para #11315.",
+    "EmuOS: FTMaciel removido dos participantes; ele não posta entre #10876 e #10882.",
+    "MDT9100T: acrescentado que Leonardo Roman fez a pergunta. A criptografia fraca foi atribuída a FTMaciel nos termos dele (#11114).",
+    "Expertinho: retiradas 'miniatura impressa' e 'vendido', que não constam no transcript. Acrescentado que Raul Tabajara é irmão de RicBit (#11128).",
+    "Ken Shirriff: adicionado o recurso do artigo sobre latches (#11237), citado no resumo mas ausente da lista. O comentário de RicBit foi ajustado para '6 bytes de code cache' (#11239).",
+    "VTech: a VTech como fabricante original foi pergunta de L., confirmada por Felipe (#11162-11163). As lembranças dos cartuchos falsos são de pitanga.",
+    "Apple II: identificação do drive atribuída a Erin, com confirmação de FTMaciel (#11181-11185).",
+    "GDLK: acrescentado que Felipe compartilhou a série (#11265).",
+    "Montagem inspirada no Pense Bem: last_id passado de 10811 para 10814, para incluir a resposta de Felipe.",
+    "Xv6: RicBit adicionado (#11449) e last_id passado para #11449. ISASTM: Felipe adicionado (#11507) e last_id passado para #11507.",
+    "SimRefinery: retirado 'da Maxis', que não aparece no transcript.",
+    "Loop/Ufes: o recurso é um tweet, não o perfil do grupo; descrição corrigida.",
+    "AtomBusMon: retirada a expansão 'emulador de circuito', que não está na mensagem.",
+    "Flash: acrescentada a pergunta de Leonardo Roman (#10442), e 'não aceitaria' suavizado para 'provavelmente não aceitaria', como L. disse em #10444.",
+    "8bitworkshop: precisado que o vídeo do Happy Hacking ainda seria publicado (#10372).",
+    "PiDP-11: retirada a descrição 'réplica do painel do PDP-11', que não está no transcript; fica só o uso de Raspberry Pi (#10755-10756).",
+    "RetroSC/Canal3: ajustado que a doação de alimentos passou a valer para todos os eventos a partir da 6ª edição (#10530)."
+   ]
+  }
+ ],
+ "taxonomy": {
+  "intro": "No terceiro ano, de novembro de 2019 a outubro de 2020, o grupo funcionou sobretudo como espaço de troca de links e relatos sobre retrocomputação. Felipe \"Juca\" Sanches desmontou um Itautec I-7000-G e limpou sua placa-mãe, máquina para a qual anos antes tinha escrito no MAME um emulador incompleto. Também relatou seu emulador parcial do Zezinho, do ITA, começou a escrever um disassembler de 286 para o ExecTrace e enviou ao MAME, como \"non-working\", o driver do mixer de vídeo Sony DFS-500 (PR #7346). Do Pense Bem, o driver do relançamento de 2017, com ATmega, foi enviado ao MAME, e o plano de extrair a mask ROM do Zilog Z8 do modelo original pelo modo de teste do chip avançou até a dessoldagem do Z8. L. começou a escrever em Python um conversor para levar de 8086 para Z80 o código-fonte do GW-BASIC, recém-liberado sob licença MIT, e RicBit compartilhou a disassembly comentada do Metal Gear do MSX2. O grupo também tratou da fonte da ROM do PC portátil Corona/Cordata, do Sega Teradrive, da Canon Typestar, do scroll fino em EGA/CGA, do Microsoft Comic Chat, do espelhamento do acervo do Datassette no archive.org e de eventos como o MSX SP 2019, o RetroSC e o curso de arqueologia dos jogos da USP. Felipe registrou que o grupo, criado para coordenar documentação e emulação, vinha servindo mais como espaço de conversa.",
+  "themes": [
+   {
+    "slug": "emulacao-no-mame",
+    "title": "Emulação de máquinas no MAME",
+    "summary": "Os principais trabalhos de emulação do ano foram de Felipe \"Juca\" Sanches. Ele desmontou e limpou um Itautec I-7000-G, máquina para a qual tinha escrito anos antes um emulador incompleto, enviou ao MAME como \"non-working\" o driver do mixer de vídeo Sony DFS-500 e relatou seu emulador parcial do Zezinho, do ITA. Também foi localizada no histórico do MAME a ROM do PC portátil Corona/Cordata, para estudar sua fonte.",
+    "subtopics": [
+     {
+      "slug": "itautec-i-7000",
+      "title": "Itautec I-7000",
+      "summary": "Felipe \"Juca\" Sanches, que anos antes tinha escrito no MAME um emulador incompleto do I-7000 a partir dos dumps de Alexandre Tabajara, recebeu um I-7000-G com ROM de outubro de 1985, documentou a desmontagem e a limpeza da placa-mãe e identificou chips compatíveis com os da Intel. FTMaciel compartilhou material da Itautec já escaneado, que não incluía o I-7000. Ricardo Bánffy informou que as propostas para o Unicode 14 incluem caracteres usados no I-7000.",
+      "conversation_ids": [
+       10447,
+       10710
+      ]
+     },
+     {
+      "slug": "sony-dfs-500",
+      "title": "Mixer de vídeo Sony DFS-500",
+      "summary": "Depois de emular parcialmente a mesa de controle PVE-500, Felipe \"Juca\" Sanches passou ao switcher DFS-500, que usa duas CPUs NEC V20 e uma NEC V30. O emulador já gerava sinal de vídeo a partir de uma imagem estática, e o driver foi enviado ao MAME como \"non-working\" no PR #7346.",
+      "conversation_ids": [
+       11389
+      ]
+     },
+     {
+      "slug": "zezinho-ita",
+      "title": "Zezinho, do ITA",
+      "summary": "A partir dos selos dos Correios sobre a história da computação brasileira, Felipe \"Juca\" Sanches explicou que começou a emular o Zezinho no MAME em novembro de 2017 e que dois PDFs do início dos anos 60 sobre a máquina estão no repositório do Patinho Feio. A emulação é parcial, e ele sugeriu escanear de novo os originais, que estariam na biblioteca do ITA.",
+      "conversation_ids": [
+       10390
+      ]
+     },
+     {
+      "slug": "corona-cordata",
+      "title": "Fonte da ROM do Corona/Cordata",
+      "summary": "Ricardo Bánffy procurou as ROMs do PC portátil Corona/Cordata para estudar sua fonte, e Felipe \"Juca\" Sanches as localizou pelo histórico de versões do MAME. Ricardo depois compartilhou uma thread de Foone sobre o dump do gerador de caracteres; segundo a leitura de Felipe da descrição de Lord Nightmare, a fonte tem resolução vertical dupla e dados entrelaçados entre duas ROMs.",
+      "conversation_ids": [
+       10540
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "pense-bem",
+    "title": "Pense Bem e o Zilog Z8",
+    "summary": "O Pense Bem concentrou um dos projetos técnicos do ano. Felipe \"Juca\" Sanches enviou ao MAME o driver do relançamento de 2017, com ATmega, e preparou a extração da mask ROM do Zilog Z8 do modelo original pelo modo de teste do chip, chegando a dessoldar o Z8 e instalar um soquete. O grupo também discutiu decapagem e leitura de mask ROMs por imagem e a origem do brinquedo na VTech.",
+    "subtopics": [
+     {
+      "slug": "dump-mask-rom-z8",
+      "title": "Dump da mask ROM do Z8",
+      "summary": "Depois de conversas sobre decapagem de chips e leitura de mask ROMs por imagem (John McMaster, zorrom), Felipe \"Juca\" Sanches encontrou num documento da Zilog o modo de teste do Z8, que permite executar código lido da porta P1. Ele comprou unidades para testes, dessoldou o Z8 de um Pense Bem e instalou um soquete, e o aparelho continuou funcionando.",
+      "conversation_ids": [
+       10709,
+       11415
+      ]
+     },
+     {
+      "slug": "driver-pense-bem-2017",
+      "title": "Driver do Pense Bem de 2017 (ATmega)",
+      "summary": "O driver do relançamento de 2017 foi enviado ao MAME no PR #7407, quase completo, mas com ruído no som por causa da implementação ineficiente do core AVR8. O modelo original, com o Z8, continuava sem dump.",
+      "conversation_ids": [
+       11524
+      ]
+     },
+     {
+      "slug": "vtech-e-projetos-relacionados",
+      "title": "VTech e projetos relacionados",
+      "summary": "L. mostrou componentes de um projeto que Felipe \"Juca\" Sanches identificou como um Pense Bem. A partir de um vídeo sobre os laptops da VTech, Felipe confirmou que ela foi a fabricante original do Pense Bem, e pitanga lembrou de cartuchos falsos que pareciam apenas selecionar programas embutidos.",
+      "conversation_ids": [
+       10803,
+       11161
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "engenharia-reversa-e-ferramentas",
+    "title": "Engenharia reversa, código e ferramentas",
+    "summary": "Várias conversas trataram de código de máquina e de ferramentas para analisá-lo. L. começou a escrever um conversor do GW-BASIC de 8086 para Z80, Felipe \"Juca\" Sanches estava escrevendo um disassembler de 286 como extensão do ExecTrace e RicBit compartilhou a disassembly comentada do Metal Gear do MSX2. Também foram discutidos o scroll fino em EGA/CGA, o protocolo do Microsoft Comic Chat e o protocolo de atualização de firmware do Technics KN5000.",
+    "subtopics": [
+     {
+      "slug": "gw-basic-z80",
+      "title": "GW-BASIC de 8086 para Z80",
+      "summary": "Com a liberação do código-fonte do GW-BASIC sob licença MIT, L. começou a escrever em Python um conversor de assembly 8086 para Z80, pensando no MSX. A conversa tratou do mapeamento de registradores e das rotinas de I/O a escrever à mão.",
+      "conversation_ids": [
+       11023
+      ]
+     },
+     {
+      "slug": "exectrace",
+      "title": "ExecTrace",
+      "summary": "Felipe \"Juca\" Sanches estava escrevendo em Python um disassembler de 286 como extensão do ExecTrace, que já suportava o 8048 do Odyssey² e o Z80, para retomar a engenharia reversa do Pinball Fantasies.",
+      "conversation_ids": [
+       11193
+      ]
+     },
+     {
+      "slug": "scroll-fino-ega-cga",
+      "title": "Scroll fino em EGA/CGA",
+      "summary": "Lord Spy pediu referências sobre o scroll fino de Dangerous Dave in Copyright Infringement. RicBit concluiu que o CGA permite emular scroll fino e que o MAME não implementa esse recurso no CGA, ressalvando que só o hardware confirmaria.",
+      "conversation_ids": [
+       11277
+      ]
+     },
+     {
+      "slug": "microsoft-comic-chat",
+      "title": "Protocolo do Microsoft Comic Chat",
+      "summary": "L. e Erin Pinheiro 🐿 explicaram que o Comic Chat é um cliente IRC comum que codifica as informações dos quadrinhos num prefixo de texto, e L. indicou um cliente web baseado nele.",
+      "conversation_ids": [
+       11319
+      ]
+     },
+     {
+      "slug": "metal-gear-msx2",
+      "title": "Disassembly do Metal Gear (MSX2)",
+      "summary": "RicBit compartilhou a disassembly totalmente comentada do Metal Gear do MSX2 e explicou como os 64 KB extras de VRAM da maioria dos MSX2 permitiriam reduzir o tempo entre telas.",
+      "conversation_ids": [
+       11494
+      ]
+     },
+     {
+      "slug": "technics-kn5000",
+      "title": "Firmware do Technics KN5000",
+      "summary": "Felipe \"Juca\" Sanches compartilhou uma alternativa de código aberto ao Gotek e explicou que pretende usá-la para entender o protocolo de atualização de firmware do teclado Technics SX-KN5000.",
+      "conversation_ids": [
+       11455
+      ]
+     },
+     {
+      "slug": "chips-e-depuracao",
+      "title": "Engenharia reversa de chips e depuração",
+      "summary": "L. compartilhou artigos de Ken Shirriff sobre o die do 8086 e o HP Nanoprocessor e o AtomBusMon, um ICE de código aberto para processadores de 8 bits.",
+      "conversation_ids": [
+       11142,
+       11157
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "preservacao-e-acervos",
+    "title": "Preservação, acervos e o papel do grupo",
+    "summary": "O grupo tratou do apoio ao Datassette e do espelhamento de seu acervo no archive.org, de coleções como eXoDOS e jogos em Flash e de código-fonte histórico, liberado ou vazado. Felipe \"Juca\" Sanches registrou que o grupo vinha servindo mais como espaço de conversa do que de coordenação de projetos, e mencionou documentos do Patinho Feio ainda não escaneados.",
+    "subtopics": [
+     {
+      "slug": "datassette",
+      "title": "Datassette",
+      "summary": "Discutiu-se como espelhar no archive.org o acervo do Datassette, e Felipe \"Juca\" Sanches explicou como enviou cerca de 4 mil itens de demoscene pela API do archive.org. Depois foi divulgada a campanha no Apoia.se para custear o projeto.",
+      "conversation_ids": [
+       10801,
+       11530
+      ]
+     },
+     {
+      "slug": "colecoes-de-jogos-e-software",
+      "title": "Coleções de jogos e software",
+      "summary": "Foram comentados a remoção de itens a pedido de detentores de direitos num projeto de preservação de jogos em Flash, a recuperação do SimRefinery e a coleção eXoDOS de jogos de DOS.",
+      "conversation_ids": [
+       10439,
+       11144,
+       11532
+      ]
+     },
+     {
+      "slug": "codigo-fonte-historico",
+      "title": "Código-fonte liberado, vazado ou descompilado",
+      "summary": "O grupo comentou o UltraHLE, as descompilações de Super Mario 64 e GoldenEye 007, o código-fonte do computador de guiagem da Apollo 11, com um PR de correção de Felipe \"Juca\" Sanches, e o vazamento do Windows XP.",
+      "conversation_ids": [
+       10331,
+       10435,
+       10558,
+       11381
+      ]
+     },
+     {
+      "slug": "memoria-da-computacao-brasileira",
+      "title": "Memória da computação brasileira",
+      "summary": "Felipe \"Juca\" Sanches compartilhou uma reportagem sobre o microcomputador desenvolvido na USP (Caninos Loucos) e restaurou o verbete do professor João José Neto na Wikipedia em português, pedindo ajuda para melhorar o texto.",
+      "conversation_ids": [
+       10567,
+       10883
+      ]
+     },
+     {
+      "slug": "proposito-do-grupo",
+      "title": "Propósito do grupo e documentos do Patinho Feio",
+      "summary": "Felipe \"Juca\" Sanches lembrou que o grupo foi criado para coordenar documentação e emulação, mas que virou um espaço de conversa sem projetos ativos, e mencionou documentos do Patinho Feio a escanear.",
+      "conversation_ids": [
+       11231
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "restauracao-de-equipamentos",
+    "title": "Restauração e identificação de equipamentos",
+    "summary": "Membros mostraram aparelhos danificados, consertados ou em restauração, entre eles um Sega Teradrive, uma máquina de escrever Canon Typestar e notebooks Toshiba. Também houve ofertas de equipamentos e identificação de máquinas a partir de fotos.",
+    "subtopics": [
+     {
+      "slug": "sega-teradrive",
+      "title": "Sega Teradrive",
+      "summary": "FTMaciel mostrou a placa de um Teradrive em que o dono anterior havia trocado CPU e cristal, rompendo trilhas, e o grupo comentou upgrades e o Amstrad Mega PC.",
+      "conversation_ids": [
+       10609
+      ]
+     },
+     {
+      "slug": "canon-typestar",
+      "title": "Canon Typestar 10-II",
+      "summary": "Erin Pinheiro 🐿 consertou a máquina, que pretende usar como tty com um Arduino Leonardo ligado à matriz do teclado, e informou que a ROM visível parece ser só o dicionário do corretor ortográfico.",
+      "conversation_ids": [
+       10727
+      ]
+     },
+     {
+      "slug": "notebooks-e-retrobright",
+      "title": "Notebooks Toshiba e retrobright",
+      "summary": "Erin Pinheiro 🐿 diagnosticou a tela de um Toshiba Satellite Pro 420CDT e FTMaciel planejou testar galvanoplastia com níquel para tratar a ferrugem de um Toshiba T4500. FTMaciel também indicou peróxido de hidrogênio para retrobright, com equipamento de proteção.",
+      "conversation_ids": [
+       10948,
+       11016
+      ]
+     },
+     {
+      "slug": "doacoes-e-perifericos",
+      "title": "Doações e periféricos",
+      "summary": "Felipe \"Juca\" Sanches pediu o 486 de que pitanga ia se desfazer, e Alexandre Villares ofereceu uma mesa digitalizadora Wacom anterior ao USB.",
+      "conversation_ids": [
+       10575,
+       11220
+      ]
+     },
+     {
+      "slug": "maquinas-identificadas",
+      "title": "Máquinas identificadas",
+      "summary": "L. identificou seu aparelho como um terminal portátil Motorola MDT9100T, e o drive de um clone finlandês do Apple II+ foi identificado como um Mitsumi Quick Disk.",
+      "conversation_ids": [
+       11103,
+       11177
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "another-world-e-fpga",
+    "title": "Another World e FPGA",
+    "summary": "Felipe \"Juca\" Sanches relatou uma chamada com Fabien Sanglard sobre a VM do Another World e compartilhou episódios da série de vídeos \"Another World VM\". O projeto de placa em FPGA para o jogo avançava devagar, e L. e Felipe compararam placas FPGA.",
+    "subtopics": [
+     {
+      "slug": "fabien-sanglard",
+      "title": "Fabien Sanglard e o Another World",
+      "summary": "Felipe \"Juca\" Sanches contou que Fabien Sanglard o incentivou a retomar o projeto de placa, e L. compartilhou os artigos de Sanglard sobre a renderização de polígonos do jogo.",
+      "conversation_ids": [
+       10337,
+       10384
+      ]
+     },
+     {
+      "slug": "videos-another-world-vm",
+      "title": "Série de vídeos Another World VM",
+      "summary": "Foram compartilhados os episódios 10 (\"JAMMA Arcade\") e 11 da série, e Felipe \"Juca\" Sanches disse que o projeto em FPGA avançava devagar.",
+      "conversation_ids": [
+       10519
+      ]
+     },
+     {
+      "slug": "placas-fpga",
+      "title": "Placas FPGA",
+      "summary": "L. e Felipe \"Juca\" Sanches compararam as placas OrangeCrab e ULX3S, e L. comprou as duas.",
+      "conversation_ids": [
+       10768
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "homebrew-e-replicas",
+    "title": "Computadores homebrew e réplicas",
+    "summary": "L. e Felipe \"Juca\" Sanches confirmaram que computadores homebrew feitos com tecnologia antiga cabem no tema do grupo, e Emerson Moura mostrou um projeto com o Motorola MC6800. Foram compartilhados projetos de CPUs discretas, kits e réplicas como PiDP-11 e RC2014, e interfaces para hardware antigo.",
+    "subtopics": [
+     {
+      "slug": "homebrew-mc6800",
+      "title": "Homebrew com Motorola MC6800",
+      "summary": "Emerson Moura mostrou o andamento de seu computador com o MC6800, e Felipe \"Juca\" Sanches sugeriu documentá-lo no fórum Fiozera.",
+      "conversation_ids": [
+       10911
+      ]
+     },
+     {
+      "slug": "cpus-caseiras",
+      "title": "CPUs caseiras",
+      "summary": "L. compartilhou uma CPU de 8 bits com lógica 74LS e o relato de um grupo que rodou o Xv6 numa CPU caseira com compilador C próprio.",
+      "conversation_ids": [
+       10956,
+       11448
+      ]
+     },
+     {
+      "slug": "kits-e-replicas",
+      "title": "Kits e réplicas",
+      "summary": "L. mostrou seu PiDP-11 funcionando, a foto de um Expertinho cujo modelo 3D foi feito por Raul Tabajara e a montagem do kit RC2014 em live.",
+      "conversation_ids": [
+       10737,
+       11122,
+       11145
+      ]
+     },
+     {
+      "slug": "vectrex-osciloscopio",
+      "title": "Vectrex com osciloscópio",
+      "summary": "L. compartilhou o projeto de TubeTime que reproduz um Vectrex usando um osciloscópio como tela.",
+      "conversation_ids": [
+       10760
+      ]
+     },
+     {
+      "slug": "interfaces-e-componentes",
+      "title": "Interfaces e componentes",
+      "summary": "Foram indicados o ISASTM, para usar placas ISA por USB, e a loja Arcade Components, com estoque de circuitos integrados antigos.",
+      "conversation_ids": [
+       11506,
+       11536
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "eventos-e-cursos",
+    "title": "Eventos e cursos",
+    "summary": "Foram divulgados eventos de retrocomputação no Brasil e no exterior, como o MSX SP 2019, o RetroSC (que passou a ter edição online) e a devroom da FOSDEM. Felipe \"Juca\" Sanches e Lord Spy tiveram a inscrição negada no curso online de arqueologia dos jogos da USP.",
+    "subtopics": [
+     {
+      "slug": "msx-sp-2019",
+      "title": "MSX SP 2019",
+      "summary": "Fractal divulgou o evento de 7 e 8 de dezembro, com a exibição do curta \"Obsoleto\".",
+      "conversation_ids": [
+       10298
+      ]
+     },
+     {
+      "slug": "retrosc",
+      "title": "RetroSC e Encontro Canal3",
+      "summary": "Eduardo Loos divulgou o 42º Encontro Canal3 SP, o 6º RetroSC e depois o RetroSC 7, feito em lives.",
+      "conversation_ids": [
+       10303,
+       11281
+      ]
+     },
+     {
+      "slug": "eventos-internacionais",
+      "title": "Eventos internacionais",
+      "summary": "Foram divulgados a devroom de retrocomputação da FOSDEM, a demoparty argentina Flashparty e um Hack Chat sobre recriação de computadores clássicos.",
+      "conversation_ids": [
+       10328,
+       11100,
+       11248
+      ]
+     },
+     {
+      "slug": "curso-arqueojogos-usp",
+      "title": "Curso de arqueologia dos jogos da USP",
+      "summary": "Foi divulgado o curso \"Arqueologia dos Jogos na Era do Atari\", do museu de arqueologia da USP; Felipe \"Juca\" Sanches e Lord Spy tiveram a inscrição negada.",
+      "conversation_ids": [
+       11254
+      ]
+     },
+     {
+      "slug": "pesquisa-academica",
+      "title": "Pesquisa acadêmica",
+      "summary": "Alexandre Villares indicou o grupo de pesquisa Loop, da Ufes.",
+      "conversation_ids": [
+       11224
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "leituras-e-links",
+    "title": "Leituras, vídeos e links",
+    "summary": "Boa parte das mensagens foi de troca de links: um livro sobre tipografia de arcade e um livro de Jordan Mechner, textos sobre história dos jogos, emuladores e ferramentas de desenvolvimento retrô e demos de MS-DOS.",
+    "subtopics": [
+     {
+      "slug": "livros-e-historia",
+      "title": "Livros e história",
+      "summary": "Foram comentados o livro Arcade Game Typography, um livro de Jordan Mechner em capa dura e um texto do MIT sobre a história do Zork e da Infocom.",
+      "conversation_ids": [
+       10301,
+       10861,
+       10964
+      ]
+     },
+     {
+      "slug": "jogos-e-codigo",
+      "title": "Jogos e seu código",
+      "summary": "Foram compartilhados uma reimplementação do Space Invaders em C, artigos sobre a proteção do Sega System 16, a série GDLK e vídeos sobre o emulador de ZX Spectrum no cartucho do GoldenEye e o código do Contra.",
+      "conversation_ids": [
+       10365,
+       10781,
+       11265,
+       11372
+      ]
+     },
+     {
+      "slug": "emuladores-e-ferramentas",
+      "title": "Emuladores e ferramentas",
+      "summary": "Foram compartilhados um guia para rodar o BeOS 5.0 no PCem, a IDE web 8bitworkshop, o EmuOS no navegador e o DOjS, plataforma de programação criativa para MS-DOS.",
+      "conversation_ids": [
+       10321,
+       10370,
+       10876,
+       10967
+      ]
+     },
+     {
+      "slug": "demoscene-e-curiosidades",
+      "title": "Demoscene e curiosidades",
+      "summary": "L. compartilhou a intro \"Memories\", de 256 bytes, e um quadro decorativo feito com disquetes coloridos.",
+      "conversation_ids": [
+       10750,
+       10915
+      ]
+     }
+    ]
+   }
+  ],
+  "highlights": [
+   {
+    "first_id": 10390,
+    "why": "Felipe \"Juca\" Sanches relatou a emulação parcial do Zezinho, do ITA, no MAME e sugeriu escanear de novo os documentos originais."
+   },
+   {
+    "first_id": 10447,
+    "why": "Felipe \"Juca\" Sanches desmontou e limpou um Itautec I-7000-G, máquina para a qual anos antes tinha escrito no MAME um emulador incompleto."
+   },
+   {
+    "first_id": 10540,
+    "why": "A ROM do PC portátil Corona/Cordata foi localizada no histórico do MAME para estudo de sua fonte."
+   },
+   {
+    "first_id": 10801,
+    "why": "O grupo discutiu o espelhamento do acervo do Datassette no archive.org, e Felipe \"Juca\" Sanches explicou como enviou cerca de 4 mil itens de demoscene."
+   },
+   {
+    "first_id": 11023,
+    "why": "L. começou um conversor em Python para levar o código-fonte do GW-BASIC de 8086 para Z80."
+   },
+   {
+    "first_id": 11193,
+    "why": "Felipe \"Juca\" Sanches começou a escrever um disassembler de 286 para o ExecTrace, para retomar a engenharia reversa do Pinball Fantasies."
+   },
+   {
+    "first_id": 11231,
+    "why": "Felipe \"Juca\" Sanches registrou que o grupo, criado para coordenar documentação e emulação, vinha servindo mais como espaço de conversa."
+   },
+   {
+    "first_id": 11389,
+    "why": "O driver do mixer de vídeo Sony DFS-500 foi enviado ao MAME como \"non-working\" no PR #7346."
+   },
+   {
+    "first_id": 11415,
+    "why": "O plano de extrair a mask ROM do Z8 do Pense Bem pelo modo de teste do chip avançou até a dessoldagem do Z8."
+   },
+   {
+    "first_id": 11494,
+    "why": "RicBit compartilhou a disassembly totalmente comentada do Metal Gear do MSX2."
+   },
+   {
+    "first_id": 11524,
+    "why": "O driver do Pense Bem de 2017, com ATmega, foi enviado ao MAME no PR #7407."
+   }
+  ]
+ },
+ "taxonomy_check": {
+  "corrections": [
+   "intro: removida a frase sobre a quarentena de 2020 como tempo livre para projetos pessoais, que não aparece em nenhuma conversa.",
+   "intro: removida a intenção de 'completar a emulação no MAME' do I-7000-G; o resumo só diz que ele tinha escrito anos antes um emulador incompleto, e isso foi registrado.",
+   "intro: 'expandiu o disassembler ExecTrace' trocado por 'começou a escrever um disassembler de 286 para o ExecTrace' (ele estava escrevendo).",
+   "intro: 'emulou no MAME o mixer Sony DFS-500' trocado por 'enviou ao MAME, como non-working, o driver', porque a emulação está incompleta.",
+   "intro: 'L. escreveu ... um conversor' trocado por 'começou a escrever'; 'recém-liberado pela Microsoft' trocado por 'recém-liberado sob licença MIT', porque o resumo não diz quem liberou o código.",
+   "intro: removido 'Em agosto de 2020', data que nenhum resumo menciona; 'curso de arqueojogos' trocado por 'curso de arqueologia dos jogos', mais próximo do título do curso.",
+   "tema emulacao-no-mame: removido 'para completar um driver antigo' (finalidade não registrada); 'emulou o mixer' trocado por 'enviou ao MAME como non-working o driver do mixer'.",
+   "subtópico itautec-i-7000: removido 'para completar o emulador incompleto' (finalidade não registrada); acrescentados o contexto do emulador antigo feito a partir dos dumps de Alexandre Tabajara e a pasta da Itautec compartilhada por FTMaciel; data da ROM corrigida para outubro de 1985.",
+   "subtópico zezinho-ita: 'com base em dois PDFs' trocado pela informação do resumo de que os dois PDFs estão no repositório do Patinho Feio.",
+   "subtópico corona-cordata: a conclusão sobre a resolução vertical dupla e os dados entrelaçados agora é atribuída à leitura de Felipe da descrição de Lord Nightmare, e não à thread de Foone; acrescentado que foi Ricardo quem compartilhou a thread.",
+   "subtópico vtech-e-projetos-relacionados: a lembrança dos cartuchos falsos agora é atribuída a pitanga, e não ao grupo.",
+   "tema engenharia-reversa-e-ferramentas: 'L. escreveu um conversor' trocado por 'começou a escrever'; 'estendeu o ExecTrace com suporte a x86' trocado por 'estava escrevendo um disassembler de 286 como extensão do ExecTrace'; 'formato de atualização' trocado por 'protocolo de atualização'.",
+   "subtópico scroll-fino-ega-cga: acrescentado 'no CGA' à afirmação de que o MAME não implementa o recurso, como diz o resumo.",
+   "tema preservacao-e-acervos: removido 'Em agosto de 2020', data que nenhum resumo menciona.",
+   "tema restauracao-de-equipamentos: 'relataram consertos e restaurações' trocado por 'mostraram aparelhos danificados, consertados ou em restauração', porque o Teradrive não foi consertado; 'doações' trocado por 'ofertas'.",
+   "subtópico notebooks-e-retrobright: 'planejou tratar com níquel' trocado por 'planejou testar galvanoplastia com níquel', como diz o resumo.",
+   "tema another-world-e-fpga: removido 'sua' da série de vídeos, porque o resumo não diz que a série é de Felipe; 'o grupo comparou placas FPGA' trocado por 'L. e Felipe compararam'.",
+   "tema homebrew-e-replicas: 'O grupo confirmou' trocado por 'L. e Felipe \"Juca\" Sanches confirmaram'.",
+   "subtópico kits-e-replicas: escrito que L. mostrou a foto de um Expertinho cujo modelo 3D foi feito por Raul Tabajara, e não que mostrou o modelo 3D.",
+   "tema e subtópico de eventos: 'arqueojogos' trocado por 'arqueologia dos jogos' no texto e no título; o slug foi mantido.",
+   "tema leituras-e-links: 'livros ... sobre Jordan Mechner' trocado por 'um livro de Jordan Mechner', porque o livro é de autoria dele.",
+   "destaque 10447: removida a intenção de completar a emulação; agora diz que Felipe desmontou e limpou a máquina, para a qual tinha escrito antes um emulador incompleto.",
+   "destaque 11193: 'O ExecTrace ganhou um disassembler de 286' trocado por 'Felipe começou a escrever um disassembler de 286 para o ExecTrace'.",
+   "destaque 11389: acrescentado 'como non-working'.",
+   "Verificado: todos os 72 ids pertencem a este ano, cada conversa aparece em pelo menos um subtópico, e os slugs são minúsculos, em ASCII, com hífens e únicos."
+  ],
+  "by": "topics/workflow_years.js (run wf_2ca9e325-052: 68 agents for years 1-9, 8329065 tokens, 49 min)"
+ }
+}

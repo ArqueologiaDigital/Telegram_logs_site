@@ -1,0 +1,3436 @@
+{
+ "meta": {
+  "year": 2,
+  "from": "2018-11",
+  "to": "2019-10",
+  "period": "2018-11..2019-10",
+  "messages": 2191,
+  "made": "2026-11-09",
+  "model": "claude-opus-5-5 (workflow agents, inherited from the session)",
+  "workflow": "topics/workflow_years.js (run wf_2ca9e325-052: 68 agents for years 1-9, 8329065 tokens, 49 min)",
+  "transcripts": "topics/transcript.py --years 2018-11..2026-10 --target 60"
+ },
+ "chunks": [
+  {
+   "overview": "Entre novembro de 2018 e junho de 2019 o grupo tratou principalmente de projetos práticos de retrocomputação ligados a Felipe \"Juca\" Sanches e a outros membros. Em novembro, Felipe explorou a ideia de rodar o jogo Alley Cat em hardware de PC mínimo: gerou uma ROM a partir do executável e depurou a BIOS no MAME. Em dezembro, Felipe escaneou e publicou o livro \"How to Design and Build Your Own Custom TV Games\" (1978). O livro levou ao anúncio de um grupo de estudos no Garoa Hacker Clube, e Leonardo Roman publicou no Datassette uma versão com OCR. Ao longo do período o grupo discutiu clones modernos de placas de som (Snark Barker, AdLib, OPL3LPT) e o Covox, a compilação de código para DOS com GCC, a digitalização do livreto \"Scopus 30 anos\" e a dúvida sobre a origem do SISNE. Também houve pedidos de ajuda e relatos de restauração (fonte de uma SGI Fuel, backlight de um NEC 286F, polarizadores de LCD) e a apresentação do disassembler ExecTrace, aplicado ao Galaga de MSX. Foi ainda noticiada a extração da ROM interna do YM2413. Em junho, Felipe montou o kit PC-Retro, um clone do IBM PC 5150. O clone ligou e exibiu diagnósticos na tela com uma placa CGA recebida de FTMaciel no Calango Hacker Clube. FTMaciel também compartilhou as ROMs do DGT-1000, um clone brasileiro do TRS-80. O grupo também circulou notícias sobre lançamentos do MAME, museus de computação, liberação de código-fonte de jogos clássicos e eventos como o MSX SP 2018.",
+   "conversations": [
+    {
+     "first_id": 8016,
+     "last_id": 8129,
+     "key_ids": [
+      8018,
+      8071,
+      8098
+     ],
+     "title": "Alley Cat em hardware mínimo: ideia de PCB e booterify",
+     "summary": "Felipe propôs descobrir o subconjunto mínimo de hardware de PC que um jogo antigo usa e montar uma PCB com o jogo em EPROM, tomando Alley Cat como exemplo. Com o booterify ele gerou uma imagem de disquete inicializável e rodou o jogo no driver at386 do MAME. Ismael Luceno sugeriu mapear as interrupções usadas e indicou trabalhos de tradução binária via LLVM (um artigo e o mcsema). Felipe citou seu analisador de binários para o i8048 e para a máquina virtual do Another World.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Ronaldo",
+      "Deleted Account",
+      "Affonso Amendola",
+      "Ismael Luceno",
+      "Rodrigo Tadeu"
+     ],
+     "tags": [
+      "Alley Cat",
+      "IBM PC",
+      "MAME",
+      "tradução binária"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.raphnet.net/programmation/booterify/index_en.php",
+       "what": "Booterify, ferramenta que transforma executáveis DOS em disquetes inicializáveis"
+      },
+      {
+       "ref": "https://github.com/raphnet/booterify.git",
+       "what": "Repositório do booterify"
+      },
+      {
+       "ref": "x86-llvm-translator-chipounov_2.pdf;",
+       "what": "Artigo sobre tradução de x86 para LLVM"
+      },
+      {
+       "ref": "https://github.com/trailofbits/mcsema",
+       "what": "mcsema, framework que converte binários x86/amd64/aarch64 em bitcode LLVM"
+      }
+     ],
+     "weight": 3
+    },
+    {
+     "first_id": 8130,
+     "last_id": 8190,
+     "key_ids": [
+      8135,
+      8143,
+      8164
+     ],
+     "title": "Alley Cat a partir de ROM no MAME: depuração da BIOS",
+     "summary": "Felipe adaptou o booterify para gerar uma ROM relocada, instalada no segmento 0xE000 e copiada para a RAM por um loader inserido por patch na BIOS. O jogo ficou com tela preta, preso em chamadas à interrupção 1Ah. A investigação apontou variáveis não inicializadas da BIOS Data Area, entre elas o contador de tempo em 0x46C–0x46F, e a necessidade de programar o RTC. Ismael Luceno indicou a Ralf Brown's Interrupt List.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Deleted Account",
+      "Ismael Luceno"
+     ],
+     "tags": [
+      "Alley Cat",
+      "BIOS",
+      "MAME",
+      "IBM PC"
+     ],
+     "resources": [
+      {
+       "ref": "http://www.o3one.org/hwdocs/bios_doc/dosref22.html",
+       "what": "Referência de chamadas da BIOS"
+      },
+      {
+       "ref": "http://www.ctyme.com/rbrown.htm",
+       "what": "Ralf Brown's Interrupt List (RBIL)"
+      },
+      {
+       "ref": "http://stanislavs.org/helppc/bios_data_area.html",
+       "what": "Mapa da BIOS Data Area (BDA)"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 8197,
+     "last_id": 8249,
+     "key_ids": [
+      8198,
+      8244,
+      8247
+     ],
+     "title": "Visita à FEUP em busca da história da computação em Portugal",
+     "summary": "Felipe visitou a Faculdade de Engenharia da Universidade do Porto para procurar professores interessados em história da computação e relatos sobre os pioneiros da área em Portugal, e publicou fotos da biblioteca. Um professor brasileiro da universidade se interessou pelo trabalho de coleta de informações sobre o computador da USP e quis que Felipe fizesse uma apresentação na faculdade. Os dois acharam que seria muito em cima da hora agendá-la antes da partida de Felipe.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Hugo (Agaelebê)",
+      "Ismael Luceno",
+      "Deleted Account",
+      "Ronaldo"
+     ],
+     "tags": [
+      "história da computação",
+      "Portugal",
+      "Universidade do Porto"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 8224,
+     "last_id": 8230,
+     "key_ids": [
+      8224,
+      8226
+     ],
+     "title": "Foto do Patinho Feio com teletipo",
+     "summary": "Felipe encaminhou mensagens de Affonso Amendola com uma foto do Patinho Feio. Nelas, Affonso observava que o teletipo da foto é idêntico ao do museu e perguntava se o equipamento sob o computador era o leitor de fita. Felipe respondeu que provavelmente é o mesmo teletipo e que acha que sim, é o leitor de fita.",
+     "participants": [
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Patinho Feio",
+      "teletipo"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 8250,
+     "last_id": 8268,
+     "key_ids": [
+      8250,
+      8257,
+      8265
+     ],
+     "title": "Workstation SGI Fuel que não liga",
+     "summary": "Silas, do wikilab, pediu ajuda com uma SGI Fuel (MIPS) que não liga, embora a fonte parecesse funcionar quando testada à parte. Foi apontado que a fonte pode falhar sob carga e que convém trocar os eletrolíticos. Silas observou que a fonte é específica da SGI e que a máquina é conhecida por problemas na fonte, e compartilhou um guia de reparo.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Silas",
+      "Deleted Account",
+      "Affonso Amendola",
+      "Ronaldo"
+     ],
+     "tags": [
+      "SGI",
+      "fonte de alimentação",
+      "restauração"
+     ],
+     "resources": [
+      {
+       "ref": "http://gentiane.org/~miod/machineroom/machines/sgi/fuel/index.html",
+       "what": "Página sobre a SGI Fuel"
+      },
+      {
+       "ref": "http://wiki.irix.cc/Fuel_PSU_repair",
+       "what": "Guia de reparo da fonte da SGI Fuel"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 8270,
+     "last_id": 8281,
+     "key_ids": [
+      8278,
+      8281
+     ],
+     "title": "Velocidade de emulação no MAME",
+     "summary": "Ismael Luceno perguntou se alguém está trabalhando na velocidade de emulação do MAME, porque alguns cores que ele usa são lentos demais. Felipe lembrou de recompilação dinâmica para algumas CPUs, mas não sabia quem está envolvido.",
+     "participants": [
+      "Ismael Luceno",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "MAME",
+      "recompilação dinâmica"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 8283,
+     "last_id": 8301,
+     "key_ids": [
+      8291,
+      8293,
+      8301
+     ],
+     "title": "Scanner Crosfield em fotos e livros sobre S-100",
+     "summary": "Felipe publicou fotos de equipamentos antigos. Ronaldo indicou um vídeo de um scanner Crosfield 6250, e Felipe confirmou que o scanner da foto é desse modelo. Ronaldo supôs que o outro aparelho, sem marca, fosse algum equipamento de editoração. Quando Ricardo Bánffy noticiou a morte de Bill Godbout, Felipe comentou ter visto livros sobre o barramento S-100 na biblioteca da FEUP.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Ronaldo",
+      "Ricardo Bánffy"
+     ],
+     "tags": [
+      "Crosfield",
+      "editoração",
+      "S-100"
+     ],
+     "resources": [
+      {
+       "ref": "https://youtu.be/0y3RdBRED50",
+       "what": "Vídeo de um scanner Crosfield 6250 em uso"
+      },
+      {
+       "ref": "http://vcfed.org/wp/2018/11/13/r-i-p-bill-godbout-79/",
+       "what": "Nota sobre a morte de Bill Godbout"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 8309,
+     "last_id": 8309,
+     "key_ids": [
+      8309
+     ],
+     "title": "Ampliação da isenção do DMCA para preservação de jogos",
+     "summary": "Felipe compartilhou um artigo da EFF sobre a ampliação da isenção do DMCA para a preservação de videogames.",
+     "participants": [
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "DMCA",
+      "preservação de jogos"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.eff.org/deeplinks/2018/11/expanded-dmca-exemption-video-game-preservation-grants-small-victory-amidst",
+       "what": "Artigo da EFF sobre a isenção do DMCA"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 8310,
+     "last_id": 8315,
+     "key_ids": [
+      8311,
+      8312,
+      8315
+     ],
+     "title": "Lançamento do MAME 0.204",
+     "summary": "Felipe compartilhou o anúncio do MAME 0.204, que permite rodar HP-UX 9 com X11 em um HP9000/370 emulado e traz progresso na emulação de workstations SGI e de terminais X. Ronaldo perguntou pela emulação da Indy, e Ricardo Bánffy citou o projeto UniBone.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Ronaldo",
+      "Ricardo Bánffy"
+     ],
+     "tags": [
+      "MAME",
+      "HP9000",
+      "SGI"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.reddit.com/r/MAME/comments/a14ezt/mame_0204/",
+       "what": "Anúncio do MAME 0.204"
+      },
+      {
+       "ref": "http://www.retrocmp.com/projects/unibone/274-unibone-introduction",
+       "what": "Projeto UniBone"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 8318,
+     "last_id": 8333,
+     "key_ids": [
+      8318,
+      8328,
+      8330
+     ],
+     "title": "Situação do port do Another World e da placa JAMMA",
+     "summary": "Perguntado por Ismael Luceno sobre o port do Another World, Felipe disse que está parado. Ele contou que planejava retomar o desenho da PCB da placa JAMMA e que talvez prototipasse primeiro apenas o estágio de saída gráfica.",
+     "participants": [
+      "Ismael Luceno",
+      "Felipe \"Juca\" Sanches",
+      "Ronaldo"
+     ],
+     "tags": [
+      "Another World",
+      "JAMMA"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 8337,
+     "last_id": 8337,
+     "key_ids": [
+      8337
+     ],
+     "title": "Coleção de código-fonte da Sierra de Al Lowe",
+     "summary": "Hugo compartilhou uma notícia sobre Al Lowe ter revelado sua coleção de código-fonte de jogos da Sierra e colocado tudo à venda no eBay.",
+     "participants": [
+      "Hugo (Agaelebê)"
+     ],
+     "tags": [
+      "Sierra",
+      "código-fonte"
+     ],
+     "resources": [
+      {
+       "ref": "https://arstechnica.com/gaming/2018/11/al-lowe-reveals-his-sierra-source-code-collection-then-puts-all-of-it-on-ebay/",
+       "what": "Notícia da Ars Technica"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 8349,
+     "last_id": 8374,
+     "key_ids": [
+      8350,
+      8353,
+      8367
+     ],
+     "title": "Gerador de vídeo em lógica discreta a partir de EPROM",
+     "summary": "Felipe mostrou uma montagem em protoboard, feita só com lógica e sem microcontrolador, para gerar sinal de vídeo a partir de uma imagem gravada em EPROM. A montagem não funcionou; a ideia era chegar pelo menos a um shield VGA para Arduino. Ronaldo recomendou dividir o circuito em blocos (sincronismo horizontal e vertical, contador de endereços) e testar cada um separadamente.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Ronaldo"
+     ],
+     "tags": [
+      "geração de vídeo",
+      "EPROM",
+      "lógica digital"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 8386,
+     "last_id": 8419,
+     "key_ids": [
+      8386,
+      8388,
+      8389
+     ],
+     "title": "Kit de conversão de MSX para MSX2 (MA-20)",
+     "summary": "Erin Pinheiro perguntou se ainda é possível achar kits de conversão de MSX para MSX2. Ronaldo indicou o MA-20 de Luis Luca, fabricado em dois lotes já vendidos por grupos de Facebook, e Erin encontrou os esquemáticos publicados. FTMaciel disse que daria uma olhada e mandaria fazer as placas na China.",
+     "participants": [
+      "Erin Pinheiro 🐿",
+      "Ronaldo",
+      "FTMaciel"
+     ],
+     "tags": [
+      "MSX",
+      "MSX2"
+     ],
+     "resources": [
+      {
+       "ref": "http://optotech.net.br/msx/ma_20_neos_kit2+/",
+       "what": "Esquemáticos do kit MA-20"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 8402,
+     "last_id": 8682,
+     "key_ids": [
+      8412,
+      8640,
+      8677
+     ],
+     "title": "Digitalização do livro \"How to Design and Build Your Own Custom TV Games\" (1978)",
+     "summary": "Felipe recebeu com meses de atraso um exemplar extraviado do livro de 1978, ficando com dois, e desmembrou um deles para escanear as cerca de 550 páginas. Publicou os capítulos em PDF no grupo e pôs as imagens TIFF e o PDF completo no repositório ArqueologiaDigital no GitHub. Erin o ajudou a tratar as imagens com curvas de níveis no GIMP, e Felipe cogitou aplicar o tratamento a todas as páginas para reduzir o tamanho do PDF. Leonardo Roman processou as páginas no Scantailor e publicou no Datassette uma versão de 28 MB com OCR.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Ismael Luceno",
+      "Hugo (Agaelebê)",
+      "FTMaciel",
+      "Luciana Marques",
+      "Leonardo Roman",
+      "Erin Pinheiro 🐿",
+      "Affonso Amendola"
+     ],
+     "tags": [
+      "How to Design and Build Your Own Custom TV Games",
+      "digitalização",
+      "videogames de lógica discreta"
+     ],
+     "resources": [
+      {
+       "ref": "How_to_Design_and_Build_Your_Own_Custom_TV_Games.pdf",
+       "what": "Capítulo 1 escaneado (os demais capítulos foram publicados em PDFs _ch2 a _ch12)"
+      },
+      {
+       "ref": "https://github.com/ArqueologiaDigital/How_to_Design_and_Build_Your_Own_Custom_TV_Games",
+       "what": "Repositório com os scans do livro"
+      },
+      {
+       "ref": "https://github.com/ArqueologiaDigital/How_to_Design_and_Build_Your_Own_Custom_TV_Games/raw/master/PDF/How_to_Design_and_Build_Your_Own_Custom_TV_Games.pdf",
+       "what": "PDF completo do livro"
+      },
+      {
+       "ref": "https://github.com/ArqueologiaDigital/How_to_Design_and_Build_Your_Own_Custom_TV_Games/tree/master/originais",
+       "what": "Imagens TIFF originais das páginas"
+      },
+      {
+       "ref": "https://datassette.org/livros/diversos-eletronica/how-design-and-build-your-own-custom-tv-games",
+       "what": "Versão tratada no Scantailor, com OCR, no Datassette"
+      }
+     ],
+     "weight": 3
+    },
+    {
+     "first_id": 8445,
+     "last_id": 8536,
+     "key_ids": [
+      8447,
+      8491,
+      8503
+     ],
+     "title": "Carregar fitas no Hotbit a partir do celular e do PC",
+     "summary": "Erin Pinheiro tentou fazer um cabo para carregar programas em fita no Hotbit a partir do celular, conferindo a pinagem do datacorder em relação à do Expert. No laptop, o carregamento funcionou depois de desligar o equalizador, e a gravação do Hotbit para o celular também funcionou. Para compensar o volume baixo do celular, Erin pôs um resistor de 2k em paralelo com R4, mas o carregamento pelo celular continuou falhando.",
+     "participants": [
+      "Erin Pinheiro 🐿",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "MSX",
+      "Hotbit",
+      "fita cassete"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 8489,
+     "last_id": 8545,
+     "key_ids": [
+      8489
+     ],
+     "title": "Fita perfurada da Escola Politécnica da USP (anos 1970)",
+     "summary": "Felipe compartilhou a foto de uma fita perfurada por volta de meados da década de 1970 na Escola Politécnica da USP.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Affonso Amendola"
+     ],
+     "tags": [
+      "fita perfurada",
+      "USP",
+      "história da computação brasileira"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 8512,
+     "last_id": 8515,
+     "key_ids": [
+      8513
+     ],
+     "title": "Compra do kit PC-Retro, clone de IBM PC",
+     "summary": "Felipe contou ter comprado o kit PC-Retro, um clone de IBM PC, entregue na casa de um amigo nos EUA. Ele pediu ao RicBit que tentasse trazê-lo e, se não desse, pretendia buscá-lo em março, quando iria aos EUA para a conferência anual da Free Software Foundation.",
+     "participants": [
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "IBM PC 5150",
+      "PC-Retro"
+     ],
+     "resources": [
+      {
+       "ref": "http://www.mtmscientific.com/pc-retro.html",
+       "what": "Página do kit PC-Retro IBM Clone"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 8542,
+     "last_id": 8542,
+     "key_ids": [
+      8542
+     ],
+     "title": "Relato sobre o início do desenvolvimento de chips na Intel",
+     "summary": "Hugo compartilhou o texto \"Recollections of Early Chip Development at Intel\".",
+     "participants": [
+      "Hugo (Agaelebê)"
+     ],
+     "tags": [
+      "Intel",
+      "história da computação"
+     ],
+     "resources": [
+      {
+       "ref": "https://lark.tu-sofia.bg/ntt/eusku/readings/art_1.pdf",
+       "what": "Recollections of Early Chip Development at Intel"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 8597,
+     "last_id": 8627,
+     "key_ids": [
+      8605,
+      8611,
+      8601
+     ],
+     "title": "MSX SP 2018: palestra, Osborne e plotter Sony HitBit PRN-C41",
+     "summary": "Felipe compartilhou a foto de um Osborne e o vídeo de sua palestra \"Arqueologia Digital\" no MSX SP 2018. Erin fotografou uma plotter Sony, identificada como HitBit PRN-C41, e Felipe disse que gostaria de fazer o dump da ROM dela.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Luciana Marques",
+      "L.",
+      "Erin Pinheiro 🐿",
+      "VictorEmm 🐸 @VictorEmmX"
+     ],
+     "tags": [
+      "MSX",
+      "MSX SP",
+      "Osborne"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.youtube.com/watch?v=PwbRx6h6H90",
+       "what": "Vídeo da palestra MSX SP 2018 - Felipe Sanches - Arqueologia Digital"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 8651,
+     "last_id": 8652,
+     "key_ids": [
+      8651
+     ],
+     "title": "Clone documentado do Commodore PET",
+     "summary": "Erin compartilhou a documentação completa de um clone do Commodore PET 2001 feito com componentes modernos.",
+     "participants": [
+      "Erin Pinheiro 🐿",
+      "Ronaldo"
+     ],
+     "tags": [
+      "Commodore PET",
+      "réplica"
+     ],
+     "resources": [
+      {
+       "ref": "http://www.glensstuff.com/pet2001/docco/pet2001clone.pdf",
+       "what": "Documentação do clone do PET 2001"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 8683,
+     "last_id": 8698,
+     "key_ids": [
+      8683,
+      8691,
+      8693
+     ],
+     "title": "Sinal de vídeo composto no osciloscópio",
+     "summary": "Nano Gennari comparou capturas de sinal de vídeo composto feitas no osciloscópio com as figuras do livro de TV games. Ronaldo mostrou uma linha de vídeo de um TK3000 em osciloscópio analógico e digital, onde se vê o burst de cor, e Aylons Hazzud identificou ali um padrão de barras de cor.",
+     "participants": [
+      "Nano Gennari",
+      "Ronaldo",
+      "Aylons Hazzud"
+     ],
+     "tags": [
+      "vídeo composto",
+      "osciloscópio"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 8704,
+     "last_id": 8767,
+     "key_ids": [
+      8764,
+      8765,
+      8767
+     ],
+     "title": "Grupo de estudos do livro Custom TV Games e placa SourceBox",
+     "summary": "Felipe começou a converter o OCR do livro para LaTeX enquanto revisava o texto e apontou a placa-padrão da Radio Shack sugerida pelo autor para as montagens. Ele anunciou para 2019 um grupo de estudos de projeto eletrônico digital de videogames retrô no Garoa, com inscrição pelo wiki. Também começou a desenhar no KiCad a placa SourceBox do livro e criou um grupo de Telegram para o estudo.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Affonso Amendola"
+     ],
+     "tags": [
+      "How to Design and Build Your Own Custom TV Games",
+      "KiCad",
+      "Garoa Hacker Clube"
+     ],
+     "resources": [
+      {
+       "ref": "https://garoa.net.br/wiki/How_to_Design_and_Build_Your_Own_Custom_TV_Games",
+       "what": "Página de inscrição do grupo de estudos no wiki do Garoa"
+      },
+      {
+       "ref": "https://garoa.net.br/wiki/Custom_TV_Games/SourceBox",
+       "what": "Página da placa SourceBox desenhada no KiCad"
+      },
+      {
+       "ref": "https://www.ebay.com/itm/Archer-Breadboard-Board-276-153-Board-Edge-Mates-22-Pin-276-1551-/323464888404",
+       "what": "Placa-padrão Radio Shack/Archer sugerida no livro"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 8709,
+     "last_id": 8746,
+     "key_ids": [
+      8709,
+      8724,
+      8730
+     ],
+     "title": "Restauração de calculadora Olympia CD90 (1976)",
+     "summary": "Erin Pinheiro mostrou e restaurou uma calculadora Olympia CD90 Sigma de 1976, com display VFD, que era de sua tia. Alguns cantos da tampa do teclado estavam muito corroídos.",
+     "participants": [
+      "Erin Pinheiro 🐿",
+      "Felipe \"Juca\" Sanches",
+      "Affonso Amendola",
+      "L."
+     ],
+     "tags": [
+      "Olympia",
+      "calculadora",
+      "restauração"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 8748,
+     "last_id": 8759,
+     "key_ids": [
+      8748,
+      8751
+     ],
+     "title": "Código-fonte do Quake e livros de Fabien Sanglard",
+     "summary": "Foi indicado o código-fonte do Quake, publicado sob GPL. L. comentou que o livro de Fabien Sanglard sobre Doom foi lançado e que o próximo será sobre Quake. Ele também recomendou o livro sobre Wolfenstein 3D.",
+     "participants": [
+      "Deleted Account",
+      "Affonso Amendola",
+      "L.",
+      "Ronaldo"
+     ],
+     "tags": [
+      "Quake",
+      "Doom",
+      "código-fonte"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/id-Software/Quake",
+       "what": "Código-fonte do Quake sob GPL"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 8761,
+     "last_id": 8808,
+     "key_ids": [
+      8761,
+      8806,
+      8807
+     ],
+     "title": "IBM 1401 compilando FORTRAN II e lembranças de Fortran",
+     "summary": "Foi compartilhado um vídeo de um IBM 1401 compilando e executando FORTRAN II. Paulo Marcotti contou que programou em Fortran de 1974 a 1987 para cálculo estrutural, e Ronaldo mencionou o estudo da operação de mainframes.",
+     "participants": [
+      "Deleted Account",
+      "Ronaldo",
+      "Paulo Marcotti"
+     ],
+     "tags": [
+      "IBM 1401",
+      "Fortran",
+      "mainframe"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.youtube.com/watch?v=uFQ3sajIdaM",
+       "what": "Vídeo: The IBM 1401 compiles and runs FORTRAN II"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 8772,
+     "last_id": 8776,
+     "key_ids": [
+      8775
+     ],
+     "title": "Recuperação do protótipo de SimCity para NES",
+     "summary": "Foi compartilhado o trabalho de recuperação do SimCity para NES, que nunca foi lançado e só existiu como protótipo.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "SimCity",
+      "NES",
+      "protótipo"
+     ],
+     "resources": [
+      {
+       "ref": "https://gamehistory.org/simcity/",
+       "what": "Artigo sobre a recuperação do SimCity para NES"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 8778,
+     "last_id": 8778,
+     "key_ids": [
+      8778
+     ],
+     "title": "Video Game Font Preservation Society",
+     "summary": "Foi compartilhada a notícia sobre a Video Game Font Preservation Society, do FontStruct.",
+     "participants": [
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "tipografia",
+      "preservação de jogos"
+     ],
+     "resources": [
+      {
+       "ref": "https://fontstruct.com/news/2018/10/19/the-video-game-font-preservation-society/",
+       "what": "Notícia sobre a Video Game Font Preservation Society"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 8783,
+     "last_id": 8802,
+     "key_ids": [
+      8783,
+      8785,
+      8796
+     ],
+     "title": "Biblioteca Arduino de barramento paralelo para chips vintage",
+     "summary": "Emerson Moura apresentou uma biblioteca para Arduino que cria um barramento paralelo de 8 ou 16 bits para controlar chips antigos como o PSG e o VDP do MSX. A conexão física é abstraída: 74595, PCF8574 via I2C ou o barramento do Arduino Mega. Ele explicou que o Mega é compatível com TTL e pode endereçar SRAM externa.",
+     "participants": [
+      "Emerson Moura",
+      "Ronaldo"
+     ],
+     "tags": [
+      "Arduino",
+      "MSX",
+      "chips vintage"
+     ],
+     "resources": [
+      {
+       "ref": "https://pastebin.com/QKFdxDy8",
+       "what": "ParallelBus.h"
+      },
+      {
+       "ref": "https://pastebin.com/FyndyGdz",
+       "what": "PBO595.h"
+      },
+      {
+       "ref": "https://pastebin.com/7N0RGQmh",
+       "what": "PBO595.cpp"
+      },
+      {
+       "ref": "http://andybrown.me.uk/2011/08/28/512kb-sram-expansion-for-the-arduino-mega-design/",
+       "what": "Expansão de SRAM de 512 KB para Arduino Mega"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 8919,
+     "last_id": 8970,
+     "key_ids": [
+      8921,
+      8941,
+      8950
+     ],
+     "title": "Clones de placas de som: Sound Blaster 1.0, AdLib, OPL3LPT e Covox",
+     "summary": "Erin mostrou o protótipo \"Snood Bloober\" de Tube Time, um clone da Sound Blaster 1.0 planejado como open source, e FTMaciel citou um clone de AdLib do mesmo autor que tem para montar. A conversa distinguiu AdLib (OPL2), SB16 (OPL3 e DSP CT1341) e Covox/Disney Sound Source (DAC de resistores R-2R). Nano Gennari indicou o OPL3LPT, ligado à porta paralela, e também foi comentado o áudio por PWM no PC speaker.",
+     "participants": [
+      "Erin Pinheiro 🐿",
+      "Felipe \"Juca\" Sanches",
+      "Affonso Amendola",
+      "FTMaciel",
+      "Ronaldo",
+      "L.",
+      "Nano Gennari",
+      "Emerson Moura"
+     ],
+     "tags": [
+      "Sound Blaster",
+      "AdLib",
+      "Covox",
+      "placas de som"
+     ],
+     "resources": [
+      {
+       "ref": "https://twitter.com/tubetimeus/status/1047605589025546241",
+       "what": "Protótipo do clone de Sound Blaster 1.0 de Tube Time"
+      },
+      {
+       "ref": "http://homepages.cae.wisc.edu/~brodskye/sb16doc/sb16doc.html#DSPPorts",
+       "what": "Documentação da SB16"
+      },
+      {
+       "ref": "https://www.serdashop.com/OPL3LPT",
+       "what": "OPL3LPT, placa OPL2/OPL3 para porta paralela"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 8971,
+     "last_id": 8987,
+     "key_ids": [
+      8977,
+      8983,
+      8987
+     ],
+     "title": "Estacionamento de cabeças de HD (park)",
+     "summary": "O grupo discutiu o comando park dos tempos do XT e o estacionamento automático das cabeças em HDs posteriores, por mola ou usando o motor do eixo como gerador. Emerson associou o park aos HDs MFM/RLL. L. lembrou que seu XT tinha um Seagate ST238R (RLL), e Affonso disse que o museu tem exatamente esse modelo, que ele está tentando ler.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Ronaldo",
+      "Erin Pinheiro 🐿",
+      "Leonardo Roman",
+      "Emerson Moura",
+      "L.",
+      "Affonso Amendola"
+     ],
+     "tags": [
+      "disco rígido",
+      "IBM PC XT"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 8989,
+     "last_id": 8993,
+     "key_ids": [
+      8989,
+      8992
+     ],
+     "title": "Digitalizador USB antigo usado via máquina virtual com Windows XP",
+     "summary": "Ronaldo usou VMware com Windows XP em modo unity para fazer funcionar um digitalizador USB cujos drivers só existem para XP.",
+     "participants": [
+      "Ronaldo"
+     ],
+     "tags": [
+      "virtualização",
+      "drivers legados"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 8995,
+     "last_id": 9001,
+     "key_ids": [
+      8995,
+      8999
+     ],
+     "title": "Fofonso's Atoms VGA, jogo novo para DOS",
+     "summary": "Affonso Amendola lançou o Fofonso's Atoms VGA, um jogo para PCs com DOS e VGA que clona um jogo de Windows 3.11 chamado Atoms. O código é livre e está no GitHub, e o binário pré-compilado ainda precisa do DOSBox para rodar.",
+     "participants": [
+      "Affonso Amendola"
+     ],
+     "tags": [
+      "DOS",
+      "VGA",
+      "desenvolvimento retrô"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/affonsoamendola/atomsVGA",
+       "what": "Repositório do Atoms VGA"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 9004,
+     "last_id": 9097,
+     "key_ids": [
+      9016,
+      9034,
+      9083
+     ],
+     "title": "Compilação de código Turbo C para DOS com GCC",
+     "summary": "Felipe tentou portar um código do Affonso, que só compilava no Turbo C, para gerar um binário de MS-DOS com o GCC; parte da conversa foi encaminhada de outro chat. L. explicou que a opção -m16 exige um 386 e que o programa caiba em um segmento de 64 KB, e sugeriu Open Watcom ou DJGPP. Os erros vinham do assembly inline. Gustavo Romero recomendou -S -save-temps e -v, e com -m32 e o pacote libc6-dev-i386 a compilação avançou.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L.",
+      "Gustavo Romero"
+     ],
+     "tags": [
+      "DOS",
+      "GCC",
+      "compilação cruzada"
+     ],
+     "resources": [
+      {
+       "ref": "https://askubuntu.com/questions/470796/fatal-error-sys-cdefs-h-no-such-file-or-directory",
+       "what": "Solução para o erro sys/cdefs.h (libc6-dev-i386)"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 9038,
+     "last_id": 9049,
+     "key_ids": [
+      9039,
+      9047
+     ],
+     "title": "Snark Barker: réplica open source da Sound Blaster 1.0",
+     "summary": "L. compartilhou o Snark Barker, réplica 100% compatível da Sound Blaster 1.0, e Erin confirmou que é o projeto mostrado antes como Snood Bloober, agora com outro nome. Erin indicou o texto do autor que explica o funcionamento da placa. FTMaciel publicou uma foto e contou que resolveu montar sua placa.",
+     "participants": [
+      "L.",
+      "Erin Pinheiro 🐿",
+      "Felipe \"Juca\" Sanches",
+      "FTMaciel"
+     ],
+     "tags": [
+      "Sound Blaster",
+      "réplica",
+      "open hardware"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/schlae/snark-barker",
+       "what": "Repositório do Snark Barker"
+      },
+      {
+       "ref": "http://tubetime.us/index.php/2019/01/19/sound-blaster-1-0-principles-of-operation/",
+       "what": "Sound Blaster 1.0 Principles of Operation"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 9051,
+     "last_id": 9053,
+     "key_ids": [
+      9051,
+      9053
+     ],
+     "title": "ROM hacking de Super Mario World",
+     "summary": "Foi indicado o site SMW Central, com tutoriais de patch em assembly do SNES e listagem comentada do código do Super Mario World. L. citou o editor de mapas Lunar Magic.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "ROM hacking",
+      "SNES"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.smwcentral.net/",
+       "what": "SMW Central"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9098,
+     "last_id": 9105,
+     "key_ids": [
+      9098,
+      9100,
+      9103
+     ],
+     "title": "Vetorização da arte do playfield baseada em Pinball Fantasies",
+     "summary": "Felipe mostrou o antes e o depois da vetorização da arte do playfield da sua máquina de pinball baseada em Pinball Fantasies. Ele observou que vetorizar pixel art às vezes pede vetores em zigue-zague de 90 graus para manter o aspecto quadriculado.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Gustavo Romero"
+     ],
+     "tags": [
+      "pinball",
+      "Pinball Fantasies",
+      "vetorização"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 9107,
+     "last_id": 9128,
+     "key_ids": [
+      9109,
+      9117,
+      9126
+     ],
+     "title": "Versão EGA do Atoms e paletas EGA/CGA",
+     "summary": "Affonso disse que está fazendo uma versão EGA do Atoms. Ele explicou o modo de alta resolução da EGA, que escolhe 16 de 64 cores e aparentemente exigia o Enhanced Color Display. A conversa passou pelas paletas da CGA e pelas cores do Alley Cat.",
+     "participants": [
+      "Affonso Amendola",
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "EGA",
+      "CGA",
+      "Alley Cat"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 9140,
+     "last_id": 9172,
+     "key_ids": [
+      9148,
+      9162,
+      9169
+     ],
+     "title": "Backlight do laptop NEC 286F substituído por fita de LED",
+     "summary": "Silas mostrou o backlight de um NEC 286F trocado por fita de LED e TNT, ideia de Muriel, estudante da UFABC. Silas disse que o resultado não ficou igual ao original, mas dá para usar. Felipe achou que ficou ruim nas fotos, e Leonardo Roman observou que faltou um material para dispersar melhor a luz. FTMaciel e Ronaldo sugeriram reaproveitar as películas difusoras de telas LCD quebradas, iluminadas pelas bordas.",
+     "participants": [
+      "Silas",
+      "Felipe \"Juca\" Sanches",
+      "Leonardo Roman",
+      "FTMaciel",
+      "Ronaldo"
+     ],
+     "tags": [
+      "NEC",
+      "LCD",
+      "restauração"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 9173,
+     "last_id": 9174,
+     "key_ids": [
+      9173
+     ],
+     "title": "Documento sobre armadilhas no Z80",
+     "summary": "L. compartilhou um documento sobre as armadilhas nos processos de fabricação do Z80.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "Z80"
+     ],
+     "resources": [
+      {
+       "ref": "Z80_traps.pdf",
+       "what": "Documento sobre armadilhas no Z80"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9186,
+     "last_id": 9224,
+     "key_ids": [
+      9186,
+      9191,
+      9201
+     ],
+     "title": "Livreto \"Scopus 30 anos\" digitalizado e a origem do SISNE",
+     "summary": "Felipe compartilhou o livreto digitalizado \"Scopus 30 anos\", emprestado por DQ, que traz uma linha do tempo da empresa. Leonardo Roman questionou se o SISNE foi mesmo criado do zero, como diz o livro, ou se era cópia do MS-DOS; Ricardo Bánffy lembrou de sequências de bytes idênticas. FTMaciel comentou sobre profissionais de informática dos anos 70/80 ainda ativos no serviço público.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Affonso Amendola",
+      "FTMaciel",
+      "Leonardo Roman",
+      "Ricardo Bánffy"
+     ],
+     "tags": [
+      "Scopus",
+      "SISNE",
+      "indústria brasileira de informática",
+      "digitalização"
+     ],
+     "resources": [
+      {
+       "ref": "Scopus_30_anos.pdf",
+       "what": "Livreto comemorativo dos 30 anos da Scopus"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 9202,
+     "last_id": 9225,
+     "key_ids": [
+      9204,
+      9206
+     ],
+     "title": "Teletype ASR-33 em vídeo",
+     "summary": "L. compartilhou um vídeo de uma Teletype ASR-33, e Felipe lembrou que há uma na Poli-USP, da época do Patinho Feio. Ronaldo advertiu que imprimir repetidamente no mesmo ponto pode furar o papel e marcar o rolo. Affonso disse que a do museu ainda precisa de conserto.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches",
+      "Ronaldo",
+      "Affonso Amendola",
+      "FTMaciel",
+      "Ricardo Bánffy"
+     ],
+     "tags": [
+      "teletipo",
+      "Patinho Feio"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 9213,
+     "last_id": 9219,
+     "key_ids": [
+      9213,
+      9218
+     ],
+     "title": "Resumo dos registradores VGA e Norton Guides on-line",
+     "summary": "Felipe compartilhou um PDF com um resumo dos registradores da VGA. L. indicou uma versão web dos Norton Guides, guias de programação residentes (TSR) da época do DOS.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Affonso Amendola",
+      "L."
+     ],
+     "tags": [
+      "VGA",
+      "DOS",
+      "documentação"
+     ],
+     "resources": [
+      {
+       "ref": "SecondSightVGARegisters.pdf",
+       "what": "Resumo dos registradores da VGA"
+      },
+      {
+       "ref": "http://www.ousob.com/ng/",
+       "what": "Norton Guides on-line"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9226,
+     "last_id": 9226,
+     "key_ids": [
+      9226
+     ],
+     "title": "Reconstrução do navegador WorldWideWeb pelo CERN",
+     "summary": "Ricardo Bánffy compartilhou a reconstrução, feita pelo CERN em 2019, do navegador WorldWideWeb original do NeXT.",
+     "participants": [
+      "Ricardo Bánffy"
+     ],
+     "tags": [
+      "CERN",
+      "WorldWideWeb",
+      "NeXT"
+     ],
+     "resources": [
+      {
+       "ref": "https://worldwideweb.cern.ch/browser/#http://info.cern.ch/hypertext/WWW/NeXT/Implementation/WorldWideWeb.nib",
+       "what": "CERN 2019 WorldWideWeb Rebuild"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9232,
+     "last_id": 9244,
+     "key_ids": [
+      9232,
+      9236
+     ],
+     "title": "Fliperamas abandonados (Wisconsin e Fukushima)",
+     "summary": "Foram compartilhadas reportagens sobre o resgate de máquinas de arcade em um galpão rural em Wisconsin e sobre um fliperama da Sega abandonado na zona radioativa de Fukushima. Erin mostrou uma pista de boliche que parecia não ter sido modernizada desde a década de 1990.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Erin Pinheiro 🐿",
+      "Rodrigo Tadeu",
+      "Deleted Account"
+     ],
+     "tags": [
+      "arcade"
+     ],
+     "resources": [
+      {
+       "ref": "https://arcadeblogger.com/2019/03/02/arcade-raid-rural-wisconsin-warehouse/",
+       "what": "Arcade Raid! Wisconsin Rural Warehouse"
+      },
+      {
+       "ref": "http://blogtectoy.com.br/homem-explora-fliperama-abandonado-da-sega-na-zona-de-perigo-radioativo-em-fukushima/",
+       "what": "Fliperama da Sega abandonado em Fukushima"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9248,
+     "last_id": 9252,
+     "key_ids": [
+      9249,
+      9252
+     ],
+     "title": "PiDP-8 e retomada do esquemático do Patinho Feio no KiCad",
+     "summary": "A partir do projeto PiDP-8, Felipe lembrou que o Patinho Feio faz 50 anos em 2021 e retomou o trabalho no esquemático em KiCad. Ele registrou no issue tracker do repositório dúvidas sobre o circuito, como a identificação do componente 4E da prancha XI.",
+     "participants": [
+      "Deleted Account",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Patinho Feio",
+      "KiCad",
+      "PDP-8"
+     ],
+     "resources": [
+      {
+       "ref": "https://obsolescence.wixsite.com/obsolescence/2016-pidp-8-building-instructions",
+       "what": "Instruções de montagem do PiDP-8"
+      },
+      {
+       "ref": "https://github.com/ArqueologiaDigital/PatinhoFeio_KICAD/issues/2",
+       "what": "Issue: Prancha XI, identificar componente 4E"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 9253,
+     "last_id": 9257,
+     "key_ids": [
+      9253,
+      9257
+     ],
+     "title": "Visita ao Living Computer Museum: Altair 8800 e Osborne",
+     "summary": "L. relatou que programou um Altair 8800 no Living Computer Museum, em Seattle, e publicou fotos, entre elas a de um Osborne rodando WordStar no CP/M.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "Living Computer Museum",
+      "Altair 8800",
+      "Osborne"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 9270,
+     "last_id": 9305,
+     "key_ids": [
+      9270,
+      9305
+     ],
+     "title": "Financiamento coletivo do documentário de Marcus Garrett",
+     "summary": "Eduardo Loos divulgou a campanha de financiamento do novo documentário de Marcus Garrett, diretor de \"1983: O Ano dos Videogames no Brasil\". L. relatou um problema com sua contribuição no Kickante e depois informou que a campanha foi bem-sucedida.",
+     "participants": [
+      "Eduardo Loos",
+      "L."
+     ],
+     "tags": [
+      "documentário",
+      "videogames no Brasil"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.kickante.com.br/campanhas/loading",
+       "what": "Campanha de financiamento do documentário"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9281,
+     "last_id": 9304,
+     "key_ids": [
+      9281,
+      9285,
+      9297
+     ],
+     "title": "Troca preventiva de capacitores: comentário recebido no YouTube",
+     "summary": "Felipe compartilhou um comentário extenso recebido em um vídeo seu no YouTube e pediu opiniões. FTMaciel considerou o conteúdo técnico procedente e o resumiu como recomendação de trocar capacitores que podem estar secos. Affonso descreveu formas de testar capacitores, e Leandro Lameiro e L. citaram fontes do C64 que causam sobretensão.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "FTMaciel",
+      "Rodrigo Tadeu",
+      "Erin Pinheiro 🐿",
+      "Affonso Amendola",
+      "Leandro Lameiro",
+      "L."
+     ],
+     "tags": [
+      "capacitores",
+      "restauração"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.youtube.com/watch?v=WBbrBwiJ3fc",
+       "what": "Vídeo de Felipe no YouTube onde o comentário foi feito"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9306,
+     "last_id": 9308,
+     "key_ids": [
+      9307
+     ],
+     "title": "4º RetroSC em Camboriú",
+     "summary": "Eduardo Loos divulgou o 4º RetroSC, em 27/4/2019, no Instituto Federal de Santa Catarina, campus Camboriú.",
+     "participants": [
+      "Eduardo Loos"
+     ],
+     "tags": [
+      "eventos",
+      "RetroSC"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 9311,
+     "last_id": 9366,
+     "key_ids": [
+      9318,
+      9321,
+      9366
+     ],
+     "title": "ExecTrace: disassembler genérico aplicado ao Galaga de MSX",
+     "summary": "Felipe apresentou o ExecTrace, um disassembler genérico em Python que analisa o fluxo de execução por busca em profundidade e separa código de dados. Ele foi criado para o bytecode do Another World e já tinha uma classe para o i8048 do Odyssey 2; a nova classe para Z80/MSX foi usada para desmontar o Galaga da Konami. Ao remontar o resultado, a ROM ainda diferia da original em alguns bytes.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Rodrigo Tadeu"
+     ],
+     "tags": [
+      "ExecTrace",
+      "Z80",
+      "MSX",
+      "engenharia reversa"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/felipesanches/ExecTrace",
+       "what": "Repositório do ExecTrace"
+      }
+     ],
+     "weight": 3
+    },
+    {
+     "first_id": 9335,
+     "last_id": 9344,
+     "key_ids": [
+      9335,
+      9341,
+      9343
+     ],
+     "title": "Extração da ROM de instrumentos do YM2413",
+     "summary": "L. compartilhou que a ROM interna do YM2413 foi extraída, o que permite uma emulação mais fiel. Erin explicou que se trata de uma tabela de dados com os operadores FM dos instrumentos e relacionou o chip ao VRC7 do Lagrange Point (Famicom).",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches",
+      "Erin Pinheiro 🐿"
+     ],
+     "tags": [
+      "YM2413",
+      "dump de ROM",
+      "síntese FM"
+     ],
+     "resources": [
+      {
+       "ref": "https://siliconpr0n.org/archive/doku.php?id=vendor:yamaha:opl2#ym2413_instruments",
+       "what": "Página do siliconpr0n com os instrumentos do YM2413"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 9350,
+     "last_id": 9352,
+     "key_ids": [
+      9350,
+      9352
+     ],
+     "title": "Publicação do código-fonte dos jogos da Infocom",
+     "summary": "Felipe compartilhou a conta historicalsource no GitHub e a notícia da publicação do código-fonte de todas as aventuras de texto da Infocom.",
+     "participants": [
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Infocom",
+      "código-fonte"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/historicalsource",
+       "what": "Conta historicalsource no GitHub"
+      },
+      {
+       "ref": "https://games.slashdot.org/story/19/04/18/2132228/the-source-code-for-all-infocom-text-adventure-classics-has-been-released",
+       "what": "Notícia sobre a liberação do código da Infocom"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 9365,
+     "last_id": 9369,
+     "key_ids": [
+      9365
+     ],
+     "title": "Nintendo derruba port de Super Mario para C64",
+     "summary": "Felipe compartilhou a notícia de que a Nintendo derrubou um port de Super Mario para Commodore 64 que levou sete anos para ser feito.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "Commodore 64",
+      "Nintendo"
+     ],
+     "resources": [
+      {
+       "ref": "https://games.slashdot.org/story/19/04/23/1913218/nintendo-squashes-super-mario-commodore-64-port-which-took-seven-years-to-make",
+       "what": "Notícia no Slashdot"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9377,
+     "last_id": 9378,
+     "key_ids": [
+      9377
+     ],
+     "title": "Vazamento de uma ROM perdida da Atari",
+     "summary": "L. compartilhou reportagem sobre o vazamento de uma ROM perdida da Atari, que levantou a pergunta de se a ROM teria sido roubada.",
+     "participants": [
+      "L.",
+      "Erin Pinheiro 🐿"
+     ],
+     "tags": [
+      "Atari",
+      "dump de ROM"
+     ],
+     "resources": [
+      {
+       "ref": "https://arstechnica.com/gaming/2019/04/after-a-lost-atari-rom-leaks-retro-fans-ask-was-it-stolen/",
+       "what": "Reportagem da Ars Technica"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9389,
+     "last_id": 9402,
+     "key_ids": [
+      9391,
+      9395,
+      9402
+     ],
+     "title": "Luzes do playfield do pinball controladas por MAX7219",
+     "summary": "No Garoa, Felipe instalou mais luzes no playfield da máquina de pinball usando um único controlador de matriz de LEDs 8x8 MAX7219, o que evita multiplexar por software ou usar vários shift registers. Ele publicou um vídeo do resultado.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "pitanga"
+     ],
+     "tags": [
+      "pinball",
+      "MAX7219",
+      "Garoa Hacker Clube"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 9403,
+     "last_id": 9419,
+     "key_ids": [
+      9403,
+      9405,
+      9410
+     ],
+     "title": "Síndrome do vinagre em LCDs: troca do polarizador",
+     "summary": "Felipe compartilhou um vídeo sobre como recuperar LCDs com síndrome do vinagre renovando a película polarizadora. FTMaciel contou ter recuperado o LCD de um Toshiba T1200 dissolvendo a película endurecida com thinner, e Emerson e L. mencionaram o Newton. Erin descreveu um defeito diferente em seu Satellite Pro, no chicote entre a placa de vídeo e o LCD.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "FTMaciel",
+      "Emerson Moura",
+      "L.",
+      "Erin Pinheiro 🐿"
+     ],
+     "tags": [
+      "LCD",
+      "restauração",
+      "polarizador"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.youtube.com/watch?v=zbrW7uUYpkw",
+       "what": "Vídeo sobre reparo da síndrome do vinagre em LCD"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 9420,
+     "last_id": 9420,
+     "key_ids": [
+      9420
+     ],
+     "title": "Open ROMs do MEGA65 para C64",
+     "summary": "L. compartilhou o projeto open-roms do MEGA65, que cria ROMs livres para o C64 e outros computadores retrô.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "Commodore 64",
+      "MEGA65",
+      "ROMs livres"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/MEGA65/open-roms",
+       "what": "Repositório open-roms"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9421,
+     "last_id": 9434,
+     "key_ids": [
+      9421,
+      9422,
+      9429
+     ],
+     "title": "Magnavox Odyssey: projeto da Universidade de Pittsburgh e esquemáticos de Felipe",
+     "summary": "VictorEmm compartilhou a notícia de que estudantes da Universidade de Pittsburgh recriaram o Magnavox Odyssey. Felipe disse que não estava claro se fizeram a captura do esquemático, uma PCB ou um simulador. Ele indicou o tópico no Fórum Fiozera onde tinha publicado seus esquemáticos do Odyssey dois anos antes.",
+     "participants": [
+      "VictorEmm 🐸 @VictorEmmX",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Magnavox Odyssey",
+      "esquemáticos"
+     ],
+     "resources": [
+      {
+       "ref": "https://variety.com/2019/gaming/news/university-of-pittsburgh-resurrects-magnavox-odyssey-1203167917/",
+       "what": "Notícia sobre o projeto da Universidade de Pittsburgh"
+      },
+      {
+       "ref": "https://forum.fiozera.com.br/t/magnavox-odyssey-1/109",
+       "what": "Tópico do Fórum Fiozera com os esquemáticos do Odyssey"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 9437,
+     "last_id": 9451,
+     "key_ids": [
+      9437,
+      9443
+     ],
+     "title": "Arcades de parede com tela LCD",
+     "summary": "Felipe comentou o formato de arcade de parede, que fica mais compacto por usar LCD em vez de CRT; Erin disse preferir bartops. Felipe mencionou que comprou uma placa JAMMA de Ms. Pac-Man.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Erin Pinheiro 🐿",
+      "L."
+     ],
+     "tags": [
+      "arcade",
+      "JAMMA"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 9452,
+     "last_id": 9455,
+     "key_ids": [
+      9453
+     ],
+     "title": "Museu technikum29 na Alemanha",
+     "summary": "Antes de viajar à Alemanha para o Libre Graphics Meeting, Felipe perguntou por atrações de retrocomputação em Frankfurt e indicou o technikum29, museu de computadores com máquinas em funcionamento. John A. John comentou o site do museu.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "John A. John"
+     ],
+     "tags": [
+      "museu",
+      "technikum29"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.technikum29.de/en/",
+       "what": "Site do technikum29"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9456,
+     "last_id": 9462,
+     "key_ids": [
+      9456,
+      9457
+     ],
+     "title": "Olivetti ELEA 9003 e o último mainframe Olivetti funcionando",
+     "summary": "Felipe compartilhou artigos do IEEE Spectrum sobre o design do Olivetti ELEA 9003 e sobre o último mainframe Olivetti em funcionamento, mantido em uma escola na Toscana.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Hugo (Agaelebê)",
+      "FTMaciel",
+      "pitanga"
+     ],
+     "tags": [
+      "Olivetti",
+      "mainframe"
+     ],
+     "resources": [
+      {
+       "ref": "https://spectrum.ieee.org/tech-talk/tech-history/silicon-revolution/when-the-history-of-computing-comes-alive",
+       "what": "The Last Working Olivetti Mainframe Sits In a Tuscan High School"
+      },
+      {
+       "ref": "https://spectrum.ieee.org/tech-history/silicon-revolution/the-italian-computer-olivettis-elea-9003-was-a-study-in-elegant-ergonomic-design",
+       "what": "Artigo sobre o design do ELEA 9003"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9466,
+     "last_id": 9473,
+     "key_ids": [
+      9466,
+      9472
+     ],
+     "title": "NuXT v2.0, placa-mãe XT nova em formato micro-ATX",
+     "summary": "L. compartilhou a NuXT v2.0, placa-mãe Turbo XT nova em formato micro-ATX, com vários recursos onboard. FTMaciel observou que os arquivos de design foram liberados e cotou cerca de 50 dólares por 5 placas.",
+     "participants": [
+      "L.",
+      "FTMaciel"
+     ],
+     "tags": [
+      "IBM PC XT",
+      "open hardware"
+     ],
+     "resources": [
+      {
+       "ref": "https://monotech.fwscart.com/NuXT_-_MicroATX_Turbo_XT_-_955MHz,_832K_RAM,_XT-CF,_SVGA,_Floppy,_Serial/p6083514_19777986.aspx",
+       "what": "Página da NuXT v2.0"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9479,
+     "last_id": 9486,
+     "key_ids": [
+      9480,
+      9486
+     ],
+     "title": "Dali Clock no Xerox Alto e Connection Museum em Seattle",
+     "summary": "L. mostrou o Dali Clock original rodando em um Xerox Alto no Living Computer Museum, em Seattle, e recomendou o Connection Museum, dedicado à história da telefonia.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Xerox Alto",
+      "Living Computer Museum"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 9487,
+     "last_id": 9590,
+     "key_ids": [
+      9488,
+      9505,
+      9548
+     ],
+     "title": "Chegada do kit PC-Retro, clone do IBM PC 5150",
+     "summary": "Chegou o kit do clone do IBM PC 5150. Felipe fez um scan da PCB e compartilhou também o scan da face superior que veio no CD. Discutiram-se o teclado (PS/2 com adaptador), as camadas da placa e o desenho do esquemático no KiCad para estudar cada componente antes de soldar. FTMaciel, que já consertou uma placa 5150, se ofereceu para procurar uma placa CGA com um colega, e L. ofereceu seu XT com monitor CGA.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L.",
+      "Aylons Hazzud",
+      "FTMaciel",
+      "Gustavo Romero"
+     ],
+     "tags": [
+      "IBM PC 5150",
+      "PC-Retro",
+      "KiCad"
+     ],
+     "resources": [
+      {
+       "ref": "pc-retro-pcb-scan.png",
+       "what": "Scan da PCB do kit PC-Retro"
+      },
+      {
+       "ref": "brd1.png",
+       "what": "Scan da face superior da PCB, da documentação do kit"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 9510,
+     "last_id": 9533,
+     "key_ids": [
+      9510,
+      9523,
+      9522
+     ],
+     "title": "Emulador de 8086 e uso de computadores antigos hoje",
+     "summary": "L. contou que retomou um emulador de PC feito do zero, para XT ou anteriores, com o objetivo de dar boot no MS-DOS 2.0. A partir de um artigo sobre trabalhar com um IBM 5150, Erin e L. discutiram o uso de computadores antigos para tarefas atuais e a dificuldade de integrá-los a serviços modernos.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches",
+      "Erin Pinheiro 🐿"
+     ],
+     "tags": [
+      "emulação",
+      "IBM PC 5150"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.cio.com/article/2405478/can-you-do-real-work-with-the-30-year-old-ibm-5150-.html",
+       "what": "Artigo: Can You Do Real Work with the 30-Year-Old IBM 5150?"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9591,
+     "last_id": 9593,
+     "key_ids": [
+      9593
+     ],
+     "title": "Livro \"Construa seu órgão eletrônico\"",
+     "summary": "Foi encaminhada a mensagem de alguém que comprou o livro raro \"Construa seu órgão eletrônico\" e pretende escaneá-lo e disponibilizá-lo.",
+     "participants": [
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "livros técnicos",
+      "digitalização"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 9594,
+     "last_id": 9674,
+     "key_ids": [
+      9605,
+      9673,
+      9674
+     ],
+     "title": "ROMs do DGT-1000, clone brasileiro do TRS-80",
+     "summary": "FTMaciel compartilhou as ROMs do DGT-1000, extraídas pelo pessoal do grupo de TRS-80 em um evento retrô, e Felipe se propôs a verificá-las e adicioná-las ao MAME. Os dois se encontraram no Calango Hacker Clube, em Brasília. Leonardo Roman explicou que o DGT-1000 é um clone do TRS-80 Model I e que, nos emuladores, o cursor aparece como \"M\" por diferença na ROM de caracteres. Felipe concluiu que é preciso fazer o dump da ROM do gerador de caracteres.",
+     "participants": [
+      "FTMaciel",
+      "Felipe \"Juca\" Sanches",
+      "Leonardo Roman"
+     ],
+     "tags": [
+      "DGT-1000",
+      "TRS-80",
+      "dump de ROM",
+      "MAME"
+     ],
+     "resources": [
+      {
+       "ref": "DGT-1000.zip",
+       "what": "ROMs do DGT-1000"
+      }
+     ],
+     "weight": 3
+    },
+    {
+     "first_id": 9621,
+     "last_id": 9638,
+     "key_ids": [
+      9622,
+      9632,
+      9638
+     ],
+     "title": "O que instalar em um 486 e truque de inicialização do VDP",
+     "summary": "Pitanga pediu sugestões para reativar um 486; foram sugeridos Pinball Fantasies, Doom, Turbo Pascal ou Turbo C++ e coletâneas de demos. Felipe contou que Lord Spy e DalPoz lhe ensinaram assembly de Z80 para MSX em 2003/2004. Ele descreveu o truque de inicializar o VDP com um laço de instruções OUT lendo valores de uma tabela.",
+     "participants": [
+      "Lord Spy",
+      "pitanga",
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "486",
+      "MSX",
+      "Z80"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 9640,
+     "last_id": 9661,
+     "key_ids": [
+      9648,
+      9650,
+      9652
+     ],
+     "title": "Servidor Unix Sisco de 1990 com 68020",
+     "summary": "Emerson Moura mostrou um servidor Unix headless da Sisco, de 1990, com processador 68020, 16 MiB, SCSI com processador próprio e 16 portas seriais. Ele não inicializa porque os disquetes se perderam e o HD está com defeito. Felipe sugeriu fazer o dump das ROMs. FTMaciel propôs consultar antigos profissionais e indicou um grupo de Facebook da Sisco, e Leonardo Roman sugeriu tentar o dump do HD.",
+     "participants": [
+      "Emerson Moura",
+      "L.",
+      "FTMaciel",
+      "Felipe \"Juca\" Sanches",
+      "Leonardo Roman"
+     ],
+     "tags": [
+      "Sisco",
+      "Unix",
+      "68020",
+      "dump de ROM"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 9675,
+     "last_id": 9675,
+     "key_ids": [
+      9675
+     ],
+     "title": "Demo 8088 MPH",
+     "summary": "L. compartilhou o demo 8088 MPH, que obtém várias cores na CGA pelo vídeo composto programando diretamente o CRTC.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "CGA",
+      "demoscene"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.youtube.com/watch?v=yHXx3orN35Y",
+       "what": "Vídeo do demo 8088 MPH"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9676,
+     "last_id": 9740,
+     "key_ids": [
+      9678,
+      9697,
+      9739
+     ],
+     "title": "Montagem do clone de IBM PC 5150 e escolha da fonte AT",
+     "summary": "Felipe relatou a ida ao Calango Hacker Clube, onde FTMaciel lhe deu uma placa CGA de 8 bits, e o andamento da soldagem de soquetes e componentes da placa-mãe. A fonte de arcade disponível não servia por não fornecer -5 V e -12 V, e Erin observou que fontes ATX deixaram de ter -5 V. Felipe comprou uma fonte AT no Mercado Livre, e Emerson Moura recomendou fazer recap mesmo em fontes que funcionam. Leonardo Roman sugeriu obter -5 V com um regulador 7905 a partir da linha de -12 V.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Erin Pinheiro 🐿",
+      "Emerson Moura",
+      "Leonardo Roman"
+     ],
+     "tags": [
+      "IBM PC 5150",
+      "PC-Retro",
+      "fonte de alimentação",
+      "Calango Hacker Clube"
+     ],
+     "resources": [
+      {
+       "ref": "https://pinouts.ru/Power/MotherboardPower_pinout.shtml",
+       "what": "Pinagem da fonte AT"
+      },
+      {
+       "ref": "https://www.youtube.com/watch?v=PRo1Yoz6coo",
+       "what": "IBM 5150 Clone Kit - Part 5 - Chips Installed"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 9731,
+     "last_id": 9731,
+     "key_ids": [
+      9731
+     ],
+     "title": "Projeto bit-preserve: esquemáticos antigos em KiCad",
+     "summary": "L. compartilhou o bit-preserve, projeto para capturar no KiCad esquemáticos de computadores antigos, ainda em estágio inicial.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "KiCad",
+      "esquemáticos"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/baldengineer/bit-preserve",
+       "what": "Repositório bit-preserve"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9742,
+     "last_id": 9744,
+     "key_ids": [
+      9742
+     ],
+     "title": "Decodificação da ROS não executável do IBM 5100",
+     "summary": "L. compartilhou um relato técnico sobre a decodificação da ROS não executável do IBM 5100.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches",
+      "Ismael Luceno"
+     ],
+     "tags": [
+      "IBM 5100",
+      "engenharia reversa"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/stepleton/5100NonExecutableROSDecode/blob/master/WRITEUP.md",
+       "what": "Relato da decodificação"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9746,
+     "last_id": 9747,
+     "key_ids": [
+      9746
+     ],
+     "title": "30 anos de Prince of Persia",
+     "summary": "L. compartilhou a página de Jordan Mechner sobre os 30 anos de Prince of Persia.",
+     "participants": [
+      "L.",
+      "Alexandre Villares"
+     ],
+     "tags": [
+      "Prince of Persia"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.jordanmechner.com/prince-of-persia-30th-anniversary/",
+       "what": "Prince of Persia 30th Anniversary"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9749,
+     "last_id": 9752,
+     "key_ids": [
+      9749,
+      9751
+     ],
+     "title": "Jogo Avenida Paulista para CP-500",
+     "summary": "FTMaciel disse que procura o jogo Avenida Paulista para o CP-500, que ninguém encontra. L. comentou que Marcus Garrett está fazendo um documentário sobre jogos nacionais.",
+     "participants": [
+      "FTMaciel",
+      "L."
+     ],
+     "tags": [
+      "CP-500",
+      "jogos brasileiros"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 9753,
+     "last_id": 9806,
+     "key_ids": [
+      9760,
+      9776,
+      9800
+     ],
+     "title": "Clone de IBM PC 5150 liga e tentativa de carregar Alley Cat",
+     "summary": "Com a fonte AT testada, o clone ligou e mostrou diagnósticos na tela pela placa CGA, apontando erros em bits da RAM. Com Gustavo Romero, Felipe completou os 256 KB de RAM, ligou um teclado XT e estudou o código da BIOS. Ele tentou dar boot no Alley Cat por um disquete de 3½\" de 1,44 MB. Erin sugeriu verificar se o cabo do drive estava invertido. FTMaciel explicou que a BIOS não aceita esse formato sem uma BIOS de controladora como a de Sergey Kiselev. Foram indicadas BIOS alternativas, e Felipe falou da ideia de rodar o Alley Cat direto de uma EPROM, sem sistema operacional.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches",
+      "FTMaciel",
+      "kretcheu",
+      "Erin Pinheiro 🐿"
+     ],
+     "tags": [
+      "IBM PC 5150",
+      "PC-Retro",
+      "Alley Cat",
+      "BIOS"
+     ],
+     "resources": [
+      {
+       "ref": "https://sourceforge.net/projects/opensoc86/files/bios/pcxtbios25/",
+       "what": "BIOS pcxtbios do projeto OpenSOC86"
+      },
+      {
+       "ref": "http://www.phatcode.net/downloads.php?id=101",
+       "what": "Super PC/Turbo XT BIOS 3.1"
+      }
+     ],
+     "weight": 3
+    }
+   ],
+   "corrections": [
+    "Overview: 'Felipe tentou rodar o jogo Alley Cat em hardware de PC mínimo' exagerava; ele só explorou a ideia e rodou o jogo no MAME a partir de disquete e de ROM. Reescrito.",
+    "Overview: 'primeiro boot' do PC-Retro não aconteceu: o clone ligou e mostrou diagnósticos, mas nenhum sistema deu boot (#9760-#9806). Corrigido.",
+    "Overview: a SGI Fuel era um pedido de ajuda, não uma restauração; 'polêmica' sobre o SISNE trocada por 'dúvida'; Covox separado dos 'clones modernos'; a extração do YM2413 passou a 'noticiada'.",
+    "Conversa 8197 (FEUP): last_id passou de 8248 para 8249, porque o participante Ronaldo só posta em #8249. Também precisei a frase da apresentação: ambos acharam que seria muito em cima da hora.",
+    "Conversa 8224 (Patinho Feio): Affonso Amendola saiu dos participantes, pois suas mensagens foram só encaminhadas por Felipe. O resumo agora atribui as observações a Affonso. Retirado 'foto de época/antiga', que não tem apoio no texto.",
+    "Conversa 8283 (Crosfield): retirado 'fotografado em Portugal' (Ronaldo perguntou, Felipe não confirmou). Precisado o que Ronaldo e Felipe identificaram: o scanner Crosfield, e a hipótese de editoração para o outro aparelho.",
+    "Conversa 8318 (Another World/JAMMA): incluída a pergunta de Ismael e o 'talvez' de Felipe sobre prototipar o estágio de saída gráfica.",
+    "Conversa 8386 (MA-20): especificado 'dois lotes'. A frase de FTMaciel passou a seguir a mensagem: daria uma olhada e mandaria fazer as placas na China.",
+    "Conversa 8394-8399 (PPDI1.pdf) removida: trivial, e as mensagens não dizem o que as imagens mostram.",
+    "Conversa 8402 (Custom TV Games): 'recebeu um segundo exemplar' corrigido para 'recebeu com atraso o exemplar extraviado'. A redução do PDF foi atribuída a Felipe; Erin ajudou com as curvas de níveis no GIMP.",
+    "Conversa 8512 (PC-Retro): especificado que RicBit tentaria trazer o kit e que Felipe iria buscá-lo em março, na conferência da FSF.",
+    "Conversa 8597 (MSX SP): 'fotos de um Osborne' corrigido para 'a foto' (só #8597 mostra o Osborne).",
+    "Conversa 8971 (park): corrigida a atribuição. L. contou que seu XT tinha um ST238R; Affonso disse que o museu tem esse mesmo modelo.",
+    "Conversa 8995 (Atoms): 'o binário roda no DOSBox' trocado por 'ainda precisa do DOSBox para rodar' (#8996).",
+    "Conversa 9004 (GCC): Affonso Amendola saiu dos participantes, pois só aparece em mensagens encaminhadas por Felipe. Anotado que parte da conversa veio encaminhada de outro chat.",
+    "Conversa 9038 (Snark Barker): o texto do autor foi indicado por Erin. 'começou a montar o seu clone de AdLib' virou 'resolveu montar sua placa', porque a mensagem #9049 não diz qual é a placa.",
+    "Conversa 9107 (EGA): 'exigia o Enhanced Color Display' passou a 'aparentemente exigia', como Affonso disse.",
+    "Conversa 9140 (NEC 286F): retirado 'a iluminação ficou irregular' (inferência). Agora o resumo traz o que Silas, Felipe e Leonardo Roman disseram de fato.",
+    "Conversa 9232 (fliperamas): a pista de boliche 'com equipamento da década de 1990' passou a 'que parecia não ter sido modernizada desde a década de 1990'.",
+    "Conversa 9452 (technikum29): retirado 'perto de Frankfurt' (não dito). Agora consta que Felipe procurava atrações em Frankfurt, e foi mencionado o comentário de John A. John. Título ajustado.",
+    "Conversa 9487 (chegada do kit): FTMaciel não tinha CGA sobrando; ele se ofereceu para procurar uma com um colega (#9562-#9567).",
+    "Conversa 9510 (emulador): precisado que o alvo é XT ou anterior, conforme #9523.",
+    "Conversa 9621 (486/VDP): Felipe disse que Lord Spy e DalPoz lhe ensinaram assembly de Z80, e não só Lord Spy. Incluído o período 2003/2004.",
+    "Conversa 9640 (Sisco): FTMaciel propôs consultar antigos colegas; ele não 'indicou antigos profissionais'.",
+    "Conversa 9676 (fonte AT): 'fonte AT usada, com recomendação de recap' corrigido. Não se diz que a fonte comprada era usada; ela veio do Mercado Livre, e o recap foi recomendação de Emerson Moura.",
+    "Conversa 9753: título 'Primeiro boot' trocado, pois só houve diagnósticos na tela e nenhum boot de sistema. Incluída a sugestão de Erin sobre o cabo invertido."
+   ]
+  },
+  {
+   "overview": "Entre julho e outubro de 2019 o grupo concentrou-se no Patinho Feio: Felipe \"Juca\" Sanches publicou uma prova de conceito de emulador em Arduino ligado ao painel-réplica, tentou fazer uma impressora matricial imprimir a saída do \"hello world\" original e publicou no repositório do projeto PDFs de documentos da prof. Maria Alice Grigas Varella Ferreira sobre o montador e o carregador cruzados feitos no IBM-1130. Também se discutiram o servidor nacional Sisco Six/30 e a possibilidade de extrair o dump de suas EPROMs para um emulador no MAME, o dump da EPROM de um Zip drive Iomega, o conserto de uma placa JAMMA de Ms. Pac-Man, geradores de vídeo e de caracteres feitos com chips discretos (a partir dos vídeos de Ben Eater), ROMs de gerador de caracteres para uma proposta ao Unicode, expansões para o kit Heathkit ET-3400, o algoritmo dos gabaritos do Pense Bem, a perda dos links do código-fonte do Photoshop 1.0, o uso das emulações de terminais VT do MAME como terminal Unix e a preparação da fonte 3270 para o Google Fonts. Houve ainda a divulgação do 5º RetroSC, a proposta de uma exibição do documentário GET LAMP no Garoa Hacker Clube e relatos de uma viagem a Tóquio com visitas a lojas e fliperamas retrô.",
+   "conversations": [
+    {
+     "first_id": 10164,
+     "last_id": 10195,
+     "key_ids": [
+      10164,
+      10166,
+      10185
+     ],
+     "title": "Emulador do Patinho Feio em Arduino no painel-réplica",
+     "summary": "Felipe \"Juca\" Sanches apresentou uma prova de conceito de emulador do Patinho Feio rodando num Arduino instalado no painel-réplica: alterna modos de operação, endereça e grava a memória e aparentemente executa o \"hello world\" que imprime na teletype. O código foi publicado no GitHub. Ele depois tentou fazer uma impressora matricial imprimir a saída do programa, viu a impressora imprimir caracteres arbitrários ao ligar o sistema e disse suspeitar mais do hardware que do software. Também citou a ideia de usar a teletype ASR33 da Poli com o painel, como num vídeo do Altair 8800.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Lord Spy",
+      "kretcheu",
+      "L."
+     ],
+     "tags": [
+      "Patinho Feio",
+      "Arduino",
+      "réplica",
+      "emulação"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/ArqueologiaDigital/PatinhoFeio_Arduino",
+       "what": "Código-fonte do emulador do Patinho Feio para Arduino com interface para o painel-réplica"
+      },
+      {
+       "ref": "https://www.youtube.com/watch?v=qv5b1Xowxdk",
+       "what": "Vídeo do carregamento do 4K BASIC num Altair 8800 por teletype, citado como referência"
+      }
+     ],
+     "weight": 3
+    },
+    {
+     "first_id": 10169,
+     "last_id": 10171,
+     "key_ids": [
+      10169,
+      10170
+     ],
+     "title": "Documentos do montador cruzado do Patinho Feio no IBM-1130",
+     "summary": "Felipe \"Juca\" Sanches publicou no repositório do Patinho Feio dois PDFs de 1973 da prof. Maria Alice Grigas Varella Ferreira (\"Anexo 21: Sistema Cross Montador\" e \"Anexo 22: Sistema Cross Carregador\"), que descrevem os sistemas feitos por ela no IBM-1130 para gerar código objeto para o Patinho Feio. Os PDFs foram gerados pela própria professora, que também doou a ele os originais e outros materiais ainda não digitalizados, entre eles o volume 2 dos artigos de um seminário de 1977 da UFMG, com artigos sobre o FORTRAN estruturado para o G-10 e sobre o Patinho Feio como RJE do Burroughs 6700.",
+     "participants": [
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Patinho Feio",
+      "IBM-1130",
+      "digitalização de documentos",
+      "G-10"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/ArqueologiaDigital/PatinhoFeio/commit/671887efd405c7a81bd61cd55ddf3077306c648b",
+       "what": "Commit com os PDFs dos anexos 21 e 22 (montador e carregador cruzados do Patinho Feio)"
+      }
+     ],
+     "weight": 3
+    },
+    {
+     "first_id": 10199,
+     "last_id": 10201,
+     "key_ids": [
+      10199
+     ],
+     "title": "Interface entre o Patinho Feio e o sintetizador do prof. Guido Stolfi",
+     "summary": "Felipe \"Juca\" Sanches compartilhou um tópico de fórum sobre a interface entre o Patinho Feio e o sintetizador musical do prof. Guido Stolfi; L. respondeu com uma brincadeira.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "Patinho Feio",
+      "síntese de áudio"
+     ],
+     "resources": [
+      {
+       "ref": "https://forum.fiozera.com.br/t/interface-entre-o-patinho-feio-e-o-sintetizador-musical-do-prof-guido-stolfi/279",
+       "what": "Tópico de fórum sobre a interface entre o Patinho Feio e o sintetizador de Guido Stolfi"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10205,
+     "last_id": 10214,
+     "key_ids": [
+      10209,
+      10212,
+      10214
+     ],
+     "title": "Dois painéis-réplica do Patinho Feio no Garoa",
+     "summary": "Felipe \"Juca\" Sanches mostrou fotos de uma noite no Garoa Hacker Clube com painéis-réplica do Patinho Feio. Perguntado por pitanga, disse que fez os dois, atribuiu a diferença de cor a não ter usado perfil de cores ICC e explicou que o primeiro protótipo não traz os avisos que, no original, eram papéis colados no painel.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "pitanga"
+     ],
+     "tags": [
+      "Patinho Feio",
+      "réplica",
+      "Garoa Hacker Clube"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 9982,
+     "last_id": 10012,
+     "key_ids": [
+      9982,
+      9992,
+      10000
+     ],
+     "title": "Servidor nacional Sisco Six/30 (68020)",
+     "summary": "Emerson Moura mostrou fotos de um Sisco Six/30, servidor nacional com processador 68020, 16 MiB de RAM, SCSI e controladora serial para 16 terminais, que segundo ele seria uma cópia aproximada de um Sun3/150 ou /250. No último teste, em 2016, a máquina ligava, mas o HD SCSI-1 estava batendo e não carregava o sistema. Discutiu-se a recuperação da imagem do disco, o dump das EPROMs (as PAL/GAL seriam a parte difícil) e levar as placas ao Garoa para um encontro de dump e escrita de um emulador no MAME.",
+     "participants": [
+      "Emerson Moura",
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "Sisco Six/30",
+      "dump de ROM",
+      "MAME",
+      "computadores nacionais"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 9921,
+     "last_id": 9941,
+     "key_ids": [
+      9927,
+      9929,
+      9931
+     ],
+     "title": "Zip drive Iomega: microcontrolador 8052 e dump da EPROM",
+     "summary": "Felipe \"Juca\" Sanches ganhou um Zip drive de porta paralela com defeito e citou a informação, vista na internet, de que o chip custom da Iomega seria um microcontrolador 8052. Ele quis extrair o dump da EPROM 27512 em PLCC32 soldada na placa, mas achou o clip Pomona caro. Affonso Amendola contou que nenhum dos drives que abriu funcionava direito, L. indicou clones baratos do clip no AliExpress e versões para impressão 3D, e Guilherme Kenzo ofereceu outro drive.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Affonso Amendola",
+      "L.",
+      "Guilherme Kenzo"
+     ],
+     "tags": [
+      "Iomega Zip",
+      "dump de ROM",
+      "8052"
+     ],
+     "resources": [
+      {
+       "ref": "https://goughlui.com/2013/03/11/tech-flashback-iomega-scsi-zip-100-drive-internals/",
+       "what": "Artigo sobre o interior do Zip 100 SCSI"
+      },
+      {
+       "ref": "http://www.vcfed.org/forum/archive/index.php/t-34097.html",
+       "what": "Tópico do Vintage Computer Forum sobre alterar o ID SCSI de Zip drives externos"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 9960,
+     "last_id": 9977,
+     "key_ids": [
+      9961,
+      9964,
+      9972
+     ],
+     "title": "Conserto de placa JAMMA de Ms. Pac-Man",
+     "summary": "Felipe \"Juca\" Sanches relatou o conserto de uma placa JAMMA de Ms. Pac-Man (Midway, 1981): a instabilidade do sincronismo vertical, que piorava com o som, foi resolvida trocando os cinco capacitores ressecados do circuito de áudio. As cores foram corrigidas cortando duas trilhas e trocando os sinais com pedaços de terminais de componentes. FTMaciel e ele comentaram placas de Mortal Kombat com defeito que têm guardadas.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "FTMaciel",
+      "Lord Spy"
+     ],
+     "tags": [
+      "arcade",
+      "JAMMA",
+      "Ms. Pac-Man",
+      "restauração de hardware"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 9819,
+     "last_id": 9871,
+     "key_ids": [
+      9844,
+      9866,
+      9868
+     ],
+     "title": "Placa de vídeo em protoboard do Ben Eater e geradores de caracteres",
+     "summary": "A partir dos vídeos de Ben Eater sobre uma placa de vídeo em protoboard, Felipe \"Juca\" Sanches contou sua tentativa anterior de um circuito parecido baseado no livro \"How to Design and Build Your Own Custom TV Games\", com o objetivo de rodar a VM do Another World. Discutiram-se o uso de um registrador na saída da EPROM, ROMs por cor e o projeto de um gerador de caracteres. Emerson Moura citou o Motorola 6845, usado em placas CGA e de 80 colunas do Apple II.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches",
+      "Emerson Moura"
+     ],
+     "tags": [
+      "Ben Eater",
+      "geração de vídeo",
+      "6845"
+     ],
+     "resources": [
+      {
+       "ref": "https://datassette.org/livros/estrangeiros-diversos-eletronica-livros/how-design-and-build-your-own-custom-tv-games",
+       "what": "Livro \"How to Design and Build Your Own Custom TV Games\", digitalizado por Felipe \"Juca\" Sanches"
+      },
+      {
+       "ref": "https://garoa.net.br/wiki/How_to_Design_and_Build_Your_Own_Custom_TV_Games",
+       "what": "Página na wiki do Garoa sobre o projeto baseado no livro"
+      },
+      {
+       "ref": "https://www.youtube.com/watch?v=uqY3FMuMuRo",
+       "what": "Segundo vídeo de Ben Eater sobre a placa de vídeo em protoboard"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 10034,
+     "last_id": 10099,
+     "key_ids": [
+      10035,
+      10037,
+      10099
+     ],
+     "title": "ROMs de gerador de caracteres para proposta ao Unicode",
+     "summary": "Ricardo Bánffy perguntou como achar as ROMs de gerador de caracteres dos sistemas emulados no MAME, para a fase 2 de uma proposta de caracteres de terminais ao Unicode. Felipe \"Juca\" Sanches explicou que o nome da ROM aparece no código-fonte do driver (geralmente \"cgrom\", às vezes \"chargen\" ou \"gfx\") e que o arquivo está no zip de ROMs do driver. Ricardo depois comentou símbolos em comum entre as ROMs do Ohio Scientific Challenger/Superboard e do I-7000, e o conteúdo da ROM de fontes do X68000.",
+     "participants": [
+      "Ricardo Bánffy",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "MAME",
+      "gerador de caracteres",
+      "Unicode",
+      "X68000"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.unicode.org/L2/L2019/19025-terminals-prop.pdf",
+       "what": "Proposta ao Unicode de caracteres de terminais"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 10104,
+     "last_id": 10135,
+     "key_ids": [
+      10104,
+      10113,
+      10129
+     ],
+     "title": "Assembly 6800 e expansões para o Heathkit ET-3400",
+     "summary": "Emerson Moura mostrou um kit 6800 em protoboard \"com patrocínio do LHC\" e discutiu com L. formas de expandi-lo: acrescentar RAM, EPROM e uma ACIA 6850 para usar um microcomputador como terminal e carregador, além de um firmware de Tiny BASIC. Ele pretende ligar as expansões ao barramento por uma placa externa, retirando os chips soquetados de RAM e ROM em vez de alterar a placa, ao contrário da expansão oficial da Heathkit, que exige várias alterações. Mencionaram ainda o grupo do ET-3400 no Yahoo como fonte de documentação.",
+     "participants": [
+      "Emerson Moura",
+      "L."
+     ],
+     "tags": [
+      "Heathkit ET-3400",
+      "Motorola 6800",
+      "LHC"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 10149,
+     "last_id": 10162,
+     "key_ids": [
+      10152,
+      10160,
+      10161
+     ],
+     "title": "Algoritmo dos gabaritos do Pense Bem",
+     "summary": "A partir de uma reportagem sobre o labirinto de um jogo antigo, Felipe \"Juca\" Sanches lembrou que o algoritmo dos gabaritos dos livros do Pense Bem ainda não foi desvendado. L. disse que já anotaram as respostas de vários livros sem acertar 100%, perguntou se Felipe chegou a fazer um emulador da versão ATmega, o que ajudaria a achar a rotina, e citou a reimplementação do Pense Bem em JavaScript e SVG feita com Felipe. Leonardo Roman sugeriu responder os livros e procurar o padrão.",
+     "participants": [
+      "L.",
+      "FTMaciel",
+      "Felipe \"Juca\" Sanches",
+      "Leonardo Roman"
+     ],
+     "tags": [
+      "Pense Bem",
+      "engenharia reversa"
+     ],
+     "resources": [
+      {
+       "ref": "http://labs.hardinfo.org/pb",
+       "what": "Reimplementação do Pense Bem em JavaScript e SVG"
+      },
+      {
+       "ref": "http://www.bbc.com/future/story/20190919-the-maze-puzzle-hidden-within-an-early-video-game",
+       "what": "Reportagem da BBC sobre o labirinto de um jogo antigo"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 10215,
+     "last_id": 10242,
+     "key_ids": [
+      10217,
+      10220,
+      10233
+     ],
+     "title": "Código-fonte do Photoshop 1.0 e links perdidos",
+     "summary": "Os dois links para o código-fonte do Photoshop 1.0 citados num artigo de 2013 da Ars Technica (site do Computer History Museum e espelho no GitHub) davam erro 404. Erin Pinheiro achou cópias funcionais no Wayback Machine, e discutiram-se a perda de páginas e a cláusula de não redistribuição do material. L. comentou o suporte a cores do QuickDraw no primeiro Mac.",
+     "participants": [
+      "Alexandre Villares",
+      "Felipe \"Juca\" Sanches",
+      "Erin Pinheiro 🐿",
+      "L."
+     ],
+     "tags": [
+      "Photoshop",
+      "Computer History Museum",
+      "código-fonte",
+      "Internet Archive"
+     ],
+     "resources": [
+      {
+       "ref": "https://web.archive.org/web/20150222115825/https://computerhistory.org/atchm/adobe-photoshop-source-code/",
+       "what": "Cópia no Wayback Machine da página do CHM com o código-fonte do Photoshop 1.0"
+      },
+      {
+       "ref": "https://arstechnica.com/information-technology/2013/02/step-back-in-time-with-the-elegant-source-code-for-photoshop-1-0/",
+       "what": "Artigo da Ars Technica sobre a divulgação do código-fonte do Photoshop 1.0"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 10246,
+     "last_id": 10272,
+     "key_ids": [
+      10255,
+      10257,
+      10266
+     ],
+     "title": "Terminais VT do MAME como terminal Unix",
+     "summary": "Ricardo Bánffy pediu apoio para o smooth scrolling (DECSCLM) no iTerm2 e perguntou se as emulações de terminais VT do MAME poderiam servir de terminal num Unix. Ismael Luceno sugeriu ligar a porta serial emulada a um pseudo-tty (algo como \"mame vt240 -bitb /dev/ttyXXXX\"). Felipe \"Juca\" Sanches citou o trabalho de Ramiro Polla, que ligou programas e o CUPS à emulação de uma matricial Epson no MAME, e L. descreveu o uso de pipes nomeados entre o DOSBox e o MAME.",
+     "participants": [
+      "Ricardo Bánffy",
+      "Ismael Luceno",
+      "Felipe \"Juca\" Sanches",
+      "L."
+     ],
+     "tags": [
+      "MAME",
+      "terminais VT",
+      "emulação de impressora"
+     ],
+     "resources": [
+      {
+       "ref": "https://gitlab.com/gnachman/iterm2/issues/8389",
+       "what": "Issue do iTerm2 pedindo smooth scrolling (DECSCLM)"
+      },
+      {
+       "ref": "http://blog.arrozcru.org/?p=11",
+       "what": "Primeiro de três posts de Ramiro Polla sobre a emulação de impressora Epson no MAME"
+      },
+      {
+       "ref": "https://www.youtube.com/watch?v=TwgGlEtEzWo",
+       "what": "Vídeo indicado após os posts sobre a emulação de impressora no MAME"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 10287,
+     "last_id": 10295,
+     "key_ids": [
+      10287,
+      10290,
+      10292
+     ],
+     "title": "Fonte 3270 a caminho do Google Fonts",
+     "summary": "Ricardo Bánffy perguntou como validar uma fonte para o Google Fonts. Felipe \"Juca\" Sanches indicou o fontbakery e disse que estavam preparando os arquivos da fonte 3270 de Ricardo para tentar publicá-la no Google Fonts. L. disse usar a fonte no terminal.",
+     "participants": [
+      "Ricardo Bánffy",
+      "Felipe \"Juca\" Sanches",
+      "L.",
+      "Ismael Luceno",
+      "Hugo (Agaelebê)"
+     ],
+     "tags": [
+      "tipografia",
+      "fonte 3270",
+      "Google Fonts"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/rbanffy/3270font",
+       "what": "Fonte 3270 em formato moderno"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 9880,
+     "last_id": 9937,
+     "key_ids": [
+      9880,
+      9881,
+      9916
+     ],
+     "title": "Exibição do documentário GET LAMP no Garoa",
+     "summary": "Felipe \"Juca\" Sanches propôs exibir no Garoa Hacker Clube o documentário de Jason Scott sobre text adventures e jogar Colossal Cave Adventure em seguida, e os participantes discutiram datas (sábado 10/08, segunda 12/08 ou 29/07). L. informou que o documentário sobre computação doméstica no Brasil estava saindo.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Lord Spy",
+      "Alexandre Villares",
+      "L.",
+      "Affonso Amendola"
+     ],
+     "tags": [
+      "Garoa Hacker Clube",
+      "text adventures",
+      "documentário"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.youtube.com/watch?v=LRhbcDzbGSU",
+       "what": "GET LAMP: The Text Adventure Documentary"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 10294,
+     "last_id": 10297,
+     "key_ids": [
+      10294
+     ],
+     "title": "Código-fonte do Altair BASIC",
+     "summary": "L. compartilhou um repositório com o código-fonte do Micro-Soft Altair BASIC 3.2.",
+     "participants": [
+      "L.",
+      "Ricardo Bánffy"
+     ],
+     "tags": [
+      "Altair 8800",
+      "BASIC",
+      "código-fonte"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/option8/Altair-BASIC",
+       "what": "Código-fonte do Micro-Soft Altair BASIC 3.2"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9807,
+     "last_id": 10101,
+     "key_ids": [
+      9807,
+      10101
+     ],
+     "title": "Divulgação do 5º RetroSC",
+     "summary": "Eduardo Loos divulgou o 5º RetroSC, marcado para 05/10 em Florianópolis, com campeonatos, setor de vendas e consertos, e reforçou o convite um mês antes.",
+     "participants": [
+      "Eduardo Loos"
+     ],
+     "tags": [
+      "RetroSC",
+      "eventos"
+     ],
+     "resources": [
+      {
+       "ref": "www.retrosc.org",
+       "what": "Site do RetroSC"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9810,
+     "last_id": 9818,
+     "key_ids": [
+      9810,
+      9815,
+      9818
+     ],
+     "title": "Engenharia reversa do Diablo, Galaga e Pinball Fantasies",
+     "summary": "Um vídeo sobre a engenharia reversa do Diablo sem código-fonte levou a comentários sobre o Blood, cujo relançamento comercial e ports modernos também vêm de engenharia reversa, e a lembranças de trabalhos de engenharia reversa da BIOS de MSX e de set-top boxes, do Galaga e do Pinball Fantasies.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Erin Pinheiro 🐿",
+      "Lord Spy"
+     ],
+     "tags": [
+      "engenharia reversa"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.youtube.com/watch?v=5tADL_fmsHQ",
+       "what": "Vídeo sobre a engenharia reversa do Diablo"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9826,
+     "last_id": 9835,
+     "key_ids": [
+      9826,
+      9833
+     ],
+     "title": "Decompilação do Mario de Nintendo 64",
+     "summary": "L. noticiou a decompilação do Mario de N64, que poderia ser recompilado com gcc. Felipe \"Juca\" Sanches distinguiu desmontagem de decompilação e disse que, pelo que lia, o resultado era código C.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "engenharia reversa",
+      "Nintendo 64"
+     ],
+     "resources": [
+      {
+       "ref": "https://warosu.org/vr/thread/5644072",
+       "what": "Tópico sobre a decompilação do Mario de N64"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9876,
+     "last_id": 9877,
+     "key_ids": [
+      9877
+     ],
+     "title": "Suporte ao processador do Game Boy no Ghidra",
+     "summary": "L. compartilhou um módulo SLEIGH que adiciona ao Ghidra suporte ao processador do Game Boy, parecido com o Z80.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "Ghidra",
+      "Game Boy",
+      "engenharia reversa"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/CTurt/GameBoy_GhidraSleigh",
+       "what": "Módulo SLEIGH do Ghidra para o Game Boy"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 9945,
+     "last_id": 9953,
+     "key_ids": [
+      9945,
+      9952
+     ],
+     "title": "Jogos e sistema operacional em setor de boot",
+     "summary": "L. compartilhou o livro \"Programming Boot Sector Games\" e o bootOS, sistema operacional monolítico para 8086 em 512 bytes.",
+     "participants": [
+      "L.",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "x86",
+      "programação retrô"
+     ],
+     "resources": [
+      {
+       "ref": "http://www.lulu.com/shop/oscar-toledo-gutierrez/programming-boot-sector-games/paperback/product-24188564.html",
+       "what": "Livro Programming Boot Sector Games"
+      },
+      {
+       "ref": "https://github.com/nanochess/bootOS",
+       "what": "bootOS, sistema operacional em 512 bytes"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10016,
+     "last_id": 10021,
+     "key_ids": [
+      10017,
+      10020
+     ],
+     "title": "Desenhos em Teletype e tipos de metal",
+     "summary": "Alexandre Villares compartilhou uma palestra do Letterform Archive com uma parte sobre desenhos feitos com Teletype, e pitanga indicou o site de uma fabricante de tipos de metal.",
+     "participants": [
+      "Alexandre Villares",
+      "pitanga"
+     ],
+     "tags": [
+      "tipografia",
+      "Teletype"
+     ],
+     "resources": [
+      {
+       "ref": "https://letterformarchive.org/events/time-to-spare-type-and-tectonics",
+       "what": "Palestra do Letterform Archive com desenhos em Teletype"
+      },
+      {
+       "ref": "https://skylinetype.com/",
+       "what": "Skyline Type Foundry, fabricante de tipos de metal"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10022,
+     "last_id": 10086,
+     "key_ids": [
+      10023,
+      10031,
+      10080
+     ],
+     "title": "Lojas e fliperamas retrô em Tóquio",
+     "summary": "Durante uma viagem a Tóquio, Felipe \"Juca\" Sanches mostrou uma mesa de mahjong eletrônico e o fliperama da SEGA em Akihabara. L. indicou a loja Super Potato, Felipe compartilhou guias do fliperama Mikado e de outros arcades, e Hugo (Agaelebê) sugeriu a Bic Camera. Comentou-se o preço alto do X68000, e Ricardo Bánffy mencionou as workstations Unix NWS da Sony.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "L.",
+      "Hugo (Agaelebê)",
+      "Ricardo Bánffy"
+     ],
+     "tags": [
+      "Japão",
+      "arcade",
+      "X68000"
+     ],
+     "resources": [
+      {
+       "ref": "https://en.japantravel.com/tokyo/mikado-vintage-video-game-arcade/2094",
+       "what": "Guia do fliperama Mikado em Tóquio"
+      },
+      {
+       "ref": "https://kotaku.com/visit-tokyos-best-arcades-1829104277",
+       "what": "Guia de arcades de Tóquio"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10043,
+     "last_id": 10049,
+     "key_ids": [
+      10043,
+      10049
+     ],
+     "title": "Montagem de um PiDP-11",
+     "summary": "L. mostrou a montagem de um PiDP-11. Leonardo Roman disse ter um PiDP-8; Emerson Moura comentou a dificuldade de achar chaves como as do painel, e L. explicou que elas foram feitas sob medida.",
+     "participants": [
+      "L.",
+      "Leonardo Roman",
+      "Emerson Moura"
+     ],
+     "tags": [
+      "PDP-11",
+      "réplica"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 10173,
+     "last_id": 10183,
+     "key_ids": [
+      10175,
+      10178
+     ],
+     "title": "O Master System é 8 ou 16 bits",
+     "summary": "Alexandre Villares apontou uma thread no Twitter em que uma programadora brasileira afirmou que o Master System seria de 16 bits. Emerson Moura listou processadores de 8 bits, entre eles o Z80, e Erin Pinheiro disse não saber de onde tiraram que o SMS é de 16 bits. Eduardo Loos comparou com as classificações do Nintendo 64, do Atari Jaguar e do Dreamcast, e Erin observou que estas ao menos tinham marketing para isso.",
+     "participants": [
+      "Alexandre Villares",
+      "Emerson Moura",
+      "Erin Pinheiro 🐿",
+      "Eduardo Loos"
+     ],
+     "tags": [
+      "Master System",
+      "Z80"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 10277,
+     "last_id": 10279,
+     "key_ids": [
+      10278
+     ],
+     "title": "ROM alternativa com BASIC JIT para Apple IIe",
+     "summary": "L. compartilhou uma ROM alternativa para o Apple IIe com um BASIC escrito em C que faz compilação JIT e não suporta todo o AppleBASIC.",
+     "participants": [
+      "L.",
+      "Ismael Luceno"
+     ],
+     "tags": [
+      "Apple II",
+      "BASIC",
+      "6502"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.teamten.com/lawrence/projects/apple2a/",
+       "what": "Projeto apple2a, ROM alternativa com BASIC JIT"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 10280,
+     "last_id": 10285,
+     "key_ids": [
+      10280
+     ],
+     "title": "Placa comemorativa do MSX-DOS na Microsoft",
+     "summary": "L. fotografou placas comemorativas na sede da Microsoft em Redmond, entre elas uma do MSX-DOS.",
+     "participants": [
+      "L.",
+      "Hugo (Agaelebê)"
+     ],
+     "tags": [
+      "MSX",
+      "Microsoft"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 10250,
+     "last_id": 10250,
+     "key_ids": [
+      10250
+     ],
+     "title": "Internet Archive libera 2.500 jogos de MS-DOS",
+     "summary": "Felipe \"Juca\" Sanches compartilhou a notícia de que o Internet Archive disponibilizou 2.500 jogos de MS-DOS.",
+     "participants": [
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Internet Archive",
+      "MS-DOS"
+     ],
+     "resources": [
+      {
+       "ref": "https://games.slashdot.org/story/19/10/15/0013215/internet-archive-releases-2500-ms-dos-games",
+       "what": "Notícia sobre os 2.500 jogos de MS-DOS no Internet Archive"
+      }
+     ],
+     "weight": 1
+    }
+   ],
+   "corrections": [
+    "Overview: 'digitalizou documentos da prof. Maria Alice' trocado por 'publicou PDFs' (#10169 diz que os PDFs foram gerados pela própria professora); 'organização de uma exibição do GET LAMP' trocado por 'proposta' (nenhuma data foi fechada); 'driver no MAME' por 'emulador no MAME' (#10010).",
+    "Emulador Arduino (#10164): 'encontrou caracteres arbitrários e suspeitou do hardware' reformulado para refletir #10188-#10190 (impressora imprime caracteres arbitrários; suspeita mais do hardware que do software).",
+    "Documentos IBM-1130 (#10169): acrescentado que os PDFs foram gerados pela própria professora; 'anais de um seminário' ajustado para 'volume 2 dos artigos', como em #10170.",
+    "Interface Guido Stolfi (#10199): peso reduzido de 2 para 1 (um único link e uma brincadeira); mencionada a resposta de L.",
+    "Painéis-réplica (#10205): resumo reescrito; as fotos foram de uma noite no Garoa, e 'fez os dois' foi resposta a pitanga (#10212), não uma apresentação de dois painéis feita por Felipe.",
+    "Sisco Six/30: 'ligava em 2016' corrigido para 'no último teste, em 2016, ligava, mas o HD estava batendo' (#9994); key_id 10010 trocado por 10000 (comparação com Sun3).",
+    "Zip drive: 'recebeu' trocado por 'ganhou' (#9922); acrescentada a contribuição de Affonso Amendola (participante sem papel descrito); descrição do recurso vcfed corrigida para o título real (ID SCSI de Zip drives externos).",
+    "Ms. Pac-Man: 'jumpers' trocado por 'pedaços de terminais de componentes' (#9972); 'defeitos parecidos' em Mortal Kombat era especulação e foi trocado por 'placas com defeito que têm guardadas' (#9968, #9975-#9977).",
+    "ROMs de gerador de caracteres: nomes de ROM ajustados ('geralmente cgrom, às vezes chargen ou gfx', #10035); 'Ohio Scientific Challenger/Superboard' como em #10052; descrição do recurso Unicode tirou 'antigos', que não está no texto.",
+    "ET-3400: o kit foi mostrado 'com patrocínio do LHC', não 'em uso no LHC' (#10104); 'sem modificar a placa original' detalhado: retirar os chips soquetados de RAM e ROM (#10129-#10132).",
+    "Pense Bem: 'sugeriu um emulador' corrigido; L. perguntou se Felipe tinha feito um emulador da versão ATmega (#10155-#10156); acrescentada a sugestão de Leonardo Roman (#10158).",
+    "Photoshop: 'divulgado pelo CHM em 2013' reformulado; 2013 é a data do artigo da Ars Technica (#10218), e os links davam 404 (#10217).",
+    "Terminais VT: descrição do vídeo TwgGlEtEzWo atenuada; #10264 só diz 'e depois esse vídeo', sem descrever o conteúdo.",
+    "Fonte 3270: o objetivo era 'tentar' publicar no Google Fonts (#10292); acrescentado o comentário de L. (#10291).",
+    "GET LAMP: 'estava sendo concluído' trocado por 'estava saindo' (#9895); datas discutidas detalhadas (10/08, 12/08, 29/07).",
+    "Altair BASIC: peso reduzido de 2 para 1 (um único link e um comentário).",
+    "RetroSC: 'área de vendas' trocado por 'setor de vendas', como em #9807.",
+    "Diablo/Blood: acrescentados o relançamento comercial do Blood (#9813) e a BIOS de set-top boxes (#9815).",
+    "Mario N64: 'confirmou que o resultado era código C' atenuado para 'disse que, pelo que lia, era C' (#9833); título e resumo usam 'Mario de N64', como na mensagem, sem afirmar o título exato do jogo.",
+    "Teletype/tipos de metal: retirado 'atual', que não aparece em #10019.",
+    "Tóquio: as indicações foram atribuídas a quem as fez (L. indicou a Super Potato; Felipe postou os guias do Mikado e de arcades; Hugo sugeriu a Bic Camera).",
+    "PiDP-11: acrescentado o comentário de Emerson Moura sobre as chaves (#10047), ao qual L. respondeu.",
+    "Master System: a thread não 'classificava' o SMS como 16 bits; foi uma programadora na thread (#10174). O argumento do marketing era de Erin Pinheiro (#10181), não de Eduardo Loos, que só citou N64, Jaguar e Dreamcast (#10179). Retirada a 'conclusão' que ninguém declarou.",
+    "Placa MSX-DOS: retirado 'de produtos', que não aparece em #10280.",
+    "Internet Archive: retirado 'para jogar', que não está na mensagem."
+   ]
+  }
+ ],
+ "taxonomy": {
+  "intro": "No segundo ano, de novembro de 2018 a outubro de 2019, o grupo se dedicou sobretudo a projetos práticos de retrocomputação e, nos últimos meses, voltou ao Patinho Feio. Felipe \"Juca\" Sanches propôs rodar o jogo Alley Cat em hardware mínimo de PC e tentou executá-lo no MAME a partir de uma ROM gerada com o booterify, depurando a BIOS. Ele também montou o kit PC-Retro, clone do IBM PC 5150, que ligou e exibiu diagnósticos na tela com uma placa CGA recebida de FTMaciel no Calango Hacker Clube. O livro \"How to Design and Build Your Own Custom TV Games\" (1978) foi escaneado e publicado e ganhou de Leonardo Roman uma versão com OCR no Datassette, e Felipe anunciou um grupo de estudos baseado nele no Garoa Hacker Clube. No mesmo período foram compartilhados o livreto digitalizado \"Scopus 30 anos\", que levantou a dúvida sobre a origem do SISNE, o disassembler ExecTrace, aplicado ao Galaga de MSX, e as ROMs do DGT-1000, clone brasileiro do TRS-80. Também se discutiram o servidor nacional Sisco Six/30, clones de placas de som, problemas em fontes de alimentação e telas LCD e o conserto de uma placa JAMMA de Ms. Pac-Man. No Patinho Feio, Felipe apresentou uma prova de conceito de emulador em Arduino instalado no painel-réplica e publicou no repositório do projeto documentos da prof. Maria Alice Grigas Varella Ferreira sobre o montador e o carregador cruzados feitos no IBM-1130.",
+  "themes": [
+   {
+    "slug": "pc-minimo-e-pc-retro",
+    "title": "Alley Cat em hardware mínimo e o clone PC-Retro",
+    "summary": "Felipe \"Juca\" Sanches propôs descobrir o subconjunto mínimo de hardware de PC que o Alley Cat usa. Com o booterify, gerou uma ROM relocada do jogo e depurou a BIOS no MAME. Em paralelo, comprou e montou o kit PC-Retro, clone do IBM PC 5150, que ligou e exibiu diagnósticos com uma placa CGA recebida de FTMaciel. O grupo também comentou uma placa-mãe XT nova, um emulador de 8086 e HDs da época do XT.",
+    "subtopics": [
+     {
+      "slug": "alley-cat-em-hardware-minimo",
+      "title": "Alley Cat a partir de ROM",
+      "summary": "Felipe gerou uma imagem inicializável e depois uma ROM relocada do Alley Cat. No MAME, o jogo ficou com tela preta, preso em chamadas à interrupção 1Ah, e a investigação apontou variáveis não inicializadas da BIOS Data Area. Mais tarde ele tentou dar boot no jogo por disquete no clone montado e voltou a falar da ideia de rodá-lo direto de uma EPROM.",
+      "conversation_ids": [
+       8016,
+       8130,
+       9753
+      ]
+     },
+     {
+      "slug": "kit-pc-retro",
+      "title": "Kit PC-Retro, clone do IBM PC 5150",
+      "summary": "O percurso foi do anúncio da compra à chegada do kit, com o escaneamento da PCB, a soldagem e a compra de uma fonte AT, já que a fonte de arcade não fornecia -5 V e -12 V. Na primeira vez em que ligou, o clone mostrou diagnósticos na tela pela placa CGA. Na tentativa de boot por disquete de 1,44 MB, FTMaciel explicou que a BIOS não aceita esse formato sem uma BIOS de controladora.",
+      "conversation_ids": [
+       8512,
+       9487,
+       9676,
+       9753
+      ]
+     },
+     {
+      "slug": "xt-e-emulacao-de-8086",
+      "title": "XT hoje: placa nova, emulador e HDs",
+      "summary": "Discutiram-se o estacionamento de cabeças em HDs MFM/RLL, a placa-mãe NuXT v2.0 em formato micro-ATX e um emulador de PC feito do zero por L. com o objetivo de dar boot no MS-DOS 2.0.",
+      "conversation_ids": [
+       8971,
+       9466,
+       9510
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "patinho-feio",
+    "title": "Patinho Feio",
+    "summary": "Felipe \"Juca\" Sanches apresentou uma prova de conceito de emulador do Patinho Feio em Arduino instalado no painel-réplica. Ele também publicou documentos de 1973 sobre o montador e o carregador cruzados feitos no IBM-1130 e retomou o esquemático em KiCad. Além disso, circularam uma foto do computador com o teletipo e conversas sobre a teletype da Poli-USP.",
+    "subtopics": [
+     {
+      "slug": "emulador-arduino-e-paineis-replica",
+      "title": "Emulador em Arduino e painéis-réplica",
+      "summary": "A prova de conceito roda num Arduino no painel-réplica, endereça e grava a memória e aparentemente executa o \"hello world\" que imprime na teletype. Felipe tentou imprimir a saída numa impressora matricial, que imprimiu caracteres arbitrários ao ligar o sistema. Ele também mostrou no Garoa Hacker Clube os dois painéis-réplica que fez.",
+      "conversation_ids": [
+       10164,
+       10205
+      ]
+     },
+     {
+      "slug": "montador-cruzado-ibm-1130",
+      "title": "Documentos do montador cruzado no IBM-1130",
+      "summary": "Felipe publicou no repositório do projeto dois PDFs de 1973 da prof. Maria Alice Grigas Varella Ferreira sobre o Sistema Cross Montador e o Sistema Cross Carregador. A professora também doou a ele os originais e outros materiais ainda não digitalizados.",
+      "conversation_ids": [
+       10169
+      ]
+     },
+     {
+      "slug": "esquematico-kicad",
+      "title": "Esquemático em KiCad",
+      "summary": "A partir do PiDP-8, Felipe lembrou os 50 anos do Patinho Feio em 2021, retomou o esquemático em KiCad e registrou dúvidas sobre o circuito no issue tracker.",
+      "conversation_ids": [
+       9248
+      ]
+     },
+     {
+      "slug": "teletipo-e-perifericos",
+      "title": "Teletipo, leitor de fita e interfaces",
+      "summary": "Uma foto do Patinho Feio com o teletipo e o provável leitor de fita. Um vídeo de uma Teletype ASR-33 lembrou a que há na Poli-USP, da época do Patinho Feio, e Affonso disse que a do museu ainda precisa de conserto. Também foi compartilhado um tópico de fórum sobre a interface entre o Patinho Feio e o sintetizador do prof. Guido Stolfi.",
+      "conversation_ids": [
+       8224,
+       9202,
+       10199
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "videogames-e-video-em-logica-discreta",
+    "title": "Videogames e vídeo em lógica discreta",
+    "summary": "Felipe escaneou e publicou o livro \"How to Design and Build Your Own Custom TV Games\" (1978), que recebeu uma versão com OCR de Leonardo Roman. Ele também anunciou um grupo de estudos no Garoa. O grupo discutiu geradores de vídeo feitos sem microcontrolador, sinais de vídeo composto no osciloscópio e os esquemáticos do Magnavox Odyssey.",
+    "subtopics": [
+     {
+      "slug": "livro-custom-tv-games",
+      "title": "Livro \"How to Design and Build Your Own Custom TV Games\"",
+      "summary": "As cerca de 550 páginas foram digitalizadas e publicadas no GitHub, e Leonardo Roman publicou uma versão com OCR no Datassette. Felipe começou a converter o OCR para LaTeX e a desenhar a placa SourceBox no KiCad, e anunciou para 2019 um grupo de estudos no Garoa.",
+      "conversation_ids": [
+       8402,
+       8704
+      ]
+     },
+     {
+      "slug": "geradores-de-video",
+      "title": "Geradores de vídeo e de caracteres",
+      "summary": "Felipe montou em protoboard um gerador de vídeo a partir de EPROM, que não funcionou, e capturas de vídeo composto foram comparadas com as figuras do livro. A partir dos vídeos de Ben Eater, discutiram-se registradores na saída da EPROM, geradores de caracteres e o Motorola 6845.",
+      "conversation_ids": [
+       8349,
+       8683,
+       9819
+      ]
+     },
+     {
+      "slug": "magnavox-odyssey",
+      "title": "Magnavox Odyssey",
+      "summary": "A notícia da recriação do Odyssey por estudantes da Universidade de Pittsburgh levou Felipe a indicar os esquemáticos que publicara no Fórum Fiozera.",
+      "conversation_ids": [
+       9421
+      ]
+     },
+     {
+      "slug": "another-world-e-placa-jamma",
+      "title": "Port do Another World e placa JAMMA",
+      "summary": "Felipe informou que o port do Another World estava parado e que planejava retomar o desenho da PCB da placa JAMMA.",
+      "conversation_ids": [
+       8318
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "engenharia-reversa-e-dumps",
+    "title": "Engenharia reversa e extração de ROMs",
+    "summary": "Felipe apresentou o ExecTrace, disassembler genérico em Python aplicado ao Galaga de MSX. O grupo comentou a extração da ROM interna do YM2413, discutiu o dump da EPROM de um Zip drive Iomega e voltou ao algoritmo ainda não desvendado dos gabaritos do Pense Bem. Também circularam notícias de decompilações e de ferramentas de análise.",
+    "subtopics": [
+     {
+      "slug": "exectrace",
+      "title": "ExecTrace e o Galaga de MSX",
+      "summary": "O disassembler segue o fluxo de execução por busca em profundidade. Foi criado para o Another World, ganhou uma classe para o i8048 e agora outra para Z80/MSX. A remontagem do Galaga ainda diferia da ROM original em alguns bytes. Mais tarde, um vídeo sobre o Diablo levou a lembranças de trabalhos de engenharia reversa no Galaga e no Pinball Fantasies.",
+      "conversation_ids": [
+       9311,
+       9810
+      ]
+     },
+     {
+      "slug": "dumps-de-rom",
+      "title": "Dumps de ROM",
+      "summary": "A extração da tabela de instrumentos do YM2413, o vazamento de uma ROM perdida da Atari e a intenção de extrair a EPROM 27512 em PLCC32 de um Zip drive Iomega, cujo chip custom seria um 8052.",
+      "conversation_ids": [
+       9335,
+       9377,
+       9921
+      ]
+     },
+     {
+      "slug": "pense-bem",
+      "title": "Gabaritos do Pense Bem",
+      "summary": "Felipe lembrou que o algoritmo dos gabaritos dos livros do Pense Bem não foi desvendado. L. citou as respostas anotadas de vários livros e a reimplementação em JavaScript e SVG.",
+      "conversation_ids": [
+       10149
+      ]
+     },
+     {
+      "slug": "decompilacao-e-ferramentas",
+      "title": "Decompilação e ferramentas",
+      "summary": "ROM hacking de Super Mario World, a decodificação da ROS não executável do IBM 5100, a decompilação do Mario de Nintendo 64 e o suporte ao processador do Game Boy no Ghidra.",
+      "conversation_ids": [
+       9051,
+       9742,
+       9826,
+       9876
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "computacao-brasileira",
+    "title": "Computação brasileira e documentação",
+    "summary": "O livreto digitalizado \"Scopus 30 anos\" levantou a dúvida sobre a origem do SISNE. FTMaciel compartilhou as ROMs do DGT-1000, clone do TRS-80 Model I. Emerson Moura mostrou o servidor nacional Sisco Six/30, cujas EPROMs poderiam ser extraídas para um emulador no MAME. Também se falou de jogos e documentários nacionais, de uma fita perfurada da Poli-USP e de um livro a ser digitalizado.",
+    "subtopics": [
+     {
+      "slug": "scopus-e-sisne",
+      "title": "\"Scopus 30 anos\" e o SISNE",
+      "summary": "O livreto, emprestado por DQ, traz a linha do tempo da Scopus. Discutiu-se se o SISNE foi criado do zero ou copiado do MS-DOS, e foram lembradas sequências de bytes idênticas.",
+      "conversation_ids": [
+       9186
+      ]
+     },
+     {
+      "slug": "sisco-six-30",
+      "title": "Servidor Sisco Six/30",
+      "summary": "Servidor Unix nacional com 68020 que não inicializa: os disquetes se perderam e o HD está com defeito. Discutiram-se o dump das EPROMs e do HD e um encontro no Garoa para escrever um emulador no MAME.",
+      "conversation_ids": [
+       9640,
+       9982
+      ]
+     },
+     {
+      "slug": "dgt-1000",
+      "title": "ROMs do DGT-1000",
+      "summary": "As ROMs foram extraídas pelo grupo de TRS-80, e Felipe se propôs a verificá-las e adicioná-las ao MAME. A diferença no cursor indicou a necessidade de extrair também a ROM do gerador de caracteres.",
+      "conversation_ids": [
+       9594
+      ]
+     },
+     {
+      "slug": "jogos-e-documentarios-nacionais",
+      "title": "Jogos e documentários nacionais",
+      "summary": "A campanha de financiamento do novo documentário de Marcus Garrett e a busca pelo jogo Avenida Paulista para o CP-500.",
+      "conversation_ids": [
+       9270,
+       9749
+      ]
+     },
+     {
+      "slug": "documentos-e-livros",
+      "title": "Fita perfurada e livros técnicos",
+      "summary": "A foto de uma fita perfurada na Escola Politécnica da USP em meados dos anos 1970 e a intenção de um comprador do livro \"Construa seu órgão eletrônico\" de escaneá-lo e disponibilizá-lo.",
+      "conversation_ids": [
+       8489,
+       9591
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "programacao-dos-e-som-no-pc",
+    "title": "Programação para DOS e som no PC",
+    "summary": "Affonso Amendola lançou o Fofonso's Atoms VGA e começou uma versão EGA, e Felipe tentou compilar código de Turbo C para DOS com o GCC. O grupo discutiu placas de som modernas para PC, como o Snark Barker, um clone de AdLib e o OPL3LPT, além de documentação de VGA e programação em setor de boot.",
+    "subtopics": [
+     {
+      "slug": "fofonsos-atoms",
+      "title": "Fofonso's Atoms",
+      "summary": "Jogo para DOS e VGA com código livre no GitHub e uma versão EGA em andamento, que levou a uma conversa sobre as paletas da EGA e da CGA.",
+      "conversation_ids": [
+       8995,
+       9107
+      ]
+     },
+     {
+      "slug": "compilacao-gcc-dos",
+      "title": "Turbo C para DOS com GCC",
+      "summary": "Discutiram-se os limites de -m16, as alternativas Open Watcom e DJGPP e os erros vindos do assembly inline. Com -m32 e libc6-dev-i386, a compilação avançou.",
+      "conversation_ids": [
+       9004
+      ]
+     },
+     {
+      "slug": "video-no-pc",
+      "title": "Documentação de vídeo e o 8088 MPH",
+      "summary": "Um resumo dos registradores da VGA, os Norton Guides on-line e o demo 8088 MPH, que obtém várias cores na CGA pelo vídeo composto.",
+      "conversation_ids": [
+       9213,
+       9675
+      ]
+     },
+     {
+      "slug": "clones-de-placas-de-som",
+      "title": "Clones de placas de som",
+      "summary": "O Snark Barker (antes chamado Snood Bloober), réplica open source da Sound Blaster 1.0, o clone de AdLib, o OPL3LPT e a distinção entre OPL2, OPL3 e o DAC R-2R do Covox.",
+      "conversation_ids": [
+       8919,
+       9038
+      ]
+     },
+     {
+      "slug": "setor-de-boot",
+      "title": "Programas em setor de boot",
+      "summary": "O livro \"Programming Boot Sector Games\" e o bootOS, sistema operacional para 8086 em 512 bytes.",
+      "conversation_ids": [
+       9945
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "restauracao-kits-e-replicas",
+    "title": "Restauração, kits e réplicas",
+    "summary": "Membros pediram ajuda e relataram restaurações: a fonte de uma SGI Fuel, o backlight de um NEC 286F, LCDs com síndrome do vinagre e uma calculadora Olympia de 1976. O grupo também discutiu kits e réplicas, como o ET-3400, o PiDP-11 e um clone do Commodore PET, e expansões e programação para MSX.",
+    "subtopics": [
+     {
+      "slug": "fontes-e-capacitores",
+      "title": "Fontes e capacitores",
+      "summary": "A SGI Fuel que não liga, com uma fonte que pode falhar sob carga, e um comentário do YouTube sobre a troca preventiva de capacitores secos.",
+      "conversation_ids": [
+       8250,
+       9281
+      ]
+     },
+     {
+      "slug": "telas-lcd",
+      "title": "Telas LCD",
+      "summary": "O backlight de um NEC 286F trocado por fita de LED e a recuperação de LCDs pela troca ou dissolução da película polarizadora.",
+      "conversation_ids": [
+       9140,
+       9403
+      ]
+     },
+     {
+      "slug": "equipamentos-e-perifericos-antigos",
+      "title": "Calculadora, cassete e periféricos legados",
+      "summary": "A restauração de uma Olympia CD90 Sigma e as tentativas de carregar fitas no Hotbit: a partir do PC funcionou, mas a partir do celular continuou falhando. Um digitalizador USB passou a funcionar numa máquina virtual com Windows XP.",
+      "conversation_ids": [
+       8445,
+       8709,
+       8989
+      ]
+     },
+     {
+      "slug": "msx",
+      "title": "MSX: expansões e programação",
+      "summary": "O kit de conversão MA-20 de MSX para MSX2, uma biblioteca Arduino de barramento paralelo para chips como o PSG e o VDP e o truque de inicializar o VDP com um laço de OUT.",
+      "conversation_ids": [
+       8386,
+       8783,
+       9621
+      ]
+     },
+     {
+      "slug": "kits-e-replicas",
+      "title": "Kits e réplicas",
+      "summary": "Um clone documentado do Commodore PET, o projeto bit-preserve de esquemáticos em KiCad e a montagem de um PiDP-11. Também se discutiram formas de expandir o Heathkit ET-3400 com RAM, EPROM e ACIA 6850.",
+      "conversation_ids": [
+       8651,
+       9731,
+       10043,
+       10104
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "mame-terminais-e-tipografia",
+    "title": "MAME, terminais e tipografia",
+    "summary": "O grupo comentou o lançamento do MAME 0.204 e a velocidade de emulação do MAME. Ricardo Bánffy perguntou como encontrar ROMs de gerador de caracteres no MAME para uma proposta ao Unicode e se as emulações de terminais VT poderiam servir de terminal Unix. A fonte 3270 começou a ser preparada para o Google Fonts.",
+    "subtopics": [
+     {
+      "slug": "mame",
+      "title": "MAME 0.204 e desempenho",
+      "summary": "A pergunta sobre a velocidade de emulação e o MAME 0.204, com HP-UX 9 num HP9000/370 emulado e progresso em workstations SGI.",
+      "conversation_ids": [
+       8270,
+       8310
+      ]
+     },
+     {
+      "slug": "gerador-de-caracteres-unicode",
+      "title": "ROMs de gerador de caracteres para o Unicode",
+      "summary": "Felipe explicou onde o nome dessas ROMs aparece nos drivers do MAME. Ricardo comentou símbolos em comum entre sistemas e a ROM de fontes do X68000.",
+      "conversation_ids": [
+       10034
+      ]
+     },
+     {
+      "slug": "terminais-vt",
+      "title": "Terminais VT do MAME como terminal Unix",
+      "summary": "Ismael Luceno sugeriu ligar a porta serial emulada a um pseudo-tty. Felipe citou o trabalho de Ramiro Polla com uma matricial Epson emulada, e L. descreveu o uso de pipes nomeados entre o DOSBox e o MAME.",
+      "conversation_ids": [
+       10246
+      ]
+     },
+     {
+      "slug": "fontes-tipograficas",
+      "title": "Fontes e tipografia",
+      "summary": "A Video Game Font Preservation Society, desenhos feitos com Teletype e a indicação do fontbakery para validar a fonte 3270, que estava sendo preparada para o Google Fonts.",
+      "conversation_ids": [
+       8778,
+       10016,
+       10287
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "pinball-e-fliperamas",
+    "title": "Pinball e fliperamas",
+    "summary": "Felipe vetorizou a arte do playfield da sua máquina de pinball baseada em Pinball Fantasies e, no Garoa, instalou mais luzes controladas por um MAX7219. Ele também consertou uma placa JAMMA de Ms. Pac-Man. O grupo compartilhou reportagens sobre fliperamas abandonados, e Felipe mostrou fliperamas de Tóquio durante uma viagem.",
+    "subtopics": [
+     {
+      "slug": "maquina-de-pinball",
+      "title": "Máquina de pinball",
+      "summary": "A vetorização da pixel art do playfield e as luzes controladas por um único MAX7219.",
+      "conversation_ids": [
+       9098,
+       9389
+      ]
+     },
+     {
+      "slug": "ms-pac-man",
+      "title": "Placa JAMMA de Ms. Pac-Man",
+      "summary": "Felipe comprou a placa e a consertou. A instabilidade do sincronismo vertical foi resolvida com a troca de cinco capacitores ressecados do áudio, e as cores foram corrigidas cortando duas trilhas.",
+      "conversation_ids": [
+       9437,
+       9960
+      ]
+     },
+     {
+      "slug": "fliperamas",
+      "title": "Fliperamas abandonados e em Tóquio",
+      "summary": "Máquinas resgatadas em Wisconsin, um fliperama abandonado em Fukushima, o fliperama da SEGA em Akihabara e indicações de lojas e fliperamas retrô em Tóquio.",
+      "conversation_ids": [
+       9232,
+       10022
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "noticias-eventos-e-museus",
+    "title": "Notícias, eventos e museus",
+    "summary": "Felipe compartilhou o vídeo de sua palestra no MSX SP 2018, e Eduardo Loos divulgou o 4º e o 5º RetroSC. Felipe propôs exibir o documentário GET LAMP no Garoa. Membros relataram visitas a uma universidade em Portugal e a museus nos EUA, e Felipe indicou um museu na Alemanha antes de viajar para lá. Circularam ainda notícias sobre código-fonte de jogos e programas clássicos e sobre preservação de jogos.",
+    "subtopics": [
+     {
+      "slug": "eventos",
+      "title": "Eventos e encontros",
+      "summary": "A palestra \"Arqueologia Digital\" no MSX SP 2018, o 4º e o 5º RetroSC e a proposta de exibir GET LAMP no Garoa e jogar Colossal Cave Adventure em seguida.",
+      "conversation_ids": [
+       8597,
+       9306,
+       9807,
+       9880
+      ]
+     },
+     {
+      "slug": "museus-e-visitas",
+      "title": "Museus e visitas",
+      "summary": "A visita à FEUP e à sua biblioteca, as fotos de um scanner Crosfield 6250, o Living Computer Museum, o technikum29, o último mainframe Olivetti em funcionamento e a placa do MSX-DOS na Microsoft.",
+      "conversation_ids": [
+       8197,
+       8283,
+       9253,
+       9452,
+       9456,
+       9479,
+       10280
+      ]
+     },
+     {
+      "slug": "codigo-fonte",
+      "title": "Código-fonte de jogos e programas",
+      "summary": "A coleção de código-fonte da Sierra que Al Lowe pôs à venda no eBay, o código do Quake, as aventuras da Infocom, os links perdidos do Photoshop 1.0 recuperados no Wayback Machine e o Altair BASIC 3.2.",
+      "conversation_ids": [
+       8337,
+       8748,
+       9350,
+       10215,
+       10294
+      ]
+     },
+     {
+      "slug": "preservacao-de-jogos",
+      "title": "Preservação de jogos",
+      "summary": "A ampliação da isenção do DMCA, o protótipo de SimCity para NES, o port de Super Mario para C64 derrubado pela Nintendo, as Open ROMs do MEGA65 e os 2.500 jogos de MS-DOS do Internet Archive.",
+      "conversation_ids": [
+       8309,
+       8772,
+       9365,
+       9420,
+       10250
+      ]
+     },
+     {
+      "slug": "historia-e-curiosidades",
+      "title": "História e curiosidades",
+      "summary": "O início do desenvolvimento de chips na Intel, um IBM 1401 compilando FORTRAN II, armadilhas no Z80, a reconstrução do navegador WorldWideWeb, os 30 anos de Prince of Persia, a discussão sobre o Master System ser de 8 bits e uma ROM com BASIC JIT para o Apple IIe.",
+      "conversation_ids": [
+       8542,
+       8761,
+       9173,
+       9226,
+       9746,
+       10173,
+       10277
+      ]
+     }
+    ]
+   }
+  ],
+  "highlights": [
+   {
+    "first_id": 8016,
+    "why": "Felipe propõe uma PCB com o hardware mínimo de PC para rodar o Alley Cat a partir de EPROM e, com o booterify, roda o jogo no MAME a partir de uma imagem de disquete inicializável."
+   },
+   {
+    "first_id": 8402,
+    "why": "O livro \"How to Design and Build Your Own Custom TV Games\" (1978) é escaneado e publicado no GitHub, e Leonardo Roman publica no Datassette uma versão com OCR."
+   },
+   {
+    "first_id": 8704,
+    "why": "Felipe anuncia no Garoa um grupo de estudos de projeto eletrônico digital de videogames retrô e começa a desenhar no KiCad a placa SourceBox do livro."
+   },
+   {
+    "first_id": 9186,
+    "why": "O livreto digitalizado \"Scopus 30 anos\" é compartilhado e levanta a dúvida sobre a origem do SISNE."
+   },
+   {
+    "first_id": 9311,
+    "why": "Felipe apresenta o ExecTrace, disassembler genérico em Python, aplicado ao Galaga de MSX."
+   },
+   {
+    "first_id": 9335,
+    "why": "É noticiada a extração da ROM interna de instrumentos do YM2413, que permite uma emulação mais fiel."
+   },
+   {
+    "first_id": 9594,
+    "why": "FTMaciel compartilha as ROMs do DGT-1000, clone brasileiro do TRS-80, e Felipe se propõe a verificá-las e adicioná-las ao MAME."
+   },
+   {
+    "first_id": 9753,
+    "why": "O clone do IBM PC 5150 montado a partir do kit PC-Retro liga e exibe diagnósticos na tela pela placa CGA."
+   },
+   {
+    "first_id": 9982,
+    "why": "Emerson Moura apresenta o servidor nacional Sisco Six/30, e o grupo discute o dump das EPROMs e um emulador no MAME."
+   },
+   {
+    "first_id": 10164,
+    "why": "Felipe apresenta uma prova de conceito de emulador do Patinho Feio em Arduino instalado no painel-réplica."
+   },
+   {
+    "first_id": 10169,
+    "why": "Felipe publica no repositório do Patinho Feio os documentos de 1973 da prof. Maria Alice Grigas Varella Ferreira sobre o montador e o carregador cruzados feitos no IBM-1130."
+   },
+   {
+    "first_id": 10287,
+    "why": "Felipe indica o fontbakery e conta que estão preparando a fonte 3270 de Ricardo Bánffy para tentar publicá-la no Google Fonts."
+   }
+  ]
+ },
+ "taxonomy_check": {
+  "corrections": [
+   "intro: 'concentrou-se no Patinho Feio' trocado por 'voltou ao Patinho Feio'; nos últimos meses houve muitos outros assuntos (10215, 10246, 10287 etc.)",
+   "intro: 'Entre julho e outubro' removido; as datas não estão nos resumos (o mesmo foi feito no resumo do tema patinho-feio)",
+   "intro: o Alley Cat não foi rodado em hardware mínimo. Agora diz que Felipe propôs a ideia e tentou executar o jogo no MAME a partir de uma ROM gerada com o booterify",
+   "intro: 'deu origem a um grupo de estudos' trocado por 'Felipe anunciou um grupo de estudos' (8704 só registra o anúncio)",
+   "intro: 'foram digitalizados o livreto...' trocado por 'foram compartilhados o livreto digitalizado...' (9186 diz que Felipe compartilhou o livreto já digitalizado)",
+   "intro: 'restauração de fontes, telas LCD e de uma placa JAMMA' trocado por 'problemas em fontes de alimentação e telas LCD e o conserto de uma placa JAMMA'; o caso da SGI Fuel foi um pedido de ajuda",
+   "tema pc-minimo-e-pc-retro: 'buscou o subconjunto mínimo' trocado por 'propôs descobrir' (8016); 'placas-mãe XT novas, emuladores de 8086' trocado pelo singular (uma NuXT e um emulador)",
+   "subtópico alley-cat-em-hardware-minimo: a causa da trava, apresentada como certa, foi trocada por 'a investigação apontou' (8130); 'retomou a ideia' trocado por 'voltou a falar da ideia' (9753)",
+   "subtópico kit-pc-retro: 'primeiro boot' trocado por 'primeira vez em que ligou' (só houve diagnósticos); 'esbarrou na BIOS' trocado por 'FTMaciel explicou que a BIOS não aceita' (9753 não registra o resultado)",
+   "subtópico xt-e-emulacao-de-8086: o título passou para o singular ('placa nova, emulador')",
+   "tema patinho-feio: removido 'voltou ao centro do grupo', que não tem apoio nos resumos; acrescentado 'prova de conceito' ao emulador; 'fotos históricas' trocado por 'uma foto do computador com o teletipo'",
+   "subtópico emulador-arduino-e-paineis-replica: '\"hello world\" original' trocado pelo 'hello world que imprime na teletype' de 10164; acrescentado o resultado da impressora e que Felipe fez os dois painéis (10205)",
+   "subtópico teletipo-e-perifericos: 'foto antiga' trocado por 'foto do Patinho Feio'. A ASR-33 da Poli-USP e a do museu que precisa de conserto passaram a ser citadas separadamente, como em 9202, sem afirmar que são a mesma; o tópico de fórum sobre o sintetizador está descrito como compartilhamento",
+   "tema videogames-e-video-em-logica-discreta: 'motivou um grupo de estudos' trocado por 'Felipe anunciou um grupo de estudos'",
+   "subtópico livro-custom-tv-games: a conversão para LaTeX e o desenho da SourceBox aparecem como começados, não como concluídos; o Datassette foi atribuído a Leonardo Roman",
+   "subtópico another-world-e-placa-jamma: 'pretendia' trocado por 'planejava', como em 8318",
+   "tema engenharia-reversa-e-dumps: 'acompanhou a extração' trocado por 'comentou'; 'tentou planejar o dump' trocado por 'discutiu o dump' (9921)",
+   "subtópico dumps-de-rom: 'plano de extrair' trocado por 'intenção de extrair'",
+   "tema computacao-brasileira: 'documentos e livros a digitalizar' trocado por 'uma fita perfurada da Poli-USP e um livro a ser digitalizado'; 8489 é só a foto de uma fita",
+   "subtópico documentos-e-livros: 'anúncio da digitalização' trocado pela intenção do comprador de escanear o livro (9591)",
+   "subtópico dgt-1000: a verificação e a inclusão no MAME foram atribuídas a Felipe, que se propôs a fazê-las (9594)",
+   "tema programacao-dos-e-som-no-pc: 'clones modernos ... como o Snark Barker, a AdLib e o OPL3LPT' trocado por 'placas de som modernas ... como o Snark Barker, um clone de AdLib e o OPL3LPT'; o OPL3LPT não é descrito como clone",
+   "subtópico equipamentos-e-perifericos-antigos: acrescentado o resultado de 8445 (pelo PC funcionou; pelo celular continuou falhando)",
+   "subtópico kits-e-replicas: as expansões do ET-3400 aparecem como formas de expandir discutidas, não como feitas (10104)",
+   "tema mame-terminais-e-tipografia: 'acompanhou lançamentos do MAME' trocado pelo único lançamento (0.204); 'como usar as emulações VT' trocado por 'se poderiam servir'; 'a fonte 3270 foi preparada' trocado por 'começou a ser preparada' (10287)",
+   "subtópico mame: título 'Lançamentos e desempenho do MAME' trocado por 'MAME 0.204 e desempenho'",
+   "subtópico terminais-vt: cada sugestão foi atribuída a quem a fez (Ismael Luceno, Felipe, L.)",
+   "subtópico fontes-tipograficas: 'a validação da fonte 3270 com o fontbakery' trocado por 'a indicação do fontbakery para validar'; 10287 não diz que a validação foi feita",
+   "tema pinball-e-fliperamas: os fliperamas abandonados aparecem como reportagens compartilhadas, e a viagem a Tóquio foi atribuída a Felipe",
+   "subtópico fliperamas: 'lojas e fliperamas retrô visitados em Tóquio' trocado por 'o fliperama da SEGA em Akihabara e indicações de lojas e fliperamas'; os resumos não dizem que os outros lugares foram visitados",
+   "tema noticias-eventos-e-museus: 'O grupo divulgou eventos como o MSX SP 2018' corrigido; Felipe compartilhou o vídeo da palestra, e Eduardo Loos divulgou o RetroSC. Na Alemanha não houve visita relatada: Felipe indicou o technikum29 antes de viajar (9452)",
+   "subtópico codigo-fonte-liberado: o slug passou para codigo-fonte e o título para 'Código-fonte de jogos e programas'; a coleção de Al Lowe foi posta à venda no eBay, não liberada (8337). Os links do Photoshop 1.0 aparecem como recuperados no Wayback Machine",
+   "subtópico museus-e-visitas: incluídas as fotos do scanner Crosfield 6250, o que cobre explicitamente 8283",
+   "destaque 8016: o texto falava em ROM, que é de 8130. Agora descreve a proposta da PCB com EPROM e a execução no MAME a partir de uma imagem de disquete",
+   "destaque 9594: a inclusão no MAME foi atribuída a Felipe, que se propôs a fazê-la",
+   "destaque 10169: 'São publicados' trocado por 'Felipe publica'",
+   "destaque 10287: 'é preparada para publicação' trocado por 'estão preparando a fonte para tentar publicá-la', com a indicação do fontbakery",
+   "verificação: todos os ids das subtópicos e destaques são deste ano, cada conversa aparece em pelo menos uma subtópico, e os slugs são únicos e em ASCII minúsculo com hífens"
+  ],
+  "by": "topics/workflow_years.js (run wf_2ca9e325-052: 68 agents for years 1-9, 8329065 tokens, 49 min)"
+ }
+}
