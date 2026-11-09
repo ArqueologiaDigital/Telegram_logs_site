@@ -274,8 +274,9 @@ def front_page(years, X):
              "\t<div class='topics'><h1>Arqueologia Digital: tópicos das conversas</h1>"
              f"<p class='period'>{len(years)} anos do grupo, de {years[0].span.split(' a ')[0]} a "
              f"{years[-1].span.split(' a ')[1]} · {n_conv} conversas em {n_msg} mensagens</p>"
-             "<p class='lead'>O que o grupo conversou e fez, ano a ano. Cada ano tem um resumo e seus temas; "
-             "dentro de cada tema estão as conversas, e cada conversa leva às mensagens originais.</p>\n",
+             "<p class='lead'>O que o grupo conversou e fez, por assunto ao longo de todos os anos ou ano a ano. "
+             "Cada assunto e cada ano têm um resumo; abaixo deles estão as conversas, e cada conversa leva às "
+             "mensagens originais.</p>\n",
              year_nav(years, None)]
     if X.topics:
         parts.append("<h2>Assuntos</h2><p class='period'>Cada assunto reúne tudo o que o grupo conversou e fez "

@@ -15,6 +15,7 @@ Columns:
   highlights           "momentos marcantes"
   tax. corrections     lines in taxonomy_check.corrections ("-" if that check has not run)
   felipe               conversations whose participants include Felipe "Juca" Sanches
+Then one line on the cross-year topics (topics/crossyear.json), if present.
 """
 import glob
 import json
@@ -55,6 +56,14 @@ def main():
     tc = [r["tax. corrections"] for r in rows if r["tax. corrections"] != "-"]
     rows.append({"year": "all", "period": "", **tot, "tax. corrections": sum(tc)})
     print(table(rows))
+    cpath = os.path.join(HERE, "crossyear.json")
+    if os.path.exists(cpath):
+        with open(cpath, encoding="utf-8") as f:
+            cross = json.load(f)["topics"]
+        placed = {sid for t in cross for sid in t["subtopics"]}
+        print(f"\ncross-year topics (crossyear.json): {len(cross)} topics, {len(placed)} of "
+              f"{tot['subtopics']} yearly subtopics placed, {sum(len(t['corrections']) for t in cross)} "
+              f"corrections by the checkers, {sum(1 for t in cross if t.get('unchecked'))} unchecked")
 
 
 if __name__ == "__main__":

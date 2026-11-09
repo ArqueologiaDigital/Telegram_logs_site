@@ -7,14 +7,15 @@ the messages themselves on the chat pages.
 
 ## Pipeline
 
-| step           | what                                                                                                     | file                       |
-|----------------|----------------------------------------------------------------------------------------------------------|----------------------------|
-| 1. transcripts | the archive as plain text, one line per message (`#id date name: text`), in chunks of a few months       | `transcript.py`            |
-| 2. segment     | one agent per chunk reads ALL of it and splits it into conversations: ids, title, summary, people, tags  | `workflow.js`              |
-| 3. verify      | one skeptical agent per chunk re-reads the transcript at every cited id and fixes or drops what is wrong | `workflow.js`              |
-| 4. taxonomy    | one agent groups all conversations into themes and subtopics, writes the intro and picks highlights      | `workflow.js`              |
-| 5. store       | the workflow's result, as returned, plus run metadata                                                    | `data/<period>.json`       |
-| 6. render      | deterministic HTML; re-checks every cited message id against the archive                                 | `render.py`, `topicos.css` |
+| step           | what                                                                                                                                                                      | file                                                     |
+|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
+| 1. transcripts | the archive as plain text, one line per message (`#id date name: text`), in chunks of a few months                                                                        | `transcript.py`                                          |
+| 2. segment     | one agent per chunk reads ALL of it and splits it into conversations: ids, title, summary, people, tags                                                                   | `workflow.js`                                            |
+| 3. verify      | one skeptical agent per chunk re-reads the transcript at every cited id and fixes or drops what is wrong                                                                  | `workflow.js`                                            |
+| 4. taxonomy    | one agent groups all conversations into themes and subtopics, writes the intro and picks highlights                                                                       | `workflow.js`                                            |
+| 5. store       | the workflow's result, as returned, plus run metadata                                                                                                                     | `data/<period>.json`                                     |
+| 5b. cross-year | one agent groups the yearly subtopics into topics (coverage checked in code); per topic, one agent writes an all-years summary from `material.py` and a skeptic checks it | `workflow_crossyear.js`, `material.py`, `crossyear.json` |
+| 6. render      | deterministic HTML; re-checks every cited message id against the archive and that every subtopic is in a topic                                                            | `render.py`, `topicos.css`                               |
 
 The agents see the same text as the site: phone tags masked, deleted messages and service events
 left out. Their output is data, committed here, so the pages can be rebuilt without rerunning them.

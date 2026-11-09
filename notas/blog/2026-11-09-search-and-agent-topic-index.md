@@ -62,6 +62,7 @@ The checkers were busy (`topics/stats.py`):
 |-------------------------------------------------|-------|-------------|
 | conversations, against the messages (years 1-9) | 1653  | 804         |
 | year summaries, themes, highlights (years 1-9)  | 9     | 351         |
+| all-years summaries of the 38 cross-year topics | 38    | 435         |
 
 About one correction for every two conversations. The typical error is not invention but
 inflation: a pull request "reached MAME" while it was still open, someone "learned to compile
@@ -78,13 +79,21 @@ theme credited Werner with work on the CP-400 Color II driver that Felipe had do
 
 The render step found no broken message links in any year.
 
+A year is not how readers think about a subject, though. A last layer groups the 433 yearly
+subtopics into 38 topics (Patinho Feio, the Technics keyboards, Pense Bem, Mines, ...), checked
+in code to leave none out, and gives each a summary of everything the group did on it across all
+nine years, written from the checked conversation summaries and checked again, sentence by
+sentence (435 corrections, about 11 per topic). Each topic page then lists, year by year, the
+conversations behind its summary.
+
 ## Cost
 
-| run           | messages | agents | tokens    | time   |
-|---------------|----------|--------|-----------|--------|
-| pilot, year 1 | 7808     | 9      | 1,356,191 | 14 min |
-| years 2-9     | 32,664   | 68     | 8,329,065 | 49 min |
-| year 1 check  |          | 1      |           |        |
+| run               | messages | agents | tokens    | time   |
+|-------------------|----------|--------|-----------|--------|
+| pilot, year 1     | 7808     | 9      | 1,356,191 | 14 min |
+| years 2-9         | 32,664   | 68     | 8,329,065 | 49 min |
+| year 1 check      |          | 1      |           |        |
+| cross-year topics | 40,472   | 77     | 3,691,197 | 13 min |
 
 Roughly 240 tokens of agent work per message, six to seven times the size of the transcripts
 (about 230k tokens for year 1, 1.23M for years 2-9, as estimated by `topics/transcript.py`):
