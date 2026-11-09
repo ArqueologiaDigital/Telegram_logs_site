@@ -63,12 +63,29 @@ travel in the record's path instead, and `search.html` turns them back into a li
 
 `publish.sh` rebuilds the index on Sundays, when it is missing, or with `SEARCH=1
 ./publish.sh`; other days keep the previous index. Each rebuild rewrites about 3.6 MB of index
-files however few messages arrived (measured with `search_churn.py` in the research-scratch
-repo: 20 new messages changed 94 of 163 word-index chunks), so a daily rebuild would grow the
+files however few messages arrived (measured with `tests/search_churn.py`: 20 new messages changed 94 of 163 word-index chunks), so a daily rebuild would grow the
 `gh-pages` history by ~1.3 GB a year; weekly is ~190 MB. Links in an older index stay valid
 because pages never shift; messages newer than the index are found after the next rebuild.
 
 Needs `pip install -r requirements.txt` in `../.venv` (pagefind, which ships the indexer binary).
+
+### Tests and probes
+
+| script                       | question it answers                                                                    | run                                                                                                       |
+|------------------------------|----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| `tests/compare_old_pages.py` | do the 2018 pages' messages all appear, in order, on the same-numbered new pages?      | `python3 -I tests/compare_old_pages.py ../Telegram_logs-2018-private/formatted/html build/formatted/html` |
+| `tests/search_churn.py`      | how many index files does a rebuild change when N messages arrive?                     | `../.venv/bin/python -I tests/search_churn.py SCRATCH_DIR 20`                                             |
+| `tests/cdp_eval.mjs`         | what does a page show once its scripts ran? (headless Chromium, polls a JS expression) | serve the build (`python3 -m http.server 8765` in `build/`), then the command below                       |
+
+```
+node --experimental-websocket tests/cdp_eval.mjs \
+  'http://127.0.0.1:8765/formatted/html/search.html?q=patinho%20feio' \
+  "document.querySelector('.pagefind-ui__result') ? document.querySelector('.pagefind-ui__message').textContent : ''"
+```
+
+On 2026-11-09 that printed "207 resultados encontrados para patinho feio"; the first hit linked to
+`…-25.html#m26172`. Chromium's `--dump-dom` is no substitute: it dumps at the load event, before
+the search has run.
 
 ## Building
 
