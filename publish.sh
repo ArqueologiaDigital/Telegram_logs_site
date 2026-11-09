@@ -16,9 +16,33 @@ if [ ! -e "${WT:?}/.git" ]; then
   fi
 fi
 
-# Full rebuild: remove everything in the worktree except its .git file, then build into it.
-find "${WT:?}" -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf -- {} +
+# The search index (search_index.py) is rebuilt on Sundays, when missing, or with SEARCH=1;
+# other days keep the previous one. Any rebuild rewrites ~3.6 MB of index files however few
+# messages arrived (measured: research-scratch/tg-arqueologia/search_churn.py), which daily
+# would add ~1.3 GB a year to the gh-pages history. Links in an older index stay valid,
+# since pages never shift; only messages newer than the index are not found yet.
+SEARCH_DIR="${WT:?}/formatted/html/pagefind"
+KEEP="${WT:?}/.search-keep"
+REBUILD_SEARCH=yes
+rm -rf -- "${KEEP:?}"     # left over by a run that failed before restoring it
+if [ -d "$SEARCH_DIR" ] && [ -f "${WT:?}/formatted/html/search.html" ] \
+   && [ "$(date -u +%u)" != 7 ] && [ "${SEARCH:-0}" != 1 ]; then
+  REBUILD_SEARCH=no
+  mkdir "$KEEP"
+  mv "$SEARCH_DIR" "${WT:?}/formatted/html/search.html" "$KEEP/"
+fi
+
+# Full rebuild: remove everything in the worktree except its .git file (and a kept search
+# index), then build into it.
+find "${WT:?}" -mindepth 1 -maxdepth 1 ! -name .git ! -name .search-keep -exec rm -rf -- {} +
 python3 -I "$HERE/build.py" --out "${WT:?}" --media-base "$MEDIA_BASE"
+if [ "$REBUILD_SEARCH" = yes ]; then
+  "$HERE/../.venv/bin/python" -I "$HERE/search_index.py" --out "${WT:?}" --media-base "$MEDIA_BASE"
+else
+  mv "$KEEP/pagefind" "$KEEP/search.html" "${WT:?}/formatted/html/"
+  rmdir "$KEEP"
+  echo "search index kept (rebuilt on Sundays, or run with SEARCH=1)"
+fi
 if [ -d "$LEGACY_HTML" ]; then
   python3 -I "$HERE/tests/compare_old_pages.py" "$LEGACY_HTML" "${WT:?}/formatted/html" >/dev/null \
     || { echo "2018 page compatibility test FAILED; not committing"; exit 1; }

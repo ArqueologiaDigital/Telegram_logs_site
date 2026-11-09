@@ -35,9 +35,40 @@ runs the 2018 compatibility test, and commits if the output changed. It never pu
 job in `Telegram_logs` calls it. GitHub Pages serves `gh-pages` at
 <https://arqueologiadigital.org/Telegram_logs_site/>.
 
-The 2018 URLs under `/Telegram_logs/formatted/html/` are **not** redirected: the site moved to
-`/Telegram_logs_site/formatted/html/` with the same file names, so an old link works after
-replacing `Telegram_logs` with `Telegram_logs_site` in it.
+The 2018 URLs under `/Telegram_logs/formatted/html/` are redirected to the same file under
+`/Telegram_logs_site/formatted/html/` by the `404.html` of the main site's repo
+(`ArqueologiaDigital.github.io`), which GitHub Pages serves for any path no repo serves.
+
+## Search
+
+`search_index.py` builds a full-text search with [Pagefind](https://pagefind.app):
+`formatted/html/search.html` (linked from the index page and every page's navigation) and its
+index in `formatted/html/pagefind/`. The index is split into small files and the browser fetches
+only the ones a query needs, so it works on GitHub Pages with no server. Words are stemmed for
+Portuguese ("emuladores" finds "emulador", "emulação").
+
+- One record per message, linking to the message on its page (`<page>.html#m<id>`).
+- Indexed: the message text as the pages show it (same phone masking, deleted messages left out
+  under `--deleted placeholder`), plus a document's file name, a link preview's title and
+  description, and a poll's question and answers. Service messages and media without text are
+  not indexed.
+- Filters: year (`ano`), sender (`autor`), kind (`tipo`: texto, link, foto, vídeo, documento, ...).
+  Sorting: relevance, newest or oldest first.
+- On 2026-11-09: 38148 of 40975 messages indexed, 38187 files, 13.2 MB, in about 30 seconds.
+
+`search_index.py`'s docstring explains two non-obvious choices: it feeds Pagefind HTML files
+through its command-line indexer (the Python API manages ~10 records/s), and records carry no
+Pagefind metadata (Pagefind makes metadata searchable; the page, id, date and has-photo flag
+travel in the record's path instead, and `search.html` turns them back into a link and title).
+
+`publish.sh` rebuilds the index on Sundays, when it is missing, or with `SEARCH=1
+./publish.sh`; other days keep the previous index. Each rebuild rewrites about 3.6 MB of index
+files however few messages arrived (measured with `search_churn.py` in the research-scratch
+repo: 20 new messages changed 94 of 163 word-index chunks), so a daily rebuild would grow the
+`gh-pages` history by ~1.3 GB a year; weekly is ~190 MB. Links in an older index stay valid
+because pages never shift; messages newer than the index are found after the next rebuild.
+
+Needs `pip install -r requirements.txt` in `../.venv` (pagefind, which ships the indexer binary).
 
 ## Building
 
@@ -45,6 +76,7 @@ replacing `Telegram_logs` with `Telegram_logs_site` in it.
 python3 -I build.py --out build                 # local preview; media linked from ../Telegram_logs_media
 python3 -I build.py --out build --media-base https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/
 python3 -I tests/compare_old_pages.py ../Telegram_logs-2018-private/formatted/html build/formatted/html
+../.venv/bin/python -I search_index.py --out build   # search page and index, after build.py
 ```
 
 Preview with a local web server from the directory that holds all repos (browsers block media

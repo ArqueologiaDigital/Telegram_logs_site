@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<title>Busca: Arqueologia Digital (Telegram)</title>
+  	<link rel=stylesheet href="telegram-history-dump.css">
+  	<link rel=stylesheet href="pagefind/pagefind-ui.css">
+  	<script src="pagefind/pagefind-ui.js"></script>
+  	<style>
+  	  .search-page { max-width: 700px; margin: 0 auto; background: #fff; padding: 1em 1.2em; border-radius: 4px; }
+  	  .search-page p.hint { color: #555; margin-top: 0; }
+  	  .search-page .ordem { margin: .5em 0 1em; }
+  	  .search-page .pagefind-ui__result-thumb { width: 90px; }
+  	</style>
+  </head>
+  <body>
+	<div class='navigation-top'><a href="index.html">Back to index</a> |</div>
+	<div class="search-page">
+	<h1>Busca no chat</h1>
+	<p class="hint">Procura palavras em todas as mensagens do grupo, incluindo nomes de arquivos, títulos
+	de links compartilhados e enquetes. Use os filtros para limitar por ano, autor ou tipo de mensagem.
+	Cada resultado leva à mensagem na página do log.</p>
+	<label class="ordem">Ordenar por:
+	  <select id="ordem">
+	    <option value="">relevância</option>
+	    <option value="desc">mais recentes primeiro</option>
+	    <option value="asc">mais antigas primeiro</option>
+	  </select>
+	</label>
+	<div id="search"></div>
+	</div>
+	<script>
+	  // Built by search_index.py: one Pagefind record per message, with no metadata (Pagefind
+	  // would make it searchable). The record's path is <page>/<id>_<YYYY-MM-DD>_<HHMM>[_p].html;
+	  // the author comes from the "autor" filter. CONFIG is filled in by search_index.py.
+	  var CONFIG = /*CONFIG*/{};
+	  var PATH = /\/(\d+)\/(\d+)_(\d{4})-(\d\d)-(\d\d)_(\d\d)(\d\d)(_p)?\.html$/;
+	  function toMessage(r) {
+	    var m = PATH.exec(r.url);
+	    if (!m) return r;
+	    var who = (r.filters && r.filters.autor && r.filters.autor[0]) || "";
+	    r.url = CONFIG.pagePrefix + m[1] + ".html#m" + m[2];
+	    r.meta = { title: who + " · " + m[3] + "-" + m[4] + "-" + m[5] + " " + m[6] + ":" + m[7] };
+	    if (m[8]) {
+	      r.meta.image = CONFIG.mediaBase + m[3] + "/" + m[3] + "-" + m[4] + "/" + m[2] + ".jpg";
+	      r.meta.image_alt = "foto";
+	    }
+	    return r;
+	  }
+	  var params = new URLSearchParams(location.search);
+	  var ordem = params.get("ordem") || "";
+	  document.getElementById("ordem").value = ordem;
+	  var ui = new PagefindUI({
+	    element: "#search",
+	    showSubResults: false,
+	    showImages: true,
+	    excerptLength: 40,
+	    sort: ordem ? { data: ordem } : null,
+	    processResult: toMessage
+	  });
+	  if (params.get("q")) ui.triggerSearch(params.get("q"));
+	  document.getElementById("ordem").addEventListener("change", function (e) {
+	    var p = new URLSearchParams(), box = document.querySelector("#search input");
+	    if (box && box.value) p.set("q", box.value);
+	    if (e.target.value) p.set("ordem", e.target.value);
+	    location.search = p.toString();
+	  });
+	</script>
+  </body>
+</html>

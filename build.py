@@ -407,7 +407,7 @@ def render_message(rec, d, page, opts):
 # ---------------------------------------------------------------- pages
 
 def nav(cls, n, last):
-    items = ["<a href=\"index.html\">Back to index</a>"]
+    items = ["<a href=\"index.html\">Back to index</a>", "<a href=\"search.html\">Search</a>"]
     if n > 0:
         items += [f"<a href='{page_href(0)}'>First</a>", f"<a href='{page_href(n - 1)}'>Previous</a>"]
     items.append(f"Page {n + 1} of {last + 1}")
@@ -463,6 +463,9 @@ def build_html(d, out, opts):
           f"Times in Brasília time (America/Sao_Paulo). Raw data: "
           f"<a href='https://github.com/ArqueologiaDigital/Telegram_logs'>Telegram_logs</a>, "
           f"<a href='https://github.com/ArqueologiaDigital/Telegram_logs_media'>Telegram_logs_media</a>.</p>\n"
+          "\t<form class='search-box' action='search.html'><input name='q' type='search' "
+          "placeholder='Buscar no chat (palavras, arquivos, links)' aria-label='Buscar no chat'> "
+          "<button>Buscar</button></form>\n"
           "\t<table class='pages'><tr><th>page</th><th>from</th><th>to</th><th>messages</th></tr>\n\t"
           + "\n\t".join(rows) + "\n\t</table></div>\n  </body>\n</html>\n")
     shutil.copy(os.path.join(HERE, "static", CSS), os.path.join(hdir, CSS))
