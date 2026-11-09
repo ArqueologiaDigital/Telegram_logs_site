@@ -25,4 +25,5 @@ if (pre) await evaluate(pre);
 const end = Date.now() + Number(tmo) * 1000; let v;
 while (Date.now() < end) { v = await evaluate(expr); if (v) break; await sleep(500); }
 console.log(v || "TIMEOUT");
-chrome.kill(); process.exit(v ? 0 : 1);
+const exited = new Promise(r => chrome.once("exit", r));
+chrome.kill(); await exited; process.exit(v ? 0 : 1);
