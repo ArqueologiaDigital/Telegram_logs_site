@@ -1,12 +1,13 @@
 // Open a URL in headless Chromium and poll a JS expression until it returns a truthy string.
 //   node --experimental-websocket cdp_eval.mjs URL 'EXPR' [timeout_s] [pre-expr run once after load]
 import { spawn } from "node:child_process";
-import { mkdtempSync } from "node:fs";
+import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 const [url, expr, tmo = "40", pre = ""] = process.argv.slice(2);
 const port = 9300 + Math.floor(Math.random() * 500);
 const prof = mkdtempSync(join(tmpdir(), "cdp-"));
+process.on("exit", () => { try { rmSync(prof, { recursive: true, force: true }); } catch {} });
 const chrome = spawn("chromium", ["--headless", "--disable-gpu", "--no-sandbox", `--remote-debugging-port=${port}`,
   `--user-data-dir=${prof}`, "about:blank"], { stdio: "ignore" });
 const sleep = ms => new Promise(r => setTimeout(r, ms));
