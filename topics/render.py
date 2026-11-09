@@ -8,6 +8,9 @@ Writes into <out>/formatted/html/, next to the chat pages it links to:
   topicos-ano-<N>.html            one year: its summary, themes and highlights
   topico-ano-<N>-<slug>.html      one theme of a year: its subtopics, each with its conversations
                                   (title, date, participants, summary, links to the messages)
+  topico-<slug>.html              one cross-year topic (topics/crossyear.json): a summary of all the
+                                  work on it across the years, then year by year its subtopics and
+                                  conversations
   membro-<user id>.html           a profile, only for user ids listed in topics/profiles_optin.json;
                                   its bio is shown only once "bio_approved" is true
 
@@ -74,6 +77,46 @@ class Year:
     def theme_page(self, t):
         return f"topico-ano-{self.n}-{t['slug']}.html"
 
+    def sid(self, t, s):
+        return f"{self.n}/{t['slug']}/{s['slug']}"
+
+
+class Cross:
+    """Cross-year topics: topics/crossyear.json (topics/workflow_crossyear.js)."""
+
+    def __init__(self, path, years, problems):
+        self.topics = []
+        self.of = {}            # subtopic id -> [topic]
+        if not os.path.exists(path):
+            return
+        with open(path, encoding="utf-8") as f:
+            self.topics = json.load(f)["topics"]
+        known = {y.sid(t, s): (y, t, s) for y in years for t in y.tax["themes"] for s in t["subtopics"]}
+        for tp in self.topics:
+            assert not tp["slug"].startswith("ano-"), tp["slug"]
+            tp["members"] = []
+            for sid in tp["subtopics"]:
+                if sid not in known:
+                    problems.append(f"cross-year topic {tp['slug']} lists unknown subtopic {sid}")
+                    continue
+                tp["members"].append((sid,) + known[sid])
+                self.of.setdefault(sid, []).append(tp)
+            tp["convs"] = {i for _, y, t, s in tp["members"] for i in s["conversation_ids"] if i in y.convs}
+            tp["years"] = sorted({y.n for _, y, t, s in tp["members"]})
+        for sid in sorted(set(known) - set(self.of)):
+            problems.append(f"subtopic {sid} is in no cross-year topic")
+
+    @staticmethod
+    def page(tp):
+        return f"topico-{tp['slug']}.html"
+
+    def link(self, y, t, s):
+        """Where a yearly subtopic leads: its year section on the cross-year topic page."""
+        tps = self.of.get(y.sid(t, s))
+        if tps:
+            return f"{self.page(tps[0])}#ano-{y.n}"
+        return f"{y.theme_page(t)}#{q(s['slug'])}"
+
 
 class Links:
     def __init__(self, d, opts, problems):
@@ -137,7 +180,7 @@ def year_nav(years, cur):
     return "<p class='years-nav'>" + " · ".join(items) + "</p>\n"
 
 
-def theme_page(L, y, years, t, profiles):
+def theme_page(L, y, years, t, profiles, X):
     parts = [head(f"{t['title']} ({y.label}): tópicos do grupo Arqueologia Digital"), nav(),
              "\t<div class='topics'>", year_nav(years, y),
              f"<p class='crumbs'><a href='topicos.html'>Tópicos</a> › <a href='{y.page()}'>{y.label}</a> › "
@@ -147,31 +190,64 @@ def theme_page(L, y, years, t, profiles):
         f"<li><a href='#{q(s['slug'])}'>{esc(s['title'])}</a> <span class='n'>{len(s['conversation_ids'])}</span></li>"
         for s in t["subtopics"]) + "</ul>\n")
     for s in t["subtopics"]:
-        parts.append(f"<section id='{q(s['slug'])}'><h2>{esc(s['title'])}</h2><p>{esc(s['summary'])}</p>\n")
+        cross = " ".join(f"<a class='cross' href='{X.page(tp)}'>{esc(tp['title'])}: todos os anos ›</a>"
+                         for tp in X.of.get(y.sid(t, s), []))
+        parts.append(f"<section id='{q(s['slug'])}'><h2>{esc(s['title'])}</h2><p>{esc(s['summary'])}</p>"
+                     f"{'<p class=meta>' + cross + '</p>' if cross else ''}\n")
         parts += [conversation(L, y.convs[i], profiles) for i in s["conversation_ids"] if i in y.convs]
         parts.append("</section>\n")
     parts.append("</div>\n  </body>\n</html>\n")
     return "".join(parts)
 
 
-def themes_block(y):
+def topic_page(L, years, X, tp, profiles):
+    span = f"{tp['years'][0]}" if len(tp["years"]) == 1 else f"{tp['years'][0]} a {tp['years'][-1]}"
+    notes = {n["year"]: n["note"] for n in tp.get("year_notes", [])}
+    parts = [head(f"{tp['title']}: tópicos do grupo Arqueologia Digital"), nav(),
+             "\t<div class='topics'>",
+             f"<p class='crumbs'><a href='topicos.html'>Tópicos</a> › {esc(tp['title'])}</p>"
+             f"<h1>{esc(tp['title'])}</h1>"
+             f"<p class='period'>{len(tp['convs'])} conversas · anos {span} do grupo</p>"]
+    parts += [f"<p class='lead'>{esc(par)}</p>" for par in tp.get("summary", "").split("\n\n") if par.strip()]
+    parts.append("<p class='years-nav'>Ano a ano: " + " · ".join(
+        f"<a href='#ano-{n}'>Ano {n}</a>" for n in tp["years"]) + "</p>\n")
+    by_year = {}
+    for sid, y, t, s in tp["members"]:
+        by_year.setdefault(y.n, (y, []))[1].append((t, s))
+    for n in sorted(by_year):
+        y, subs = by_year[n]
+        parts.append(f"<section id='ano-{n}' class='topic-year'><h2><a href='{y.page()}'>{y.label}</a> "
+                     f"<span class='n'>{y.span}</span></h2>")
+        if notes.get(n):
+            parts.append(f"<p>{esc(notes[n])}</p>")
+        for t, s in subs:
+            parts.append(f"<h3>{esc(s['title'])} <span class='n'>no tema <a href='{y.theme_page(t)}#{q(s['slug'])}'>"
+                         f"{esc(t['title'])}</a></span></h3><p class='subsum'>{esc(s['summary'])}</p>\n")
+            parts += [conversation(L, y.convs[i], profiles) for i in s["conversation_ids"] if i in y.convs]
+        parts.append("</section>\n")
+    parts.append(method_note())
+    parts.append("</div>\n  </body>\n</html>\n")
+    return "".join(parts)
+
+
+def themes_block(y, X):
     out = ["<div class='themes'>"]
     for t in y.tax["themes"]:
         n = sum(len(s["conversation_ids"]) for s in t["subtopics"])
-        subs = ", ".join(f"<a href='{y.theme_page(t)}#{q(s['slug'])}'>{esc(s['title'])}</a>" for s in t["subtopics"])
+        subs = ", ".join(f"<a href='{X.link(y, t, s)}'>{esc(s['title'])}</a>" for s in t["subtopics"])
         out.append(f"<div class='theme'><h3><a href='{y.theme_page(t)}'>{esc(t['title'])}</a> "
                    f"<span class='n'>{n}</span></h3><p>{esc(t['summary'])}</p><p class='subs'>{subs}</p></div>\n")
     out.append("</div>")
     return "".join(out)
 
 
-def year_page(L, y, years):
+def year_page(L, y, years, X):
     parts = [head(f"{y.label} ({y.span}): tópicos do grupo Arqueologia Digital"), nav(),
              "\t<div class='topics'>", year_nav(years, y),
              f"<p class='crumbs'><a href='topicos.html'>Tópicos</a> › {y.label}</p>"
              f"<h1>{y.label} do grupo</h1>"
              f"<p class='period'>{y.span} · {len(y.convs)} conversas em {y.messages} mensagens</p>"
-             f"<p class='lead'>{esc(y.tax['intro'])}</p>\n<h2>Temas</h2>", themes_block(y)]
+             f"<p class='lead'>{esc(y.tax['intro'])}</p>\n<h2>Temas</h2>", themes_block(y, X)]
     if y.tax.get("highlights"):
         parts.append("<h2>Momentos marcantes</h2><ul class='highlights'>")
         for h in y.tax["highlights"]:
@@ -191,7 +267,7 @@ def method_note():
             "originais. Para procurar palavras específicas, use a <a href='search.html'>busca</a>.</p>")
 
 
-def front_page(years):
+def front_page(years, X):
     n_conv = sum(len(y.convs) for y in years)
     n_msg = sum(y.messages for y in years)
     parts = [head("Tópicos: Arqueologia Digital (Telegram)"), nav(),
@@ -201,8 +277,17 @@ def front_page(years):
              "<p class='lead'>O que o grupo conversou e fez, ano a ano. Cada ano tem um resumo e seus temas; "
              "dentro de cada tema estão as conversas, e cada conversa leva às mensagens originais.</p>\n",
              year_nav(years, None)]
+    if X.topics:
+        parts.append("<h2>Assuntos</h2><p class='period'>Cada assunto reúne tudo o que o grupo conversou e fez "
+                     "sobre ele, em todos os anos.</p><ul class='cross-topics'>")
+        for tp in X.topics:
+            ys = tp["years"]
+            span = f"ano {ys[0]}" if len(ys) == 1 else f"anos {ys[0]}–{ys[-1]}"
+            parts.append(f"<li><a href='{X.page(tp)}'>{esc(tp['title'])}</a> <span class='n'>{len(tp['convs'])} "
+                         f"conversas, {span}</span><br><span class='scope'>{esc(tp['scope'])}</span></li>")
+        parts.append("</ul><h2>Ano a ano</h2>")
     for y in years:
-        top = ", ".join(f"<a href='{y.theme_page(t)}'>{esc(t['title'])}</a>" for t in y.tax["themes"][:5])
+        top = ", ".join(f"<a href='{y.theme_page(t)}'>{esc(t['title'])}</a>" for t in y.tax["themes"][:5])  # noqa
         parts.append(f"<div class='year' id='ano-{y.n}'><h2><a href='{y.page()}'>{y.label}</a> "
                      f"<span class='n'>{y.span} · {len(y.convs)} conversas</span></h2>"
                      f"<p>{esc(y.tax['intro'])}</p><p class='subs'>Temas: {top}"
@@ -212,7 +297,7 @@ def front_page(years):
     return "".join(parts)
 
 
-def profile_page(L, years, uid, info, opts):
+def profile_page(L, years, uid, info, opts, X):
     d = L.d
     name = d.name(uid)
     mine = [r for r in d.records if r.get("raw") and d.sender_id(r["raw"]) == uid
@@ -231,6 +316,14 @@ def profile_page(L, years, uid, info, opts):
     parts.append(f"<h2>Mensagens no grupo</h2><p>{len(mine)} mensagens"
                  + (f", desde {L.msg(first['id'], pt_date(first))}" if first else "") + ".</p>"
                  f"<table class='years'>{bars}</table>\n")
+    if X.topics:
+        mine_t = [(tp, sum(1 for _, y, t, s in tp["members"] for i in s["conversation_ids"]
+                           if i in y.convs and name in y.convs[i]["participants"])) for tp in X.topics]
+        mine_t = [(tp, k) for tp, k in mine_t if k]
+        if mine_t:
+            parts.append("<h2>Assuntos em que participou</h2><p class='subs'>" + ", ".join(
+                f"<a href='{X.page(tp)}'>{esc(tp['title'])}</a> ({k})"
+                for tp, k in sorted(mine_t, key=lambda x: -x[1])) + "</p>")
     total = 0
     blocks = []
     for y in years:
@@ -277,13 +370,16 @@ def main():
     with open(os.path.join(HERE, "profiles_optin.json"), encoding="utf-8") as f:
         optin = {int(k): v for k, v in json.load(f).items()}
     profiles = {d.name(uid): uid for uid in optin}
-    B.write(os.path.join(hdir, "topicos.html"), front_page(years))
+    X = Cross(os.path.join(HERE, "crossyear.json"), years, problems)
+    B.write(os.path.join(hdir, "topicos.html"), front_page(years, X))
     for y in years:
-        B.write(os.path.join(hdir, y.page()), year_page(L, y, years))
+        B.write(os.path.join(hdir, y.page()), year_page(L, y, years, X))
         for t in y.tax["themes"]:
-            B.write(os.path.join(hdir, y.theme_page(t)), theme_page(L, y, years, t, profiles))
+            B.write(os.path.join(hdir, y.theme_page(t)), theme_page(L, y, years, t, profiles, X))
+    for tp in X.topics:
+        B.write(os.path.join(hdir, X.page(tp)), topic_page(L, years, X, tp, profiles))
     for uid, info in optin.items():
-        B.write(os.path.join(hdir, f"membro-{uid}.html"), profile_page(L, years, uid, info, opts))
+        B.write(os.path.join(hdir, f"membro-{uid}.html"), profile_page(L, years, uid, info, opts, X))
     shutil.copy(os.path.join(HERE, "topicos.css"), os.path.join(hdir, "topicos.css"))
     idx = os.path.join(hdir, "index.html")     # link the front page from the log's index page
     with open(idx, encoding="utf-8") as f:
@@ -293,7 +389,8 @@ def main():
                             "Tópicos das conversas</a>: o que o grupo conversou e fez, ano a ano.</p>\n", 1)
         B.write(idx, page)
     print(f"topics: {len(years)} year(s), {sum(len(y.convs) for y in years)} conversations, "
-          f"{sum(len(y.tax['themes']) for y in years)} themes, {len(optin)} profile(s) -> {hdir}")
+          f"{sum(len(y.tax['themes']) for y in years)} themes, {len(X.topics)} cross-year topics, "
+          f"{len(optin)} profile(s) -> {hdir}")
     for msg in sorted(set(problems)):
         print("  CHECK:", msg)
 
