@@ -27,6 +27,13 @@ links with sizes, polls, service events as centered rows, an index table of page
 sender names in the plaintext logs. Users whose Telegram account was deleted are shown with their
 last known name.
 
+Everyone's messages look alike. The 2018 pages showed the archiving account's own messages
+(Felipe's) as green bubbles on the right; now every message is a left-hand bubble tinted with
+its sender's own colour (a hue fixed per Telegram user id, `hue()` in `build.py`), with the
+sender's profile photo beside the name, or their initials when there is no public photo. The
+photos come from `Telegram_logs/tools/tg_avatars.py` (`media/avatars.jsonl`, files in the media
+repo's `avatars/`).
+
 ## Publishing
 
 `./publish.sh` rebuilds into the `gh-pages` branch (a worktree at `../Telegram_logs_site-gh-pages`)
@@ -76,6 +83,7 @@ Needs `pip install -r requirements.txt` in `../.venv` (pagefind, which ships the
 | `tests/compare_old_pages.py` | do the 2018 pages' messages all appear, in order, on the same-numbered new pages?      | `python3 -I tests/compare_old_pages.py ../Telegram_logs-2018-private/formatted/html build/formatted/html` |
 | `tests/search_churn.py`      | how many index files does a rebuild change when N messages arrive?                     | `../.venv/bin/python -I tests/search_churn.py SCRATCH_DIR 20`                                             |
 | `tests/cdp_eval.mjs`         | what does a page show once its scripts ran? (headless Chromium, polls a JS expression) | serve the build (`python3 -m http.server 8765` in `build/`), then the command below                       |
+| `tests/cdp_shot.mjs`         | what does a page look like? (headless Chromium screenshot, lazy images loaded)         | `node --experimental-websocket tests/cdp_shot.mjs URL out.png 800 1100 4000`                              |
 
 ```
 node --experimental-websocket tests/cdp_eval.mjs \

@@ -100,6 +100,14 @@ class Data:
                 for line in f:
                     e = json.loads(line)
                     self.media[e["msg_id"]] = e
+        self.avatars = {}
+        apath = os.path.join(data_dir, "media", "avatars.jsonl")
+        if os.path.exists(apath):
+            with open(apath, encoding="utf-8") as f:
+                for line in f:
+                    a = json.loads(line)
+                    if a.get("path"):
+                        self.avatars[a["user_id"]] = a["path"]
         self.page_of = {r["id"]: i // PER_PAGE for i, r in enumerate(self.records)}
         self.by_id = {r["id"]: r for r in self.records}
 
@@ -115,6 +123,11 @@ class Data:
             if n.get("username"):
                 return "@" + n["username"]
         return "Deleted Account"
+
+    @staticmethod
+    def sender_id(raw):
+        fid = raw.get("from_id") or {}
+        return fid.get("user_id") or fid.get("channel_id") or 0
 
     def sender(self, raw):
         fid = raw.get("from_id") or {}
@@ -286,6 +299,25 @@ def render_media(rec, d, opts):
     return f"<div class='file'>📎 <a target='_blank' href='{u}'>{label}</a> ({human_size(size)})</div>"
 
 
+# ---------------------------------------------------------------- senders
+
+def hue(uid):
+    """A fixed colour per sender: golden-angle steps over the colour wheel, by user id."""
+    return int(uid * 137.508) % 360
+
+
+def initials(name):
+    words = re.findall(r"[^\W\d_]+", name)
+    return "".join(w[0] for w in words[:2]).upper() or "?"
+
+
+def avatar(d, uid, name, opts):
+    path = d.avatars.get(uid)
+    if path:
+        return f"<img class='avatar' src='{q(opts.media_base + urllib.parse.quote(path))}' alt='' loading='lazy'>"
+    return f"<span class='avatar initials' aria-hidden='true'>{esc(initials(name))}</span>"
+
+
 # ---------------------------------------------------------------- messages
 
 def action_text(raw, d):
@@ -364,26 +396,27 @@ def render_message(rec, d, page, opts):
         return (f"<div class='msg-service' id='m{rec['id']}' title='{title}'><div class=inner>"
                 f"{esc(action_text(raw, d))}{link}</div></div>\n")
 
-    cls = "out" if raw.get("out") else "in"
+    cls = "in"   # everyone alike: the archiving account's own messages are not set apart
     if dl:
         cls += " deleted"
         title += " | " + deletion_note(dl, d)
     if raw.get("edit_date"):
         title += f" | edited {stamp(local(raw['edit_date']))}"
-    parts = []
-    if cls.startswith("in"):
-        parts.append(f"<div class=\"author\">{esc(d.sender(raw))}:</div> ")
+    uid = d.sender_id(raw)
+    who = d.sender(raw)
+    style = f" style='--h:{hue(uid)}'"
+    parts = [f"<div class=\"author\">{avatar(d, uid, who, opts)}<span class='name'>{esc(who)}</span></div>"]
 
     if dl and opts.deleted == "placeholder":
         parts.append(f"<span class='deleted-note'>[message {esc(deletion_note(dl, d))}]</span>")
-        return f"<div class='msg {cls}' id='m{rec['id']}' title='{q(title)}'>{''.join(parts)}</div>\n"
+        return f"<div class='msg {cls}' id='m{rec['id']}' title='{q(title)}'{style}>{''.join(parts)}</div>\n"
 
     f = raw.get("fwd_from")
     if f:
         fid = f.get("from_id") or {}
         src = (d.name(fid["user_id"]) if fid.get("user_id")
                else f.get("from_name") or (d.name(fid["channel_id"]) if fid.get("channel_id") in d.users else "a channel"))
-        parts.append(f"<div class=\"author\">Forwarded message from <span class=\"fwd-name\">{esc(src)}</span>:</div>")
+        parts.append(f"<div class=\"fwd\">Forwarded message from <span class=\"fwd-name\">{esc(src)}</span>:</div>")
     reply = (raw.get("reply_to") or {}).get("reply_to_msg_id")
     if reply:
         href = link_to(d, reply, page)
@@ -401,7 +434,7 @@ def render_message(rec, d, page, opts):
         parts.append(med)
     if dl:
         parts.append(f"<div class='deleted-note'>[{esc(deletion_note(dl, d))}]</div>")
-    return f"<div class='msg {cls}' id='m{rec['id']}' title='{q(title)}'>{''.join(parts)}</div>\n"
+    return f"<div class='msg {cls}' id='m{rec['id']}' title='{q(title)}'{style}>{''.join(parts)}</div>\n"
 
 
 # ---------------------------------------------------------------- pages
