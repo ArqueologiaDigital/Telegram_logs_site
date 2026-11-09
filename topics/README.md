@@ -19,6 +19,8 @@ the messages themselves on the chat pages.
 The agents see the same text as the site: phone tags masked, deleted messages and service events
 left out. Their output is data, committed here, so the pages can be rebuilt without rerunning them.
 
+Numbers per year (conversations, corrections, size of the theme tree): `python3 -I topics/stats.py`.
+
 ## Profiles: opt-in only
 
 A member gets a profile page (`membro-<id>.html`: photo, message counts per year, themes and
