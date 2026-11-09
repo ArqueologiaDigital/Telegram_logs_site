@@ -48,6 +48,12 @@ if [ -d "$LEGACY_HTML" ]; then
     || { echo "2018 page compatibility test FAILED; not committing"; exit 1; }
 fi
 
+# Topic index pages (topics/render.py), only once topics/publish exists: the agent-written
+# index is reviewed by a maintainer before it goes public.
+if [ -f "$HERE/topics/publish" ]; then
+  python3 -I "$HERE/topics/render.py" --out "${WT:?}" --media-base "$MEDIA_BASE"
+fi
+
 DATA_SHA=$(git -C "$HERE/../Telegram_logs" rev-parse --short HEAD)
 SITE_SHA=$(git -C "$HERE" rev-parse --short HEAD)
 cd "${WT:?}"

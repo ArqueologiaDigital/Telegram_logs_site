@@ -1,0 +1,33 @@
+/* Topic index pages (topics/render.py), on top of telegram-history-dump.css */
+.topics { clear: both; background: #fff; padding: 1em 1.4em; border-radius: 4px; line-height: 1.45; }
+.topics h1 { font-size: 1.6em; margin: .2em 0 .3em; }
+.topics h2 { font-size: 1.25em; margin: 1.4em 0 .4em; border-bottom: 1px solid #ddd; }
+.topics .lead { font-size: 1.05em; }
+.topics .period, .topics .crumbs, .topics .meta, .topics .method { color: #666; font-size: .9em; }
+.topics .method { margin-top: 2em; border-top: 1px solid #eee; padding-top: .6em; }
+.topics .n { color: #888; font-size: .8em; font-weight: normal; }
+.themes .theme { border-left: 4px solid #7aa7d8; padding: .1em 0 .1em .8em; margin: 1em 0; }
+.themes h3 { margin: 0 0 .2em; font-size: 1.1em; }
+.themes .subs { font-size: .9em; color: #555; margin: .2em 0; }
+.highlights li { margin: .35em 0; }
+.topics .date { color: #777; font-size: .85em; white-space: nowrap; margin-right: .3em; }
+.toc { columns: 2; padding-left: 1.2em; }
+@media (max-width: 600px) { .toc { columns: 1; } }
+details.conv { margin: .3em 0; border: 1px solid #e3e3e3; border-radius: 4px; padding: .3em .6em; }
+details.conv[open] { background: #fafafa; }
+details.conv summary { cursor: pointer; }
+details.conv.w3 .title { font-weight: bold; }
+details.conv .weight { color: #d0a000; font-size: .8em; }
+.conv-body p { margin: .4em 0; }
+.conv-body ul.res { margin: .2em 0; font-size: .9em; }
+.conv-body .ref { color: #888; word-break: break-all; }
+.profile .who { display: flex; align-items: center; gap: 14px; }
+.profile .who h1 { margin: 0; }
+.profile .role { margin: .2em 0 0; color: #555; }
+.profile .avatar.big { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; }
+.profile .avatar.initials.big { display: inline-flex; align-items: center; justify-content: center;
+  background: hsl(var(--h) 40% 45%); color: #fff; font-size: 26px; font-weight: bold; }
+.profile table.years td { padding: 1px 6px; }
+.profile table.years td:nth-child(2) { width: 60%; }
+.profile .bar { display: inline-block; height: .8em; background: hsl(var(--h) 50% 60%); border-radius: 2px; }
+.profile .toc { columns: 1; }
