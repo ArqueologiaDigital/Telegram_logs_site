@@ -1,0 +1,31 @@
+[2025-07-29 11:10:32] Felipe "Juca" Sanches: https://youtu.be/B8hX1n5xETw?si=sVjAumt31mVp-5Nv
+[2025-07-29 16:28:27] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-07/35236.jpg
+[2025-07-29 16:28:27] Felipe "Juca" Sanches: Bill of Materials completo! São 321 pastilhas da familia 74 em 18 PCBs.
+[2025-07-29 16:47:07] L.: https://bsky.app/profile/experimentt.bsky.social/post/3lv2lhe3ujs23
+
+Emulador de LaserActive!
+[2025-07-29 16:48:02] L.: Caray. Vai montar com SMD ou componente tradicional mesmo?
+[2025-07-29 16:54:55] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-07/35239.jpg
+[2025-07-29 16:56:57] Felipe "Juca" Sanches: Isso é LEGO de gente grande! kkkk
+[2025-07-29 17:00:05] Leonardo Roman: Vai montar o backplane em wire wrap também?
+[2025-07-29 17:00:32] Felipe "Juca" Sanches: Não. Provavelmente usarei uma PCB só de trilhas e conectores.
+[2025-07-29 17:00:46] Felipe "Juca" Sanches: Mas talvez faça com flat-cable
+[2025-07-29 17:00:52] Felipe "Juca" Sanches: não decidi ainda como será
+[2025-07-29 17:00:59] Felipe "Juca" Sanches: mas o mais provavel é que seja uma PCB
+[2025-07-29 17:01:22] Felipe "Juca" Sanches: as 18 placas serão de circuito impresso
+[2025-07-29 17:01:40] Felipe "Juca" Sanches: diferentemente do Patinho Feio original que era em wire-wrap
+[2025-07-29 17:05:03] Felipe "Juca" Sanches: mas a idéia de fazer com SMD é interessante, se alguém no futuro quiser tentar miniaturizar o Patinho Feio, pode ser um projeto divertido de se desenvolver como derivativo desse
+[2025-07-29 17:05:29] L.: Patinhozinho Feio
+[2025-07-29 17:05:41] Felipe "Juca" Sanches: se bobear cabe em uma miniatura
+[2025-07-29 17:05:47] Felipe "Juca" Sanches: "desktop" LOL
+[2025-07-29 17:07:07] L.: Ninguém merece fazer tudo em wire wrap em 2025
+
+Eu comecei a fazer um MSX2 com macarrão, mas soldando, e já desisti, imagina se fosse com wire wrap
+[2025-07-29 17:07:39] Felipe "Juca" Sanches: pois é... seria um sofrimento à toa
+[2025-07-29 17:08:01] Felipe "Juca" Sanches: Eu to pensando aqui... essa idéia de fazer em SMD é muito divertida. Ia ficar muito fofinho.
+[2025-07-29 17:08:06] L.: Um dia terei paciência pra fazer esse MSX2 como placa mini ITX. Ainda mais agora que é fácil fazer placa de 4 ou 6 camadas
+[2025-07-29 17:08:56] L.: Se projetar a placa com SMD é capaz de conseguir até mandar soldarem os componentes lá mesmo. Muito lugar que faz PCB oferece o serviço
+[2025-07-29 17:09:25] Felipe "Juca" Sanches: o problema é que não sei se tem todos os chips disponiveis em SMD
+[2025-07-29 17:11:55] L.: é, maior problema de usar tecnologia véia
+[2025-07-29 17:12:12] L.: dependendo põe uma PAL 😆
+[2025-07-29 20:09:22] FTMaciel: Mete numas 2 cpld

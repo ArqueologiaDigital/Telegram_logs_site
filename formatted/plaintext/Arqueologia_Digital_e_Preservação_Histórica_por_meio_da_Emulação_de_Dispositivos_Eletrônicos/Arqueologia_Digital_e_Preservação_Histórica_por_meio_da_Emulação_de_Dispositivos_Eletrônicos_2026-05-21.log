@@ -1,0 +1,28 @@
+[2026-05-21 03:10:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38821.jpg
+[2026-05-21 03:10:14] Felipe "Juca" Sanches: Estou logando no meu Debian usando um cartucho de VT52 no Itautec emulado no MAME
+[2026-05-21 03:12:41] Felipe "Juca" Sanches: adoro esse gostinho de aventura ;-)
+[2026-05-21 04:52:43] Pablo Vasques Bravo-Villalba: Achei bonitinha essa fonte
+[2026-05-21 05:17:30] Felipe "Juca" Sanches: Descobri empiricamente (ao usar o cartucho de terminal VT52 pra logar no meu Debian) que o meu emulador do I7000 no MAME tá mapeando a tecla left-arrow no lugar da tecla backspace. Agora estou investigando pra consertar isso
+[2026-05-21 05:18:32] Felipe "Juca" Sanches: O Claude está escrevendo um blog conforma vamos desenvolvendo a pesquisa para implementar o emulador. O blog já tem 33 posts :-P
+[2026-05-21 05:18:45] Felipe "Juca" Sanches: Conta a história das hipóteses e experimentos e descobertas
+[2026-05-21 05:18:54] Felipe "Juca" Sanches: acho que vai ficar indigesto para o público ler
+[2026-05-21 05:19:04] Felipe "Juca" Sanches: mas talvez eu possa fazer uma versão resumida depois
+[2026-05-21 05:19:18] Felipe "Juca" Sanches: É quase um livro!
+[2026-05-21 08:14:50] Ismael Carvalho: @fsanches faz sentido isso aqui? XD
+[2026-05-21 08:18:01] Felipe "Juca" Sanches: Computar tabela de lookup é uma técnica de emulação. Me parece OK. Mas se quiser fazer a opção B, tá valendo também! Ambas são válidas.
+[2026-05-21 10:05:25] RicBit: No meu sistema isso é essencial, serve para o agente consultar o que foi feito e validar o raciocinio.
+[2026-05-21 15:53:10] Felipe "Juca" Sanches: Exato! Eu tenho isso em mente também. Acho que ajuda muito.
+[2026-05-21 15:55:04] Felipe "Juca" Sanches: Agora estou começando a investigar um outro cartucho, que implementa no I-7000 uma emulação de terminal Sperry Uniscope 200.
+[2026-05-21 15:55:21] Felipe "Juca" Sanches: https://en.wikipedia.org/wiki/Uniscope
+[2026-05-21 16:13:39] Pablo Vasques Bravo-Villalba: Nóóó, que doideira. Monitor widescreen CRT, e o texto é gerado vetorialmente
+[2026-05-21 16:29:12] Leonardo Roman: Me pergunto qual a grande empresa ou banco que deve ter definido isso como essencial pra decidir pela compra dos I7000.
+[2026-05-21 16:30:57] Felipe "Juca" Sanches: pois é... sabe-se lá se o banco Itaú resolveu implementar uma rede de terminais com mainframes Univac e delegou à Itautec desenvolver um terminal compatível, pra não precisar importar os originais da Uniscope. Até aqui é tudo especulação. Mas me parece razoável.
+[2026-05-21 16:33:58] Leonardo Roman: É plausível. Mas provavelmente já tinham o mainframe desde os anos 70 e pra atualizar o parque de terminais precisavam de algo compatível.
+[2026-05-21 16:39:17] Felipe "Juca" Sanches: isso. Também acho que seja algo nessa linha.
+[2026-05-21 21:43:07] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38842.jpg
+[2026-05-21 21:43:07] Felipe "Juca" Sanches: Galera quer "fazer conteúdo" e espalha desinformação... É bacana querer lembrar a história, mas é um desserviço lembrar a história errada :-P
+[2026-05-21 22:03:44] Pedro de Medeiros 👾: Canal de desinformação costuma colocar IA pra gerar conteúdo também
+[2026-05-21 22:04:04] Felipe "Juca" Sanches: Mas é o canal da FDTE!!!!
+[2026-05-21 22:05:04] Felipe "Juca" Sanches: É a fundação que foi criada na USP depois de projetos como o do Patinho Feio
+[2026-05-21 22:05:05] Pedro de Medeiros 👾: Como pode isso?
+[2026-05-21 22:05:55] Felipe "Juca" Sanches: sei lá... esse aí deve ser um engenheiro que jura se lembrar dos fatos e ninguém se mete a discordar

@@ -1,0 +1,80 @@
+[2026-09-01 10:43:39] Pablo Vasques Bravo-Villalba [forwarded]: Um emulador para Amiga… Em Rust.
+
+Rust é uma linguagem de programação que está muito falada ultimamente: Ela é multiparadigma, focada em segurança, velocidade e concorrência, desenvolvida originalmente pela Fundação Mozilla.
+
+Ela é focada em segurança, tendo um sistema de gerenciamento de memória inovador que minimiza erros como vazamentos de memória e acessos inválidos. Isso tudo em tempo de compilação. Logo,…
+
+https://retropolis.com.br/2026/09/01/um-emulador-para-amiga-em-rust/
+[2026-09-01 22:47:09] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/16037
+[2026-09-01 23:03:33] L.: https://github.com/llvm-z80/llvm-z80
+[2026-09-01 23:23:38] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40317-minigb.zip
+[2026-09-01 23:23:38] RicBit: suporte ao attr_chr, melhora um monte de jogos do sgb, ainda 4kb.
+[2026-09-01 23:25:28] RicBit: já estamos no nivel pós-divino de dificuldade, namagiri teve que aprender a chamar o z3 para conseguir.
+[2026-09-01 23:39:15] Felipe "Juca" Sanches: O futuro é aqui!
+[2026-09-01 23:42:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40320.jpg
+[2026-09-01 23:42:30] Felipe "Juca" Sanches: gostoso ver isso...
+[2026-09-01 23:47:05] Shideravan: MAME esse mês está pegando fogo, muitos updates interessantes
+[2026-09-01 23:50:09] Felipe "Juca" Sanches: mês que vem vai ter impressora 3d
+[2026-09-01 23:51:22] Shideravan: Nessas horas que eu sinto falta de boas 3D artwork para simular em 3D as coisas sendo impressas hahaha
+[2026-09-01 23:51:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40324.jpg
+[2026-09-01 23:51:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40325.jpg
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: Let me verify the actual boot behaviour empirically before trusting the analysis.
+
+  Probing reset PC with correct state keys
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: The firmware is executing — the brief's B1 was wrong (the base device_reset is shadowed, so reset PC is 0). It hangs at PC=0x00C2F2. Let me find out where that is.
+
+● Disassemble the hang site
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: SPI busy-wait confirmed as the real first hang. Now the interrupt core rewrite.
+
+  Checking replicator fuse settings
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: Adding USART defines and ATmega2560 interrupt table
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: Rewire CALL/RET/EICALL and SEI inhibit
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: Now the SPI fix — the actual hang site.
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: AVR8 core rewrite for SPI hang; agents parallelizing independent pieces
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: Now let me build to catch errors before adding the USART.
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: Running 3 shell commands… 
+ ⎿  $ SDL_VIDEODRIVER=offscreen timeout 180 ./rambo metamaq2 -rp /home/fsanches/compartilhado/mame-roms -video none -sound none -nothrottle -seconds_to_run 3 -autoboot_script probe/pcprobe.lua 2>&1 | head -20
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: Now the USART — the largest missing piece. Let me write it.
+
+  Ran 4 shell commands
+
+Now the driver. Let me rewrite it with the corrected boot path, serial port and sensors.
+
+● Running 1 shell command…
+
+✢ Swooping… (1h 6m 21s · ↓ 102.4k tokens)
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: ● Dynamic workflow "Build the independent pieces: probe archive, AD5206 and A4982 devices, and 3D-visualisation prior-art research" completed · 23m 51s
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: The firmware boots and talks — exact expected banner. Now let me fix the bit-level framing.
+
+  Ran 1 shell command
+
+Serial framing is off. Let me instrument the TXD line to measure the actual bit timing.
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: Found it — MAME zero-fills registers at reset, but UCSRnC powers up at 0x06 (8N1), so the frame was 5 data bits.
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: me assusta ainda ver essas coisas acontecendo em segundos
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: Found the real bug — spurious UDRE assertions were dropping 5 of every 6 bytes. Let me fix that and the interrupt flag-clear semantics.
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: Stage 1 complete — the printer boots and talks. Let me clean up and commit.
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: é de cair o cu da bunda
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: netflix de nerd
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: Now let me build a G-code session harness so we can actually talk to the printer.
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: Full G-code dialogue works. Temperatures still read 0 — let me check the ADC path.
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: T:25.00 B:25.04 — exactly the predicted values. Let me commit and read the 3D research.
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: Decisive research. Let me rescue the cited artefacts, then push on with the hardware devices.
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: Now let me wire the stepper drivers, digipot, mechanics and thermal model into the driver.
+[2026-09-01 23:51:24] Felipe "Juca" Sanches [forwarded]: Now the main driver work — mechanics, endstops and the thermal model.
+[2026-09-01 23:51:25] Felipe "Juca" Sanches [forwarded]: NÃO TEM COMO COMPETIR COM ESSA PORRA!
+[2026-09-01 23:51:25] Felipe "Juca" Sanches [forwarded]: mal dá tempo de copiar e colar
+[2026-09-01 23:51:25] Felipe "Juca" Sanches [forwarded]: algum tempo atrás eu tive a idéia de mandar o Claude escrever blogposts sobre os projetos que eu faço com ele
+[2026-09-01 23:51:25] Felipe "Juca" Sanches [forwarded]: corta...
+[2026-09-01 23:51:25] Felipe "Juca" Sanches [forwarded]: Part 183 published, on a bug I invented.
+[2026-09-01 23:51:25] Felipe "Juca" Sanches [forwarded]: acho que a unica solucao é eu abrir um meta projeto que monitora o projeto e escreve um meta blog que resume o blog
+[2026-09-01 23:51:25] Felipe "Juca" Sanches [forwarded]: Firmware boot/serial fixed; wiring stepper drivers & thermal model · 53s
+[2026-09-01 23:51:25] Felipe "Juca" Sanches [forwarded]: Homing works — the X endstop reads H after G28 X. Let me verify the full state via outputs and test heating.
+[2026-09-01 23:51:25] Felipe "Juca" Sanches [forwarded]: The PID regulates the hot end at ~203 °C against a 200 °C setpoint. Let me validate and commit.
+[2026-09-01 23:51:25] Felipe "Juca" Sanches [forwarded]: Now the visualisation. Let me parallelize the supporting work while I build the 3D viewport.
+[2026-09-01 23:51:25] Felipe "Juca" Sanches [forwarded]: Workflow(Build the 2D layout, extract CAD geometry, and try to get OpenSCAD/solid-node running for real meshes)
+[2026-09-01 23:51:25] Felipe "Juca" Sanches [forwarded]: Nota: eu não estou dando prompts. A porra toda tá avançando por conta própria
+[2026-09-01 23:51:45] Felipe "Juca" Sanches: https://github.com/mamedev/mame/issues/388
+[2026-09-01 23:52:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40363.jpg
+[2026-09-01 23:52:46] Felipe "Juca" Sanches: o prompt inicial foi esse.
+[2026-09-01 23:57:18] RicBit: as minhas coisas ele nao faz em segundos nao, foram 48h rodando gomea+z3 pra conseguir o attr_chr haha
+[2026-09-01 23:57:38] RicBit: attr_blk precisa de mais 100 bytes, quase impossivel, mas vamos ver

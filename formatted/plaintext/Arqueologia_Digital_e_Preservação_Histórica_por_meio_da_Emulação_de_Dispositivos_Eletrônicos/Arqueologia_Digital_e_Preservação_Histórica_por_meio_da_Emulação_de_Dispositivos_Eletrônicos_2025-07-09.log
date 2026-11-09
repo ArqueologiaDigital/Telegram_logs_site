@@ -1,0 +1,44 @@
+[2025-07-09 01:26:06] L.: Ficou incrível esse site (abra num computador) https://aresluna.org/frame-of-preference/?force-emulation
+[2025-07-09 02:15:31] Felipe "Juca" Sanches: eu demorei um pouco pra perceber que eram emuladores embutidos na página!
+[2025-07-09 02:16:23] Felipe "Juca" Sanches: depois que percebi que eram emuladores, eu fiquei com a impressão de que talvez estejam rodando com uma resolução incorreta, pois acho que rola umas distorções nas imagens das telas (aliasing)
+[2025-07-09 02:18:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-07/35172.jpg
+[2025-07-09 02:18:13] Felipe "Juca" Sanches: ...e depois meu queixo caiu ao ver o emulador rodando inclinado, em perspectiva! Que coisa linda! Uma delícia interagir com o mouse nessa tela inclinada! E AMEI os layouts com fotos dos dispositivos reais!
+[2025-07-09 02:18:31] L.: Né? Eu achei incrível demais
+[2025-07-09 02:18:44] Felipe "Juca" Sanches: Precisamos de um website assim sobre o Patinho Feio
+[2025-07-09 02:19:07] L.: Um desses mostrando micros nacionais seria legal também
+[2025-07-09 02:19:16] Felipe "Juca" Sanches: sim!
+[2025-07-09 02:19:34] L.: Com uma timeline e tal
+[2025-07-09 02:20:09] L.: Cê percebeu que o texto muda quando você faz algumas ações nos emuladores? Tipo abrir alguma coisa específica
+[2025-07-09 02:21:25] Felipe "Juca" Sanches: Eu estou me preparando para oferecer mentoria de contribuição em projetos de software livre para alunos da UFABC. Preciso até sexta-feira preparar um pequeno cardápio de projetos com os quais estudantes podem contribuir sob minha mentoria. Se mais alguém aqui quiser participar, me avise, que eu passo o contato da professora da UFABC que está coordenando essa disciplina.
+[2025-07-09 02:21:49] Felipe "Juca" Sanches: ainda não explorei tão a fundo, mas vou tentar observar isso
+[2025-07-09 02:21:55] L.: O hackaday fez há muito tempo atrás uma série de artigos sobre computadores atrás da cortina de ferro
+
+Um negócio similar, mas com computadores nacionais e a história deles, seria algo incrível!
+[2025-07-09 02:25:04] Felipe "Juca" Sanches: https://youtu.be/YqmEcepDNYE
+[2025-07-09 02:25:31] Felipe "Juca" Sanches: vídeo "não listado". Em estágio de preparação para ser editado e publicado em breve
+[2025-07-09 02:27:29] L.: Fazer conteúdo em inglês é um mal necessário
+[2025-07-09 02:28:12] Felipe "Juca" Sanches: Primeira parte: 
+https://www.youtube.com/watch?v=g-nItgkYobs
+[2025-07-09 02:38:54] Felipe "Juca" Sanches: Segunda parte: https://www.youtube.com/watch?v=jHd3dnODtRY
+[2025-07-09 02:43:03] Felipe "Juca" Sanches: Parte 3: https://www.youtube.com/watch?v=xMypvSYpcJg
+[2025-07-09 02:44:38] Felipe "Juca" Sanches: parte 4: https://www.youtube.com/watch?v=VgtbGITZChM
+[2025-07-09 02:47:37] Felipe "Juca" Sanches: parte 5: https://www.youtube.com/watch?v=bqpZoSFTap0
+[2025-07-09 02:54:00] Felipe "Juca" Sanches: parte 6: https://www.youtube.com/watch?v=2WpLdE9jpVQ
+[2025-07-09 02:58:43] Felipe "Juca" Sanches: parte 7: https://www.youtube.com/watch?v=v06dp_zdZk0
+[2025-07-09 03:05:20] Felipe "Juca" Sanches: parte 8 (a última!): https://www.youtube.com/watch?v=A7ZqTaQTtsc
+[2025-07-09 03:15:36] Felipe "Juca" Sanches: Eu tenho a intenção de editar todos esses vídeos em um único video grandão com tudo. Mas eu mandei aqui os links para o material cru das filmagens originais para garantir que todos possam ver.
+A qualquer momento, entretanto, eu posso mudar de ideia e simplesmente publicar os vídeos originais sem edição mesmo! 😉
+[2025-07-09 03:59:57] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-07/35197-gwf-lint.py
+[2025-07-09 03:59:57] Felipe "Juca" Sanches: A little bit of software archaeology here... I am freeing up space on my 2TB SSD (only today I deleted ~110 GBytes of files, mostly very old git repos of many projects I'm not actively working on). So, in the process of cleaning up, I found a tiny python file called gwf-lint.py (I'd guess it means "Google Web Fonts Linter") timestamped circa "March 25, 2013". This is probably the oldest copy I have of what later became Font Bakery, and nowadays Fontspector.
+[2025-07-09 04:00:45] Felipe "Juca" Sanches: Me desculpem pelo Inglês aqui. Essa foi uma mensagem que mandei para meus colegas de trabalho
+[2025-07-09 08:26:56] Pablo Vasques Bravo-Villalba: Esse problema é do Firefox, não sei se ficou faltando configurar algo para ligar a filtragem no redimensionamento
+[2025-07-09 08:35:23] Pablo Vasques Bravo-Villalba: Eu mudei o "papel de parede" do artigo mexendo no painel de controle do emulador
+[2025-07-09 11:39:47] Guilherme Ranoya: O projeto Infinitymac com os emuladores já é antigo... tem emulador de todos os sistemas, e inclusive dos NextSTEP. Acho que o único que não tem lá é do A/UX.
+
+Pelo que eu entendi, o autor fez esse texto por que implementaram o recurso novo no Infinitymac de fazer embed dos emuladores... até coisa de 1 mês atrás quando entrei no site, isso não era possível ainda.
+
+Ficou realmente um primor.
+[2025-07-09 16:40:46] Erin Pinheiro 🐿: não "por que", foi em conjunto: https://mastodon.online/@mwichary/114820902745978201
+[2025-07-09 16:48:05] Guilherme Ranoya: Olha!!! que bacana.
+[2025-07-09 17:22:59] L.: No MacOS mais novo, se mudar pro tema escuro, a página inteira fica em dark mode
+[2025-07-09 17:23:18] L.: Eu geralmente não curto site moderninho demais mas esse ficou muito legal

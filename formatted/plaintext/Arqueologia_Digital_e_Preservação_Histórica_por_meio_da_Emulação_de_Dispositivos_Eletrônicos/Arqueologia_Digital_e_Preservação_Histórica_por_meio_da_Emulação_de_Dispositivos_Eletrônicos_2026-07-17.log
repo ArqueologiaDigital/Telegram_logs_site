@@ -1,0 +1,19 @@
+[2026-07-17 13:59:56] RicBit: agora podemos ver o que importa, que é a rotina para conseguir entrar na base, CHECK_DOCK_ALIGNMENT
+[2026-07-17 14:00:17] RicBit: ele compara o angulo de entrada com 3DD1h, que na representação do jogo é 15 graus.
+[2026-07-17 14:00:26] RicBit: poxa 15 graus é bastante até, achei que fosse menos
+[2026-07-17 14:53:50] Pedro de Medeiros 👾: Essa era a motivação real: a rotina de docking na estação espacial 🤭
+[2026-07-17 14:54:49] Pedro de Medeiros 👾: A velocidade não importa?
+[2026-07-17 15:02:54] RicBit: não! só angulo, posição e orientação
+[2026-07-17 15:03:04] RicBit: em principio não dá para entrar de ré
+[2026-07-17 15:59:45] Pablo Vasques Bravo-Villalba: Então é melhor entrar rápido, menos chance de dar errado
+[2026-07-17 19:31:50] RicBit: pra constar, o msxdos para de funcionar em 23-Sep-2158.
+tá melhor que o unix que para daqui a pouco
+[2026-07-17 20:13:31] RicBit: ugh a interface de drive tem uma proteção contra copia sinistra
+[2026-07-17 20:14:08] RicBit: se o checksum da rom não bater, toda vez que ele abre um arquivo, às vezes ele modifica um byte aleatorio.
+[2026-07-17 20:14:17] RicBit: só falha de vez em quando, isso é evil++
+[2026-07-17 23:38:37] RicBit: e o CALL VERIFY so le 2 chars depois do verify
+entao os comandos sao
+CALL VERIFY ON
+CALL VERIFY OF
+depois dos dois primeiros ele ignora o resto
+[2026-07-17 23:43:10] Pablo Vasques Bravo-Villalba: Isso em qualquer DiskROM? Você pode usar CALL VERIFY ONIONS e CALL VERIFY OFTENTIMES e vai funcionar de qualquer jeito?

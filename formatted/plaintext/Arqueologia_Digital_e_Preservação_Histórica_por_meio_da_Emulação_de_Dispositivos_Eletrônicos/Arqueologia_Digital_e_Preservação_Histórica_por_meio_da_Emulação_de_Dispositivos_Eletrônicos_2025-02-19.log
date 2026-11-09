@@ -1,0 +1,5 @@
+[2025-02-19 01:51:17] Felipe "Juca" Sanches: hoje teve mais uma sessão de hacking do KN5000 no Calango Hacker Clube. (Eu e @pvm_NoCryptoScams das 19h à meia-noite)
+[2025-02-19 01:52:34] Felipe "Juca" Sanches: demos mais um tapa no  código ASM pra fazer patch das rotinas de interrupt handler de TX e RX da serial #1 da subcpu, pra fazer patch no payload executável e receber comandos do laptop pra fazer dumps da bootrom
+[2025-02-19 02:27:33] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/13386
+[2025-02-19 17:12:45] Pedro de Medeiros 👾: https://www.youtube.com/watch?v=g3jOJfrOknA
+[2025-02-19 21:14:48] Leonardo Roman: https://youtu.be/TxU_3dEJ2nM?si=1rDGZjJOfxAGVp27

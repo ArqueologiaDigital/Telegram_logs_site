@@ -1,0 +1,19 @@
+[2023-11-20 04:55:13] RicBit: aí sim
+[2023-11-20 04:55:48] RicBit: o de c64 é melhor que esse, mas nenhum é melhor que o real reality
+[2023-11-20 04:56:36] L.: ah, aquele é incrível mesmo
+[2023-11-20 04:56:48] L.: precursor da geração tiktok
+[2023-11-20 07:18:40] Pablo Vasques Bravo-Villalba: Eu vou na contramão aqui, e dizer que não curti esse do Apple II não. Sei que é inviável sequer tentar se aproximar do original, mas achei muito palha a maior parte dos efeitos ser simplesmente animações. Sei que animações fazem parte do truque, mas na minha opinião todo o lance dos demos é fazer você ficar se perguntando como fizeram o efeito X. Um exemplo, as partículas em 6m39s, nem sequer deram ao trabalho de usar uma tabelinha para a "física" ficar mais real.
+[2023-11-20 09:43:10] RicBit: ahn, uma pessoa sozinha em três meses com prazo para entregar
+[2023-11-20 09:43:34] RicBit: tem o source online
+https://github.com/deater/dos33fsprogs/tree/master/demos/second
+[2023-11-20 09:44:43] RicBit: eu entendi que não tinha como aumentar a lut porque acabou o espaço, era 4kb por cena e um lissajous era o que tinha pra hoje
+[2023-11-20 09:45:35] RicBit: em 4kb certamente daria para fazer uma lut bem maior, mas eu entendi que cada cena é um executavel diferente, então a maior parte dos 4kb é biblioteca de grafico e musica
+[2023-11-20 09:46:11] RicBit: daria para manter uma unica lib se fosse tudo um executavel só, mas executavel separado deve ter sido mais facil de debugar
+[2023-11-20 09:47:43] RicBit: quase sempre a resposta é daria pra fazer melhor se tivesse mais tempo
+[2023-11-20 10:11:05] Pablo Vasques Bravo-Villalba: No mapa de memória que ele forneceu a área de música fica nas páginas $D0 a $FF, são 12kB só para a música. Esses 4kB são o espaço que esse efeito em particular ocupa no disco; o espaço que ele disponibilizou para os efeitos na RAM totaliza 24kB, mas só o oceano ocupa tudo isso, o resto fica entre 8kB e 4kB.
+
+Pelos vários comentários que ele colocou dá a impressão de que o autor fez o demo às pressas como "prova de conceito", mas sinceramente não estou vendo muito conceito sendo provado, não 😅
+[2023-11-20 10:13:00] Pablo Vasques Bravo-Villalba: Não estou aqui querendo detonar o dev. O cara fez e teve gente que curtiu, e mesmo que ninguém curtisse o importante é que ele ficasse satisfeito. Ele fez no tempo livre dele e ninguém além dele é que sabe quanto vale o tempo dele 😉
+[2023-11-20 10:24:10] RicBit: No c64 é a mesma cpu e o mesmo clock, mas deve ter sido mais fácil porque o c64 tem sprite.
+[2023-11-20 10:42:20] Pablo Vasques Bravo-Villalba: Tem que ver também que a memória de vídeo do Apple II é chatinha de manipular. Talvez por isso ele tenha desistido do túnel que ele fez (e é real no C64)
+[2023-11-20 13:46:05] Pablo Vasques Bravo-Villalba: Para quem curte video game music, aqui tem uma entrevista com o Motoi Sakuraba! Ele menciona o PC-8801 e seu primeiro trabalho do ramo, na softhouse japonesa Wolf Team: https://www.youtube.com/watch?v=DvEsS6xax5c

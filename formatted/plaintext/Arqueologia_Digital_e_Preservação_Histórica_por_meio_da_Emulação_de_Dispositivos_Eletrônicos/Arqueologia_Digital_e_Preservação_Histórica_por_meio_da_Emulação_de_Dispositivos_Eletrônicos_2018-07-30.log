@@ -1,0 +1,53 @@
+[2018-07-30 06:58:50] Ronaldo: A semente deve ser esse número que se digita, no caso aí de cima 101
+[2018-07-30 11:13:37] Leonardo Roman: Na verdade acho que são só os dois primeiros dígitos. O último dígito seleciona um programa ou o algoritmo diferente (de 1 a 6).
+[2018-07-30 11:19:16] DQ: Use the source, luke: https://github.com/lpereira/Pense-Bem/blob/master/calcanswer.py
+[2018-07-30 13:53:16] Leonardo Roman: Mas tá faltando coisa mesmo. As respostas 16 a 30 do livro 10 são: bdacaccbdababda. Não tem esse padrão lá no código.
+[2018-07-30 14:03:28] Felipe "Juca" Sanches: não me lembro mais desse código, mas imagino que seria uma boa prática listar os códigos conhecidos na forma de uma suíte de testes e depois ir aprimorando a re-implementação do gerador de números aleatórios até satisfazer todos os testes.
+[2018-07-30 14:03:50] Felipe "Juca" Sanches: A resposta definitiva a gente só vai saber, entretanto, quando houver um dump da ROM original de fato
+[2018-07-30 14:04:01] Felipe "Juca" Sanches: o resto é suposição, tentativa e erro
+[2018-07-30 14:47:04] DQ: Olhando o código, não parece ter sido "quebrado" o gerador de número aleatórios. Existe uma suposição sobre a repetição das respostas e uma lista (incompleta) de padrões que foram validados com alguns dados conhecidos (o arquivo SAMPLES).
+[2018-07-30 14:47:38] Felipe "Juca" Sanches: eu não tive tempo de olhar pro código ainda
+[2018-07-30 14:55:34] Ronaldo: Quantos resultados são possíveis?
+[2018-07-30 14:55:46] Ronaldo: Quantos livros de resposta existem?
+[2018-07-30 14:55:57] Felipe "Juca" Sanches: eu tenho alguns aqui em casa
+[2018-07-30 14:56:13] Felipe "Juca" Sanches: se quiserem posso transcrever todas as respostas deles para aumentar a suite de testes
+[2018-07-30 14:56:44] Ronaldo: Não daria pra dessoldar o microcontrolador, conectar num arduino e forçar o arduino a extrair todas as respostas por tentativa e erro?
+[2018-07-30 14:56:53] Felipe "Juca" Sanches: opa
+[2018-07-30 14:56:55] Felipe "Juca" Sanches: até dá
+[2018-07-30 14:57:25] Felipe "Juca" Sanches: e depois fazer um mapa de karnaugh e ver se sai algo simples
+[2018-07-30 14:57:35] Felipe "Juca" Sanches: mas talvez não seja algo meramente combinatório
+[2018-07-30 14:57:54] Felipe "Juca" Sanches: pode ter uma pequena máquina de estados pra gerar a sequencia pseudoaleatoria
+[2018-07-30 14:58:32] Ronaldo: Mas a máquina de estados deve dar um número finito de padrões, não?
+[2018-07-30 14:58:34] Felipe "Juca" Sanches: uma técnica comum era o uso de um shift-register com feedback duma função booleana de um subconjunto de seus próprios bits
+[2018-07-30 14:58:36] DQ: Aqui tem alguns livros: https://datassette.org/livros/pense-bem
+[2018-07-30 15:00:08] Ronaldo: Já verificaram se o número do livro não é um mero salto pro meio de uma uma lista de respostas fixas, que "dão a volta" quando as respostas acabam?
+[2018-07-30 15:00:53] Ronaldo: Isso do último dígito ser um "algoritmo" diferente é suspeito, poderia ser só uma lista diferente
+[2018-07-30 15:01:06] DQ: É mais ou menos isto que o código faz (se eu entendi direito).
+[2018-07-30 15:02:07] DQ: (lembrando que o código não está funcionando direito)
+[2018-07-30 15:02:46] Felipe "Juca" Sanches: acho que isso dava um belo dojo
+[2018-07-30 15:03:12] Felipe "Juca" Sanches: se bem que.... pode ser bem frustrante
+[2018-07-30 15:03:23] DQ: Tem dez padrões, cada um composto por 16 respostas. Ele escolhe o padrão por  (question - 1) / 15
+[2018-07-30 15:03:35] Felipe "Juca" Sanches: melhorando a minha observação: acho que isso dava uma bela noite de hacking entre os interessados
+[2018-07-30 15:03:51] DQ: Dentro do padrão, a resposta é (book+question)%16
+[2018-07-30 15:03:52] Ronaldo: Respostas a b c d cabem em dois bits, o salto poderia ser feito dentro de uma tabela bem pequena
+[2018-07-30 15:04:55] Ronaldo: O número do "algoritmo" pode ser algum tipo de operação lógica aplicada ao resultado
+[2018-07-30 15:05:51] DQ: No código do emulador, o número do livro tem três dígitos (o mesmo formato que é digitado).
+[2018-07-30 15:06:18] DQ: Isto sugere que o tal algoritmo apenas desloca as respostas de uma posição.
+[2018-07-30 15:06:20] Felipe "Juca" Sanches: simulador 😊
+[2018-07-30 15:06:32] DQ: verdade...
+[2018-07-30 15:08:17] Ronaldo: Se as respostas cabem em dois bits daria pra fazer o seguinte: colocar a lista de respostas numa tabela, daí deslocar as respostas em um bit geraria uma tabela diferente.
+[2018-07-30 15:09:21] Ronaldo: Um xor na tabela de respostas poderia gerar mais uma tabela, talvez, e o xor junto com o deslocamento outra
+[2018-07-30 15:09:55] Ronaldo: Sem ver o programa só dá pra chutar
+[2018-07-30 15:13:33] Ronaldo: Uma tabela de 64 respostas pseudoaleatórias caberia em 16 bytes. Um offset na tabela (chegando ao fim da tabela ela é lida desde o começo) geraria uma falsa aleatoriedade fácil de verificar.
+[2018-07-30 15:13:39] Felipe "Juca" Sanches: claro. Mas acho que é uma abordagem legal; Coletar a maior amostra possível de respostas dos livros e depois ir chutando algoritmos diferentes até achar o que encaixa melhor
+[2018-07-30 15:14:20] Felipe "Juca" Sanches: coletar TODAS combinações a partir do chip original interfaceado num microcontrolador qualquer (como o Arduino) seria fenomenal!
+[2018-07-30 15:14:27] Ronaldo: Sim
+[2018-07-30 15:14:51] Felipe "Juca" Sanches: é bem um problema de cripto-análise
+[2018-07-30 15:14:59] Felipe "Juca" Sanches: parece divertido tentar
+[2018-07-30 15:15:10] Ronaldo: Já dá um TCC, hahahaha
+[2018-07-30 15:15:53] Ronaldo: O interessante é que seria uma análise não-invasiva, em termos.
+[2018-07-30 15:16:05] Ronaldo: Não iria destruir o hardware original.
+[2018-07-30 15:16:16] Ronaldo: (não que seja raro)
+[2018-07-30 15:16:46] Felipe "Juca" Sanches: a maioria dos equipamentos raros um dia foram abundantes
+[2018-07-30 15:16:54] Ronaldo: Sim
+[2018-07-30 15:16:57] Felipe "Juca" Sanches: há exceções é claro... como protótipos e tal

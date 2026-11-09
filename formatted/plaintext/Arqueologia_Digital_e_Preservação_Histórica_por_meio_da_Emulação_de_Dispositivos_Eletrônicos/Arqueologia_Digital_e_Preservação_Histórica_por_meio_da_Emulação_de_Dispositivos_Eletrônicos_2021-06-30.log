@@ -1,0 +1,6 @@
+[2021-06-30 17:13:41] L.: http://crpgaddict.blogspot.com/2021/06/brief-everything-we-know-about-1970s.html
+[2021-06-30 17:19:55] L.: @fsanches Muito massa! Tem uns negócios interessantes que podem ser testados em processadores modernos e talvez usados em compiladores:
+
+> Does the microcode have any hidden features, opcodes or easter eggs that have not yet been documented?
+
+It does! Using the REP or REPNE prefix with a MUL or IMUL instruction negates the product. Using the REP or REPNE prefix with an IDIV instruction negates the quotient. As far as I know, nobody has discovered these before (or at least documented them).

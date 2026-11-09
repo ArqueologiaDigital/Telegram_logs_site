@@ -1,0 +1,59 @@
+[2024-05-22 00:06:43] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31980.jpg
+[2024-05-22 00:06:43] Felipe "Juca" Sanches: ...e então fui convidado a um discord server de aficcionados por coisas da VTECH :-P
+[2024-05-22 00:07:19] Felipe "Juca" Sanches: quando a gente acha que não dá pra cavar mais fundo...
+[2024-05-22 00:09:00] L.: por causa do trabalho no mame?
+[2024-05-22 00:09:03] Felipe "Juca" Sanches: sim
+[2024-05-22 00:09:07] L.: lol
+[2024-05-22 00:09:39] L.: tem canal só do smart start?
+[2024-05-22 00:10:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31986.jpg
+[2024-05-22 00:11:04] L.: undumped eh
+[2024-05-22 00:11:06] L.: lmao
+[2024-05-22 00:11:15] L.: manda link pra entrar lá também!
+[2024-05-22 00:11:17] L.: tô curiosa
+[2024-05-22 00:12:32] Felipe "Juca" Sanches: mandei em chat privado, pra evitar os spammers
+[2024-05-22 00:12:46] Erin Pinheiro 🐿: catei antes de sumir rs
+[2024-05-22 00:12:53] Felipe "Juca" Sanches: tá vendo?
+[2024-05-22 00:12:56] Felipe "Juca" Sanches: kkk
+[2024-05-22 00:14:15] L.: Eles tem emulador deles
+[2024-05-22 00:17:50] Felipe "Juca" Sanches: se entendi bem abandonaram. Acho que por conta de ter evoluido no MAME
+[2024-05-22 00:18:00] Felipe "Juca" Sanches: emulador do PreComputer da Vtech, eu acho
+[2024-05-22 01:18:06] L.: https://fxtwitter.com/jmechner/status/1792988765662662912
+[2024-05-22 02:51:36] Felipe "Juca" Sanches: eu tava confuso com alguns trechos do código, então voltei a revisar a maskrom e acabei achando alguns bits que eu tinha transcrito errado
+
+e acho que ainda tem mais alguns errados talvez
+[2024-05-22 02:51:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/32001.jpg
+[2024-05-22 02:51:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/32002.jpg
+[2024-05-22 04:15:09] Felipe "Juca" Sanches: Esse valor 0002 no IRQ5 tava me dando nó na cabeça
+[2024-05-22 04:16:08] Felipe "Juca" Sanches: E o JR NZ, 008Bh caía num operando de instrução, pois o opcode fica no endereço anterior, 08A
+[2024-05-22 04:16:50] Felipe "Juca" Sanches: mas mesmo com esses ajustes, ainda tem coisa confusa. Deve ter mais comida de bola, preciso continuar revisando
+[2024-05-22 10:47:29] L.: Emulador de Psion 5! https://wuffs.org/WindEmu/index.html
+
+Eu era doida pra ter um desses quando adolescente
+[2024-05-22 10:50:20] L.: Uia, eles não custam tão caro hoje em dia. Achei até um arquivo de software e documentação https://www.garethjmsaunders.co.uk/2022/02/17/psion-software-archive/
+[2024-05-22 10:56:22] L.: É, brincando no emulador e eu realmente adoraria ter isso aí. Mas, como usar o Newton em 2024, eu prefiro os celulares de hoje em dia :P
+[2024-05-22 12:36:36] L.: é, executar passo a passo no emulador vai te ajudar a achar coisa esquisita.
+
+o foda mesmo é nesse último hunk aí. por causa de um bit, um monte de instrução mudou. é foda ter certeza. :(
+[2024-05-22 13:45:18] Shideravan: Bem legal, ele tinha um tecladinho
+[2024-05-22 13:45:54] Shideravan: Mas tem seu charme, é inegável hahahaha
+[2024-05-22 13:46:14] L.: sim, é bem legal! roda uma versão velha do symbian, o que acabou indo pros celulares nokia um tempo depois
+[2024-05-22 13:46:47] L.: os apps são bem bons pra limitações do hardware. por exemplo, o editor de texto tem até suporte à um esquema parecido com o OLE do windows!
+[2024-05-22 13:47:05] L.: então rola botar um pedaço de planilha ou gráfico direto da planilha ali
+[2024-05-22 13:47:43] Shideravan: Tem um charme nesses display de dot matrix que não sei explicar o que é
+[2024-05-22 13:48:45] Shideravan: É verdade, se fosse hoje em dia iam "cepar" vários recursos que ele tinha porque "parecer simples" é mais importante para o público hoje até do que ter funcionalidades
+[2024-05-22 13:49:41] Shideravan: Olhando as aplicações, ele tentava emular ao máximo a experiência do Windows/Office na época, que eram a moda
+[2024-05-22 13:50:41] L.: um bicho desses aí com um adaptador wifi pra modem (tipo aqueles que usam ESP8266), com algo pra fazer proxy pro email usar TLS, e browser usar algo tipo o fudebrowser do RicBit ia ficar bem legal na verdade
+[2024-05-22 13:51:39] L.: se duvidar, dá até pra botar o esp8266 dentro do bicho mesmo e aí ter wifi embutido. tem espaço de sobra no lugar do conector do modem LOL
+[2024-05-22 13:51:58] L.: tipo meu hack pra botar porta PS/2 no libretto 50CT. eu arranquei o botão de reset e botei uma porta PS/2 lá
+[2024-05-22 13:53:41] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/32021.jpg
+[2024-05-22 13:53:41] L.: não tirei foto da placa sem o reset (e faz muito tempo que fiz isso!), mas ficou legal até
+[2024-05-22 13:53:41] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/32022.jpg
+[2024-05-22 13:55:34] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/32023.jpg
+[2024-05-22 13:55:34] Shideravan: Design dele parece meio incomum mesmo para a época hahahaha
+A parte que fica suportando a tela é grande assim por causa dos conectores?
+[2024-05-22 13:57:10] Shideravan: Estou frustrado de não encontrar fotos boas que mostrem essa parte de trás
+[2024-05-22 13:57:56] Shideravan: Isso é uma BATERIA???? 😳
+[2024-05-22 14:02:13] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/32026.jpg
+[2024-05-22 14:02:13] Shideravan: Ele fechado, olhado de cima até que era bonitinho hahahaha
+[2024-05-22 14:27:39] Erin Pinheiro 🐿: tem um cara no fediverso trabalhando pra desenvolver software e hardware novo pra linha psion, os posts dele são legais de seguir https://bitbang.social/@thelastpsion
+[2024-05-22 14:28:40] L.: Gostei do nome de usuário

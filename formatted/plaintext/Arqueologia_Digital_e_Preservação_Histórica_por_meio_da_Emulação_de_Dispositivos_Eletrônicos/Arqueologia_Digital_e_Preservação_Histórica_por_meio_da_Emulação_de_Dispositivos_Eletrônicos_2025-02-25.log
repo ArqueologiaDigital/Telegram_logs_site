@@ -1,0 +1,23 @@
+[2025-02-25 00:12:55] Felipe "Juca" Sanches: Depois de alguns anos fazendo engenharia reversa, o meu script de patching para as ROMs do Technics KN5000 virou um código macarrônico.
+
+Hoje resolvi dar um tapa. Não tá perfeito, mas está ao menos um pouco mais fácil de ler e editar...
+
+https://github.com/felipesanches/kn5000_homebrew/pull/1
+[2025-02-25 08:34:19] Guilherme Ranoya: https://www.instagram.com/reel/DGGQRUisF_G/?igsh=MWo3NWdmN2pqNTBzbQ==
+[2025-02-25 08:34:49] Guilherme Ranoya: Doom rodando em um adaptador HDMI para computadores da Apple.
+[2025-02-25 18:42:18] Erin Pinheiro 🐿: aqui da pra assistir sem conta meta e sem clickbait https://www.youtube.com/watch?v=4XCkeN0XuqA
+[2025-02-25 20:15:41] Guilherme Ranoya: Pessoal, talvez alguém aqui consiga me dar uma luz... estava levantando softwares gráficos do AtariST na década de 1980, e acabei me lembrando de um software brasileiro para MSX chamado Aquarela. Lembro que rodar ele, já na época, não era trivial. Baixei aqui 2 imagens diferentes, e as duas dão problema quando tento rodar no WebMSX (gera artefato na tela e trava o emulador). Alguém sabe se é necessário alterar algum parâmetro de configuração do emulador, colocar alguma versão específica da bios, ou alguma outra mandinga pra rodar?
+[2025-02-25 21:36:51] Pablo Vasques Bravo-Villalba: Não custa perguntar, mas você tentou algum outro emulador que não seja o WebMSX?
+[2025-02-25 21:39:26] Guilherme Ranoya: Não... na verdade não testei não... não tenho nenhum emulador de MSX instalado no computador, e tudo que botei pra emular no WebMSX sempre funcionou direitinho... é a primeira vez que alguma coisa não roda.
+[2025-02-25 21:40:27] Pablo Vasques Bravo-Villalba: Bom, eu fiz aqui do jeito mais simples possível e imaginável: fui no download.file-hunter.com, na pasta Games/MSX1/DSK, encontrei lá o Aquarela e cliquei no botão Run
+[2025-02-25 21:40:35] Pablo Vasques Bravo-Villalba: E funcionou de cara
+[2025-02-25 21:43:50] Pablo Vasques Bravo-Villalba: Pra ser sincero não sei por que ele poderia ser não trivial de rodar. Eu tinha um Expert na época e ele simplesmente funcionava, não tinha que fazer nada de especial para ele rodar
+[2025-02-25 21:44:08] Pablo Vasques Bravo-Villalba: Talvez apertar CTRL na hora do boot, mas não precisei fazer isso para funcionar no WebMSX
+[2025-02-25 21:45:11] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34571.jpg
+[2025-02-25 21:45:11] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34572.jpg
+[2025-02-25 21:45:12] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34573.jpg
+[2025-02-25 21:46:30] Pablo Vasques Bravo-Villalba: Qualquer coisa tenta esse link: https://download.file-hunter.com/assets/webmsx.html?url=https%3A%2F%2Fdownload.file-hunter.com%2FGames%2FMSX1%2FDSK%2FAquarela%2520(1989)(Paulisoft%2520Informatica)(pt)(Disk%25201%2520of%25202).zip
+[2025-02-25 22:43:46] Guilherme Ranoya: deve ser a imagem que eu usei, funcionou perfeitamente com essa do link que você mandou!! 👍👍👍
+[2025-02-25 23:51:41] Felipe "Juca" Sanches: MAME 0.275
+26 Feb 2025
+https://www.mamedev.org/?p=548

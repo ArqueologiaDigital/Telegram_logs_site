@@ -1,0 +1,146 @@
+[2023-10-04 00:00:10] RicBit: acho que linhas finas sao o ponto fraco do fractal
+[2023-10-04 00:00:20] RicBit: vou voltar pro floyd para comparar
+[2023-10-04 00:00:25] Pablo Vasques Bravo-Villalba: Os braços do Luffy ficam menos serrilhados no mifui
+[2023-10-04 00:01:25] L.: é legal que a paleta da scr8, mesmo sendo esquisitinha, funcione bem pra essas cores saturadas de anime
+[2023-10-04 00:02:41] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28165.jpg
+[2023-10-04 00:02:41] RicBit: bilinear+psicovisual+floyd+scr8, sem fractal
+[2023-10-04 00:05:58] Pablo Vasques Bravo-Villalba: Experimenta ordered, Ricbit
+[2023-10-04 00:06:48] RicBit: vixe ordered é zuado
+[2023-10-04 00:09:04] RicBit: ordered precisa de estrutura, só vai dar na scr8
+[2023-10-04 00:09:19] RicBit: faco amanha, minha pilha ta acabando
+[2023-10-04 00:09:31] RicBit: faco o fractal adaptativo tambem, esse eu to botando fé
+[2023-10-04 00:11:05] RicBit: isso tudo com paleta fixa né
+[2023-10-04 00:11:13] RicBit: com variavel eu pensei em usar voronoi
+[2023-10-04 00:11:18] RicBit: ninguem fez voronoi em msx ainda
+[2023-10-04 00:11:24] RicBit: que eu saiba
+[2023-10-04 00:15:25] L.: deve ficar interessante!
+[2023-10-04 00:15:53] L.: eu lembro de ter visto algo que parecia voronoi em um demo de amiga
+[2023-10-04 00:19:50] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28177.jpg
+[2023-10-04 00:19:50] L.: De um paper que faz dithering com voronoi
+[2023-10-04 00:20:04] L.: fica bem doido!
+[2023-10-04 00:20:22] L.: https://www.researchgate.net/publication/220050726_Adaptive_cluster_dot_dithering
+[2023-10-04 00:25:03] L.: Lembra demais https://en.m.wikipedia.org/wiki/Pointillism
+[2023-10-04 11:09:26] L.: @fsanches  https://fxtwitter.com/travisgoodspeed/status/1709418054524805124
+[2023-10-04 12:19:45] RicBit: eu fiz dithering com voronoi uns dez anos atras
+[2023-10-04 12:20:16] RicBit: https://ricbit.com/temp/voronoi.gif
+[2023-10-04 12:21:21] RicBit: O Seurat estava fazendo exatamente isso, gerando tons que não existem com tintas complementares
+[2023-10-04 12:22:31] RicBit: voronoi com um ponto por regiao eu acho que nao funciona na resolucao da scr2/scr5
+[2023-10-04 12:22:35] RicBit: mas em scr6 daria
+[2023-10-04 13:31:58] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28187.jpg
+[2023-10-04 13:31:58] RicBit: desenhei o fractal por cima para poder debugar. a proxima parte é fazer adaptativo então eu preciso enxergar para ver esta funcionando
+[2023-10-04 13:41:46] Pedro de Medeiros 👾: https://www.linkedin.com/pulse/unveiling-enigma-navigating-labyrinth-cheat-codes-guimaraes-crash-
+[2023-10-04 14:10:21] Anne Isabelle: Gente, eu tava vendo uma galera codando raytracer em MSDOS e SNES e eu tava pensando em como codar um pro Mac OS 9
+[2023-10-04 14:10:56] Anne Isabelle: Alguém tem alguma ideia de como começar?
+[2023-10-04 14:11:07] Anne Isabelle: Além do Raytracing in a weekend
+[2023-10-04 14:43:58] L.: Microcodigo do Z8? https://twitter.com/travisgoodspeed/status/1709623461180563673
+[2023-10-04 15:14:16] RicBit: Eu fiz um raytracer em duas linhas de basic
+[2023-10-04 15:14:47] RicBit: é o terceiro -> http://www.ricbit.com/mundobizarro/twoliners/
+[2023-10-04 15:15:36] RicBit: mas eu aprendi com o livro do glassner que é livre hoje em dia, tem pdf no site do autor
+[2023-10-04 15:18:14] RicBit: https://www.realtimerendering.com/blog/an-introduction-to-ray-tracing-is-now-free-for-download/
+[2023-10-04 15:42:25] L.: Como fazer um raytracer em 2023:
+
+1) desenha um triângulo, uma esfera e um espelho
+2) bota um checkbox:  ✅ RTX on
+3) ???
+4) profit
+[2023-10-04 17:40:40] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28198-mindblown-omg.mp4
+[2023-10-04 17:47:41] Pedro de Medeiros 👾: https://www.leadedsolder.com/2023/10/03/creativision-clone-v1.html
+[2023-10-04 20:52:41] RicBit: hum todo mundo reescala a imagem usando interpolacao bilinear, mas acho que pra screen de msx tem jeito melhor
+[2023-10-04 20:52:51] RicBit: se fizer com mediana deve ficar bom
+[2023-10-04 20:52:51] RicBit: vamos ver
+[2023-10-04 20:59:05] Pablo Vasques Bravo-Villalba: Acho que dá resultados "suficientemente" bons para a baixa resolução do MSX. Mas me pergunto se não daria para obter resultados melhores
+[2023-10-04 21:04:01] RicBit: é isso que estou tentando fazer haha
+[2023-10-04 21:04:15] RicBit: pra conseguir resultado igual eu só usava o que já existe
+[2023-10-04 21:10:19] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28206-fractal3.png
+[2023-10-04 21:10:19] RicBit: fractal de tamanho 3, bilinear
+[2023-10-04 21:10:42] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28207.jpg
+[2023-10-04 21:10:42] RicBit: fractal de tamanho 3, mediana de 5
+[2023-10-04 21:11:35] RicBit: com a mediana de 5 vai ficar muito mais facil converter para screen 2
+[2023-10-04 21:11:55] RicBit: com bilinear ele faz bordas entre as superficies
+[2023-10-04 21:16:40] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28210.jpg
+[2023-10-04 21:16:40] RicBit: mediana no floyd, ai nao faz diferenca do bilinear
+[2023-10-04 21:22:46] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28211.jpg
+[2023-10-04 21:22:46] RicBit: mediana em imagens reais fica um horror, só é bom pra cartoon mesmo
+[2023-10-04 21:23:28] Pablo Vasques Bravo-Villalba: Parece fazer diferença na forma como a line art é reduzida
+[2023-10-04 21:24:38] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28213.jpg
+[2023-10-04 21:24:38] RicBit: pra imagem real vai ser dificil bater o floyd bilinear
+[2023-10-04 21:25:24] Shideravan: Como é o resultado para imagens reais com tons de verde etc?
+[2023-10-04 21:26:06] RicBit: nao sei, me dá uma imagem e eu tento
+[2023-10-04 21:33:04] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28216.jpg
+[2023-10-04 21:33:04] RicBit: original
+[2023-10-04 21:33:24] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28217.jpg
+[2023-10-04 21:33:24] RicBit: floyd bilinear
+[2023-10-04 21:36:15] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28218.jpg
+[2023-10-04 21:36:15] RicBit: fractal de tamanho 5
+[2023-10-04 21:36:43] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28219.jpg
+[2023-10-04 21:38:55] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28220.jpg
+[2023-10-04 21:38:55] RicBit: fractal de tamanho 5
+[2023-10-04 21:39:58] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28221.jpg
+[2023-10-04 21:39:58] RicBit: floyd
+[2023-10-04 21:40:10] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28222.jpg
+[2023-10-04 21:40:35] Pablo Vasques Bravo-Villalba: Floyd tá ficando melhor em todos os casos
+[2023-10-04 21:40:38] Shideravan: Não ficou ruim
+[2023-10-04 21:41:09] Shideravan: Também não ficou ruim
+[2023-10-04 21:41:59] Shideravan: Acho que ter ficado com cores tão ruins na foto era a falta de diversidade de cores na imagem original mesmo
+[2023-10-04 21:42:00] RicBit: acho que o fractal só vai ganhar em cartoon
+[2023-10-04 21:42:31] Shideravan: Pelo jeito, parece que sim
+[2023-10-04 21:43:06] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28229.jpg
+[2023-10-04 21:43:06] RicBit: floyd
+[2023-10-04 21:44:37] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28230.jpg
+[2023-10-04 21:44:37] RicBit: fractal 5
+[2023-10-04 21:45:10] Shideravan: Nessa foi interessante, acho que ambas ficaram boas
+[2023-10-04 21:45:52] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28232.jpg
+[2023-10-04 21:45:52] RicBit: fractal tamanho 3
+[2023-10-04 21:47:05] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28233.jpg
+[2023-10-04 21:47:05] RicBit: fractal tamanho 7
+[2023-10-04 21:48:13] RicBit: 7 é grande demais. fica artistico, mas nao realista
+[2023-10-04 21:49:40] RicBit: daria para espalhar o erro para todos os lados e torcer para ter ponto fixo
+[2023-10-04 21:49:50] RicBit: se isso funcionar ia ser melhor metodo para scr2
+[2023-10-04 21:50:39] Pablo Vasques Bravo-Villalba: As cores ficam melhores na minha opinião
+[2023-10-04 21:50:42] Shideravan: É interessante como a banhista no centro da imagem virou uma referência interessante. Os barquinhos em compensação, sumiram
+[2023-10-04 21:51:32] RicBit: efeito seurat, quanto mais mistura, mais proximo voce chega
+[2023-10-04 21:51:37] RicBit: mas perde resolucao espacial
+[2023-10-04 21:52:16] Shideravan: Dos fractais, acho que o que ficou melhor foi o 5
+[2023-10-04 21:52:22] Shideravan: Como um todo
+[2023-10-04 21:52:39] RicBit: pra imagens reais sim
+[2023-10-04 21:52:43] RicBit: pra cartoon o 5 fica ruim
+[2023-10-04 21:53:43] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28245.jpg
+[2023-10-04 21:53:43] RicBit: fractal 5
+[2023-10-04 21:55:32] RicBit: só é estranho que o fractal puxa muito pro vermelho
+[2023-10-04 21:55:37] RicBit: se bobear é overflow
+[2023-10-04 21:56:10] Shideravan: Puxa mesmo, na foto do live action puxou também
+[2023-10-04 21:57:49] RicBit: se alguem quiser o codigo é curtinho -> https://gist.github.com/ricbit/0c272f28be50c68afee22c08c65514c8
+[2023-10-04 21:59:05] RicBit: aahh achei um bug
+[2023-10-04 21:59:06] RicBit: perai
+[2023-10-04 22:00:51] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28252.jpg
+[2023-10-04 22:00:51] RicBit: fractal 7 corrigido
+[2023-10-04 22:01:07] RicBit: só o fractal 5 tava certo, os outros estavam arredondando errado
+[2023-10-04 22:01:44] Pablo Vasques Bravo-Villalba: Pra mim ficou pior que antes 😳
+[2023-10-04 22:01:50] RicBit: pois é
+[2023-10-04 22:01:57] RicBit: mas o 3 melhorou
+[2023-10-04 22:02:00] Pablo Vasques Bravo-Villalba: O vermelho ali no coqueiro
+[2023-10-04 22:02:11] Pablo Vasques Bravo-Villalba: É estranho, na original não tem vermelho ali
+[2023-10-04 22:02:38] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28259.jpg
+[2023-10-04 22:03:01] Shideravan: Agora o 7 tá mais parecido com o 5 kkkk
+[2023-10-04 22:03:12] Pablo Vasques Bravo-Villalba: Melhorou bastante até
+[2023-10-04 22:03:30] RicBit: vou chutar na lua
+[2023-10-04 22:03:51] Shideravan: O 3 também, ficou bem parecido com o 5 original e com o 7 corrigido
+[2023-10-04 22:04:20] Shideravan: Mas muito parecido, passa do 7 corrigido para o 3 corrigido e você vê que só alguns pixels mudam
+[2023-10-04 22:04:54] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28265.jpg
+[2023-10-04 22:04:54] RicBit: fractal tamanho 16
+[2023-10-04 22:05:14] RicBit: acho que estabilizou, do 5 em diante o erro deve ser menor que uma unidade
+[2023-10-04 22:05:18] Shideravan: Tá dando muito pouca diferença
+[2023-10-04 22:05:19] RicBit: ai tanto faz o tamanho
+[2023-10-04 22:05:30] Shideravan: Até o 3
+[2023-10-04 22:05:50] Shideravan: Mesmo o 3 nçao dá tanta diferença mais não
+[2023-10-04 22:05:53] RicBit: mas ainda esta puxando pro vermelho
+[2023-10-04 22:06:01] RicBit: isso eu preciso pensar
+[2023-10-04 22:06:01] Shideravan: É
+[2023-10-04 22:06:09] Shideravan: Isso é estranho memso
+[2023-10-04 22:06:27] RicBit: deixa ver com scr8
+[2023-10-04 22:08:11] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28276.jpg
+[2023-10-04 22:08:11] RicBit: fractal 16, screen 8
+[2023-10-04 22:08:16] RicBit: scr8 tem tanta cor que nem faz diferenca o algoritmo
+[2023-10-04 22:09:30] RicBit: mas fica fazendo banding no ceu
+[2023-10-04 22:09:40] RicBit: se desse pra fazer voronoi o banding sumia
+[2023-10-04 22:09:45] RicBit: preciso pensar tambem

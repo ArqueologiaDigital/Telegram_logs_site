@@ -1,0 +1,7 @@
+[2026-08-07 00:06:20] RicBit: nó, achei um negocio engraçado, o colete a prova de balas do jogo funciona
+[2026-08-07 00:07:13] RicBit: tipo quando voce leva um tiro, ele sorteia um pixel no desenho do colete, se estiver branco ele pinta de preto, se estiver preto voce leva o dano.
+[2026-08-07 00:07:58] RicBit: o que significa que meia duzia de buracos no colete é quase um colete inteiro, só precisa trocar quando nem der pra ver direito.
+[2026-08-07 00:08:43] RicBit: (esse disasm está bem dificil de fazer porque static analysis não combina com codigo auto modificavel, e tem muito codigo assim no jogo)
+[2026-08-07 00:16:34] RicBit: e se o tiro cair num buraco preto na regiao do coração é instakill
+[2026-08-07 02:59:54] Felipe "Juca" Sanches: Eu tô até agora impressionado de ter conseguido chegar nesse ponto. Me parecia um objetivo tão distante, tão pouco tempo atrás...
+[2026-08-07 17:37:07] L.: https://m.youtube.com/watch?v=-aI_XEwmKFk

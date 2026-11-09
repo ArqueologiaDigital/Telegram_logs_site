@@ -1,0 +1,5 @@
+[2026-06-21 11:52:51] Robson França: Bom dia aê! Poderia ser para sfx?
+[2026-06-21 12:50:46] RicBit: hoje eu vou caçar esse código até descobrir!
+[2026-06-21 15:47:40] L.: https://neuviemeporte.github.io/f15-se2/2026/06/20/needyou.html
+[2026-06-21 17:19:35] L.: https://research.google/pubs/analyzing-bytes-pre-disassembly-static-binary-analysis/
+[2026-06-21 21:13:33] RicBit: pior que eu coloquei isso no meu sistema semana passada. tem uma analise de live registers para achar data. tipo se tem ld b,1 seguido de ld b,2, provavelmente é data.

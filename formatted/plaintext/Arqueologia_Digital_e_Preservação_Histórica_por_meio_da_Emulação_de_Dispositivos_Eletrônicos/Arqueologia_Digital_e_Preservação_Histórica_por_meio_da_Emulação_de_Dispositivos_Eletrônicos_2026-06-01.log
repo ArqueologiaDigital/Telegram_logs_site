@@ -1,0 +1,15 @@
+[2026-06-01 00:46:22] Felipe "Juca" Sanches: Olha só! Alguém portou a sua contribuição de netlist para Verilog e mandou como contribuição pro projeto MiSTer agora há pouco!
+
+https://github.com/MiSTer-devel/Arcade-RallyX_MiSTer/pull/14
+[2026-06-01 01:26:53] Ismael Carvalho: caramba, não sabia que verilog dava pra levar pro mame, tava aprendendo aos poucos ao longo do tempo, vou dar uma olhada
+[2026-06-01 01:28:31] Felipe "Juca" Sanches: ao contrário: o netlist que o RicBit contribuiu ao MAME foi traduzido pra Verilog para uso no projeto MiSTer
+[2026-06-01 01:39:54] Ismael Carvalho: ih malz, eu já to ficando louco do horário já
+[2026-06-01 01:40:14] Ismael Carvalho: vou tentar dar uma fuçada na parte de netlist do mame pra ver se aprendo algo
+[2026-06-01 02:04:52] RicBit: nice!
+[2026-06-01 02:08:07] RicBit: tomara que ele tenha testado, eu só vi a parte digital no verilog. sem aquele capacitor de tântalo safado o som fica sem o envelope, vai tocar em vol maximo sem desligar.
+[2026-06-01 10:26:56] RicBit: reli com mais cuidado, ao inves de colocar o capacitor ele modelou o envelope digitalmente. então isso esta resolvido. só não sei se a forma de onda vai ser igual sem o diferenciador.
+[2026-06-01 18:41:51] RicBit: esse já está merged
+[2026-06-01 19:07:31] Pedro de Medeiros 👾: Isso quer dizer que os dumps de ROM estão todos errados e que será necessário gerar dumps novos?
+[2026-06-01 19:08:29] Pedro de Medeiros 👾: Ou deixar as ROMs antigas com outra mapper que funciona, apesar de não ser a apropriada.
+[2026-06-01 20:10:18] RicBit: as roms antigas ainda funcionam, só sao maiores que deveriam
+[2026-06-01 20:10:31] RicBit: eu fiz as roms novas e mandei pro tfh

@@ -1,0 +1,35 @@
+[2023-10-28 00:00:06] Guilherme Ranoya: Bom, acredito que a impressão que tenho seja mais culpa do resto do hardware do que do processador em si.
+[2023-10-28 00:00:37] RicBit: sim, foi o que eu disse, voce nao aprendeu a arquitetura então está confundindo as camadas
+[2023-10-28 00:01:14] RicBit: dito isso, seu exemplo de 6502 ser melhor foi uma interface grafica de apple que nunca foi lancada né ?
+[2023-10-28 00:01:49] RicBit: essa aqui é uma interface grafica multitarefa colorida que roda em um z80: https://www.youtube.com/watch?v=Fq8QJ32l2Fc
+[2023-10-28 00:03:56] Guilherme Ranoya: Acho que a questão é que com 10 anos de idade eu não estava muito interessado nas camadas 😆
+[2023-10-28 00:04:06] Guilherme Ranoya: E sim nos resultados.
+[2023-10-28 00:04:53] RicBit: mas voce nem deu exemplo de resultados ainda
+[2023-10-28 00:07:18] Guilherme Ranoya: Resultado dos programas que eu fazia em 4 computadores diferente... Um Apple II, um Atari 800, um MSX e um PC XT... O que eu via era que o MSX respondia mal... Mas bem colocado, não era um problema do processador.
+[2023-10-28 00:08:04] RicBit: nem da arquitetura né
+[2023-10-28 00:08:12] RicBit: se voce ainda tiver esses codigos eu mostro como otimizar
+[2023-10-28 00:09:29] Guilherme Ranoya: Que me dera ter isso guardado!
+[2023-10-28 00:10:04] RicBit: eu nao tenho codigo de quando tinha 10 anos, comecei com 12 haha
+[2023-10-28 00:10:54] Guilherme Ranoya: Mesmo que ainda tivesse os diskettes....onde eu ia achar um drive de 5 1/2!!!!!
+[2023-10-28 00:11:02] RicBit: mas tipo eu acho estranho voce afirmar em 2023 que o processador x era porcaria baseado na experiencia de uma criança de 10 anos
+[2023-10-28 00:12:36] Guilherme Ranoya: É como eu me lembro deles... O que eu posso fazer... O coitado do MSX parecia uma porcaria.... Eu gostava dele... Os jogos eram divertidos, mas era o patinho feio em casa.
+[2023-10-28 00:13:29] Guilherme Ranoya: Eu queria muito um TK80... Achava lindo nas revistas.... Aí meu pai falava....sabe o MSX?... É pior.... E eu desisti.
+[2023-10-28 00:14:49] RicBit: certo
+[2023-10-28 00:15:50] RicBit: eles nao eram uma porcaria, é que com 10 anos voce nao sabia usar
+[2023-10-28 00:16:01] RicBit: estava melhor que eu que com 10 anos nem computador tinha
+[2023-10-28 02:28:51] L.: aliás, falando em desenhar coisas e tal, tem esse artigo recente sobre desenhar linhas sem usar bresenham http://www.quiss.org/boo/
+[2023-10-28 07:36:13] RicBit: Ah esse é o DDA
+[2023-10-28 07:36:44] RicBit: eu usei ele para fazer a barrinha de progresso no fudebrowser
+[2023-10-28 07:37:23] RicBit: naquele caso fazia sentido porque o servidor fazia a divisao pra mim
+[2023-10-28 07:37:41] RicBit: nesse caso dele parece que ele usa a cpu do drive para fazer a divisao
+[2023-10-28 07:37:50] RicBit: nem sabia que o drive fazia isso haha
+[2023-10-28 07:46:42] RicBit: 8B-8D : https://sta.c64.org/cbm1541mem.html
+[2023-10-28 07:46:56] RicBit: acho que tem uma ula memory mapped nesse endereco
+[2023-10-28 07:47:00] RicBit: deixa ver no mame
+[2023-10-28 08:00:50] RicBit: ugh tem um 6502 inteiro dentro do drive
+[2023-10-28 08:00:56] RicBit: devia ser caro
+[2023-10-28 08:01:08] RicBit: mas é uma maquina com duas cpus então
+[2023-10-28 18:56:30] Leonardo Roman: O drive do C64 é um computador completo sem vídeo.
+[2023-10-28 18:56:55] Leonardo Roman: Alguns programas rodam sem precisar do C64 inclusive: https://cdm.link/2021/07/freespin-is-a-demo-made-for-the-commodore-1541-no-not-the-computer-just-the-floppy-drive/
+[2023-10-28 22:31:37] RicBit: Muito bom
+[2023-10-28 23:24:33] Alexandre Villares: https://blog.glyphdrawing.club/amiga-ascii-art/#322-making-the-colly

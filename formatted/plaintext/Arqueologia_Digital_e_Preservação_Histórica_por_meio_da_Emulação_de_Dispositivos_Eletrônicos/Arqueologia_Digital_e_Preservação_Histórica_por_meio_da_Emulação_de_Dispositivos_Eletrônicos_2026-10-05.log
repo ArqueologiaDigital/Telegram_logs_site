@@ -1,0 +1,67 @@
+[2026-10-05 15:44:37] RicBit: descobri que o jogo do asterix está quebrado, 8 bytes pra consertar, e eu não tenho mais de onde raspar, a panela está vazia a nivel atomico.
+[2026-10-05 15:45:21] RicBit: a melhor solução que eu pensei foi jogar tudo pro alto e recomeçar do zero. vamos ver. talvez funcione, daqui a 10 horas eu vejo se mudei de opinião.
+[2026-10-05 18:46:58] Felipe "Juca" Sanches: Incrível esse mundo moderno em que jogar tudo pra cima e recomeçar do zero leva 10 horas... parece mesmo que estamos surfando nas últimas ondas antes da singularidade...
+[2026-10-05 18:47:29] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41057.jpg
+[2026-10-05 18:47:29] Felipe "Juca" Sanches: https://www.ndss-symposium.org/wp-content/uploads/2026-f380-paper.pdf
+[2026-10-05 18:50:09] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41058.jpg
+[2026-10-05 18:50:09] Felipe "Juca" Sanches: https://arxiv.org/pdf/2607.07738
+[2026-10-05 18:59:13] RicBit: começar do zero = randomizar todos os genes e usar simulated annealing ao invés de gomea ou vnd. o resultado foi positivo, é uma opção se precisar, mas talvez não precise. veremos.
+
+mas sim esses são os últimos anos que retro ainda tem graça, daqui a pouco vai ser tudo automatico.
+[2026-10-05 18:59:55] Shideravan: Não sei se isso é uma boa ou má notícia
+[2026-10-05 19:00:10] Shideravan: Parece que estamos vivendo tempos tão estranhos...
+[2026-10-05 19:08:54] RicBit: alias acho que não comentei mas semana passada eu fiz isso com namagiri.  Ela tinha umas funções de dez mil linhas, coisa sinistrissima. Eu resolvi criando 490 casos de teste, até o coverage ficar 99.8%, e depois nuke e start again. ficou bem melhor.
+[2026-10-05 19:10:40] RicBit: agora está com exatamente 512 testes
+[2026-10-05 19:13:03] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41064.jpg
+[2026-10-05 19:13:03] RicBit: eu fiz de um jeito que o expect fica dentro do proprio arquivo.ng , como comentarios.
+[2026-10-05 19:13:46] Felipe "Juca" Sanches: número bonito!
+[2026-10-05 19:16:14] RicBit: eu tenho até a curiosidade de recodar namagiri inteira em rust pra ver se fica mais rapido
+[2026-10-05 19:17:23] RicBit: alias acho que vou fazer isso agora, vamos ver quanto tempo demora. start 19:17
+[2026-10-05 19:18:44] RicBit: usando opus 5.5 medium
+[2026-10-05 19:18:51] RicBit: eu chuto menos de 2h
+[2026-10-05 19:24:04] RicBit: inclusive acho que ela vai achar erros no original em C++ no caminho
+[2026-10-05 20:07:42] L.: manda botar um rayonzinho
+[2026-10-05 21:15:13] Felipe "Juca" Sanches: baygonzinho? Pra matar os bugs?
+[2026-10-05 21:16:58] RicBit: nao creio
+[2026-10-05 21:17:02] L.: https://docs.rs/rayon/latest/rayon/
+[2026-10-05 21:17:14] RicBit: terminou exatamente 21:17
+[2026-10-05 21:17:33] RicBit: 512/512 passando
+[2026-10-05 21:17:37] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=3tzmnLW2OYo
+[2026-10-05 21:18:07] L.: O nome é inspirado nisso (thread, fiber, etc)
+[2026-10-05 21:18:40] Felipe "Juca" Sanches: roubadinha! marmelada!
+[2026-10-05 21:18:48] L.: é doido que em computação a gente tem string, thread e fiber que são coisas completamente diferentes
+[2026-10-05 21:19:11] Felipe "Juca" Sanches: e beads!
+[2026-10-05 21:19:14] L.: ah, e rope também
+[2026-10-05 21:19:26] RicBit: o corno fez tudo em um commit só
+[2026-10-05 21:19:39] Felipe "Juca" Sanches: uma anta!
+[2026-10-05 21:20:27] Felipe "Juca" Sanches: o bom eh que vc pode dar pra ele um trabalho de corno de fazer o split em commits razoaveis
+[2026-10-05 21:20:42] RicBit: é bom pra colocar em perspectiva. portar 29k linhas de C++ para rust -> 2h. Otimizar 8 bytes do emulador -> 48h e ainda não conseguiu
+[2026-10-05 21:20:55] Shideravan: e fabric
+[2026-10-05 21:20:57] Shideravan: E web
+[2026-10-05 21:21:46] Felipe "Juca" Sanches: teve tamb'em o Mozilla Weave
+[2026-10-05 21:22:33] Shideravan: E tem o Loom
+
+https://openjdk.org/projects/loom/
+[2026-10-05 21:23:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41091.jpg
+[2026-10-05 21:24:18] Shideravan: Tem patch também, como pudemos esquecer? kkkkkkkkkkkkkkk
+[2026-10-05 21:24:50] Felipe "Juca" Sanches: bah! kkkkk
+[2026-10-05 21:24:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41094.jpg
+[2026-10-05 21:37:10] RicBit: resultado: a versao rust é mais lenta que o c++ porque o g++ tem auto avx2
+[2026-10-05 21:37:17] RicBit: talvez com rayon melhore vejamos
+[2026-10-05 21:39:50] L.: o rust não compila com avx2 por padrão, cê tem que habilitar x86-64-v2
+[2026-10-05 21:40:10] L.: o v1 é o padrão e original da amd que não tinha avx2
+[2026-10-05 21:41:49] L.: dependendo também, rolou esses dias um troço pra gerar código pra rodar em gpu
+[2026-10-05 21:42:04] L.: código rust normal compilado como se fosse shader
+[2026-10-05 21:42:39] RicBit: namagiri é graph intensive, cheio de branch, nao vai rodar legal em gpu
+[2026-10-05 21:43:00] RicBit: ele escreveu com avx2 intrinsics e ficou igual ao c++
+[2026-10-05 21:43:07] RicBit: mas eu nao quero igual, quero meelhor poxa
+[2026-10-05 21:46:19] RicBit: mais legal é pedir para ele trocar mut por let. deve ter muita copia desnecessária. vejamos
+[2026-10-05 21:47:56] RicBit: vale a pena otimizar namagiri porque a busca são alguns milhares de namagiris rodando para achar os genes que diminuem o packed size
+[2026-10-05 21:48:39] Macabeus: Pessoas, vou gravar um podcast com o Ricardo Gomes.
+Ele já apresentou projetos malucos na GambiConf, como rodar Go no PlayStation 2, e estará nessa próxima edição falando sobre Super Nintendo.
+
+Vocês teriam tópicos e perguntas que gostariam que eu fizesse no programa?
+[2026-10-05 21:51:31] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41107.jpg
+[2026-10-05 21:51:31] RicBit: ele usou 19 agentes para converter em rust
+[2026-10-05 21:52:13] RicBit: multiplos agentes é o melhor pattern, porque cada um fica com contexto menor -> menos tokens e mais espaço para pensar
+[2026-10-05 21:53:06] Felipe "Juca" Sanches: perfeito!

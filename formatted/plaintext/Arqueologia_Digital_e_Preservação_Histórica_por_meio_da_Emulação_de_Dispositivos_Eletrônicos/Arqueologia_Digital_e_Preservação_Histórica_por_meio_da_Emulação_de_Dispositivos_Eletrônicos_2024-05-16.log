@@ -1,0 +1,44 @@
+[2024-05-16 09:08:48] Felipe "Juca" Sanches: Comprei um megadrive. Veio com uma fonte de 12 volts. O LED vermelho do console não acende. E a TV que tenho aqui no AirBNB não tem entrada de vídeo RCA, então não sei como testar.
+
+Olhei atrás do console e fiquei surpreso ao notar que não tem em lugar nenhum dizendo qual é a voltagem e nem a polaridade correta.
+
+Medi com multimetro e a fonte tá dando 12.2V (com o terra no pino central)
+[2024-05-16 09:09:07] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=Ot3bseWGUVo
+[2024-05-16 09:09:45] Felipe "Juca" Sanches: aí eu vi esse vídeo e fiquei de novo surpreso, pois a fonte original diz ser de 9 volts, mas na realidade dá uns 14 volts
+[2024-05-16 09:11:37] Felipe "Juca" Sanches: Fiquei também desconfiado ao ver que as polaridades das medidas que o cara faz nesse vídeo não batem entre a fonte original e a que ele usa para substituir
+[2024-05-16 09:12:57] Pablo Vasques Bravo-Villalba: Tem umas fontes dessa época que o positivo é por fora. 🙁 E sim, também tem umas fontes dessa época que sem carga dá uma voltagem bem maior, me lembro claramente de umas fontes de 9V que davam uns 13V quando media
+[2024-05-16 09:13:25] Felipe "Juca" Sanches: que loucura
+[2024-05-16 09:13:31] Felipe "Juca" Sanches: como uma porra dessas funciona?
+[2024-05-16 09:14:17] Pablo Vasques Bravo-Villalba: Estou vendo uma foto de uma fonte oficial da Sega aqui, saída 10V, 1.2A, negativo no meio
+[2024-05-16 09:15:42] Pablo Vasques Bravo-Villalba: Caceta, isso aqui é do inferno
+[2024-05-16 09:15:58] Felipe "Juca" Sanches: isso é erro de projeto ou é alguma macumba que eu não conheço?
+[2024-05-16 09:16:02] Pablo Vasques Bravo-Villalba: Achei uma outra fonte, dessa vez com positivo no meio, saída 9V 850mA
+[2024-05-16 09:16:05] Pablo Vasques Bravo-Villalba: Que diablos?
+[2024-05-16 09:16:20] Pablo Vasques Bravo-Villalba: Tem a marca da Sega, mas é diferente da que eu tinha no meu Mega
+[2024-05-16 09:17:51] Pablo Vasques Bravo-Villalba: Me explicaram na época mas eu sinceramente não lembro da explicação
+[2024-05-16 09:18:10] Pablo Vasques Bravo-Villalba: Algo como resistência interna do próprio dispositivo?
+[2024-05-16 09:18:17] Pablo Vasques Bravo-Villalba: ☹️
+[2024-05-16 09:22:32] Pablo Vasques Bravo-Villalba: Bom, eu olhei aqui um monte de fontes para Mega Drive, e dependendo do modelo do seu pode variar um pouco, mas uma indicada para 9V ou 10V com capacidade de 1.2A e positivo no meio deve funcionar com qualquer Mega Drive
+[2024-05-16 09:22:34] Felipe "Juca" Sanches: pluguei um fone de ouvido e consigo ouvir a música do SONIC 2, então o console tá OK, apesar de eu não ter como ligar RCA nessa TV aqui
+[2024-05-16 09:23:07] Felipe "Juca" Sanches: E o LED realmente fica apagado. Achei que estivesse queimado, mas ele chegou a dar uma breve piscadinha, então talvez esteja com mau contato
+[2024-05-16 09:23:17] Pablo Vasques Bravo-Villalba: Depois abre e mede a voltagem da fonte com ele ligado, pra ver se não está alta demais
+[2024-05-16 10:19:06] L.: é tudo fonte não regulada né
+[2024-05-16 10:19:25] L.: vai direto do trafo pra uma ponte retificadora e um capacitor
+[2024-05-16 10:19:39] L.: e é isso aí, yolo total
+[2024-05-16 10:22:26] L.: aquelas fontes com várias voltagens de saída era exatamente isso aí, mas cada posição da chave pegava um tap diferente do trafo
+[2024-05-16 11:18:45] L.: de qualquer forma, se não me engano o mega tem um regulador logo na entrada
+[2024-05-16 11:18:56] L.: acho que um 7805 ou algo assim
+[2024-05-16 11:19:08] L.: deve funcionar com 12v, só vai esquentar mais o regulador
+[2024-05-16 12:10:08] RicBit: meio dificil de ler mas parece dois 7808 https://gamesx.com/wiki/lib/exe/fetch.php?media=schematics:genesis_cpu_and_custom_chips.png
+[2024-05-16 12:11:12] RicBit: nao, acho que é 7805 mesmo
+[2024-05-16 15:38:32] Eduardo Loos [forwarded]: Querem vender ou comprar itens de retrogaming e retrocomputação ? Participem do grupo Mercado Retro. 
+https://t.me/+8SgmzAKW4QNiNzcx
+[2024-05-16 16:24:23] Lord Spy: https://icltank.com.br/projeto-gamegesis/#vote
+
+Faça parte da evolução lúdica! 
+Seja protagonista junto à Gamegesis para levarmos o projeto a um novo nível e impulsionar o avanço em conhecimento de jogos. 
+Juntos, desvendaremos como criar experiências incríveis para todos! E ainda lutamos para defender a preservação de jogos, digitais ou não! 
+
+Vote diariamente! E divulgue aos quatro cantos do mundo!
+
+Joguemos!

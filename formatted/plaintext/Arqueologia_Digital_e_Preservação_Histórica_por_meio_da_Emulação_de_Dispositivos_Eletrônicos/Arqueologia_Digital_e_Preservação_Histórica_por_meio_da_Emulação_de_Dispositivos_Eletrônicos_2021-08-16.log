@@ -1,0 +1,16 @@
+[2021-08-16 21:03:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14216.jpg
+[2021-08-16 21:03:49] Felipe "Juca" Sanches: https://docs.google.com/spreadsheets/d/13IkljF7hjmkXOPps4ji-Ua_a8X6xd97JFlfAfjq2EMk/edit?usp=sharing
+[2021-08-16 22:04:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14217.jpg
+[2021-08-16 22:04:33] Felipe "Juca" Sanches: Essa é a MASK ROM do boot da CPU secundária. Quero descobrir qual leitor usar para fazer o dump dela a partir do próprio chip, que tenho aqui em mãos.
+[2021-08-16 22:12:44] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14218.jpg
+[2021-08-16 22:12:44] Felipe "Juca" Sanches: Parece que é compatível pino-a-pino com uma M27C1001
+[2021-08-16 22:13:20] Felipe "Juca" Sanches: E a semelhança de códigos entre M27C1001 e QSIGX3C01001 me alegra 😉
+[2021-08-16 22:14:10] Felipe "Juca" Sanches: acho improvável, mas há a chance da tensão de alimentação ser diferente, entretanto. Então preciso verificar isso antes de tentar qualquer coisa
+[2021-08-16 22:15:22] Erin Pinheiro 🐿: +5D eu chutaria que é +5V DC
+[2021-08-16 22:15:25] Felipe "Juca" Sanches: bom... isso tá fácil! Nessa imagem aqui mesmo já dá pra ver que a alimentação é 5 volts 😉
+[2021-08-16 22:15:30] Felipe "Juca" Sanches: exato!
+[2021-08-16 22:15:41] Felipe "Juca" Sanches: acho que o D é de Digital
+[2021-08-16 22:15:53] Erin Pinheiro 🐿: ah
+[2021-08-16 22:16:07] Felipe "Juca" Sanches: a alimentacao de 5 volts pra outras partes do circuito acho que é feita separadamente
+[2021-08-16 22:54:21] Felipe "Juca" Sanches: a desgraça do encapsulamento do chip é diferente de todos adaptadores que tenho aqui, e buscando online não acho em lugar nenhum um adaptador adequado :-P
+[2021-08-16 22:54:41] Felipe "Juca" Sanches: se eu consegui identificar corretamente, parece ser um TSSOP32

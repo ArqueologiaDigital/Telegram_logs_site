@@ -1,0 +1,10 @@
+[2022-06-11 02:18:47] L.: curl https://tia.mat.br/temp/mines-fuzz-target-v2.patch | git am
+[2022-06-11 02:18:51] L.: @fsanches ^
+[2022-06-11 02:43:45] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/54
+[2022-06-11 09:06:13] Felipe "Juca" Sanches: nao estou familiarizado com exatamente como isso funciona. Me diz o que você fez quando disse que já achou bug usando o fuzzer. Não sei como se opera isso
+[2022-06-11 09:11:27] Pedro de Medeiros 👾: Gergeado!
+[2022-06-11 11:53:55] L.: Faz um arquivo com as inscrições (tipo, bota só LLLLDDDDDDDDDDB por exemplo). Roda o programa passando o caminho pra esse arquivo
+[2022-06-11 11:54:44] L.: O fuzzer vai botar esse arquivo na entrada e aí vai rodando e fazendo mutações nesses dados de acordo com os branches que o programa toma
+[2022-06-11 11:56:11] L.: Aí em poucos segundos vai crashar com backtrace e um dump da região de memória que causou o problema (por exemplo, out of bounds access no array)
+[2022-06-11 15:12:09] Felipe "Juca" Sanches: ah, boa!
+[2022-06-11 15:12:14] Felipe "Juca" Sanches: agora entendi

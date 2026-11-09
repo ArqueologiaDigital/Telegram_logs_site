@@ -1,0 +1,18 @@
+[2026-05-30 08:19:21] Felipe "Juca" Sanches: hoje estou programando com as próprias mãos durante uma longa viagem de trem
+[2026-05-30 08:19:44] Felipe "Juca" Sanches: revisando os códigos de emulação que o Claude escreveu pra mim ao longo das últimas duas semanas
+[2026-05-30 08:20:05] Felipe "Juca" Sanches: o código que ele escreveu funciona. Mas tá meio porco.
+[2026-05-30 08:20:33] Felipe "Juca" Sanches: então tô dando aquela massageada pra não passar vergonha na hora de enviar mais um PR pro MAME
+[2026-05-30 08:22:02] Felipe "Juca" Sanches: No caso, estou revisando toda a emulação do Itautec I7000. Comecei na véspera do evento ZZAP Live de 2 semanas atrás em Coventry. E estou agora fechando o ciclo logo antes de chegar no evento RetroFest UK, em Swindon, hoje.
+[2026-05-30 08:25:13] Felipe "Juca" Sanches: E aí? Tá em Swindon, já?
+[2026-05-30 12:16:54] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/39041.jpg
+[2026-05-30 12:16:54] RicBit: os labirintos do rallyx
+[2026-05-30 12:40:05] Pablo Vasques Bravo-Villalba: Só tem esses quatro? Tem do New também? 😊
+[2026-05-30 13:56:11] RicBit: esse é do msx, em principio o msx é o new rallyx
+[2026-05-30 20:45:03] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/39044.jpg
+[2026-05-30 20:45:03] RicBit: primeiro estagio funcionando! acertar o lfsr era a parte mais dificil, agora só falta colocar as duas etapas de audio. isso já é no netlist do mame.
+[2026-05-30 21:53:51] RicBit: audio: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/39045-bang.wav
+[2026-05-30 21:53:51] RicBit: original
+[2026-05-30 21:54:18] RicBit: audio: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/39046-bang_synth.wav
+[2026-05-30 21:54:18] RicBit: simulado
+[2026-05-30 21:54:26] RicBit: tá igual, mas tá diferente
+[2026-05-30 23:26:19] L.: Engenharia reversa do micro código do 8087 https://www.righto.com/2026/05/microcode-inside-intel-8087-floating.html?m=1

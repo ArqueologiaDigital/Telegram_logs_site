@@ -1,0 +1,13 @@
+[2026-08-27 00:02:05] RicBit: eu tenho meu xt original tambem, esta na casa da minha mae. fiquei até com vontade de fazer uma plaquinha de ems, nao sabia que existia
+[2026-08-27 00:02:32] RicBit: sem a plaquinha nao dá pra rodar rom direto, mas sempre dá para colocar num dsk com execrom e rodar. ai nao precisa do ems.
+[2026-08-27 00:32:37] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40246.jpg
+[2026-08-27 00:32:37] RicBit: como é namagiri por dentro
+[2026-08-27 19:21:33] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40247-minimsx.zip
+[2026-08-27 19:21:33] RicBit: mais uma dádiva de namagiri, suporte ao flag de quinto sprite, sem isso o demo msx unleashed não roda.
+[2026-08-27 20:36:00] L.: https://blog.chrislewis.au/decompiling-a-nintendo-64-game-in-84-days/
+[2026-08-27 21:06:12] Felipe "Juca" Sanches: E teria sido mais rápido se não fossem os limiteis de tokens semanais!
+[2026-08-27 23:21:35] RicBit: nó, acabei de perceber que namagiri estava otimizando o tamanho errado. ela otimizava o tamanho em bytes, mas otimizar o tamanho em bits é muito melhor.
+[2026-08-27 23:40:55] RicBit: alias fiquei curioso para saber qual o tamanho do espaço de estados, é 1e722 (o numero de atomos no universo é 1e80).
+[2026-08-27 23:45:41] RicBit: a primeira versão da namagiri usava algoritmo genetico para navegar nesse estado, o que é engraçado porque algoritmo genético depende de evolução, achei curioso que essa deusa não é criacionista
+[2026-08-27 23:46:16] RicBit: v2 era LNS, v3 está usando GENOA
+[2026-08-27 23:51:54] Shideravan: E Snowboard Kids é um jogo super legal, que pouca gente jogou

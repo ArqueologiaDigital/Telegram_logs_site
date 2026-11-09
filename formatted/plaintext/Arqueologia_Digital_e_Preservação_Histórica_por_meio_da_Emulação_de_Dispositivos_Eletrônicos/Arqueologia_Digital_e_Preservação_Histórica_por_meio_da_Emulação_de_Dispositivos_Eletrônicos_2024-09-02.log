@@ -1,0 +1,89 @@
+[2024-09-02 00:32:08] Shideravan: Curti muito hoje
+[2024-09-02 00:32:18] Shideravan: Foi bem divertido
+[2024-09-02 00:33:01] Shideravan: *Ops, ontem já que passou da meia-noite
+[2024-09-02 00:42:01] Felipe "Juca" Sanches: Podemos chamar de MAME-BR essa foto? 😉
+[2024-09-02 00:43:48] Shideravan: Primeiro encontro brasileiro extra-oficial de desenvolvimento do MAME
+[2024-09-02 00:44:08] Felipe "Juca" Sanches: pois é!
+[2024-09-02 00:45:40] Shideravan: Qual era a combinação de botões que ativava o potencial easter egg?
+[2024-09-02 00:46:27] Felipe "Juca" Sanches: Na verdade já tiveram outros encontros extra-oficiais de desenvolvimento do MAME aqui no ponto-br. Por exemplo, várias vezes em Brasilia no Calango Hacker Clube com @pvm_NoCryptoScams e @mrparn
+[2024-09-02 00:47:31] Felipe "Juca" Sanches: teclas "5" + "operação" do Pense Bem
+[2024-09-02 00:47:50] Felipe "Juca" Sanches: há algo curioso envolvendo essas teclas imediatamente após o boot
+[2024-09-02 00:48:01] Felipe "Juca" Sanches: ou eu interpretei errado o código
+[2024-09-02 00:48:16] Felipe "Juca" Sanches: ou levantei errado o pinout do Z8
+[2024-09-02 00:49:36] Shideravan: Tem mais gente com pense bem no grupo?
+[2024-09-02 00:50:04] Felipe "Juca" Sanches: se você quiser ajudar a desenhar o circuito no KICAD, posso te dar um
+[2024-09-02 00:50:15] Shideravan: É legal jogar essa possibilidade no grupo, assim quem tiver e quiser testar talvez descubra alguma coisa
+[2024-09-02 00:50:25] Felipe "Juca" Sanches: OK
+[2024-09-02 00:51:05] Felipe "Juca" Sanches: se alguém aqui quiser contribuir desenhando o esquemático da placa eletrônica, posso dar de presente um Pense Bem
+[2024-09-02 00:51:58] Shideravan: Eu estou numa fase da vida que estou me mudando, para lá e para cá
+[2024-09-02 00:52:23] Felipe "Juca" Sanches: ok, se em algum momento no futuro tiver interesse, me fala
+[2024-09-02 00:52:36] Felipe "Juca" Sanches: (pode ser amanhã, ou mês que vem, ou daqui 10 anos)
+[2024-09-02 00:52:42] Felipe "Juca" Sanches: quando quiser
+[2024-09-02 00:53:06] Felipe "Juca" Sanches: (até acabarem os estoques)
+[2024-09-02 00:53:31] Shideravan: Dependendo de uns eventos nós próximos meses, talvez eu cole mais lá no garoa
+[2024-09-02 00:54:09] Shideravan: Aí talvez ajudo com essas coisas por lá mesmo
+[2024-09-02 00:54:10] Felipe "Juca" Sanches: (e, obviamente, apenas enquanto a informação ainda for útil / necessária para implementar o emulador)
+[2024-09-02 00:54:39] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/32893-sticker.webp
+[2024-09-02 00:55:18] Felipe "Juca" Sanches: Eu tenho um full-rom-set do MAME aqui com 50 GB
+[2024-09-02 00:55:23] Felipe "Juca" Sanches: Acabei de deletar tudo
+[2024-09-02 00:55:26] Shideravan: Outra coisa que pode ser massa é a gente pegar algum hardware simples para fazer o processo desse o início
+[2024-09-02 00:55:46] Felipe "Juca" Sanches: pois era do 0.191
+[2024-09-02 00:56:09] Shideravan: E documentar, gravar, jogar no YouTube, algo assim
+[2024-09-02 00:56:20] Felipe "Juca" Sanches: estou com 55% de progresso no download do full-rom-set do 0.269 agora (80 gigas)
+[2024-09-02 00:56:48] Felipe "Juca" Sanches: eu amo essa idéia
+[2024-09-02 00:57:17] Shideravan: Sabia que você ia curtir
+[2024-09-02 00:57:28] Felipe "Juca" Sanches: entretanto... não existe "hardware simples"
+[2024-09-02 00:57:51] Shideravan: Fato, mas acho que você entendeu o ponto
+[2024-09-02 00:58:03] Felipe "Juca" Sanches: todo projeto de emulação que tentei abordar sempre resultou  em tretas maiores do que sou capaz de implementar por completo
+[2024-09-02 00:58:14] Felipe "Juca" Sanches: (antes de perder o foco, kkkk)
+[2024-09-02 00:58:22] Shideravan: Algo que tenha potencial de conseguirmos ir até o fim
+[2024-09-02 00:58:36] Shideravan: Olha... Na verdade...
+[2024-09-02 00:58:45] Shideravan: Até "existe"
+[2024-09-02 00:58:47] Felipe "Juca" Sanches: eu achava que o fuzebox seria fácil...
+[2024-09-02 00:58:57] Felipe "Juca" Sanches: puro engano meu
+[2024-09-02 00:59:20] Shideravan: O lance é que o que é mais "simples" é aquilo que já é ricamente documentado
+[2024-09-02 00:59:38] Shideravan: E o que já é ricamente documentado já é emulado kkkkk
+[2024-09-02 01:00:51] Felipe "Juca" Sanches: hoje estou desenhando artwork vetorial para um módulo da Yamaha, modelo MU2000
+[2024-09-02 01:01:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/32914.jpg
+[2024-09-02 01:01:35] Felipe "Juca" Sanches: isso é uma foto
+[2024-09-02 01:01:40] Shideravan: O que é o fuzebox?
+[2024-09-02 01:02:17] Shideravan: Nome chato de pesquisar no Google kkkk
+[2024-09-02 01:02:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/32918.jpg
+[2024-09-02 01:02:21] Felipe "Juca" Sanches: meu desenho vetorial ainda está muito rudimentar
+[2024-09-02 01:04:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/32919.jpg
+[2024-09-02 01:04:13] Felipe "Juca" Sanches: no MAME ainda está bem tosco, então qualquer coisa que eu fizer será com certeza muito melhor do que o que temos hoje
+[2024-09-02 01:06:27] Shideravan: Achei que hoje você passaria o resto do dia ajudando sua esposa
+[2024-09-02 01:07:25] Felipe "Juca" Sanches: http://www.ladyada.net/make/fuzebox/
+[2024-09-02 01:07:46] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/32922-bean-mr-bean.mp4
+[2024-09-02 01:09:40] Shideravan: Ahhh eu vi algo com um conceito semelhante na Retrocon
+[2024-09-02 01:17:18] Shideravan: Achei o cartão do desenvolvedor
+[2024-09-02 01:17:21] Shideravan: https://www.instagram.com/lofi_gs/
+[2024-09-02 13:10:39] Leonardo Roman: Entrei em contato com um cara que recriou as placas do TK2000 e do Atari da Bit Eletrônica pra ver se ele tem interesse: https://github.com/clemarfolly
+[2024-09-02 14:06:56] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/32927.jpg
+[2024-09-02 18:35:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/32928.jpg
+[2024-09-02 18:35:53] Felipe "Juca" Sanches: @shideravan, https://github.com/mamedev/mame/pull/12711
+[2024-09-02 18:36:56] Felipe "Juca" Sanches: Como discutido ontem, aqui mais um caso do David Haywood (Haze) reclamando dos code-reviews chatos / excessivamente rigorosos do Cuavas
+[2024-09-02 18:46:30] Hugo (Agaelebê): hehe, ele não pode mandar a sugestão de código de como seria sem o problema?
+[2024-09-02 18:56:08] Shideravan: E aí a gente está falando de uma pessoa que está desde o início do projeto, etc
+[2024-09-02 18:57:03] Shideravan: Imagina a pessoa que está começando a contribuir com o MAME? Ela desanima
+[2024-09-02 18:57:43] Shideravan: Ainda mais que esse processo de code review como tem sido feito é demorado
+[2024-09-02 19:01:05] Shideravan: Se você manda uma contribuição pequena, não está boa porque está "incompleta" (mesmo podendo ser incrementada com PR subsequentes).
+
+Se manda uma contribuição completa, fica meses parada no code review e para descobrir que um monte de coisa que fez "não era boa o bastante" e que muito tempo acabou sendo perdido.
+
+O que é o certo a se fazer então? 🤔
+[2024-09-02 19:08:44] Felipe "Juca" Sanches: Eu tinha um pull request de 3 anos de idade que ainda não tinha sido aceito. Mês passado abri um PR novo com um pedacinho pequeno do PR maior e depois de passar por code-review e ajustes finalmente foi aceito.
+
+Aí teve um release do MAME alguns dias atrás como meu driver pela metade, sendo que eu tenho um driver muito melhorado sentado no meu HD (e também naquele PR de 3 anos atrás)
+[2024-09-02 19:09:57] Felipe "Juca" Sanches: Eu fechei o PR antigo, fiz git squase de tudo num commit só, fiz rebase, pra tirar do commit aquele pedacinho que já entrou nesse release, e submeti como um PR novo.
+
+Já veio o review dizendo que "continua errado"
+[2024-09-02 19:11:43] Felipe "Juca" Sanches: Aí eu percebi que uma das coisas que o Cuavas diz que tá "errado" é idêntico ao estilo de código usado nos cores das outras variantes do TOSHIBA TLCS-900 que já estão há uns 4 ou 5 anos assim no MAME. E eu tinha simplesmente feito meu código seguindo o mesmo estilo.
+
+Fiz a pergunta sobre isso, mas até agora não ouvi nenhuma resposta. Me dá a sensação de que eu estou sendo ignorado.
+[2024-09-02 19:14:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/32939.jpg
+[2024-09-02 19:14:28] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/12684#discussion_r1730039950
+[2024-09-02 20:04:21] Shideravan: Eu atualizo todo mês
+[2024-09-02 20:05:10] Shideravan: Roms, CHDs, software-list Roms e software-lists CHDs
+[2024-09-02 20:05:24] Shideravan: Dá alguns TB 😅
+[2024-09-02 20:34:38] Erin Pinheiro 🐿: o blog de onde esse cara roubou a foto é melhor :) https://www.righto.com/2024/08/pentium-navajo-fairchild-shiprock.html

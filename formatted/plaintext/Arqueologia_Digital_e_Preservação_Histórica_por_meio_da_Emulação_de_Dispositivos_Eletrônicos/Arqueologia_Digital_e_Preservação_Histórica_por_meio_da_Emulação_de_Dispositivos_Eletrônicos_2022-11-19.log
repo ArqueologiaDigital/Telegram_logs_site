@@ -1,0 +1,20 @@
+[2022-11-19 04:23:42] Toy: Então de facto, mudou-se, meu caro ?
+[2022-11-19 04:23:54] Felipe "Juca" Sanches: sim, senhor!
+[2022-11-19 04:24:06] Felipe "Juca" Sanches: fico aqui até JAN/2024
+[2022-11-19 04:24:27] Toy: Em London ou UK?
+[2022-11-19 04:24:57] Toy: 2024! Desculpa
+[2022-11-19 04:25:08] Toy: Vi e pensei como 2023
+[2022-11-19 04:25:34] Toy: Vais ficar aí pelo Sul mesmo ?
+[2022-11-19 04:55:27] Felipe "Juca" Sanches: sim, Londres até 2024
+[2022-11-19 04:56:24] Felipe "Juca" Sanches: devo passear por algumas outras cidades, mas tô com contrato de aluguel assinado até 2024 em Londres, então isso já tá bem definido
+[2022-11-19 04:56:42] Felipe "Juca" Sanches: depois de JAN/2024, provavelmente volto pro Brasil, a não ser que surjam outras oportunidades
+[2022-11-19 04:59:00] Felipe "Juca" Sanches: em qual cidade que você tá mesmo? Me esqueci
+[2022-11-19 05:20:44] Toy: Newcastle Upon Tyne
+[2022-11-19 05:21:30] Felipe "Juca" Sanches: Bora combinar um encontro pra tomar umas e fazer um hands-on de programação daquele projeto do Another World!
+[2022-11-19 05:24:54] Felipe "Juca" Sanches: acho que mês que vem vou visitar Leeds, que fica um pouco mais perto daí.
+[2022-11-19 06:38:14] Toy: Show! Fechou então !
+[2022-11-19 16:14:56] RicBit: Isso não é verdade não, no msx você pode blitar na região ativa sem flicker nenhum se temporizar direitinho. É diferente do master system onde realmente não pode porque o vdp fica perdido.
+[2022-11-19 17:29:24] Pedro de Medeiros 👾: A borda colorida indica onde está o raster. Se o raster passou do ponto onde os sprites seriam renderizados porque o código que posiciona sprites não chegou lá antes, eles não vão aparecer nesse frame.
+[2022-11-19 17:44:32] RicBit: Sim, no seu caso específico. Mas no caso geral você pode fazer isso de boa, cheio de Konami que faz isso.
+[2022-11-19 17:45:09] RicBit: Tem plataformas onde você não pode fazer isso at all pela maneira que o vdp e o barramento funcionam.
+[2022-11-19 19:25:22] Pedro de Medeiros 👾: Ah, se você blitar para outra pagina não exibida, por exemplo, não tem problema. Ou você faz o blit "racing the beam" no mesmo frame. Mas pra uso genérico, se você espera usar sprites depois, pode já ter passado o raster por ali. E se você usar o vsync você aproveita melhor o VDP.

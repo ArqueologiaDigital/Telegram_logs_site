@@ -1,0 +1,17 @@
+[2022-09-17 14:05:57] Anne Isabelle: https://www.linkedin.com/feed/update/urn:li:activity:6974314759303106560?utm_source=share&utm_medium=member_ios
+[2022-09-17 14:06:00] Anne Isabelle: @fsanches
+[2022-09-17 14:06:21] Anne Isabelle: Ah, já postou hehe
+[2022-09-17 15:37:47] Sebastiao Barretto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23873.jpg
+[2022-09-17 15:37:47] Sebastiao Barretto: Resultado do 2o teste da Teletype no Lassu. Conversor RS232-TTL funcionou ok ligado num Raspberry Pico a 110 Baud.  Recebeu correto do teclado (com paridade), mas na transmissão para a impressora continua setado o bit 20h
+[2022-09-17 15:43:06] Sebastiao Barretto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23874.jpg
+[2022-09-17 15:43:06] Sebastiao Barretto: Perfuradora de fita também funcionou, mostrando o bit 10h (ou 16) empre setado. O bit 1 parece também setado sempre, mas na impressão parece que não
+[2022-09-17 15:43:26] Sebastiao Barretto: https://www.soemtron.org/teletypemanuals.html
+[2022-09-17 15:45:55] Sebastiao Barretto: Olhando o manual da Teletype o problema parece estar nas codebar que acionam tanto a impressão como a perfuradora de fita
+[2022-09-17 15:46:34] Sebastiao Barretto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23877.jpg
+[2022-09-17 15:49:06] Sebastiao Barretto: Talvez uma mola solta ou falta de óleo (intervalo máximo entre lubrificação segundo manual é de 39 semanas)
+[2022-09-17 15:55:02] Sebastiao Barretto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23879.jpg
+[2022-09-17 15:57:37] Sebastiao Barretto: Não deve ter sido lubrificada nos últimos 39 anos
+[2022-09-17 16:45:52] Felipe "Juca" Sanches: Kkkkk
+[2022-09-17 16:45:59] Felipe "Juca" Sanches: Bora tentar isso?
+[2022-09-17 19:20:01] L.: https://crumblingstatue.github.io/hexerator-book/hexerator.html
+[2022-09-17 19:46:12] Erin Pinheiro 🐿: interessante, acho que vai substituir o binxelview pra mim

@@ -1,0 +1,26 @@
+[2026-08-19 02:24:14] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40175-minimsx.zip
+[2026-08-19 02:24:14] RicBit: namagiri é a divindade correta para isso, dessa vez ela nos concedeu a graça da SCREEN 3. ainda 4kb.
+[2026-08-19 08:18:39] Emerson BRANCORP2000: pergunta besta... o que é ou quem é namagiri?
+[2026-08-19 08:24:28] RF: Passava cola pro Ramanujan na escoĺa
+[2026-08-19 10:29:53] RicBit: isso, é a deusa que dava poderes matematicos para o Ramanujan.
+[2026-08-19 10:31:09] RicBit: também é o meu novo assembler auto otimizador
+[2026-08-19 13:00:37] Pedro de Medeiros 👾: Conte mais 😁
+[2026-08-19 13:36:22] RicBit: Namagiri design doc -> https://gist.github.com/ricbit/b8e9a08688b28020fb8c231613939143
+[2026-08-19 13:39:25] RicBit: eu não dou palpite, a AI não dá palpite, as otimizações vem direto da deusa.
+[2026-08-19 14:10:51] L.: ideias pra tentar: pra coisas que tem tabela, rola tentar achar alguma fórmula que calcule o valor? nem que tenha que ter uma tabela menor pra fazer ajustes ou várias formulas/constantes pra cada pedaço da tabela maior
+[2026-08-19 14:11:30] L.: em alguns casos rola até aceitar algo que não seja 100% fiel à tabela original mas próximo o suficiente
+[2026-08-19 14:13:31] RicBit: acho que só funciona se for superopt, voce constroi um stream que dá match em toda a tabela
+[2026-08-19 14:13:44] RicBit: ruim de superopt é que voce chega em 7 opcodes, 8 tops
+[2026-08-19 14:17:48] RicBit: mas tem um algoritmo pra isso, deixa ver se lembro o nome
+[2026-08-19 14:19:05] RicBit: Berlekamp–Massey , funciona modulo p
+[2026-08-19 14:21:47] L.: Olhando a Wikipédia, Reeds-Sloane parece que encaixa melhor, mas, sim
+[2026-08-19 14:24:43] RicBit: berlekamp massey é o algoritmo secreto dos campeões no project euler haha
+[2026-08-19 14:25:16] RicBit: tem um monte de problemas dificeis que ficam simples se voce conhece berlekamp massey e tem bastante cpu pra gastar.
+[2026-08-19 19:31:48] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40192-minimsx.zip
+[2026-08-19 19:31:48] RicBit: agora namagiri nos abençoou com colisão de sprites por hardware, o que conserta o magical kid wiz. ainda 4kb.
+[2026-08-19 22:00:57] RicBit: momento a linguagem é minha, o assembler é meu, eu coloco unicode na sintaxe se quiser: 
+mov cl,{128:100↔255}
+[2026-08-19 22:53:29] L.: O compilador C que o compilador do Go era escrito, antes de ser reescrito em Go, aceitava Unicode também. Alguns símbolos tinham um &middot; entre um "namespace" e o nome de alguma função, por exemplo.
+[2026-08-19 23:01:11] L.: Mais linguagens deviam aceitar isso
+[2026-08-19 23:01:23] RicBit: em python acho que é padrao
+[2026-08-19 23:05:38] L.: Acho que só pra identificadores, igual ao compilador C que o Go usava

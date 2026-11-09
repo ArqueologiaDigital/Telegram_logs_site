@@ -1,0 +1,23 @@
+[2018-12-13 04:13:33] Felipe "Juca" Sanches: @mynameiserin me ajudou com truques de gimp pra dar uns tapas nas imagens do livro escaneado!
+[2018-12-13 04:13:50] Erin Pinheiro 🐿: curvas de níveis... curvas de níveis...
+[2018-12-13 04:14:18] Felipe "Juca" Sanches: será que não rolaria passar esse filtro em todas as 550 páginas do livro pra reduzir o tamanho do PDF?
+[2018-12-13 04:14:34] Erin Pinheiro 🐿: já falei que dava pra ser paramétrico :P
+[2018-12-13 04:14:39] Felipe "Juca" Sanches: (o PDF dos scans originais, não o gerado em LaTeX)
+[2018-12-13 04:14:42] Erin Pinheiro 🐿: sim
+[2018-12-13 04:14:47] Felipe "Juca" Sanches: interessante...
+[2018-12-13 04:14:50] Erin Pinheiro 🐿: isso + png
+[2018-12-13 04:15:00] Felipe "Juca" Sanches: isso me parece uma ótima solução
+[2018-12-13 04:15:07] Erin Pinheiro 🐿: happy hacking !!!
+[2018-12-13 04:15:08] Erin Pinheiro 🐿: xD
+[2018-12-13 04:15:12] Felipe "Juca" Sanches: vou tentar ver como automatizar o gimp via shell script
+[2018-12-13 10:29:47] Hugo (Agaelebê): Onde tem o pdf para baixar?
+[2018-12-13 10:53:17] Hugo (Agaelebê): https://archive.org/donate/ Boa oportunidade hoje para doar para o archive.org
+[2018-12-13 10:53:33] Hugo (Agaelebê): This is it. Today, a generous supporter will match your donation 2-to-1. So your $5 gift becomes $15 for the Internet Archive. That’s right, for the price of a paperback, you can sustain a library the whole world trusts.
+[2018-12-13 12:05:37] Leonardo Roman: Já usei algumas vezes o imagemagick para automatizar conversões de imagens.
+[2018-12-13 12:17:12] Felipe "Juca" Sanches: sim, uso a ferramenta "convert" do image-magik no processo de geração do PDF, mas eu ainda não estava fazendo esse tratamento de cores (curvas de níveis)
+[2018-12-13 14:52:52] Luciana Marques: 😊😊😊😊
+[2018-12-13 14:53:11] Luciana Marques: Braço levantado!
+[2018-12-13 14:53:36] Luciana Marques: Eu tenho, vou colocar
+[2018-12-13 15:02:31] Felipe "Juca" Sanches: Maravilha!
+[2018-12-13 23:45:52] Leonardo Roman: https://datassette.org/livros/diversos-eletronica/how-design-and-build-your-own-custom-tv-games
+[2018-12-13 23:46:54] Leonardo Roman: Ficou 28MB com OCR. Passei antes no Scantailor que ajustou a inclinação e fez uma limpeza nas páginas.

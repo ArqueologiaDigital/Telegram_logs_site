@@ -1,0 +1,40 @@
+[2022-10-10 12:27:55] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-10/24024.jpg
+[2022-10-10 12:28:06] Felipe "Juca" Sanches: Felipe:
+ 
+Os comandos, listados na página 57 do manual do sintetizador, são:
+ 
+0 = NOTA tocada, ou seja, com acionamento de envoltória. Equivale a apertar uma nota no teclado. Os bits 0 a 3 do dado associado definem a nota (Do até Si) e os bits 4 a 7 definem a oitava.
+ 
+1 até 8 =  comandos para programação de TIMBRE (forma de onda). Para cada comando, o dado associado (8 bits) consiste de dois campos de 4 bits, correspondentes a duas amostras da forma de onda. Então, mandando esses 8 comandos, cada um referente a 2 amostras, são programadas as 16 amostras de um semiciclo da forma de onda, da mesma forma que é desenhado no painel do sintetizador.
+ 
+9 = Grava timbre (GRTMB); o dado associado especifica em qual memória vai ser gravado. Temos as memórias 1 e 7 instaladas.
+ 
+10 = Lê timbre (LETMB); escolhe de qual memória o timbre vai ser usado para gerar a forma de onda (1 ou 7; se não me engano, 0 corresponde ao próprio painel do aparelho).
+ 
+11 =  Nota silenciosa, desligando a envoltória. Se o dado correspondente for igual ao do comando NOTA anterior, equivale a soltar a tecla. Se o dado for diferente, pode mudar a frequência sem dispara nova envoltória, para fezer legatos ou trinados durante o decaimento da nota anterior.
+ 
+12, 13, 14 = Conversores D/A 1, 2 ou 3. Um comando com sintaxe COM,12,<dado> controla a tensão gerada pelo D/A 1 (0 a 5 V) que normalmente é usado para controlar o volume.
+15 = Conversores D/A 1, 2 e 3 ao mesmo tempo. Por exemplo,  COM,15,0 coloca 0 volts nos 3D/A ao mesmo tempo
+ 
+16,1 7, 18, 19 = idem para D/A 4, 5 e 6 (não instalado).
+ 
+20 = Controle de Portamento. COM,20,0 desliga o portamento e COM,20,1 liga o portamento.
+ 
+21, 22 = Geradores de envoltória 1 e 2, disparados pelo evento de nota, podem ser controlados como tipo A (duração constante determinada por voltagem) ou tipo B (duração determinada pelo evento de nota, ou seja enquanto a tecla estiver apertada). COM,21,0 seleciona modo B e COM,21,1 seleciona modo A.
+ 
+23, 24 = Geradores de envoltória 3 e 4, podem ser disparadas pelo computador independentemente da nota. COM,23,0= desliga envoltória no modo B. COM,23,1= dispara envoltória no modo B. COM,23,2= desliga envoltória no modo A. COM,23,3 = dispara envoltória o modo B.
+ 
+31 = Coloca os bits 0, 1 e 2 do dado nos bornes correspondentes no painel do módulo SINC, para uso geral.
+ 
+255= NOP, não faz nada.
+ 
+ 
+Os comandos essenciais são 0 (NOTA) e 11, talvez o 12; o resto pode ser programado manualmente pelo painel e conexões.
+Os números dos comandos estão em decimal, não em Hexa.
+Vou testar esses comandos fazendo um auto-teste dentro do conversor de protocolo.
+ 
+Abs.
+Guido
+[2022-10-10 14:53:00] L.: Dá pra fazer uma polifonia tosca com isso, não? Tipo C5 + F5 dá quase um D#5
+[2022-10-10 14:53:35] L.: Sintetizador Toscofônico
+[2022-10-10 16:23:03] Felipe "Juca" Sanches: não entendi a proposta

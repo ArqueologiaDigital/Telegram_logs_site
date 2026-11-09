@@ -1,0 +1,22 @@
+[2026-07-24 09:06:25] L.: É um dos motivos que eu queria ver o fonte do Sox
+[2026-07-24 09:06:54] L.: O pedido de LAI que fiz pra BB Tecnologia deu em nada. Eles não tem nada mais da Cobra.
+[2026-07-24 09:09:59] L.: (Eu espero que o Sox seja bem escrito dada a complexidade dele. Por exemplo, todos os programas rodavam em cima de uma máquina virtual.)
+[2026-07-24 09:59:06] RicBit: nao tem nem binario por ai ?
+[2026-07-24 09:59:29] L.: Nope
+[2026-07-24 10:00:29] L.: Eu tenho contato com um cara que supostamente tinha discos mas não sei se chegou a usar um daqueles leitores especiais que armazenam informações do fluxo magnético e tal
+[2026-07-24 16:18:27] Leonardo Roman: Ah, é o Luiz Pacheco. Ele estava tentando mas parece que precisava saber o tipo de formatação dos discos.
+[2026-07-24 17:30:22] Felipe "Juca" Sanches: Acho que o ideal seria extrair a imagem e publicar na internet para nerds como nós podermos ajudar
+[2026-07-24 18:50:45] L.: O sistema de arquivos provavelmente é próprio do sox. Precisa da imagem mesmo.
+[2026-07-24 18:51:10] L.: Provavelmente é um sistema convencional unix, com um superbloco, inodes, etc. Duvido que seja muito complicado
+[2026-07-24 18:51:31] L.: Talvez dê até pra fazer um bagulho com fuse pra montar.
+[2026-07-24 20:26:17] RicBit: se tiver um .dsk é só fazer o disasm do boot para descobrir o formato
+[2026-07-24 21:49:42] L.: Às vezes nem é tão simples né? Tipo, o LILO guardava hardcoded os setores onde tava o kernel+initrd. Tanto é que você tinha que chamar o lilo de dentro do Linux pra atualizar a lista toda vez que trocava de kernel.
+[2026-07-24 21:49:59] L.: Mas, sim, é um bom ponto de partida
+[2026-07-24 21:50:14] Ismael Carvalho: Pessoal eu tenho tentado estudado o gameboy clássico e estava vendo os registradores que ele tem disponível e fiquei encucado com uma coisa, a maioria dos documentos e emuladores que eu trombei na internet não falam dos registradores Instruction Register (IR) e Interrupt Enable (IE), eu só vi uma documentação falar sobre isso e também vi no mame https://github.com/mamedev/mame/blob/master/src/devices/cpu/lr35902/lr35902.cpp
+
+Esse caras existem mesmo, a galera só tira das representações dos registradores por que não costuma ser usado?
+[2026-07-24 21:51:06] L.: Já viu a Ultimate Game Boy Talk? https://media.ccc.de/v/33c3-8029-the_ultimate_game_boy_talk
+
+(Um dia quero fazer algo bão assim de MSX!)
+[2026-07-24 21:53:49] Ismael Carvalho: vi não, vou dar uma olhada, cheguei a ver esse document o aqui https://docs.google.com/viewerng/viewer?url=http://marc.rawer.de/Gameboy/Docs/GBCPUman.pdf e o que eu percebi a diferença foi esse https://docs.google.com/viewerng/viewer?url=https://gekkio.fi/files/gb-docs/gbctr.pdf
+[2026-07-24 21:54:01] Ismael Carvalho: vou assistir a talk

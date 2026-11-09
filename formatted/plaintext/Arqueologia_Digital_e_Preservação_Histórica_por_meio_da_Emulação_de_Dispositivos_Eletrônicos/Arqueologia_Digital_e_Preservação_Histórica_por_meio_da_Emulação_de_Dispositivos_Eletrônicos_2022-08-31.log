@@ -1,0 +1,39 @@
+[2022-08-31 01:32:24] Felipe "Juca" Sanches: eu criei algo muito parecido com isso (conversor de mouse PS2 para Mouse MSX) em VHDL uns 15 anos atrás lá no LSI-USP, junto com o Marco dal Poz, um pouco depois do RicBit sair do lab.
+[2022-08-31 02:19:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23637.jpg
+[2022-08-31 02:19:10] Felipe "Juca" Sanches: Fazendo isso agora mesmo. Gerei SVG a partir do scan hi-res dos fotolitos e carreguei como layers de apoio no kicad
+[2022-08-31 02:20:31] Felipe "Juca" Sanches: agora to quebrando cabeça pra desvendar qual footprint corresponde a qual chip. Pois não estão numerados nos fotolitos. Então tenho que cruzar pelos nomes dos sinais no netlist e inspeção visual das trilhas dos dois fotolitos, pra ver em qual posição os footprints encaixam de forma compatível com o esquemático do caderno (escrito a mão) do Stolfi
+[2022-08-31 02:20:35] Flávio Amieiro: Irado!
+[2022-08-31 02:21:05] Flávio Amieiro: Bem, uma outra opção é só colocar manualmente furos passantes nas ilhas
+[2022-08-31 02:21:22] Flávio Amieiro: Mas é mais arriscado
+[2022-08-31 02:21:24] Felipe "Juca" Sanches: de qualquer forma vou ter que descobrir qual chip vai onde na placa
+[2022-08-31 02:21:40] Flávio Amieiro: Principalmente pros Chips DIP que dependem mais de precisão...
+[2022-08-31 02:21:44] Flávio Amieiro: Sim, verdade. Hahahaha
+[2022-08-31 02:21:47] Felipe "Juca" Sanches: e esse processo é a engenharia reversa necessaria para cruzar as informações e concluir onde vai cada chip
+[2022-08-31 02:57:16] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23646.jpg
+[2022-08-31 02:57:16] Felipe "Juca" Sanches: agora mudei as cores e deixei semi-transparente pra bagunçar menos a visualização do layout
+[2022-08-31 03:10:00] Flávio Amieiro: Se quiser fazer push do projeto depois, eu posso tentar ajudar!
+[2022-08-31 03:10:13] Felipe "Juca" Sanches: legal!
+[2022-08-31 03:10:16] Felipe "Juca" Sanches: faço sim
+[2022-08-31 03:10:22] Felipe "Juca" Sanches: antes de ir dormir
+[2022-08-31 03:10:51] Flávio Amieiro: Até o fim do mês ando muito sem tempo, mas posso tentar trabalhar nisso nos buracos te tempo que rolam. Hahhaha
+[2022-08-31 03:10:54] Flávio Amieiro: Show!
+[2022-08-31 03:11:47] Flávio Amieiro: Eu só preciso fazer downgrade do meu kicad pq tô usando o main e ninguém consegue abrir meus projetos...
+[2022-08-31 03:11:59] Felipe "Juca" Sanches: kkkk
+[2022-08-31 03:20:14] Felipe "Juca" Sanches: acho que o queq faz mais sentido é paralelizar. Eu continuo trabalhando no estudo dessa placa e você pode pegar uma outra placa do synth pra ir fazendo. Assim não ficamos mexendo o tempo todo nos mesmos arquivos
+[2022-08-31 03:21:15] Felipe "Juca" Sanches: vou tirar um tempinho nessa próxima semana para fazer o escaneamento completo de todo o conjunto de fotolitos. Pra ter isso em mãos quando eu estiver viajando (to indo morar em Londres pelos próximos 12 meses)
+[2022-08-31 03:26:20] Flávio Amieiro: Boa!
+[2022-08-31 03:26:30] Flávio Amieiro: Acho ótima a idéia
+[2022-08-31 03:26:48] Flávio Amieiro: Eita! Vai rolar mesmo?!
+[2022-08-31 03:27:26] Felipe "Juca" Sanches: muito provavelmente sim. Só não vai rolar se der zica no pedido de visto. De resto, tá tudo muito bem encaminhado já
+[2022-08-31 03:28:08] Flávio Amieiro: Irado! Boa sorte com a mudança!!
+[2022-08-31 03:28:17] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23662-sticker.webp
+[2022-08-31 03:28:23] Felipe "Juca" Sanches: você também 😊
+[2022-08-31 03:28:36] Felipe "Juca" Sanches: (mas estamos indo em sentidos opostos né?)
+[2022-08-31 04:59:58] Flávio Amieiro: Pois é
+[2022-08-31 05:00:01] Flávio Amieiro: Hahahahahah
+[2022-08-31 05:00:16] Flávio Amieiro: Valeu!
+[2022-08-31 06:14:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23668.jpg
+[2022-08-31 06:14:20] Felipe "Juca" Sanches: Avanços de hoje no estudo da interface de controle digital do synth do prof. Guido Stolfi
+[2022-08-31 06:14:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23669.jpg
+[2022-08-31 07:21:04] Flávio Amieiro: Muito bom!
+[2022-08-31 14:40:01] Pedro de Medeiros 👾: Acho que encontraria compradores fácil se você construísse e vendesse

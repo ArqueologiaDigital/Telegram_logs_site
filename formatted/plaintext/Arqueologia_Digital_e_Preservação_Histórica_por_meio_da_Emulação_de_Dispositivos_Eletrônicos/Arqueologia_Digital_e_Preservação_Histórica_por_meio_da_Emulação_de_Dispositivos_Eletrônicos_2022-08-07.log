@@ -1,0 +1,43 @@
+[2022-08-07 08:21:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23221.jpg
+[2022-08-07 08:21:03] Felipe "Juca" Sanches: Escaneando fotolitos do sintetizador do professor Guido Stolfi
+[2022-08-07 08:23:54] Felipe "Juca" Sanches: E quem estiver atento aos detalhes terá visto uma pequena pilha de placas de fenolite dupla-face no canto direito superior da foto...
+[2022-08-07 12:28:01] L.: O Baer Mate lembra o Club Mate?
+[2022-08-07 16:49:17] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23224.jpg
+[2022-08-07 16:49:22] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23225.jpg
+[2022-08-07 16:49:22] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23226.jpg
+[2022-08-07 18:24:46] Felipe "Juca" Sanches: lembra um pouco sim. É diferente, mas é parecido.
+[2022-08-07 18:26:52] Felipe "Juca" Sanches: Que interessante isso!  Como será que é feita a configuração desses patches? Vou ler a documentação mais tarde. Agora estou focado no escaneamento e estudo dos fotolitos do synth do Guido Stolfi
+[2022-08-07 18:54:20] Augusto Almeida: Acredito que seja a mesma estratégia do romulator
+[2022-08-07 18:55:00] Augusto Almeida: Sendo que o romulator é pra 6502
+[2022-08-07 18:55:53] Augusto Almeida: https://bitfixer.com/product/romulator/
+[2022-08-07 18:56:04] Augusto Almeida: O cara tá fazendo um pra Z80
+[2022-08-07 19:01:24] Felipe "Juca" Sanches: gente... é muito gostosa a sensação de manusear esses fotolitos e ir aos poucos desvendando os circuitos.
+[2022-08-07 19:02:03] Felipe "Juca" Sanches: Dá uma sensação de aventura esse processo de descoberta. E esse cuidado ao manusear algo muito raro
+[2022-08-07 19:03:14] Felipe "Juca" Sanches: Indiana Jones feelings... Só que com menos riscos à vida. Não tenho ninguém me perseguindo, que eu saiba... kkkk
+[2022-08-07 19:04:04] Felipe "Juca" Sanches: mas é bem essa sensação de estar inspecionando um "mapa do tesouro"
+[2022-08-07 19:04:27] Felipe "Juca" Sanches: tipo algum episódio de Duck Tales haha
+[2022-08-07 19:10:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23238.jpg
+[2022-08-07 19:11:06] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23239.jpg
+[2022-08-07 19:13:44] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/146
+[2022-08-07 19:18:31] Felipe "Juca" Sanches: de onde veio aquele nome de variavel "ampersand"?
+[2022-08-07 19:18:56] Felipe "Juca" Sanches: na verdade acho que não é variavel, mas sim o prefixo usado em algumas constantes
+[2022-08-07 19:21:21] Pedro de Medeiros 👾: em qual arquivo?
+[2022-08-07 19:21:35] Felipe "Juca" Sanches: no codigo que desenha o timer
+[2022-08-07 19:21:55] Felipe "Juca" Sanches: seria ampersand um sinonimo para ampulheta?
+[2022-08-07 19:22:07] Pedro de Medeiros 👾: sim
+[2022-08-07 19:22:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23247.jpg
+[2022-08-07 19:23:33] Pedro de Medeiros 👾: Vou mudar pra sandglass
+[2022-08-07 19:23:40] Pedro de Medeiros 👾: Ou hourglass
+[2022-08-07 19:26:28] Pedro de Medeiros 👾: quero
+[2022-08-07 19:26:55] Pedro de Medeiros 👾: Tá pronto
+[2022-08-07 19:34:37] Felipe "Juca" Sanches: merged!
+[2022-08-07 19:44:47] Pedro de Medeiros 👾: Mudei o screenshot https://github.com/ArqueologiaDigital/Mines/pull/147
+[2022-08-07 20:02:09] Felipe "Juca" Sanches: Os 2 temas ainda estão disponiveis?
+Se sim, seria melhor preservar o screenshot antigo e apenas adicionar o novo num arquivo separado, e atualizar o README para mostrar os 2 screenshots
+[2022-08-07 20:02:44] Pedro de Medeiros 👾: O antigo xpm foi removido
+[2022-08-07 20:03:10] Felipe "Juca" Sanches: seria legal trazer ele de volta e adicionar algum mecanismo para troca de tema
+[2022-08-07 21:33:55] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/0147
+[2022-08-07 22:50:30] Pedro de Medeiros 👾: Acho que está legal assim. 👆
+[2022-08-07 23:32:19] Felipe "Juca" Sanches: da hora!
+[2022-08-07 23:32:27] Felipe "Juca" Sanches: merged!
+[2022-08-07 23:52:13] L.: https://twitter.com/richinseattle/status/1556469990592630784?t=KTVJ_ot3ursMuZLi-Ppt_g&s=35

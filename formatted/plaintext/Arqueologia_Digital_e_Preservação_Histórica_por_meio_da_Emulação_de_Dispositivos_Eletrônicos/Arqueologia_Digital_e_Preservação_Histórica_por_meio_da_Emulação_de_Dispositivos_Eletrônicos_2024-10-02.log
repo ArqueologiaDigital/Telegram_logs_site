@@ -1,0 +1,16 @@
+[2024-10-02 03:10:25] L.: https://marincomics.com/vallejo-pixelart.html
+[2024-10-02 07:09:52] Pablo Vasques Bravo-Villalba: Muito legal. Nunca tinha pensado na influência do Vallejo e do Sorayama na demoscene. Pensando em retrospecto é super, super óbvio. Várias considerações bacanas no artigo, também.
+[2024-10-02 21:04:23] Felipe "Juca" Sanches: Como  eu consegui fazer dumps bons da maincpu do kn5000 esse mês usando o Arduino ligado na porta paralela, agora estou me preparando psicologicamente para encarar o desafio de fazer o dump da subcpu por técnicas similares.
+[2024-10-02 21:09:05] Felipe "Juca" Sanches: um caminho possível que andei pensando é o seguinte:
+
+* Mudar o ponto no qual eu insiro código arbitrário durante o boot para ser um pouco depois da rotina que carrega o payload executável para a subcpu.
+* fazer um patch para que esse payload contenha código que lê os bytes de 0xFE0000 até 0xFFFFFF (que é onde fica a ROM de boot, com 128k bytes) e os envia para a maincpu por meio dos latches de comunicação inter-CPUs
+* no código inserido durante o boot da maincpu, ficar lendo do latch e escrevendo na porta paralela.
+[2024-10-02 21:12:36] Felipe "Juca" Sanches: Mas eu tenho um receio. Toda vez que esses latches recebem escrita de dado,  é gerada uma interrupção na CPU de destino da mensagem. E eu acho que eu teria que desabilitar essa rotina de tratamento de interrupção, caso contrário ela atrapalharia a minha recepção normal do dump.
+
+E outro caminho possível seria eu fazer uso dessa rotina de tratamento de interrupção para receber o dump também. Mas... não sei se mexer nela não atrapalharia o protocolo inicial de carga do payload executável.
+
+Então me parece que o caminho melhor seria eu dar uma estudada no disasm desse int handler e tentar me familiarizar com o protocolo em questão.
+[2024-10-02 21:13:26] Felipe "Juca" Sanches: mas também existe a possibilidade do envio de payload não envolver a rotina de recepção de dados no lado da maincpu. E aí daria pra eu "estragar" essa int handler numa boa com um patch mais grosseiro mesmo
+[2024-10-02 21:40:34] Felipe "Juca" Sanches: Tem um agravante, entretanto... Essa comunicação inter-CPU é feita por operações de "micro-dma" que o TLCS900 suporta. E tem algumas escritas em registradores de controle que não  estão sendo decodificadas corretamente pelo meu disassembler e suspeito que sejam relacionadas ao setup dessa micro-dma. Pra eu entender exatamente como funciona o protocolo de envio de payload para a subcpu seria importante eu consertar esse decoding dos opcodes extra dessa CPU. E não achei em lugar nenhum documentação dos valores desses opcodes, então estou no escuro.
+[2024-10-02 21:41:29] Felipe "Juca" Sanches: ACHO que já troquei uma dessas instruções por NOP e o resultado, se não me falha a memória, foi de falha na inicialização da subcpu, por isso que acho que é relacionado ao setup de micro-dma

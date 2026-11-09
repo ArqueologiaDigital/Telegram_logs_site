@@ -1,0 +1,107 @@
+[2021-10-08 06:25:35] Ismael Luceno: @fsanches estava pensando que não seria tão difícil fazer un pinball from scratch
+[2021-10-08 06:25:49] Ismael Luceno: só leva tempo, muito tempo
+[2021-10-08 13:51:56] Erin Pinheiro 🐿: procura o Bill Paxton Pinball do ben heck
+[2021-10-08 14:01:05] FTMaciel: @mynameiserin não esqueci do seu negócio. Ta embalado mas ando meio enrolado pra ir nos correios
+[2021-10-08 14:05:14] Erin Pinheiro 🐿: de boa, sem problemas!
+[2021-10-08 20:17:57] Felipe "Juca" Sanches: estou hoje brincando com python e curses pra escrever um clone do HexIt, o editor hexadecimal que eu mais gosto de usar no MSDOS, mas que é proprietário
+[2021-10-08 20:18:32] Felipe "Juca" Sanches: to com um rascunho inicial do código da interface. Próxima feature é de fato exibir os bytes do arquivo aberto
+[2021-10-08 20:18:59] Felipe "Juca" Sanches: o cursor já navega pela interface, preso ao grid de 16 bytes por linha do editor
+[2021-10-08 20:21:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16290.jpg
+[2021-10-08 20:21:02] Felipe "Juca" Sanches: Essa é a cara do HexIt no MSDOS (rodando no dosbox)
+[2021-10-08 20:21:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16291.jpg
+[2021-10-08 20:21:54] Felipe "Juca" Sanches: E essa é a cara do meu clone livre em seu estado atual...
+[2021-10-08 20:22:20] Felipe "Juca" Sanches: Resolvi chamar minha implementação de HexItch 😉
+[2021-10-08 20:22:57] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16293-mp4.mp4
+[2021-10-08 20:32:38] Pedro de Medeiros 👾: Tem certeza que já não existe algo assim em software livre pronto pra usar?
+[2021-10-08 20:33:29] Felipe "Juca" Sanches: é a minha farra. Mesmo que já exista, a diversão é fazer
+[2021-10-08 20:33:47] L.: Editor hexa? Tem um monte. Mas igual a esse aí? Talvez não
+[2021-10-08 20:34:00] Felipe "Juca" Sanches: igual certamente não tem
+[2021-10-08 20:34:09] Felipe "Juca" Sanches: mas a farra é fazer identico hahaha
+[2021-10-08 20:34:12] Pedro de Medeiros 👾: Desenvolve usando o Textual: https://github.com/willmcgugan/textual
+[2021-10-08 20:34:18] Felipe "Juca" Sanches: pois bate uma nostalgia
+[2021-10-08 20:34:51] Pedro de Medeiros 👾: Talvez seja mais rápido.
+[2021-10-08 20:35:19] L.: Até o joe, que é o editor de texto que eu uso, tem editor hexa embutido :P
+[2021-10-08 20:36:31] Felipe "Juca" Sanches: o hexit fazia disasm de código x86 também (e interpretava o header dos arquivos .EXE)
+[2021-10-08 20:37:09] Pedro de Medeiros 👾: O Radare2 também faz. 😜
+[2021-10-08 20:37:11] Felipe "Juca" Sanches: e vi ontem que tem uma biblioteca python de bindings do BFD (binary file descriptor), que é a aprte do GNU binutils que lida com binários de diversas arquiteturas
+[2021-10-08 20:37:37] Felipe "Juca" Sanches: entao acho que vou plugar o pybfd3 no meu editor pra suportar qualquer coisa, e não só .EXE de MSDOS
+[2021-10-08 20:47:35] Pedro de Medeiros 👾: O que eu gosto do radare2 é que eu posso chamar ele em linha de comando pra montar/desmontar código z80. rasm2 -a z80 "call 0x8000" devolve cd 00 08
+[2021-10-08 20:50:21] L.: @fsanches procurando foto do lhc aqui achei foto do telebradesco residencia la no lhc. se pá tá lá ainda
+[2021-10-08 20:55:26] Shideravan: Uma coisa que eu tava lendo sobre o cartucho de telebradesco residência é que o Bradesco só descontinuou o serviço quando o último usuário de Mega Drive resolveu desligar o console
+[2021-10-08 20:55:43] Shideravan: Não sei se isso é verdade, mas em se tratando de banco acho altamente improvável
+[2021-10-08 20:56:28] L.: Será que foi usado mesmo?
+[2021-10-08 20:56:37] L.: No sucatão que eu peguei tinha um pallet inteiro desse cartucho
+[2021-10-08 20:56:46] L.: Tinha tipo uma centena lá
+[2021-10-08 20:56:51] Shideravan: Caraca!
+[2021-10-08 20:56:58] Shideravan: Esse trem é valioso hoje em dia
+[2021-10-08 20:57:06] L.: Tudo lacrado inclusive
+[2021-10-08 20:57:24] L.: Bom, hoje, né? Na época eu paguei preço de sucata, por kg
+[2021-10-08 20:57:35] Shideravan: ahhh sim
+[2021-10-08 20:57:45] Shideravan: A questão do telebradesco residencia é que tinha que pagar uma assinatura
+[2021-10-08 20:57:52] L.: Ah, vish. Que zoado.
+[2021-10-08 20:58:02] Shideravan: A pessoa tinha que fazer muita movimentação no serviço para ele se pagar
+[2021-10-08 20:58:08] L.: Melhor ir no banco mesmo e pegar o extrato na boca do caixa lol
+[2021-10-08 20:58:27] Shideravan: E geralmente quem fazia movimentações assim, tinha outros meios melhores de fazer isso
+[2021-10-08 20:58:42] Shideravan: Então imagino que deva ter tido pouca gente que de fato usou o serviço
+[2021-10-08 20:59:14] L.: É, também duvido que tenha sido amplamente usado
+[2021-10-08 20:59:23] L.: Como curiosidade é interessante demais, mas pára por aí
+[2021-10-08 21:02:22] Shideravan: Acabei de checar aqui. O valor da assinatura segundo a Old! Gamer era R$ 3,95 e o cartucho custava R$14,00. Mesmo na época, não era caro não. Na minha memória tava vindo uns valores tipo R$ 45,00 de assinatura, mas é por isso que a gente não pode confiar só na memória hahaha
+[2021-10-08 21:02:30] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16328.jpg
+[2021-10-08 21:02:54] L.: Fico imaginando tiozão comprando um Mega Drive só pra usar isso aí
+[2021-10-08 21:03:20] Shideravan: Se eu tivesse um comercinho na época e soubesse disso, era algo que valia considerar
+[2021-10-08 21:04:22] Shideravan: Um mega drive em 95 era muito mais barato que um computador usado mais fuleiro que você imaginasse
+[2021-10-08 21:05:10] Shideravan: Com a vantagem de você acessar as coisas muito mais rápido do que ligar para alguém lá no banco
+[2021-10-08 21:05:59] Shideravan: Mesmo assim, não me parece o tipo de serviço que conseguia ser anunciado direto com o seu público alvo
+[2021-10-08 21:07:07] Shideravan: Se fosse SÓ para fazer isso, era uma forma acessível. O problema é estar nessa estreita faixa de precisar só disso, mas não querer um 386 que faria muito mais coisas
+[2021-10-08 21:07:44] L.: Em 95 já dava pra arrumar um 386 usado. 486 tava saindo e 386 tava abaixando o preço.
+[2021-10-08 21:07:55] L.: Um DX40 dava um caldo bom ainda naquela época
+[2021-10-08 21:09:04] L.: Em pouco tempo já teria Pentium no mercado, aí achar um PC razoável quase no mesmo preço dum Mega Drive, que é "coisa de criança", era bem mais factível
+[2021-10-08 21:09:55] Shideravan: Quase num preço de um mega drive não
+[2021-10-08 21:10:57] Shideravan: Antes do preço das peças baratear e lei de acesso de informação, PC por mais fuleiro que fosse era patrimônio
+[2021-10-08 21:12:07] Shideravan: Um usado você não achava por menos de 10 salários mínimos (cerca de 1000 reais) e um novo dos mais baratos, saia por volta de 2000-2400 em 95 (que era 20 salários mínimos)
+[2021-10-08 21:17:40] Shideravan: Em 95 a turma comprava computador pagando 31 parcelas :O
+[2021-10-08 21:17:42] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16342.jpg
+[2021-10-08 21:18:55] Erin Pinheiro 🐿: lembro que a minha tia comprou um 486 em 96 ou 97 e era o charme da rua
+[2021-10-08 21:19:01] Erin Pinheiro 🐿: ainda mais com o sierra print artist
+[2021-10-08 21:19:35] Shideravan: Pagar prestações de quase um salário mínimo e meio por quase 3 anos
+[2021-10-08 21:19:54] Shideravan: O negócio tinha que te dar muito retorno hahaha
+[2021-10-08 21:20:12] Shideravan: Já o Mega Drive, você rouba do moleque que está de castigo e GG
+[2021-10-08 21:20:16] Erin Pinheiro 🐿: pior que pra ela dava, ela fazia embalagens e cartões na época
+[2021-10-08 21:20:26] Erin Pinheiro 🐿: (por isso o print artist)
+[2021-10-08 21:20:36] Shideravan: Aí sim
+[2021-10-08 21:21:30] Shideravan: Uma coisa interessante é que as propagandas de PC na época, era quase que exclusivamente vendendo como "máquina de fazer dinheiro". O público alvo das propagandas eram principalmente os grande escritórios
+[2021-10-08 21:22:34] Shideravan: Nos países do norte na mesma época, PC era marketeado principalmente para "comprar com fins didáticos para as crianças poderem aprender com o mágico mundo do computador"
+[2021-10-08 21:25:00] Erin Pinheiro 🐿: ah nem sempre né
+[2021-10-08 21:25:12] Erin Pinheiro 🐿: IBM sempre quis o setor comercial
+[2021-10-08 21:27:56] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16355.jpg
+[2021-10-08 21:28:22] Shideravan: No brasil durante muito tempo só no setor comercial conseguia valer o investimento
+[2021-10-08 21:28:35] Shideravan: Mas a partir dos anos 2000 a coisa melhorou bastante
+[2021-10-08 21:31:06] Shideravan: @lrrosa por que as info exame do Datassette tem pdf com texto selecionável, mas não tem propaganda?
+[2021-10-08 21:31:27] Shideravan: Querendo caçar as propagandas para comparar, mas elas estão faltando hahaha
+[2021-10-08 21:32:18] Shideravan: Até as que apareciam meia página estão assim:
+[2021-10-08 21:32:20] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16361.jpg
+[2021-10-08 21:32:47] Shideravan: Tenho a impressão que vieram direto dos arquivos originais ou de uma versão digital da própria editora hahahaha
+[2021-10-08 21:36:07] Shideravan: A Info Exame é uma ótima fonte para esse tipo de comparação, já que estava na ativa firme e forte com todos os anunciantes tanto nos anos 90 como após os anos 2000
+[2021-10-08 21:36:43] Shideravan: Mas eu lembro de ver certinho as propagandas mudando, de propagandas exclusivamente para o mercado corporativo como essas
+[2021-10-08 21:38:40] Shideravan: Para propagandas já visando mais ser uma central multimídia na casa na viradinha do século, para focar mais o público jovem gamer a partir de 2003/2004 que foi quando teve uma brusca queda de preços fomentada por incentivos fiscais. Aí o computador passou a ser acessível para toda a classe média e o Orkut explodiu hahahaha
+[2021-10-08 21:39:30] Shideravan: Agora computador já está virando mercado de nicho de novo, com salário estagnado e o dólar descontrolado hahaha
+[2021-10-08 21:40:06] Felipe "Juca" Sanches: quem quiser, entra aqui pra acompanhar ao vivo a programação do HexItch:
+
+https://streamyard.com/zux227fwha
+[2021-10-08 21:40:16] Felipe "Juca" Sanches: vou começar em uns 5 min
+[2021-10-08 21:40:21] Felipe "Juca" Sanches: com live pelo youtube
+[2021-10-08 21:40:31] Shelton Ribeiro: E os arrombados usando as placas de vídeo pra minerar essas porcarias de bitcoins aí o preço dos pcs dispararam
+[2021-10-08 21:40:43] Shideravan: Isso que eu ia citar também
+[2021-10-08 21:42:09] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=AQ332wpvOKQ
+[2021-10-08 21:54:06] Shideravan: Eu entrei e vc tava saindo huauhahua
+[2021-10-08 22:19:22] Felipe "Juca" Sanches: vou entrar de novo, mas o link mudou:
+
+https://streamyard.com/kcawdxgr92
+[2021-10-08 22:19:29] Felipe "Juca" Sanches: entrem aí
+[2021-10-08 22:22:01] Leonardo Roman: Foi uma época que algumas edições estavam sendo distribuídas em CD pela Abril mesmo. Essas sem propaganda são essas edições oficiais.
+[2021-10-08 22:22:46] Shideravan: Ahhh que maneiro
+[2021-10-08 22:23:24] Shideravan: Mas eu sinto falta das propagandas hahaha
+[2021-10-08 22:23:47] Shideravan: A info cobriu diversos períodos completamente diferentes de perfil de usuários de computador
+[2021-10-08 22:24:42] Shideravan: Inclusive, a ascensão e estouro da bolha das dot com
+[2021-10-08 22:25:42] Shideravan: Cobriu o ápice da Microsoft, mas também o crescimento do software livre
+[2021-10-08 22:28:44] Shideravan: Hoje em dia até a própria Microsoft também se rendeu ao software livre hahahaha

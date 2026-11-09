@@ -1,0 +1,27 @@
+[2019-10-05 14:48:38] Alexandre Villares: https://arstechnica.com/information-technology/2013/02/step-back-in-time-with-the-elegant-source-code-for-photoshop-1-0/
+[2019-10-05 14:48:59] Felipe "Juca" Sanches: oh wow!
+[2019-10-05 14:54:31] Felipe "Juca" Sanches: 404 nos 2 links pro código fonte. Tanto no link do computer history museum quanto no link do "mirror no github"
+[2019-10-05 14:57:40] Felipe "Juca" Sanches: o artigo da Ars Technica é de 2013. Em apenas 6 anos (ou menos) já tivemos (nós, a sociedade) a incompetência de perder a informação numa página 404? 😞
+[2019-10-05 14:59:57] Erin Pinheiro 🐿: pode ter sido C&D da adobe
+[2019-10-05 15:01:00] Erin Pinheiro 🐿: https://web.archive.org/web/20150222115825/https://computerhistory.org/atchm/adobe-photoshop-source-code/
+[2019-10-05 15:01:50] Felipe "Juca" Sanches: pois é... pode mesmo. Mas um cease & desist da adobe parece incompatível com o que essa notícia da Slashdot reporta (supostamente uma citação do site do CHM): "With the permission of Adobe Systems, the Computer History Museum has made available the source code for Photoshop version 1.0.1,"
+
+https://developers.slashdot.org/story/13/02/14/1323254/for-your-inspection-source-code-for-photoshop-10
+[2019-10-05 15:02:08] Erin Pinheiro 🐿: a adobe é esquizofrênica e doida
+[2019-10-05 15:02:17] Erin Pinheiro 🐿: enfim, o link do wayback funciona
+[2019-10-05 15:02:23] Erin Pinheiro 🐿: tanto pro artigo qto pro download
+[2019-10-05 15:03:15] Felipe "Juca" Sanches: ah, que bom!
+[2019-10-05 15:05:35] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-10/10226.jpg
+[2019-10-05 15:05:35] Felipe "Juca" Sanches: os arquivos do código fonte possuem um cabeçalho de copyright mencionando o CHM
+[2019-10-05 15:06:54] Erin Pinheiro 🐿: então vai ver é social bitrot mesmo
+[2019-10-05 15:07:13] Erin Pinheiro 🐿: (que é o que eu chamo quando páginas caem em abandono e deixam de funcionar)
+[2019-10-05 15:11:20] Alexandre Villares: Putz, é duro isso
+[2019-10-05 15:11:51] Alexandre Villares: Páginas que eu cuidei ao longo dos anos apodreceram muito tb
+[2019-10-05 15:12:30] Alexandre Villares: O artigo mencionava GitHub também, não?
+[2019-10-05 15:13:11] Felipe "Juca" Sanches: menciona, mas tá fora do ar também
+[2019-10-05 15:13:48] Felipe "Juca" Sanches: se bobear era um mirror feito por alguma pessoa qualquer, o que seria uma infração desses termos "may not be distributed to third parties"
+[2019-10-05 15:14:07] Felipe "Juca" Sanches: que é um termo bizarro para um item de museu online
+[2019-10-05 15:15:07] Alexandre Villares: Super
+[2019-10-05 15:15:21] Felipe "Juca" Sanches: Eu tenho acesso a um pedaço enorme do código fonte em ASM do port de MSDOS do jogo Pinball Fantasies. Mas, infelizmente, não tenho autorização para compartilhar.
+[2019-10-05 16:37:48] L.: O código é bem legível
+[2019-10-05 16:37:57] L.: (do PS)

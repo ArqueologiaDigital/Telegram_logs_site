@@ -1,0 +1,31 @@
+[2025-04-22 01:19:04] Erin Pinheiro 🐿: que charme, o tanto de chave sem etiqueta parece cabine de aeronave
+[2025-04-22 01:19:48] Erin Pinheiro 🐿: ah tem etiqueta sim, é que é difícil de ler o relevo
+[2025-04-22 01:21:43] Erin Pinheiro 🐿: mas usar o 186 é nostalgia né? z80 ou algum risc da época acho que faria mais sentido em eficiência
+[2025-04-22 01:22:06] Erin Pinheiro 🐿: se bem que dos é o que tem mais software pronto
+[2025-04-22 01:22:17] Erin Pinheiro 🐿: cp/m nem tanto
+[2025-04-22 02:24:45] RicBit: Acho que é um processador moderno emulando xt
+[2025-04-22 02:26:44] RicBit: Que deve ser melhor que z80 porque z80 é nmos. Se minha memória não falha, o transistor do nmos conduz corrente sempre que o bit é 0. Do cmos para frente ele do consome energia enquanto está mudando de 0 para 1 ou vice versa, não consome nada enquanto o bit está parado.
+[2025-04-22 07:55:20] Pablo Vasques Bravo-Villalba: Sim, é um ESP32 emulando XT. Não sei por que ele chamou de clone, talvez porque se chamasse de emulador as pessoas ficariam menos interessadas? 🤔
+[2025-04-22 09:30:45] Erin Pinheiro 🐿: sim sim, é que eu achei que emular um PC z80 seria melhor no micro
+[2025-04-22 15:21:45] Alexandre Villares: ha!
+[2025-04-22 15:22:10] Alexandre Villares: Entrei pra postar esse link, achei massa...
+[2025-04-22 15:22:36] L.: é muito doido ver um microcontrolador rodando excel
+[2025-04-22 15:23:04] L.: pra quem cresceu com basic stamp e 8051, é uma loucura  hehe
+[2025-04-22 20:49:44] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-04/34813.jpg
+[2025-04-22 20:49:44] Pedro de Medeiros 👾 [forwarded]: São Paulo MSX Summit 2025
+🗓 19 de julho
+📍 Club Homs – Av. Paulista
+
+O evento mais aguardado pelos fãs de MSX do Brasil está chegando!
+A chance única e histórica de conhecer o Pai do MSX presencialmente no Brasil!
+
+Palestras, lançamentos, exposição e outros com a presença ilustre do *Dr. Kazuhiko Nishi* – criador do padrão MSX, direto do Japão! 🇯🇵
+
+⚠ VAGAS LIMITADAS!
+Garanta seu ingresso agora:
+👉 saopaulomsxsummit.com
+
+Não fique de fora dessa celebração histórica do universo MSX!
+
+Receba notícias em primeira mão sobre o evento em nosso grupo do Whatsapp: https://chat.whatsapp.com/C5PoN7WBJJ1J5bnupUc7Zz
+[2025-04-22 20:50:52] Pedro de Medeiros 👾: Oi, Alexandre. Eu participei do seu workshop no último Python Cerrado. 😉

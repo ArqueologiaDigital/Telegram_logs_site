@@ -1,0 +1,34 @@
+[2025-11-29 01:04:29] Erin Pinheiro 🐿: praticamente a mesma do top gear no snes, só que com menos truque de hardware
+[2025-11-29 01:05:26] Erin Pinheiro 🐿: tenho um triângulo na memória e controlo como ele é "projetado" na tela
+[2025-11-29 01:06:53] Erin Pinheiro 🐿: dependendo de como avança qual linha do triângulo desenhar na tela, e mudando onde na horizontal, a perspectiva muda
+[2025-11-29 01:07:59] Erin Pinheiro 🐿: como o gametank é framebuffer, da pra fazer só brincando com variável em C, no snes tinha que futricar na VDP com DMA
+[2025-11-29 06:44:17] Pablo Vasques Bravo-Villalba: Como você faz para evitar tearing se o framebuffer não tem páginas?
+[2025-11-29 06:46:00] Pablo Vasques Bravo-Villalba: O SNES precisava fazer DMA para desenhar a pista em Top Gear? Eu imaginaria que isso seria necessário somente para atualizar os patterns, já que o SNES tem uma arquitetura de tiles
+[2025-11-29 06:47:58] Pablo Vasques Bravo-Villalba: Eu acho curioso pensar em um framebuffer como uma arquitetura mais "fácil" se você precisa programar todas as abstrações como tiles ou sprites que você precisar no seu jogo. Mas isso é porque pra mim soa pouco intuitivo. Pra mim coisas como o MSX pareciam anos-luz mais avançadas do que coisas como o Apple II, o CoCo e o ZX Spectrum 😊
+[2025-11-29 07:35:51] Erin Pinheiro 🐿: pra desenhar não, mas pra fazer alguma atualização. não lembro de cabeça
+[2025-11-29 07:36:11] Erin Pinheiro 🐿: e o do 3000 era bem diferente, que eu me lembre
+[2025-11-29 07:36:52] Erin Pinheiro 🐿: mas essa é a beleza, você não usa tiles, ai um jogo como top gear fica fácil
+[2025-11-29 07:37:25] Erin Pinheiro 🐿: que eu me lembre tinha um framebuffer duplo no hardware sim
+[2025-11-29 07:37:40] Erin Pinheiro 🐿: isso foi 2 anos atrás e eu não toquei mais nele
+[2025-11-29 07:40:56] Erin Pinheiro 🐿: se eu não me engano o seu espaço de memória de vídeo era alguma coisa como 6 vezes o tamanho da tela, e você tem controle sobre qual endereço dessa memória é a tela. aí é só usar 2 desses espaços intercalando qual aponta pra tela
+[2025-11-29 07:42:17] Erin Pinheiro 🐿: eu nunca vi o console físico, fiz tudo isso enquanto o Clyde estava implementando essas ferramentas de debugger no emulador, e ele levou uma cópia do meu demo pra uma convenção onde ele foi mostrar o console, pelo que ele disse o pessoal gostou
+[2025-11-29 07:43:08] Erin Pinheiro 🐿: só que eu acabei nunca terminando um jogo com aquilo
+[2025-11-29 07:43:47] Erin Pinheiro 🐿: aliás eu quem introduzi pra ele o dear imgui pa fazer a gui do emulador :)
+[2025-11-29 07:47:09] Pablo Vasques Bravo-Villalba: Só fiquei sabendo da existência disso agora. 😅 Vi uma página de especificações que o Pedro compartilhou mas era muito esparsa, faltavam vários detalhes que me deixaram curioso
+[2025-11-29 07:47:59] Pablo Vasques Bravo-Villalba: Na spec dá a entender que tem 512kB que só são acessíveis pelo blitter
+[2025-11-29 07:49:45] Pablo Vasques Bravo-Villalba: Uma coisa que me chama a atenção em praticamente todos esses projetos de hobby é como o som me parece um cidadão de segunda classe. Se bem que nesse caso específico um processador secundário fazendo síntese por software me parece algo mais próximo da filosofia geral do sistema, de certa forma
+[2025-11-29 07:50:10] Erin Pinheiro 🐿: ah sim, som é bem chatinho nele
+[2025-11-29 07:50:27] Erin Pinheiro 🐿: eu não cheguei a ver, porque achei na época complicado pra fazer qualquer coisa legal
+[2025-11-29 07:51:12] Erin Pinheiro 🐿: o Clyde fez um pipeline tosco pra você poder colocar um midi numa pasta e ele ser convertido pra tocar
+[2025-11-29 07:51:32] Erin Pinheiro 🐿: mas em tese tem potencial pra fazer coisa bem mais legal, tipo wavetables
+[2025-11-29 07:51:50] Erin Pinheiro 🐿: mas tem que ter saco de entender o hardware e fazer do zero no software
+[2025-11-29 07:51:51] Pablo Vasques Bravo-Villalba: Pedro diz que o povo tá fazendo quatro canais de FM 😱
+[2025-11-29 07:52:05] Erin Pinheiro 🐿: oxe, aí sim
+[2025-11-29 07:52:28] Erin Pinheiro 🐿: eu perdi contato porque alguém que eu não gosto entrou no discord e eu saí
+[2025-11-29 07:54:29] Erin Pinheiro 🐿: o gametank é legal porque o básico do projeto é 
+- um processador 6502
+- o resto é software te vira
+[2025-11-29 07:54:45] Erin Pinheiro 🐿: então dá pra fazer coisa bem legal se você encontrar os truques certos
+[2025-11-29 07:55:27] Pablo Vasques Bravo-Villalba: Entendi
+[2025-11-29 09:17:49] Pedro de Medeiros 👾: Sim, tem na API um comando que só troca o buffer. Bem no estilo SDL.
+[2025-11-29 09:34:00] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-11/36552.jpg

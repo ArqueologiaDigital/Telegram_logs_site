@@ -1,0 +1,55 @@
+[2021-07-31 15:16:31] L.: @mynameiserin https://twitter.com/ticky/status/1396334202380079104?s=19
+[2021-07-31 15:21:49] Erin Pinheiro 🐿: nice
+[2021-07-31 15:22:04] Erin Pinheiro 🐿: tem esse aqui também: https://github.com/atauenis/webone
+[2021-07-31 15:22:43] Erin Pinheiro 🐿: é um proxy http que não só funciona pra browsers antigos como também permite rewrites internos, e já vem com alguns pra acessar por exemplo geocities direto da web archive
+[2021-07-31 15:23:01] Erin Pinheiro 🐿: brinquei com ele no meu compaq, funciona super bem
+[2021-07-31 15:35:25] L.: Legal!
+[2021-07-31 17:43:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13792.jpg
+[2021-07-31 17:43:12] Felipe "Juca" Sanches: OK. Inspecionando trechos da ROM do teclado KN5000 no debugger interativo do MAME, achei esse trecho aqui da ROM que é com certeza código. Dá pra ver as estruturas de controle, chamadas de subrotinas, etc... E vocês vão dar risada, mas eu acho que isso tem cara de inicialização de uma placa de vídeo VGA :-P
+[2021-07-31 17:45:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13793.jpg
+[2021-07-31 17:45:50] Felipe "Juca" Sanches: Ao ver isso aí no código do teclado eu rapidamente me lembrei de um trecho do disassembly do jogo Pinball Fantasies. Eu posso estar viajando na maionese, mas acho que é bem parecido...
+[2021-07-31 17:47:58] Felipe "Juca" Sanches: no IBM-PC a VGA tá mapeada em portas enquando no kn5000 os acessos estão sendo feitos por meio do endereço-base 0x17000 da memória.
+
+Será que eu tô enxergando mais coisa do que de fato tem aí? Será que essas coisas são só coincidência?
+[2021-07-31 18:02:00] Felipe "Juca" Sanches: meu raciocínio agora está sendo o seguinte... eu poderia trocar uma dessas instrucoes aí por nop e ver se zoa o modo de vídeo
+[2021-07-31 18:02:17] Felipe "Juca" Sanches: pra confirmar a teoria
+[2021-07-31 18:04:29] Felipe "Juca" Sanches: mas resolvi fazer outra coisa: se for mesmo uma VGA, deve ter código acessando as "portas 3c8 e 3c9" pra configurar a paleta de cores. E ontem eu tava tentando achar onde ficam armazenados os dados de paletas das imagens.
+
+Se eu achar código similar a esse mas acessando as portas 3c8 e 3c9, fortalece minha teoria e ainda ajuda a achar as paletas de  cores (o que me permitiria carregar imagens PNG arbitrárias com qualquer paleta que eu quiser)
+[2021-07-31 18:05:26] Felipe "Juca" Sanches: o trecho que procuro deve ter essa cara:
+30 C8 03   ld WA, 0x03c8
+D9 ??      ld BC, ??
+1E ?? ??   calr ????
+[2021-07-31 18:06:55] Felipe "Juca" Sanches: então devo procurar pela sequencia de bytes: 30 C8 03 D9, mas em big-endian, ou seja:
+no hexdump devo procurar por C8 30 D9 03
+[2021-07-31 18:08:43] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13800.jpg
+[2021-07-31 18:08:43] Felipe "Juca" Sanches: ahá! Será que é?! Vou carregar no disassembler pra dar uma olhadinha 😉
+
+olha a porta 3c9 alí na linha de baixo também! Vixxx....
+[2021-07-31 18:18:37] Felipe "Juca" Sanches: é... tá com muita cara de VGA isso!
+[2021-07-31 18:30:41] Felipe "Juca" Sanches: ok, acho que isso aqui é uma evidencia muito forte para confirmar a teoria. A partir desse trecho do código, a paleta de cores parece ser inicializada com as seguintes cores:
+
+* #0: preto rgb=(00, 00, 00)
+* #1: branco (0F, 0F, 0F)
+* #2: vermelho (0F, 00, 00)
+* #3: verde (00, 0F, 00)
+* #4: azul (00, 00, 0F)
+* #5: ciano (00, 0F, 0F)
+* #6: amarelo (0F, 0F, 00)
+* #7: magenta (0F, 00, 0F)
+[2021-07-31 18:32:15] Felipe "Juca" Sanches: que me parece uma sequencia muito comum de ser usada para uma paleta básica. Eu já estou colocando minha mão no fogo que esse teclado tem uma controladora compativel com VGA
+[2021-07-31 18:33:53] L.: Abre e bota um monitor 😅
+[2021-07-31 18:33:59] Felipe "Juca" Sanches: kkkk
+[2021-07-31 18:34:23] L.: Mas, tipo, escrever nessas portas não diz nada né. Não é PC pra essas portas fazerem sentido
+[2021-07-31 18:34:43] L.: Pode ser até algo inspirado em VGA
+[2021-07-31 18:34:56] Felipe "Juca" Sanches: mas talvez tenham criado um controlador com registros em memória usando o mesmo padrão de numeração e funcionalidades
+[2021-07-31 18:35:12] L.: Pode ser. Facilitaria desenvolvimento
+[2021-07-31 18:35:20] Felipe "Juca" Sanches: facilita demais!
+[2021-07-31 18:36:09] Felipe "Juca" Sanches: cara... é incrível como é possível eu bater o olho num código supostamente sem relacao nenhuma, ver um 3c4 e um 3c5 e gritar: "Pinball Fantasies! VGA!!!!" kkkkk
+[2021-07-31 18:36:21] Felipe "Juca" Sanches: o cérebro é uma maquininha fantástica 😉
+[2021-07-31 18:40:42] L.: É bizarro lembrar dessas coisas mesmo
+[2021-07-31 18:42:03] Felipe "Juca" Sanches: to comecando a ficar com vontade de transpilar o pinball fantasies de x86 pra TLCS900H
+[2021-07-31 18:42:08] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13815-sticker.webp
+[2021-07-31 18:42:21] L.: Quando fiz o programinha de mapa em qbasic no LHC, eu precisava fazer uma detecção de colisão. Jeito mais fácil foi ler memória de vídeo. Eu lembrei que VGA colorido começava no seg b800 e escrevi o código que funcionou de primeira hahaha
+[2021-07-31 18:42:50] L.: Não lembro coisa importante mas lembro coisa inútil tipo isso
+[2021-07-31 18:43:02] Felipe "Juca" Sanches: bom... nesse caso foi útil!

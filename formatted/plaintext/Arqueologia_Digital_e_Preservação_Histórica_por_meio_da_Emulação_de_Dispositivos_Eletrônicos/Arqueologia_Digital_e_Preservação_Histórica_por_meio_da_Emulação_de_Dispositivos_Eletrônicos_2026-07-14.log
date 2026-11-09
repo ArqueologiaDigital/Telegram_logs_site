@@ -1,0 +1,13 @@
+[2026-07-14 00:23:57] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39606.jpg
+[2026-07-14 00:23:57] RicBit: treinei na cpu outro modelo, está bem legal apesar do aspecto de vhs velho. vou deixar rodando na gpu à noite pra ver como fica.
+
+a parte bacana é que treinar é lento mas inferir é rapidinho, dá para colocar dentro de um emulador e fazer em real time.
+[2026-07-14 00:28:54] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39607.jpg
+[2026-07-14 00:28:54] RicBit: aqui ele inventou um vermelho, mas achei bacana que ele tambem renderizou um brilho na torre, como se tivesse iluminando. achei impressive para um modelo sem usar difusão. com difusão vai ficar ainda mais legal.
+[2026-07-14 05:14:32] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39608.jpg
+[2026-07-14 10:03:24] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39609.jpg
+[2026-07-14 10:03:24] RicBit: modelo novo, tá ficando legal. dessa fez eu treinei com screenshots de snes e mega drive
+[2026-07-14 14:43:22] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39610.jpg
+[2026-07-14 14:43:22] RicBit: tive outra ideia para gerar input data. ao inves de pegar anime e quantizar nas cores do tms, eu faço uma distorção continua usando o tms como atrator. ficou bacana, ele puxa para as cores do tms, então o treino não vai ficar perdido.
+[2026-07-14 15:06:32] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39611.jpg
+[2026-07-14 15:06:32] RicBit: o mapa continuo

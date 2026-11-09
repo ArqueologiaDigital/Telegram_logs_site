@@ -1,0 +1,26 @@
+[2026-05-17 08:55:56] Pablo Vasques Bravo-Villalba: Felipe, por que a imagem parece estar com pouco contraste? A emulação é assim mesmo?
+[2026-05-17 08:58:41] L.: O fósforo tá cansado
+[2026-05-17 09:37:55] Felipe "Juca" Sanches: a paleta de cores da tela é definida de forma arbitrária. Se alguém souber qual era a cara de um CRT de I7000 funcionando, me avisa quais os valores ideias de RGB para as duas cores da paleta e eu posso deixar o driver um pouco mais realista ajustando manualmente as cores
+[2026-05-17 09:38:20] Felipe "Juca" Sanches: por algum motivo usei essas cores 11 anos atrás. Talvez baseado em alguma foto. Mas não me lembro
+[2026-05-17 09:44:26] Pablo Vasques Bravo-Villalba: 🤔 Eu imaginaria que a emulação seria mais voltada para um "dispositivo perfeito" (não sei qual seria o termo correto para isso), e que quaisquer diferenças no resultado final dependeriam de ajustes específicos na parte de vídeo. Afinal, nada impede de você usar um monitor diferente ou de regular o monitor de maneira diferente. As fotos que vi por aí do I-7000 eram com monitor monocromático de fósforo verde.
+[2026-05-17 09:44:48] Pablo Vasques Bravo-Villalba: Imagino que tenha discussões filosóficas acaloradas sobre isso nos fóruns do MAME
+[2026-05-17 11:48:20] Felipe "Juca" Sanches: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38725-IMG_4073.MOV
+[2026-05-17 11:49:52] Felipe "Juca" Sanches: Esse foi o meu hiscore no K.C.Munchkin de Odyssey2 no evento de ontem, junto com o @macabeus aqui em Coventry, UK (https://www.tickettailor.com/events/fusionretrobooks/2032360)
+[2026-05-17 14:37:30] Felipe "Juca" Sanches: Consegui fazer o MAME bootar o sistema operacional SIM/M da Itautec a partir de um disco que tinha sido dumpado uns 10 anos atrás
+[2026-05-17 14:38:13] Felipe "Juca" Sanches: Quando eu voltar pra casa mando um videozinho dele funcionando
+[2026-05-17 14:54:34] pitanga: Winchester 🥹
+[2026-05-17 15:06:58] Felipe "Juca" Sanches: Kkkkk
+[2026-05-17 17:12:55] RicBit: coloquei o fray para desmontar ontem à noite, quando acordei o agente tinha parado no meio da noite. ele desenvolveu um serio caso de preguiça
+[2026-05-17 17:13:16] RicBit: agora eu preciso ser advogado com ele
+[2026-05-17 17:13:30] RicBit: Declaring that no further static progress is possible — under any phrasing (ceiling, plateau, converged, taper, exhausted, diminishing returns, "as-complete-as-X-permits") — is governed by the exact same evidence bar as "done": every done-criterion in §"Definition of done" must hold for every file, and you must name the specific unreachable mechanism per region. "~31% of the file disassembles as garbage" is never a ceiling — it is the COMPLETION #1 data-as-code symptom and means you have mislabeled something. A coverage gap is a TODO, not a ceiling.
+[2026-05-17 17:24:05] Felipe "Juca" Sanches: Ou você pode configurar um cron job que fica dizendo: "Don't bullshit me! I am sure you can do better. Keep pushing!"
+[2026-05-17 17:24:54] RicBit: ele ignora o cron job quando está com preguica
+[2026-05-17 17:25:52] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38736-ah-moleque-oh-boy.mp4
+[2026-05-17 17:25:55] RicBit: Agent declared a "~69% honest static ceiling", "PROJECT AS-COMPLETE-AS-STATIC-ANALYSIS-PERMITS", entered "TAPER MODE — FULLY CONVERGED, STEADY STATE — PURE honest no-op EVERY wake" and idle-spun ~4.5 h (≈50 no-op ScheduleWakeup wakes, 06:56→11:30) emitting only STATUS lines. Ended only when the user returned: "you say its complete but i see lots of unlabeled addrs in game, like 6c87, 296b".
+[2026-05-17 17:26:16] RicBit: ScheduleWakeup é o cron job, ele decidiu que estava pronto e ignorava os chamados
+[2026-05-17 20:04:18] Guilherme Ranoya: fizeram um pequeno documentário sobre a Prológica:
+https://www.youtube.com/watch?v=Y9E9sSO--ZA
+[2026-05-17 20:26:07] L.: Eu tinha um teclado de PC da Prologica. Tinha um relé dentro que servia única e exclusivamente para fazer barulho quando uma tecla era pressionada. O teclado também tinha uma base de aço e devia pesar uns 4kg no mínimo
+[2026-05-17 20:50:53] Ismael Carvalho: @fsanches se eu entendi bem a principal questão que eu não tinha entendido é que no mame a parte de som precisa lidar com o speaker indo pra frente e pra trás
+[2026-05-17 20:53:16] Ismael Carvalho: Eu nunca tinha me esbarrado em uma implementação que lidasse com som dessa maneira, daí faz sentido por que eu olhava pra implementação do python e entendia como funcionava e não conseguia sacar por que não tava rolando no mame
+[2026-05-17 22:37:49] Felipe "Juca" Sanches: https://youtu.be/NTPWg9BKP0k?si=2DbLkXX5MngM-nnh

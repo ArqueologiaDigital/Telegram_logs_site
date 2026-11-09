@@ -1,0 +1,42 @@
+[2026-11-07 08:40:32] Felipe "Juca" Sanches: É muito interessante finalmente descobrir qual é a proveniência do kernel do bagulho que eu venho fuçando há 5 anos!
+[2026-11-07 09:18:44] Pedro de Medeiros 👾: Comandos do V9990 não são canceláveis pelo que eu me lembro.
+[2026-11-07 09:19:30] Pedro de Medeiros 👾: Então acho que não vai precisar fazer um PR de follow-up.
+[2026-11-07 11:37:22] RicBit: no idea. imagino que se voce começar um comando novo antes do antigo terminar, cancela o atual rodando, o que deve ser equivalente. só testando mesmo.
+[2026-11-07 13:13:21] Shideravan: Temos que comemorar um marco
+[2026-11-07 13:13:33] Shideravan: O MAME atingiu 400 PR sem revisão acumulados!
+[2026-11-07 13:13:39] Shideravan: Uma marca histórica kkkkkkkkkkkkkkk
+[2026-11-07 13:14:03] Shideravan: E do jeito que está indo, logo bate 500 nesse limbo kkkkkkkkkkkkkk
+[2026-11-07 13:18:55] Tataizinha: Pior que quando essas coisas forem revistas, já vão estar incompatíveis com o código atual. Então imagine quanto progresso é perdido nesse limbo 😢
+[2026-11-07 14:59:23] RicBit: nah, a AI é boa pra fazer rebase
+[2026-11-07 15:08:40] Tataizinha: O problema é que com isso demorando anos, muitos devs vão sumindo e outros perdem a empolgação de se darem ao trabalho de fazer isso
+[2026-11-07 15:08:50] Tataizinha: Tem PR lá de 2018
+[2026-11-07 15:14:26] Shideravan: Um limbo assim não é benéfico para nenhum projeto
+[2026-11-07 15:15:04] Shideravan: Creio que existem algumas coisas que podem ser feitas para acelerar o processo de validação de PRs que podem ajudar bastante a diminuir a fila
+[2026-11-07 15:19:22] Shideravan: Poderiam evoluir a pipeline de CI para automatizar mais a triagem de PRs, incluindo análise estática (para capturar code smells e memory leaks), testes de regressão automatizados nos drivers alterados e relatórios resumidos com CodeRabbit ou PR-Agent. Só isso já economizaria bastante tempo de revisão manual e facilitaria muito o trabalho.
+[2026-11-07 15:22:10] Shideravan: @fsanches você que está virando dinossauro no MAME poderia sugerir atualizações no CI
+[2026-11-07 17:11:06] Felipe "Juca" Sanches: O quanto disso é equivalente ao que o AI-skill "/mame-review" faz?
+[2026-11-07 17:21:38] Shideravan: Praticamente nada se sobrepõe, porque a ferramenta do arbee roda client side e o que eu estou sugerindo foca no CI/CD
+[2026-11-07 17:24:32] Shideravan: O CI visa facilitar a tarefa de review depois de postado, até porque não tem como garantir que a pessoa que esteja contribuindo tenha utilizado a AI-skill
+[2026-11-07 17:27:19] Shideravan: O repositório já possui várias actions configuradas, mas foram configuradas em um contexto diferente, já que hoje temos ferramentas melhores que utilizam IA para facilitar o processo de review, inclusive, gerando um sumário de tudo o que está sendo modificado e alertas para memory leaks e ppossíveis regressões
+[2026-11-07 17:29:01] Shideravan: A análise final ainda vai ficar a cargo de quem esteja revisando, mas ele vai ter relatórios muito mais completos da situação para agilizar e poder tomar decisões mais assertivas
+[2026-11-07 17:30:31] Shideravan: Uma coisa complementa a outra
+[2026-11-07 17:32:28] Felipe "Juca" Sanches: você conseque rascunhar um protótipo disso pra gente estudar e possivelmente submeter como PR?
+[2026-11-07 17:32:55] Shideravan: Creio que sim
+[2026-11-07 17:34:27] Shideravan: Seria necessário modificarmos os YAML dentro do .github/workflows
+[2026-11-07 17:34:35] Shideravan: https://github.com/mamedev/mame/tree/master/.github/workflows
+[2026-11-07 17:36:36] Shideravan: Mas pelo que eu conheço do pessoal mais velho do MAME, eles não gostam muito do pessoal mexendo no CI/CD
+[2026-11-07 17:37:40] Paulo: é que o CI/CD é o que garante a qualidade de todos os outros PRs, né
+
+pra mexer lá tem que mostrar que sabe muito bem o que está fazendo
+[2026-11-07 17:38:20] Shideravan: Pois é, o ideal é conversar com o cuavas e com o arbee primeiro
+[2026-11-07 17:38:56] Shideravan: Tanto que se você olhar quem fez modificações ali, praticamente foram só o cuavas, arbee e startaq que fizeram modificações
+[2026-11-07 17:40:32] Shideravan: Modificações no CI/CD precisam ser discutidas antes, analisar os prós e contras e integrar as ações no próprio workflow de review, senão não adianta nada
+[2026-11-07 17:41:00] Shideravan: O ponto que eu quero levar é que existe caminho para melhorar esse fluxo de review
+[2026-11-07 17:41:28] Shideravan: Facilitar o trabalho, para desafogar um pouco esse backlog
+[2026-11-07 18:07:54] Felipe "Juca" Sanches: E o que você acha de brincar de faz-de-conta criando um friendly-fork do MAME em que a gente revisa e faz o merge dos PRs de acordo com o que a gente julga serem métodos melhores de code-review?
+[2026-11-07 19:22:02] Felipe "Juca" Sanches: Projeto MEIME 🤣
+[2026-11-07 21:51:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42240.jpg
+[2026-11-07 21:51:40] Felipe "Juca" Sanches: Cuavas dando mais um exemplo de como ser um verdadeiro imbecil!
+
+Praticamente esfrega no chão a cara da pessoa que está querendo contribuir com o projeto, fecha o PR e não dá nenhuma indicação do que pode ser feito para melhorar o código. O coitado do rapaz ainda tem esperanças e pergunta o que fazer, mas óbvio que depois disso o Cuavas simplesmente fica em silêncio. Um completo escroto esse Cuavas!
+[2026-11-07 21:52:39] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/16695

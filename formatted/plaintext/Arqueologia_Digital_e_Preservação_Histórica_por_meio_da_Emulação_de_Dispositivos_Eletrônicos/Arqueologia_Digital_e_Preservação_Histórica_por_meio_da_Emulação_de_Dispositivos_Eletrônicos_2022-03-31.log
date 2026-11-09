@@ -1,0 +1,4 @@
+[2022-03-31 02:36:57] L.: https://alexandrugroza.ro/microelectronics/system-design/isa-80386dx-sbmc/index.html
+[2022-03-31 07:39:40] Ismael Luceno: https://hackaday.com/2022/03/30/visit-the-worlds-largest-computer-museum-the-heinz-nixdorf/
+[2022-03-31 19:36:28] Felipe "Juca" Sanches: https://github.com/felipesanches/AnotherWorld_VMTools/commit/8e4d936576281987cd8e98da7cafd4d4f3fca554
+[2022-03-31 19:38:14] Felipe "Juca" Sanches: Com esse commit, o disasm resultante fica bem melhor, pois só usa labels onde realmente precisa e também mostra labels do tipo JUNK__3F27: para as rotinas que estão disponíveis no bytecode mas são inalcançáveis. Quero muito entender melhor o que é esse monte de código abandonado no meio do bytecode lançado

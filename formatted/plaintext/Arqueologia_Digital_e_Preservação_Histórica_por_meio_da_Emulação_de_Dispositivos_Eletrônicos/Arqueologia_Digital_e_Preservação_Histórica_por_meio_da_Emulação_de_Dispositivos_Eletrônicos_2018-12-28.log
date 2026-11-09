@@ -1,0 +1,26 @@
+[2018-12-28 01:18:44] Deleted Account: Não sei o que é pior, isso ou o remake do nitendinho 
+https://tecnoblog.net/272945/playstation-classic-desconto/amp/?__twitter_impression=true
+[2018-12-28 02:04:49] Aylons Hazzud: Peraí, puseram o NES classic em produção de novo?
+[2018-12-28 02:42:58] L.: O NES classic não sei, mas eu peguei um SNES classic outro dia :)
+[2018-12-28 03:41:46] Deleted Account: É sim, eu me enganei
+[2018-12-28 20:21:10] Emerson Moura: Olá a todos. Iniciei (faz tempo, mas anda a passos de tartaruga) um projeto de um biblioteca para Arduino com o intuito de criar um barramento paralelo (8 ou 16 bits) para comunicar com chips vintage como, por exemplo, o PSG (chip de som) ou VDP (chip de vídeo) do MSX.
+[2018-12-28 20:23:27] Emerson Moura: Essa biblioteca tem o objetivo de abstrair a conexão física (por exemplo, usar um conversor serial-paralelo como o chip 74595, fazer conexão direta com o barramento disponível no Arduino Mega, usar conversor i2c para 8 bits como o PCF8574 etc).
+[2018-12-28 20:26:38] Emerson Moura: A ideia é que, mesmo mudando a conexão física, a biblioteca permita manter o código de controle de determinado chip (PSG, VDP etc), sem se preocupar em quais pinos ou de que forma o barramento de dados está conectado entre o Arduino e o chip, bastando mudar a instância (Arduino trata drivers/bibliotecas como objetos instanciados) do objeto de controle do barramento.
+[2018-12-28 20:43:26] Emerson Moura: Eu montei um circuito bem simples, ligando o Arduino ao 74595 com 8 LEDs e usei esse programa para colocar uma contagem em binário nele (desculpe o site excessivamente noob para o código):
+https://pastebin.com/WtUNPaTw
+[2018-12-28 20:47:21] Emerson Moura: Se, ao invés de usar o 74595, eu queira usar o PCF8574 (via i2c - apenas 2 terminais do Arduino), preciso mudar apenas as primeiras 2 linhas desse código, para:
+#include "PBOpcf8574.h"
+PBOpcf8574 pBusOut;
+[2018-12-28 20:55:23] Emerson Moura: O código da biblioteca ainda tá bem tosco, mas já funciona o básico do básico:
+[2018-12-28 20:55:26] Emerson Moura: https://pastebin.com/QKFdxDy8
+[2018-12-28 20:57:27] Emerson Moura: https://pastebin.com/FyndyGdz
+[2018-12-28 20:58:46] Emerson Moura: https://pastebin.com/7N0RGQmh
+[2018-12-28 21:01:13] Emerson Moura: Vou aumentar e melhorar um pouco o código e, com um pouco de vergonha na cara, subir pro github ou outro equivalente.
+[2018-12-28 21:11:10] Ronaldo: Legal
+[2018-12-28 21:11:34] Ronaldo: Só que eu imagino que precise algo com um número razoável de pinos...
+[2018-12-28 21:15:24] Emerson Moura: Usando o chip 74595, vc usa 3 pinos do Arduino. Usando o chip PCF8574, usa 2 pinos do Arduino (i2c). No Arduino Mega vc já tem um barramento completo (com 16 bits de endereço e 8 bits de dados) que pode ser usado como barramento de alta velocidade (afinal, no Mega, a preocupação com disponibilidade de pinos é menor).
+[2018-12-28 21:15:55] Emerson Moura: E, com isso, vc consegue usar chips vintage que precisam, só de barramento de dados, 8 pinos.
+[2018-12-28 21:52:34] Ronaldo: Ah, então fica bom. Mas o Mega é compatível com TTL diretamente?
+[2018-12-28 22:59:34] Emerson Moura: Sim. Além de compatível com TTL, ele tem esse barramento completo disponível, que é muito legal pra ligar, inclusive, memória RAM estática (endereça diretamente 64kB externos - o que eu acho muito interessante pra implementar um BASIC ou alguma outra linguagem interpretada) e/ou chips vintage.
+[2018-12-28 23:00:42] Emerson Moura: http://andybrown.me.uk/2011/08/28/512kb-sram-expansion-for-the-arduino-mega-design/
+[2018-12-28 23:01:44] Emerson Moura: O Arduino Mega é excelente pra brincar com ideias meso-vintage (chips antigos), meso-modernas (dispositivos SPI como cartões SD e chips modernos, tanto via SPI quanto i2c).

@@ -1,0 +1,48 @@
+[2026-05-18 06:42:03] Macabeus: Hey, estou planejando na próxima edição da GambiConf colocar no pátio alguns computadores e consoles antigos (ou relançados), para as pessoas poderem jogar e interagir durante o evento.
+Foi bem bacana a experiência no evento acima, e queria replicar na GambiConf.
+
+Devo comprar um Spectrum que estão relançando para usar na exposição, porém, seria bacana se tivesse uns 5 computadores/consoles ao todo para ter maior diversidade.
+
+Alguém daqui estaria disposto a colaborar?
+[2026-05-18 08:20:47] Ismael Carvalho: Eu pretendo ir na gambi conf esse ano pra conhecer
+[2026-05-18 08:57:44] Tevo: Preciso me organizar com a logística, mas eu provavelmente consigo levar uma Sun e/ou um Macintosh PPC
+[2026-05-18 09:50:55] Felipe "Juca" Sanches: Qual será seu calendário de estadia no Brasil no final de 2026?
+
+Pretendo ir pro Brasil pra passar Natal e Ano Novo com a família.
+Fim de novembro (data da GambiConf) pra mim é um pouco cedo demais, eu acho. Então, se eu for participar, acho que vai ter que ser remotamente dessa vez.
+[2026-05-18 10:05:22] Macabeus: Opa, seria muito bom!
+
+Você mora onde? Precisaria de alguma ajuda do nosso lado?
+[2026-05-18 10:07:42] Macabeus: Eu ainda não comprei as passagens, mas como tem o show da Hatsune Miku em Londres dia 12 de Novembro (e vou estar lá), devo viajar para SP dia 14 de Novembro, e ficar até dia 5 de Dezembro.
+Talvez volte dia 12, mas é menos provável
+[2026-05-18 11:20:49] Toy: oia o Macabeus!
+[2026-05-18 11:21:13] Toy: tu estás morando por cá ?
+[2026-05-18 11:28:40] Tevo: Estou em Indaiatuba. Eu não tenho carro, então preciso descobrir como que eu vou levar tudo e trazer de volta, mas isso eu acho que consigo me virar por aqui ^^
+[2026-05-18 11:38:08] Macabeus: cá -> ?
+[2026-05-18 11:38:17] Macabeus: eu moro em Ourém (~1h30 de Lisboa)
+[2026-05-18 11:38:24] Macabeus: e vou para SP 1-2x por ano
+[2026-05-18 11:38:41] Toy: UK
+[2026-05-18 11:38:58] Macabeus: ah, eu estou só turistando na Inglaterra
+[2026-05-18 11:39:04] Macabeus: estou em Londres nesse momento
+[2026-05-18 11:40:05] Toy: estava afim desse evento de Coventry, mas bateu não conseguir as folgas. Sempre vejo as propagandas na Crash
+[2026-05-18 11:40:47] Felipe "Juca" Sanches: bora no evento de Swindon daqui 2 semanas?
+[2026-05-18 11:41:23] Felipe "Juca" Sanches: https://www.retrofest.uk/
+[2026-05-18 11:42:19] Toy: vamos, deixa eu pedir as folgas aqui logo
+[2026-05-18 11:43:10] Toy: aaa é sab/dom, tu vais os dois dias ?
+[2026-05-18 11:45:58] Felipe "Juca" Sanches: sim
+[2026-05-18 11:54:38] Felipe "Juca" Sanches: no sábado o evento começa 10h30 da manhã, mas minha reserva no airbnb tem checkin só 14h e eu estarei vindo de Manchester (onde estarei com a minha esposa nos dias anteriores). Então, ainda não decidi direito, mas ACHO que vou chegar na cidade por volta das 14h mesmo e pegar só medate do dia de evento. E depois eu posso curtir o dia inteiro no domingo. Vou embora na segunda-feira.
+[2026-05-18 12:10:51] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38766.jpg
+[2026-05-18 12:10:51] RicBit: coisa linda esses tiles (psycho wld6)
+[2026-05-18 12:11:41] RicBit: parte é o turquesa, quase nenhum jogo usa turquesa. mas também é o contraste, você bate o olho e já entende o que esta acontecendo
+[2026-05-18 12:12:29] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38768.jpg
+[2026-05-18 12:12:29] RicBit: ja o wld8 é um desastre, treco feio da porra. mas faz sentido, a ultima fase tem que atordoar mesmo, para dar urgencia.
+[2026-05-18 12:13:07] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38769.jpg
+[2026-05-18 12:13:07] RicBit: e eu sou muito lerdo, mas só agora percebi que o fundo do wld1 é um mapa do jogo. dá pra ver ali a fase 2, fase 3, etc.
+[2026-05-18 15:16:03] RicBit: os cenarios na versão de master system são muito inferiores, não tem como comparar 16kb de vram com 128kb no msx. mas os inimigos no master são melhores.
+[2026-05-18 15:53:50] Pablo Vasques Bravo-Villalba: Em tese a versão de MSX é ainda mais econômica com a VRAM, já que os tiles da SCREEN 4 ocupam menos espaço do que os tiles do Master System, e os sprites também ocupam menos espaço
+[2026-05-18 16:05:43] RicBit: por isso que o msx consegue ter 3 tilebanks por wld. o master não consegue nem deixar a menina em tela cheia na abertura lol
+[2026-05-18 16:08:07] RicBit: no wld1 é um tilebank para o mapa, um para o jogo normal, e um para o boss.
+[2026-05-18 18:53:05] L.: https://hellmood.111mb.de//wake_up_16b_writeup.html
+[2026-05-18 18:53:15] L.: Demo dr 16 bytes pra 8086 com som!
+[2026-05-18 20:35:06] Robson França: https://youtu.be/bgPivhnpuXU?si=2RU7Gter3159DMx5
+[2026-05-18 20:47:55] RicBit: ai sim !

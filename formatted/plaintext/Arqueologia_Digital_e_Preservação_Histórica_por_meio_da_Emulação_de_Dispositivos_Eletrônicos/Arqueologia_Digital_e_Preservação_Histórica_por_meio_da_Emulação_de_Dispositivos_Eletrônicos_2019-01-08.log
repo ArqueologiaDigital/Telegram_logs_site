@@ -1,0 +1,17 @@
+[2019-01-08 11:45:27] Ronaldo: Nada mais anacrônico que meter um CPLD numa Soundblaster, hahaha
+[2019-01-08 12:52:47] Felipe "Juca" Sanches: ah! Verdade! Mas eu me referia a ser anacrônico em relação aos dias de hoje. E fiel às técnicas da época.
+[2019-01-08 13:00:04] L.: Adlibzinha pra brincar com o adlib tracker ][ :D
+[2019-01-08 16:33:37] Ronaldo: A adlib não é só um DAC?
+[2019-01-08 16:38:39] Erin Pinheiro 🐿: adlib tem chip OPL2 da yamaha
+[2019-01-08 16:38:58] Erin Pinheiro 🐿: aliás adlib é SÓ OPL2 sem suporte a sample
+[2019-01-08 16:39:17] Erin Pinheiro 🐿: sb16 chegou depois com OPL3 MAIS PCM que aí acho que era só um DAC pro PCM
+[2019-01-08 16:39:59] Erin Pinheiro 🐿: não, é um DSP CT1341
+[2019-01-08 16:40:06] Erin Pinheiro 🐿: http://homepages.cae.wisc.edu/~brodskye/sb16doc/sb16doc.html#DSPPorts
+[2019-01-08 17:13:31] Ronaldo: Ah é, eu lembro vagamente disso
+[2019-01-08 17:17:08] Ronaldo: A Disney Sound Source é praticamente só um DAC, pelo visto.
+[2019-01-08 17:23:38] Erin Pinheiro 🐿: tbm conhecido como covox speech thing
+[2019-01-08 17:31:56] Ronaldo: Sim
+[2019-01-08 19:45:12] Nano Gennari: Não sei se vocês conhecem mas teve um cara que recentemente reimplementou a placa adlib pela porta paralela, ela funciona com um driver no dos que redireciona as comunicações no endereço original da adlib para o endereço da porta paralela, ou fazendo pach direto nos executáveis.
+[2019-01-08 19:46:52] Nano Gennari: Tem versão opl2 e opl3: https://www.serdashop.com/OPL3LPT
+[2019-01-08 19:49:41] Nano Gennari: Ele é basicamente uma R-2R resistor ladder.
+[2019-01-08 19:52:45] Nano Gennari: O covox speech thing é uma das placas de som mais fáceis de clonar, dá para montar uma em uma protoboard em questão de minutos, a desvantagem dela é que ela gasta muitos ciclos da CPU.

@@ -1,0 +1,55 @@
+[2026-02-09 02:19:55] RicBit: a versao do coleco é compilada em 8000, mas parece que veio da v0
+[2026-02-09 02:49:42] Felipe "Juca" Sanches: desenha um diagrama de grafo representando visualmente as derivações
+[2026-02-09 02:49:59] Felipe "Juca" Sanches: parecido com uma árvore genealógica
+[2026-02-09 07:53:44] Pablo Vasques Bravo-Villalba: O que é um mystery footer? E as ROMs europeias são as duas da direita?
+[2026-02-09 10:49:28] RicBit: eu nao sei o que é o mystery footer
+tem uma sequencia de bytes no fim dessas roms que eu não consegui descobrir
+[2026-02-09 10:50:32] RicBit: "AC8882B79D81B78F0087B386AC940087B386B5881401AA"
+[2026-02-09 10:50:57] RicBit: nao é ascii, nao é jis, nao é musica, nao sao graficos
+[2026-02-09 10:51:02] RicBit: nao é ascii, nao é jis, nao é musica, nao sao graficos
+[2026-02-09 10:55:16] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37410.jpg
+[2026-02-09 10:55:55] RicBit: ainda tem mais um monte, mas essas sao as versoes em cartucho
+[2026-02-09 10:56:08] RicBit: depois tem as versoes disco e vai
+[2026-02-09 10:56:48] RicBit: a rom europeia oficial é a eu106
+[2026-02-09 11:37:29] L.: AC 88 é claramente Ademir Carchano 1988
+[2026-02-09 13:14:53] RicBit: foi o que eu pensei tambem lol
+[2026-02-09 13:56:09] Pedro de Medeiros 👾: Também não é código de máquina adicionado pelo jeito.
+[2026-02-09 13:59:58] RicBit: Nope. Talvez algum metadado para o game master?
+[2026-02-09 14:05:59] RicBit: alias deixa eu contar o codigo mais engracado
+[2026-02-09 14:06:31] RicBit: tem um formato de compressao no jogo é 00 terminator, 01-DF dado puro, E0-FF control
+[2026-02-09 14:06:45] RicBit: e como faz para copiar dado para a vram que usa E0 ou mais?
+[2026-02-09 14:06:53] RicBit: nao faz. o formato nao permite
+[2026-02-09 14:07:00] RicBit: e o que a konami fez para contornar?
+[2026-02-09 14:07:06] RicBit: nao usa E0 pra cima
+[2026-02-09 14:07:08] RicBit: lol
+[2026-02-09 14:07:27] RicBit: nao tem tile maior E0, sprite nunca vai muito pra baixo ou muito pra direita
+[2026-02-09 17:54:59] L.: Raiders of the Lost Ark do 2600 desassemblado e comentado https://github.com/joshuanwalker/Raiders2600/
+[2026-02-09 18:26:02] Pedro de Medeiros 👾: Ah, ótimo. Agora vou aprender como se zera o jogo que ganhei naquele natal 43 anos atrás. 😛
+[2026-02-09 22:22:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37428.jpg
+[2026-02-09 22:22:59] Felipe "Juca" Sanches: Esse Claude Code é de cair o cu da bunda!
+[2026-02-09 22:25:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37429.jpg
+[2026-02-09 22:26:55] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37430.jpg
+[2026-02-09 22:26:55] Felipe "Juca" Sanches: Arrumando a porra toda como quem não quer nada...
+[2026-02-09 22:28:41] Felipe "Juca" Sanches: Eu dei pra ele o meu código fonte em C++ (minha implementação da VM do Another World em HLE no MAME)
+
+E dei também uma primeira tentativa minha de reimplementar em assembly de TLCS900, mas que tava toda incompleta e com bugs
+
+E pedi pra ele comparar os códigos e terminar o port
+[2026-02-09 22:30:17] Felipe "Juca" Sanches: Dei também um hexdump implementado em assembly com código de boot mínimo, que eu já tinha feito junto com o Claude mais cedo hoje e pedi pra usar como ponto de partida para rodar a VM direto do boot do teclado (substituindo por completo todo o resto do firmware e, assim, tendo mais espaço livre pra armazenar os assets do jogo direto na MainCPU Program ROM)
+[2026-02-09 22:31:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37433.jpg
+[2026-02-09 22:32:19] Felipe "Juca" Sanches: Isso aqui é o programa de hexdump mostrando um dump de si próprio ;-)
+[2026-02-09 22:33:09] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37435.jpg
+[2026-02-09 22:33:09] Felipe "Juca" Sanches: e, enquanto a gente conversa, o Cláudio coda!
+[2026-02-09 22:33:26] Felipe "Juca" Sanches: Isso é assustador!
+[2026-02-09 22:44:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37437.jpg
+[2026-02-09 22:46:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37438.jpg
+[2026-02-09 23:32:41] RicBit: olha eu testei todas as ai e o claude é a pior
+[2026-02-09 23:33:02] RicBit: roda o gpt codex 5.3 que ele está sem limite de uso por enquanto
+[2026-02-09 23:44:18] Felipe "Juca" Sanches: Pra mim isso parece impressionante:
+[2026-02-09 23:45:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37442.jpg
+[2026-02-09 23:45:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37443.jpg
+[2026-02-09 23:45:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37444.jpg
+[2026-02-09 23:46:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37445.jpg
+[2026-02-09 23:46:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37446.jpg
+[2026-02-09 23:49:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37447.jpg
+[2026-02-09 23:49:24] Felipe "Juca" Sanches: A capacidade de troubleshooting é algo que realmente me impressiona!

@@ -1,0 +1,30 @@
+[2018-08-30 20:18:18] Luciana Marques: 😁😁😁😁
+[2018-08-30 20:18:25] Luciana Marques: Teve encontro hoje???
+[2018-08-30 20:18:53] Luciana Marques: Eu to terminando um EP, não consegui ir
+[2018-08-30 22:09:33] Felipe "Juca" Sanches: hoje não teve.
+[2018-08-30 22:09:37] Felipe "Juca" Sanches: mas eu tava lá
+[2018-08-30 22:10:50] Felipe "Juca" Sanches: por 2 motivos: (a) percebi que apesar de eu não ter anunciado, talvez algumas pessoas pudessem ter a impressão de que iria acontecer. (b) hoje teve gravação dum vídeo descrevendo o garoa para divulgar para outros hackerspaces
+[2018-08-30 22:11:03] Felipe "Juca" Sanches [forwarded]: https://www.facebook.com/hackerspacesbr/videos/746603552338600/
+[2018-08-30 22:52:21] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7514.jpg
+[2018-08-30 22:52:31] L.: Fazer o próprio computador é on-topic aqui?
+[2018-08-30 22:53:59] Emerson Moura: Uia, um MSX empilhado?
+[2018-08-30 22:54:28] L.: É um MSX2 SBC: Stacked Board Computer
+[2018-08-30 22:54:55] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7518.jpg
+[2018-08-30 22:54:55] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7519.jpg
+[2018-08-30 22:58:33] Emerson Moura: Temos um grupo no FB sobre homebrew computers e temos uma atividade fixa no ABC Makerspace / Wikilab (com grupo aqui no Telegram) sobre a construção de homebrew computers (mas nosso foco no Makerspace é um Z80 simples baseado no projeto do Grant Searle - apesar que tem gente que faz projetos próprios).
+[2018-08-30 22:59:30] L.: Eu sou alérgico à Facebook senão entrava nesse grupo aí.
+[2018-08-30 23:05:54] L.: Tem um outro projeto de Z80 simples, o RC2014. O Alan Cox tava portando Fuzix pra ele outro dia.
+[2018-08-30 23:06:29] Emerson Moura: Vc tá documentando esse projeto em algum site ou blog?
+[2018-08-30 23:07:01] L.: Não, mas tô seguindo esse projeto russo aqui: http://zx-pk.ru/threads/27898-modulnyj-kompyuter-%E2%80%93-msx-ext.html?s=91400d6e905b169d43af182aac78a747
+[2018-08-30 23:09:51] Emerson Moura: Eu tô mudando o nosso projeto de SimpleZ80 para algo que fisicamente lembra o RC2014, usando um flat-cable como "placa mãe / barramento".
+[2018-08-30 23:10:50] L.: Se fizer um projeto legal, com memória mapeada tipo megaram, dá pra rodar Fuzix nele com pouco trabalho.
+[2018-08-30 23:11:37] Deleted Account: da hora
+[2018-08-30 23:23:38] L.: Outra coisa que eu tô fazendo aqui e que talvez conte, é uma mini NeXT Cube. Já imprimi todas as peças do gabinete, já configurei o emulador no RPi, só tô esperando o primer secar pra pintar e montar.
+[2018-08-30 23:23:51] L.: Mando fotos quando estiver pra montar tudo. :)
+[2018-08-30 23:24:20] DQ: Eu montei um RC2014. É legal porque é bem expansível e tem uma comunidade bem ativa fazendo placas para ele. Por outro lado, no kit padrão, as funções estão divididas em muitas placas. É meio esquisito ter uma plaquinha só para o clock e reset e outra só com o Z80.
+[2018-08-30 23:25:37] L.: Eu imagino que tenham feito isso para deixar as placas mais simples e menores. Tem vários lugares que fazem placas -- por exemplo, a JLCPCB -- que colocam um preço bem mais acessível para placas até um certo tamanho, especialmente se tiver apenas duas camadas.
+[2018-08-30 23:26:25] L.: Mas, de fato, é meio estranho. É curioso também que eles usem uma Raspberry Pi na "placa de video" dele. Faz sentido, especialmente se considerar o preço da RPi Zero, mas é bem curioso :)
+[2018-08-30 23:43:17] Felipe "Juca" Sanches: é... eu também acho meio roubadinha isso aí... hahaha
+[2018-08-30 23:45:07] L.: Nesse meu MSX2 eu vou roubar e vou usar um Atmega (num Arduino Pro Mini mesmo, que é barato e pequeno) pra converter um teclado PS/2. Mas aí eu acho válido, pelo menos o Atmega ainda é 8-bit, mesmo sendo bem mais rápido que o Z80. :P
+[2018-08-30 23:46:08] Emerson Moura: É mais ou menos o que pretendo fazer com o SimpleZ80 no ABC Makerspace/Wikilab, pra facilitar a montagem pro pessoal que tem menos habilidades e prática com solda... Mas pretendo usar um flat cable no lugar da placa mãe/barramento.
+[2018-08-30 23:49:08] Emerson Moura: Ai a pergunta pro @fsanches (dono da casa): homebrew computer com tecnologia vintage é arqueologia digital no seu entendimento?

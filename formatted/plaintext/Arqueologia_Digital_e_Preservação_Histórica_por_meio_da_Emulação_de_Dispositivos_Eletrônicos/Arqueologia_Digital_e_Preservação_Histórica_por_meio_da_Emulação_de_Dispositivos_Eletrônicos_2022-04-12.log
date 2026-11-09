@@ -1,0 +1,11 @@
+[2022-04-12 03:20:16] Flávio Amieiro: Eu gosto dos vídeos dele tbm. Ele manda bem nos roteiros, narra bem e tal. E faz umas coisas dessas que são meio piada, mas ao mesmo tempo impressionantes...
+[2022-04-12 06:24:15] Erin Pinheiro 🐿: se gostam do tom7 vejam também o resto do SIGBOVIK
+[2022-04-12 06:24:39] Erin Pinheiro 🐿: http://sigbovik.org/
+[2022-04-12 22:39:26] Felipe "Juca" Sanches: A VM do Another World tem apenas 256 palavras de 16 bits como memória "RAM", dos quais uma pequena parte são SFRs (registradores de propósito específico)
+
+O resto dos "dados" que a VM manipula são os assets gráficos, strings de texto e samples/músicas. E tudo isso fica em barramentos dedicados e read-only.
+
+Essa limitação pode ser interessante para a demoscene, pois torna-se desafiador fazer qualquer coisa computada on-the-fly.
+[2022-04-12 22:39:54] Felipe "Juca" Sanches: Na verdade, acho meio decepcionante não poder gerar polígonos algoritmicamente
+[2022-04-12 22:40:17] Felipe "Juca" Sanches: talvez faça sentido fazer um super-set da VM adicionando instruções para manipulação dos dados dos barramentos de assets
+[2022-04-12 22:40:58] Felipe "Juca" Sanches: mas aí já não seria mais a VM do another world. Seria apenas retro-compatível

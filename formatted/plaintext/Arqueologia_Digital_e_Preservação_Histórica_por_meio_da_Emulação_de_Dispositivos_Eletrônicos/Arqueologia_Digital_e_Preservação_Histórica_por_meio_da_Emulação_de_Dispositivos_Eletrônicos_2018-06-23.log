@@ -1,0 +1,60 @@
+[2018-06-23 00:24:39] Felipe "Juca" Sanches: Affonso manda aqui o videozinho que gravamos hoje do Golly Ghost!
+[2018-06-23 00:34:48] Affonso Amendola: OOpa tinha esquecido, sorry
+[2018-06-23 00:44:19] Affonso Amendola: Ta enviando
+[2018-06-23 00:44:31] Affonso Amendola: Ta demorando um teco
+[2018-06-23 01:04:00] Affonso Amendola: video: (not yet published)
+[2018-06-23 08:12:58] * Deleted Account joined the group via invite link
+[2018-06-23 10:20:12] * Felipe "Juca" Sanches removed Deleted Account
+[2018-06-23 10:27:51] Ronaldo: Legal!
+[2018-06-23 10:28:04] Ronaldo: Vocês montaram todo o painel?
+[2018-06-23 10:30:40] Felipe "Juca" Sanches: Por enquanto só esse painel de timer e pontuação. Mas ontem chegou pelo correio um pacote com vários solenóides que vou usar pra montar uma casinha animada
+[2018-06-23 10:31:51] Felipe "Juca" Sanches: De madrugada fiz a ligação dos solenóides numa placa de relês controlada pelo arduino.
+[2018-06-23 10:32:08] Ronaldo: Puxa
+[2018-06-23 10:32:56] Ronaldo: Como fica a documentação de algo assim no MAME? A montagem em si deve ser mais complexa que o código.
+[2018-06-23 10:34:08] Ronaldo: Outra coisa: vocês colocaram um arduino pra controlar o display ou fizeram uma cópia do controlador original e usaram o arduino como interface?
+[2018-06-23 10:34:17] Felipe "Juca" Sanches: Eu explico isso naquela postagem que fiz no fiozera
+[2018-06-23 10:34:31] Ronaldo: Perdi o link da postagem
+[2018-06-23 10:36:10] Felipe "Juca" Sanches: https://forum.fiozera.com.br/t/replicas-funcionais-de-arcades-eletro-mecanicos-com-mame-e-rpi/25
+[2018-06-23 10:37:54] Ronaldo: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5406-sticker.webp
+[2018-06-23 10:40:25] Ronaldo: Bem interessante
+[2018-06-23 10:41:39] Ronaldo: Essas máquinas que giram poderiam ter o gabinete renderizado num overlay na tela. Essa aí com a casa de bonecas também. Na tela ou num segundo monitor.
+[2018-06-23 10:41:52] Felipe "Juca" Sanches: Mame rodando no laptop emulando a placa namco system 2 com as ROMs do Golly Ghost e soltando no console as informaçoes does displays, LEDs e solenoides. Codigo python (no laptop tambem) lendo essas informações e an aminhando para o arduino mega por meio da porta serial USB. Arduino multiplexando os displays e controlando os relês que ativam os solenóides.
+[2018-06-23 10:43:55] Ronaldo: Vocês só tomaram duas liberdades no painel: não está escrito time, por exemplo, e os leds azuis que são bem recentes. Só falo nisso porque o pessoal do MAME é excessivamente purista...
+[2018-06-23 10:45:14] Ronaldo: Eu só falo, também, porque obviamente são escolhas estéticas, vocês não fizeram assim porque é mais fácil.
+[2018-06-23 10:45:49] Ronaldo: (eu achei mais legal que o original)
+[2018-06-23 10:48:51] Felipe "Juca" Sanches: Nota: eu tinha planejado botar o texto "time/sec" mas acabei esquecendo. E depois notei que não ia caber dado que fiz o painel um pouco mais estreito para poder caber no meu gabinete de arcade.
+[2018-06-23 10:49:50] Felipe "Juca" Sanches: Os LEDs azuis era o que eu tinha em mãos ... ;-P
+[2018-06-23 10:50:58] Felipe "Juca" Sanches: Adequadamente puristas. ;-)
+[2018-06-23 10:51:20] Felipe "Juca" Sanches: Importantemente puristas.
+[2018-06-23 10:51:42] Ronaldo: Eu acho que funcionando como o original tá bom
+[2018-06-23 10:51:51] Felipe "Juca" Sanches: Responsavelmente puristas ;-)
+[2018-06-23 10:55:02] Felipe "Juca" Sanches: Não é essa a missão do Projeto MAME, portanto "só" funcionar não basta. Tem que funcionar em função de um modelo técnico fiel cujo código-fonte de emulação sirva como documento de preservação histórica.
+[2018-06-23 10:57:23] Ronaldo: Pois então... Há um limite pra isso. Por exemplo, o MAME não está documentando eletricamente as placas. Funcionou emulado, a placa original é "descartada". Se no futuro fosse possível fazer uma emulação elétrica em tempo real, essa informação não está sendo preservada.
+[2018-06-23 11:00:56] Felipe "Juca" Sanches: Eles têm escopo de atuação. Atuam na preservação de metadados de ROM sets e da arquitetura de hardware. Outras pessoas fazem projetos complementares como, por exemplo, scans de manuais de serviço, fotos de gabinetes, scan de arte do marquee, panfletos, etc....
+[2018-06-23 11:02:01] Felipe "Juca" Sanches: Alguem poderia fazer um esforço de estocar PCBs em algum lugar seguro como se fossem fosseis de dinossauros.
+[2018-06-23 11:02:13] Ronaldo: Sim
+[2018-06-23 11:03:04] Felipe "Juca" Sanches: Há também projetos de escaneamento de esquemáticos dos circuitos...
+[2018-06-23 11:03:34] Ronaldo: Existe alguma placa que tenha efeitos não-determinísticos, talvez por alguma falha de projeto? Por exemplo, por falta de pull-ups o comportamento das máquinas varia?
+[2018-06-23 11:04:45] Felipe "Juca" Sanches: Nao sei. Mas acho que a resposta mais sensata aqui provavelmente é "Com certeza!"
+[2018-06-23 11:05:04] Ronaldo: Deve ser chato achar e emular isso
+[2018-06-23 11:06:15] Felipe "Juca" Sanches: Provavelmente basta usar um gerador de numeros aleatórios para implementar o modelo de emulação de algo assim
+[2018-06-23 11:07:11] Ronaldo: Esse gerador, pra ser fiel ao original, teria que ser feito em spice ou algo parecido
+[2018-06-23 11:07:38] Felipe "Juca" Sanches: Nao necessariamente.
+[2018-06-23 11:08:22] Ronaldo: Uma geração pseudo-aleatória baseada num levantamento estatístico do sinal?
+[2018-06-23 11:08:44] Ronaldo: Seria uma simplificação, de qualquer forma
+[2018-06-23 11:08:50] Felipe "Juca" Sanches: Mas algo similar a um spice é sim uma forma possivel de se  fazer.
+[2018-06-23 11:09:20] Felipe "Juca" Sanches: Sim, pode ser assim também.
+[2018-06-23 12:11:44] Felipe "Juca" Sanches: video: (not yet published)
+[2018-06-23 12:13:41] Felipe "Juca" Sanches: solenóides sincronizados com o jogo
+[2018-06-23 12:17:45] Felipe "Juca" Sanches: Tem um solenoide que liga e desliga em sincronia com o pressionamento da arminha do jogador 1. (pra demonstrar isso eu fiquei pressionando a arminha várias vezes durante o vídeo) Tem outro que faz o mesmo para o jogador 2. Esses solenóides ficam instalados dentro da arma dos jogadores para dar o feedback táctil do "coice" da arma ao se pressionar o gatilho.
+[2018-06-23 12:19:02] Ronaldo: Talvez seja algo tipo uma matraca no jogo original. Já jogaram ele?
+[2018-06-23 12:19:26] Ronaldo: Ou é tiro, mesmo?
+[2018-06-23 12:19:57] Felipe "Juca" Sanches: E tem um relê que será ligado a uma fita LED (originalmente creio que eram luzinhas incandescentes na década de 90) para iluminar a casa durante o jogo, mas apagar nas cut-scenes e abertura.
+[2018-06-23 12:20:49] Felipe "Juca" Sanches: os outros 5 relês/solenóides são para os itens móveis na maquete da casa (porta da geladeira, tampa da privada, etc)
+[2018-06-23 19:51:54] * Felipe "Juca" Sanches added VictorEmm 🐸 @VictorEmmX
+[2018-06-23 19:52:18] * Felipe "Juca" Sanches added Rodrigo Tadeu
+[2018-06-23 19:58:57] Rodrigo Tadeu: Obrigado pela oportunidade de fazer parte do grupo
+[2018-06-23 20:22:29] VictorEmm 🐸 @VictorEmmX: Obrigado. Muito bom estar aqui. E ótima palestra de vocês hoje lá.
+[2018-06-23 21:30:45] Felipe "Juca" Sanches: 😃 Valeu, gente!
+[2018-06-23 23:16:25] Felipe "Juca" Sanches: mais info sobre o projeto do Golly Ghost que apresentei hoje na palestra tem aqui nessa postagem: https://forum.fiozera.com.br/t/replicas-funcionais-de-arcades-eletro-mecanicos-com-mame-e-rpi/25
+[2018-06-23 23:58:05] Ismael Luceno: estou aqui com o Francisco Castro Regueira, fazendo ferramentas para análise de código do BIOS de um 386

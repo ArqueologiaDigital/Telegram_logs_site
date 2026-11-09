@@ -1,0 +1,101 @@
+[2024-03-12 10:00:46] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30276.jpg
+[2024-03-12 10:00:46] Lucas Alberto: @fsanches o apendice_g__hexam.bin é esse programa aqui no pdf do montador do patinho feio 🤯
+[2024-03-12 10:01:07] Lucas Alberto: Então ele tem documentação sim
+[2024-03-12 10:02:18] Felipe "Juca" Sanches: É isso aí! ;-D
+[2024-03-12 10:02:45] Lucas Alberto: Tu sabia e não me contou isso ? 🫠
+[2024-03-12 10:03:33] Felipe "Juca" Sanches: contei sim. Tá aqui
+[2024-03-12 10:03:45] Felipe "Juca" Sanches: " junto à listagem de onde extraí esse código"
+[2024-03-12 10:04:10] Felipe "Juca" Sanches: a listagem de onde extraí esse código é essa da imagem aí: o apêndice do manual do montador, eu acho
+[2024-03-12 10:04:26] Felipe "Juca" Sanches: acho que no dia que você me perguntou eu tava com sono hahaha
+[2024-03-12 10:04:57] Felipe "Juca" Sanches: aliás... o nome do arquivo binário já diz: apendice_g__hexam.bin
+[2024-03-12 10:05:08] Felipe "Juca" Sanches: Apendice G
+[2024-03-12 10:05:11] Lucas Alberto: Eu achei que era de algum binario salvo na USP
+[2024-03-12 10:05:43] Felipe "Juca" Sanches: transcrever listagem também é "técnica de dump"
+[2024-03-12 10:05:45] Lucas Alberto: Tá, isso vai me ajudar muito a tentar rodar essa bagaça
+[2024-03-12 10:05:59] Felipe "Juca" Sanches: a mídia de armazenamento, nesse caso, é tinta sobre papel
+[2024-03-12 10:08:51] Lucas Alberto: Mas vc não leu algumas fitas perfuradas ?
+[2024-03-12 10:08:56] Felipe "Juca" Sanches: sim
+[2024-03-12 10:09:02] Lucas Alberto: Achei que vc tinha feito um dump em bin delas
+[2024-03-12 10:09:11] Felipe "Juca" Sanches: sim, de algumas sim
+[2024-03-12 10:09:16] Felipe "Juca" Sanches: tem outras que ainda não li
+[2024-03-12 10:09:25] Felipe "Juca" Sanches: pois não é fácil ler fita perfurada hoje em dia
+[2024-03-12 10:10:10] Lucas Alberto: Então, essas são programas que não tem doc
+[2024-03-12 10:12:08] Felipe "Juca" Sanches: precisaremos algum dia digitalizar as fitas que estão com o Sebastiao
+[2024-03-12 10:12:44] Felipe "Juca" Sanches: e também algumas que estavam comigo, mas foram para a casa do @andre_bla quando me mudei pra Londres e ainda não peguei de volta agora que voltei pro Brasil
+[2024-03-12 10:14:20] Felipe "Juca" Sanches: bem... "digitalizar" não é o termo mais preciso, pois elas já armazenam dados digitais. O que quis dizer é que precisaremos extrair esses dados (fazer o dump) para poder ler em computadores de hoje em dia (leia-se: transferir os dados das fitas de papel para arquivos num laptop)
+[2024-03-12 10:15:45] Lucas Alberto: Será que dá pra arrumar um leitor de fita no ebay ? e fazer alguma adaptação com arduino ?
+[2024-03-12 10:16:18] Felipe "Juca" Sanches: Talvez...
+[2024-03-12 10:17:08] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=WBbrBwiJ3fc
+[2024-03-12 10:18:59] Lucas Alberto: Eu vi esse video, mas ela tava com algum problema né
+[2024-03-12 10:20:18] Felipe "Juca" Sanches: sim, o cabeçote de leitura tava emperrando
+[2024-03-12 10:21:14] Lucas Alberto: Vc chegou a mexer nela depois desse video ?
+[2024-03-12 10:21:44] Felipe "Juca" Sanches: nunca mais.
+[2024-03-12 10:21:52] Felipe "Juca" Sanches: esse equipamento está lá na USP ainda
+[2024-03-12 10:22:23] Felipe "Juca" Sanches: se quiser, dá pra contactar o professor Fernando Redigolo e tentar agendar pra ir lá fazer mais experimentos
+[2024-03-12 10:22:53] Felipe "Juca" Sanches: https://www.lassu.usp.br/equipe/fernando-frota-redigolo/
+[2024-03-12 10:25:32] Lucas Alberto: Eu sou do Rio, não da pra ir 😭
+[2024-03-12 10:26:13] Felipe "Juca" Sanches: dar até dá...
+[2024-03-12 10:26:19] Felipe "Juca" Sanches: mas entendo
+[2024-03-12 10:29:14] Lucas Alberto: KSKKSKS só tem q pagar uma passagem interestadual.
+
+Se Br fosse Europa era só eu pegar um trem 😔
+[2024-03-12 10:38:49] Lucas Alberto: Achei qual era o problema, A minha instrução PUG estava errada. Estava invertendo as palavras
+[2024-03-12 10:39:07] Lucas Alberto: O mais significativo estava no menos, e vice versa, agora rodou
+[2024-03-12 11:13:34] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30316.jpg
+[2024-03-12 11:13:34] Lucas Alberto: Nossa, tive um bom avanço, acho que o programa rodou sem erro. 
+
+Ele chegou até essa parte do PARE
+[2024-03-12 11:13:59] Lucas Alberto: Agora vou ter que codar a parte do IO
+[2024-03-12 11:15:43] Lucas Alberto: E tive q codar mais uma instrução, a SUS
+[2024-03-12 11:17:42] Pablo Vasques Bravo-Villalba: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30319-pug-vergonha-zap.mp4
+[2024-03-12 11:28:42] L.: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30320-animation.gif.mp4
+[2024-03-12 12:16:03] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30321.jpg
+[2024-03-12 12:16:03] Lucas Alberto: So pra deixar salvo aqui
+[2024-03-12 12:16:17] Lucas Alberto: Isso vai me ajudar daqui a pouco 🤣
+[2024-03-12 13:23:46] Felipe "Juca" Sanches: PUG = PUla e Guarda. É uma instrução de desvio para outro endereço, mas ela guarda o endereço de retorno no "cabeçalho" da rotina.
+
+Infelizmente, com isso, não é possível fazer recursão.
+
+Pra implementar chamadas recursivas o programador tem que criar sua própria estrutura de dados de pilha para guardar os endereços de retorno
+[2024-03-12 13:24:03] Felipe "Juca" Sanches: a CPU do Patinho Feio não tem instruções de PUSH e POP
+[2024-03-12 13:25:24] Felipe "Juca" Sanches: SUS = Sistema Único de Saude
+
+Também conhecido como "Instrução SUS" = "Subtrai Um ou Salta"
+[2024-03-12 13:34:49] Lucas Alberto: @fsanches vc sabe como eles ligavam esses equipamentos no patinho feio ?
+
+Se tinha algum tipo de adaptador...
+[2024-03-12 13:35:00] Lucas Alberto: E se tem documento isso
+[2024-03-12 13:35:35] Lucas Alberto: Principalmente a impressora, decwriter e teletype (tty)
+[2024-03-12 13:37:23] Lucas Alberto: Queria ver se dava pra pro um terminal nele :/
+[2024-03-12 13:47:04] Felipe "Juca" Sanches: O que eu entendi até agora é que tinham placas de interface espetadas atrás dele para ligar com esses periféricos
+[2024-03-12 13:47:46] Felipe "Juca" Sanches: tem uma interface padronizada de dispositivos de entrada e saída (que é descrita nos manuais que você tá lendo). E cada equipamento acho que criava sua interface em cima dessa interface padrão
+[2024-03-12 13:49:34] Felipe "Juca" Sanches: Se não me falha a memória, ouvi dizer que em algum momento interfacearam uma DECWRITER III.
+
+Pode-se dizer que a DECWRITER III funcionava como um tipo de "terminal" pro Patinho
+[2024-03-12 13:49:57] Felipe "Juca" Sanches: mas digo isso de cabeça. Teria que procurar documentos pra corroborar com isso que estou dizendo
+[2024-03-12 13:50:39] Lucas Alberto: Sim, pelo oq percebi é isso mesmo. Porem tem mais coisas... No capitulo 7 do livro "projeto de computadores digitais", ele mostra que essas interfaces tbm podiam escrever na memoria do patinho em qualquer endereço (Ainda tenho que ler mais sobre isso)
+[2024-03-12 13:51:24] Lucas Alberto: Eu não consegui achar nada :c
+[2024-03-12 13:52:14] Lucas Alberto: Outra coisa que carece de informação, as teletype tem baud rate
+[2024-03-12 13:52:20] Lucas Alberto: E não achei nada na documentação
+[2024-03-12 13:52:44] Lucas Alberto: por isso eu perguntei isso, sobre os adaptadores
+[2024-03-12 15:17:11] L.: Instrução SUS devia ter a SAMU 🚑 pra complementar: Subtrai Adiciona MUltiplica
+[2024-03-12 15:18:25] Felipe "Juca" Sanches: a Teletype se chama ASR33 pois trabalha com 33 caracters por segundo
+[2024-03-12 15:18:53] Felipe "Juca" Sanches: acho que falei besteira
+[2024-03-12 15:18:55] Felipe "Juca" Sanches: peraí
+[2024-03-12 15:19:10] Felipe "Juca" Sanches: "The ASR 33 transfers data at 10 characters per second, 110 baud."
+[2024-03-12 15:19:35] Felipe "Juca" Sanches: não sei de onde tirei essa idéia de que era 33 chars por segundo
+[2024-03-12 15:19:46] Lucas Alberto: Ele tbm usa a tabela asci ?
+[2024-03-12 15:19:59] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30346-sticker.webp
+[2024-03-12 15:20:13] Felipe "Juca" Sanches: sim
+[2024-03-12 15:21:22] Felipe "Juca" Sanches: 7-bit ASCII
+[2024-03-12 15:21:50] Felipe "Juca" Sanches: "The Model 33 keyboard generates the seven-bit ASCII code, also known as CCITT International Telegraphic Alphabet No. 5, with one (even) parity bit and two stop bits, with a symbol rate of 110 baud,[16] but it only supports an upper-case subset of that code; it does not support lower-case letters or the `, {, |, }, and ~ characters."
+[2024-03-12 15:21:59] Felipe "Juca" Sanches: https://en.wikipedia.org/wiki/Teletype_Model_33
+[2024-03-12 15:22:31] Lucas Alberto: Esse troço deve fazer um barulho...
+[2024-03-12 15:22:37] Felipe "Juca" Sanches: sim!
+[2024-03-12 15:22:58] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=S81GyMKH7zw
+[2024-03-12 15:24:45] Lucas Alberto: Me da um Felipe 😔
+[2024-03-12 15:42:06] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30355.jpg
+[2024-03-12 15:42:06] Lucas Alberto: Carai, agora que eu me dei conta
+[2024-03-12 15:42:25] Lucas Alberto: O tty envia o dado "complementado" e com "paridade"
+[2024-03-12 15:42:36] Lucas Alberto: Por isso estou tentando enviar em ASCI e não ta pegando
+[2024-03-12 15:45:22] Lucas Alberto: Alguém saber como converter ascii nessa lasanha ai ? 🤡

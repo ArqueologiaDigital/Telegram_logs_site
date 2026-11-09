@@ -1,0 +1,102 @@
+[2018-07-25 00:45:39] Deleted Account: Opa... Acho que já conheço um ou outro aqui do grupo, mas enfim...
+[2018-07-25 00:46:32] Deleted Account: Meu nome é Victor Fragoso, sou estudante de Ciências da Computação na UFABC e trabalho na engenharia da Avnet. Além disso tbm sou um dos responsáveis pelo WikiLab na UFABC
+[2018-07-25 02:12:16] Felipe "Juca" Sanches: Saiu o MAME 0.200 😊  https://www.reddit.com/r/MAME/comments/91oo7z/mame_0200/
+[2018-07-25 02:12:58] Felipe "Juca" Sanches: no 0.201 vai ter Gran Trak 10 se tudo der certo...
+[2018-07-25 10:45:12] Deleted Account: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6425-sticker.webp
+[2018-07-25 10:45:59] Deleted Account: @fsanches , por acaso chegou a fazer um esquemático do Pense Bem antigo?
+[2018-07-25 13:13:38] Felipe "Juca" Sanches: ahá! Ainda não. Adorei a idéia 😃
+[2018-07-25 13:32:25] Leonardo Roman: Já conseguiram simular de forma decente o Pense Bem? Sei que ele é chato pq o firmware fica embutido no microcontrolador e não tem como ler. Talvez fazendo engenharia reversa das saídas do chip.
+[2018-07-25 13:35:21] DQ: Não sei se está completo: https://garoa.net.br/wiki/PenseBem
+[2018-07-25 13:37:25] Felipe "Juca" Sanches: vixe! É meu!
+[2018-07-25 13:37:30] Felipe "Juca" Sanches: Certeza que tá incompleto
+[2018-07-25 13:37:32] Felipe "Juca" Sanches: https://github.com/garoa/PenseBem
+[2018-07-25 13:37:57] Felipe "Juca" Sanches: rascunho de 5 anos atrás. Alguém quer abraçar o projeto morto e levá-lo adiante?
+[2018-07-25 13:38:33] Deleted Account: MEEEE o/
+[2018-07-25 13:38:44] Deleted Account: se puder claro
+[2018-07-25 15:52:00] Affonso Amendola: Believe
+[2018-07-25 15:52:38] Affonso Amendola: Realmente duvido que alguem vai chegar e falar "NÃO ENCOSTA NISSO, O PENSE BEM É UM PROJETO MEU MUAHAUAHAHAHA"
+[2018-07-25 15:53:21] Deleted Account: asuhusah via saber se alguem é ciumento
+[2018-07-25 15:53:47] Deleted Account: então, desculpa a ignorância, mas a gente tem um pense bem no garoa?
+[2018-07-25 15:53:52] Felipe "Juca" Sanches: Este definitivamente não sou eu. :-) Manda ver!
+[2018-07-25 16:21:06] Ronaldo: A pior parte deve ser conseguir um pense bem original
+[2018-07-25 16:21:18] FTMaciel: ML tem a rodo
+[2018-07-25 16:22:00] Ronaldo: Qual é o microcontrolador do Pense Bem?
+[2018-07-25 16:22:11] FTMaciel: Z8
+[2018-07-25 16:22:14] FTMaciel: não Z80
+[2018-07-25 16:26:02] Ronaldo: Interessante, eu não conhecia
+[2018-07-25 16:34:34] Deleted Account: Eu tenho um Pense Bem. Comprei ele numa loja de brinquedos antigos
+Mas ele vai durar pouco
+Tenho intenções malévolas para com ele
+[2018-07-25 16:35:50] Felipe "Juca" Sanches: eita!
+[2018-07-25 16:36:09] Felipe "Juca" Sanches: quer retirar o Z8 dele pra tentarmos fazer o dump da ROM ?
+[2018-07-25 16:36:14] Felipe "Juca" Sanches: (com ácido!)
+[2018-07-25 16:36:27] Deleted Account: Não tão malévolas
+[2018-07-25 16:36:42] Felipe "Juca" Sanches: ah ok
+[2018-07-25 16:37:01] Felipe "Juca" Sanches: só não vai desperdiçar um Z8 de pense bem, hein... 😊
+[2018-07-25 16:37:32] Felipe "Juca" Sanches: se sobrar, me passa que eu tento achar algum colaborador do MAME que saiba fazer IC decapping
+[2018-07-25 16:37:46] Deleted Account: É por isso que tava procurando o esquema 
+Judiar com carinho
+[2018-07-25 16:37:54] Felipe "Juca" Sanches: ok
+[2018-07-25 16:40:01] FTMaciel: Usa ácido nítrico pra dissolver o epoxi?
+[2018-07-25 16:40:07] Rodrigo Tadeu: Gostei da Ideia!
+[2018-07-25 16:40:51] Deleted Account: Se algo der errado ele é doador de órgãos
+[2018-07-25 16:41:24] Deleted Account: eita sauhsauhsa
+[2018-07-25 16:43:15] Rodrigo Tadeu: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6461.jpg
+[2018-07-25 16:43:15] Rodrigo Tadeu: "PEnseBem" antes de fazer
+[2018-07-25 16:43:19] Rodrigo Tadeu: não podia perder a piada 😉
+[2018-07-25 16:44:34] Rodrigo Tadeu: não sabia disso http://labs.hardinfo.org/pb/
+[2018-07-25 16:53:44] Deleted Account: USAHUASHSA
+[2018-07-25 16:56:16] Deleted Account: @SandroFriedland @fsanches vocês tem o nome daquele site do(a) Gislaine Benoit? O relógio feito sem placa, com jumpers...
+[2018-07-25 16:59:31] Deleted Account: É Gislain Benoit 
+techno-logic-art.com/clock.htm
+[2018-07-25 17:00:32] FTMaciel: Ficaria mais bonito com displays tipo numitron
+[2018-07-25 17:01:19] FTMaciel: http://www.tube-tester.com/sites/nixie/different/x2000/pic-clk/x2000-rt-clk-tubes.jpg
+[2018-07-25 17:01:32] Deleted Account: obrigada!!!
+[2018-07-25 17:01:34] FTMaciel: numitron não precisa de alta tensão para trabalhar
+[2018-07-25 17:01:53] Deleted Account: ops hahaha obg :3
+[2018-07-25 17:02:40] Deleted Account: nixie tube e numitron são a mesma coisa?
+[2018-07-25 17:05:15] FTMaciel: numitron é tipo um filamento incandescente. nixie usa o mesmo princípio da luz neon (descarga em gás)
+[2018-07-25 17:06:44] FTMaciel: nixie é mais bonita e tal, mas tem vida util menor
+[2018-07-25 17:08:38] FTMaciel: vantagem do numitron é trabalhar com baixa tensão. 5V pra pra acender o filamento.
+[2018-07-25 17:09:35] Deleted Account: legal.  eletrônica antiga era muito charmosa
+[2018-07-25 17:48:57] Felipe "Juca" Sanches: eu que fiz isso!
+[2018-07-25 17:49:12] Felipe "Juca" Sanches: junto com o Leonardo Pereira
+[2018-07-25 17:49:25] Felipe "Juca" Sanches: Muito tempo atrás!!!
+[2018-07-25 18:07:50] Ronaldo: Que chip é esse?
+[2018-07-25 18:13:31] Felipe "Juca" Sanches: é desse vídeo: https://www.youtube.com/watch?v=mT1FStxAVz4
+[2018-07-25 18:13:48] Felipe "Juca" Sanches: parece que é um chip qualquer da família 74
+[2018-07-25 18:14:38] Ronaldo: Parece um chip relativamente simples, deve ser
+[2018-07-25 18:15:42] Ronaldo: A memória desse microcontrolador é feita com máscara, na fábrica?
+[2018-07-25 18:15:58] Ronaldo: Do Z8 do Pense Bem
+[2018-07-25 18:16:16] Ronaldo: Ou é uma PROM/EPROM?
+[2018-07-25 18:17:59] Felipe "Juca" Sanches: maskrom embutida na própria pastilha do Z8
+[2018-07-25 18:20:13] Rodrigo Tadeu: Não sei por que raios não fizeram separado
+[2018-07-25 18:23:40] Ronaldo: Na época isso era mais barato
+[2018-07-25 18:24:56] Deleted Account: A Tectoy comprava o chip já gravado?
+[2018-07-25 18:28:32] Felipe "Juca" Sanches: acho que sim
+[2018-07-25 18:29:15] Felipe "Juca" Sanches: aliás... certemente! Não tem outro jeito. O dado fica embutido na máscara de silício usada na fabricação do chip
+[2018-07-25 18:29:58] Felipe "Juca" Sanches: em algum momento a tectoy mandou um disquetão para a fábrica com o binário a ser usado para a fabricação do chip
+[2018-07-25 18:31:10] Deleted Account: Ou nem isso... só pegou a licença de montar aqui no Brasil e os componentes de fora
+[2018-07-25 18:32:51] Felipe "Juca" Sanches: bom... de fato o pensebem é uma réplica do smart start da vtech
+[2018-07-25 18:33:08] Felipe "Juca" Sanches: então talvez a vtech tenha mandado um disquetão para a fábrica😊
+[2018-07-25 18:33:18] Ronaldo: Tem que descobrir se não existe o original dumpado, nesse caso
+[2018-07-25 18:33:32] Felipe "Juca" Sanches: já procurei, nunca achei
+[2018-07-25 18:33:49] Ronaldo: Existem mensagens em português na tela do Pense Bem?
+[2018-07-25 18:33:55] Felipe "Juca" Sanches: não
+[2018-07-25 18:34:11] Ronaldo: Algo tipo S/N...
+[2018-07-25 18:34:15] Felipe "Juca" Sanches: não
+[2018-07-25 18:34:35] Felipe "Juca" Sanches: acerto e erro são indicados por sons diferentes
+[2018-07-25 18:34:36] Ronaldo: Se tivesse seria algo custom
+[2018-07-25 18:35:03] Ronaldo: Se não tem, deve ter comprado encalhe dos chips originais, hahahaha
+[2018-07-25 18:35:26] Felipe "Juca" Sanches: uma nota aguda seguida de uma mais grave significa "errou"
+[2018-07-25 18:35:45] Felipe "Juca" Sanches: uma nota grave seguida de duas mais agudas significa "acertou!"
+[2018-07-25 18:36:51] Ronaldo: O Pense Bem é um gerador de números pseudoaleatórios com semente? (o livro de perguntas, no caso)
+[2018-07-25 18:37:04] Felipe "Juca" Sanches: sim
+[2018-07-25 18:38:31] Ronaldo: Hmm
+[2018-07-25 18:38:39] Ronaldo: Deve ser bem simples
+[2018-07-25 18:39:10] Ronaldo: Talvez desse pra implementar uma coisa parecida com poucos TTLs
+[2018-07-25 18:39:31] Ronaldo: Eu nunca usei um
+[2018-07-25 18:40:58] Ronaldo: Quando eu era criança eu via as propagandas e pensava "nossa, computador..."
+[2018-07-25 18:43:04] Ronaldo: Seria engraçado adaptar um caderno de prova de vestibular de universidade pra funcionar com o Pense Bem, hahaha
+[2018-07-25 18:43:26] Ronaldo: É só colocar a resposta correta de acordo com as respostas certas de um livro.
+[2018-07-25 18:44:00] Ronaldo: Daí é só fazer o simulado usando o Pense Bem

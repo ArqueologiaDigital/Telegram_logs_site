@@ -1,0 +1,22 @@
+[2021-09-26 22:12:46] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15642.jpg
+[2021-09-26 22:12:46] RicBit: Terminei de modelar meu cabo de turboR, é din8 de um lado e 6x BNC do outro. Amanhã eu imprimo (queria ter impresso hoje mas perdi o cabo de alimentação da impressora haha)
+[2021-09-26 22:13:42] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15643-sticker.webp
+[2021-09-26 22:14:31] Felipe "Juca" Sanches: OpenSCAD é nota 10!
+[2021-09-26 22:14:46] Felipe "Juca" Sanches: (com ressalvas)
+[2021-09-26 22:14:50] RicBit: nem acho nao, é bugado pra porra
+[2021-09-26 22:14:56] Felipe "Juca" Sanches: conceitualmente é muito bom, mas é cheio de bug
+[2021-09-26 22:15:02] Felipe "Juca" Sanches: sim sim, concordamos hahaha
+[2021-09-26 22:15:09] RicBit: e nao tem conserto
+[2021-09-26 22:15:13] RicBit: tem que fazer do zero de novo
+[2021-09-26 22:16:06] Felipe "Juca" Sanches: é... eu to há muitos anos no mailing list do projeto. Tem problemas estruturais que acho que nunca serão arrumados.
+
+Mas o conceito de modelagem 3d paramétrica algorítmica é muito legal
+[2021-09-26 22:16:41] Felipe "Juca" Sanches: projetei (junto com o @rodrigopitanga) uma impressora 3D inteira usando OpenSCAD
+[2021-09-26 22:16:54] RicBit: eles usam float pra tudo e ai o gerador buga por erro de aproximação
+[2021-09-26 22:16:58] Felipe "Juca" Sanches: e obviamente tropeçamos em um monte de limitações
+[2021-09-26 22:17:07] RicBit: teria que refazer com bigdecimal ou algo assim
+[2021-09-26 22:17:22] Felipe "Juca" Sanches: https://github.com/Metamaquina/Metamaquina2
+[2021-09-26 22:18:45] RicBit: boa
+[2021-09-26 22:25:10] Felipe "Juca" Sanches: me avisa quando quiser retomar as lives
+[2021-09-26 22:25:22] Felipe "Juca" Sanches: estarei disponível a partir de 4-a feira
+[2021-09-26 23:45:20] L.: Pena que o Antimony não foi pra frente: https://www.mattkeeter.com/projects/antimony/3/

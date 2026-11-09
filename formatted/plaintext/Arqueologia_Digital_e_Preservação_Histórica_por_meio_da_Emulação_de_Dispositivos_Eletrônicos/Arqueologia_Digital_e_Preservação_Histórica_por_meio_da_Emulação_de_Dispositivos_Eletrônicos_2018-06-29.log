@@ -1,0 +1,113 @@
+[2018-06-29 12:42:10] Affonso Amendola: Aqui está, é um drive Tandon
+[2018-06-29 12:42:33] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5739.jpg
+[2018-06-29 12:42:33] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5740.jpg
+[2018-06-29 12:42:33] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5741.jpg
+[2018-06-29 12:42:33] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5742.jpg
+[2018-06-29 12:42:33] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5743.jpg
+[2018-06-29 12:42:33] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5744.jpg
+[2018-06-29 12:42:33] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5745.jpg
+[2018-06-29 12:42:33] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5746.jpg
+[2018-06-29 12:42:33] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5747.jpg
+[2018-06-29 12:42:33] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5748.jpg
+[2018-06-29 12:42:35] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5749.jpg
+[2018-06-29 12:42:35] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5750.jpg
+[2018-06-29 12:42:35] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5751.jpg
+[2018-06-29 12:42:35] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5752.jpg
+[2018-06-29 12:42:35] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5753.jpg
+[2018-06-29 12:42:35] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5754.jpg
+[2018-06-29 12:43:15] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5755.jpg
+[2018-06-29 12:44:45] Affonso Amendola: Talvez até a silica seja de época
+[2018-06-29 12:45:05] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5757.jpg
+[2018-06-29 12:48:16] Affonso Amendola: E olha so que maravilha
+[2018-06-29 12:48:17] Affonso Amendola: https://archive.org/details/bitsavers_tandonTM84ificationMar81_1081204
+[2018-06-29 13:18:49] Affonso Amendola: Aparentemente o drive uma interface padrao de 50 pinos
+[2018-06-29 13:18:55] Affonso Amendola: Imagino que seja shugart
+[2018-06-29 13:19:11] Affonso Amendola: https://www.vogonswiki.com/index.php/Shugart_50-pin
+[2018-06-29 13:22:09] Affonso Amendola: http://old.pinouts.ru/HD/InternalDisk_pinout.shtml
+[2018-06-29 13:25:15] Ronaldo: Esse adesivo colado ao motor serve pra regular a velocidade de rotação, usando uma luz estroboscópica com a frequência certa
+[2018-06-29 13:26:48] Ronaldo: Quando o drive está girando na velocidade correta as linhas dão a impressão de parar, quando a velocidade está ligeiramente errada parece que gira lentamente em sentido horário ou anti-horário
+[2018-06-29 13:29:09] Affonso Amendola: http://www.retrotechnology.com/herbs_stuff/drive.html#43
+[2018-06-29 13:29:26] Affonso Amendola: Ahh, daora, entao quando estiver ligado eu tento isso
+[2018-06-29 13:29:36] Affonso Amendola: Vejo se a velocidade ta batendo
+[2018-06-29 13:30:22] Ronaldo: Tem que ter a luz estroboscópica, daí
+[2018-06-29 13:30:58] Ronaldo: Vocês podem ligar um led forte num microcontrolador e deixar a sala escura
+[2018-06-29 13:31:18] Affonso Amendola: Acho que tem aplicativos em celular que fazem isso
+[2018-06-29 13:31:30] Affonso Amendola: Deixam a lanterna piscando numa frequencia especifica
+[2018-06-29 13:31:50] Affonso Amendola: (Espero que tenha, pq isso n soa como uma coisa muito dificil de programar, e parece bem util)
+[2018-06-29 13:31:52] Ronaldo: Dá pra piscar numa frequência alta? Se dá, tá pronto
+[2018-06-29 13:32:51] Affonso Amendola: Meu cel ta fudido, entao n da pra eu procurar agora
+[2018-06-29 13:33:49] Affonso Amendola: https://play.google.com/store/apps/details?id=com.tp77.StrobeAd&hl=pt_BR
+[2018-06-29 13:33:51] Affonso Amendola: There
+[2018-06-29 13:34:00] Ronaldo: Provavelmente precisaria piscar a 360 Hz (talvez um submúltiplo sirva)
+[2018-06-29 13:34:36] Ronaldo: Se precisar ser a 360 Hz não vai servir
+[2018-06-29 13:34:52] Ronaldo: Precisão de 1/1000 de segundo
+[2018-06-29 13:34:57] Affonso Amendola: Yeah
+[2018-06-29 13:35:44] Ronaldo: Dá pra fazer isso com um gerador de funções, se vocês tiverem no laboratório
+[2018-06-29 13:36:20] Affonso Amendola: Sure, isso tem como conseguir facil
+[2018-06-29 13:36:26] Ronaldo: Programar uma onda quadrada de 330 Hz e usar pra comandar o acionamento do led
+[2018-06-29 13:36:27] Affonso Amendola: Tao devendo um pra ca ja
+[2018-06-29 13:37:30] Ronaldo: Se vocês mexem com um básico de eletrônica, é só tocar uma onda de 360 Hz (acho que é essa a frequência, na verdade) com a placa de som e usar a saída pra comandar um driver de led
+[2018-06-29 13:37:50] Ronaldo: Uma onda quadrada, na placa de som do PC
+[2018-06-29 13:38:15] Affonso Amendola: Porra, adorei
+[2018-06-29 13:38:54] Affonso Amendola: Mas isso e so pra quando a gente conseguir ligar isso num computador
+[2018-06-29 13:39:00] Affonso Amendola: Ou num arduino simulando os sinais de controle
+[2018-06-29 13:39:06] Ronaldo: Não precisaria
+[2018-06-29 13:39:33] Ronaldo: O motor dos drives de 8 polegadas funciona com corrente alternada e fica sempre girando
+[2018-06-29 13:39:55] Ronaldo: Daí, um teste mais básico do drive é ver se ele funciona e está com a rotação certa
+[2018-06-29 13:40:27] Ronaldo: Os drives de 8 polegadas estacionam a cabeça de leitura, igual HD (antigo)
+[2018-06-29 13:40:59] Ronaldo: Antes mesmo de saber se o resto do drive funciona dá pra testar essa parte, daí
+[2018-06-29 13:44:25] Affonso Amendola: Interessante
+[2018-06-29 13:44:31] Affonso Amendola: Mas o conector n e o padrao atual
+[2018-06-29 13:44:36] Affonso Amendola: tem que dar uma adaptada
+[2018-06-29 13:44:59] Ronaldo: Se for igual ao meu drive tem três conectores diferentes
+[2018-06-29 13:45:30] Ronaldo: O de dados, o de força do motor que gira o disco e o de força do resto do sistema
+[2018-06-29 13:46:13] Ronaldo: No caso do meu o motor que gira o disco é AC, e é separado de todo o resto, daí a melhor coisa é testar ele primeiro, mesmo.
+[2018-06-29 13:47:03] Ronaldo: Podendo ligar a placa de circuito do drive existe um teste mais preciso que pode ser feito da velocidade do drive, que independe da luz estroboscópica
+[2018-06-29 13:47:39] Ronaldo: Deve dar pra usar o sinal de índice ou de hard sectoring do disco pra medir a frequência
+[2018-06-29 13:47:57] Ronaldo: De acordo com a velocidade que o disco gira, a frequência desse sinal vai mudar
+[2018-06-29 13:48:16] Ronaldo: Se tiver um furo de índice no disco, vai gerar um pulso a cada rotação
+[2018-06-29 13:48:50] Ronaldo: Se for um disco com hard sectors, os furos de setor vão gerar um pulso por setor.
+[2018-06-29 13:49:38] Ronaldo: Com isso e alguma coisa que meça a frequência - um multímetro, por exemplo - deve dar pra medir a rotação.
+[2018-06-29 14:10:27] Affonso Amendola: Tem 2 Conectores
+[2018-06-29 14:10:28] Affonso Amendola: Here
+[2018-06-29 14:10:55] Affonso Amendola: Here
+[2018-06-29 14:11:20] Affonso Amendola: Meio que 3 na real, pq o de forca tem uma divisoriazinha
+[2018-06-29 14:12:03] Affonso Amendola: Usa um conector AMP de seis pinos segundo o manual
+[2018-06-29 14:13:09] Affonso Amendola: Na pag 6 do manualzinho tem um pinout do power
+[2018-06-29 14:21:42] Ronaldo: Pelo visto esse é o padrão da época, meu drive tem um desse tipo
+[2018-06-29 14:22:46] Ronaldo: Só que no caso do meu drive o motor que gira o disco é alimentado através de um terceiro conector, e é de 115v CA
+[2018-06-29 14:23:55] Affonso Amendola: Eita
+[2018-06-29 14:25:27] Ronaldo: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5817.jpg
+[2018-06-29 14:25:42] Ronaldo: Aí tem os três conectores do meu drive
+[2018-06-29 14:25:59] Affonso Amendola: Que bizarro
+[2018-06-29 14:26:03] Affonso Amendola: Pq fizeram assim?
+[2018-06-29 14:26:25] Ronaldo: Porque precisavam de um motor forte demais pra girar o disco, provavelmente
+[2018-06-29 14:26:48] Ronaldo: Os motores dos drives modernos são bem diferentes
+[2018-06-29 14:27:31] Ronaldo: O drive de vocês talvez nem tenha um conector propriamente dito pro motor que gira o drive
+[2018-06-29 14:28:10] Ronaldo: Tem que ver no que ele está conectado
+[2018-06-29 14:28:50] Ronaldo: Talvez ele seja simplesmente ligado a um interruptor no gabinete do micro, pra cortar a alimentação da rede elétrica
+[2018-06-29 14:29:01] Ronaldo: Como um ventilador
+[2018-06-29 14:30:03] Ronaldo: Esse conector de seis pinos tem a alimentação pra placa de circuito (os 5v positivos e negativos) e 24v pro motor de passo da cabeça de leitura
+[2018-06-29 14:30:50] Ronaldo: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5828.jpg
+[2018-06-29 14:31:30] Affonso Amendola: Ta escrito aqui no manual que o motor nesse drive e DC
+[2018-06-29 14:31:42] Affonso Amendola: Entao talvez so esteja puxando energia do 24V tbem
+[2018-06-29 14:31:45] Ronaldo: Hmm, interessante
+[2018-06-29 14:31:46] Affonso Amendola: Sei la
+[2018-06-29 14:32:26] Ronaldo: É só ver se tem continuidade entre os terminais do motor e os pinos de 24v do conector
+[2018-06-29 14:32:52] Ronaldo: Se tiver é isso
+[2018-06-29 16:55:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5835.jpg
+[2018-06-29 16:55:28] Felipe "Juca" Sanches: https://garoa.net.br/wiki/Categoria:Eventos
+[2018-06-29 18:27:01] Fractal: hmm motores de drives normalmente são dc mesmo...
+[2018-06-29 18:28:31] Fractal: os de 5 1/4 se não me falha a memória giram em 300 rpm, os de 8 já não sei...
+[2018-06-29 18:30:18] Fractal: na verdade acho que todos drives recolhem a cabeça para a trilha zero quando é ligado, até os 3.5"
+[2018-06-29 18:33:10] Ronaldo: Parece que são 360 rpm, tem que conferir no manual
+[2018-06-29 18:35:07] Ronaldo: Isso é feito por software. O caso dos drives de 8 polegadas é que eles têm funcionalidade pra afastar a cabeça de leitura da superfície do disco, porque o motor gira continuamente.
+[2018-06-29 18:36:33] Ronaldo: Tem um tipo de eletroímã que move as cabeças
+[2018-06-29 18:37:16] Ronaldo: Posso gravar um videozinho mostrando, até. Dá pra mover com a mão.
+[2018-06-29 18:39:53] Fractal: legal! mas são todos assim?
+[2018-06-29 18:42:51] Ronaldo: Eu não sei... É interessante descobrir essas coisas, um passo atrás do que eu sabia quando comecei a usar computador
+[2018-06-29 18:43:46] Ronaldo: Eu não fazia ideia que a interface dos drives de 8 polegadas já era padronizada, e que o padrão mudou com os drives de 5 1/4
+[2018-06-29 18:44:15] Ronaldo: O conector de força, o conector de dados...
+[2018-06-29 18:57:02] Fractal: Então, eu acho que o drive de 8' que tenho é um pouco mais moderno, se não me engane o conector de dados dele já é padrão shugart do 5 1/4, mas como disse antes, não onde está, faz muito tempo que não o vejo! 😜
+[2018-06-29 18:58:12] Fractal: ou melhor: "moderno" hehe
+[2018-06-29 19:42:58] Ronaldo: Tem que ver, talvez seja de 50 pinos

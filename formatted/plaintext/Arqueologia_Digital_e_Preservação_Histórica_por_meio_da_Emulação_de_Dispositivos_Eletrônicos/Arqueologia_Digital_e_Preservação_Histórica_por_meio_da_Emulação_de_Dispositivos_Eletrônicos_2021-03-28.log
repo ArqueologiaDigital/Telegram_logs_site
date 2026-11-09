@@ -1,0 +1,66 @@
+[2021-03-28 00:48:29] * root@thiagopolicena:~# joined the group
+[2021-03-28 02:29:24] Felipe "Juca" Sanches: arranjei um computador 386 com DOS 5 e Windows 3.1
+[2021-03-28 02:30:02] Felipe "Juca" Sanches: estou copiando pro HD dele alguns jogos que eu gosto (usando o famoso protocolo de transferencia de dados DPLDPC)
+[2021-03-28 02:30:31] Felipe "Juca" Sanches: DPLDPC = "disquete pra lá, disquete pra cá"
+[2021-03-28 02:31:32] Felipe "Juca" Sanches: eu queria configurar a placa de som no jogo STUNTS e chutei que o comando seria SETUP, mas não rolou. Aí chutei CONFIG e abriu um cliente de configuracao do Windows :-P
+[2021-03-28 02:33:15] Felipe "Juca" Sanches: Cancelei pra sair do programa de configuracao do windows e continuei fazendo minhas coisas no DOS como estava antes.
+
+Mas depois quanto tentei abrir o windows 3.1 de novo (executando o comando win), ele mostra a splash screen com o logo do windows e depois volta pro DOS com uma mensagem de erro dizendo que o arquivo de configuracao está incompleto e me sugere rodar novamente o "config do windows"
+[2021-03-28 02:34:16] Felipe "Juca" Sanches: o computador já tava redondinho antes dessa cagada. Então queria saber se alguém aqui tem idéia do que eu posso fazer para reverter essa "config incompleta" e voltar pro que tava antes. Ele salva backup em algum lugar dos arquivos de configuracao em algum lugar?
+[2021-03-28 02:34:22] Felipe "Juca" Sanches: e quais arquivos seriam esses?
+[2021-03-28 02:39:46] Felipe "Juca" Sanches: a frase do erro é a seguite:
+
+"o arquivo de inicialização do sistema necessário para rodar o windows em modo 386 avançado está incompleto"
+[2021-03-28 06:25:53] * Tojil joined the group
+[2021-03-28 08:09:53] Flávio Amieiro: Nossa, eu AMAVA esse jogo
+[2021-03-28 08:10:36] Flávio Amieiro: Infelizmente minha memória não é o suficiente pra lembrar disso 😔
+[2021-03-28 08:11:13] Flávio Amieiro: O cliente de configuração é tipo um wizzard? Rola de seguir com a configuração ao invés de cancelar?
+[2021-03-28 10:20:18] Felipe "Juca" Sanches: consegui descobrir!
+[2021-03-28 10:20:38] Felipe "Juca" Sanches: ele salva uma cópia do arquivo de configuracao bom com outro nome
+[2021-03-28 10:21:03] Felipe "Juca" Sanches: o nome correto é SYSTEM.INI, mas ele salvou um SYSTEM.000
+[2021-03-28 10:21:16] Felipe "Juca" Sanches: troquei os arquivos e voltou a funcionar
+[2021-03-28 10:48:39] Flávio Amieiro: Ah, boa!
+[2021-03-28 10:48:59] Flávio Amieiro: https://twitter.com/voxel/status/1376130968851869696?s=19
+[2021-03-28 10:49:09] Flávio Amieiro: Acabou de passar na minha timeline aqui...
+[2021-03-28 16:29:13] Felipe "Juca" Sanches: acredite se quiser, hoje eu tive um momento MSDOS envolvendo soundblaster
+[2021-03-28 16:31:29] Felipe "Juca" Sanches: Usei C:\SB16\MIXERSET.EXE para ajustar o volume "master", pois tava muito alto.
+
+Aí abri o Pinball Fantasies e ficou super alto.
+
+Voltei pro MIXERSET e tava de novo setado no talo.
+
+Maldito Pinball Fantasies muda as configuracoes da Sound Blaster pra deixar o volume no máximo!
+
+Minha primeira reação mais instintiva foi puxar meu disassembler... Lá vamos nós!
+[2021-03-28 16:41:39] Flávio Amieiro: Hahahaha
+Claro
+[2021-03-28 16:41:42] Flávio Amieiro: Reação natural.
+[2021-03-28 17:58:28] Erin Pinheiro 🐿: na minha época caixinha de som tinha knob de volume hihihihi
+[2021-03-28 18:04:27] Flávio Amieiro: hahahah
+[2021-03-28 18:49:49] Felipe "Juca" Sanches: eu tenho uma caixinha de som velha aqui, mas precisaria colocar 4 (QUATRO) pilhas tamanho MÉDIO. Ou ligar numa tomada usando uma fonte de 6 volts (que eu não tenho).
+
+Aí acabei usando uma dessas caixinhas bluetooth usando um cabinho p2-p2
+
+mas aparentemente os botoes de volume da caixa simplesmente enviam comandos para um celular fazer o ajuste de volume (ou para um dispositivo bluetooth ajustar o volume por software)
+[2021-03-28 18:50:21] Felipe "Juca" Sanches: acho que pra celular via p2-p2 rola um esquema meio hackeado de sinalizacao por impedancia
+[2021-03-28 18:50:43] Erin Pinheiro 🐿: se for igual a minha, os botões de volume precisam ser segurados por alguns segundos, aí o volume vai mudando gradualmente (se só apertar serve de next/prev track)
+[2021-03-28 18:51:47] Felipe "Juca" Sanches: de todo modo, mesmo as caixinhas daquela época tendo knob de volume (que fazia uma bela chiadeira, diga-se de passagem!) ainda assim é uma certa falta de educação o pinball fantasies alterar as configuracoes de volume do sistema todo!
+[2021-03-28 18:52:56] Felipe "Juca" Sanches: bom... existiria ainda a chance de terem implementado com uma rotina que re-estabelece a configuracao ao fechar o pinball fantasies. Mas já vi que nào fizeram assim
+[2021-03-28 18:53:02] Erin Pinheiro 🐿: deoxit!
+[2021-03-28 18:53:13] Erin Pinheiro 🐿: ou em bom português, limpa-contatos!
+[2021-03-28 18:53:30] Erin Pinheiro 🐿: sim é falta de educação, não estou discordando :P
+[2021-03-28 18:53:35] Felipe "Juca" Sanches: e também é muito esquisito essa arrogância do programa achar que sabe o que é melhor nos ajustes de volume do usuário kkkk
+[2021-03-28 18:53:48] Erin Pinheiro 🐿: "é pra você ouvir melhor..."
+[2021-03-28 18:54:07] Felipe "Juca" Sanches: "é pra você acordar tua mae quando for jogar pinball de madrugada"
+[2021-03-28 18:54:29] Erin Pinheiro 🐿: mas, navalha de hanlon, não assuma malícia no que pode ser melhor explicado por ignorância
+[2021-03-28 18:54:38] Erin Pinheiro 🐿: pinball fantasies é port de amiga
+[2021-03-28 18:54:42] Felipe "Juca" Sanches: sim sim claro claro
+[2021-03-28 18:54:56] Felipe "Juca" Sanches: e é um port muito bem feito aliás!
+[2021-03-28 18:55:32] Erin Pinheiro 🐿: claro, mas não dá pra se esperar implementação de coisas que não existiam no amiga, por exemplo, a inicialização de uma SB16
+[2021-03-28 18:55:41] Felipe "Juca" Sanches: gente... hoje eu zerei Another World numa sentada só, no 386
+[2021-03-28 18:56:24] Erin Pinheiro 🐿: nem todo port vai ter a mesma qualidade que o port que THPS1 teve pro dreamcast! https://www.gamasutra.com/view/feature/131563/postmortem_treyarchs_tony_hawks_.php
+[2021-03-28 18:56:29] Erin Pinheiro 🐿: adoro essa história
+[2021-03-28 18:56:34] Felipe "Juca" Sanches: claro que dá! Fazer port é justamente fazer as ciosas específicas da plataforma para a qual se está portando 😉
+[2021-03-28 18:56:36] Erin Pinheiro 🐿: boa!
+[2021-03-28 18:57:05] Erin Pinheiro 🐿: no cenário capitalista onde recursos e limites de entregas existem, escolha 2 de três: bom, bonito e barato
+[2021-03-28 23:04:57] RicBit: Eu precisei de fonte 6V para ligar um datacorder, comprei uma genérica no Multicoisas

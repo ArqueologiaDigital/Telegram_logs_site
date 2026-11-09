@@ -1,0 +1,32 @@
+[2025-11-11 11:26:45] Leonardo Roman: Se lembro bem a história, o SOX começou com uma compra que o governo fez dos fontes do Unix AT&T e várias empresas brasileiras depois fizeram suas traduções e adaptações, sendo o SOX a mais famosa.
+[2025-11-11 12:20:50] L.: Tudo que li a respeito foi o contrário: a AT&T não quis licenciar o Unix pro Brasil e aí fizeram do zero
+[2025-11-11 12:22:16] L.: Pelos diagramas me parece ser bem avançado, inclusive. Por exemplo, programas rodavam em máquinas virtuais (ao invés de, por exemplo, o 68k dos minicomputadores da Cobra)
+[2025-11-11 12:23:01] L.: Quando a reserva de mercado acabou, aí parece que a galera disse foda-se e pegou o Unix da AT&T mesmo
+[2025-11-11 12:43:12] Pedro de Medeiros 👾: Então não era um UNIX para 68K?
+[2025-11-11 12:55:49] L.: Parte do sistema era né
+[2025-11-11 12:56:13] L.: A parte mais baixo nivel, mas me parece que as aplicações rodavam em cima dessa VM
+[2025-11-11 12:56:34] L.: Mas eu não tenho certeza! A documentação que achei não é tão clara
+[2025-11-11 12:59:08] Felipe "Juca" Sanches: O Stephan Kovachs me contou que em algum computador da Cobra eles desenvolveram um sistema que detectava queda de energia e dava conta de salvar o estado do sistema antes de morrer por completo. Ou seja, em milissegundos.
+Diz que um teste era puxar o computador da tomada e ver se ele restaurava do ponto onde tinha parado ao botar de volta na tomada.
+[2025-11-11 13:15:18] Felipe "Juca" Sanches: https://virtuallyfun.com/2025/11/10/mips-risc-os-on-mame/
+[2025-11-11 13:20:13] L.: Isso é factível com máquina virtual! Com CPU já fica mais difícil
+[2025-11-11 13:20:23] L.: (dá pra fazer mas é difícil)
+[2025-11-11 13:20:42] Felipe "Juca" Sanches: acho que com microcódigo de CPU é mais fácil que com VM
+[2025-11-11 13:21:48] Felipe "Juca" Sanches: Digo mais fácil, não no sentido de dificuldade de implementar, mas no sentido de ser menos coisa pra salvar e usando memórias mais velozes, por estarem bem perto do circuito da CPU.
+[2025-11-11 13:22:33] L.: Talvez
+[2025-11-11 13:59:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-11/36374.jpg
+[2025-11-11 13:59:21] Felipe "Juca" Sanches: borked
+[2025-11-11 14:02:03] Felipe "Juca" Sanches: Eu acho divertido ver esses passos intermediários de desenvolvimento quando algo está ainda completamente quebrado, mas já mostra uma gotinha de progresso e uma quantidade enorme de esperança e coragem!
+Estou agora começando a editar o layout do Virus B com a intenção de transformá-lo num layout do Virus C.
+[2025-11-11 14:33:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-11/36376.jpg
+[2025-11-11 14:33:31] Felipe "Juca" Sanches: O objetivo é ficar parecido com esse mockup
+[2025-11-11 15:34:58] RicBit: Hoje é 11/11, dia de descontos grandes no Aliexpress.
+[2025-11-11 15:38:59] Felipe "Juca" Sanches: RicBit, obrigado por ter me ajudado a entrar no mundo da emulação!
+[2025-11-11 15:39:56] RicBit: Normalmente você não agradece o traficante pelas drogas!
+[2025-11-11 15:40:07] Felipe "Juca" Sanches: LOL
+[2025-11-11 15:41:57] Pablo Vasques Bravo-Villalba: Ué, você não agradece? 😝
+[2025-11-11 15:43:53] Felipe "Juca" Sanches: Emulação não mata. Apenas engorda.
+[2025-11-11 16:28:57] Erin Pinheiro 🐿: falta de educação isso, eu agradeço os meus sim
+[2025-11-11 17:49:28] Felipe "Juca" Sanches: hgfernan!!! :-D
+[2025-11-11 21:55:19] Erin Pinheiro 🐿: https://soranews24.com/2025/11/12/maker-of-japans-first-crane-machine-is-looking-for-a-working-model-offering-100000-yen-reward/
+[2025-11-11 21:56:44] Erin Pinheiro 🐿: será que alguma chegou a ir pro Brasil?

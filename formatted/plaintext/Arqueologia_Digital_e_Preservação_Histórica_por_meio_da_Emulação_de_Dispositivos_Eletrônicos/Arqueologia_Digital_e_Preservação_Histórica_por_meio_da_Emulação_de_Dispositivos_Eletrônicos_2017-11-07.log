@@ -1,0 +1,334 @@
+[2017-11-07 12:07:16] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/194.jpg
+[2017-11-07 12:07:16] Felipe "Juca" Sanches: Eu tenho um desses !
+[2017-11-07 12:07:26] Felipe "Juca" Sanches: E olha o que eu achei aqui em casa hoje:
+[2017-11-07 12:07:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/196.jpg
+[2017-11-07 12:08:03] Werner: Isso é o q eu penso ser?
+[2017-11-07 12:08:12] Felipe "Juca" Sanches: Um conversor USB serial usando chip FTDI
+[2017-11-07 12:08:22] Werner: então deve funcionar lá
+[2017-11-07 12:08:25] Felipe "Juca" Sanches: yep!
+[2017-11-07 12:08:35] Werner: junto com esse adaptador de pinos 9 -> 25
+[2017-11-07 12:08:39] Felipe "Juca" Sanches: exatamente
+[2017-11-07 12:08:46] Werner: tem q ter driver instalado no seu computador
+[2017-11-07 12:08:48] Werner: provavelmente
+[2017-11-07 12:08:52] Felipe "Juca" Sanches: já tenho tudo certinho
+[2017-11-07 12:09:02] Werner: então blzinha
+[2017-11-07 12:09:31] Werner: vc ta na usp ou em casa?
+[2017-11-07 12:10:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/208.jpg
+[2017-11-07 12:10:01] Felipe "Juca" Sanches: Isso aqui é o que o meu kernel avisa quando eu plugo o adaptador na USB
+[2017-11-07 12:10:47] Felipe "Juca" Sanches: Na verdade aí no log você me vê desplugando e replugando
+[2017-11-07 12:10:54] Werner: é isso aí
+[2017-11-07 12:10:59] Werner: tá com td
+[2017-11-07 12:11:08] Felipe "Juca" Sanches: falta a troca dos capacitores
+[2017-11-07 12:11:15] Werner: pois é
+[2017-11-07 12:11:21] Felipe "Juca" Sanches: e falta montar um cabo de alimentação elétrica
+[2017-11-07 12:11:26] Werner: isso msm
+[2017-11-07 12:11:36] Werner: vc tem a foto da traseira dele d novo?
+[2017-11-07 12:11:42] Felipe "Juca" Sanches: vou ver se consigo anotar hoje lá todos os capacitores necessários
+[2017-11-07 12:12:11] Werner: não só os eletrolíticos, mas todos, inclusive os cerâmicos, de poliéster, etc
+[2017-11-07 12:12:35] Werner: os mais críticos são os eletrolíticos e os cerâmicos
+[2017-11-07 12:13:19] Werner: e quanto à tomada, leve um adaptador desses benjamim padrão abnt (3 pinos) fêmea, veja se ele se encaixa lá
+[2017-11-07 12:13:24] Felipe "Juca" Sanches: aqui!
+[2017-11-07 12:13:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/222.jpg
+[2017-11-07 12:13:35] Werner: exato
+[2017-11-07 12:14:04] Werner: olhando com zoom, parecem ser 3 pinos banana mesmo
+[2017-11-07 12:14:27] Werner: mas tenta ver se um adaptador femea 3 pinos encaixa nele
+[2017-11-07 12:14:50] Werner: caso contrário teremos q fazer uma espécie de adaptador com 3 jacks banana
+[2017-11-07 12:16:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/227.jpg
+[2017-11-07 12:16:41] Felipe "Juca" Sanches: isso aqui pode ajudar também.
+[2017-11-07 12:17:16] Werner: O q estou pensando é em fazer uma coisa q a gente prenda nesses 3 conectores garrinha e encaixe lá nos 3 pinos.
+[2017-11-07 12:17:27] Felipe "Juca" Sanches: eu tenho alguns desses cabos aqui em casa
+[2017-11-07 12:17:39] Werner: imagina q esses 3 pinos macho desse cabo aí sejam compatíveis com os do sagitta
+[2017-11-07 12:18:06] Werner: pra medir corretamente, pense em se vc fosse encaixar um benjamim femea nesse cabo
+[2017-11-07 12:18:13] Werner: perae
+[2017-11-07 12:19:16] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/234.jpg
+[2017-11-07 12:19:17] Felipe "Juca" Sanches: o truque do benjamim fêmea não vai funcionar por que os pinos do sagitta estão alinhados e no padrão brasileiro o pino do meio não é alinhado com os outros dois
+[2017-11-07 12:19:50] Felipe "Juca" Sanches: isso aí não vai dar certo
+[2017-11-07 12:19:58] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/237.jpg
+[2017-11-07 12:20:07] Werner: ctz?
+[2017-11-07 12:20:13] Felipe "Juca" Sanches: não rola
+[2017-11-07 12:20:16] Werner: ele tem furos em 2 tamanhos diferentes
+[2017-11-07 12:20:31] Werner: pq vc diz isso?
+[2017-11-07 12:20:48] Felipe "Juca" Sanches: suponho que os furos mais largos sejam para 220V
+[2017-11-07 12:20:52] Werner: isso é só pra testar lá
+[2017-11-07 12:21:00] Werner: sim, mas e daí?
+[2017-11-07 12:21:11] Werner: estamos apenas falando mecanicamente
+[2017-11-07 12:21:24] Felipe "Juca" Sanches: esse adaptador aí não tem o pino de terra
+[2017-11-07 12:21:36] Werner: tem no meio
+[2017-11-07 12:21:53] Werner: só não liga em nada. A maioria das instalações elétricas no Brasil não tem.
+[2017-11-07 12:21:54] Felipe "Juca" Sanches: na foto nitidamente faltaum terceiro pino
+[2017-11-07 12:22:03] Werner: tem o furo
+[2017-11-07 12:22:09] Werner: pro pino do meio
+[2017-11-07 12:22:13] Felipe "Juca" Sanches: eu prefiro sempre ligar o terra
+[2017-11-07 12:22:22] Werner: então vc tá lascadp
+[2017-11-07 12:22:35] Felipe "Juca" Sanches: imagino que a faculdade de engenharia elétrica da escola politécnica da USP tenha instalações elétricas decentes
+[2017-11-07 12:22:37] Werner: pq a maioria das instalações feitas no Brasil não contemplam essa ligação
+[2017-11-07 12:22:49] Werner: esse Sagitta provavelmente viveu a vida inteira ligado sem terra
+[2017-11-07 12:23:02] Werner: vc q sabe... eu aposto minhas fichas q nao
+[2017-11-07 12:23:04] Werner: mas...
+[2017-11-07 12:23:08] Felipe "Juca" Sanches: 😉
+[2017-11-07 12:23:25] Werner: Mas a questão nem é essa
+[2017-11-07 12:23:30] Werner: eu volto a reiterar
+[2017-11-07 12:23:46] Werner: a gente nesse momento só precisa saber se mecanicamente os pinos entrariam nesses furos
+[2017-11-07 12:23:53] Werner: o adaptador só será utilizado pra isso
+[2017-11-07 12:24:09] Werner: daí vc pode ter a confiança q vai poder entrar numa loja de materiais elétricos
+[2017-11-07 12:24:18] Felipe "Juca" Sanches: eu acho que não cabe no espaço disponível
+[2017-11-07 12:24:19] Werner: e gastar um $ pra comprar uma tomada femea
+[2017-11-07 12:24:29] Werner: e ligar nas 3 pontas do seu cabo
+[2017-11-07 12:24:54] Werner: cara então não sei o q mais dizer
+[2017-11-07 12:25:14] Felipe "Juca" Sanches: e mesmo que caiba, se um pino ficar firme o outro ficará frouxo, dado que essa ligação gambiarrada na diagonal resulta em furos de diametro diferente
+[2017-11-07 12:25:33] Werner: vai ter q desmontar essa parte no sagitta, e trocar a tomada dele, ou simplesmente dar um jeito de conectar essas 3 pontas do seu cabo na placa da fonte
+[2017-11-07 12:25:49] Werner: outra coisa não tem
+[2017-11-07 12:25:59] Werner: leva esse seu cabo, um kit de ferramentas...
+[2017-11-07 12:26:06] Werner: alicate de corte, de bico...
+[2017-11-07 12:26:15] Werner: chaves de fenda e philips de diversos tamanhos
+[2017-11-07 12:26:28] Felipe "Juca" Sanches: eu acho que o melhor esquema é montar um cabo usando esse meu de 3 garras e 3 cabos com plug fêmea para banana.
+[2017-11-07 12:26:43] Werner: essa tomada é totalmente fora de qq padrão conhecido. Vai ter q dar uma de McGyver\
+[2017-11-07 12:26:56] Werner: só q daí tem um outro problema
+[2017-11-07 12:27:15] Werner: eu duvido q nesse espacinho pequeno caiba 3 conectores banana femea ali
+[2017-11-07 12:27:28] Felipe "Juca" Sanches: é... vou ter que testar
+[2017-11-07 12:27:30] Werner: eles são grossos
+[2017-11-07 12:27:38] Werner: então... se é pra testar...
+[2017-11-07 12:27:41] Felipe "Juca" Sanches: talvez dê, talvez não dÊ
+[2017-11-07 12:27:43] Werner: leva um adaptador como esse meu
+[2017-11-07 12:27:50] Felipe "Juca" Sanches: eu não tenho um desses aí
+[2017-11-07 12:27:55] Werner: compra no caminho...
+[2017-11-07 12:27:59] Werner: custa 3.50
+[2017-11-07 12:28:07] Werner: vc tem os banana?
+[2017-11-07 12:28:10] Felipe "Juca" Sanches: 😉 pode ser...
+[2017-11-07 12:28:29] Werner: outra coisa, leva esse seu cabo junto
+[2017-11-07 12:28:35] Felipe "Juca" Sanches: talvez. Tenho que ver aqui. Acho que eu tinha, mas não tenho certeza
+[2017-11-07 12:28:43] Werner: e fotografa dentro da fonte, onde esses 3 pinos são ligados
+[2017-11-07 12:28:54] Werner: de repente é td parafusado na placa
+[2017-11-07 12:29:18] Felipe "Juca" Sanches: se tiver garrinhas internamente vai ser só alegria
+[2017-11-07 12:29:26] Werner: daí se for assim, vc só precisa afrouxar os parafusos da placa, retirar as conexões q vão pra esses pinos do gabinete, e ligar o seu cabo
+[2017-11-07 12:29:44] Felipe "Juca" Sanches: é. Tem uma boa chance disso ser possível.
+[2017-11-07 12:29:57] Werner: e já te digo, não adianta torcer o nariz pra manter o equipamento na originalidade... vai ter q adaptar uma coisinha ou outra.
+[2017-11-07 12:30:28] Werner: não tem outro jeito, tanto pros capacitores quanto pra essa conexão elétrica.
+[2017-11-07 12:30:50] Felipe "Juca" Sanches: sim. Faz sentido
+[2017-11-07 12:31:16] Werner: leve seu multimetro. vc sabe medir a ddp entre o neutro/terra/fase?
+[2017-11-07 12:31:40] Werner: isso serve para descobrir qual é qual, e se tem de fato um terra lá
+[2017-11-07 12:32:16] Felipe "Juca" Sanches: sim, eu consigo mapear isso
+[2017-11-07 12:32:20] Werner: blz
+[2017-11-07 12:32:56] Werner: daí vc consegue até diagnosticar o equipamento um pouco
+[2017-11-07 12:33:10] Werner: tipo, imaginemos q dê pra conectar ele na tomada/
+[2017-11-07 12:33:30] Werner: vc pode medir as saídas da fonte, pra ver q tensões CC saem dela
+[2017-11-07 12:33:51] Werner: seria ideal se essa fonte estivesse conectada à placa principal através de algum conector
+[2017-11-07 12:34:02] Felipe "Juca" Sanches: o equipamento é tudo uma coisa só.
+[2017-11-07 12:34:18] Werner: ideal seria se desse pra isolar a fonte do resto, e medir
+[2017-11-07 12:34:36] Werner: outra coisa: fusíveis
+[2017-11-07 12:34:40] Felipe "Juca" Sanches: ligou na tomada, já era. Tem risco de pipocar os capacitores
+[2017-11-07 12:34:49] Werner: tem um soquete lá acima do conector de força
+[2017-11-07 12:34:59] Werner: para fusível. Veja se ele está rompido
+[2017-11-07 12:35:04] Felipe "Juca" Sanches: sim, vou ver
+[2017-11-07 12:35:19] Werner: se estiver rompido, precisa ser substituído por um de igual "amperagem"
+[2017-11-07 12:35:29] Werner: nunca superior
+[2017-11-07 12:35:51] Werner: no caso, 2A
+[2017-11-07 12:36:07] Werner: fusiveis custam na margem de centavos de real
+[2017-11-07 12:36:18] Werner: qq lojinha de material de construção vende
+[2017-11-07 12:36:29] Werner: e elétricas
+[2017-11-07 12:36:44] Werner: assistencias técnicas... capaz do cara te dar de graça
+[2017-11-07 12:41:03] Felipe "Juca" Sanches: "fusível do bom, daqueles que não queimam" http://www.tabalabs.com.br/eletronica/gambiarras/1.jpg
+[2017-11-07 12:41:17] Werner: pqp!!!!
+[2017-11-07 12:41:26] Felipe "Juca" Sanches: Fusivel "do bom" daqueles que nao queimam nunca versao 2.0 http://www.tabalabs.com.br/eletronica/gambiarras/5.jpg
+[2017-11-07 12:41:45] Felipe "Juca" Sanches: :-P
+[2017-11-07 12:41:55] Werner: olha q interessante na foto de cima, o conector com 3 pinos...
+[2017-11-07 12:42:06] Werner: se for algo assim na placa do sagitta, tbm podemos adaptar
+[2017-11-07 12:42:14] Felipe "Juca" Sanches: to indo almoçar
+[2017-11-07 12:42:14] Werner: mas o ideal seria parafusável
+[2017-11-07 12:42:17] Werner: blz
+[2017-11-07 12:42:20] Felipe "Juca" Sanches: e depois vou lá pra USP
+[2017-11-07 12:42:29] Felipe "Juca" Sanches: té mais
+[2017-11-07 12:42:51] Werner: 👍🏻
+[2017-11-07 14:51:32] Werner: Ô cara, valeu por isso:
+[2017-11-07 14:51:34] Werner: +   Thanks to Werner Moecke for the help in inspecting the circuits and
+ +     debugging this driver.
+[2017-11-07 14:51:41] Werner: https://github.com/mamedev/mame/pull/2776/files
+[2017-11-07 14:51:51] Werner: ☺️
+[2017-11-07 14:57:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/337.jpg
+[2017-11-07 14:58:08] Werner: à direita vc tem o q parece ser o conector AC externo plugando à placa?
+[2017-11-07 14:58:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/339.jpg
+[2017-11-07 14:58:48] Werner: isso parecem ser as velocidades da serial
+[2017-11-07 14:59:38] Werner: legal q as conexões de alimentação são todas ligadas por cabos e conectores.
+Facilita na hora de medir as tensões da fonte sem medo de danificar o resto da eletrônica
+[2017-11-07 15:02:34] Felipe "Juca" Sanches: O cabo Azul com os vários fiozinhos coloridos conectado à placa via pin-headers vai ligado no tubo CRT
+[2017-11-07 15:02:58] Felipe "Juca" Sanches: Essas fotos todas são do Sagitta 150
+[2017-11-07 15:03:15] Werner: e o cabo azul com fios brancos e azuis?
+[2017-11-07 15:03:22] Felipe "Juca" Sanches: De fato, essas labels no silk parecem ser baud rates
+[2017-11-07 15:04:01] Werner: são sim, sem dúvida. Inclusive tem um label "Tx/Rx" ali tbm
+[2017-11-07 15:04:28] Felipe "Juca" Sanches: os dois cabos azuis vão ligados no CRT
+[2017-11-07 15:04:46] Felipe "Juca" Sanches: segue abaixo uma foto dos nomes dos sinais no silk da placa:
+[2017-11-07 15:05:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/349.jpg
+[2017-11-07 15:06:19] Werner: são tensões de excitamento do tubo
+[2017-11-07 15:06:25] Felipe "Juca" Sanches: alguém usou pedaços de corpo de caneta BIC como espaçador para aparafusar o teclado:
+[2017-11-07 15:06:29] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/352.jpg
+[2017-11-07 15:06:38] Werner: altíssimas tensões, portanto nada de mãos ali durante o funcionamento
+[2017-11-07 15:06:50] Werner: choque de jogar o corpo longe.
+[2017-11-07 15:06:57] Felipe "Juca" Sanches: sim, conheço
+[2017-11-07 15:07:12] Werner: tá vendo, já tem gambiarras
+[2017-11-07 15:07:21] Werner: normal isso nesse tipo de equipamento.
+[2017-11-07 15:15:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/358.jpg
+[2017-11-07 15:16:07] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/359.jpg
+[2017-11-07 15:16:44] Werner: só q um detalhe
+[2017-11-07 15:16:47] Felipe "Juca" Sanches: é muito dificil de levantar a placa pra ver
+[2017-11-07 15:17:10] Werner: Ali na foto anterior à do teclado, tem duas PCIs presas ao painel traseiro.
+[2017-11-07 15:17:24] Felipe "Juca" Sanches: o teclado não tem nenhum chip controlador especializado. Apenas aquele 74145 alí
+[2017-11-07 15:17:36] Werner: Uma delas, próxima aos potenciômetros, deve ser a que distribui força aos transformadores.
+[2017-11-07 15:18:05] Werner: imagino que os pinos de entrada de força estejam soldados a fios, cujas outras extremidades estejam soldadas a essa placa.
+[2017-11-07 15:18:19] Felipe "Juca" Sanches: credo! 74145 é conversor de BCD pra decimal... :-P http://www.ti.com/product/SN74145
+[2017-11-07 15:18:53] Werner: achei q ele seria somente algum latch ou buffer.
+[2017-11-07 15:19:18] Werner: pode ser q ele faça parte do circuito decodificador do teclado.
+[2017-11-07 15:19:47] Werner: não sei ao certo. Precisaria ver no q ele está ligado.
+[2017-11-07 15:20:02] Felipe "Juca" Sanches: ah! é usado para multiplexar as linhas (ou colunas, não sei)
+[2017-11-07 15:20:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/372.jpg
+[2017-11-07 15:20:52] Felipe "Juca" Sanches: entra um valor de 4 bits e sai ativo baixo em um dos 10 outputs
+[2017-11-07 15:21:11] Felipe "Juca" Sanches: preciso ver em que endereço tá mapeado esse bicho
+[2017-11-07 15:21:28] Werner: faz sentido isso aí.
+[2017-11-07 15:21:48] Werner: faz parte da lógica do teclado. Linhas e colunas.
+[2017-11-07 15:22:36] Werner: veja onde se conectam os pinos 12/13/14/15 dele
+[2017-11-07 15:22:51] Werner: pois os pinos 1 a 11 certamente são ligados ao teclado.
+[2017-11-07 15:23:21] Werner: cara, mutex não faz parte da biblioteca std?
+[2017-11-07 15:23:31] Werner: (só um parentese)
+[2017-11-07 15:24:00] Werner: to tendo um erro no código core do MAME, numa linha q diz: std::mutex
+[2017-11-07 15:24:32] Werner: e em std::thread tbm
+[2017-11-07 15:24:40] Werner: mas deixa isso pra mais tarde.
+[2017-11-07 15:24:48] Werner: voltando ao sagitta
+[2017-11-07 15:31:56] Felipe "Juca" Sanches: nao sei responder essa pergunta
+[2017-11-07 15:32:17] Werner: em windows o mutex não é implementado em gcc
+[2017-11-07 15:32:19] Felipe "Juca" Sanches: justamente estou mapeando os sinais A, B, C e D
+[2017-11-07 15:32:26] Werner: estou procurando um workaround
+[2017-11-07 15:32:33] Werner: blz
+[2017-11-07 15:37:01] Felipe "Juca" Sanches: os pinos A, B e C estao respectivamente ligados a uma pastilha 7493 nos pinos 9, 8 e 11
+[2017-11-07 15:38:10] Werner: o 7493 é um decodificador de display 7 segmentos
+[2017-11-07 15:38:30] Werner: perai deixa eu ler mais um pouco
+[2017-11-07 15:38:44] Felipe "Juca" Sanches: http://pdf.datasheetcatalog.com/datasheet/motorola/SN54LS92J.pdf
+[2017-11-07 15:38:56] Werner: bcd
+[2017-11-07 15:39:06] Werner: desculpe, ele sai código bcd
+[2017-11-07 15:39:17] Felipe "Juca" Sanches: é um contador
+[2017-11-07 15:39:27] Werner: sim, ele conta em bcd
+[2017-11-07 15:39:37] Werner: essa lógica é pra varrer as linhas do teclado
+[2017-11-07 15:39:42] Felipe "Juca" Sanches: sim
+[2017-11-07 15:39:53] Felipe "Juca" Sanches: então alguém dá pulsos nesse contador pra trocar a linha ativa
+[2017-11-07 15:40:12] Werner: normalmente em projetos, ele é usado conectado a um driver bcd para 7 segmentos, a fim de mostrar a contagem em um display
+[2017-11-07 15:40:21] Felipe "Juca" Sanches: e depois lê de algum outro lugar o padrão de pressionamento das teclas da linha selecionada
+[2017-11-07 15:40:29] Werner: mas nesse caso ele está ativando linhas no teclado
+[2017-11-07 15:41:27] Werner: procure agora onde tem as colunas
+[2017-11-07 15:41:50] Werner: isso deve levar até onde o teclado é decodificado
+[2017-11-07 15:45:43] Felipe "Juca" Sanches: e o quarto bit (o sinal D) tá ligado no pinio 3 de um 7474 (sinal de CLK de um flip flop)
+[2017-11-07 15:47:35] Werner: ele usa esse flip flop pra dividir o sinal provavelmente pra outra coisa
+[2017-11-07 15:48:04] Werner: (é um divisor da frequencia do flip flop)
+[2017-11-07 15:48:15] Werner: olhando na saida do flip flop ele liga em que?
+[2017-11-07 15:50:06] Werner: não tem nada que conecte esse teclado a um outro CI, um maiorzinho? Ou mesmo ao 8080?
+[2017-11-07 15:54:33] Felipe "Juca" Sanches: to desenhando aqui na lousa
+[2017-11-07 16:05:58] Felipe "Juca" Sanches: tá complicadinho o circuito aqui
+[2017-11-07 16:06:03] Felipe "Juca" Sanches: mas to levantando aos poucos
+[2017-11-07 16:06:35] Werner: não se prenda demais ao nitty-gritty detail... foque onde estão conectadas as duas pontas da fiozera
+[2017-11-07 16:06:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/415.jpg
+[2017-11-07 16:06:44] Werner: uma ponta é o teclado, e a outra é...
+[2017-11-07 16:07:25] Felipe "Juca" Sanches: os canetões não tão ajudando muito, pra variar
+[2017-11-07 16:07:28] Felipe "Juca" Sanches: haha
+[2017-11-07 16:07:31] Werner: tá meio apagadão o u32 e u101
+[2017-11-07 16:07:43] Felipe "Juca" Sanches: u92
+[2017-11-07 16:07:44] Werner: onde vai ligado a saida do flip-flop u32?
+[2017-11-07 16:07:53] Felipe "Juca" Sanches: vou ver
+[2017-11-07 16:07:58] Werner: ah ta, u92
+[2017-11-07 16:10:19] Felipe "Juca" Sanches: vai numa das entradas de outra porta NAND
+[2017-11-07 16:12:22] Werner: puta merda... tenta ver onde isso tudo vai dar. Em algum ponto tem q conectar no barramento de dados de alguém. cazzo.
+[2017-11-07 16:13:11] Werner: não adianta muito pra gente ficar analisando todo o bloco da lógica de leitura desse teclado. Só nos interessa o endereçamento dele e/ou quem habilita os dados das teclas pro processador ler
+[2017-11-07 16:13:35] Werner: 😏
+[2017-11-07 16:23:32] Felipe "Juca" Sanches: ufa!
+[2017-11-07 16:23:41] Felipe "Juca" Sanches: arrumei canetão melhor aqui
+[2017-11-07 16:24:03] Felipe "Juca" Sanches: concordo
+[2017-11-07 16:31:17] Werner: tente abstrair ao máximo, tentando chegar no big picture
+[2017-11-07 16:31:35] Werner: senão vc vai endoidar desenhando flip-flops e portas lógicas
+[2017-11-07 16:31:53] Werner: pense como nos diagramas lógicos da tese do zezinho
+[2017-11-07 16:37:54] Felipe "Juca" Sanches: sim, to ligado
+[2017-11-07 16:38:02] Felipe "Juca" Sanches: to indo pra trás nos caminhos de onde vem o sinal
+[2017-11-07 16:38:13] Felipe "Juca" Sanches: tentando ver de onde vem os pulsos de clk por exemplo
+[2017-11-07 16:38:14] Werner: 👍🏻
+[2017-11-07 16:41:16] Felipe "Juca" Sanches: esse circuito tem a cara do Edson Fregni
+[2017-11-07 16:41:32] Werner: kd?
+[2017-11-07 16:42:41] Felipe "Juca" Sanches: me dá mais um tempinho
+[2017-11-07 16:42:50] Felipe "Juca" Sanches: to puxando mais um novelo de lã aqui
+[2017-11-07 16:46:24] Werner: 👍🏻
+[2017-11-07 17:23:12] Werner: Falow Juca, eu to saindo agora.
+[2017-11-07 17:23:42] Werner: Mas mais tarde eu devo voltar aqui. Só não sei te precisar o horário. Penso q esteja de volta até umas 22/23h
+[2017-11-07 17:23:54] Werner: 👍🏻
+[2017-11-07 22:12:07] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/446.jpg
+[2017-11-07 22:13:25] Werner: Estou a caminho d casa. Chegando eu vejo a foto com mais zoom.
+[2017-11-07 22:14:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/448.jpg
+[2017-11-07 22:15:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/449.jpg
+[2017-11-07 22:15:25] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/450.jpg
+[2017-11-07 22:15:50] Felipe "Juca" Sanches: Esses fios sao jumpers
+[2017-11-07 22:15:59] Felipe "Juca" Sanches: Da pra tirar
+[2017-11-07 22:17:11] Felipe "Juca" Sanches: Pra separar a fonte do resto do circuito.
+[2017-11-07 22:17:15] Werner: Só não entendo ainda o motivo de haver esses jumpers aí. Preciso examinar as fotos mais detalhadamente.
+[2017-11-07 22:18:33] Felipe "Juca" Sanches: Essa é exatamente a fronteira entre a area digital e a regiao do circuito da fonte de alimentação
+[2017-11-07 22:19:29] Werner: Ok
+[2017-11-07 22:47:38] Werner: cara, com a foto do quadro tem tanto reflexo de fundo q não dá pra ver... parece a maioria ser flip-flops com algumas portas lógicas (and, not) e o q tem bem à direita do quadro tá ilegível...
+[2017-11-07 22:47:59] Werner: o bom desses jumpers é poder desconectar pra medir as tensões das fontes
+[2017-11-07 22:48:13] Felipe "Juca" Sanches: exatamente!
+[2017-11-07 22:48:30] Felipe "Juca" Sanches: eles estão lá pra isso mesmo, eu acho
+[2017-11-07 22:48:34] Werner: vc conseguiu descobrir o q tem na outra ponta do teclado?
+[2017-11-07 22:48:43] Felipe "Juca" Sanches: não
+[2017-11-07 22:48:58] Werner: não vai ligado ao barramento de dados?
+[2017-11-07 22:49:01] Felipe "Juca" Sanches: fiquei caçando algum sinal que chegasse no barramento de endereços da CPU
+[2017-11-07 22:49:08] Felipe "Juca" Sanches: ou no barramento de dados
+[2017-11-07 22:49:12] Felipe "Juca" Sanches: mas nao achei nada
+[2017-11-07 22:49:15] Werner: tem q ser ligado lá...
+[2017-11-07 22:49:25] Felipe "Juca" Sanches: é... mas é um circuito complicadinho
+[2017-11-07 22:49:31] Werner: só se ele serializa os dados por flip flops... mas tem q chegar no processador
+[2017-11-07 22:49:40] Felipe "Juca" Sanches: deve estar um pouco mais longe o ponto onde finalmente alcança a CPU
+[2017-11-07 22:49:44] Werner: não tem como não chegar na cpu
+[2017-11-07 22:50:04] Werner: blz isso a gente pode olhar numa próxima visita
+[2017-11-07 22:50:11] Felipe "Juca" Sanches: ok
+[2017-11-07 22:50:13] Werner: eu posso levar meu osciloscópio de bolso
+[2017-11-07 22:50:21] Werner: se eu for
+[2017-11-07 22:50:51] Felipe "Juca" Sanches: ok, a gente pode ir semana que vem
+[2017-11-07 22:51:04] Werner: e a conversa lá, rolou?
+[2017-11-07 23:04:40] Felipe "Juca" Sanches: rolou sim
+[2017-11-07 23:04:43] Felipe "Juca" Sanches: foi legal
+[2017-11-07 23:04:56] Felipe "Juca" Sanches: vamos começar a frequentar o espaço
+[2017-11-07 23:05:17] Felipe "Juca" Sanches: pra continuar inspecionando as máquinas, escrevendo emuladores e possivelmente restaurando alguns equipamentos
+[2017-11-07 23:05:42] Felipe "Juca" Sanches: tive a impressão de que o professor Fernando gostou bastante de ver o emulador funcionando
+[2017-11-07 23:06:47] Felipe "Juca" Sanches: vamos tentar organizar a bagunça da sala onde ficam os equipamentos que ainda não estão na exposição aberta ao público de modo a conseguir abrir um pouco de espaço e botar lá uma mesa com alguns instrumentos úteis para restauração de computadores
+[2017-11-07 23:06:58] Felipe "Juca" Sanches: acho que é promissor
+[2017-11-07 23:07:25] Felipe "Juca" Sanches: eles estão também usando um software livre para catalogar o acervo
+[2017-11-07 23:07:39] Felipe "Juca" Sanches: mas parece que isso ainda está incompleto
+[2017-11-07 23:08:03] Werner: me dá só uns dois minutos por favor...
+[2017-11-07 23:08:45] Felipe "Juca" Sanches: uma coisa legal é que esse software livre oferece não apenas um painel de controle privado para administração, mas também gera uma cara pública para "museus". Oferece uma opção de hospedar um website com a descrição do acervo
+[2017-11-07 23:09:27] Felipe "Juca" Sanches: cheguei a comentar com o professor que seria legal tentar hospedar nessas páginas emuladores de algumas das máquinas do acervo, quando possível.
+[2017-11-07 23:10:44] Felipe "Juca" Sanches: Existe uma tecnologia chamada emscripten que permite que um código C/C++ seja compilado para javascript, capaz de rodar uma aplicação dentro de uma página web. O Internet Archive, por exemplo, usa isso para compilar o MAME e hospedar o "Internet Arcade"
+[2017-11-07 23:10:57] Felipe "Juca" Sanches: https://archive.org/details/internetarcade
+[2017-11-07 23:16:51] Werner: esse conversor de C/C++ para js parece ser louco... funciona? Eu cheguei a ver o seu patinho feio no js
+[2017-11-07 23:24:43] Felipe "Juca" Sanches: sim, funciona ;-)
+[2017-11-07 23:25:11] Felipe "Juca" Sanches: todos esses jogos de arcade que tem no Internet Archive são jogáveis no browser
+[2017-11-07 23:25:22] Werner: eu conhecia esse site
+[2017-11-07 23:25:44] Felipe "Juca" Sanches: e são na realidade os drivers de emulação das placas dessas arcades no MAME compilados pra javascript usando o emscripten
+[2017-11-07 23:25:51] Werner: não conhecia sobre LLVM
+[2017-11-07 23:26:09] Werner: o código js q ele gera é legivel?
+[2017-11-07 23:26:22] Felipe "Juca" Sanches: não
+[2017-11-07 23:26:45] Werner: deve sair como um jQ minified né?
+[2017-11-07 23:26:46] Felipe "Juca" Sanches: ele usa o javascript como "bytecode" para a compilação
+[2017-11-07 23:26:50] Felipe "Juca" Sanches: é
+[2017-11-07 23:26:55] Felipe "Juca" Sanches: isso mesmo
+[2017-11-07 23:29:29] Werner: fica meio pesado pros arcades, mas pra máquinas como as q estamos emulando, deve rodar legal.
+[2017-11-07 23:29:58] Werner: o bacana do js é q podendo ser incorporado a páginas web, eu consigo estilizar a página como eu quiser
+[2017-11-07 23:30:53] Werner: posso fazer cada máquina emulada ter um layout único, por exemplo, o pf pode ter todo o painel frontal q vc fez em svg ficar funcional e interativo. Isso seria legal.
+[2017-11-07 23:31:24] Werner: Dá para fazer um negócio bem bacana.
+[2017-11-07 23:43:10] Felipe "Juca" Sanches: :-)
+[2017-11-07 23:46:06] Felipe "Juca" Sanches: É... Nao sei como ele faz com o render do svg
+[2017-11-07 23:47:18] Werner: Não esquente. SVG se não me engano, pode ser renderizado na folha de estilos (CSS) - no último caso, acredito ser possível transformar em uma imagem png.
+[2017-11-07 23:47:30] Felipe "Juca" Sanches: Teoricamente daria pra fazer isso sim. Mas não sei se o esquema automatizado é tão esperto assim
+[2017-11-07 23:48:28] Werner: Eu tenho certa experiência como desenvolvedor web (front end e back end). Eu já vi alguns exemplos de SVG ser gerado em CSS preciso dar uma relembrada nisso, pois não é corriqueiro, mas acho provável q seja possível fazer.
+[2017-11-07 23:48:41] Felipe "Juca" Sanches: O ideal seria o arquivo svg original ser enviado ao browser. Mas realmente duvido que o sistema tenha esse tipo de esperteza
+[2017-11-07 23:49:20] Werner: https://www.w3schools.com/graphics/svg_intro.asp
+[2017-11-07 23:49:40] Felipe "Juca" Sanches: Ja brinquei bastante com SVG, por conta das minhas contribuicoes como desenvolvedor do Inkscape
+[2017-11-07 23:50:58] Felipe "Juca" Sanches: Cheguei a implementar uns 2 capítulos da spec
+[2017-11-07 23:52:07] Werner: hehehe então é o pai da matéria
+[2017-11-07 23:52:16] Felipe "Juca" Sanches: ;-)
+[2017-11-07 23:53:43] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/519.jpg
+[2017-11-07 23:53:57] Werner: 😉
+[2017-11-07 23:56:21] Werner: abrindo a imagem no inkscape vc consegue extrair todas as coordenadas e daí fica relativamente fácil exportá-la para uma página web.
+[2017-11-07 23:57:00] Werner: https://www.w3schools.com/graphics/svg_path.asp
+[2017-11-07 23:57:36] Werner: não tem terror - as regras para SVG inclusive já foram incorporadas ao W3C.
+[2017-11-07 23:58:13] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/524.jpg

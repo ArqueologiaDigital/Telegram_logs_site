@@ -1,0 +1,62 @@
+[2026-10-27 07:42:28] L.: https://benwinding.github.io/encarta_95_web/
+
+Encarta 95 pra web!
+[2026-10-27 09:28:41] Felipe "Juca" Sanches: Uns vinte anos atras eu fui enganado pela minha tia que me convenceu a dar pra ela minha colecao (de livros fisicos) da enciclopedia Barsa em troca de um cd-rom da Encarta
+[2026-10-27 10:21:21] Felipe "Juca" Sanches: Pinball Fantasies tá rodando lisinho no KN7000.
+[2026-10-27 10:21:26] Felipe "Juca" Sanches: Mas...
+[2026-10-27 10:21:58] Felipe "Juca" Sanches: o LCD é meio lerdo pra atualizar. Então as imagens ficam borradas por conta do movimento do scroll do playfield.
+[2026-10-27 10:22:04] Felipe "Juca" Sanches: Compromete bastante a jogabilidade
+[2026-10-27 10:22:32] Felipe "Juca" Sanches: mas nao é uma questão de performance. É apenas limitação do hardware
+[2026-10-27 10:24:06] L.: Altera o jogo pra ter rastro na bolinha tipo Windows tinha quando rodava em laptop com LCD lento
+[2026-10-27 10:27:04] Felipe "Juca" Sanches: como é isso, que eu não conheço?!
+[2026-10-27 10:31:57] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41900.jpg
+[2026-10-27 10:32:08] L.: Ia desaparecendo
+[2026-10-27 11:03:00] Pablo Vasques Bravo-Villalba: Isso realmente ajudava com telas de LCD de matriz passiva
+[2026-10-27 11:13:41] Felipe "Juca" Sanches: sim, eu me lembro de ter visto isso no Windows 3.11 e nao ter entendido por que alguem poderia querer algo assim
+[2026-10-27 11:13:45] Felipe "Juca" Sanches: eu era um teenager
+[2026-10-27 11:13:58] Felipe "Juca" Sanches: acho que nem isso. Acho que eu era uma criança de uns 12 anos
+[2026-10-27 11:30:13] Felipe "Juca" Sanches: https://youtu.be/L0ZIVUTCqG4?is=HbcQIbv6O9zH3WzW
+[2026-10-27 11:31:07] Felipe "Juca" Sanches: É muito difícil gravar LCD com celular...
+[2026-10-27 11:37:18] Pablo Vasques Bravo-Villalba: Facilita um pouco se você tiver um app que permita deixar as configurações o mais manuais possível e prender o celular em um tripé. Mas receio que seja um esforço desproporcional em vista do benefício que se pode conseguir
+[2026-10-27 11:38:49] Felipe "Juca" Sanches: o foco agora é 100% em hackeragem do kn7000 kkkk
+[2026-10-27 11:39:36] Felipe "Juca" Sanches: esse pinball fantasies ta escrito em C
+[2026-10-27 11:39:49] Felipe "Juca" Sanches: compilado pro kn7000 com um fork do LLVM
+[2026-10-27 11:40:40] Felipe "Juca" Sanches: me segura, por que daqui a pouco vai aparecer um minix para teclados Technics kkkkk
+[2026-10-27 11:47:09] L.: porta .net pra programar em C#
+[2026-10-27 11:52:18] Felipe "Juca" Sanches: Acho que vou tentar fazer algo prático... algo que seja realmente útil para um músico
+[2026-10-27 11:52:52] Felipe "Juca" Sanches: talvez um módulo de síntese FM
+[2026-10-27 11:53:07] Felipe "Juca" Sanches: ou um emulador de synth analógico, por exemplo um moog
+[2026-10-27 11:53:28] Felipe "Juca" Sanches: algo que complemente as ferramentas que o firmware original já tem
+[2026-10-27 11:54:08] L.: ah sim
+[2026-10-27 11:54:13] L.: um trackerzinho seria legal
+[2026-10-27 11:54:22] L.: ou um opencubic player
+[2026-10-27 11:54:27] Felipe "Juca" Sanches: caraca, ótima idéia!
+[2026-10-27 11:54:45] L.: https://github.com/mywave82/opencubicplayer
+[2026-10-27 11:55:14] L.: tem umas reescritas de coisas tipo impulsetracker e tal
+[2026-10-27 11:55:19] Felipe "Juca" Sanches: ou o open mod plug tracker
+[2026-10-27 11:55:24] Felipe "Juca" Sanches: openmpt
+[2026-10-27 11:55:39] L.: pega o xmp do Claudio Matsuoka (brasileiro que trampou na conectiva!) e porta ele :D
+[2026-10-27 11:55:55] L.: https://github.com/libxmp/libxmp
+[2026-10-27 12:01:25] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41929.jpg
+[2026-10-27 12:01:25] Felipe "Juca" Sanches: Vai ser Amiga ProTracker ;-D
+[2026-10-27 13:20:00] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41930.jpg
+[2026-10-27 13:20:56] Felipe "Juca" Sanches: é... a IA engoliu o mundo do software
+[2026-10-27 13:52:17] Marcelo: porta .net pra programar em j2me
+[2026-10-27 13:58:57] Marcelo: Um compositor polifônico daqueles que vinha nos celulares seria legal
+[2026-10-27 13:59:33] L.: Um bagulho desses na época que esses teclados eram novos ia ser do caralho hehe
+[2026-10-27 13:59:38] L.: Galera ia pirar
+[2026-10-27 14:00:57] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=1wa2_QBpyS4
+[2026-10-27 14:25:39] Guilherme Ranoya: Tem um Age of Empires ali de quebra. 😆
+É um emulador rodando Windows 3 com o Encarta instalado e já abrindo direto nele.
+[2026-10-27 14:26:10] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41939.jpg
+[2026-10-27 16:58:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41940.jpg
+[2026-10-27 16:58:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41941.jpg
+[2026-10-27 17:03:03] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41942-protracker-kn7000-manual.pdf
+[2026-10-27 18:04:30] Marcelo: Libera aí pra gente jogar no mame
+[2026-10-27 20:46:15] Felipe "Juca" Sanches: o MAME ainda nao ta pronto pra rodar isso
+[2026-10-27 20:46:46] Felipe "Juca" Sanches: tenho uns PRs em aberto esperando os mantenedores aceitarem
+[2026-10-27 21:17:02] Pablo Vasques Bravo-Villalba: Qual é a CPU do KN7000?
+[2026-10-27 21:21:23] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41947.jpg
+[2026-10-27 21:21:23] Felipe "Juca" Sanches: https://arqueologiadigital.org/technics-docs/kn7000/
+[2026-10-27 21:36:57] Pablo Vasques Bravo-Villalba: Tá dando erro de certificado, mas consegui acessar assim mesmo. Diz que o certificado não corresponde à URL
+[2026-10-27 22:52:57] Hugo (Agaelebê): https://spelk.press/gb/products/81-jokes-for-the-zx81?v_id=variant_01M5BBJAFDQC1R85Z3535FT840

@@ -1,0 +1,25 @@
+[2026-10-22 10:46:30] Shideravan: Desbloquearam o Switch 2 e já estão mandando ver na engenharia reversa do console
+[2026-10-22 10:46:33] Shideravan: https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/
+[2026-10-22 14:59:00] Pedro de Medeiros 👾: Está usando a interrupção de linha pra mudar a prioridade dos layers enquanto atualiza também o conteúdo do layer pra simular um terceiro layer?
+[2026-10-22 15:01:52] RicBit: bem que eu gostaria, mas não dá pra mudar prioridade de layer no 9990
+[2026-10-22 16:04:22] Pedro de Medeiros 👾: Acho que até daria usando o registrador R#27, mas o layer B não pode ocupar toda a tela, só a parte de baixo.
+[2026-10-22 16:05:17] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41767.jpg
+[2026-10-22 16:05:17] Pedro de Medeiros 👾: Se eu tiver entendido esta parte direito. 😅
+[2026-10-22 16:07:49] Pedro de Medeiros 👾: Então daria pra fazer parallax na parte de cima com A movendo rápido na frente de B e na parte abaixo de y=64, inverte a prioridade e faz parallax com B movendo rápido na frente de A.
+[2026-10-22 16:08:48] RicBit: WAT
+[2026-10-22 16:08:58] RicBit: 9990 tem controle de window?
+[2026-10-22 16:09:02] RicBit: que vacilo, vou usar
+[2026-10-22 16:10:45] RicBit: hum é um window meio toscão, só funciona em unidades de 64 pixels
+[2026-10-22 16:10:56] Pedro de Medeiros 👾: Sim
+[2026-10-22 16:11:04] RicBit: se der sorte de algum parallax cair bem na divisa vale
+[2026-10-22 16:11:43] RicBit: talvez seja util pra mim na entrada da mina
+[2026-10-22 16:14:12] RicBit: 64 é o tamanho certinho do zanac, dá pra deixar o scroll vertical por hardware e o HUD com window por cima.
+[2026-10-22 16:14:30] RicBit: em principio é pra isso que serve o window
+[2026-10-22 16:30:01] Pedro de Medeiros 👾: O que será que acontece ali na pontinha da nuvem mais ou menos na altura da linha 78-80, que o layer de trás corrompe no webMSX?
+[2026-10-22 16:32:05] RicBit: Webmsx é ruim, no openmsx funciona
+[2026-10-22 20:51:08] RicBit: a abertura no templo é tensa. cinco layers de parallax, mais o adol e os morcegos, sendo que tem morcego que voa por cima das letras e morcego que voa por trás.
+[2026-10-22 20:51:25] RicBit: eu consegui colocar tudo mas está lento, agora é otimizar
+[2026-10-22 22:32:20] RicBit: abertura refeita -> https://www.ilafox.com.br/ricbit/ys3/
+[2026-10-22 22:32:38] RicBit: webmsx tem problemas serios de timing, se bobear eu vou ter que consertar
+[2026-10-22 22:33:06] RicBit: mas tá lá, 5 layers de parallax, texto com scroll vertical e tal
+[2026-10-22 22:33:10] RicBit: ainda falta otimizar

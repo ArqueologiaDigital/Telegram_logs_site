@@ -1,0 +1,19 @@
+[2024-01-02 06:19:28] Felipe "Juca" Sanches: Começando o ano bem. O driver de emulação do teclado musical Technics KN5000 pela primeira vez está mostrando gráficos na tela!
+
+https://github.com/mamedev/mame/pull/11835
+[2024-01-02 06:19:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/28857.jpg
+[2024-01-02 13:10:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/28858.jpg
+[2024-01-02 13:10:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/28859.jpg
+[2024-01-02 13:10:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/28860.jpg
+[2024-01-02 13:11:27] Felipe "Juca" Sanches: tem outras versões do firmware também
+[2024-01-02 13:11:39] Felipe "Juca" Sanches: e a splash screen é ligeiramente diferente
+[2024-01-02 14:17:05] Felipe "Juca" Sanches: Eu fico impressionado com a tolerancia a esses glitches gráficos como os pixels azul marinho na splash screen da versão 2. Será que ficava pouco visível no LCD real?  Ou as pessoas em 1997 simplesmente não tinham o rigor estético que eu tenho nos dias de hoje?
+[2024-01-02 14:17:49] Pablo Vasques Bravo-Villalba: De repente a resolução física do LCD era menor do que a resolução do framebuffer e tudo ficava borrado? Que nem Game Gear jogando jogo de Master System?
+[2024-01-02 14:18:04] Pablo Vasques Bravo-Villalba: Se é que tem framebuffer. Desculpa se eu falei groselha 😅
+[2024-01-02 14:18:26] Felipe "Juca" Sanches: Tem sim. 320x240x8bpp
+[2024-01-02 14:52:50] Leonardo Roman: Ou será que o azul deveria ser originalmente outra cor?
+[2024-01-02 15:13:42] Pablo Vasques Bravo-Villalba: Olha... Isso faz sentido pra mim.
+[2024-01-02 16:51:53] RicBit: eu chuto que essa cor deve ser "transparente" e ele esta mostrando a cor da borda no lugar
+[2024-01-02 16:52:35] RicBit: ainda mais se for tela paletada
+[2024-01-02 16:53:22] RicBit: ou tem um off by one no emulador?
+[2024-01-02 18:45:37] Felipe "Juca" Sanches: Pois é... ponderei isso mesmo. Preciso checar.

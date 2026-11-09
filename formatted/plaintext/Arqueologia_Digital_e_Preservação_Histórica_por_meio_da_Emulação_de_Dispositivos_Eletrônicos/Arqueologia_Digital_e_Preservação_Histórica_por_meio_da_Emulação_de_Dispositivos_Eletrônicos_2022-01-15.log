@@ -1,0 +1,64 @@
+[2022-01-15 00:50:14] Felipe "Juca" Sanches: me desculpe, estava ocupado com outra coisa quando vi. Li tudo, mas não parei pra responder
+[2022-01-15 00:50:27] Felipe "Juca" Sanches: concordo com tudo o que você disse!
+[2022-01-15 00:51:28] Felipe "Juca" Sanches: são muitos desenvolvedores. Alguns deles são mais ativos. E acho que o Cuavas é quem mais faz code-review quando alguém abre um pull request
+[2022-01-15 00:51:48] Felipe "Juca" Sanches: acho que o Cuavas é o atual mantenedor, mas não tenho certeza
+[2022-01-15 00:52:54] Felipe "Juca" Sanches: você já leu tudo que tem nessa issue?
+https://github.com/mamedev/mame/issues/388
+[2022-01-15 00:53:31] Felipe "Juca" Sanches: Depois de ler tudo, talvez seja o caso de você fazer alguns comentários lá também. Eu já falei bastante por lá ao longo dos anos.
+[2022-01-15 00:57:00] Felipe "Juca" Sanches: eu tenho vontade de fazer isso também. Mas no momento não tenho equipamento de escaneamento 3D. Aliás... foi a busca por um empréstimo de um scanner 3D que me levou à USP em 2015 e, como a professora Roseli não estava lá no dia, acabei dando umas voltas pela faculdade e acabei me encontrando com o professor João José Neto. E essa foi a conversa que, sem querer, deu o ponta-pé inicial no meu projeto de resgate de toda a documentação do Patinho Feio.
+[2022-01-15 01:00:31] Shideravan: Vou fazer isso sim, dar um apoio
+[2022-01-15 01:00:54] Shideravan: Mas acho que isso é mais jogo de já trocar ideia direto com o cuavas, saca?
+[2022-01-15 01:01:06] Shideravan: Colocar isso no roadmap
+[2022-01-15 01:01:29] Shideravan: Olha que interessante!
+[2022-01-15 01:01:39] Shideravan: Mas eu tenho uma "boa notícia"
+[2022-01-15 01:01:43] Shideravan: Não é a ideal, claro
+[2022-01-15 01:02:17] Felipe "Juca" Sanches: diz aí
+[2022-01-15 01:02:22] Shideravan: Mas hoje em dia existem apps que fazem escaneamento a partir da imagem da câmera do celular e geram alguns modelos 3D rústicos, mas que podem ser editados no Maya e panz
+[2022-01-15 01:03:01] Shideravan: O que vai ajudar bastante é que alguns modelos mais novos (e caros para o brasileiro médio) já possuem lidar
+[2022-01-15 01:04:07] Shideravan: Parece que a combinação da varredura a laser do lidar com a imagem processada por câmeras de alta resolução, geram alguns modelos até razoavelmente bons
+[2022-01-15 01:04:37] Shideravan: Então tecnicamente, já existem até celulares que já servem para fazer isso
+[2022-01-15 01:05:42] Shideravan: Claro que o ideal para o trabalho de preservação seria usar equipamento dedicado, mas pode estar aí no horizonte uma solução que vai ser até acessível para o público em geral
+[2022-01-15 01:06:33] Felipe "Juca" Sanches: acho que o caminho é adquirir um equipamento desses e fazer uma demonstração da interface desejada, mesmo que seja por meio de um pequeno mockup em um programinha stand alone mesmo (sem ser patch no MAME em si)
+[2022-01-15 01:06:43] Felipe "Juca" Sanches: ter uma demo pode animar as pessoas
+[2022-01-15 01:06:53] Shideravan: É verdade, eu curto essa ideia
+[2022-01-15 01:06:56] Felipe "Juca" Sanches: e nos permite focar no processo de captura dos modelos em si
+[2022-01-15 01:07:00] Shideravan: Sim
+[2022-01-15 01:07:12] Shideravan: Acho que o ponto mais essencial é o banco de dados de modelos
+[2022-01-15 01:07:23] Felipe "Juca" Sanches: sem encostar no código do MAME enquanto não tivermos uma coleção de tamanho médio de scans 3D relevantes
+[2022-01-15 01:08:00] Felipe "Juca" Sanches: Eu escanearia coisas que tenho em mãos como, o Pense Bem, por exemplo
+[2022-01-15 01:08:16] Shideravan: Só que você pode chegar e mostrar e falar "olha que legal isso, poderíamos integrar isso ao MAME pois tem tudo a ver com o objetivo primário de preservação
+[2022-01-15 01:08:32] Shideravan: Exatamente isso que eu penso
+[2022-01-15 01:08:41] Shideravan: Cada pessoa vai escaneando aquilo que tem em mãos
+[2022-01-15 01:09:06] Felipe "Juca" Sanches: agora fica a questão: qual scaner 3d comprar? Eu preferiria não depender de sw proprietário, o que já limita bastante as soluções disponíveis, eu acho
+[2022-01-15 01:09:19] Shideravan: Até porque existem muitos hardwares bastante únicos e não vai ter uma forma elegante de fazer isso sem ser com ajuda da comunidade
+[2022-01-15 01:11:12] Shideravan: Ahhh a gente está num grupo. Acho que dá para perguntar isso de forma geral. Galera, alguém possui um celular com ToF? Já tentaram fazer escaneamento de objetos com ele para gerar um modelo 3D? O que acham do resultado?
+[2022-01-15 01:26:00] Felipe "Juca" Sanches: bom... são várias questoes complementares, na realidade:
+
+1) qual aparelho tem as cameras ToF
+2) quais aplicativos de celular existem que sejam capazes de usar essas cameras ToF pra gerar modelos 3D (e são todos proprietários?)
+3) Existe uma API para acessar os dados dessas cameras no Android? Isso seria útil para desenvolvermos nosso próprio app, caso não haja um livre ainda.
+[2022-01-15 01:26:45] Felipe "Juca" Sanches: vi que esse celular aqui tem ToF e é o modelo mais barato que consegui achar numa busca rápida. Celular usado, vendido por 1300 reais. 
+
+https://produto.mercadolivre.com.br/MLB-1982947947-lg-g8s-thinq-128gb-preto-bom-celular-usado-_JM#position=9&search_layout=stack&type=item&tracking_id=d1ac34c9-1398-4ec7-8d13-6ed668f0f748
+[2022-01-15 01:28:18] Felipe "Juca" Sanches: nota: eu até toleraria usar um app proprietario temporariamente, para avaliar a qualidade da tecnologia
+[2022-01-15 01:30:51] Shideravan: Muito bom, eu tava achando que só modelos de 10k+ que tinham essa tecnologia ainda. Geralmente essas coisas começam nos modelos mais caros e aos poucos vão sendo adotados de forma mais abrangente
+[2022-01-15 01:47:16] Shideravan: Mas parece que essa tecnologia já vai ser usada para várias coisas, por isso é bem provável que com o tempo se torne mainstream em celulares
+[2022-01-15 01:48:47] Shideravan: Por exemplo, a Nike lançou um app chamado Nike Fit que você escaneia o seu pé e ele te indica um tênis com o tamanho adequado para seu tamanho e formato de pé
+[2022-01-15 01:50:01] Felipe "Juca" Sanches: bacana!
+[2022-01-15 01:50:36] Shideravan: Eu encontrei um app aqui, que é gratuito e promete funcionar até em modelos mais simples de celular, desde que você esteja nas "condições ideais", que eu não estou aqui, já que meu espaço é minusculo e restrito, mas talvez você queira dar uma olhada
+[2022-01-15 01:50:41] Shideravan: Chama-se scann3D
+[2022-01-15 01:52:12] Shideravan: Você precisa colocar o objeto a ser escaneado, em uma superfície plana e você com o aparelho vai tirando fotos, sempre a mesma distancia, com o objeto parado, circundando e tomando o cuidado para cada parte do objeto ter aparecido em ao menos 2 fotos
+[2022-01-15 01:52:37] Shideravan: Ele exige um mínimo de 20 fotos diferentes e precisa ter uma boa iluminação indireta
+[2022-01-15 01:53:20] Shideravan: E não serve para qualquer objeto, ele preferencialmente precisa ter cores/texturas diversas, para permitir ele trackear certinho a superfície para gerar o objeto 3D
+[2022-01-15 09:02:36] RicBit: O Kinect é bom para scanear e deve ter bastante barato usado por aí
+[2022-01-15 09:02:54] RicBit: O Kinect 1 é com luz estruturada e o 2 é com tof
+[2022-01-15 09:03:01] RicBit: Eu tenho os dois aqui
+[2022-01-15 13:58:45] L.: https://twitter.com/Altomare3/status/1482332613427793923?t=zQg8tYjfe3f3BswJFosXnw&s=09
+[2022-01-15 14:25:41] Felipe "Juca" Sanches: Se puder/quiser, faz o Scan de algum aparelho seu que poderia estar (ou já está) emulado no MAME
+[2022-01-15 14:35:46] RicBit: Tenho que achar primeiro haha
+[2022-01-15 14:38:28] Felipe "Juca" Sanches: Não temos pressa ;-)
+[2022-01-15 19:29:18] Leonardo Roman: Isso deve ser novo. :) Antes ainda tinha aqueles feitos com fios e ferrite.
+[2022-01-15 20:56:40] Shideravan: Maravilha!
+[2022-01-15 20:56:59] Shideravan: Eu tinha o Kinect 1, mas vendi
+[2022-01-15 20:58:03] Shideravan: Mas se ele servir para escanear objetos para isso, acho que consigo encontrar algum barato no mercado livre
+[2022-01-15 21:35:55] L.: https://sudden-desu.net/entry/leftover-text-in-chrono-trigger

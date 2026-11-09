@@ -1,0 +1,162 @@
+[2022-06-06 01:04:14] Pedro de Medeiros 👾: Falando nisso, um port pra MSX1 pode gerar facilmente ports também para: Tatung Einstein, Memotech MTX, Colecovision/Coleco Adam, Sord M5, Spectravideo SVI-318/328, SEGA SG-1000/SC-3000 (e jogos desses consoles da SEGA rodam no SMS japonês com um cartucho de flash de tão próximos que são)
+[2022-06-06 07:39:40] Pablo Vasques Bravo-Villalba: No caso do SG-1000, o SMS japonês o cartucho direto
+[2022-06-06 14:17:07] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21158.jpg
+[2022-06-06 14:17:07] Pedro de Medeiros 👾: Sem muito tempo hoje, mas cheguei até aqui.
+[2022-06-06 14:20:10] Pedro de Medeiros 👾: Isso está em SCREEN 5 e foi copiado da página 2 com LMMM (logic move memory to memory).
+[2022-06-06 14:26:11] L.: Massa! Mais difícil da parte de vídeo já foi :)
+[2022-06-06 14:42:12] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/34
+[2022-06-06 14:59:44] L.: Não compensa usar OTIR no _lmmv?
+[2022-06-06 15:25:33] Pedro de Medeiros 👾: Tipo... montando um buffer com todos parâmetros e depois só passar esse buffer pro OTIR?
+[2022-06-06 15:30:04] Pedro de Medeiros 👾: Se bem que se eu colocar mais 0, 0, 90 na pilha, não preciso nem montar buffer, jogo o HL apontando pra sp+2 direto.
+[2022-06-06 15:40:22] L.: Ou OUTI, que parece ser mais eficiente
+[2022-06-06 15:40:52] L.: (Mas aí tem que botar vários, ele não faz o loop)
+[2022-06-06 15:43:39] Pablo Vasques Bravo-Villalba: Com OUTI assim não corre o risco de ficar rápido demais pro VDP? Não é uma pergunta retórica, é que já vi pessoal otimizando para velocidade "desenrolando" OTIR dessa forma
+[2022-06-06 15:44:42] L.: Essa página do Grauw usa OUTI http://map.grauw.nl/sources/docopy.php
+[2022-06-06 15:45:02] L.: Talvez dê problema em alguns MSX?
+[2022-06-06 15:45:18] Pedro de Medeiros 👾: tms9918 não tanca OUTI, mas acho que v9938 sim.
+[2022-06-06 15:46:26] Pablo Vasques Bravo-Villalba: Geralmente o Grauw é cuidadoso com esse tipo de coisa, mas acho que a observação do Pedro procede. Sei que tem horas que o VDP não "gosta" de receber dados no talo.
+[2022-06-06 15:50:12] Pedro de Medeiros 👾: @fsanches acho que dá pra fazer merge. Isso agora é apenas discussão de otimização.
+[2022-06-06 15:51:26] Pedro de Medeiros 👾: Minesweeper não precisa rodar a 60 fps. 😏
+[2022-06-06 15:58:34] Pedro de Medeiros 👾: Pra não esquecer: https://github.com/ArqueologiaDigital/Mines/issues/35
+[2022-06-06 16:02:36] Pedro de Medeiros 👾: Talvez o jeito correto mesmo fosse fazer isso, mas copiar a rotina pra RAM e ajustando a porta do VDP que está hard coded. Ou seja, lendo os endereços #0x0006 e #0x0007 pra ver quais as portas corretas.
+[2022-06-06 16:03:11] Pedro de Medeiros 👾: No caso desses OUT (#0x99), a
+[2022-06-06 16:38:07] RicBit: outi funciona em qualquer msx, desde que seja feito no retraço
+[2022-06-06 16:38:32] RicBit: o lance é que o vdp precisa desenhar na tela, para desenhar ele precisa ler a vram de tempos em tempos.
+[2022-06-06 16:38:51] RicBit: então ele lê a vram, espera o proximo pixel, lê a vram, etc
+[2022-06-06 16:39:22] RicBit: quando você dá um out na 99, o vdp coloca o seu out numa fila para ser escrito na vram no proximo intervalo entre um pixel e outro
+[2022-06-06 16:39:59] RicBit: se voce escrever rapido demais, com outi ou com combo de out, você vai sobrescrever o valor da fila e ele nunca vai parar na vram.
+[2022-06-06 16:40:32] Felipe "Juca" Sanches: Merged!
+[2022-06-06 16:40:34] RicBit: tudo isso durante o traço - no retraço o vdp não desenha nada, logo nao le a vram, logo pode escrever sem medo
+[2022-06-06 16:41:35] RicBit: no msx turbor você pode dar out sem medo porque ele trava a cpu até a janela aparecer, o que é bom ou ruim dependendo do que voce quer fazer
+[2022-06-06 16:42:20] RicBit: no 38 e no 58 tem o mesmo problema do msx1, mas como a pipe é mais rapida, as janelas sao maiores, e fica bem mais dificil de encavalar
+[2022-06-06 16:42:33] Pablo Vasques Bravo-Villalba: Eu lembro de você explicando isso em Jaú
+[2022-06-06 16:42:52] RicBit: tem algumas arquiteturas onde o vdp não tem janela nenhuma, no master system por exemplo você só pode escrever no retraço
+[2022-06-06 16:43:41] RicBit: no turbor tem uma pegadinha, a cpu só trava quando você você vai dar o segundo out, o primeiro ele guarda num buffer
+[2022-06-06 16:44:12] RicBit: então se voce fizer uma pipe otimizada, pode dar um out, imediatamente fazer contas, e depois dar outro out, com latencia zero
+[2022-06-06 16:44:31] RicBit: porque voce fez aritmetica entre um out e outro
+[2022-06-06 16:45:12] RicBit: é bom para descomprimir vram, você pode blitar dado comprimido com a mesma velocidade de dado raw, o custo é absorvido pelo buffer
+[2022-06-06 17:46:37] Pedro de Medeiros 👾: @fsanches E se a gente criar uma implementação tile-based default pra draw_minefield, que inclusive passa por parâmetro todas as definições de tiles? Aí todas as plataformas que usam tiles ou emulam tiles só precisam chamar essa função?
+[2022-06-06 18:49:56] Felipe "Juca" Sanches: Eu tava considerando exatamente isso ontem
+[2022-06-06 18:50:05] Felipe "Juca" Sanches: Acho ótimo!
+[2022-06-06 18:51:37] Pedro de Medeiros 👾: De repente a gente cria uma plataforma "virtual" que se chama tiled que não compila de verdade... mas as plataformas tile-based estendem dela.
+[2022-06-06 18:54:23] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/36
+[2022-06-06 18:55:17] Felipe "Juca" Sanches: Acho que toda essa implementação do vídeo baseado em tiles pode ficar dentro do diretório Common e ser feita usando uma pequena API de tiles que teria implementações específicas para cada plataforma
+[2022-06-06 18:55:48] Pedro de Medeiros 👾: Eu não testei o código do gunsmoke, mas eu acho que faz sentido esse PR#36.
+[2022-06-06 18:56:05] Felipe "Juca" Sanches: Vou ver
+[2022-06-06 19:03:07] Pedro de Medeiros 👾: Durante o retrace de uma linha, entre o fim da borda à direita e o começo da próxima borda à esquerda existe uma janela no MSX?
+[2022-06-06 19:10:45] RicBit: Tem, no turbor cabe três outs nela. No msx1 até dá para detectar mas involve polling então não sei se é útil na prática.
+[2022-06-06 19:23:26] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21202.jpg
+[2022-06-06 19:23:26] Pedro de Medeiros 👾: Alguém quer refazer os gráficos da versão MSX2? Não tem color clash então pode deixar a imaginação voar. 😁
+[2022-06-06 19:25:36] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21203.jpg
+[2022-06-06 19:25:36] Pedro de Medeiros 👾: @fsanches isso é o tile do quê mesmo? Bomba não estourada no final do jogo?
+[2022-06-06 19:30:47] Pablo Vasques Bravo-Villalba: Eu gostaria de dedicar um tempinho a isso
+[2022-06-06 19:31:56] Pedro de Medeiros 👾: Eu estou usando o mesmo pattern que o @fsanches criou, então você pode usar esse como modelo.
+[2022-06-06 19:33:59] Pedro de Medeiros 👾: Quando eu tiver um script pronto de conversão você vai poder tacar um png na pasta do MSX2 substituindo o anterior e ele fará a extração automática dos assets.
+[2022-06-06 19:35:14] Felipe "Juca" Sanches: kkkkk. Isso é o desenho da célula fechada. Mas eu concordo que não tá lindo não. Se alguém quiser fazaer um desenho melhor manda ver
+[2022-06-06 19:36:30] Pedro de Medeiros 👾: LOL. É que no minesweeper de windows a célula fechada é um bloco em branco.
+[2022-06-06 19:36:51] Felipe "Juca" Sanches: pois é... só muda a cor né?
+[2022-06-06 19:37:26] Felipe "Juca" Sanches: acho que é como um botão da GUI do Windows 3.11 não é? Não me lembro exatamente agora de cabeça.
+[2022-06-06 19:37:44] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21211.jpg
+[2022-06-06 19:37:44] Pedro de Medeiros 👾: Então vai ficar assim um tabuleiro em branco:
+[2022-06-06 19:38:29] Felipe "Juca" Sanches: é... é meio feio mesmo. Dá pra melhorar bastante esse visual, eu acho. Eu fiz os assets gráficos correndo, pois era só prova de conceito
+[2022-06-06 19:38:35] Pedro de Medeiros 👾: Ah, sim. Um botão em branco com bevel.
+[2022-06-06 19:40:04] Felipe "Juca" Sanches: Aliás... Seria divertido fazer também um port desse minesweeper pra Win 3.1 kkkk
+[2022-06-06 19:49:01] L.: Faz textura de chão/grama mesmo, e lugar que já foi visto, bota um buraco (do tipo, já escavei e vi que tem nada)😅
+[2022-06-06 19:49:28] L.: Esse pro SMS ficou legal https://www.smspower.org/forums/14693-CodingCompetition2014MinesweeperByEfry
+
+Lembra bem o do Windows
+[2022-06-06 19:50:22] Pablo Vasques Bravo-Villalba: Eu tava pensando em fugir um pouco do visual Windows 3.1 😬
+[2022-06-06 19:51:43] Pedro de Medeiros 👾: Eu gostei dessa ideia.
+[2022-06-06 19:53:06] Felipe "Juca" Sanches: Uma curiosidade: Houve uma época em que eu não sabia inglês e eu achava que o nome do jogo era Mines Weeper
+[2022-06-06 19:53:27] L.: Dá pra ter uns 4 buracos diferentes e escolher aleatório o tile
+[2022-06-06 19:55:21] L.: A versão sem buraco pode ter coisa tipo um matinho, uma pedrinha no canto, só terra
+[2022-06-06 19:55:51] Felipe "Juca" Sanches: Um visual estilo WarCraft 1, né?
+[2022-06-06 19:56:16] Pedro de Medeiros 👾: Fazer um minesweeper isométrico parecido com populous 😜
+[2022-06-06 19:56:34] Felipe "Juca" Sanches: bora portar pro hardware do ZAXXON, então!
+[2022-06-06 19:57:10] L.: Fica massa!
+[2022-06-06 20:02:05] Pedro de Medeiros 👾: Minesweeper vetorial com gráficos estilo vectrex
+[2022-06-06 20:04:03] Felipe "Juca" Sanches: oh, yeah! Agora estamos falando 😊
+[2022-06-06 20:09:16] Felipe "Juca" Sanches: Minesweeper em 3D no N64
+[2022-06-06 20:15:25] L.: Em 2D na plotter da Erin
+[2022-06-06 20:17:16] Felipe "Juca" Sanches: LOL
+[2022-06-06 21:16:28] Felipe "Juca" Sanches: Depois do merge do PR #36 (da declaração de cores num array ao invés de um switch statement no port pra GunSmoke), os numeros passaram a ficar todos com a mesma cor. Acho que a inicialização de variaveis globais não tá certa. Olhei o crt0.z80 do port pra MSX e vi que ele tem um código na área _GSINIT que eu não compreendo. Alguém sabe explicar?
+[2022-06-06 21:16:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21232.jpg
+[2022-06-06 21:16:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21233.jpg
+[2022-06-06 21:31:10] RicBit: Ldir dá overflow se você chamar com bc=0, então ele fez um if para esse caso.
+[2022-06-06 21:50:22] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/37
+[2022-06-06 21:50:39] Felipe "Juca" Sanches: Eu tava realmente fazendo besteira. Consertei. 😉
+[2022-06-06 21:52:42] Augusto Almeida: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21237-AnimatedSticker.tgs
+[2022-06-06 21:58:00] Felipe "Juca" Sanches: Explicando:
+
+O SDCC cria esses símbolos começados com #s__ ou #l__ para cada uma das áreas definidas. A letra S significa "start" e a letra L significa "length".
+
+Então tinha faltado eu declarar essas áreas INITIALIZED e INITIALIZER que o código copia nessa rotina de inicialização aí.
+[2022-06-06 21:58:49] Felipe "Juca" Sanches: Basicamente copia da ROM para a RAM os valores das atribuições iniciais das variáveis globais.
+[2022-06-06 21:59:07] Felipe "Juca" Sanches: Corrijam-me se eu estiver falando bobagem.
+[2022-06-06 22:12:01] Pedro de Medeiros 👾: Tá meio que funcionando agora: https://github.com/ArqueologiaDigital/Mines/pull/38
+[2022-06-06 22:12:08] Pedro de Medeiros 👾: Ele lê as teclas direitinho.
+[2022-06-06 22:13:04] Pedro de Medeiros 👾: Mas está bem lerdo porque ele atualiza a tela inteira.
+[2022-06-06 22:19:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21244.jpg
+[2022-06-06 22:19:58] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21245-excited-hockey.mp4
+[2022-06-06 22:20:42] Felipe "Juca" Sanches: E as cores?
+[2022-06-06 22:24:10] Felipe "Juca" Sanches: merged!
+[2022-06-06 22:24:24] Pedro de Medeiros 👾: O jeito mais fácil de resolver as cores é editando os tiles.
+[2022-06-06 22:25:06] Felipe "Juca" Sanches: Tá faltando no port MSX2 os inputs de OPEN_BLOCK (pra abrir um grupo de 9 célular de uma vez só) e de QUIT (pra sair do jogo)
+[2022-06-06 22:25:09] Pedro de Medeiros 👾: O código de alteração de paleta vai dar mais flexibilidade pra fazer a skin do jogo, mas não resolve esse quesito específico.
+[2022-06-06 22:25:38] Pedro de Medeiros 👾: Blz. Isso é 10 minutim.
+[2022-06-06 22:26:34] Felipe "Juca" Sanches: Como agora temos duas implementações tile-based (MSX2 e GunSmoke), podemos fazer aquele refactoring pra aproveitar a parte em comum e deixar nos ports só o que é realmente peculiaridade de cada hardware
+[2022-06-06 22:27:25] Felipe "Juca" Sanches: Uma vez isso feito, acho que dá até pra fazer facinho um port MSX1 com SCREEN 1
+[2022-06-06 22:45:57] Pedro de Medeiros 👾: @fsanches você pensa em implementar o tile de interrogação?
+[2022-06-06 22:46:09] Felipe "Juca" Sanches: AH! Verdade!
+[2022-06-06 22:46:12] Felipe "Juca" Sanches: Eu nunca usei isso
+[2022-06-06 22:46:17] Felipe "Juca" Sanches: mas pode ser
+[2022-06-06 22:46:24] Felipe "Juca" Sanches: deve ter gente que gosta de usar a interrogação
+[2022-06-06 22:46:32] Felipe "Juca" Sanches: simplesmente não faz parte da minha estratégia de jogo
+[2022-06-06 22:46:33] Pedro de Medeiros 👾: Eu não uso muito. Mas depende do jeito como a pessoa joga.
+[2022-06-06 22:46:51] Felipe "Juca" Sanches: é... bora adicionar isso também.
+[2022-06-06 22:47:03] Felipe "Juca" Sanches: mas não tô com pressa hahaha
+[2022-06-06 22:47:40] Pedro de Medeiros 👾: Pra configuração de entrada, ele pode ser um segundo clique no botão de flag.
+[2022-06-06 22:47:50] Pedro de Medeiros 👾: Acho que no windows era assim
+[2022-06-06 22:48:35] Felipe "Juca" Sanches: ah, fica cíclico FLAG => INTERROGACAO => NADA => FLAG..., é isso?
+[2022-06-06 22:48:42] Pedro de Medeiros 👾: Isso
+[2022-06-06 22:48:48] Felipe "Juca" Sanches: ok, faz sentido
+[2022-06-06 22:48:53] Felipe "Juca" Sanches: e é fácil de implementar
+[2022-06-06 22:49:22] Felipe "Juca" Sanches: é só fazer o desenho, declarar o tile e colocar essa lógica de ciclo aí
+[2022-06-06 22:49:28] Felipe "Juca" Sanches: quer fazer?
+[2022-06-06 22:49:37] Pedro de Medeiros 👾: Pode colocar o tile do lado do flag.
+[2022-06-06 22:49:45] Felipe "Juca" Sanches: perfeito
+[2022-06-06 22:50:20] Pedro de Medeiros 👾: OK. Só não sei se consigo testar no gunsmoke
+[2022-06-06 22:50:39] Felipe "Juca" Sanches: ok, eu testo no gunsmoke
+[2022-06-06 22:50:48] Felipe "Juca" Sanches: o setup do gunsmoke é só um build normal do mame
+[2022-06-06 22:55:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21276.jpg
+[2022-06-06 22:55:08] Felipe "Juca" Sanches: Meio feio... mas é o que consegui fazer rapidão
+[2022-06-06 22:57:29] Pablo Vasques Bravo-Villalba: Eu estou tentando desenhar uns tiles aqui
+[2022-06-06 22:57:59] Pablo Vasques Bravo-Villalba: Não achei o tile que representa uma bomba explodida
+[2022-06-06 23:04:02] Felipe "Juca" Sanches: não tem
+[2022-06-06 23:04:04] Pedro de Medeiros 👾: Acho que o Juca configurou isso pra exibir a mesma bombinha mas com outra cor de fundo.
+[2022-06-06 23:04:11] Felipe "Juca" Sanches: isso
+[2022-06-06 23:04:24] Felipe "Juca" Sanches: mas podemos fazer 2 tiles diferentes se for melhor
+[2022-06-06 23:04:38] Pablo Vasques Bravo-Villalba: É melhor porque a gente pode ter uma imagem diferente
+[2022-06-06 23:04:43] Felipe "Juca" Sanches: sim, claro!
+[2022-06-06 23:05:03] Pedro de Medeiros 👾: Que outra tecla a gente usa além de espaço e M no MSX pra designar botões?
+[2022-06-06 23:05:17] Pedro de Medeiros 👾: N?
+[2022-06-06 23:05:33] Felipe "Juca" Sanches: Pedro, to com a mão na massa, posso implementar a interrogacao?
+[2022-06-06 23:05:39] Pablo Vasques Bravo-Villalba: M é padrão Konami. Outras empresas usam outras teclas
+[2022-06-06 23:05:44] Pedro de Medeiros 👾: Manda ver
+[2022-06-06 23:21:38] Felipe "Juca" Sanches: Feito!
+
+https://github.com/ArqueologiaDigital/Mines/pull/39
+[2022-06-06 23:22:17] Felipe "Juca" Sanches: Merged. Só falta você atualizar os gráficos no port de MSX2, eu já ajustei no gunsmoke e no ncurses.
+[2022-06-06 23:37:28] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/40
+[2022-06-06 23:37:49] Pedro de Medeiros 👾: Antes disso, a tecla N chama o comando MINE_INPUT_OPEN_BLOCK
+[2022-06-06 23:42:44] Pablo Vasques Bravo-Villalba: A Konami usa N e M de forma indistinta. Talvez para lidar melhor com diferenças de matriz de teclado, não sei
+[2022-06-06 23:43:01] Pablo Vasques Bravo-Villalba: A Compile usa Shift se não me engano
+[2022-06-06 23:53:20] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21296.jpg
+[2022-06-06 23:53:20] Pablo Vasques Bravo-Villalba: Uma ideia para tiles. Já encaminhei para o Pedro para ele tentar converter
+[2022-06-06 23:53:35] Pablo Vasques Bravo-Villalba: Nossa, ficou bizarro pequeno assim. Deixa eu tentar mandar de novo
+[2022-06-06 23:53:59] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21298.jpg
+[2022-06-06 23:54:42] Pablo Vasques Bravo-Villalba: Se der pra ter um processo de conversão simples e rápido, posso fazer alterações e ajustes mais rapidamente
+[2022-06-06 23:55:01] Pablo Vasques Bravo-Villalba: Por exemplo, o desenho da interrogação, que virou uma bandeira amarela. Não estou 100% satisfeito com isso
+[2022-06-06 23:55:30] Pablo Vasques Bravo-Villalba: Também a borda, que é simplesmente uma colorização do que o @fsanches já tinha feito
+[2022-06-06 23:55:44] Pablo Vasques Bravo-Villalba: E adicionar uns detalhes como graminhas ou pedrinhas, como a L. tinha sugerido
+[2022-06-06 23:57:29] Pablo Vasques Bravo-Villalba: Esse conjunto de tiles usa 13 cores, então sobram 3 cores caso exista uma limitação total de 16 cores (caso do MSX2)

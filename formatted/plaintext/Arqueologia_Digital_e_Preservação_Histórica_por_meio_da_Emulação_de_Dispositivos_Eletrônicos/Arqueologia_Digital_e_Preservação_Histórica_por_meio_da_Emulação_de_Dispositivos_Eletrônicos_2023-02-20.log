@@ -1,0 +1,14 @@
+[2023-02-20 10:18:16] Felipe "Juca" Sanches: Eu tenho um branch de desenvolvimento do MAME na minha cópia local onde eu implementei um esboço de driver para o teclado musical Technics KN5000. Vou começar a reorganizar esse branch pra submeter um pull request. Mas talvez eu mande só uma parte por enquanto, pois quero ter certeza que o PR será aceito sem muita dor de cabeça.
+
+Acho que é uma boa oportunidade para eu fazer code-review do meu próprio código (escrito ao longo de 1 ou 2 anos)
+[2023-02-20 10:18:38] Felipe "Juca" Sanches: talvez eu acabe tendo algum insight novo durante esse processo de preparo do PR
+[2023-02-20 10:19:41] Felipe "Juca" Sanches: o primeiro commit adiciona suporte a uma variante do processador TLCS900, o modelo TMP94C241
+[2023-02-20 10:19:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/26099.jpg
+[2023-02-20 10:21:06] Felipe "Juca" Sanches: Só um pequeno esclarecimento: o driver ainda não funciona. É apenas um esboço mesmo, mas nem dá "sinal de vida" ainda.
+[2023-02-20 12:35:11] Felipe "Juca" Sanches: speedrunners virando o jogo do avesso:
+[2023-02-20 12:35:13] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=WvmLrFNg6SQ
+[2023-02-20 12:35:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/26103.jpg
+[2023-02-20 13:34:21] Pablo Vasques Bravo-Villalba: Hoje vos trago Truxton, também conhecido como Tatsujin. Nessa versão usei o VRC6, e me inspirei bastante no arranjo do PC Engine: https://on.soundcloud.com/kvToL
+[2023-02-20 16:22:16] Felipe "Juca" Sanches: Estou começando a documentar o código de boot e as caracteristicas da inicialização do hardware do KN5000 aqui:
+https://docs.google.com/document/d/16cTsiIKNgGmAu4DQSjqs78iasDQ6pHe8tT1biLsCr7g
+[2023-02-20 16:22:45] Felipe "Juca" Sanches: Fiquem à vontade para ir lendo e talvez fazer comentários lá

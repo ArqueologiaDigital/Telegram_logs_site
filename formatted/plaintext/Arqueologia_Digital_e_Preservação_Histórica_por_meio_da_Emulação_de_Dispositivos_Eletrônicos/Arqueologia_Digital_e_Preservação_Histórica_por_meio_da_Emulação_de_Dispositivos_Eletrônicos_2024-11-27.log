@@ -1,0 +1,68 @@
+[2024-11-27 05:47:56] Alexandre Villares: How to present MS-DOS screenshots
+https://30fps.net/pages/msdos-aspect-ratio/
+[2024-11-27 05:48:06] Alexandre Villares: Hoje eu aprendi...
+[2024-11-27 08:02:37] Ismael Luceno: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-11/33411.jpg
+[2024-11-27 08:48:54] Pablo Vasques Bravo-Villalba: Interessante essa página, e a premissa é fundamentalmente correta. Porém eles linkam para uma página da Wikipédia que tem várias informações erradas. Não vou fazer uma análise exaustiva, mas só para citar um exemplo, eles listam o chip TMS9918 como tendo razão de aspecto pixel 1:1 e o Nintendinho como tendo razão de aspecto de pixel 7:6, e na verdade ambos são 8:7 (em NTSC, pelo menos). Aqui tem informações que não verifiquei na totalidade mas parecem muito mais corretas: https://pineight.com/mw/page/Dot_clock_rates.xhtml
+[2024-11-27 12:05:59] RicBit: Wikipedia tá errada mesmo, parte boa é que é fácil consertar. Faço isso já perai
+[2024-11-27 12:27:55] RicBit: oh no é dificil
+[2024-11-27 12:28:59] RicBit: a gente sabe que é 8:7 mas achar uma documentação autoritativa disso para colocar com referencia é complicado
+[2024-11-27 12:29:22] RicBit: tem que procurar em todos os datapack até achar
+[2024-11-27 12:30:18] RicBit: eu sei onde está, é na variavel de sistema que controla os parametros do comando CIRCLE
+[2024-11-27 12:30:52] RicBit: mas o fato de que esta numa variavel de sistema e nao no manual indica que o tamanho do pixel é dependente de implementacao
+[2024-11-27 13:41:09] Pablo Vasques Bravo-Villalba: Se você olhar nos manuais técnicos fala qual o pixel clock. Com base nisso e baseado numa aproximação de quantas linhas são visíveis no sinal NTSC, dá pra obter a razão de aspecto. Eu já vi pessoas usando vários critérios, mas no caso do TMS9918 e seus derivados, os valores davam sempre muito perto de 1,14, de forma que mesmo havendo algum erro na metodologia a razão 8:7 me parece excelente.
+[2024-11-27 13:50:28] Pablo Vasques Bravo-Villalba: Eu tinha curiosidade de saber a razão de aspecto dos pixels dos modos overscan do V9990. Com base na tabela do manual técnico parecem ser 6:7 e 3:7, mas os emuladores implementam de maneira diferente e não sei a razão. 6:7 seria útil para converter coisas a partir do PC, pois essa é a mesma razão dos modos 320x200 do PC e do Amiga.
+[2024-11-27 13:53:14] RicBit: Hoje em dia tem gente reimplementando o TMS com FPGA usando saída VGA, então nesses modelos é 1:1. Tem tanto jogo recente que foi desenhado nesse ratio que nem dá mais para falar que é errado.
+[2024-11-27 13:53:45] RicBit: Eu não achei nada no datapack especificando, chuto que é implementation defined mesmo.
+[2024-11-27 13:55:28] RicBit: O v9990 eu conseguiria medir, eu tenho um aqui em casa, mas eu não sei se vou ligar esse ano ainda.
+[2024-11-27 13:55:57] Pablo Vasques Bravo-Villalba: Se for pra esticar pra resolução FHD eu prefiro 5x a resolução vertical e 6x a resolução horizontal. 1,2 é mais perto de 1,14 do que 1.
+[2024-11-27 13:56:32] Pablo Vasques Bravo-Villalba: Tenho também em casa, o que eu não tenho mais é TV ou monitor 3:4
+[2024-11-27 13:58:05] RicBit: Se for pra medir o pixel clock não precisa né, só colocar no osciloscópio.
+[2024-11-27 13:58:18] Pablo Vasques Bravo-Villalba: O pixel clock tem no manual técnico
+[2024-11-27 13:59:35] RicBit: Então eu não entendi? O que falta é confirmar se o manual está certo?
+[2024-11-27 14:03:35] Pablo Vasques Bravo-Villalba: O manual eu suponho que esteja certo, porque o pixel clock é função do cristal selecionado. A Yamaha optou por arredondar com 1 casa decimal, mas isso é o de menos. Já que o vídeo é sempre 15kHz, então com base nisso estimei a razão em 6:7 (384x240) e 3:7 (768x240), respectivamente. Só que nos emuladores me deu a impressão de que usaram uma razão de aspecto diferente, e eu não sei a razão disso.
+[2024-11-27 14:04:44] RicBit: Não tem nada nos comentários do source?
+[2024-11-27 14:08:42] Pablo Vasques Bravo-Villalba: Tem mas eu não entendo como aquilo vira a razão de aspecto que a gente vê na tela
+[2024-11-27 14:36:11] RicBit: puts eu posso dar uma olhada, mas antes voce já tentou pegar o codigo inteiro, socar no chatgpt e pedir para ele explicar? tipo "me explica como o aspect ratio surge do codigo abaixo"?
+[2024-11-27 14:43:37] RicBit: é , o chatgpt deu 1.104, 8/7 é 1.142
+[2024-11-27 14:47:42] RicBit: eu soquei nele o V9990DisplayTiming.hh do openmsx, o que ele fez foi assumir por definicao que a area visivel da tela tem 4:3, então se contar os clocks por pixel dá (4/3) / (256/212) = 1.104
+[2024-11-27 14:48:10] RicBit: se voce fizer a mesma conta usando 240 ou 290 linhas vai adar diferente
+[2024-11-27 14:48:38] RicBit: mas isso quebra a definicao de que a area visivel é 4:3, porque não é, o overscan só desenha no que seria borda
+[2024-11-27 14:49:30] RicBit: então o correto é calibrar o pixel para 1.104 independente de overscan ou nao
+[2024-11-27 14:50:43] RicBit: calibrar é calibrar mesmo, em crt normalmente tem potenciometro com ajuste de h e v, voce precisa preencher a tela com uma cor diferente da borda, e usar uma trena para ajustar os potenciometros até ficar 1.104
+[2024-11-27 14:51:32] Pablo Vasques Bravo-Villalba: Essa conta está errada porque o overscan horizontal é maior do que o vertical
+[2024-11-27 14:55:49] RicBit: hum deixa ver o esquematico
+[2024-11-27 14:57:09] Pablo Vasques Bravo-Villalba: Recomendo dar uma olhada nas contas da seção "NTSC" também:
+https://www.nesdev.org/wiki/Overscan
+[2024-11-27 15:05:56] RicBit: oh fuck
+[2024-11-27 15:06:00] RicBit: ele tem dois cristais
+[2024-11-27 15:16:04] Pablo Vasques Bravo-Villalba: Sim, ele usa um cristal de 21MHz para os modos de resolução horizontal de 256 e 512 pixels, e um de 14MHz para os modos overscan
+[2024-11-27 15:29:28] RicBit: tá, o overscan é mais fininho numa proporcao de 6:8
+[2024-11-27 15:42:11] RicBit: sim, é isso
+[2024-11-27 15:57:18] RicBit: nao espera
+[2024-11-27 15:57:20] RicBit: argh
+[2024-11-27 15:57:54] RicBit: nao, é isso mesmo, tem que 6:8 do original se a area for a mesma
+[2024-11-27 16:02:38] RicBit: a calibragem fica assim entao, você vai no basic e traca um circulo de raio 100, ai vai no potenciometro com a trena e ajusta até o eixo horizontal ficar igual ao eixo vertical. sem mexer na calibracao, se voce desenhar o mesmo circulo no modo b2 do 9990, ele tem que ficar 6/8 mais fino que o outro.
+[2024-11-27 16:03:35] Pablo Vasques Bravo-Villalba: Não precisa desenhar círculo, um quadrado teria o mesmo efeito e seria mais fácil de medir
+[2024-11-27 16:04:33] RicBit: ah é que o basic do msx desenha circulos mas nao desenha quadrados
+[2024-11-27 16:05:54] Pablo Vasques Bravo-Villalba: Se você desenhar um "quadrado" de, sei lá, 150 pixels de lado no centro da tela, e medir o comprimento de cada lado na tela com a trena, vai ver que não dá valores iguais. Aí você calcula a razão de aspecto
+[2024-11-27 16:07:35] RicBit: ai vai de gosto, eu acho mais facil o circulo
+[2024-11-27 16:08:51] Pablo Vasques Bravo-Villalba: Bom, se o objetivo é encontrar a razão de aspecto, não é mais fácil medir um quadrado?
+[2024-11-27 16:09:12] Pablo Vasques Bravo-Villalba: Medi aqui na tela, no WebMSX, um "quadrado" de 212x212 pixels na SCREEN 5
+[2024-11-27 16:09:42] Pablo Vasques Bravo-Villalba: No meu monitor de 23 polegadas, na resolução 1920x1080, no tamanho default do WebMSX, deu 140mm x 122mm
+[2024-11-27 16:10:10] Pablo Vasques Bravo-Villalba: O que dá uma razão de aspecto quase 1.15
+[2024-11-27 16:14:30] Pablo Vasques Bravo-Villalba: No OpenMSX deu 197mm x 168mm, ou 1.17 de razão de aspecto. Parece excessivo
+[2024-11-27 16:14:47] Pablo Vasques Bravo-Villalba: Claro que no mundo real isso depende de mil coisas, inclusive da TV
+[2024-11-27 16:15:25] Pablo Vasques Bravo-Villalba: Eu tinha aquele monitorzinho da Gradiente, ele tinha um botão para tirar o overscan. Reduzia a tela inteira para que todos os pixels ficassem visíveis
+[2024-11-27 16:15:48] Pablo Vasques Bravo-Villalba: Mas na TV normalmente não tinha como fazer isso sem abrir a TV e mexer nos trimpots
+[2024-11-27 19:35:09] RicBit: sim por isso que meu protocolo começa ajustando os pots, depois dessa etapa deveria ser igual em qualquer tv.
+[2024-11-27 19:35:35] RicBit: mas vai saber, o mundo é estranho, tolerancias derivam com o tempo
+[2024-11-27 20:21:32] Pablo Vasques Bravo-Villalba: Essa curiosidade minha é mais acadêmica, porque as variações dentre os incontáveis modelos de televisões fazem com que diferenças na terceira casa decimal sejam um tanto irrelevantes. Muito provavelmente monitores profissionais como PVMs têm calibragens mais precisas, mas enfim. A ideia é que as imagens nos emuladores se aproximem ao máximo razoável e possível do que a gente via nas TVs analógicas de antanho. Pode ser que muita gente no mundo do FPGA siga o caminho "fácil" dos pixels 1:1 nas telas digitais, mas também há quem se preocupe com preservação e fidelidade à experiência original e procure obter isso.
+[2024-11-27 20:39:01] RicBit: eu acho que no emulador tanto faz porque você muda o aspect ratio por fora
+[2024-11-27 20:40:57] RicBit: sim no openmsx é set horizontal_stretch xxx
+[2024-11-27 20:41:04] RicBit: ai voce coloca o xxx que quiser
+[2024-11-27 20:43:42] Pablo Vasques Bravo-Villalba: Bom, tem vários emuladores que deixam você mudar o aspect ratio à vontade do freguês. Mas não é esse o meu ponto. No OpenMSX se você moda o horizontal_stretch isso vai afetar todos os modos gráficos, não importa se você está emulando o V99x8 ou o V9990. Se por qualquer razão a emulação dos modos overscan estiver muito diferente do hardware real, então perde um pouco o sentido eu usar o emulador pra saber como fica no hardware real. Não vou ficar ajustando o horizontal_stretch toda vez que mudar de modo gráfico
+[2024-11-27 20:44:11] RicBit: nao é dificil viu
+[2024-11-27 20:44:33] RicBit: só colocar um callback pro horizontal_stretch no i/o na registro do 9990
+[2024-11-27 20:45:08] Pablo Vasques Bravo-Villalba: Sei que não é difícil. Eu só quero que fique bom sem eu precisar ficar mexendo ou hackeando o emulador. Quero que fique bom em todos os emuladores, não só no que eu estiver usando. Quero que fique bom nos emuladores e no hardware real
+[2024-11-27 20:45:15] RicBit: dá pra mexer no source mas ai tem que recompilar e o openmsx demora pra recompilar haha
+[2024-11-27 20:45:53] Pablo Vasques Bravo-Villalba: Enfim, eventualmente vou investigar isso. Se eu descobrir algo errado e já tiver tudo pronto, é fácil de pedir uma correção para a próxima versão dos emuladores

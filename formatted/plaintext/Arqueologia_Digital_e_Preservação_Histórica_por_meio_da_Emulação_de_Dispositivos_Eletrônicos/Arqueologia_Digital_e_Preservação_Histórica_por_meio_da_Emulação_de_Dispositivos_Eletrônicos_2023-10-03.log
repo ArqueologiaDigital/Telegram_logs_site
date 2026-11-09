@@ -1,0 +1,125 @@
+[2023-10-03 08:00:15] Pablo Vasques Bravo-Villalba: Por curiosidade, o que faz você ter essa certeza, Ricbit? 😊
+[2023-10-03 12:26:24] RicBit: A entrevista do autor na msx magazine contando como ele errou a implementacao do DAA. A explicacao dele só faz sentido se for microcode.
+[2023-10-03 12:31:11] Pablo Vasques Bravo-Villalba: Tem essa entrevista em algum lugar online pra gente poder ver?
+
+EDIT: Já achei 😊
+[2023-10-03 13:09:51] RicBit: deve ter sim, acho que é naquela msx magazine mais recente que saiu nos anos 2000
+[2023-10-03 13:09:56] RicBit: ah boa
+[2023-10-03 13:15:43] Pablo Vasques Bravo-Villalba: O Kazuya Kishioka também participa de uma entrevista anterior, na MSX Magazine de novembro de 1990
+[2023-10-03 13:18:23] Pablo Vasques Bravo-Villalba: Nessa entrevista, ele diz que basicamente construiu o R800 com gate array e células lógicas padronizadas. Eles chegam a dizer que o R800 foi inicialmente criado como um projeto pessoal do Kazuya Nishioka, como se fosse um hobby... Bem ao estilo da ASCII, segundo eles próprios
+[2023-10-03 13:19:11] RicBit: deve ser por isso que o die é tão uniforme
+[2023-10-03 13:19:30] Pablo Vasques Bravo-Villalba: Ricardo, você acha que tem alguma incompatibilidade entre o que eles falam sobre gate arrays e células padronizadas e o uso de microcódigo? Na outra entrevista ele fala que os bugs de desenvolvimento eram corrigidos enviando novas máscaras (presumivelmente a quem produzia os protótipos)
+[2023-10-03 13:19:53] Pablo Vasques Bravo-Villalba: Sim, é um gate array da Yamaha
+[2023-10-03 13:20:20] RicBit: disso aí a L entende mais que eu !
+[2023-10-03 13:21:51] RicBit: em principio o microcodigo tem que ter uma rom em algum lugar, só que nao tem lugar com cara de rom no die. mas eles podem ter feito rom com gate array, vai saber
+[2023-10-03 13:23:55] RicBit: alias ontem eu fiquei encanado com o conversor de tela e fiz um do zero
+[2023-10-03 13:24:36] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28064.jpg
+[2023-10-03 13:24:36] RicBit: screen 5 com palette de msx1
+[2023-10-03 13:24:36] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28065.jpg
+[2023-10-03 13:25:10] RicBit: dá diferenca quando voce espalha o erro na horizontal, que é o que esta faltando no outro conversor
+[2023-10-03 13:25:51] RicBit: mas dá para melhorar bastante ainda
+[2023-10-03 13:27:08] Pablo Vasques Bravo-Villalba: Qual conversor de tela? 😅
+[2023-10-03 13:27:30] RicBit: o do jannone
+[2023-10-03 13:31:11] Pablo Vasques Bravo-Villalba: Ah, boto fé, ficou bem melhor assim
+[2023-10-03 13:34:58] Pablo Vasques Bravo-Villalba: Atualmente uso mais o conversor do Louthrax porque oferece mais opções
+[2023-10-03 13:35:05] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28072.jpg
+[2023-10-03 13:35:05] RicBit: esse é do mifui
+[2023-10-03 13:35:39] Pablo Vasques Bravo-Villalba: Parece que ele usa uma paleta de MSX1 um pouco menos saturada
+[2023-10-03 13:35:45] Pablo Vasques Bravo-Villalba: Ou é impressão minha?
+[2023-10-03 13:36:11] RicBit: acho que a paleta é a mesma, o gamma antes da conversao que deve ser diferente
+[2023-10-03 13:36:33] RicBit: mas o meu deve ser mais fiel porque eu nao estou usando rgb
+[2023-10-03 13:36:56] RicBit: mas é subjetivo e tal
+[2023-10-03 13:37:14] Pablo Vasques Bravo-Villalba: Ainda mais a gente olhando isso em monitor de PC
+[2023-10-03 13:37:30] RicBit: o mifui e o janonne tendem a colocar verde do nada nas coisas
+[2023-10-03 13:37:37] RicBit: culpa do rgb isso
+[2023-10-03 13:44:25] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28081.jpg
+[2023-10-03 13:44:25] RicBit: o do jannone está claramente bugado, ele faz linhas
+[2023-10-03 13:44:38] Pablo Vasques Bravo-Villalba: Sim
+[2023-10-03 13:45:57] Pablo Vasques Bravo-Villalba: Isso acontece em todos os modos, aliás
+[2023-10-03 14:03:13] RicBit: Não, no screen 2 tá certo
+[2023-10-03 15:19:34] L.: O die não tem cara de nada em lugar nenhum. Entender aquela maçaroca vai dar trabalho!
+[2023-10-03 15:32:09] L.: Eu suspeito que a ROM de microcodigo esteja ali no canto superior esquerdo
+[2023-10-03 15:33:04] Pablo Vasques Bravo-Villalba: Não sei se tem algo a ver, mas essa área no chip fica próxima aos pinos do DMA
+[2023-10-03 15:35:21] L.: Pois é, aquilo tá próximo demais da beirada pra ser a ROM. Não faz muito sentido estar ali, mas é a única coisa que me pareceu mais denso e com cara de ROM no negócio.
+[2023-10-03 15:37:03] L.: Talvez não seja mesmo ROM no sentido comum de ROM, e sim um circuitão combinatorial com as microinstruções. Imagina ver o mapa de Karnaugh disso 😂
+[2023-10-03 15:43:10] Pablo Vasques Bravo-Villalba: Uma curiosidade, microcódigo consegue rodar mais rápido do que o clock nominal? Pergunto porque tem várias instruções no R800 que executam em um ciclo só.
+[2023-10-03 15:45:37] L.: O microcodigo ajuda a simplificar o design transformando circuito em codigo. As microinstruções são geralmente só os sinais que controlam cada circuito em separado (tipo, lê de registrador e bota no bus, lê do bus e joga na ULA, manda ULA somar, etc)
+[2023-10-03 15:46:14] L.: As microinstruções não são executadas do mesmo jeito que instruções da CPU, elas já ficam mastigadinhas na ROM
+[2023-10-03 15:46:59] L.: E, por serem mastigadinhas assim, podem precisar de mais ciclos pra sequenciar
+[2023-10-03 15:47:29] L.: Por que aí cada instrução da CPU pode virar uma meia dúzia de micro instruções
+[2023-10-03 15:48:51] L.: É comum ter CPUs que só usam microcodigo pra instruções menos comuns, ou mais complicadas. Pode ser também o caso de que a instrução é tão simples de implementar que só tem uma microinstrução
+[2023-10-03 15:49:42] L.: CPUs Intel tem um monte de instrução que nem passam por microcodigo, é tudo feito na mão mesmo. Geralmente coisas mais usadas (movs, incs, jmps, etc)
+[2023-10-03 15:51:32] L.: Trivia: uma vez ouvi de um CPU engineer na Intel "assembly de x86 é alto nível demais pra mim"
+[2023-10-03 15:51:48] L.: O cara pensava em microcodigo e circuitos😂
+[2023-10-03 15:59:06] Felipe "Juca" Sanches: PCLMULQDQ - Perform a carry-less multiplication of two 64-bit polynomials over the finite field GF(2k).
+[2023-10-03 16:01:46] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=Wz_xJPN7lAY
+[2023-10-03 16:09:50] L.: Também conhecida como pickle muckle duck. (Nome interno não oficial mas todo mundo usa.)
+[2023-10-03 16:11:18] L.: É uma instrução muito útil!  Usada em criptografia, compressão, CRCs, etc
+[2023-10-03 16:12:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28103.jpg
+[2023-10-03 16:12:01] Felipe "Juca" Sanches: pickle muckle duck
+[2023-10-03 16:23:24] RicBit: Se bobear nenhuma instrução do R800 roda em um clock só. É tudo pipelined,  throughput 1, mas a latência não.
+[2023-10-03 16:24:12] RicBit: O throughput é maior ou igual a 1 porque toda instrução tem no mínimo a quantidade de clocks igual ao numero de leituras na ram.
+[2023-10-03 16:24:31] RicBit: Então nao tem prefetching
+[2023-10-03 16:24:45] RicBit: mas é engracado que RRA é 1 clock e RRD são cinco
+[2023-10-03 16:26:43] RicBit: rrd são dois para ler o opcode, 1 para ler o hl, 1 para escrever o hl, sobrou um
+[2023-10-03 17:03:24] Pablo Vasques Bravo-Villalba: Não tem que escrever no ler do A?
+[2023-10-03 17:39:03] RicBit: Add a,b também lê e escreve no a, 1 clock.
+[2023-10-03 18:57:11] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28111.jpg
+[2023-10-03 18:57:11] L.: @fsanches o Travis tirou essa fotinho do Z8
+
+tá processando a versão alta resolução agora
+[2023-10-03 19:04:51] Felipe "Juca" Sanches: Esse é o Z8 genérico? Ou já é o do Smart Start?
+[2023-10-03 19:04:58] L.: É o genérico
+[2023-10-03 19:05:17] L.: Ele tá só vendo primeiro se vai precisar de algum cuidado especial com esse chip
+[2023-10-03 19:05:27] L.: Pra não estragar o que tem a ROM útil
+[2023-10-03 19:05:35] Felipe "Juca" Sanches: maravilha
+[2023-10-03 19:05:48] L.: Demora uns dias pro ácido corroer aquele tanto de epóxi
+[2023-10-03 23:14:53] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28119.jpg
+[2023-10-03 23:14:53] RicBit: Dessa vez eu usei um fractal de hilbert ao inves do floyd steinberg, ficou interessante
+[2023-10-03 23:15:10] RicBit: o proximo vai ser um fractal adaptativo e ai o bicho vai pegar
+[2023-10-03 23:17:25] RicBit: alias
+[2023-10-03 23:17:34] RicBit: tudo isso roda em screen 8 mudando uma linha
+[2023-10-03 23:17:37] RicBit: deixa eu mudar a linha
+[2023-10-03 23:21:23] L.: Num CRT talvez fique bem legal!
+[2023-10-03 23:21:35] RicBit: sim, posso testar amanha
+[2023-10-03 23:21:56] RicBit: eu acho que ja esta legal assim, in a Seuret way
+[2023-10-03 23:22:05] L.: Dá pra ver bem o fractal acima da cabeça do Luffy
+[2023-10-03 23:22:21] RicBit: mas se for screen 5 então dá para colocar 4 telas e fazer o fractal em 3d
+[2023-10-03 23:22:56] RicBit: lol dá pra ver total o fractal ali no topo mesmo
+[2023-10-03 23:23:20] RicBit: a vantagem é que eu posso espalhar o erro em 1d, depois é só converter para 2d mapeando no fractal
+[2023-10-03 23:24:01] RicBit: porra fractal 3d trocado uma tela a cada 16ms vai ficar o bicho
+[2023-10-03 23:24:04] RicBit: em um crt
+[2023-10-03 23:25:03] RicBit: a vantagem do fractal é que ele tende a alternar só duas cores
+[2023-10-03 23:25:12] RicBit: então quando for converter para scr2 fica mais facil
+[2023-10-03 23:26:10] L.: Aliás, falando em cores em várias screens de MSX: eu tava pensando em fazer isso aqui pra MSX2, mas ainda não sei exatamente como faria os efeitos da sombra e da lanterna: https://krajzeg.itch.io/dank-tomb
+
+Talvez a da lanterna dê pra fazer só com mudança na paleta de cores
+[2023-10-03 23:26:50] RicBit: em screen 10-12 é super facil
+[2023-10-03 23:27:04] RicBit: voce faz o shift de 1 bit do Y e deixa o resto quieto
+[2023-10-03 23:27:13] L.: O autor deu permissão pra portar, contanto que seja grátis e dê os créditos
+[2023-10-03 23:27:48] L.: Eu nunca li nada sobre as screens do MSX2+! Preciso ver isso depois.
+[2023-10-03 23:28:45] RicBit: screen 12 o pixel é guardado em yjk
+[2023-10-03 23:28:58] RicBit: y é luminancia, jk é croma
+[2023-10-03 23:29:12] RicBit: se voce shiftar o y quebra a luminancia no meio
+[2023-10-03 23:29:51] L.: aaaah, sim, de fato fica fácil!
+[2023-10-03 23:30:19] RicBit: eu fiz um demo muitas decadas atras onde uma tartaruga andava no cenario em scr10
+[2023-10-03 23:30:30] L.: vou olhar isso aí então. tem pouco jogo pra msx2+, seria legal ter algo novo
+[2023-10-03 23:30:36] RicBit: e ela tinha uma sombra real time que era calculada shiftando o y
+[2023-10-03 23:30:49] RicBit: deixa pegar o codigo aqui
+[2023-10-03 23:30:50] L.: pena que roubaram minha expert3 :(
+[2023-10-03 23:33:26] RicBit: damn
+[2023-10-03 23:34:01] RicBit: pbg_shadow, ele usa uma loopup para shiftar o y 
+https://github.com/ricbit/Oldies/blob/master/1999-12-tmnt/tmnt.mac
+[2023-10-03 23:35:10] L.: ah, o bom e velho demo do tmnt
+[2023-10-03 23:35:23] RicBit: muitos aprendizados
+[2023-10-03 23:35:56] RicBit: a tecnologia era boa, a audiencia nao estava preparada
+[2023-10-03 23:50:53] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28154.jpg
+[2023-10-03 23:50:53] RicBit: ficou o bicho, psicovisual+fractal+scr8
+[2023-10-03 23:53:48] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28155.jpg
+[2023-10-03 23:53:48] RicBit: equivalente no mifui
+[2023-10-03 23:57:01] L.: gostei do céu/mar, mas o line art parece mais bem definido no mifui
+[2023-10-03 23:57:13] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28157.jpg
+[2023-10-03 23:57:13] RicBit: bilinear+psicovisual+fractal+scr8
+[2023-10-03 23:57:47] RicBit: essa versap bilinear melhora o line art?
+[2023-10-03 23:58:07] L.: olha o contorno no cotovelo da mina
+[2023-10-03 23:58:41] L.: ele meio que some nas duas versões mas fica bem visível no mifui

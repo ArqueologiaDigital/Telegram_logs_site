@@ -1,0 +1,37 @@
+[2026-06-27 01:18:21] RicBit: tá na mão, disassembly completo das 3 versões oficiais do Rally-X do MSX -> https://github.com/ricbit/rallyx
+[2026-06-27 10:58:29] Érico Andrei: Quando cai sair a do Elite? 😃
+[2026-06-27 11:14:47] Pedro de Medeiros 👾: Sabe o que seria interessante também? Verificar quais tipos de atalhos jogos pinball tipo Rollerball usavam, já que não devem usar ponto flutuante.
+[2026-06-27 11:51:21] RicBit: elite eu acho que esta pronto, só falta revisar
+[2026-06-27 11:51:49] RicBit: eu chuto que rollerball deve ser ponto fixo, o elite é todo ponto fixo por dentro
+[2026-06-27 11:53:09] RicBit: ah espera , do elite eu teria que fazer a versao fita tambem, deve ser bem diferente por dentro
+[2026-06-27 11:53:55] Érico Andrei: Show. Eu estou usando o Claude para fazer um port/clone do Elite usando PyGame, mas comecei usando o código da versão do C64.
+Quero pegar algumas coisas da versão do MSX que eu acho mais interessantes
+[2026-06-27 11:54:29] RicBit: a do c64 não deve ter o bug do slimy slimy !
+[2026-06-27 11:54:48] Érico Andrei: Fato
+[2026-06-27 12:05:48] Érico Andrei: Uma coisa interessante que eu descobri foi que parte das versões do Elite foram implementadas sem acesso ao fonte do original.
+Em alguns casos eles só disponibilizaram a rotina de geração de planetas/galáxias e as naves, o resto a galera (incluindo a Firebird) fez apenas olhando como jogo original se comportava
+[2026-06-27 12:07:00] RicBit: dá pra comparar os sources e testar a teoria
+[2026-06-27 13:57:45] Érico Andrei: Bom projeto, vou embarcar nele depois
+[2026-06-27 18:32:50] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39385.jpg
+[2026-06-27 18:32:50] RicBit: em homenagem eu coloquei squiggles to meu sistema para avisar quais endereços ainda precisam de label.
+[2026-06-27 19:43:47] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39386.jpg
+[2026-06-27 19:43:47] Felipe "Juca" Sanches: Extraí umas imagens como essa do manual de servido do gabinete deluxe do jogo Thunder Blade e passei como material de referência pro Claude me ajudar a fazer um modelo 3D
+[2026-06-27 19:43:55] Felipe "Juca" Sanches: Aí ele me aprontou essa:
+[2026-06-27 19:44:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39388.jpg
+[2026-06-27 19:44:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39389.jpg
+[2026-06-27 19:44:46] Felipe "Juca" Sanches: Aí eu chamei ele de vagabundo e ele fez isso:
+[2026-06-27 19:45:15] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39391.jpg
+[2026-06-27 19:45:15] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39392.jpg
+[2026-06-27 19:45:15] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39393.jpg
+[2026-06-27 19:45:41] Felipe "Juca" Sanches: Ainda tá uma bosta, mas tá uma bosta refinada...
+[2026-06-27 20:18:13] RicBit: eu acho que é mais negocio jogar numa dessas AI que fazem modelo 3d, e depois importar no blender e mandar o claude fazem marching cubes-alike no modelo
+[2026-06-27 20:20:10] RicBit: AI de 3d funciona, eu tô pintando uma Brazilian Miku que foi modelada 100% AI
+[2026-06-27 20:20:17] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39397.jpg
+[2026-06-27 20:21:18] Felipe "Juca" Sanches: quel é o nome dessas AIs que modelam 3d?
+[2026-06-27 20:24:50] RicBit: eu uso essa aqui -> https://3d.hunyuan.tencent.com/
+[2026-06-27 20:25:14] RicBit: mas dá pra rodar local se voce tiver as vram tudo
+[2026-06-27 20:54:37] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39401.jpg
+[2026-06-27 20:54:37] Felipe "Juca" Sanches: Cansei por hoje de dar murro em ponta de faca com esses modelos 3D. Vou redirecionar minha energia pra algo mais importante...
+[2026-06-27 23:42:34] RicBit: descobri que a interface de drive faz malloc seguido de dynamic linking de código, achei curioso. aqui um write-up -> https://gist.github.com/ricbit/87323444aecc9adf3960ff14ec0732e4
+[2026-06-27 23:47:53] RicBit: e a diskrom também é doida para pular no meio de instrução. não sei se era o paterson ou o suzuki que era viciado na técnica, mas eu chuto o suzuki porque a bios também tem um monte.
+[2026-06-27 23:48:19] RicBit: eu só usei uma vez na vida, e foi em código size-optimized, o que faz sentido.

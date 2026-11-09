@@ -1,0 +1,105 @@
+[2018-12-31 12:14:09] Luciana Marques: que legal!
+[2018-12-31 12:14:48] Luciana Marques: na faculdade de engenharia ou ciência da computação existem disciplinas de sistemas de programação básica e lógica, acho que chega um pouco perto do que vc está falando mas realmente parece um projeto interessante vc pesquisar sobre
+[2018-12-31 12:15:28] Luciana Marques: Eu usei prolog numa disciplina de Inteligência Artificial. Fiquei #xatiada por não termos utilizado python, mas depois eu entendi o motivo da decisão do prog.
+[2018-12-31 12:15:30] Luciana Marques: *prof
+[2018-12-31 15:37:07] Eduardo Loos: Pessoal, supergrupo de vendas retro criado aqui no telegram. Quem quiser participar:
+https://t.me/joinchat/CMP6YE_mEv1_HCIm3Smecg
+[2018-12-31 15:54:22] Deleted Account: @LucianaMarx poderia detalhar melhor o porquê foi bom ele ter tomado essa decisão?
+[2018-12-31 15:56:40] Deleted Account: No caso de fortran, eu destaco as funções embutidas e a facilidade pra lidar com algebra linear plus desempenho
+[2018-12-31 15:57:04] Deleted Account: O ruim é que vc se torna uma gota de oleo num oceano de agua
+[2018-12-31 15:57:35] Deleted Account: Eu considero a curva de aprendizado de programação por livros muito maior do que abrir o github e ir olhando códigos e como as pessoas fizeram as coisas
+[2018-12-31 15:58:09] Deleted Account: Fora que quando vc usa livros vc tende a fazer as coisas de forma a gastar mais recursos do que deveria, e se vc tem um monte de código pra olhar vc vai escovando conforme vai vendo como as pessoas fizeram as coisas
+[2018-12-31 15:58:55] Deleted Account: No primeiro semestre eu demorei 1 mês pra fazer toda a parte de algebra linear em C (não podia usar coisas fora da linguagem), em fortran mesmo só restrito a linguagem eu fiz em 3 horas :D
+[2018-12-31 15:58:58] Deleted Account: a mesma coisa
+[2018-12-31 15:59:27] Deleted Account: Tipo... algoritmos de decomposição de matrizes em lu, resolução de sistema usando eliminação gaussiana, etc
+[2018-12-31 15:59:42] Deleted Account: Mas me fodeu muito a falta de código pra olhar
+[2018-12-31 15:59:57] Deleted Account: Pq eu passei a vida inteira programando assim e tive que pegar o livro rs
+[2018-12-31 16:01:18] Deleted Account: E o professor não gostou de nenhum dos meus códigos de fortran
+[2018-12-31 16:01:28] Deleted Account: E no outro semestre quando eu fiz em C só vinha 10
+[2018-12-31 16:01:30] Deleted Account: :-(
+[2018-12-31 16:03:25] Luciana Marques: Porque hoje em dia Inteligência Artificial é meio que um nome mais bonito para estatística. Eu tive um conversa dessa com o Luciano Ramalho (não sei se ele está aqui no grupo) no Garoa e ele me falou exatamente isso: que nos anos 70/80/90 a IA era algo bem mais simbólico, e hoje é estatístico. Prolog é uma linguagem que utiliza predicados e noções de Lógica, então aprendê-la é ótimo para entender essa parte da computação. Lógica é bem importante pra IA, sendo um recurso/necessidade de todo aprendizado, e o prof queria que a gente entendesse isso. Ele disse de início que a matéria dele não ia ser sobre Machine Learning, tivemos um pouco sobre o assunto mas como ele precisava abranger IA de uma forma mais geral não dava pra focar só nisso. Na época fiquei meio chateada pq ML é o que tem de mais importante atualmente, mas, conforme vou estudando mais, percebo que o fundamento é tão importante quanto as ferramentas, se não até mais importante.
+[2018-12-31 16:05:39] Deleted Account: Eu acho que eu tenho licença pra falar porque eu trabalho com isso hehe
+Pra mim machine learning é modinha. E a maioria das pessoas que fazem de fato machine learning são tipo astrólogos da computação: não fazem ideia do que estão fazendo realmente, querem prever o futuro e simplesmente saem usando métodos aleatórios tentando até conseguir fazer o computador cuspir o resultado que querem que saia hehe
+[2018-12-31 16:05:51] Luciana Marques: Tipo, não precisava ser Prolog especificamente, mas ele queria que a gente entendesse Lógica. Então ele poderia até fazer exercícios em Python que levassem em conta isso, mas Prolog foi desenvolvida baseado nesses prinícios
+[2018-12-31 16:06:14] Deleted Account: Eu realmente não entendo porque pra tirar ruídos de sinal tem que usar isso e não posso tentar fazer um algoritmo deterministico
+[2018-12-31 16:06:29] Deleted Account: Já que eu sei o que vai vai causar o ruído que eu quero tirar dos meus dados
+[2018-12-31 16:06:34] Luciana Marques: Ah então acho que vc entende o que o prof. queria no sentido de aprender os fundamentos né?
+[2018-12-31 16:07:05] Luciana Marques: Eu não trabalho com isso então não sei opinar, mas imagino que nem sempre vc vai saber de onde vem o ruído né?
+[2018-12-31 16:07:27] Luciana Marques: Tem uma coisa que eu gosto muito em Engenharia Elétrica que chama Filtro Adaptativo
+[2018-12-31 16:07:43] Luciana Marques: Não sei se vc conhece mas eu acho genial 😍😍😍
+[2018-12-31 16:07:57] Deleted Account: Não :-(
+E eu queria perguntar mais depois disso pra vc e pro Ramalho pq eu faço uso estatístico mesmo. Eu sou matemática e manjo razoavelmente de programação então eu vou fazer um uso moderno do conceito hehe
+[2018-12-31 16:08:13] Luciana Marques: @prinewgirl vc faz faculdade? que curso?
+[2018-12-31 16:08:20] Deleted Account: Não conheço, em que tipo de literatura eu posso achar mais sobre?
+[2018-12-31 16:08:40] Deleted Account: @LucianaMarx eu faço mestrado
+[2018-12-31 16:08:51] Luciana Marques: Acho que o Haykin, o mesmo de Redes Neurais
+[2018-12-31 16:09:06] Luciana Marques: Caramba moça 😊😊😊
+[2018-12-31 16:09:16] Deleted Account: sou do grupo de Cosmologia do professor Elcio Abdalla e trabalho no projeto BINGO: http://www.bingotelescope.org/pt/
+[2018-12-31 16:09:31] Luciana Marques: Vc se formou em Matemática Pura ou Aplicada?
+[2018-12-31 16:09:35] Deleted Account: Aplicada
+[2018-12-31 16:10:07] Luciana Marques: ❤❤❤❤❤❤❤❤❤❤❤❤❤          ❤
+[2018-12-31 16:10:16] Deleted Account: Aplicada >>> Pura
+[2018-12-31 16:10:22] Luciana Marques: Que incrível!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[2018-12-31 16:10:23] Deleted Account: hehe
+[2018-12-31 16:10:33] Luciana Marques: Nossa, to até emocionada, sério, que coisa linda!
+[2018-12-31 16:10:41] Luciana Marques: Muito bom, de encher os olhos
+[2018-12-31 16:10:53] Luciana Marques: Eu fico feliz de encontrar mulheres no ramo
+[2018-12-31 16:11:04] Deleted Account: o ruido que eu quero tirar é tipo, pessoa está com o celular ligado perto, passou um avião em cima do experimento
+[2018-12-31 16:11:12] Deleted Account: passou um satélite geoestacionário
+[2018-12-31 16:11:19] Deleted Account: é um conjunto bem finito e pequeno de coisas
+[2018-12-31 16:11:44] Deleted Account: Eu adorei o meu tema!!!! Foi meio difícil conseguir entrar pro grupo mas eu to bem orgulhosa hehe
+[2018-12-31 16:11:58] Deleted Account: Tem um vídeo do professor falando sobre
+[2018-12-31 16:12:15] Deleted Account: versão curta: https://www.youtube.com/watch?v=Fr_WHgPUGpc
+[2018-12-31 16:12:32] Luciana Marques: Eu faço graduação em Engenharia Elétrica com ênfase em Computação, eu gosto de hardware digital e analógico, mas por falta de oportunidade eu achei melhor migrar pra software mesmo. Por esse motivo eu to estudando muito Ciência da Computação por conta, inclusive o Garoa me ajuda muito nesse sentido!
+[2018-12-31 16:12:43] Luciana Marques: Obrigada!
+[2018-12-31 16:12:46] Deleted Account: versão longa: https://www.youtube.com/watch?v=0HW7m0VBJN4
+[2018-12-31 16:12:58] Luciana Marques: Ah e desculpa a ignorância, mas em que faculdade fica o seu grupo?
+[2018-12-31 16:14:27] Deleted Account: Isso era uma coisa que eu gostava muito quando era mais mocinha, mas por falta de oportunidades acabei desistindo temporariamente.  Eu imagino que estar aqui pode me ajudar a aprender alguma coisa ou outra. Agora peguei um arduino e to tentando mexer nele
+Quando eu era uma mocinha de 16 anos eu queria fazer um tecnico em eletronica e trabalhar com essas coisas
+ rs
+[2018-12-31 16:15:44] Deleted Account: fica no IFUSP
+[2018-12-31 16:15:49] Luciana Marques: Eu tava pra tentar fazer o meu próprio Arduino agora
+[2018-12-31 16:15:56] Deleted Account: :O
+[2018-12-31 16:16:00] Luciana Marques: Se quiser podemos sofrer juntas
+[2018-12-31 16:16:06] Deleted Account: Vamos!
+[2018-12-31 16:16:14] Luciana Marques: Acho que dá pra aprender bastante mesmo se der errado
+[2018-12-31 16:16:25] Luciana Marques: Ahhh adoro ❤❤
+[2018-12-31 16:16:28] Deleted Account: E o que nessa vida não pode dar errado? rs
+[2018-12-31 16:16:36] Luciana Marques: Pessoal do HS da Física é muito legal inclusive
+[2018-12-31 16:16:39] Deleted Account: Viver é um risco.... Bem alto.
+[2018-12-31 16:16:44] Luciana Marques: Vc conhece eles?
+[2018-12-31 16:16:50] Luciana Marques: Né
+[2018-12-31 16:17:18] Deleted Account: Simmmm
+Eu adoro esse pessoal, mas eu só vou lá pra bater papo por enquanto hehe
+[2018-12-31 16:18:44] Deleted Account: @LucianaMarx Mas poderia ser em qualquer lugar, praticamente. Cada grupo faz uma coisa
+O meu faz a pipeline e o INPE toda a parte de instrumentação, por ex
+[2018-12-31 16:19:27] Luciana Marques: Desculpe, não entendi, o que pode ser em qualquer lugar?
+[2018-12-31 16:19:41] Deleted Account: @LucianaMarx O meu grupo... Porque tem vários
+[2018-12-31 16:19:48] Luciana Marques: Ah entendi
+[2018-12-31 16:19:52] Deleted Account: Não é um projeto do IFUSP
+[2018-12-31 16:19:59] Luciana Marques: Saquei
+[2018-12-31 16:20:14] Deleted Account: desculpe que eu me empolgo qdo alguém se interessa em saber hehe
+[2018-12-31 16:20:32] Luciana Marques: não não, achei ótimo 😊 vou dar uma olhada nos vídeos
+[2018-12-31 16:20:37] Aylons Hazzud: O Haykin é referência em adaptativos, mas eu acho intragável como introdução ao tema. Eu tenho o livro, mas acabei usando outros materiais para estudar no começo
+[2018-12-31 16:20:53] Deleted Account: Quais?
+[2018-12-31 16:20:54] Luciana Marques: Vc não é o primeiro que me fala isso...
+[2018-12-31 16:21:16] Luciana Marques: Eu não li o Haykin de adaptativos, só conheço o conceito mesmo.
+[2018-12-31 16:21:19] Aylons Hazzud: Uma pena, falta gente em hardware no Brasil, super difícil contratar mesmo estagiário
+[2018-12-31 16:22:21] Aylons Hazzud: Quando eu voltar para casa eu vejo. Coisas avulsas, eu comecei com um curso de pós no tema.
+[2018-12-31 16:22:33] Deleted Account: ok!
+[2018-12-31 16:23:25] Aylons Hazzud: Está em que ano da faculdade, aliás?
+[2018-12-31 16:24:32] Deleted Account: quando me perguntavam isso eu não sabia se eu respondia há qtos anos eu to no curso, qtas matérias faltavam ou dizer a verdade: todos rs
+[2018-12-31 16:24:43] Aylons Hazzud: Hehe
+[2018-12-31 16:25:10] Aylons Hazzud: Ok, quanto tempo até terminar o curso. Meu interesse é sugerir que tente estágio no LNLS :c)
+[2018-12-31 16:34:04] Aylons Hazzud: Ah, sim, o livro do Diniz
+[2018-12-31 16:34:21] Aylons Hazzud: Diniz, P. S. R. Adaptive Filtering: Algorithms and Practical Implementation
+[2018-12-31 16:34:30] Aylons Hazzud: Achei no catálogo da disciplina :cP
+[2018-12-31 16:36:03] Deleted Account: Thanks!
+[2018-12-31 16:54:08] Luciana Marques: Estou indo pro último, mas é meio na linha que a @prinewgirl falou haha
+[2018-12-31 17:03:01] Aylons Hazzud: Bem, agora o programa de estágio do LNLS já foi, mas de vez em quando aparecem vagas avulsas. Se eu souber de algo, te aviso
+[2018-12-31 17:03:38] Aylons Hazzud: De qualquer forma, tem sim, muita área de atuação para eletrônica no Brasil. Principalmente embarcados (agora tudo se chama IOT, pfff). Falta é gente, na real.
+[2018-12-31 21:48:39] Luciana Marques: Obrigada! 😁
+[2018-12-31 21:57:13] Luciana Marques: Feliz ano novo gente 😁😁
+[2018-12-31 22:16:48] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-01/8904-sticker.webp
+[2018-12-31 22:52:26] Eduardo Loos: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-01/8905.jpg
+[2018-12-31 22:52:26] Eduardo Loos: Feliz ano novo pessoal !!!

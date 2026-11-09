@@ -1,0 +1,38 @@
+[2026-11-08 00:28:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42242.jpg
+[2026-11-08 00:28:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42243.jpg
+[2026-11-08 00:28:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42244.jpg
+[2026-11-08 00:28:13] Felipe "Juca" Sanches: [message deleted on 2026-11-08 00:28 by Felipe "Juca" Sanches]
+[2026-11-08 00:30:18] Felipe "Juca" Sanches: audio: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42246-ULTRAN.wav
+[2026-11-08 00:36:04] Shideravan: Por esse tipo de coisa que eu desanimei de contribuir no MAME 😢
+[2026-11-08 00:38:11] Shideravan: Eu acho isso um baita desrespeito com quem está dedicando seu tempo para contribuir
+[2026-11-08 00:50:08] Felipe "Juca" Sanches: Isso aqui era usado só em São Paulo, capital? Ou tinha em outras cidades também? Quem aqui também tem memórias desse som tocando na rua de casa?
+[2026-11-08 01:13:09] RicBit: alguem refez o projeto? o ultragas v1 era um z80
+[2026-11-08 04:53:51] Leão de Chácara: [message deleted on 2026-11-08 04:58 by Leão de Chácara]
+[2026-11-08 04:58:54] Leão de Chácara: [message deleted on 2026-11-08 04:59 by Leão de Chácara]
+[2026-11-08 05:23:47] Felipe "Juca" Sanches: Guido Stolfi
+[2026-11-08 07:54:20] Leão de Chácara: [message deleted on 2026-11-08 07:59 by Leão de Chácara]
+[2026-11-08 07:59:22] Leão de Chácara: [message deleted on 2026-11-08 07:59 by Leão de Chácara]
+[2026-11-08 07:59:58] L.: Em Campinas era buzina até mudarem pra musiquinha. Não sei se era a versão z80 do Carchano (que segundo ele não tinha nem RAM), ou essa aí
+[2026-11-08 09:41:17] Shideravan: Eu não tenho
+[2026-11-08 09:43:53] Shideravan: Tenho só da fur Elise e de uma outra
+[2026-11-08 09:44:53] Shideravan: [message deleted on 2026-11-08 09:45 by Shideravan]
+[2026-11-08 09:45:18] Shideravan: Falava "olha o gás" e não "Ultragaz"
+[2026-11-08 10:20:41] Felipe "Juca" Sanches: Aqui uma entrevista com o compositor, Hélio Ziskind: https://www.instagram.com/reel/DOQldYyDi37
+[2026-11-08 10:23:53] Pablo Vasques Bravo-Villalba: Aqui em Brasília definitivamente não tinha
+[2026-11-08 12:46:28] Felipe "Juca" Sanches: Olha que legal isso! Pequei o CD-ROM de dev-tools da TOSHIBA para TLCS-900 e pedi pro Claude checar se tem semelhanças com o código das ROMs dos teclados e synths da Technics que estou emulando no MAME. Claro que tem!
+[2026-11-08 12:47:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42264.jpg
+[2026-11-08 12:47:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42265.jpg
+[2026-11-08 20:25:50] Felipe "Juca" Sanches: Estou usando o codigo fonte C do dev kit da toshiba e os binários do devkit para inferir detalhes de ABI e, com isso, desenvolver um backend do LLVM que sirva como drop-in replacement. Pessoas interessadas em homebrew para Neo Geo Pocket serão os beneficiários diretos disso.
+
+ Em seguida, vou adicionar uma flag que altera ligeiramente o comportamento do backend para poder compilar trechos das ROMs do KN5000 e do WSA1R.
+
+E isso abrirá portas para um decomp desses teclados/synths.
+[2026-11-08 21:06:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42267.jpg
+[2026-11-08 21:08:58] Felipe "Juca" Sanches: Me sinto um mestre cervejeiro monitorando diversos lotes de produção em paralelo e fazendo ajustes conforme necessário.
+[2026-11-08 21:10:37] Felipe "Juca" Sanches: A piada não é mais "tá compilando".
+
+Agora é "tá programando".
+
+
+https://xkcd.com/303/
+[2026-11-08 21:52:39] Leonardo Roman: Aqui em Floripa também tinha. Era essa e a Fur Elize.

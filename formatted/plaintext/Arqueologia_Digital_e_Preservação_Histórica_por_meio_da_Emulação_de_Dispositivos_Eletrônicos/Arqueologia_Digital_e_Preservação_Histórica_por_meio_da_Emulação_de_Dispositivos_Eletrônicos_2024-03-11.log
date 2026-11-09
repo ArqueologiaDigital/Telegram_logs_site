@@ -1,0 +1,63 @@
+[2024-03-11 02:55:40] L.: Retrogaming: Viboritas game in 2K made in 1990
+https://nanochess.org/viboritas.html
+[2024-03-11 05:54:51] Pablo Vasques Bravo-Villalba: 2K é uma resolução impressionante para 1990 com Z80 😝
+[2024-03-11 08:03:14] Shideravan: Resolução?
+[2024-03-11 08:03:51] Pablo Vasques Bravo-Villalba: Resolução 2K, 4K, 8K... 😋
+[2024-03-11 08:04:29] Shideravan: Sim, eu sei... Mas nesse contexto não é 2k de memória? Kkkkk
+[2024-03-11 08:16:23] Pablo Vasques Bravo-Villalba: Era pra ser uma piada. Em minha defesa, admito que não pensei que seria muito boa. 😅
+[2024-03-11 08:49:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30237.jpg
+[2024-03-11 08:49:54] Felipe "Juca" Sanches: Durante o boot, as luzes do painel são acesas para indicar a seleção padrão de instrumento (piano) e de efeitos (apenas o digital reverb ligado)
+[2024-03-11 08:52:04] Felipe "Juca" Sanches: por algum motivo, entretanto, as luzes de "Organ & Accordion" até "Drum Kits" estão travadas ligadas. Devo ter mapeado o endereço errado para elas.
+[2024-03-11 09:00:07] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30239.jpg
+[2024-03-11 09:00:07] Felipe "Juca" Sanches: Isso aqui é a versão do firmware sendo indicada pelas luzes durante o boot se eu iniciar segurando 3 botoes pressionados (digital drawbar + accordion register + gm special).
+
+Isso demonstra que a leitura dos botoes está correta. E que o emulador já chega nessa parte do boot, e que pelo menos essas luzes também já estão mapeadas corretamente.
+
+Um passinho de cada vez... 😉
+[2024-03-11 09:05:34] Felipe "Juca" Sanches: no caso, a regra aqui é: sempre ficam as luzes "flute" ligada e "sax & reed" desligada. E as outras 4 luzes indicam em binário a versão do firmware. No caso: 1010, que é igual a 0xA ou "versão 10" (que está de fato correto)
+[2024-03-11 09:25:17] Felipe "Juca" Sanches: Esse diagrama aqui explica isso.
+[2024-03-11 09:35:26] Pablo Vasques Bravo-Villalba: Feito na Suíça? 😳
+[2024-03-11 09:36:25] Pablo Vasques Bravo-Villalba: Por outro lado, para fins de preservação, quanto mais versões melhor, não? Então é win-win
+[2024-03-11 09:36:54] Felipe "Juca" Sanches: é... acho que sim, né?
+
+Mas isso é só para a placa de extensão para disco rígido. Acho que o KN5000 em si foi projetado no Japão
+[2024-03-11 09:37:28] Pablo Vasques Bravo-Villalba: Achei engraçado o termo Technosoft, me fez lembrar da empresa japonesa de mesmo nome
+[2024-03-11 09:38:46] Felipe "Juca" Sanches: sim. No momento tenho aqui 2 placas com versões do firmware que já tenho dump. Então estou podendo fazer alterações a vontade sem destruir ROMs que ainda não foram dumpadas. Entretanto, ainda não domino todas as técnicas necessárias para finalizar a coleta das ROMs. É um grande quebra-cabeça!
+[2024-03-11 09:39:22] Felipe "Juca" Sanches: Acho que cedo ou tarde vou aprender a programar comunicação de dados via cabo midi. E aí vai dar pra extrair toda a ROM com mais facilidade
+[2024-03-11 09:39:26] Felipe "Juca" Sanches: mas ainda não cheguei lá
+[2024-03-11 09:39:33] Pablo Vasques Bravo-Villalba: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30249-spock-fascinating.mp4
+[2024-03-11 09:39:38] Felipe "Juca" Sanches: são muitos subsistemas diferentes para desvendar ao mesmo tempo
+[2024-03-11 09:40:37] Felipe "Juca" Sanches: eu adoro esse sprint que tá rolando. Ter um deadline para dar palestra num evento é um dos maiores motivadores pra eu me dedicar mais intensamente no projeto
+[2024-03-11 09:41:11] Felipe "Juca" Sanches: A conferência é dia 23/Março, em Campinas
+[2024-03-11 10:00:43] RicBit: midi não é uma serial simples?
+[2024-03-11 10:02:39] RicBit: sim, serial 8n1
+[2024-03-11 10:03:14] Felipe "Juca" Sanches: sim, é. Só não sei como se programa isso na placa-mãe do KN5000
+[2024-03-11 10:03:33] Felipe "Juca" Sanches: então imagino que seja simples, mas é uma das frentes que ainda não explorei
+[2024-03-11 10:06:51] Pablo Vasques Bravo-Villalba: Com a velocidade da interface MIDI esse processo, se possível, deve ser um tanto demorado, não?
+[2024-03-11 10:18:07] Felipe "Juca" Sanches: não sei...
+[2024-03-11 10:18:31] Pablo Vasques Bravo-Villalba: 😬
+[2024-03-11 11:38:59] Lucas Alberto: Vai está no brasil ?
+[2024-03-11 11:39:34] Felipe "Juca" Sanches: Eu estou no Brasil. Moro em São Paulo
+[2024-03-11 11:39:53] Lucas Alberto: Ultima vez que falei com vc, vc estava em londres
+[2024-03-11 11:39:56] Felipe "Juca" Sanches: Morei em Londres ano passado, mas voltei pro BR em Janeiro
+[2024-03-11 19:25:56] Lucas Alberto: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30264-Captura%20de%20tela%202024-03-11%20184859.png
+[2024-03-11 19:25:56] Lucas Alberto: Pow, essas instruções de deslocamento estão explodindo minha cabeça 🤯
+
+Tenho certeza que depois q eu entender, vai ser a coisa mais simples do mundo
+[2024-03-11 19:29:51] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30265.jpg
+[2024-03-11 19:29:51] Lucas Alberto: Tenho duas instruções delas no programa, D141 e D121
+
+
+D141 equivale a SL 0001 (deslocamento para a esquerda)
+
+D121 equivale a GD 0001 (giro a direita)
+[2024-03-11 19:30:44] Lucas Alberto: O mais foda é que eu ainda não entendi onde salva o valor depois de fazer o deslocamento, no Acumulador ? no Contador de instrução ? .... Não sei, vou ter q ler mais para tentar entender
+[2024-03-11 19:36:54] Pablo Vasques Bravo-Villalba: Não é no próprio acumulador?
+[2024-03-11 19:37:43] Pablo Vasques Bravo-Villalba: A diferença entre deslocamento e giro parece à primeira vista a diferença entre shift e rotate no Z80
+[2024-03-11 19:38:42] Lucas Alberto: Nas instruções imediatas é salvo no acumulador, será que as de deslocamento também ?
+[2024-03-11 19:38:59] Lucas Alberto: Pq na doc não tá explícito
+[2024-03-11 19:55:19] Pablo Vasques Bravo-Villalba: As figuras A e B estão invertidas
+[2024-03-11 19:55:36] Pablo Vasques Bravo-Villalba: Mas pela lógica parecem usar o acumulador
+[2024-03-11 19:58:27] Lucas Alberto: Sim Kkkkk tbm percebi isso
+[2024-03-11 20:02:54] Lucas Alberto: Vou tentar fazer com o acumulador
+[2024-03-11 23:33:45] Pedro de Medeiros 👾 [forwarded]: The Secret Life of XY Monitors (2001)  https://www.jmargolin.com/xy/xymon.htm

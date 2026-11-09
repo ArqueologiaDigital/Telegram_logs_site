@@ -1,0 +1,44 @@
+[2024-05-19 12:05:37] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=lQi7vWqT-sQ
+[2024-05-19 13:12:34] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=7bf-Stkm_4A
+[2024-05-19 14:52:08] L.: @fsanches https://fxtwitter.com/travisgoodspeed/status/1792237850701824058 mais atualização, agora com disassembly!
+[2024-05-19 14:52:18] L.: Será que agora vai?👀
+[2024-05-19 17:46:00] Felipe "Juca" Sanches: wow!
+[2024-05-19 17:46:09] Felipe "Juca" Sanches: Mas será que tem suporte a disasm de z8 também?
+[2024-05-19 17:46:39] Felipe "Juca" Sanches: se ele estiver usando o unidasm (do MAME) por baixo do capô, rola
+[2024-05-19 18:10:42] L.: compilando pra ver
+[2024-05-19 18:13:40] L.: tem disassembly de z8!
+[2024-05-19 18:13:52] L.: eu não tenho as bagaças marcadas aqui, cê tem os arquivos aí?
+[2024-05-19 18:14:29] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31495.jpg
+[2024-05-19 19:58:23] Felipe "Juca" Sanches: tenho
+[2024-05-19 19:58:59] Felipe "Juca" Sanches: já te passo
+[2024-05-19 20:02:46] L.: https://www.theregister.com/2022/08/04/the_many_derivatives_of_cpm/
+[2024-05-19 20:03:58] Felipe "Juca" Sanches: acho que é isso aqui, não é?
+[2024-05-19 20:15:44] Felipe "Juca" Sanches: document: (not yet published)
+[2024-05-19 20:15:44] Felipe "Juca" Sanches: "Here you go, the full project and a decoded .bin of the ROM.  The Test ROM comes first, so you'll need to cut off the first so many bytes to get only the application."
+[2024-05-19 20:28:06] Felipe "Juca" Sanches: eu compilei, mas não sei usar a ferramenta
+[2024-05-19 20:28:14] Felipe "Juca" Sanches: tô procurando a documentação
+[2024-05-19 20:29:36] Felipe "Juca" Sanches: "The keyboard shortcuts in this tool are not optional. Please read the GUI documentation below before starting to explore."
+[2024-05-19 20:29:42] Felipe "Juca" Sanches: https://github.com/travisgoodspeed/maskromtool/?tab=readme-ov-file#gui-usage
+[2024-05-19 21:57:40] Erin Pinheiro 🐿: pra usar o maskromtool? uai, tem tuto https://github.com/travisgoodspeed/gbrom-tutorial
+[2024-05-19 22:08:34] Felipe "Juca" Sanches: sim, eu li o readme e já estou usando
+[2024-05-19 22:08:38] Felipe "Juca" Sanches: é meio trabalhoso
+[2024-05-19 22:08:44] Felipe "Juca" Sanches: mas certamente menos do que fazer manualmente tudo
+[2024-05-19 22:09:03] Felipe "Juca" Sanches: ainda assim, ele erra um monte de bits
+[2024-05-19 22:09:08] Felipe "Juca" Sanches: então tem que revisar tudo
+[2024-05-19 22:09:11] Felipe "Juca" Sanches: (eu acho)
+[2024-05-19 22:09:17] Felipe "Juca" Sanches: a não ser que tenha algo mais esperto
+[2024-05-19 22:21:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31515.jpg
+[2024-05-19 22:21:49] Felipe "Juca" Sanches: Esses com destaque verde foram os que ele detectou errado e eu tive que consertar manualmente
+[2024-05-19 22:22:12] Felipe "Juca" Sanches: Essas foram as 4 primeiras linhas que revisei. Ainda faltam 124... :-P
+[2024-05-19 22:23:37] Felipe "Juca" Sanches: ou seja... em linhas gerais ele detectou bem a maioria dos bits. Mas ainda assim tem muito trabalho manual para ser feito
+[2024-05-19 22:24:08] Felipe "Juca" Sanches: a ferramenta faz 80% do trabalho, e o ser humano fica com o resto
+[2024-05-19 22:45:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31519.jpg
+[2024-05-19 22:45:57] Felipe "Juca" Sanches: Sim, ele está usando o unidasm do MAME
+[2024-05-19 22:46:27] Felipe "Juca" Sanches: dica: tem que primeiro abrir a janela de HexView. Só depois disso a janela de disasm funciona
+[2024-05-19 22:50:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31521.jpg
+[2024-05-19 22:50:14] Felipe "Juca" Sanches: Eu acho que essas opções de desembaralhamento são insuficientes, pois a maskrom tem bits a mais do que uma potencia de 2 e esses parametros não tratam como fazer o descarte desses bits extra
+[2024-05-19 22:51:32] Felipe "Juca" Sanches: são 66 colunas de bits
+[2024-05-19 22:51:48] Felipe "Juca" Sanches: teria que ter uma forma de descartar duas dessas colunas
+[2024-05-19 22:52:58] Felipe "Juca" Sanches: se eu soubessem quais são as colunas a se descartar, eu simplesmente não desenharia elas. Mas como não sei, fica pouco prático ficar desenhando e redesenhando até achar
+[2024-05-19 22:53:16] Felipe "Juca" Sanches: então o ideal seria desenhar as 66 mesmo, e ter uma opões para listar as colunas a serem ignoradas
+[2024-05-19 22:54:10] Felipe "Juca" Sanches: acho que vou ter que fazer um patch nesse programa pra implementar isso e ver se me ajuda no processo de desvendar essa ROM

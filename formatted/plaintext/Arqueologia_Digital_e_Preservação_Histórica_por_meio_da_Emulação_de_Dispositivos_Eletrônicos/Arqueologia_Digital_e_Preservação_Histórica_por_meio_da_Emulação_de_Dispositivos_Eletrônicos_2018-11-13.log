@@ -1,0 +1,16 @@
+[2018-11-13 05:56:28] Felipe "Juca" Sanches: https://www.eventbrite.com.br/e/msx-sp-2018-tickets-50937317889
+[2018-11-13 05:56:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-11/8192.jpg
+[2018-11-13 08:58:41] Deleted Account: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-11/8193-sticker.webp
+[2018-11-13 10:26:25] Deleted Account: Se alguém puder me ajudar... 
+To querendo fazer em fortran 90 uma sub rotina que recebe uma matriz como argumento... Tentei fazer 
+subroutine show_matrix(A)
+  real(kind=8) :: allocatable A(:,:)
+  integer :: i
+  do i=1,size(A,1) 
+  write(*,'(20G12.4)') A(i,:) 
+  end do      
+end subroutine show_matrix
+
+e pelo que entendi vc tem que declarar os argumentos se vc usar implicit none, mas declarando ela desse jeito que eu fiz não funciona... Como que declara?
+[2018-11-13 17:14:38] Deleted Account: http://faculty.washington.edu/rjl/uwamath583s11/sphinx/notes/html/fortran_sub.html
+[2018-11-13 17:14:50] Deleted Account: respondendo a minha pergunta :P

@@ -1,0 +1,28 @@
+[2022-11-20 02:12:59] RicBit: Os meus eu fiz racing the beam mesmo. Quem tambem faz isso é o space manbow, ele quebra a tela no meio para ter o dobro de sprites.
+[2022-11-20 02:13:53] RicBit: e uma manha importante que ninguem conta é que os sprites sao lidos antes da linha começar
+[2022-11-20 02:14:06] RicBit: por isso que o y deles é -1
+[2022-11-20 02:14:39] RicBit: por consequencia nao dá para mudar os sprites no meio de uma linha, que seria legal.
+[2022-11-20 12:06:15] Pedro de Medeiros 👾: Isso de mudar o sprite no meio da linha seria útil pra fazer o quê, considerando, como você disse, que já existe o sprite table swap do Space Manbow? 🤔
+[2022-11-20 12:08:46] RicBit: Se desse para mudar os sprites no meio da linha, você poderia colocar mais de 8 sprites por linha. Mas não dá, ele faz o cache no retraço horizontal.
+[2022-11-20 12:12:38] Pedro de Medeiros 👾: Isso me deu uma ideia. Seria possível pegar um único sprite e ir deslocando ele pra baixo na interrupção de linha, ou seja, esticá-lo até o fim do frame?
+[2022-11-20 12:13:10] RicBit: Sim, isso funciona.
+[2022-11-20 12:13:56] RicBit: Mas dependendo do efeito pode ser mais fácil mudar o scroll vertical.
+[2022-11-20 12:14:07] RicBit: Tinha um jogo que começa com L que faz isso.
+[2022-11-20 12:14:29] RicBit: Acho que um dos xak faz também?
+[2022-11-20 12:14:38] RicBit: O jogo com L certeza que faz.
+[2022-11-20 12:14:44] RicBit: Deixa ver se lembro aqui
+[2022-11-20 12:15:01] RicBit: Lenor? Leman?
+[2022-11-20 12:18:42] Pedro de Medeiros 👾: Sword of Legend Lenam?
+[2022-11-20 12:32:03] RicBit: Isso
+[2022-11-20 12:32:07] RicBit: Boa
+[2022-11-20 12:36:39] RicBit: Gente não tem no YouTube
+[2022-11-20 12:37:05] RicBit: Não é o lenam original, tem que ser o lenam que está dentro do Disc station 9
+[2022-11-20 12:37:12] RicBit: É nesse que tem o efeito
+[2022-11-20 15:40:23] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-11/24492.jpg
+[2022-11-20 15:40:23] L.: Minha cópia chega hoje!
+[2022-11-20 15:41:50] L.: Esticar sprite? Isso me lembra de uma coisa...
+[2022-11-20 15:42:01] L.: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-11/24494-sticker.webp
+[2022-11-20 15:42:02] L.: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-11/24495-sticker.webp
+[2022-11-20 15:42:04] L.: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-11/24498-sticker.webp
+[2022-11-20 15:42:05] L.: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-11/24499-sticker.webp
+[2022-11-20 15:42:06] L.: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-11/24500-sticker.webp

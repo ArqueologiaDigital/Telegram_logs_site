@@ -1,0 +1,243 @@
+[2024-03-04 00:44:02] Felipe "Juca" Sanches: Cheguei em casa. Fiz alguns testes mas ainda continua tijolado. Estou sem idéias. Acho que vou trocar a main board e deixar essa encostada para tentar destijolar depois, quando eu tiver um entendimento melhor do que foi que aconteceu.
+[2024-03-04 00:45:03] Felipe "Juca" Sanches: Tem uma outra placa aqui que eu achava que eu tinha tijolado cerca de 1 mês atrás, mas hoje em dia, acho que já consigo restaurá-la.
+[2024-03-04 00:47:17] Felipe "Juca" Sanches: Acho que para esse relato vale gravar mais um vídeo
+[2024-03-04 01:21:13] Felipe "Juca" Sanches: Adicionei no MAME uma linha no memory map fornecendo de mentirinha o valor que se esperaria ler no buffer de estados do control panel, para o firmware achar que foi pressionado o combo que ativa a rotina de Flash Memory Update.
+[2024-03-04 01:21:23] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29532.jpg
+[2024-03-04 01:21:38] Felipe "Juca" Sanches: E funcionou 😉 Enganei o firmware
+[2024-03-04 01:23:00] Felipe "Juca" Sanches: O lance é que a varredura do control panel é feita com um micro-controlador cujo código fica em mask-rom dentro da pastilha. Então não tem forma fácil de fazer dump. Então por enquanto vai ter que ser HLE (high-level emulation)
+[2024-03-04 01:23:27] L.: Ainda bem que no mame cê pode só stubbar a função tijolate() que não acontece nada
+[2024-03-04 01:23:36] Felipe "Juca" Sanches: kkkk
+[2024-03-04 01:24:34] Felipe "Juca" Sanches: Eu, que trabalho profissionalmente com tipografia, tenho vontade de chorar quando vejo esses 2 pontos de exclamação
+[2024-03-04 01:24:56] L.: Aí cê descobre que a pastilha tem um z8 dentro e acaba tendo que decodificar imagem do die
+[2024-03-04 01:25:23] Felipe "Juca" Sanches: conheço uma história semelhante...
+[2024-03-04 01:25:32] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29540.jpg
+[2024-03-04 02:02:27] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29541.jpg
+[2024-03-04 02:02:27] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29542.jpg
+[2024-03-04 02:02:27] Felipe "Juca" Sanches: Trocando a mainboard
+[2024-03-04 02:23:05] L.: que gambi é essa nesses capacitores? lol
+[2024-03-04 02:28:58] Felipe "Juca" Sanches: Alguém em algum momentous trocou as baterias originais
+[2024-03-04 02:29:17] Felipe "Juca" Sanches: Isso aí é para a RAM não-volátil
+[2024-03-04 02:29:23] Felipe "Juca" Sanches: NVRAM
+[2024-03-04 02:31:31] L.: ahhh sim
+[2024-03-04 02:39:25] Felipe "Juca" Sanches: OK. Missão cumprida! Placa trocada e firmware instalado. Tá de novo funcionando. Fica pra outro dia descobrir como destijolar a outra placa.
+[2024-03-04 02:39:48] Felipe "Juca" Sanches: Agora posso voltar a trabalhar no mapeamento da rotina de leitura de botões do painel de controle
+[2024-03-04 02:40:44] Felipe "Juca" Sanches: vou fazer uma implementação HLE, então preciso ter o mapa completo de quais botões correspondem a cada um dos bits de cada endereço da RAM
+[2024-03-04 02:42:11] Felipe "Juca" Sanches: normalmente esses valores são escritos na RAM por uma rotina de tratamento de interrupção de uma das interfaces seriais, que implementa algum protocolo  para fazer (acho que) polling nos microcontroladores de varredura da matriz de botoes
+[2024-03-04 02:42:19] Felipe "Juca" Sanches: e também pra enviar status dos LEDs
+[2024-03-04 02:42:38] Felipe "Juca" Sanches: não tenho idéia de como é esse protocolo ainda
+[2024-03-04 02:42:53] Felipe "Juca" Sanches: antão por enquanto é mais fácil fazer o corte direto na RAM
+[2024-03-04 02:43:30] Felipe "Juca" Sanches: fazer um device no MAME que esteja mapeado em memória pra escrever direto os bits e ignorar por completo o protocolo serial
+[2024-03-04 02:43:40] Felipe "Juca" Sanches: é gambi, mas é o que eu acho que sei fazer
+[2024-03-04 02:43:48] Felipe "Juca" Sanches: depois dá pra melhorar, claro
+[2024-03-04 02:55:59] Felipe "Juca" Sanches: Nem todos os botões dá pra testar facilmente. Mas vários deles são "inertes" na tela de memory dump. Então dá pra ver os valores da RAM mudando ao vivo conforme vou pressionando os botões
+[2024-03-04 02:56:30] Felipe "Juca" Sanches: vão ter alguns, entretanto, que vou ter que testar de outras formas, por exemplo o botão "EXIT", que fecha a tela de debugging
+[2024-03-04 03:46:10] Felipe "Juca" Sanches: Aos poucos tá saindo...
+[2024-03-04 03:46:16] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29561.jpg
+[2024-03-04 03:47:26] Felipe "Juca" Sanches: Minha meta de curto prazo é ter uma demo bacana pra mostrar na Tosconf, dia 23/março
+[2024-03-04 18:34:58] Felipe "Juca" Sanches: video: (not yet published)
+[2024-03-04 18:35:42] Shideravan: Alguém entendeu essa treta com o Yuzu?
+[2024-03-04 18:35:56] Shideravan: Isso pode afetar outros tipos de preservação com o precedente que abriram?
+[2024-03-04 18:58:12] Pedro de Medeiros 👾: A página oficial do projeto sumiu. A página do github sumiu também.
+[2024-03-04 18:58:48] Pedro de Medeiros 👾: Mas tem um monte de fork por aí já.
+[2024-03-04 18:59:32] Shideravan: Não é esse o problema
+[2024-03-04 19:00:10] Shideravan: Até o presente momento, emulação e engenharia reversa em sí tinha um precedente que protegia (Sony Computer Entertainment, Inc. v. Connectix Corp.)
+[2024-03-04 19:00:48] Shideravan: Desde que você não distribuísse o software com um emulador, os projetos de emulação eram 100% legais
+[2024-03-04 19:01:11] Shideravan: Agora esse precedente diz que não. Só não distribuir o software de terceiros não é suficiente
+[2024-03-04 19:01:35] Shideravan: Essa decisão que ao meu ver é absurda diz que se você desenvolve um emulador, é "pirataria" também
+[2024-03-04 19:01:47] Shideravan: Pelo menos foi isso que eu entendi
+[2024-03-04 19:03:12] Shideravan: Além disso, ele traz precedente para quebra de criptografia em hardware também
+[2024-03-04 19:04:38] Shideravan: Não importa que você faça a engenharia reversa de boa fé, qualquer processo para conseguir "burlar uma proteção de hardware" se tornou ilegal
+[2024-03-04 19:05:57] Shideravan: Até então, não se distribuía chaves criptográficas (mesmo o Yuzu você precisava fornecer suas próprias chaves) mas por boa vontade. Agora não só não pode, como não pode fazer para você desenvolver qualquer coisa também. Porque o Yuzu nunca distribuiu as chaves junto com o código.
+[2024-03-04 19:06:35] Felipe "Juca" Sanches: Eu não entendo, o que as pessoas ganham fazendo emuladores. Baita perda de tempo!
+[2024-03-04 19:06:47] Felipe "Juca" Sanches: vai jogar bola!
+[2024-03-04 19:08:32] Shideravan: "Documentar e preservar para que? Deixa a história morrer em paz
+Não existe qualquer progresso humano nessa coisa de hardware não, é só um meio para a empresa ganhar dinheiro por um tempo com aquilo quando passar pode deixar morrer"
+[2024-03-04 19:11:33] Felipe "Juca" Sanches: "se tivesse valor, a empresa cuidava de preservar"
+[2024-03-04 19:57:26] Lucas Alberto: Pior que isso é foda, pq o hardware a gente até consegue preservar, mas esses novos dispositivos que dependem de redes online, nunca vamos conseguir preservar 🥲
+[2024-03-04 19:57:58] Lucas Alberto: Ngm hj em dia consegue usar um Android antes do Google comprar 🥲
+[2024-03-04 20:07:19] RicBit: Eu não estava acompanhando, fui ler agora do que se trata.
+[2024-03-04 20:07:36] RicBit: Então, não teve precedente nenhum. Nada muda.
+[2024-03-04 20:08:47] RicBit: O caso não foi julgado, as duas partes se juntaram e combinaram de desistir. Isso é "settling out of court", sem transito em julgado não forma precedente.
+[2024-03-04 20:10:06] RicBit: o unico precedente legal que tem efeito que aconteceu essa semana é que finalmente um juiz na frança falou que GPL é legal
+[2024-03-04 20:16:04] Shideravan: Tem certeza que isso não abre precedente nenhum então?
+[2024-03-04 20:16:30] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29589.jpg
+[2024-03-04 20:17:10] Shideravan: https://www.terra.com.br/gameon/plataformas-e-consoles/criadores-do-yuzu-pagarao-us-24-milhoes-para-a-nintendo,c20be335b7e0680a172490321eedb317mfgkxnoa.html
+[2024-03-04 20:17:29] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29591.jpg
+[2024-03-04 20:25:49] Shideravan: O yuzu aceitar pagar a multa e entregar tudo para a Nintendo não é reconhecer que estariam fazendo algo errado?
+[2024-03-04 20:26:41] Pablo Vasques Bravo-Villalba: É reconhecer que eles simplesmente não têm condição de manter uma disputa legal contra a Nintendo
+[2024-03-04 20:29:59] Pablo Vasques Bravo-Villalba: Francamente, 2 milhões e meio parece pouco diante do que eles poderiam perder se decidissem enfrentar a Nintendo nos tribunais, ainda mais tendo que convencer um juiz leigo do que é que um emulador realmente faz
+[2024-03-04 20:34:20] RicBit: Legalmente, no sistema americano de justiça, não. É como o parn falou, na hora do vamover você teria que pagar uma fortuna em advogados só para poder se defender. Eventualmente, se você ganhasse a causa, talvez o juiz mandasse a nintendo pagar as suas custas, mas nem isso é garantido.
+[2024-03-04 20:34:42] RicBit: Podia acontecer do cara ganhar a causa e ter que pagar dois milhões pros advogados de defesa dele.
+[2024-03-04 20:37:14] Pablo Vasques Bravo-Villalba: O mais provável é que o povo do Yuzu iria à falência nesse processo. A Nintendo nem precisaria vencer o processo. E como o Ricbit falou, nos EUA não tem garantia de que a parte vencida pague as custas; mesmo que você possa vencer o processo você precisa custeá-lo até o fim.
+[2024-03-04 20:38:17] Shideravan: Ou seja, Nintendo conseguiu validar seu sistema de assédio juridico
+[2024-03-04 20:39:36] Lucas Alberto: Pior que isso abre precedentes para próximos emuladores 😔
+[2024-03-04 20:39:51] RicBit: ah, isso com certeza. mas é comum e já existe faz tempo. empresa grande sempre pode arrastar um processo forever só para fazer o custo juridico aumentar
+[2024-03-04 20:40:40] RicBit: o ponto aqui é justamente que não abre precedente nenhum. mas dá para saber o tamanho da briga que você vai comprar se decidir ir pro litígio
+[2024-03-04 20:42:07] Pablo Vasques Bravo-Villalba: No mundo das disputas jurídicas envolvendo um grande desequilíbrio de poder, ganha quem tem mais dinheiro
+[2024-03-04 20:42:44] RicBit: pra constar, já aconteceu comigo. empresa grande veio reclamar de coisa que eu estava fazendo, a gente settlou out of court e vida segue. eu sou pessoa fisica, ce tá doido que eu vou brigar haha
+[2024-03-04 20:43:03] Pablo Vasques Bravo-Villalba: Você até poderia dizer que o precedente é o yuzu topar pagar 2 milhões e meio de cara. Devia estar vendo que perderia muito mais se deixasse correr
+[2024-03-04 20:43:46] Shideravan: Para a comunidade da emulação então não vai mudar nada?
+[2024-03-04 20:43:56] Shideravan: Só não vai ter Yuzu mais, isso?
+[2024-03-04 20:44:10] RicBit: sim, não tem precedente jurídico mas tem o precedente do cagaço
+[2024-03-04 20:45:21] Pablo Vasques Bravo-Villalba: Pode ser que outras empresas se sintam motivadas a tentar o mesmo que a Nintendo. Apesar de que, de modo geral, a Nintendo costuma ser a mais agressiva entre elas. A Microsoft está com uma estratégia totalmente diferente, em que o serviço vale muito mais do que a plataforma
+[2024-03-04 20:46:11] RicBit: juridicamente nada muda, mas olha, eu acho que quem faz emulador de coisa que ainda está vendendo está pedindo problema. espera o interesse comercial morrer e boa.
+[2024-03-04 20:47:03] Pablo Vasques Bravo-Villalba: O problema é que para a Nintendo o interesse comercial nunca morre
+[2024-03-04 20:47:34] RicBit: que nada, eles tem zero problema com emulador de nes por exemplo
+[2024-03-04 20:48:01] RicBit: nesse caso em especifico eles nem poderiam fazer nada porque a patente do nes já expirou. voce pode fazer um clone e vender se quiser.
+[2024-03-04 20:48:33] RicBit: a nintendo protege o software velho porque software é outro esquema, lei diferente, nada a ver com emulação de hardware.
+[2024-03-04 20:49:15] RicBit: rodar rom sem licença sempre foi ilegal
+[2024-03-04 20:50:26] Shideravan: Se pudessem, processavam também
+[2024-03-04 20:50:45] Shideravan: Zero problema é muita boa vontade da sua parte
+[2024-03-04 20:51:21] Shideravan: Eles sempre falam ILEGALMENTE que qualquer tipo de emulação é crime no site deles. Isso sim é uma informação errada do ponto de vista legal que eles divulgam.
+[2024-03-04 20:52:48] Shideravan: Isso mancha a imagem de quem desenvolve emuladores por hobby por exemplo, porque você coloca isso num portfólio apontantam "mas emulação é sempre ilegal, olha o que a nintendo diz"
+[2024-03-04 20:52:49] RicBit: quer ver como tem zero problema?
+[2024-03-04 20:53:03] RicBit: vai no aliexpress e procura por clone de nintendo, tem aos rodos
+[2024-03-04 20:53:12] RicBit: procura clone de switch, não tem
+[2024-03-04 20:53:56] RicBit: e fazer switch é muito mais facil que fazer nes porque o switch é basicamente o devkit do tegra da nvidia. não tem nada de diferente. você pega o mario odyssey e roda num tegra com modificação minima
+[2024-03-04 20:54:34] Shideravan: https://www.nintendo.com.au/legal/information
+[2024-03-04 20:54:57] RicBit: tudo que está nesse screenshot é 100% correto
+[2024-03-04 20:54:59] RicBit: deixa ver no site
+[2024-03-04 20:55:49] Shideravan: Pior que a screenshot não tava errada mesmo kkkkkkkkk
+[2024-03-04 20:56:45] RicBit: yup, li tudo e não fala nada sobre emuladores serem ilegais
+[2024-03-04 20:56:52] RicBit: fala só sobre roms, que são ilegais mesmo
+[2024-03-04 20:57:19] RicBit: é misleading mas é 100% correto
+[2024-03-04 20:57:42] Shideravan: Eu não estou conseguindo achar, mas eles já tiveram uma página dessas falando bobagem
+[2024-03-04 20:57:47] RicBit: 1. O QUE É UMA ROM?
+2. O QUE É EMULADOR?
+3. ROM SÃO ILEGAIS
+[2024-03-04 20:58:16] RicBit: quem lê com pressa acha que emuladores são ilegais, mas você pode ter certeza que isso foi feito para confundir mesmo.
+[2024-03-04 20:58:24] Shideravan: Eles falavam que "Nintendo emulators" stifles innovation therefore são 100% ilegais
+[2024-03-04 20:58:40] RicBit: isso é falso e não tem nesse site que voce mandou
+[2024-03-04 20:59:50] Shideravan: https://www.pcgamer.com/nintendos-claim-that-emulation-stifles-innovation-isnt-just-absurdits-hypocritical/
+[2024-03-04 21:00:05] Felipe "Juca" Sanches: PQP! Tijolei outra placa :-P
+[2024-03-04 21:00:49] Felipe "Juca" Sanches: Preciso me dedicar mais em desenvolver métodos de destijolamento :-P
+[2024-03-04 21:01:27] Felipe "Juca" Sanches: por que dessa vez fui pego de surpresa. Eu não tava fazendo nada muito fora do comum
+[2024-03-04 21:01:28] L.: Daqui a pouco tá levantando parede
+[2024-03-04 21:01:35] Felipe "Juca" Sanches: kkkk
+[2024-03-04 21:01:50] RicBit: tem um episódio do adventure time que voce iria gostar
+[2024-03-04 21:02:21] RicBit: o personagem é um cachorro que pode se transformar em qualquer coisa, aí um dia ele resolve que quer ser um tijolo.
+[2024-03-04 21:02:26] RicBit: vejo semelhanças
+[2024-03-04 21:03:13] L.: Jake e Juca
+[2024-03-04 21:03:54] RicBit: muitas semelhanças
+[2024-03-04 21:04:04] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29649.jpg
+[2024-03-04 21:04:46] RicBit: episódio clássico, tem ate pagina na wiki
+https://en.wikipedia.org/wiki/Jake_the_Brick
+[2024-03-04 21:04:50] L.: Podiam ter chamado o cachorro de Jucão na versão brasileira
+[2024-03-04 21:07:19] RicBit: total
+[2024-03-04 21:07:27] RicBit: melhor que o original
+[2024-03-04 21:07:50] RicBit: e um dos personagens é um emulador bebe né
+[2024-03-04 21:08:26] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29655.jpg
+[2024-03-04 21:08:41] L.: O Bmo é fofinho demais
+[2024-03-04 21:09:04] RicBit: acho que vou fazer um
+[2024-03-04 21:09:05] L.: Conhecida minha imprimiu um suporte de Switch na Bamboo dela, com filamentos de várias cores
+[2024-03-04 21:09:23] RicBit: pois é
+[2024-03-04 21:09:30] RicBit: eu pensei em fazer pequeno mesmo
+[2024-03-04 21:09:40] RicBit: tenho lcd de celular sobrando aqui
+[2024-03-04 21:09:44] L.: Ele senta no rack de TV carregando o switch. Muito fofo hehe
+[2024-03-04 21:10:20] L.: Eu tenho o pipboy do Fallout 4 com espaço pra botar celular. Rola usar o celular como pipboy no jogo hehehe
+[2024-03-04 21:10:32] L.: É horrível aliás
+[2024-03-04 21:10:37] RicBit: aí sim é responsa
+[2024-03-04 21:11:02] RicBit: eu acabei um cutulu mas ele não para em pé haha
+[2024-03-04 21:11:26] RicBit: coloquei um ímas na base, agora preciso de algo pesado para compensar
+[2024-03-04 21:11:48] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29668.jpg
+[2024-03-04 21:11:48] L.: O Tux aqui segura meus óculos enquanto eles carregam
+[2024-03-04 21:12:26] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29669.jpg
+[2024-03-04 21:12:26] RicBit: a gente podia tá jogando, mas tamos aí pintando
+[2024-03-04 21:12:37] L.: Ficou legal demais!
+[2024-03-04 21:12:58] L.: Ficaria legal dentro de um aquário
+[2024-03-04 21:13:10] RicBit: uai ficaria mesmo
+[2024-03-04 21:22:31] Shideravan: Eu pisquei estão falando de bonecos kkkkkkkkkkk
+[2024-03-04 21:23:20] Felipe "Juca" Sanches: Uma outra coisa boa de se fazer pra evitar esse drama da tijolagem seria eu pelo menos emular o mecanismo de update de firmware. Por que aí daria pra eu fazer testes antes de rodar na máquina real.
+
+Mas tô muito longe de conseguir algo assim
+[2024-03-04 21:24:11] Shideravan: Me mandaram o cel-shading na vida real. Fica aí a sugestão de pintura para o próximo Cthulhu
+
+https://www.instagram.com/lusen426/reel/C16GW6lLpbd/
+[2024-03-04 21:24:49] Felipe "Juca" Sanches: essas duas placas não estão tijoladas pra sempre, entretanto, já que eu ainda consigo instalar novas imagens de firmware. Mas durante o boot, ele entra em loop e não segue adiante. Se eu conseguir descobrir onde enrosca, posso instalar um firmware modificado pra ignorar o problema e seguir adiante com o boot
+[2024-03-04 21:25:03] RicBit: é dificil fazer cel shading! eu fiz uma tartaruga e ficou um lixo haha
+[2024-03-04 21:26:03] Felipe "Juca" Sanches: presumo que o problema seja que o boot usa algum dado armazenado na flash de "custom rhythm memory" que eu tava alterando nos meus testes
+[2024-03-04 21:27:12] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29679.jpg
+[2024-03-04 21:28:04] Felipe "Juca" Sanches: eu tenho um disquete chamado "Initial Data Disk" que tem o conteúdo normal que deveria ir nessa flash. Se bobear, uma saída seria eu enxertar no firmware uma rotina de flashrom pra re-gravar essa flash corrompida durante o boot :-P
+[2024-03-04 21:28:06] Felipe "Juca" Sanches: que treta
+[2024-03-04 21:28:39] RicBit: nao é treta, é desafio
+[2024-03-04 21:29:10] Felipe "Juca" Sanches: no LHC, o hackerspace de Campinas, ele usam "treta" como gíria para "idéia de projeto pessoal"
+[2024-03-04 21:29:33] RicBit: ah aí sim
+[2024-03-04 21:29:54] Felipe "Juca" Sanches: ah, minto! É o pessoal do Calango Hacker Clube (o hackerspace de Brasilia) que usa essa gíria
+[2024-03-04 21:32:35] L.: LHC adotou o termo do calango
+[2024-03-04 21:32:50] Felipe "Juca" Sanches: outra idéia é enxertar no firmware um pequeno bootloader, pra rodar código arbitrário a partir do setor zero de um disquete. E a partir daí construir todo o resto...
+[2024-03-04 21:32:50] L.: Se propor a treta, cê compra a treta pra você automaticamente e tem que resolver
+[2024-03-04 21:33:26] L.: Aliás, tosconf fim do mês hein
+[2024-03-04 21:33:46] L.: Só 42 crucru pra entrar :D
+[2024-03-04 21:34:22] Felipe "Juca" Sanches: essa minha treta do Technics KN5000 se intensificou recentemente justamente por que pretendo apresentar um workshop na TOSCONF, próximo dia 23/março 😉
+[2024-03-04 21:34:57] Felipe "Juca" Sanches: eu trabalho melhor com deadline apertado
+[2024-03-04 21:34:58] L.: avisa aí se precisa comprar cimento pra oficina :)
+[2024-03-04 21:35:03] Felipe "Juca" Sanches: kkkk
+[2024-03-04 21:35:55] Felipe "Juca" Sanches: já tenho duas placas-tijolo, então já cabe um pouquinho de cimento para juntá-las numa muretinha
+[2024-03-04 21:35:58] L.: pena que não vou conseguir ir lá dessa vez
+[2024-03-04 21:36:14] L.: mas pretendo ir pro Brasil esse ano de novo, lá pra junho/julho
+[2024-03-04 21:36:24] Felipe "Juca" Sanches: tenho certeza que em breve descobrirei um jeito de ressucitar essas placas
+[2024-03-04 21:37:12] Felipe "Juca" Sanches: quando você vem pra cá, você fica hospedada onde?
+[2024-03-04 21:37:26] L.: Geralmente casa da minha mãe em Campinas
+[2024-03-04 21:37:56] L.: Mas eu devo ir pra São Paulo, e aí vai depender do que rolar na viagem.
+[2024-03-04 21:38:28] Pablo Vasques Bravo-Villalba: Eu devo estar em São Paulo em junho, seria massa encontrar com vocês por lá
+[2024-03-04 21:38:37] Felipe "Juca" Sanches: com certeza!
+[2024-03-04 21:38:44] L.: Seria massa mesmo
+[2024-03-04 22:07:06] Shideravan: Com a Nintendo processando, é uma boa hora para começarmos uns hobbies diferentes mesmo kkkkkkkkkkkkkkk
+[2024-03-04 22:08:04] Shideravan: Não achei lixo não
+[2024-03-04 22:08:13] Shideravan: Esse é o resultado final ou passo intermediário?
+[2024-03-04 22:08:39] RicBit: final, eu estava tentando o look das tartarugas originais que eram preto e branco
+[2024-03-04 22:08:55] RicBit: mas foi dois anos atras, talvez eu consiga melhor agora
+[2024-03-04 22:10:05] L.: ah, nintendo gosta de processar. não é a primeira vez.
+[2024-03-04 22:10:18] L.: sempre ficam em cima, por mais que no final das contas role uns acordos.
+[2024-03-04 22:11:25] Shideravan: É mesmo, os caras processam até projetos de fãs
+[2024-03-04 22:12:22] Shideravan: Fair use não é um termo que eles ligam muito
+[2024-03-04 22:13:21] L.: fair use é um conceito americano, aliás
+[2024-03-04 22:13:25] L.: nem todo lugar tem algo similar
+[2024-03-04 22:13:28] Shideravan: Eu acho covarde para caramba
+[2024-03-04 22:13:39] L.: brasil mesmo, se não me engano, não tem conceito parecido
+[2024-03-04 22:16:25] Shideravan: Interessante, eu não conheço os detalhes técnicos da legislação, só sei que algo sobre copyright lá, acaba espirrando num grande número de países por conta de acordos firmados
+[2024-03-04 22:17:22] Shideravan: Mas muitas vezes algumas dessas coisas servem mais na "teoria" do que na prática
+[2024-03-04 22:18:01] L.: o fair use é pra casos onde eu quero citar uma obra sem ter que pedir permissão
+[2024-03-04 22:18:17] L.: por exemplo, eu tô fazendo um trabalho sobre música e quero botar um trecho de 5s pra mostrar um negócio
+[2024-03-04 22:18:29] L.: ou botar uns screenshots de um filme
+[2024-03-04 22:18:42] L.: muito mais que isso aí acaba sendo complicado
+[2024-03-04 22:18:52] L.: eu não sei muito bem como isso encaixaria na questão de emulação
+[2024-03-04 22:19:14] L.: mas também não sou advogada :)
+[2024-03-04 22:20:29] Shideravan: O que protege uma criança de desenhar o Goku no caderno dela de escola?
+[2024-03-04 22:21:09] L.: a carreta furacão vai proteger
+[2024-03-04 22:21:13] Shideravan: kkkkkkkkkkkkkkkk
+[2024-03-04 22:21:53] Shideravan: Carreta Furacão tomou C&D de usar a imagem do Fofão, hein? kkkkkkkkkkk
+[2024-03-04 22:22:12] L.: C&D: Corre&Dança
+[2024-03-04 22:22:17] Shideravan: kkkkkkkkkkkkkkk
+[2024-03-04 22:23:38] Shideravan: Não pode nem Fofão da shopee mais kkkkkkkkkkk
+
+https://www.cnnbrasil.com.br/nacional/justica-de-sao-paulo-proibe-uso-do-fofao-pela-carreta-furacao
+[2024-03-04 22:38:41] Deleted Account: Esse lance da nintendo só mostra que, em termos de arqueologia, tem coisas que merecem ser deixadas enterradas mesmo.
+
+A Nintendo já mostrou em mais de uma ocasião ser extremamente hostil com quem tem algum carinho pelas IPs dela. 
+
+Eu até entenderia dar strike em emuladores closed source. Mas achincalhar projetos open source beira o ridículo. 
+
+Eu que não quero um switch nem de graça pra financiá-los. Nem emular tenho estômago.
+[2024-03-04 22:44:30] Deleted Account: E, agora que acabaram com o Yuzu, não duvido nada que a mira da nintendo não se volte pro Dolphin devido à grande quantidade de títulos que ele emula.
+[2024-03-04 22:55:31] Shideravan: Sim
+[2024-03-04 22:55:42] Shideravan: Eles devem derrubar o Ryujinx também
+[2024-03-04 23:08:30] Felipe "Juca" Sanches: Saca só! Acho que dá pra eu pendurar com segurança código meu aqui pra tentar ressucitar a placa:
+[2024-03-04 23:08:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29739.jpg
+[2024-03-04 23:19:50] RicBit: isso é rom ?
+[2024-03-04 23:28:53] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29741.jpg
+[2024-03-04 23:28:53] RicBit: coloquei anotacoes no disasm
+[2024-03-04 23:30:37] Lucas Alberto: Que AI é essa q vc fica usando?
+[2024-03-04 23:31:02] RicBit: chatgpt que eu customizei com actions externas para disasm
+[2024-03-04 23:31:45] Lucas Alberto: Wow, legal, da muita diferença do gpt normal?
+[2024-03-04 23:32:41] Felipe "Juca" Sanches: É o meu disasm da FLASH
+[2024-03-04 23:33:17] RicBit: ah cool, flash dá para reescrever mesmo
+[2024-03-04 23:33:39] RicBit: gpt normal nem sabe do que eu estou falando haha
+[2024-03-04 23:36:34] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29748.jpg
+[2024-03-04 23:36:34] RicBit: gpt normal
+[2024-03-04 23:37:59] Lucas Alberto: Como faz pra ter um gpt assistent igual o seu ? 
+
+Já tem algo pre pronto ou tem a montar do zero com base na API da open aí ?
+[2024-03-04 23:42:14] RicBit: tem algo pre pronto! deixa pegar aqui o tutorial
+[2024-03-04 23:42:51] RicBit: here -> https://platform.openai.com/docs/actions/introduction
+[2024-03-04 23:45:35] Lucas Alberto: Vlw, depois vou dar uma olhadinha

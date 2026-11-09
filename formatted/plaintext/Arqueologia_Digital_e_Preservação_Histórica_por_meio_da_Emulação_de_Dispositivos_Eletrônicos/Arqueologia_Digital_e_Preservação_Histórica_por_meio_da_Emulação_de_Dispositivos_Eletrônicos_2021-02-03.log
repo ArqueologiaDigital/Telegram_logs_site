@@ -1,0 +1,23 @@
+[2021-02-03 12:52:49] Ricardo Bánffy: Tem NetBSD pra Turbo-R?
+[2021-02-03 13:03:28] L.: Não sei, mas duvido. Tem Fuzix.
+[2021-02-03 13:11:39] Ricardo Bánffy: Se alguém aqui quiser suporte a gráficos Tektronix no Gnome Terminal, eu abri um ticket https://gitlab.gnome.org/GNOME/vte/-/issues/328
+[2021-02-03 13:12:06] Ricardo Bánffy: Se o xterm consegue fazer, é inadmissível que o Gnome Terminal não consiga...
+[2021-02-03 13:12:28] Ricardo Bánffy: Aí eu achei isso: https://github.com/rricharz/Tek4010
+[2021-02-03 13:14:31] Ismael Luceno: RicBit oi! estava olhando o brmsx, é muito interessante, mas estava pensando... existe algum ensamblador software livre compatível com o TASM para compilar-lo?
+[2021-02-03 13:37:54] RicBit: Não sei, faz tempo que eu não compilo x86.
+[2021-02-03 19:29:30] L.: Talvez nasm funcione (-t)
+[2021-02-03 19:51:31] Ismael Luceno: Leandro  não, já tentei, e pesquisando o código achei muito difícil agregar todos os features, por exemplo o código assume que você tem mapeadas 1:1 os mnemônicos contra os opcodes, então fica difícil implementar features de HLA
+[2021-02-03 19:51:42] Ismael Luceno: tentei com o nasm e ytasm
+[2021-02-03 21:58:58] RicBit: se bobear o mais facil é fazer um parser que converte de tasm para alguma coisa aberta
+[2021-02-03 22:56:21] Felipe "Juca" Sanches: concordo
+[2021-02-03 22:57:04] Felipe "Juca" Sanches: reformatar o código como etapa de pré-processamento para a montagem com assemblers modernos me parece um bom caminho
+[2021-02-03 22:58:33] Felipe "Juca" Sanches: seria divertido escrever um reformatador de código asm que suporte input e output de uma selecao das sintaxes mais usadas tanto hoje em dia como em assemblers famosos do passado
+[2021-02-03 22:59:11] Felipe "Juca" Sanches: acho que é semelhante a implementar um linter
+[2021-02-03 22:59:42] Felipe "Juca" Sanches: e um auto-fixer para problemas detectados por linters
+[2021-02-03 23:00:03] Felipe "Juca" Sanches: por que tem que tanto parsear quanto soltar um novo output modificado
+[2021-02-03 23:21:21] RicBit: eu nem usava nada muito avançado no brmsx
+[2021-02-03 23:21:30] RicBit: tem algumas macros, ums reps e só
+[2021-02-03 23:21:35] RicBit: que eu me lembre pelo menos
+[2021-02-03 23:30:42] Felipe "Juca" Sanches: Vou fazer mais uma live hoje, mas não tenho nenhum convidado dessa vez. Vou só continuar fazendo um projetinho meu, ao vivo e batendo papo com a turma. Vou iniciar a transmissão às 23h55min hoje. Venham bater papo pelo chat! E se alguem quiser entrar via video também, tudo bem!
+
+https://youtu.be/nGWys38FlCA

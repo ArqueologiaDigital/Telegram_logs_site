@@ -1,0 +1,54 @@
+[2021-07-23 14:30:19] L.: Tem mais de uma máquina lá. Pode ficar com o que as que o RicBit não ficar.
+[2021-07-23 14:31:13] L.: Acho que tem uma Sparcstation 4, umas duas Ultrasparc 1, e as JavaStation. Um monitor CRT, alguns teclados, alguns mouses ópticos (daqueles que precisam de mousepad quadriculado), alguns mouses de bolinha, e uns discos SCSI externos
+[2021-07-23 14:31:40] L.: Existe possibilidade de que não consiga ligar por que a bateria interna pode ter zoado e teria que trocar um módulo. Um deles eu, uh, emprestei duma sparc da faculdade
+[2021-07-23 14:52:18] Erin Pinheiro 🐿: que mais tem sobrando aí? 👀
+[2021-07-23 14:53:01] Erin Pinheiro 🐿: eu moro perto do RicBit, vou atazanar ele pra ir brincar com as máquinas também hauhauh
+[2021-07-23 15:04:38] L.: Vish, tem coisa pra cacete na casa da minha mãe
+[2021-07-23 15:04:47] L.: Mas só ano que vem quando for pro Brasil
+[2021-07-23 15:08:28] L.: Se me lembro bem, tem uns MSX1, uns CP-400 na caixa, acho que tem uns TK-85 e TK-90x, vários Apple II clones, alguns TK2000, uns 30 modelos diferentes de Atari (tudo clone nacional, incluindo raros tipo Dactar Maleta), cartuchos de jogos, outros consoles
+[2021-07-23 15:08:52] L.: Eu não quero mais nada disso e vai dar trabalho demais vender, então vou doar pra quem coleciona ou brinca com esse tipo de coisa
+[2021-07-23 15:27:07] Erin Pinheiro 🐿: nossa
+[2021-07-23 15:27:14] Erin Pinheiro 🐿: onde tu conseguiu tudo isso?
+[2021-07-23 15:30:56] L.: Eu colecionava essas coisas, então ia atrás.
+[2021-07-23 15:31:10] L.: Brechó de igreja, loja de usados, feira do rolo
+[2021-07-23 15:31:33] L.: Amigos vendo o negócio e "eu tenho um computador velho lá em casa, ia jogar fora, quer pra você?"
+[2021-07-23 15:33:33] Erin Pinheiro 🐿: meu sonho
+[2021-07-23 15:37:43] L.: Hoje só tenho um PiDP/11 e um MDT-9100T que não tá funcionando
+[2021-07-23 15:46:48] Eduardo Loos: Posso entrar na fila ?
+[2021-07-23 15:49:17] FTMaciel: Onde que é?
+[2021-07-23 15:51:12] L.: Campinas
+[2021-07-23 15:52:04] FTMaciel: Eita. Que tristeza. Mas vai dar tudo? Aí eu vou de carro buscar
+[2021-07-23 15:52:14] L.: Sim, mas você tá em SC né? Eu não pretendo botar nada nos correios, por que se for pro Brasil (moro nos EUA), eu não quero perder tempo com isso.
+[2021-07-23 15:53:30] Eduardo Loos: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13651-animation.mp4
+[2021-07-23 15:55:49] L.: Heh, isso aí provavelmente foi aqui perto de casa (Bill Gates mora numa ilha aqui do lado)
+[2021-07-23 15:56:20] Eduardo Loos: Isso se a melinda não ficar com a mansão....
+[2021-07-23 15:56:40] Eduardo Loos: depois do que ele aprontou... merecia ficar
+[2021-07-23 17:49:11] Emerson Moura: Se alguém estiver interessado, tem um gringo no fb querendo desassemblar o código de um robô industrial antigo (Cybermotion) que usa Z80:
+https://www.facebook.com/groups/849674861775079/?hoisted_section_header_type=recently_seen&multi_permalinks=4202629536479578
+[2021-07-23 18:39:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13656.jpg
+[2021-07-23 18:40:03] Felipe "Juca" Sanches [forwarded]: https://meet.jit.si/debxphs
+[2021-07-23 18:40:03] Felipe "Juca" Sanches [forwarded]: O Hackerspace DEBXP Está Aberto!
+
+Se já não tiver algum tema planejado pra hoje, eu gostaria de mostrar umas tentativas de engenharia reversa que estou fazendo num teclado musical Technics SX-KN5000 de 1996.
+
+Envolve estudo de algorítmos de compressão de dados (que são usados para guardar o update de firmware do teclado musical em um disquete)
+[2021-07-23 18:41:49] Felipe "Juca" Sanches: "DEBXP" é uma comunidade da qual faço parte e que tem se reunido toda sexta-feira numa espécie de "hackerspace-virtual".
+
+Muita gente de Debian, e temas em geral focados bastante em software livre. Mas eu tenho tentado puxar a sardinha pro lado dos projetos de hardware também 😉
+[2021-07-23 18:42:48] Felipe "Juca" Sanches: já esse estudo do Technics é misto. Tanto hardware quanto software. Nessa etapa agora é mais software mesmo: tentar desvendar esse esquema de compressão de dados do update de firmware.
+[2021-07-23 18:45:27] Felipe "Juca" Sanches: eu tomei coragem e modifiquei o arquivo de update de firmware e instalei.
+
+Dá pra ver que o texto "OVERALL TOUCH SENSITIVITY" agora aparece com "OVER" substituido por "JUCA"
+
+o que é boa notícia, pois mostra que o sistema de update de firmware não valida checksum, o que seria uma dor de cabeça a mais. Já sabemos que não precisaremos lidar com isso, pelo menos 😉
+[2021-07-23 21:09:51] RicBit: Nice, troca o terminador agora!
+[2021-07-23 21:10:03] RicBit: Você não sabe a CPU?
+[2021-07-23 23:20:15] Felipe "Juca" Sanches: sim a CPU é TOSHIBA TLCS900H
+[2021-07-23 23:20:27] Felipe "Juca" Sanches: duas CPUs dessas
+[2021-07-23 23:20:32] Felipe "Juca" Sanches: mais 2 DSPs
+[2021-07-23 23:20:48] Felipe "Juca" Sanches: TLCS900H é parecido com Z80 se não me engano
+[2021-07-23 23:23:35] RicBit: Não dá pra jogar no disasm?
+[2021-07-23 23:32:26] Felipe "Juca" Sanches: meu objetivo é descomprimir e depois fazer disasm
+[2021-07-23 23:32:41] Felipe "Juca" Sanches: furada tentar disasm de dado com compressão
+[2021-07-23 23:33:13] Felipe "Juca" Sanches: e se bobear farei o disasm via MAME pois já tenho um driver de emulacao desse teclado musical esboçado no MAME, comecei isso ano passado
+[2021-07-23 23:53:28] RicBit: O código não deve estar comprimido não

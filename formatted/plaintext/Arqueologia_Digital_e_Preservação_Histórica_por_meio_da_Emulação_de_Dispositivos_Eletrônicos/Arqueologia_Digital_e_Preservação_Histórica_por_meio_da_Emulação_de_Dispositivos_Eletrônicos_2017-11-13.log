@@ -1,0 +1,398 @@
+[2017-11-13 01:01:01] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/574.jpg
+[2017-11-13 01:08:23] Felipe "Juca" Sanches: wow
+[2017-11-13 01:13:26] Werner: 😁 o negócio era punk. Imagina fazer os sprites da SFA2 assim...
+[2017-11-13 01:53:24] Felipe "Juca" Sanches: SFA2 ?
+[2017-11-13 01:53:27] Felipe "Juca" Sanches: o que é isso?
+[2017-11-13 01:54:41] Werner: Street Fighter Alpha 2
+[2017-11-13 01:54:45] Werner: 😁
+[2017-11-13 01:55:19] Felipe "Juca" Sanches: ah
+[2017-11-13 01:55:24] Felipe "Juca" Sanches: eu tenho essa placa
+[2017-11-13 01:55:33] Werner: Eu sei
+[2017-11-13 01:55:47] Werner: Li o seu post lá no fiozera
+[2017-11-13 01:56:04] Felipe "Juca" Sanches: http://mamedev.emulab.it/fsanches/2016/03/07/recovering-a-dead-cps2-board-street-fighter-zero-2-brazil/
+[2017-11-13 01:56:04] Werner: Falando justamente a respeito de sprites
+[2017-11-13 01:56:10] Werner: Isso
+[2017-11-13 01:56:20] Werner: Digo, post no Mamedev
+[2017-11-13 01:56:21] Felipe "Juca" Sanches: Esse é um post pré-fiozera
+[2017-11-13 01:56:36] Werner: 👍
+[2017-11-13 01:57:34] Werner: Como vc conseguiu botar a mão numa placa dessas?
+[2017-11-13 01:57:49] Werner: Comprou no ML?? 😁
+[2017-11-13 01:58:23] Felipe "Juca" Sanches: não, acharam no lixo numa central de reciclagem de eletrônicos em Brasilia e me deram de presente
+[2017-11-13 01:58:45] Werner: Pqp...
+[2017-11-13 01:58:49] Felipe "Juca" Sanches: hehe
+[2017-11-13 01:59:09] Werner: Vou começar a fazer dumpster diving aqui
+[2017-11-13 01:59:24] Felipe "Juca" Sanches: tem realmente muita coisa boa indo pro lixo
+[2017-11-13 02:00:24] Werner: Ta na hora de voltarmos ao old school hacking e sair invadindo centrais d reciclagem... Oh-oh, alerta d post politicamente incorreto!
+[2017-11-13 02:01:03] Werner: Os geração mimimi devem sair da sala!
+[2017-11-13 02:01:08] Werner: 😜
+[2017-11-13 02:02:19] Felipe "Juca" Sanches: hoje eu estava lendo novamente o livro sobre a história do LSD e do PCS.
+[2017-11-13 02:02:40] Werner: Eu li parte dele ontem
+[2017-11-13 02:03:16] Felipe "Juca" Sanches: E ao ver menções aos computadores G-10, G-11 e Cobra 530, lembrei que preciso ir conversar com o professor Stephan Kovacs
+[2017-11-13 02:03:53] Felipe "Juca" Sanches: E lembrei também essa semana que vi em algum lugar descrições do instruction set do G-10 em algumas das teses relacionadas ao Patinho Feio
+[2017-11-13 02:04:38] Werner: Já vi q alguém andou pensando em emulação d novo...
+[2017-11-13 02:05:06] Felipe "Juca" Sanches: ...
+[2017-11-13 02:06:01] Felipe "Juca" Sanches: na bibliografia da tese "Procedimentos microprogramados num Minicomputador" de Edit Grassiani (1975) tem isso:
+[2017-11-13 02:06:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/608.jpg
+[2017-11-13 02:07:09] Werner: O trabalho arqueológico tem início...
+[2017-11-13 02:07:27] Felipe "Juca" Sanches: Olha que divertidas essas referências bibliográficas:
+[2017-11-13 02:07:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/611.jpg
+[2017-11-13 02:08:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/612.jpg
+[2017-11-13 02:08:51] Werner: Gostaria de ler essas obras. Imagina o conteúdo!
+[2017-11-13 02:08:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/614.jpg
+[2017-11-13 02:09:09] Werner: Micro programação nos anos 70
+[2017-11-13 02:09:41] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/616.jpg
+[2017-11-13 02:10:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/617.jpg
+[2017-11-13 02:12:03] Werner: Emulação direta de estrutiras de controle 
+Um ambiente para pesquisa de micro programação e emulação
+[2017-11-13 02:12:36] Werner: Leitura interessante hein?
+[2017-11-13 02:13:26] Werner: São referências antigas, seria possível ainda conseguí-las?
+[2017-11-13 02:13:32] Felipe "Juca" Sanches: talvez
+[2017-11-13 02:13:39] Felipe "Juca" Sanches: agora a cereja do bolo:
+[2017-11-13 02:13:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/623.jpg
+[2017-11-13 02:14:38] Werner: Tá. Já tem o disassembler praticamente prontinho aí.
+[2017-11-13 02:14:49] Werner: 😁
+[2017-11-13 02:15:07] Felipe "Juca" Sanches: preciso ir dormir agora
+[2017-11-13 02:15:12] Werner: MAME here we go... Rss
+[2017-11-13 02:15:48] Werner: É né? Durma se com um barulho desses agora...
+[2017-11-13 02:15:59] Felipe "Juca" Sanches: se quiser se divertir, tudo isso aí e muito mais está nesse PDF: https://archive.org/details/ProcedimentosMicroprogramadosNumMinicomputador
+[2017-11-13 02:17:12] Werner: Amanhã vou abrir isso no desktop.
+[2017-11-13 02:17:17] Werner: Fui
+[2017-11-13 02:28:55] Felipe "Juca" Sanches: 👍
+[2017-11-13 02:32:26] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/633.jpg
+[2017-11-13 02:32:41] Felipe "Juca" Sanches: Happy Hacking!
+[2017-11-13 10:13:42] Felipe "Juca" Sanches [forwarded]: https://forum.fiozera.com.br/t/arqueologia-digital-resgate-historico-dos-computadores-pioneiros-do-brasil/156
+[2017-11-13 10:13:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/636.jpg
+[2017-11-13 10:13:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/637.jpg
+[2017-11-13 10:13:42] Felipe "Juca" Sanches [forwarded]: @fsanches no Roadsec
+[2017-11-13 10:18:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/639.jpg
+[2017-11-13 12:54:41] Werner: @fsanches, qdo vc tiver um tempo livre, seria interessante se vc conseguisse escanear as páginas daquele seu livro da USP onde o G-10 é citado, para dar um contexto (mais informações, fotos, etc) - pois na web só achei um breve parágrafo e uma minúscula foto: https://pcs.usp.br/departamento/historia/
+[2017-11-13 13:26:09] Werner: As referências 22 a 24 seriam de extrema utilidade, vou tentar achar caso já existam no web archive.
+[2017-11-13 13:40:01] Werner: Parece que ainda não; só encontrei duas obras listadas fazendo referência a ele: https://archive.org/details/@felipe_correa_da_silva_sanches?and[]=subject%3A"G10"
+[2017-11-13 18:16:13] Werner: O MAME está compilando!! Hurra!! Eita poha agora vai.
+[2017-11-13 18:18:13] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/645-sticker.webp
+[2017-11-13 18:18:54] Werner: Quatro dias rachando a cabeça semana passada e nada dele querer passar da fase "pre-compile emu.h"
+[2017-11-13 18:19:17] Werner: Hoje comecei do zero - deletei o conteúdo da pasta c:\MinGW e fiz tudo de novo.
+[2017-11-13 18:19:20] Werner: rolou de boa.
+[2017-11-13 18:19:58] Werner: Mas eles arrumaram a página lá. Tá com só um .exe pra baixar e instalar.
+[2017-11-13 19:07:56] Felipe "Juca" Sanches: As ROMs do CP500 fui eu que extraí da placa que tenho em mãos e cataloguei no MAME.
+[2017-11-13 19:08:12] Felipe "Juca" Sanches: As ROMs desse site aí devem ser dumps que outras pessoas fizeram de outras placas
+[2017-11-13 19:08:38] Felipe "Juca" Sanches: isso significa que talvez seja o caso de cadastrar essas ROMs aí no MAME também
+[2017-11-13 19:08:51] Felipe "Juca" Sanches: mas antes de fazer isso, é bom verificar se não se trata de ROMs gambiarradas
+[2017-11-13 19:09:33] Felipe "Juca" Sanches: por que tem outros emuladores que fazem bobagens como, por exemplo, concatenar múltiplas ROMs num arquivo só
+[2017-11-13 19:09:45] Werner: entendi
+[2017-11-13 19:09:47] Felipe "Juca" Sanches: e isso o MAME não faz. O MAME sempre documenta o que de fato há no hardware
+[2017-11-13 19:10:01] Werner: Especialmente em ROMs de arcade
+[2017-11-13 19:10:11] Felipe "Juca" Sanches: se tem 3 chips de EPROM, vai ter 3 arquivos de ROM, por exemplo
+[2017-11-13 19:10:21] Werner: certo
+[2017-11-13 19:10:26] Felipe "Juca" Sanches: outro problema é que há dumps ruins circulando pela internet
+[2017-11-13 19:10:43] Felipe "Juca" Sanches: por exemplo quando o pessoal faz o dump usando um programa rodando no próprio dispositivo
+[2017-11-13 19:11:24] Felipe "Juca" Sanches: aí existe o risco de determinados endereços retornarem valores diferentes do que estava de fato na ROM, por conta de interferência de dispositivos de hardware mapeados naquele endereço específico
+[2017-11-13 19:11:27] Werner: eu já fiz algo assim quando precisei fazer o dump da ROM da minha calculadora
+[2017-11-13 19:11:45] Werner: Pra rodar em um emulador q eu tinha no PC
+[2017-11-13 19:11:48] Felipe "Juca" Sanches: e o MAME documenta o conteúdo exato das ROMs, mesmo que esse conteúdo esteja mascarado em alguns endereços
+[2017-11-13 19:12:25] Felipe "Juca" Sanches: então o método preferido para se efetuar um dump é removendo mesmo o chip de EPROM da placa pra ler o dado real, e não o que está visível em runtime
+[2017-11-13 19:12:49] Felipe "Juca" Sanches: e tem um comentário desses no código fonte do driver do trs80
+[2017-11-13 19:13:09] Felipe "Juca" Sanches: então parece que há um caso desses de hardware interferindo no dump feito por software
+[2017-11-13 19:25:42] Felipe "Juca" Sanches: E aí, qual seu próximo passo agora que tem o MAME compilado dos fontes ?
+[2017-11-13 19:26:01] Werner: Pensando em tocar o puteiro no G-10
+[2017-11-13 19:26:10] Felipe "Juca" Sanches: hahaha
+[2017-11-13 19:26:11] Werner: Pra ver logo se eu tenho isso no sangue ou não
+[2017-11-13 19:26:12] Felipe "Juca" Sanches: boa sorte
+[2017-11-13 19:26:26] Felipe "Juca" Sanches: parece um projeto fascinante
+[2017-11-13 19:26:34] Felipe "Juca" Sanches: e, sinceramente, meio hardcore
+[2017-11-13 19:26:37] Werner: Vou me basear no trabalho q vc fez no PF e talvez olhar alguma coisa no ITA-II
+[2017-11-13 19:26:44] Werner: pra entender a estrutura e ir fazendo
+[2017-11-13 19:26:46] Felipe "Juca" Sanches: já que é uma máquina programável no nível de micro-código
+[2017-11-13 19:27:24] Felipe "Juca" Sanches: então me parece que a emulação "certa" seria com emulação das micro-instruções
+[2017-11-13 19:27:34] Werner: Se eu conseguir vencer essa eu acho q terei conseguido diminuir o gap entre vc e eu no tocante a emulação
+[2017-11-13 19:27:45] Felipe "Juca" Sanches: hehe
+[2017-11-13 19:27:51] Felipe "Juca" Sanches: acho demais vocÊ topar esse desafio
+[2017-11-13 19:28:01] Felipe "Juca" Sanches: se enroscar, me avisa
+[2017-11-13 19:28:05] Werner: Ou vc acha q fazer isso nesse nível é demais da conta? Pera, melhor não me falar nada
+[2017-11-13 19:28:05] Felipe "Juca" Sanches: que eu dou uma força
+[2017-11-13 19:28:15] Werner: Aquela história do sapo subindo no poste
+[2017-11-13 19:28:25] Werner: beleza
+[2017-11-13 19:28:31] Felipe "Juca" Sanches: se precisar de ajuda, grita aê
+[2017-11-13 19:28:32] Werner: Toca ler a tese da Dr. Edit
+[2017-11-13 19:28:41] Werner: Pra dar um contexto
+[2017-11-13 19:28:43] Felipe "Juca" Sanches: mas eu acho que vai demorar um pouco até vocÊ começar a escrever código
+[2017-11-13 19:28:50] Felipe "Juca" Sanches: por que tem uma tese inteira pra ler primeiro hahaha
+[2017-11-13 19:28:58] Werner: vamos ver...
+[2017-11-13 19:29:06] Felipe "Juca" Sanches: mas esse é o espírito!
+[2017-11-13 19:29:11] Felipe "Juca" Sanches: Tô gostando de ver :-)
+[2017-11-13 19:29:17] Werner: tem q começar de algum lugar
+[2017-11-13 19:35:36] Felipe "Juca" Sanches: Tem uma coisa que é interessante aí. O framework do MAME é desenhado para emulação e disasm em nível de instrução. Emular em nível de micro-instrução me parece o caminho mais preciso. Mas também me parece tornar muito mais confusa a inspeção de código no debugger interativo, pois "esconde" o nível de abstração da camada acima (a camada do código assembly) ao mostrar o step-by-step do micro-código.
+[2017-11-13 19:36:22] Felipe "Juca" Sanches: Seria muito interessante tentar construir um framwork para emulação e debugging de micro-código no MAME. De modo que o debugger pudesse ainda preservar a interface de depuração passo-a-passo no nível de instruções também
+[2017-11-13 19:36:35] Felipe "Juca" Sanches: teríamos então 2 níveis de abstração para o debugging
+[2017-11-13 19:37:03] Felipe "Juca" Sanches: 2 janelas de debugger distintas, talvez (uma pra debugging em micro-código e outra para debugging em nível de instrução)
+[2017-11-13 19:37:21] Felipe "Juca" Sanches: o mais fácil agora é você simplesmente emular em nível de micro-código
+[2017-11-13 19:37:38] Felipe "Juca" Sanches: mas mais pra frente vai fazer falta poder depurar códigos em nível de instrução também
+[2017-11-13 19:37:57] Werner: Penso em fazer isso por etapas
+[2017-11-13 19:38:31] Werner: Uma vez vencida a primeira, daí o entendimento ganho possa me dar condições de passarmos pra essa segunda abstração
+[2017-11-13 19:40:38] Felipe "Juca" Sanches: além disso, há uma possível confusão nisso que diz respeito à mistura de carga de "roms" de microcódigo e "roms" de código. Supostamente um sistema pode ter dumps de diversas versões de sua memória de controle (que é onde ficam armazenadas as descrições da máquina escritas em micro-instruções). E então as várias ROMs de boot da máquina poderiam ser combinadas com as várias ROMs de micro-código. E que eu saiba o MAME não tem uma forma simples de fazer essa troca e combinação de multiplos ROMsets em uma só máquina.
+[2017-11-13 19:41:57] Felipe "Juca" Sanches: normalmente o que há é um conjunto de ROMs de diversas versões de BIOS da mesma máquina (selecionaveis no menu de usuário) e então diversos programas que as pessoas podem carregar a partir de mídias como imagens de disquete, imagens de fita cassete, etc
+[2017-11-13 19:42:53] Felipe "Juca" Sanches: então essa seleção de mlutiplas versões de bios existe. Mas não existe forma de ter seleção dupla (que seria útil para escolher tanto a versão do micro-código quanto a versão do boot da bios)
+[2017-11-13 19:43:20] Felipe "Juca" Sanches: faz sentido isso que eu falei?
+[2017-11-13 19:45:14] Werner: Pelo que eu atualmente entendo a respeito de microcódigo, seria código escrito em devices do tipo PAL ou FPGA, definindo um hardware com a ajuda de micro instruções
+[2017-11-13 19:45:51] Werner: Se isso estiver correto no que diz respeito ao G-10, penso que já vi algo parecido em vários drivers de máquinas arcade no MAME
+[2017-11-13 19:46:23] Werner: arquivos .zip contendo o conteúdo de PALs junto com ROMs é normal, eu já vi. Só não sei se estamos nos referindo às mesmas coisas.
+[2017-11-13 19:46:38] Werner: Por isso acho que preciso me inteirar melhor lendo a tese da Edit.
+[2017-11-13 19:47:12] Felipe "Juca" Sanches: meu entendimento é diferente
+[2017-11-13 19:47:21] Felipe "Juca" Sanches: micro-código é quase como um assembly do assembly
+[2017-11-13 19:47:34] Werner: Acho que boiei
+[2017-11-13 19:47:48] Felipe "Juca" Sanches: é uma forma de escrever "programinhas" que descrevem o algorítmo de cada uma das instruções do assembly de uma CPU
+[2017-11-13 19:48:14] Werner: é o código q define o algoritmo a ser executado por um opcode, por exemplo?
+[2017-11-13 19:48:19] Felipe "Juca" Sanches: então vc tem micro-instruções que vocÊ usa pra escrever um micro-programa que define o comportamente de uma certa instrução
+[2017-11-13 19:48:24] Felipe "Juca" Sanches: isso mesmo
+[2017-11-13 19:48:34] Felipe "Juca" Sanches: é tipo uma CPU dentro da CPU
+[2017-11-13 19:49:05] Werner: Se um opcode diz algo como, "LDA, <valor>" são as instruções que fazem a CPU carregar o acumulador com esse dado?
+[2017-11-13 19:49:15] Felipe "Juca" Sanches: é uma forma de programaticamente determinar o sequenciamento de sinais de controle internos da CPU
+[2017-11-13 19:49:35] Felipe "Juca" Sanches: o Patinho Feio não tem micro-código
+[2017-11-13 19:49:40] Werner: Isso é território ainda inexplorado pra mim
+[2017-11-13 19:50:00] Werner: O máximo q eu já desci, foi para o assembler, com opcodes.
+[2017-11-13 19:50:14] Felipe "Juca" Sanches: por que o sequenciamento de sinais da unidade de controle do Patinho Feio é feito por meio de funções booleanas implementadas direto em portas lógicas.
+[2017-11-13 19:50:29] Felipe "Juca" Sanches: Por isso que dizemos que é uma unidade de controle "hardwired"
+[2017-11-13 19:50:32] Werner: q vc abstraiu
+[2017-11-13 19:50:44] Felipe "Juca" Sanches: isso
+[2017-11-13 19:50:58] Werner: Podemos dizer q é o mesmo caso da CPU do zezinho?
+[2017-11-13 19:51:05] Felipe "Juca" Sanches: sim
+[2017-11-13 19:51:24] Werner: já q a UC dele tbm é feita com portas logicas implementadas a transistor
+[2017-11-13 19:51:24] Felipe "Juca" Sanches: já o G-10 tem uma CPU micro-programada
+[2017-11-13 19:51:37] Felipe "Juca" Sanches: isso
+[2017-11-13 19:51:48] Felipe "Juca" Sanches: do zezinho, sim
+[2017-11-13 19:52:08] Werner: Eu tbm gostaria de entender isso, será q uma daquelas 3 referencias da tese da Edit tem essa informação do hardware do G-10?
+[2017-11-13 19:52:14] Felipe "Juca" Sanches: o G-10 tem uma memória de controle onde ficam armazenados os algoritmos de micro-instruções
+[2017-11-13 19:52:35] Werner: Tem o projeto de mestrado do Wilson Ruggiero q eu peguei pra ler tbm
+[2017-11-13 19:53:01] Werner: Eu não sei dizer ainda, se esse projeto tem algo a ver com o G-10 pra ser totalmente sincero com vc
+[2017-11-13 19:53:10] Felipe "Juca" Sanches: acho que essa tese aqui ajuda também: https://archive.org/details/ProjetoDeUmProcessadorMicroprogramado
+[2017-11-13 19:53:18] Werner: eu peguei já
+[2017-11-13 19:53:20] Felipe "Juca" Sanches: ah, isso isso !!!
+[2017-11-13 19:53:31] Werner: peguei hj mais cedo
+[2017-11-13 19:53:48] Werner: Isso é o projeto do G-10?
+[2017-11-13 19:53:54] Felipe "Juca" Sanches: não sei. Mas deve ser
+[2017-11-13 19:54:01] Werner: Eu tbm não.. kkk
+[2017-11-13 19:54:02] Felipe "Juca" Sanches: é da mesma época
+[2017-11-13 19:54:04] Felipe "Juca" Sanches: só pode ser
+[2017-11-13 19:54:10] Werner: Comecei a ler meio desatento
+[2017-11-13 19:54:28] Felipe "Juca" Sanches: bom... boa leitura aí. Eu preciso focar no trampo aqui. Volto mais tarde
+[2017-11-13 19:54:41] Werner: Blz, depois falamos. Toca o puteiro daí q eu toco a zona daqui
+[2017-11-13 19:55:02] Felipe "Juca" Sanches: :-P
+[2017-11-13 19:55:27] Felipe "Juca" Sanches: não é exatamente o meu vocabulário predileto, mas acho que peguei o espírito da coisa hahaha
+[2017-11-13 20:17:39] Werner: rss
+[2017-11-13 20:18:06] Werner: Pensa em abstração de micro-código
+[2017-11-13 20:25:35] Werner: Depois me fala se vc já chegou a fazer o commit do driver do Sagitta?
+[2017-11-13 20:25:45] Felipe "Juca" Sanches: fiz o pull request
+[2017-11-13 20:25:56] Felipe "Juca" Sanches: mas teve feedback pedindo alteração em algumas coisas
+[2017-11-13 20:26:02] Felipe "Juca" Sanches: e eu ainda não fiz as alterações
+[2017-11-13 20:26:04] Werner: ummm
+[2017-11-13 20:26:09] Felipe "Juca" Sanches: o Cuavas tá esperando eu acertar isso
+[2017-11-13 20:26:24] Werner: Eu queria compilar, daí fiz um pull do seu remote mas não vi
+[2017-11-13 20:26:31] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/2776
+[2017-11-13 20:26:50] Felipe "Juca" Sanches: eu acho que você pode fazer:
+[2017-11-13 20:26:56] Felipe "Juca" Sanches: git fetch fsanches
+[2017-11-13 20:27:07] Felipe "Juca" Sanches: git checkout fsanches/sagitta180
+[2017-11-13 20:27:12] Felipe "Juca" Sanches: e compilar
+[2017-11-13 20:27:33] Werner: já fiz. o nome do driver é esse mesmo, sagitta180?
+[2017-11-13 20:27:47] Felipe "Juca" Sanches: sagitta180 é o nome do driver e também é o nome do branch
+[2017-11-13 20:27:51] Werner: ok
+[2017-11-13 20:28:00] Felipe "Juca" Sanches: já o código fonte fica no scopus.cpp
+[2017-11-13 20:28:01] Werner: então vou tentar compilar com esse target
+[2017-11-13 20:28:18] Felipe "Juca" Sanches: src/mame/drivers/scopus.cpp
+[2017-11-13 20:28:21] Werner: aah, acho q foi por isso, eu não vi
+[2017-11-13 20:28:30] Werner: estava de olho em algo como sagitta
+[2017-11-13 20:28:52] Werner: tá lá sim
+[2017-11-13 20:28:56] Werner: blz
+[2017-11-13 20:28:58] Felipe "Juca" Sanches: eu optei por fazer um driver inteiro pros terminais da scopus, então não botei o nome do modelo no arquivo CPP
+[2017-11-13 20:29:18] Werner: sem problemas, isso foi bom pois eu estou me acostumando com essa estrutura toda
+[2017-11-13 20:29:28] Felipe "Juca" Sanches: mas talvez faça sentido renomear depois quando o conjunto de emuladores da Scopus for maior e tiver formas melhor de nomear as categorias de máquianas emuladas
+[2017-11-13 20:29:37] Felipe "Juca" Sanches: por exemplo, a scopus tem clone de PC-XT
+[2017-11-13 20:29:42] Werner: 👍🏻
+[2017-11-13 20:29:46] Werner: vdd
+[2017-11-13 20:29:55] Felipe "Juca" Sanches: então o XT da Scopus entraria provavelmente nos drivers de XT que o MAME já tem
+[2017-11-13 20:29:57] Werner: são maquinas distintas
+[2017-11-13 20:30:03] Felipe "Juca" Sanches: a não ser que seja MUITO diferente
+[2017-11-13 20:30:06] Werner: faz sentido
+[2017-11-13 20:30:39] Felipe "Juca" Sanches: (e tem um XT da Scopus lá no acervo histórico da USP :-D)
+[2017-11-13 20:31:09] Felipe "Juca" Sanches: Esse hobby é uma desgraça. Quanto mais a gente avança, mais a gente afunda
+[2017-11-13 20:31:23] Felipe "Juca" Sanches: tem mais máquina do que gente pra emular as máquinas...
+[2017-11-13 20:31:38] Werner: kkk
+[2017-11-13 20:31:49] Werner: é coisa de programação.
+[2017-11-13 20:31:57] Werner: Não só emulação
+[2017-11-13 20:32:02] Werner: estou compilando pro sagitta.
+[2017-11-13 20:32:12] Werner: só queria ver ele acender aqui
+[2017-11-13 20:32:16] Felipe "Juca" Sanches: legal
+[2017-11-13 20:32:24] Felipe "Juca" Sanches: podia dar uma investigada no teclado talvez
+[2017-11-13 20:32:32] Felipe "Juca" Sanches: que é o misterio da vez...
+[2017-11-13 20:32:33] Werner: certo
+[2017-11-13 20:33:03] Werner: o mapeamento do teclado do cp500 tbm não foi feito, ou foi?
+[2017-11-13 20:33:10] Werner: pq eu percebi diferenças nas teclas
+[2017-11-13 20:33:35] Werner: ou isso é usado do driver trs80?
+[2017-11-13 20:33:41] Felipe "Juca" Sanches: ah
+[2017-11-13 20:33:44] Felipe "Juca" Sanches: bem observado
+[2017-11-13 20:33:52] Felipe "Juca" Sanches: pode ser que o teclado do cp500 seja mesmo diferente
+[2017-11-13 20:33:55] Felipe "Juca" Sanches: não sei dizer
+[2017-11-13 20:34:07] Felipe "Juca" Sanches: se for, é necessário mapear as diferenças e declarar no driver
+[2017-11-13 20:34:11] Werner: pq seria legal (só não sei se correto), se ele mapeasse as teclas do teclado guest
+[2017-11-13 20:34:19] Werner: ah tá, entendi
+[2017-11-13 20:34:34] Werner: pow, isso seria uma coisa boa pra um padawan fazer, não?
+[2017-11-13 20:35:31] Felipe "Juca" Sanches: e tem uma zica maior no driver do cp500 (aliás nos dos trs80 model 3 e derivados em geral) que é a falta de suporte ao formado de imagem de disco JV3 ou DMK
+[2017-11-13 20:35:49] Felipe "Juca" Sanches: sim, seria
+[2017-11-13 20:36:06] Felipe "Juca" Sanches: só não sei como você faria
+[2017-11-13 20:36:09] Felipe "Juca" Sanches: com base em fotos ?
+[2017-11-13 20:36:10] Werner: nem eu, rss
+[2017-11-13 20:36:22] Werner: eu diria com base no q está agora
+[2017-11-13 20:36:32] Werner: tipo, eu anotando as teclas q eu pressiono e o q sai na tela
+[2017-11-13 20:36:40] Werner: daí criando uma espécie de mapa
+[2017-11-13 20:36:43] Felipe "Juca" Sanches: é... é um metodo empírico
+[2017-11-13 20:36:51] Felipe "Juca" Sanches: tem chances de dar certo
+[2017-11-13 20:36:56] Werner: e finalmente olhando uma foto de um teclado completo e ver se tem td
+[2017-11-13 20:37:00] Felipe "Juca" Sanches: mas não é garantido que será uma descrição fiel do layout
+[2017-11-13 20:37:06] Felipe "Juca" Sanches: uma foto pode ajudar sim
+[2017-11-13 20:37:18] Werner: daí passando ao remapeamento pra que as teclas físicas do host reflitam
+[2017-11-13 20:37:24] Felipe "Juca" Sanches: a certeza só teremos inspecionando as trilhas do teclado talvez
+[2017-11-13 20:37:43] Felipe "Juca" Sanches: mas combinar análise empírica com uma foto do teclado é bom o suficiente
+[2017-11-13 20:38:03] Werner: vou olhar os fontes do driver e localizar onde e como isso está sendo feito primeiramente
+[2017-11-13 20:38:22] Felipe "Juca" Sanches: outra coisa legal é ver as ROMs existentes circulando pela web e categoriza-las
+[2017-11-13 20:38:27] Felipe "Juca" Sanches: (1) lixo
+[2017-11-13 20:38:30] Felipe "Juca" Sanches: (2) bad dump
+[2017-11-13 20:38:50] Felipe "Juca" Sanches: (3) rom de outras versões domesmo hardware do  cp500
+[2017-11-13 20:38:54] Werner: poutz mas daí seria um trabalhão, visitar todos os sites...
+[2017-11-13 20:38:59] Felipe "Juca" Sanches: (4) rom de variantes do hardware do cp500
+[2017-11-13 20:39:08] Felipe "Juca" Sanches: como por exemplo o cp500/M80
+[2017-11-13 20:39:17] Werner: esse tem lá naquele site q eu mencionei
+[2017-11-13 20:39:21] Werner: nunca tinha ouvido falar
+[2017-11-13 20:39:26] Felipe "Juca" Sanches: eu não sei qual é a diferença
+[2017-11-13 20:39:36] Felipe "Juca" Sanches: seria legal tentar carregar a ROM dele no MAME e ver o que acontece
+[2017-11-13 20:39:49] Werner: e pra fazer isso teria q mudar o q no driver?
+[2017-11-13 20:40:04] Felipe "Juca" Sanches: só deus sabe (eu diria se eu não fosse ateu)
+[2017-11-13 20:40:23] Werner: pra ele carregar a rom q eu quiser q ele carregue?
+[2017-11-13 20:40:29] Felipe "Juca" Sanches: ah!
+[2017-11-13 20:40:31] Werner: em um mesmo driver
+[2017-11-13 20:40:48] Felipe "Juca" Sanches: isso é só questão de editar os nomes das ROMs lá no driver
+[2017-11-13 20:41:08] Felipe "Juca" Sanches: e rodar apontando prum diretório com as roms diferentes
+[2017-11-13 20:41:29] Felipe "Juca" Sanches: talvez editar os tamanhos dos arquivos também (se for diferente)
+[2017-11-13 20:41:44] Werner: curiosidade, teria como fazer uma espécie de opção ou submenu, que vc escolhesse a variante baseado na ROM?
+[2017-11-13 20:42:14] Felipe "Juca" Sanches: e, se for algo útil de adicionar no MAME, aí vale a pena declarar uma nova seção de declaração de ROMs com o ROMset alterativo
+[2017-11-13 20:42:19] Felipe "Juca" Sanches: sim
+[2017-11-13 20:42:23] Felipe "Juca" Sanches: tem duas formas
+[2017-11-13 20:43:09] Felipe "Juca" Sanches: se o hardware é diferente, vocÊ declara um nome diferente de driver, declara como derivado, adiciona as funções com código de emulação da diferença do hardware e o resto é herdado do "driver pai".
+[2017-11-13 20:43:39] Werner: tipo, o cp500m80 seria um child do cp500...
+[2017-11-13 20:43:41] Felipe "Juca" Sanches: se o hardware for idêntico e a única diferença for, por exemplo, uma versão diferente da bios, aí dá pra usar uma macro que declara alternativas de bios
+[2017-11-13 20:43:48] Felipe "Juca" Sanches: isso!
+[2017-11-13 20:44:03] Werner: lembro vagamente de vc ter me mostrado isso
+[2017-11-13 20:44:03] Felipe "Juca" Sanches: Mas uma outra versão de bootrom pro mesmo equipamento seria declarado diferente
+[2017-11-13 20:44:12] Felipe "Juca" Sanches: veja o exemplo do driver replicator.cpp
+[2017-11-13 20:44:16] Felipe "Juca" Sanches: eu que escrevi
+[2017-11-13 20:44:25] Werner: deixa eu abrir
+[2017-11-13 20:44:30] Felipe "Juca" Sanches: tem lá o uso da macro de múltiplas versões de bootrom para um mesmo hardware
+[2017-11-13 20:44:54] Werner: ah ta vc corrigiu
+[2017-11-13 20:44:55] Werner: rsss
+[2017-11-13 20:44:59] Felipe "Juca" Sanches: src/mame/drivers/replicator.cpp
+[2017-11-13 20:45:00] Werner: perae deixa eu localizar ele
+[2017-11-13 20:45:07] Werner: é, então
+[2017-11-13 20:48:50] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/870.jpg
+[2017-11-13 20:48:50] Werner: Seria essa parte aqui, né?
+[2017-11-13 20:49:47] Werner: esse replicator é aquela impressora 3D da makerbot?
+[2017-11-13 20:51:17] Felipe "Juca" Sanches: sim
+[2017-11-13 20:51:24] Felipe "Juca" Sanches: sim
+[2017-11-13 20:51:57] Felipe "Juca" Sanches: (divertido, né?)
+[2017-11-13 20:52:03] Felipe "Juca" Sanches: Mas é um driver pela metade
+[2017-11-13 20:52:17] Felipe "Juca" Sanches: o problema é que a emulação da CPU é incompleta
+[2017-11-13 20:52:29] Felipe "Juca" Sanches: e o problema é meio cabeludo de resolver
+[2017-11-13 20:52:40] Felipe "Juca" Sanches: emular os timers do microcontrolador AVR8
+[2017-11-13 20:52:41] Felipe "Juca" Sanches: etc
+[2017-11-13 20:52:46] Felipe "Juca" Sanches: eu tentei
+[2017-11-13 20:52:51] Felipe "Juca" Sanches: e me confundi
+[2017-11-13 20:52:55] Felipe "Juca" Sanches: e larguei pela metade
+[2017-11-13 20:53:15] Werner: o bicho ficou cabeludo demais?
+[2017-11-13 20:53:21] Werner: o sagitta emulou aqui
+[2017-11-13 20:53:23] Felipe "Juca" Sanches: o driver boota e mostra texto no display de cristal líquido
+[2017-11-13 20:53:31] Werner: só q sem perceber entrada do teclado
+[2017-11-13 20:53:32] Felipe "Juca" Sanches: mas não toca a música
+[2017-11-13 20:53:57] Felipe "Juca" Sanches: o input de teclado está descrito no driver mas não funciona
+[2017-11-13 20:54:12] Felipe "Juca" Sanches: mas acho que não funciona por conta dos timers e não por estar errado o mapeamento do teclado
+[2017-11-13 20:54:26] Felipe "Juca" Sanches: acho que tá certa a emulação do teclado da impressora 3d (é um key pad)
+[2017-11-13 20:54:42] Felipe "Juca" Sanches: mas realmente a emulação dos timers tá toda zoada e aí o driver não funciona
+[2017-11-13 20:54:45] Werner: a questão dos timers vc está falando da replicator?
+[2017-11-13 20:55:02] Felipe "Juca" Sanches: por que o firmware usa os timers do avr8 para fazer bitbang no speaker e tocar música
+[2017-11-13 20:55:12] Felipe "Juca" Sanches: e também para controlar o timing dos stepper motors
+[2017-11-13 20:55:17] Felipe "Juca" Sanches: sim
+[2017-11-13 20:55:20] Felipe "Juca" Sanches: replicator
+[2017-11-13 20:55:45] Werner: difícil controlar isso sabendo q cada máquina tem um clock diferente
+[2017-11-13 20:55:58] Felipe "Juca" Sanches: se algum dia eu ajustar a questão dos timers, acho que é um driver legal para experimentar a idéia de modelos 3D se movendo em função de comandos do firmware
+[2017-11-13 20:55:58] Werner: ou existe algum artifício no MAME q já facilita isso?
+[2017-11-13 20:56:34] Felipe "Juca" Sanches: o MAME tem algumas formas de lidar com timers
+[2017-11-13 20:56:35] Felipe "Juca" Sanches: tem sim
+[2017-11-13 20:56:41] Felipe "Juca" Sanches: eu é que não manjo muito
+[2017-11-13 20:56:46] Felipe "Juca" Sanches: mas sei que tem jeito de fazer sim
+[2017-11-13 20:56:52] Felipe "Juca" Sanches: é que eu preciso estudar mais
+[2017-11-13 21:45:41] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/905.jpg
+[2017-11-13 21:45:41] Werner: Esporadicamente, ao carregar o driver cp500 aparece isso ao invés da tela de boot...
+[2017-11-13 21:45:52] Werner: Não é sempre. Não parece haver um padrão.
+[2017-11-13 22:29:31] Werner: umm... eu acho q já tenho um palpite de qual macro eu preciso fazer uma sobrecarga pro CP500...
+[2017-11-13 22:31:08] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/908.jpg
+[2017-11-13 22:36:36] Felipe "Juca" Sanches: yup!
+[2017-11-13 22:36:55] Felipe "Juca" Sanches: será que é por conta do estado inicial do flipflop ?
+[2017-11-13 23:12:31] Werner: é... talvez seja uma possibilidade. Eu vi onde vc declara ele, mas não pesquisei onde ele é setado.
+[2017-11-13 23:18:23] Werner: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/913-image_2017-11-13_23-18-18.png
+[2017-11-13 23:18:23] Werner: Esse cara (em verde) é alguma macro, por acaso?
+[2017-11-13 23:21:48] Felipe "Juca" Sanches: não.
+[2017-11-13 23:21:53] Felipe "Juca" Sanches: é um método
+[2017-11-13 23:22:13] Felipe "Juca" Sanches: procure o nome dele no código
+[2017-11-13 23:22:17] Felipe "Juca" Sanches: vc vai achar a implementação
+[2017-11-13 23:22:24] Werner: to chegando lá
+[2017-11-13 23:22:33] Werner: tem 3 ocorrências de cp500_a11_flipflop_toggle nos fontes
+[2017-11-13 23:22:58] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/920.jpg
+[2017-11-13 23:22:58] Werner: Aqui
+[2017-11-13 23:23:07] Werner: deve ser no mame\machine
+[2017-11-13 23:23:24] Felipe "Juca" Sanches: não
+[2017-11-13 23:23:28] Felipe "Juca" Sanches: é no drivers/trs80.cpp
+[2017-11-13 23:24:04] Werner: no cpp não tem implementação do "cp500_a11_flipflop_toggle"
+[2017-11-13 23:24:13] Werner: não em mame\drivers
+[2017-11-13 23:25:55] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/926.jpg
+[2017-11-13 23:25:55] Werner: em mame\machine\trs80.cpp
+[2017-11-13 23:26:23] Felipe "Juca" Sanches: duh
+[2017-11-13 23:26:26] Felipe "Juca" Sanches: vc tem razão
+[2017-11-13 23:27:35] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/929.jpg
+[2017-11-13 23:27:35] Werner: E aqui posso assumir q sempre seta ele com zero a cada início?
+[2017-11-13 23:28:09] Felipe "Juca" Sanches: pois é
+[2017-11-13 23:28:15] Felipe "Juca" Sanches: é isso mesmo
+[2017-11-13 23:28:29] Werner: pq na linha de baixo ele chama o reset pro trs80m4?
+[2017-11-13 23:28:34] Felipe "Juca" Sanches: então não sei qual é o problema
+[2017-11-13 23:28:48] Felipe "Juca" Sanches: pra fazer tudo o que o construtor originalmente fazia
+[2017-11-13 23:29:07] Werner: não deveria haver alguma coisa igual, só q passando 'cp500'?
+[2017-11-13 23:29:09] Felipe "Juca" Sanches: como eu sobrecarreguei o construtor, eu preciso chamar o construtor original depois que eu faço a minha coisinha extra
+[2017-11-13 23:29:42] Werner: isso q eu pensei. Vc sobrecarregou ele imagino q com uma assinatura diferente no método?
+[2017-11-13 23:29:56] Felipe "Juca" Sanches: só pra me assegurar, eu troqueo essa linha pra flipflop=1 e compilei
+[2017-11-13 23:30:00] Felipe "Juca" Sanches: quando rodo dá tela preta
+[2017-11-13 23:30:07] Felipe "Juca" Sanches: então acho que o problema é outro
+[2017-11-13 23:30:17] Werner: vc rodou mais de uma vez?
+[2017-11-13 23:30:23] Felipe "Juca" Sanches: botei flipflop=1 só pra tentar induzir o mesmo problema
+[2017-11-13 23:30:28] Felipe "Juca" Sanches: aqui eu rodo mil vezes e sempre funciona
+[2017-11-13 23:30:33] Werner: tendi
+[2017-11-13 23:31:01] Felipe "Juca" Sanches: vou ficar offline agora
+[2017-11-13 23:31:02] Werner: eu pensei o seguinte, vc chama o método do flip flop, e a cada chamada ele reseta o estado dele certo?
+[2017-11-13 23:31:03] Felipe "Juca" Sanches: té mais
+[2017-11-13 23:31:04] Werner: ok
+[2017-11-13 23:31:09] Werner: blz
+[2017-11-13 23:31:12] Felipe "Juca" Sanches: ah
+[2017-11-13 23:31:16] Felipe "Juca" Sanches: só uma dica
+[2017-11-13 23:31:28] Werner: diga
+[2017-11-13 23:31:30] Felipe "Juca" Sanches: o cuavas me disse que esse driver do trs80 tá uma extrema gambiarra
+[2017-11-13 23:31:38] Werner: ummm
+[2017-11-13 23:32:01] Felipe "Juca" Sanches: e que alguém precisa fazer um refactoring geral. Re-escrever do zero
+[2017-11-13 23:32:09] Felipe "Juca" Sanches: por que tem muita gambiarra
+[2017-11-13 23:32:09] Werner: uiaiui
+[2017-11-13 23:32:15] Werner: aiuiai
+[2017-11-13 23:32:25] Felipe "Juca" Sanches: acho que por que ele foi escrito numa época em que o MAME não tinha determinados recursos
+[2017-11-13 23:32:34] Felipe "Juca" Sanches: e hoje em dia dá pra escrever de forma mais didática
+[2017-11-13 23:33:04] Felipe "Juca" Sanches: enfim... não é o melhor exemplo de código pra aprender emulação
+[2017-11-13 23:33:12] Felipe "Juca" Sanches: vou dormir. té mais!
+[2017-11-13 23:33:17] Werner: alguma coisa dá pra tirar dele. Té mais
+[2017-11-13 23:33:22] Felipe "Juca" Sanches: E Happy Hacking !!!
+[2017-11-13 23:33:25] Werner: répi réquingui
+[2017-11-13 23:33:35] Felipe "Juca" Sanches: (prepare-se pra ir na USP na 4a feira)
+[2017-11-13 23:33:40] Werner: opa!
+[2017-11-13 23:33:42] Felipe "Juca" Sanches: 3, 2, 1, fui!
+[2017-11-13 23:33:46] Werner: inté
+[2017-11-13 23:46:50] Werner: Outro brinquedin: https://youtu.be/KAivGLHJzJM

@@ -1,0 +1,36 @@
+[2024-01-21 00:26:59] Felipe "Juca" Sanches: não. Piorou
+[2024-01-21 00:27:35] Felipe "Juca" Sanches: essa aqui era a imagem original, em que tinha só os pixels azul-marinho que estavam um pouco estranhos.
+[2024-01-21 00:28:01] Felipe "Juca" Sanches: as duas imagens com offset na paleta resultaram em mais pixels com cores estranhas
+[2024-01-21 02:39:16] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/28993.jpg
+[2024-01-21 02:39:16] Felipe "Juca" Sanches: zoeirinha de sábado à noite
+
+um programinha minúsculo para desenhar imagem na VGA do KN5000
+
+o programa é instalado na ROM da placa de extensão.
+[2024-01-21 02:39:56] Felipe "Juca" Sanches: assemblei na mão pois ainda não tenho um bom assembler para essa CPU
+[2024-01-21 02:40:16] Felipe "Juca" Sanches: mas quero experimentar esse aqui:
+[2024-01-21 02:41:05] Felipe "Juca" Sanches: http://john.ccac.rwth-aachen.de:8000/as/index.html
+[2024-01-21 02:42:48] Felipe "Juca" Sanches: Em teoria, posso fabricar uma pequena PCB com uma RAM de 512kb e um soquete ZIF para uma EPROM de 512kb também, e com isso poder carregar programas no meu teclado cujo mecanismo de update via disquete estragou
+[2024-01-21 02:43:40] Felipe "Juca" Sanches: um programa útil de se rodar por esse meio seria um instalador alternativo para a flash rom do sistema
+[2024-01-21 02:44:04] Felipe "Juca" Sanches: pra recuperar equipamento bricado
+[2024-01-21 02:45:18] Felipe "Juca" Sanches: outra possibilidade seria implementar um pequeno programa monitor que me permita conectar ao laptop via porta serial e executar comandos no teclado real, para inspecionar o hardware, fazer dumps, etc...
+[2024-01-21 02:50:07] Felipe "Juca" Sanches: e obviamente poderia ser também uma flash rom com um mecanismo para gravá-la pela serial para eu poder instalar programas na interface de extensão sem precisar ficar manuseando EPROMs e soquete ZIF
+[2024-01-21 02:50:24] Felipe "Juca" Sanches: preciso largar mão de ser preguiçoso e abrir logo o KICAD pra desenhar essa placa
+[2024-01-21 13:57:29] Felipe "Juca" Sanches: sim, a paleta de cores tá errada
+[2024-01-21 15:35:16] Alexandre Villares: https://mastodon.archive.org/@textfiles/111792519380940363
+[2024-01-21 23:21:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/29005.jpg
+[2024-01-21 23:21:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/29006.jpg
+[2024-01-21 23:21:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/29007.jpg
+[2024-01-21 23:21:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/29008.jpg
+[2024-01-21 23:21:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/29009.jpg
+[2024-01-21 23:21:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/29010.jpg
+[2024-01-21 23:21:44] Felipe "Juca" Sanches: Alguém sabe dizer qual é o nome/modelo desse conector?
+[2024-01-21 23:26:16] Felipe "Juca" Sanches: ah! E caso estejam curiosos, essa é a placa HD-AE5000
+[2024-01-21 23:26:31] L.: http://connectorbook.com/identification.html?m=NP
+[2024-01-21 23:28:47] L.: Parece um centronics, tipo de scsi externo, mas com mais pinos
+[2024-01-21 23:28:57] L.: Mas deve ser outra coisa
+[2024-01-21 23:29:19] Felipe "Juca" Sanches: quero saber o modelo exato pra eu poder comprar alguns
+[2024-01-21 23:29:30] Felipe "Juca" Sanches: pois quero projetar uma placa usando esse conector
+[2024-01-21 23:29:40] L.: O site ajuda
+[2024-01-21 23:29:57] Felipe "Juca" Sanches: pra eu poder injetar código arbitrário no kn5000 e talvez assim conseguir re-flashar a ROM do sistema
+[2024-01-21 23:38:58] Pablo Vasques Bravo-Villalba: Se a distância entre os pinos for menor que a de um conector Centronics pode ser um VHDCI (AMP HPCN68M)

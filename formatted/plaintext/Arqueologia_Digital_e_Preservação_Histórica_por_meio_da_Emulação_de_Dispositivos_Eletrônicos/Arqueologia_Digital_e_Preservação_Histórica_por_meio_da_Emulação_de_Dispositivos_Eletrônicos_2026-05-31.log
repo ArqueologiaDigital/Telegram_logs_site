@@ -1,0 +1,57 @@
+[2026-05-31 01:17:50] Pablo Vasques Bravo-Villalba: Ah, pensei que fosse do arcade, já que você estava falando dele antes
+[2026-05-31 04:11:36] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/15419
+[2026-05-31 04:12:29] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/39051.jpg
+[2026-05-31 16:58:19] RicBit: flashbacks de 2004, quando eu estava medindo com o osciloscopio as cores do expert na saida do vdp.
+[2026-05-31 16:58:48] RicBit: a mesma coisa aqui com o circuito de bang do rallyx. Eu fiz a netlist, fica parecido mas não fica igual ao gravado com microfone
+[2026-05-31 16:59:36] RicBit: mas o microfone gravado tambem tem a acustica do gabinete influindo, isso eu não tenho como fazer. o melhor que eu faço é o sinal eletrico equivalente e dai em diante o usuario coloca filtro se quiser.
+[2026-05-31 17:03:43] Pablo Vasques Bravo-Villalba: Ricardo, eu acho que o segundo som parece ter clipping. E tem algum tipo de ressonância ou reverberação que não dá pra perceber no original.
+
+De qualquer forma, sou totalmente a favor do som ser gerado da maneira mais próxima possível a uma situação ideal, sem levar em consideração um monte de outras variáveis incontroláveis.
+
+Aliás sou a favor disso também na parte de vídeo. Ainda acho que detalhes como idiossincrasias do monitor utilizado não deveriam estar presentes no vídeo final, ele deveria ser uma representação ideal (o quanto possível, na minha opinião) do sinal gerado
+[2026-05-31 17:04:31] RicBit: tem que ter clipping, o original tambem tem!
+[2026-05-31 17:04:43] RicBit: a ressonancia é que me pega, fica parecendo jogo de atari
+[2026-05-31 17:05:06] RicBit: um filtro high pass deve tirar isso, mas aí é melhor externo eu acho
+[2026-05-31 17:06:20] RicBit: a unica coisa que eu tenho para futucar é o modelo do mb3730 que não tem no mame ainda. eu fiz rmq nos parametros dele para minimizar o rms com o bang original. curiosamente (ou felizmente), os parametros minimizados batem com o datasheet do mb3730
+[2026-05-31 17:06:38] RicBit: ou melhor do mb3730a. o mb3730 sem a eu não achei
+[2026-05-31 17:15:46] RicBit: ontem a noite eu deixei abrindo o galaga do msx, e surpresa! nenhum emulador emula direito o galaga.
+[2026-05-31 17:15:57] RicBit: acabando o patch do mame eu faco patch do openmsx
+[2026-05-31 17:32:03] RicBit: alguem por acaso tem cartucho original da namco para tirar foto da placa ?
+[2026-05-31 18:27:07] RicBit: pronto pr do mame seguiu
+https://github.com/mamedev/mame/pull/15424
+[2026-05-31 18:31:14] Pablo Vasques Bravo-Villalba: Parece que tem mais no seu 😬
+[2026-05-31 18:31:55] Pablo Vasques Bravo-Villalba: Qual o problema?
+[2026-05-31 18:32:23] RicBit: todas as roms do galaga de 32kb deveriam ser 16kb
+[2026-05-31 18:32:27] RicBit: dumparam errado
+[2026-05-31 18:33:15] RicBit: eu testei outras roms e todas as da namco estao overdumped
+[2026-05-31 18:52:08] Pablo Vasques Bravo-Villalba: Mas você falou que nenhum emulador emula direito o Galaga. Estou curioso em saber o que é que não está sendo emulado direito. 😅
+[2026-05-31 19:21:52] RicBit: o mapper do cartucho
+[2026-05-31 19:22:08] RicBit: povo overdumpou sem perceber que era um mapper diferente
+[2026-05-31 19:22:33] RicBit: o A13 da rom tá ligado no A14 ou A15 do slot
+[2026-05-31 19:22:46] RicBit: mas eu nao sei qual, a14 ou a15, precisaria abrir um cartucho pra ver
+[2026-05-31 19:40:13] Pablo Vasques Bravo-Villalba: Mas se o dump do cartucho é que está errado, o que é que o OpenMSX está fazendo errado? 🤔
+[2026-05-31 19:42:04] RicBit: se eu stripar os 16kb do overdump, o openmsx nao vai conseguir rodar porque ele nao tem o mapper pra isso
+[2026-05-31 19:46:50] Pablo Vasques Bravo-Villalba: Se não me engano ele tem o mapper Mirrored4000 ou coisa semelhante. 🤔
+[2026-05-31 19:48:19] RicBit: mirror4000 mirroreia ABAB
+o galaga precisa mirrorear AABB
+[2026-05-31 19:48:34] RicBit: eu rodei o teste aqui e surprise again!
+[2026-05-31 19:48:48] RicBit: tem duas versoes do galaga recompiladas em enderecos diferentes
+[2026-05-31 20:04:34] RicBit: conferi, tem duas versoes recompiladas, 100% de certeza
+[2026-05-31 20:11:31] Pablo Vasques Bravo-Villalba: Precisa mesmo? Tem referências no Galaga a endereços nas páginas 1 e 2? Pergunto porque existem pelo menos dois dumps de 16kB do Galaga no File-Hunter e os dois que testei carregam na página 1 e não precisam de espelhamento pra funcionar
+[2026-05-31 20:12:42] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/39086-galaga.rom
+[2026-05-31 20:12:42] RicBit: voce rodou o recompilado. tenta esse aqui
+[2026-05-31 20:13:15] RicBit: eu testei exaustivamente todas as roms do file hunter
+[2026-05-31 20:16:20] Pablo Vasques Bravo-Villalba: Tá, esse travou. Estou vendo aqui ele espelhado na página 2. Não era isso que deveria acontecer?
+[2026-05-31 20:17:03] RicBit: ele espelhou ABAB, tem que espelhar AABB, ai funciona
+[2026-05-31 20:17:10] Pablo Vasques Bravo-Villalba: Como assim ABAB?
+[2026-05-31 20:17:32] RicBit: primeiro 8kb + primeiro 8kb + segundo 8kb + segundo 8kb
+[2026-05-31 20:17:41] Pablo Vasques Bravo-Villalba: Ahhhh
+[2026-05-31 20:18:38] RicBit: faz o teste de recortar e juntar desse jeito, ela vai funcionar
+[2026-05-31 20:21:57] Pablo Vasques Bravo-Villalba: Aí ela fica igual ou similar à GoodMSX 775. Agora pra mim tudo faz sentido. Você falou A13 mas eu não estava pensando em termos de circuito. Estava pensando em termos de página da visão de slots do MSX. Agradeço pela paciência de me explicar
+[2026-05-31 20:25:22] RicBit: provavelmente sao duas PCBs diferentes
+teria que abrir pra ver
+[2026-05-31 20:25:32] RicBit: mas eu nao tenho nenhum desses jogos
+[2026-05-31 21:01:12] RicBit: pr do openmsx foi
+https://github.com/openMSX/openMSX/pull/2131
+[2026-05-31 21:22:16] Pablo Vasques Bravo-Villalba: Eu acho que até foi bom conversarmos sobre isso, porque pode antecipar o tipo de questionamento que você pode receber dos mantenedores
+[2026-05-31 21:55:18] RicBit: a regra é clara, se voce nao sabe explicar é porque não entendeu

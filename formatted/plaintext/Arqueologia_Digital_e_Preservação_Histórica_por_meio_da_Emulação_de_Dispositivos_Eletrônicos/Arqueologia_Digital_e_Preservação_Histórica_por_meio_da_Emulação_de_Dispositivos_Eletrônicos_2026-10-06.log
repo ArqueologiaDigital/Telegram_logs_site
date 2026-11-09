@@ -1,0 +1,54 @@
+[2026-10-06 12:45:09] Shideravan: Tenso
+[2026-10-06 12:45:35] Shideravan: Um bot tentou entrar no grupo, foi isso?
+[2026-10-06 12:46:51] Shideravan: Único bot que a gente respeita é a namagiri kkkkkkkkkkkk
+[2026-10-06 12:53:30] Felipe "Juca" Sanches: nem vi! Algum outro admin foi mais rapido, ou o proprio bot se autodeletou
+[2026-10-06 12:56:52] L.: o bot de captcha chutou
+[2026-10-06 12:57:13] L.: tem uns 3/4 por dia
+[2026-10-06 12:59:47] Felipe "Juca" Sanches: ah ok
+[2026-10-06 14:02:44] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41123-minigb.zip
+[2026-10-06 14:02:44] RicBit: roda asterix, ainda 4kb.
+[2026-10-06 14:07:23] RicBit: eu estava preparado psicologicamente para apertar o reset e começar de novo, mas aí bateu a ideia, e se ao inves disso eu adicionasse bytes aleatorios?
+[2026-10-06 14:08:12] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41125.jpg
+[2026-10-06 14:08:12] RicBit: incrivelmente, funcionou. adicionando cinco bytes aleatorios e o tamanho do arquivo diminuiu. agora o segredo é achar onde colocar os bytes, quantos bytes e quais bytes.
+[2026-10-06 14:15:07] Felipe "Juca" Sanches: Isso é tudo muito lindo! Impressionante!
+[2026-10-06 14:19:24] RicBit: 12h procurando os bytes certos haha.
+[2026-10-06 14:20:10] Shideravan: Qual a porcentagem de compatibilidade atual?
+[2026-10-06 14:21:42] RicBit: no idea, nao rodei o sweep ainda
+[2026-10-06 14:23:20] RicBit: o asterix foi regression, ele funcionava antes, quebrou quando eu coloquei o mapper do wisdom tree. o unico de achar regression é testando todos, e demora
+[2026-10-06 14:26:25] Shideravan: O bom de usar um fullset do No-Intro é que você pode colocar na frente o número de jogos testados rodando e comparar com o número total:
+
+xxxx/2335 files tested
+[2026-10-06 14:28:14] Shideravan: Eu costumava criar uma tabela no spreadsheets para ir marcando o que eu já testei e entrava ingame
+[2026-10-06 14:33:10] Shideravan: Você pode até fazer algo bonitinho que automaticamente associa as entradas com imagens das boxarts/title screen/ingame snaps, para porta a lista para a web por exemplo
+
+https://github.com/teeedubb/no-intro-pictures
+[2026-10-06 14:41:36] RicBit: posso tentar algo assim
+[2026-10-06 14:42:18] RicBit: tem um monte de roms que não funcionam, o problema é que nao sei se eram pra funcionar
+[2026-10-06 14:42:37] RicBit: tipo daikatana, o header diz que suporta dmg, mas eu acho que é gbc only
+[2026-10-06 14:43:44] Shideravan: Daikatana é GBC only, tanto que nem está no fullset do DMG
+[2026-10-06 14:46:02] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41139.jpg
+[2026-10-06 14:46:02] Shideravan: Na capa tem até uma inscrição gigante dizendo que é exclusivo
+[2026-10-06 14:47:10] RicBit: podiam colocar o header certo para ajudar os autores de emulador 20 anos depois
+[2026-10-06 14:47:17] Shideravan: Pega o fullset do DMG
+[2026-10-06 14:47:34] Shideravan: Aí você não passa por esse perrengue a toa
+[2026-10-06 14:47:48] RicBit: fullset do dmg roda tudo, meu problema são os gbc, alguns funcionam
+[2026-10-06 14:48:48] Shideravan: Obaaa 100% do fullset do DMG rodando finalmente!
+[2026-10-06 14:48:49] L.: Daikatana não rodar é feature
+[2026-10-06 14:49:38] RicBit: nao roda matel gear 2
+[2026-10-06 14:50:11] RicBit: vou usar esse site de bootlegs como oraculo, segundo o site nao era pra rodar mesmo. 
+https://bootleggames.fandom.com/wiki/Matel_Gear_II
+[2026-10-06 14:50:56] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41148.jpg
+[2026-10-06 14:50:56] L.: É, o logo da matel é uma engrenagem ⚙️
+[2026-10-06 14:53:16] RicBit: é jogo de luta, he-man x barbie
+[2026-10-06 14:57:54] L.: eu jogaria
+[2026-10-06 15:28:56] Enieber Cunha: alguém sabe nome de revista antiga que falava sobre computação e internet?
+[2026-10-06 15:50:18] Shideravan: Sei de várias
+[2026-10-06 15:50:24] Shideravan: Brasileira?
+[2026-10-06 16:11:04] Enieber Cunha: sim
+[2026-10-06 16:28:45] Shideravan: No Datassette tem um monte e dá para você baixar elas por lá
+[2026-10-06 16:29:02] Shideravan: https://datassette.org/pt-br/revistas/informatica
+[2026-10-06 18:29:55] Shideravan: @macabeus achei que essa lista talvez possa te interessar
+
+https://recomp.fyi/
+[2026-10-06 18:43:16] Macabeus: oh, massa, inclusive menciona o projeto do klonoa que o testyourmine fez
+[2026-10-06 18:43:32] Macabeus: estava precisando mesmo de uma lista ampla

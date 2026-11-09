@@ -1,0 +1,125 @@
+[2017-11-16 00:00:10] Felipe "Juca" Sanches: o MAME soh tem o 8275
+[2017-11-16 00:00:46] Felipe "Juca" Sanches: mas acho que eh relativamente simles implementar o 8276 herdando o codigo do 8275
+[2017-11-16 00:01:11] Felipe "Juca" Sanches: a diferenca eh soh desabilitar light-pen e DMA
+[2017-11-16 00:02:27] Werner: Parece haver pouquíssimas diferenças entre os dois
+[2017-11-16 00:05:00] Werner: Eu diria q as diferenças se resumem aos pinos 5, 6, 11, 38, 39
+[2017-11-16 00:05:42] Werner: Meu instinto me diz q são intercambiaveis.
+[2017-11-16 00:08:18] Werner: 5/6/31 são exatamente a mesma coisa nos dois - só muda a designação do pino.
+[2017-11-16 00:09:25] Werner: Vc está certo.
+[2017-11-16 00:10:15] Werner: Qdo tiver terminado essa implementação do Lepus no Mame, vc vai subir?
+[2017-11-16 08:05:44] DQ: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1202.jpg
+[2017-11-16 08:05:44] DQ: A "corujinha" que eu mencionei ontem
+[2017-11-16 08:44:41] Felipe "Juca" Sanches: "mau contato" ... :-(
+[2017-11-16 08:47:45] Felipe "Juca" Sanches [forwarded]: The Xerox Alto Struts Its Stuff on Its 40th Birthday - IEEE Spectrum
+https://www.spectrum.ieee.org/view-from-the-valley/tech-history/silicon-revolution/the-xerox-alto-struts-its-stuff-on-its-40th-birthday
+[2017-11-16 08:52:24] DQ: Dá um desconto, o cara era francês.
+[2017-11-16 08:58:37] * Lucas joined the group via invite link
+[2017-11-16 08:59:27] Lucas: Lucas Barros de SP! Aprendiz de maker ... e curioso
+[2017-11-16 08:59:30] Lucas: bom dia a todos
+[2017-11-16 09:29:56] Felipe "Juca" Sanches: Olá, Lucas! Conte um pouco pra gente sobre seus interesses em retrocomputação e como você acredita que pode ajudar em esforços de preservação da história da computação.
+[2017-11-16 09:40:29] DQ: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1210-lepus.asm
+[2017-11-16 09:40:33] DQ: Acho que consegui dissassembler o início da EProm do Lepus.
+[2017-11-16 09:43:17] DQ: Alguns endereços: 0000-0FFF EProm, 4000-47FF Ram, A000 e A001 USART 8251, D000 e D001 8275 (acabo de ver que tá errado o EQU no início do arquivo)
+[2017-11-16 09:43:36] DQ: Não creio que dê para compilar, estou editando manualmente a saída de um dissassembler
+[2017-11-16 09:44:29] DQ: Mais um dias e vou estar lendo e escrevendo Assembly 8085 fluentemente de novo...
+[2017-11-16 09:44:42] Felipe "Juca" Sanches: hehe
+[2017-11-16 09:45:01] Felipe "Juca" Sanches: e o endereço E000 ?
+[2017-11-16 09:45:18] DQ: Ainda não apareceu na parte que eu decifrei...
+[2017-11-16 09:45:46] DQ: Mas acho que peguei as interrupções, o que vai facilitar bastante.
+[2017-11-16 09:49:24] Felipe "Juca" Sanches: acho que E000 e E001 podem ser os 2 conjuntos de dip-switches
+[2017-11-16 09:53:49] Felipe "Juca" Sanches: se for isso mesmo entao o mapa de memória ficaria assim:
+[2017-11-16 09:53:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1221.jpg
+[2017-11-16 09:58:03] Felipe "Juca" Sanches: não... e000 nao pode ser dipswitch por que tem escrita nesse endereço
+[2017-11-16 09:58:32] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1223.jpg
+[2017-11-16 09:59:48] Felipe "Juca" Sanches: talvez e000 seja o endereço usado para escrever na VRAM do 8276, enquanto os endereós d000 e d001 sao apenas para o envio de comandos de configuraçao ?
+[2017-11-16 10:00:38] Felipe "Juca" Sanches: por que o 8275 copia o conteúdo da memória principal do sistema para a VRAM interna ao chip por mei ode DMA
+[2017-11-16 10:01:00] Felipe "Juca" Sanches: mas o 8276 nao tem suporte a DMA
+[2017-11-16 10:01:13] Felipe "Juca" Sanches: entao os dados de video precisam ser enviados de outra forma
+[2017-11-16 10:01:29] Felipe "Juca" Sanches: e suspeito que possa ser por meio desse endereço e000
+[2017-11-16 10:07:26] DQ: Eu estou olhando pelo outro lado. As dips determinam alguns parâmetros seriais, portanto influenciam na programação da 8251. Já descobri que a variável em 47B8 contém o comando atual da 8251. Estou tentando achar a iniciação da 8251.
+[2017-11-16 10:11:24] Felipe "Juca" Sanches: acho que esses aqui sao os endereços que você pode analisar em busca da rotina de inicialização do Intel 8251:
+[2017-11-16 10:11:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1231.jpg
+[2017-11-16 10:14:39] DQ: Parece que a rotina começa em 07D6...
+[2017-11-16 10:43:42] DQ: A leitura de E000 e E001 lê as dip switches
+[2017-11-16 10:44:45] Felipe "Juca" Sanches: Sério mesmo ?!
+[2017-11-16 10:44:56] Felipe "Juca" Sanches: Mas tem escrita no endereço E000 !
+[2017-11-16 10:45:52] DQ: Então, o sinal de escrita direciona para outro componente.
+[2017-11-16 10:46:02] Felipe "Juca" Sanches: é...
+[2017-11-16 10:46:04] Felipe "Juca" Sanches: pode ser
+[2017-11-16 10:46:10] Felipe "Juca" Sanches: eu tava pensando sobre isso
+[2017-11-16 10:46:24] DQ: Deixa eu conseguir entender a programação da paridade, que eu tento achar a escrita..
+[2017-11-16 10:46:48] DQ: Mas talvez eu tenha que encostar para trabalhar um pouco ;)
+[2017-11-16 10:46:49] Felipe "Juca" Sanches: e minha intuição é de que a escrita vai para a VRAM interna do 8276
+[2017-11-16 10:47:05] Felipe "Juca" Sanches: faz parte haha
+[2017-11-16 11:25:05] Werner: É isso aí mesmo! Precisávamos d um assim msm.
+[2017-11-16 11:30:31] Felipe "Juca" Sanches: Precisávamos de um desses com "bom contato" :-D
+[2017-11-16 11:31:11] Werner: sim
+[2017-11-16 11:31:17] Werner: mas o "mau" contato a gente arruma
+[2017-11-16 11:31:21] Werner: 😊
+[2017-11-16 11:31:57] DQ: Tem um outro junto, agora entendi porque (não tinha reparado na anotação, ficou visível com a foto)
+[2017-11-16 11:33:34] Werner: @fsanches o q tem escrito na caixa daquele seu db9<->usb mesmo (fabricante/site/modelo)?
+[2017-11-16 11:35:10] Werner: Bom dia DQ! Obrigado pelo disasm... 👍🏻 Vou buscar no bin onde a instrução do SIM pro 8085 é feita pra gente conseguir "quebrar" o método de endereçamento dos periféricos codificado naquelas duas proms...
+[2017-11-16 11:40:15] Werner: Na vdd o ideal seria eu rodar o cód. de emulação q o @fsanches tem no MAME em modo disassembler, pra poder ver o assembly e ir acompanhando.
+[2017-11-16 11:41:41] Werner: mas por enqto vou deixar o DQ seguir com esse trabalho. Não quero meter a colher onde tem gente com mais competência do q eu já fazendo isso.
+[2017-11-16 11:42:41] DQ: Eu gosto mais de trabalhar de modo estático. O SIM é usado quando transfere dados para a 8275, por exemplo em 01E5
+[2017-11-16 11:45:01] DQ: Acho que 019D é onde ele copia dados da memória para o 8275, usando POPs. Em 1E5 ele aproveita para limpara a linha, usando pushs.
+[2017-11-16 11:45:11] DQ: Preciso ler este application note:
+[2017-11-16 11:45:33] DQ: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1257-AP-62%20Low%20Cost%20CRT%20Terminal%20Using%20The%208275.pdf
+[2017-11-16 11:46:21] DQ: É a inspiração para o hardware do Lepus
+[2017-11-16 11:54:56] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1259.jpg
+[2017-11-16 11:54:56] Werner: Olha lá, Juca.
+[2017-11-16 11:56:11] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1260.jpg
+[2017-11-16 11:59:56] DQ: Aqui está a parte mágica:
+[2017-11-16 12:00:01] DQ: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1262.jpg
+[2017-11-16 12:09:00] Werner: isso isso isso
+[2017-11-16 12:09:29] Felipe "Juca" Sanches: é... isso aí é bem familiar...
+[2017-11-16 12:09:40] Werner: Só q me parece q as linhas de endereço usadas no Lepus são diferentes
+[2017-11-16 12:09:42] Felipe "Juca" Sanches: vi algo assim ontem lá no circuito do lepus 200
+[2017-11-16 12:10:00] Werner: Em especial, temos a linha A0 conectada ao pino serial do 8085
+[2017-11-16 12:10:04] Felipe "Juca" Sanches: só que olepus usa o 8276 e nao o 8275
+[2017-11-16 12:10:14] Werner: me corrija se eu estiver errado, @fsanches
+[2017-11-16 12:10:23] Werner: Estou puxando da memória
+[2017-11-16 12:10:27] Felipe "Juca" Sanches: acho que eh isso mesmo
+[2017-11-16 12:11:13] Werner: as entradas A4/A3/A2 estão ligadas respectivamente às linhas A15/A14/A13
+[2017-11-16 12:11:22] Felipe "Juca" Sanches: isso
+[2017-11-16 12:12:08] Werner: mas olhe lá as saídas da PROM como o DS mapeia
+[2017-11-16 12:12:08] Felipe "Juca" Sanches: e uma das outras duas (A1 e A0) está ligada no pino de sa[ida de dado serial do 8085 (bit esse que pode ser escrito com a instrução SIM)
+[2017-11-16 12:12:51] Werner: Isso, não me lembro direito se era o A0 ou A1... e se esses tinham conexão tbm com os da segunda PROM
+[2017-11-16 12:14:52] Werner: Lembro que as entradas A4/A3/A2 estão ligadas nas duas PROMS
+[2017-11-16 12:18:37] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1278.jpg
+[2017-11-16 12:18:37] Werner: Olha aqui...
+[2017-11-16 12:26:41] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1279.jpg
+[2017-11-16 12:26:41] Werner: Isso e o fonte detalha o q o DQ falou sobre escrita na memória de vídeo do 8275.
+[2017-11-16 12:29:22] Werner: Aqui vai um chute pro alto de olhos fechados: assumindo que uma das PROMs é para gerenciar o acesso não-DMA do 8275 ao barramento, talvez a segunda PROM seja para efetuar o mesmo com relação ao 8251??
+[2017-11-16 12:29:40] Werner: E aqui encerro a minha sessão de devaneios.
+[2017-11-16 12:35:22] DQ: A 8251 é bem mais simples (depois eu posto o datasheet). Precisa só de um endereço e um chip select (provavelmente gerado pela primeira)
+[2017-11-16 12:36:51] DQ: A 8275 é mais complexa, porque precisa simular o DMA e transferir somente os dados, ignorando o fetch das instruções
+[2017-11-16 12:37:22] DQ: Primeira -> Prom
+[2017-11-16 12:42:38] Werner: O DS da 8251 já temos aqui, DQ. Eu baseei meu "chute" puramente na lógica de controle dele; por isso assumi q eventualmente, pudesse ser uma possibilidade a segunda PROM servir pra gerenciar essa lógica de acesso, para o caso da comunicação com a porta serial.
+[2017-11-16 14:12:43] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1286.jpg
+[2017-11-16 14:14:12] DQ: Sim, são os famosos POP. Mas tem também uns PUSHs, que eu acho que o apnote não falava.
+[2017-11-16 14:16:05] DQ: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1288.jpg
+[2017-11-16 14:16:36] DQ: Se não me engano, isto gera a linha em branco entre a parte que vem da Ram e a linha de status.
+[2017-11-16 14:17:02] DQ: Note o SIM para ativar a transferência
+[2017-11-16 14:19:01] Felipe "Juca" Sanches: to pensando aqui como é que eu vou estruturar isso na emulação...
+[2017-11-16 14:20:41] Felipe "Juca" Sanches: sim! Por conta do 2020 (espaço espaço) no registrador DE
+[2017-11-16 14:24:16] DQ: Eu não lembro se foi neste projeto ou em outro, mas tinha um truque de ter uma marca indicando que estava pendente a linha se apagada e os pushes de refresh eram usados para apagar... quando concluir o disassembler a gente vai saber.
+[2017-11-16 14:47:18] Werner: Exato, notei isso! Então são 80 POP's/PUSH's a cada transferência, correto?
+[2017-11-16 14:50:25] Werner: O texto fala de setar uma linha do 8085 para sinalizar o início da transferência. "Coincidentemente" (uma ova!), ele faz uso do pino SOD que, como vimos lá no hardware, está ligado à entrada A0 da primeira PROM... faz sentido?
+[2017-11-16 14:51:11] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1296.jpg
+[2017-11-16 14:51:11] Werner: Olha aqui está praticamente descrita a lógica da primeira PROM.
+[2017-11-16 14:52:01] Werner: DQ está retirando o "pano preto" da PROM para nós!! 😃
+[2017-11-16 14:52:25] Werner: Sem essa AN a gente pastaria pra saber isso.
+[2017-11-16 14:53:35] Werner: Agora a listagem 4.2 começa a tomar mais sentido ainda.
+[2017-11-16 14:55:31] DQ: Na realidade são 40 PUSHs ou POPs, pois cada um move 2 bytes e são 80 colunas.
+[2017-11-16 14:56:12] DQ: E o firmware usa mesmo um truque: se o primeiro byte da linha é 0xFF, a linha é limpada no refresh.
+[2017-11-16 14:57:05] DQ: Um outro truque é rolar sem mover os dados: tem uma variável que indica qual a primeira linha.
+[2017-11-16 15:07:11] Werner: 👍🏻👍🏻
+[2017-11-16 15:12:31] DQ: Tem uma única leitura em C001. Acho que é para limpar a interrupção de retraço (RST6.5)
+[2017-11-16 15:31:22] Felipe "Juca" Sanches: que treta esse LEPUS-200, hein, DQ! Temos que puxar a orelha desse Daniel...
+[2017-11-16 15:33:05] DQ: Então você vai gostar desta: a linha em branco não é feita com aqueles PUSHs. É apenas *um* POP que move da EProm para a 8275 um byte de controle especial end of row / stop dma.
+[2017-11-16 15:33:06] Werner: Eu busquei alguma pista desse seu conversor 1s-usb no google, mas não encontrei nada. Só tem um modelo de mesmo nome comercializado pela Comm5. Custa o olho da cara. Acho q próxima vez teremos q olhar naqueles jumpers internos até onde o sinal Tx consegue chegar
+[2017-11-16 15:36:13] Felipe "Juca" Sanches: ou comprar / arrumar / emprestar um adaptador bem documentado
+[2017-11-16 15:36:17] DQ: Vou ter que dar uma parada agora, mas já foi quase toda a parte do vídeo.
+[2017-11-16 15:36:35] Felipe "Juca" Sanches: :-)
+[2017-11-16 21:35:39] Werner: Sem luz desde as 18:30h 😒

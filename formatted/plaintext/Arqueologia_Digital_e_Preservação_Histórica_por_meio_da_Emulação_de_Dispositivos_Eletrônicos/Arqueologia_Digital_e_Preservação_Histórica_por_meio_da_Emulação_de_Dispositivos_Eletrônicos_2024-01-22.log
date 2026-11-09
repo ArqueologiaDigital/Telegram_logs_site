@@ -1,0 +1,52 @@
+[2024-01-22 00:02:42] Felipe "Juca" Sanches: parece ser Molex EBBI 50D, ou algo muito parecido
+[2024-01-22 00:09:37] Felipe "Juca" Sanches: talvez isso aqui: https://tools.molex.com/pdm_docs/sd/716612068_sd.pdf
+[2024-01-22 00:09:53] Felipe "Juca" Sanches: mas onde eu compro alguns desses? kkkk
+[2024-01-22 07:09:37] Felipe "Juca" Sanches: Estou agora usando com sucesso esse assembler ;-)
+[2024-01-22 07:20:00] Pablo Vasques Bravo-Villalba: https://youtu.be/y4ZOE5pAdCI
+[2024-01-22 12:30:23] Hugo (Agaelebê): @fsanches vc tem esse emulador da unidade de disquete para o kn5000?
+https://www.ebay.com/itm/134832270619?hash=item1f64a12d1b:g:MG4AAOSwA~dlZ0Xb
+[2024-01-22 13:12:23] Felipe "Juca" Sanches: Eu tinha um mais simples que esse,mas deixei com o Ramiro
+[2024-01-22 14:23:14] Hugo (Agaelebê): ah legal. E onde vc encontra o kn5000 para comprar aqui no BR? É meio raro, né?
+[2024-01-22 14:30:13] Shelton Ribeiro: Boa tarde pessoal, tudo bem?
+
+Meu nome é Luiz, sou programador! Queria ver se alguém aqui aceita fazer um collab. 
+
+Resumo do projeto: Tenho uma engine 100% funcional que fiz pra um console retrô, que já tem todo o ciclo do game: Menus, stage, boss, salva score,  suporta o rumble pack, se abrir a tampa do cd volta pro menu do console, etc...
+
+Estava fazendo esse projeto com um gringo, mas o projeto não foi pra frente pois ele era extremamente perfeccionista e ficou quase 2 anos refazendo o menu hahaha. Enfim desisti do projeto por um tempo, mas toda vez que olho pro trabalho que tive escrevendo essa engine, fico muito frustrado.
+
+Enfim, queria ver se acho algum artista 2D que queira entrar nessa comigo, pra fazer algo simples, 3 ou 4 fases. Tenho certeza que é o tipo de projeto bem legal pra adicionar no CV, e que tem potencial pra sair em sites de notícias e tudo mais.
+
+Espeficiações:
+
+Console: Dreamcast (Engine escrita em C++, bem tranquilo de portar para outros consoles retros como PSP e WII)
+Resolução: (320x240) - Sim as artes serão pequenas, vamos escovar bits.
+Genero: Shum Up
+Alguns vídeos do que já tem pronto:
+
+https://youtu.be/cwXQMvNz04w?si=8UpringSLYImyu-y
+
+https://youtu.be/pWrFcYOkq1E?si=bSa1lg2kTgR6EaTJ
+
+https://youtu.be/KfkyMofOqSQ?si=hcf8et0Ty2KRur-d
+
+Fui indicado pelo <@399550552863932416>  nesse projeto. Quem tiver interesse me manda um PV!! Muito obrigado!
+[2024-01-22 14:31:00] Shelton Ribeiro: Gente, se alguém souber de algum artista de pixel ART que esteja interessado em fazer parte do projeto, entrem em contato comigo, por favor.🙏🏾
+[2024-01-22 14:31:14] Shelton Ribeiro: Agradeço demais, este game precisa ir para frente 🙏🏾
+[2024-01-22 14:31:49] Ramiro Polla: O Juca já comprou todos. Não se acha mais nenhum...
+[2024-01-22 15:53:39] Felipe "Juca" Sanches: que exagero! kkkk
+[2024-01-22 17:00:53] RicBit: AI? Ela faz uns pixel art bem legais hoje em dia
+[2024-01-22 17:02:50] Shelton Ribeiro: Tem alguma sugestão de A.I voltada para pixel?
+[2024-01-22 17:04:51] L.: Pixel ait
+[2024-01-22 17:07:23] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/29037.jpg
+[2024-01-22 17:07:23] RicBit: GPT-4
+[2024-01-22 17:20:05] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/29038.jpg
+[2024-01-22 17:23:01] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/29039.jpg
+[2024-01-22 17:26:38] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/29040.jpg
+[2024-01-22 17:37:08] Shelton Ribeiro: Obrigado 🙏🏾
+[2024-01-22 17:37:34] Shelton Ribeiro: Vou repassar pro meu amigo
+[2024-01-22 17:45:26] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/29043.jpg
+[2024-01-22 21:30:14] João Carlos: Esses passos são pra que?? Estavam no prompt?
+[2024-01-22 21:30:57] João Carlos: Aliás, agora que percebi que ele se perdeu muito nesses números 🤣
+[2024-01-22 21:44:42] RicBit: eu pedi para eles os frames da animação, até que nao ficou muito ruim
+[2024-01-22 21:45:18] RicBit: Pixel art modelsheet for a boss in a shoot 'em up game, with a design similar to the Easter Island Moai but with variations, and 8-bit resolution akin to R-Type and Gradius. This variation should include the animation steps where the Moai emerges from the earth, revealing a different style of mechanical body hidden inside. The sequence should show the Moai initially as a statue, then transitioning through stages as it unveils a unique mechanical structure beneath. The design should capture each step of this transformation, maintaining the 8-bit video game aesthetic similar to msx or master system.

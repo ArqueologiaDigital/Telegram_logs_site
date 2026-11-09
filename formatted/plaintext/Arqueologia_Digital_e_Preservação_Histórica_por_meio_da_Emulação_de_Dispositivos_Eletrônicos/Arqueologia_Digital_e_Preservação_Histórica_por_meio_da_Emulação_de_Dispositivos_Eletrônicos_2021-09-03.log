@@ -1,0 +1,42 @@
+[2021-09-03 02:12:12] L.: https://twitter.com/hackaday/status/1433656172335312901?s=09
+[2021-09-03 02:12:43] L.: @fsanches talvez ajude com o teclado 😂
+[2021-09-03 02:30:00] Felipe "Juca" Sanches: pensei nisso... mas acho que não...
+[2021-09-03 02:31:19] Felipe "Juca" Sanches: eu dei uma pausa na reversa do teclado e estou focado na implementacao do toolchain para a CPU dele
+[2021-09-03 02:31:53] Felipe "Juca" Sanches: depois pretendo usar esse toolchain pra conseguir escrever códigos com mais facilidade para inspecionar mais a fundo o funcionamento do teclado
+[2021-09-03 02:32:17] Felipe "Juca" Sanches: ficar escrevendo assembly na unha entrando opcodes em editor hexa é bem pouco prático
+[2021-09-03 04:24:38] Flávio Amieiro: https://www.youtube.com/watch?v=B1J2RMorJXM
+[2021-09-03 05:25:24] Flávio Amieiro: https://github.com/chrislgarry/Apollo-11
+[2021-09-03 15:13:51] RicBit: pensando em fazer uma live de engenharia reversa do turbo r, interessa alguem? tem uns pedaços que estao emulados errados e eu queria consertar.
+[2021-09-03 15:14:11] Felipe "Juca" Sanches: SIM!!!!
+[2021-09-03 15:14:50] RicBit: inclusive é um lance que ate o mame deve estar errado
+[2021-09-03 15:14:55] RicBit: e todos os arcades junto haha
+[2021-09-03 15:14:58] RicBit: deixa conferir perai
+[2021-09-03 15:15:02] Felipe "Juca" Sanches: emulado errado por todos emuladores existentes? Qual projeto é o estado da arte em emulacao de turbo-r hoje em dia?
+[2021-09-03 15:15:28] RicBit: o melhor é o openmsx, mas ainda nao é perfeito, especialmente no som
+[2021-09-03 15:15:32] RicBit: o vdp tá quase 100%
+[2021-09-03 15:26:49] RicBit: é, parece que o mame também tem o bug
+[2021-09-03 15:26:57] RicBit: no mame é mais dificil de consertar
+[2021-09-03 15:30:34] Flávio Amieiro: Por favor!
+[2021-09-03 15:48:01] Felipe "Juca" Sanches: explica pra mim qual o problema que, quando eu tiver um tempo, posso tentar fazer o ajuste
+[2021-09-03 15:49:18] RicBit: Preciso testar antes no osciloscópio para ver se funciona
+[2021-09-03 15:52:59] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/14442-sticker.webp
+[2021-09-03 15:55:01] Ismael Luceno: eu estou com alguns dias livres, tentarei fazer alguns projetos de hardware 😁
+[2021-09-03 17:57:51] RicBit: Vou montar o setup aqui, como vocês fazem Live com múltiplas câmeras?
+[2021-09-03 18:02:23] Felipe "Juca" Sanches: eu uso um sisteminha chamado streamyard
+[2021-09-03 18:03:35] Felipe "Juca" Sanches: não costumo usar mais de uma camera nao. Em geral o que tenho são múltiplos participantes e o streamyard me permite alternar com muita facilidade quais aparecem na tela
+[2021-09-03 18:04:24] Felipe "Juca" Sanches: e também permite fazer stream pra múltiplos canais ao mesmo tempo. Por exemplo, eu consigo transmitir ao vivo para o Happy Hacking Video Blog no YouTube e para a minha página pessoal no Facebook e para meu canal no Twitch, tudo ao mesmo tempo
+[2021-09-03 18:05:04] Felipe "Juca" Sanches: dá até pra transmitir pra mais de um canal de youtube ao vivo simultaneamente. Já fiz isso uma ou duas vezes quando colaborei com outros youtubers. Então transmiti pelo meu canal e pelo canal do parceiro ao mesmo tempo
+[2021-09-03 18:05:36] L.: https://www.os2museum.com/wp/pc-86-dos/
+[2021-09-03 18:06:03] Felipe "Juca" Sanches: uma coisa que faço também com o streamyard é compartilhar minha tela, mas ainda ter o vídeo do meu rosto falando para o público
+[2021-09-03 18:07:36] Felipe "Juca" Sanches: Qual formato você tá pensando em fazer? Abrir um editor de texto e ir programando ao vivo em formato de workshop mão na massa? Ou é algo que você já fez e preparou slides e vai ser mais em formato de palestra?
+[2021-09-03 18:10:06] Felipe "Juca" Sanches: ah, e no streamyard também consigo destacar comentários que o público tenha enviado pelo chat das plataformas onde estiver transmitindo ao vivo (inclusive ele junta todos os chats numa tela administrativa só, então fica fácil de responder mensagens que tenham enviado por YouTube, Twitch, Facebook, etc tudo direto numa tela só da central de transmissão)
+[2021-09-03 18:12:07] Felipe "Juca" Sanches: se você achar útil, posso voluntariamente operar isso pra você hoje usando minha conta pró (que remove o logo do streamyard e permite essas transmissões simultaneas)
+[2021-09-03 18:14:10] Felipe "Juca" Sanches: e ficaria muito feliz se puder também transmitir teu workshop pelo meu canal (além de mandar pro seu também). Mas aí fica a teu critério
+[2021-09-03 20:38:36] RicBit: https://twitter.com/ricbit/status/1433937325973770241?s=19
+[2021-09-03 20:39:12] RicBit: Eu preciso de duas telas, uma no msx real e outra no emulador para comparar.
+[2021-09-03 21:41:20] Flávio Amieiro: As vezes que eu precisei eu usei o obs mesmo, que é software livre e sempre cobriu tudo o que eu precisei...
+[2021-09-03 21:42:10] Flávio Amieiro: Ele deixa você escolher as fontes e as saídas e gerenciar como elas aparecem no stream
+[2021-09-03 21:43:27] RicBit: Vou fazer uns testes aqui e ver o que funciona
+[2021-09-03 21:43:50] RicBit: Na pior das hipóteses vai vlc mesmo haha
+[2021-09-03 21:46:52] Flávio Amieiro: Sempre o fallback. Hahahah
+[2021-09-03 22:51:39] Felipe "Juca" Sanches: obs funciona bem também!

@@ -1,0 +1,12 @@
+[2026-07-03 07:37:19] Pablo Vasques Bravo-Villalba: Ricardo, sabe se as ROMs dos jogos da Konami incluídas nos Konami Antiques do PlayStation e do Saturn são modificadas de alguma maneira? Sei que, no disco, elas são guardadas compactadas, mas não sei muito além disso. Sei que tanto no PlayStation como no Saturn o som é totalmente emulado, mas não sei se, por exemplo, as rotinas de música são alteradas para atender a especificidades da emulação, que parece particularmente bem limitada no PlayStation.
+[2026-07-03 13:42:00] RicBit: Posso conferir no antarctic, vejo à noite
+[2026-07-03 14:16:15] Pablo Vasques Bravo-Villalba: Legal, obrigado!
+[2026-07-03 14:43:25] RicBit: aproveitando
+[2026-07-03 14:44:01] RicBit: aqui para mim liberou o fable até o fim da semana. o opus não conseguia entender o codigo do ys3, mas o fable foi de primeira.
+[2026-07-03 14:45:11] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39417.jpg
+[2026-07-03 14:45:11] RicBit: agora eu consigo renderizar os layers individualmente
+[2026-07-03 14:45:31] RicBit: então se alguem tiver alguma tarefa rica em semantica, aproveita a free week
+[2026-07-03 22:30:08] Pablo Vasques Bravo-Villalba: https://youtu.be/1YWe811rehU
+[2026-07-03 22:40:04] RicBit: testei o konami antiques que está no file-hunter, é a rom europeia com 2 mudanças, 1. não tem a proteção contra copia, 2. tiraram o menu para escolher teclado ou joystick, é uma coisa só, e a mensagem PLAY SELECT virou RUN AROUND ANTARCTICA. a parte de som é igual.
+[2026-07-03 22:42:23] Pablo Vasques Bravo-Villalba: Haha, eu deveria ter imaginado que as ROMs do Antiques já estariam há milênios no file-hunter. Mas obrigado por olhar, de qualquer forma 😉👍🏽
+[2026-07-03 22:43:09] RicBit: e essa rom foi patcheada, nao recompilada. eles já deviam ter perdido o source a essa altura

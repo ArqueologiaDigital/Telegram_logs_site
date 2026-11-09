@@ -1,0 +1,5 @@
+[2025-09-14 09:36:09] Felipe "Juca" Sanches: https://youtu.be/9zcbT5RPVoQ
+[2025-09-14 09:37:48] Pablo Vasques Bravo-Villalba: Muito interessante. Teve muita coisa que não entendi, mas ainda assim foi uma leitura fascinante, obrigado por compartilhar. 😊👍🏽 Esse tipo de leitura sempre renova minha convicção de que o 68000 era um processador à frente de seu tempo, na época em que foi lançado. Muita gente critica a plataforma x86 em retrospecto sem levar em consideração a perspectiva de quem estava lá, convivendo com a evolução da plataforma e com as necessidades que se acumulavam com cada geração
+[2025-09-14 09:45:48] Pablo Vasques Bravo-Villalba: Maneiro demais! Btw, por curiosidade, o MAME emula o D-50 ou o D-550?
+[2025-09-14 09:47:04] Felipe "Juca" Sanches: Ainda não. Tem um esboço de driver, mas falta um core de emulação da CPU usada pelo D-50 (e pelo D-550)
+[2025-09-14 09:47:36] Felipe "Juca" Sanches: Algo me diz que em algum momento eu vou por as mãos nesse código ;-)

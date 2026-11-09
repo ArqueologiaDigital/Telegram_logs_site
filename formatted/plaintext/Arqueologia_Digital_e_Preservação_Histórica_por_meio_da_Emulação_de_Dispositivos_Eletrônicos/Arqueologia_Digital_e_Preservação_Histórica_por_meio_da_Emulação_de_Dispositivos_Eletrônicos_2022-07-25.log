@@ -1,0 +1,18 @@
+[2022-07-25 18:03:24] Anne Isabelle: https://youtu.be/b0zxIfJJLAY @fsanches
+[2022-07-25 18:18:32] Augusto Almeida: Muito bom 👏👏👏👏👏
+[2022-07-25 18:20:24] Anne Isabelle: Viciei em vídeos de ex-microsofters hahaha
+
+https://youtu.be/UWUBjM2LNJU
+[2022-07-25 18:48:59] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/141
+[2022-07-25 18:51:08] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/23143.jpg
+[2022-07-25 18:51:08] Pedro de Medeiros 👾: Ah, o screenshot obrigatório 😛
+[2022-07-25 18:52:59] Pedro de Medeiros 👾: Ainda não dá pra mudar o estado do tabuleiro com os botões do mouse. Tô bolando uma API pra fazer isso no código comum.
+[2022-07-25 20:40:38] L.: Legal! Assim que bombar isso coloco mouse na versão ms-dos
+[2022-07-25 20:41:09] L.: Em teoria é só iniciar o driver na int 33h que já tem até o sprite pronto
+[2022-07-25 20:45:51] Felipe "Juca" Sanches: avisa quando quiser que eu revise e faça o merge
+[2022-07-25 21:07:15] Pedro de Medeiros 👾: Está quase pronto. Estou só tentando ver se consigo capturar o click do meio. O openMSX captura, mas recebe isso como se tivesse vindo pela matriz do teclado, o que é estranho.
+[2022-07-25 21:57:16] Pedro de Medeiros 👾: Na verdade é uma idiossincrasia do emulador. Clique do meio faz paste do clipboard. Então ele tava jogando teclas arbitrárias na matriz de teclado. 😅
+[2022-07-25 22:02:43] Felipe "Juca" Sanches: afff
+[2022-07-25 22:30:46] L.: LOL
+[2022-07-25 23:19:59] Pedro de Medeiros 👾: Tá pronto
+[2022-07-25 23:27:48] Pedro de Medeiros 👾: corrigi um erro no README.md

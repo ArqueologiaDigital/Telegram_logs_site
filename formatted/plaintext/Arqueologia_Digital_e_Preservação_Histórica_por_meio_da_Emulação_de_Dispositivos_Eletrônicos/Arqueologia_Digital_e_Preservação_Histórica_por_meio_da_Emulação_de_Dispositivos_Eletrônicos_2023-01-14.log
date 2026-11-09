@@ -1,0 +1,31 @@
+[2023-01-14 00:05:16] Giga: Ah sim, entendi
+[2023-01-14 00:06:00] Giga: No total 3 sobrenomes
+[2023-01-14 00:08:32] Giga: Eu só tenho dois. Um deles valem por dois, é de origem portuguesa, porém a casa dos imigrantes teve a proeza de registrar errado, quando meu bisavô chegou aqui. Era para ser Guiguine. Registraram como Quinquinel 🤦🏻‍♂️
+[2023-01-14 04:26:25] Toy: Vou dar uma lida hoje, aproveitar o descanso.
+[2023-01-14 10:05:31] FTMaciel: Duas coisas que me deixam cheio de "tesão" (não tinha outra palavra pra descrever):
+Leitoras e perfuradoras de fita e tape drives de 9 trilhas.
+[2023-01-14 10:05:33] FTMaciel: Kkkk
+[2023-01-14 10:07:21] FTMaciel: @fsanches tô reparando um Sid 1035 que era da UNB. Já viu um desses? Sabe pra que serve? Vou fazer o dump da eprom que tem nele pra tu dar uma olhada
+[2023-01-14 11:40:27] Felipe "Juca" Sanches: mande fotos desse aparelho pra gente ver
+[2023-01-14 13:52:39] Giga: Na adolescência tive a oportunidade de ter um SID 502, estava completo. Mas por falta de recursos não comprei
+[2023-01-14 15:42:45] Leonardo Roman: Achei esse: https://compratobene.wordpress.com/tag/sid-1035/
+[2023-01-14 22:33:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25147.jpg
+[2023-01-14 22:33:13] Felipe "Juca" Sanches: O bytecode do jogo Another World na parte da esquerda é do release de MSDOS e o da direita é do release para Symbian. Olha que divertido, o release oficial pra symbian tem uma instrução "RET" desabilitando a rotina de copy-protection 😊
+[2023-01-14 22:47:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25148.jpg
+[2023-01-14 22:47:03] Felipe "Juca" Sanches: O release europeu pro SEGA Genesis faz a mesma coisa, mas a posição da instrução "ret" está ligeiramente diferente, porém equivalente.
+[2023-01-14 22:47:53] Shideravan: @fsanches peguei o bonde andando
+[2023-01-14 22:48:11] Shideravan: Você quem fez a decompilação dos códigos ou os desenvolvedores já haviam disponibilizado?
+[2023-01-14 22:49:59] Felipe "Juca" Sanches: as ferramentas que estou desenvolvendo no meu repo AnotherWorld_VMTools estão sendo usadas para fazer a extração e o disassembly do bytecode de diversos releases diferentes do jogo. E eu mesmo estou dando nomes às variáveis. E agora estou conseguindo fazer diff entre os meus resultados de disasm pra comparar os diversos releases do jogo
+[2023-01-14 22:50:44] Shideravan: Entendi, então esses comentários nos códigos são seus mesmo
+[2023-01-14 22:51:41] Felipe "Juca" Sanches: essa última imagem aí mesmo já tem a dica de que no endereço 3C08 do bytecode de sega genesis fica a rotina que eu apelidei como "A_CALM_ALIEN_POOL_BEFORE_LESTERS_ARRIVAL".
+
+Então é só eu inserir esse metadado na minha ferramenta e o próximo disasm vai sair mais bonitinho ainda.
+[2023-01-14 22:52:37] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25154.jpg
+[2023-01-14 22:52:37] Felipe "Juca" Sanches: Feito!
+[2023-01-14 22:54:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25155.jpg
+[2023-01-14 22:54:45] Felipe "Juca" Sanches: e aqui está o disasm melhorado por conta disso.
+[2023-01-14 22:54:58] Felipe "Juca" Sanches: trabalho de formiguinha...
+[2023-01-14 22:57:54] Felipe "Juca" Sanches: Tem um NPC desabilitado no bytecode de MSDOS, mas que aparece na versão de Amiga
+[2023-01-14 22:58:15] Felipe "Juca" Sanches: olhando o código achei o trecho que tem a animação e descrição do comportamento do NPC
+[2023-01-14 22:58:35] Felipe "Juca" Sanches: fiz um patch no bytecode e o bicho apareceu na versão de MSDOS
+[2023-01-14 22:59:07] Felipe "Juca" Sanches: mas apareceu andando num pedaço estranho da tela, então deve ter mais diferenças pra de fato botar ele de volta no jogo

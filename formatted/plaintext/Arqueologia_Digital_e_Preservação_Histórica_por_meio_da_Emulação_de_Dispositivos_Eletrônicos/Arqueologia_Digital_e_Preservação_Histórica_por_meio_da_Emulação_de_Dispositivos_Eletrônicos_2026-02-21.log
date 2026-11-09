@@ -1,0 +1,15 @@
+[2026-02-21 00:04:26] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37618.jpg
+[2026-02-21 00:04:26] Felipe "Juca" Sanches: Botando ordem na casa
+[2026-02-21 00:04:48] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37619.jpg
+[2026-02-21 00:05:04] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37620.jpg
+[2026-02-21 00:05:15] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37621.jpg
+[2026-02-21 00:43:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37622.jpg
+[2026-02-21 00:43:08] Felipe "Juca" Sanches: Agora tenho tudo centralizado e usando um issue tracker para guiar o trabalho
+[2026-02-21 09:24:36] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37624.jpg
+[2026-02-21 09:24:36] RicBit: acabei de fazer o teste mais dificil de todos no jogo. coloquei um único nop no começo da rom, e funcionou tudo perfeito!
+[2026-02-21 09:25:14] RicBit: (um unico nop no começo muda todos os pointers do jogo, só funciona se o seu jogo está inteiramente relocável)
+[2026-02-21 13:31:20] pitanga: Esse issue tracker é só no site em Jekyll ou, em paralelo, ele já abre issue no GitHub?
+[2026-02-21 16:41:33] Felipe "Juca" Sanches: Steve Yegge's Beads issue tracker
+[2026-02-21 16:41:37] Felipe "Juca" Sanches: https://github.com/steveyegge/beads
+[2026-02-21 16:54:26] Felipe "Juca" Sanches: https://youtu.be/s96O9oWI_tI?si=r2G-dd-9PiQZLT-e
+[2026-02-21 18:13:54] RicBit: isso é parecido com o que eu fiz, mas o meu é custom para disasm

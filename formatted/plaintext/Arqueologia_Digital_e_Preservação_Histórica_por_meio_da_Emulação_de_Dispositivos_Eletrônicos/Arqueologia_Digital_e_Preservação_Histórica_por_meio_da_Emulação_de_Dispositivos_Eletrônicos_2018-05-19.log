@@ -1,0 +1,4 @@
+[2018-05-19 22:57:48] Affonso Amendola: Okay, agora que acabou o inferno absoluto que é a semana de provas eu posso voltar a mecher no codigo de io
+[2018-05-19 22:58:07] Affonso Amendola: Viu alguma coisa interessante sobre isso esses dias @fsanches?
+[2018-05-19 23:00:37] Affonso Amendola: Vamos ver se eu ainda lembro das coisas importantes, a gente precisa escrever duas coisas, a interface de IO do patinho em geral, e uma placa externa de interface para alguma coisa pra testar.
+[2018-05-19 23:01:01] Affonso Amendola: A CPU liga na interface de IO que liga na placa externa, que liga em algum dispositivo externo

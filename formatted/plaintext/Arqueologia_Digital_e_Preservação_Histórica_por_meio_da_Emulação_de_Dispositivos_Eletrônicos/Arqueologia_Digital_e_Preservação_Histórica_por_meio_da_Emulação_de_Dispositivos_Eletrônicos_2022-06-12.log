@@ -1,0 +1,58 @@
+[2022-06-12 01:27:49] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/58
+[2022-06-12 08:33:23] Felipe "Juca" Sanches: Merged!
+[2022-06-12 10:15:20] Pedro de Medeiros 👾: @fsanches uma dúvida de implementação. Por que não usar menos tiles de espaçamento e mais tiles pra desenhar a célula? A gente poderia caprichar mais nos gráficos fazendo meta tiles de 16x16 consumindo o mesmo espaço que o tabuleiro atual usa. E a lógica de desenho do tabuleiro ficaria até mais simples.
+[2022-06-12 10:20:15] Pablo Vasques Bravo-Villalba: Sobre isso que o @pvm1337 está falando, fiz uma conta de padaria e vi que mesmo gastando 4 tiles de 8x8 por metatiles de 16x16, e usando mais outros tantos tiles para fazer uma lógica de highlight diferente, que permita uma qualidade visual melhor, não gasta mais do que 128 tiles no total, o que tornaria fácil, por exemplo, implementar em plataformas como Master System e MSX1 também.
+[2022-06-12 10:20:28] Pablo Vasques Bravo-Villalba: Eu até comecei a prototipar aqui, mas não tenho nada pra mostrar ainda
+[2022-06-12 10:21:03] Pablo Vasques Bravo-Villalba: E ainda sobram outros 128 tiles para outras finalidades, como texto, placar, menu, esse tipo de coisa
+[2022-06-12 10:27:23] Pedro de Medeiros 👾: Talvez quando a gente fizer aquela separação entre implementação com tile e sem tile a gente possa aproveitar e resolver isso também.
+[2022-06-12 10:34:33] Pedro de Medeiros 👾: E pensar numa forma de desacoplar ainda mais o código de desenho do tabuleiro do restante do código do jogo (e mover isso pra implementação).
+[2022-06-12 15:03:25] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/59
+[2022-06-12 17:23:47] Felipe "Juca" Sanches: merged!
+[2022-06-12 17:25:01] Felipe "Juca" Sanches: estou trabalhando nisso hoje
+[2022-06-12 17:29:27] Felipe "Juca" Sanches: Tenho uma questão sobre isso. No port para GunSmoke, os Tile IDs são valores numéricos arbitrários, pois todo o código que os manipula usa representação simbólica (os nomes dos items daquele enum). Até mesmo a ferramenta que faz a leitura do arquivo de imagem e gera o patch na ROM do gerador de caracteres também usa essa representação simbólica.
+
+Já no caso do port pra MSX, os Tile IDs (se não me falha a memória ficam no arquivo char_codes.h) parecem estar relacionados ao processo de geração do arquivo MINES.SC5. Então os valores alí importam, para que as imagens corretas sejam usadas nos tiles, é isso mesmo?
+
+Pra unificar o sistema de tiles como um código genérico seria bom usar uma única definição de valores numéricos para os tiles. Talvez isso se resolva fazendo uma implementação genérica (e puramente simbólica) também pro MSX, quando formos implementar o conversor de PNG para .SC5
+[2022-06-12 17:32:45] Felipe "Juca" Sanches: Quando eu vi o Campo Minado pra MSX que um outro brasileiro mandou esse ano para a MSXDev, notei que ele não usa tiles de desenho do grid. !00% dos tiles da implementação dele são células do jogo. Isso permite ter um campo muito maior na tela.
+
+Por outro lado, acho que ficou uma gracinha a nossa implementação com o espaçamento, principalmente depois que o Pablo fez desenhos bem melhores para os tiles.
+[2022-06-12 17:35:34] Felipe "Juca" Sanches: É desse aqui que estou falando.
+[2022-06-12 17:36:36] Felipe "Juca" Sanches: Curiosa a sincronicidade de um outro brasileiro estar implementando Campo Minado para MSX ao mesmo tempo que a gente de forma independente
+[2022-06-12 17:41:03] Pedro de Medeiros 👾: Acho que isso é possível porque você define o que vai em determinada posição da ROM do gunsmoke. A abordagem MSX2 tá mais pra pegar a imagem inteira SC5 e jogar na ROM inalterada, então a posição de cada coisa importa.
+[2022-06-12 17:42:42] Felipe "Juca" Sanches: No gunsmoke a posição também importa. Veja no código platform/gunsmoke/tools/patchCGROM.c onde é feita a leitura de cada tile passando as coordenadas específicas de onde os tiles indicuais devem ser extraídos
+[2022-06-12 17:43:09] Pedro de Medeiros 👾: O que está em char_codes é a imagem percorrida da esquerda pra direita, dividindo a imagem em tiles de 8x8 e atribuindo um índice a cada. A primeira linha tem 12 tiles (de 0 a 11) e a próxima começa no 12 (até 23) e assim por diante.
+[2022-06-12 17:44:22] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21575.jpg
+[2022-06-12 17:45:54] Pedro de Medeiros 👾: Certo
+[2022-06-12 17:47:07] Pedro de Medeiros 👾: No caso do gunsmoke você gera ROMs avulsas direto, mas no MSX2 a gente gera um .asm que vai ser anexado à ROM destino.
+[2022-06-12 17:48:04] Felipe "Juca" Sanches: A única diferença (se entendi direito) é que os assets gráficos no GunSmoke ficam em ROMs separadas, e no MSX fica tudo numa ROM só. Fora isso, acho que poderia ser feito exatamente o mesmo tratamento
+[2022-06-12 17:49:22] Felipe "Juca" Sanches: É muito legal esse exercicio de escrever simultaneamente para multiplas plataformas, pois nos traz esses pequenos quebra-cabeças pra resolver
+[2022-06-12 17:52:34] P. M: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21580.jpg
+[2022-06-12 17:52:41] P. M: Não fui eu, foi o MISTER X
+[2022-06-12 17:52:46] P. M: Curti mto
+[2022-06-12 17:53:18] RicBit: Faz um de dois jogadores, vai ficar massa. Joga alternado e ganha ponto quando abre casas.
+[2022-06-12 17:54:06] L.: Tetrinet mas campo minado
+[2022-06-12 17:55:13] Felipe "Juca" Sanches: haha! Adorei!
+[2022-06-12 17:57:30] Felipe "Juca" Sanches: Mas seria enfadonho ser por turnos, eu acho.
+[2022-06-12 17:58:10] Felipe "Juca" Sanches: Talvez fosse mais interessante um mesmo campo grandão poder ser jogado simultaneamente pelos dois jogadores
+[2022-06-12 17:58:30] Felipe "Juca" Sanches: só não sei como lidar com a chance dos dois jogadores quererem jogar na mesma região
+[2022-06-12 17:59:19] Felipe "Juca" Sanches: talvez fosse o caso de ir expandindo "territórios de influência" onde ficam restritas as possibilidades de jogadas de cada jogador
+[2022-06-12 17:59:56] Felipe "Juca" Sanches: se um jogador está avancando bem, sua região de influencia vai sendo expandida, e aí talvez o critério de vitória seja quem cobriu uma área maior de limpeza do campo
+[2022-06-12 18:00:53] Felipe "Juca" Sanches: Seria divertido também jogadas boas de um jogador causarem um bombardeio localizado numa parte já limpa do campo do adversário
+[2022-06-12 18:01:24] P. M: Algo como Go/Baduk?
+[2022-06-12 18:01:42] Felipe "Juca" Sanches: e resultaria em uma nova distribuição aleatória de bombas em uma pequena região de células novamente fechadas, que o adversário precisa novamente limpar
+[2022-06-12 18:02:09] Felipe "Juca" Sanches: realmente, eu pensei um pouco no lance territorial do Go enquanto escrevia, apesar das regras do jogo serem diferentes
+[2022-06-12 18:03:00] Felipe "Juca" Sanches: eu acho que não precisa limitar por turnos pois a velocidade de avanço do jogo já seria naturalmente limitada pela capacidade de raciocínio lógico veloz de cada jogador
+[2022-06-12 18:04:17] Felipe "Juca" Sanches: teria que ter também uma regra que tornasse menos catastrófica a abertura de uma célula contendo uma mina
+[2022-06-12 18:04:24] Felipe "Juca" Sanches: senão seria game-over rápido demais
+[2022-06-12 18:05:07] Felipe "Juca" Sanches: um jogo mais dinâmico precisa de regras menos severas, ou seja, precisa punir mais de leve eventuais erros dos jogadores
+[2022-06-12 22:27:16] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/60
+[2022-06-12 23:26:04] Felipe "Juca" Sanches: merged!
+[2022-06-12 23:26:45] Felipe "Juca" Sanches: Seria legal talvez mencionar também os alvos esperados em um Makefile.
+[2022-06-12 23:28:47] Pedro de Medeiros 👾: Alvos? Como assim?
+[2022-06-12 23:29:34] Felipe "Juca" Sanches: make run
+[2022-06-12 23:29:46] Felipe "Juca" Sanches: make clean
+[2022-06-12 23:30:07] Felipe "Juca" Sanches: run e clean são alvos
+[2022-06-12 23:30:38] Pedro de Medeiros 👾: Ah, tá. Dentro do README de cada implementação.
+[2022-06-12 23:31:10] Pedro de Medeiros 👾: Porque o make run não tem no ncurses por exemplo
+[2022-06-12 23:31:27] Felipe "Juca" Sanches: Ah, comi bola kkk

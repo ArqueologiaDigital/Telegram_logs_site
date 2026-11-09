@@ -1,0 +1,237 @@
+[2017-11-18 00:01:35] Felipe "Juca" Sanches: hoje eu fui na USP e dei uma arrumada geral por lá
+[2017-11-18 00:01:51] Felipe "Juca" Sanches: e também bati um papo legal com o professor João José Neto
+[2017-11-18 00:02:19] Felipe "Juca" Sanches: na sala do acervo não-exposto eu consegui organizar bem cerca de metade do material
+[2017-11-18 00:02:49] Felipe "Juca" Sanches: mais umas 2 ou 3 visitas e aquele espaço vai ficar bem bacana pra poder trabalhar na restauração e no estudo das máquinas
+[2017-11-18 00:15:17] Werner: Legal.
+[2017-11-18 00:16:16] Felipe "Juca" Sanches: o professor me disse hoje que ele acha que eu devo dar continuidade à construção do painel do Patinho Feio
+[2017-11-18 00:16:29] Felipe "Juca" Sanches: e eu falei de vocë, Werner
+[2017-11-18 00:16:40] Felipe "Juca" Sanches: mencionei que você também está empolgado com isso
+[2017-11-18 00:16:41] Werner: opa, fez minha caveira? rss
+[2017-11-18 00:16:49] Werner: Eu tbm acho q devemos fazer isso
+[2017-11-18 00:16:54] Felipe "Juca" Sanches: sim...
+[2017-11-18 00:17:05] Werner: Eu adoraria poder levar uma réplica funcional e mostrar a ele...
+[2017-11-18 00:17:14] Felipe "Juca" Sanches: talvez eu dedique um pouco de tempo amanhã para debugar o firmware do painel
+[2017-11-18 00:17:14] Werner: falar q ajudei a construir.
+[2017-11-18 00:17:19] Felipe "Juca" Sanches: pra fazer voltar a funcionar
+[2017-11-18 00:17:30] Felipe "Juca" Sanches: e talvez soldar uns switches
+[2017-11-18 00:17:35] Werner: Eu gostaria mto de fazer isso, mas preciso ligar todas as chavinhas.
+[2017-11-18 00:18:14] Werner: E montar aqueles shift registers
+[2017-11-18 00:19:22] Felipe "Juca" Sanches: sim
+[2017-11-18 00:19:41] Felipe "Juca" Sanches: o ideal seria projetar uma pcb para os shift registers
+[2017-11-18 00:19:47] Werner: sim!
+[2017-11-18 00:19:57] Felipe "Juca" Sanches: mas na falta disso eu tenho feito usando placa padrão
+[2017-11-18 00:20:33] Werner: Se vc me permite um comentário, eu vi a parte de trás desse painel... e me deu uma vontade grande de recomeçá-la do zero
+[2017-11-18 00:20:41] Werner: Digo, a parte elétrica.
+[2017-11-18 00:20:46] Felipe "Juca" Sanches: sim, eu sei
+[2017-11-18 00:21:05] Werner: Eu tenho maior gosto por soldar as coisas com o maior esmero e tentar minimizar os fios soltos
+[2017-11-18 00:21:07] Felipe "Juca" Sanches: dá pra recomeçar do zero com aquele que tá no Garoa
+[2017-11-18 00:21:33] Werner: É uma boa.
+[2017-11-18 00:22:45] Werner: Outra coisa q não sai da minha cabeça são aquelas placas q vc começou a projetar pra replicar todos os circuitos do PF
+[2017-11-18 00:22:57] Werner: Aquilo seria lindo.
+[2017-11-18 00:23:21] Felipe "Juca" Sanches: sim, será!
+[2017-11-18 00:23:40] Werner: A gente pode falar sério sobre isso. Até a parte do $$
+[2017-11-18 00:32:11] Felipe "Juca" Sanches: Eu sou um pouco impulsivo...
+[2017-11-18 00:33:23] Werner: vc encomendou 3 da CDE-3 e 3 da debug?
+[2017-11-18 00:33:36] Werner: precisa ser repetidas?
+[2017-11-18 00:33:49] Werner: (eu sei q a qtde minima dele é 3)
+[2017-11-18 00:34:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1358.jpg
+[2017-11-18 00:36:08] Felipe "Juca" Sanches: yep!
+[2017-11-18 00:36:17] Felipe "Juca" Sanches: encomenda mínima de 3 unidades
+[2017-11-18 00:36:34] Felipe "Juca" Sanches: esse foi o motivo pelo qual não rodei esses projetos em fevereiro
+[2017-11-18 00:36:43] Felipe "Juca" Sanches: por que eu não queria comprar 3 unidades
+[2017-11-18 00:36:48] Werner: certo
+[2017-11-18 00:36:50] Felipe "Juca" Sanches: mas agora acho que faz sentido
+[2017-11-18 00:37:02] Werner: faz assim cara, eu banco os componentes
+[2017-11-18 00:37:03] Felipe "Juca" Sanches: um par pra mim, um pra vc e um pra deixar na Poli talvez ?\
+[2017-11-18 00:37:23] Werner: boa idéia!
+[2017-11-18 00:37:41] Werner: Seria muito bacana ter isso lá, o prof. João certamente irá se iluminar
+[2017-11-18 00:38:03] Werner: Eu faço questão de comprar os componentes pras 3
+[2017-11-18 00:38:16] Felipe "Juca" Sanches: tomara que não tenha erros de projeto
+[2017-11-18 00:38:24] Felipe "Juca" Sanches: mas eu acho que tá tudo ok
+[2017-11-18 00:38:25] Werner: Ah ta...
+[2017-11-18 00:38:28] Werner: sempre acontece
+[2017-11-18 00:38:32] Werner: lei de murphy
+[2017-11-18 00:38:43] Felipe "Juca" Sanches: mas agora já era... já encomendei
+[2017-11-18 00:38:46] Werner: rss
+[2017-11-18 00:38:47] Felipe "Juca" Sanches: vamos ver quando chegar
+[2017-11-18 00:38:52] Werner: a gente conserta
+[2017-11-18 00:39:16] Werner: placa sem trilha cortada e jumper ligando os pontos não é placa
+[2017-11-18 00:39:53] Felipe "Juca" Sanches: hahaha
+[2017-11-18 00:40:13] Werner: tem q mostrar q teve sangue suor e lágrimas ali...
+[2017-11-18 00:40:35] Felipe "Juca" Sanches: https://forum.fiozera.com.br/uploads/default/original/1X/890f44d36e3f9c23fb80b6a99983b1d89f99203d.png
+[2017-11-18 00:41:05] Werner: exato!
+[2017-11-18 00:48:10] Felipe "Juca" Sanches: sensação gostosa de ter gasto uma grana num projeto da hora
+[2017-11-18 00:48:23] Felipe "Juca" Sanches: agora é só esperar
+[2017-11-18 00:48:29] Werner: é sim. Demora?
+[2017-11-18 00:48:40] Felipe "Juca" Sanches: deve levar um mês, eu acho
+[2017-11-18 00:48:54] Felipe "Juca" Sanches: eles dizem 10 dias após fabricação
+[2017-11-18 00:49:09] Felipe "Juca" Sanches: e de 10 a 15 dias pra fechar um painel de encomendas de multiplos clientes
+[2017-11-18 00:49:37] Felipe "Juca" Sanches: eu aposto que vou ver o Falcon Heavy voando antes de ver essas PCBs do Pato
+[2017-11-18 00:49:46] Werner: rsss
+[2017-11-18 00:50:22] Felipe "Juca" Sanches: http://www.spacex.com/falcon-heavy
+[2017-11-18 00:52:27] Werner: lindo esse foguete
+[2017-11-18 00:53:40] Felipe "Juca" Sanches: https://static.curtacircuitos.com.br/projects/001252/001252.top.png
+[2017-11-18 00:54:48] Felipe "Juca" Sanches: https://static.curtacircuitos.com.br/projects/001801/001801.top.png
+[2017-11-18 00:56:55] Werner: essa placa vai LEDs... 52 😆
+[2017-11-18 01:01:03] Werner: me passa o BOM dessas duas placas cara... é q eu to com aquele problema aqui q o KiCAD não abre.
+[2017-11-18 01:04:26] Felipe "Juca" Sanches: veja se os projetos tão publicos aqui https://curtacircuitos.com.br/felipesanches
+[2017-11-18 01:04:35] Felipe "Juca" Sanches: vou gerar o BOM e te passo
+[2017-11-18 01:04:47] Felipe "Juca" Sanches: só nao vou fazer isso agora por que to indo dormir
+[2017-11-18 01:05:04] Werner: blz, eu só quero ter isso pra qdo for encomendar
+[2017-11-18 01:05:16] Werner: tem tempo
+[2017-11-18 13:44:32] Alexandre Villares: https://twitter.com/FozzTexx/status/931676084722008065
+[2017-11-18 15:14:47] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1406.jpg
+[2017-11-18 15:15:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1407.jpg
+[2017-11-18 15:16:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1408.jpg
+[2017-11-18 15:19:00] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1409.jpg
+[2017-11-18 15:22:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1410.jpg
+[2017-11-18 15:23:37] Werner: Ah eu lembro desse cartucho
+[2017-11-18 15:24:00] Werner: Isso foi ontem ou vc está aí na USP?
+[2017-11-18 15:24:12] Felipe "Juca" Sanches: foi ontem. Peguei emprestado pra estudar
+[2017-11-18 15:24:19] Werner: vai emular?
+[2017-11-18 15:24:27] Felipe "Juca" Sanches: não tem o que emular nisso aí
+[2017-11-18 15:24:33] Felipe "Juca" Sanches: é só um cartucho com software
+[2017-11-18 15:24:34] Werner: já chupinhou as ROMs?
+[2017-11-18 15:24:44] Felipe "Juca" Sanches: extraí as duas EPROMs UV
+[2017-11-18 15:25:00] Felipe "Juca" Sanches: as mask roms é mais difícil por que estao soldadas na placa
+[2017-11-18 15:25:24] Werner: poderia emular talvez algum driver de impressão usando as fontes armazenadas nessas EPROMs?
+[2017-11-18 15:25:43] Felipe "Juca" Sanches: o ideal seria emular uma impressora laserjet
+[2017-11-18 15:25:51] Werner: ummm... remover até dá.
+[2017-11-18 15:26:05] Felipe "Juca" Sanches: e carregar esse cartucho como um opcional de extensão
+[2017-11-18 15:26:16] Werner: Eu tenho aqui em casa o wick e o sugador pra retirar a solda dos pinos.
+[2017-11-18 15:26:43] Werner: E minha estaçãozinha com temperatura ajustável.
+[2017-11-18 15:27:08] Werner: Taí uma idéia interessante
+[2017-11-18 15:45:09] Felipe "Juca" Sanches: o mundo tá repleto de idéias interessantes...
+[2017-11-18 15:46:15] Felipe "Juca" Sanches: idéia interessante no mundo abunda!
+[2017-11-18 15:46:39] Werner: sim sim. Falta execução.
+[2017-11-18 15:46:57] Werner: ou priorização...
+[2017-11-18 15:48:02] Werner: falando em idéias interessantes, sobre a nossa discussão de ontem, queria ver contigo um pouco sobre a parte financeira.
+[2017-11-18 15:48:50] Werner: Quero saber de vc como vc vê a melhor forma de compartilharmos os custos (atuais e os que virão).
+[2017-11-18 15:49:09] Werner: Eu dei um pontapé inicial ontem, mas esqueci de lhe perguntar isso antes.
+[2017-11-18 15:49:20] Felipe "Juca" Sanches: :-)
+[2017-11-18 15:50:19] Werner: Whenever you feel like.
+[2017-11-18 15:50:40] Felipe "Juca" Sanches: claro... mas acho que essa é uma conversa melhor para se ter pessoalmente
+[2017-11-18 15:51:44] Werner: sem problemas.
+[2017-11-18 15:51:51] Werner: up to you.
+[2017-11-18 18:03:32] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital
+[2017-11-18 18:04:17] Felipe "Juca" Sanches: Migrei todos os meus repos pessoais de escaneamento de teses de mestrado, e outros repos relacionados ao Patinho Feio e demais projetos de preservação histórica da computação
+[2017-11-18 18:05:07] Felipe "Juca" Sanches: Os "pinned" repos são uma boa para destacar a meia dúzia de repos que não são só armazenamento de arquivos hi-res dos scans de teses
+[2017-11-18 18:05:45] Felipe "Juca" Sanches: mas acho que seria melhor botar no ar um website organizando melhor o material todo disponivel aí (e no Internet Archive)
+[2017-11-18 18:06:02] Felipe "Juca" Sanches: talvez um arqueologiadigital.org
+[2017-11-18 18:06:15] Werner: Isso seria uma boa idéia.
+[2017-11-18 18:06:33] Felipe "Juca" Sanches: interfaceando com Internet Archive, GitHub, Fiozera, e esse grupo do Telegram
+[2017-11-18 18:06:38] Werner: Falta pegar o domínio e ter um host
+[2017-11-18 18:06:48] Felipe "Juca" Sanches: Mas sendo a "porta da frente" do "museu"/"laboratório"
+[2017-11-18 18:07:04] Werner: Criar um portal assim não é difícil
+[2017-11-18 18:07:27] Felipe "Juca" Sanches: eu faria tudo no Github Pages
+[2017-11-18 18:08:08] Felipe "Juca" Sanches: E também usaria um bug tracker nesse repo central pra geranciar as meta-tarefas
+[2017-11-18 18:08:23] Felipe "Juca" Sanches: coisas que a gente planeja fazer algum dia e depois larga pela metade, sabe?
+[2017-11-18 18:08:32] Felipe "Juca" Sanches: aqueles eternos "work-in-progress"
+[2017-11-18 18:08:43] Werner: então vamos por partes
+[2017-11-18 18:09:32] Werner: Eu nunca fiz github pages. Se eu quiser fazer isso é a partir do meu github?
+[2017-11-18 18:10:04] Felipe "Juca" Sanches: não tenho certeza, mas acho que não
+[2017-11-18 18:10:23] Felipe "Juca" Sanches: acho que nesse caso seria um repo hospedado nessa conta de organização
+[2017-11-18 18:10:42] Felipe "Juca" Sanches: eu posso abrir um repo desses com um index.html bobinho
+[2017-11-18 18:10:56] Felipe "Juca" Sanches: e depois você como colaborador teria condições de escrever lá
+[2017-11-18 18:11:13] Werner: certo
+[2017-11-18 18:11:20] Felipe "Juca" Sanches: me dá um tempinho que eu preparo esse setup
+[2017-11-18 18:11:21] Werner: então faz isso
+[2017-11-18 18:12:55] Felipe "Juca" Sanches: eu acho que essa página explica. to lendo ela agora: https://help.github.com/articles/user-organization-and-project-pages/
+[2017-11-18 18:26:33] Felipe "Juca" Sanches: Pronto
+[2017-11-18 18:26:42] Felipe "Juca" Sanches: É só contribuir para esse repo: https://github.com/ArqueologiaDigital/ArqueologiaDigital.github.io
+[2017-11-18 18:27:02] Felipe "Juca" Sanches: Tudo o que estiver no branch master aparecerá no website em https://ArqueologiaDigital.github.io
+[2017-11-18 18:27:24] Felipe "Juca" Sanches: vou comprar o nome de dominio agora
+[2017-11-18 18:27:33] Felipe "Juca" Sanches: arqueologiadigital.org
+[2017-11-18 18:30:19] Felipe "Juca" Sanches: Ironicamente já existe o .com
+[2017-11-18 18:30:21] Felipe "Juca" Sanches: http://arqueologiadigital.com/
+[2017-11-18 18:30:58] Werner: .org
+[2017-11-18 18:31:01] Werner: é mais chique
+[2017-11-18 18:31:10] Werner: perae q eu to mudando de PC
+[2017-11-18 18:31:31] Werner: eu tava no de HS, mexendo em algumas configurações. Agora to no de trampo
+[2017-11-18 18:31:40] Werner: vou clonar a bagaça
+[2017-11-18 18:40:03] Werner: Ok. A gente pode começar a pensar em como vc quer distribuir essas informações todas pela página. Inclusive textos, etc
+[2017-11-18 18:40:44] Werner: A idéia seria de repente formar um menu no topo, com opções pra acessar as diversas áreas q vc citou.
+[2017-11-18 18:43:06] Werner: E daí ou redireciona pra fora, no caso do fórum e Github / Internet Archive (ou pode abrir o documento direto...?)
+[2017-11-18 18:43:38] Werner: Acho q primeiro temos q ver o q a gente quer disponibilizar e como
+[2017-11-18 18:49:16] Felipe "Juca" Sanches: sim, tem razão
+[2017-11-18 18:49:29] Felipe "Juca" Sanches: precisamos fazer um brainstorming geral
+[2017-11-18 18:58:42] Werner: vou subir uma brincadeira q acabei de fazer aqui
+[2017-11-18 18:58:52] Werner: bem simples, só pra dar uma pensada
+[2017-11-18 19:02:03] Felipe "Juca" Sanches: beleza
+[2017-11-18 19:02:07] Felipe "Juca" Sanches: sobre lá pra eu ver
+[2017-11-18 19:02:16] Werner: já subi e fiz um request pra vc
+[2017-11-18 19:02:17] Felipe "Juca" Sanches: eu vou em seguida fazer um commit com a config de DNS
+[2017-11-18 19:02:25] Werner: ve o q acha
+[2017-11-18 19:02:31] Werner: td é mutável
+[2017-11-18 19:02:50] Felipe "Juca" Sanches: vc já deu git push ?
+[2017-11-18 19:03:03] Felipe "Juca" Sanches: não to vendo nada seu no repo ainda
+[2017-11-18 19:03:07] Werner: Já dei sim. Inclusive, só fiz uns style inline bem rapidinho.
+[2017-11-18 19:03:12] Werner: no meu aparece.
+[2017-11-18 19:03:16] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/ArqueologiaDigital.github.io/commits/master
+[2017-11-18 19:03:21] Werner: First styling example with <nav>
+[2017-11-18 19:03:39] Werner: vc tá olhando no seu. Eu fiz um fork
+[2017-11-18 19:03:52] Werner: e gerei um pull request pra vc
+[2017-11-18 19:03:55] Felipe "Juca" Sanches: então dê um pull request pro principal
+[2017-11-18 19:04:00] Werner: eu fiz
+[2017-11-18 19:04:00] Felipe "Juca" Sanches: ah ok
+[2017-11-18 19:05:05] Werner: pera deixa eu só arrumar uma cagadinha q só vi agora. Nada sério
+[2017-11-18 19:08:50] Felipe "Juca" Sanches: http://arqueologiadigital.org/
+[2017-11-18 19:09:53] Werner: tem só q pegar uma alteraçãozinha q eu dei push agora... eu to aqui adicionando o seu remote
+[2017-11-18 19:09:55] Werner: perae
+[2017-11-18 19:10:08] Felipe "Juca" Sanches: :-)\
+[2017-11-18 19:10:36] Felipe "Juca" Sanches: acho que vc consegue escrever direto (dar push) para o master do repo principal
+[2017-11-18 19:14:28] Werner: acesso negado.
+[2017-11-18 19:16:08] Felipe "Juca" Sanches: ok, talvez eu tenha que liberar isso pra você
+[2017-11-18 19:16:36] Werner: blz
+[2017-11-18 19:16:57] Werner: tá atualizado o meu master... se vc quiser só dar um Ctrl-C e Ctrl-V no seu arquivo .html...
+[2017-11-18 19:17:19] Werner: daí vc pode atualizar lá no dns
+[2017-11-18 19:17:30] Felipe "Juca" Sanches: já atualizei o DNS agora há pouco
+[2017-11-18 19:17:33] Felipe "Juca" Sanches: já tá no ar
+[2017-11-18 19:17:45] Felipe "Juca" Sanches: acesso o site arqueologiadigital.org agora e veja
+[2017-11-18 19:17:45] Werner: eu sei mas tem uma atualizaçãozinha q eu queria colocar
+[2017-11-18 19:17:56] Werner: já vi, mas tem uma atualização
+[2017-11-18 19:18:04] Felipe "Juca" Sanches: ok, faz outro pull request entao
+[2017-11-18 19:19:06] Werner: já fiz
+[2017-11-18 19:24:09] Werner: Posso mudar "Documentos sobre o Patinho Feio no Internet Archive" para só "Patinho Feio no Internet Archive"?
+[2017-11-18 19:26:00] Werner: já chegou o email de autorização pra mim aqui
+[2017-11-18 19:26:05] Felipe "Juca" Sanches: à vontade
+[2017-11-18 19:26:11] Felipe "Juca" Sanches: o site é nosso
+[2017-11-18 19:26:21] Werner: vou testar se agora consigo fazer push direto
+[2017-11-18 19:26:28] Felipe "Juca" Sanches: tente dar o merge
+[2017-11-18 19:26:30] Felipe "Juca" Sanches: do PR
+[2017-11-18 19:26:47] Felipe "Juca" Sanches: para coisas pequenas e rápidas push para master é aceitável
+[2017-11-18 19:27:07] Felipe "Juca" Sanches: mas em geral se a mudança for mais do que algo trivial eu prefereria o uso de PRs
+[2017-11-18 19:27:11] Werner: peraí; eu vi q o link pro PF no Internet Archive não tem nada
+[2017-11-18 19:27:15] Felipe "Juca" Sanches: pois gera notificações por email
+[2017-11-18 19:27:24] Werner: sem problemas, sempre vamos nos comunicando
+[2017-11-18 19:27:35] Werner: eu criei um fork justamente pra isolar
+[2017-11-18 19:27:58] Felipe "Juca" Sanches: acho que minha intenção era de apontar pra cá, mas esqueci de colar a URL no html: https://archive.org/search.php?query=subject%3A%22patinho+feio%22
+[2017-11-18 19:33:59] Werner: atualizei lá no seu
+[2017-11-18 19:34:03] Werner: manda pro DNS
+[2017-11-18 19:34:28] Werner: ah parece q já foi
+[2017-11-18 19:34:32] Werner: isso tá automatico?
+[2017-11-18 19:34:39] Felipe "Juca" Sanches: como assim ?! Sim, é automático
+[2017-11-18 19:34:44] Werner: ah bom
+[2017-11-18 19:34:46] Werner: blz
+[2017-11-18 19:34:49] Felipe "Juca" Sanches: o que estiver no master aparece no site
+[2017-11-18 19:34:55] Werner: legal vc ter feito isso
+[2017-11-18 19:35:04] Felipe "Juca" Sanches: às vezes pode demorar uns minutinhos, mas é automatico
+[2017-11-18 19:35:13] Werner: legal, ele já tá espelhando
+[2017-11-18 19:35:36] Felipe "Juca" Sanches: eu sou meio impulsivo. Tem dias que eu tô inspirado e saio fazendo coisas
+[2017-11-18 19:36:48] Werner: idem
+[2017-11-18 19:36:53] Werner: e tem dias q eu travo
+[2017-11-18 19:37:56] Werner: legal, eu vou continuar fazendo umas coisinhas pra aos poucos ir melhorando o visual. Vc podia bolar uns textos pra jogar no <body>, se quiser
+[2017-11-18 19:38:00] Werner: vou comer
+[2017-11-18 19:38:03] Werner: to com fome
+[2017-11-18 19:38:36] Werner: se tiver imagens, ícones, logos, etc.. q vc queira usar na página, manda pra mim q eu insiro
+[2017-11-18 19:38:46] Werner: 321 - fui!
+[2017-11-18 19:39:58] Felipe "Juca" Sanches: é... eu acho que vou abrir umas issues lá com idéias de como estruturar o site
+[2017-11-18 19:40:22] Felipe "Juca" Sanches: agora to ocupado num outro esquema legal, já já mostro aqui
+[2017-11-18 21:11:36] Werner: show
+[2017-11-18 21:39:02] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Documentos_Scopus
+[2017-11-18 21:39:18] Felipe "Juca" Sanches: tá subindo os dados do escaneamento daquela publicacao da scopus que o dq trouxe
+[2017-11-18 21:39:22] Felipe "Juca" Sanches: logo logo aparece lá o commit
+[2017-11-18 21:39:34] Felipe "Juca" Sanches: preciso ainda gerar o pdf e subir no internet archive
+[2017-11-18 21:39:41] Felipe "Juca" Sanches: vou jantar, té mais!
+[2017-11-18 21:51:29] Alexandre Villares: https://twitter.com/jessfraz/status/932028810219917312
+[2017-11-18 23:22:50] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Documentos_Scopus/blob/master/TecnologiaScopus_Out83/PDF/Tecnologia_Scopus_Outubro_1983.pdf

@@ -1,0 +1,16 @@
+[2024-05-03 02:07:32] L.: se souber onde tá a fonte na vram, deve dar pra achar a rotina que lê naquela região né?
+[2024-05-03 02:08:27] L.: provavelmente nem deve ser comum descomprimir pra uma string antes, deve ser caracter a caracter
+[2024-05-03 11:26:25] RicBit: hum dá para renderizar a vram inteira e jogar no ocr
+[2024-05-03 11:26:45] RicBit: mas eu acho que nao tem a fonte inteira na vram
+[2024-05-03 11:26:53] RicBit: deixa ver uns exemplos aqui
+[2024-05-03 11:36:09] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31290.jpg
+[2024-05-03 11:36:09] RicBit: VRAM na abertura do undeadline. O  jogo está na pagina 0, o texto da tela seguinte aparece na pagina 1 junto com ruido. certeza que o ruido é o resto da fonte comprimida, e ele descomprime quando muda de cena
+[2024-05-03 11:36:21] RicBit: mas eu descobri um negocio MUITO LOCO agora
+[2024-05-03 11:37:02] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31292.jpg
+[2024-05-03 11:37:02] RicBit: os passarinhos são um color cycle! genial a ideia.
+[2024-05-03 11:38:09] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31293.jpg
+[2024-05-03 11:38:09] RicBit: desligando a palette dá para ver todos
+[2024-05-03 11:46:20] Felipe "Juca" Sanches: igual animação de minigame em LCD
+[2024-05-03 11:47:35] RicBit: isso
+[2024-05-03 13:26:55] RicBit: hum eu estava pensando em metodos complicados para descobrir quando um texto é apagado da tela
+[2024-05-03 13:27:18] RicBit: mas é só medir a entropia? se a entropia cair de repente é porque apagou.

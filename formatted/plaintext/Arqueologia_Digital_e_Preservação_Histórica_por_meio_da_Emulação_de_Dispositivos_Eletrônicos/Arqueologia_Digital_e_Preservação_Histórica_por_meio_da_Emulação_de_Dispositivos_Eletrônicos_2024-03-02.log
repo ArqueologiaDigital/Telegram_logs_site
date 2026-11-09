@@ -1,0 +1,66 @@
+[2024-03-02 02:44:49] RicBit: tenta lá -> https://chat.openai.com/g/g-Bw63drlcH-msx-debugger
+[2024-03-02 02:50:53] RicBit: olha amanha eu tenho uma tarde livre se alguem quiser fazer projeto eu topo
+[2024-03-02 02:51:27] RicBit: compilador de basic [prece cool
+[2024-03-02 06:00:17] Felipe "Juca" Sanches: Eita!
+
+Conta mais pra gente como você fez isso
+[2024-03-02 10:24:10] RicBit: coloquei o red book dentro do modelo
+[2024-03-02 19:19:35] RicBit: pronto agora nao precisa mais ser tcl
+[2024-03-02 19:19:41] RicBit: from openmsx import OpenMSX
+
+emu = OpenMSX("antarctic.rom")
+emu.breakpoint(0x4010)
+emu.run()
+emu.wait()
+[2024-03-02 19:40:49] Pedro de Medeiros 👾: Quem fez essa interface entre Python e OpenMSX?
+[2024-03-02 20:17:14] RicBit: Eu uai. Tive uma tarde livre hoje.
+[2024-03-02 21:38:33] Pedro de Medeiros 👾: Ah, legal. Tá no repositório do OpenMSX?
+[2024-03-02 21:57:46] RicBit: nope só local por enquanto
+[2024-03-02 21:57:54] RicBit: mas nao é dificil nao, só usar o --control stdio
+[2024-03-02 21:58:53] L.: "alexa seta o breakpoint ali"
+[2024-03-02 21:59:04] RicBit: falta pouco
+[2024-03-02 21:59:25] RicBit: mas eu fazendo pelo chatgpt porque é mais facil pra mim haha
+[2024-03-02 21:59:56] RicBit: mas é um sanduiche inteiro
+[2024-03-02 22:00:13] RicBit: opengpt -> flask -> xml -> tcl -> openmsx
+[2024-03-02 22:06:32] RicBit: alias tantos anos nessa industria vital e só hoje eu percebi que 0x4010 é um numero redondo
+[2024-03-02 22:06:38] RicBit: dá 16400 em decimal
+[2024-03-02 22:29:00] RicBit: lol funcionou
+[2024-03-02 22:29:14] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29385.jpg
+[2024-03-02 22:32:25] L.: fudebug v2
+[2024-03-02 22:34:18] RicBit: total
+[2024-03-02 22:34:37] RicBit: mas o redbook é comprido demais para ele, ele nao sacou que fd9a é um hook
+[2024-03-02 22:34:53] RicBit: ao inves do redbook inteiro vou tentar uma versao menorzinha
+[2024-03-02 22:35:07] RicBit: as llm atuais tem janela pequena demais
+[2024-03-02 22:39:59] L.: mas achei legal que ele sacou que 0xc3 é jp
+[2024-03-02 22:48:03] RicBit: ae agora sim
+
+ld (#fd9a), a (0x4015): Store the value in register A (0xC3) into memory address 0xFD9A. Address 0xFD9A is part of the MSX hooks area, specifically the HKEYI hook, which is used for custom interrupt handling.
+
+ld hl, #4044 (0x4018): Load the value 0x4044 into the HL register pair. This could be an address or data, depending on the context of the code.
+
+ld (#fd9b), hl (0x401B): Store the value in the HL register pair (0x4044) into memory address 0xFD9B. This address is immediately after the HKEYI hook, and the data might be related to the custom interrupt handler.
+[2024-03-02 22:48:08] RicBit: vou publicar, peari
+[2024-03-02 22:52:39] RicBit: tenta aí
+
+https://chat.openai.com/g/g-Bw63drlcH-msx-debugger
+[2024-03-02 22:53:08] RicBit: o emu está carregado no antartic adventure e pausado, entao só dá para fazer disasm
+[2024-03-02 23:11:38] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29396.jpg
+[2024-03-02 23:11:38] RicBit: olha que coisa lindea
+[2024-03-02 23:39:52] RicBit: agora eu preciso ensinar ele a dar restart na emulação para pegar o conteudo dos registros. com isso em mãos ele provavelmente debuga o jogo inteiro sozinho
+[2024-03-02 23:42:23] L.: é, seria legal perguntar coisa tipo "como faço pra ter vida infinita" e o bagulho achar onde o jogo guarda variável de vida
+[2024-03-02 23:43:35] RicBit: sim, isso é facinho se ele souber fazer dump
+[2024-03-02 23:44:02] RicBit: o unico problema do chatgpt é que a janela tem só 7k tokens de tamanho
+[2024-03-02 23:44:25] RicBit: entao se ele escrever 7k palavras, depois mais 7k palavras, as primeiras 7k ele esquece
+[2024-03-02 23:44:47] RicBit: mas agora que eu sei fazer webhook posso manter memoria externa
+[2024-03-02 23:44:57] RicBit: e essa janela de 7k vira só um cache
+[2024-03-02 23:45:29] RicBit: ah e eu nao ensinei z80 para ele
+[2024-03-02 23:45:50] RicBit: meu training set é só pedaços do red book que eu resumi para ficar menor que 7k
+[2024-03-02 23:46:27] RicBit: entao em principio funciona em qualquer maquina, nes, snes, mame
+[2024-03-02 23:47:01] RicBit: ah quero ver uma coisa
+[2024-03-02 23:47:15] RicBit: sera que ele consegue deduzir o algoritmo de compressao ?
+[2024-03-02 23:47:28] RicBit: acho que nesses konamis antigos é um rle toscão
+[2024-03-02 23:47:37] RicBit: se bobear ele consegue deixa ver
+[2024-03-02 23:51:32] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29411.jpg
+[2024-03-02 23:51:32] RicBit: cabou a brincadeira haha
+[2024-03-02 23:52:14] RicBit: gpt-4 tem limite pequeno de requests, tem que ver se funciona no gpt3.5 turbo
+[2024-03-02 23:52:44] RicBit: gpt3.5turbo é tao barato que dá para mandar disassemblar um megarom e vai ficar menos de 1usd haha

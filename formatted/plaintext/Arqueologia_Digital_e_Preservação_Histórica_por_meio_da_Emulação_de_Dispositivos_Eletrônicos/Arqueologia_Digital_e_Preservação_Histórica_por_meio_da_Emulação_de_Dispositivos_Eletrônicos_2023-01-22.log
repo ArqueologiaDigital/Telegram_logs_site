@@ -1,0 +1,15 @@
+[2023-01-22 05:58:48] * Deleted Account joined the group
+[2023-01-22 14:19:22] Toy: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS9ndnR4VWlJZg/episode/ZTZjYjM4YjAtNmU1NC00NDZmLWE2NjItMjQwMTMxZTIwMzU0?ep=14
+[2023-01-22 15:09:41] Anne Isabelle: Que susto, achei que o Hanselman tinha saído da Microsoft e ido pra Google 😅
+[2023-01-22 15:38:26] Felipe "Juca" Sanches: Terminei de ouvir agora e gostei muito.
+
+Tem várias coisas que ele falou nessa entrevista que eu vivi (e ainda vivo) ao lidar com desenvolvimento de emuladores.
+
+Inclusive fiquei curioso quando mencionaram que ele tá agora trabalhando em outro projeto de emulação de jogos escritos na linguagem SCUMM. Achei que teria alguma semelhança com o meu projeto de estudo da VM do Another World. Ele até usou o mesmo argumento que eu uso às vezes de que a VM é apenas um emulador de uma máquina imaginária.
+
+Mas aí me desanimei um pouco quando ele explicou que o projeto atual dele apenas emula um IBM-PC e roda a VM original por cima.
+
+Só que não me entendam mal! Gostei muito da entrevista e acho que vale a pena demais dedicar meia horinha para ouví-la!
+[2023-01-22 16:22:00] Toy: Ainda não terminei, por alguns segundo questionei minha memória se o Scummvm não era opensource
+[2023-01-22 16:23:19] Toy: Em umas partes da entrevista eu me lembrei de algumas dificuldades da própria comunidade que você relatou @fsanches .. esses problemas de alguma forma melhoraram ?
+[2023-01-22 16:24:35] Felipe "Juca" Sanches: faz tempo que não participo ativamente, então não sei dizer

@@ -1,0 +1,70 @@
+[2022-07-02 00:11:09] Augusto Almeida: Sim, mas eles só não eram tão populares assim no Japão, porque na Europa, boa parte da Ásia e Américas (principalmente central e do sul) era febre
+[2022-07-02 00:11:39] Augusto Almeida: A maioria dos crackers eram europeus
+[2022-07-02 08:24:54] Ismael Luceno: ainda é assim eu acho, tem muito homebrew também
+[2022-07-02 08:55:57] Anne Isabelle: Nos consoles atuais é tudo no JavaScripto os mods
+[2022-07-02 08:56:34] Ismael Luceno: eu falava do cracking/homebrew
+[2022-07-02 08:57:05] Anne Isabelle: Ah sim
+[2022-07-02 09:57:42] Augusto Almeida: Ainda há muita gente nisso, mas as técnicas de DRM estão dificultando crackear programas
+[2022-07-02 09:58:59] Augusto Almeida: Os shaders, objetos,..., ficaram "acessíveis " de se alterar, vide como usam o GTA V do PC em mods diversos
+[2022-07-02 09:59:58] Augusto Almeida: Uma coisa que achei muito interessante é o poder do Raspberry Pi Pico, realmente estou impressionado
+[2022-07-02 10:00:14] Augusto Almeida: Custando 4 dólares é incrível mesmo
+[2022-07-02 12:23:42] Ismael Luceno: hoje estava olhando uns vídeos de Windows, e notei que muita gente nem sabe porqué CR+LF vs LF, então aqui tem um resumo da história:
+[2022-07-02 12:23:48] Ismael Luceno: TTYs use CR+LF behind scenes (and emulation does that too); in fact, real TTYs often require extra time to reposition the head in addition to the sequence (often handled by sending NULs); this is one of the reasons that prompted Multics to have a streamlined I/O filter framework (idea inherited by Unix), which also made adding extra features easy; using just LF represents a saving of 2.5%-3% depending on the nature of the file (based on modern UNIX code and documentation files), and storage was extremely expensive back then, plus these were research products. LF was chosen over CR because in practice CR was also used to fake a boldface in real TTYs. Windows inherited CR+LF usage from DEC, indirectly, through DOS, for compatibility with CP/M. DEC systems were dumb, and CP/M was heavily influenced by DEC's TOPS-10 in all aspects because Gary Kildall used it for development and thus wanted compatibility.
+[2022-07-02 16:41:47] Anne Isabelle: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22586.jpg
+[2022-07-02 16:41:47] Anne Isabelle: Achei o rx do serial do PlayStation!
+[2022-07-02 16:41:58] Anne Isabelle: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22587.jpg
+[2022-07-02 16:50:54] Augusto Almeida: Parabéns, você transformou seu PlayStation em um C64
+[2022-07-02 16:51:29] Anne Isabelle: Hahahahaha
+[2022-07-02 17:39:14] Anne Isabelle: Achei o Tx, fiz upload do joguinho, mas ele não desenha nada no display 😭
+[2022-07-02 18:05:35] Felipe "Juca" Sanches: Kkkk, eu ia dizer exatamente a mesma coisa!
+[2022-07-02 18:12:02] Augusto Almeida: Roda no emulador primeiro, pra ver se está ok
+[2022-07-02 18:12:55] Anne Isabelle: No emu funciona, tem alguma treta no vsync… parei pra ver stranger things hahah
+[2022-07-02 18:28:02] Felipe "Juca" Sanches: Vou então te contar um "causo" nerd...
+
+Em 2010 eu participei de um demoparty pela primeira vez. Foi a realização de um sonho. Como eu sabia que os competidores eram muito fera e eu não tinha chance de competir com eles nas plataformas tradicionais de demos como C64, resolvi inovar fazendo minha demo numa plataforma até então inédita na demoscene: o videogame Magnavox Odyssey 2 (conhecido na Europa como Phillips Videopac)
+
+Comprei um odyssey2 no eBay francês e pedi pra entregar na casa do meu amigo Leandro Lameiro, que na época morava na Bélgica. Eu fiquei acho que umas 3 ou 4 semanas hospedado lá com ele antes da data da demoparty e ele participou do desenvolvimento da demo também.
+
+Nesse tempo, nossa intenção era programar a demo e fabricar um cartucho artesanal de odyssey2.
+
+Entretanto, o francês do eBay nós deu um calote e o console nunca foi entregue. Precisamos convencer os organizadores da demoparty a aceitarem tocar a demo usando um emulador. Eles torceram o nariz e muito a contragosto aceitaram nosso pedido.
+
+Eu e o Lameiro ficamos em terceiro lugar na competição.
+
+Uns 6 anos depois descobrimos que a nossa demo só funciona em emulador. No hardware real não teria funcionado. :-P
+
+Ou seja, testar no hardware real é sempre importante!
+
+Seja bem-vinda ao time, Vivi :-)
+[2022-07-02 18:28:53] Felipe "Juca" Sanches: Assista a "Rewired 2010 - ODC2 by Dashcrew - (Live Footage)" no YouTube
+https://youtu.be/i9EFqBBK1Vw
+[2022-07-02 18:34:17] L.: https://twitter.com/fabynou/status/1543346734314573825?t=OhSUeYYYtooG-qWMkjf4Kg&s=09
+[2022-07-02 18:34:31] Augusto Almeida: VSync? Por acaso o projeto inicial é para 50Hz? Dependendo da sua TV quando o PSX troca pra 50Hz ele perde a imagem ou o sincronismo.
+[2022-07-02 18:35:50] Anne Isabelle: Aaaaaa eu não pensei nisso!
+[2022-07-02 18:41:55] Anne Isabelle: Acho q é exatamente isso, quando ele tenta carregar o jogo ele troca o rate. Estranho que forcei ntsc e ainda assim ele perde o sincronismo
+[2022-07-02 18:44:00] Augusto Almeida: No código ele deve fazer isso "a força", então tem que achar e modificar todos os parâmetros (até de compilação se for necessário) pra trocar pra 60Hz
+[2022-07-02 18:44:34] Augusto Almeida: Uma coisa que pode acontecer é ficar com uma área menor pra desenho na tela, como ocorre com os computadores Amiga
+[2022-07-02 18:46:17] Anne Isabelle: Tô pensando se a treta não é o retrotink que eu tenho
+[2022-07-02 18:57:15] Augusto Almeida: Muito difícil de ser isso
+[2022-07-02 18:57:15] Augusto Almeida: É mais fácil o UNIROM estar com alguma configuração estranha
+[2022-07-02 19:01:33] Anne Isabelle: Nah, era meu código mesmo
+[2022-07-02 19:01:42] Anne Isabelle: Testei com um hello World e foi!
+[2022-07-02 19:02:00] Anne Isabelle: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22607.jpg
+[2022-07-02 19:29:04] Felipe "Juca" Sanches: fiquei curioso agora pra saber se esse teste com a demo foi suficiente pra esclarecer o que havia de errado com seu código
+[2022-07-02 19:42:03] Anne Isabelle: Não, eu precisei tb dar uns diffs tb, vou subir num branch
+[2022-07-02 19:42:27] Anne Isabelle: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22610.jpg
+[2022-07-02 19:42:27] Anne Isabelle: Quase hahahah
+[2022-07-02 21:43:18] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22611-sticker.webp
+[2022-07-02 22:18:26] Anne Isabelle: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22612.jpg
+[2022-07-02 22:18:26] Anne Isabelle: My PlayStation has seen better days. Ele travou assim
+[2022-07-02 22:23:57] Augusto Almeida: What?
+[2022-07-02 22:24:07] Augusto Almeida: Que houve, tá eternamente travado?
+[2022-07-02 22:58:29] Anne Isabelle: Nah, mais uma vez o retrotink pregou uma peça. Ele inverteu as cores
+[2022-07-02 23:00:05] Anne Isabelle: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22616.jpg
+[2022-07-02 23:00:05] Anne Isabelle: Consegui fazer rodar :) 
+Ta com o mesmo bug do emulador, que é um problema com o background / não persistir os tiles se tiver background
+[2022-07-02 23:28:14] Felipe "Juca" Sanches: Quero pedir que você adicione uma entrada para o PlayStation 1 no README.md da raiz do repo, apontando para o README específico do seu port no diretório platforms. E coloque essa foto como "screenshot.jpg" e liste o port como "Work-In-Progress".
+
+E com isso vou fazer o merge do seu PR, de modo que pessoas visitando o nosso repo tenham mais chance de saber que o port existe (mesmo que ainda incompleto).
+
+Em seguida, você pode abrir um novo PR para os próximos aprimoramentos.

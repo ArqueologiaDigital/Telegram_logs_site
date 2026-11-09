@@ -1,0 +1,42 @@
+[2023-12-06 00:18:42] Pedro de Medeiros 👾: https://gamehistory.org/eclipse-the-demo-that-sold-3d-to-nintendo/
+[2023-12-06 02:13:38] Shideravan: Esse é o tipo de coisa que tecnicamente, ainda não dá para emular no MAME (eu acho)
+[2023-12-06 02:14:19] Shideravan: @fsanches cadê o projeto no MAME para simular partes mecânicas em 3D? 😂
+[2023-12-06 03:36:01] Felipe "Juca" Sanches: https://github.com/mamedev/mame/issues/388
+[2023-12-06 09:39:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-12/28798.jpg
+[2023-12-06 09:39:14] Felipe "Juca" Sanches: Meu disassembler está levando mais de meia hora pra rodar no binário de 2MBytes do KN5000
+[2023-12-06 09:40:43] Felipe "Juca" Sanches: O motivo dessa demora toda é que eu achei símbolos de debugging e escrevi código para extrair todos esses ponteiros de função e strings com os nomes das rotinas e usá-los como mais pontos de entrada para o disassembly ficar cada vez mais completo. E com isso, o code coverage do disassembler aumentou bastante
+[2023-12-06 09:41:10] Felipe "Juca" Sanches: ainda não é tudo, pois nessa análise ele tropeçou em 450 jump tables
+[2023-12-06 09:41:40] Felipe "Juca" Sanches: então é possível que existam ainda mais rotinas que ainda não foram alcançadas
+[2023-12-06 09:42:39] Felipe "Juca" Sanches: eu não sei se vou ter paciência de documentar todas essas 450 jump-tables manualmente. Mas não consegui ainda imaginar alguma forma mais automática de lidar com esse desafio
+[2023-12-06 09:43:44] Felipe "Juca" Sanches: e com cada iteração levando mais de meia hora pra rodar (e provavelmente mais ainda conforme forem sendo documentadas as jump tables), acho que esse disassembler merece passar por um profiler, pra eu ver onde está o gargalo de performance
+[2023-12-06 09:44:11] Felipe "Juca" Sanches: o RicBit já tinha dado umas dicas aqui, alguns meses atrás sobre isso, mas acho que ainda dá pra melhorar
+[2023-12-06 11:45:25] Shideravan: Faz falta isso andar, hein?
+[2023-12-06 13:36:28] L.: Tá rodando em Python 3.12?
+[2023-12-06 13:37:19] L.: Vai ficar lento ainda mas deve melhorar um pouco
+[2023-12-06 15:27:35] Felipe "Juca" Sanches: ainda não
+[2023-12-06 15:28:03] Felipe "Juca" Sanches: to usando o 3.11.2 aqui
+[2023-12-06 16:18:57] RicBit: 3.12 tem itertools.batched, tao util e só colocaram agora
+[2023-12-06 16:30:28] L.: Outra coisa que eu olharia é mudar pra usar structural matching
+[2023-12-06 16:31:25] L.: E se possível usar functools.lru_cache, mesmo que tenha que reestruturar parte do código pra passar por uma função decorada com isso
+[2023-12-06 16:31:49] RicBit: lru_cache tem pegadinha haha
+[2023-12-06 16:31:56] RicBit: o cache default é pequenino
+[2023-12-06 16:31:58] L.: Fora isso aí, vou supor que tenha alguma coisa acidentalmente quadrática
+[2023-12-06 16:32:10] RicBit: tem que passar um parametro para ficar com cache tamanho infinito
+[2023-12-06 16:32:32] L.: Acho que usar functools.cache ao invés de lru_cache resolve
+[2023-12-06 16:32:49] RicBit: eu acho que cache precisa passar um functor ou algo assim?
+[2023-12-06 16:32:58] L.: Eu não lembro mesmo
+[2023-12-06 16:33:10] L.: Teria que ver na doc ou experimentar
+[2023-12-06 16:33:12] RicBit: da ultima vez que vi o mais facil era lru_cache(maxsize=None) ou algo assim
+[2023-12-06 16:33:36] RicBit: mas isso foi no 3.10, nao sei como esta no 3.12
+[2023-12-06 16:33:45] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-12/28823.jpg
+[2023-12-06 16:34:58] RicBit: cool
+[2023-12-06 16:36:28] L.: structural matching é perfeito pra disasm
+[2023-12-06 16:37:03] L.: especialmente se brincar com o itertools pra te dar uma janela deslizante
+[2023-12-06 18:33:41] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-12/28827.jpg
+[2023-12-06 18:33:41] Pedro de Medeiros 👾: Write your own retro compiler
+Study the complete source code for a self-hosting compiler that runs on and generates code for CP/M on the Z80 processor. No prior knowledge in the field of compiler construction is required. The T3X/0 language that is discussed and implemented in the book has its roots in Pascal and BCPL and is very simple. A full 20-page manual is contained in the book.
+
+Prerequisits: The reader should know at least one procedural programming language, such as C or Pascal, and at least one assembly language, ideally the one for the Z80 CPU. They should also know the basics of the CP/M operating system. For the determined autodicact a short introduction to Z80 assembly language is also included in the book.
+[2023-12-06 20:51:09] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-12/28829.jpg
+[2023-12-06 20:51:09] Felipe "Juca" Sanches [forwarded]: My baby chip precious
+[2023-12-06 20:52:51] Felipe "Juca" Sanches: Parado no ponto de ônibus inspecionando uma foto da PCB do CCE Top Game

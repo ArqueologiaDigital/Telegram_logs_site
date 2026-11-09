@@ -1,0 +1,20 @@
+[2026-07-31 00:01:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39845.jpg
+[2026-07-31 00:03:15] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39847.jpg
+[2026-07-31 00:04:40] Felipe "Juca" Sanches: quando ele fala sobre um "tick", ele está se referindo aos conjobs que agendei para ficar cutucando ele pra trabalhar um pouco mais
+[2026-07-31 17:22:36] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=uZ1atMUOUMU
+[2026-07-31 18:09:18] RicBit: consertei. A cedilha maiuscula já estava no dicionario, era bug no preprocessador mesmo.
+[2026-07-31 18:10:13] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39853.jpg
+[2026-07-31 18:10:13] RicBit: a parte bacana é que eu percebi que dá para desenhar em unicode o brascii art tambem. com alguma imaginação dá pra ver o topo de "sistema operacional".
+[2026-07-31 20:44:57] Guilherme Ranoya: https://www.instagram.com/reel/DbbEaUtkoNz/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==
+
+homecomputermuseum
+Our 'secret' project...
+
+As you all know, we have 2 Aesthedes computers in the museum. Two incredibly rare machines where only 5 are known to exist today, and we have the only 2 functional ones. The Aesthedes is a CAD-computer with 6 screens and our version has 2x Motorola 68020 and 2x Motorola 68882 CPU. It was created in 1985.
+
+[...]
+
+We provided Enrico and Antonio with the ROMs, high res images of the board and all schematics so they can reverse engineer the system.
+
+The video shows the emulator (in MAME) booting up the Aesthedes software. The top 2 screens are the output of the RS232 interfaces (directly from the CPU-cards) and the bottom 3 screens are the emulated data screens of the Aesthedes.
+[2026-07-31 20:45:26] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39858.jpg

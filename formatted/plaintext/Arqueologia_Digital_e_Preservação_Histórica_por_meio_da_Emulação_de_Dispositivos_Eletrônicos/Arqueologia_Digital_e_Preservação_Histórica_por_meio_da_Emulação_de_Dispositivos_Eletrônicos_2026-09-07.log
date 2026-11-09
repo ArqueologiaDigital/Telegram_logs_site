@@ -1,0 +1,14 @@
+[2026-09-07 03:00:11] Toy: https://youtu.be/z1nRvJi9d5U?is=O6iHtX_m3zfrTvHH
+[2026-09-07 03:00:54] Toy: Eu vi que já compartilharam as ferramentas, só um complementar da entrevista com o autor das ferramentas.
+[2026-09-07 14:32:48] RicBit: vixe chegou a hora da verdade
+[2026-09-07 14:33:20] RicBit: eu tenho que escolher entre emulador que emula 90% de game boy e 90% de sgb, ou emulador que emula só o game boy, mas 100%
+[2026-09-07 14:34:00] RicBit: eu nao conseguiria fazer um emulador meia boca, vai ser só gb então
+[2026-09-07 17:34:47] RicBit: Quem otimiza ainda é Namagiri, mas eu resolvi testar se colocar dois agentes para coordenar ajuda. Agora o Zé Pequeno cuida do código e o Dadinho só fica procurando bug.
+[2026-09-07 17:35:14] RicBit: Eu achei ia que dar na mesma, no fim das contas o limite é numero de tokens né, eu só iria dividir a quota de tokens em duas partes.
+[2026-09-07 17:35:34] RicBit: nope, engano, Dadinho + Zé Pequeno juntos são muito melhores.
+[2026-09-07 17:36:00] RicBit: Mas só agora caiu a ficha, é óbvio, dois agentes são o dobro de contexto, especialmente quando cada um tem uma tarefa distinta.
+[2026-09-07 19:16:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40435.jpg
+[2026-09-07 19:16:24] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/16037#issuecomment-5575748927
+[2026-09-07 22:01:43] L.: GEM pra Linux (com emulador de 68k!)
+
+https://github.com/triglav-os/gem

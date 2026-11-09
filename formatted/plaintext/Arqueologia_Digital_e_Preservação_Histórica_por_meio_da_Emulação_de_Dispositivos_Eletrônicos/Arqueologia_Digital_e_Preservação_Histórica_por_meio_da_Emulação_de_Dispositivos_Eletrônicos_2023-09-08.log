@@ -1,0 +1,27 @@
+[2023-09-08 00:26:15] Giga: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-09/27734.jpg
+[2023-09-08 00:26:15] Giga: Ontem adquiri um CP500 MC, ele está com defeito ao ligar. No lugar da EPROM, estava essa placa com três EPROMs. Alguém sabe o que seria essa placa?
+[2023-09-08 00:26:16] Giga: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-09/27735.jpg
+[2023-09-08 00:27:34] Giga: Coloquei uma das EPROMs direto no soquete da placa principal, e houve diferença ao ligar.
+[2023-09-08 01:03:14] L.: Atualização no artigo sobre calculadoras do lcamtuf https://fxtwitter.com/lcamtuf/status/1699995868148244803
+[2023-09-08 03:39:36] Felipe "Juca" Sanches: sim, eu sei!
+[2023-09-08 03:53:28] Felipe "Juca" Sanches: Estou dando uma olhadinha no código fonte do MAME agora, pois fui eu que emulei uns 6 anos atrás as diferenças entre o CP500 e o TRS80 model 3
+[2023-09-08 03:53:37] Felipe "Juca" Sanches: e lembro que tinha essas 3 ROMs
+[2023-09-08 03:54:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-09/27741.jpg
+[2023-09-08 03:54:18] Felipe "Juca" Sanches: Só tô achando meio estranho que eu listei a mesma ROM duas vezes no MAME:
+https://github.com/mamedev/mame/blame/7ca8993afe6f3c721a211815f17d24be6580853f/src/mame/drivers/trs80.cpp
+[2023-09-08 04:00:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-09/27742.jpg
+[2023-09-08 04:00:21] Felipe "Juca" Sanches: mas, enfim... esse aqui é o motivo (eu acho):
+[2023-09-08 04:01:00] Felipe "Juca" Sanches: O CP500 tem um flip-flop que alterna o valor do bit 11 do barramento de endereços para selecionar uma de duas ROMs
+[2023-09-08 04:01:23] Felipe "Juca" Sanches: e a terceira ROM é a fonte bitmap (ROM do gerador de caracteres)
+[2023-09-08 04:02:33] Felipe "Juca" Sanches: essas duas ROMs alternáveis contém:
+* o código do sistema em si
+* e um "system monitor" (que eu nunca usei, então não sei explicar direito quais funcionalidades oferece)
+[2023-09-08 13:46:58] Giga: Verdade, eu li seu artigo. Foi lá que notei que originalmente só há uma EPROM na placa principal. Creio que seja alguma adaptação, que foi feita neste que comprei
+[2023-09-08 13:48:18] Giga: Nessa placa da foto encontrei um 74ls74, vou seguir a trilha para ver se bate com o A11 no Z80. Caso seja ele vou substituir
+[2023-09-08 13:48:30] Giga: Mas o ideal seria voltar ao original
+[2023-09-08 13:50:00] Giga: Grato pelas informações 🙏🏼
+[2023-09-08 14:57:51] Felipe "Juca" Sanches: não é uma modificação do seu. É uma modificação de TODOS os CP500
+[2023-09-08 22:55:54] L.: https://nerdlypleasures.blogspot.com/2023/09/nuxt-20-motherboard-new-8088.html?m=1
+[2023-09-08 22:56:32] L.: https://arstechnica.com/gadgets/2023/07/going-deep-with-the-book-8088-the-brand-new-laptop-that-runs-like-its-1981/
+
+A foto desse artigo tá rodando gorilla.bas❤️

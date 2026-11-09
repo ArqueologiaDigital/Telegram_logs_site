@@ -1,0 +1,136 @@
+[2023-10-19 08:24:40] Pablo Vasques Bravo-Villalba: Eu estava falando deste vídeo outro dia para o @pvm1337 . O que eu achei interessante dele, além da forma específica como Super Mario Bros. 3 lida com números aleatórios (e como ele usa um LFSR para gerar esse números), é uma demonstração bem clara de como um equívoco simples e compreensível levou à previsibilidade do jogo da memória, e de como o jogo da roleta é completamente roubado: https://youtu.be/QGeLzCmUDDk
+[2023-10-19 22:48:17] * Felipe "Juca" Sanches added Guilherme Ranoya
+[2023-10-19 22:50:17] Felipe "Juca" Sanches: L., toparia escrever um blog post sobre o Pense Bem / Smart Start para publicar no arqueologiadigital.org?
+[2023-10-19 22:57:38] Guilherme Ranoya: @fsanches , poxa, que legal isso aqui!
+
+bom, aproveitando, vou deixar a lista de softwares do DOS que eu botei online hoje:
+
+Autodesk 3D Studio R4
+https://namco.vercel.app/interfaces/?rom=a3d
+
+Autodesk Autocad R2.5
+https://namco.vercel.app/interfaces/?rom=ac25
+
+Autodesk Animator
+https://namco.vercel.app/interfaces/?rom=ani
+
+dBASE III Plus
+https://namco.vercel.app/interfaces/?rom=atdb
+
+Banner Mania
+https://namco.vercel.app/interfaces/?rom=bman
+
+Deluxe Paint
+https://namco.vercel.app/interfaces/?rom=dp
+
+MS-DOS 6.0 Graphic Shell
+https://namco.vercel.app/interfaces/?rom=dshell
+
+Fantavision
+https://namco.vercel.app/interfaces/?rom=fv
+
+Framework IV
+https://namco.vercel.app/interfaces/?rom=fw4
+
+GW-BASIC
+https://namco.vercel.app/interfaces/?rom=gwb
+
+Microsoft Multiplan
+https://namco.vercel.app/interfaces/?rom=mp
+
+Microsoft Works 2.0
+https://namco.vercel.app/interfaces/?rom=mw2
+
+Norton Commander
+https://namco.vercel.app/interfaces/?rom=nc
+
+Newsmaster
+https://namco.vercel.app/interfaces/?rom=newsm
+
+Aldus Page Maker 1.0
+https://namco.vercel.app/interfaces/?rom=pmaker1
+
+Paint Shop Pro
+https://namco.vercel.app/interfaces/?rom=pspro
+
+Microsoft QBasic
+https://namco.vercel.app/interfaces/?rom=qb
+
+Microsoft Quick Basic
+https://namco.vercel.app/interfaces/?rom=qb45
+
+Microsoft Visual Basic
+https://namco.vercel.app/interfaces/?rom=vb
+
+Microsoft Quick C
+https://namco.vercel.app/interfaces/?rom=qc
+
+Borland Quattro Pro 1.0
+https://namco.vercel.app/interfaces/?rom=qp1
+
+Borland Quattro Pro 4.0
+https://namco.vercel.app/interfaces/?rom=qp4
+
+IBM Story Board
+https://namco.vercel.app/interfaces/?rom=sb
+
+Borland Turbo Basic
+https://namco.vercel.app/interfaces/?rom=tb
+
+VisiCalc
+https://namco.vercel.app/interfaces/?rom=vc
+
+Microsoft Word 3.0
+https://namco.vercel.app/interfaces/?rom=w3
+
+WordPerfect 6.0
+https://namco.vercel.app/interfaces/?rom=wp6
+
+WordStar
+https://namco.vercel.app/interfaces/?rom=ws
+
+Microsoft Windows 2.0
+https://namco.vercel.app/interfaces/?rom=w203
+[2023-10-19 22:58:51] Guilherme Ranoya: com um pouco mais de tempo vou tentando incluir outras versões… mas nem sempre é fácil fazê-los funcionar… (não parecia tão difícil na década de 1980….)
+[2023-10-19 23:00:03] Guilherme Ranoya: Coisas que eu quebrei a cabeça nos últimos tempos, mas não consegui fazer funcionar de jeito nenhum foram:
+
+Um emulador para o Visicorp VisiOn
+Uma forma de emular mouse serial dos PCs no Dosbox, de forma que seja possível rodar o ambiente gráfico GEM, e alguns dos softwares que foram criados para ele…
+[2023-10-19 23:00:41] Guilherme Ranoya: (consegui instalar o GEM, o Ventura Publisher, e outros… mas o mouse simplesmente não é emulado, e aí não tem como isso funcionar.)
+[2023-10-19 23:10:21] Felipe "Juca" Sanches: QBASIC!
+[2023-10-19 23:10:31] Felipe "Juca" Sanches: BANNER!
+[2023-10-19 23:11:04] Felipe "Juca" Sanches: mas olha... o que está me dando vontade de chorar de alegria aqui é o FANTAVISION!
+[2023-10-19 23:11:15] Felipe "Juca" Sanches: Eu me lembrava da animação do urso
+[2023-10-19 23:11:28] Felipe "Juca" Sanches: mas não me lembrava do nome do software
+[2023-10-19 23:12:10] Felipe "Juca" Sanches: eu rodei isso no meu 386 quando eu tinha uns 11 ou 12 anos de idade. Ou seja, por volta de 1994 ou 1995
+[2023-10-19 23:14:29] Felipe "Juca" Sanches: Me lembro do cheiro de cigarro no carpete do apartamento do meu pai, onde eu tinha um quarto que eu usava aos finais de semana quando ia para a casa dele. E me lembro do quarto em que eu dormia. No qual havia apenas uma cama de solteiro e um rack com o PC e uma impressora matricial
+[2023-10-19 23:23:39] Felipe "Juca" Sanches: tinha um software naquele 386 que eu nunca mais achei. Era um programa sobre planetas, sistema solar, etc.
+[2023-10-19 23:24:10] Felipe "Juca" Sanches: não lembro se era em português. Mas suspeito que era em inglês
+[2023-10-19 23:31:57] Felipe "Juca" Sanches: Me lembro também de ir visitar meus primos em Piracicaba e jogar War Craft 1 no DOS e ao mesmo tempo ouvir o CD do No Doubt, com aquela música "Just A Girl"
+
+https://www.youtube.com/watch?v=PHzOOQfhPFg
+[2023-10-19 23:33:51] Felipe "Juca" Sanches: Me lembro que com esses mesmos primos eu tinha vontade de compor músicas. Então teve um dia lá que a gente abriu o EDIT no MSDOS e escrevemos um arquivo TXT com uma sequência de acordes
+[2023-10-19 23:36:27] Guilherme Ranoya: Eu lembro de você ter comentado numa noite de Processing que participamos... Por isso te mandei.
+[2023-10-19 23:37:12] Felipe "Juca" Sanches: Me lembro também da primeira vez que vi alley cat e prince of persia. Acho que era um PC XT de tela de fósforo verde. Foi na casa de um amigo do meu pai, o "Rubão".
+
+Ele guardava o PC dentro de um rack daqueles com porta de vidro fumê.
+
+O computador inteiro (tela, teclado, gabinete e fonte) ficava dentro do rack.
+[2023-10-19 23:39:03] Felipe "Juca" Sanches: Esse mesmo "Rubão" foi quem instalou o 386 lá na casa do meu pai. E me lembro do dia em que ele fez a demonstração do PC. E ele rodou o jogo Another World. E aquilo me impressionou demais. Aquele momento provavelmente definiu grande parte da minha vida.
+[2023-10-19 23:40:36] Guilherme Ranoya: Alley Cat:
+https://www.playdosgames.com/play/alley-cat/
+
+Prince of Persia:
+https://princejs.com/
+[2023-10-19 23:41:20] Felipe "Juca" Sanches: lembro também, mais tarde por volta de 1997, do dia em que um Pentium foi instalado na casa da minha mãe. E o técnico (possivelmente o mesmo Rubão, não tenho certeza) fez a demonstração da conexão com modem dial-up.
+[2023-10-19 23:42:03] Guilherme Ranoya: Warcraft 1:
+https://www.playdosgames.com/play/warcraft-orcs-humans/
+[2023-10-19 23:42:05] Felipe "Juca" Sanches: é incrível como tem algumas memórias muito específicas...
+[2023-10-19 23:42:38] Guilherme Ranoya: Tem!!! ô se tem!…
+
+Eu lembro das caixas (embalagens) dos softwares… eram lindas!
+[2023-10-19 23:44:21] Guilherme Ranoya: E os barulhos?? dos disk drives, das HDs fazendo parking para desligar o computador? do monitor de fósforo verde que produzia uma frequência bem grave baixinha quando estava ligado… essas memórias afetivas são muito fortes...
+[2023-10-19 23:44:36] Felipe "Juca" Sanches: por exemplo, lembro do dia em que minha tia estava visitando a casa do meu pai e eu estava lá, com 12anos de idade, programando em QBASIC. Fazendo uma "proteção de tela". Piscava a tela inteira em diversas cores diferentes. E ia mudando a cor de forma lenta e gradativa. Meu pai e minha tia me chamaram para ir jantar e eu não queria largar o computador pois meu programa estava "quase funcionando". Quando consegui fazer funcionar, deixei o código rodando e corri para a mesa, morrendo de orgulho do que eu tinha acabado de conseguir fazer funcionar. E fazendo questão de mostrar pros adultos
+[2023-10-19 23:45:40] Felipe "Juca" Sanches: na minha memória eu sinto que "quase" consigo ver até o código escrito na tela
+[2023-10-19 23:49:39] Felipe "Juca" Sanches: Lembro que no QBASIC tinha uma expressão que terminava em "AS DATA". E mostrei isso para um amigo e o cara foi bem arrogante comigo dizendo que eu estava pronunciando errado. Eu dizia "és dáta" e ele fez questão de dizer que o CERTO era "és dêira"
+[2023-10-19 23:53:04] Felipe "Juca" Sanches: me lembro do dia em que ganhei de presente dos tios, adultos, um minigame Tiger Electronics. Lembro do cheiro da embalagem do jogo. E do processo de rasgar a embalagem para acessar o brinquedo. E depois o procedimento de inserir as pilhas, e a alegria absurda ao ouvir o som (com um pouco de glitch se me lembro bem) do aparelho ligando. Ele acendia todos os ícones do LCD quando resetava ao inserir uma nova pilha.

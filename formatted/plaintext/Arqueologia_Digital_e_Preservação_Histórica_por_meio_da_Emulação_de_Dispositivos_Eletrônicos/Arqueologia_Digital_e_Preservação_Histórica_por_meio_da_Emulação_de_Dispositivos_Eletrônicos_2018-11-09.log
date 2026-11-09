@@ -1,0 +1,63 @@
+[2018-11-09 03:57:33] Felipe "Juca" Sanches: sudo apt-get install nasm
+[2018-11-09 03:57:54] Felipe "Juca" Sanches: git clone https://github.com/raphnet/booterify.git
+[2018-11-09 03:58:03] Felipe "Juca" Sanches: cd booterify
+[2018-11-09 03:58:05] Felipe "Juca" Sanches: make
+[2018-11-09 03:58:34] Felipe "Juca" Sanches: ./booterify bootsector.bin ~/nonfree/MSDOS/GAMES/ALLEYCAT/ALLEYCAT.EXE ~/alleycat.dsk
+[2018-11-09 03:59:07] Felipe "Juca" Sanches: cd ~/mame; ./ibm_pc_at_64 -rp ~/nonfree/MAME0191/ROMs/ at386 -flop1 ~/alleycat.dsk
+[2018-11-09 03:59:33] Felipe "Juca" Sanches: com isso consegui rodar no MAME o alleycat direto da imagem de disquete gerada
+[2018-11-09 03:59:56] Felipe "Juca" Sanches: próximo passo é modificar o booterify para gerar uma ROM ao invés de uma imagem de disco
+[2018-11-09 04:00:14] Felipe "Juca" Sanches: provavelmente sobrescrevendo algum pedaço inútil duma ROM de BIOS
+[2018-11-09 04:00:23] Felipe "Juca" Sanches: e fazer funcionar
+[2018-11-09 04:02:52] Felipe "Juca" Sanches: o binário ibm_pc_at_64 é uma compilação parcial do MAME contendo apenas os drivers de emulação de computadores PC/AT, dos quais o que estou usando é o at386
+[2018-11-09 16:14:27] Ismael Luceno: Geralmente eu uso at&t
+[2018-11-09 16:16:37] Ismael Luceno: Pega uma lista das interrupções que ele usa
+[2018-11-09 16:16:59] Ismael Luceno: Você quer implementar tudo em asm ?
+[2018-11-09 16:26:47] Felipe "Juca" Sanches: claro que não!
+[2018-11-09 16:26:50] Felipe "Juca" Sanches: basta funcionar
+[2018-11-09 16:26:57] Felipe "Juca" Sanches: não quero sofrer de propósito
+[2018-11-09 16:29:15] Ismael Luceno: Seguro?
+[2018-11-09 16:30:59] Ismael Luceno: Há que gosta do Asm quanto há que gosta do BDSM, eu não sou quem para julgar 😂
+[2018-11-09 16:32:17] Ismael Luceno: O alley cat precisa de 286 + EGA?
+[2018-11-09 16:32:48] Felipe "Juca" Sanches: creio que sim, acho que esse é o pre-requisito minimo
+[2018-11-09 16:32:52] Felipe "Juca" Sanches: nao tenho certeza ainda
+[2018-11-09 16:33:45] Deleted Account: Eu mexi com uma rotina em ASM 16 bits que implementava printscreen e "copia e cola" pro DOS e foi bem divertido
+[2018-11-09 16:36:45] Ismael Luceno: Dá para implementar tudo numa ROM só eu acho
+[2018-11-09 16:36:50] Felipe "Juca" Sanches: yep
+[2018-11-09 16:36:53] Felipe "Juca" Sanches: também acho
+[2018-11-09 16:36:58] Felipe "Juca" Sanches: substituir a ROM da BIOS
+[2018-11-09 16:37:04] Ismael Luceno: Sim
+[2018-11-09 16:37:33] Felipe "Juca" Sanches: mas suspeito que não seja possivel diminuir tanto assim o hardware necessário pra rodar o código
+[2018-11-09 16:39:32] Ismael Luceno: O hardware de vídeo as vezes pode ser substituído, tem alguma que outra implementação de VGA em software no SMM pro x86
+[2018-11-09 16:40:04] Felipe "Juca" Sanches: uma outra abordagem bem mais ousada seria fazer um analisador do binário que rastreia todo o fluxograma do assembly e gera um grafo que possa ser usado de base para a geração de código binário pra outra arquitetura. E com detecção de padrões em trechos desse grafo, identificar as interfaces com o hardware (ou com funções específicas da BIOS) e substituir por blocos de código nativo de outra arquitetura de hardware que faça coisas equivalentes com hardware mais barato e mais simples e com mais cara de placa de arcade JAMMA
+[2018-11-09 16:41:13] Ismael Luceno: Eu acho que montar um 286 numa placa e bem mais fácil
+[2018-11-09 16:41:32] Felipe "Juca" Sanches: mas talvez menos divertido
+[2018-11-09 16:41:42] Felipe "Juca" Sanches: ou menos desafiador
+[2018-11-09 16:42:44] Ismael Luceno: Não, tem bastante diversão fazendo o BIOS
+[2018-11-09 16:43:13] Ismael Luceno: Se quer fazer um tradutor, eu recomendo o LLVM
+[2018-11-09 16:43:59] Felipe "Juca" Sanches: o que o LLVM tem de especial em relação a essa tarefa?
+[2018-11-09 16:46:53] Ismael Luceno: É até agora o compilador moderno mais accessível que eu achei
+[2018-11-09 16:47:39] Felipe "Juca" Sanches: mas ele tem alguma feature especificamente util para tradução de binários de uma arquitetura para outra?
+[2018-11-09 16:55:23] Ismael Luceno: Não especificamente
+[2018-11-09 17:11:01] Ismael Luceno: x86-llvm-translator-chipounov_2.pdf;
+[2018-11-09 17:11:01] Ismael Luceno: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-11/8109-x86-llvm-translator-chipounov_2.pdf%3B
+[2018-11-09 17:13:17] Ismael Luceno: GitHub - trailofbits/mcsema: Framework for lifting x86, amd64, and aarch64 program binaries to LLVM bitcode
+https://github.com/trailofbits/mcsema
+[2018-11-09 17:13:34] Ismael Luceno: E tem mais
+[2018-11-09 17:17:02] Ismael Luceno: @fsanches se não tem que fazer tudo de zero
+[2018-11-09 17:17:17] Felipe "Juca" Sanches: to lendo o artigo
+[2018-11-09 17:17:20] Felipe "Juca" Sanches: muito interessante
+[2018-11-09 17:17:58] Ismael Luceno: Eu estava pesquisando isso mesmo para o análise do código dos BIOS
+[2018-11-09 17:20:52] Ismael Luceno: Fazendo um modelagem do hardware direto no processo de compilação seria possível fazer simplificação e eliminação de código.
+[2018-11-09 17:21:13] Felipe "Juca" Sanches: exato
+[2018-11-09 17:21:25] Felipe "Juca" Sanches: esse é um desafio bem interessante
+[2018-11-09 17:21:40] Ismael Luceno: Eu estive pensando bastante o processo
+[2018-11-09 17:22:24] Ismael Luceno: Para o 286 eu acho possível
+[2018-11-09 17:23:00] Felipe "Juca" Sanches: eu fiz um analisador de binários escrito em python para o processador do Odyssey2, um Intel i8048
+[2018-11-09 17:23:25] Felipe "Juca" Sanches: ele gera um grafo do código todo do jogo
+[2018-11-09 17:23:42] Ismael Luceno: Legal
+[2018-11-09 17:23:52] Felipe "Juca" Sanches: o mesmo poderia ser feito com x86 e hardware clássico de ibm-pc vga/cga
+[2018-11-09 17:24:46] Felipe "Juca" Sanches: e com o grafo em mãos gerar um assembly de z80 e traduzir as interfaces de hardware para interfacear com circuitos de video e audio mais simples que possam ser montador numa PCB de arcade
+[2018-11-09 17:24:57] Felipe "Juca" Sanches: z80 ou 68k, claro
+[2018-11-09 17:25:53] Ismael Luceno: Pro 386+ pode ser mais complexo, aí da para pegar alguns atalhos.
+[2018-11-09 17:26:00] Felipe "Juca" Sanches: eu portei esse analisador de 8048 para analisar também o bytecode da VM do anotherworld e depois consegui gerar listagens e re-montar os binários
+[2018-11-09 17:26:16] Felipe "Juca" Sanches: (cou ou sem modificacoes)

@@ -1,0 +1,71 @@
+[2024-08-06 02:20:25] RicBit: Same, a mesma impressora laser faz mais de 10 anos e ainda funciona normal
+[2024-08-06 02:21:06] RicBit: Ela só tinha parado de puxar papel por falta de grip no cilindro, só nós colocamos hidratante nele e funcionou de novo.
+[2024-08-06 06:08:55] Erin Pinheiro 🐿: eu recebi "grátis" uma Deskjet portátil 350c (junto com um laptop Pentium 2 que era o que eu queria, e o leilão com a impressora era metade do preço de outro do mesmo laptop sem impressora) que de acordo com os escritores de drivers pra CUPS é "impossível tirar imagem boa dela". 300dpi max em cor, e como só usa pb ou cor um de cada vez, tom de cinza é chuvisco de todas cores. ia ficar de peso de papel mas de farra resolvi gastar as 5 libras num cartucho e pasme, funcionou perfeitamente até com um conversor centronics-USB
+[2024-08-06 06:09:29] Erin Pinheiro 🐿: por incrível que pareça HP fez 1 impressora jato extremamente baixo de linha que sobreviveu 24 anos
+[2024-08-06 06:10:46] Erin Pinheiro 🐿: o legal dela é que pra deixar ainda mais portátil o paper feed é opcional. dá pra remover e aí você insere o papel manualmente por trás sem ele dobrar. dá pra imprimir com uma gramatura bem pesada desse jeito
+[2024-08-06 06:11:26] Erin Pinheiro 🐿: usei assim pra imprimir papercraft direto em papel cartão
+[2024-08-06 10:30:09] Pablo Vasques Bravo-Villalba: Eu acho bem clichê falar mal da HP, mas eu tive experiência com duas impressoras jato de tinta que deram zero problemas. Uma delas era uma corporativa com cartuchos de tinta independentes de todas as quatro cores. Era um verdadeiro burro de carga, a gente imprimia dezenas de páginas diariamente, só parava pra trocar tinta. E os cartuchos eram grandões, não eram baratos mas o preço da tinta por mililitro era muito menor. Ganhou um pouco de descanso quando colocamos uma laser do lado. Em casa tive outra, um modelo de escritório que custava o triplo de uma básica, mas nunca comeu uma folha de papel sequer e o driver não dava pau. Só paramos de usar quando a HP parou de fabricar o cartucho dela
+[2024-08-06 11:15:32] Robson França: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32551.jpg
+[2024-08-06 11:15:40] Robson França: Tela dentro do trem...
+[2024-08-06 12:02:45] L.: eu tinha essa impressora em 1996!🙃
+[2024-08-06 12:03:07] L.: não a portátil
+[2024-08-06 12:24:07] Erin Pinheiro 🐿: a 350c é a portátil, se a que você tinha não era então é outro modelo
+[2024-08-06 12:24:44] Erin Pinheiro 🐿: "Deskjet" é uma linha enorme
+[2024-08-06 12:25:06] Erin Pinheiro 🐿: no Brasil acho que a mais popular era a 600
+[2024-08-06 12:26:16] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32558.jpg
+[2024-08-06 12:26:16] Erin Pinheiro 🐿: essa é a 350
+[2024-08-06 12:27:28] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32559.jpg
+[2024-08-06 12:27:37] Erin Pinheiro 🐿: essa é a 600, tivemos duas
+[2024-08-06 12:28:28] Erin Pinheiro 🐿: essa inclusive funciona com bateria, a que veio na minha toda corroída
+[2024-08-06 12:50:09] L.: ah, lembrei, eu tinha a 850c, que parece a 600
+[2024-08-06 12:50:19] L.: eu lembro que tinha que usar outro driver no linux por um tempo
+[2024-08-06 13:27:42] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32564.jpg
+[2024-08-06 13:27:42] Pablo Vasques Bravo-Villalba: A que a gente tinha em casa era a 930c
+[2024-08-06 13:28:10] Pablo Vasques Bravo-Villalba: Nessa foto não dá pra ver direito, mas ela era de um tom cinzento mais escuro
+[2024-08-06 13:36:44] L.: A minha acabou virando "bege amarelado de computador véio"🙃
+[2024-08-06 13:38:05] Pedro de Medeiros 👾: https://www.theregister.com/2024/08/06/wordstar_7_the_last_ever/
+[2024-08-06 13:38:29] Pedro de Medeiros 👾: Todo computador é bege amarelado. Ele só pega outras cores emprestadas do passado.
+[2024-08-06 13:39:29] L.: Eu ainda uso joe, que usa os atalhos do word star por costume da época que usava a versão em Português no meu XT
+[2024-08-06 13:39:50] Pedro de Medeiros 👾: Tem gente falando que quer um port pra MSX. Eu não toco no código disso aí até virar FOSS.
+[2024-08-06 13:40:48] L.: Duvido que vire FOSS
+[2024-08-06 13:41:06] L.: Isso aí é só uma distro da versão propita junto com dosbox
+[2024-08-06 13:41:46] Pablo Vasques Bravo-Villalba: Tem o WordTsar
+[2024-08-06 13:41:50] L.: Realisticamente falando, quem usaria MSX pra escrever documento hoje em dia?
+[2024-08-06 13:42:03] Pablo Vasques Bravo-Villalba: Essa é a pergunta do milhão
+[2024-08-06 13:42:57] Pablo Vasques Bravo-Villalba: Editor de texto pelo menos ainda tem utilidade. Mas processador de texto eu acho demais
+[2024-08-06 13:43:01] L.: Pra mim é pra rodar joguinho, brincar de programar e coisas do tipo. Coisas que eu aceito as limitações e acho até massa
+[2024-08-06 13:43:28] L.: Mas editor de texto? Gente, tem backup via internet há anos, tem um monte de coisa legal pra computador moderno
+[2024-08-06 13:43:39] Pedro de Medeiros 👾: Talvez alguém que ocupe o nicho de quem usava uma máquina de escrever antiga pra evitar as distrações. 😁
+[2024-08-06 13:43:53] L.: Se alguém quiser portar por farra, bom, não sou eu quem vai barrar isso, mas sei lá
+[2024-08-06 13:43:59] Pablo Vasques Bravo-Villalba: Editor de texto vem a calhar para mexer em algum arquivo de configuração
+[2024-08-06 13:44:13] L.: Ah, mas aí tem um monte já
+[2024-08-06 13:44:39] Pedro de Medeiros 👾: Wordstar é um full-fledged processador de texto.
+[2024-08-06 13:45:05] Pablo Vasques Bravo-Villalba: Sim, akid tá bom demais já
+[2024-08-06 13:45:27] Pedro de Medeiros 👾: Se não conhecesse diria que é um erro de ortografia. 😁
+[2024-08-06 13:58:17] Pedro de Medeiros 👾: Vou criar meu próprio processador de texto e chamá-lo de WordStra
+[2024-08-06 14:00:08] Pablo Vasques Bravo-Villalba: WardStor?
+[2024-08-06 14:48:14] L.: PalavraEstrela
+[2024-08-06 15:18:32] Nano Gennari: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32589.jpg
+[2024-08-06 15:18:32] Nano Gennari: Achei um PDP11 no Air and space museum, aparentemente o console de controle de um satélite que operou de 1978 a 1996.
+[2024-08-06 15:21:08] Nano Gennari: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32590.jpg
+[2024-08-06 15:21:09] Nano Gennari: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32591.jpg
+[2024-08-06 15:21:09] Nano Gennari: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32592.jpg
+[2024-08-06 15:21:09] Nano Gennari: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32593.jpg
+[2024-08-06 15:24:40] Nano Gennari: Outros computadores interessantes
+[2024-08-06 15:40:16] Felipe "Juca" Sanches: Eu não sabia que tinha Python 2 pra NES...
+[2024-08-06 15:40:39] Felipe "Juca" Sanches: Sim, pro Nintendinho!
+[2024-08-06 15:56:13] Pablo Vasques Bravo-Villalba: E por falar em editor de texto no MSX: https://www.msx.org/forum/msx-talk/software/sofaedit-prototype
+[2024-08-06 15:57:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32598.jpg
+[2024-08-06 15:57:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32599.jpg
+[2024-08-06 15:57:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32600.jpg
+[2024-08-06 15:58:30] Pablo Vasques Bravo-Villalba: Eu acho que no Python 3 a experiência de programar melhorou MUITO
+[2024-08-06 16:16:08] L.: se eu ainda trabalhasse com o Guido eu mandaria no chat :P
+[2024-08-06 17:15:23] Pedro de Medeiros 👾: Se Python vem com baterias inclusas isso eu dizer que ele é wireless?
+[2024-08-06 18:19:22] RicBit: O George Martin escreve todos os livros da série game of thrones usando WordStar para dos.
+[2024-08-06 18:20:00] L.: por isso que demora pra sair. disquete dá pau e tem que reescrever tudo.
+[2024-08-06 18:21:23] RicBit: Vou encontrar com ele essa semana, tento ensinar ele a usar emulador de drive pelo menos.
+[2024-08-06 18:21:33] Felipe "Juca" Sanches: Eu tenho usado disquetes com muita frequencia ultimamente. Para fazer instalações de firmware modificado no technics kn5000
+[2024-08-06 18:21:57] Felipe "Juca" Sanches: Várias dezenas de testes por dia
+[2024-08-06 18:23:41] Felipe "Juca" Sanches: Ainda vou escrever um software que receba comandos via cabo MIDI para enviar payloads executáveis pra rodar no teclado musical sem precisar ficar reinstalando o sistema inteiro a cada novo teste.
+[2024-08-06 18:25:18] L.: escreve em .net e manda tudo via C#
+[2024-08-06 18:28:04] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32611-sticker.webp

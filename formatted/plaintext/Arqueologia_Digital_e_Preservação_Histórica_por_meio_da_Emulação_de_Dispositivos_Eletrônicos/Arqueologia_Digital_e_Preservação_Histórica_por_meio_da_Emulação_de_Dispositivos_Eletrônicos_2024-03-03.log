@@ -1,0 +1,121 @@
+[2024-03-03 00:10:19] RicBit: vou fechar o server, na proxima tarde livre eu deixo rodando em alguma nuvem por ai
+[2024-03-03 07:36:41] Felipe "Juca" Sanches: video: (not yet published)
+[2024-03-03 10:30:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29416.jpg
+[2024-03-03 10:30:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29417.jpg
+[2024-03-03 10:30:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29418.jpg
+[2024-03-03 10:30:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29419.jpg
+[2024-03-03 10:30:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29420.jpg
+[2024-03-03 10:30:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29421.jpg
+[2024-03-03 10:30:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29422.jpg
+[2024-03-03 10:30:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29423.jpg
+[2024-03-03 10:30:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29424.jpg
+[2024-03-03 10:30:18] Felipe "Juca" Sanches: Achei a rotina que desenha as mensagens da interface de update de firmware. Eu não via strings ASCII por que as mensagens são bitmaps
+[2024-03-03 10:43:29] Felipe "Juca" Sanches: Ou seja, dá sim pra tijolar! Kkkkk
+[2024-03-03 10:55:30] Felipe "Juca" Sanches: E eu, incrivelmente, nunca fiz cagada.
+[2024-03-03 12:14:17] L.: Lease Wait
+[2024-03-03 12:14:28] L.: É uma espera alugada
+[2024-03-03 12:39:46] Felipe "Juca" Sanches: É um scroll-text
+[2024-03-03 12:41:06] Felipe "Juca" Sanches: é divertido que se no meu código eu não botar um "EI 0x06" (disable all interrupts), fica mostrando essa animação de "please wait" do sistema operacional aguardando terminar a tarefa.
+
+Mas com "EI 0x06", eu tomo o controle todo da máquina pra mim e me livro da mensagem.
+[2024-03-03 14:17:01] RicBit: hum eu nao preciso subir labels na LLM, posso cuidar disso no meu lado, assim eu aumento a janela
+[2024-03-03 14:18:40] L.: daqui a pouco cê tá gzipando a janela
+[2024-03-03 14:18:54] L.: e usando a llm pra descompactar
+[2024-03-03 14:47:16] RicBit: ENTAO
+[2024-03-03 14:47:18] RicBit: haha
+[2024-03-03 14:47:52] RicBit: em teoria isso eu nao preciso fazer porque o gpt-4 faz sozinho
+[2024-03-03 14:48:09] RicBit: mas funciona tao bem que é assim que o nosso cerebro funciona
+[2024-03-03 14:48:42] RicBit: em um humano tipico a janela tem 7 mais ou menos 2 tokens
+[2024-03-03 14:48:50] RicBit: esse resultado é classico
+[2024-03-03 14:49:25] L.: eu tenho certeza que só comprimo com RLE e aí só é eficiente pra coisa tipo gooooooooooool
+[2024-03-03 14:49:37] RicBit: https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two
+[2024-03-03 14:50:08] RicBit: eu estou sempre medindo a minha capacidade, no meio da pandemia estava 5 em dias bons
+[2024-03-03 14:50:17] RicBit: agora acho que está voltando pro 7
+[2024-03-03 14:50:22] L.: com tdah é tipo 1 pra mim
+[2024-03-03 14:50:51] RicBit: nao sei, acho que nao
+[2024-03-03 14:51:08] RicBit: normalmente com tdah continua sendo 7, mas os 7 com coisas diferentes
+[2024-03-03 14:51:17] RicBit: sem tdah são os 7 slots numa coisa só
+[2024-03-03 14:51:39] L.: talvez seja de fato esses 7+-2 mas a janela move tão rápido que acabo esquecendo coisas que não deveria
+[2024-03-03 14:51:47] RicBit: tdah nao é um problema de short term memory, é de attention
+[2024-03-03 14:52:35] RicBit: para mim só fica os 7 slots numa coisa só quando estou em flow
+[2024-03-03 14:53:55] RicBit: eu lembro que quando eu era jovem eu colocava musica bem alto para suprimir os ruidos, ai entrava mais facil no flow
+[2024-03-03 14:53:58] L.: nem vyvanse ajuda mais a ficar em flow pra chegar nesse número
+[2024-03-03 14:54:12] Felipe "Juca" Sanches: Pra mim é 7 só das 23h às 7h
+[2024-03-03 14:54:14] RicBit: hoje em dia é mais dificil porque eu entendo ingles haha. entao se a musica tem letra eu perco um slot
+[2024-03-03 14:54:55] L.: é, um dos motivos deu não ouvir música com vocal
+[2024-03-03 14:55:09] L.: na maioria das vezes pelo menos
+[2024-03-03 14:55:16] RicBit: tenta uma lingua que voce nao conhece
+[2024-03-03 14:55:29] L.: eu tava ouvindo coisa em russo
+[2024-03-03 14:55:33] Felipe "Juca" Sanches: Eu nunca presto atenção em letra de música
+[2024-03-03 14:55:48] RicBit: continue nao prestando, salve um slot
+[2024-03-03 14:55:55] L.: aí abri a letra em cirílico, consegui acompanhar, aí peguei a tradução e comecei a traduzir na cabeça
+[2024-03-03 14:56:05] RicBit: no meu caso é passivo, eu nao consigo nao prestar
+[2024-03-03 14:56:20] L.: aí foram uns 5 slots só no alfabeto novo, palavra nova, etc
+[2024-03-03 14:56:51] RicBit: nesse caso é ruim para o flow mas é bom para aumentar a compressão
+[2024-03-03 14:57:08] RicBit: voce está forçando os neuronios a se conectarem mais
+[2024-03-03 14:57:59] L.: aí acabo prestando atenção na parte mecânica do vocal, que depois de passar anos treinando a voz pra soar mais feminina, consigo perceber mais variações de ressonância, peso, etc
+[2024-03-03 14:58:09] L.: aí independe do idioma
+[2024-03-03 14:58:48] RicBit: Sim, igual eu pintando, agora consigo ver cores de maneira melhor
+[2024-03-03 14:58:57] L.: por isso acabo ouvindo bastante só piano ou violão acústico ou chiptune
+[2024-03-03 15:00:20] RicBit: Chiptune é bom que tem memória emocional junto, ajuda
+[2024-03-03 15:00:28] L.: ahan
+[2024-03-03 15:00:36] RicBit: Tenta ouvir yngwie Malmsteen que é parecido
+[2024-03-03 15:00:40] L.: aliás, tá chegando a revision desse ano
+[2024-03-03 15:00:56] L.: várias chiptunes novas👀
+[2024-03-03 15:01:26] L.: animenz no youtube, especialmente os arranjos do ghibli. o cara é foda demais.
+[2024-03-03 15:35:36] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29476.jpg
+[2024-03-03 15:35:36] RicBit: aqui ele usou a memoria externa para pegar o nome do hook. achei o formato melhor tambem
+[2024-03-03 15:36:10] RicBit: mas ele nao sacou que o ldir é fill ao inves de copy
+[2024-03-03 15:36:16] RicBit: preciso ensinar isso explicitamente
+[2024-03-03 15:38:27] L.: tentar não mostrar coisas obvias, tipo "di ; disable interrupts"
+[2024-03-03 15:39:06] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29480.jpg
+[2024-03-03 15:39:15] RicBit: ai o dificil é decidir o que é obvio
+[2024-03-03 15:39:20] L.: pois é
+[2024-03-03 15:39:39] RicBit: mas esse tipo de coisa dá para pedir em ingles mesmo, llm ftw
+[2024-03-03 15:39:41] L.: seria legal ele perceber que tá inicializando os registradores pra rodar um ldir
+[2024-03-03 15:40:11] L.: e escrever um comentário antes do ldir "preenche tantos bytes com valor tal a partir do endereco tal"
+[2024-03-03 15:40:18] L.: e não ter nada em cada instrucao
+[2024-03-03 15:42:32] RicBit: ele detectou sozinho a inicializacao sem eu pedir haha
+[2024-03-03 15:42:48] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29488.jpg
+[2024-03-03 15:43:15] L.: gente haha
+[2024-03-03 15:43:19] RicBit: mas ele errou o comentario do fill né
+[2024-03-03 15:43:38] L.: sim, mas mesmo assim
+[2024-03-03 15:44:03] RicBit: agora é só realimentar
+[2024-03-03 15:44:19] RicBit: eu faco o gpt jogar os comentarios de volta pro server para usar como memoria
+[2024-03-03 15:44:25] RicBit: e vai de 20 em 20 até terminar a rom
+[2024-03-03 15:44:40] RicBit: é muito bom viver no futuro
+[2024-03-03 15:52:16] L.: seria massa se tivesse mais um nível de indireção nesse negócio de obvio aí e dissese o motivo de estar preenchendo a memoria
+[2024-03-03 15:52:32] L.: aí explodiria minha cabeça mesmo hehe
+[2024-03-03 15:52:45] RicBit: vamos chegar lá, esse é o proximo passo hehe
+[2024-03-03 15:53:05] RicBit: para fazer isso eu preciso terminar a memoria externa senao ele nao tem contexto para entender o codigo
+[2024-03-03 15:54:00] RicBit: mas nesse caso especifico ele deve saber
+[2024-03-03 15:56:20] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29501.jpg
+[2024-03-03 15:56:20] RicBit: explicou como funciona, porque está sendo usando (mem init) e ainda falou que na bios tem um parecido para vram.
+[2024-03-03 15:58:35] L.: showoff
+[2024-03-03 15:59:02] L.: legal mesmo :)
+[2024-03-03 16:04:34] RicBit: cansei, continuo à noite. quando ficar pronto vai ser legal porque a AI não cansa
+[2024-03-03 16:04:48] RicBit: nao cansa mas cobra por chamada haha
+[2024-03-03 21:13:41] RicBit: voce pode conectar no openmsx por um socket que é escolhido aleatoriamente
+[2024-03-03 21:13:50] RicBit: do manual -> The port number is random between 9938 and 9958.
+[2024-03-03 21:14:04] RicBit: esse tipo de humor é parecido com o meu haha
+[2024-03-03 21:31:19] Felipe "Juca" Sanches: Acho que tijolei meu teclado. Ao menos temporariamente. Estou agora entrando numa sessão de cinema, mas quando eu voltar pra casa darei um relato mais detalhado da aventura desse final de semana.
+[2024-03-03 21:40:12] Felipe "Juca" Sanches: Durante os trailers vou contar algumas coisas aqui. Se eu parar do nada, o resto do relato vem após o filme.
+[2024-03-03 21:41:37] Felipe "Juca" Sanches: Eu achei a rotina de update de firmware. Então resolvi checar como é que é feita a leitura dos botões do panel de controle.
+[2024-03-03 21:42:21] Felipe "Juca" Sanches: A rotina é ativada ligando o teclado com 4 botões pressionados simultaneamente
+[2024-03-03 21:43:07] Felipe "Juca" Sanches: (Botões panel memory 1, 2, 3 e 4)
+[2024-03-03 21:43:28] L.: Juca, desliga o celular que o filme vai começar
+[2024-03-03 21:43:49] Felipe "Juca" Sanches: Existem também outras combinações de botoes para fazer outras coisas
+[2024-03-03 21:44:07] L.: Não é pra sair pela saída de emergência se tiver alguma ideia pra arrumar o teclado. Isso não é emergência
+[2024-03-03 21:44:50] Felipe "Juca" Sanches: Por exemplo, tem um combo de 4 botões para mostrar a tela SOFT VERSION
+[2024-03-03 21:45:36] Felipe "Juca" Sanches: E tem um combo de 3 botões pra mostrar qual é a versão do sistema
+[2024-03-03 21:46:14] Felipe "Juca" Sanches: E eu suspeito que exista também algum combo para accessories aquela tela de debugging / memory dump
+[2024-03-03 21:47:33] Felipe "Juca" Sanches: Ao inspecionar a retina de update de firmware, achei um trachoma de código que lê 4 "magic numbers" de alguns endereços da RAM.
+[2024-03-03 21:49:07] Felipe "Juca" Sanches: E consegui confirmar que essa é a região da RAM onde a rotina de leitura do painel de controle armazena os padrões de bits com o status de pressionamento de todos os botões.
+[2024-03-03 21:51:49] Felipe "Juca" Sanches: Copiei esse trecho de código em um pequeno programinha meu, montei, botei num disquete e rodei ele (por meio daquele meu hack de carregar e executar código via RCM LOAD)
+[2024-03-03 21:52:05] Felipe "Juca" Sanches: RCM = Rhythm Custom Memory
+[2024-03-03 21:53:14] Felipe "Juca" Sanches: Originalmente esses arquivos RCM eram usados para instalar novos estilos musicais para o acompanhamento automatico do teclado
+[2024-03-03 21:54:25] Felipe "Juca" Sanches: Meu código funcionou e, com isso, consegui descobrir experimentalmente qual era o quarto combo de botoes aceito pela rotina
+[2024-03-03 21:55:29] Felipe "Juca" Sanches: Não pensei duas vezes. Rebootei o teclado usando esse novo combo, esperando ver a tela de memory dump. Mas.... tijolou.
+[2024-03-03 21:56:56] Felipe "Juca" Sanches: Comecou o filme. Mais infos daqui 3 horas.
+
+ Happy hacking!

@@ -1,0 +1,25 @@
+[2026-06-07 06:59:41] Felipe "Juca" Sanches: Você tá escrevendo emulador desse cartucho?
+[2026-06-07 07:00:12] Felipe "Juca" Sanches: Se não me engano é o mesmo hardware usado no TeleBradesco, apenas a ROM é diferente. Mas precisaria checar essa informação, claro!
+[2026-06-07 12:01:51] FTMaciel: Sim, descrevi ele como um cartucho no genesis plus fx
+[2026-06-07 12:02:46] Felipe "Juca" Sanches: projeto de emulador próprio seu? Ou contribuição a algum projeto de emulação já existente como o MAME?
+[2026-06-07 12:12:22] FTMaciel: Emulador já existia. Era o mais fácil de mexer. Kkk
+[2026-06-07 12:12:40] FTMaciel: Mas eu posso portar pro mame
+[2026-06-07 12:13:16] FTMaciel: Pq ali tava fácil de criar as portas COM virtual
+[2026-06-07 12:33:23] Felipe "Juca" Sanches: Qual é o emulador no qual você está fazendo essas modificações?
+[2026-06-07 13:10:31] Felipe "Juca" Sanches: OK. Vou tentar mais uma vez:
+
+Show me the code!
+[2026-06-07 13:14:13] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39239-talk-is-cheap-robert-nesta-marley.mp4
+[2026-06-07 13:15:00] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39240-linus-torvalds-67-linus.mp4
+[2026-06-07 14:12:27] Felipe "Juca" Sanches: Eu tô sendo bem humorado aqui, usando uma frase famosa do Linus Torvalds, mas por favor não me leve a mal. O que eu quero mesmo é demostrar interesse em ver o que você tá fazendo. Conta aí pra gente!
+[2026-06-07 15:21:29] FTMaciel: Genesis Plus GX
+[2026-06-07 15:21:45] FTMaciel: Foi mal to resolvendo umas coisas aqui em casa.
+[2026-06-07 15:22:45] FTMaciel: Deixa eu chegar em casa que eu mando aqui o que to fazendo
+[2026-06-07 15:24:20] FTMaciel: Só lembrando que, apesar de ter feito análise de sistemas, não programo a décadas. Fiz praticamente tudo usando chatgpt.
+[2026-06-07 15:24:52] FTMaciel: Não tenho claude ainda
+[2026-06-07 15:25:15] FTMaciel: Mas vou migrar do chatgpt pra ele logo
+[2026-06-07 15:26:02] FTMaciel: A engenharia reversa da rom foi feita usando o ghidra
+[2026-06-07 15:50:56] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39249.jpg
+[2026-06-07 15:50:56] RicBit: fiz um compilador de C
+[2026-06-07 15:52:02] RicBit: eu deixei ele abrindo mais do sisne ontem, mas tem muito codigo dificil de leer porque o original foi compilado. então eu fiz um compilador que compila exatamente o binario que esta no sisne. está dando para deduzir quais otimizacoes o compilador original tinha (bem poucas, mas não zero).
+[2026-06-07 17:38:37] Robson França: Ghidra é tudo de bom. Eu já usei o IDA Pro para fazer engenharia reversa de um jogo que eu fiz em 94

@@ -1,0 +1,127 @@
+[2018-08-31 00:01:58] Felipe "Juca" Sanches: por volta de 2004 eu escrevi em VHDL um conversor de mouse MSX para mouse PS/2 lá pro projeto do set-top-box pra tv digital do LSI (que era baseado num MSX em FPGA)
+[2018-08-31 00:03:22] Felipe "Juca" Sanches: É saudosismo. Acho que é válido aqui sim, apesar de não ser arqueologia. É um símbolo de amor/paixão por uma época bacana da computação.
+[2018-08-31 00:04:51] L.: Ah, bacana! No contexto valia a pena usar um FPGA, mas tem projeto pra isso usando microcontrolador também... é menos ICBM pra matar mosquito.
+[2018-08-31 00:05:06] Felipe "Juca" Sanches: claro
+[2018-08-31 00:05:42] Felipe "Juca" Sanches: já tinha o MSX inteiro dentro da FPGA, adicionar a conversão pra PS/2 na FPGA também era a opção mais lógica e econômica. Tanto que isso nem sequer foi discutido.
+[2018-08-31 00:06:06] Felipe "Juca" Sanches: Era óbvio que a conversão deveria ser feita também na FPGA
+[2018-08-31 01:57:19] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7543.jpg
+[2018-08-31 01:57:34] L.: Peças pra fazer o NeXT Cube mini prontas :)
+[2018-08-31 01:59:04] Emerson Moura: Eu quero embutir uma RPi num terminal burro. Tem alguns aqui em casa.
+[2018-08-31 05:46:39] DQ: É isto que é a "placa de vídeo" do RC2014. Uma RPi rodando um emulador de terminal "bare metal". Eu gostaria de dar uma mexida neste software, mas o baixo nível da RPi é complicado e pouco documentado.
+[2018-08-31 05:48:15] DQ: Tem outras opções de vídeo, algumas usando o chip de vídeo do MSX ou outros da época.
+[2018-08-31 05:52:25] DQ: Sobre FPGA e afins, o Searle tem um projeto de emulação de um micro inteiro de 8 bits em uma placa de baixo custo. Pode ser interessante para quem quer ter a experiência de usuário de um micro com BASIC   com um hw bem simples.
+[2018-08-31 05:54:16] DQ: Tem também vários chips antigos, não mais produzidos, que estão sendo reproduzidos com FPGAs e afins. Por exemplo, a ULA do ZX81.
+[2018-08-31 07:29:11] Ronaldo: E eu querendo transformar um Raspberry Pi num terminal burro, porque tenho dois Zero aqui em casa.
+[2018-08-31 08:50:58] DQ: https://github.com/fbergama/pigfx
+[2018-08-31 08:53:23] DQ: O PiGFX é bem "raiz", não usa SO. O chato é que no momento isto significa não acessar arquivos no SD. Outro detalhe é que ele não suporta o Zero W, onde a serial principal por default está ligada no chip de *Blutooth* (a secundária tem várias restrições). (Corrigido)
+[2018-08-31 08:55:07] DQ: Um opção que eu queria investigar era usar o RISC OS, em particular a versão Pico: https://www.riscosopen.org/content/sales/risc-os-pico
+[2018-08-31 08:56:34] DQ: (Porque bootar um Linux só para rodar um emulador de terminal burro é muito Nutella para mim)
+[2018-08-31 09:22:05] Ronaldo: Pois é, e eu queria justamente usar um Zero, que é barato
+[2018-08-31 09:23:05] DQ: O Zero roda legal, o Zero W é que não
+[2018-08-31 09:23:53] Ronaldo: Ahh, pois é o W que eu tenho, me acostumei a chamar de Zero, só
+[2018-08-31 09:27:57] DQ: Eu comprei um Zero "não W" (que é meio raro) só para testar. Tem uma forma de "recuperar" a serial (https://www.abelectronics.co.uk/kb/article/1035/raspberry-pi-3-and-zero-w-serial-port-usage), mas não sei como fazer isto em bare metal.
+[2018-08-31 09:31:29] Ronaldo: Não tem ninguém que venda terminais burros baratos hoje em dia?
+[2018-08-31 09:31:59] Ronaldo: Tipo um Pi, mas feito pra ser terminal burro logo de cara
+[2018-08-31 09:38:34] DQ: É mais divertido fazer um ; )
+[2018-08-31 09:40:03] DQ: Por exemplo, tem este aqui: http://searle.hostei.com/grant/MonitorKeyboard/index.html
+[2018-08-31 09:42:39] DQ: Eu tenho um deste aqui: https://www.tindie.com/products/maccasoft/vga-serial-terminal-for-rc2014/ (carinho, mas a ideia é interessante e funciona muito bem)
+[2018-08-31 09:44:39] DQ: Embora ele diga que é para o RC2014, ele só pega alimentação e TX/RX do bus.
+[2018-08-31 09:45:33] DQ: Vou tentar montar um com um Arduino ligado a um LCD 4x40 e teclado PS/2.
+[2018-08-31 09:46:08] DQ: Dá para ver que ideias não faltam... falta é tempo.
+[2018-08-31 09:50:42] Ronaldo: Achei esse bem legal
+[2018-08-31 11:32:14] L.: Tem um shield de Arduino que gera sinal de video composto monocromático e aceita comandos Vt52 estendido (tem como fazer caracteres maiores por exemplo). Faz tudo em software com um Atmega8, mas consegue só umas 40 colunas de texto
+[2018-08-31 11:32:54] L.: Esse não só é baratinho, o projeto é livre, então é fácil pegar o firmware dele e um atmega da pilha de sucata e fazer :)
+[2018-08-31 11:34:48] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7570.jpg
+[2018-08-31 11:37:33] DQ: Passa o link se tiver...
+[2018-08-31 11:38:54] L.: Não sei se vende mais, mas tem o esquemático e fontes aqui: http://www.batsocks.co.uk/products/Other/TellyMate.htm
+[2018-08-31 11:40:35] L.: Fizeram até um joguinho com ele que lembra *muito* as coisas dum ZX-81 (lá nos 40s de vídeo): https://www.youtube.com/watch?v=VQNT2bKiFv0
+[2018-08-31 11:43:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7575.jpg
+[2018-08-31 11:43:57] L.: É esse aí mesmo. Eu tenho um, mas larguei lá no LHC.
+[2018-08-31 11:44:02] Felipe "Juca" Sanches: haha
+[2018-08-31 11:44:10] Felipe "Juca" Sanches: esse da foto é o seu, então
+[2018-08-31 11:44:35] Felipe "Juca" Sanches: o maluquinho lá do LHC me emprestou
+[2018-08-31 11:44:44] L.: Pode crer
+[2018-08-31 11:45:18] L.: Eu comprei esse aí pra fazer um computadorzinho rodando FINF (meu ambiete forth-like pra Arduino - https://github.com/lpereira/finf) mas obviamente eu nunca terminei. :)
+[2018-08-31 11:47:19] Felipe "Juca" Sanches: Esse maluquinho da foto aqui:
+[2018-08-31 11:47:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7583.jpg
+[2018-08-31 11:47:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7584.jpg
+[2018-08-31 11:48:00] L.: "Maluquinho" define bem o Zé, não precisa de muito. :)
+[2018-08-31 11:48:29] Felipe "Juca" Sanches: É... parece que tem 2 maluquinhos nessa foto!
+[2018-08-31 12:02:22] DQ: Legal! Muito tempo atrás eu comecei a brincar com geração de vídeo com AVR, mas acabei encostando.
+[2018-08-31 12:03:55] Felipe "Juca" Sanches: Eu tentei fazer geração de vídeo com uma FPGA (aquela Lattice ICE40 - ICEStick) mas não funcionou...
+[2018-08-31 12:04:22] L.: Tem um projeto usando ESP8266, usando a porta de I2S para transmitir em VHF. Eu já testei, funciona razoavelmente bem, considerando todas as gambiarras necessárias por que o I2S dele não gera a frequencia correta: https://www.youtube.com/watch?v=SSiRkpgwVKY
+[2018-08-31 12:04:43] Felipe "Juca" Sanches: cheguei a ligar num cabo VGA improvisado. Não sei se o meu erro foi na montagem do cabo, interferencia, etc. ou se foi no próprio Verilog carregado na FPGA...
+[2018-08-31 12:11:50] Ronaldo: Eu tenho interesse nisso. Tenho as ferramentas, os microcontroladores, só não tenho tempo pra sentar e estudar.
+[2018-08-31 12:12:29] Ronaldo: No meu caso eu quero usar STM32, e launchpad
+[2018-08-31 12:12:57] Ronaldo: Comprei até um osciloscópio pra isso
+[2018-08-31 12:16:21] Ronaldo: Como o STM32 é um microcontrolador rápido e com muitos canais de interrupção e DMA eu gostaria de fazer em C, não asm
+[2018-08-31 12:17:03] Ronaldo: 168 MHz o que eu tenho
+[2018-08-31 12:17:29] Ronaldo: Ram embutida o suficiente
+[2018-08-31 12:27:39] L.: Pra terminal burro aqui eu tenho uma máquina legal. Era um terminal pra carro de polícia. Tem um 386SX dentro (tem vídeo se fizer scroll na thread): https://twitter.com/lafp/status/988956674873438208
+[2018-08-31 12:29:38] Felipe "Juca" Sanches: WOW!!! Que legal isso!
+[2018-08-31 12:30:07] Ronaldo: Bem legal
+[2018-08-31 12:30:40] Ronaldo: Parece algo saído do primeiro filme do Robocop
+[2018-08-31 12:30:48] Felipe "Juca" Sanches: veio com algum software específico do carro de polícia instalado no HD?
+[2018-08-31 12:30:51] L.: Se não me engano tem um desses no filme do Robocop
+[2018-08-31 12:30:56] Felipe "Juca" Sanches: isso aí parece coisa boa pra ir pro MAME
+[2018-08-31 12:31:13] Ronaldo: Gostei da tela âmbar
+[2018-08-31 12:31:16] Felipe "Juca" Sanches: gera uma imagem do disco aí pra gente inspecionar
+[2018-08-31 12:31:31] Felipe "Juca" Sanches: deve ser interessante também interfacear com esses botões extras aí
+[2018-08-31 12:31:41] L.: Não tem HD, tem uma memória flash. Ela inclusive não é detectada como HD IDE, mas tem uma BIOS estendida que o DOS/Windows 3.1 entende.  Sim, ele roda Windows 3.1, mas a única coisa que tem nele é um software de terminal. Ele é um terminal burro desde sempre :D
+[2018-08-31 12:33:03] L.: É um PC. Os botões extras são todos as teclas Fn. Eu preciso achar um jeito de dumpar esse disco aí, não é comum. Não tem nem um interlnk/intersvr no DOS que tem nele, e embora tenha slot PCMCIA, não é trivial botar um driver lá.
+[2018-08-31 12:33:58] Felipe "Juca" Sanches: seria legal de todo modo ter uma imagem dessa memória flash
+[2018-08-31 12:34:47] Ronaldo: A placa-mãe tem slots ou conector de HD ou disquete? Provavelmente isso seria necessário pra fazer manutenção
+[2018-08-31 12:35:01] L.: Eu não abri ele ainda.
+[2018-08-31 12:35:17] Ronaldo: Se tiver é fácil
+[2018-08-31 12:35:19] L.: Mas eu vi fotos, e é uma solução bem integrada, e feita para esse propósito.
+[2018-08-31 12:35:48] L.: Não tem slots ou coisa do tipo. Tem o slot PCMCIA e é isso. Talvez dê pra fazer um programinha no debug.com (tem nele) pra ler o driver de ethernet pela serial...
+[2018-08-31 12:35:58] Felipe "Juca" Sanches: só de mostrar aquele splash screen da morotola já justifica dumpar a bios e a memória flash
+[2018-08-31 12:36:24] Felipe "Juca" Sanches: e o software de terminal é bonito, seria bacana replicar isso tudo no MAME
+[2018-08-31 12:36:25] L.: A splash screen é a do Windows, eles só trocaram a imagem que aparece
+[2018-08-31 12:36:34] Felipe "Juca" Sanches: perfeito
+[2018-08-31 12:37:03] Ronaldo: Ou ele permite dar boot pelo PCMCIA ou tem alguma outra coisa pra poder rodar software de diagnóstico
+[2018-08-31 12:37:19] L.: Pornografia dele: https://www.flickr.com/photos/phooky/sets/72157692938701844
+[2018-08-31 12:37:20] Felipe "Juca" Sanches: de todo modo, por razões de preciosismo seria bom ter um dump da bios também, caso seja viável pra você tirar uma cópia
+[2018-08-31 12:37:50] L.: Eu tenho um gravador de EPROM agora, mas tenho que ver com calma isso aí. Não queria ter que dessoldar tudo pra ler.
+[2018-08-31 12:38:21] Felipe "Juca" Sanches: claro
+[2018-08-31 12:38:37] Felipe "Juca" Sanches: é aquele 28F020 né?
+[2018-08-31 12:38:57] L.: Tem esse projeto aqui que o cara botou uma beaglebone dentro:
+https://trmm.net/MDT9100
+[2018-08-31 12:39:03] L.: (tem fotos do interior também.)
+[2018-08-31 12:39:04] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7627.jpg
+[2018-08-31 12:39:37] L.: Isso, tem cara de ser essa flash aí que tem toda imagem de "disco"
+[2018-08-31 12:39:45] Felipe "Juca" Sanches: dá pra fazer dump por software rodando no próprio equipamento
+[2018-08-31 12:40:22] L.: Dá. Um dia que estiver com saco eu vejo isso.
+[2018-08-31 12:40:23] Felipe "Juca" Sanches: suspeito que essa bios possa conter código específico para essa placa mãe aí
+[2018-08-31 12:41:04] L.: Tô com um cabo USB-serial (que aceita níveis de RS-232 mesmo, já com conector DB-9), posso até brincar algum dia. Mas tô com tanto projeto pra fazer que é possível que isso demore bastante hehe
+[2018-08-31 12:41:54] Felipe "Juca" Sanches: cara... chipset inteiro da motorola
+[2018-08-31 12:42:04] Ronaldo: Uma das imagens tem dois conectores, um deles parece um conector ISA
+[2018-08-31 12:43:00] Ronaldo: As imagens são bem "artísticas", quem fez não se preocupou em fazer visões gerais das placas e fotos vistas de cima, que são boas pra referência
+[2018-08-31 12:43:07] Felipe "Juca" Sanches: e tem alguma coisa curiosa alí com uma etiqueta de versão 2.2, checksum 0x30A4
+[2018-08-31 12:44:27] Ronaldo: Opa, errei o link
+[2018-08-31 12:45:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7638.jpg
+[2018-08-31 12:45:38] Felipe "Juca" Sanches: e nessa foto aqui tem 3 coisas interessantes (v2.2, ALTERA no u69 e outra flash no U68)
+[2018-08-31 12:45:59] Ronaldo: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7639.jpg
+[2018-08-31 12:46:27] Ronaldo: Se tem um slot ISA dá pra conectar uma controladora de disco
+[2018-08-31 12:47:14] Ronaldo: Eu ia dizer que o slot de cima lembra um slot PCI, mas se é um 386...
+[2018-08-31 12:47:45] Ronaldo: Também tem um conector de 64 pinos
+[2018-08-31 12:48:26] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7643.jpg
+[2018-08-31 12:48:26] Felipe "Juca" Sanches: Ai, caramba! O Windows tá instalado aqui, é?
+[2018-08-31 12:49:08] Ronaldo: A outra flash deve ser o bios
+[2018-08-31 12:49:51] Ronaldo: O microcontrolador pode ser a interface de teclado
+[2018-08-31 12:50:03] Felipe "Juca" Sanches: já vi 2 outros chips de memória flash além desses aí.
+[2018-08-31 12:50:38] Felipe "Juca" Sanches: aqui
+[2018-08-31 12:50:52] Ronaldo: Um pode ser o programa do microcontrolador (teria que ver se esse modelo tem memória embutida)
+[2018-08-31 12:52:10] Ronaldo: Existe uma pequena chance de uma parte desse sistema estar protegida com criptografia, considerando a natureza das informações que eram acessadas
+[2018-08-31 12:53:22] Ronaldo: Talvez a rede sem fio à qual esse computador se conectava usasse alguma autenticação e criptografasse os dados pra envio, pra evitar que alguém pudesse se conectar ao banco de dados da Polícia
+[2018-08-31 12:53:45] Ronaldo: Mesmo sendo algo simples e primitivo
+[2018-08-31 12:54:38] Ronaldo: Também existe a possibilidade de existir algum "anti-tampering" que destrua informações em caso de abertura do gabinete, cuidado
+[2018-08-31 12:55:39] FTMaciel: https://www.bleepingcomputer.com/news/technology/hardware-hacker-converts-old-mobile-terminal-into-fallout-like-computer/
+[2018-08-31 12:56:26] Ronaldo: Essa também poderia ser uma explicação pro microcontrolador, implementar algum tipo de criptografia na transmissão que fosse transparente ao sistema
+[2018-08-31 12:59:20] Ronaldo: Nesse artigo fala em nvram. Isso tá certo? Se estiver pode ser RAM mantida por bateria.
+[2018-08-31 12:59:55] Ronaldo: Acho que não, ali nos chips tá claramente escrito "flash"
+[2018-08-31 13:01:32] FTMaciel: Esses terminais se comunicavam com uma central por rádio frequencia geralmente em VHF ou UHF. E o slot pcmcia era para conectar um cartão de encriptação
+
+http://www.cryptomuseum.com/crypto/motorola/mdt9100/index.htm
+[2018-08-31 13:03:35] Ronaldo: Eu vi
+[2018-08-31 22:39:09] Deleted Account: https://www.ghacks.net/2018/08/28/the-flash-games-preservation-project-flashpoint/

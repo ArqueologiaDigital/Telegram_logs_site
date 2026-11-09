@@ -1,0 +1,12 @@
+[2026-08-30 13:43:53] Felipe "Juca" Sanches: Muito interessante... Agora que estou fazendo disassembly das ROMs do WSA1R (versão rack do "Acoustic Modelling Synth" da Technics), estou encontrando trechos de código parecidos com os da ROM do KN5000.
+
+Ou seja, é evidência de reuso de código entre diferentes equipamentos. E isso é ótimo! Estou aos poucos cruzando as árvores de disasm pra ter um único codebase que compila com bytematching as ROMs de todos aparelhos (e de diversos releases dessas ROMs).
+[2026-08-30 13:44:54] Felipe "Juca" Sanches: Isso também é bom pois amplia o acervo de códigos DSP que são carregados nos chips que não tem documentação oficial. Ter um acervo mais amplo ajuda na reversa do instruction set dos DSPs.
+[2026-08-30 16:54:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40282.jpg
+[2026-08-30 19:15:24] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40283.jpg
+[2026-08-30 19:15:24] RicBit: emu mostrando o loló
+[2026-08-30 19:28:22] RicBit: para poder mostrar o loló, o codigo agora tem STD
+[2026-08-30 19:29:33] RicBit: eu acho o z80 melhor nisso, ldir pra frente, lddr pra tras, não precisa de uma variavel global que você precisa ficar monitorando.
+[2026-08-30 23:32:54] Leonardo Roman: GB e NES são muito diferentes?
+[2026-08-30 23:48:24] RicBit: GB é quase um MSX
+[2026-08-30 23:48:35] RicBit: NES é quase um apple

@@ -1,0 +1,23 @@
+[2022-06-27 00:53:02] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/130
+[2022-06-27 00:57:22] Felipe "Juca" Sanches: Screenshot please :-)
+[2022-06-27 00:58:16] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22361.jpg
+[2022-06-27 00:58:16] Pedro de Medeiros 👾: Com bandeira improvisada cortada com uma cruz (porque uma bandeira com um X ficava difícil de entender)
+[2022-06-27 01:00:41] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22363.jpg
+[2022-06-27 01:00:41] Pedro de Medeiros 👾: No ncurses dá pra usar unicode e usar um F riscado.
+[2022-06-27 01:09:33] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22364.jpg
+[2022-06-27 01:09:33] Pedro de Medeiros 👾: As outras plataformas meio que funcionam depois de um pequeno ajuste, já que o jogo atualmente remove todas as bandeiras e coloca minas. Então se tiver uma bandeira depois do jogo encerrado, é porque ela está no lugar errado. Exemplo no canto inferior esquerdo ☝️
+[2022-06-27 01:11:10] Pedro de Medeiros 👾: Só que eu acho que isso não é o comportamento correto. Acho que as bandeiras corretas deviam ficar no tabuleiro e não serem substituídas por minas. Porque os erros e acertos do player ficam todos visíveis no tabuleiro depois do fim do jogo.
+[2022-06-27 07:44:09] Alexandre Villares: https://twitter.com/mwichary/status/1537628666137415682?t=l1CrHH1NAGBPo2DrW-qrZA&s=19
+[2022-06-27 15:15:59] L.: Cheguei mais perto! Eu tava zoando alguns registradores na ISR :P
+[2022-06-27 15:19:59] L.: Acho que o jeito vai ser fazer a ISR em asm mesmo
+[2022-06-27 15:36:24] L.: Aha -- eu tava fazendo um "pushf; lcall *(%bx)", mas com constraint que carregava o BX *antes* do pushf. Botando o pushf num bloco asm diferente resolveu :)
+[2022-06-27 16:13:05] L.: LTO também dá uma zoada :(
+[2022-06-27 17:51:50] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/0133
+[2022-06-27 18:39:44] Pedro de Medeiros 👾: renomeei o commit.
+[2022-06-27 18:52:50] Felipe "Juca" Sanches: Gostei muito disso!
+[2022-06-27 18:53:58] Felipe "Juca" Sanches: Adiciona um commit nesse PR, por favor, atualizando o arquivo screenshot.png com essa captura que você postou
+[2022-06-27 18:54:17] Pedro de Medeiros 👾: blz
+[2022-06-27 19:08:49] Pedro de Medeiros 👾: Tá lá.
+[2022-06-27 19:09:45] Felipe "Juca" Sanches: Merged.
+[2022-06-27 21:54:17] Pedro de Medeiros 👾: Este é o bug que apareceu no SDCC do container. https://sourceforge.net/p/sdcc/bugs/3212/
+[2022-06-27 21:55:25] Pedro de Medeiros 👾: Depois eu gero um container com SDCC 4.2 pra corrigir isso.

@@ -1,0 +1,39 @@
+[2020-09-29 15:05:21] Felipe "Juca" Sanches: Acidx Leandro, achei um jeito de fazer o dump da mask ROM do mcu Z8 usado no Pense Bem:
+http://www.bitsavers.org/components/zilog/z8/Z8_MCU_Test_Mode_Jun82.pdf
+[2020-09-29 15:06:03] L.: Eu tinha visto isso uma vez mas não cheguei a testar
+[2020-09-29 15:06:17] L.: Vai tentar isso aí?
+[2020-09-29 15:06:29] Felipe "Juca" Sanches: a resposta: 7,5 volts no pino /RESET durante 6 ciclos logo após o reset bota o bicho em modo teste e permite rodar código arbitrário sendo lido da porta P1
+[2020-09-29 15:06:45] Felipe "Juca" Sanches: é... cedo ou tarde vou ter que tentar ;-D
+[2020-09-29 15:07:24] Felipe "Juca" Sanches: mas no momento estou com os pés na lama de um outro emulador...
+[2020-09-29 15:08:47] L.: Será que o Ghidra suporta Z8?
+[2020-09-29 15:10:07] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-09/11422.jpg
+[2020-09-29 15:10:07] Felipe "Juca" Sanches: já aparece sinal de video no meu emulador... 😉 Botei como input uma imagem estática, passada pela linha de comando
+[2020-09-29 15:11:06] Felipe "Juca" Sanches: falta implementar todo o pipeline de DSP para os efeitos de transicao
+[2020-09-29 15:11:22] Felipe "Juca" Sanches: as placas das CPUs já tão bem completinhas
+[2020-09-29 15:11:50] Felipe "Juca" Sanches: falta emular também os LEDs e a leitura de switches do painel de controle
+[2020-09-29 15:12:16] Felipe "Juca" Sanches: e acho que vou desenhar o painel em SVG de forma parecida com o que fizemos com o simulador do PenseBem
+[2020-09-29 15:12:57] Felipe "Juca" Sanches: não tenho idéia... mas tenho um palpite: provavelmente nào
+[2020-09-29 15:14:32] L.: Acabei de ver. Não suporta
+[2020-09-29 15:14:40] L.: Entretanto, parece fácil botar suporte
+[2020-09-29 15:19:26] L.: "Fácil" no sentido que precisa especificar tudo (o que cada instrução faz, etc), mas tem toda a infra pra isso
+[2020-09-29 15:28:07] Felipe "Juca" Sanches: legal
+[2020-09-29 15:29:51] Felipe "Juca" Sanches: lendo o PDF do testmode do Z8, fiquei na dúvida de como é feito o enderecamento da ROM externa. Diz que "fetch instructions from port 1". Suponho que os pinos da porta 1 funcionem como um barramento externo de dados. Mas e o barramento externo de enderecos, onde seria nesse caso do modo de teste?
+[2020-09-29 15:33:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-09/11434.jpg
+[2020-09-29 15:33:40] Felipe "Juca" Sanches: hmmmm... tô lendo o datasheet do Z8 aqui...
+https://www.zilog.com/appnotes_download.php?FromPage=DirectLink&dn=UM0016&ft=User%20Manual&f=YUhSMGNEb3ZMM2QzZHk1NmFXeHZaeTVqYjIwdlpHOWpjeTkxYlRBd01UWXVjR1Jt
+[2020-09-29 17:00:20] pitanga: Esse video switcher é um que estava no Garoa (ou no EP?) desde os primórdios? Ou vc comprou outro? Pq lembro de já termos examinado e falado sobre um desses.
+[2020-09-29 17:11:31] Felipe "Juca" Sanches: A história é antiga, sim. O Marquinho (aquele que morava com você, eu acho) entrou em contato comigo e doou uma mesa de controle da SONY, modelo PVE-500. Ficou por muitos anos no porão do Garoa e depois na sede nova. Na sede nova eu consegui emular parcialmente a mesa de controle e eu tinha a intencao de adaptá-la para "controlar coisas"  (como luzes, e outras parafernálias) no clube. Mas lá no porão da sede antiga a mesa pegou humidade e vazou um pouco também de alguns eletrolíticos. Corroeu uma parte da PCB e o painel de controle não liga mais.
+
+Aí recentemente eu comprei no mercado livre outras unidades desse mesmo painel e também de um outro similar, da SONY também, mas de um outro modelo.
+
+O emulador (incompleto) do pve500 é provavelmente um dos drivers do MAME mais complexos que eu já escrevi até hoje. Me ajudou a entender melhor algumas coisas um pouco mais complicadas sobre o framework de emulaćão do MAME. E por causa disso, fiquei empolgado para levar adiante a emulacao desse dispositivo.
+
+Lendo o service manual desses painéis, eu vi que o setub básico envolvia o uso de player e recorders de fita cassete betamax. Então comprei alguns desses VCRs também (tenho aqui os seguintes modelos: UVW-1200, UVW-1600, UVW-1800 e U-Matic vo5080PM, todos da SONY)
+
+E outro item do setup de estudio sugerido no service manual pve500 é um switcher de vídeo, modelo DFS-500, que tentei comprar uns 3 anos atrás, mas o vendedor fez cu doce e não quis entregar em mãos lá em Brasilia. Algumas semanas atrás procurei de novo e finalmente comprei, por um prećo menor, e com frete pelos correios pra São Paulo, do mesmo vendedor! kkkk
+
+E é esse DFS-500 que estou emulando agora. E já tá superando o pve500 como o device mais complexo que já emulei. Tem mais de duzentas páginas o service manual. E o equipamento tem 7 PCBs grandonas (tamanho de placas JAMMA)
+[2020-09-29 17:12:05] Felipe "Juca" Sanches: 7 PCBs no caixote de processamento de efeitos. E mais uma PCB dentro do painel de controle do switcher
+[2020-09-29 17:12:27] Felipe "Juca" Sanches: é um monstrinho, mas me parece que tenho acesso a todas as informacoes necessarias para emular corretamente
+[2020-09-29 17:47:49] Felipe "Juca" Sanches: eu gostei muito desse artigo de uns 20 anos atrás:
+https://www.montagar.com/~patj/dfs.htm

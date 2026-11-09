@@ -1,0 +1,65 @@
+[2018-01-11 00:31:59] Felipe "Juca" Sanches: Acho que sempre detecta no boot
+[2018-01-11 00:32:25] Felipe "Juca" Sanches: Olhei aqui e realmente parece que nao tem bateria nenhuma
+[2018-01-11 10:37:44] Felipe "Juca" Sanches: Affonso src/mame/drivers/ibmpc.cpp é o driver de emulação de PC XT no MAME
+[2018-01-11 10:39:41] Felipe "Juca" Sanches: Pra compilar um "single driver build" do MAME com apenas suporte a IBM PC XT vc pode rodar esse comando:
+[2018-01-11 10:39:46] Felipe "Juca" Sanches: make SUBTARGET=pcxt_ SOURCES=src/mame/drivers/ibmpc.cpp REGENIE=1
+[2018-01-11 12:43:28] DQ: Não tenho certeza, mas desconfio que é uma porta serial. Reparei que tem uma 8250 na placa.
+[2018-01-11 12:45:20] Felipe "Juca" Sanches: Sao duas ROMs de 8kbytes
+[2018-01-11 12:45:20] Felipe "Juca" Sanches: Mas tem 8 soquetes na placa
+[2018-01-11 12:45:20] Felipe "Juca" Sanches: E uma ROM fica no primeiro soquete enquanto a outra fica no ultimo
+[2018-01-11 12:45:20] Felipe "Juca" Sanches: 8 * 8k = 64k que é o espaço completo de endereçamento da CPU 8088
+[2018-01-11 12:45:20] Felipe "Juca" Sanches: Ou seja... A primeira ROM fica mapeada na faixa de endereços de 0000 a 1FFF e a segunda fica em E000-FFFF
+[2018-01-11 12:45:20] Felipe "Juca" Sanches: E isso faz todo sentido, dado que a CPU boota a partir do endereço FFF0
+[2018-01-11 12:45:20] Felipe "Juca" Sanches: (Se nao me engano)
+[2018-01-11 12:45:20] Felipe "Juca" Sanches: Carreguei essas duas ROMs no driver de emulação do IBM5160 no MAME e observando no debugger, vi que a sequencia de instruções do código de boot dessas ROMs parece código válido
+[2018-01-11 12:45:20] Felipe "Juca" Sanches: Mas o emulador fica preso numa tela inteira preta (nao mostra nada na tela em momento algum) e com um apito constante no speaker
+[2018-01-11 12:45:20] Felipe "Juca" Sanches: Vi nesse código de boot escritas em registradores que se nao me engano sao para configuração da placa CGA
+[2018-01-11 12:45:20] Felipe "Juca" Sanches: Acho que eram escritas em I/O no endereço 3D4h talvez (ou algum valor próximo desse)
+[2018-01-11 12:46:26] DQ: O Nexus 2600 tem algumas diferenças de hardware em relação ao IBM PC, portanto não deve funcionar de primeira.
+[2018-01-11 12:48:05] Felipe "Juca" Sanches: Tem 2 chips de UART na placa. Seria um dedicado para o protocolo de teclado proprietário da Scopus e o outro  para compor o chipset clássico de um PC XT ?
+[2018-01-11 12:48:18] DQ: Veja se uma das EProm não é do BASIC.
+[2018-01-11 12:49:33] DQ: Não lembro mais como era a configuração do Nexus... A IBM usava dip switches no PC e PC XT, o relógio com memória CMOS para configuração surgiu só no PC AT
+[2018-01-11 12:50:13] DQ: Veja se não tem algum chip da Xicor. Em alguns projetos da Scopus era usada uma NVRAM para configuração.
+[2018-01-11 12:51:13] Felipe "Juca" Sanches: Mas nvram precisa de bateria
+[2018-01-11 12:51:34] DQ: Esta NVRAM era uma EEPROM
+[2018-01-11 12:52:24] DQ: Não consegui identificar direito as placas de expansão. Inclusive uma delas não é Scopus.
+[2018-01-11 12:53:11] Felipe "Juca" Sanches: Podemos tentar tirar fotos melhores
+[2018-01-11 12:53:40] DQ: Se você puder mandar as fotos em resolução maior, posso tentar identificar alguns componentes.
+[2018-01-11 12:54:00] Affonso Amendola: Eu tiro umas melhores quando chegar la no lassu, no worries
+[2018-01-11 13:01:35] DQ: Beleza!
+[2018-01-11 13:02:48] DQ: Eu ainda estou devendo o disassembly do Lepus. Tem umas partes do código que não estou conseguindo entender.
+[2018-01-11 14:54:56] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2881.jpg
+[2018-01-11 14:54:56] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2882.jpg
+[2018-01-11 14:54:56] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2883.jpg
+[2018-01-11 14:54:56] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2884.jpg
+[2018-01-11 14:54:57] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2885.jpg
+[2018-01-11 14:54:57] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2886.jpg
+[2018-01-11 14:54:57] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2887.jpg
+[2018-01-11 14:54:57] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2888.jpg
+[2018-01-11 14:54:57] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2889.jpg
+[2018-01-11 14:54:57] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2890.jpg
+[2018-01-11 14:55:00] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2891.jpg
+[2018-01-11 14:55:00] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2892.jpg
+[2018-01-11 14:55:00] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2893.jpg
+[2018-01-11 14:55:00] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2894.jpg
+[2018-01-11 14:55:00] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2895.jpg
+[2018-01-11 14:55:05] Affonso Amendola: Essa foi a maior qualidade que eu consegui
+[2018-01-11 15:03:36] DQ: As fotos estão ótimas!
+[2018-01-11 15:08:32] DQ: A placa com o NEC D765 é a controladora de floppy.
+[2018-01-11 15:09:45] Affonso Amendola: Faz sentido, o floppy tava conectado nela
+[2018-01-11 15:09:51] Affonso Amendola: Falando nisso
+[2018-01-11 15:10:26] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2901.jpg
+[2018-01-11 15:11:37] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2902.jpg
+[2018-01-11 15:13:38] DQ: A placa com MC6845 é de vídeo. Ele segue o padrão CGA, com a vantagem adicional de sincronizar o acesso do processador à memória de vídeo.
+[2018-01-11 15:15:04] DQ: Na CGA IBM, se o processador acessar a memória de vídeo no modo texto fora dos retraços ocorre interferência na apresentação pois o processador tem preferência sobre o refresh.
+[2018-01-11 15:16:38] DQ: Ao rolar a tela (onde todas as posições da memória precisam ser acessadas), o BIOS da IBM desliga o vídeo. Isto demora um pouco mais de um quadro (1/60 seg), o que causa uma piscada bem perceptível.
+[2018-01-11 15:17:22] DQ: O projetista da Scopus teve que se contorcer todo para evitar isto. A primeira versão era um sanduiche de duas placas.
+[2018-01-11 15:18:10] Affonso Amendola: 😄😄😄
+[2018-01-11 15:18:42] Affonso Amendola: Alem disso, a placa manda energia pro monitor, isso era comum?
+[2018-01-11 15:20:24] DQ: Não...
+[2018-01-11 15:22:04] DQ: A placa da XPTO me parece ser uma controladora de HD meio trambicada (usa uma 8255 que é um interface paralela)
+[2018-01-11 15:23:56] DQ: A segunda EProm pode ser o BIOS para esta placa.
+[2018-01-11 15:27:06] DQ: Se lembro direito, no PC/XT o BIOS na motherboard não trata o HD. As rotinas do HD estão em uma EProm na placa de interface. O BIOS da motherboard procura estas expansões de BIOS, que precisam ter um formato especial.
+[2018-01-11 15:28:54] DQ: Tem um livro que fala sobre o BIOS...
+[2018-01-11 15:28:56] DQ: https://drive.google.com/file/d/0BxAzQY17Vad0Tm9nZjVNN1BEbG8/view?usp=sharing
+[2018-01-11 17:37:45] Felipe "Juca" Sanches: Dum tal de Daniel...

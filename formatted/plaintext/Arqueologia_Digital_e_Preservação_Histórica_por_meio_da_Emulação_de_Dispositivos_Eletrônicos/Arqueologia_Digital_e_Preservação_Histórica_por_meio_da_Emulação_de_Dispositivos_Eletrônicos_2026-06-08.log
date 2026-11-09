@@ -1,0 +1,76 @@
+[2026-06-08 01:05:27] RicBit: o comecinho do sisne.sis -> https://gist.github.com/ricbit/57775dde61d7ca7994a491579624073c
+[2026-06-08 01:06:24] RicBit: agora as partes que eram compiladas estão em C mesmo. pra funcionar direitinho tem um compilador de C que faz as mesmas otimizacoes que o sistema da época, que eu não faço ideia qual seja.
+[2026-06-08 01:07:26] RicBit: ele compila o C pra 100% bit a bit com o binario. tem umas partes que ainda não são C idiomatico, acho que ainda não entendi qual a regra que ele usa para decidir quem vem primeiro, o then ou o else.
+[2026-06-08 11:04:01] Leonardo Roman: Olha que interessante o relato de um dos desenvolvedores do SISNE 2: https://dqsoft.blogspot.com/2020/12/memorias-dos-anos-80-versao-2-do-sisne.html
+[2026-06-08 11:04:18] Leonardo Roman: Ele disse que usaram Lattice C.
+[2026-06-08 11:40:08] RicBit: boa, nao conhecia!
+[2026-06-08 11:49:41] L.: O DQ é membro do Garoa!
+[2026-06-08 15:51:44] RicBit: vai demorar bastante para terminar o sisne. Por função, ele leva 2 minutos se for simples, mas se tiver que mexer no compilador aí são 20 min.
+[2026-06-08 19:48:03] FTMaciel: https://bitbucket.org/eke/genesis-plus-gx/src/master/
+[2026-06-08 19:48:45] FTMaciel: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39263-meganet.c
+[2026-06-08 19:48:45] FTMaciel: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39264-meganet.h
+[2026-06-08 19:50:27] FTMaciel: Ainda não tá 100%, acho que tem muito lixo aí por conta do debug que tive que fazer. Mas o cartucho faz o cadastro inicial no servidor python, as funções do servidor foram mapeadas.
+[2026-06-08 19:50:57] FTMaciel: não cheguei a testar com o telebradesco, mas creio que devem ter reaproveitado muita coisa
+[2026-06-08 19:51:55] FTMaciel: Galera, não sou dev, apesar de ter feito análise de sistemas não ganho a vida com isso. Então  fiz isso com IA.
+[2026-06-08 19:53:27] FTMaciel: Não liguem se o código ficou tosco ou cheio de gambiarras
+[2026-06-08 19:53:33] FTMaciel: negócio é que funciona
+[2026-06-08 19:54:15] FTMaciel: Agora que consegui fazer um servidor funcional, vou testar num Mega Net físico mesmo.
+[2026-06-08 22:14:42] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39271.jpg
+[2026-06-08 22:14:42] RicBit: desafio valendo 10 pontos, quem consegue tirar os gotos preservando a ordem das instrucoes?
+[2026-06-08 22:14:58] RicBit: provavelmente era para ser um while mas não estou conseguindo converter
+[2026-06-08 22:29:27] L.: int read_path_chars(..., unsigned int n)
+{
+        init_fcb_from_drive(drive, start);
+        while (n-- > 0) {
+                if (CURSOR != 0) { 
+                        if (CURSOR <= COUNT) { 
+                                CURSOR = read_fcb_path_char(CURSOR);
+                                continue;
+                        }
+                }
+                CURSOR = 0xffff;
+        }
+        return CURSOR;
+}
+[2026-06-08 22:29:31] L.: alguma coisa assim, talvez?
+[2026-06-08 22:29:39] L.: deve ter erro de por-1
+[2026-06-08 22:31:25] RicBit: lets see
+[2026-06-08 22:32:35] RicBit: uai bateu
+[2026-06-08 22:32:43] RicBit: ah nao perai
+[2026-06-08 22:34:39] L.: int read_path_chars(..., unsigned int n)
+{
+        init_fcb_from_drive(drive, start);
+        while (n-- > 0) {
+                if (CURSOR != 0 && CURSOR <= COUNT) {
+                        CURSOR = read_fcb_path_char(CURSOR);
+                } else {
+                        CURSOR = 0xffff;
+                }
+        }
+        return CURSOR;
+}
+
+
+mesma coisa, mas um pouco mais limpo
+[2026-06-08 22:36:31] RicBit: vou fazer um repo , ai voce pode testar
+[2026-06-08 22:36:42] RicBit: compilador ainda nao tinha n-- > 0, só vou colocar isso antes
+[2026-06-08 22:37:09] RicBit: e todo mundo sabe que a maneira correta de escrever é com o operador big arrow
+n --> 0
+[2026-06-08 22:38:13] L.: operador vai para
+[2026-06-08 22:38:35] L.: é meio chato isso aí quando o n é unsigned
+[2026-06-08 22:46:00] RicBit: aqui -> https://github.com/ricbit/sisne
+[2026-06-08 22:46:15] RicBit: o repo tem os asm e os compiladores, só precisa instalar por fora  o jwasm
+[2026-06-08 22:46:27] RicBit: ai a funcao tá dentro do asm
+[2026-06-08 22:47:06] RicBit: o objetivo é fazer o codigo C ser compilado para os exatos bytes,  a versão atual com goto faz isso mas não deve ser o original
+[2026-06-08 22:47:22] RicBit: em todas as outras funcoes eu consegui reconstruir, só essa que ainda não
+[2026-06-08 22:48:00] RicBit: provavelmente vai ser uma mistura de modificar o codigo C e possivelmente mexer nas otimizações do compilador
+[2026-06-08 22:49:02] RicBit: atualmente ele só tem duas otimizações, jmp pra jmp ele tira o primeiro e salta direto pro segundo. a outra é que ele sabe quais parametros ficam em quais registros.
+[2026-06-08 22:49:41] RicBit: no tinycc.md tem a ordem de compilacao, é quase sempre cond -> body -> jump back
+[2026-06-08 22:50:07] RicBit: menos no for, que é init -> jmp forward -> body -> cond -> jmp back
+[2026-06-08 22:52:25] RicBit: ah faltou o assembly dessa funcao para referencia
+[2026-06-08 22:52:27] RicBit: perai vou gerar
+[2026-06-08 22:54:19] RicBit: ah tem outra otimizacao, se dois caminhos de um if terminam com o mesmo codigo, ele emite só o de baixo, o primeiro vira jmp
+[2026-06-08 22:54:33] RicBit: tipo um cse de pobre
+[2026-06-08 22:56:46] L.: Olho amanhã. Vou dormir agora
+[2026-06-08 22:57:00] RicBit: bom descanso! eu vou continuar tentando aqui
+[2026-06-08 22:57:27] RicBit: ta no repo o asm de referencia

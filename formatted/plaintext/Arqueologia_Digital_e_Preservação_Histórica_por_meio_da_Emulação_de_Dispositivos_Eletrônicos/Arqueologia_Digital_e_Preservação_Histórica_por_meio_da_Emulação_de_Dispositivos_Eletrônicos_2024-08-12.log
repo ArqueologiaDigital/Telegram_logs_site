@@ -1,0 +1,13 @@
+[2024-08-12 15:57:59] Felipe "Juca" Sanches [forwarded]: Vídeo longo mas muito informativo : https://youtu.be/8iEb266ZfWQ?si=ObZWESwrwHRGV9uj
+[2024-08-12 20:07:36] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32624.jpg
+[2024-08-12 20:07:36] Pedro de Medeiros 👾: Estava comentando com o @fsanches como o assembly do TLCS tem bons mnemônicos para saltos condicionais. Aí na página dois a gente vê isso 👆
+[2024-08-12 20:08:05] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32625.jpg
+[2024-08-12 20:11:02] Pedro de Medeiros 👾: Só pra morder a língua.
+[2024-08-12 20:15:27] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32627.jpg
+[2024-08-12 20:15:27] Pedro de Medeiros 👾: A descrição dos mnemônicos de rotação é quase isso aqui.
+[2024-08-12 21:05:15] Pablo Vasques Bravo-Villalba: Dá pra entender, mas é meio bizarro. As versões sem carry são uma rotação de 8 bits em que o bit que dá a volta é copiado para a flag carry, enquanto as versões com carry são uma rotação de 9 bits em que a flag carry atua como bit mais significante
+[2024-08-12 21:26:20] Pedro de Medeiros 👾: O problema é a nomenclatura. Porque escolheram RLC pra significar SEM carry quando o fato de ter um "C" no mnemônico ali serviria justamente pra dizer que essa é a versão COM carry.
+[2024-08-12 21:37:16] Pedro de Medeiros 👾: Ou indo pelo outro lado: se você vê o mnemônico RLC sem saber nada específico sobre assembly de TLCS, você imagina que significaria "Rotate Left com Carry". 😂
+[2024-08-12 22:43:52] Pablo Vasques Bravo-Villalba: Mas é igual no Z80, não?
+[2024-08-12 23:08:06] Pedro de Medeiros 👾: De fato, foi o Z80 quem começou esse crime hediondo.
+[2024-08-12 23:21:35] Pablo Vasques Bravo-Villalba: E no Z80 temos RLC/RRC e RL/RR, mas SLA/SRA e SLL/SRL 🤷🏽‍♂

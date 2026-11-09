@@ -1,0 +1,68 @@
+[2025-02-13 14:09:37] Pedro de Medeiros 👾: Meu debugger feito praticamente do zero em Tcl foi aprovado pelo OpenMSX. Sei que muita gente (uns 3 😅) estava pedindo por algo assim. Testem lá quando puderem!
+https://github.com/openMSX/openMSX/pull/1854
+[2025-02-13 14:22:33] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34315.jpg
+[2025-02-13 14:22:33] Guilherme Ranoya: Se tem placa, tem Doom.
+[2025-02-13 14:33:37] Shideravan: Já vi muito a placa, só nunca vi ela sendo levada a sério kkkkkkkkkkkkkkkkkkkkkk
+[2025-02-13 14:35:58] Shideravan: Poootz isso me lembra de uma coisa
+[2025-02-13 14:36:29] Shideravan: Tinha uma época que eu fiquei desesperado achando que eu jogar games estava me tomando tempo e atrapalhando na universidade
+[2025-02-13 14:36:49] Shideravan: Aí eu vendi baratinho meu DSi, vendi meu notebook para não ter a tentação em casa
+[2025-02-13 14:37:00] Shideravan: E só ia viver no PET, estudando para caramba
+[2025-02-13 14:37:29] Shideravan: Eu não fazia parte do PET, mas eu tinha confiança dos professores que tomavam conta, então eu tinha acesso irrestrito e minha digital cadastrada
+[2025-02-13 14:37:54] Shideravan: E ia acessar internet lá, usar computador lá porque eu ia focar 100% nos estudos
+[2025-02-13 14:38:41] Shideravan: Eu lembro de um sabado para domingo de madrugada, eu pegando meu HD portátil e instalando o jogo lançamento na época, Resident Evil Revelations HD e ficando maravilhoso porque os computadores eram bons
+[2025-02-13 14:40:16] Shideravan: Eu indo segunda-feira de manhã morrendo de vergonha contar para os professores "nossa, eu cai em tentação, tive uma recaída e ao invés de estudar, do sábado para domingo passei jogando Resident Evil"
+
+O professor falando "rapaz, mas esse jogo tá maravilhoso, parece uma série né? Tem cada cliffhanger entre os episódios...." kkkkkkkkkk
+[2025-02-13 14:41:11] Shideravan: Aí ele me contou que não espera que seja algo tão dracônico assim, se tem computador bom, é inevitável de alguém jogar, mas é um espaço que pelo menos enquanto a gente estiver entre a gente que a gente estudasse
+[2025-02-13 14:41:46] Shideravan: Aí me tirou um peso das costas e vi que o pessoal não era de ferro e jogava também, mas estudava muito e desenvolvia projetos MASSA também
+[2025-02-13 14:42:38] Shideravan: Hoje em dia eu entendo muito mais o processo das coisas, porque fui diagnosticado com TDAH e foi até libertador para mim
+[2025-02-13 14:43:03] Shideravan: Mas eu vejo essas placas assim eu lembro dessas histórias hahahaha
+[2025-02-13 16:11:11] L.: Na faculdade eu operava um servidor clandestino no centro acadêmico com várias coisas, incluindo jogos 
+
+O que tinha de gente usando no lab da faculdade pra jogar Warcraft ou Age of Empires não era brincadeira 😆
+[2025-02-13 16:12:25] L.: Eu lembro inclusive que o Windows dos labs tinha regra pra não deixar processos com alguns nomes iniciarem. Aí alguns jogos eram tipo "notepad.exe" ou "winword.exe"
+[2025-02-13 16:13:24] Shideravan: A gente não instalava, rodava direto do HD externo ou pendrive. Essa era uma regra importante, não podia instalar hahahaha
+[2025-02-13 16:14:26] Shideravan: Política de segurança bem fraca essa kkkkkkkkkkkk
+[2025-02-13 16:14:44] L.: Ah, a galera da minha faculdade não era esperta com isso
+[2025-02-13 16:15:00] L.: Eu tinha admin local em todas as máquinas lá por exemplo
+[2025-02-13 16:16:43] L.: Tudo por que eles configuraram o sudo errado pra abrir o Wireshark e eu usei isso pra pegar root, e do root eu peguei as senhas criptografadas do Windows e usei uma tabela arco íris gigante (pra época né) que precisei de um DVD double layer pra colocar, e quebrei a senha
+[2025-02-13 16:17:26] L.: Com root eu também consegui a senha da BIOS então eu conseguia até bootar de pendrive pra não usar o Linux zoado do lab (era distro da propria faculdade baseada no Gentoo)
+[2025-02-13 16:20:00] Shideravan: Isso aí era na Unicamp?
+[2025-02-13 16:20:05] L.: PUC
+[2025-02-13 16:20:13] Shideravan: PUC-Campinas?
+[2025-02-13 16:20:17] L.: Ahan
+[2025-02-13 16:20:48] Shideravan: Poxa, a PUC tem um bom nome, os caras me passam uma vergonha dessas? kkkkkkkkkkkk
+[2025-02-13 16:21:06] Shideravan: A melhor política de segurança é você conquistar a confiança dos usuários
+[2025-02-13 16:21:27] Shideravan: De resto, aluno com tempo, sempre dá um jeito de quebrar kkkkkkk
+[2025-02-13 16:22:04] Shideravan: Se sente até "hacker" com o desafio kkkkkkkkkk
+[2025-02-13 16:22:22] L.: As impressoras tinham cota né 
+
+Só que a cota só valia se imprimisse pelas máquinas do lab
+
+Se imprimisse direto não contava. Eu até fiz a folha de capa pra ser igual a do sistema pra não ficar óbvio 😆
+[2025-02-13 16:22:45] L.: Isso foi útil quando fiz meu TCC😆
+[2025-02-13 16:23:06] Shideravan: TCC impresso, saudades kkkkkkkkkkkkk
+[2025-02-13 16:24:07] L.: Eu fiz em LaTeX inclusive, só pra não usar Word
+
+Sofri um bocado por que tive que fazer o próprio estilo da faculdade, mas achei engraçado quando verificaram cada uma das referências pra ver se estavam no formato certo ou não 😆
+[2025-02-13 16:24:52] Shideravan: Eu sempre fui fã do Overleaf
+[2025-02-13 16:25:08] Shideravan: Até trabalho na universidade fazia pelo overleaf para ir treinando usar o padrão
+[2025-02-13 16:25:39] Pedro de Medeiros 👾: Isso acontecia até nas melhores universidade do mundo, especialmente nos anos 90.
+[2025-02-13 16:28:02] L.: A PUC hoje tem WiFi na sala de aula, mas 10 anos antes deles fazerem isso tinha o WiFi clandestino que eu operava também
+[2025-02-13 16:28:06] Pedro de Medeiros 👾: Quando fui fazer a segunda monografia a UnB já tinha uma "biblioteca" LaTeX pronta pra usar. Só não estava configurada direito pro português, aí você tinha que usar comandos do LaTeX pra colocar acentos e cedilha
+[2025-02-13 16:29:34] L.: O meu wi-fi usava inclusive 802.11x ao invés do esquema zoado de portal captivo que usam hoje em dia. Usuário e senha era o ID do aluno e autenticava usando um esquema de scraping em um dos sites da própria universidade
+[2025-02-13 16:29:44] L.: A antena era uma lata de Nescau
+[2025-02-13 16:29:55] L.: Faculdade foi divertido
+[2025-02-13 16:30:58] L.: É, na PUC ensinaram a diminuir a fonte e apertar enter no word até dar o espaço certo na hora de fazer a capa
+
+Quando falei que tinha o estilo pra usar junto do abntex e que podia compartilhar ninguém quis, nem a biblioteca
+[2025-02-13 16:33:50] Pedro de Medeiros 👾: Argh, eu odeio essa cirurgia medieval de arquivo doc com todas as forças.
+[2025-02-13 16:33:58] Shideravan: Você disponibilizava a própria internet da universidade para todos?
+[2025-02-13 16:34:03] L.: Esse ano faz 20 anos que entrei lá. Caray.
+
+Era pra ter entrado em 2002 mas eu era aluna nota 5 e não ia passar no vestibular da Unicamp nem fodendo
+[2025-02-13 16:34:25] L.: Só pra engenharia de computação
+[2025-02-13 16:35:29] L.: Ensinaram coisas tipo fazer índice e lista de ilustrações e tabelas na mão, fazer bibliografia na mão, etc. O Word tem todas as ferramentas pra fazer isso automático, mas...
+[2025-02-13 16:36:08] Shideravan: Achava que você era de Eletrônica
+[2025-02-13 16:36:17] Shideravan: É minha veterana de outra universidade então
+[2025-02-13 16:36:28] Shideravan: Respeito

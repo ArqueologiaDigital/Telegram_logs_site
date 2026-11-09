@@ -1,0 +1,181 @@
+[2021-10-03 00:05:55] Pedro de Medeiros 👾: Desculpe, mas eu falho em ver qual foi o propósito disso tudo. Então, não devemos ensinar git para os desenvolvedores-em-potencial porque a ferramenta em si não é importante. O que deve ser ensinado então são, mais genericamente, estratégias e táticas para desenvolvimento mais eficiente e de maior qualidade? Olha, eu acho que uma coisa não substitui a outra. O ensino da ferramenta pode ser uma etapa nessa jornada épica aí.
+[2021-10-03 14:53:06] Shideravan: Gente, alguém aqui já trabalhou com o Drupal?
+[2021-10-03 14:53:19] Shideravan: A gente estava querendo implementar uma coisa no Datassette
+[2021-10-03 14:53:40] Shideravan: Tornar possível uploads múltiplos
+[2021-10-03 14:54:21] Shideravan: Isso é algo muito importante para a gente, porque eu mesmo tenho coleções e coleções de revistas, manuais, documentação técnica. Mas não tenho tido tempo de upar uma a uma
+[2021-10-03 14:55:45] Ismael Luceno: 🤷‍♂ é só mais um elemento
+[2021-10-03 15:01:00] Felipe "Juca" Sanches: Minha humilde opinião é de que já existem zilhares de recursos educacionais disponíveis na internet para o aprendizado do uso de git. O que é escasso é material de apoio para estudo de emulação. Por isso que acho que o foco deveria ser emulação, e pra aprender git a pessoa pode buscar outras fontes de informação
+[2021-10-03 15:03:01] Shideravan: Gente, essa discussão sobre git já virou discussão sobre sexo dos anjos já tem um tempo hahaha
+[2021-10-03 15:03:34] Shideravan: Eu gostaria muito de voltarmos a programação normal, porque eu queria resolver essa questão do drupal lá no Datassette hahaha
+[2021-10-03 15:04:15] Deleted Account: git dá um livro de graça pro aprendizado. 😅
+
+O que eu acharia legal é um "deep dive" no source do MAME para aprender como o projeto é estruturado.
+
+E uma analise do makefile pra saber mais ou menos como os componentes são colados.
+[2021-10-03 15:05:13] Shideravan: Meus dois centavos é que muitos lugares tem muitas coisas. Mas a nossa tarefa principal não é essa. É a de mostrar o caminho para que pessoas por mais leigas que sejam, possam começar a colaborar nos projetos
+[2021-10-03 15:05:16] Felipe "Juca" Sanches: É... Isso é realmente algo bacana de se fazer
+[2021-10-03 15:05:22] Deleted Account: A tree do mame é assustadora.
+[2021-10-03 15:06:53] Shideravan: Sim, no início é mesmo. Mas ai depois vc entende que não precisa entender tudo que está alí. É modularizada o suficiente para você ir onde quer e dizer "ok, vou mexer com isso, isso e isso" hahahaha
+[2021-10-03 15:07:24] Shideravan: O maior problema é o início, como a maior parte das coisas
+[2021-10-03 15:07:32] Shideravan: Vou contar uma coisa para vocês
+[2021-10-03 15:08:02] Shideravan: Sabem por que esses cursos online pagos, como alura, devmedia e coisas do tipo fazem tanto sucesso, mesmo tendo esse material disponível de graça por aí?
+[2021-10-03 15:08:12] Deleted Account: Marketing. 😂
+[2021-10-03 15:08:15] Shideravan: Porque quem é leigo muitas vezes não sabe nem por onde começar
+[2021-10-03 15:08:22] Shelton Ribeiro: https://youtu.be/IZnWqe5cidE
+
+Uma dúvida, supostamente o Nintendo 64 “ suporta” rodar alguns games MAME, fica a pergunta: não teria nem como rodar um Street Zero ou Kof 94, pelo menos? Ou é muito bicho fazer ele rodar esses game mais “parrudos”????
+[2021-10-03 15:08:25] Shideravan: É inocencia pensar isso
+[2021-10-03 15:08:46] Shideravan: O marketing só consegue vender algo que você já tenha intenção de comprar
+[2021-10-03 15:09:43] Shideravan: A gente está no Brasil de 2021, com brasileiro não conseguindo colocar prato de comida na mesa. Algumas pessoas não estão gastando porque não faz diferença. Elas precisam de alguém para iluminar o caminho para elas poderem seguir.
+[2021-10-03 15:09:59] Shideravan: E não tem nada de errado com isso
+[2021-10-03 15:10:24] Shideravan: Eu nunca pensei em fazer um curso completo de GIT não, porque nem eu sei todos os recursos do git
+[2021-10-03 15:10:50] Shideravan: Mas mostrar onde as pessoas podem buscar as informações para se virarem, já vai fazer uma diferença enorme, pode ter certeza
+[2021-10-03 15:11:01] Shideravan: É só isso
+[2021-10-03 15:11:11] Shideravan: Algumas coisinhas assim a gente vai ter que fazer
+[2021-10-03 15:11:15] Deleted Account: Cara, tem alguns cursos pagos muito bons, meeeeesmo. 
+
+Tem um brasileiro que vende cursos na própria plataforma chamada pikuma.com e ele tem um curso de programação atari 2600 que é a coisa mais linda.
+
+É claro que de graça é sempre melhor. Mas tem alguns cursos pagos que são muito bons.
+[2021-10-03 15:11:17] Shideravan: Mostrar o caminho
+[2021-10-03 15:11:55] Shideravan: Cara, eu assino Alura e Devmedia. Acho ótimos. Estou usando eles para introduzir minha namorada nesse mundo do desenvolvimento
+[2021-10-03 15:12:06] Shideravan: Não tem nada de errado com cursos, sejam gratuitos ou pagos
+[2021-10-03 15:12:42] Shideravan: Mas a pessoa que não sabe nada, ela vai saber que precisa estudar git como? Lembre-se: Ela tem boa vontade, mas não sabe nada hahaha
+[2021-10-03 15:12:48] Deleted Account: Alura eu assinei 2 anos mas não gosto do modelo de assinatura deles. Eu preferiria um modelo de compra de curso. Assinatura é muito ruim.
+[2021-10-03 15:13:05] Deleted Account: Mas a alura tem alguns professores ótimos
+[2021-10-03 15:14:12] Shideravan: Tem, mas quando eu precisei aprender react tive que comprar um curso na Udemy, porque achei os cursos de react deles meio fraco. Mas os de PHP e Laravel, são ótimos, por exemplo
+[2021-10-03 15:14:47] Shideravan: Varia de curso a curso hahaha
+[2021-10-03 15:15:19] Shideravan: Mas... PAra quem é completamente leigo, eu recomendo muito, porque eles pegam pela mão. Ensinam desde instalar as coisas até desenvolver projetos
+[2021-10-03 15:16:36] Deleted Account: Eu sou dev COBOL. Pra mim não atualiza nunca... 😭 
+
+Mas queria migrar pra web ou algo mais moderno. COBOL limita um pouco pq não tem muita empresa que usa.
+[2021-10-03 15:16:58] Deleted Account: Eu programo em C só por hobby mesmo. Mesmo assim estou enferrujado.
+[2021-10-03 15:17:17] Shideravan: A questão é: a gente não vai dar um curso de C ou um curso de git. Isso realmente tem outros lugares melhores para quem quiser aprofundar nessas coisas
+[2021-10-03 15:17:32] Deleted Account: Ah não. C e Git é pré requisito.
+[2021-10-03 15:17:50] Shideravan: Mas acho que não custa nada ensinar, por exemplo, a pessoa a abrir um issue corretamente
+[2021-10-03 15:17:56] Shideravan: Ou como fazer um PR
+[2021-10-03 15:17:59] Deleted Account: Isso sim é bacana.
+[2021-10-03 15:18:10] Deleted Account: Concordo 1000%
+[2021-10-03 15:18:16] Shideravan: Aí você mostra também: olha, essa é a documentação do Git para quem quiser se aprofundar
+[2021-10-03 15:18:29] Shideravan: A pessoa leiga já tem um caminho para ela seguir
+[2021-10-03 15:19:24] Shideravan: É só isso. A maior parte do conteúdo claro que vai ser o desenvolvimento de emuladores em sí
+[2021-10-03 15:21:00] Felipe "Juca" Sanches: Sinceramente? Eu acho que quem tem interesse em aprender sobre desenvolvimento de emuladores já está em outro nível. Não é um tema para iniciantes. É claro que a pessoa não precisa já chegar sabendo tudo. Mas me parece razoável imaginar que qualquer pessoa com um mínimo de chance de conseguir avançar nesses temas já vai ter um mínimo de conhecimentos menos avançados (não dá pra querer ensinar a pessoa a programar)
+[2021-10-03 15:22:56] Deleted Account: Eu sempre achei emulação legal por causa do livro do tanenbaum.
+
+Ele fala: "o hardware é o software petrificado". 
+
+Isso sempre me deixou intrigado com a possibilidade de substituir hardware por software.
+[2021-10-03 15:24:06] Felipe "Juca" Sanches: Ontem apareceu um menino mostrando interesse, mas a única "linguagem de programação" que ele conhece é um sisteminha proprietário de automação de tarefas do Windows. Tipo scripting pra clicar em botoes na GUI.
+
+E ele disse que se interessou em emuladores pois trabalha em uma marcenaria e está querendo montar máquians multi-jogos.
+
+Ou seja, não parece estar realmente interessado em inspecionar esquemáticos de hardware e programar drivers. Não acho que seja prático eu fazer um esforço pra ensinar o básico pra uma pessoa que ainda está nesse nível muito inicial de estudos, entende?
+[2021-10-03 15:25:01] Shideravan: Eu não estou falando para você fazer isso. Eu estou sugerindo dar o caminho para a pessoa saber seguir
+[2021-10-03 15:25:33] Felipe "Juca" Sanches: concordo
+[2021-10-03 15:26:24] Felipe "Juca" Sanches: sim, com certeza! Exemplo: preste muita atenção no uso de tabs e espaços antes de abrir um pull request, senão o Cuavas ou o MogMiner vão te dar uns coices.
+[2021-10-03 15:27:16] Shideravan: O problema que eu tenho com a comunidade de devs de emulação é que faz parecer que é um olimpo ou um conhecimento inatingível. Não é. Precisa de um background? Claro que precisa. Mas seguindo o caminho certo e estudando bastante, qualquer um que tenha boa vontade de estudar e aprender, pode colaborar em projetos ou mesmo montar os seus
+[2021-10-03 15:27:45] Shideravan: A intenção é trazer mais gente para o "olímpo". Algumas vezes não vai ser pela mãozinha, claro
+[2021-10-03 15:27:54] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16076-mp4.mp4
+[2021-10-03 15:28:37] Shideravan: Mano, sinceramente? Acho que a comunidade dá mais atenção ao Mog do que ele merece. Ele é claramente uma pessoa que busca atenção...
+[2021-10-03 15:29:01] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16078-mp4.mp4
+[2021-10-03 15:29:13] Shideravan: Eu se fosse adm de alguma comunidade do mame, já teria banido faz tempo, independente se ele faz colaborações técnicas úteis ou não.
+[2021-10-03 15:29:35] Shideravan: Não dá para trabalhar com uma pessoa que não saiba respeitar ninguém
+[2021-10-03 15:31:35] Shideravan: Vou dar um exemplo: tenho certeza que muita gente se motivaria para desenvolver junto as artworks 3D. Mas depois da bobajada que ele falou lá na issue, adiciona algumas camadas de treta para quem queira adentrar nessa aventura
+[2021-10-03 15:31:47] Shideravan: E ele encheu o saco, mas ele mesmo não fez
+[2021-10-03 15:32:08] Shideravan: Conclusão: 6 anos sem ninguém fazer e é provavel que tenham mais 10 assim
+[2021-10-03 15:32:27] Shideravan: As coisas no ares costumam ser tão mais "fast track"
+[2021-10-03 15:32:39] Deleted Account: Pode ser um pouco de medo de perder o protagonismo no projeto que eles são assim.
+[2021-10-03 15:32:46] Shideravan: Claro que sim
+[2021-10-03 15:32:54] Shideravan: É estrelismo puro
+[2021-10-03 15:33:10] Shideravan: E tem uma galera ali que bota panos quentes, porque eles sabem que estão no olimpo também
+[2021-10-03 15:33:33] Shideravan: Eu acho um desperdicio de potencial tão grande, porque a comunidade do MAME é enorme e engajada
+[2021-10-03 15:34:02] Felipe "Juca" Sanches: é... me chateia essa postura dele de dizer: "pode deixar que eu já to fazendo", mas não dizer exatamente como ou o que está fazendo. E cinco anos depois quando alguém pergunta como tá, o cara solta arrogantemente um "se alguém for realmente foda em desenvolvimento de engines gráficas, podemos conversar, senão fica quieto e espera"
+[2021-10-03 15:34:27] Shideravan: Cara, é bem claro que ele não estava desenvolvendo porra nenhuma, só queria tirar seu brilho...
+[2021-10-03 15:34:39] Deleted Account: O linus é o maior exemplo. O cara podia dar um soco nele e ele provavelmente nem ficaria bravo.
+
+Agora se faz algo no kernel que ele acha errado ele só falta explodir a veia na testa. 😂
+[2021-10-03 15:34:47] Shideravan: Ou se estava, está escondido num canto da gaveta/HD dele
+[2021-10-03 15:34:53] Shideravan: juntando poeira
+[2021-10-03 15:35:44] Felipe "Juca" Sanches: "pode deixar que já tô fazendo"
+[2021-10-03 15:35:45] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16096-mp4.mp4
+[2021-10-03 15:35:51] Shideravan: Quando eu começei no MAME, eu lembro que ele estava desenvolvendo um driver de N64
+[2021-10-03 15:36:07] Shideravan: Isso foi em 2007
+[2021-10-03 15:36:10] Shideravan: Adivinha?
+[2021-10-03 15:36:22] Shideravan: 2021 e o MAME ainda não tem um driver completo de Nintendo 64
+[2021-10-03 15:37:03] Shideravan: Enquanto isso, no ares, estamos quase atingindo 100% de compatibilidade
+[2021-10-03 15:37:06] Shideravan: Isso foi coisa de MESES
+[2021-10-03 15:37:19] Shideravan: Do zero ao 100%
+[2021-10-03 15:37:52] Shideravan: E isso porque, todos sabemos, N64 tem um hardware complexo para caramba
+[2021-10-03 15:38:04] Shideravan: Ahhh e eu nem vou falar de performance
+[2021-10-03 15:38:44] Deleted Account: Hardware do N64 era lindo demais.
+[2021-10-03 15:38:51] Shideravan: https://github.com/higan-emu/ares/issues/143
+[2021-10-03 15:38:55] Shideravan: Verdade!
+[2021-10-03 15:39:35] Shideravan: Eu não entendo nada para ajudar ali no código do core de Nintendo 64, mas eu pude ajudar de outras formas. Fazendo a compatibility list dele e fazendo reports válidos, por exemplo
+[2021-10-03 15:41:01] Shideravan: Aliás... a questão da performance no MAME é algo que me incomoda
+[2021-10-03 15:41:23] Shideravan: Em tese é aquilo que conversamos ontem, que ele é preciso demais e isso tem um custo computacional alto
+[2021-10-03 15:41:33] Shideravan: Só que na prática, a gente sabe que não é só isso
+[2021-10-03 15:41:54] Shideravan: Estamos em 2021 e o MAME evoluiu pouco frente aos recursos que foram evoluindo
+[2021-10-03 15:42:30] Shideravan: Outros projetos em LLE conseguem emular muitas vezes as coisas num nível mais detalhado e terem performance melhor que o MAME
+[2021-10-03 15:42:36] Shelton Ribeiro: https://youtu.be/95faptE3-mc
+
+Sem gerar spam, maaaas vem coisa boa aí! A Segunda Jam de nintendo 64 Já está aberta!  Vem coisa boa por aí! 👏🏼👏🏼👏🏼
+[2021-10-03 15:43:08] Shideravan: Claro, existem formas de conseguir esse desempenho com novas técnicas e novas tecnologias e isso significa muito trabalho duro para implementar
+[2021-10-03 15:43:36] Shideravan: Mas quem poderia ir lá e implementar no MAME é ofendido por gente que não quer perder a estrelinha...
+[2021-10-03 15:43:53] Deleted Account: Um emulador que eu acho sensacional é o VICE com emulação de toda a família 6502 da commodore. Nem consigo imaginar a trabalheira pra implementar o SID chip.
+[2021-10-03 15:48:00] Shideravan: A gente fica aí esperando a mesma meia dúzia fazer tudo, porque não aceitam dividir holofotes...
+[2021-10-03 15:51:34] Shideravan: É o mesmo chip do NES, não é?
+[2021-10-03 16:14:09] Deleted Account: Sim. Mesmo chip do NES. .
+[2021-10-03 16:43:38] Felipe "Juca" Sanches: Dia 11 e 12 de Dezembro conferência tech como você nunca viu! Venha discutir o lado lúdico da computação.
+
+(o deadline é hoje! Se alguém também quiser mandar proposta: https://t.co/Rna6UTLSF4?amp=1)
+
+Minha proposta de palestra para a GambiConf
+
+Título da palestra:
+Iniventando moda com emuladores
+
+Descrição (280 caracteres):
+Nessa apresentação mostrarei diversos projetinhos de usos inusitados de emuladores como meio de prototipar interfaces de sistemas emulados com equipamentos reais como, por exemplo, uma máquina de pinball, um sintetizador analógico, displays de LED, motores, sensores e atuadores.
+
+Apresentador:
+Felipe Corrêa da Silva Sanches
+
+Mini-bio:
+Desenvolvedor de software livre tanto profissionalmente, no projeto Font Bakery para o Google Fonts, quanto em meu tempo de lazer, desenvolvendo emuladores junto ao Projeto MAME. Co-fundador do Garoa Hacker Clube.
+
+Tempo ideal para a talk: 45 minutos
+[2021-10-03 16:44:19] Toy: bacana, Juca.
+[2021-10-03 16:45:33] Shideravan: Muito bacana!
+[2021-10-03 16:45:38] Shideravan: Vou divulgar!
+[2021-10-03 16:47:53] Shideravan: Ahhhh esse é o formulário para você se inscrever para palestrar, achei que era o link para participar da palestra hahahaha
+[2021-10-03 16:47:53] Shideravan: Eu gostei bastante das informações, só tem um pequeno typo no título da palestra
+[2021-10-03 16:48:25] Shideravan: Apoio muito!
+[2021-10-03 16:48:45] Felipe "Juca" Sanches: opa! Consertei! 😊
+[2021-10-03 16:48:48] Shideravan: Boa!
+[2021-10-03 18:46:16] Shideravan: O documento sobre o Patinho Feio que você mencionou ontem na live era esse daqui?
+[2021-10-03 18:46:17] Shideravan: https://datassette.org/manuais/br-brasil-hardware-diversos-manuais/montador-do-patinho-feio
+[2021-10-03 20:02:45] Felipe "Juca" Sanches: sim! Eu falei 1974 no video? Se falei isso, então falei errado, pois pelo PDF vejo que era 1977. Mas era esse manual sim.
+
+A partir das informacoes continas nele implementei o driver do pato no mame
+[2021-10-03 20:02:55] Felipe "Juca" Sanches: tem todo o instruction set aí
+[2021-10-03 21:05:39] Shideravan: Dentre aqueles dumps do Zeebo que eu tinha encontrado aquele dia, você se recorda quais eram dumps da BIOS do console?
+[2021-10-03 21:06:08] Felipe "Juca" Sanches: não lembro
+[2021-10-03 21:06:53] Felipe "Juca" Sanches: as coisas que descobri eu postei aqui no grupo.Dá uma navegada no histórico daqui daquele dia
+[2021-10-03 21:08:22] Shideravan: Será que seriam esses arquivos aqui?
+[2021-10-03 21:08:23] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16141.jpg
+[2021-10-03 21:08:43] Felipe "Juca" Sanches: nao sei dizer
+[2021-10-03 21:08:56] Felipe "Juca" Sanches: mas pode ser
+[2021-10-03 21:10:47] Felipe "Juca" Sanches: o arquivo que eu tava vendo se chama 1.1.2.bin
+[2021-10-03 21:11:28] Felipe "Juca" Sanches: nele que tinha essas imagens
+[2021-10-03 21:11:33] Shideravan: hmmm
+[2021-10-03 21:11:50] Shideravan: Mas era um arquivo monolítico?
+[2021-10-03 21:11:55] Shideravan: Eu tenho esse que é separado
+[2021-10-03 21:12:12] Felipe "Juca" Sanches: é... fiquei mesmo com a impressao de que aquele arquivo tinha um monte de coisas num arquivao só
+[2021-10-03 21:12:33] Felipe "Juca" Sanches: pode ser que esses aí sejam o mesmo conteúdo mas separado por trechos de propósito específico
+[2021-10-03 21:12:39] Shideravan: Tenta verificar esse daqui
+[2021-10-03 21:13:02] Felipe "Juca" Sanches: talvez fosse o caso de concatenar todos esses aí e ver se o resultado dá o mesmo checksum do 1.1.2.bin
+[2021-10-03 21:13:26] Shideravan: zeebo\dump\nand\1.1.2\partitions
+[2021-10-03 21:13:38] Felipe "Juca" Sanches: não vou poder ver isso agora pois estou começando a lavar a louça aqui em casa
+[2021-10-03 21:13:54] Felipe "Juca" Sanches: volto mais tarde se der
+[2021-10-03 21:14:17] Shideravan: https://www.tripleoxygen.net/files/devices/zeebo/dump/nand/1.1.2/partitions/
+[2021-10-03 21:14:29] Felipe "Juca" Sanches: eu vim aqui no laptop só pra botar uma musiquinha pra me deixar mais feliz lavando louça :-P

@@ -1,0 +1,63 @@
+[2025-06-24 21:50:16] Felipe "Juca" Sanches: Eu tenho um SSD de 2TB. E já tá quase cheio. Então estou fazendo a limpeza. Buscando o que há de arquivos pesados que posso descartar. E um dos lugares que sei que gasto bastante espaço são nos diretórios de projetos de software, pois é comum eu largar projetos compilados a partir de um git clone e isso ocupar espaço possível de se liberar com um mero make clean
+[2025-06-24 21:50:24] Felipe "Juca" Sanches: Aí eu achei isso:
+[2025-06-24 21:50:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-06/35006.jpg
+[2025-06-24 21:50:52] Felipe "Juca" Sanches: é um checkout do MAME dedicado a implementar o driver de emulação do Itautec I-7000
+[2025-06-24 21:51:04] Felipe "Juca" Sanches: Está consumindo 3 GB do meu disco
+[2025-06-24 21:51:15] Felipe "Juca" Sanches: E tem nele apenas 2 commits meus
+[2025-06-24 21:52:31] Felipe "Juca" Sanches: vou verificar se esses commits (de 2015!!!) chegaram a entrar já no MAME. Se não entraram ainda, vou extraí-los em forma de patch e aplicá-los a um branch local no diretório do meu git-clone principal do MAME
+[2025-06-24 21:53:14] Felipe "Juca" Sanches: Teve uma época em que eu mantinha um git clone pra cada driver novo que eu estivesse desenvolvendo. Pois era chato ficar alternando entre vários branches
+[2025-06-24 21:53:29] Felipe "Juca" Sanches: Na verdade também por que eu ainda não tinha muita familiaridade com o git
+[2025-06-24 21:53:44] Felipe "Juca" Sanches: mas hoje em dia deixo tudo num git-clone só
+[2025-06-24 21:53:51] L.: git worktree
+[2025-06-24 21:54:38] L.: oooou você faz outro clone, mas clonando do diretório onde tá teu clone que veio de fora
+
+o git é esperto pra fazer hardlink nesse caso
+[2025-06-24 21:55:24] L.: nesse caso aí talvez role até um rebase hein?
+[2025-06-24 21:55:42] Felipe "Juca" Sanches: código de 10 anos atrás? É pedir pra dar merda
+[2025-06-24 21:56:18] Felipe "Juca" Sanches: o MAME tem 95 mil commits!
+[2025-06-24 21:56:31] L.: sem dúvida, mas em teoria é coisa nova né? aí não deve ter muito conflito
+[2025-06-24 21:57:34] Felipe "Juca" Sanches: é, pode ser. Mas no momento estou priorizando liberar espaço no disco, então farei da forma mais simples possível e em seguida partirei pro próximo diretório de projeto de software pra ver se libero mais uns gigabytes
+[2025-06-24 21:57:35] L.: aliás, falando em projeto velho
+
+no trampo novo pediram pra listar invenções. é claro que o simulador de pense bem entrou na lista
+[2025-06-24 21:57:45] Felipe "Juca" Sanches: :-D
+[2025-06-24 21:59:03] Felipe "Juca" Sanches: Aliás... ainda tá na nossa TO-DO list fazer o driver do Pense Bem original dos anos 80 (e também do Smart Start, que suponho ser idêntico) usando a ROM extraída recentemente via decapping...
+[2025-06-24 21:59:22] L.: é, agora vai ser mais difícil pra mim :(
+[2025-06-24 21:59:49] Felipe "Juca" Sanches: por que?
+[2025-06-24 22:00:06] L.: trampo é cheio de restrição pra contribuição, além de, por padrão, ser dona do que eu fizer mesmo fora do horário de trabalho usando meu equipamento
+[2025-06-24 22:00:34] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-06/35027-face-melting-indiana-jones.mp4
+[2025-06-24 22:01:07] L.: é, é foda, mas eu precisava de trabalho (quase 1 ano sem emprego, bolso tava doendo)
+[2025-06-24 22:01:39] Felipe "Juca" Sanches: qual é a empresa?
+[2025-06-24 22:01:43] L.: google
+[2025-06-24 22:01:48] Felipe "Juca" Sanches: uia!
+[2025-06-24 22:03:03] L.: oportunidade pra achar outros hobbies, né?
+[2025-06-24 22:05:20] Felipe "Juca" Sanches: * Montar LEGO...
+[2025-06-24 22:05:56] Felipe "Juca" Sanches: * Tocar um instrumento musical
+[2025-06-24 22:06:17] Felipe "Juca" Sanches: * Aprender receitas de comida e de coquetelaria
+[2025-06-24 22:06:29] Felipe "Juca" Sanches: * Ler livros
+[2025-06-24 22:06:59] L.: * dormir
+[2025-06-24 22:07:05] Felipe "Juca" Sanches: * ver netflix
+[2025-06-24 22:07:10] Felipe "Juca" Sanches: * jogar video game
+[2025-06-24 22:09:34] Felipe "Juca" Sanches: Alguém me contou que antigamente a lógica do mecanismo de busca do Google tinha uma regra de equivalência entre os termos "Genesis" e "Mega Drive" e que uma consequência disso era que se vocÊ buscasse por "The Book of Mega Drive", os primeiros resultados eram sobre a Bíblia :-P
+[2025-06-24 22:13:59] L.: eu não duvido 😆
+[2025-06-24 22:14:31] Felipe "Juca" Sanches: Ah, e parece que nem é algo tão antigo assim! Olha aqui: https://www.pcgamer.com/google-spits-out-results-for-book-of-genesis-and-the-band-genesis-when-searching-for-segas-mega-drive-because-its-trying-to-be-clever/
+[2025-06-24 22:15:01] L.: tem vários que ainda funcionam, tipo se buscar por "do a barrel roll" (starfox)
+[2025-06-24 22:32:26] Felipe "Juca" Sanches: kkkk, que divertido isso!
+[2025-06-24 22:45:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-06/35045.jpg
+[2025-06-24 22:45:10] Felipe "Juca" Sanches: Alguém me explica por que é que essas coisas acontecem? (Olhem a data de hoje e olhem a data do arquivo!)
+[2025-06-24 22:46:28] L.: é de hoje mesmo?
+[2025-06-24 22:46:40] Felipe "Juca" Sanches: É de EXATAMENTE 10 anos atrás
+[2025-06-24 22:47:03] Felipe "Juca" Sanches: tropecei nisso completamente sem querer
+[2025-06-24 22:47:25] Felipe "Juca" Sanches: Levou dez anos pra eu resolver fazer isso. E fiz justamente no dia do aniversário de 10 anos :-P
+[2025-06-24 22:54:24] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-06/35050-irc_chat_snes_xtal.txt
+[2025-06-24 22:54:24] Felipe "Juca" Sanches: O conteúdo do arquivo não é muito importante. É apenas o log de uma conversa que tive sobre frequencias de cristais usados em SNES brasileiro, comparado com os cristais declarados no driver do MESS (que depois virou MAME)
+[2025-06-24 22:55:49] L.: o meu snes de infância foi naturalizado brasileiro 😆
+[2025-06-24 22:56:23] L.: era americano, aí aprendeu a aceitar cartucho piratex e emitir pal-m ao invés de ntsc
+[2025-06-24 22:58:36] Felipe "Juca" Sanches: Interessante como a comunidade cresceu em 10 anos! No IRC nesse dia 10 anos atrás tinha 69 pessoas online. Hoje no Discord do MAME estamos nesse exato momento com 103 pessoas online e outras 227 offline.
+[2025-06-24 23:00:39] L.: é legal, mesmo! e o mais incrível é que o sonho do papa da emulação, do grande reirom, finalmente virou verdade 
+
+quem diria
+[2025-06-24 23:01:28] L.: quem viveu aquela época, viveu
+
+lembrei disso aí outro dia quando um dos meus amigos, que fez o papel de reirom nos filmes, mandou um like num post meu por aí
+[2025-06-24 23:01:40] L.: tosqueira total 😆

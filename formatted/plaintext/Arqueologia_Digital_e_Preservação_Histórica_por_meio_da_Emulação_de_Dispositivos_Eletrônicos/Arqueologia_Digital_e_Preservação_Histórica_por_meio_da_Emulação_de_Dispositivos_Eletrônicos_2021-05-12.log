@@ -1,0 +1,169 @@
+[2021-05-12 16:34:30] Flávio Amieiro: https://www.youtube.com/watch?v=uUCLerEA9vA
+[2021-05-12 16:34:49] Flávio Amieiro: Tem uma menção ao patinho feio no início (com uma história um pouco diferente da que eu conhecia)
+[2021-05-12 16:53:23] Felipe "Juca" Sanches: ele diz "um departamento rival", mas a realidade é que não era outro departamento da usp. Era uma outra universidade: a UNICAMP
+[2021-05-12 16:53:53] Flávio Amieiro: Sim
+[2021-05-12 16:54:21] Flávio Amieiro: Ele diz também, se me lembro bem, que o patinho feio foi feito pra competir pelo contrato com a Marinha
+[2021-05-12 16:54:26] Flávio Amieiro: Disso eu não sabia
+[2021-05-12 16:54:31] Felipe "Juca" Sanches: e não estavam "competindo por um contrato da marinha".  O contrato com a  marinha era só com a UNICAMP mesmo. Até onde ouvi dizer, a USP estava apenas "competindo" pelo prestígio acadêmico em comparaćão às atividades feitas na UNICAMP.
+[2021-05-12 16:54:54] Felipe "Juca" Sanches: Mas eu não sei. Eu não tava lá.
+[2021-05-12 16:55:08] Flávio Amieiro: Era isso que eu achava também...
+[2021-05-12 16:55:22] Felipe "Juca" Sanches: Pois é. Acho que o TecMundo comeu bola.
+[2021-05-12 16:55:23] Flávio Amieiro: Bem, mas eu soube por você, então...
+[2021-05-12 16:55:24] Flávio Amieiro: Hahahah
+[2021-05-12 16:55:42] Felipe "Juca" Sanches: e eu sei dessas coisas por conta de conversas com o pessoal da USP
+[2021-05-12 16:56:11] Flávio Amieiro: É possível. Eles devem ter feito uma pesquisa rápida e tal. É um vídeo curto no Youtube e o patinho feio nem é o foco.
+[2021-05-12 17:21:11] Felipe "Juca" Sanches [forwarded]: https://dmitry.gr/?r=05.Projects&proj=30.%20Reverse%20Engineering%20an%20Unknown%20Microcontroller
+[2021-05-12 17:39:02] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13132.jpg
+[2021-05-12 17:39:05] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13133.jpg
+[2021-05-12 17:39:27] L.: Descrição do leilão dizia que era "pouco usado". Nenhuma tecla quase tem texto ainda :(
+[2021-05-12 17:39:46] L.: Esse negócio tem um Z80. Fizeram um terminal pra ele
+[2021-05-12 17:42:22] Felipe "Juca" Sanches: nerd-sniping warning!
+[2021-05-12 17:42:48] Felipe "Juca" Sanches: tem EPROM pra fazer dump?
+[2021-05-12 17:43:07] Felipe "Juca" Sanches: que coisa linda essa tela
+[2021-05-12 17:43:18] L.: Eu pedi dinheiro de volta por que quero um com teclado decente, esse aí tá zoado. Vamos ver. Se não conseguir eu abro (tem adesivo de garantia, lol)
+[2021-05-12 17:43:25] L.: Tem emails de alguém nisso LOL
+[2021-05-12 17:43:48] L.: Deve ser possível botar um MS-BASIC nisso
+[2021-05-12 17:44:33] Felipe "Juca" Sanches: É QWERTY. Vc não sabe digitar nisso com os olhos fechados?
+[2021-05-12 17:44:56] L.: Sim, eu sei, mas eu queria algo com aparência legal, ué.
+[2021-05-12 17:44:58] Felipe "Juca" Sanches: (sim, eu sei... o anúncio não estava correto, você tem o direito de querer um teclado em boas condicoes)
+[2021-05-12 17:45:20] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13145-sticker.webp
+[2021-05-12 17:45:49] Erin Pinheiro 🐿: nice!
+[2021-05-12 17:46:00] L.: Adaptar aquele terminal que fizeram e patchear o MS-BASIC pra rodar nisso vai ser legal
+[2021-05-12 17:46:06] Erin Pinheiro 🐿: enquanto isso eu me enchendo de tinta tentando recuperar as canetinhas da minha plotter
+[2021-05-12 17:46:09] Felipe "Juca" Sanches: tem interface serial?
+[2021-05-12 17:46:09] L.: Especialmente se conseguir fazer modo gráfico funcionar!
+[2021-05-12 17:46:19] L.: Tem. Fizeram um negócio com ESP8266 pra virar terminal.
+[2021-05-12 17:46:24] L.: Implementaram VT100 e tal
+[2021-05-12 17:46:31] L.: https://jcs.org/wifistation
+[2021-05-12 17:47:02] L.: Eu peguei o chip que usam pra I/O como sample da Microchip, tô esperando chegar
+[2021-05-12 17:47:18] Felipe "Juca" Sanches: e tem alguma forma de executar código nele? Poderia escrever um programinha pra fazer o dump da ROM interna e mandar para a serial (sem rasgar o selinho de garantia)
+[2021-05-12 17:47:32] L.: Sim, nesse site aí mostra como bota um loader
+[2021-05-12 17:47:46] L.: Depois que tem o ESP8266 ligado na serial, ele tem um negócio que você pode mandar o programa via HTTP
+[2021-05-12 17:48:14] Felipe "Juca" Sanches: me interessa um dump do boot dele pra poder emular
+[2021-05-12 17:48:19] L.: Deve ser possível dumpar a ROM, sim. Não sei se tem esquema de bankswitching
+[2021-05-12 17:48:36] L.: LOL, já deram o refund
+[2021-05-12 17:48:38] L.: Foi de graça
+[2021-05-12 17:48:40] L.: :D
+[2021-05-12 17:49:33] L.: Manda algo aí quando conseguir fazer funcionar
+[2021-05-12 17:49:38] Felipe "Juca" Sanches: fazendo um dump parcial do boot, dá pra carregar a rom (mesmo que incompleta) num skeleton driver no MAME e com base nisso, coletar mais evidencias técnicas que nos levam a entender como funcionam os mecanismos de bankswitchin (caso haja)
+[2021-05-12 17:50:07] Felipe "Juca" Sanches: Ahhhhhhh....... nerd-sniped! :-P
+[2021-05-12 17:50:09] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13166.jpg
+[2021-05-12 17:50:09] Erin Pinheiro 🐿: *alguma* coisa funciona, só não tá 100%
+[2021-05-12 17:50:10] Erin Pinheiro 🐿: dá pra brincar
+[2021-05-12 17:50:12] L.: Tem emails nisso ainda, e tem bateria no negócio. Por sorte não vazaram por que os últimos emails foram de 2013
+[2021-05-12 17:50:46] Erin Pinheiro 🐿: essa caneta preta eu preenchi com caneta de uma esferográfica fina
+[2021-05-12 17:51:22] Erin Pinheiro 🐿: mas no processo de tentar recuperar as canetas acabei destruindo algumas delas (e outras a esfera já não funcionava mais quando chegou em mim)
+[2021-05-12 17:51:33] Erin Pinheiro 🐿: a preta e a azul estão legíveis
+[2021-05-12 17:51:38] Erin Pinheiro 🐿: a verde tá mais ou menos
+[2021-05-12 17:51:52] Erin Pinheiro 🐿: e eu não tenho mais ponta esferográfica pra fazer uma vermelha
+[2021-05-12 17:51:54] Felipe "Juca" Sanches: preciso retomar essa treta aqui... antes de cair em outros buracos de projetos interessantes
+[2021-05-12 17:52:20] Erin Pinheiro 🐿: tem new old stock nos EUA mas eu mandei um pedido de cotação e só o frete fica 40 USD, vsf
+[2021-05-12 17:52:21] L.: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13176.mp4
+[2021-05-12 17:53:52] L.: Eita. :|  É fácil adaptar pra usar outro tipo de caneta?
+[2021-05-12 17:54:11] Erin Pinheiro 🐿: possível, acredito que sim. fácil, jamais
+[2021-05-12 17:54:24] Erin Pinheiro 🐿: mas estou estudando (e fazendo impressões 3d)
+[2021-05-12 17:54:33] Erin Pinheiro 🐿: até agora não consegui um método bom
+[2021-05-12 17:55:13] Erin Pinheiro 🐿: aliás, li mal, perdão: "adaptar pra outro tipo de caneta" não. o que estou tentando fazer é recriar as canetas próprias pra isso
+[2021-05-12 17:55:27] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13182.jpg
+[2021-05-12 17:55:27] L.: Parece ser a ROM
+[2021-05-12 17:55:34] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13183.jpg
+[2021-05-12 17:55:34] Erin Pinheiro 🐿: elas são minúsculas:
+[2021-05-12 17:56:27] Felipe "Juca" Sanches: e uma quantidade obscena de test-points kkkk
+[2021-05-12 17:56:30] Erin Pinheiro 🐿: mas nada impede de cortar uma esferográfica e colocar no lugar, precisa só adaptar pra ficar do diâmetro certo que não trave (ela precisa ser empurrada pra frente e voltar pra trás dentro do cabeçote)
+[2021-05-12 17:57:41] L.: É, talvez dê pra achar algum caninho pra usar de bucha
+[2021-05-12 17:57:49] L.: Ou adaptar pra usar uma felt tip com a carga cortada
+[2021-05-12 17:57:59] Felipe "Juca" Sanches: "62C256 32K x 8 LOW Power CMOS Static RAM"
+[2021-05-12 17:58:25] Erin Pinheiro 🐿: não acho que caneta de feltro vá durar muito com o uso, as originais são umas esferográficas de frações de milímetro
+[2021-05-12 17:58:38] Erin Pinheiro 🐿: por isso quebram fácil quando você tenta abrir pra colocar tinta nova
+[2021-05-12 17:58:39] L.: Ah, é, essa SRAM aí já era, tirei a bateria que já tava começando a vazar
+[2021-05-12 18:00:37] Felipe "Juca" Sanches: "Don't turn it on! Take it apart!" — Dave Jones
+[2021-05-12 18:01:06] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13193.jpg
+[2021-05-12 18:01:06] L.: Isso aqui é uma EEPROM de 128k!
+[2021-05-12 18:01:14] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13194-sticker.webp
+[2021-05-12 18:01:26] Felipe "Juca" Sanches: YEP!
+[2021-05-12 18:02:13] L.: Legal que no datasheet fala: "Fast access time: 45ns" LOL
+[2021-05-12 18:02:49] L.: Parece que o Z80 tá num SOC da Conexant
+[2021-05-12 18:02:56] Felipe "Juca" Sanches: e suspeito que os chips mais acima na foto sejam para implementar o memory-map (chavear o chipselect em funcao das faixas de endereco)
+[2021-05-12 18:03:21] L.: Provavelmente sim, tudo 74HC
+[2021-05-12 18:03:41] L.: OK, como dumpo isso aqui sem tirar da placa?
+[2021-05-12 18:03:46] L.: Tenho leitor de eeprom aqui
+[2021-05-12 18:03:59] Erin Pinheiro 🐿: clips
+[2021-05-12 18:04:10] Erin Pinheiro 🐿: ou soldando pontos
+[2021-05-12 18:04:13] L.: Ah, sim. Eu tenho um pra SOIC-8.
+[2021-05-12 18:04:38] L.: Vou ver se acho algo pra isso aqui, ou faço na mão
+[2021-05-12 18:04:55] Erin Pinheiro 🐿: na verdade acho que nem tem clips pra rom soic paralela assim, só serial
+[2021-05-12 18:04:59] Erin Pinheiro 🐿: muitos pinos
+[2021-05-12 18:05:06] Erin Pinheiro 🐿: a de soic8 já me dá dor de cabeça ahuaha
+[2021-05-12 18:05:23] L.: Hehehe, eu usei várias vezes enquanto brinquei de coreboot no meu thinkpad
+[2021-05-12 18:05:27] Felipe "Juca" Sanches: escrevendo um programinha em basic pra varrer intervalos de memória e mandar pela serial
+[2021-05-12 18:06:17] L.: (Meu thinkpad velho tem Linux na ROM que boota direto num negócio só com o cryptsetup hackeado pra fazer kexec no kernel que tá no disco criptografado. Não tem bootloader e todo o disco tá criptografado.)
+[2021-05-12 18:06:23] Felipe "Juca" Sanches: em basic ou em alguma outra linguagem que possa estar disponível no sistema nativo desse aparelho. Ou não tem nenhum sistema de programacao?
+[2021-05-12 18:06:43] L.: (Toda a userland é esse cryptsetup, é só um arquivo dentro do initrd inteiro. O binário faz tudo :P)
+[2021-05-12 18:07:07] Felipe "Juca" Sanches: me refiro ao MailStation
+[2021-05-12 18:07:16] L.: Parece que tem um modo monitor nisso
+[2021-05-12 18:07:23] L.: Vou ver mais tarde
+[2021-05-12 18:23:15] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13217.jpg
+[2021-05-12 20:25:03] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13218.jpg
+[2021-05-12 20:36:35] Erin Pinheiro 🐿: boa!
+[2021-05-12 20:59:14] L.: Found TL866II+ 04.2.86 (0x256)
+Warning: Firmware is out of date.
+  Expected  04.2.122 (0x27a)
+  Found     04.2.86 (0x256)
+Overcurrent protection!
+
+
+Fuén. Pelo jeito não vai rolar com a ROM na placa.
+[2021-05-12 20:59:50] L.: Teria que levantar o pino de VCC talvez?
+[2021-05-12 21:02:28] Erin Pinheiro 🐿: hmm
+[2021-05-12 21:02:41] Erin Pinheiro 🐿: não faço idéia
+[2021-05-12 21:02:46] Erin Pinheiro 🐿: será que algo está em curto?
+[2021-05-12 21:09:02] L.: Ahá, dumpei.
+[2021-05-12 21:09:17] L.: Levantei o pino de VCC da placa
+[2021-05-12 21:09:24] L.: Tem umas strings ASCII no .bin então deve estar certo
+[2021-05-12 21:09:36] L.: ROCKWELL RPI (TM) MODEM+01
+[2021-05-12 21:10:15] L.: Ahhh, isso é o firmware do modem! Não é o firmware do negócio
+[2021-05-12 21:15:41] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13230.jpg
+[2021-05-12 21:15:41] L.: A ROM mesmo deve estar nesse negócio na ponta da placa
+[2021-05-12 21:16:30] Erin Pinheiro 🐿: SRAM Low Power & Low Voltage 1Mb x8
+[2021-05-12 21:18:01] L.: SRAM? Meh.
+[2021-05-12 21:19:24] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13233.jpg
+[2021-05-12 21:19:24] L.: Esses outros dois são memória mas vai ser chato dumpar se forem ROMs
+[2021-05-12 21:20:06] Erin Pinheiro 🐿: yep esses códios são de roms
+[2021-05-12 21:20:48] Erin Pinheiro 🐿: uma 4mbit e outra 8mbit
+[2021-05-12 21:27:38] L.: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13236-mailstation.bin
+[2021-05-12 21:27:43] L.: Esse .bin aí é do modem
+[2021-05-12 21:28:21] L.: Vou fechar esse negócio por enquanto, outro dia olho. Talvez melhor esquema seja dumpar sem abrir mesmo
+[2021-05-12 21:28:38] L.: Ah, valeu por pesquisar.
+[2021-05-12 21:28:59] Erin Pinheiro 🐿: esses eu sabia de cabeça 😄
+[2021-05-12 21:47:00] Felipe "Juca" Sanches: memória flash, né?
+[2021-05-12 21:52:50] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13242.jpg
+[2021-05-12 21:52:50] L.: Tem um hex editor embutido
+[2021-05-12 21:53:00] Erin Pinheiro 🐿: eita
+[2021-05-12 21:53:16] Erin Pinheiro 🐿: agora eu tô querendo um também hauahaahuahah
+[2021-05-12 21:53:20] Felipe "Juca" Sanches: que da hora!
+[2021-05-12 21:53:42] Felipe "Juca" Sanches: esse hex editor só lê arquivos? Ou lê também conteúdo de enderecos de memória?
+[2021-05-12 21:54:04] Ismael Luceno: legal
+[2021-05-12 21:54:36] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13248.jpg
+[2021-05-12 21:54:36] L.: Só da memoria
+[2021-05-12 21:55:04] Felipe "Juca" Sanches: isso é dump da memória do aparelho?!?!?!
+[2021-05-12 21:55:08] L.: Ahan
+[2021-05-12 21:55:15] Felipe "Juca" Sanches: então é só anotar kkkkk
+[2021-05-12 21:55:25] L.: 😂
+[2021-05-12 21:55:27] Felipe "Juca" Sanches: haja saco digitar 128K
+[2021-05-12 21:55:28] Ismael Luceno: 😯
+[2021-05-12 21:55:41] Erin Pinheiro 🐿: faz ocr
+[2021-05-12 21:55:41] L.: Dá pra botar programa extra
+[2021-05-12 21:55:53] L.: E aí dumpar pela serial
+[2021-05-12 21:56:04] Felipe "Juca" Sanches: dá pra escrever na unha um ASM simples de poucos bytes que faz o dum e manda pra serial
+[2021-05-12 21:56:08] Felipe "Juca" Sanches: é, isso!
+[2021-05-12 21:56:11] L.: Eu tô esperando chegar o chip pra fazer serial da porta paralela
+[2021-05-12 21:57:35] Felipe "Juca" Sanches: o bom é que essa foto já serve de comfirmacao pra validar se o dump via serial funcionou
+[2021-05-12 21:58:07] Felipe "Juca" Sanches: ah! o que você modifica aí é permanente?
+[2021-05-12 21:58:16] Felipe "Juca" Sanches: esse editor grava na flash?
+[2021-05-12 21:58:42] Felipe "Juca" Sanches: tem cara de que dá pra transformar o aparelho em um tijolo com isso aí
+[2021-05-12 22:00:08] L.: Sim, dá pra brickar fácil
+[2021-05-12 22:05:49] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13266.jpg
+[2021-05-12 22:05:49] L.: Instalei um programa na unha
+[2021-05-12 22:07:10] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13267.jpg
+[2021-05-12 22:07:10] L.: Mas vou ter que esperar chegar o bagulho pra jogar outra coisa aqui
+[2021-05-12 22:09:45] Nano Gennari: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13268-473j2t.mp4

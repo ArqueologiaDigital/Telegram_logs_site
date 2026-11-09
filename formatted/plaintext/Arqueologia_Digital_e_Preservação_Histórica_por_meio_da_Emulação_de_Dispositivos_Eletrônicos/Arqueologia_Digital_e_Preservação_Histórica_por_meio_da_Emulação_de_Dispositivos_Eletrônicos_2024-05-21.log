@@ -1,0 +1,299 @@
+[2024-05-21 00:04:45] Felipe "Juca" Sanches: eu acho que isso é um pedacinho de bond-wire
+[2024-05-21 00:05:09] Felipe "Juca" Sanches: ou algo do tipo
+[2024-05-21 00:05:17] Felipe "Juca" Sanches: resíduos do processo de decapping
+[2024-05-21 00:05:25] Felipe "Juca" Sanches: coisas que a limpeza não retirou por completo
+[2024-05-21 00:06:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31734.jpg
+[2024-05-21 00:06:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31735.jpg
+[2024-05-21 00:10:49] Erin Pinheiro 🐿: só pra saber, vc tá usando detecção "tall" né?
+[2024-05-21 00:11:00] Felipe "Juca" Sanches: sim
+[2024-05-21 00:11:04] Erin Pinheiro 🐿: blz
+[2024-05-21 00:12:11] Felipe "Juca" Sanches: progresso atual: 25%
+[2024-05-21 00:12:22] Felipe "Juca" Sanches: me parece que ainda hoje teremos uma ROM boa 😉
+[2024-05-21 00:12:52] Felipe "Juca" Sanches: hoje, 21 de maio hahaha
+[2024-05-21 00:20:02] Felipe "Juca" Sanches: levei 1 hora pra levantar 25% da ROM A
+[2024-05-21 00:20:23] Felipe "Juca" Sanches: então preciso de mais umas 3 horas...
+[2024-05-21 01:43:18] Felipe "Juca" Sanches: 50% 😊
+[2024-05-21 02:20:38] Erin Pinheiro 🐿: essa aqui é a "tamagochi P1" que tem uma rom no MAME? pq eu tentei de vários jeitos decodar e não chego na mesma rom, e não encontro informação nenhuma de como decodaram a rom (o tama P1 especificamente dizem ter sido decodado por decap, por isso achei que seja esse map) https://siliconpr0n.org/map/bandai/tamagotchi-v1/mcmaster_rom_mit100x_x/
+[2024-05-21 02:21:19] Erin Pinheiro 🐿: quero entender como essa rom precisa ser decodada pq nessa mesma pasta tem outros modelos e eu acho que um é o P2, que não foi dumpado ainda até onde eu sei
+[2024-05-21 02:22:39] Erin Pinheiro 🐿: não mapeei a rom inteira, fiz só o canto superior esquerdo, visualmente parece que o inferior direito condiz com o final da ROM dumpada então assumi estar ali, mas o solver não encontra nenhum desembaralhamento que bata com o começo da ROM do MAME
+[2024-05-21 02:29:30] Felipe "Juca" Sanches: @mynameiserin já estou em 85% 😊 Muito obrigado. Eu tava sendo muito tapado antes das suas dicas 😉
+[2024-05-21 02:32:33] Erin Pinheiro 🐿: eu devia só ter feito e mandado pronto rs assim eu tinha o que fazer e você já tinha a rom pronta nessa hora, provavelmente
+[2024-05-21 02:32:46] Felipe "Juca" Sanches: :-P
+[2024-05-21 02:32:50] Felipe "Juca" Sanches: tá tudo certo
+[2024-05-21 02:33:01] Felipe "Juca" Sanches: eu tô achando divertido fazer
+[2024-05-21 02:33:10] Erin Pinheiro 🐿: eu também, por isso queria fazer oras
+[2024-05-21 02:33:15] Felipe "Juca" Sanches: hehe
+[2024-05-21 02:33:19] Erin Pinheiro 🐿: agora tô tentando com essa do tamagochi e apanhando
+[2024-05-21 02:40:56] Erin Pinheiro 🐿: @fsanches você quem sabe de mame, se achar alguma informação de como foi dumpada let me know
+[2024-05-21 02:40:57] Erin Pinheiro 🐿: tks
+[2024-05-21 02:54:25] Felipe "Juca" Sanches: ok, vou dar uma investigada
+[2024-05-21 02:54:28] Felipe "Juca" Sanches: e te falo
+[2024-05-21 02:54:35] Felipe "Juca" Sanches: terminei de extrair os bits
+[2024-05-21 02:54:44] Felipe "Juca" Sanches: e tenho um disasm completo
+[2024-05-21 02:55:09] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31762-smartstart-corrigida.asm
+[2024-05-21 02:55:09] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31763-smartstart-corrigida.bin
+[2024-05-21 02:55:37] Felipe "Juca" Sanches: Tem ainda uns "Illegal", mas agora saquei o que é: Trata-se de um bloco de dados no final da ROM
+[2024-05-21 02:58:19] Felipe "Juca" Sanches: Todos esses "Illegal" aparecem no final da ROM.
+[2024-05-21 02:58:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31766.jpg
+[2024-05-21 02:58:51] Felipe "Juca" Sanches: IRET no endereço 73C é a última instrução. O resto é dado.
+[2024-05-21 02:59:21] Felipe "Juca" Sanches: E tem uma parte do código que endereça  esses dados:
+[2024-05-21 02:59:27] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31769.jpg
+[2024-05-21 02:59:46] Felipe "Juca" Sanches: registradores R4 e R5 juntos formam um ponteiro para 73D
+[2024-05-21 03:01:00] Felipe "Juca" Sanches: e o dado apontado por RR4 (que suponho ser a sintaxe para R4 concatenado com R5) é lido para o registrador R6 na instrução do endereço 594h
+[2024-05-21 03:09:07] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31772.jpg
+[2024-05-21 03:09:07] Erin Pinheiro 🐿: yup http://www.bitsavers.org/components/zilog/z8/Z8_Family_Design_Handbook_Aug89.pdf
+[2024-05-21 03:09:59] Felipe "Juca" Sanches: 😊
+[2024-05-21 03:10:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31774.jpg
+[2024-05-21 03:10:52] Felipe "Juca" Sanches: Editando...
+[2024-05-21 03:12:29] Felipe "Juca" Sanches: @mynameiserin e L., querem receber agradecimentos em público?
+[2024-05-21 03:12:53] Felipe "Juca" Sanches: ou preferem anonimato?
+[2024-05-21 03:17:10] Erin Pinheiro 🐿: tudo que eu fiz foi ler o readme a aprender a usar a ferramenta rs
+[2024-05-21 03:18:12] Erin Pinheiro 🐿: mas a atribuição que eu uso em git é maple "mavica" syrup <maple@maple.pet> exatamente como escrito sem caixa alta
+[2024-05-21 03:18:23] Erin Pinheiro 🐿: não precisa colocar
+[2024-05-21 03:21:56] L.: bota lá! "L. Pereira <pensebem@tia.mat.br>"
+[2024-05-21 03:23:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31781.jpg
+[2024-05-21 03:23:01] Felipe "Juca" Sanches: self test rom
+[2024-05-21 03:23:12] L.: Olharei isso amanhã!
+
+Agradece o Travis também, a ajuda dele foi indispensável!!
+[2024-05-21 03:23:23] Felipe "Juca" Sanches: sim, claro!
+[2024-05-21 03:23:55] Felipe "Juca" Sanches: se não aparecer agradecimento nos comentários do driver, é por chatice dos mantenedores do MAME
+[2024-05-21 03:24:03] Felipe "Juca" Sanches: não sei se isso é permitido
+[2024-05-21 03:24:05] L.: De buenas
+[2024-05-21 03:24:26] Erin Pinheiro 🐿: yarp
+[2024-05-21 03:24:51] Felipe "Juca" Sanches: sobre o ponto de entrada, talvez seja o IRQ4, como se vê na ROM de factory test do Z8
+[2024-05-21 03:26:28] L.: Compilar mame com driver do pense bem z8 pra webassembly e passar pelo weval (que faz execução parcial -- projeção futamura -- e transforma interpretador em compilador) vai essencialmente portar  z8 pra wasm (sem interpretar!)
+[2024-05-21 03:27:23] L.: Aí com um pouco de plumbing rola controlar o svg na versão web
+[2024-05-21 03:27:25] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31791.jpg
+[2024-05-21 03:27:25] Felipe "Juca" Sanches: E na ROM do smartstart IRQ4 é 697h
+[2024-05-21 03:27:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31792.jpg
+[2024-05-21 03:27:51] Felipe "Juca" Sanches: que parece ser o caso mesmo...
+[2024-05-21 03:27:56] Felipe "Juca" Sanches: agora é só alegria
+[2024-05-21 03:28:06] L.: Massa demais
+[2024-05-21 03:29:13] Felipe "Juca" Sanches: cruzando com os esquemáticos nos próximos dias, dará pra começar a extrair significado desse monte de manipulaçao de registradores
+[2024-05-21 03:29:34] L.: Ahan
+[2024-05-21 03:29:57] L.: Logo no começo deve ter algo pra controlar timer e fazer o pwm da musiquinha de boot
+[2024-05-21 03:30:26] Felipe "Juca" Sanches: E isso aqui era um palpite ruim. Pois ao que tudo indica, esse endereço já é bloco de dados
+[2024-05-21 03:31:10] L.: eu ia dormir, mas acho que vou ver isso também
+[2024-05-21 03:31:10] L.: auheuahe
+[2024-05-21 03:34:16] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31801.jpg
+[2024-05-21 03:34:16] Felipe "Juca" Sanches: Temos um novo candidato: Esse RR R4 numa rotina que depois também trabalha com aqueles dados do fim da ROM
+[2024-05-21 03:34:45] L.: boa
+[2024-05-21 03:36:23] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31803.jpg
+[2024-05-21 03:36:23] Felipe "Juca" Sanches: E parece que também tem um ponteiro pra um outro bloco de dados naquela mesma região, em 75Ah
+[2024-05-21 03:36:59] L.: pode ser ou player de musiquinha ou rotina dos livros
+[2024-05-21 03:37:47] L.: atualizando radare2 no meu pc aqui pra ver se tem disassembler de z8
+[2024-05-21 03:38:20] L.: tomara que tenha, aí rola análise pra achar as subrotinas
+[2024-05-21 03:38:44] Felipe "Juca" Sanches: mas minha busca por RR pode ser viés da minha aprte, por eu estar apostando que o RNG seja um LFSR
+[2024-05-21 03:40:13] L.: é, não suporta z8 :(
+[2024-05-21 03:41:26] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31809.jpg
+[2024-05-21 03:41:26] Felipe "Juca" Sanches: ah! Tem rotate-left também!
+[2024-05-21 03:41:38] L.: pode ser só divisão e multiplicação por 2 né
+[2024-05-21 03:41:44] L.: RL e RR é super comum :P
+[2024-05-21 03:42:22] Felipe "Juca" Sanches: pois é... mas to pensando que instruções eu usaria pra fazer um LFSR, então esse foi meu primeiro palpite pra procurar código suspeito
+[2024-05-21 03:43:52] L.: dados começam em $73d, certo? logo após o iret?
+[2024-05-21 03:44:20] Felipe "Juca" Sanches: isso, acho que é isso
+[2024-05-21 03:47:14] L.: tô mapeando as rotinas chamadas por CALL
+[2024-05-21 03:55:38] Erin Pinheiro 🐿: das coisas doidas que eu nem sabia que existia: um módulo "sintetizador" (not really) de voz (usa o mesmo sistema LPC do speak n spell) brasileiro baseado no Z80 que fazia parte de uma linha de carros nacionais que eu nem tinha ouvido falar https://www.youtube.com/watch?v=egLzFEZ6LAg
+[2024-05-21 03:56:02] Erin Pinheiro 🐿: (fui achar pesquisando coisa sobre o lamborghini miura, de onde os brasileiros "compartilharam" o nome)
+[2024-05-21 03:56:23] Erin Pinheiro 🐿: cadê achar esses pra fazer dump? :^)
+[2024-05-21 03:57:38] L.: Aparentemente 39 rotinas!
+[2024-05-21 03:58:19] L.: https://paste.lwan.ws/p/17255069517338799950 <-- rotinas marcadas
+[2024-05-21 03:58:45] Felipe "Juca" Sanches: eram 10 jogos... Tem 10 rotinas parecidas? LOL
+[2024-05-21 03:58:49] L.: lol
+[2024-05-21 03:59:11] L.: tem muita rotina que é tipo sem RET, só carregando uns valores diferentes em registradores
+[2024-05-21 03:59:18] L.: e fazendo fallthrough pra próxima
+[2024-05-21 03:59:23] L.: devem ser os joguinhos
+[2024-05-21 04:00:46] Felipe "Juca" Sanches: se  ninguém faz jump ou call para 00C, tô achando que é o ponto de entrada
+[2024-05-21 04:01:28] L.: rotina 31 é suspeita
+[2024-05-21 04:02:33] Felipe "Juca" Sanches: não sei o que é SRP e TCM
+[2024-05-21 04:03:04] Felipe "Juca" Sanches: acho que que SRP seta o register pointer
+[2024-05-21 04:03:05] L.: TCM é Test Complement Under Mask
+[2024-05-21 04:03:26] L.: (~DST) & SRC
+[2024-05-21 04:03:30] Felipe "Juca" Sanches: que é pra chavear banco de registradores
+[2024-05-21 04:03:57] L.: isso
+[2024-05-21 04:04:07] L.: tem 16 grupos
+[2024-05-21 04:06:44] Felipe "Juca" Sanches: eu tinha dito que IRQ4 => 0697h seria a rotina principal. Mas acho que não é. Suspeito que o ponto de entrada seja no 00C mesmo
+[2024-05-21 04:06:51] L.: certo
+[2024-05-21 04:07:17] Felipe "Juca" Sanches: essa rotina do IRQ4 termina em IRET (naturalmente). Talvez seja tratamento de eventos do timer
+[2024-05-21 04:07:23] L.: provavelmente
+[2024-05-21 04:07:36] L.: tem duas coisas que deve usar timer: a musiquinha e o display.
+[2024-05-21 04:07:41] Felipe "Juca" Sanches: isso
+[2024-05-21 04:07:47] L.: o display deve ter a "fonte" ali nos dados
+[2024-05-21 04:08:16] L.: sabendo como o display de 7 segmentos tá conectado dá pra ter uma noção como que isso tá codificado
+[2024-05-21 04:12:02] Felipe "Juca" Sanches: pois é... eu tava pensando sobre a fonte também
+[2024-05-21 04:12:38] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31844.jpg
+[2024-05-21 04:12:38] L.: Juca novinho no Garoa0
+[2024-05-21 04:13:15] Felipe "Juca" Sanches: BARBARIDADE!
+[2024-05-21 04:13:30] Felipe "Juca" Sanches: E eu vou fazer esse exato gesto 5a feira que vem no Garoa
+[2024-05-21 04:13:49] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31847.jpg
+[2024-05-21 04:13:49] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31848.jpg
+[2024-05-21 04:13:49] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31849.jpg
+[2024-05-21 04:13:49] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31850.jpg
+[2024-05-21 04:13:49] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31851.jpg
+[2024-05-21 04:13:49] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31852.jpg
+[2024-05-21 04:13:50] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31853.jpg
+[2024-05-21 04:13:50] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31854.jpg
+[2024-05-21 04:13:50] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31855.jpg
+[2024-05-21 04:13:50] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31856.jpg
+[2024-05-21 04:14:02] L.: Fotos daquela época
+[2024-05-21 04:14:08] Erin Pinheiro 🐿: acho que essa pasta para solda best é a mesma que tinha até a última vez que eu fui
+[2024-05-21 04:14:20] L.: As caixas do Pense Bem/Smart Start são os meus, nem sei se tenho aidna
+[2024-05-21 04:15:48] Felipe "Juca" Sanches: então... são 7 dígitos, mas um deles é de 14 seg. Então na realidade são 8 dígitos sendo multiplexados
+[2024-05-21 04:16:29] Felipe "Juca" Sanches: e a fonte dos números de 0 a 9 tem o mesmo pattern nesse digito de 14seg.
+[2024-05-21 04:16:34] L.: O Party Land no fundo e o Pense Bem na mesa desmontado. :D
+[2024-05-21 04:17:11] Felipe "Juca" Sanches: os segmentos extras desse de 14seg ficam no digito adicional
+[2024-05-21 04:17:33] Felipe "Juca" Sanches: e também os segmentos do sinal de igual
+[2024-05-21 04:17:47] Felipe "Juca" Sanches: e subtração e os pontinhos em cima e embaixo
+[2024-05-21 04:18:15] L.: Será que é a mesma do simulador? LMAO https://github.com/lpereira/Pense-Bem/blob/02ccba6aa82019e74960bc2fb0ed39773747b5da/simulador/pensebem.js#L949
+[2024-05-21 04:18:53] Felipe "Juca" Sanches: eu aposto que a fonte de 0 a 9 tem 1 byte por glifo com a ordem padrão de segmentos dos 7seg
+[2024-05-21 04:19:08] L.: provavelmente
+[2024-05-21 04:19:14] Felipe "Juca" Sanches: cara, deve ser sim
+[2024-05-21 04:19:20] Felipe "Juca" Sanches: não tem muito o que reinventar aqui
+[2024-05-21 04:22:05] Felipe "Juca" Sanches: bom... pode ser invertida a ordem dos pinos
+[2024-05-21 04:22:15] Felipe "Juca" Sanches: msb/lsb
+[2024-05-21 04:22:41] L.: pode até estar embaralhada
+[2024-05-21 04:22:53] Felipe "Juca" Sanches: pode mesmo
+[2024-05-21 04:22:58] L.: dependendo de como foi roteada a placa, as vezes fica mais facil em ordem bizarra
+[2024-05-21 04:23:34] L.: teria que ver como isso tá conectado pra ter ideia
+[2024-05-21 04:23:44] L.: mas, enfim, tá tarde e eu preciso trabalhar amanhã
+[2024-05-21 04:23:52] L.: massa demais!
+[2024-05-21 04:24:02] L.: finalmente vai rolar entender isso aqui aqheuhaueh
+[2024-05-21 04:24:17] L.: ah, a emulação do z8 do mame suporta tudo aí?
+[2024-05-21 04:34:50] Felipe "Juca" Sanches: acho que suporta sim
+[2024-05-21 04:34:58] Felipe "Juca" Sanches: vamos descobrindo passo a passo
+[2024-05-21 04:35:03] Felipe "Juca" Sanches: eu também vou dormir
+[2024-05-21 04:35:22] Felipe "Juca" Sanches: obrigado pela parceria de uns 15 anos ;-D
+[2024-05-21 04:36:17] Felipe "Juca" Sanches: ah, e aqui está a internal test rom:
+[2024-05-21 04:36:39] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31886-smartstart-testrom.bin
+[2024-05-21 09:05:49] Ramiro Polla: Alguém sabe onde é que eu posso encontrar uma cópia do Grass (RT/1) pra dos?
+[2024-05-21 09:06:33] Ramiro Polla: ( um amigo artista tá procurando, eu nem sei direito o que é, mas acho que alguém aqui deve saber 🙃 )
+[2024-05-21 10:46:51] Felipe "Juca" Sanches: será que é uma versão moderna do sistema que foi usado pra fazer isso aqui?
+[2024-05-21 10:47:13] Felipe "Juca" Sanches: ...e isso aqui também?
+[2024-05-21 11:59:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31891.jpg
+[2024-05-21 11:59:13] Felipe "Juca" Sanches: Confirmei agora que o ponto de entrada sempre é no endereço 00C
+[2024-05-21 12:03:58] L.: faz sentido pq ninguém chama aquela rotina
+[2024-05-21 13:58:15] Felipe "Juca" Sanches: A imagem chegou em outubro de 2023. E só mexi a bunda pra decodificar pra valer ontem. Significa que estou meio lerdo hoje em dia.
+[2024-05-21 14:03:34] L.: Pra quem esperou 15 anos, uns meses é de boa
+[2024-05-21 14:09:45] Felipe "Juca" Sanches: a emulação do kn5000 tá no mesmo ritmo
+[2024-05-21 14:10:03] Felipe "Juca" Sanches: mas é muitíssimo mais complicado que o Pense Bem
+[2024-05-21 14:10:20] L.: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31897-animation.gif.mp4
+[2024-05-21 14:27:30] Felipe "Juca" Sanches: Ritmo de festa?
+[2024-05-21 14:54:13] RicBit: Eh, eu não conheço nada que seja bom e rápido. Coisas demoram, especialmente as não remuneradas.
+[2024-05-21 15:16:17] Felipe "Juca" Sanches: Esquemáticos começados 11 anos atrás. Não tenho idéia do quão completos estão: https://github.com/garoa/PenseBem
+[2024-05-21 15:16:57] L.: Considerando como a tectoy fez a versão atmega, eu duvido que eles ainda tenham essa ROM
+[2024-05-21 15:18:44] Felipe "Juca" Sanches: também acho
+[2024-05-21 15:25:39] Shideravan: Emulador de Zeebo parece que está rolando bem legal
+[2024-05-21 15:25:42] Shideravan: https://www.youtube.com/watch?v=P5So5Iz_mGY
+[2024-05-21 15:25:59] Shideravan: Inclusive portatilmente no steam deck
+[2024-05-21 15:32:06] Felipe "Juca" Sanches: Os 6 bits menos significativos da porta 0 e os bits 5 e 6 da porta 3 selecionam o digito ativo na multiplexação do display:
+
+P0_0 -> primeiro dígito da esquerda
+P0_1 -> 2o digito
+P0_2 -> metade do 3o digito (aquele de 14 segs)
+P0_3 -> segunda metade do 3o digito
+P0_4 -> 4o digito
+P0_5 -> 5o digito
+P3_5 -> 6o digito
+P3_6 -> 7o digito
+[2024-05-21 15:32:23] L.: legal, isso já ajuda a achar a rotina de display!
+[2024-05-21 15:32:38] Felipe "Juca" Sanches: A porta 1 determina o padrão de segmentos do digito selecionado no display
+[2024-05-21 15:33:01] Felipe "Juca" Sanches: então a "fonte" é escrita na P1
+[2024-05-21 15:33:33] Felipe "Juca" Sanches: enquanto rola um shift the 1 único bit ativo em P0+P3
+[2024-05-21 15:33:40] Shideravan: Vocês que tem um Zeebo aí, a velocidade tá bem acertada com o console? Pelo vídeo tenho a sensação que em algumas partes está levemente mais rápido do que deveria
+[2024-05-21 15:33:42] Shideravan: https://www.youtube.com/watch?v=7Cy2Uqm9qqY
+[2024-05-21 15:33:55] L.: Aquela rotina que trata a IRQ4 que bomba o display entao
+[2024-05-21 15:34:05] Felipe "Juca" Sanches: (bom... a seleção dos dígitos pode talvez ser ativo baixo também)
+[2024-05-21 15:35:57] Felipe "Juca" Sanches: curiosamente P1 também tá ligada na matriz do teclado. Então deve ser bidirecional. Escreve patterns de fonte pro display e depois lê patterns de keypress pela mesma porta
+[2024-05-21 15:36:06] L.: hm
+[2024-05-21 15:36:11] L.: faz sentido
+[2024-05-21 15:36:15] L.: olha em $6be
+[2024-05-21 15:37:05] L.: 6bc: 70 01     PUSH P1          ; salva o que tá na P1 (display?)
+6be: e6 01 ff  LD   P1, #FFh ; começa a preparar máscara pra decodificar teclado?
+[2024-05-21 15:37:20] Felipe "Juca" Sanches: se pá
+[2024-05-21 15:38:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31921.jpg
+[2024-05-21 15:38:08] Felipe "Juca" Sanches: sente o drama
+[2024-05-21 15:38:29] L.: Cê faz o que dá com o que tem né :D
+[2024-05-21 15:38:35] Felipe "Juca" Sanches: kkk
+[2024-05-21 15:38:48] Felipe "Juca" Sanches: 5a feira eu conserto esse esquemático corrompido
+[2024-05-21 15:38:56] L.: Eu acho esses hacks bem legais. Tipo charlieplex.
+[2024-05-21 15:39:02] L.: Charlieplex é coisa de gênio
+[2024-05-21 15:39:03] Felipe "Juca" Sanches: ao carregar um esquemático de 11 anos atrás o kicad jogou fora os símbolos
+[2024-05-21 15:40:48] L.: https://github.com/norton120/educator-tools-87
+[2024-05-21 15:42:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31929.jpg
+[2024-05-21 15:42:42] Felipe "Juca" Sanches: O Pense Bem de 2017 também usa 6 bits de uma porta e 2 bits de outra pra multiplexar o display.
+
+Devem ter copiado o layout de I/O e reescrito o software em AVR8
+[2024-05-21 15:43:39] L.: Possível
+[2024-05-21 15:45:03] Felipe "Juca" Sanches: porta C do AVR8 corresponde à P0 do Z8
+porta E do AVR8 => P3 do Z8
+
+mas espelhadas no quesito msb/lsb
+[2024-05-21 15:46:27] Felipe "Juca" Sanches: ah, mas as semelhanças param por aí
+[2024-05-21 15:46:52] Felipe "Juca" Sanches: o pinout do Z8 (pelo menos nesse encapsulamento) expões apenas 6 bits da P0
+[2024-05-21 15:47:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31934.jpg
+[2024-05-21 15:48:03] Felipe "Juca" Sanches: a P2 tem apenas os bits 1 a 5
+[2024-05-21 15:48:07] L.: eu gosto que tem P3_1, P3_6, e P3_5 do outro lado
+[2024-05-21 15:48:13] Felipe "Juca" Sanches: muito esquisito terem excluído o bit zero da P2
+[2024-05-21 15:48:40] Felipe "Juca" Sanches: e a P1 é completa com os seus 8 bits
+[2024-05-21 15:49:12] Felipe "Juca" Sanches: uma bagunça
+[2024-05-21 15:53:55] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31940.jpg
+[2024-05-21 15:53:55] Felipe "Juca" Sanches: Essa coisa saindo da P2, bit 5 parece ser um resistor e 2 transistores. ACHO que é o buzzer
+[2024-05-21 16:07:38] Felipe "Juca" Sanches: eu tenho umas suposições que ainda precisam ser validadas:
+[2024-05-21 16:07:58] Felipe "Juca" Sanches: 6f7: 5c cb     LD   R5, #CBh
+6f9: 4c 07     LD   R4, #07h
+6fb: 03 53     ADD  R5, @R3
+6fd: c2 64     LDC  R6, @RR4
+[2024-05-21 16:08:10] Felipe "Juca" Sanches: isso aqui é uma leitura de um array
+[2024-05-21 16:08:48] Felipe "Juca" Sanches: R6 <= RAM[RR4 + @R3]
+[2024-05-21 16:08:58] Felipe "Juca" Sanches: R3 indexa o array
+[2024-05-21 16:09:38] Felipe "Juca" Sanches: RR4 é R4 e R5 concatenados, um endereço base de 16 bits, inicializado com o valor 7CBh (que tá naquela área de dados da ROM)
+[2024-05-21 16:09:44] Felipe "Juca" Sanches: acho que é a fonte
+[2024-05-21 16:10:00] Felipe "Juca" Sanches: e R3 deve estar apontando para o conteúdo a ser mostrado na tela
+[2024-05-21 16:11:01] Felipe "Juca" Sanches: @R3 acho que acessa o register file, ao invés de ler da ROM
+[2024-05-21 16:13:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31950.jpg
+[2024-05-21 16:13:19] Felipe "Juca" Sanches: tem uma outra parte do código que inicializa R3 com o valor 5Fh e testa se vale 67h
+
+Suponho que o conteúdo da tela fique armazenado nas variáveis do endereço 5F ao 66h (sendo assim, correspondente a 8 dígitos)
+[2024-05-21 16:15:22] Felipe "Juca" Sanches: mais um chutezinho: R2 aqui tá com cara de seletor ativo baixo para multiplexação dos dígitos. Inicializado com apenas o último bit zerado. Alguém deve shiftar esse cara pra direita um bit por vez
+[2024-05-21 16:16:21] Felipe "Juca" Sanches: ah, sim! é a próxima instrução que ficou cortada no pé desse screenshot:
+
+732: 90 e2     RL   R2
+
+não é shift pra direita. É rotate pra esquerda. Mas vale também.
+[2024-05-21 21:15:25] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31953.jpg
+[2024-05-21 21:15:49] Felipe "Juca" Sanches: falta pendurar todos os I/Os
+[2024-05-21 21:30:36] Felipe "Juca" Sanches: tentei executar passo-a-passo mas me perdi. Ou o core de emulação do Z8 tá bugado, ou eu não entendi direito como funciona o gerenciamento de register file
+[2024-05-21 21:31:03] Felipe "Juca" Sanches: vou ler o manual do Z8 pra me familiarizar com os detalhes da arquitetura e ver se preciso consertar alguma coisa
+[2024-05-21 23:25:30] Felipe "Juca" Sanches: Pronto, entendi!
+[2024-05-21 23:25:55] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31958.jpg
+[2024-05-21 23:26:47] Felipe "Juca" Sanches: a instrução do endereço 013h é LD R8, #04h e logo depois de executá-la o valor do R4 não muda, o que me parece bizarro
+[2024-05-21 23:26:55] Felipe "Juca" Sanches: mas... agora entendi o motivo
+[2024-05-21 23:27:46] L.: o debugger mostra o banco errado?
+[2024-05-21 23:28:06] Felipe "Juca" Sanches: essa instrução está setando o valor 04h no bloco de registrador selecionado pelo register pointer (RP)
+[2024-05-21 23:28:17] Felipe "Juca" Sanches: e RP foi setado logo no inicio como F0
+[2024-05-21 23:28:26] Felipe "Juca" Sanches: o nibble alto dele seleciona o bloco
+[2024-05-21 23:28:50] Felipe "Juca" Sanches: bloco F é o último, onde ficam os special funcion registers
+[2024-05-21 23:29:16] Felipe "Juca" Sanches: e o special funcion register número 8 é o P01M (port 0 and 1 mode)
+[2024-05-21 23:29:29] Felipe "Juca" Sanches: veja que P01M mudou pra quatro (tá marcado em vermelhinho)
+[2024-05-21 23:29:57] L.: que gambiarra, zilog
+[2024-05-21 23:29:59] Felipe "Juca" Sanches: daria pra fazer a mesma coisa com a instrução LD P01M, #04 mas gastaria um byte a mais
+[2024-05-21 23:31:34] Felipe "Juca" Sanches: então nesse bloco de inicialização economizaram 8 bytes nas instruções curtas (mas gastaram 2 bytes para fazer o SRP #F0h)
+[2024-05-21 23:31:40] Felipe "Juca" Sanches: então na prática economizaram 6 bytes
+[2024-05-21 23:39:53] Felipe "Juca" Sanches: E então sse código equivale a:
+
+LD   P01M, #04h  ; Ports 0 & 1 Mode
+LD   SPL, #80h   ; Stack pointer (low-byte)
+LD   IMR, #90h   ; Interrupt Mask Reg.
+LD   IPR, #03h   ; Interrupt Priority Reg.
+LD   IRQ, #10h   ; Interrupt Request Reg.
+LD   PRE0, #0Ch  ; Timer 0 Prescaler
+LD   T0, #60h    ; Timer/Counter 0 
+LD   TMR, #03h   ; Timer Mode
+[2024-05-21 23:40:10] Felipe "Juca" Sanches: que tem bem cara de código de inicialização mesmo
+[2024-05-21 23:53:11] L.: tem como botar comentário no disasm do mame?
+[2024-05-21 23:53:15] L.: tipo arquivo separado com comentários?
+[2024-05-21 23:56:08] Felipe "Juca" Sanches: putz, não sei, mas já desejei isso
+[2024-05-21 23:56:20] Felipe "Juca" Sanches: preciso checar nas docs
+[2024-05-21 23:56:32] Felipe "Juca" Sanches: lembro de ter procurado uma vez isso e não ter achado
+[2024-05-21 23:56:46] Felipe "Juca" Sanches: mas não significa que não tenha. Só significa que não sei

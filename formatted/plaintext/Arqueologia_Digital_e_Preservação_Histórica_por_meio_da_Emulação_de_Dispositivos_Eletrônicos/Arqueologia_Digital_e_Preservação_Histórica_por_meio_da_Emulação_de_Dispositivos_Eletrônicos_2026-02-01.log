@@ -1,0 +1,28 @@
+[2026-02-01 10:08:42] Alexandre Villares: Alguém sabe se é possível fazer uma busca textual que encontre itens dentro dos snapshots das páginas no WaybackMachine do Internet Archive, a partir de um domínio?
+[2026-02-01 10:09:46] Alexandre Villares: O ponto é que o site do Sesc "apaga" as páginas de atividades passadas, e sem ter uma URL completa é difícil achar qualquer coisa no WaybackMachine
+[2026-02-01 10:10:28] Alexandre Villares: queria ver se tem alguma maneira de encontrar os snapshots dessas páginas a partir da URL da homepage.
+[2026-02-01 10:29:03] Erin Pinheiro 🐿: https://web.archive.org/web/*/sesc.com.br* ?
+[2026-02-01 10:29:24] Erin Pinheiro 🐿: readiciona esse último asterisco que o telegram tirou do link
+[2026-02-01 10:58:40] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37257.jpg
+[2026-02-01 10:58:40] RicBit: achei engraçado que a fonte do antartic nao tem F Q e X
+[2026-02-01 10:59:38] Érico Andrei: Otimizaram bem.
+[2026-02-01 11:56:29] L.: Parece as fontes de jogo de SNES que eu removia W, Y, K, etc pra colocar letras acentuadas no lugar
+[2026-02-01 16:13:13] RicBit: versao atual, acho que já foram uns 70% -> https://gist.github.com/ricbit/018303e38541758355e9caf31c240cc0
+[2026-02-01 19:37:14] Pablo Vasques Bravo-Villalba: Tangencialmente relacionado ao tópico, mas só hoje fiquei sabendo da existência disto:
+
+https://www.fullbucket.de/music/vst.html
+
+Vários desses plugins são simulações de modelos de sintetizadores clássicos, como o Yamaha FB-01 e o Korg Poly-800. Achei interessante.
+[2026-02-01 20:21:55] Guilherme Ranoya: Os VST não são emuladores... são sintetizadores mesmo, que funcionam dentro dos DAWs (Digital Audio Workstation... que, na minha época a gente chamava de Sequencers).
+
+Muitos deles foram criados para reproduzir em software o que os equipamentos faziam, e lógico, muitos foram criados para reproduzir o som desses equipamentos antigos nas produções atuais.
+
+Aí, lá por volta de 1998 (acho), um DAW (Reason) resolveu criar uma forma de você empilhar sintetizadores em um rack, como se fazia quando eles eram equipamentos... e virar esse rack para ligar os fios das entradas e saídas na "mesa de som". Desde lá, os VSTs começaram a contar com a "cara" do equipamento, para que pudessem ser manipulados como se a gente estivesse lidando com o equipamento físico.
+[2026-02-01 20:22:21] Guilherme Ranoya: Esse aqui é o Reason:
+[2026-02-01 20:22:31] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37264.jpg
+[2026-02-01 20:22:35] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37265.jpg
+[2026-02-01 20:24:50] Guilherme Ranoya: era lindo de ver. pra chutar o pau da barraca, quando você virava o rack (com a tecla tab), os cabos balançavam como se tivesse um engine de física ali e eles tivessem peso.
+[2026-02-01 20:38:19] Erin Pinheiro 🐿: amo o reason, comecei a fazer música nele em 2007
+[2026-02-01 20:40:12] Erin Pinheiro 🐿: pqp, passei minha vida pirateando vst de recriação de synth e esses tão aí de graça! 
+
+já sei o que eu vou fazer fds que vem :)

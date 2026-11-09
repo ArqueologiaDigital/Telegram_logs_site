@@ -1,0 +1,78 @@
+[2023-10-27 12:57:41] Pedro de Medeiros 👾: https://thenewstack.io/a-visit-to-the-physical-internet-archive/
+[2023-10-27 14:20:11] L.: Óia o zé aí https://fxtwitter.com/TICS_Game/status/1717948708468240861
+[2023-10-27 16:00:27] Felipe "Juca" Sanches: Esse aí é o zézão oitenta! Não o zézinho oito... :-)
+[2023-10-27 18:53:27] Guilherme Ranoya: Tenho que admitir que os Z80 eram uma porcaria 😆... Mas mesmo assim tenho um afeto pelos MSX.
+[2023-10-27 18:53:47] Pablo Vasques Bravo-Villalba: Porcaria? 😢
+[2023-10-27 18:57:42] Guilherme Ranoya: Já tinha coisa melhor na época né... O projeto era de um processador barato, e não de um processador capaz de processar e guardar mais instruções que os 6502 ou a linha 8080... 
+
+Mas eu gosto deles... Tenho um carinho pelos Z80... Quase comprei uma TV uma vez por que descobri que ela tinha um Z80!
+[2023-10-27 19:03:36] L.: o z80 é melhor que o 8080 né
+[2023-10-27 19:03:59] L.: executa as mesmas coisas que o 8080 mas tem mais instruções, etc
+[2023-10-27 19:04:23] L.: mas de qualquer forma, em 2023, nem importa mais se é melhor ou pior
+[2023-10-27 19:14:54] Guilherme Ranoya: Ahh verdade... Que o 8080 original era melhor sim... 
+
+Mas o projeto todo do MSX era uma ideia incrível... Um padrão mínimo, como um protocolo, e independente de marca ou fabricante. Os primeiros PCs fizeram a mesma coisa, mas por pura pirataria industrial, e porque a IBM ditava os padrões e não tinha espaço para conversa.
+[2023-10-27 19:17:18] Guilherme Ranoya: Mas é isso, ele nunca foi feito para ser melhor. O que ele era realmente bom era em ser acessível... Ele poderia ser usado em muitas coisas, e não só para fazer computadores pessoais.
+[2023-10-27 22:29:21] RicBit: Qual cpu era melhor que o z80 em 1976?
+[2023-10-27 23:07:09] Guilherme Ranoya: Olha, até o 6502 fazia coisas que o Z80 não conseguia...
+Tem muitas coisas feitas para os Apple II no final da década de 1980 que ninguém imaginava que os 6502 eram capazes de dar conta, mas eles davam....
+
+Só para você ter uma ideia, a Apple chegou a construir uma interface gráfica ao estilo Macintosh para o Apple II... E funcionava... Mas quando isso aconteceu, tanto os Apple II, quando toda geração 6502 já estava sendo abandonada...
+
+Em 1982 eu tinha um Atari 800 (também era um 6502). Tinham jogos nele que eram graficamente melhores que os jogos do meu MSX de 1989.... Mas o Atari 800 tinha um coprocessador gráfico, e isso explica o porquê disso.
+[2023-10-27 23:13:41] Guilherme Ranoya: Eu sempre tive essa impressão que a parte gráfica do MSX respondia mal... Era lenta. Os PCs tinham menos cores, mas eram melhores nisso...porém, pra isso, tinham uma placa de vídeo dedicada.... A minha CGA lá de 1985 tinha uns 30cm de comprimento pra exibir 4 cores na tela! 😆
+[2023-10-27 23:16:21] Guilherme Ranoya: Mas ao contrário das placas de vídeo de hoje que quase são um outro computador, as da década de 1980 eram apenas uma matriz gráfica... Quem controlava tudo ainda era o processador central... E nisso os 8080 até resolviam mais rápido... Com menos cores, com muito mais memória RAM, mas era mais rápido.
+[2023-10-27 23:18:01] Guilherme Ranoya: A memória, claro, não interferia nessa questão do processamento gráfico. Mas por conta disso, esses computadores eram infinitamente mais caros que aqueles com os 6502 e os Z80.
+[2023-10-27 23:25:14] Guilherme Ranoya: Agora, quando a gente olha para os Sinclairs ali no final da década de 1970, que usavam Z80, a diferença para os 6502 (Apples, Ataris e Commodores) era pequena... Mas a diferença de preço era absurda. Os Sinclairs eram muito mais acessíveis...
+[2023-10-27 23:27:32] RicBit: mas você não deu nenhuma exemplo do processador, só do hardware de video
+[2023-10-27 23:27:51] RicBit: o que eu quero saber é qual o processador que era melhor que o z80 no ano de lançamento
+[2023-10-27 23:31:49] Guilherme Ranoya: Eram todos controlados pelo processador. O hardware de vídeo não fazia nada sozinho... Era tudo processado no processador central mesmo.
+
+Os 6502 eram bem melhores.
+
+Foi o que falei... Lá na base em 1970 e poucos, os Apples, Ataris e Commodores eram mais rápidos e faziam mais coisas que os Sinclairs. E o 6502 não era o único processador usado por computadores pessoais antes de 1980....
+
+Os munidos com Z80 era computadores mais baratos... Não entregavam a mesma coisa que os outros, mas custavam menos de 1/3 do preço. Essa era a grande questão do Z80... E ele continuou sendo usado por mais 15 anos, o que é um assombro em termos de vida útil na computação.
+[2023-10-27 23:33:25] RicBit: você consegue me dar um exemplo de um algoritmo que roda melhor no 6502 que no z80? até agora você só disse que era melhor mas não deu exemplo
+[2023-10-27 23:34:45] Guilherme Ranoya: Tudo aquilo que eu fiz de programas na década de 1980 funcionava melhor em uma Atari800 de 1979 (que eu usava em 1982) do que no MSX de 1989... Não tinha um código que funcionasse mais rápido no Z80.
+[2023-10-27 23:35:14] RicBit: eu aposto 100 dolares que consigo fazer melhor no z80 qualquer coisa que voce faça no 6502
+[2023-10-27 23:36:43] Guilherme Ranoya: Veja... Era a minha impressão na época. Não gosto menos dos MSX por isso... Só que pra mim pareciam mais lentos, e repondendo pior a tudo que era construído graficamente.
+[2023-10-27 23:37:21] RicBit: mas eu não estou falando de msx, estou falando de z80
+[2023-10-27 23:38:08] Guilherme Ranoya: Se era um problema do programador ineficiente 😆 eu não duvidaria.... Mas era o mesmo programador.
+
+Como o John Carmack provou, um algoritmo bem construído faz milagres que a gente não acredita serem possíveis.
+[2023-10-27 23:38:50] RicBit: mas eu nao estou falando do carmack, eu quero saber de onde você tirou que o z80 era um processador porcaria
+[2023-10-27 23:39:15] RicBit: porque pra mim está parecendo que voce não conhece direito o z80
+[2023-10-27 23:39:36] Guilherme Ranoya: Uai.. da experiência pessoal de programar neles... É disso... Não é de olhar pra eles no microscópio...
+[2023-10-27 23:39:57] RicBit: então quer apostar 100 dolares?
+[2023-10-27 23:41:43] Guilherme Ranoya: Tive todos eles na década de 1980... Vivi cercado de computadores... E pelo que eu via ali na época, eles não pareciam responder bem...
+
+Pode ter sido apenas incompetência minha de não saber usá-los bem... Mas era o que eu percebia na época.
+[2023-10-27 23:42:29] RicBit: sim, voce nao conhecia os processadores e está com uma visao equivocada
+[2023-10-27 23:43:15] RicBit: tipo um algoritmo bobo, tipo calcular pi com 1000 digitos, se eu te der um codigo z80 que fiz você consegue fazer melhor no 6502?
+[2023-10-27 23:46:43] RicBit: ninguém brinca comigo poxa
+[2023-10-27 23:46:46] RicBit: lol
+[2023-10-27 23:48:06] Guilherme Ranoya: Não sei... Eu definitivamente nunca fiz isso neles.
+
+Mas por exemplo, eles tinham instruções no próprio processador para desenhar círculos... Isso os 6502 não tinham! Tinha que processar o cálculo com um algoritmo mesmo.
+[2023-10-27 23:48:38] RicBit: qual processador é esse que faz circulos? eu não conheço nenhum na decada de 70
+[2023-10-27 23:50:21] Guilherme Ranoya: O BASIC dos MSX fazia... Mas não era um algoritmo do BASIC... Já era algo que estava na EPROM acredito eu.... Era uma coisa que precisava ser processada pelo processador, mas os Z80 resolviam mais rápido.
+[2023-10-27 23:50:44] RicBit: ahn
+[2023-10-27 23:50:57] Guilherme Ranoya: Tinha alguma coisa ali nas instruções que facilitava esse processo... Não tinha nos 6502.
+[2023-10-27 23:51:13] RicBit: veja, o que tinha no z80 que deixava ele mais rapido é que ele era melhor
+[2023-10-27 23:51:26] RicBit: nao tem nenhum comando do circulo do z80, nem multiplicacao ele faz
+[2023-10-27 23:51:53] RicBit: qualquer circulo que voce fizer nele tem que ser com algoritmo processado pelo processador
+[2023-10-27 23:52:37] RicBit: espera
+[2023-10-27 23:52:45] RicBit: voce sabe o que é um processador?
+[2023-10-27 23:52:56] Guilherme Ranoya: 👍
+[2023-10-27 23:52:57] RicBit: eu acho que voce está falando isso porque nao aprendeu a arquitetura ainda
+[2023-10-27 23:54:10] RicBit: nenhum processador "faz circulos", nem o mais recente intel core que voce consiga pensar
+[2023-10-27 23:54:56] RicBit: o basic do msx usa o algoritmo de bresenham com espelho de 1/16, que é um algoritmo bem esperto
+[2023-10-27 23:55:17] RicBit: com correcao de tamanho do pixel ainda, que é um negocio que me incomoda haha
+[2023-10-27 23:55:57] RicBit: esse algoritmo não vai rodar direito no 6502 porque voce precisa de muitos registros para manter o estado
+[2023-10-27 23:56:49] RicBit: isso é a definicao de ser um processador melhor, nao é?
+[2023-10-27 23:59:11] Guilherme Ranoya: Não necessariamente....depende de pra qual uso se dá.
+
+Mas em termos gerais, sim... Mais costuma ser melhor.
+[2023-10-27 23:59:31] RicBit: omg
+[2023-10-27 23:59:47] RicBit: em qual uso ter menos registradores é melhor?

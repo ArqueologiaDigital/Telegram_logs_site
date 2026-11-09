@@ -1,0 +1,97 @@
+[2025-02-17 00:39:49] Felipe "Juca" Sanches: Vamos lá...
+Foram uns 3 ou 4 code-reviews. Depois uns 30 commits. Então um git-squash pra unificar tudo num commit só, e mais um code-review do cuavas, e agora mais 5 commits...
+
+E eu nem tô contabilizando a saga que foi esse código em 2 outros pull_requests anteriores ao longo dos últimos anos :-P
+
+Mas acho que agora vai...
+
+
+https://github.com/mamedev/mame/pull/13220
+[2025-02-17 03:27:02] Shideravan: Por que ao invés de só sair o cara fez um baita drama? Quis ganhar holofote num grupo que ninguém importa com incelzismo dele?
+
+@fsanches o que aconteceu com o filtro do grupo que um discípulo do Paulo Kogos apareceu aqui para causar? 😂
+[2025-02-17 03:28:55] Shideravan: É offtopic demais, mas confesso que foi divertido ver essa viagem aí kkkkkk
+[2025-02-17 03:30:22] Shideravan: Voltemos a programação normal do grupo
+[2025-02-17 03:32:37] Shideravan: A saga que é para alguns colaboradores conseguirem fazer uma simples contribuição no mame sempre me impressiona
+[2025-02-17 03:33:15] Shideravan: Eu ia questionar se é porque a gente é latino, mas até o Haze reclama disso kkkkk
+[2025-02-17 03:34:17] Shideravan: Tomara que agora dê certo, pelo menos para documentar todo esse progresso que você já teve com esse driver
+[2025-02-17 03:36:08] Shideravan: Só de curiosidade, nesse tempo todo, quantos rebase para o master atual você precisou fazer? Kkkk
+[2025-02-17 03:42:12] Shideravan: Esqueci de comentar... Mas agora eu tô fazendo academia e preciso bater proteína...
+Tem uma maravilha para ajudar a bater meta de proteína que foi terem espalhado fake news que soja "simula estrogênio" (que inúmeros estudos científicos já desmentiram em humanos), porque a proteína de soja se tornou uma fonte baratissima de suplementação de proteína, porque os marombas em geral morrem de medo por conta de fake news...
+Então eu até me benefício de certa forma desses otários cidadões
+[2025-02-17 03:46:35] Shideravan: "Sojado" é portanto só abrasileiramento de soy boy mesmo em chans. Incrível a capacidade de muito brasileiro copiar só o que não presta da gringa kkkkkkk
+[2025-02-17 03:49:48] Shideravan: Pode me chamar de sojado então que eu realmente consumo soja e também leio artigo científico e me sentiria honrado de ser chamado assim por algum incel usando nick e avatar de templário kkkkk
+[2025-02-17 08:55:22] Anne Isabelle: Sojado redpillado cringe e based
+[2025-02-17 09:16:25] Luciano Ramalho: Não acho difícil acreditar nisso,
+até porque o 6502 tem a peculiaridade de instruções de acesso muito otimizadas para os primeiros 256 bytes de memória, que viram praticamente “registradores”. Isso pede estratégias de otimização incomuns.
+[2025-02-17 15:03:38] RicBit: não, é assim para todo mundo, em todo projeto open source.
+[2025-02-17 16:02:22] Felipe "Juca" Sanches: já perdi a conta
+[2025-02-17 16:13:20] Felipe "Juca" Sanches: M E R G E D!!!
+[2025-02-17 16:15:00] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34464.jpg
+[2025-02-17 16:15:33] Felipe "Juca" Sanches: Agora, arregaçar as mangas e partir pro próximo PR. Tenho um monte de commits que estavam esperando na fila.
+[2025-02-17 16:16:15] Pedro de Medeiros 👾: Massa. Explica pra gente mais tarde lá no Calango o que foi feito? 😁
+[2025-02-17 16:20:48] Felipe "Juca" Sanches: sim,com certeza
+[2025-02-17 16:23:52] Felipe "Juca" Sanches: Esse PR que entrou é o que implementa suporte a uma variante da arquitetura TLCS900. O modelo  específico do processador usado  no  KN5000.
+
+Antes o driver no MAME estava usando o core de emulação de um TLCS900 genérico que não tinha todas as portas de I/O e timers adicionais que o KN5000 usa. E por causa disso, tinha vários pedaços do código comentados como TO-DO.
+
+Agora com o core da variante específica, o driver consegue avançar mais na sequência de boot.
+
+Ainda não chega na tela principal do desktop gráfico. Mas já mostra uma mensagem de erro. E eu fico muito feliz em  ver a mensagem  de erro,  pois ela indica que estou no caminho certo.
+[2025-02-17 16:24:46] Felipe "Juca" Sanches: Eu tenho uns commits adicionais que não entraram nesse PR. Originalmente era pra entrarem, mas o code-review estava tão pesado e rigoroso que eu resolvi postergar uma parte, estratégicamente, pra conseguir fazer ao menos algo ser aceito.
+[2025-02-17 16:25:26] Felipe "Juca" Sanches: Com os commits adicionais, eu engano um dos self-tests durante o boot e faço o emulador driblar a mensagem de erro e chegar no "desktop gráfico"
+[2025-02-17 16:26:40] Pedro de Medeiros 👾: você criou essa variante ou achou um outro sistema emulado que também a usa?
+[2025-02-17 16:27:05] Felipe "Juca" Sanches: (o erro ainda existe. Só não é reportado  pelo self-test, mas o pedaço do hardware que ele checa ainda está  emulado incorretamente. A desviada sorrateira é apenas a minha forma malandra de compreender quais os pré-requisitos para se completar a sequência de boot)
+[2025-02-17 16:27:34] Felipe "Juca" Sanches: Eu implementei a variante com base no que tenho lido no datasheet da CPU
+[2025-02-17 16:30:29] Felipe "Juca" Sanches: Uma outra coisa que tenho em commits adicionais ainda a serem  submetidos é o código que declara os checksums da ROM da subcpu e a coloca na faixa correta de endereços do  memory_map.
+
+O  dump que tenho dessa subcpu  está incompleto,  mas acho que todo o resto que não fiz dump deve ser região inutilizada da mask-rom, provavelmente toda cheia de 0xFF.
+
+Estou tentando  finalizar o dump completo dela, pra ter certeza que é isso mesmo.
+[2025-02-17 16:44:29] Pedro de Medeiros 👾: Como você está fazendo esse dump? É aquele método de mandar o dump via MIDI?
+[2025-02-17 16:50:41] Felipe "Juca" Sanches: por meio de uma porta serial disponível na própria subcpu
+[2025-02-17 16:51:02] Felipe "Juca" Sanches: fazendo patch no payload da subcpu para fazer o dump e  mandar para a serial
+[2025-02-17 16:51:39] Felipe "Juca" Sanches: MIDI seria prático se eu estivesse querendo fazer algo na CPU principal,  pois as portas MIDI desse teclado usam uma serial que está ligada à maincpu
+[2025-02-17 17:41:26] Shideravan: Pera, a origem de toda essa teoria da conspiração é esse artigo lixo aí?
+[2025-02-17 17:42:05] Shideravan: Literalmente quem escreveu se baseou em achismos
+[2025-02-17 17:49:43] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34481.jpg
+[2025-02-17 17:50:31] Shideravan: Todo esse lance que a gente compra Whey Protein hoje e vem escrito bem grande como se fosse uma mega vantagem "não contém soja" é por causa dessa porcaria desse artigo aí?
+[2025-02-17 18:02:06] Shideravan: Poxa, eu achava que tinha um artigo que sei lá, fazia análise a nível celular que mostrasse a genisteína sendo captada por receptores de estrogênio em algum tipo de célula e um pessoal ficou alarmado a toa
+[2025-02-17 18:06:39] Shideravan: Não é nem isso, é um texto que diz: "Eu sou um fanático que raramente permite qualquer coisa em sua cozinha a menos que seja orgânico. Declaro meu preconceito aqui só para que você saiba que não sou contra comida saudável. Mas a soja está transformando nossas crianças em gays. Eu acho que devem haver evidências científicas de que soja contém estrogênio" 
+
+E ele não fala nem sobre a genisteína, fala literalmente que o grão de soja contém estrogênio humano e diz que deve ter artigo científico provando isso mas ele não apresenta estudo nenhum para embasar.
+
+"Dito isso, comprem um livro meu, segue link para comprar"
+[2025-02-17 18:09:43] Shideravan: Ele diz que LITERALMENTE tem estrogênio humano numa leguminosa 👀
+
+Galera que faz tratamento hormonal então, tá fácil pelo jeito, esquece remédio caro, é só literalmente comer soja 😂😂😂
+[2025-02-17 18:17:42] Shideravan: Tem estudos embasados depois que levantam a possibilidade da genisteína ser captado por receptores de estrogênio, por isso eu achava que a base original do "pânico" eram estudos preliminares que observavam esse tipo de coisa a nível celular
+[2025-02-17 18:20:43] Felipe "Juca" Sanches: Foco, galera!
+[2025-02-17 18:21:15] Felipe "Juca" Sanches: Arqueologia Digital e Preservação Histórica por meio da Emulação de Dispositivos Eletrônicos
+[2025-02-17 18:26:50] Shideravan: "Arqueologia Digital em Material Histórico Preservado por meio de Dispositivos Eletrônicos Sobre a Emulação de Estrogênio" não conta? kkkkkkkkkkkkkkk
+[2025-02-17 18:27:16] Felipe "Juca" Sanches: Devem me chamar de "sojado imbecil" por conta de eu dar essas chamadas de atenção no povo de vez enquanto.
+[2025-02-17 18:28:09] Felipe "Juca" Sanches: Mas é sério, bora papear sobre emuladores
+[2025-02-17 18:29:00] Shideravan: Pior que o grupo tava falando de um assunto que eu tinha me interessado recentemente
+[2025-02-17 18:29:10] Felipe "Juca" Sanches: Hoje de noite, daqui meia hora, irei me encontrar com @mrparn e @pvm_NoCryptoScams aqui em Brasilia, no Calango Hacker Clube, pra tocar adiante esse trabalho de emulação no MAME.
+[2025-02-17 18:30:32] Shideravan: Nah, eu não duvido que algum dinossauro do MAME já me chamou de "sojado imbecil" ou alguma coisa do gênero em algum fórum do MAME de graça só porque sim kkkkkkkkkkkkkkkkkk
+[2025-02-17 18:31:14] Shideravan: Tem uma galerinha ali que é na vibe do templário que brotou ali kkkkkkkkkkkkkkkkkkkk
+[2025-02-17 18:34:36] Shideravan: Vocês vão documentar essa empreitada?
+[2025-02-17 18:35:15] Felipe "Juca" Sanches: sim, informalmente, por meio de conversas que rolam aqui mesmo
+[2025-02-17 18:35:59] Shideravan: Ahhh tipo o que a gente fez lá no garoa aquela vez
+[2025-02-17 18:36:06] Felipe "Juca" Sanches: próxima tarefa: Atualizar esse PR fazendo rebase com os commits que foram incorporados no PR que entrou hoje e corrigindo os conflitos que certamente teremos  nesse processo:
+
+https://github.com/mamedev/mame/pull/12684
+[2025-02-17 18:37:00] Shideravan: Tem algum momento que o cuavas adquire mais confiança no seu trabalho e faz o processo de merge ser mais fácil?
+[2025-02-17 18:37:18] Felipe "Juca" Sanches: sei lá
+[2025-02-17 18:37:55] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34503.jpg
+[2025-02-17 18:37:55] Felipe "Juca" Sanches: Óbvio que ia conflitar!
+[2025-02-17 18:39:53] Shideravan: Já tem um material para iniciar os trabalhos de hoje!
+[2025-02-17 18:40:16] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34505.jpg
+[2025-02-17 18:40:16] Felipe "Juca" Sanches: Bora lá resolver esse conflito...
+[2025-02-17 18:40:40] Felipe "Juca" Sanches: pior é que pra hoje já tinha outra tarefa relacionada agendada
+[2025-02-17 18:40:57] Felipe "Juca" Sanches: code-review do trojan pra dump da ROM de boot da subpcu
+[2025-02-17 21:31:02] L.: https://github.com/decrazyo/nes86
+
+emulador de x86 pra nes
+[2025-02-17 21:31:25] L.: roda até elks (linux pra 8086) 😆
+[2025-02-17 21:42:04] L.: https://m.youtube.com/watch?v=OooHTDMUSGY o video é engraçado

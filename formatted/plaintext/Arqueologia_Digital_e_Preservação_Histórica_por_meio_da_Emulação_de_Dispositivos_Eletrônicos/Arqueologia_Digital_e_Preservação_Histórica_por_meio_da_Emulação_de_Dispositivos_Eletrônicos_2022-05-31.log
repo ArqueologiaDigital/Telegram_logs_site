@@ -1,0 +1,108 @@
+[2022-05-31 02:20:24] Pedro de Medeiros 👾: Pull request criado
+[2022-05-31 02:20:58] Felipe "Juca" Sanches: Há!
+[2022-05-31 02:21:02] Felipe "Juca" Sanches: Vou ver
+[2022-05-31 02:24:28] Felipe "Juca" Sanches: improving keyboard scanning function by pvmm · Pull Request #12 · ArqueologiaDigital/Mines
+https://github.com/ArqueologiaDigital/Mines/pull/12
+[2022-05-31 02:24:28] Felipe "Juca" Sanches: Merged!
+[2022-05-31 03:11:23] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20870.jpg
+[2022-05-31 03:11:23] Felipe "Juca" Sanches: Tá "jogável". Zerei um campo.
+[2022-05-31 03:14:29] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/13
+[2022-05-31 03:16:46] Flávio Amieiro: Aeee!
+[2022-05-31 03:17:17] Felipe "Juca" Sanches: mas o campo ainda não calcula pra nós o game-over
+[2022-05-31 03:17:37] Felipe "Juca" Sanches: nem abre clareiras automaticamente
+[2022-05-31 03:18:12] Flávio Amieiro: A parte chatinha 😅
+[2022-05-31 03:18:49] Felipe "Juca" Sanches: me senti jogando um jogo de tabuleiro, onde eu sou reponsável por mover todas a s peças eu mesmo kkkk
+[2022-05-31 03:18:57] Flávio Amieiro: Hahahah
+[2022-05-31 03:19:03] Flávio Amieiro: E dá pra roubar?
+[2022-05-31 03:19:10] Felipe "Juca" Sanches: sim, dá
+[2022-05-31 03:19:25] Felipe "Juca" Sanches: é só meter uma flag em cima de uma mina encontrada
+[2022-05-31 03:19:30] Flávio Amieiro: Eu tava pensando em implementar um modo "espiar", que ele mostra a célula atual sem abrir
+[2022-05-31 03:19:41] Flávio Amieiro: Ah sim, pq o jogo não acaba
+[2022-05-31 03:20:20] Flávio Amieiro: Isso aqui pra talvez ajudar a debugar depois que tiver a lógica do gameover. Pra não clicar em uma mina sem querer.
+[2022-05-31 03:20:45] Felipe "Juca" Sanches: ah, não, minto! do jeito que tá, as flags só aparecem se a celula estiver fechada, então não dá pra dar essa roubadinha, não
+[2022-05-31 04:49:36] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/14
+[2022-05-31 10:03:46] Flávio Amieiro: https://github.com/ArqueologiaDigital/Mines/pull/15
+[2022-05-31 14:46:02] Felipe "Juca" Sanches: ooops! 😃
+[2022-05-31 14:49:05] Pedro de Medeiros 👾: @fsanches acho que a gente precisa discutir (ou pelo menos definir melhor) o que a função wait_for_any_key retorna. Eu achava que seria o ASCII da tecla, mas depois virou uma representação das teclas de setas e botões.
+[2022-05-31 14:49:55] Pedro de Medeiros 👾: Arquiteturas diferentes às vezes têm formas diferentes de distinguir input de teclado de input via scancodes.
+[2022-05-31 14:51:56] Pedro de Medeiros 👾: O MSX por exemplo processa algumas teclas pra entregar funções convenientes que servem tanto pra teclado quanto pra joystick.
+[2022-05-31 14:52:00] Felipe "Juca" Sanches: originalmente wait_for_any_key era só pra aguardar qualquer toque no teclado, irrelevante qual tecla. Mas concordo que evoluiu pra algo diferente
+[2022-05-31 14:53:32] Pedro de Medeiros 👾: O que você espera receber quando wait_for_any_key retorna algo que não se enquadra nos MINE_* definidos?
+[2022-05-31 14:54:11] Felipe "Juca" Sanches: nesse jogo específico não hã necessidade de processar combinacoes de teclas, eu acho, né?
+[2022-05-31 14:54:32] Pedro de Medeiros 👾: Setas diagonais talvez.
+[2022-05-31 14:54:44] Felipe "Juca" Sanches: MINE_INPUT_IGNORED
+[2022-05-31 14:55:26] Felipe "Juca" Sanches: acho que deveríamos renomear a função pra tirar a palavra any
+[2022-05-31 14:56:03] Felipe "Juca" Sanches: deveria ser só wait_for_key
+[2022-05-31 14:59:18] Pedro de Medeiros 👾: Se não precisa processar combinações, a gente não precisa de buffer, certo? Vou ter que fazer uns ajustes no código do MSX.
+[2022-05-31 15:01:47] Felipe "Juca" Sanches: é, acho que só precisa detectar o key_down de algumas teclas específicas, mas sem combinacoes
+[2022-05-31 15:06:19] Pedro de Medeiros 👾: Como a gente está lidando com um processo de escrita de código de mais baixo nível do que o normal, acho que a gente pode escrever nas definições das funções na documentação o que se espera que a arquitetura futuramente incluída deva fazer pra implementar as funções. Esse mesmo seria um bom exemplo: o wait_for_key não deve processar combinações de teclas, processar apenas o evento de key_down e não bufferizar entrada.
+[2022-05-31 15:17:42] Felipe "Juca" Sanches: exato, e seria bom ser non-blocking também, pra permitir que a gente possa fazer outras coisas enquando espera um input especifico
+[2022-05-31 15:18:56] Felipe "Juca" Sanches: e ao ser non-blocking, seria bom tambem tirar o wait do nome haha
+[2022-05-31 15:19:13] Felipe "Juca" Sanches: seria get_key_press ou algo do tipo
+[2022-05-31 15:19:40] Felipe "Juca" Sanches: ou read_key_press
+[2022-05-31 15:39:18] Pedro de Medeiros 👾: Melhor tirar o key também e colocar control, ctrl ou algo do tipo pro caso de video game.
+[2022-05-31 15:41:44] Pedro de Medeiros 👾: Não é nem que é muito baixo nível... é que trabalhando em arquiteturas modernas a gente tá acostumado a fazer um monte de suposições que podem não estar corretas.
+[2022-05-31 15:47:50] Felipe "Juca" Sanches: read_input
+[2022-05-31 16:01:36] Pedro de Medeiros 👾: Definir API não é fácil, ainda mais uma aberta que deve acomodar um monte de plataformas distintas. Certas coisas só materializam depois de pelo menos alguma implementação ou esboço de uma pelo menos.
+[2022-05-31 16:18:32] Felipe "Juca" Sanches: exato!
+[2022-05-31 16:27:20] Pedro de Medeiros 👾: Aí quando a gente for precisar de uma função que lê entrada com combinação, a gente pensa num nome.
+[2022-05-31 16:27:29] Pedro de Medeiros 👾: Mas isso será provavelmente pra outro jogo.
+[2022-05-31 16:29:12] Felipe "Juca" Sanches: é isso aí
+[2022-05-31 17:05:13] Pedro de Medeiros 👾: Aliás, video game multiplayer podem precisar de um definição de qual controle estamos falando. Poderíamos adotar a passagem de parâmetro onde 0 = KEYBOARD, 1 = JOY1 e 2 = JOY2, porque o MSX por exemplo tem os três. E aí definir uma outra função pra decidir qual o jogador está usando.
+[2022-05-31 17:09:18] Pedro de Medeiros 👾: E talvez ir logo até JOY4.
+[2022-05-31 17:27:59] Felipe "Juca" Sanches: Prefiro que seja um mapa de bits, para que uma chamada possa ler o input de qualquer subconjunto de inputs desejado de uma só vez para casos em que um jogo single-player pode usar qualquer joystick, ou teclado
+[2022-05-31 17:31:45] Felipe "Juca" Sanches: #define KEYBOARD = (1 << 0);
+#define JOY_1 = (1 << 1);
+#define JOY_2 = (1 << 2);
+#define JOY_3 = (1 << 3);
+#define JOY_4 = (1 << 4);
+[2022-05-31 17:33:05] Pedro de Medeiros 👾: Não tenho certeza se entendi. O read_input() vai trazer entrada ao mesmo tempo de teclado e JOY1 até JOY4?
+[2022-05-31 17:33:11] Felipe "Juca" Sanches: uint8_t input = read_input(JOY_1 | JOY_2);
+[2022-05-31 17:33:38] Pedro de Medeiros 👾: OK
+[2022-05-31 17:34:50] Felipe "Juca" Sanches: Tem outras formas de fazer também, teria que ser avaliado o que funciona melhor
+[2022-05-31 17:35:29] Felipe "Juca" Sanches: Ao invés de passar como parâmetro, daria pra ler campos na resposta também
+[2022-05-31 17:35:46] Felipe "Juca" Sanches: Que acho que faz até mais sentido
+[2022-05-31 17:36:30] Pedro de Medeiros 👾: Isso tudo nem vai caber em um byte se eu fizer read_input(0b11111)?
+[2022-05-31 17:36:49] Felipe "Juca" Sanches: Pois é...
+[2022-05-31 17:37:30] Felipe "Juca" Sanches: Talvez usar o que você sugeriu antes seja melhor mesmo
+[2022-05-31 17:38:15] Felipe "Juca" Sanches: Com 3 bits se codifica até 8 inputs distintos, o que é suficiente para os 4 joysticks e o teclado
+[2022-05-31 17:38:44] Felipe "Juca" Sanches: E aí sobram 5 bits para o código da tecla/botão de fato
+[2022-05-31 17:40:21] Felipe "Juca" Sanches: Mas essa é a treta, uma função específica pra um jogo, mesmo que genérica do ponto de vista de ser multiplataforma, é bem mas fácil que uma função dum devkit completamente genérico pra se fazer qualquer programa ou jogo
+[2022-05-31 17:41:18] Felipe "Juca" Sanches: No momento estamos lidando com um joguinho bem simples então acho ok termos uma implementação limitada mas efetiva pra esse nosso caso simples
+[2022-05-31 17:41:35] Felipe "Juca" Sanches: Depois a gente customiza se for fazer jogos com maiores demandas
+[2022-05-31 17:47:23] Pedro de Medeiros 👾: O Minesweeper tem dois botões, né? Abrir mina ou colocar bandeirinha na mina sob o cursor. Acho que você só definiu um?
+[2022-05-31 17:48:35] Felipe "Juca" Sanches: É verdade, tem uma ação de abrir um bloco de 9 casas de uma vez só
+[2022-05-31 17:48:42] Pedro de Medeiros 👾: Que você tá chamando de "MINE_INPUT_OPEN"
+[2022-05-31 17:49:00] Felipe "Juca" Sanches: Costuma ser implementado como clique do scrollwheel
+[2022-05-31 17:49:28] Felipe "Juca" Sanches: Ou como clique dos botões direito e esquerdo do mouse  simultaneamente
+[2022-05-31 17:50:02] Felipe "Juca" Sanches: Eu chamaria isso de MINE_INPUT_OPEN_BLOCK
+[2022-05-31 17:50:13] Felipe "Juca" Sanches: E mapearia na tecla B do teclado
+[2022-05-31 17:50:42] Felipe "Juca" Sanches: 'b' ou 'B' (pra ser mais preciso)
+[2022-05-31 17:50:59] Pedro de Medeiros 👾: O MSX usa por padrão o M pra Fire2.
+[2022-05-31 17:51:16] Felipe "Juca" Sanches: No MSX pode ser assim, sim
+[2022-05-31 17:51:33] Felipe "Juca" Sanches: Eu tava pensando no ncurses
+[2022-05-31 17:52:00] Felipe "Juca" Sanches: Mas posso fazer igual, por consistência entre os ports, claro
+[2022-05-31 17:55:21] Pedro de Medeiros 👾: input_read ou read_input? Aí a gente pode fazer input_* stuff como se fosse um namespace.
+[2022-05-31 17:55:46] Felipe "Juca" Sanches: Boa!
+[2022-05-31 17:55:59] Pedro de Medeiros 👾: Ou a gente vai usar um prefixo mine_* ?
+[2022-05-31 17:56:35] Felipe "Juca" Sanches: Não precisa
+[2022-05-31 18:01:40] Pedro de Medeiros 👾: Comentário no cabeçalho da função com pandoc?
+[2022-05-31 18:01:54] Pedro de Medeiros 👾: Pandoc suporta markdown
+[2022-05-31 18:18:32] Pedro de Medeiros 👾: Criei um PR com base nessa conversa. https://github.com/ArqueologiaDigital/Mines/pull/17
+[2022-05-31 18:18:57] Pedro de Medeiros 👾: Ops. tem um erro.
+[2022-05-31 18:20:09] Felipe "Juca" Sanches: faz git commit —amend e depois git push force pro teu branch
+[2022-05-31 18:20:25] Pedro de Medeiros 👾: Já arrumei
+[2022-05-31 18:23:02] Pedro de Medeiros 👾: Coloquei implementation details.
+[2022-05-31 18:23:47] Felipe "Juca" Sanches: boa
+[2022-05-31 18:25:05] Pedro de Medeiros 👾: Ficou nome genérico Fire1 e Fire2. Depois a gente arruma
+[2022-05-31 18:28:54] Pedro de Medeiros 👾: Aliás, uma dica: acho meio desperdício de espaço fazer clone duas vezes de repositórios (o meu e o original), então eu uso diferentes remotes no mesmo repositório local.
+[2022-05-31 18:30:27] Felipe "Juca" Sanches: eu também
+[2022-05-31 19:53:37] Pedro de Medeiros 👾: Voilà https://github.com/ArqueologiaDigital/Mines/pull/18
+[2022-05-31 19:54:09] Pedro de Medeiros 👾: Deixei ncurses e MSX2 compilando.
+[2022-05-31 19:54:49] Pedro de Medeiros 👾: Aproveitei e arrumei o erro de input_read() retornando void no cabeçalho.
+[2022-05-31 19:56:33] Pedro de Medeiros 👾: Temos que colocar -I../../common no CFLAGS. Acho muito feio ficar fazendo include "../../common/input.h" 😛
+[2022-05-31 19:57:20] Felipe "Juca" Sanches: ok
+[2022-05-31 19:57:22] Pedro de Medeiros 👾: Se você esperar eu arrumo isso.
+[2022-05-31 19:57:27] Felipe "Juca" Sanches: sim, por favor
+[2022-05-31 20:00:06] Pedro de Medeiros 👾: Pronto!
+[2022-05-31 22:57:11] Pedro de Medeiros 👾: Achei esse relato muito interessante: https://devblogs.microsoft.com/oldnewthing/20220419-00/?p=106496

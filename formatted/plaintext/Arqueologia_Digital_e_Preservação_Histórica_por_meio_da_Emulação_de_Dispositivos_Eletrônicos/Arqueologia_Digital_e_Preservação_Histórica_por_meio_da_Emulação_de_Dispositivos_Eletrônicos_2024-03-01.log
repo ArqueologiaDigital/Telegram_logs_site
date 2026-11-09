@@ -1,0 +1,24 @@
+[2024-03-01 05:32:34] Felipe "Juca" Sanches: Descobri uma coisa muito legal! Vou gravar um vídeo e mando daqui a pouco
+[2024-03-01 06:14:53] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=h7OD637CnBo
+[2024-03-01 06:58:00] Pablo Vasques Bravo-Villalba: "Este vídeo é privado"
+[2024-03-01 07:02:11] Felipe "Juca" Sanches: me desculpe
+[2024-03-01 07:02:17] Felipe "Juca" Sanches: agora tá disponível?
+[2024-03-01 07:02:41] Pablo Vasques Bravo-Villalba: Acontece 😅
+[2024-03-01 07:02:50] Pablo Vasques Bravo-Villalba: 👍🏽👍🏽👍🏽
+[2024-03-01 07:03:40] Pablo Vasques Bravo-Villalba: Eu uso a mesma régua que você 😊
+[2024-03-01 07:13:41] Pablo Vasques Bravo-Villalba: Legal demais o vídeo
+[2024-03-01 07:14:30] Felipe "Juca" Sanches: 😉
+[2024-03-01 09:40:14] kretcheu: Um OCR dessas telas de dump!?
+[2024-03-01 09:51:01] Felipe "Juca" Sanches: O endereço avança de 0x80 para cada tela. Tem uma ROM que preciso fazer o dump e que tem um total de 0x80000 bytes. Precisaria fazer OCR de 0x1000 páginas (ou seja, 4096 páginas). Sem chance! Tem formas mais simples de fazer isso.
+[2024-03-01 09:52:16] Felipe "Juca" Sanches: por exemplo, eu já tenho uma técnica de salvar dump em disquete. Mas só salva 0x1000 bytes por vez. Então eu precisaria salvar e concatenar 0x80 (ou seja 128) arquivos via disquete.
+[2024-03-01 09:52:50] Felipe "Juca" Sanches: ainda é treta... portanto continuarei pesquisando pra tentar achar uma solução ainda mais prática
+[2024-03-01 10:53:37] Pedro de Medeiros 👾: "ACHTUNG !"
+
+Por quê os textos em alemão tem espaço entre o texto e o ponto de exclamação/interrogação?
+[2024-03-01 10:55:47] Pedro de Medeiros 👾: "apakah yakin akan dihapus ?" é indonésio e também tem.
+[2024-03-01 12:15:12] Pedro de Medeiros 👾: https://www.mistys-internet.website/blog/blog/2024/03/01/that-time-i-accidentally-deleted-a-game-from-mame/
+[2024-03-01 13:43:41] L.: https://hackaday.com/2024/03/01/if-you-thought-sega-only-made-electronic-games-think-again/
+[2024-03-01 18:44:57] Pedro de Medeiros 👾: https://forums.atariage.com/topic/362182-colecovision-basic-compiler-cvbasic-v010/
+[2024-03-01 19:01:07] L.: O Oscar Toledo é aquele cara dos engines de xadrez pequenos
+[2024-03-01 21:12:17] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29364.jpg
+[2024-03-01 21:12:17] L.: ó eu jogando super cobra em 1992

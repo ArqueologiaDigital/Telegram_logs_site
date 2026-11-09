@@ -1,0 +1,22 @@
+[2026-04-22 09:12:21] L.: Linux rodando de forma cooperativa no Windows 95 (igual o Colinux fazia com o 2000): https://codeberg.org/hails/wsl9x :P
+[2026-04-22 09:35:16] Guilherme Ranoya: https://www.youtube.com/watch?v=igi-Hnd54DU
+
+Pronto... agora já posso ressuscitar todos aqueles softwares de controle de locadoras de VHS e de controle de estoque da década de 1980 😂
+[2026-04-22 12:18:21] Nelson Lima: O interessante e as vezes passa despercebido é q o conceito de janelas sobrepostas já existia no modo texto.
+[2026-04-22 12:33:22] RicBit: pra quem usava na época não era despercebido, era comum. tipo sidekick
+[2026-04-22 12:49:04] Guilherme Ranoya: A maior parte das ferramentas que tinham janelas modais usavam elas de forma fixa... isso mascarava um pouco de que eram frames sobrepostos. Mas a biblioteca de interface da microsoft que usavam em ferramentas como o Quick C, Quick Pascal, Quick Basic e etc. eram janelas mesmo... você podia deslocar e redimensionar as janelas de texto sobrepostas.
+
+Há diversos outros exemplos interessantes como o Framework da Ashton-Tate, que tem um sistema de interface de texto mesmo, com múltiplas janelas abertas em paralelo (e virava uma confusão completa).
+
+Uma coisa que eu usava muito (e não consigo emular em DOSBox) é o DESQView. Era um sistema de multitask que abria instâncias de DOS em paralelo, e que dava para colocar essas instâncias em janelas de texto. Eu tinha uma BBS em casa... a única forma de usar o computador rodando a BBS ao mesmo tempo era com o DESQView.
+[2026-04-22 14:50:17] Pablo Vasques Bravo-Villalba: Janelas mesmo, em que um programa ou aplicação executasse dentro de uma área da tela, não era tão comum em interfaces modo texto. O mais comum eram menus pop-up ou drop-down, ou caixas de alerta ou confirmação. E, por que não lembrarmos, em 1984 já existia o Macintosh
+[2026-04-22 16:03:23] RicBit: Minha vida seria mais simples se eu tivesse um assembly fortemente tipado
+[2026-04-22 16:07:02] RicBit: Vocês não usavam turbo vision? Eu brinquei um monte com ele na época.
+[2026-04-22 16:27:28] Pablo Vasques Bravo-Villalba: Nunca ouvi falar
+[2026-04-22 16:27:49] RicBit: Eita
+[2026-04-22 16:28:08] RicBit: Vinha como padrão no turbo pascal e turbo c
+[2026-04-22 16:29:32] Pablo Vasques Bravo-Villalba: Bom, nunca usei nenhum desses dois. 😅
+
+Estou vendo que é uma interface de usuário para modo texto criada em 1990, bacana. Me lembrou a interface do VB para DOS
+[2026-04-22 17:41:45] Nelson Lima: Legal era o capricho das janelas o botão tinha um contorno preto no fundo pra fazer uma sombra
+[2026-04-22 17:43:15] Nelson Lima: Turbo Vision era o framework d Borland. Cheguei a usar o Turbo Pascal

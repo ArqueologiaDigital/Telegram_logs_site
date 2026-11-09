@@ -1,0 +1,16 @@
+[2025-01-18 00:10:42] Felipe "Juca" Sanches: haha, pois é
+[2025-01-18 00:10:59] Felipe "Juca" Sanches: e o pior é que por volta de 3 horas antes eu acho que eu tava já mexendo nesse arquivo
+[2025-01-18 00:11:18] Felipe "Juca" Sanches: se bobear passou muito perto disso
+[2025-01-18 00:11:27] Felipe "Juca" Sanches: mas só percebi no momento dessa captura
+[2025-01-18 00:28:52] Shelton Ribeiro: https://github.com/n64brew/N64brew-GameJam2024/releases 
+
+Link para baixar os games da GameJam 2024 Nintendo 64 Brew. Games com código aberto. Roda em Everdrive e emuladores.
+[2025-01-18 00:29:56] Shelton Ribeiro: video: (not yet published)
+[2025-01-18 00:29:56] Shelton Ribeiro: Coin Rush, o game campeão da edição deste ano.
+[2025-01-18 15:34:05] Felipe "Juca" Sanches: Hoje estou documentando o disasm do payload executável da subcpu do kn5000
+Com o objetivo de entender melhor como funciona a comunicação com a porta serial (chamada de "computer interface") e reprogramá-la para extrair um dump da rom de boot da subcpu.
+[2025-01-18 15:34:32] Felipe "Juca" Sanches: Eu  fiz um patch bobinho, que deveria ser trivial,e quebrou tudo
+[2025-01-18 15:35:36] Felipe "Juca" Sanches: Cheguei a suspeitar de ter validação de checksum do payload. Fiz um patch diferente,  também trivial, em outro endereço, e funcionou bem.
+
+Conclusão: não sei o que estou fazendo e preciso estudar mais.
+[2025-01-18 15:47:05] Felipe "Juca" Sanches: Uma coisa que esse projeto com certeza está me ensinando é ter perseverança!

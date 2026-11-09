@@ -1,0 +1,23 @@
+[2026-05-15 08:53:51] RicBit: cheguei no ponto que o meu sistema está 100% autonomo!
+[2026-05-15 08:53:55] RicBit: eu larguei o psycho.dsk e falei se vira, ele fez um monte durante a noite:
+[2026-05-15 08:54:09] RicBit: https://gist.github.com/ricbit/19793c14455a7bdda2bf5886fa6293aa
+[2026-05-15 10:01:47] Felipe "Juca" Sanches: E então toda a coleção de software pra MSX passa a ter código fonte legível...
+[2026-05-15 11:43:20] RicBit: tá funcionando bem legal. Ontem eu abri o Ys 3 para ver como funcionava o scroll parallax dele
+[2026-05-15 11:44:07] RicBit: era como eu suspeitava, ele só desenha os tiles que se mexeram
+[2026-05-15 11:46:06] RicBit: alias não é toda a coleção, eu ainda não ensinei ele a abrir megarom
+[2026-05-15 11:46:18] RicBit: por enquanto só cartucho sem mapper ou dsk
+[2026-05-15 13:16:34] Leonardo Roman: Tua intenção é portar pra V9990?
+[2026-05-15 14:20:49] RicBit: eu nao quero portar, quero que ele porte para mim
+[2026-05-15 14:22:35] RicBit: provavelmente eu vou ter que fazer na mao uns 2 jogos para ele aprender
+[2026-05-15 14:58:47] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38697.jpg
+[2026-05-15 14:58:47] Felipe "Juca" Sanches: Itautec I7000 começando a dar sinais de vida no MAME
+[2026-05-15 15:01:25] Pablo Vasques Bravo-Villalba: Não conhecia esse Itautec I-7000. Onde tem especificações mais detalhadas dele?
+[2026-05-15 15:02:27] Felipe "Juca" Sanches: tem duas versões: um é clone de PC-XT. Outro é um computador projetado pela Itautec sem copiar de máquina estrangeira, usando um chip clone de Z80.
+[2026-05-15 15:02:53] Felipe "Juca" Sanches: https://tabajara-labs.blogspot.com/2013/08/alguem-conhece-o-i7000-da-itautec.html
+[2026-05-15 15:03:19] Felipe "Juca" Sanches: 11 anos atrás eu comecei a emular:
+[2026-05-15 15:03:20] Felipe "Juca" Sanches: https://tabajara-labs.blogspot.com/2015/06/i7000-da-itautec-finalmente-emulado-no.html
+[2026-05-15 15:03:36] Felipe "Juca" Sanches: E hoje eu pedi uma ajudinha pro Cláudio
+[2026-05-15 15:47:06] Pablo Vasques Bravo-Villalba: Clone de PC-XT não me interessa. Agora, uma arquitetura proprietária baseada em Z80 já me soa mais divertido
+[2026-05-15 16:16:29] Leonardo Roman: Temos fotos e software, mas até onde eu saiba nenhuma documentação: https://datassette.org/pt-br/manuais/itautec/i-7000-i-7000g-i-7000-junior/fotos-internas-e-externas-i-7010
+[2026-05-15 16:16:37] Leonardo Roman: https://datassette.org/pt-br/manuais/itautec/i-7000-i-7000g-i-7000-junior/fotos-internas-e-externas-i-7000-jr-e
+[2026-05-15 16:17:56] Leonardo Roman: https://datassette.org/pt-br/softwares/itautec-i-7000/firmwares/br-brasil/itautec-i7000-roms

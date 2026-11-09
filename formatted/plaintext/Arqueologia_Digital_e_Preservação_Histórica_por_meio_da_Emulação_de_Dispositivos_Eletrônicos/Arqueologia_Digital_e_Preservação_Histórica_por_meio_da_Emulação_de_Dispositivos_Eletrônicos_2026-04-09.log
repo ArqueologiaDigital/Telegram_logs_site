@@ -1,0 +1,17 @@
+[2026-04-09 16:45:05] Deleted Account: Bem, meu primeiro contato com o computadores foi o NE-Z8000, depois passei para o TK-82C. Quando trabalhei no Itaú usávamos o Cobra 400 que, com a chegada da Itautec, foi substituído pelo I-7000. Foi aí que realmente comecei a descobrir a programação com o dBase II. Daí pra frente a evolução foi a natural. XT, 286, 386 e etc. Tenho 65 anos e aposentei na área de informática.
+[2026-04-09 17:39:19] L.: https://www.pjrc.com/mcl68-68000-emulator/
+[2026-04-09 18:03:12] L.: https://bsky.app/profile/rockmancosmo.bsky.social/post/3mj3mdgzho22z
+[2026-04-09 20:05:17] RicBit: o music player do zanac é muito superior ao do antartic, tem uma linguagem propria:
+
+Bytes 0x80–0xDE: command dispatch (handler table at 4F6Ch):
+0x80 lo hi — unconditional jump to address
+0x81 lo hi — conditional loop (decrement ix+0Fh; jump if non-zero)
+0x82 — end of track (deactivate channel)
+0x84 N — set arpeggio type (ix+2 = N)
+0x85 N — set note transpose offset (ix+3)
+0x86 N — adjust volume (ix+1) by signed delta N
+0x87 N — play track N (PLAY_MUSIC_SAFE)
+0x88 N — set loop counter (ix+0Fh = N)
+0x8A lo hi — portamento table lookup at address lo/hi
+0x8B N M — enable vibrato (period=N, depth=M)
+0x8C N M — configure portamento

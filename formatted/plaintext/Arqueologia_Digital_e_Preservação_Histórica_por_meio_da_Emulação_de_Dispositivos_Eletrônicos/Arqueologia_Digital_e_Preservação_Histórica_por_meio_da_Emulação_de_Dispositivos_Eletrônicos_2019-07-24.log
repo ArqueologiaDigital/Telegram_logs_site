@@ -1,0 +1,25 @@
+[2019-07-24 07:14:53] Affonso Amendola: Carai eu fecho
+[2019-07-24 07:15:21] Affonso Amendola: Excelente por mim
+[2019-07-24 07:18:46] Felipe "Juca" Sanches: Bora agendar pra 10/AGO, Anita?
+[2019-07-24 07:18:58] Felipe "Juca" Sanches: O que acha, @villares ?
+[2019-07-24 08:03:01] Alexandre Villares: Anita e eu trabalhamos aos sábados, precisaria ver escala e tal.
+[2019-07-24 08:03:42] Alexandre Villares: Por isso segunda costuma ser um bom dia para nós
+[2019-07-24 08:23:35] Felipe "Juca" Sanches: ah, entendi!
+[2019-07-24 08:24:57] Felipe "Juca" Sanches: só me preocupa ter pouco tempo de segunda-feira pra ver o documentário e depois jogar.
+[2019-07-24 08:26:05] Felipe "Juca" Sanches: Começando o filme às 19h30, acaba 21h 30. É... acho que dá pra jogar das 21h30 até o horário de fechar o clube.
+[2019-07-24 08:26:20] Felipe "Juca" Sanches: Affonso, rola de segunda-feira também pra você?
+[2019-07-24 08:31:10] Felipe "Juca" Sanches: talvez segunda-feira, dia 12/AGO?
+[2019-07-24 08:33:30] Felipe "Juca" Sanches: poderia ser agora dia 29/JUL também, mas aí teríamos menos tempo pra divulgar e, portanto, uma certa chance de ter um público menor
+[2019-07-24 08:45:01] Affonso Amendola: Suree!
+[2019-07-24 09:54:32] Felipe "Juca" Sanches: https://goughlui.com/2013/03/11/tech-flashback-iomega-scsi-zip-100-drive-internals/
+[2019-07-24 09:55:01] Felipe "Juca" Sanches: Ganhei um drive zip100 (porta paralela). Mas ele tá quebrado.
+[2019-07-24 10:33:26] Affonso Amendola: Eu ja mexi em uns 5 ou 6
+[2019-07-24 10:33:33] Affonso Amendola: Nenhum deles funcionava direito
+[2019-07-24 10:33:41] Affonso Amendola: E eu juro que tentei
+[2019-07-24 11:37:05] Felipe "Juca" Sanches: Uma pessoa na internet afirma que o chip custom da Iomega usado nesse zip drive é um microcontrolador 8052...
+[2019-07-24 11:37:06] Felipe "Juca" Sanches: http://www.vcfed.org/forum/archive/index.php/t-34097.html
+[2019-07-24 11:39:53] Felipe "Juca" Sanches: pensei em fazer um dump da ROM pra dar uma estudada só pela farra. Mas o chip (uma EPROM 27512 em encapsulamento PLCC32) está soldada na PCB.
+[2019-07-24 11:40:27] Felipe "Juca" Sanches: procurei um clip pomona pra extrair o dump sem desoldar o chip da placa, mas o clip custa caro demais!!!! https://www.alliedelec.com/product/pomona-electronics/5733/70198373/
+[2019-07-24 21:07:00] L.: AliExpress tem os clones
+[2019-07-24 21:07:21] L.: Eu tenho um clone que usei pra botar coreboot no meu laptop. Foi tipo $3 com frete
+[2019-07-24 21:08:07] L.: Tem umas versões pra imprimir também mas na época não tinha impressora 3D fácil

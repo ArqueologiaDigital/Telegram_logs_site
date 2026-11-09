@@ -1,0 +1,63 @@
+[2022-05-27 01:58:12] Felipe "Juca" Sanches: Ooops! Você tem razão
+[2022-05-27 01:59:37] Felipe "Juca" Sanches: Amanhã quando eu sentar na frente do notebook eu torno o repo público, não tô conseguindo fazer isso agora aqui pelo celular
+[2022-05-27 10:13:55] Ismael Luceno: ta falando da 4.2?
+[2022-05-27 10:21:05] Pedro de Medeiros 👾: Sim
+[2022-05-27 10:22:43] Ismael Luceno: não é um cambio muito problemático
+[2022-05-27 10:22:56] Ismael Luceno: e acho que todas as rolling releases ja tem atualizado
+[2022-05-27 10:32:19] Flávio Amieiro: Não tá no Debian testing. Só achei pro oldstable
+[2022-05-27 10:32:26] Flávio Amieiro: Será que mudou de nome o pacote?
+[2022-05-27 10:35:43] Flávio Amieiro: Ops. Typo aqui. Hahahah
+[2022-05-27 10:35:56] Flávio Amieiro: No Debian testing tá na versão. 4.0
+[2022-05-27 10:50:39] Ismael Luceno: Debian testing não é rolling release nem é standard de nada, a lentidão deles é épica
+[2022-05-27 10:51:21] Ismael Luceno: no caso deveria olhar a sid
+[2022-05-27 10:52:48] Ismael Luceno: e mesmo a sid segue com 4.0
+[2022-05-27 10:54:35] Ismael Luceno: https://repology.org/project/sdcc/versions
+[2022-05-27 10:55:28] Ismael Luceno: opa, a parabola tem o sdcc atualizado
+[2022-05-27 10:57:00] Flávio Amieiro: Ah, rolling release meio que é. Se usar "testing" como nome de distro é sempre a próxima testing.
+
+Mas olhei principalmente pra saber mesmo se dava pra eu instalar direto do repo ou precisaria compilar eu mesmo ....
+[2022-05-27 11:06:02] Pedro de Medeiros 👾: Derivados de Arch Linux com certeza.
+[2022-05-27 11:12:02] Ismael Luceno: Não
+[2022-05-27 11:18:17] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20702.jpg
+[2022-05-27 11:18:17] Pedro de Medeiros 👾: Tá lá nos packages.
+[2022-05-27 11:19:45] Pedro de Medeiros 👾: E Manjaro também porque usa o mesmo repositório.
+[2022-05-27 11:56:54] Ismael Luceno: eu falava de que não só derivados da Arch, derivado da Arch = Arch, não vamos contar os derivados
+[2022-05-27 11:57:41] Ismael Luceno: https://github.com/void-linux/void-packages/tree/master/srcpkgs/sdcc -> 4.2
+[2022-05-27 11:58:47] Ismael Luceno: http://scm.sourcemage.org/smgl/grimoire.git/tree/devel/sdcc/DETAILS-> 4.2
+[2022-05-27 12:01:23] Ismael Luceno: eu vou pedir para atualizar a openSUSE
+[2022-05-27 12:12:57] Pedro de Medeiros 👾: Pois é. OpenSUSE Thumbleweed não tem ainda e é rolling release.
+[2022-05-27 12:21:59] Pedro de Medeiros 👾: Nem Debian Testing, nem Gentoo. Acho que a minoria das rolling distros na verdade. 😅
+[2022-05-27 15:38:52] Pedro de Medeiros 👾: Este site ajuda a ver isso: https://pkgs.org/search/?q=sdcc
+[2022-05-27 15:55:39] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20711.jpg
+[2022-05-27 15:55:39] Pedro de Medeiros 👾: Muito doida essa ideia. https://martinmelhus.com/web-audio-modem
+[2022-05-27 16:14:06] Felipe "Juca" Sanches: Hoje visitei a casa do professor Guido Stolfi
+[2022-05-27 16:15:00] Felipe "Juca" Sanches: Eis aqui a listagem do conteúdo das fitas perfuradas dele, da época do Patinho Feio:
+[2022-05-27 16:15:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20714.jpg
+[2022-05-27 16:15:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20715.jpg
+[2022-05-27 16:15:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20716.jpg
+[2022-05-27 16:15:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20717.jpg
+[2022-05-27 16:15:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20718.jpg
+[2022-05-27 16:15:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20719.jpg
+[2022-05-27 16:42:20] João Carlos: Uau, ele gostava bastante de musica
+[2022-05-27 16:55:19] Flávio Amieiro: Tô curioso a respeito do gerador de números aleatórios!
+[2022-05-27 16:55:33] Flávio Amieiro: (de tudo, na verdade, mas isso pescou minha atenção de primeira)
+[2022-05-27 18:12:22] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20723.jpg
+[2022-05-27 18:12:50] Felipe "Juca" Sanches: fotolitos da fabricação do sintetisador do Guido Stolfi, 1974/75
+[2022-05-27 18:12:58] Flávio Amieiro: 👀
+[2022-05-27 18:13:18] Felipe "Juca" Sanches: Tudo separadinho por subsistemas
+[2022-05-27 18:13:35] Felipe "Juca" Sanches: esses aí são só alguns das placas de interface do synth com o patinho feio
+[2022-05-27 18:13:49] Felipe "Juca" Sanches: tem vários outros envelopes com os fotolitos dos outros subsistemas também
+[2022-05-27 18:14:05] Felipe "Juca" Sanches: vou escanear a porra toda
+[2022-05-27 18:14:31] Flávio Amieiro: Boa!!
+[2022-05-27 18:15:09] Flávio Amieiro: O sintetizador dele é muito interessante!
+[2022-05-27 18:15:12] Felipe "Juca" Sanches: eu to boquiaberto aqui com as folhas dos circuitos desenhados manualmente, que foram usados para criar os fotolitos em si
+[2022-05-27 18:16:44] Felipe "Juca" Sanches: eu achava que faziam isso em um tamanho maior e reduziam ópticamente. Mas não! As matrizes foram desenhadas em tamanho real! É muito louco alguém fazer isso manualmente. Impressionante!
+[2022-05-27 18:42:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20734.jpg
+[2022-05-27 18:42:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20735.jpg
+[2022-05-27 18:43:23] Felipe "Juca" Sanches: O Telegram estraga as imagens. Mandei aqui só pra terem uma idéia da cara dos fotolitos. Estou guardando os arquivos em 300dpi e formato TIFF num repo git.
+[2022-05-27 18:47:41] Felipe "Juca" Sanches: olha a cara da matriz:
+[2022-05-27 18:48:01] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20738-interface_de_timbre__matriz_componentes.tiff
+[2022-05-27 18:50:18] Felipe "Juca" Sanches: to escaneando as matrizes também, mesmo estando com falhas, pois algumas contém anotações a lápis como essas indicando os nomes dos sinais do barramento. Vai ser útil para cruzar com os esquemáticos:
+[2022-05-27 18:50:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20740.jpg
+[2022-05-27 20:23:33] * Felipe "Juca" Sanches added Augusto Almeida
+[2022-05-27 22:45:47] FTMaciel: Tem um plug-in no kicad que deixa as trilhas assim curvas

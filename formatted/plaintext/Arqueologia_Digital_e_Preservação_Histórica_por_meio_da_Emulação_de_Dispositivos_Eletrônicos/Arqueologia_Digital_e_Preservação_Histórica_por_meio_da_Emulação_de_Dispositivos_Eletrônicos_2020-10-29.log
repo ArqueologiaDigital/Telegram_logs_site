@@ -1,0 +1,14 @@
+[2020-10-29 12:30:37] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-10/11524.jpg
+[2020-10-29 12:30:37] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/7407
+[2020-10-29 13:14:03] pitanga: Conseguiu fazer o dump?
+[2020-10-29 13:18:42] Felipe "Juca" Sanches: esse é do re-release de 2017, que usa um ATMEGA
+[2020-10-29 13:19:19] Felipe "Juca" Sanches: o dos anos 80, que usa um Zilog Z8, continua sem dump
+[2020-10-29 13:20:04] Felipe "Juca" Sanches: meu driver de emulacao do pense bem 2017 está quase perfeito. Só o som que tá cheio de ruido pois o core de avr8 no mame tá implementado de forma ineficiente
+[2020-10-29 13:21:15] Felipe "Juca" Sanches: tem um contribuidor do MAME que vai dar uma revisada nisso "nesse fim de semana" pra modernizar a forma como o core de avr8 lida com io ports e, cruzem os dedos, talvez melhorar a performance dos eventos de timer usados no buzzer do pense bem
+[2020-10-29 23:01:37] Eduardo Loos: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-10/11530.jpg
+[2020-10-29 23:01:39] Eduardo Loos: Pessoal, assunto de extrema importância agora.
+O Datassette, site VITAL para o nosso hobby, precisa de seu apoio.
+Agora ele está com mais uma forma de angariar auxílio financeiro: foi criado uma conta no Apoia.se (apoia.se/datassette).
+As contribuições começam a partir de 4 reais.
+
+Ajude a manter o site, que há 17 anos cumpre seu papel de repositório de revistas, livros, software e informações técnicas de consoles e microcomputadores. O auxílio, além de ajudar no custeio do site, ajudará na aquisição de mais materiais a serem disponibilizados. Contribua vc também !

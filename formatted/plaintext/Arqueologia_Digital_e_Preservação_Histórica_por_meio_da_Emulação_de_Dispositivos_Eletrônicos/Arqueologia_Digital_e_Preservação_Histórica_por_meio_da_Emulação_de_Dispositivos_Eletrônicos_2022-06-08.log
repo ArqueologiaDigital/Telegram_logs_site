@@ -1,0 +1,29 @@
+[2022-06-08 00:00:52] Felipe "Juca" Sanches: Ainda não tá claro pra mim. Você mostrou um screenshot com a funcionalidade, mas não forneceu o código que a implementa (caso se use #define USE_DEBUG_MODE). Também não tá claro como uma chamada de função compilada na ROM pode se comunicar com o emulador (sem que isso gere código binário estranho às specs do hardware real de um MSX).
+[2022-06-08 00:02:18] Pedro de Medeiros 👾: A implementação de MSX: https://github.com/ArqueologiaDigital/Mines/commit/c671a85ca53a5f5c41d8403fb780a6f6339bbb26
+[2022-06-08 00:03:26] Pedro de Medeiros 👾: O código se comunica com um dispositivo virtual via OUT, como se fosse um dispositivo qualquer de MSX.
+[2022-06-08 00:03:59] Pedro de Medeiros 👾: Então ele funciona no MSX também.
+[2022-06-08 00:04:01] Felipe "Juca" Sanches: e aí num MSX real não tem nenhum device nessa porta e portanto as operacoes de I/O são inertes?
+[2022-06-08 00:04:09] Pedro de Medeiros 👾: Yup
+[2022-06-08 00:04:11] Felipe "Juca" Sanches: ok
+[2022-06-08 00:06:25] Felipe "Juca" Sanches: Esse commit tá em outro branch seu? Adiciona ele ao PR pra ir tudo junto quando eu der o merge.
+[2022-06-08 00:06:37] Pedro de Medeiros 👾: OK
+[2022-06-08 00:08:02] Pedro de Medeiros 👾: Faz tempo que não uso git merge, mas usei agora.
+[2022-06-08 00:08:32] Felipe "Juca" Sanches: nem precisava. Bastava fazer um git cherry-pick c671a85ca53a5f5c41d8403fb780a6f6339bbb26
+[2022-06-08 00:08:45] Pedro de Medeiros 👾: Verdade
+[2022-06-08 00:10:06] Pedro de Medeiros 👾: Eu coloquei o debug em arquivo separado. Assim fica fácil tirá-lo depois se necessário.
+[2022-06-08 00:10:15] Felipe "Juca" Sanches: ok
+[2022-06-08 00:10:17] Felipe "Juca" Sanches: merged!
+[2022-06-08 00:26:17] Felipe "Juca" Sanches: coloquei agora screenshots nos arquivos de README dos ports
+[2022-06-08 00:27:19] Felipe "Juca" Sanches: Quando fizerem modificações visuais, considerem atualizar o arquivo screenshot.png
+[2022-06-08 00:30:41] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21441.jpg
+[2022-06-08 00:30:43] Felipe "Juca" Sanches: https://flashparty.rebelion.digital
+[2022-06-08 00:30:56] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=11NneZEOo60
+[2022-06-08 00:42:17] Pedro de Medeiros 👾: Precisamos de uma função comum que atualiza só uma célula da tela. Pra colocar as flags e/ou cursor de forma mais eficiente.
+[2022-06-08 00:50:17] Felipe "Juca" Sanches: É o miolo daquele for-duplo na draw_minefield
+[2022-06-08 06:09:44] Felipe "Juca" Sanches [forwarded]: Bom dia, pessoal. Mais um jogo brasileiro inscrito na MSXdev22. Mine Finder, do amigo Paolo Pugno. É uma versão para MSX1 do Campo Minado.
+https://www.clubemsx.com.br/2022/05/mine-finder-decimo-jogo-inscrito-na-msxdev22/
+[2022-06-08 06:44:39] Ismael Luceno: MSYS FTW
+[2022-06-08 09:10:46] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/49
+[2022-06-08 19:41:33] L.: Doideira https://arstechnica.com/gaming/2022/06/inside-the-100k-forgery-scandal-thats-roiling-pc-game-collecting/
+[2022-06-08 20:08:26] L.: https://katelibc.medium.com/porting-doom-to-a-ux-8cecab02b531
+[2022-06-08 20:10:13] L.: Saudades do meu Centris 650 rodando A/UX :P

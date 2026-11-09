@@ -1,0 +1,173 @@
+[2024-03-05 01:04:28] Felipe "Juca" Sanches: ah, sim sim! Eu tenho re-gravado a flash diversas vezes. É justamente dessa forma que estou fazendo modificações no firmware para poder, por exemplo, adaptar algumas rotinas de carga de arquivos via floppy para virar um mecanismo de execução de pequenos programas
+[2024-03-05 01:05:23] Felipe "Juca" Sanches: Mas como uma outra flash secundária foi corrompida e tijolou o boot, estou pensando em modificar essa flash principal para adicionar uma rotina que restaure a flash secundária cagada
+[2024-03-05 01:06:15] Felipe "Juca" Sanches: digo que o aparelho não foi tijolado permanentemente pois o mecanismo de update de firmware (flash mem update) ainda funciona, então tenha ainda essa porta aberta pra fazer algumas tentativas de recuperação
+[2024-03-05 01:07:00] Felipe "Juca" Sanches: mas é bem arriscado, pois se em algum momento eu foder com o trecho da flash principal onde fica o código da rotina de update, aí complica pra valer pois fecha-se essa porta
+[2024-03-05 01:07:42] Felipe "Juca" Sanches: e é complicado, pois preciso entender perfeitamente o código no qual vou futucar, já que é uma operação tão sensível
+[2024-03-05 01:08:07] Felipe "Juca" Sanches: por isso que estou minuciosamente documentando as rotinas de update de firmware
+[2024-03-05 01:08:47] Felipe "Juca" Sanches: meu disasm tá ficando bonito, dando nomes às funções e gradativamente desatando os nós. Tá ficando cada vez mais legível.
+[2024-03-05 01:09:17] Felipe "Juca" Sanches: o enrosco atual está no entendimento das rotinas que interfaceiam com o hardware pra valer
+[2024-03-05 01:09:52] Felipe "Juca" Sanches: por exemplo, a parte que faz a leitura de dados do disquete, por meio de envios de comandos ao floppy disk controller
+[2024-03-05 01:10:16] Felipe "Juca" Sanches: é complicadinho entender um driver de disquete escrito em assembly sem comentários
+[2024-03-05 01:11:38] Felipe "Juca" Sanches: e eu estava reaproveitando as rotinas de floppy_load existentes justamente por eu não saber ainda como programar minhas próprias rotinas de ler arquivos de um disquete
+[2024-03-05 01:13:59] Felipe "Juca" Sanches: Aqui um exemplo da treta atual. Como é que eu interpreto essa joça?
+[2024-03-05 01:14:09] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29765.jpg
+[2024-03-05 01:23:59] Felipe "Juca" Sanches: ai, caramba, caiu a ficha!
+[2024-03-05 01:26:45] Felipe "Juca" Sanches: PUSH, 0x0026
+PUSH, 0x00e0
+PUSH, 0x0038
+
+0x0026 é o comprimento da string (38 bytes)
+E os outras duas instruções de PUSH colocam na pulha o ponteiro 0x00E038, que aponta para a string:
+"Technics KN5000 Program  DATA FILE 1/2"
+[2024-03-05 01:28:28] Felipe "Juca" Sanches: Que é o conteúdo de um dos arquivos do disquete de instalação do sistema
+[2024-03-05 01:28:56] Felipe "Juca" Sanches: então o conteúdo desse arquivo determina qual ação será feita (ou seja, em qual faixa de memória o dado será escrito)
+[2024-03-05 01:30:00] Felipe "Juca" Sanches: (e se vai descomprimir o conteúdo do arquivo - se for do tipo PCK = packed-data - ou se vai ler os dados raw - se for do tipo '1/2' ou '2/2')
+[2024-03-05 01:30:28] Felipe "Juca" Sanches: curioso que eu nunca vi um update de firmware dividido em 2 disquetes. Acho que eles devem ter usado isso internamente durante o desenvolvimento do produto
+[2024-03-05 01:30:38] Felipe "Juca" Sanches: eu sempre vejo arquivos comprimidos
+[2024-03-05 01:31:05] Felipe "Juca" Sanches: tanto é que uns 3 anos atrás você, RicBit, me ajudou a sacar qual era o algoritmo de compressão de dados usado nesses arquivos
+[2024-03-05 01:34:50] Felipe "Juca" Sanches: Então a rotina LABEL_FF0CC1 é só uma string_compare!
+[2024-03-05 01:35:24] Felipe "Juca" Sanches: E a rotina FF0E80 deve ser quem lê o conteúdo do arquivo.
+[2024-03-05 01:57:48] RicBit: nao dá para tirar a flash da placa e atualizar por fora?
+[2024-03-05 01:58:05] RicBit: alias compilando o mame aqui
+[2024-03-05 01:58:54] RicBit: ai eu vi passando
+                                           
+Compiling src/mame/usp/patinho_feio.cpp...                                                     
+Compiling src/mame/misc/hitpoker.cpp...
+[2024-03-05 02:13:29] Felipe "Juca" Sanches: até daria... mas é muito invasivo
+[2024-03-05 02:13:41] Felipe "Juca" Sanches: precisa dessoldar smd
+[2024-03-05 02:13:59] Felipe "Juca" Sanches: sempre que possível tento achar solução que não envolvam ferro de solda
+[2024-03-05 02:14:11] L.: não é flash serial?
+[2024-03-05 02:14:19] Felipe "Juca" Sanches: não é
+[2024-03-05 02:14:34] L.: flashei a bios do meu laptop velho com um clip Pomona
+[2024-03-05 02:14:47] Felipe "Juca" Sanches: são 2 megabytes em uma flash com barramento de endereços e de dados paralelos
+[2024-03-05 02:14:53] L.: e uma Raspberry pi🙃
+[2024-03-05 02:16:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29787.jpg
+[2024-03-05 02:16:44] Felipe "Juca" Sanches: vou via software por enquanto
+[2024-03-05 02:17:05] Felipe "Juca" Sanches: se eu tiver que tentar algo por hardware provavelmente eu usaria esse conector de extensão primeiro
+[2024-03-05 02:17:14] Felipe "Juca" Sanches: e dessoldar chips só depois
+[2024-03-05 02:17:28] Felipe "Juca" Sanches: se nada mais desse certo
+[2024-03-05 04:11:44] RicBit: eu pensei que talvez nao precise desoldar, só corta o vcc e o gnd e liga por cima
+[2024-03-05 04:12:14] RicBit: ai voce injeta o sinal nos outros pinos pela placa mesmo
+[2024-03-05 04:12:44] RicBit: e eu deveria estar dormindo
+[2024-03-05 04:14:31] Felipe "Juca" Sanches: eu ainda tenho caminhos via software
+[2024-03-05 04:15:19] Felipe "Juca" Sanches: e mesmo assim, eu ainda tenho tijolado placas. Imagina a lambança que eu faria se eu estivesse fazendo intervenções assim no hardware...
+[2024-03-05 04:15:31] Felipe "Juca" Sanches: eu morro de medo de queimar chips com eletricidade estática!
+[2024-03-05 04:15:44] Felipe "Juca" Sanches: e eu também deveria estar dormindo, mas não estou :-P
+[2024-03-05 11:19:04] Lucas Alberto: Quer isso felipe, com medo de um ferro de solda ? ksksksk
+[2024-03-05 16:46:18] Lucas Alberto: Oii pessoal, uma pergunta, que talvez vcs saibam
+[2024-03-05 16:46:25] Lucas Alberto: Existe algum emulador do patinho feio ?
+[2024-03-05 17:00:13] RicBit: eu compilei um ontem eu acho
+[2024-03-05 17:04:05] Felipe "Juca" Sanches: sim, compilou
+[2024-03-05 17:04:14] Felipe "Juca" Sanches: MAME
+[2024-03-05 17:04:41] Lucas Alberto: Onde ele tá ? vi no repo que não tem nada linkado
+[2024-03-05 17:04:48] Felipe "Juca" Sanches: E tem também um que roda em Arduino ligado a um painel de botões e leds:
+
+https://github.com/ArqueologiaDigital/PatinhoFeio_Arduino/
+[2024-03-05 17:05:07] Lucas Alberto: Esse eu vi
+[2024-03-05 17:05:35] Lucas Alberto: Inclusive estou pensando em recriar ele usando o SDL, pra rodar tudo local
+[2024-03-05 17:05:47] Felipe "Juca" Sanches: https://github.com/mamedev/mame/tree/master/src/mame/usp
+[2024-03-05 17:06:46] Lucas Alberto: Ahhh, por isso não achei, ta direto dentro do mame
+[2024-03-05 17:06:55] Lucas Alberto: Eu não procurei lá XD
+[2024-03-05 17:06:56] RicBit: ontem eu peguei o mame mais recente com git pull mesmo
+[2024-03-05 17:07:30] L.: é engraçado demais ver um diretório "usp" no src do mame
+[2024-03-05 17:07:34] Lucas Alberto: Eu nunca usei o mame, vcs tem algum tutorial bom para iniciantes ?
+[2024-03-05 17:07:35] Felipe "Juca" Sanches: caso te interesse, dá pra fazer compilação parcial do MAME, só com os emuladores que te interesse usar
+[2024-03-05 17:08:28] RicBit: eu fiz completo ontem, saindo do make clean deu isso aqui com -j 6
+real    85m11.370s
+user    464m34.306s
+[2024-03-05 17:08:52] RicBit: daria pra fazer com -j 8 mas eu queria umas cpus pra mim hehe
+[2024-03-05 17:09:00] Felipe "Juca" Sanches: QT_SELECT=5 make SUBTARGET=patinho SOURCES=src/mame/usp/patinho_feio.cpp REGENIE=1
+[2024-03-05 17:09:18] Lucas Alberto: pera, 85 minutos ????
+[2024-03-05 17:09:37] RicBit: 85min com 6 cpus, isso
+[2024-03-05 17:09:39] Felipe "Juca" Sanches: por isso que eu gosto de fazer compilação parcial
+[2024-03-05 17:09:47] RicBit: no ssd
+[2024-03-05 17:09:48] Lucas Alberto: MDS
+[2024-03-05 17:09:54] L.: eu sempre rodo o make com nice 20
+[2024-03-05 17:10:21] Lucas Alberto: O instalador fornecido por eles já vem com o patinho feio ? ou tem q compilar na mao mesmo ?
+[2024-03-05 17:11:08] RicBit: se voce nao compilar na mao não vai poder mexer no src né
+[2024-03-05 17:11:23] Felipe "Juca" Sanches: Nem sei que instalador é esse. Eu sempre uso a partir da compilação do código-fonte.
+
+O código-fonte é o produto.
+[2024-03-05 17:11:43] Felipe "Juca" Sanches: o executável é mero efeito colateral da documentação. Mas o objetivo é documentar.
+[2024-03-05 17:11:53] Lucas Alberto: É que tipo, posso fazer um apt install mame
+[2024-03-05 17:12:16] Felipe "Juca" Sanches: mas aí você não terá como alterar o código-fonte para aprimorar a emulação
+[2024-03-05 17:12:42] Lucas Alberto: Só queria dar uma rodada pra brincar antes de mexer XD
+[2024-03-05 17:12:45] RicBit: sim, e se voce fizer o apt está deixando que ELES escolham a versao  por você
+[2024-03-05 17:12:45] Felipe "Juca" Sanches: o MAME é todo incompleto, com emulações pela metade. O trampo de arqueologia digital passa por fazer alterações no código
+[2024-03-05 17:13:36] Felipe "Juca" Sanches: e mesmo sem alterar o código, meramente lê-lo também é bastante educativo
+[2024-03-05 17:14:07] Lucas Alberto: Eu estou fazendo isso agora.
+[2024-03-05 17:14:16] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29836-sticker.webp
+[2024-03-05 17:14:46] RicBit: eu olhando o código aqui e pensando nos meus dogmas religiosos
+[2024-03-05 17:15:18] Lucas Alberto: Pior que nem é tanto codigo assim... Ainda ta bem incompleto ou é simples assim mesmo ?
+[2024-03-05 17:15:41] RicBit: as macros do mame sao bem high level, fazem muita coisa com pouco codigo
+[2024-03-05 17:16:14] Lucas Alberto: Entendi
+[2024-03-05 17:16:52] RicBit: eu estava falando aqui com a ila no fim de semana que estritamente falando o meu disasm usando AI é contra minha religiao
+[2024-03-05 17:17:08] RicBit: minha religiao nao permite deixar AI controlar o computador
+[2024-03-05 17:17:21] RicBit: começa sempre assim
+[2024-03-05 17:17:49] RicBit: mas eu pensei, puxa, nao vou dar o controle do meu computador pra AI, só para um emulador, seria dificil ele fazer maldade de dentro do emulador
+[2024-03-05 17:18:02] RicBit: só se o emulador tivesse alguma falha de segurança
+[2024-03-05 17:18:33] RicBit: ai eu abro o patinho_feio.cpp e o buffer overflow bate na minha cara haha
+[2024-03-05 17:18:49] RicBit: linha 55 tem um buffer overflow
+[2024-03-05 17:18:57] RicBit: 0                         sprintf(lamp_id, "mem_data%d", i);
+[2024-03-05 17:19:32] RicBit: se alguem conseguir injetar alguma coisa dentro desse i, o sprintf estoura
+[2024-03-05 17:19:50] RicBit: troca para um snprintf que resolve tudo
+[2024-03-05 17:26:59] Lucas Alberto: não fui eu ksksk
+[2024-03-05 17:27:58] RicBit: return leva só 700ms? mó rapido isso aí
+[2024-03-05 17:28:06] RicBit: minha impressora da epoca levava mais que 700ms
+[2024-03-05 17:28:32] Lucas Alberto: Vou tentar criar um emulador simples em c. principalmente baseado no codigo do arduino.
+[2024-03-05 17:29:18] RicBit: clock alto tambem, 500kHz
+[2024-03-05 17:29:22] RicBit: achava que era mais lento
+[2024-03-05 17:29:57] RicBit: ele é mais rapido que um msx ?
+[2024-03-05 17:31:24] Lucas Alberto: KKKKKKKKKK 0,5 Mhz
+[2024-03-05 17:36:25] RicBit: pra 1972 é alto!
+[2024-03-05 17:40:47] Felipe "Juca" Sanches: E antigamente tinha muito mais macros.
+[2024-03-05 17:42:54] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Patinho_Feio_Painel_RPi_Pico
+[2024-03-05 17:43:12] Felipe "Juca" Sanches: É em python ainda. Mas pra rodar no Raspberry Pi
+[2024-03-05 17:43:37] Lucas Alberto: Tem a parte da interface grafica ?
+[2024-03-05 17:44:14] Felipe "Juca" Sanches: que foi a versão que entreguei para a FDTE
+[2024-03-05 17:44:33] Lucas Alberto: Interface grafica que eu digo, é o painel XD
+[2024-03-05 17:44:34] Felipe "Juca" Sanches: Não... esse do RPi também é para controlar leds e botoes num painel-réplica
+[2024-03-05 17:44:46] Lucas Alberto: :c entendi
+[2024-03-05 17:45:02] Felipe "Juca" Sanches: com interface gráfica acho que tem só no MAME
+[2024-03-05 17:56:51] L.: sprintf devia estar marcado com atributo deprecated igual gets
+[2024-03-05 18:02:38] Lucas Alberto: Entendi
+[2024-03-05 18:11:00] RicBit: e tem um monte, grepei o src do mame e tem em todo canto
+[2024-03-05 18:11:14] RicBit: se alguem quiser contribuir para o mame tá aí uma coisa facil de fazer
+[2024-03-05 18:12:11] L.: em alguns casos nem deve dar problema por que o inteiro deve estar dentro dum intervalo que vai caber no buffer
+[2024-03-05 18:12:35] L.: (tipo não precisar mesmo usar snprintf, por mais que não custe nada)
+[2024-03-05 18:13:17] L.: (eu implementaria sprintf chamando snprintf com SIZE_MAX de tamanho de buffer pra não ter diferença nenhuma hehe)
+[2024-03-05 18:13:27] RicBit: sim, mas aí tem que assumir arquitetura, compilador e tal
+[2024-03-05 18:14:07] RicBit: acho que daria para fazer template que deduz o tamanho
+[2024-03-05 18:14:09] L.: as vezes pode ser só o bagulho emulado. tipo um registrador 16bit e o buffer ser grande suficiente
+[2024-03-05 18:14:19] RicBit: mas só se o argumento for char[], se for char* não tem como
+[2024-03-05 18:14:42] L.: provavelmente. mame é c++ né, da pra fazer um monte de maracutaia inclusive que não precisa interpretar os comandos de printf em runtime
+[2024-03-05 18:15:15] L.: tipo o print! do rust que vira uma maçaroca doida mas é tudo checado na compilação
+[2024-03-05 18:15:33] RicBit: a compilacao iria aumenta de 85min para um dia e meio haha
+[2024-03-05 18:15:49] L.: lol
+[2024-03-05 18:16:07] RicBit: rust é outro nivel, se fosse rust zero problema
+[2024-03-05 18:17:21] RicBit: ah eu falei que a ai não sabe fazer conta?
+[2024-03-05 18:17:34] RicBit: disasm até 0x4060, depois continua
+[2024-03-05 18:17:51] RicBit: e ela vai para 0x4100 ao inves de 0x4061 haha
+[2024-03-05 18:17:59] RicBit: vou terceirizar tudo que tenha aritmetica
+[2024-03-05 18:18:24] RicBit: tipo no response do disasm eu já coloco qual o proximo addr, assim a ai não precisa pensar
+[2024-03-05 18:20:05] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29890.jpg
+[2024-03-05 18:20:05] RicBit: tipo aqui, do 0x79F2 ela foi para tras no 0x79EA
+[2024-03-05 19:09:39] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29891.jpg
+[2024-03-05 19:09:39] Lucas Alberto: Não ta fiel, mas to tentando ❤️
+[2024-03-05 19:49:30] Felipe "Juca" Sanches: podia usar uma biblioteca de renderizar SVG, aí não precisa redesenhar o painel
+[2024-03-05 19:50:31] Felipe "Juca" Sanches: mas uma UI simplificada pode ser uma boa também. Pode até ser melhor do ponto de vista de legibilidade
+[2024-03-05 19:51:29] Lucas Alberto: Sim, primeiro vou tentar fazer funcionar. Depois vou ver se consigo deixar bonitinho
+[2024-03-05 21:19:21] Shideravan: https://gitlab.com/suyu2/suyu
+[2024-03-05 21:19:35] Shideravan: Viva o software open-source!
+[2024-03-05 21:20:05] Shideravan: E adorei o nome, é tanto "Yuzu" ao contrário quanto um trocadilho com "Sue you"
+[2024-03-05 21:59:25] RicBit: matar formiga é facil; um formigueiro, not so much
+[2024-03-05 22:04:41] Lucas Alberto: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29899-2024-03-05%2022-02-53.mp4
+[2024-03-05 22:04:41] Lucas Alberto: Comecei a montar o pequeno emulador.
+
+Por enquanto tudo tranquilo.
+
+PS: estou no windows, podem me julgar
+[2024-03-05 22:28:42] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29900-sticker.webp
+[2024-03-05 22:54:42] L.: por um tempo a apple não podia fazer nada "musical" por causa da apple records. quando fizeram os Macs, botaram uns sons de sistema mais musicais e os advogados ficaram com medo. aí o cara que fez mudou o nome do áudio pra "sosumi" e disse que era japonês
+
+era só um "so sue me" mesmo

@@ -1,0 +1,32 @@
+[2026-03-15 13:03:09] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=NnKHpMplFbg
+[2026-03-15 13:35:40] Felipe "Juca" Sanches: Eu quero fazer uma chamada de vídeo pra conversar com você sobre esse seu projeto de descompilação. Em particular o que me interessa é tentar entender como seria possível fazer isso de forma colaborativa usando as coisas que eu aprendi a fazer com o Claude Code para complementar as coisas que você já sabe fazer por meio da sua plataforma de decomp.
+
+Esse jogo em particular não é algo que me interessa, a priori, pois eu nem sequer sabia que ele existia. Acredito que pra você deva ter um fator de nostalgia similar ao que sinto em relação ao Technics KN5000.
+
+Mas esse aspecto de colaboração é algo que quero explorar, pois estou há muito tempo trabalhando em grande parte sozinho no KN5000. Mas pra outros projetos sei que será muito útil desenvolver esses mecanismos de colaboração intermediados por IA.
+[2026-03-15 13:37:53] Felipe "Juca" Sanches: Também me interessa desenvolver mecanismos para "treinar" agentes de IA para apresenderem sobre o hardware dos dispositivos de modo que a engenharia reversa de um segundo jogo seja muito mais fácil que a do primeiro de uma dada plataforma como, por exemplo, o GBA.
+
+Então seria bacana escolher um segundo jogo de GBA para esse tido de exercício complementar.
+[2026-03-15 13:55:49] Felipe "Juca" Sanches: Imagino que se for escolhido um jogo do mesmo desenvolvedor (nesse caso a NAMCO) haveria ainda mais oportunidades de sinergia. Por exemplo, talvez seja possível extrair código comum e tratá-lo como uma biblioteca da NAMCO usada em vários jogos.
+[2026-03-15 13:56:40] Felipe "Juca" Sanches: Aí o exercício começa a ficar mais interessante, pois começam a aparecer padrões repetidos, e insights sobre as práticas de desenvolvimento das empresas da época.
+[2026-03-15 14:01:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37778.jpg
+[2026-03-15 14:01:56] Felipe "Juca" Sanches: Bom... seguindo esses citérios, não tem muitas opções. Segundo a wikipédia só teria esses aqui.
+[2026-03-15 14:01:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37779.jpg
+[2026-03-15 15:50:35] Pablo Vasques Bravo-Villalba: O Manuel Pazos está usando Claude para fazer a engenharia reversa do driver de som usado pela Konami em jogos de MSX que usavam SCC, em particular os mais recentes. Ele já trabalhou com o Metal Gear 2 e com o Quarth. Imagino que SD Snatcher seja o próximo da fila.
+[2026-03-15 16:03:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37781.jpg
+[2026-03-15 16:04:03] Felipe "Juca" Sanches: Tô pedindo pro Claude aqui ajudar ;-)
+[2026-03-15 16:04:09] Felipe "Juca" Sanches: logo logo te mando um PR
+[2026-03-15 16:06:06] Macabeus: Opa, claro! Podemos conversar sim, @fsanches 
+
+Inclusive, fico bem contente em falar sobre esses projetos de descompilação que vejo desenvolvendo 😄
+E sim, estou fazendo o Mizuchi (https://github.com/macabeus/mizuchi) e organizando o projeto do Klonoa de forma que seja reaproveitável para outros projetos de matching decompilation.
+
+Só um detalhe: o Klonoa Empire of Dreams foi licenciado pela NAMCO, mas desenvolvido pela Now Productions.
+Então poderia ser feito uma biblioteca para os jogos desenvolvidos pela Now.
+[2026-03-15 16:06:52] Macabeus: Eeeh, obrigado 🙏
+
+Só um detalhe: subi agora a pouco um commit para organizar melhor o split das funções, então seria bom fazer um pull antes, já que antes tinha muitos fragmentos de funções que, na realidade, representavam nada
+[2026-03-15 16:07:23] Macabeus: isso também reduziu de 690 para 463 funções
+[2026-03-15 16:33:02] Felipe "Juca" Sanches: OK. Eu mandei o PR antes de ver sua mensagem. O Claude tá trabalhando agora pra fazer um git-rebase e retrabalhar as contribuições. Logo logo a gente atualiza o PR, por favor aguarde.
+[2026-03-15 16:48:47] Macabeus: Claro, obrigado ☺️
+[2026-03-15 22:22:37] Felipe "Juca" Sanches: https://felipesanches.github.io/kl-eod-decomp/

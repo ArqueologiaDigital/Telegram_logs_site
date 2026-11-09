@@ -1,0 +1,110 @@
+[2025-10-17 00:06:53] Pablo Vasques Bravo-Villalba: Tem um TMS9128, da mesma família do VDP do MSX.
+[2025-10-17 01:29:05] Felipe "Juca" Sanches: os últimos bytes da ROM contém endereços ao redor de 0xE000
+[2025-10-17 01:29:22] Felipe "Juca" Sanches: a ROM tem 4Kb
+[2025-10-17 01:29:55] Felipe "Juca" Sanches: Isso parece indicar que é mapeada na faixa de endereços 0xC000-0xFFFF
+[2025-10-17 01:30:05] Felipe "Juca" Sanches: e que o código começa na metade da ROM
+[2025-10-17 01:30:11] Felipe "Juca" Sanches: a primeira metade devem ser dados
+[2025-10-17 01:31:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35854.jpg
+[2025-10-17 01:31:42] Felipe "Juca" Sanches: E, de fato, toda essa parte inicial tem "cara de dado"
+[2025-10-17 01:32:47] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35855.jpg
+[2025-10-17 01:32:47] Felipe "Juca" Sanches: Tem algumas strings aqui, um pouquinho depois do início da segunda metade.
+[2025-10-17 01:35:35] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35856.jpg
+[2025-10-17 01:35:35] Felipe "Juca" Sanches: dá pra notar uma mudança da "textura" dos bytes logo depois de cruzar a metade da ROM
+[2025-10-17 01:35:51] Felipe "Juca" Sanches: Acima parece dado. Abaixo parece código.
+[2025-10-17 01:36:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35858.jpg
+[2025-10-17 01:36:59] Felipe "Juca" Sanches: E no final da segunda metade, volta a parecer dado (e também tem umas strings muito interessantes)
+[2025-10-17 01:38:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35859.jpg
+[2025-10-17 01:38:14] Felipe "Juca" Sanches: aqui no finalzinho a gente vê o vetor de boot
+[2025-10-17 01:38:27] Felipe "Juca" Sanches: vejam que os endereços estão em big-endian
+[2025-10-17 01:39:18] Felipe "Juca" Sanches: Nos resta responder a pergunta: quais são as CPUs de 8 bits que são big-endian e têm vetor de boot nos endereços mais altos da memória?
+[2025-10-17 01:39:36] Felipe "Juca" Sanches: Tô com uma intuição de que pode ser M6809
+[2025-10-17 09:02:56] Ismael Carvalho: Não saquei o conceito de textura, é tipo o padrão visual que é formado a partir de como os bytes aparecem?
+[2025-10-17 09:08:14] Pablo Vasques Bravo-Villalba: Veja como alguns tipos de dados parecem se repetir, e se repetem de forma mais ou menos regular. Esse tipo de regularidade e conteúdo é típico de dados com estrutura fixa e conteúdo mais ou menos padronizado. Parecem imagens bitmap pra mim
+[2025-10-17 13:59:21] L.: Uma coisa que dá pra fazer é presumir que seja uma CPU tal e ver se a pinagem faz sentido (tipo, pinos de alimentação fazem sentido onde estão ligados? sinais de /rd e wr da memória tão em pinos certos? e os pinos de endereço e dados?)
+[2025-10-17 14:00:50] L.: Inclusive é bem comum embaralharem as memórias pra facilitar o layout da placa (evita jumper em alguns casos), então pode até ser que tenha endereço trocado a partir de certo ponto da ROM
+[2025-10-17 14:27:54] Leonardo Roman: Sim, vou verificar a pinagem à noite.
+[2025-10-17 14:58:52] Felipe "Juca" Sanches: eu tenho um esboço de driver no MAME já. Mas falta identificar a CPU correta
+[2025-10-17 15:50:16] Robson França: Boa tarde aê! Pelos bytes que vc mostrou, parece ser 6809 sim.
+8E XX YY: LDX #XXYY
+1F cc: TFR
+[2025-10-17 15:52:10] Robson França: Assim como o Z80 tem uns bytes prefixos, tipo DD 21 para LD IX, xxxx
+o 6809 também tem algo parecido:
+10 8E XX YY: LDY #XXYY
+[2025-10-17 17:54:21] Robson França: Eu passei em um disassembler de 6809 os bytes a partir do endereço 2000 e o código gerado é bastante coerente...
+[2025-10-17 17:55:24] Robson França: Ele inicializa a pilha S no endereço 0200, por exemplo
+[2025-10-17 17:55:51] Robson França: E, sim, o 6809 é um dos poucos processadores 8 bits que é big endian
+[2025-10-17 18:07:06] Felipe "Juca" Sanches: o endereço 2000 na ROM provavelmente corresponde ao endereço E000 no mapa de memória
+[2025-10-17 18:07:25] Felipe "Juca" Sanches: sua observação está coerente com o que eu tinha visto também
+[2025-10-17 18:10:22] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35876.jpg
+[2025-10-17 18:35:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35877.jpg
+[2025-10-17 18:37:05] Felipe "Juca" Sanches: @lrrosa agora você vai ter que me ajudar a mapear a matriz do teclado
+[2025-10-17 18:46:13] Felipe "Juca" Sanches: @lrrosa, E também me manda, por favor, um scan do painel frontal (ou uma foto bem de frente pra eu vetorizar a arte)
+[2025-10-17 18:53:12] L.: Só falta fazer isso falar com o OBS
+[2025-10-17 18:53:28] Felipe "Juca" Sanches: kkkkk
+[2025-10-17 18:53:30] Felipe "Juca" Sanches: nem brinca!
+[2025-10-17 18:56:07] L.: Se for só algo que bota texto na tela e tal, aí nem precisa! Só fazer captura da tela do mame no OBS e jogar por cima, filtrando o fundo tipo chromakey 😆
+[2025-10-17 18:56:51] L.: Seria engraçado demais usar algo de quase 40 anos assim
+[2025-10-17 19:01:49] Felipe "Juca" Sanches: Eu tenho 3 video titlers de uma empresa brasileira chamada JRR VideoDevices
+[2025-10-17 19:02:11] Felipe "Juca" Sanches: consegui também emular, mas não cheguei a submeter o PR
+[2025-10-17 19:02:34] Felipe "Juca" Sanches: vou dar um tapa nesse VET3000 e em seguida aproveito o embalo e subo os JRR também
+[2025-10-17 19:02:51] Felipe "Juca" Sanches: os JRR são clones de TK95
+[2025-10-17 19:03:01] Felipe "Juca" Sanches: altamente modificados
+[2025-10-17 19:03:12] L.: os JRR são clones de TolKien95
+[2025-10-17 19:03:36] Felipe "Juca" Sanches: inclusive com circuito analógico que presumo ser para fazer o mix do video in com os gráficos gerados
+[2025-10-17 20:03:13] Leonardo Roman: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35892.jpg
+[2025-10-17 20:03:13] Leonardo Roman: @fsanches
+[2025-10-17 20:03:39] Felipe "Juca" Sanches: Maravilha!
+[2025-10-17 20:36:47] Felipe "Juca" Sanches: Estou esboçando o layout aqui no Inkscape
+[2025-10-17 20:36:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35895.jpg
+[2025-10-17 20:37:33] Felipe "Juca" Sanches: Infelizmente ainda não dá pra escrever texto em itálico no MAME (que coisa ridícula, isso!)
+[2025-10-17 20:37:53] Pablo Vasques Bravo-Villalba: Nem se referenciar a variante itálica da fonte?
+[2025-10-17 20:38:08] Felipe "Juca" Sanches: Não dá pra selecionar fonte! kkkkk
+[2025-10-17 20:38:20] Felipe "Juca" Sanches: é de cair o cu da bunda
+[2025-10-17 20:39:10] Pablo Vasques Bravo-Villalba: Ou, em linguajar mais castiço, de despencar o fiofó do bumbum
+[2025-10-17 20:41:18] Felipe "Juca" Sanches: estou pensando em fazer a interface com teclado e tela lado a lado, mas também com a opção de ocultar o teclado
+[2025-10-17 20:42:11] Felipe "Juca" Sanches: inicialmente eu ia colocar a tela acima do teclado, pois me parecia o arranjo mais natural. Entretanto fica num aspect ratio muito ruim pra mostrar em tela cheia no emulador rodando em um laptop
+[2025-10-17 21:45:56] Leonardo Roman: Qual a melhor forma de fazer isso? Só testando todas as combinações mesmo? Ele tem duas membranas de 8 "fios" cada uma.
+[2025-10-17 21:52:38] Felipe "Juca" Sanches: isso. Acho que o ideal seria fazer uma lista de quais dessas 16 trilhas estão ligadas a cada uma das teclas
+[2025-10-17 21:52:45] Felipe "Juca" Sanches: É trabalhoso, eu sei...
+[2025-10-17 21:53:00] Felipe "Juca" Sanches: mas se você me der uma lista incompleta, já é um bom começo
+[2025-10-17 21:53:18] Felipe "Juca" Sanches: pois talvez dê pra deduzir o resto por inferência lógica
+[2025-10-17 21:55:25] Felipe "Juca" Sanches: eu vou tentar descbrir quais portas de I/O são usadas para fazer o keyscan. Se eu não conseguir por meio do disasm, aí acho que também vou te pedir pra identificar na placa quais pinos da CPU estão ligados em cada uma dessas 16 trilhas (e talvez tenha algum chip no meio do caminho)
+[2025-10-17 21:56:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35909.jpg
+[2025-10-17 21:56:34] Felipe "Juca" Sanches: o layout já rodando no MAME. Tá começando a pegar forma. Faltam os textos das teclas
+[2025-10-17 22:34:59] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/14355
+[2025-10-17 23:13:35] Leonardo Roman: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35911-mapeamento%20do%20teclado%20vet3000.txt
+[2025-10-17 23:13:35] Leonardo Roman: Tá na mão!
+[2025-10-17 23:14:05] Felipe "Juca" Sanches: eba!
+[2025-10-17 23:22:39] Shideravan: Você já sabe minha opinião sobre algumas coisas no MAME, vou poupar de me repetir kkkkk
+[2025-10-17 23:23:09] Shideravan: Mas o Layout tá bem bonito com base no que é possível
+[2025-10-17 23:24:00] Felipe "Juca" Sanches: o legal é a mensagem "pressiona qualquer tecla". Ou seja, assim que eu apertar qualquer coisa já devo ver outra tela kkkk
+[2025-10-17 23:24:04] Shideravan: Ver esse driver funcionando me deixou feliz
+[2025-10-17 23:24:18] Shideravan: Eu perdi o momento em que o dump aconteceu
+[2025-10-17 23:24:47] Shideravan: O Leo mesmo dumpou?
+[2025-10-17 23:24:49] Felipe "Juca" Sanches: 24 horas atrás quando o @lrrosa publicou um vídeo no youtube
+[2025-10-17 23:24:56] Felipe "Juca" Sanches: e botou a ROM no datassette
+[2025-10-17 23:25:08] Felipe "Juca" Sanches: https://datassette.org/node/106385
+[2025-10-17 23:25:11] Shideravan: Ahhh acabei de ver a descrição
+[2025-10-17 23:25:14] Shideravan: Que coisa linda
+[2025-10-17 23:25:30] Shideravan: Eu não terminei de ver o video inteiro
+[2025-10-17 23:25:56] Shideravan: Datassette mais uma vez, prestando um grandioso serviço de preservação!
+[2025-10-17 23:26:42] Shideravan: Eu nunca tinha visto esse equipamento antes, to animado como o driver está se desenhando rápido
+[2025-10-17 23:27:07] Shideravan: Parabéns @fsanches e @lrrosa
+[2025-10-17 23:27:21] Felipe "Juca" Sanches: é que é um aparelho simples
+[2025-10-17 23:27:25] Felipe "Juca" Sanches: e eu já tenho os macetes
+[2025-10-17 23:27:33] Felipe "Juca" Sanches: então sai rápido mesmo
+[2025-10-17 23:27:47] Felipe "Juca" Sanches: aparentemente não tem nada muito complicado nele
+[2025-10-17 23:27:54] Shideravan: Você tem amadurecido bastante no desenvolvimento de novos drivers no mame
+[2025-10-17 23:28:00] Shideravan: Isso é bem massa
+[2025-10-17 23:28:11] Felipe "Juca" Sanches: estou curioso ainda sobre aquele conector de interface traseiro. Pra que será que serve?
+[2025-10-17 23:30:06] Shideravan: Aquele conector macho estilo ZX-80?
+[2025-10-17 23:30:28] Felipe "Juca" Sanches: é
+[2025-10-17 23:34:11] Shideravan: Eu to me perguntando se foi por causa dele que o @lrrosa bateu o olho e achou que internamente ele era um tk-90x
+[2025-10-17 23:35:59] Shideravan: O chato é que buscar VET3000 no google retorna sobre um analisador hematológico kkkkkkk
+[2025-10-17 23:37:09] Leonardo Roman: E também pelo estilão de micro 8 bits. E por já existir outro titulador baseado no tk90x.
+[2025-10-17 23:37:44] Leonardo Roman: Agora queria saber se existiu algum micro com 6809 que use um 9128 como VDP.
+[2025-10-17 23:38:04] Shideravan: Me corrijam se eu estiver errado, mas houveram alguns hardwares baseados na família ZX-80 e Spectrum que tinham essa porta de interface mesmo algumas vezes sendo inútil, não tem?
+[2025-10-17 23:38:56] Shideravan: Me consta a informação que pode ser incorreta, que muitas vezes deixavam lá exposto por existir no hardware original e vai que no futuro surgisse oportunidade de lançar alguma acessório, mas muitas vezes nem usado era
+[2025-10-17 23:40:12] Leonardo Roman: Sim, basicamente todos os micros tinham uma expansão para periféricos.
+[2025-10-17 23:41:45] Shideravan: Esse conector macho é bem barato de colocar, já faz parte da placa... Deixa, se usar usou uhahuahua
+[2025-10-17 23:44:41] Shideravan: Então tem uma chance considerável de não servir para nada kkkkkk

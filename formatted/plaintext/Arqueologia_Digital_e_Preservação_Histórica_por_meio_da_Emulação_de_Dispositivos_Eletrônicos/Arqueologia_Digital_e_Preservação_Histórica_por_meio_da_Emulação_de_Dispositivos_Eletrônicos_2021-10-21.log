@@ -1,0 +1,87 @@
+[2021-10-21 09:32:11] Augusto Almeida [forwarded]: Marujo não usa drogas alucinógena. Ele é a própria droga alucinógena.
+
+E é assim desde que eu o conheço, desde os anos 1990.
+[2021-10-21 09:32:12] Augusto Almeida [forwarded]: Quando o Fábio Augusto C. R. Santos restaurou o meu CP-500, eu fiz uma postagem no site do Retrocomputaria mostrando vídeos, fotos e narrando como tudo foi feito.
+
+Olha o comentário dele:
+
+O CP 500 porventura aceita o kit MSX 2+ ? 64k RAM? Drive é o mesmo controlador?
+
+PODIAS TER ESSE MSX MONOBLOCO EXCLUSIVO, Ô PÁ!
+
+
+Pra não dizerem que eu menti...
+https://www.retrocomputaria.com.br/2021/09/02/rfyg-nosso-recuperacao-de-um-cp-500-parte-2-a-restauracao/#comment-12204
+[2021-10-21 09:32:12] Augusto Almeida [forwarded]: Zero.
+
+Ele só tem ideias, as mais loucas e as mais esquisitas. E implementa nada.
+[2021-10-21 09:32:12] Augusto Almeida [forwarded]: Eu tô ficando velho. No início eu prestava atenção. Depois eu passei a rir. Mais recentemente eu passei a ignorar. E agora tenho vontade de ejetar.
+
+Tem tempos q eu recebo 3 e-mails dele por dia. Já veio no pvt pra mim c/ uns papos q beiravam o antivax. Aí eu respondi rispidamente. 
+
+Apesar de não concordar com a forma com que o Tabajara respondeu ele na lista (ríspida como uma lixa), eu compreendo plenamente. Sim, é um saco lidar com maluco.
+[2021-10-21 09:32:54] Augusto Almeida: Isso responde a pergunta do que tá acontecendo com o marujo, e a resposta é ele sempre foi assim mas só agora percebemos
+[2021-10-21 09:33:58] Pablo Vasques Bravo-Villalba: Podicrê
+[2021-10-21 13:00:48] RicBit: É verdade, eu tenho essa rom aqui em algum lugar. Mas faz um tempo entao tenho que procurar.
+[2021-10-21 13:01:03] RicBit: marujo é esperto demais, aprendi muito com ele
+[2021-10-21 13:01:09] RicBit: foi ele que me ensinou os segredos do psg
+[2021-10-21 13:04:30] RicBit: o drive do cp 500 é o mesmo controlador do msx sim
+[2021-10-21 13:04:50] RicBit: os drives de msx da epoca eram feitos por empresa que fazia drive de cp500 e adaptou a controladora
+[2021-10-21 13:07:22] RicBit: kit de msx2+ dá pra ligar no cp 500 uai, mesma cpu, mesmo barramento
+[2021-10-21 13:07:31] RicBit: eu tenho aqui em casa um kit de master system para msx
+[2021-10-21 13:07:40] RicBit: com o vdp do master ligado no slot
+[2021-10-21 13:10:45] Augusto Almeida: Mas tem coisas como o caso da porta 0xFE que não fazem o menor sentido
+[2021-10-21 13:10:57] RicBit: sei nao
+[2021-10-21 13:11:10] RicBit: tem jogo que é porco e nao deve ter apagado o out pra FE
+[2021-10-21 13:11:26] RicBit: tinha um chamado obliterator que era um lixo por dentro
+[2021-10-21 13:12:12] RicBit: e a porta FE no speccy é isso ai mesmo, borda, cassete etc
+[2021-10-21 13:12:28] RicBit: no spec voce usa isso para fazer transicao de cor
+[2021-10-21 13:12:45] RicBit: tipo a abertura do venom strikes back que faz um efeito bom demais para tk
+[2021-10-21 13:29:45] Augusto Almeida: Tem um color cycling no logo de abertura que no MSX pode ser feito sem maiores problemas, mas no ZX precisa um "macete"
+[2021-10-21 13:30:01] Augusto Almeida: Você ainda tem contato com o Marujo?
+[2021-10-21 13:30:54] Augusto Almeida: Sabe se ele tem alguma particularidade?
+[2021-10-21 13:31:23] Augusto Almeida: Porque podemos estar julgando ele de forma errada
+[2021-10-21 13:31:55] Augusto Almeida: Contudo boa parte das coisas que ele vem postando ultimamente tem intrigado não somente a mim
+[2021-10-21 13:34:17] RicBit: nao tem nada de mais uai
+[2021-10-21 13:34:30] RicBit: ele deve escrever fumado, aí é só desfumar o que ele fala
+[2021-10-21 13:34:52] RicBit: fiz o teste aqui e mandei um grep d3 fe no msx mania 70, olha o que deu
+[2021-10-21 13:35:18] RicBit: 00003440  04 d3 fe 21 00 40 11 00  80 01 00 40 ed b0 3e 02  |...!.@.....@..>.|
+00003450  d3 fd 3d d3 fe 21 20 00  11 99 c1 0e 27 cd 7d f3  |..=..! .....'.}.|
+00003470  d3 fe 32 c1 f1 3a bf c1  3c 32 17 40 21 00 82 22  |..2..:..<2.@!.."|
+000233a0  d0 0f 43 2e 1f 9c 7f c9  f8 d3 fe e3 fb 77 ff 47  |..C..........w.G|
+[2021-10-21 13:35:40] RicBit: os tres primeiros acho que é inicializacao de mapper, mas o quarto é claramente codigo
+[2021-10-21 13:35:57] RicBit: c9 f8 d3 fe é ret, ret m, out (FE),A
+[2021-10-21 13:36:14] RicBit: entao pelo menos um jogo dentro desse pacote escreve na porta FE como predito
+[2021-10-21 13:39:43] Augusto Almeida: Isso faz sentido
+[2021-10-21 13:40:33] Augusto Almeida: Qual jogo você fez esse teste? Venon ou Obliterator?
+[2021-10-21 13:40:53] RicBit: nao sei qual jogo é, tem uns 5 jogos no msx mania 70
+[2021-10-21 13:41:04] RicBit: http://www.msxarchive.nl/pub/msx/games/msx1mania/
+[2021-10-21 13:41:21] RicBit: era o unico que eu tenha aqui no hd
+[2021-10-21 13:42:31] Augusto Almeida: Entendi
+[2021-10-21 13:42:36] Augusto Almeida: Valeu!
+[2021-10-21 13:44:27] Augusto Almeida: Aparenta ser código válido mesmo, mas só vendo o assembler pra ter certeza absoluta, contudo de antemão não é um padrão normal de gráficos ou dados de som ou alguma tabela
+[2021-10-21 13:46:40] RicBit: nem ver o assembly é garantido porque pode ser um trecho nao executado
+[2021-10-21 13:46:52] RicBit: o unico jeito confiavel é colocar um breakpoint no openmsx
+[2021-10-21 13:47:02] RicBit: mas dá um trampo e a vida é curta
+[2021-10-21 13:47:54] Augusto Almeida: Se a programação foi muito mal feita mesmo o esperado é que o jogo não tenha o efeito obtido no ZX no MSX, e em teoria essa porta num MSX padrão (europeu) o acesso nessa porta não produziria efeito algum, caso seja acessada. Em teoria algum efeito de som (por exemplo) não seria reproduzido
+[2021-10-21 13:48:11] Augusto Almeida: Sim, verdade
+[2021-10-21 13:48:11] RicBit: tem efeito sim
+[2021-10-21 13:48:16] RicBit: fe é mapper nao é ?
+[2021-10-21 13:48:38] RicBit: um jogo porco desses vai funcionar no msx1 e dar pau no msx2+
+[2021-10-21 13:48:45] Augusto Almeida: Sim mas estou me referindo aos msx1 europeus
+[2021-10-21 13:49:05] RicBit: ah sim, vai ser ignorado sem mapper
+[2021-10-21 13:49:20] Augusto Almeida: No msx 2 tem a mapper que tem essa característica
+[2021-10-21 13:50:43] Augusto Almeida: Na prática o próprio TK90X sofria de incompatibilidade com o ZX (por isso do mod da ROM ZX) por causa de portas com estado flutuante que eram vitais para inicialização do jogo
+[2021-10-21 13:50:53] Augusto Almeida: O Thanatos era um desses se não me engano
+[2021-10-21 13:51:16] Augusto Almeida: jail break, match day II, Salamander,...
+[2021-10-21 13:51:28] Augusto Almeida: Mas aí foi mancada da Microdigital
+[2021-10-21 14:01:42] Hugo (Agaelebê): @fsanches vi esse post e lembrei de vc (não lembro se vc tem o DX7 ou outro similar): https://ajxs.me/blog/Yamaha_DX7_Technical_Analysis.html
+[2021-10-21 15:05:08] Felipe "Juca" Sanches: sim, eu tenho um DX7
+[2021-10-21 15:05:35] Felipe "Juca" Sanches: mas hoje em dia estou usando ele simplesmente como controlador MIDI para um clone de MiniMoog Model D
+[2021-10-21 15:06:14] Felipe "Juca" Sanches: preciso ligar uma mesinha de som para conseguir alternar facilmente entre os 2 synths sem ter que ficar desplugando cabos de áudio
+[2021-10-21 15:07:54] Felipe "Juca" Sanches: Esse aqui:
+
+https://www.behringer.com/product.html?modelCode=P0CQJ
+[2021-10-21 15:08:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16933.jpg
+[2021-10-21 15:11:46] Hugo (Agaelebê): ah. acho que lembro desse behringer aí
+[2021-10-21 15:30:55] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=PATlf0W3m7k

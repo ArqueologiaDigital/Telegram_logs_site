@@ -1,0 +1,24 @@
+[2024-05-15 12:20:26] L.: https://www.tomshardware.com/video-games/nearly-all-nintendo-64-games-can-now-be-recompiled-into-native-pc-ports-to-add-proper-ray-tracing-ultrawide-high-fps-and-more
+[2024-05-15 12:23:41] L.: (Eu lembro de um negócio similar pra ROM de MSX gerando executável pra PC. Bem massa! Não funciona com tudo, claro, afinal código auto-modificável existe, mas... :P)
+[2024-05-15 12:26:40] L.: Uma das coisas que eu queria fazer com meu porte do GW-BASIC pro Z80 era fazer algo genérico (parsear o 8086 e gerar uma IL interna, e aí tem vários backends, incluindo um C). Mas a preguiça imperou :)
+[2024-05-15 13:07:26] L.: fiz um teste aqui na mão e realmente me parece possível: https://tia.mat.br/temp/notrap.html
+
+bota tudo numa funçãozona só, ou quebra em várias funções e faz tail call pra próximo label ou algo assim, aí facilita até fazer coisas tipo call/ret sem precisar de setjmp/longjmp
+
+nesse exemplo aí eu faria, por exemplo:
+
+void UPERR(void) { A = LOW_OFFSET(ERRUE1); [[musttail]] return NTDERR2(); }
+void NTDERR2(void) { A -= OFFSET(DSKER1); E = A; [[musttail]] return NTDERR(); }
+void NTDERR(void) { [[musttail]] return LEPSKP(); }
+void LEPSKP(void) {
+     ...
+     if (!flags.zero) [[musttail]] return LEPSKP();
+     ...
+}
+
+e assim por diante. só vai compilar no clang por enquanto (GCC não tem o atributo [[musttail]] que é necessário aqui), mas acho que é a melhor solução
+[2024-05-15 13:08:49] L.: (em alguns casos dá pra detectar recursão e aí botar um label no começo, aí talvez diminua a necessidade de ter musttail, mas...)
+[2024-05-15 20:55:53] Tevo: Me lembra do port do Open Genera pra Linux, que compilava o assembly de DEC Alpha do emulador da Ivory original pra C pra rodar em outras arquiteturas
+[2024-05-15 20:55:58] Tevo: https://github.com/hanshuebner/vlm/blob/master/stub/process.lisp
+[2024-05-15 20:57:41] RicBit: Tem alguma versão do brmsx que fazia dynarec, a conclusão na época era que funcionava bem para jogo japonês, que roda em rom, e terrível pra jogo espanhol, que roda em ram e é cheio de auto-modificação.
+[2024-05-15 21:04:22] L.: É meio tricky fazer isso mesmo! Mesmo em modo protegido, com mmap e tal, tem vários poréns

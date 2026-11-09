@@ -1,0 +1,45 @@
+[2023-02-09 07:47:33] Pedro de Medeiros 👾: O debugger do OpenMSX é a mesma coisa. Aliás, estou fazendo um monte de melhorias nele e consertando erros que tem mais de 12 anos de idade.
+[2023-02-09 19:39:10] RicBit: vixe eu deveria ter feito uma lista dos bugs entao
+[2023-02-09 19:39:21] RicBit: achei varios enquanto estava usando mas ja esqueci tudo
+[2023-02-09 19:39:53] RicBit: acho que os mais frequentes eram as telas de debug do vdp que pifavam quando você mudava de screen
+[2023-02-09 19:40:19] RicBit: tipo a formula dos enderecos base mudam com a screen mas o debugger nao fazia o refresh
+[2023-02-09 19:40:26] RicBit: tinha mais, mas eu nao lembro
+[2023-02-09 19:50:09] Felipe "Juca" Sanches: Cultura de software livre:
+Viu a merda? Reporta imediatamente.
+
+Alguém vai cuidar.
+Ou ninguém vai cuidar.
+Mas ao menos tá documentado.
+[2023-02-09 19:54:37] RicBit: Para mim foi: 1. vi que não funciona, 2. fiz um melhor haha
+[2023-02-09 19:54:50] Felipe "Juca" Sanches: duh
+[2023-02-09 19:54:55] Felipe "Juca" Sanches: você não conta kkkk
+[2023-02-09 19:55:00] RicBit: ao invés de coletar o dado na interface eu comecei a fazer log num arquivo e foi muito melhor a longo prazo
+[2023-02-09 19:55:03] Felipe "Juca" Sanches: ponto fora da curva
+[2023-02-09 19:57:53] RicBit: mas tudo bem porque foi e voltou
+[2023-02-09 19:58:08] RicBit: eventualmente evoluiu para um script que hoje em dia vem como default no openmsx
+[2023-02-09 20:00:25] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25784-sticker.webp
+[2023-02-09 20:00:55] RicBit: meh tiraram os creditos
+[2023-02-09 20:00:57] RicBit: https://github.com/openMSX/openMSX/blob/master/share/scripts/_vgmrecorder.tcl
+[2023-02-09 20:01:58] Felipe "Juca" Sanches: esse código é derivado de código seu e tiraram os seu créditos de autoria?
+[2023-02-09 20:04:34] RicBit: original -> https://github.com/ricbit/Oldies/blob/master/2014-11-grabfm/grabfm.tcl
+[2023-02-09 20:05:48] RicBit: nao sobrou muito do meu codigo
+[2023-02-09 20:06:10] RicBit: mas foi tudo baseado na minha ideia original
+[2023-02-09 20:09:39] RicBit: por isso que eu só reporto erro pro knuth hoje em dia, pelo menos ele sempre dá os creditos haha
+[2023-02-09 20:14:00] Felipe "Juca" Sanches: cara... errar é humano. É bem possível que tenham tirado seus créditos por vacilo, sem maldade alguma.
+[2023-02-09 20:14:24] Felipe "Juca" Sanches: nada mais justo que reportar o erro, se você achar que ainda merece reconhecimento de autoria
+[2023-02-09 20:15:15] RicBit: meh
+[2023-02-09 20:15:29] RicBit: eles fizeram o provenance, isso que importa
+[2023-02-09 20:15:46] RicBit: antes de incluir me perguntaram qual licenca do meu codigo original
+[2023-02-09 20:16:21] RicBit: eu falei que podia usar então tá tudo bem
+[2023-02-09 20:16:59] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25798-sticker.webp
+[2023-02-09 20:17:07] Felipe "Juca" Sanches: tá certo, então! kkkk
+[2023-02-09 20:36:58] Pedro de Medeiros 👾: O que é provenance?
+[2023-02-09 20:39:34] Felipe "Juca" Sanches: acho que tem a ver com "árvore genealógica", no sentido de ser uma "busca pelas origens" de um código
+[2023-02-09 20:40:55] RicBit: Isso
+[2023-02-09 20:41:44] RicBit: Eles usaram a quarta versão do código e foram atrás dos três autores anteriores recursivamente.
+[2023-02-09 20:42:27] RicBit: Não fazer isso é o gera as merdas tipo Google x Oracle
+[2023-02-09 20:42:32] Shideravan: Acho incrível o quanto esse Sonic é bom, pqp
+[2023-02-09 20:43:14] Felipe "Juca" Sanches: Essa coisa é muito interessante. Derivação da derivação da derivação. Até que ponto o original merece reconhecimento?
+Em tese pra sempre. Na prática, depende....
+[2023-02-09 20:43:22] Shideravan: Sem zoeira, deve ser um dos meus Sonics favoritos
+[2023-02-09 20:43:41] Felipe "Juca" Sanches: sim, é muito bom!

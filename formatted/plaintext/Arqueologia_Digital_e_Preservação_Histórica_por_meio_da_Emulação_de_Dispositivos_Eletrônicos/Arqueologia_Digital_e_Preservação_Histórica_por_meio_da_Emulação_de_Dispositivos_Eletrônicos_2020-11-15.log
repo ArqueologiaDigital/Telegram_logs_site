@@ -1,0 +1,51 @@
+[2020-11-15 00:39:20] Felipe "Juca" Sanches: já se desfez desse 486? Ou ainda podemos combinar de eu pegar com você e/ou seus pais assim que se resolver essa treta de coronavirus?
+[2020-11-15 00:40:11] Felipe "Juca" Sanches: eu estive buscando um computador desses recentemente pra fazer um setup retrô aqui em casa
+[2020-11-15 00:52:01] Erin Pinheiro 🐿: eu tenho um pentium 1 da minha tia que esteve parado desde... possivelmente 2004
+[2020-11-15 00:52:26] Erin Pinheiro 🐿: eu queria ficar com o gabinete só, os componentes nem tenho tanto interesse
+[2020-11-15 00:52:37] Erin Pinheiro 🐿: (meu sonho é montar um sleeper pc dentro de um baby at)
+[2020-11-15 00:53:08] Erin Pinheiro 🐿: era um 486 em 1996 mas um vizinho nosso fez um upgrade pra um pentium 1 quando queimou
+[2020-11-15 00:54:09] Felipe "Juca" Sanches: faz cerca de um mês e pouco que o mosquito do MAME me picou de novo
+[2020-11-15 00:54:55] Felipe "Juca" Sanches: estou agora debrućado sobre a placa-mae do i7000 mapeando os sinais para esclarecer o que falta declarar no driver de emulaćão dele no MAME
+[2020-11-15 00:55:40] Erin Pinheiro 🐿: é aquele itautec né
+[2020-11-15 00:56:10] Erin Pinheiro 🐿: o cp/m ou o clone xt?
+[2020-11-15 00:58:29] Felipe "Juca" Sanches: cp/m
+[2020-11-15 00:58:46] Felipe "Juca" Sanches: sim, o nome completo é Itautec I-7000 G
+[2020-11-15 00:58:55] Erin Pinheiro 🐿: legal
+[2020-11-15 02:10:39] Felipe "Juca" Sanches: tem idéia se já encontraram os documentos/esquemáticos do i7000?
+[2020-11-15 05:32:42] pitanga: Vou ver c eles
+[2020-11-15 09:01:42] FTMaciel: O cara que tem não mandou para que eu pudesse escanear. Estao em A0 e tenho acesso a um scanner A0. Insisti várias vezes, íamos pagar o frete de ida e volta, ele falou que ia embalar e pesar, mas não rolou. Não insisto mais.
+[2020-11-15 12:14:07] Felipe "Juca" Sanches: quer passar o contato pra mim, pra eu tentar também?
+[2020-11-15 12:14:21] Felipe "Juca" Sanches: ele disse explicitamente que tem em maos os esquematicos do i7000?
+[2020-11-15 12:15:10] Felipe "Juca" Sanches: ontem eu virei a madrugada levantando o mapeamento de alguns sinais importantes direto da PCB usando um multimetro em modo teste de continuidade por que não tenho os esquematicos em maos
+[2020-11-15 12:42:35] FTMaciel: Tu consegue escanear em A0?
+[2020-11-15 12:42:58] FTMaciel: Acho que tem o do i7000
+[2020-11-15 12:44:27] FTMaciel: 24 [phone number]
+[2020-11-15 12:44:30] FTMaciel: Marcos
+[2020-11-15 12:44:50] FTMaciel: Eu e um colega daqui de bsb íamos rachar o frete
+[2020-11-15 12:45:02] FTMaciel: E eu ia escanear e devolver
+[2020-11-15 12:45:09] FTMaciel: Mas o cara é enrolado
+[2020-11-15 12:45:56] FTMaciel: Se tiver alguém de Volta Redonda pra ir na casa do cara pegar, por nos correios e depois receber de volta e ir levar pra ele , pode ser que ele se anime
+[2020-11-15 13:33:26] kretcheu: Ou ainda apenas levar numa empresa de digitalização de documentos.
+[2020-11-15 13:42:58] FTMaciel: Eu ia fazer de graça
+[2020-11-15 13:43:14] FTMaciel: Sai mais barato pagar o frete pra cá
+[2020-11-15 13:45:18] kretcheu: Contabilizou o risco do transporte?
+[2020-11-15 14:38:02] L.: @fsanches Ainda tenho meu segundo computador (um XT clone) na casa da minha mãe, BTW. Acho que o monitor âmbar ainda tá lá. Se quiser também, só buscar quando for pro Brasil
+[2020-11-15 14:39:05] L.: Se o HD ainda funcionar, tem umas coisas que valham talvez a pena disponibilizar
+[2020-11-15 14:39:15] L.: Tioo Wordstar em Português
+[2020-11-15 16:14:28] Felipe "Juca" Sanches: uia!
+[2020-11-15 16:14:31] Felipe "Juca" Sanches: que legal 😊
+[2020-11-15 16:15:20] Felipe "Juca" Sanches: EXATAMENTE! Um documento raro desses era melhor pegar em mãos, tirar uma foto mesmo que tosca antes de arriscar botar nos correios e acabar extraviando
+[2020-11-15 16:22:24] Felipe "Juca" Sanches: Marcos Antonio Souza Velasco?
+[2020-11-15 16:25:45] Felipe "Juca" Sanches: tentei agora ligar nesse número mas diz que é inválido (mas ao mesmo tempo meu celular identificou o numero com esse nome completo que mencionei aqui)
+[2020-11-15 18:34:25] Aylons Hazzud: Posso fazer isso no fim do mês
+[2020-11-15 18:34:46] Aylons Hazzud: Digo, posso trazer para São Paulo no fim do mês, e no fim de dezembro levar de volta
+[2020-11-15 19:37:02] FTMaciel: Iamos mandar por azul express
+[2020-11-15 19:38:28] FTMaciel: Mas não vou insistir mais.
+[2020-11-15 19:38:55] FTMaciel: Pelo jeito não quer liberar o acesso
+[2020-11-15 19:40:14] FTMaciel: Acho errado. Já fizeram isso com esquemas de outros equipamentos e por causa disso não temos informações para reparo. Basta ver os esquemas e manuais técnicos do cp500, de clones apple brasileiros
+[2020-11-15 19:41:09] FTMaciel: Esquemas dos cp500 m80 e turbo
+[2020-11-15 19:41:28] FTMaciel: O cara poderia mandar um por vez
+[2020-11-15 19:41:33] Felipe "Juca" Sanches: não to dizendo que é pra resolver a questão com uma foto. Estou apenas dizendo que, antes de correr o risco do extravio, seria bom ter ao menos uma foto.
+[2020-11-15 23:25:26] Felipe "Juca" Sanches: na falta de uma cópia oficial dos esquemáticos eu estou desenhando o meu com base em observacoes na placa. É um trampo enorme, mas é tudo o que tenho ao meu alcance nesse momento
+[2020-11-15 23:26:09] Felipe "Juca" Sanches: estou me focando nos sinais que sao mais importantes pra mim: Chip Select dos principais componenets e como eles são gerados a partir do barramento de enderecos da CPU
+[2020-11-15 23:26:26] Felipe "Juca" Sanches: pois com isso deriva-se o memory map pra escrever o resto do emulador

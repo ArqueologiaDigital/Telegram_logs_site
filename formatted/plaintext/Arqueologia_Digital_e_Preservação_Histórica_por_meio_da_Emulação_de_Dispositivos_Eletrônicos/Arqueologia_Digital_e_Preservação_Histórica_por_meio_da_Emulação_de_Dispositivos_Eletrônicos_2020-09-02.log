@@ -1,0 +1,46 @@
+[2020-09-02 11:24:40] Felipe "Juca" Sanches: https://en.wikipedia.org/wiki/Microsoft_Comic_Chat
+[2020-09-02 11:25:40] Felipe "Juca" Sanches: https://www.kurlander.net/DJ/Projects/ComicChat/resources.html
+[2020-09-02 12:32:44] Leonardo Roman: Nossa, eu lembro disso. Um irc com quadrinhos :)
+[2020-09-02 14:47:18] L.: Eu usei isso uma época
+[2020-09-02 16:44:32] Ismael Luceno: esse foi provavelmente o melhor programa da Microsoft 😂
+[2020-09-02 16:53:53] L.: Tem umas libs que recriam esse estilo
+[2020-09-02 17:20:14] Eduardo Loos: 😂😂😂😂
+[2020-09-02 18:19:33] Ismael Luceno: :0
+[2020-09-02 18:19:37] Ismael Luceno: onde?!?
+[2020-09-02 19:02:50] L.: https://github.com/gyng/comicchat por exemplo
+[2020-09-02 19:04:10] Felipe "Juca" Sanches: nao olhei ainda, mas já pergunto: algum desses aí implementa o protocolo server-side de modo a permitir que o programa original de Windows da própria microsoft seja enganado e possa ser operado hoje em dia mesmo depois da MS ter tirado os servidores do ar?
+[2020-09-02 19:04:30] L.: O protocolo server side é IRC
+[2020-09-02 19:04:37] Felipe "Juca" Sanches: pergunta 2: Acidx Leandro, consegue cutucar alguém aí na MS pra liberar o código fonte? ;-D
+[2020-09-02 19:04:41] Ismael Luceno: hmmm
+[2020-09-02 19:04:45] Ismael Luceno: os sprites s
+[2020-09-02 19:04:56] Erin Pinheiro 🐿: ele não tinha servidor, ele é só um cliente irc
+[2020-09-02 19:04:57] Felipe "Juca" Sanches: não acho que seja só isso não...
+[2020-09-02 19:04:58] Erin Pinheiro 🐿: literalmente
+[2020-09-02 19:05:04] L.: É só IRC
+[2020-09-02 19:05:07] Ismael Luceno: são de corpo inteiro
+[2020-09-02 19:05:09] Erin Pinheiro 🐿: é sim, eu conversava no freenode com ele :P
+[2020-09-02 19:05:32] L.: As mensagens tem um prefixo que codifica informações da tirinha
+[2020-09-02 19:05:37] Erin Pinheiro 🐿: ele só coloca nas suas mensagens em plaintext mesmo um código que determina quando vc escolhe uma — é isso
+[2020-09-02 19:05:42] Felipe "Juca" Sanches: A wikipedia diz: "it is infrequently used today because MSN decided to get out of the chat business, and turned off its servers.[2]"
+[2020-09-02 19:05:44] Erin Pinheiro 🐿: parei de digitar pq o leandro falou a mesma coisa
+[2020-09-02 19:05:53] Erin Pinheiro 🐿: a wikipedia tá errada :)
+[2020-09-02 19:06:08] L.: Aliás, vou ver aqui se rola abrir o fonte dissl
+[2020-09-02 19:06:21] Ismael Luceno: é IRC + uma extensão opcional para a emoção
+[2020-09-02 19:06:45] L.: Tem muita coisa que não rola por questões legais (muita coisa é licenciada pra uso nos produtos e não temos o Copyright)
+[2020-09-02 19:06:45] Erin Pinheiro 🐿: sim mas ele não usa nenhum servidor adulterado, essa extensão é parte plaintext da sua mensagem
+[2020-09-02 19:07:04] Ismael Luceno: sim
+[2020-09-02 19:07:08] L.: Isso, uma mensagem "olá" era mandada como "rhsgeushshs olá"
+[2020-09-02 19:07:18] L.: Ou algo assim, faz tempo que não uso isso hehe
+[2020-09-02 19:08:18] Ismael Luceno: o cliente esse usa os sprites de corpo inteiro, mas eu acho que não é isso o que fazia o comic chat...
+[2020-09-02 19:08:29] Ismael Luceno: o talvez a implementação não coincide com o paper
+[2020-09-02 19:08:48] Erin Pinheiro 🐿: dependia do enquadramento do frame
+[2020-09-02 19:08:56] Erin Pinheiro 🐿: era tudo automático
+[2020-09-02 19:09:20] Erin Pinheiro 🐿: se uma pessoa falava e tinha um tempo de silêncio ela ficava sozinha no quadro e podia aparecer o quadro inteiro
+[2020-09-02 19:09:42] Ismael Luceno: esse cliente é muito mais simples
+[2020-09-02 19:18:32] Ismael Luceno: as regras do comic chat são muito inapropriadas para algumas culturas...
+[2020-09-02 19:21:56] Ismael Luceno: seria interessante aplicar o conceito em algum outro contexto... há games de aventura gráfica que fazem coisas similares para a composição de cenas
+[2020-09-02 19:22:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-09/11360.jpg
+[2020-09-02 19:22:03] Felipe "Juca" Sanches: É, parece que os servidores que a MS tirou do ar só eram IRC comum mesmo... Mas era o que todo mundo usava pra se encontrar. Acho que é isso.
+
+https://www.kurlander.net/DJ/Projects/ComicChat/GettingStarted.html
+[2020-09-02 19:24:16] L.: Eu conectava na brasnet

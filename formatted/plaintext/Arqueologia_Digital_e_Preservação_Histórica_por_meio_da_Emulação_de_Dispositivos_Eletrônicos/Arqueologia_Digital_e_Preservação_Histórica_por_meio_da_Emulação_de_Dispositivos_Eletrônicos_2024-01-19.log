@@ -1,0 +1,50 @@
+[2024-01-19 00:36:43] Pedro de Medeiros 👾: https://floppy.cafe/
+[2024-01-19 00:38:26] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/28946-mindblown-omg.mp4
+[2024-01-19 00:43:38] Felipe "Juca" Sanches: Direto ao ponto:
+
+Notícia boa: desvendei por completo o formato do arquivo de update de sistema do KN5000. Em teoria agora dá pra instalar patches sem corromper a instalação.
+
+Notícia ruim: Briquei o mecanismo de update poucos minutos antes de fazer o teste com o arquivo de update bom. Agora estou com meu teclado com um firmware corrompido e sem uma forma simples de re-instalar o firmware original, pois ele reboota logo no início do processo de update.
+[2024-01-19 00:45:20] Felipe "Juca" Sanches: Outra notícia boa: achei onde está o código executável da sub-cpu e acho que estou começando a entender como é o protocolo de upload desse código da maincpu para a subcpu durante o boot. Com isso poderei (depois que descagar o mecanismo de update) escrever um trojan para fazer o dump da mask rom de boot da subcpu
+[2024-01-19 00:46:37] Felipe "Juca" Sanches: @pvm_NoCryptoScams, você tá com aquele meu KN5000 aí, né? Tem interesse em participar dos próximos passos dessa investigação?
+[2024-01-19 00:46:54] Felipe "Juca" Sanches: O Ramiro tá com um KN5000 também lá na Bélgica.
+[2024-01-19 00:52:00] Pedro de Medeiros 👾: Vamos
+[2024-01-19 00:52:14] Felipe "Juca" Sanches: maravilha!
+[2024-01-19 00:56:47] Felipe "Juca" Sanches: o primeiro passo é checar qual é a versão do firmware que já tá instalado nele. Para isso, basta ligar o teclado enquanto segura pressionados 4 botões do painel:
+[2024-01-19 00:57:06] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/28954.jpg
+[2024-01-19 00:57:07] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/28955.jpg
+[2024-01-19 00:57:48] Felipe "Juca" Sanches: Nessa parte da esquerda do painel, tem os botões "SPLIT POINT", "AUTOPLAY CHORD" e logo abaixo deles, tem os botões "3" e "4"
+[2024-01-19 00:58:20] Felipe "Juca" Sanches: segurando esses 4 pressionados e ligando o aparelho, vai acessar uma tela de diagnóstico que mostra as versões de cada pedaço do firmware
+[2024-01-19 00:59:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/28958.jpg
+[2024-01-19 00:59:03] Felipe "Juca" Sanches [forwarded]: Program ROM Versão 10
+[2024-01-19 00:59:15] Felipe "Juca" Sanches: Essa tela aqui
+[2024-01-19 00:59:52] Felipe "Juca" Sanches: Apesar da versão do firmware ser chamada de "v10", essas versões aí devem ser os números dos builds de cada parte
+[2024-01-19 01:00:37] Felipe "Juca" Sanches: eu fiz uma tabelinha listando a correspondência desses números:
+[2024-01-19 01:00:43] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/28962.jpg
+[2024-01-19 01:00:59] Felipe "Juca" Sanches: Veja qual dessas versões tá instalada aí, por favor
+[2024-01-19 01:41:31] Felipe "Juca" Sanches: Acabei de tornar público do script que decodifica e recodifica com perfeição os discos de update:
+
+https://github.com/felipesanches/kn5000_homebrew/commit/c85b76b392fac7f1384cbd265fdf9c4b3e552c4a
+[2024-01-19 01:41:46] Felipe "Juca" Sanches: Farei um refactoring pra arrumar a casa em breve.
+[2024-01-19 01:55:12] Felipe "Juca" Sanches: Pra tirar uma foto como essa, você pode apertar o botão "DISPLAY HOLD" que fica pertinho do canto inferior direito da tela. Com isso você evita dar timeout após alguns segundos e a informação sumir da tela.
+[2024-01-19 01:56:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/28967.jpg
+[2024-01-19 02:18:33] Felipe "Juca" Sanches: @pvm_NoCryptoScams e Ramiro, o motivo pelo qual quero anotar a versão do firmware que tem instalado nos teclados que estão com vocês é que eu preciso mapear quais ROMs eu ainda preciso fazer dump
+[2024-01-19 02:18:49] Felipe "Juca" Sanches: A versão 4, por exemplo, eu não tenho dump
+[2024-01-19 02:20:47] Felipe "Juca" Sanches: também não tenho das versões 1, 2 e 3. Mas tenho uma placa com a v3 aqui, que ainda precisarei dumpar. E acho que tenho uma placa com v4 também, preciso ligar e verificar (pois uma coisa é o que o adesivo na PCB diz, outra coisa é o que tem instalado de fato).
+[2024-01-19 02:20:59] Felipe "Juca" Sanches: eu nunca vi placa com a versão 1 em lugar nenhum
+[2024-01-19 02:21:08] Felipe "Juca" Sanches: e vi uma com a versão 2 pra vender no ebay
+[2024-01-19 02:23:08] Felipe "Juca" Sanches: Sugiro também a gente agendar algum dia fazer uma chamada de vídeo entre nós 3 para bater papo sobre o tema e articular estratégias. Me digam se têm interesse e sugiram datas/horários bons para esse bate-papo.
+[2024-01-19 10:32:59] RicBit: achou o bug dos pixels com overflow?
+[2024-01-19 12:40:25] Felipe "Juca" Sanches: não investiguei mais esse aspecto
+[2024-01-19 12:41:43] Felipe "Juca" Sanches: @ricbit, você já deu uma olhada no datasheet desse TLCS900?
+
+É tipo um Z80 de 32-bits
+[2024-01-19 12:41:50] Felipe "Juca" Sanches: rodando a 20MHz
+[2024-01-19 20:40:28] RicBit: 8 EXX e LD (HL+A)? sold
+[2024-01-19 21:00:36] Felipe "Juca" Sanches: Esse processador foi usado no Neo Geo Pocket Color
+[2024-01-19 21:05:43] Pablo Vasques Bravo-Villalba: E no não color também, não?
+[2024-01-19 22:13:52] Felipe "Juca" Sanches: Kkkkkk
+[2024-01-19 22:14:21] Felipe "Juca" Sanches: Eu pensei isso no momento em que eu estava escrevendo a mensagem
+[2024-01-19 22:14:43] Felipe "Juca" Sanches: Mas resolvi mandar mesmo assim e ver se alguém notava
+[2024-01-19 22:16:06] Felipe "Juca" Sanches: Mas o fato é que eu tenho um Neo Geo Pocket Color
+[2024-01-19 22:16:09] Felipe "Juca" Sanches: e não tenho um que não tenha cores

@@ -1,0 +1,70 @@
+[2026-04-11 15:34:14] Shideravan: Ismael, você sabe como estão a emulação dos Brick Games no MAME?
+[2026-04-11 15:34:31] Shideravan: Eu estou querendo adicionar alguns drivers de Brick Games por lá
+[2026-04-11 15:35:46] Shideravan: Todos seguem a mesma estrutura do E-23 Plus Mark II que já tem por lá
+[2026-04-11 15:36:10] Shideravan: Já tenho os dumps e tudo mais
+[2026-04-11 15:37:07] Shideravan: Mas não gosto de chegar para implementar se já tem gente cuidado disso, atrapalhar o trabalho dos outros kkkkkkk
+[2026-04-11 15:44:43] Felipe "Juca" Sanches: E vejo aqui um potencial de vocês talvez se unirem pra trabalharem juntos nisso, se o Ismael (@figur8) estiver com tempo disponível e interesse para tal!
+[2026-04-11 15:54:14] Shideravan: Seria bem legal, inclusive porque os drivers baseados no HT1130 estão sem a emulação de som implementada
+[2026-04-11 15:54:29] Shideravan: Então tem bastante espaço para desenvolvimento
+[2026-04-11 15:55:14] Shideravan: E tem milhares de modelos de brick games baseados nele, então tem um potencial infinito de dispositivos que podem ser preservados no MAME
+[2026-04-11 15:55:27] Shideravan: Além de serem baratos e fáceis de encontrar aqui no Brasil
+[2026-04-11 15:55:36] Felipe "Juca" Sanches: Bom consultar também David Haywood pra saber se ele ainda se interessa em alguma coisa nesse driver (ou checar se era alguma outra pessoa que tava lidando com esse driver, caso minha memória seja imprecisa)
+[2026-04-11 15:55:58] Felipe "Juca" Sanches: a.k.a. "MAME Haze"
+[2026-04-11 15:56:45] Felipe "Juca" Sanches: https://mamedev.emulab.it/haze/
+[2026-04-11 15:57:01] Shideravan: Sim, o Haze e o Hap (aka mestre de handhelds obscuros) estavam trabalhando nesse driver
+[2026-04-11 15:57:18] Shideravan: Eu conheço o figura
+[2026-04-11 15:57:36] Shideravan: Mas tenho a impressão que ele deu uma abandonada
+[2026-04-11 15:57:43] Shideravan: Foi fazer outra coisa
+[2026-04-11 15:58:00] Shideravan: Mas ele pode dar um help sim
+[2026-04-11 15:58:18] Shideravan: É só motivarmos ele a voltar a trabalhar junto
+[2026-04-11 15:58:46] Shideravan: Tem outro cara que talvez possa ajudar
+[2026-04-11 15:59:22] Shideravan: É uma pessoa que dumpou dezenas desses handhelds
+[2026-04-11 15:59:29] Shideravan: E fez um emulador em python
+[2026-04-11 15:59:40] Shideravan: https://github.com/azya52/BrickEmuPy
+[2026-04-11 15:59:44] Felipe "Juca" Sanches: Ele tem um Discord server dedicado ao MAME (à parte do oficial) onde tem um monte de gente participando, apesar de ter (se não me engano) uma boa intersecção do público presente entre os 2 servers. Se quiserem posso pedir pra ele adicionar vocês dois lá (se já não estiverem inscritos)
+[2026-04-11 16:00:02] Shideravan: Pode ser
+[2026-04-11 16:00:35] Shideravan: Acho que ele junto na iniciativa pode ajudar a acelerar a aprovação dos nossos commits
+[2026-04-11 16:00:41] Felipe "Juca" Sanches: sim, claro. Mas é uma pessoa que provavelmente desconhece a cultura do MAME (code-style, best practices, etc)
+[2026-04-11 16:00:53] Shideravan: Com certeza
+[2026-04-11 16:01:25] Shideravan: Mas é bom trocar ideia sobre engenharia reversa e deve ser uma pessoa que tenha em posse alguns desses handhelds obscuros
+[2026-04-11 16:02:27] Shideravan: O MAME é bem rígido nessas coisas e afasta novados e prende PR no limbo também kkkkkkkkkkkkkkkk
+[2026-04-11 16:02:51] Shideravan: Por isso que eu acho legal se o Haze puder "apadrinhar" nossa iniciativa
+[2026-04-11 16:03:42] Shideravan: Mas eu quero começar com coisas simples, portar esses sistemas já dumpados para a estrutura do driver básico do Brick Game E-23 PLUS MARK II 96 in 1 (HT-943D0)
+[2026-04-11 16:03:54] Felipe "Juca" Sanches: sim, claro. Eu já to pegando o jeito da coisa. O Olivier Galibert tem me ajudado.
+[2026-04-11 16:04:08] Shideravan: https://habr.com/ru/articles/773040/
+[2026-04-11 16:04:20] Felipe "Juca" Sanches: Aos poucos estou me integrando mais e mais na comunidade. Acho que estou cada vez menos sendo visto como contribuidor externo
+[2026-04-11 16:04:33] Shideravan: Imagino que poucos aqui devam saber russo, então recomendo traduzir a página rs
+[2026-04-11 16:04:34] Felipe "Juca" Sanches: mas ainda estou muito longe de ser um core-dev
+[2026-04-11 16:04:59] Shideravan: Mas aqui nesse blog tem um trabalho interessante de documentação da engenharia reversa desses sistemas
+[2026-04-11 16:05:32] Felipe "Juca" Sanches: além disso, meu experimentos recentes com IA talvez assustem alguns devs "da antiga". Mas também têm me ajudado a ter avanços mais significativos.
+[2026-04-11 16:06:01] Shideravan: Eu to por fora do MAME, fale mais sobre IA porque é algo que me preocupa kkkkkkkkkkk
+[2026-04-11 16:06:24] Shideravan: Dev Dinossauro sempre fica com um pé atrás com IA, não adianta kkkkkkkkkkk
+[2026-04-11 16:06:49] Shideravan: Mas não implementaram nada com IA no MAME nesse meio tempo que ando afastado, né?
+[2026-04-11 16:07:13] Shideravan: Eu vi uma zoeira de 1o de abril e quase caí, porque do MAME eu não duvido nada kkkkkkkkkkkk
+[2026-04-11 16:08:08] Shideravan: Inclusive... Até para fazer "zoeira" a comunicação do MAME é desnecessariamente agressiva, os caras precisavam melhorar muito isso
+[2026-04-11 16:09:40] Shideravan: Não tem nada de oficial implementado no MAME com IA, tipo uma pré-triagem de PR, né?
+[2026-04-11 16:11:53] Shideravan: Esse emulador em python COMPLETAMENTE FORA dos padrões do MAME, obviamente, acaba sendo uma implementação em cima da pesquisa de engenharia reversa desse blog que eu postei
+[2026-04-11 16:12:26] Shideravan: Então esse emulador em python é tipo aqueles emuladores no$algumaCoisa
+[2026-04-11 16:13:37] Shideravan: É só uma implementação bem pouco acurada como prova de conceito de um trabalho prévio de engenharia reversa. E a documentação gerada disso sim que é útil para a gente trabalhar em drivers mais precisos.
+[2026-04-11 16:14:13] Shideravan: Mas o emulador dele é interessante por ter um debugger acoplado o tempo todo
+[2026-04-11 16:17:14] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38119.jpg
+[2026-04-11 16:17:54] Shideravan: Acho bem útil para darmos uma estudada no sistema, inclusive, porque ele já implementou som
+[2026-04-11 16:18:59] Shideravan: Esse "emulador" é mais um debugger do que uma plataforma pensada em jogar os sistemas
+[2026-04-11 16:19:38] Shideravan: Claramente a pessoa documentou tudo isso esperando que sirva para outras pessoas criarem um emulador mais preciso e "user friendly"
+[2026-04-11 16:19:59] Shideravan: Basicamente uma prova de conceito
+[2026-04-11 16:38:20] Felipe "Juca" Sanches: Não. Mas tem código do KN5000 que entrou já (PR merged) e que foi o Claude que escreveu pra mim ;-)
+[2026-04-11 16:38:39] Felipe "Juca" Sanches: Algumas pessoas sabem disso, outras não.
+[2026-04-11 16:39:11] Felipe "Juca" Sanches: Talvez o Cuavas já saiba, ou ao menos suspeite, mas até agora ninguém cagou na minha cabeça por conta disso
+[2026-04-11 16:43:45] Shideravan: 🚨🚨VOU DENUNCIAR🚨🚨
+[2026-04-11 16:44:01] Shideravan: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38128-event.mp4
+[2026-04-11 16:47:56] Shideravan: Óbvio que é zoeira kkkk
+[2026-04-11 16:50:08] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38130-sticker.webp
+[2026-04-11 17:20:21] RicBit: os emus do nocash são super bons, rodam até em xt. Ele gostava de falar que os emus dele eram os mais rapidos que existiam até descobrir o brmsx e ficar putissimo que não conseguia chegar na velocidade. Aí uma hora ele arregou e me perguntou qual era o truque, eu expliquei e o emu dele ficou rapido tambem
+[2026-04-11 17:25:28] Shideravan: São bons em velocidade, mas não em precisão
+[2026-04-11 17:27:11] Shideravan: Mas isso não diminuiu o trabalho dele, pelo contrário, ele fazia (ou faz, não sei se ele continua na ativa) uma documentação muito boa e o escopo dele sempre foi priorizar velocidade sobre precisão
+[2026-04-11 17:27:44] Shideravan: Isso possibilitou coisas incríveis também, por exemplo, na época do DS ele criou um emulador de DS que rodava até numa carroça
+[2026-04-11 22:25:32] RicBit: antartic e zanac são muito diferentes mesmo. o antartic é só uma maquina de estados, o zanac tem duas maquinas virtuais (uma para a musica e outra para o cenario), e os inimigos são todos orientados a objeto (tem dados comuns tipo x, y, vx, vy, hit points, sprite, etc), mais um virtual void update() que atualiza o que é unico para cada inimigo.
+[2026-04-11 22:30:25] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38136.jpg
+[2026-04-11 22:30:25] RicBit: eu imagino que isso é uma bateria no fundo:
+[2026-04-11 22:57:12] RicBit: e eles usaram a rom até o talo, sobrou 5 bytes só
+[2026-04-11 22:57:55] RicBit: no antartic sobraram 445

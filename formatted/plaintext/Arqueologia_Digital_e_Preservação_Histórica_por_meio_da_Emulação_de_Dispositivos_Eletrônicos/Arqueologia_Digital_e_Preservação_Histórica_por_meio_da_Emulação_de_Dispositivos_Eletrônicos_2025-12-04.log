@@ -1,0 +1,10 @@
+[2025-12-04 12:47:00] L.: https://git.sr.ht/~nkali/vision-sdk/tree/main/item/note/index.md?goaway_challenge=meta-refresh&goaway_id=8684e073b02310c01d08aeefdb849208
+[2025-12-04 16:13:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36575.jpg
+[2025-12-04 16:13:42] Felipe "Juca" Sanches: On recreating the lost SDK for a 42-year-old operating system: VisiCorp Visi On
+[2025-12-04 18:31:19] Pablo Vasques Bravo-Villalba: Acho que eu ia pirar MUITO se tivesse visto isso na época
+[2025-12-04 20:06:43] L.: Daqui a pouco alguém faz um compilador de VM do jogo pra Z80 pra economizar uns ciclos e põe umas rotinas trocaveis pra ter modos de vídeo diferentes etc
+[2025-12-04 23:20:10] Felipe "Juca" Sanches: "alguém"
+[2025-12-04 23:21:14] Felipe "Juca" Sanches: https://github.com/felipesanches/kn5000_homebrew/blob/main/demos/anotherworld/another.asm
+[2025-12-04 23:21:49] Felipe "Juca" Sanches: Isso aqui é grande parte da VM do Another World portada para assembly de TLCS900, pra rodar no teclado musical KN5000
+[2025-12-04 23:22:21] Felipe "Juca" Sanches: TLCS900 é uma variante de Z80 mas com 32 bits
+[2025-12-04 23:23:31] Felipe "Juca" Sanches: Se alguém quiser se aventurar, acho que o emulador no MAME já tá bem avançado para ser útil como ferramenta pra auxiliar no resto do desenvolvimento desse port

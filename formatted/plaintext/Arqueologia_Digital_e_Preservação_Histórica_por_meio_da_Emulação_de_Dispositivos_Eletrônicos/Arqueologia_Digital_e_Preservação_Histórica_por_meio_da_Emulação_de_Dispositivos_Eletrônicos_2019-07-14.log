@@ -1,0 +1,6 @@
+[2019-07-14 12:43:14] L.: Gerador de caracteres: ROM tem 256 caracteres, 1 byte/linha. Endereço = caracter a ser mostrado | linha a ser desenhada (pode ser 3 bits menos significativos do contador vertical se tiver até 7px de altura). Caracter a ser mostrado é lido duma RAM, de forma linear, usando alguns bits do contador horizontal e vertical.
+[2019-07-14 12:44:00] L.: Não é tão complicado, mas tem acesso indireto e possivelmente precise de clock mais rápido pra ter umas 80col
+[2019-07-14 13:20:27] Emerson Moura: Salvo engano, o chip 6845 da Motorola faz isso.
+[2019-07-14 13:21:02] Emerson Moura: É o chip usado nas placas CGA de PC e 80 colunas de Apple II.
+[2019-07-14 15:04:10] L.: Talvez seja até possível usar um 6845 pra gerar VGA. Deve simplificar bem. :)
+[2019-07-14 15:12:56] Emerson Moura: Eu acho que ele não consegue os timings (frequências) do VGA... Mas é apenas uma desconfiança. Nunca confirmei isso em datasheet ou experimento.

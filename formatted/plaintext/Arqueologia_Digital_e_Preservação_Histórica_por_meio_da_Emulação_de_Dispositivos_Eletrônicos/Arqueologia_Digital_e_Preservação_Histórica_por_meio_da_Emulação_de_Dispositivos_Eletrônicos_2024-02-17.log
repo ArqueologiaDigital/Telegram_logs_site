@@ -1,0 +1,37 @@
+[2024-02-17 05:21:29] RicBit: 2am eu tive uma ideia besta
+[2024-02-17 05:21:43] RicBit: agora 5h30am a ideia besta funcionou
+[2024-02-17 05:23:02] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29224-Default_anime_girl_in_sailor_suit_going_to_school_photorealist_0.jpg
+[2024-02-17 05:23:02] RicBit: treinei um modelo de ai para gerar imagens de screen 2 na paleta do msx1, ficou muito bom, ele usa cores mais ou menos parecidas e chuncha para a figura encaixar nos octetos
+[2024-02-17 05:23:55] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29225.jpg
+[2024-02-17 05:23:55] RicBit: ai se eu pego o output da ai e jogo no mifui sem nenhum error diffusion, ja fica legal
+[2024-02-17 05:37:19] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29226.jpg
+[2024-02-17 05:37:19] RicBit: original da AI
+[2024-02-17 05:37:45] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29227.jpg
+[2024-02-17 05:37:45] RicBit: conversao do mifui, screen 2 com palette
+[2024-02-17 05:38:11] RicBit: fica igual, a AI entendeu o color clash
+[2024-02-17 06:09:34] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29229.jpg
+[2024-02-17 06:25:06] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29230.jpg
+[2024-02-17 06:38:59] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29231.jpg
+[2024-02-17 06:38:59] RicBit: tá, dedos são complicados
+[2024-02-17 06:39:26] RicBit: mas eu estou achando muito bom
+[2024-02-17 06:46:31] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29233.jpg
+[2024-02-17 06:46:31] RicBit: porra ta melhor que o original haha
+[2024-02-17 06:46:41] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29234.jpg
+[2024-02-17 07:04:37] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29235.jpg
+[2024-02-17 07:04:47] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29236.jpg
+[2024-02-17 07:40:51] RicBit: o negodcio ficou tenso, compara só
+[2024-02-17 07:41:11] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29238.jpg
+[2024-02-17 07:41:11] RicBit: esse é screen 4
+[2024-02-17 07:41:34] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29239.jpg
+[2024-02-17 07:41:34] RicBit: esse é screen 5
+[2024-02-17 07:41:57] RicBit: tá tão bem encaixado que quase nao dá diferençá do modo bitmap pro modo tiled
+[2024-02-17 16:08:50] L.: mesmo mo modo bitmap, dá quase pra trucar que tem 16 cores
+[2024-02-17 21:43:06] RicBit: acho que se colocar um GAN no final vai ficar o bicho
+[2024-02-17 21:49:48] L.: com borrado de crt já deve ficar legal por si só
+[2024-02-17 21:50:12] L.: o dither na face dela deve sumir
+[2024-02-17 22:10:26] RicBit: eu estou pensando que se tiver um GAN na saida ele vai pegar os borroes mais obvios tipo a linha vermelha na boca
+[2024-02-17 22:11:16] RicBit: e o original era muito diferente haha
+[2024-02-17 22:12:00] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29247.jpg
+[2024-02-17 22:12:00] RicBit: o original era um desenho antigo do meu irmão
+[2024-02-17 22:13:12] RicBit: eu pedi um desenho com pouca aderência para ver como fica, se você pede parecido demais com o original, ele começa a deixar as linhas na mesma coordenada x, aí borra
+[2024-02-17 22:14:49] RicBit: da onde ele tirou o brilho na parte de baixo eu não faço a menor idéia

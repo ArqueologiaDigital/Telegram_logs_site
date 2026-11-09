@@ -1,0 +1,13 @@
+[2024-12-19 14:58:22] Guilherme Ranoya: Pra quem interessar, finalmente consegui rodar o GEM Desktop 1.2 no dosbox online. Todas as tentativas anteriores, o mouse não funcionava. Mas agora foi.
+O GEM Desktop 1 é aquele anterior ao processo do Steve Jobs contra o Gary Kildall... A versão que o Jobs alegava ser uma cópia da interface do System 1 da Apple. Depois disso, na versão 2 em diante, eles tiveram que tirar várias coisas do GEM para PC.
+
+https://namco.vercel.app/interfaces/?rom=gdesk1
+
+Tem umas 3 aplicações instaladas na pasta GEMAPPS. Vou tentar instalar o Ventura e o KeyPublisher depois... aquilo que eu conseguir instalar, eu atualizo na imagem online.
+[2024-12-19 15:36:15] Pablo Vasques Bravo-Villalba: Difícil dizer que não é cópia, hein? 😅
+[2024-12-19 15:36:20] Pablo Vasques Bravo-Villalba: Mas é interessante
+[2024-12-19 16:28:32] Guilherme Ranoya: Eram todos cópias de alguma coisa... o System 1 era cópia do Star Office System... era tão cópia, que o nome do sistema do Lisa (que veio antes do System 1 do Macintosh) era Lisa Office System. Difícil dizer se o Kildall copiou a Apple ou a Xerox! Mas uma coisa posso garantir: quem criou o sistema de drop down menu foi a Apple mesmo... isso todos copiaram dela.
+[2024-12-19 16:49:26] Pablo Vasques Bravo-Villalba: Isso é inegável, mas eu me arrisco a dizer que a UI do GEM é uma cópia da UI do System 1, porque esta adicionou algumas coisas que o Star não tinha, e seria muita coincidência o GEM ter adicionado exatamente as mesmas coisas (como o menu dropdown, os labels embaixo dos ícones, os botões na barra de título das janelas e o ícone da lixeira)
+[2024-12-19 16:49:48] Pablo Vasques Bravo-Villalba: Mas não acho que isso seja qualquer demérito para o GEM
+[2024-12-19 16:55:56] Guilherme Ranoya: Copiar a lixeira é assinar o roubo e deixar a identidade no lugar do crime. Pra fazer o serviço completo só faltava arrastar o disco pra lixeira para ejetar! 😄
+[2024-12-19 17:02:01] Pablo Vasques Bravo-Villalba: Eu acho que boas convenções de UI têm mais é que se disseminar mesmo. Os botõezinhos semáforo do OS X eu acho uma tristeza; desconfio que sejam criação do próprio Steve Jobs

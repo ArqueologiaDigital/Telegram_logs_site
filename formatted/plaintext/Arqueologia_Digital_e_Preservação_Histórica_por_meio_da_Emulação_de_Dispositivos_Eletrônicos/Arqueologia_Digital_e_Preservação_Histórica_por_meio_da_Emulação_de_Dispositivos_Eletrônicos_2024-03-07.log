@@ -1,0 +1,116 @@
+[2024-03-07 10:18:16] Lucas Alberto: Eu estou tentando criar uma interface multi-plataforma para colocar no emulador e está dificil achar uma que seja legal
+[2024-03-07 10:19:19] Lucas Alberto: O Qt é super complexo e pesado
+O GTK é super dificil de instalar no windows
+E usar o .Net o pessoal do linux não deve gostar🤡
+[2024-03-07 10:19:48] Lucas Alberto: Se alguem tiver alguma dica de alguma lib de GUI multiplataforma....
+[2024-03-07 10:20:35] Pablo Vasques Bravo-Villalba: Que tal Dear ImGui?
+https://github.com/ocornut/imgui
+[2024-03-07 10:21:48] Lucas Alberto: Essa eu não conhecia, vou dar uma olhada
+[2024-03-07 10:24:30] Pedro de Medeiros 👾: A nova versão do OpenMSX vai usar. Já dá pra testar se você baixá-lo no github.
+[2024-03-07 10:25:01] Pablo Vasques Bravo-Villalba: O Furnace, software que uso para fazer chiptunes, usa também
+[2024-03-07 10:29:17] Pedro de Medeiros 👾: O Dear ImGui está em desenvolvimento e consolidando algumas features ainda e coisas como gerenciamento de shortcuts complexos (especialmente se você tem um aplicativo ou game que vai usar o ImGui por cima) vai exigir um bocado de tweaking.
+[2024-03-07 10:41:18] Lucas Alberto: Ela é meia feinha, mas parece ser bem Plug and Play
+[2024-03-07 10:41:35] Lucas Alberto: Vou tentar usar
+[2024-03-07 10:44:27] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29966.jpg
+[2024-03-07 10:44:27] Pedro de Medeiros 👾: Eu não acho isso feio.
+[2024-03-07 10:45:55] Lucas Alberto: vdd, ela é excêntrica kskskks
+[2024-03-07 11:00:32] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29968.jpg
+[2024-03-07 11:00:32] Lucas Alberto: Funfou ❤️
+[2024-03-07 11:11:01] Felipe "Juca" Sanches: isso é lindo demais!
+[2024-03-07 12:12:34] Lord Spy: Vulkan é a resposta da Khronos para o Metal... existe uma API/Camada de compatibilidade, mas Vulkan não é bolinho... adiciona uma pancada de complexidades em baixo da OpenGL
+[2024-03-07 14:21:56] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29971.jpg
+[2024-03-07 14:21:56] Lucas Alberto: Mais Pc velho pra gente mexer
+[2024-03-07 14:22:10] Lucas Alberto: @fsanches qual software vc usa pra scannear?
+[2024-03-07 14:57:50] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29973.jpg
+[2024-03-07 14:57:50] Lucas Alberto: O micro computador da UFRJ tinha até uma sessão sobre a deflexão do monitor
+[2024-03-07 14:57:55] Lucas Alberto: 🤯
+[2024-03-07 15:00:49] L.: Tem até seção pra pita 🫓
+[2024-03-07 15:03:23] Lucas Alberto: KKKKKK
+[2024-03-07 15:03:53] Lucas Alberto: 📼 pitinha
+[2024-03-07 15:08:52] Shideravan: É "pita" ou "fita"? Eu estou feliz do i estar bem visível kkkkkkkkkkkkkkkkkkk
+[2024-03-07 15:10:05] L.: É fita mas eu já tô pensando no almoço aqui
+[2024-03-07 15:10:17] Lucas Alberto: KKKKKK
+[2024-03-07 15:10:28] Lucas Alberto: É fita mesmo 🤣
+[2024-03-07 15:21:08] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29982.jpg
+[2024-03-07 15:21:08] Lucas Alberto: Wow, olha a placa da deflexão
+[2024-03-07 15:25:04] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29983.jpg
+[2024-03-07 15:25:04] Lucas Alberto: Cheguei na pita
+[2024-03-07 15:30:09] Shideravan: Que pitão
+[2024-03-07 15:40:53] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29985.jpg
+[2024-03-07 15:43:40] L.: ainda bem que a Nintendo não tá interessada em pitararia 🫓
+[2024-03-07 16:20:11] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29987.jpg
+[2024-03-07 16:20:11] Lucas Alberto: Quando tem uma documentação da Intel no meio das outras é que tá ficando bom
+[2024-03-07 16:21:14] Leonardo Roman: Que computador é esse?
+[2024-03-07 16:21:43] Lucas Alberto: Sde-40,
+[2024-03-07 16:21:48] Lucas Alberto: A UFRJ que fez
+[2024-03-07 16:22:04] Lucas Alberto: Primeiro micro computador 100% Br
+[2024-03-07 16:22:53] Leonardo Roman: Que legal. Esse não ouvi falar. Vai rolar uns scans disso né 😀
+[2024-03-07 16:23:15] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29993.jpg
+[2024-03-07 16:23:22] Lucas Alberto: Tô aqui sacaneando
+[2024-03-07 16:23:28] Lucas Alberto: Escaneando**
+[2024-03-07 16:40:59] Leonardo Roman: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29996.jpg
+[2024-03-07 16:40:59] Leonardo Roman: Falando em jabuticabas, estou com uns manuais do SOX pra escanear.
+[2024-03-07 16:45:08] Lucas Alberto: WOW
+[2024-03-07 16:45:11] Lucas Alberto: É da cobra ?
+[2024-03-07 16:45:51] Lucas Alberto: Fala q vc tem o código-fonte tbm 😍
+[2024-03-07 16:51:31] L.: geeente
+[2024-03-07 16:55:48] Leonardo Roman: Sim, o Unix da Cobra. Infelizmente acho que não se conhece nenhuma cópia dele hoje em dia.
+[2024-03-07 16:59:45] Lucas Alberto: 😢
+[2024-03-07 17:17:14] L.: Tem uma tese de doutorado falando sobre ele e todos os esforços da autora de localizar uma cópia desse negócio. Todas foram em vão. Tem-se alguma documentação e até relatório de viagem quando povo foi até a At&t falar sobre compatibilidade Unix e tal
+[2024-03-07 17:17:45] L.: Uma pena mesmo que isso não sobreviveu, eu tenho muita curiosidade de ver isso aí de perto
+[2024-03-07 17:21:24] Lucas Alberto: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30005-sticker.webp
+[2024-03-07 17:21:33] Lucas Alberto: Isso é triste demais
+[2024-03-07 17:21:51] Lucas Alberto: Não consegui escanear tudo :c foram 140 páginas
+[2024-03-07 17:22:03] Lucas Alberto: Depois vou lá para escanear mais
+[2024-03-07 18:02:50] Giga: Incrível! Me interessei bastante nisso
+[2024-03-07 18:41:41] Lucas Alberto: Eu cheguei em casa agora
+[2024-03-07 18:41:46] Lucas Alberto: Não consegui escanear tudo
+[2024-03-07 18:41:52] Lucas Alberto: Semana q vem vou lá pra continuar
+[2024-03-07 18:41:57] Lucas Alberto: Mas já tenho mais da metade
+[2024-03-07 18:43:02] Giga: Que maravilha! Vi que se trata de um Z80
+[2024-03-07 18:43:24] Giga: Seria show reconstruir este computador
+[2024-03-07 18:43:59] Giga: Acho que não cheguei compartilhar com vocês, meu último projeto com Z80
+[2024-03-07 18:44:15] Lucas Alberto: Pelo q me falaram, ele tem 3 versões,
+
+Com 8008, 8080 e z80
+[2024-03-07 18:44:54] Lucas Alberto: O Pc que tem lá no museu é o primeiro protótipo com 8008
+[2024-03-07 18:45:15] Giga: Incrível! Eu tenho uns 8080 aqui, original da época, porém fabricados pela AMD
+[2024-03-07 18:45:29] Giga: Já o 8008 é o Santo Graal
+[2024-03-07 18:45:35] Giga: Nunca vi um a venda
+[2024-03-07 18:45:57] Lucas Alberto: Tem um lá dentro da máquina XD
+[2024-03-07 18:46:09] Lucas Alberto: E eles deixaram eu mexer no hardware.
+[2024-03-07 18:46:17] Lucas Alberto: Ksksk mas só vou fazer isso depois
+[2024-03-07 18:46:17] Giga: O derradeiro kkkk
+[2024-03-07 18:46:30] Giga: Que massa
+[2024-03-07 18:46:41] Giga: Queria ter contato com essas coisas
+[2024-03-07 18:47:28] Giga: O que não consigo ter, eu construo para diminuir a ansiedade 😆
+[2024-03-07 18:47:55] Lucas Alberto: A ansiedade já me fez cometer muitos erros de construção kskskskskskks
+[2024-03-07 18:50:13] Giga: Coisa simples, que aos poucos estou dando forma
+[2024-03-07 18:50:19] Giga: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30031-IMG_1604.MOV
+[2024-03-07 18:50:24] Giga: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30032-IMG_1968.MOV
+[2024-03-07 18:50:24] Giga: Este é o meu atual legado com Z80
+[2024-03-07 18:51:09] Giga: Nem me fale kkkkkkkk eu faço correndo já pensando no próximo, corrigindo o que errei no atual kkkkkkkkk
+[2024-03-07 18:51:27] Lucas Alberto: Nossa !! Que maneiro
+[2024-03-07 18:51:36] Lucas Alberto: Quero arrumar um z80 pra fazer isso
+[2024-03-07 18:52:16] Giga: Tô empenhado em realizar este 😁 gratidão
+[2024-03-07 18:52:48] Giga: Eu comprei este na Shopee, funcionou
+[2024-03-07 18:53:09] Giga: Foi R$10, se não me engano
+[2024-03-07 18:55:03] Giga: Esse displays que aparece no vídeo será um terminal octal, com teclado, tudo em TTL, nada de PIC. Ele ficará do lado de fora e será conectado neste conector do segundo vídeo
+[2024-03-07 19:37:30] Lucas Alberto: Esse documento que eu escannei tem justamente um teclado
+[2024-03-07 19:37:32] Lucas Alberto: Em ttl
+[2024-03-07 19:44:43] Lucas Alberto: Eu ainda não escanei tudo
+[2024-03-07 19:44:49] Lucas Alberto: Então ainda não vou subir o pdf
+[2024-03-07 19:44:56] Lucas Alberto: Mas posso deixar a primeira parte aqui
+[2024-03-07 19:55:33] Lucas Alberto: document: (not yet published)
+[2024-03-07 20:46:49] Giga: Wow que massa
+[2024-03-07 20:55:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30047.jpg
+[2024-03-07 20:55:36] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30048.jpg
+[2024-03-07 20:55:51] Felipe "Juca" Sanches: 16kbytes em EPROM
+[2024-03-07 20:55:59] Felipe "Juca" Sanches: 2708 ou 2716
+[2024-03-07 20:59:34] Felipe "Juca" Sanches: Dá pra fazer o dump usando o MiniPro TL866cs
+[2024-03-07 21:01:04] Felipe "Juca" Sanches: Se o chip de EPROM estiver em soquete, é sucesso!
+[2024-03-07 21:01:32] Felipe "Juca" Sanches: Aí a gente escreve juntos um driver pro MAME
+[2024-03-07 21:07:17] Lucas Alberto: Felipe já está espiando o arquivo 👀
+[2024-03-07 21:15:24] Lucas Alberto: Pessoal, vcs que estão lendo o PDF, se acharem alguma pagina que está +/-, me fala para eu re-escanear,
+[2024-03-07 23:18:14] RicBit: o trem azul é um capacitor?
+[2024-03-07 23:23:52] L.: é uma lata de refri

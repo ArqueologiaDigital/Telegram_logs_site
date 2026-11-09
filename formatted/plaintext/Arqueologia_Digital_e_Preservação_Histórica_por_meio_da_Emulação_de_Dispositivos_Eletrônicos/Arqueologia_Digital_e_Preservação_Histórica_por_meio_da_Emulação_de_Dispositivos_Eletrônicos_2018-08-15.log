@@ -1,0 +1,96 @@
+[2018-08-15 14:45:55] Affonso Amendola: Hey guys
+[2018-08-15 14:46:32] Affonso Amendola: Eu peguei um multimetro e comecei a mecher no chip h12 do tk3000
+[2018-08-15 14:46:59] Affonso Amendola: A principio so queria ver as voltagem nele, pra tentar entender o que ta acontecendo
+[2018-08-15 14:47:29] Affonso Amendola: E olha só o que acontece quando eu encostei no pino 6
+[2018-08-15 14:47:34] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7087.jpg
+[2018-08-15 14:48:01] Affonso Amendola: Da otra vez que eu tentei ele apagou o um dos leds
+[2018-08-15 14:48:11] Affonso Amendola: E mudou o caractere de cedilha pra [
+[2018-08-15 14:48:16] Affonso Amendola: Mas n fez mais nada
+[2018-08-15 14:51:54] Felipe "Juca" Sanches: o que é o chip h12 ?
+[2018-08-15 14:52:10] Felipe "Juca" Sanches: TTL? família 74?
+[2018-08-15 14:53:25] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7093.jpg
+[2018-08-15 14:53:35] Affonso Amendola: É esse bem do meio
+[2018-08-15 14:53:51] DQ: Sinal que é problema no teclado, o BASIC está processando direitinho a tecla doida que você gerou.
+[2018-08-15 14:54:45] Affonso Amendola: To suspeitando do cabo, vo trocar por um flat de 34 pinos de disquete
+[2018-08-15 14:54:53] Affonso Amendola: Tomando cuidado com a voltinha
+[2018-08-15 14:55:16] Felipe "Juca" Sanches: 74LS2598 ?!
+[2018-08-15 14:55:22] Felipe "Juca" Sanches: ou eu li errado?
+[2018-08-15 14:56:07] Felipe "Juca" Sanches: acho que é esse: https://pdf1.alldatasheet.com/datasheet-pdf/view/51061/FAIRCHILD/74LS259.html
+[2018-08-15 14:56:48] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7101.jpg
+[2018-08-15 14:56:55] Felipe "Juca" Sanches: vou ver se tem um desses no Garoa...
+[2018-08-15 14:57:00] Felipe "Juca" Sanches: pra você trocar
+[2018-08-15 14:59:07] Felipe "Juca" Sanches: o bom é que é soquetado, né?
+[2018-08-15 14:59:20] Felipe "Juca" Sanches: tira ele do soquete e limpa os contatos e bota de volta
+[2018-08-15 15:00:36] Felipe "Juca" Sanches: mas às vezes o próprio soquete está ruim, falhando os contatos. Aí seria o caso de remover esse soquete e soldar no lugar um soquete novo
+[2018-08-15 15:01:10] Affonso Amendola: Oookay, veremos
+[2018-08-15 15:01:19] Affonso Amendola: (N era o cabo
+[2018-08-15 15:01:28] DQ: Você não encostou no pino 5 ao invés do 6?
+[2018-08-15 15:01:47] Affonso Amendola: Mas eu vo deixar com esse novo mesmo, o otro ta bem fodidinho
+[2018-08-15 15:01:52] DQ: Tenho a impressão que o pino 5 é a indicação de tecla pressionada.
+[2018-08-15 15:01:52] Affonso Amendola: Possivel
+[2018-08-15 15:02:22] DQ: Você consegue ver o que é o H6 ?
+[2018-08-15 15:02:53] Affonso Amendola: H6 é isso aqui
+[2018-08-15 15:03:02] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7115.jpg
+[2018-08-15 15:03:33] Affonso Amendola: Vo fazer o teste denovo garantindo que eu to pegando no 6
+[2018-08-15 15:05:37] DQ: Putz, este aí é um chip custom de I/O: https://pt.wikipedia.org/wiki/TK3000_IIe
+[2018-08-15 15:06:27] Affonso Amendola: Hmmm eu vou tirar ambos. Dar uma limpada nos contatos e ver o que aconyece
+[2018-08-15 15:08:20] DQ: Se eu li direito, o pino 5 do H12 vai no pino RKD do H6. Meu chute é que ele indica que foi lida uma tecla. Quando você acionou com o multímetro ele se comportou como se uma tecla 0xFF (ou 0x7F ?) estivesse apertada o tempo todo.
+[2018-08-15 15:09:42] Affonso Amendola: Ele se comportou como se uma tecla tivesse pressionada sempre
+[2018-08-15 15:09:56] Affonso Amendola: Era um *
+[2018-08-15 15:10:43] DQ: Pareceu mais um bloco que um asterisco, por isso chutei 0xFF  ou 0x7F
+[2018-08-15 15:11:47] Affonso Amendola: Justo
+[2018-08-15 15:12:41] Affonso Amendola: Eu nunca vi os caracteres do tk, entao n sei se era mesmo um asterico ou algum otro simbolo bugado
+[2018-08-15 15:17:39] Affonso Amendola: E se eu roda sem o teclado e forcar umas teclas na mao
+[2018-08-15 15:18:16] Affonso Amendola: So pra ver se o problema é do lado da placa ou do lado do teclado
+[2018-08-15 15:18:23] Affonso Amendola: Eu imagino ser do lado do teclado
+[2018-08-15 15:18:28] Affonso Amendola: Mas n tenho certeza
+[2018-08-15 15:22:47] Affonso Amendola: Por exemplo, algumas coisas funcionam, tipo ctrl bola cheia resey
+[2018-08-15 15:22:50] Affonso Amendola: Mas otras nao
+[2018-08-15 15:31:21] Affonso Amendola: Ooookay, n faço ideia do que eu fiz, but
+[2018-08-15 15:31:27] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7132.jpg
+[2018-08-15 15:33:13] Felipe "Juca" Sanches: aha!
+[2018-08-15 15:33:37] Felipe "Juca" Sanches: mas lembre-se da máxima: "se você não consertou, ainda está quebrado"
+[2018-08-15 15:34:06] Affonso Amendola: Yup
+[2018-08-15 15:34:12] Affonso Amendola: Mas n funciona ainda
+[2018-08-15 15:34:18] Affonso Amendola: So apareceu essa mensagem
+[2018-08-15 15:34:23] Affonso Amendola: Teclado ainda n faz nada
+[2018-08-15 15:34:34] Affonso Amendola: E resetando e fazendo a mesma coisa que eu fiz n da na mesma
+[2018-08-15 15:34:52] Affonso Amendola: Entao foi alguma cagada n deu muito ruim
+[2018-08-15 16:03:28] DQ: Você entrou no monitor.
+[2018-08-15 16:04:47] Ricardo Bánffy: Parece ter tentado rodar algo no firmware sa placa no slot 2 (0xC2xx).
+[2018-08-15 16:05:01] Ricardo Bánffy: Em termos de Apple, eu devia falar $c2d2
+[2018-08-15 16:05:22] Ricardo Bánffy: De repente tirar a placa, se ela estiver no slot
+[2018-08-15 16:05:42] Ricardo Bánffy: No 2 costumava ter uma serial ou um modem.
+[2018-08-15 16:14:17] Affonso Amendola: Weeeelll
+[2018-08-15 16:14:20] Affonso Amendola: Aí que ta
+[2018-08-15 16:14:24] Affonso Amendola: N tem nada no slot 2
+[2018-08-15 16:25:42] Affonso Amendola: Se eu dou um curto no pino 33 e no 3 do header do teclado, eu o ç vira ]
+[2018-08-15 16:26:19] Affonso Amendola: Se eu dou um curto no 33 e no 24(?) ele entra no monitoro
+[2018-08-15 16:26:48] Felipe "Juca" Sanches: cara... vc se arrisca dando curtos assim
+[2018-08-15 16:28:08] Affonso Amendola: Eu prestei atencao
+[2018-08-15 16:28:25] Affonso Amendola: Eu so to tentando nos pinos que fecham no teclado
+[2018-08-15 16:28:41] Affonso Amendola: Na real é so uma simulaçao do que o teclado faz
+[2018-08-15 16:28:46] Felipe "Juca" Sanches: legal
+[2018-08-15 16:29:13] Affonso Amendola: Com isso eu tenho quase certeza que n é na placa mae
+[2018-08-15 16:35:06] Affonso Amendola: Well, nevermind
+[2018-08-15 16:35:30] Affonso Amendola: Fechando o 18 e o 33, que seria o equivalente de apertar o botao mode, nada acontece
+[2018-08-15 16:36:04] Affonso Amendola: Apertar o mode é o que deveria trocar ç por ]
+[2018-08-15 16:36:06] Affonso Amendola: Nao?
+[2018-08-15 16:36:08] Felipe "Juca" Sanches: ainda acho bom vocë substituir aquele TTL
+[2018-08-15 16:36:22] Felipe "Juca" Sanches: o 74LS259
+[2018-08-15 16:36:28] Affonso Amendola: Maybe
+[2018-08-15 16:36:39] Felipe "Juca" Sanches: sim, talvez
+[2018-08-15 16:36:41] Felipe "Juca" Sanches: 😊
+[2018-08-15 16:38:14] Affonso Amendola: Na verdade essa parte ta em otros chips
+[2018-08-15 16:38:32] Affonso Amendola: Acho que o pino 18 é esse aqui no esquematico
+[2018-08-15 16:38:43] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7168.jpg
+[2018-08-15 16:39:25] Affonso Amendola: E ele vai pro z80, pro h13, pro f12 e pro e13
+[2018-08-15 16:39:30] Affonso Amendola: N sei qual entra em qual
+[2018-08-15 16:41:13] Affonso Amendola: N to conseguindo interpretar direito o que vai pra onde
+[2018-08-15 19:03:54] Ronaldo: Se você está tentando ativamente consertar esse TK3000, Affonso, pode ser interessante entrar no grupo de Apple II do Telegram, mesmo que temporariamente.
+[2018-08-15 19:04:13] Ronaldo: Fica o aviso, o pessoal fala bastante bobagem nesses grupos
+[2018-08-15 19:05:30] Ronaldo: Se vocês se preocupam com preservação histórica pode ser o caso de não condenar a peça original, a não ser em caso de necessidade
+[2018-08-15 19:06:35] Affonso Amendola: Ahh, eu vou deixar o cabo original junto
+[2018-08-15 19:06:55] Ronaldo: 👍
+[2018-08-15 20:39:31] Leonardo Roman: Segue o link do grupo de Apple 2
+[2018-08-15 20:39:32] Leonardo Roman [forwarded]: https://t.me/joinchat/Bmf3Dz9IDdPm2UBXp2EGdA

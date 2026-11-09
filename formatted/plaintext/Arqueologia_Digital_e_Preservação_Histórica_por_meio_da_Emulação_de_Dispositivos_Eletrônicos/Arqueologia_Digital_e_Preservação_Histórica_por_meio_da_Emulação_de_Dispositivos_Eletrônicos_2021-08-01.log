@@ -1,0 +1,142 @@
+[2021-08-01 01:09:09] * Felipe "Juca" Sanches added Augusto Almeida
+[2021-08-01 01:59:32] Augusto Almeida: Opa
+[2021-08-01 01:59:38] Augusto Almeida: Boa noite pessoal
+[2021-08-01 01:59:50] Felipe "Juca" Sanches: Boa!
+[2021-08-01 02:00:27] Augusto Almeida: Patinho feio logo de cara!
+[2021-08-01 02:01:01] Felipe "Juca" Sanches: Pelo timing da mensagem, aposto que você tava assistindo jogo de vôlei ;-)
+[2021-08-01 02:01:11] Augusto Almeida: Exato kkkkkk
+[2021-08-01 02:01:26] Felipe "Juca" Sanches: Que jogo fenomenal!!!
+[2021-08-01 02:01:33] Augusto Almeida: Na verdade isso é planejando as aulas da semana
+[2021-08-01 02:01:47] Augusto Almeida: Foi sofrido mesmo!
+[2021-08-01 02:01:58] Felipe "Juca" Sanches: Acho que você vai curtir esse grupo aqui
+[2021-08-01 02:02:41] Augusto Almeida: Certeza!
+[2021-08-01 02:02:52] Felipe "Juca" Sanches: Tô fazendo o relato passo a passo dos experimentos aqui com o teclado Technics kn5000
+[2021-08-01 02:02:52] Augusto Almeida: Obrigado por me adicionar!
+[2021-08-01 02:03:26] Augusto Almeida: Ah Boa!
+[2021-08-01 02:38:45] Erin Pinheiro 🐿: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13834.mp4
+[2021-08-01 02:44:59] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13836.jpg
+[2021-08-01 02:56:06] L.: Barulhento mas animal!
+[2021-08-01 02:57:08] Erin Pinheiro 🐿: super :D
+[2021-08-01 02:57:18] Erin Pinheiro 🐿: (os dois, barulhento e animal)
+[2021-08-01 02:58:27] Erin Pinheiro 🐿: Panasonic Penwriter RK-P400C, ontem chegaram as canetas de reposição dela e hoje consegui fazer um conversor de SVG pros comandos serial dela (que não seguem nenhum outro padrão de plotter que eu conheça)
+[2021-08-01 10:05:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13841.jpg
+[2021-08-01 10:05:52] Felipe "Juca" Sanches: OK... se eu tivesse prestado um pouco mais de atenção, eu poderia ter visto já que no esquemático, o controlador de LCD tem alguns sinais com nomes como "VGA.IOCS" (Chip Select de I/O da VGA)
+[2021-08-01 10:24:48] Augusto Almeida: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13842-AnimatedSticker.tgs
+[2021-08-01 10:25:00] Augusto Almeida: Interessante!
+[2021-08-01 10:37:44] Felipe "Juca" Sanches: aqui tem uma linha ld XDE, 0x00170000. 
+
+A esse valor é somado o número da porta, no caso desse exemplo, temos as portas 3c4 e 3c5 da VGA.
+
+Então isso significa que é feita uma escrita de um valor no endereço 0x1703c4 da memória quando se quer fazer uma operaćão de escrita na porta de i/o 3c4 do controlador VGA
+[2021-08-01 10:39:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13845.jpg
+[2021-08-01 10:39:31] Felipe "Juca" Sanches: Nessa parte aqui do esquemático podemos ver que é desse decoder que saem alguns sinais de chip-select
+[2021-08-01 10:39:53] Felipe "Juca" Sanches: Um deles é o VGA.IOCS, que fica ativo quando a saída do decoder for 7
+[2021-08-01 10:40:18] Felipe "Juca" Sanches: e a entrada do decoder são os bits 16, 17 e 18 do barramento de endereços da CPU
+[2021-08-01 10:40:40] Felipe "Juca" Sanches: fazendo a nossa matemática... tudo se encaixa!
+[2021-08-01 10:40:45] L.: LOL, tá até no manual de serviço que é VGA😂
+[2021-08-01 10:40:57] Felipe "Juca" Sanches: affff
+[2021-08-01 10:41:22] Felipe "Juca" Sanches: é muita informação, às vezes a gente não vê coisas óbvias
+[2021-08-01 10:42:21] Felipe "Juca" Sanches: no valor 0x170000 esse 7 corresponde justamente aos bits 16, 17 e 18
+[2021-08-01 10:45:19] Felipe "Juca" Sanches: outra condição para esse VGA.IOCS estar ativo é o próprio decoder estar ativo. E isso acontece quando o input /CS3 do decoder for LOW. Esse pino tá ligado ao output /CS1 da CPU que é mapeado programaticamente a alguma faixa de enderećos.
+
+Concluimos então que o firmware do teclado mapeia o seu Chip Select número 1 no bloco de memória 0x100000
+[2021-08-01 10:49:49] Felipe "Juca" Sanches: as outras saídas daquele decoder e seus respectivos mapeamentos em memória são:
+
+* PPIFCS (Chip Select para uma porta paralela que fica junto à placa de expansão para disco-rígido opcional - não tem no meu 😞) 0x160000
+* FDCCS (controlador de disquete) 0x110000
+* DMA Ack do floppy em 0x120000
+* HDDCS (controlador de disco rígido - opcional) 0x130000
+[2021-08-01 10:50:15] Felipe "Juca" Sanches: já dá pra começar a implementar um sistema operacional kkkk
+[2021-08-01 10:59:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13856.jpg
+[2021-08-01 10:59:02] Felipe "Juca" Sanches: Esse diagrama de blocos disponível no service manual frusta minha esperança de fazer um dump da ROM de boot a partir da CPU principal, pois vejo que essa ROM fica inacessível, pois está em um barramento completamente independente. Só a própria CPU de boot (chamada de SUB-MICROCOMPUTER no diagrama) tem acesso a essa ROM (IC30 - 1MBit MASK ROM)
+[2021-08-01 10:59:59] Felipe "Juca" Sanches: só vai rolar ler essa ROM direto do chip mesmo
+[2021-08-01 11:01:36] Felipe "Juca" Sanches: ou se tiver alguma particularidade no protocolo de comunicação entre as duas CPUs (por meio daqueles 2 flip-flops alí no meio) que permita delegar leituras
+[2021-08-01 11:03:17] Felipe "Juca" Sanches: não tá claro ainda pra mim se a CPU principal troca por ali apenas comandos e respostas para a CPU secundária. Ou se consegue também consegue manipular dados no barramento secundario por esse mecanismo
+[2021-08-01 11:06:23] Felipe "Juca" Sanches: os dois DSPs assim como o tone generator estão pendurados na sub-cpu, ou seja, não é uma CPU só de boot, não. É realmente uma CPU que faz um trabalho pesado durante operação do teclado coordenando a geracao de som pra aliviar a CPU principal que acho que deve ficar mais dedicada ao gerenciamento de "aplicação" (leia-se: cuidando da interface de usuário, tela, painel de botoes, disquete, etc).
+[2021-08-01 11:11:28] Augusto Almeida: True
+[2021-08-01 11:16:13] Augusto Almeida: Se ela não tiver algum fusível de proteção contra leitura, sim, essa é a forma mais "fácil". Caso contrário teria que criar um código pra rodar antes do bootstrap (como os modchips fazem), e fazer um dump da ROM pra alguma região de memória ou arquivo em algum lugar (SD, PENDRIVE, USB HOST,...)
+[2021-08-01 11:33:18] Felipe "Juca" Sanches: então... justamente essa leitura pra algum lugar que acho que é impossível, pois a CPU principal nem sequer tem acesso ao barramento da ROM da outra CPU
+[2021-08-01 11:34:53] Felipe "Juca" Sanches: É uma mask rom com uma interface de pinos de enderecos e de dados que posso usar pra ler como se o leitor de eprom fosse a própria CPU
+[2021-08-01 11:35:14] Felipe "Juca" Sanches: (mas no caso não é uma eprom, é mask rom)
+[2021-08-01 11:36:03] Felipe "Juca" Sanches: eu preciso tomar coragem pra ler essa ROM a partir de um chip que tenho aqui dessoldado da placa-mãe de um outro teclado desse mesmo modelo
+[2021-08-01 11:36:36] Felipe "Juca" Sanches: mas não quero me afobar e acabar fazendo merda
+[2021-08-01 11:36:44] Felipe "Juca" Sanches: então tá guardado pra depois
+[2021-08-01 11:37:25] Felipe "Juca" Sanches: é como as rochas lunares que estão há 50 anos guardadas esperando termos tecnologia para analizá-las em momento mais oportuno :-P
+[2021-08-01 11:38:40] Felipe "Juca" Sanches: por exemplo, eu acho que não tenho o adaptador correto pra essa ROM IC30 ainda. Precisaria descobrir qual é o adaptador e qual aparelho é capaz de fazer a leitura
+[2021-08-01 11:43:36] Felipe "Juca" Sanches: Olha que coisa doida! O service manual me diz que tem uma flash que contém "parte" do programa da SUB CPU. Sendo assim, esse é um caminho: alterar esse programa da subcpu pra fazer o dump de sua própria rom de boot e transmitir esse dump para a cpu principal por meio dos flip-flops e, por sua vez fazer a cpu principal salvar em disquete uma cópia da ROM. Affff.... isso vai dar um trabalho!
+[2021-08-01 11:44:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13872.jpg
+[2021-08-01 11:44:17] Felipe "Juca" Sanches: aqui está a parte do service manual que fala isso.
+[2021-08-01 11:52:49] Augusto Almeida: Tem que ser por outra com ram pra ela, tipo um 68000, porque Z80 só acessa 64KB por vez
+[2021-08-01 11:53:09] Augusto Almeida: Sensato
+[2021-08-01 11:54:11] Augusto Almeida: O bootstrap pode estar ali
+[2021-08-01 11:56:56] Felipe "Juca" Sanches: a parte principal do bootstrap tá em ROM com certeza. Mas acho que um segundo estágio do bootstrap pode estar mesmo nessa outra flash
+[2021-08-01 13:57:14] Augusto Almeida: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13877-AnimatedSticker.tgs
+[2021-08-01 14:20:07] Felipe "Juca" Sanches: olha aqui o módulo opcional de disco rígido: http://www.keysoftservice.ch/hdae5000-e.htm
+[2021-08-01 14:28:51] Augusto Almeida: Pó HD de 1GB hoje em dia é osso de achar, funcionando, é mais fácil um Micro SD de 8GB com adaptador pra SATA ou IDE
+[2021-08-01 14:29:40] Felipe "Juca" Sanches: osso de achar mesmo hoje em dia é esse módulo opcional aí. Acho que pouca gente teve.
+[2021-08-01 14:33:01] Erin Pinheiro 🐿: https://github.com/Lana-chan/pypenwriter
+[2021-08-01 14:33:13] Erin Pinheiro 🐿: do meu código de ontem
+[2021-08-01 14:44:20] L.: Com relação à cor: se fizer múltiplos traços com canetas diferentes, é possível fazer outros tons, ou a caneta seca rápido o suficiente pra isso ser inviável?
+[2021-08-01 14:45:01] Erin Pinheiro 🐿: a caneta da penwriter (e de toda plotter ALPS) é tipo uma micro-esferográfica
+[2021-08-01 14:45:26] Erin Pinheiro 🐿: não sei se essa tinta solúvel a água faz esse tipo de mesclagem
+[2021-08-01 14:45:29] Erin Pinheiro 🐿: é tipo usar uma bic mesmo
+[2021-08-01 14:50:53] L.: Entendi
+[2021-08-01 14:51:07] L.: Talvez seja possível fazer tracejado com cores diferentes
+[2021-08-01 14:51:24] L.: Ou linhas próximas (provavelmente mais fácil inclusive)
+[2021-08-01 14:51:47] L.: Só pensando alto aqui na possibilidade artística 😅
+[2021-08-01 14:52:11] Erin Pinheiro 🐿: se você configurar direitinho o svg talvez dê
+[2021-08-01 14:52:17] Erin Pinheiro 🐿: no momento tô só brincando com lineart mesmo
+[2021-08-01 14:52:43] Erin Pinheiro 🐿: essas canetas são chatas de achar, consegui comprar 3 kits new-old stock de um revendedor atari
+[2021-08-01 14:52:53] Erin Pinheiro 🐿: (pq a plotter da atari 1020 é o mesmo mecanismo ALPS)
+[2021-08-01 14:53:10] L.: Ah, são originais. Não conseguiu adaptar esferográfica comum? :(
+[2021-08-01 14:53:17] Erin Pinheiro 🐿: (várias plotters de computadores pessoas da década de 80 são, inclusive umas japonesas de MSX)
+[2021-08-01 14:53:22] Erin Pinheiro 🐿: até deve dar, mas eu desisti
+[2021-08-01 14:53:33] Erin Pinheiro 🐿: muita sujeira e quase nenhum resultado
+[2021-08-01 14:53:41] L.: Uma pena por que aí limita demais a vontade de usar
+[2021-08-01 14:53:48] Felipe "Juca" Sanches: ou implementar a rotina de desenhar SVG para renderizar com o tracejado sugerido pelo Lenandro. Seria tipo um dithering vetorial se entendi bem
+[2021-08-01 14:54:00] Erin Pinheiro 🐿: pra mim não, tô me divertindo ahuahahuh
+[2021-08-01 14:54:01] L.: Embora seja barulhento, parece divertido
+[2021-08-01 14:54:16] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13903.jpg
+[2021-08-01 14:54:16] Erin Pinheiro 🐿: olha o tamanho
+[2021-08-01 14:54:31] Felipe "Juca" Sanches: que fósforo gigante!
+[2021-08-01 14:54:57] L.: Isso, minha ideia era alterar o script pra fazer o tracejado, ou desenhar linhas paralelas, que deve ser mais fácil (só copiar a linha e botar offset)
+[2021-08-01 14:55:05] Erin Pinheiro 🐿: dá pra recarregar elas com tinta base d'água sim, eu quem quebrei todas as antigas tentando fazer isso (elas são super frágeis, ou pelo menos as originais dessa máquina eram, só vou tentar abrir as NOS quando secarem)
+[2021-08-01 14:55:18] Erin Pinheiro 🐿: então se você pegar uma dessas seca dá pra colocar tinta de qualquer cor
+[2021-08-01 14:55:23] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13908.jpg
+[2021-08-01 14:55:23] L.: Pra escala
+[2021-08-01 14:55:31] Felipe "Juca" Sanches: ah, agora sim!!!
+[2021-08-01 14:55:56] Erin Pinheiro 🐿: eu nem percebo muito mais, viu
+[2021-08-01 14:56:18] Erin Pinheiro 🐿: não é tão alto quanto no vídeo, acho
+[2021-08-01 14:56:50] L.: Eu sempre vejo galera do plottertwitter mandando coisa e penso em pegar uma. Eu sei que vou usar umas 4x e largar de canto, então nem compro
+[2021-08-01 14:57:02] Erin Pinheiro 🐿: o movimento é bem silencioso, o mais estrondoso é a barra atuadora que empurra as canetas pra desenhar no papel
+[2021-08-01 14:57:10] L.: (Não por que não ache legal, mas por que sou assim mesmo 😑)
+[2021-08-01 14:57:30] Erin Pinheiro 🐿: US$65 OBO https://www.ebay.com/itm/154488321599?hash=item23f838b63f:g:y9UAAOSwa6JgwmLS
+[2021-08-01 14:58:20] Erin Pinheiro 🐿: e na best electronics cada set de 4 canetas (4 cores ou 4 pretas) sai US$9.95
+[2021-08-01 14:58:33] Erin Pinheiro 🐿: e eu tenho um contato de missouri que disse que encontrou mais estoque
+[2021-08-01 14:58:45] Erin Pinheiro 🐿: de nada :)
+[2021-08-01 15:00:29] Erin Pinheiro 🐿: a minha eu achei no ML em estado de novo listada na categoria de som hi-fi
+[2021-08-01 15:14:51] L.: Vou fingir que não vi o link 😂
+[2021-08-01 15:15:55] L.: Parece um cara que pegou um Amiga 600 por R$3 num sucatão por que era "teclado velho sem cabo"😂
+[2021-08-01 15:20:27] Erin Pinheiro 🐿: eu acho que a categoria foi engano mesmo porque na listagem estava como "máquina de escrever"
+[2021-08-01 15:20:37] Erin Pinheiro 🐿: mas eu achei porque estava procurando um som pro meu quarto mesmo HUAEHUAHEUAEHUE
+[2021-08-01 15:22:07] L.: 😂
+[2021-08-01 15:23:21] L.: Eu já peguei um protótipo/TRS80 caseiro lá em Campinas e o vendedor disse que tinha máquina de escrever melhor, que tava com o gabinete inteiro e não "tava faltando peça" (tipo o cilindro pra botar papel)😂
+[2021-08-01 15:23:56] L.: Eu até sinto falta de ir nesses lugares pra pegar essas coisas por que esse tipo de coisa acontecia direto
+[2021-08-01 15:23:56] Erin Pinheiro 🐿: boa
+[2021-08-01 16:37:19] Felipe "Juca" Sanches: OK. Depois de fritar o cérebro por muitos dias seguidos, resolvi reinstalar no teclado seu firmware original e tocar uma música pra dar uma relaxadinha ;-D
+[2021-08-01 16:37:31] Felipe "Juca" Sanches: tudo funcionando perfeitamente
+[2021-08-01 16:38:08] Felipe "Juca" Sanches: música tocada, agora voltando à luta. Tenho mais uns testes pra fazer ainda hoje nesse bicho.
+[2021-08-01 16:39:17] Felipe "Juca" Sanches: pensei em algumas coisas divertidas como, por exemplo, injetar uns códigos pra configurar a VGA em modo texto e fazer um hex dump em tela kkkk
+[2021-08-01 17:29:33] Felipe "Juca" Sanches: video: (not yet published)
+[2021-08-01 17:30:10] Felipe "Juca" Sanches: primeiro bom resultado do dia: baguncei a paleta de cores 😉
+[2021-08-01 17:43:26] L.: Bota um microcontrolador por fora que deixa escolher a paleta de cores
+[2021-08-01 17:43:29] L.: 😅
+[2021-08-01 17:45:19] Felipe "Juca" Sanches: minha intuicao nesse momento é com essa observacao de um efeito colateral conhecido, conseguir achar um ponto no binário que possa ser útil como ponto de entrada pros meus códigos a serem injetados e que seja algo replicável, e não um endereço de memória qualquer que pode funcionar às vezes e não funcionar em outras vezes
+[2021-08-01 17:55:11] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13937.jpg
+[2021-08-01 17:55:26] Felipe "Juca" Sanches: caramba, que da hora!
+[2021-08-01 17:55:43] Erin Pinheiro 🐿: essa máquina de escrever NUNCA que foi feita pra isso
+[2021-08-01 17:56:03] Erin Pinheiro 🐿: isso foi um verdadeiro stress test tanto do meu script quanto da plotter hahaha
+[2021-08-01 19:10:15] L.: Quanto tempo demorou?
+[2021-08-01 19:12:12] Erin Pinheiro 🐿: uns 15 minutos
+[2021-08-01 19:14:05] L.: Razoável até.
+[2021-08-01 19:14:34] L.: Eu demoraria uns dias e provavelmente recomeçaria do zero umas vezes 😂

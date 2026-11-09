@@ -1,0 +1,87 @@
+[2018-07-26 10:04:45] Felipe "Juca" Sanches: https://github.com/felipesanches/PortableWumpus
+[2018-07-26 14:19:20] Affonso Amendola: Nice
+[2018-07-26 14:19:41] Felipe "Juca" Sanches: aceito pull requests
+[2018-07-26 14:20:00] Felipe "Juca" Sanches: tanto para portar para outras plataformas quando para melhorar os ports existentes ou corrigir bugs
+[2018-07-26 14:20:37] Felipe "Juca" Sanches: o port para Mega Drive só usa texto escrito em cor verde. Com certeza dá pra melhorar
+[2018-07-26 14:22:10] Deleted Account: Amanhã vou levar o Pense Bem pra adaptar uma fonte pra ele
+[2018-07-26 14:29:16] DQ: Se alguém gostar de BASIC, aqui tem uns jogos clássicos (não portáveis): https://github.com/dquadros/RC2014/tree/master/BASIC
+[2018-07-26 14:29:36] Felipe "Juca" Sanches: 😃
+[2018-07-26 14:30:30] Felipe "Juca" Sanches: foi bom mesmo você mencionar isso. O WumpusPortable é escrito em C, então só e viável portá-lo para plataformas para as quais a gente consiga compilar código C
+[2018-07-26 14:33:12] Felipe "Juca" Sanches: seria divertido ver uma versão para Auduino
+[2018-07-26 14:33:47] DQ: Uma das minhas frustrações do final dos anos 70 ao início dos anos 80 era ficar vendo listagens de jogos em revistas americanas e não ter um micro para rodar.
+[2018-07-26 14:34:24] Felipe "Juca" Sanches: e qual foi o micro que solucionou seu problema?
+[2018-07-26 14:34:28] Felipe "Juca" Sanches: algum da microdigital?
+[2018-07-26 14:37:08] Deleted Account: A minha era não ter idade nem dinheiro para comprar componentes para fazer montagens  que eu via nas revistinhas de Eletrônica
+[2018-07-26 14:38:49] DQ: Em termos. O meu primeiro micro foi um TK-82C (clone do ZX-81), mas ele é excêntrico demais para rodar facilmente programas feitos para outros micros. Teve alguns programas que eu rodei no trabalho (no MicroScopus, um micro CP/M). E, antes de tudo isto, eu converti dois programas para COBOL rodar rodar numa máquina esquisita chamada Cobra 400.
+[2018-07-26 14:39:16] DQ: Outro clássico que eu só rodei em 2013: https://dqsoft.blogspot.com/2013/11/raspberry-pi-oregon-trail.html
+[2018-07-26 14:40:19] Deleted Account: Vamos mexer nele amanhã?
+[2018-07-26 14:42:20] Felipe "Juca" Sanches: sim
+[2018-07-26 14:47:39] Deleted Account: legaaal
+[2018-07-26 15:45:48] * Felipe "Juca" Sanches added Luciana Marques
+[2018-07-26 15:47:05] Felipe "Juca" Sanches: @LucianaMarx te chamei aqui pra avisar que amanhã na atividade de programação para Mega Drive eu vou mostrar como fiz o setup do GCC para compilação cruzada para o processador Motorola 68k
+[2018-07-26 15:47:49] Felipe "Juca" Sanches: E mostrar um port pra Mega Drive que comecei a fazer do jogo "Hunt the Wumpus" originalmente implementado pelo Affonso para MSDOS / VGA
+[2018-07-26 15:48:47] Felipe "Juca" Sanches: vamos tentar melhorar o port, pois no momento está desenhando o campo de jogo usando caracteres de texto, mas em teoria daria para fazer um visual bem mais bonito com pequenos ícones, ao invés de caracteres de texto
+[2018-07-26 15:49:12] Felipe "Juca" Sanches: E também não tem som ainda
+[2018-07-26 15:49:36] Felipe "Juca" Sanches: Quem quiser já ir vendo o código, tá aqui nesse repo: https://github.com/felipesanches/PortableWumpus
+[2018-07-26 15:50:33] Felipe "Juca" Sanches: E pra fazer o setup do GCC basta clonar esse outro repo e rodar o script toolchain.sh: https://github.com/noname22/megadrive-gcc
+[2018-07-26 15:51:30] Felipe "Juca" Sanches: vai demorar um pouco por que esse script baixa o código fonte do GCC e alguns outros projetos relacionados (como o binutils) e inicia o processo de compilação do compilador 😊
+[2018-07-26 15:51:46] Felipe "Juca" Sanches: deve levar cerca de meia hora pra ter o toolchain pronto no seu GNU/Linux
+[2018-07-26 15:51:46] Luciana Marques: Valeu!!! 💜💜💜
+[2018-07-26 15:57:26] Felipe "Juca" Sanches: ah! E hoje chegou pelo correio o novo Mega Drive que eu comprei. Não é do modelo original. É o de 2017 da TecToy.
+[2018-07-26 15:57:34] Felipe "Juca" Sanches: em algumas diferenças no hardware...
+[2018-07-26 15:58:01] Felipe "Juca" Sanches: mas é o melhor a que eu tenho acesso no momento.
+[2018-07-26 16:52:08] Felipe "Juca" Sanches: Acabei de comprar mais um Mega Drive. Agora um original, placa-mãe modelo VA3. (100 reais + frete)
+[2018-07-26 16:53:28] Felipe "Juca" Sanches: acho que com isso estou bem de ferramentas para a atividade :-)
+[2018-07-26 16:53:43] Felipe "Juca" Sanches: daqui alguns dias vai chegar um cartucho everdrive
+[2018-07-26 17:38:30] DQ: Li alguma coisa a respeito de não existir mais o chip de Som e eles terem feito alguma gambiarra. Você tem mais informações?
+[2018-07-26 18:02:13] Felipe "Juca" Sanches: hoje em dia é um megadrive-on-a-chip cuja reimplementação do hardware está mal feita
+[2018-07-26 18:02:22] Felipe "Juca" Sanches: especialmente o chip de som tá com bugs feios
+[2018-07-26 18:02:53] Felipe "Juca" Sanches: as músicas tocam com um certo erro na frequencia das notas
+[2018-07-26 18:03:00] Felipe "Juca" Sanches: então fica tudo meio desafinado
+[2018-07-26 18:03:26] Felipe "Juca" Sanches: dá umas dissonancias de arreiar qualquer pessoa com o mínimo de noção em música
+[2018-07-26 18:03:42] Felipe "Juca" Sanches: mas parece que os leigos não ligam muito pois não sabem explicar exatamente o que está errado
+[2018-07-26 18:03:55] Felipe "Juca" Sanches: só que tá meio diferente
+[2018-07-26 18:04:17] Felipe "Juca" Sanches: mas eu acho realmente chato.Dá um embrulho no estômago ouvir a abertura de sonic 3, por exemplo
+[2018-07-26 18:42:12] Ronaldo: Mesmo depois das atualizações?
+[2018-07-26 18:42:52] Felipe "Juca" Sanches: eu ainda vou verificar se o meu precisa de atualização. Não tirei o checksum do firmware que tá no sd card do meu ainda pra saber se é o velho
+[2018-07-26 18:42:59] Ronaldo: Eu tenho um, usei muito pouco
+[2018-07-26 18:43:07] Felipe "Juca" Sanches: minha esperança é que as atualizações ajudem
+[2018-07-26 18:43:18] Felipe "Juca" Sanches: dos 10 cartuchos que tenho aqui, apenas uns 4 funcionaram
+[2018-07-26 18:43:21] Ronaldo: Se eu jogo, jogo direto em emulador
+[2018-07-26 18:43:23] Felipe "Juca" Sanches: o resto nem sequer roda
+[2018-07-26 18:43:35] Felipe "Juca" Sanches: e dos que rodam, a maioria dá som zoado
+[2018-07-26 18:44:10] Ronaldo: Isso também acontece com os originais, esses cartuchos estão velhos e com os contatos oxidados
+[2018-07-26 18:44:17] Felipe "Juca" Sanches: comprei os 2 megadrives por conta de querer fazer a atividade no Garoa com hardware de verdade
+[2018-07-26 18:44:33] Felipe "Juca" Sanches: confesso que comprei o novo da tectoy por cagada achando que era o original
+[2018-07-26 18:44:56] Felipe "Juca" Sanches: e depois acabei comprando um outro, mas me assegurando que é o hardware da década de 90
+[2018-07-26 18:45:19] Ronaldo: Eu tenho uns 12 jogos de Mega, acho que uns seis não funcionam no videogame original
+[2018-07-26 18:46:24] Ronaldo: Os cartuchos, principalmente se eram de locadora, sofreram todo o tipo de mau uso
+[2018-07-26 18:46:51] Felipe "Juca" Sanches: o meus cartuchos foram todos comprados originais na caixa e usados só por mim mesmo
+[2018-07-26 18:47:01] Ronaldo: Hmm
+[2018-07-26 18:47:58] Ronaldo: Então é possível que estejam oxidados, se você ficou tanto tempo sem contato com Mega Drive pra confundir o novo com o hardware original
+[2018-07-26 18:49:29] Ronaldo: Alguns dos que eu tenho funcionaram depois de limpar os contatos
+[2018-07-26 20:11:31] Deleted Account: Algum emulador bom de MegaDrive para PC?
+[2018-07-26 20:12:05] Deleted Account: (Pra jogar)
+[2018-07-26 20:13:17] FTMaciel: Tem um cara no Facebook chamado Neto. O cara é o mestre em consoles da Sega. Inclusive fez muitas melhorias no sistema do mega drive novo.
+[2018-07-26 20:13:37] Felipe "Juca" Sanches: sim, conheço
+[2018-07-26 20:13:45] Felipe "Juca" Sanches: MAME
+[2018-07-26 20:13:53] Felipe "Juca" Sanches: mas eu sou suspeito pra falar hahaha
+[2018-07-26 20:13:59] Deleted Account: Além do MAME néé
+[2018-07-26 20:14:28] Felipe "Juca" Sanches: não sei dizer. Sei que tem, mas não conheço de perto
+[2018-07-26 20:18:18] FTMaciel: Eu tenho um mega drive clone muito bom. Daqueles fabricados na Malásia que vinham pelo Paraguai
+[2018-07-26 20:18:36] FTMaciel: Lembram?
+[2018-07-26 20:18:51] Felipe "Juca" Sanches: não conheço
+[2018-07-26 20:19:03] Felipe "Juca" Sanches: ATGames ?
+[2018-07-26 20:19:36] FTMaciel: Não. Atgames nem existia. Não eram aqueles chips goac
+[2018-07-26 20:19:45] Felipe "Juca" Sanches: ATGames é terrível. É exatamente a tecnologia que a TecToy comprou pronta pra esse megadrive-on-a-chip zoado
+[2018-07-26 20:20:13] Felipe "Juca" Sanches: goac = genesis-on-a-chip
+[2018-07-26 20:22:54] FTMaciel: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6596.jpg
+[2018-07-26 20:22:54] FTMaciel: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6597.jpg
+[2018-07-26 20:22:54] FTMaciel: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6598.jpg
+[2018-07-26 20:22:54] FTMaciel: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6599.jpg
+[2018-07-26 20:22:54] FTMaciel: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6600.jpg
+[2018-07-26 20:22:54] FTMaciel: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6601.jpg
+[2018-07-26 20:22:54] FTMaciel: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6603.jpg
+[2018-07-26 20:24:58] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6604-sticker.webp
+[2018-07-26 22:09:40] Affonso Amendola: Eu costumava usar o Gens
+[2018-07-26 22:10:08] Affonso Amendola: Mas faz tempo que eu n encosto nele

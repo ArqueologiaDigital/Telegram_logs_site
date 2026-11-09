@@ -1,0 +1,11 @@
+[2023-01-10 02:10:58] Felipe "Juca" Sanches: Finalmente empacotei o ExecTrace e publiquei no PyPI
+[2023-01-10 02:11:25] Felipe "Juca" Sanches: E passei a utilizá-lo no AnotherWorld_VMTools
+[2023-01-10 02:11:26] Felipe "Juca" Sanches: https://github.com/felipesanches/AnotherWorld_VMTools
+[2023-01-10 02:13:38] Felipe "Juca" Sanches: hoje documentei um pouco mais as labels de assets gráficos e de subrotinas do bytecode do Another World, de modo que o disasm que o AW-VMTools gera está um pouco mais legível (já dá pra entender o código que faz as animações do início do jogo quando o Professor Lester aparece dentro de um lago alienígena boiando junto ao console de seu laboratório de acelerador de partículas)
+[2023-01-10 02:14:27] Felipe "Juca" Sanches: @toymak3r, alguns anos atrás acho que você tava interessado em colaborar nesse projeto. Dá uma olhada lá nos meus últimos commits
+[2023-01-10 02:16:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25089.jpg
+[2023-01-10 02:16:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25090.jpg
+[2023-01-10 02:20:06] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25091.jpg
+[2023-01-10 02:20:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25092.jpg
+[2023-01-10 02:20:23] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25093.jpg
+[2023-01-10 04:25:26] Toy: Aeeeee

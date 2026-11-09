@@ -1,0 +1,37 @@
+[2026-08-02 04:36:12] Felipe "Juca" Sanches: por que raios esta frase está alí?
+[2026-08-02 11:14:10] Guilherme Ranoya: Quem tem esses 2 funcionando é o pessoal do https://www.homecomputermuseum.nl/en/
+E parece que quem tá fazendo o emulador no Mame são pessoas associadas a eles.
+
+Quem sabe se você entrar em contato com eles, eles se disponham a fotografar detalhadamente o painel e te mandar.
+[2026-08-02 12:45:52] Felipe "Juca" Sanches: vou aguardar. É possível que já estejam fazendo isso também. E no momento já tenho muito no meu prato. Mas daqui um tempo se não tiverem feito ainda, quando eu estiver menos atarefado mando um email
+[2026-08-02 13:31:43] L.: https://16-bits.org/ft2.php
+
+Clone do fast tracker 2 (tem do protracker também), em C e SDL2
+[2026-08-02 14:48:44] Leonardo Roman: O manual de treinamento mostra o painel completo em detalhes, dividido por setores. Só não está em cores: https://bitsavers.org/pdf/aesthedes/Aesthedes_Training_Manual.pdf
+[2026-08-02 19:22:00] RicBit: coloquei o treasure of usas para abrir
+[2026-08-02 19:22:16] RicBit: conclusão: sim, ele tem dois finais, mas não é o que você pensa
+[2026-08-02 19:23:22] RicBit: é gated pela região. na versão internacional, explode uma bomba atômica e mata todo mundo. na versão japonesa, também explode a bomba, mas depois tem uma carta explicando porque explodiu, e mostra os creditos (não tem creditos na versão intl).
+[2026-08-02 19:34:29] Macabeus: Fiquei sabendo que vai ter esse evento de retrogame em SP, nos dias 20/21/22 de Novembro.
+Comprei ingresso para ir no sábado.
+
+Alguém mais daqui tem planos de ir?
+
+https://www.sympla.com.br/evento/canal-3-expo-2026/3270295
+[2026-08-02 19:48:21] Felipe "Juca" Sanches: @macabeus compartilhei numa live de youtube minha pesquisa sobre o telebradesco ante-ontem ;-) Agora terei provas de que eu também descobri independentemente as telas, além do trabalho em paralelo do palestrante da GambiConf desse ano hahaha
+[2026-08-02 19:48:52] Felipe "Juca" Sanches: nessa live aqui 😂
+[2026-08-02 19:51:02] Érico Andrei: Eu estava planejando visitar eles agora em Setembro, mas mudei os planos de viagem.
+[2026-08-02 19:57:44] Felipe "Juca" Sanches: quando for lá, tira umas fotos em alta resolução e a gente pode botar no MAME
+[2026-08-02 19:58:10] Pablo Vasques Bravo-Villalba: Tem algum macete pra ver o final japonês?
+[2026-08-02 20:15:41] Macabeus: Eu estava online na live kek
+[2026-08-02 20:15:44] Macabeus: Até falei no chat
+[2026-08-02 20:15:54] Felipe "Juca" Sanches: ;-)
+[2026-08-02 20:16:07] Felipe "Juca" Sanches: e eu falei na live que sabia que você tava online haha
+[2026-08-02 20:19:47] Alexandre Villares: Que viagem né?
+[2026-08-02 20:28:50] Érico Andrei: Com certeza. Aviso antes aqui e faço a lista de "compras"
+[2026-08-02 21:32:35] RicBit: sim, tem que jogar em maquina com rom japonesa (ele testa o byte 02Bh da main rom)
+[2026-08-02 21:32:39] RicBit: mas eu posso copiar aqui perai
+[2026-08-02 21:35:10] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/39890-ending_scene_jp_overview.png
+[2026-08-02 21:40:26] RicBit: ano passado eu fui
+[2026-08-02 21:50:54] Pablo Vasques Bravo-Villalba: Ah, aqui tem o final completo do Usas e outras diferenças, incluindo tradução: https://tcrf.net/U%C8%99as
+[2026-08-02 22:00:24] RicBit: tem mais algum jogo que a gente nao sabe se tem dois finais ?
+[2026-08-02 22:03:00] RicBit: hum descobrir se o death wish 3 tem final

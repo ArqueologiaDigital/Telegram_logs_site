@@ -1,0 +1,18 @@
+[2023-03-08 20:42:06] L.: engine de jogo de 1a pessoa pra speccy! https://www.youtube.com/watch?v=rOQbdaqIYH8
+[2023-03-08 20:42:18] L.: bagulho move a câmera pra cima e pra baixo também, é bem legal!
+[2023-03-08 22:06:54] Felipe "Juca" Sanches: Comprei um KN5000 aqui em Londres, mas o cara ficou enrolando pra fazer o envio. Só hoje ele colocou no correio. Deve chegar dentro de alguns poucos dias
+[2023-03-08 22:11:00] Augusto Almeida: Putz
+[2023-03-08 22:12:48] Felipe "Juca" Sanches: essa semana consertei a implementação do mecanismo de execução de rotinas de tratamento de interrupções no emulador do TLCS900 usado pelo KN5000 no MAME
+[2023-03-08 22:13:43] Felipe "Juca" Sanches: agora está rodando as rotinas, então avançou um pouco mais além de um loop onde o firmware tava preso esperando alguma coisa
+[2023-03-08 22:14:31] Felipe "Juca" Sanches: acho que esse loop que ficava aguardando um valor em uma variável era um loop de pausa mesmo. E a variável é atualizada periodicamente por uma rotina de interrupção disparada por um dos timers
+[2023-03-08 22:14:47] Felipe "Juca" Sanches: é uma forma do firmware contabilizar o tempo
+[2023-03-08 22:15:21] Felipe "Juca" Sanches: tem vários lugares no código onde acontecem essas pausas em função de N incrementos nessa variável atualizada pelo timer
+[2023-03-08 22:15:38] Felipe "Juca" Sanches: não fiz as contas, mas não me espanta se essa variável estiver contando segundos
+[2023-03-08 22:15:42] Felipe "Juca" Sanches: ou milissegundos
+[2023-03-08 22:15:47] Felipe "Juca" Sanches: ou algo parecido
+[2023-03-08 22:16:52] Felipe "Juca" Sanches: agora que consertei o gerenciamento de interrupções, estou meio perdido sem saber qual é o próximo passo
+[2023-03-08 22:17:20] Felipe "Juca" Sanches: eu esperava ver algum sinal de vida na tela VGA. Mas continua tela preta
+[2023-03-08 22:18:38] Felipe "Juca" Sanches: pensei em tentar desvendar como funciona a comunicação serial com o painel de botões. Talvez implementar um device enxuto que só me dá um log de quais valores foram recebidos pela porta serial e com base nisso tentar compreender qual é o protocolo
+[2023-03-08 22:20:39] Felipe "Juca" Sanches: pois o painel usa uns microcontroladores para fazer a varredura dos botoes, só que não temos dump do código que roda nesses chips, então por enquanto vai ter que ser feita emulação de alto nivel (HLE - high-level emulation), que é basicamente implementar no próprio código do emulador o comportamento aproximado do que o chip faz.
+[2023-03-08 22:20:44] Felipe "Juca" Sanches: É impreciso, mas quebra um galho enquanto não se descobre como extrair o firmware pra poder ser feita a emulação mais fiel.
+[2023-03-08 23:07:14] Augusto Almeida: 👏

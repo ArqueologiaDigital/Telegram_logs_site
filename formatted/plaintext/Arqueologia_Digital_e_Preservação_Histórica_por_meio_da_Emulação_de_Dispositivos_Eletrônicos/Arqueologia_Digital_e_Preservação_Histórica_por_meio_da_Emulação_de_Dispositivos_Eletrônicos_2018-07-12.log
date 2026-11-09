@@ -1,0 +1,95 @@
+[2018-07-12 14:33:24] Affonso Amendola: Nova adicao ao museu, tava la no cedir e eu peguei esse monitorzinho em otimo estado
+[2018-07-12 14:33:42] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6049.jpg
+[2018-07-12 14:34:10] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6050.jpg
+[2018-07-12 14:34:24] Affonso Amendola: Parece estar funcionando perfeitamente
+[2018-07-12 14:34:38] Affonso Amendola: Fosforo verde, mas n tive como ligar ele a nada ainda
+[2018-07-12 14:35:10] Affonso Amendola: Ja que a entrada é essa rca aí
+[2018-07-12 14:35:41] DQ: Vídeo composto. Não tem nenhum micro de 8 bits antigo por aí?
+[2018-07-12 14:36:16] Affonso Amendola: Nenhum garantido que funcione
+[2018-07-12 14:36:25] Affonso Amendola: Tem um tk que n da sinal de vida
+[2018-07-12 14:37:08] Affonso Amendola: Se eu n me engano tinha saida componente
+[2018-07-12 14:38:39] Affonso Amendola: E um laser 128 que funciona
+[2018-07-12 14:39:01] Affonso Amendola: Mas que a entrada de power é um DIN5 meio bizarro
+[2018-07-12 14:39:13] Affonso Amendola: Tive que gambiarrar pra fazer funcionar quando testei
+[2018-07-12 14:39:21] Affonso Amendola: E a gambiarra n ta aqui
+[2018-07-12 14:40:41] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6062.jpg
+[2018-07-12 14:40:41] Felipe "Juca" Sanches: Hoje de noite no Garoa Hacker Clube
+[2018-07-12 14:41:47] Affonso Amendola: Estarei la
+[2018-07-12 14:42:06] DQ: Talvez eu dê uma passada rápida.
+[2018-07-12 14:47:48] Affonso Amendola: Acho que a fonte do tk ta fritada
+[2018-07-12 14:48:00] Affonso Amendola: Absolutamente 0 sinal de vida
+[2018-07-12 14:48:13] Affonso Amendola: Vo ver as voltagens nos pinos saindo da fonte
+[2018-07-12 15:33:39] Affonso Amendola: Yup, mortinha
+[2018-07-12 15:34:04] Affonso Amendola: preciso arrumar otro jeito de fornecer as voltagens certas ou abrir a fonte e arrumar
+[2018-07-12 15:36:04] Affonso Amendola: Com sorte ta escrito na placa as voltagens de cada pino
+[2018-07-12 15:36:33] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6071.jpg
+[2018-07-12 15:45:28] DQ: Dá para trambicar uma fonte de PC (não usa nenhuma tensão estranha)
+[2018-07-12 15:49:13] DQ: Ops.. parece que -5 é só nas fontes ATX mais velhas, com conector de 20 pinos.
+[2018-07-12 15:55:24] Affonso Amendola: Fonte velha é o q n falta aqui
+[2018-07-12 15:56:08] Affonso Amendola: Mas to sem ferro de solda aqui pra fazer um cabo bonitinho
+[2018-07-12 15:56:19] Affonso Amendola: E n tem jacaré o suficiente pra fazer uma gambiarra monstra
+[2018-07-12 15:57:09] Affonso Amendola: Hmmm, tem fita isolante, da pra fazer um cabo não bonitinho e gambiarrado pra cari
+[2018-07-12 15:57:12] Affonso Amendola: carai*
+[2018-07-12 15:57:43] FTMaciel: Uai, liga num videocassete aí
+[2018-07-12 15:58:22] FTMaciel: E eu to atrás desse maldito paninho que fica na frente do crt.
+[2018-07-12 15:59:13] Felipe "Juca" Sanches: sai de trás do paninho!
+[2018-07-12 15:59:19] DQ: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6082.jpg
+[2018-07-12 15:59:54] FTMaciel: Sabe que paninho maldito é esse?
+[2018-07-12 15:59:55] DQ: Parece que em algumas fontes ATX2 o pino marcado como NC tem -5V
+[2018-07-12 16:00:02] Felipe "Juca" Sanches: sim, eu sei.
+[2018-07-12 16:00:16] FTMaciel: dá o nome dele aí
+[2018-07-12 16:00:28] FTMaciel: já falaram que era organza
+[2018-07-12 16:00:42] Felipe "Juca" Sanches: a primeira vez que eu vi um desses foi lá na USP mesmo, num CRTzinho que tava instalado num IBM XT
+[2018-07-12 16:00:57] FTMaciel: tô com um angra que só falta esse pano pra ficar show
+[2018-07-12 16:00:58] Felipe "Juca" Sanches: eu nunca tinha visto isso
+[2018-07-12 16:01:19] Felipe "Juca" Sanches: mas o da USP tava com o paninho machucado. Com um furo e uns riscos
+[2018-07-12 16:02:24] FTMaciel: Se as tuas fontes não tem o -5V, gere um a partir do -12 com um 7905
+[2018-07-12 16:02:46] Affonso Amendola: Um desses?
+[2018-07-12 16:03:04] FTMaciel: um monitor marca Angra
+[2018-07-12 16:03:16] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6095.jpg
+[2018-07-12 16:03:18] FTMaciel: mas vários usavam esse paninho, pra melhorar o contraste
+[2018-07-12 16:03:37] FTMaciel: parecido
+[2018-07-12 16:03:42] FTMaciel: só que mais tosco
+[2018-07-12 16:03:46] FTMaciel: esse aí ta bonito até
+[2018-07-12 16:04:03] Affonso Amendola: Esse é o que o juca falou
+[2018-07-12 16:04:08] Affonso Amendola: Com o pano meio judiado
+[2018-07-12 16:04:14] Affonso Amendola: Esse novo ta lisinho
+[2018-07-12 16:05:40] FTMaciel: esse aí deve ter descolado
+[2018-07-12 16:05:50] FTMaciel: foi o que aconteceu com o que to mexendo
+[2018-07-12 16:05:52] Affonso Amendola: N seria mais facil usar uma fonte AT, Essas tem pilhas aqui
+[2018-07-12 16:06:03] Affonso Amendola: Aí n precisa fazer aquela gambiarra pra ligar a fonte
+[2018-07-12 16:06:07] Affonso Amendola: Tem o botaozinho ja
+[2018-07-12 16:06:30] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6108.jpg
+[2018-07-12 16:08:31] DQ: Pode ser, tem todas as tensões que precisa.
+[2018-07-12 16:59:13] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6110.jpg
+[2018-07-12 16:59:39] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6111.jpg
+[2018-07-12 16:59:44] Affonso Amendola: N funcionou no monitor
+[2018-07-12 16:59:46] Affonso Amendola: Mas na tv funfa
+[2018-07-12 17:01:45] Felipe "Juca" Sanches: 🤙
+[2018-07-12 17:02:18] DQ: Estou tentando lembrar de quando eu liguei o meu TK dois meses atrás... não tem mais de um conector na traseira?
+[2018-07-12 17:03:05] DQ: Eu lembro vagamente de alguma dificuldade em ligar no meu monitor.
+[2018-07-12 17:03:35] Affonso Amendola: Tem dois
+[2018-07-12 17:03:49] Affonso Amendola: Um chamado monitor e um chamado video
+[2018-07-12 17:04:03] DQ: Tentou com ambos?
+[2018-07-12 17:04:17] Affonso Amendola: Ligadando o monitor no monitor da uns artefatos na tela
+[2018-07-12 17:04:28] Affonso Amendola: Como se tivesse fora de sync
+[2018-07-12 17:04:36] Affonso Amendola: Ligando no video n da nada
+[2018-07-12 17:04:56] Affonso Amendola: Na tv so tentei no monitor, ja que ja deu certo
+[2018-07-12 17:05:23] DQ: Pelo visto a frequência não bate.
+[2018-07-12 17:06:44] DQ: https://datassette.org/manuais/apple-ii/tk-3000-e-manual-de-instalacao
+[2018-07-12 17:10:12] DQ: A saída vídeo é modulada para ligar na antena da TV
+[2018-07-12 17:10:27] DQ: Tem uns jumpers que controlam a saída monitor
+[2018-07-12 17:11:31] DQ: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6128.jpg
+[2018-07-12 17:20:30] Affonso Amendola: Sim, tamo vendo isso agora
+[2018-07-12 17:20:42] Affonso Amendola: N funfou com as configuraçoes pra monitor monocromatico
+[2018-07-12 17:21:01] Felipe "Juca" Sanches: quem mais tá contigo aí?
+[2018-07-12 17:21:02] Affonso Amendola: Sera que a conf de PAL/M é a culpada?
+[2018-07-12 17:21:10] Affonso Amendola: Um brother meu do IAG
+[2018-07-12 17:21:14] Felipe "Juca" Sanches: legal
+[2018-07-12 17:21:19] Affonso Amendola: Acho que ele vai na reuniao mais tarde
+[2018-07-12 17:21:25] Felipe "Juca" Sanches: traz ele pro garoa
+[2018-07-12 17:21:26] Affonso Amendola: Ai a gente fala o que fez
+[2018-07-12 17:21:26] Felipe "Juca" Sanches: isso
+[2018-07-12 17:21:31] Felipe "Juca" Sanches: maravilha!
+[2018-07-12 20:28:23] Leonardo Roman: a saída vídeo é RF (canal 3 ou 4)
+[2018-07-12 20:28:54] Leonardo Roman: a monitor é vídeo composto PAL-M (colorido ou monocromático - dependendo da configuração dos jumpers)

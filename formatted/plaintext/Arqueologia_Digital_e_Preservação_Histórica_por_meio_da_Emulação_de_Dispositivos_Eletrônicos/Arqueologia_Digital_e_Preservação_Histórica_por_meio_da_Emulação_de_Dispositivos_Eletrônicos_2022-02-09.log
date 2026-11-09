@@ -1,0 +1,18 @@
+[2022-02-09 14:54:05] Felipe "Juca" Sanches: @Shideravan https://github.com/mamedev/mame/pull/7142
+[2022-02-09 15:37:03] Shideravan: EITA OLHA O HAZEEEE
+[2022-02-09 15:37:08] Shideravan: Que maravilha!
+[2022-02-09 15:37:11] Shideravan: Shelton
+[2022-02-09 15:37:57] Shideravan: Ahhh ele está dando créditos ao Triple Oxygen
+[2022-02-09 15:37:59] Shideravan: Excelente
+[2022-02-09 15:38:17] Shideravan: Uma pessoa que parece manjar o Zeebo de cabo a rabo
+[2022-02-09 15:38:52] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/19019-sticker.webp
+[2022-02-09 15:39:01] Shideravan: É só o esqueleto por enquanto
+[2022-02-09 15:39:13] Shideravan: Mas já é o primeiro passo hahaha
+[2022-02-09 15:39:20] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/19022-GkBIV1-rYaWA7MRect9-CeTkcsM0DV_q8ngKl-2KBPE.mp4
+[2022-02-09 15:39:29] Shideravan: ROM_LOAD( "1.1.2_spare.bin", 0x000000, 0x8400000, CRC(64bd6faa) SHA1(da0db9585d15cf7f1f127e39b0a5fa47f3c13cc0) )
+[2022-02-09 15:39:44] Shideravan: É a ROM que estávamos usando
+[2022-02-09 15:40:00] Shideravan: Você já repassou para o pessoal a documentação @fsanches ?
+[2022-02-09 15:40:13] Felipe "Juca" Sanches: "tá pronto. só falta testar" kkkk
+[2022-02-09 15:40:29] Felipe "Juca" Sanches: não... mas podemos fazer isso
+[2022-02-09 15:40:34] Felipe "Juca" Sanches: eu acabei de ver isso
+[2022-02-09 15:40:40] Shideravan: Acho adequadíssimo

@@ -1,0 +1,15 @@
+[2020-10-15 14:19:41] Hugo (Agaelebê): Juca é o melhor comprador que tem :)
+[2020-10-15 17:26:55] L.: https://twitter.com/GameHistoryOrg/status/1316772515235000321?s=19
+[2020-10-15 17:27:09] L.: https://twitter.com/GameHistoryOrg/status/1316774671317045248?s=19
+[2020-10-15 17:31:30] RicBit: eu comecei a otimizar o source do metal gear do msx, preciso terminar alguma hora
+[2020-10-15 17:31:44] RicBit: tinha um gargalo super facil de mexer
+[2020-10-15 17:33:44] L.: Vazou o source?
+[2020-10-15 17:34:35] L.: Os identificadores usam snake_case?
+[2020-10-15 17:40:43] Felipe "Juca" Sanches: source ou disasm?
+[2020-10-15 17:51:32] RicBit: disasm comentado
+[2020-10-15 17:51:57] RicBit: https://github.com/ricbit/MetalGear
+[2020-10-15 17:52:57] RicBit: o gargalo é que o jogo assume que o msx2 tem 64kb de vram, mas na pratica quase todos tem 128kb né
+[2020-10-15 17:53:19] RicBit: entao tem um monte de descompressão que é feita on the fly mas dá para cachear fácil nos 64kb que estão sobrando
+[2020-10-15 17:54:41] RicBit: alias a maioria dos konami msx2 da primeira leva deve dar para otimizar assim
+[2020-10-15 20:58:17] Felipe "Juca" Sanches: mas qual é a otimizacao que vc busca? tempo de loading de novas cenas/fases?
+[2020-10-15 21:40:07] RicBit: É, fica mais rápido entre uma tela e outra. No original são vários segundos.

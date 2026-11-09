@@ -1,0 +1,40 @@
+[2021-12-04 02:08:10] Felipe "Juca" Sanches: Eu tenho pouco conhecimento sobre Xtensa. Da última vez que pesquisei um pouco sobre o tema, fiquei com a impressão de que trata-se de um framework para criar instruction sets otimizados para o tipo de aplicação desejada
+[2021-12-04 02:09:05] Felipe "Juca" Sanches: E que gera tanto a descrição de hardware para sintetizar uma CPU custom quanto o toolchain para desenvolvimento de software para essa CPU
+[2021-12-04 02:09:38] Felipe "Juca" Sanches: Suspeito que gera ports de gcc automaticamente também
+[2021-12-04 02:09:48] Felipe "Juca" Sanches: Mas eu posso ter entendido errado
+[2021-12-04 02:10:20] Felipe "Juca" Sanches: Se alguém aqui souber mais, agradeço quaisquer esclarecimentos
+[2021-12-04 03:15:26] L.: A Cadence te dá um port defasado do GCC
+[2021-12-04 03:16:03] L.: E é mais ou menos isso. É tudo mal documentado e mesmo se pagar caro pra eles é sempre difícil entender qualquer coisa
+[2021-12-04 03:16:48] L.: Quando eu portei o Zephyr pro ESP32, eu pastei demais. Um cara do time acabou resolvendo um monte de coisa e reescrevendo código do SDK deles por que era ruim demais
+[2021-12-04 03:58:46] Felipe "Juca" Sanches: Você está confirmando que eu entendi direito mas ao mesmo tempo está dizendo que o serviço é péssimo?
+[2021-12-04 09:33:32] Flávio Amieiro: Ah, podes crer. Eu acho que vi alguém gerando um sinal vga assim. Se não me engano foi o bitluni
+[2021-12-04 13:01:13] P. M: https://v.redd.it/gitxolsm2h381
+[2021-12-04 13:09:06] Flávio Amieiro: Pô, isso me fez lembrar uma coisa: eu tenho um gameboy color aqui que ficou parado muitos anos. Fui pegar agora e ele ainda funciona, mas a tela tá danificada.
+[2021-12-04 13:09:30] Flávio Amieiro: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-12/18096.jpg
+[2021-12-04 13:09:41] Flávio Amieiro: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-12/18097.jpg
+[2021-12-04 13:09:52] Shelton Ribeiro: Trocando a película polarizadora fica top de novo
+[2021-12-04 13:10:05] Flávio Amieiro: Pô, perfeito! Hahahah era essa a pergunta
+[2021-12-04 13:10:11] Flávio Amieiro: Valeu :)
+[2021-12-04 13:10:27] Flávio Amieiro: Sabe se acho de boa no mercado livre ou algo assim?
+[2021-12-04 13:10:31] Shelton Ribeiro: Se acha fácil
+[2021-12-04 13:11:02] Shelton Ribeiro: Quer dizer, pena um pouco porque p motor de busca deles tá um lixo, mas vai descendo que você acha 🤭🤭
+[2021-12-04 13:11:18] Flávio Amieiro: Hahahaha
+[2021-12-04 13:11:19] Flávio Amieiro: Blz
+[2021-12-04 13:11:24] Flávio Amieiro: Valeu pela dica!
+[2021-12-04 13:12:25] Flávio Amieiro: 20 dinheiros. Vou pedir hoje!
+[2021-12-04 15:40:04] Shelton Ribeiro: audio: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-12/18108.ogg
+[2021-12-04 16:20:16] Flávio Amieiro: Boa! Valeu mesmo!
+[2021-12-04 18:52:31] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-12/18110.jpg
+[2021-12-04 18:52:31] Erin Pinheiro 🐿: o meu estava assim e comprei uma tela IPS de reposição pra ele
+[2021-12-04 18:52:46] Erin Pinheiro 🐿: acho melhor que reparar a tela original
+[2021-12-04 18:52:58] Erin Pinheiro 🐿: no aliexpress acha vários desses, só procurar GBC IPS
+[2021-12-04 19:21:57] Shelton Ribeiro: Tá quanto a tela IPS?
+[2021-12-04 19:22:15] Shelton Ribeiro: Ficou top 👏🏼👏🏼👏🏼
+[2021-12-04 19:23:01] Erin Pinheiro 🐿: não lembro quanto paguei, procurei agora no ali e sem buscar muito achei uma por 36 USD
+[2021-12-04 19:23:09] Erin Pinheiro 🐿: não é barato, mas a qualidade é muito melhor
+[2021-12-04 19:23:20] Erin Pinheiro 🐿: https://aliexpress.com/item/4000338739866.html
+[2021-12-04 19:23:28] Erin Pinheiro 🐿: se procurar pode ser que ache mais barato
+[2021-12-04 19:23:40] Augusto Almeida: É o mesmo esquema do Game Gear, a tela não é barata mas a qualidade final é ótima
+[2021-12-04 19:24:11] Shelton Ribeiro: Compensa mais pôr em um ADvanced porque daí e quebra você tem um color junto, né? 🤭🤭🤭🤭
+[2021-12-04 19:24:37] Erin Pinheiro 🐿: se você já tiver o GBA sim, eu não tenho
+[2021-12-04 19:24:59] Shelton Ribeiro: Sim 👍🏼

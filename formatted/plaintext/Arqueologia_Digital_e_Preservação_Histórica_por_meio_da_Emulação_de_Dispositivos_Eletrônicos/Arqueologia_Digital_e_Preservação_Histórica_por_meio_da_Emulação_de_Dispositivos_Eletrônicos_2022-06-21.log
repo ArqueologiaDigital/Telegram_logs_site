@@ -1,0 +1,144 @@
+[2022-06-21 00:22:08] L.: Fiz uma compressão RLE toscona aqui e diminuiu o mines.xpm pra uns 2KB. Dá pra diminuir mais ainda se botar 2 cores/byte, mas brinco com isso depois.
+[2022-06-21 00:24:07] L.: (Os 10KB foram com UPX, que ainda entende .COM)
+[2022-06-21 00:25:47] L.: O legal é que o itertools já tem um esquema que faz RLE pra você (groupby :D)
+[2022-06-21 01:20:19] Pedro de Medeiros 👾: @fsanches http://blog.petersobot.com/patching-the-k2500
+[2022-06-21 01:31:49] L.: Pensando em botar animação naquele mato no fundo usando ciclagem de paleta de cores
+[2022-06-21 06:42:49] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/85
+[2022-06-21 06:43:00] Felipe "Juca" Sanches: Matei o bug. Merged! 😉
+[2022-06-21 07:22:23] Felipe "Juca" Sanches: Muito bom isso!
+[2022-06-21 13:35:56] L.: Escrevi o decoder pra imagem comprimida com RLE e usando um nibble/pixel. Ficou simplão, mas tá só precisando botar isso aí no joguinho: https://gist.github.com/lpereira/7c2d5f2282716ca6024bbef067410061
+[2022-06-21 13:41:15] L.: Botei o código do encoder lá também :P
+[2022-06-21 13:51:54] L.: Ha! Funcionou com a imagem comprimida :D
+[2022-06-21 13:53:50] L.: Sem comprimir com UPX, binário pra MS-DOS tá com 14k agora
+[2022-06-21 13:59:27] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/87
+[2022-06-21 14:00:20] Felipe "Juca" Sanches: eu tava fazendo o codereview desse PR agora mesmo 😉
+[2022-06-21 14:04:56] Pedro de Medeiros 👾: O crescente número de macros não me agrada muito porque começa a ficar difícil de entender. Mas a medida que as plataformas existentes implementarem uma tábula rasa, por exemplo implementar tela de game over e tela de início, a gente pode começar a presumir algumas coisas e tirar o código legado.
+[2022-06-21 14:06:11] Felipe "Juca" Sanches: eu achei ruim copiar trechos grandes de código para o port de opengl. Eu preferiria que os códigos de plataforma não tivessem nada de repetição de código já existente na implementação common
+[2022-06-21 14:06:49] Pedro de Medeiros 👾: Mas aí suja o common. Não está tão repetido assim: eu só movi o que estava nos #ifdef's para o extras.c
+[2022-06-21 14:07:09] Pedro de Medeiros 👾: A lógica por trás do update_* é diferente do *_loop.
+[2022-06-21 14:07:12] L.: https://github.com/ArqueologiaDigital/Mines/pull/88
+[2022-06-21 14:07:20] Felipe "Juca" Sanches: andei pensando na possibilidade de usar nos ports uma estrutura parecida com a que é usada nos drivers do kernel Linux:
+
+o método init do driver (do port) popula uma struct com ponteiros para as funções que ele implementa
+[2022-06-21 14:07:21] Pedro de Medeiros 👾: Deixa o código confuso a função dizer que é de loop e não ser.
+[2022-06-21 14:07:50] Felipe "Juca" Sanches: concordo
+[2022-06-21 14:07:51] L.: Aí toda chamada à coisa específica de plataforma vira indireta
+[2022-06-21 14:08:22] L.: No Linux faz sentido: tem uma interface definida e várias implementações concorrentes. Aqui só tem uma por programa.
+[2022-06-21 14:08:35] Felipe "Juca" Sanches: é verdade, tem razao
+[2022-06-21 14:08:47] L.: O jeito que tá sendo feito hoje é melhor, só que tá uma bagunça por que é assim mesmo enquanto tá descobrindo a interface.
+[2022-06-21 14:09:39] Pedro de Medeiros 👾: A coisa mais repetida é o switch case de entrada. A gente pode pensar em formas de refatorar isso no futuro.
+[2022-06-21 14:12:29] L.: Primeira vez que fiz um código de compressão/descompressão personalizado pra um único programa. :D
+[2022-06-21 14:12:48] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21875-sticker.webp
+[2022-06-21 14:13:04] L.: Ter lido um monte de tranqueira pra implementar a decodificação huffman pro HPACK no meu servidor web ajudou bem :D
+[2022-06-21 14:13:32] Felipe "Juca" Sanches: @pvm1337, precisamos da sua ajuda aqui pra botar python no docker com ia16-gcc
+[2022-06-21 14:15:33] Pedro de Medeiros 👾: OK, mas eu preciso de duas horinhas agora.
+[2022-06-21 14:27:14] L.: O negócio de compressão deve dar pra usar pros outros portes também. No MSX deve ficar legal por que rola descompressão ROM -> VRAM
+[2022-06-21 14:27:29] L.: E é RLE, então o Zé Oitenta deve ficar de boa
+[2022-06-21 14:28:15] Felipe "Juca" Sanches: ah, não... não vai dar pra esperar. Temos que entregar isso pro cliente pra ontem! kkkk
+[2022-06-21 14:59:35] L.: Eu lembro de ter um programa que pegava um .COM e identificava instruções repetidas e gerava rotinas novas pra substituir por um CALL no lugar original. Isso diminuia o tamanho do executável consideravelmente!  Não consigo lembrar o nome
+[2022-06-21 14:59:53] L.: O Clang faz isso hoje (se compilar com -Oz em algumas plataformas, o negócio chama code outlining lá)
+[2022-06-21 15:18:51] Pedro de Medeiros 👾: A gente pode usar o esquema do update_* que eu fiz no opengl e usar declarações inline pra tentar diminuir os efeitos da alta quantidade de calls dentro do game loop.
+[2022-06-21 15:29:43] L.: https://github.com/ArqueologiaDigital/Mines/pull/93
+[2022-06-21 15:30:16] L.: Com -flto e esse patch aí, reduzi quase um setor de disquete de coisa inútil :D
+[2022-06-21 15:47:10] L.: Mais 100 bytes salvos na versão MS-DOS
+[2022-06-21 15:47:35] L.: (Codificando o inteiro de tile offsets em 8-bit ao invés de 16-bit por que temos menos que 16 offsets pra cada coordenada.)
+[2022-06-21 16:01:22] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21889-sticker.webp
+[2022-06-21 16:06:32] L.: Tem algum motivo pro número dos tiles serem aqueles lá? (Com exceção dos números pros tiles numerados)
+[2022-06-21 16:07:32] Felipe "Juca" Sanches: o port de MSX2 dependia daqueles valores específicos. Não sei dizer de cabeça se o código ainda tem essa premissa.
+[2022-06-21 16:07:42] L.: Saquei
+[2022-06-21 16:08:04] Felipe "Juca" Sanches: a intenção era que aqueles valores fossem irrelevantes. O port de MSX era a unica exceção
+[2022-06-21 16:08:23] L.: Se rolar tirar, deve diminuir bem o tamanho do código -- aí ao invés do switch pra descobrir quais os offsets, faz algo tipo tile2offsets[tile] e já era
+[2022-06-21 16:09:04] L.: Dá pra fazer uma tabela no port MSX pra converter de um pro outro também
+[2022-06-21 16:09:05] Felipe "Juca" Sanches: tem que ver como está a conversão de xpm para screen5
+[2022-06-21 16:09:14] L.: É
+[2022-06-21 16:09:40] L.: Bom, por hoje chega. Hora de procurar algo pra comer
+[2022-06-21 16:09:48] L.: Fazia tempo que não me divertia assim
+[2022-06-21 16:10:06] Felipe "Juca" Sanches: no gunsmoke nem tem xpm em runtime, pois os tiles viram uma ROM de foreground tiles
+[2022-06-21 16:10:30] Felipe "Juca" Sanches: é muito legal, mesmo!
+[2022-06-21 16:10:56] Felipe "Juca" Sanches: me fez lembrar da nossa colaboração no PenseBem SVG+js
+[2022-06-21 16:17:54] Pedro de Medeiros 👾: O programa que converte xpm pra SC5 ainda usa a ordem dos tiles, mas a ordem das cores é a definida no próprio xpm.
+[2022-06-21 16:21:19] Pedro de Medeiros 👾: Mas a gente pode fazer o switch-case das outras implementações pra ficar igual.
+[2022-06-21 16:21:45] Pedro de Medeiros 👾: Acho que vai ser útil porque eu pretendo colocar em breve tiles 16x16 onde a ordem fixa só atrapalha.
+[2022-06-21 16:22:07] Felipe "Juca" Sanches: com esse monte de otimização, se bobear dá pra fazer um outro port de IBM-PC, mas sem o MSDOS. Pra rodar direto de um disquete de boot
+[2022-06-21 16:22:23] Felipe "Juca" Sanches: platforms/pcbooter
+[2022-06-21 16:22:32] Pedro de Medeiros 👾: Fazer uma versão de boot sector 😜
+[2022-06-21 16:23:08] Pedro de Medeiros 👾: vou fazer uma versão android.
+[2022-06-21 16:23:37] Felipe "Juca" Sanches: sim, tem muitas plataformas esquisitas que dá pra fazer kkkk
+[2022-06-21 16:24:12] Felipe "Juca" Sanches: eu até pensei no Patinho Feio e na VM do Another World, mas pra esses não tem compilador C infelizmente
+[2022-06-21 16:24:36] Felipe "Juca" Sanches: E o Patinho Feio não tem tela! Teria que imprimir na teletype hahaha
+[2022-06-21 16:24:56] Felipe "Juca" Sanches: imprimir as coordenadas igual batalha naval
+[2022-06-21 16:32:53] Pablo Vasques Bravo-Villalba: Uma curiosidade musical com a qual esbarrei aqui:
+https://vgmrips.net/packs/pack/magical-crystals-arcade
+
+Essa trilha sonora usa o YM2149, versão Yamaha do venerando AY-3-8910 (um chip de 1978) em conjunto com o MSM6295 da OKI, que é um chip ADPCM lançado no finalzinho dos anos 80. É uma combinação bem incomum, considerando que vários chips FM da Yamaha foram introduzidos muito antes desse chip ADPCM, que normalmente é visto em arcades combinado com o YM2151 (OPM) ou o YM2203 (OPN).
+[2022-06-21 16:33:45] Felipe "Juca" Sanches: esse projeto tá parecendo o rosetta code: 
+
+https://rosettacode.org/
+[2022-06-21 16:38:17] L.: Só começar a fazer lol
+[2022-06-21 16:39:04] L.: Sem o MS-DOS é até de boa na real
+[2022-06-21 16:39:36] L.: Não estamos usando interrupções do DOS, então é tranquilo a princípio. Não sei o que a libi86 usa.
+[2022-06-21 16:41:58] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/95
+[2022-06-21 17:19:33] Pedro de Medeiros 👾: @fsanches acho que você vai ter que ir lá no gh actions e pedir pra executar o build job que falhou no PR 88 depois de fazer o merge do meu PR.
+[2022-06-21 17:24:25] L.: Seria massa ver o quanto ficou mais rápido no teu 386, @fsanches,  depois dessas mudanças todas
+[2022-06-21 17:24:43] Felipe "Juca" Sanches: vou checar mais tarde e te conto
+[2022-06-21 17:41:06] L.: Reduzi em mais 80 bytes na imagem melhorando o esquema do RLE um pouquinho :)
+[2022-06-21 17:43:39] L.: "Adafruit Floppy is a project to make a flexible, full-stack, open source
+ hardware/software device for reading, archiving, accessing and 
+duplicating floppy disk media." https://github.com/adafruit/Adafruit_Floppy
+[2022-06-21 17:48:22] L.: E a compressão foi de 3.7x pra 4x exatos :D
+[2022-06-21 18:04:33] L.: 292 bytes a menos! :D
+[2022-06-21 18:19:50] Felipe "Juca" Sanches: BOOOOMMMM!!!!
+
+https://github.com/ArqueologiaDigital/Mines/issues/97
+[2022-06-21 18:20:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21928.jpg
+[2022-06-21 18:20:18] Felipe "Juca" Sanches: Sorry, MSX2...
+[2022-06-21 18:20:35] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21929-catdestroy-catknockover.mp4
+[2022-06-21 18:21:39] L.: Agora a gente já sabe que a ordem quebra lol
+[2022-06-21 18:22:06] Felipe "Juca" Sanches: é gostoso quebrar algumas coisas de vez em quando hahaha
+[2022-06-21 19:22:25] Felipe "Juca" Sanches: merged!
+[2022-06-21 19:26:59] L.: Pras músicas eu acho que na versão PC o mais fácil é fazer esquema na adlib mesmo
+[2022-06-21 19:27:43] L.: PC speaker rola mas é chato fazer ficar bom hehe
+[2022-06-21 19:28:14] Felipe "Juca" Sanches: pois é... mas seria a solucao mais "universal" pra PC
+[2022-06-21 19:28:34] Felipe "Juca" Sanches: podia ser um sonzinho tosco estilo alleycat
+[2022-06-21 19:29:48] L.: Agora tô com a musiquinha do alley cat na cabeça
+[2022-06-21 19:30:16] Felipe "Juca" Sanches: kkkk
+[2022-06-21 19:30:23] L.: 👀 https://www.reenigne.org/blog/8088-pc-speaker-mod-player-how-its-done/
+[2022-06-21 19:32:40] Felipe "Juca" Sanches: tú-ru tu-rú
+tu tu tu
+tú-ru tu-ruuuu....
+[2022-06-21 19:33:09] L.: https://doom.fandom.com/wiki/PC_speaker_sound_effects
+[2022-06-21 19:33:53] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21942-dancing-cats.mp4
+[2022-06-21 19:35:39] L.: Se conseguir fazer tocar MOD, aí fica *bem* mais fácil fazer música lol
+[2022-06-21 19:36:32] Felipe "Juca" Sanches: eu não sou de falar... mas já falando...
+
+pinball fantasies tem MOD player em PC Speaker
+[2022-06-21 19:39:12] L.: https://www.quaxio.com/%C2%B5_mod_player_from_scratch/
+[2022-06-21 19:39:23] L.: LOL, mas aí ripar o código é feio né :D
+[2022-06-21 19:41:50] L.: Talvez dê pra usar algo tipo https://github.com/jfdelnero/HxCModPlayer
+[2022-06-21 19:42:50] L.: Ou portar esse outro em JS aí embora parece que não tem os efeitos legais
+[2022-06-21 19:45:31] Felipe "Juca" Sanches: eu rodei o mines aqui no meu 386 e ficou muito bom
+[2022-06-21 19:45:47] Felipe "Juca" Sanches: e mantive uma copia da versao antiga que eu ja tinha testado
+[2022-06-21 19:45:56] Felipe "Juca" Sanches: impressionante a diferenca entre as duas versoes
+[2022-06-21 19:46:40] Felipe "Juca" Sanches: uma era lenta com arquivo grande. A outra é super rápida, com arquivo pequenininho e mais bonita
+[2022-06-21 19:55:23] L.: rola fazer um video no 386? no dosbox fica rápido demais lol
+[2022-06-21 19:55:48] Felipe "Juca" Sanches: preciso é fazer uma live no happy hacking video blog!
+[2022-06-21 19:55:54] Felipe "Juca" Sanches: pra mostrar todos os ports que já temos
+[2022-06-21 19:55:55] L.: :D
+[2022-06-21 20:17:24] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/issues/102
+[2022-06-21 20:29:05] L.: Eu acabei de tirar um cursor 8x8 que eu tinha desenhado!
+[2022-06-21 20:29:31] L.: Tá no tilesheet da versão msdos (se não mergear o #103)
+[2022-06-21 20:30:18] L.: No PC nem precisa por que só de ativar o driver com a int 33h no modo gráfico já aparece uma setinha
+[2022-06-21 20:31:02] Pedro de Medeiros 👾: Então seria pras outras plataformas.
+[2022-06-21 20:37:36] Pablo Vasques Bravo-Villalba: Acho que cada plataforma deveria ter o cursor mais apropriado para suas capacidades
+[2022-06-21 20:38:33] Felipe "Juca" Sanches: ontem eu estava refletindo sobre as diferencas entre ports. E cheguei à conclusão de que é bonito ports terem caras diferentes. Fica interessante 😉
+[2022-06-21 20:39:05] Pablo Vasques Bravo-Villalba: É mais como era na época. Se você olha os ports bem feitos, eles são adequados à capacidade de cada hardware
+[2022-06-21 20:39:47] Pablo Vasques Bravo-Villalba: Então você às vezes tinha aberrações como versões de Amstrad e MSX que eram simplesmente cópias pioradas das versões de ZX Spectrum
+[2022-06-21 20:40:00] Pablo Vasques Bravo-Villalba: Ou versões de Atari ST que eram cópias pioradas e com menos cores do Amiga
+[2022-06-21 20:43:29] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/104
+[2022-06-21 20:47:10] Felipe "Juca" Sanches: bola pra frente nesse PR aqui? Ou devo esperar alguma mudança? Não ficou claro esse "se não mergear"
+[2022-06-21 20:52:08] L.: Ah, não, tá de boa esse PR. Eu tiro um tile que não tô usando pra liberar espaço, mas se for necessário depois é só ir atrás no git e pegar. (É um cursor de setinha tamanho 8x8)
+[2022-06-21 20:52:11] RicBit: Eu fiz um mod player em Java algumas décadas atrás, deve ser fácil portar para c. Mas eu também só coloquei o básico, não tem os efeitos.
+[2022-06-21 20:53:23] RicBit: https://github.com/ricbit/Oldies/tree/master/2004-08-modplayer
+[2022-06-21 22:44:10] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/issues/105
+[2022-06-21 22:44:24] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/issues/106
+[2022-06-21 22:54:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21975.jpg

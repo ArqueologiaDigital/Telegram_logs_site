@@ -1,0 +1,4 @@
+[2024-09-04 11:07:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/32960.jpg
+[2024-09-04 11:10:00] Felipe "Juca" Sanches: Esse eu tive que consertar o driver, pois ele ainda não fazia a interpretação dos bits das portas de I/O que setam o estado dos LEDs e o nível de contraste do LCD.
+
+https://github.com/mamedev/mame/pull/12729

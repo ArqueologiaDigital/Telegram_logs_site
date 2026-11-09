@@ -1,0 +1,26 @@
+[2022-07-18 01:08:13] L.: https://twitter.com/dosnostalgic/status/1548820074756276224?t=YlvLQCAdqM1zXjlG_mYbDQ&s=09
+[2022-07-18 03:37:21] Shideravan: Que maneiro
+[2022-07-18 03:37:36] Shideravan: Qual o tamanho médio de um save de doom?
+[2022-07-18 03:39:26] Shideravan: Eu tenho a impressão que o truque são as regiões de leitura. Tipo, poderia ser qualquer coisa + imagem e qualquer coisa + save, sem que os dados extras afetem. Mas o fato de ser apenas 117 kbytes e conter todo o software + áudio + injeção me parece bem impressionante
+[2022-07-18 03:45:03] Shideravan: Ahhh outra dúvida: isso funciona no doom vanilla ou você precisa de um doom modificado para rodar? Porque se não for um doom vanilla a magia meio que se desfaz hahaha
+[2022-07-18 11:02:12] Pablo Vasques Bravo-Villalba: Algumas dezenas de kB. Mas dependendo do mapa pode passar de 100kB. O Doom original dava pau se o savegame fosse muito grande (tipo uns 140kB, não lembro o valor exato), o que poderia acontecer usando mapas customizados.
+[2022-07-18 16:04:58] L.: Bom, o jogo de campo minado pra DOS tá com 4kb (sem áudio). Com 100 e poucos kb deve dar pra botar música com sample PCM e tudo mais😂
+[2022-07-18 16:08:07] Felipe "Juca" Sanches: Acidx, eu tava pensando na possibilidade da gente fazer o merge do teu patch de som pra MSDOS usando arquivos de áudio quaisquer (pode pegar uns arquivos WAV simples de algum catálogo livre, ou public domain). Aí mais pra frente outra pessoa pode fazer o trabalho de selecionar áudios mais adequados. Assim a gente desacopla a tarefa técnica da decisão cosmética
+[2022-07-18 16:08:32] L.: Pode ser
+[2022-07-18 16:08:44] L.: Só precisa fazer negócio pra ler arquivo
+[2022-07-18 16:08:51] Felipe "Juca" Sanches: saquei
+[2022-07-18 16:08:53] L.: Ou incluir no executável mesmo
+[2022-07-18 16:09:00] L.: Talvez seja mais fácil
+[2022-07-18 16:09:22] Felipe "Juca" Sanches: é... ler de arquivo seria mais interessante, mas não me oponho a embutir no executável não
+[2022-07-18 16:09:22] L.: Eu comecei a fazer um mod player. Fui até longe mas não cheguei a terminar
+[2022-07-18 16:09:56] L.: Problema de botar no executável é que hoje tá com modelo de memória tiny, que é só 1 segmento pra tudo
+[2022-07-18 16:10:20] L.: Se ler de arquivo rola botar coisa em outros segmentos e usar far pointer pra ler
+[2022-07-18 16:10:38] L.: Mas eu dei uma cansada desse projeto hehe
+[2022-07-18 16:12:07] Felipe "Juca" Sanches: tudo bem
+[2022-07-18 16:12:09] L.: O negócio do som no pc speaker dá uma zoada
+[2022-07-18 16:12:17] L.: Tipo, o isr em C não ficou legal
+[2022-07-18 16:12:34] L.: Dependendo, dá uma zoada legal nas coisas. Ainda não entendi o que é
+[2022-07-18 16:12:43] Felipe "Juca" Sanches: se possível, faz um braindump do que você tem aí, mesmo que incompleto, pra gente poder tentar dar a continuidade caso você não queira mais fazer coisas nesse projeto
+[2022-07-18 16:12:47] L.: O negócio é fazer em asm e ler dum ring buffer ou algo assim
+[2022-07-18 16:13:32] L.: Se compilar com LTO por exemplo, zoa legal se chamar o ISR
+[2022-07-18 16:13:56] L.: Se só der ack na IRQ e retornar da interrupção numa rotina em asm, é de boa

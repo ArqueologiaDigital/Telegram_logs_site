@@ -1,0 +1,73 @@
+[2021-08-11 04:00:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14057.jpg
+[2021-08-11 04:00:38] Felipe "Juca" Sanches: O código do firmware do KN5000 continua travando nesse ponto que julgo ser um loop de checagem de semáforo
+[2021-08-11 04:03:06] Felipe "Juca" Sanches: Meu raciocínio é que esse loop aí só é possível de desenroscar se "alguém" alterar as variáveis armazenadas nos endereços de memória consultadas (0x0409 e 0x8d9b). Portanto, isso só pode ser feito por uma rotina de tratamento de interrupção.
+
+E é por isso que estou agora trabalhando no aprimoramento da emulação de timers e suas respectivas interrupções. E também investigando outras possíveis fontes de interrupções, como o controlador de floppy, por exemplo.
+[2021-08-11 04:05:03] Felipe "Juca" Sanches: meu emulador dessa CPU continua melhorando, mas a emulação do KN5000 (que é quem "usa" essa CPU) continua desmotivantemente tela-preta :-P
+[2021-08-11 04:09:53] Felipe "Juca" Sanches: a quem possa estar ainda começando no estudo de assembly, essa rotina aí é um loop que basicamente faz isso:
+
+"Aguarde parado aqui enquanto a diferença entre os valodes das duas variáveis for menos que 0x33"
+[2021-08-11 04:11:16] Felipe "Juca" Sanches: ...e 0x33 é um número hexadecimal que corresponde ao valor decimal 51  (que pra mim não tem nenhum significado especial até agora)
+[2021-08-11 04:13:43] Felipe "Juca" Sanches: mas seja lá o que for isso aí, o importante é a observaćão de que essa conta vai continuar sempre dando o mesmo resultado a não ser que as variáveis mudem de valor. E o código desse loop claramente não altera as variáveis. Portanto a alteracao vem de outro lugar. E esse outro lugar só pode ser uma rotina de tratamento de interrupção, que para tudo o que a CPU tá fazendo e vai momentaneamente fazer "outras coisas" 😉
+[2021-08-11 04:17:57] Felipe "Juca" Sanches: devem ser essas interrupções dos timers #0 e #4 aqui. Mas pode ter mais coisas em jogo também... Continuo investigando 😉
+[2021-08-11 04:21:30] Felipe "Juca" Sanches: Como vocês talvez se lembrem vagamente.... (kkkkk) o endereço inicial de execução do código do firmware é 0xEF03C6
+[2021-08-11 04:23:18] Felipe "Juca" Sanches: A CPU decide ir pra esse endereço por que ela lê um "vetor de rotinas" localizado a partir do endereço 0xFFFF00 da memória. Isso é comportamento padrão da CPU, especificado pelo fabricante. Quem desenvolve software pra rodar nessa CPU precisa colocar lá em 0xFFFF00 o ponteiro para o ponto de partida do código.
+[2021-08-11 04:24:31] Felipe "Juca" Sanches: Além desse "entry point" (ponto de partida), também tem outros endereços nessa tabela.
+
+Por exemplo, lá se encontram todos os endereços das rotinas de tratamento de interrupções.
+[2021-08-11 04:25:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14067.jpg
+[2021-08-11 04:25:10] Felipe "Juca" Sanches: Aqui está a parte relevante do arquivo do firmware, com o entry point destacado (o valor 0x00EF03C6, que aparece escrito "de trás pra frente" aqui, por conta de outro detalhe de implementação da CPU)
+[2021-08-11 04:30:45] Felipe "Juca" Sanches: vejam que cada um dos grupo de 4 bytes nessa região corresponde um valor de um ponteiro de alguma rotina
+
+No caso aqui tem várias vezes o valor 0x00EF086A, o que me faz acreditar que essa seja uma rotina genérica que não faz nada de especial. É usada apenas para dizer "these are not the droids you're looking for" e pular fora.
+[2021-08-11 04:31:46] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14071-mp4.mp4
+[2021-08-11 04:31:56] Felipe "Juca" Sanches: Provavelmente correspondem a interrupções não-mascaráveis (aquelas que não temos como desabilitar), caso contrário o programador poderia ter simplesmente as desabilitado. Mas posso estar enganado é claro.
+[2021-08-11 04:35:47] Felipe "Juca" Sanches: o datasheet da CPU me diz aqui quais são as rotinas localizadas em cada um desses endereços:
+[2021-08-11 04:36:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14074.jpg
+[2021-08-11 04:59:02] Felipe "Juca" Sanches: com isso, concluo que as rotinas de tratamento de interrupção que precisamos estudar são:
+
+* Pino /NMI [0xFFFF20] = 0x00EF08A5
+* INTWD: Watch-dog Timer [0xFFFF24] = 0x00EF086B
+* Pino INT0 [0xFFFF28] = 0x00EF3525
+* Pino INT4 [0xFFFF2C] = 0x00F97E50
+* Pino INT5 [0xFFFF30] = 0x00F97E4A
+* Pino INTA [0xFFFF48] = 0x00FC442B
+* INTT1: 8-bit timer #1 [0xFFFF54] = 0x00EF0BF9
+* INTT2: 8-bit timer #2 [0xFFFF58] = 0x00EF08A4
+* INTT3: 8-bit timer #3 [0xFFFF5C] = 0x00EF1965
+* INTTR4: 16-bit timer #4 [0xFFFF60] = 0x00EF0E21
+* INTRX0: Recepção Serial #0 [0xFFFF80] = 0x00FCF1F0
+* INTTX0: Transmissão Serial #0 [0xFFFF84] = 0x00FCF15B
+* INTRX1: Recepção Serial #1 [0xFFFF88] = 0x00FC44D7
+* INTTX1: Transmissão Serial #1 [0xFFFF8C] = 0x00FC44B5
+* INTTC0: micro-DMA, canal 0 [0xFFFF94] = 0x00EF35E8
+* INTTC2: micro-DMA, canal 2 [0xFFFF9C] = 0x00EF35CA
+* INTTC3: micro-DMA, canal 3 [0xFFFFA0] = 0x00F97E35
+[2021-08-11 04:59:37] Felipe "Juca" Sanches: tirei esses números daqui
+[2021-08-11 04:59:51] Felipe "Juca" Sanches: cruzando com essa tabela
+[2021-08-11 05:01:03] Felipe "Juca" Sanches: isso já vai me servir como um bom guia de quais features preciso implementar no emulador
+[2021-08-11 05:02:37] Felipe "Juca" Sanches: o resto posso deixar incompleto (não implementado) por enquanto, pois essa é a filosofia do MAME:
+
+Implementamos o que precisa para um dispositivo específico. Aí quando aparece outro aparelho que usa a mesma CPU (ou os mesmos chips de som, de video, disquete, etc...) e que precisa de outras coisas do hardware, aí emulamos gradativamente oque for necessário
+[2021-08-11 05:03:18] Felipe "Juca" Sanches: Acho que nunca ninguém disse isso em voz alta. Mas é o que percebo no dia-a-dia acompanhando o projeto
+[2021-08-11 05:07:39] Felipe "Juca" Sanches: Sim, isso aqui tá virando um blog kkkkk
+
+Provavelmente vou continuar postando aqui esse "diário de bordo" da aventura por mais algumas semanas (famosas últimas palavras :-P)
+
+Fiquem à vontade para comentar... Perguntar...
+
+Se bobear depois eu faço mais um apanhadão pra postar um update lá no Fórum Fiozeira.
+[2021-08-11 05:12:01] Felipe "Juca" Sanches: Caso interesse ver o código-fonte do emulador, comecei a publicar meu branch do MAME com o "work in progress" da emulação dos teclados KN1500 e KN5000 da Technics aqui: 
+
+https://github.com/felipesanches/mame/commits/technics_keyboards
+[2021-08-11 05:13:27] Felipe "Juca" Sanches: continuarei empurrando mais commits meio sujos aí ao longo das "próximas semanas".
+
+Quando estiver funcionando bem o suficiente pretendo reorganizar os commits e limpar o código pra mandar um pull request pra ser incorporado oficialmente no MAME. Mas isso vai demorar.
+[2021-08-11 05:46:04] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14084.jpg
+[2021-08-11 05:46:04] Felipe "Juca" Sanches: último comentário da madrugada antes de ir dormir até meio-dia:
+
+Notem que o datasheet especifica que o último   ponteiro do vetor de interrupcoes fica em FFFFB0 e o resto é reservado (para CPUs futuras poderem ter chance de adicionar mais coisas ali e manter retrocompatibilidade)
+[2021-08-11 05:47:41] Felipe "Juca" Sanches: e, de fato, depois do ponteiro de 32 bits (4 bytes) no endereço FFFFB0 (1FFFB0 no arquivo da ROM), vem um monte de byte FF.
+
+Nada demais aqui. Só um sorrisinho ao confirmar algo que já se esperava 😉
+[2021-08-11 13:23:45] RicBit: Esse é o padrão em joguinho de Master system. No msx nem isso, é JR FE e o jogo roda inteiro na interrupção.

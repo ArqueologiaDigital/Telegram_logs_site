@@ -1,0 +1,47 @@
+[2026-09-28 00:38:12] Shideravan: Confesso que eu fiquei meio confuso com o conceito, porque o que eu aprendi na faculdade é que o bit era a menor unidade em computação e portanto, indivisível
+[2026-09-28 00:42:12] Shideravan: Eu confesso que me perdi na sua última explicação @RicBit. Aí pedi para a IA me explicar e ela fez algumas analogias interessantes
+[2026-09-28 00:42:30] RicBit: Bit de storage é indivisível, bit de teoria de informação não
+[2026-09-28 00:43:35] Shideravan: Essa conversa é fascinante! Seu amigo "RicBit" está mergulhado em um nível extremo de programação e matemática (provavelmente fazendo sizecoding, que é a arte de criar programas ou compressores minúsculos para computadores antigos, já que ele menciona o processador 8086 do MS-DOS).
+
+Não se sinta mal por não ter entendido: ele misturou otimização matemática, teoria da informação e linguagem de máquina em poucos parágrafos.
+Para traduzir o que ele fez, imagine o seguinte cenário: você está vendado no alto de uma montanha e seu objetivo é descer até a base.
+Na matemática, isso é o Gradiente Descendente (que o algoritmo "Namagiri" dele usa). Para descer, você apalpa o chão com o pé; se o chão inclina para baixo, você dá um passo naquela direção. O problema é que o algoritmo dele estava preso em um "platô" gigante.
+Aqui está o passo a passo da genialidade do que ele fez:
+
+1. O problema de medir em Bytes (O Platô) Ele tem um arquivo e quer testar milhares de pequenas modificações ("vizinhos") para ver qual comprime mais. Se ele medir o tamanho final em Bytes, uma mudança minúscula não vai alterar o tamanho total do arquivo. É como se a montanha fosse feita de degraus gigantes. Ele dá um passo para o lado e continua no mesmo degrau (1500 vizinhos têm o mesmo tamanho). O algoritmo empaca, pois não sabe para qual lado é a descida.
+
+2. A tentativa de medir em Bits (O degrau menor) Ele pensou: "Vou medir em bits no lugar de bytes". Melhorou um pouco (o degrau ficou 8 vezes menor), mas ainda é um degrau. Muitas modificações ainda resultam na exata mesma quantidade de bits. Ele ainda não consegue achar a inclinação da montanha.
+
+3. A "Grande Sacada": O Milibit (A Rampa Suave) É aqui que entra a tal "fração de bit". A mágica acontece porque ele usou Compressão Aritmética.
+Em compressores comuns (como ZIP, que usa Huffman), cada pedaço de dado vira um número inteiro de bits (ex: 010).
+Na Compressão Aritmética, o arquivo inteiro é transformado em um único número decimal entre 0 e 1.
+
+O que o RicBit percebeu foi: em vez de contar quantos bits o arquivo final gerou, ele pode olhar para as "casas decimais" do cálculo da compressão aritmética e ver o quão perto o compressor estava de precisar usar um novo bit.
+
+Como os processadores da época (ou a matemática que ele implementou) trabalham com números de 16 bits, essa escala tem exatas 65.536 divisões possíveis (). Então, ele pegou esse "espaço interno" da matemática do compressor e passou a usá-lo como unidade de medida. Ele apelidou isso de "milibit" (1/65536 de um bit).
+
+O Resultado Prático Agora, a montanha não tem mais degraus; ela virou uma rampa perfeitamente lisa (smooth). Qualquer alteração microscópica que ele faz no arquivo muda a conta em alguns "milibits". O algoritmo não fica mais cego; ele sempre sabe exatamente qual mudança aproxima o arquivo de ficar menor, e converge para a resposta perfeita incrivelmente rápido.
+Foi uma solução tão elegante que ele não precisou mais usar servidores na nuvem para processar a otimização de força bruta — o computador local dele deu conta do recado usando apenas matemática inteligente.
+(Curiosidade extra: no final, ele cita "E8 retargeting". E8 é o código de máquina da arquitetura x86 para "chamar função". Programadores de MS-DOS faziam truques alterando esses códigos antes de comprimir para o compressor achar mais padrões repetidos no arquivo. Um detalhe bem nostálgico para quem curte emuladores e DOS como você!)
+[2026-09-28 00:44:38] Shideravan: A IA te achou genial, Ric hahaha
+[2026-09-28 00:46:06] RicBit: IA sempre acha as pessoas geniais. Mas a explicação dela ficou boa sim.
+[2026-09-28 00:46:37] Shideravan: Quanta modéstia hahaha
+[2026-09-28 00:51:27] RicBit: E8 retargeting é porque o call do 8086 é relativo. Se eu tiver uma rotina em A000h, o binário não é E8 00 A0 como no z80, é E8 seguido da diferença entre A000 e o endereço do call. Então uma mesma rotina vai ter bytes sempre diferentes, o que o compressor odeia. Compressor gosta de repetição. Então eu faço E8 00 A0 mesmo, e depois de descomprimir eu faço a subtracao na mão. Isso salva centenas de bytes.
+[2026-09-28 00:51:28] Shideravan: Mas eu consegui compreender melhor e estou achando fascinante
+[2026-09-28 00:56:13] Shideravan: Qual a porcentagem da biblioteca do DMG que você já está conseguindo dar suporte?
+[2026-09-28 00:56:55] Shideravan: Ou melhor, em termos de compatibilidade, ainda falta alguma coisa?
+[2026-09-28 00:57:54] Shideravan: Tô curioso de saber quais seus próximos objetivos
+[2026-09-28 01:58:24] RicBit: ainda tem alguns mappers faltando, tipo huc1 e huc2. mas eu pausei colocar mappers para preparar um release da namagiri
+[2026-09-28 14:13:53] Macabeus: Essa postagem contando sobre como e-mail já foi bem usado para outros casos de uso, antes mesmo de termos páginas web, é bem interessante.
+Conta um pouco da história da computação e um futuro alternaivo caso e-mail ainda fosse o padrão para comunicação e integração entre sistemas
+
+https://buttondown.com/blog/software_over_email
+[2026-09-28 18:00:13] Shelton Ribeiro: Vi sim, e está incrível.
+[2026-09-28 18:01:22] Shideravan: Que época incrível que estamos vivendo, né? É muito legal ver esses ports que jamais imaginaríamos ver
+[2026-09-28 18:58:57] FTMaciel: Desculpem se for repetido, mas esse TMNT pro Master tá muito legal
+
+https://youtu.be/VN3uvgweXUo?is=Gmjc9xcaQcElXGl2
+[2026-09-28 19:19:12] Leonardo Roman: @fsanches lembra do VET3000? Tô brincando de fazer um demo pra entrada de cartucho dele (https://github.com/lrrosa/vet3000). O Claude foi categórico que o clock do VDP dele no MAME tá errado. Então já submetemos um PR: https://github.com/mamedev/mame/pull/16276
+[2026-09-28 20:50:30] Felipe "Juca" Sanches: Caralho! Que fantástico!!!
+[2026-09-28 20:51:22] Felipe "Juca" Sanches: Agora já sabe, né? A gente vai querer ver um cartucho fabricado rodando essa demo!
+[2026-09-28 20:52:43] Leonardo Roman: É a ideia.

@@ -1,0 +1,10 @@
+[2025-05-03 08:42:04] Ramiro Polla: Uma boa tática é incluir alguma coisa obviamente errada, porém pequena e de pouca importância, no código. Quando começa discussão de bikeshed, mais gente começa a interagir e talvez até façam um review mais sério :)
+[2025-05-03 16:02:09] L.: https://github.com/AaronFriel/qmodem-4.51
+[2025-05-03 16:02:56] L.: The source code release of QModem 4.51, 
+an MS-DOS telecommunications program authored by John Friel III 
+(1960–2024). This source snapshot reflects the state of QModem 
+"Test-Drive" edition, version 4.51, as it existed in early 1992. The 
+release is presented in the hope it may prove valuable as a historical 
+artifact, for telecommunications enthusiasts, retrocomputing hobbyists, 
+or anyone interested in the inner workings of a classic DOS comms 
+package.

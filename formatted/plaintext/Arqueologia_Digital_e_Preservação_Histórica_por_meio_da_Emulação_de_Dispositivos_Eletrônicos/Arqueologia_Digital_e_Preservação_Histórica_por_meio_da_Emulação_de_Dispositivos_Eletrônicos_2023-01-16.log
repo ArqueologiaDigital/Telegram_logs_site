@@ -1,0 +1,73 @@
+[2023-01-16 10:41:36] Pablo Vasques Bravo-Villalba: Uma curiosidade retrô aqui, será que alguém sabe? É sobre a paleta de cores do TK2000. Ele tem um sistema de vídeo similar ao do Apple II, em que as cores são geradas a partir de artefatos do vídeo composto. No caso do Apple II as cores são, dependendo da combinação de bits nos atributos, as seguintes:
+
+0 - Preto 1
+1 - Verde
+2 - Roxo (parece mais um magenta)
+3 - Branco 1
+4 - Preto 2
+5 - Laranja
+6 - Azul
+7 - Branco 2
+
+Essas são especificamente as cores geradas pelo Apple no padrão NTSC, e até onde eu sei são as mesmas em todos os clones. Mas o TK2000 é diferente porque o vídeo composto dele é no padrão PAL-M. E sei que as cores são diferentes também. Por exemplo, ele tem vermelho e ciano. E acho que o azul dele é mais escuro, mas não tenho certeza.
+
+O que eu queria saber especificamente é a que cor específica cada atributo corresponde no TK2000. Eu vi essa informação no manual técnico do TK2000 mas não parece correto, pois as cores não parecem bater quando comparo screenshots do Apple com screenshots do TK2000.
+
+Alguém teria alguma ideia?
+[2023-01-16 13:03:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25162.jpg
+[2023-01-16 13:03:10] Felipe "Juca" Sanches: Achei um bug (ao menos na versão de MSDOS). A rocha deveria ser renderizada obstruindo a visão das pernas do personagem. Depois vou insvestigar o bytecode pra ver se é simples de corrigir o bug
+[2023-01-16 13:09:32] L.: O emulador do Belavenuto deve ajudar, não?
+[2023-01-16 13:33:23] Felipe "Juca" Sanches: me parece que é algo que poderia ser determinado com embasamento teórico sobre o funcionamento dos padrões de vídeo. Talvez o @aylons nos possa ajudar a interpretar isso
+[2023-01-16 13:51:50] Pablo Vasques Bravo-Villalba: Legal, boa ideia! Vou verificar. Obrigado 😊
+[2023-01-16 13:52:32] Pablo Vasques Bravo-Villalba: Isso também me parece interessante, embora vá bem além da minha intenção original. 😊
+[2023-01-16 13:53:27] Felipe "Juca" Sanches: seria bom verificar também se o MAME mostra as cores certas na emulação do TK2000
+[2023-01-16 13:53:54] Felipe "Juca" Sanches: se estiver errado, seria um bug interessante pra tentar consertar
+[2023-01-16 14:28:24] Pablo Vasques Bravo-Villalba: O emulador do Belavenuto seria autoritativo nesse aspecto? Não tenho como verificar em um TK2000 real
+[2023-01-16 16:01:12] Felipe "Juca" Sanches: pra ter certeza, só com o hardware real
+[2023-01-16 16:02:14] Felipe "Juca" Sanches: o MAME é muito rigoroso, então tá pra confiar mais. Mas mesmo assim nunca é garantido que esteja perfeito, até mesmo por que o escopo do projeto é gigante, então é natural que haja coisas emuladas pela metade ou incorretamente.
+[2023-01-16 16:02:29] Felipe "Juca" Sanches: já outros emuladores costumam ser menos rigorosos e incluir gambiarras
+[2023-01-16 16:02:49] Felipe "Juca" Sanches: não sei como é o emulador do Belavenuto nesse quesito
+[2023-01-16 16:04:11] Felipe "Juca" Sanches: a principal diferença entre o MAME e a vasta maioria dos demais emuladores é justamente essa: o rigor em buscar uma emulação mais correta, mesmo que seja mais trabalhoso chegar nesse resultado (ou que talvez a performance não seja tão boa quanto seria com o uso de algumas gambiarras imprecisas)
+[2023-01-16 18:22:17] Pedro de Medeiros 👾: https://marioslab.io/posts/rendering-like-its-1996/babys-first-pixel/
+[2023-01-16 19:21:02] Shideravan: Existe outra também, tentar sempre renderizar o vídeo por software, mesmo que acelerado por hardware dedicado no original
+[2023-01-16 19:27:21] Shideravan: Eu lembro que há muitos anos atrás alguém (cuavas?) tinha liberado um roadmap que incluia implementar alguma forma de usar renderização por hardware no MAME
+[2023-01-16 19:27:34] Shideravan: Mas as coisas no MAME costumam ser bem lentas hahaha
+[2023-01-16 19:44:45] Toy: Que delícia de leitura!
+[2023-01-16 21:14:49] RicBit: Não existe cor certa. Eu medi com osciloscópio todas as variações possíveis em um Expert e a conclusão é que não tem como falar qual a cor certa, porque depende de como o sinal está codificado, de qual capacitor está nos filtros dos amplificadores, do comprimento do cabo, da calibração da tv e aí vai.
+[2023-01-16 21:18:34] Shideravan: Que legal
+[2023-01-16 21:18:52] Shideravan: Então não se garante a cor, se garante a consistência dela hahahaha
+[2023-01-16 21:19:22] Shideravan: Se garante que uma é diferente da outra e toda a vez que aparece ser igual a que apareceu antes no mesmo sistema e na mesma configuração
+[2023-01-16 21:20:20] Shideravan: Eu já vi discussões sobre o output de vídeo de emulador x e emulador y serem mais ou menos fieis e até comparações com o "hardware original" e tudo (com fotos de tela, por exemplo), para no fim, todos estarem certos de alguma forma hahahaha
+[2023-01-16 22:25:23] RicBit: Nem isso, bota um ímã perto da tv e a mesma configuração vai dar diferente.
+[2023-01-16 22:25:25] Pablo Vasques Bravo-Villalba: Expert? Mas eu queria saber do TK2000. Cada TK2000 apresenta cores diferentes? 😳
+[2023-01-16 22:35:21] RicBit: É que o raciocínio vale para todos né
+[2023-01-16 22:48:26] Pablo Vasques Bravo-Villalba: Então. Eu honestamente não tenho conhecimento técnico suficiente em relação a isso, mas ao menos sei que a maneira do Apple II (e do TK2000) gerar cores é bem diferente da maneira que o MSX gera. Entendo que no caso do Apple é gerado um sinal de alta resolução com dois pixels a cada ciclo de colorburst, o que possibilita 4 cores diferentes: preto com os dois pixels apagados, duas cores diferentes com cada um dos pixels acesos e branco com os dois pixels acesos; um delay adicional de meio pixel causa um desalinhamento que possibilita ainda mais duas cores diferentes além das originais. Então você tem as cores básicas de alta resolução do Apple II, que são as que listei na minha postagem original. E essas cores parecem ser bastante previsíveis, tanto que a técnica foi usada em incontáveis jogos e programas e está bem documentada.
+
+Agora, aparentemente em modo PAL o alinhamento não é tão perfeito e as cores não podem ser determinadas com precisão. Só que quando a gente vê informações sobre PAL na Internet, muitas vezes se assume que seja PAL-B ou PAL-G, que são os mais comuns na Europa. Ninguém fala muito sobre PAL-M, mas pelo que entendi no caso do PAL-M os timings são tão mais similares ao do NTSC que dá pra gerar cores de artefato de vídeo composto da mesma maneira, e obter resultados similarmente consistentes; o porém é que as cores geradas são literalmente diferentes.
+[2023-01-16 22:51:09] Pablo Vasques Bravo-Villalba: Olha só as cores do Karateka no Apple II:
+[2023-01-16 22:51:22] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25190.jpg
+[2023-01-16 22:51:40] Pablo Vasques Bravo-Villalba: Esse emulador aqui parece usar as mesmas cores do Apple II:
+[2023-01-16 22:51:44] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25192.jpg
+[2023-01-16 22:52:05] Pablo Vasques Bravo-Villalba: Já esse outro tem cores diferentes:
+[2023-01-16 22:52:08] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25194.jpg
+[2023-01-16 22:52:29] RicBit: audio: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25195.ogg
+[2023-01-16 22:52:48] Pablo Vasques Bravo-Villalba: E esse segundo é que tem cores de acordo com o que está no Manual Técnico do TK2000
+[2023-01-16 22:53:39] RicBit: Se você achar o esquemático eu posso tentar calcular o nível do sinal
+[2023-01-16 22:54:06] RicBit: Dá a cor média pelo menos
+[2023-01-16 22:58:00] Pablo Vasques Bravo-Villalba: Eu achei dois aqui
+[2023-01-16 22:58:05] Pablo Vasques Bravo-Villalba: Não sei se estão suficientemente detalhados
+[2023-01-16 22:58:40] Pablo Vasques Bravo-Villalba: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25201-esquema-tk2000-medio.jpg
+[2023-01-16 22:58:40] Pablo Vasques Bravo-Villalba: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25202-esquema-tk2000.jpg
+[2023-01-16 23:00:15] Pablo Vasques Bravo-Villalba: Na Wikipédia tem essa tabela referente ao Apple II:
+[2023-01-16 23:00:17] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25204.jpg
+[2023-01-16 23:00:35] Pablo Vasques Bravo-Villalba: Só que eu não tenho ideia de como a lógica se transferiria para o TK2000
+[2023-01-16 23:04:38] RicBit: São o mesmo esquemático, pelo que eu vi
+[2023-01-16 23:06:13] RicBit: Treco doido, a RAM tá ligada direto no vídeo haha
+[2023-01-16 23:06:25] RicBit: Da para calcular sim, amanhã eu faço.
+[2023-01-16 23:06:44] Pablo Vasques Bravo-Villalba: Massa, obrigado 😊
+[2023-01-16 23:07:18] RicBit: Normalmente tem um chip de vídeo entre a RAM e o vídeo, não tinha visto direto assim
+[2023-01-16 23:07:49] RicBit: O clock é 3.57 né?
+[2023-01-16 23:08:13] Pablo Vasques Bravo-Villalba: É PAL-M, então suponho que seja isso ou algo bem próximo
+[2023-01-16 23:12:38] Pablo Vasques Bravo-Villalba: Se eu procuro cristal PAL-M online acho frequência um pouquinho diferente da do NTSC. NTSC seria 3.579545MHz, enquanto PAL-M seria 3.575611MHz. Não sei se isso afeta muito os cálculos
+[2023-01-16 23:21:31] RicBit: Afeta sim, obrigado pelos números!
+[2023-01-16 23:22:12] Pablo Vasques Bravo-Villalba: Eu é que agradeço. É uma curiosidade minha tão inconsequente no fim das contas 😅

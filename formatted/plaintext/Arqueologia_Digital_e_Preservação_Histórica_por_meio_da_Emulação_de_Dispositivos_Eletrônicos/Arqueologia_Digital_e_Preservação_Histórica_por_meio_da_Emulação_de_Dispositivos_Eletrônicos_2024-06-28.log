@@ -1,0 +1,14 @@
+[2024-06-28 08:18:15] Guilherme Ranoya: Eu finalmente consegui fazer o Xerox Ventura Publisher funcionar no Dosbox online.
+
+https://namco.vercel.app/interfaces/?rom=xvpgem
+
+Imagino que quase ninguém aqui conheça esse programa. Ele foi um dos primeiros softwares de Desktop Publishing (editoração de livros e revistas). Mas ele era um assombro em 1985. Primeiro: ele era enorme, e praticamente ocupava 100% da HD do PC-XT, que tinha 20Mb. Segundo: ele exigia que o computador tivesse um co-procecssador matemático instalado, coisa absolutamente incomum em 85 e nos PCs XT; e por fim, ele exigia um mouse, algo também completamente incomum na época.
+
+O Ventura rodava em cima do GEM, aquele ambiente gráfico que a DRI do Gary Kildall (desse vez acertei!) criou, e que o Steve Jobs fez ele piorar para não ser processado. O próprio GEM veio anos antes do Windows, e se me perguntarem, acho ele bem mais bonito que o Windows (alias, acho uma das interfaces gráficas mais bonitas, até hoje).
+
+Eu já tinha conseguido rodar o Ventura online no ano passado, mas o mouse não funcionava... acabei descobrindo que a versão 3 do Ventura já tinha suporte para mouses PS2  e aí consegui fazer funcionar. O uso do mouse em 85 era tão raro nos PCs que o driver do Ventura/GEM era proprietário e restrito a poucos modelos conectados na porta serial... me lembro desta questão também: meu logitech de 3 botões (era o máximo da tecnologia na época) era ligado na porta serial do PC. Por esse motivo, o mouse não funciona no GEM... já havia tentado configurar o Dosbox para usar mouse serial na COM1, mas também não tinha funcionado.
+
+O que ainda não consegui fazer funcionar é o próprio GEM Desktop 1.0... pra esse ainda não consegui fazer o mouse funcionar. E como a versão seguinte já é a que o Steve Jobs destruiu, a solução do Ventura de instalar uma versão posterior não se aplica...
+[2024-06-28 12:57:44] L.: https://blog.adafruit.com/2024/06/28/a-raspberry-pi-pico-based-psx-memory-card-piday-psx-wizzomafizzo-raspberrypi/
+[2024-06-28 13:50:12] RicBit: Na minha bolha todo mundo lembra do ventura porque era uma lenda local, o pai do amigo de alguém trabalhava "com ventura" e os graficos eram "tipo foto", mas obvio que a molecada achava que era lorota. Até que um dia a gente foi visitar o tal pai do amigo no trabalho e realmente o tal do ventura era coisa do outro mundo. Não sei qual era a versão exatamente, devia ser por volta de 1990 ou 1991, o que eu lembro era que ele usavam o monitor na vertical para editorar a pagina por inteiro, e o grafico de foto provavelmente era uma placa XGA. Eu só fui ter uma resolução igual em casa com o SVGA lá por volta de 1996.
+[2024-06-28 13:51:21] Guilherme Ranoya: Isso... era uma verdadeira lenda!

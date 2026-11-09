@@ -1,0 +1,53 @@
+[2024-07-22 11:30:13] Felipe "Juca" Sanches: Quem cutuca acha!
+[2024-07-22 11:30:15] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-07/32460.jpg
+[2024-07-22 11:30:15] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-07/32461.jpg
+[2024-07-22 11:30:16] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-07/32462.jpg
+[2024-07-22 11:30:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-07/32463.jpg
+[2024-07-22 11:31:16] Felipe "Juca" Sanches: E aqui a resposta dele 😉
+[2024-07-22 11:31:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-07/32465.jpg
+[2024-07-22 11:31:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-07/32466.jpg
+[2024-07-22 11:35:27] Lucas Alberto: KKKKK um ci por cima do outro, muito bom.
+
+Ele também trocou um TTL por um CMOS. Por que será ? Alimentação?
+[2024-07-22 15:46:16] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=bY79uhagv6s
+[2024-07-22 17:33:50] Felipe "Juca" Sanches: E ele também disse:
+
+
+Quanto aos divisores, só tem 2 CIs 7493. O primeiro divide 100 kHz por 8 (entra no pino 1, sai no 11) para gerar o Clock Serial de 12,5 kHz.
+
+O segundo conta os bits, entra o clock no pino 1, sai no 11 e entra no 14 e daí sai nos pinos 9 e 12 para detectar o décimo bit recebido usando uma porta NAND.
+
+Aí dispara um monoestável (74121) que resseta os contadores ao mesmo tempo que gera o pulso de “strobe” (através de um 7440) indicando que foram recebidos 8 bits de dados e comando.
+
+Guido
+[2024-07-22 17:35:33] Felipe "Juca" Sanches: Esse circuito foi projetado em 1974. O Guido em meia hora me explica com a maior facilidade o que ele fez 50 anos atrás!
+[2024-07-22 17:37:55] Lucas Alberto: Com certeza marcou a vida dele
+[2024-07-22 17:39:35] L.: Eu tenho dificuldade pra explicar o que fiz semana passada na reunião do time segunda de manhã
+[2024-07-22 18:02:59] Pablo Vasques Bravo-Villalba: Somos dois 😅
+[2024-07-22 18:23:06] Pedro de Medeiros 👾: Eu olho os pull requests, merges e branches.
+[2024-07-22 18:24:34] L.: As vezes nem isso serve pra mim por que tem interações que tive com galera, tem documentação que escrevi, coisa que fiz review
+[2024-07-22 18:24:43] L.: Um monte de coisa intangível
+[2024-07-22 18:24:52] L.: Demoro pra pegar no tranco hehehe
+[2024-07-22 18:25:01] L.: Eu escrevo na sexta pra lembrar na segunda
+[2024-07-22 18:32:49] Felipe "Juca" Sanches [forwarded]: o professor João Josẽ Neto outro dia se lembrou de cabeça de uma sequencia de valores numéricos da rotina de bootstrap do Patinho Feio
+[2024-07-22 18:33:04] Felipe "Juca" Sanches [forwarded]: de quase 50 anos atrás
+[2024-07-22 18:33:11] Felipe "Juca" Sanches [forwarded]: Felipe, Depois de ficar sabendo da ressurreição do hexam, fiquei muito incomodado por não ter encontrado qualquer resquício documentado  do boot do patinho feio.
+Resolvi então fazer uma devassa no meu cérebro e resgatar o dito cujo. Em anexo, o resultado de dois dias de intensas regressões mentais, a partir das quais consegui resgatar sucessivos fragmentos do código de máquina em hexadecimal do micro pré-loader do patinho feio.
+Não é tudo, mas já é um grande começo. Peço-lhe
+ que, quando puder, teste no simulador este programa, carregando-o manualmente ou então com o hexam (espero que não haja conflito de endereçamento) e depois, tentando usá-lo para ler uma fita e carregar a memória alta com seu conteúdo, de trás para frente. Se der certo, talvez seja possível tentar reescrever o loader absoluto. 
+Deste, eu não consigo vislumbrar onde poderia haver qualquer resquício de documentação. (será que pode existir alguma coisa nos arquivos da diretoria da poli?) só sei que o programa foi desenvolvido pelo victor mammana de barros em macro assembler do ibm1130. Talvez alguém saiba onde isso foi parar...
+Estou ansioso por saber se consegui realmente resgatar memórias verdadeiras de meio século de idade. Em anexo, o programa e uma documentação que fiz para que fique legível.
+abraço
+[2024-07-22 18:33:26] Felipe "Juca" Sanches [forwarded]: "Resolvi então fazer uma devassa no meu cérebro e resgatar o dito cujo." -- João José Neto
+[2024-07-22 18:33:43] Lucas Alberto: Quando crescer quero ser igual eles
+[2024-07-22 18:34:21] Felipe "Juca" Sanches: Originalmente eu tinha postado essas mensagens aqui mesmo nesse grupo em 2017, mas o Telegram não deixa eu dar reply em mensagens "tão antigas"...
+[2024-07-22 18:34:51] Felipe "Juca" Sanches: 21/OUT/2017, pra quem se interessar
+[2024-07-22 18:40:53] L.: Doideira
+[2024-07-22 22:35:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-07/32487.jpg
+[2024-07-22 22:35:01] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/11835#issuecomment-2244004277
+[2024-07-22 22:35:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-07/32488.jpg
+[2024-07-22 22:35:30] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/11835#issuecomment-2244009318
+[2024-07-22 23:46:49] Felipe "Juca" Sanches: Guido me mandou agora fotos da placa com os ajustes
+[2024-07-22 23:47:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-07/32490.jpg
+[2024-07-22 23:47:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-07/32491.jpg
+[2024-07-22 23:47:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-07/32492.jpg

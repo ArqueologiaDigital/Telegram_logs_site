@@ -1,0 +1,34 @@
+[2023-01-28 00:05:29] Felipe "Juca" Sanches: Fazer isso é gostoso igual jogar SUDOKU
+[2023-01-28 00:23:17] L.: Tá quase virando a função monstro que faz eval dum frame no python!😅
+[2023-01-28 00:42:05] Felipe "Juca" Sanches: Eu fico vendo esses códigos de jump table e torcendo pra achar algum vacilo de verificação de tamanho do vetor...
+[2023-01-28 00:42:48] Felipe "Juca" Sanches: que possa me dar uma chance de injetar código via buffer overflow sem ter que ficar fazendo gravação da flash inteira
+[2023-01-28 00:42:56] L.: O jeito de achar o limite da tabela é sempre o mesmo? Um and ou um mod?
+[2023-01-28 00:43:21] Felipe "Juca" Sanches: por enquanto tem sido isso. Mas vi algumas rotinas que parecem não validar
+[2023-01-28 00:43:31] Felipe "Juca" Sanches: então to deixando anotado aqui pra investigar mais a fundo
+[2023-01-28 00:44:05] L.: Dá pra pelo menos marcar com comentário que aquele bando de DB seguido dum jump indireto pode ser uma jump table
+[2023-01-28 00:44:22] L.: *jump indireto seguido de db
+[2023-01-28 00:46:17] Felipe "Juca" Sanches: o motivo de eu ter interesse em achar algum buffer overflow é poder rodar código arbitrário em cima da ROM original, pois a minha ROM hackeada tem ainda alguma cagada no algoritmo de descompressão e algumas áreas no início da memória ainda estão com valores incorretos. Portanto eu gostaria de fazer um dump dessa parte, pra ver se me traz alguma luz sobre qual é o bug no meu descompressor
+[2023-01-28 02:07:48] Felipe "Juca" Sanches: o output (ainda incompleto) do disassembler já tá com cerca de 21 mil labels kkkk
+[2023-01-28 02:07:59] Felipe "Juca" Sanches: são 2 Mbytes de binário
+[2023-01-28 02:21:19] Felipe "Juca" Sanches: ah, minto! São 7482 labels até agora. 21 mil seria contando não só as labels mas também as instruções que as referenciam
+[2023-01-28 08:58:51] Felipe "Juca" Sanches: Hoje no café da manhã achei mais uma tabela de 192 ponteiros
+[2023-01-28 10:02:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25585.jpg
+[2023-01-28 10:03:32] Felipe "Juca" Sanches: Parece um Pense Bem, mas nao sei o que é. Não tem nenhum nome de fabricante na carcaça
+[2023-01-28 10:09:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25587.jpg
+[2023-01-28 10:09:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25588.jpg
+[2023-01-28 11:52:02] Ismael Luceno: https://en.wikipedia.org/wiki/Peter_Pan_Playthings_Ltd
+[2023-01-28 11:53:11] Ismael Luceno: https://www.handheldmuseum.com/Misc/PeterPanMasterChallenge.htm
+[2023-01-28 11:53:50] Ismael Luceno: @fsanches ^^^
+[2023-01-28 12:29:48] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25592.jpg
+[2023-01-28 12:43:46] Felipe "Juca" Sanches: OK. Esse aí é o Master Challenge. Mas e o mini "computador" ao lado esquerdo dele nessa foto?
+[2023-01-28 14:32:55] Ismael Luceno: Kay-Bee Toys, See & Learn Computer
+[2023-01-28 14:35:27] Ismael Luceno: KB Toys - Wikipedia
+https://en.wikipedia.org/wiki/KB_Toys
+[2023-01-28 19:51:50] L.: https://digipres.club/@misty/109769126813925979
+[2023-01-28 20:40:56] FTMaciel: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25599.jpg
+[2023-01-28 20:40:56] FTMaciel: Hoje tava numa queda de braço com esse demônio
+[2023-01-28 20:45:44] FTMaciel: Era uma plotter multifuncional que arrematei num leilão por 100 reais. Ai fui lá e tirei só a parte do scanner, que se conecta via USB ao controlador
+[2023-01-28 20:52:23] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25601.jpg
+[2023-01-28 20:52:23] L.: E esse demônio?
+[2023-01-28 20:56:09] FTMaciel: Zóio de gato
+[2023-01-28 20:56:19] FTMaciel: Um tapa olho

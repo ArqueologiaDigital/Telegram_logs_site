@@ -1,0 +1,26 @@
+[2022-11-01 15:56:00] * Gunter joined the group
+[2022-11-01 15:56:13] Gunter: é aqui que é proibido bolsominion?
+[2022-11-01 15:56:17] Shideravan: Seja bem-vindo @N0b0dy00000005348641897894868794
+[2022-11-01 15:56:21] Gunter: Finalmente, um lugar que tem paz
+[2022-11-01 15:56:28] Shideravan: kkkkkkkkkkkkkkkkkk
+[2022-11-01 15:56:34] Gunter: obregado
+[2022-11-01 16:00:09] Shideravan: @N0b0dy00000005348641897894868794 acompanha os grupos do Garoa Hackerspace e do Hackspace de Campinas, então acho que vai se sentir em casa aqui com a gente
+[2022-11-01 16:46:53] Anne Isabelle: Hello @N0b0dy00000005348641897894868794 !
+[2022-11-01 17:54:00] Shelton Ribeiro: Bem-vindo @N0b0dy00000005348641897894868794 👏🏼👏🏼👏🏼
+[2022-11-01 18:15:33] Erin Pinheiro 🐿: pra quem quiser me ajudar a melhorar o pilot-link pra que eu possa usar meu Handspring Treo 90 no linux: https://github.com/desrod/pilot-link/issues/13
+[2022-11-01 18:15:48] Erin Pinheiro 🐿: tem bastante informação que eu já consegui dar uma avançada, mas ainda sem sucesso total
+[2022-11-01 18:16:13] Erin Pinheiro 🐿: as capturas:
+[2022-11-01 18:16:13] Erin Pinheiro 🐿: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-11/24378-treo90hotsync.pcapng
+[2022-11-01 18:16:13] Erin Pinheiro 🐿: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-11/24379-txhotsync2.pcapng
+[2022-11-01 18:21:37] Anne Isabelle: Eu pensei em ajudar mas eu tô cansada demais kajskajaj
+[2022-11-01 18:22:03] Anne Isabelle: Mas prometo que tento ver no fim de semana
+[2022-11-01 18:24:58] Shideravan: Minha vida nos últimos meses kkkkkkkkkkk
+[2022-11-01 18:26:03] Erin Pinheiro 🐿: eu consegui ahuehauhaueh
+[2022-11-01 18:26:16] Erin Pinheiro 🐿: hardcodei o tamanho esperado do interrupt read pra 64 bytes
+[2022-11-01 18:26:19] Erin Pinheiro 🐿: e destravou a bus
+[2022-11-01 18:26:22] Erin Pinheiro 🐿: o treo deu sync
+[2022-11-01 18:26:23] Erin Pinheiro 🐿: HAUEHAUEHAHE
+[2022-11-01 18:26:36] Erin Pinheiro 🐿: agora preciso deixar de preguiça e mandar PR pro pilot-link
+[2022-11-01 18:28:06] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-11/24389.jpg
+[2022-11-01 18:55:08] Erin Pinheiro 🐿: https://github.com/desrod/pilot-link/pull/14 pronto
+[2022-11-01 19:35:33] Anne Isabelle: Lajskajajaj

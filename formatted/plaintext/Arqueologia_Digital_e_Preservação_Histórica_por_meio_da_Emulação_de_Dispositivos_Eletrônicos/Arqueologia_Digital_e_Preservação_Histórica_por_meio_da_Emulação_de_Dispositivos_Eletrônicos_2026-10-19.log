@@ -1,0 +1,29 @@
+[2026-10-19 03:39:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41686.jpg
+[2026-10-19 03:39:08] Felipe "Juca" Sanches: sucesso!
+[2026-10-19 03:47:27] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41687-rubegoldberg1.gif.mp4
+[2026-10-19 04:02:55] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/16517
+[2026-10-19 04:27:49] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=jr5or3y8ROs
+[2026-10-19 07:05:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41690.jpg
+[2026-10-19 07:56:11] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/16520
+[2026-10-19 07:56:40] Felipe "Juca" Sanches: to surfando a onda! haha
+[2026-10-19 17:34:49] Guilherme Ranoya: https://www.youtube.com/watch?v=o_VZWWu95Q4
+[2026-10-19 17:34:53] Guilherme Ranoya: https://pointandclick.studio/games/sierra-quest
+[2026-10-19 18:21:58] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41695.jpg
+[2026-10-19 18:21:58] RicBit: kcachegrind em codigo z80
+[2026-10-19 18:38:53] L.: Gerou com tcl no openmsx?
+[2026-10-19 18:39:10] RicBit: Isso
+[2026-10-19 19:10:49] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41698.jpg
+[2026-10-19 19:10:49] RicBit: hotloop
+[2026-10-19 19:12:57] Jecel Assumpcao Jr: Ah, instruções dentro do mesmo bloco básico tem números diferentes por levarem diferentes números de ciclos de relógio para serem executadas. Achei estranho até me lembrar deste detalhe
+[2026-10-19 19:15:08] RicBit: sim, ele calcula os t-states com 1 wait extra por ciclo M1
+[2026-10-19 19:15:40] RicBit: eu nunca entendi o wait extra, se a leitura fosse falhar porque a memoria é lenta, o mais sensato seria colocar wait em todas as leituras
+[2026-10-19 19:15:56] RicBit: mas ele faz só no instruction fetch, vai saber o motivo.
+[2026-10-19 19:17:11] Jecel Assumpcao Jr: serve para dar refresh nas memórias dinâmicas. É o único micro que faz isso
+[2026-10-19 19:18:05] Jecel Assumpcao Jr: Tem um contador de 7 bits (registrador R) que gera os endereços destes ciclos extras
+[2026-10-19 19:18:28] RicBit: ah pode ser isso entao, true. refresh não precisa ser sempre, pode ser só de vez em quando
+[2026-10-19 19:20:59] Jecel Assumpcao Jr: Se o contador voltar ao 0 (depois de ir até 127) em menos de 2 milisegundos vai estar dentro das especificações da 4116
+[2026-10-19 20:46:50] Robson França: Boa noite aê! Resolvi "brincar" com o Claudio e... pedi um emulador de TRS Color rs
+https://github.com/robsonfr/Cepecdbr
+[2026-10-19 20:47:13] Robson França: Eu pedi um emulador 100% em C
+[2026-10-19 21:13:49] Felipe "Juca" Sanches: https://www.theverge.com/gadgets/1013493/vibe-coding-ai-music-gear-hacking-custom-firmware
+[2026-10-19 21:21:41] RicBit: faz um em 4kb!

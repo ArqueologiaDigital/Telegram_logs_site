@@ -1,0 +1,7 @@
+[2021-09-27 00:09:07] RicBit: deixa ver o source do openscad para ver se é muito trampo refazer do zero perai
+[2021-09-27 00:12:28] RicBit: eita tem o tipo tribool no codigo
+[2021-09-27 00:12:31] RicBit: isso nao é bom sinal haha
+[2021-09-27 00:32:13] RicBit: lendo de cima acho que nao precisa mexer quase nada no openscad, a parte que dá pau é dentro da CGAL que é a biblioteca de geometria que ele usa.
+[2021-09-27 14:12:55] L.: @fsanches foi você que mandou pro archive.org? https://github.com/historicalsource/pinballfantasies
+[2021-09-27 14:24:23] Felipe "Juca" Sanches: não
+[2021-09-27 14:38:55] Pablo Vasques Bravo-Villalba: 👀

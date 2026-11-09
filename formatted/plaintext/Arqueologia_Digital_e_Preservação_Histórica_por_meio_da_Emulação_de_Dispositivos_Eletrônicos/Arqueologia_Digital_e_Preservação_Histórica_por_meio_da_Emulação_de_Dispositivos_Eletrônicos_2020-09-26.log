@@ -1,0 +1,28 @@
+[2020-09-26 02:09:18] Felipe "Juca" Sanches: estou me divertindo de montão com o MAME essa semana
+[2020-09-26 02:09:43] Felipe "Juca" Sanches: comprei um monte de equipamentos de vídeo da SONY e to emulando tudo
+[2020-09-26 02:11:16] Felipe "Juca" Sanches: a coisa mais legal que tenho aqui é um switcher de video com um painel de controle. Ele faz conversao de frames de video analógico para buffer digital, aplica efeitos, e converte de volta para sinais analógicos. Faz aquelas transicoes de cena cafonas da TV da década de 90
+[2020-09-26 02:19:02] Felipe "Juca" Sanches: Aos 9 minutos e 32 segundos desse video, dá pra ver uma demonstracao dos efeitos cafonas:
+
+
+https://youtu.be/URKQDis9XfM?t=572
+[2020-09-26 09:54:37] RicBit: Gente, Carnaval da Globo total isso aí
+[2020-09-26 14:41:32] Leonardo Roman: Hahaha, pensei a mesma coisa.
+[2020-09-26 17:14:24] Felipe "Juca" Sanches: controlado por 2 CPUs NEC V20 (retrocompativel com intel 8088) e uma NEC V30 (igual ao V20, mas com barramento de dados de 16bits)
+[2020-09-26 17:16:13] Felipe "Juca" Sanches: tem 4 inputs (com opcoes de video-composto, Y/C ou video-componente para cada um dos 4 inputs)
+E tem dois outputs (com as mesmas opcoes de sinal de video)
+[2020-09-26 17:16:33] Felipe "Juca" Sanches: além disso acho que tem também uma entrada pra chroma key, mas não tenho certeza. Preciso ler melhor o manual
+[2020-09-26 17:26:46] Felipe "Juca" Sanches: hoje limpei a PCB do mixer que tava com uma bateria vazada
+[2020-09-26 17:27:33] Felipe "Juca" Sanches: não chegou a sofrer muito com corrosão. Depois de limpar tudo chequei com um multimetro e aparentemente as trilhas do circuito ainda estão todas intactas
+[2020-09-26 17:28:01] Felipe "Juca" Sanches: medi também a tensão da bateria vazada e, como esperado, zero volts. Mortinha da silva!
+[2020-09-26 17:28:30] Felipe "Juca" Sanches: posso remover a bateria e deixar sem, e suspeito que apenas vai perder a capacidade de memorizar configuracoes
+[2020-09-26 17:28:54] Felipe "Juca" Sanches: nao sei se a bateria morta atrapalha o funcionamento do circuito. Acho que não.
+[2020-09-26 17:29:17] Felipe "Juca" Sanches: verifiquei com o multimetro e ela não está funcionando como um curto-circuito
+[2020-09-26 17:30:05] Felipe "Juca" Sanches: liguei o aparelho pela primeira vez e vejo apenas um padrão quadriculado branco e preto (testei em ambas as saídas de vídeo-composto)
+[2020-09-26 17:30:34] Felipe "Juca" Sanches: eu estou sem o cabo DB25 aqui pra ligar o painel de controle. Comprei um hoje (e também mais cabos BNC) e deve chegar ao longo da semana
+[2020-09-26 17:31:11] Felipe "Juca" Sanches: o video das duas saídas tá um pouco instaval, piscando intermitentemente, e ameacando de leve perder sync
+[2020-09-26 17:31:42] Felipe "Juca" Sanches: no fim das contas deve ser tudo questão de troca de capacitores, provavelmente na PCB do conversor digital-analógico
+[2020-09-26 17:32:33] Felipe "Juca" Sanches: só pelo comportamento observado hoje, não tenho idéia se a PCB das CPUs está OK ou não. Não vi nenhum texto na tela, por exemplo. Nem mesmo um alerta de bateria fraca.
+[2020-09-26 17:32:55] Felipe "Juca" Sanches: ligando junto com o painel de controle vai dar pra diagnosticar melhor
+[2020-09-26 17:37:48] Felipe "Juca" Sanches: O código de emulação já tá comecando a ficar cabeludinho...
+[2020-09-26 17:38:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-09/11411.jpg
+[2020-09-26 17:38:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-09/11412.jpg

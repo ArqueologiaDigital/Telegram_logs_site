@@ -1,0 +1,14 @@
+[2025-09-20 08:29:44] Ismael Carvalho: bom dia pessoal @fsanches me apresentou esse mundo aqui, e pelo MAME tá sendo os tópicos de programação mais divertidos em anos que tô tendo contato
+[2025-09-20 08:35:32] Felipe "Juca" Sanches: Estamos nos divertindo com isso:
+https://www.reddit.com/r/emulation/comments/18rhhcn/mame_is_starting_to_emulate_a_brick_game_handheld/?tl=pt-br
+[2025-09-20 08:52:46] Felipe "Juca" Sanches: O driver no MAME (src/mame/handheld/hh_ht11xx.cpp) não emula o som. E o artigo explica que é por que a CPU tinha sequências de sons/músicas pré-definidas e que eles ainda não tinham feito dump das estruturas de dados dessa "sounds library" embutida na CPU.
+
+Mas o emulador escrito em python nesse outro repo já tem som. Então acho que de dez/2023 pra cá, já devem ter feito o dump dessas músicas.
+
+Então essa pode ser uma forma de ajudar na implementação do driver, portando essa parte do áudio que parece ser uma descoberta recente e ainda não implemnetada.
+[2025-09-20 08:54:34] Felipe "Juca" Sanches: Emulador em python nesse outro repo:
+https://github.com/azya52/BrickEmuPy
+[2025-09-20 08:58:08] Ismael Carvalho: O artigo sobre o processo de engenharia reversa do Brick Game E-23 PLUS MARK II 96 in 1  que ele faz menção nesse repo está em russo, mas é bem maneiro de ler
+[2025-09-20 11:58:17] L.: Agora tem que pegar um brick game, arrancar o circuito e botar uma placa com arm e mame
+[2025-09-20 12:01:25] L.: Eu peguei um video game portátil pro meu sobrinho e paguei uns $4 no Aliexpress. É um daqueles NES de chip bolha com 99999999 jogos na rom
+[2025-09-20 18:39:09] Felipe "Juca" Sanches: https://youtu.be/A7ZqTaQTtsc

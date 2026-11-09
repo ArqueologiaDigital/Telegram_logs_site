@@ -1,0 +1,31 @@
+[2018-06-24 00:16:56] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5449-sticker.webp
+[2018-06-24 00:17:42] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5450-sticker.webp
+[2018-06-24 00:18:27] Ismael Luceno: (já mais de dois anos desde que eu deixei o projeto)
+[2018-06-24 00:19:05] Ismael Luceno: estamos trabalhando um dump da Samsung DeskMaster 486S/25Q
+[2018-06-24 00:30:14] Ismael Luceno: @fsanches http://dpaste.com/25G0W46
+[2018-06-24 00:31:01] Felipe "Juca" Sanches: 😊
+[2018-06-24 00:33:28] Ismael Luceno: temos aluns bugs ainda
+[2018-06-24 00:33:35] Ismael Luceno: alguns*
+[2018-06-24 00:40:44] Ismael Luceno: agora estamos com os opcode "call"
+[2018-06-24 00:41:15] Felipe "Juca" Sanches: não está claro exatamente o que vocês querem fazer
+[2018-06-24 00:42:13] Ismael Luceno: agora estamos fazendo um pequeno decompilador um poquitinho mais inteligente do que o objdump
+[2018-06-24 00:42:23] Ismael Luceno: mas a idéia é outra
+[2018-06-24 00:45:33] Ismael Luceno: a idéia é fazer caracterização automática do código
+[2018-06-24 00:45:44] Ismael Luceno: então precisamos disso primeiro
+[2018-06-24 00:46:24] Ismael Luceno: simplesmente dizer quais opcodes aparecem em quais tipos de código
+[2018-06-24 01:22:12] Felipe "Juca" Sanches: http://flashparty.dx.am/index.php?lang=en
+[2018-06-24 03:12:37] Ismael Luceno: @fsanches estou em Montevidéu atualmente
+[2018-06-24 03:13:26] Ismael Luceno: ah, Setembro... :(
+[2018-06-24 03:13:48] Ismael Luceno: @fsanches já não vou estar na região
+[2018-06-24 11:47:20] Rodrigo Tadeu: Aí é bom demais. Comer no porto.. O coisa boa
+[2018-06-24 12:32:20] Felipe "Juca" Sanches: As armas usadas no gabinete do jogo Golly Ghost também foram usadas no Steel Gunner
+[2018-06-24 12:33:37] Felipe "Juca" Sanches: https://www.ebay.com/itm/steel-gunner-arcade-gun-2/253196630352
+[2018-06-24 12:34:21] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=PGJDqoiCcTI
+[2018-06-24 16:05:50] Felipe "Juca" Sanches: Gunmen Wars também usa a mesma arma que o Golly Ghost
+[2018-06-24 16:05:55] Felipe "Juca" Sanches: https://www.crazykong.com/manuals/GunMenWars.man.pdf
+[2018-06-24 16:06:09] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5474.jpg
+[2018-06-24 16:06:26] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5475.jpg
+[2018-06-24 16:06:26] Felipe "Juca" Sanches: Esse é o mecanismo de "gun recoil"
+[2018-06-24 17:28:22] Ronaldo: É só um solenóide, mesmo
+[2018-06-24 17:29:21] Ronaldo: Mas tem algo preso que sai pela ponta da pistola
+[2018-06-24 20:46:02] * Felipe "Juca" Sanches added André Biagioni

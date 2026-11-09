@@ -1,0 +1,9 @@
+[2026-07-25 00:06:22] Pablo Vasques Bravo-Villalba: O IR (Instruction Register) é um registrador interno que sempre contém o opcode atual. Quando a CPU é inicializada esse registrador contém zero (NOP). Já o IE (Interrupt Enable) é mapeado diretamente no endereço FFFFh e habilita ou desabilita as interrupções (V-Blank, status do LCD, timer, serial e joypad). Eles existem de verdade. 😉👍🏽
+[2026-07-25 00:31:48] RicBit: enquanto eu apanhando de &p
+[2026-07-25 00:31:55] RicBit: tipo &p, pega o endereço
+[2026-07-25 00:32:48] RicBit: mas em 16 bit &p pode ser near ou far, e em caso far depende da variavel, global é ds:bx, local é ss:bx
+[2026-07-25 00:32:58] RicBit: nao tem como saber o que é &p sem contexto
+[2026-07-25 09:35:22] L.: https://extinct-media-museum.blog.jp/otemachi/
+[2026-07-25 09:36:22] L.: Não tem um sistema de tipo pra te ajudar? No Turbo C, ponteiro far era especificado (char far *), e tinham umas macros pra fazer o ponteirão
+[2026-07-25 10:13:10] RicBit: estava assim até agora, mas eu acho ilegivel ficar colocando cast toda vez que fizer um &p. estou colocando um detector para ficar com a menor quantidade de cast possíveis, só quando realmente não tiver como deduzir.
+[2026-07-25 23:16:18] Ismael Carvalho: Obrigado!

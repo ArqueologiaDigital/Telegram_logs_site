@@ -1,0 +1,16 @@
+[2026-06-05 07:56:30] Pablo Vasques Bravo-Villalba: Uma pena que sejam monocromáticas no MSX. Mas com caracteres seria complicado fazer muito diferente
+[2026-06-05 16:54:13] Felipe "Juca" Sanches: Eu acho que já cheguei em 47
+[2026-06-05 16:54:28] Felipe "Juca" Sanches: Naquela época do LSI
+[2026-06-05 16:54:39] Felipe "Juca" Sanches: Nos MSX em FPGA de lá
+[2026-06-05 17:34:54] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39180.jpg
+[2026-06-05 17:34:54] RicBit: monocromatico por enquanto, tá bem facil de mudar! eu não sabia que tinha a enterprise no jogo.
+[2026-06-05 17:37:26] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39181.jpg
+[2026-06-05 17:37:26] RicBit: esses sao os trajetos do challenging stage
+[2026-06-05 17:38:43] RicBit: eu achava que seria uma lista de x,y dentro da rom, mas não, ele tem um integrador que reconstroi a partir da aceleração vetorial
+[2026-06-05 18:08:49] L.: Bem mais legal! E mais portável também
+[2026-06-05 18:10:13] L.: Eu fiz uns negócios assim num joguinho que fiz num trabalho anterior. Eu meio que fiz na mão mas colocando os valores numa planilha pra pegar a linha de tendência e a fórmula dela :P
+[2026-06-05 20:29:51] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39185.jpg
+[2026-06-05 20:29:51] RicBit: isso é o que entra no integrador para o caminho 17 (começa descendo e dá duas voltas)
+[2026-06-05 20:32:36] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39186.jpg
+[2026-06-05 20:32:36] RicBit: o 13, que dá três voltas, tem até subrotina
+[2026-06-05 20:36:27] RicBit: vou trocar advance por rotate, esse comando é pra ficar parado girando

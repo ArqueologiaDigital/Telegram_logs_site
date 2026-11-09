@@ -1,0 +1,42 @@
+[2025-02-15 00:01:51] Shideravan: Achei que tinha para poder facilitar o rodamento de joguinhos de cartucho
+[2025-02-15 00:08:35] L.: tem uns programas que carregam coisa em RAM por exemplo
+[2025-02-15 01:13:03] Erin Pinheiro 🐿: a sd mapper inclusive é do fractal não é não?
+[2025-02-15 01:13:35] Erin Pinheiro 🐿: alguém postou foto uma vez de uma sendo vendida numa super potato no Japão
+[2025-02-15 01:14:10] Erin Pinheiro 🐿: é interessante o quanto de projeto msx é brazuca
+[2025-02-15 02:54:51] Pablo Vasques Bravo-Villalba: Que eu saiba o projeto é do Fábio Belavenuto, mas é código aberto e qualquer um pode fazer o seu.
+[2025-02-15 02:59:10] Pablo Vasques Bravo-Villalba: Tem vários cartuchos com esse tipo de funcionalidade e muitas vezes eles oferecem funcionalidades extras, como armazenamento de massa ou expansões sonoras (como SCC e/ou FM). Mas MSX baseados em FPGA já são bem completos, têm essa funcionalidade incluída e não precisam de nada a mais (a não ser que você queira algo mais incomum ou exótico)
+[2025-02-15 03:02:11] Shideravan: Saquei! É que L. tava querendo algo que rodava cartuchos e eu achei que era por conta de poder usar algo do tipo
+[2025-02-15 03:02:25] Pablo Vasques Bravo-Villalba: A grande maioria, sejamos sinceros, é cópia de coisa criada lá fora, mas tem coisas realmente criadas por aqui, como os projetos do Belavenuto (código aberto) e da Tecnobytes (comerciais), mas não só. 😊
+[2025-02-15 03:02:29] L.: ah, é que eu tenho uns cartuchos de jogos originais lá no brasil
+[2025-02-15 03:02:42] Shideravan: Ryca
+[2025-02-15 03:03:03] L.: ah, nem é, é tudo coisa de rolo
+[2025-02-15 03:03:16] L.: quando eu colecionava era escambo pra tudo que é lado
+[2025-02-15 03:03:41] Shideravan: hahaha tava só brincando, acho que por conta do hackerclub vocês devem acabar tendo contato com muito material também desse tipo
+[2025-02-15 03:03:46] Pablo Vasques Bravo-Villalba: O MSXBook tem um slot de cartucho. De modo geral qualquer cartucho compatível com MSX funcionaria nele. Tem uns cartuchos recentes incompatíveis por uma razão ou outra, entretanto
+[2025-02-15 03:04:28] Shideravan: Eu ainda estou encantado do monte de cartucho original de Odyssey que tinha lá no Garoa
+[2025-02-15 03:05:06] Shideravan: Essas coisas hoje em dia são ouro demais!
+[2025-02-15 03:05:09] Pablo Vasques Bravo-Villalba: Cartucho de MSX já foi arroz de festa. Até SCC era relativamente acessível. Hoje é que está tudo absurdamente caro.
+[2025-02-15 03:05:59] Shideravan: Mas eu não imaginava que cartucho "original". Se bem que eu acho que tem que definir o que é considerado "original" no Brasil dessa época, não?
+[2025-02-15 03:06:30] Shideravan: Reserva de mercado trouxe um monte de particularidades, imagino
+[2025-02-15 03:10:09] Pablo Vasques Bravo-Villalba: Cartucho brasileiro de MSX era praticamente tudo pirata realmente. Mas do ponto de vista do hardware é tudo compatível e funciona em qualquer MSX (contanto que tenha slot, mas também, se não tiver, tecnicamente não é MSX 😅). Os computadores em si eram oficialmente licenciados, entretanto, ao contrário dos outros micros de 8 bits da época que era tudo clone não oficial. Consoles tinha oficiais, como o Atari e os da Sega, e não oficiais, como os clones de Nintendinho
+[2025-02-15 03:11:14] Pablo Vasques Bravo-Villalba: Acho que o mais fascinante eram micros estranhos que aparentemente não eram compatíveis com nada, nem eram cópias de coisa estrangeira
+[2025-02-15 03:12:52] Pablo Vasques Bravo-Villalba: Tipo o MC-1000. Provavelmente era cópia de algo ultra obscuro. Mas ele em si é curioso, uma espécie de CoCo com Z80 em vez de 6809
+[2025-02-15 03:13:22] Erin Pinheiro 🐿: eu por exemplo só por ser de hacker clube ganhei um model m de graça
+[2025-02-15 03:13:51] Pablo Vasques Bravo-Villalba: Aquilo é uma arma
+[2025-02-15 03:18:02] Shideravan: O MX-1600 apesar de ter a arquitetura do TRS-80 só suportava cartuchos próprios da Dynacom, né?
+[2025-02-15 03:19:11] Shideravan: Os caras inventavam a própria dificuldade kkkkkkkkk
+[2025-02-15 03:21:19] Shideravan: Quase 3 kg de teclado kkkkkkkkkk
+[2025-02-15 03:22:01] Pablo Vasques Bravo-Villalba: Eu não sabia nem da existência desse micro. 😱 A página da Wikipedia diz que o CP400 também padecia do mesmo problema! (Entendi errado, viajei) 😱 Acho que a ideia era ter um público cativo para software comercializado nesse formato. Mesmo na época acho que era má ideia porque tudo era pirateado em fita ou disco no fim das contas
+[2025-02-15 03:23:13] Shideravan: Fora que se fuçar por aí, certamente o pessoal devia inventar mil e uma maneiras de fazer gambiarra para funcionar
+[2025-02-15 03:23:40] Shideravan: O pessoal nessa época precisava ser criativo e inventava cada coisa, né? kkkkkkkkkkk
+[2025-02-15 04:13:56] L.: Ainda tenho uma pilha desses aí da época que eu garimpava em ferro velho 😆
+[2025-02-15 04:14:39] L.: Eu mesma lembro de ter achado num desses garimpos um TRS feito em casa em gabinete de Apple II
+[2025-02-15 04:15:07] L.: Placa de fenolite que com certeza foi desenhada na caneta de retroprojetor
+[2025-02-15 13:18:41] Erin Pinheiro 🐿: https://universeodon.com/@markmoxon/114008400839205726
+[2025-02-15 21:21:49] Lord Spy: DJC comprou um! :)
+[2025-02-15 22:14:05] L.: Uia! Sabe se já chegou? A página do eBay tá aberta aqui e tô coçando
+[2025-02-15 22:46:30] Lord Spy: Ainda não... ele pediu essa semana ou final da semana passada
+[2025-02-15 22:46:36] Lord Spy: Mas chega pra Jau! :)
+[2025-02-15 22:57:23] L.: Hehehe, é, pra Jaú tem que chegar. Só não vir de Sagres, aí demora mesmo :)
+[2025-02-15 22:59:45] Pablo Vasques Bravo-Villalba: Malvada você 😅😅😅
+[2025-02-15 23:37:46] Pedro de Medeiros 👾: Tinha interesse em saber como foi criado o BASIC disso. Segundo a wikipedia foi feito pra parecer Applesoft BASIC

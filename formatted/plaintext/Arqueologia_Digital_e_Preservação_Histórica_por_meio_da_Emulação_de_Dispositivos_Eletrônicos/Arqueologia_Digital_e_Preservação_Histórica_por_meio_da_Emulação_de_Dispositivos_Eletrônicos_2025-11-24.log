@@ -1,0 +1,19 @@
+[2025-11-24 03:07:41] Erin Pinheiro 🐿: video: (not yet published)
+[2025-11-24 03:07:41] Erin Pinheiro 🐿: portando SMS Plus 1.3 pra RP2350
+[2025-11-24 03:10:20] Erin Pinheiro 🐿: engasga um pouco porque o input é lendo um i2c slave a cada 10ms, eu aumentei pra 20ms e aliviou um pouco, tirar o contador de fps da tela também ajuda
+[2025-11-24 03:10:31] Erin Pinheiro 🐿: tá jogável :)
+[2025-11-24 13:57:26] Erin Pinheiro 🐿: video: (not yet published)
+[2025-11-24 13:57:26] Erin Pinheiro 🐿: melhorei umas coisas, inclusive o buffer de som, e tá jogável até no RP2040 agora (overclock 250mhz e frameskip 4 rárárá)
+[2025-11-24 14:43:18] Felipe "Juca" Sanches: SENSACIONAL!!! :-D
+[2025-11-24 17:34:28] Erin Pinheiro 🐿: arm-none-eabi/bin/ld: region 'RAM' overflowed by 540 bytes 🥲
+[2025-11-24 19:00:51] Shideravan: Galera, para quem quiser abrir uma tornozeleira eletrônica para fazer engenharia reversa e dumpar, ferro de solda não é um equipamento recomendável então? kkkkkkkk
+[2025-11-24 19:05:03] Erin Pinheiro 🐿: contanto que não tenha ataque de tosse enquanto estiver manuseando
+[2025-11-24 19:15:24] Erin Pinheiro 🐿: consegui fazer carregar ROM do cartão mas meu truque de carregar os bancos só quando o mapper chama (pra salvar RAM) não funcionou :( só ROM até 32k
+[2025-11-24 19:15:32] Erin Pinheiro 🐿: não tô achando o que eu fiz de errado
+[2025-11-24 19:23:26] Felipe "Juca" Sanches: Se algum dia alguma empresa resolver vir tirar satisfações comigo (estilo Nintendo) por eu escrever emuladores, eu posso dizer que abri só por curiosidade. Se a desculpa não colar, eu posso alegar surto.
+[2025-11-24 19:25:26] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-11/36474.jpg
+[2025-11-24 19:25:26] Felipe "Juca" Sanches: Eu olhava pro KN5000 e ouvia vozes... https://github.com/mamedev/mame/pull/14420
+[2025-11-24 19:58:15] Erin Pinheiro 🐿: resolvi, tava mandando endereço errado pro mapa da CPU
+[2025-11-24 19:59:32] Erin Pinheiro 🐿: só que carregar os bancos on-the-fly do cartão SD é muito lento! :D
+[2025-11-24 21:10:46] Shideravan: Irônicamente, a gente pega um equipamento eletrônico e na primeira oportunidade já abrimos por curiosidade mesmo kkkkkkkkkkk
+[2025-11-24 21:11:24] Shideravan: Mas realmente, tem gente que chega num novo nível nisso aí kkkkkkkkkkk

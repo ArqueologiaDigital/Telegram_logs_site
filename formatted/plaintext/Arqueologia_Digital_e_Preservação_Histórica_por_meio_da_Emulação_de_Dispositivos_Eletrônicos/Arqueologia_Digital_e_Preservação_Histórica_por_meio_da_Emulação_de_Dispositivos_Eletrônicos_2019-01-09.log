@@ -1,0 +1,35 @@
+[2019-01-09 09:19:01] Ronaldo: Também precisa dos resistores com os valores precisos. Daria pra fazer com resistores variáveis, talvez.
+[2019-01-09 11:45:00] Emerson Moura: Só usar resistor padrão E24, com 5% de tolerância (ou superior). Com certeza vai ser mais preciso e estável do que usar trimpots.
+[2019-01-09 11:45:41] Ronaldo: Parece que o som fica estranho se desviar muito
+[2019-01-09 11:47:04] Ronaldo: Uma coisa que eu já fiz foi pegar resistores em grande quantidade e testar um por um pra pegar o mais próximo do valor que eu queria, naqueles pacotes que vem bastante.
+[2019-01-09 11:47:18] Erin Pinheiro 🐿: tbm truco você regular um trimpot com mais precisão que a fábrica
+[2019-01-09 11:47:51] Emerson Moura: Se a pessoa for tão exigente a ponto de perceber a variação de uma covox, melhor opção é não usar esse "DAC" gambiarra, mesmo pq isso é um DAC de 8 bits.
+[2019-01-09 11:48:46] Ronaldo: Se a pessoa for exigente não vai fazer isso, com certeza. A pessoa que monta um desses faz por gostar de gambiarra, hoje em dia.
+[2019-01-09 11:49:12] Erin Pinheiro 🐿: gam-bi-ar-ra! 👏gam-bi-ar-ra! 👏
+[2019-01-09 11:49:54] Ronaldo: Nada como o prazer de montar a própria placa de som, mesmo que seja uma droga, hahahaha
+[2019-01-09 11:50:10] Erin Pinheiro 🐿: melhor que pwm da pc speaker
+[2019-01-09 11:52:00] Ronaldo: O PWM do speaker é controlado por interrupções, né? Daria pra colocar um microcontrolador com DAC embutido pra fazer uma placa compatível com isso, hoje em dia.
+[2019-01-09 11:52:13] Felipe "Juca" Sanches: PWM no PC Speaker é genial! É um dos motivos de eu ser programador hoje em dia aliás... (Pinball Fantasies)
+[2019-01-09 11:52:44] Erin Pinheiro 🐿: e justamente esse jogo que eu jogava no meu laptop 486 sem placa de som só pq tinha musica
+[2019-01-09 11:54:10] Ronaldo: Eu lembro que quando montei o primeiro PC que eu tive eu fiquei um bom tempo sem ter placa de som. Como eu vinha do Amiga eu tinha bastante arquivos .MOD, daí eu usava um player de DOS, que tocava com o speaker interno. Ficava bem razoável, eu diria.
+[2019-01-09 11:55:13] Ronaldo: Lembro bem do som do Doom rodando pelo speaker interno, também
+[2019-01-09 11:55:44] Felipe "Juca" Sanches: Exatamente. No meu caso era um 386 em gabinete mesmo. Mas sem "kit multimídia"...
+[2019-01-09 11:57:00] Felipe "Juca" Sanches: Naquela época computador era "micro", gabinete era "cpu" e disco rígido era "Winchester"...
+[2019-01-09 11:57:13] Ronaldo: Meu primeiro PC foi um 486 DX2, antes eu tinha um Amiga 500
+[2019-01-09 11:59:53] Felipe "Juca" Sanches: ...e pra desligar o "micro", a superstição era que precisava sair do windows 3.11, ir pro drive C digitando "cd c:\" e digitar park pra estacionar o "Winchester" antes de pressionar o botão de desligar.
+[2019-01-09 12:01:39] Ronaldo: Eu não sei em qual época os HDs começaram a vir todos com autoparking
+[2019-01-09 12:03:19] Ronaldo: Acho que o HD guarda energia em um capacitor e move a cabeça pra área de estacionamento quando detecta corte na alimentação, hoje em dia.
+[2019-01-09 12:03:29] Ronaldo: Deve ser algo assim.
+[2019-01-09 12:21:32] Erin Pinheiro 🐿: eu acho que o processo é mais mecânico que elétrico.
+[2019-01-09 12:22:17] Felipe "Juca" Sanches: suspeito que hoje em dia seja por firmware
+[2019-01-09 12:23:20] Erin Pinheiro 🐿: "A landing zone is an area of the platter usually near its inner diameter (ID), where no data are stored. This area is called the Contact Start/Stop (CSS) zone. Disks are designed such that either a spring or, more recently, rotational inertia in the platters is used to park the heads in the case of unexpected power loss. In this case, the spindle motor temporarily acts as a generator, providing power to the actuator."
+[2019-01-09 12:23:34] Erin Pinheiro 🐿: mecânico :)
+[2019-01-09 12:24:21] Felipe "Juca" Sanches: "spindle motor temporarily acts as a generator, providing power to the actuator." => elétrico?
+[2019-01-09 12:24:31] Erin Pinheiro 🐿: vdd
+[2019-01-09 12:24:36] Erin Pinheiro 🐿: eu só li a parte da inércia
+[2019-01-09 12:40:36] Leonardo Roman: Pelos HDs que eu já abri, é só uma mola mesmo, que mantém a cabeça de leitura na posição inicial
+[2019-01-09 13:19:36] Emerson Moura: O park era coisa pra XT, que usava HD MFM/RLL.
+[2019-01-09 13:20:19] Emerson Moura: HDs IDE, comuns a partir dos PCs AT (286 em diante).
+[2019-01-09 19:54:52] L.: O park da tecnoponta demorava uns segundos pra estacionar o hd do meu XT
+[2019-01-09 19:55:13] L.: (que era RLL, um ST238R da Seagate)
+[2019-01-09 23:36:37] Affonso Amendola: Tem exatamente um modelo desses no museu, to tentando ler faz um tempinho

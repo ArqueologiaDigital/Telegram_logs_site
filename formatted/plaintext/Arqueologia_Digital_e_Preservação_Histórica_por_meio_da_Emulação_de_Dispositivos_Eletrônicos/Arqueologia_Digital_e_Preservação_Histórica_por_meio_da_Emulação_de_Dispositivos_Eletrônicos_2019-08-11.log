@@ -1,0 +1,33 @@
+[2019-08-11 09:57:38] Alexandre Villares: Esse thread no Twitter tá interessante:
+[2019-08-11 09:57:41] Alexandre Villares: https://twitter.com/stevesi/status/1160453536137695232?s=19
+[2019-08-11 18:22:47] L.: https://twitter.com/DanielGriehaber/status/1160594786002358272?s=19
+[2019-08-11 19:08:24] Emerson Moura: Não sei se já falei dessa criança aqui, mas esse tá difícil de conseguir alguma informação: Sisco (a empresa nacional, da família Maksoud, com "s", mesmo) Six/30...
+[2019-08-11 19:08:51] Emerson Moura: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-08/9983.jpg
+[2019-08-11 19:09:08] Emerson Moura: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-08/9984.jpg
+[2019-08-11 19:09:18] Emerson Moura: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-08/9985.jpg
+[2019-08-11 19:09:29] Emerson Moura: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-08/9986.jpg
+[2019-08-11 19:09:42] Emerson Moura: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-08/9987.jpg
+[2019-08-11 19:09:51] Emerson Moura: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-08/9988.jpg
+[2019-08-11 19:10:00] Emerson Moura: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-08/9989.jpg
+[2019-08-11 19:10:13] Emerson Moura: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-08/9990.jpg
+[2019-08-11 19:11:10] Felipe "Juca" Sanches: que coisa linda!
+[2019-08-11 19:11:31] Emerson Moura: É um servidor headless com processador 68020, placa de 16MiB de RAM, interface SCSI e controladora serial para 16 terminais burros.
+[2019-08-11 19:12:40] Felipe "Juca" Sanches: isso ainda funciona? liga ao menos?
+[2019-08-11 19:13:47] Emerson Moura: Da última vez que foi testado, lá no ABC Makerspace em 2016, ligava, mas o HD estava batendo e não carregava o sistema... Então eu usava ele de banco (e aguentava meus 120kg de boas)!!!
+[2019-08-11 19:14:07] Felipe "Juca" Sanches: o HD ainda existe?
+[2019-08-11 19:14:21] Emerson Moura: Sim. É um SCSI-1 de 50 vias.
+[2019-08-11 19:14:24] Felipe "Juca" Sanches: será que existe alguma forma de se extrair uma imagem do HD?
+[2019-08-11 19:14:38] Felipe "Juca" Sanches: talvez por algum "procedimento cirúrgico" de resgate dos dados...
+[2019-08-11 19:14:40] Emerson Moura: Batendo cabeça eu diria que não sem um lab especializado.
+[2019-08-11 19:16:00] Emerson Moura: Nas minhas pesquisas, o mais próximo que cheguei foi de concluir que ele seja uma cópia aproximada de um server Sun3/150 ou /250.
+[2019-08-11 19:16:08] Felipe "Juca" Sanches: é algo que valeria muito a pena fazer
+[2019-08-11 19:16:41] Emerson Moura: Mas mesmo essas máquinas da Sun tem pouca documentação (apesar que, pelo menos a oficial da Sun acha fácil).
+[2019-08-11 19:16:46] Felipe "Juca" Sanches: talvez um crowdfunding pra levantar a grana necessária para o processo de recuperação dos dados do sistema desse HD
+[2019-08-11 19:16:57] Felipe "Juca" Sanches: quanto custaria?
+[2019-08-11 19:17:07] Emerson Moura: Num faço ideia.
+[2019-08-11 19:18:36] L.: Pelo menos deve rolar dumpar essas EPROMs aí
+[2019-08-11 19:18:50] Felipe "Juca" Sanches: exato!
+[2019-08-11 19:35:58] Emerson Moura: EPROM é fácil... O que pega é a penca de PAL/GAL que tem nas placas!!!
+[2019-08-11 19:39:45] L.: Dumpando a EPROM fica mais fácil confirmar a compatibilidade com SunOS
+[2019-08-11 19:41:01] Felipe "Juca" Sanches: rola trazer esse bichão no Garoa? Podemos fazer um encontro de Retroprogramação pra fazer o dump das EPROMs e tentar escrever um emulador no MAME
+[2019-08-11 19:56:07] Emerson Moura: 50kg e não cabe no Ka!!! Hwahwahwahwahwa

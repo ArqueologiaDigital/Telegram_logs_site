@@ -1,0 +1,13 @@
+[2024-01-06 11:14:58] Pedro de Medeiros 👾: Apple's classic Pascal poster, remade as a vector image [pdf]  http://www.danamania.com/print/Apple%20Pascal%20Poster/PascalPosterV3%20A1.pdf
+[2024-01-06 11:24:02] Pedro de Medeiros 👾: Alguém já fez 👆
+[2024-01-06 22:19:59] RicBit: ué a gramatica é ambigua?
+[2024-01-06 22:20:07] RicBit: fiquei curioso, vou procurar o source
+[2024-01-06 22:28:41] RicBit: se eu entendi acho que é greedy por definicao
+[2024-01-06 22:29:53] RicBit: (minha duvida era se voce fizer "if a then if b then 1 else 2", o else era do primeiro if ou do segundo if. acho que ele pega sempre o mais externo e nao esquenta com isso)
+[2024-01-06 22:30:44] RicBit: mas eu achei legal o codigo, fui ver qual era a cpu target, ele compila pra p-code
+[2024-01-06 22:30:46] RicBit: duh
+[2024-01-06 22:30:55] RicBit: depois tem um assembler e um interpretador
+[2024-01-06 22:31:10] RicBit: mas o que ele chama de interpretador é o que eu chamo de emulador
+[2024-01-06 22:31:25] RicBit: ele nao esta interpretando a linguagem, esta interpretando os p-codes
+[2024-01-06 22:31:31] RicBit: here -> https://github.com/jzelinskie/pascal-p2/tree/master/source
+[2024-01-06 23:56:06] Felipe "Juca" Sanches: https://youtu.be/xsAFKtDmKaw?si=J4-JgrrEtzcOkCc2

@@ -1,0 +1,25 @@
+[2022-06-14 00:49:49] Felipe "Juca" Sanches: cadastrei algums issues hoje:
+https://github.com/ArqueologiaDigital/Mines/issues
+[2022-06-14 12:45:15] Pedro de Medeiros 👾: Falando nisso... parece que o CBIOS até a versão 0.29 não implementa interface de mouse. GTPAD não retorna nenhum valor em A.
+[2022-06-14 12:45:38] Pedro de Medeiros 👾: A gente vai ter que usar firmware original pra testar mouse.
+[2022-06-14 12:45:46] L.: Que chato :(
+[2022-06-14 13:24:09] RicBit: dá para aumentar a cbios também
+[2022-06-14 13:24:27] RicBit: leitura de mouse é facinho de fazer, é um loop vazio só
+[2022-06-14 21:53:26] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/70
+[2022-06-14 21:56:11] Pedro de Medeiros 👾: Ah, também dividi as regras e coloquei um install que copia os arquivos de volta pro mame.
+[2022-06-14 21:56:21] Felipe "Juca" Sanches: sim, eu vi
+[2022-06-14 21:56:23] Felipe "Juca" Sanches: muito bom
+[2022-06-14 21:56:47] Felipe "Juca" Sanches: percebi também que você deve estar rodando aí um build do MAME pra testar o port pra gunsmoke né?
+[2022-06-14 21:57:03] Pedro de Medeiros 👾: Eu rodei, mas achei ele meio estranho.
+[2022-06-14 21:58:21] Pedro de Medeiros 👾: Ele é super rápido mesmo?
+[2022-06-14 21:58:24] Felipe "Juca" Sanches: as cores estão todas bem ruins, pois chutei valores de índices da paleta de cores padrão do jogo gunsmoke. Ainda não parei pra ver como a paleta é codificada, para eu poder gerar uma ROM de paletas customizadas
+[2022-06-14 21:58:52] Felipe "Juca" Sanches: ah, tem isso também.... Veja:
+https://github.com/ArqueologiaDigital/Mines/issues/69
+[2022-06-14 22:00:49] Pedro de Medeiros 👾: Quais são os outros botões do gunsmoke? A primeira vista não é muito óbvio.
+[2022-06-14 22:01:04] Pedro de Medeiros 👾: FLAG, QUIT e OPEN_BLOCK...
+[2022-06-14 22:02:29] Felipe "Juca" Sanches: pressine TAB para abrir o menu do MAME e nele escolha "Input (this machine)" para ver o mapeamento de teclas para os inputs do arcade (isso funciona em qualquer driver do MAME)
+[2022-06-14 22:02:33] Pedro de Medeiros 👾: Essa separação entre build e install será necessária pro github actions fazer seu trabalho de gerar releases.
+[2022-06-14 22:03:09] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21658-sticker.webp
+[2022-06-14 22:03:20] Felipe "Juca" Sanches: gostei da idéia kkkk 😉
+[2022-06-14 22:04:52] Pedro de Medeiros 👾: Assim o @mrparn vai poder gerar releases fazendo push no repositório forkado dele no github e só baixar a ROM pronta depois de alguns segundos sem precisar instalar compilador C/C++ na própria máquina.
+[2022-06-14 22:05:36] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21661-sticker.webp

@@ -1,0 +1,4 @@
+[2021-04-15 15:04:11] RicBit: Não, eles podem ter trocado o A10 com o A11 dentro do cart, assim sai certinho pelo bus mas fica bugado com leitor de eprom. Era uma proteção anti cópia com na época.
+[2021-04-15 16:55:24] L.: Ou pra facilitar layout também
+[2021-04-15 19:24:46] Felipe "Juca" Sanches: verdade!
+[2021-04-15 19:25:47] Felipe "Juca" Sanches: é que no MAME nós temos o hábito de desembaralhar ROMs via código dentro do próprio emulador, de modo que o arquivo de ROM é exatamente o que sair do leitor e eprom e essas trocas de pinos ficam documentadas

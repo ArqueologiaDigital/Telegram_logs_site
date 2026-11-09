@@ -1,0 +1,288 @@
+[2024-05-20 01:13:55] Felipe "Juca" Sanches: Acho que consegui
+[2024-05-20 01:14:29] Felipe "Juca" Sanches: O algoritmo de desembaralhamento é o z86x1
+[2024-05-20 01:15:04] Felipe "Juca" Sanches: o disasm me dá uma cópia quase idêntica ao test rom embutido no Z8 do synth Wersi DX10
+[2024-05-20 01:15:23] Felipe "Juca" Sanches: e depois o resto deve ser a ROM do smartstart
+[2024-05-20 01:16:02] Felipe "Juca" Sanches: tem algumas instruções fazendo disasm commo "Illegal" mas eu acho que são bits transcritos incorretamente pelo travisgoodspeed
+[2024-05-20 01:16:06] Felipe "Juca" Sanches: então estou revisando tudo
+[2024-05-20 01:17:00] Felipe "Juca" Sanches: achei já um bit de divergência nas duas fileiras que correspondem à test ROM e daqui a pouco vou confirmar se com essa correção o código passa a ser idêntico à do synth
+[2024-05-20 02:36:13] L.: https://romhacking.com/hack/mario-builder-64 -- faça fases de mario 64... no n64!
+[2024-05-20 03:36:01] Felipe "Juca" Sanches: é, minha gente... agora é só suor. Gastei umas horinhas revisando bits e ainda falta um monte
+[2024-05-20 03:36:20] Felipe "Juca" Sanches: são uns 16 kilobits para serem verificados visualmente
+[2024-05-20 03:36:35] Felipe "Juca" Sanches: já chequei 1kb
+[2024-05-20 03:37:07] Felipe "Juca" Sanches: verifiquem se daqui duas semanas eu ainda estou vivo
+[2024-05-20 03:37:11] Felipe "Juca" Sanches: kkkk
+[2024-05-20 03:44:11] L.: eu vou ficar de olho nos commits do mame pra ver o emulador do pense bem original aparecer
+[2024-05-20 03:44:33] L.: no final das contas, quais bits faziam sentido lá?
+[2024-05-20 11:02:32] Felipe "Juca" Sanches: são 66 colunas de 256 bits cada.
+
+as duas primeiras da esquerda correspondem à rom de factory  test
+
+as outras 64 colunas correspondem à ROM de fato da aplicação
+[2024-05-20 15:42:03] Felipe "Juca" Sanches: é tanto bit que me dá uma ansiedade... uma sensação de que estou comendo bola
+[2024-05-20 15:42:30] Felipe "Juca" Sanches: to montando um repo git com alguns testes, pra me assegurar que não estou cagando no trabalho já realizado
+[2024-05-20 15:43:18] Felipe "Juca" Sanches: o software do travis deu pau e apagou todos os bits. Tive que refazer uma boa parte
+[2024-05-20 15:44:03] Felipe "Juca" Sanches: agora vou salvar com mais frequência e ficar rodando uns testes de regressão pra evitar problemas maiores e retrabalho
+[2024-05-20 15:44:50] Felipe "Juca" Sanches: 4 da madrugada eu tive meu momento AHHHH VÁ TOMAR NO CU!
+[2024-05-20 15:46:30] L.: aheuaheuaheuaeh
+[2024-05-20 15:46:55] L.: tá dizendo que tem que... pensar bem?
+[2024-05-20 15:47:15] Felipe "Juca" Sanches: outra abordagem seria confiar na transcrição do travis, mesmo sabendo que tem alguns bits errados, e aí quando o disasm não fizer sentido, ir na transcrição e checar se tem bit errado
+[2024-05-20 15:47:59] Felipe "Juca" Sanches: pra isso eu precisaria implementar o algoritmo invereso, pra re-embaralhar os bits, de modo que eu possa saber onde no die ficam os bits que formam o opcode de uma instrução que me interessa checar se tá ok
+[2024-05-20 15:48:55] Felipe "Juca" Sanches: o algoritmo de desembaralhamento é o z86x1 que tá aqui:
+https://github.com/travisgoodspeed/maskromtool/blob/master/gatodecoderz86x1.cpp
+[2024-05-20 15:48:59] L.: força bruta: while (disasm aqui não faz sentido) { incrementa_byte_até_chegar_onde_tava)
+[2024-05-20 15:49:08] Felipe "Juca" Sanches: /* This is a decoder for the ROM of the Zilog Z8 Z8601 and Z8611,
+ * which is complex in several ways:
+ * Each data bit is in a separate 'meta-column', 32 bits wide.
+ * The bits within each column are in a complicated order, left to right.
+ * The bits in the D0-D3 meta-columns are mirrored left to right vs D4-D7.
+ * The rows are not in linear order, but top to bottom 1, 0, 2, 3, 5, 4, 6, 7, etc.
+ * The top two rows are the 64-byte factory test ROM. This effectively means the
+ *  actual row numbers top to bottom are T1 T0 0 1 3 2 4 5 7 6 ... up to 3f or 7f.
+ *
+ *  Decoder module by Lord Nightmare.
+ *
+ *  Limited to 8-bit words.
+ */
+[2024-05-20 15:49:28] L.: Lord Nightmare aheuaheuaheuhae
+[2024-05-20 15:49:36] Felipe "Juca" Sanches: É desenvolvedor do MAME
+[2024-05-20 15:57:00] Felipe "Juca" Sanches: @agaelebe, vou precisar pegar um Pense Bem com você pra abrir e reinspecionar a PCB, ver quais sinais estão estão ligados em cada pino do MCU, pra escrever o driver de emulação no MAME.
+[2024-05-20 15:57:17] Hugo (Agaelebê): Blza, quinta eu levo no garoa. Pode ser?
+[2024-05-20 15:57:45] Felipe "Juca" Sanches: Muito tempo atrás eu comecei a desenhar a PCB dele no KICAD, eu acho, mas provavelmente não fiz o trabalho completo, pois era meio sem sentido, dado que não tínhamos ainda um dump da ROM
+[2024-05-20 15:57:51] Felipe "Juca" Sanches: Maravilha!
+[2024-05-20 16:14:52] L.: caray
+[2024-05-20 16:15:06] L.: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31562-oh-my-god-okay.mp4
+[2024-05-20 16:15:28] L.: atualizar a versão online pra rodar mame compilado pra webassembly?
+[2024-05-20 16:47:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31564.jpg
+[2024-05-20 16:47:51] Felipe "Juca" Sanches [forwarded]: Atividade: Desvendando as entranhas do Pense Bem da TecToy.
+Data: 5a-feira, 23/Maio/2024
+Horário:  A partir das 19h30
+Local: Sede do Garoa Hacker Clube, sala multi-uso.
+Organizado por: Felipe "Juca" Sanches
+ 
+Descrição:
+  Vamos levantar o esquemático da PCB do Pense Bem e ler os códigos em assembly executados pelo micro-controlador Zilog Z8 (que é diferente do famoso Z80!) usado no brinquedo. O objetivo é avançar nos esforços de implementação de um emulador do Pense Bem no Projeto MAME.
+
+Como participar:
+  - Todos eventos no Garoa são abertos ao público geral.
+  - Basta aparecer.
+  - Não precisa de inscrição.
+[2024-05-20 16:48:18] Felipe "Juca" Sanches: pode ser! 😉
+[2024-05-20 16:48:43] Felipe "Juca" Sanches: 15 anos de espera... finalmente desenroscou
+[2024-05-20 16:50:28] Felipe "Juca" Sanches: aliás... traga dois. Pra deixarmos um funcionando e outro aberto sendo inspecionado
+[2024-05-20 16:50:33] L.: Finalmente vamos descobrir o algoritmo
+[2024-05-20 16:50:48] L.: Por que duvido que seja o que a galera fez na versão avr lol
+[2024-05-20 16:50:50] Felipe "Juca" Sanches: pois é... já dá pra começar a tentar, pois já temos um disasm preliminar
+[2024-05-20 16:51:07] L.: Vai ser a coisa mais estupida do mundo
+[2024-05-20 16:51:09] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31572-smartstart.asm
+[2024-05-20 16:51:09] Felipe "Juca" Sanches: Versão preliminar, certeza que tem erros.
+[2024-05-20 16:52:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31573.jpg
+[2024-05-20 16:52:57] Felipe "Juca" Sanches: Isso aqui, por exemplo, parece um bit zero que virou 1
+[2024-05-20 16:53:52] L.: pelo menos a área de vetor de IRQ parece fazer sentido
+[2024-05-20 16:53:58] Felipe "Juca" Sanches: sim
+[2024-05-20 16:54:24] L.: rodar esse bin no radare e ver se ele mostra os call graphs
+[2024-05-20 16:54:39] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31577-smartstart.bin
+[2024-05-20 16:54:39] Felipe "Juca" Sanches: o binário preliminar correspondente a esse disasm tá aqui
+[2024-05-20 16:55:00] L.: legal
+[2024-05-20 16:55:39] Felipe "Juca" Sanches: mas acho que daqui uma ou duas semanas teremos um binário muito mais confiável (e um Juca muito mais cansado)
+[2024-05-20 16:56:19] L.: mas um Juca feliz por ter finalmente passado a régua num problema de 15 anos
+[2024-05-20 16:56:38] L.: compilando o radare, veremos
+[2024-05-20 16:56:40] Felipe "Juca" Sanches: o pior é que terminar a verificação dos bits é só o ponto de partida para a real busca
+[2024-05-20 16:56:46] L.: ahan
+[2024-05-20 16:56:53] Felipe "Juca" Sanches: que é compreender o algoritmo e escrever o emulador
+[2024-05-20 16:56:53] L.: ideal mesmo seria arrumar isso e ter o emulador
+[2024-05-20 16:57:03] L.: aí achar o algoritmo do livro
+[2024-05-20 16:57:07] Felipe "Juca" Sanches: isso
+[2024-05-20 16:57:23] Felipe "Juca" Sanches: o core de emulação de Z8 no MAME também, ouvi dizer, é bem rudimentar
+[2024-05-20 16:57:56] Felipe "Juca" Sanches: então existe uma boa chance de ter que arregaçar as mangas e escrever emulação do próprio Z8, pra consertar o comportamento das instruções
+[2024-05-20 16:58:20] Felipe "Juca" Sanches: a treta sempre é maior do que a gente imagina
+[2024-05-20 16:58:27] L.: gente, é só isso? hehe
+[2024-05-20 16:58:39] L.: é só isso mesmo
+[2024-05-20 16:58:55] Felipe "Juca" Sanches: é isso!
+[2024-05-20 16:58:59] Felipe "Juca" Sanches: :-P
+[2024-05-20 16:59:33] Felipe "Juca" Sanches: ah!
+
+Meu palpite:
+
+7c1: c0 ff     RRC  SPL
+[2024-05-20 16:59:49] L.: essa rotina tava me chamando a atencao mesmo
+[2024-05-20 17:00:16] L.: vários illegal ali entretanto
+[2024-05-20 17:00:45] Felipe "Juca" Sanches: tudo bit flip, aposto
+[2024-05-20 17:01:15] L.: é, mas tem cara demais de ser o que a gente tá procurando
+[2024-05-20 17:01:18] Felipe "Juca" Sanches: ou interpretação desalinhada de operando como se fosse opcodes por conta de propagação de um bitflip anterior
+[2024-05-20 17:01:42] L.: ahan
+[2024-05-20 17:02:14] L.: tem uns 17 illegal
+[2024-05-20 17:02:35] L.: tem que ir arrumando na ordem pra ver se resolve esse negocio da interpretacao desalinhada
+[2024-05-20 17:02:46] Felipe "Juca" Sanches: sim
+[2024-05-20 17:02:46] L.: pode até ser que esse numero de illegal diminua rapido arrumando uns no comeco
+[2024-05-20 17:02:57] Felipe "Juca" Sanches: é a minha esperança
+[2024-05-20 17:03:45] L.: fazer uma versão C disso depois, com o target pra versão AVR
+[2024-05-20 17:04:01] L.: que seja um port toscão instrução à instrução, como eu tinha falado do gw-basic
+[2024-05-20 17:04:15] Felipe "Juca" Sanches: acho que um meio-termo seria ver o primeiríssimo illegal instruction e ler o código que vem antes dele e ver se faz snetido. E a partir da primeira instrução estranha, calcular qual é o endereço e aí eu posso checar no mapa de bits se tem algum bit interpretado errado naquela região
+[2024-05-20 17:04:42] L.: o primeiro tá em $05f, que é um $5f
+[2024-05-20 17:07:24] L.: dá pra tentar força bruta ali né? tipo:
+
+for endereco in invalidos {
+    for bit in 0..7 {
+        *endereco ^= 1<<bit
+        desassembla_e_pergunta_se_faz_sentido(mostra_codigo_perto_de: endereco);
+    }
+}
+[2024-05-20 17:07:26] Felipe "Juca" Sanches: ok... são 32 bytes por coluna de bits (256 bits)
+
+Então tem que ver qual é 0x5F dividido por 32.
+
+Dá 0x5F >> 5 dá 4
+
+então preciso verificar os bits da coluna 4
+[2024-05-20 17:08:12] L.: talvez até pula a pergunta se for uma instrucao invalida
+[2024-05-20 17:08:47] L.: dá pra fazer de jeito bem tosco com python e o objdump que vc usou aqui
+[2024-05-20 17:10:40] Felipe "Juca" Sanches: será que eu tô ruim de fazer conta?
+
+coluna 0: 000-01f
+coluna 1: 020-03f
+coluna 2: 040-05f
+coluna 3: 060-07f
+coluna 4: 080-09f
+[2024-05-20 17:10:49] Felipe "Juca" Sanches: onde foi que eu errei?
+[2024-05-20 17:13:54] Felipe "Juca" Sanches: Ah, sim.
+
+errei no shift right
+
+0x5F » 5 dá 2
+[2024-05-20 17:13:59] Felipe "Juca" Sanches: coluna número 2
+[2024-05-20 17:14:15] Felipe "Juca" Sanches: que é uma que eu já revisei. Vou gerar um novo binário aqui
+[2024-05-20 17:25:07] RicBit: Eu já vi gente fazendo gato em fiação elétrica, primeira vez que vejo gato em maskrom.
+[2024-05-20 17:26:40] L.: se é gato, eventualmente vai rolar uma maskromronada
+[2024-05-20 17:26:55] RicBit: e ele é um gato de coder, para diferenciar de gato de tester e gato de produto.
+[2024-05-20 17:28:43] RicBit: gatograderascii.cc
+
+ /\_/\  
+( o.o ) 
+ > ^ <
+"Esse gato é nota 10"
+[2024-05-20 17:35:38] Hugo (Agaelebê): ok, levo alguma revista? :D
+[2024-05-20 17:41:36] Felipe "Juca" Sanches: ah, isso eu tenho aqui já
+[2024-05-20 17:57:45] Erin Pinheiro 🐿: a do sonic eu escaneei 14 anos atrás pra sonic retro https://info.sonicretro.org/Pense_Bem:_Uma_Aventura_Cient%C3%ADfica_com_Sonic_the_Hedgehog
+[2024-05-20 17:58:05] Erin Pinheiro 🐿: não sei onde o livro físico foi parar
+[2024-05-20 18:01:37] Erin Pinheiro 🐿: tem um erro de impressão na página 31 onde chamam o tails de sally acorn
+[2024-05-20 18:01:41] Erin Pinheiro 🐿: https://info.sonicretro.org/File:Pensembem_33.jpg
+[2024-05-20 18:02:28] Felipe "Juca" Sanches: e de onde vem esse nome Sally Acorn?
+[2024-05-20 18:02:45] Erin Pinheiro 🐿: https://en.wikipedia.org/wiki/Sonic_the_Hedgehog_(TV_series) SatAM
+[2024-05-20 18:03:22] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31632.jpg
+[2024-05-20 18:03:22] Erin Pinheiro 🐿: essa é a sally acorn
+[2024-05-20 18:03:25] Erin Pinheiro 🐿: mas usaram a imagem do tails
+[2024-05-20 19:05:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31634.jpg
+[2024-05-20 19:05:58] Felipe "Juca" Sanches: Revisei os bits dessa coluna e até consertou algumas coisas, mas continua o illegal lá. Vou ter que re-revisar :-P
+[2024-05-20 19:06:33] Felipe "Juca" Sanches: Aquele CALL 8AEB que virou CALL 02EB é claramente um avanço
+[2024-05-20 19:07:02] Felipe "Juca" Sanches: já que a ROM tem endereçamento só de 000 até 7FF
+[2024-05-20 19:07:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31637.jpg
+[2024-05-20 19:07:49] Felipe "Juca" Sanches: E o endereço 2EB tem cara de ponto de entrada de subrotina mesmo
+[2024-05-20 19:09:13] Felipe "Juca" Sanches: será que 5F é opcode não documentado?
+[2024-05-20 19:09:43] Felipe "Juca" Sanches: ou talvez implementação incompleta do disasm do MAME (o unidasm)
+[2024-05-20 19:12:32] Felipe "Juca" Sanches: https://www.zilog.com/docs/um0016.pdf
+
+O datasheet diz que tem uma instrução chamada WDT com opcode 5F
+[2024-05-20 19:13:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31641.jpg
+[2024-05-20 19:13:13] Felipe "Juca" Sanches: Watch Dog Timer
+[2024-05-20 19:13:41] Felipe "Juca" Sanches: teremos que arregaçar as mangas e aprimorar o disasm de Z8 do MAME
+[2024-05-20 19:45:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31643.jpg
+[2024-05-20 19:45:39] Felipe "Juca" Sanches: Isso parece uma boa correção? Acho que sim! 😊
+[2024-05-20 20:05:37] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31645.jpg
+[2024-05-20 20:05:37] Felipe "Juca" Sanches: Aqui eu corrigi a coluna de bits 25, mudou apenas uma instrução (que parece ok), mas continuou a Illegal instruction no endereço 0x32a com opcode E2
+
+E conforme o datasheet, realmente não existe esse opcode. Mas aqui acho que é um caso de interpretação desalinhada, pois essa instrução tá bem pertinho da coluna de bits anterior. E lá vemos um jump pra 3259h, que não faz sentido, pois esse endereço tá fora da faixa de endereços da ROM (000 a 7FF)
+[2024-05-20 20:06:12] Felipe "Juca" Sanches: Então vou agora revisar a coluna 24
+[2024-05-20 20:07:24] L.: O código começa sempre logo após o vetor irq?
+[2024-05-20 20:16:18] Felipe "Juca" Sanches: não tenho certeza, mas suspeito que sim
+[2024-05-20 20:17:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31649.jpg
+[2024-05-20 20:17:53] Felipe "Juca" Sanches: coluna 24 corrigida. E aí? Vocês contavam com a minha astúcia? 😃
+[2024-05-20 20:23:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31650.jpg
+[2024-05-20 20:23:20] Felipe "Juca" Sanches: opcode 0F não existe.
+
+0x745 > 5 = 0x3a
+
+Próximo alvo, coluna 0x3A = 58
+[2024-05-20 21:06:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31651.jpg
+[2024-05-20 21:06:12] Felipe "Juca" Sanches: cometi um erro off-by-one e revisei sem querer a coluna anterior, a 57
+
+Mas mesmo assim, achei um bit errado, então tá valendo! Acho que provavelmente vou ter que revisar todas mesmo, não só as que dão indícios mais óbvios de que tem algo errado...
+[2024-05-20 21:21:45] Erin Pinheiro 🐿: cê tá fazendo a ROM A, certo? precisa fazer a ROM B?
+[2024-05-20 21:22:07] Erin Pinheiro 🐿: to caçando coisa pra fazer
+[2024-05-20 21:44:59] L.: cê tá usando o meld né?
+[2024-05-20 21:45:44] L.: eu fiz sexta passada umas modificações numa ferramenta que a gente usa no trabalho pra ter uma UI parecida: https://cornputer.org/@lafp/112470547105406038
+[2024-05-20 21:52:27] L.: raycasting em 256 bytes! https://frankforce.com/city-in-a-bottle-a-256-byte-raycasting-system/
+
+(é JS, então meio off-topic, mas acho que galera aqui vai curtir :D)
+[2024-05-20 21:53:06] Erin Pinheiro 🐿: eu tentei ler e entendi foi nada
+[2024-05-20 21:56:40] Felipe "Juca" Sanches: sim
+[2024-05-20 21:56:53] Felipe "Juca" Sanches: isso
+[2024-05-20 21:57:27] Felipe "Juca" Sanches: a ROM B tem o microcode do Z8. Mas eu não tenho idéia de como é feita a interpretação desse micro-código
+[2024-05-20 21:57:49] L.: pra entender microcódigo tem que entender a fundo como o processador funciona
+[2024-05-20 21:58:06] L.: as microinstruções são geralmente codificadas de jeito a controlarem o que o circuito faz
+[2024-05-20 21:58:21] Felipe "Juca" Sanches: eu adoraria estudar isso, mas tem coisa mais simples pra ser feita antes
+[2024-05-20 21:58:57] Felipe "Juca" Sanches: eu entendo conceitualmente, mas não sei como abordaria o desafio de fazer reversa disso
+[2024-05-20 21:59:20] Felipe "Juca" Sanches: por mais que os bits estejam ali visiveis, me falta conhecimento pra saber como mastigá-los
+[2024-05-20 21:59:26] L.: é, teria que começar com um diagrama de bloco
+[2024-05-20 21:59:33] L.: e tentar entender o que cada circuito faz
+[2024-05-20 21:59:43] L.: pra traçar pra onde vão os bits
+[2024-05-20 21:59:57] L.: é bem difícil!
+[2024-05-20 22:00:06] Felipe "Juca" Sanches: pois é... seria mais do que apenas ler os bits. Teria que interpretar os circuitos mesmo, e aí o bicho pega
+[2024-05-20 22:00:14] L.: ahan
+[2024-05-20 22:00:46] L.: pra dizer bem a verdade, eu acho que não vale a pena
+[2024-05-20 22:09:12] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31673.jpg
+[2024-05-20 22:09:12] Erin Pinheiro 🐿: bom, engatei e fiz
+[2024-05-20 22:09:40] Erin Pinheiro 🐿: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31674-romb20x.tif.json
+[2024-05-20 22:09:40] Erin Pinheiro 🐿: corrigi a cada coluna que fui colocando então tenho alta confiança de estar 100%
+[2024-05-20 22:10:04] Erin Pinheiro 🐿: glhf
+[2024-05-20 22:10:40] Felipe "Juca" Sanches: maravilha
+[2024-05-20 22:10:51] Felipe "Juca" Sanches: eu que devo ser meio burro então kkkk
+[2024-05-20 22:10:58] Felipe "Juca" Sanches: por que estou penando aqui
+[2024-05-20 22:11:06] Felipe "Juca" Sanches: mas se vocÊ confia que tá bom, bora testar
+[2024-05-20 22:11:20] Felipe "Juca" Sanches: gera o binário aí e me manda
+[2024-05-20 22:12:33] Erin Pinheiro 🐿: desembaralhar eu não sei, o json é direto da maskromtool
+[2024-05-20 22:12:40] Erin Pinheiro 🐿: usei o tif do mesmo nome ali
+[2024-05-20 22:12:51] Felipe "Juca" Sanches: o meu não tá abrindo tif
+[2024-05-20 22:13:06] Erin Pinheiro 🐿: imagemagick pra converter pra bmp?
+[2024-05-20 22:14:13] Felipe "Juca" Sanches: pra desembaralhar você abre a janela HexView primeiro, e depois vai no menu Decoding e coloca a opção z86x1
+[2024-05-20 22:14:45] Felipe "Juca" Sanches: ou, sem desembaralhar, pode copiar e colar os bits no menu View->ASCII Bits
+[2024-05-20 22:14:54] Felipe "Juca" Sanches: e aí eu desembaralho aqui
+[2024-05-20 22:15:37] Felipe "Juca" Sanches: ah, e pra desembaralhar precisa rotacionar 90 graus
+[2024-05-20 22:15:57] Felipe "Juca" Sanches: tem essa opção lá também na janela Decoding
+[2024-05-20 22:16:52] Felipe "Juca" Sanches: acho que a minha lentidão em revisar é pelo fato da imagem que eu usei ser de resolução menor, então tá com bastante erro
+[2024-05-20 22:17:30] Erin Pinheiro 🐿: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31691-romb20x.tif.ascii.txt
+[2024-05-20 22:17:33] Felipe "Juca" Sanches: e os quadradinhos ficam maiores que o próprio bit na foto, então tenho que ficar escondendo e mostrando o layer dos bits
+[2024-05-20 22:17:47] Erin Pinheiro 🐿: vai na aba display, diminui o tamanho dos quadrados
+[2024-05-20 22:18:01] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31694.jpg
+[2024-05-20 22:18:06] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31695.jpg
+[2024-05-20 22:18:54] Erin Pinheiro 🐿: meu truque foi verificar conforme eu colocava cada coluna ao invés de fazer tudo e depois verificar, assim não precisa passar a vista duas vezes
+[2024-05-20 22:19:56] Felipe "Juca" Sanches: boa
+[2024-05-20 22:20:04] Erin Pinheiro 🐿: o tif realmente tá numa qualidade bem melhor que o que você mostrou aí
+[2024-05-20 22:20:13] Erin Pinheiro 🐿: mas também tem bastante poeira, a rom b tem menos
+[2024-05-20 22:22:14] Felipe "Juca" Sanches: ah! Essa é a ROM B?
+[2024-05-20 22:22:27] Felipe "Juca" Sanches: por que tem 54x120 bits
+[2024-05-20 22:22:45] Felipe "Juca" Sanches: a ROM A tem 66x256
+[2024-05-20 22:23:07] Erin Pinheiro 🐿: a que eu fiz é a ROM B, de bobeira
+[2024-05-20 22:23:28] Erin Pinheiro 🐿: o TIF da ROM A está melhor que o seu screenshot
+[2024-05-20 22:23:46] Erin Pinheiro 🐿: converta o TIF pra BMP, ou, se quiser, tenha paciência pra eu fazer do zero :)
+[2024-05-20 22:23:48] Felipe "Juca" Sanches: é... a ROM B vai ficar pra alguém que queira investigar o microcódigo no futuro
+[2024-05-20 22:23:59] Erin Pinheiro 🐿: aceito incentivos
+[2024-05-20 22:26:23] Erin Pinheiro 🐿: document: (not yet published)
+[2024-05-20 22:26:23] Erin Pinheiro 🐿: veja se ajuda, convertido pra png que é lossless
+[2024-05-20 22:27:09] Erin Pinheiro 🐿: certas horas eu preciso de um trabalhinho braçal assim pra espairecer, então eu aceito fazer, se você tiver paciência pra eu fazer no meu tempo
+[2024-05-20 22:28:04] Felipe "Juca" Sanches: eu já tô com a mão na massa. Se quiser fazer em paralelo, é trabalho redundante, pode ser útil, mas pode também ser à toa
+[2024-05-20 22:28:23] Erin Pinheiro 🐿: então glhf
+[2024-05-20 22:29:10] Felipe "Juca" Sanches: o próximo passo, que é interpretar o código assembly, vai ser mais paralelizável
+[2024-05-20 22:29:25] Felipe "Juca" Sanches: pois acho que nao vai ser fácil de entender
+[2024-05-20 22:29:28] Erin Pinheiro 🐿: na, eu sirvo só pra brincar com a maskromtool
+[2024-05-20 22:30:10] Felipe "Juca" Sanches: se eu cansar eu te aviso. Mas agora eu tô engajado nessa treta
+[2024-05-20 22:31:16] Felipe "Juca" Sanches: acabei de perceber que a matemática não é tão simples, pois as colunas também estão levemente embaralhadas
+[2024-05-20 23:06:50] Felipe "Juca" Sanches: @mynameiserin, caramba! Recomecei do zero com o seu PNG de maior resolução e seguindo a metodologia que vocÊ sugeriu e estou me sentindo mais confiante
+[2024-05-20 23:06:58] Felipe "Juca" Sanches: acho que melhorou bastante a confiabilidade
+[2024-05-20 23:07:17] Felipe "Juca" Sanches: obrigado pelas dicas!
+[2024-05-20 23:07:38] Felipe "Juca" Sanches: eu tava com medo de recomeçar do zero, mas agora acho que isso vai me ajudar a terminar mais cedo
+[2024-05-20 23:08:03] Erin Pinheiro 🐿: a ROM B inteira me levou meia hora
+[2024-05-20 23:15:07] Felipe "Juca" Sanches: com esse software dá pra transcrever fita perfurada kkkk
+[2024-05-20 23:25:01] RicBit: pergunta meio besta, mas voces fizeram um fft na imagem? deve pegar automaticamente todos os bits
+[2024-05-20 23:26:09] Erin Pinheiro 🐿: não faz muita diferença, o algoritmo por cor do maskromtool pegou tudo sem problema, o que precisou consertar (no meu caso) foi tudo sujeira na imagem, que não tem fft que ajude
+[2024-05-20 23:26:34] RicBit: ah, ai nao tem jeito mesmo
+[2024-05-20 23:49:45] Felipe "Juca" Sanches: é... tem umas catotas em cima do die em alguns lugares

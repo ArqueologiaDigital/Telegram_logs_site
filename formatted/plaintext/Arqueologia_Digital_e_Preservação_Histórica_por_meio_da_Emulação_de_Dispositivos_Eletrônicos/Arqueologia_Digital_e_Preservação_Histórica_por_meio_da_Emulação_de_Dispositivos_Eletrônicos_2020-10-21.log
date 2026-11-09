@@ -1,0 +1,61 @@
+[2020-10-21 11:39:29] Felipe "Juca" Sanches [forwarded]:   .cr z8
+  .tf z8dump.bin
+  .org 0x9ee ; this is at CAC irq routine
+; note: program assumes MSC/CAC init stuff is done (eg. port write direction)
+; all jumps are relative, so this piece can be placed anywhere else
+
+  di
+  ld r4,#0
+  ld r5,#0
+  ld r6,#8
+  ld r7,#0
+  ld 3,#0
+
+; lazy start signal: write port 3hi: 0x80, 0x00, 0x40, 0x00, 0x20, 0x00, 0x10, 0x00
+  ld 3,#$80
+  ld 3,#0
+  ld 3,#$40
+  ld 3,#0
+  ld 3,#$20
+  ld 3,#0
+  ld 3,#$10
+  ld 3,#0
+
+LOOP
+  ld r8,#$10
+WAIT1
+  djnz r8,WAIT1
+
+  ldc r8,@rr4
+  ld 2,r8
+
+; strobe port 3 bit7, indicate byte available at port 2
+  ld 3,#$80
+  ld r8,#$10
+WAIT2
+  djnz r8,WAIT2
+  ld 3,#0
+
+  incw rr4
+  decw rr6
+  jr nz,LOOP
+
+STOP
+  jr STOP
+[2020-10-21 11:39:30] Felipe "Juca" Sanches [forwarded]: Esse código foi colocado numa ROM externa para se fazer o dump da ROM interna de um MCU Zilog Z8 usado nesse jogo de xadrez:
+
+https://github.com/mamedev/mame/blob/master/src/mame/drivers/fidel_msc.cpp
+[2020-10-21 11:39:30] Felipe "Juca" Sanches [forwarded]: Algo parecido pode ser usado para fazer o dump da ROM do Pense Bem, da TecToy
+[2020-10-21 17:26:41] Eduardo Loos: Segunda live da semana RetroSC, hoje as 20:00
+[2020-10-21 17:26:53] Eduardo Loos: https://www.youtube.com/watch?v=YkiCDogPYeo&feature=youtu.be
+[2020-10-21 17:27:05] Eduardo Loos: Participantes
+
+Emerson Branco (Oldplayers)
+Daniel Campos (RetroPC)
+Luciano Scharf (RetroSC)
+Edson Godoy (VGDB)
+Leo Rosa (RetroSC / Datassette)
+Marcus Garrett (Jogos80 / Bitnamic / 1983 / Loading)
+[2020-10-21 19:29:19] * Deleted Account joined the group
+[2020-10-21 22:13:11] Felipe "Juca" Sanches [forwarded]: desoldei o chip Z8 de um Pense Bem hoje. Botei um soquete no lugar e reinstalei o chip. E ele ainda liga e funciona normalmente. Então isso comprova que eu nào danifiquei o chip durante o processo de desoldar
+[2020-10-21 22:13:11] Felipe "Juca" Sanches [forwarded]: vou montar um circuito em protoboard pra fazer o dump. Se eu ficar na dúvida se fiz alguma bobagem, posso sempre espetar o chip de volta no soquete do pense bem pra me certificar que ainda não fritei o chip

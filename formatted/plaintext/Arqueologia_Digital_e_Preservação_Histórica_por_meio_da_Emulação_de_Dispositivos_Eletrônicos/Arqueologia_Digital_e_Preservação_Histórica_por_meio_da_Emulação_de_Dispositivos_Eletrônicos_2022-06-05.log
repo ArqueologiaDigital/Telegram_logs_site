@@ -1,0 +1,63 @@
+[2022-06-05 00:04:29] Pedro de Medeiros 👾: Aplicativo útil pra gerar C-array de blobs binários é o srecord.
+[2022-06-05 00:05:12] Pedro de Medeiros 👾: Vou usar pra inserir a versão SCREEN5 da imagem que você usou pro Gunsmoke
+[2022-06-05 00:06:47] Felipe "Juca" Sanches: a imagem do fundo?
+[2022-06-05 00:06:59] Pedro de Medeiros 👾: Esta imagem
+[2022-06-05 00:07:05] Felipe "Juca" Sanches: ah
+[2022-06-05 00:07:12] Felipe "Juca" Sanches: ok
+[2022-06-05 00:07:34] Felipe "Juca" Sanches: mas o arquico xpm gerado é uma estrutura de dados em C
+[2022-06-05 00:10:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21104.jpg
+[2022-06-05 00:12:29] Pedro de Medeiros 👾: Tem como gerar um arquivo de imagem de 4bpp?
+[2022-06-05 00:13:16] Felipe "Juca" Sanches: pq 4bpp?
+[2022-06-05 00:13:31] Pedro de Medeiros 👾: SCREEN5 é assim.
+[2022-06-05 00:14:40] Felipe "Juca" Sanches: até dá, mas se tem 4bpp, pode ter 16 cores né? Aí seria melhor preparar alguma arte mais bonita
+[2022-06-05 00:17:28] Pedro de Medeiros 👾: Primeiro queria fazer as rotinas e ver o jogo funcionando. Arte melhorada pode vir depois.
+[2022-06-05 00:17:43] Felipe "Juca" Sanches: ok, perfeito
+[2022-06-05 00:18:22] Felipe "Juca" Sanches: usa o srecord entao e depois a gente muda se for o caso
+[2022-06-05 00:18:35] Felipe "Juca" Sanches: e também fique curioso pra ver como é
+[2022-06-05 00:26:32] L.: tela inteira em scr5, sem compressão, dá uns 32kb
+[2022-06-05 00:26:46] L.: em xpm deve ficar bem maior
+[2022-06-05 00:27:04] Felipe "Juca" Sanches: mas o XPM é usado apenas durante o build
+[2022-06-05 00:27:08] L.: no caso do msx isso faz bastante diferença se for botar em ROM
+[2022-06-05 00:27:15] L.: ah, belê
+[2022-06-05 00:27:16] Felipe "Juca" Sanches: o que realmente vai para a ROM é o dado comprimido
+[2022-06-05 00:30:45] Pedro de Medeiros 👾: Felizmente só preciso de 48 pontos de altura da imagem que o Juca fez. O que dá uns 6144 bytes. E olha que ainda tem um monte de espaço em branco.
+[2022-06-05 00:32:34] Felipe "Juca" Sanches: o build pra gunsmoke converte o PNG para XPM para embuti-lo hardcoded no programa patch_CGROM que, por sua vez, abre uma ROM original do romset do jogo Gunsmoke e faz o patch binário com o desenho de alguns tiles.
+[2022-06-05 00:33:07] Felipe "Juca" Sanches: algo similar poderia ser feito para gerar o blob que você pretente inserir na ROM pro MSX
+[2022-06-05 00:33:39] Felipe "Juca" Sanches: assim, o espaço em branco não entra na conta de espaço gasto em ROM
+[2022-06-05 03:08:47] Felipe "Juca" Sanches: Eu queria usar sprites para desenhar um cursor realçando qual a casa atual do jogo. Mas acabei de perceber que os sprites no hardware de vídeo da placa de arcade do GunSmoke sempre são renderizado debaixo da camada de foreground tiles.
+[2022-06-05 03:09:04] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21124.jpg
+[2022-06-05 03:09:17] Felipe "Juca" Sanches: São três camadas:
+- background tiles, usados pra desenhar o cenário de fundo (if (bgon))
+- sprites, ou "objects", pra desenhar os personagens (if (objon))
+- foreground tiles, ou "caracteres", pois são usados pra mostrar textos (if (chon))
+[2022-06-05 03:12:53] Felipe "Juca" Sanches: Lendo o código-fonte da emulação do GunSmoke no MAME eu consegui aprender como se faz para programar os sprites (endereços na RAM de sprites e registrador de configuração para ligar/desligar e para setar coordenadas)
+
+Mas não vai ser prático usar isso para o que eu queria. Vou guardar as rotinas apenas por serem úteis para outros jogos.
+[2022-06-05 04:52:15] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/31
+[2022-06-05 04:53:19] Felipe "Juca" Sanches: Não estou satisfeito ainda com isso. O pisca-pisca da célula ativa é meio irritante. E mudar a cor ao redor fica feio. Vou continuar experimentando. Por enquanto larguei as duas opcoes nesse PR.
+[2022-06-05 09:36:36] Pedro de Medeiros 👾: Primeiro release de Lotus 1-2-3 pro GNU  https://github.com/taviso/123elf/discussions/78
+[2022-06-05 10:47:34] Pedro de Medeiros 👾: Não dá pra renderizar o tabuleiro com os background tiles?
+[2022-06-05 11:38:15] Felipe "Juca" Sanches: Não dá, pois o posicionamento de bg tiles fica em ROM. É por design apenas para fundos estáticos
+[2022-06-05 11:39:13] Pedro de Medeiros 👾: E se fizesse o tabuleiro de sprites?
+[2022-06-05 11:39:43] Pedro de Medeiros 👾: Tem limitação horizontal?
+[2022-06-05 11:40:08] Felipe "Juca" Sanches: Com certeza tem. Só não sei qual é
+[2022-06-05 14:02:07] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/32/commits
+[2022-06-05 14:58:19] Felipe "Juca" Sanches: merged
+[2022-06-05 15:09:04] Pedro de Medeiros 👾: Não sei como vou obter a imagem em screen 5 de forma automática. Eu usei o conversor online do Jannone
+[2022-06-05 15:10:50] Felipe "Juca" Sanches: Depois eu tento achar uma solução para isso
+[2022-06-05 15:11:29] Pedro de Medeiros 👾: Eu sei que tem no windows
+[2022-06-05 16:36:15] L.: Se não precisar de dither, é sussa né
+[2022-06-05 16:36:54] L.: Rola inclusive fazer carregador de formato comum tipo BMP que suporta só 16 cores e tem informação de paleta
+[2022-06-05 16:37:05] L.: Aí usa imagemagick mesmo
+[2022-06-05 16:53:40] Pedro de Medeiros 👾: Ah, lembrei que eu tenho esse projeto aqui, que eu poderia ter usado. Mas dá pra aproveitar o código python pra fazer algo automatizado: https://github.com/pvmm/gimpfu-msx-gr4.py
+[2022-06-05 18:50:15] Eduardo Loos: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21145-IMG_9540.MP4
+[2022-06-05 18:50:48] Eduardo Loos: Com licença nobres amigos, apresento a vcs a identidade visual do RetroSC X - Encontro Brasileiro de Colecionadores de Computadores e Videogames Antigos - Florianópolis/SC - 05/11
+[2022-06-05 21:35:54] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/33
+[2022-06-05 21:39:03] Felipe "Juca" Sanches: Próximo passo é implementar uma tela de abertura do jogo. Para arcades faz sentido ter contador de ficha e botão de start. Estou pensando em como fazer essa lógica não atrapalhar as implementações de consoles, onde isso não faz sentido. Um dos empecilhos é que acabaram os bits de um byte para tipos de input. Se não houver necessidade de pressionamento de teclas/botôes simultâneos, acho que vou fazer o enum dos MINE_INPUT_... ter valores sequenciais de zero a 255 ao invés de ser um mapa de apenas 8 bits.
+[2022-06-05 21:39:31] Felipe "Juca" Sanches: aliás... tela de abertura e tela de game-over!
+[2022-06-05 21:40:55] Felipe "Juca" Sanches: Enquanto eu arrumava o gerenciamento de inputs do gunsmoke percebi também que posso colocar configurações de dificuldade (numero de bombas, tamanho do tabuleiro) nos DIP-switches 😉
+[2022-06-05 21:43:11] Erin Pinheiro 🐿: ué, não dá pra fazer um header genérico de tela de abertura e diferentes fontes ?
+[2022-06-05 21:43:48] Erin Pinheiro 🐿: p.ex sound.h -> sound_sdl.c, sound_dummy.c e o makefile que escolhe qual dependendo da plataforma
+[2022-06-05 21:44:46] Erin Pinheiro 🐿: fbdoom gerencia assim e por isso é fácil de portar
+[2022-06-05 21:45:26] Felipe "Juca" Sanches: É acho que vou fazer algo parecido com isso mesmo
+[2022-06-05 21:46:46] Felipe "Juca" Sanches: Erin, ninguém tentou ainda um port pra SMS... ;-)

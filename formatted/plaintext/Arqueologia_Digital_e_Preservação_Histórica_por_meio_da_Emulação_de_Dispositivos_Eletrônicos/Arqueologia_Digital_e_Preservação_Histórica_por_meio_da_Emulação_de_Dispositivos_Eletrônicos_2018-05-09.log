@@ -1,0 +1,101 @@
+[2018-05-09 01:26:37] Affonso Amendola: Ow Juca, no seu scan do Montador do Patinho Feio, do JJN ele descreve as instruções de E/S, e ele descreve as instruções FNC e SAL, esses flip-flops que ele menciona de status, interrupção, controle, tão na placa de interface né?
+[2018-05-09 01:26:56] Affonso Amendola: Isso n é algo que vem da Teletype por exemplo
+[2018-05-09 01:27:12] Affonso Amendola: Essas instruções me confundiram um tantinho
+[2018-05-09 01:41:59] Felipe "Juca" Sanches: sim, é meio complicadinho mesmo.
+[2018-05-09 01:42:41] Felipe "Juca" Sanches: se entendi direito, os flipflops ficam nas placas de interface. Que provavelmente são placas específicas de cada periférico.
+[2018-05-09 01:42:48] Felipe "Juca" Sanches: Algo que eu acho que nao temos esquematicos
+[2018-05-09 01:43:25] Felipe "Juca" Sanches: ou talvez fique no "subsistema" de I/O do próprio Patinho (que vc pode ver os esquemáticos no livro do Fregni, no final do capítulo 5)
+[2018-05-09 01:44:12] Affonso Amendola: Isso que eu tava achando, que tinha placas especifica pra cara periferico
+[2018-05-09 01:44:47] Affonso Amendola: Aí teria que ter uns 4 flipflops pra cada dispositivo, mesmo que ele n esteja instalado
+[2018-05-09 01:45:31] Felipe "Juca" Sanches: então e minha dúvida é entre 2 arquiteturas possíveis: (a) Pato(CPU) <=> Pato(I/O) <=> placa de interface <=> periférico ou (b) Pato(CPU) <=> Pato(I/O) <=> periférico
+[2018-05-09 01:46:00] Felipe "Juca" Sanches: eu acho que a arquitetura usadafoi a (a)
+[2018-05-09 01:46:25] Felipe "Juca" Sanches: e eu acho que os flip-flops ficam nas placas de interface (mas eu posso estar enganado)
+[2018-05-09 01:46:26] Affonso Amendola: Pato(IO) seria?
+[2018-05-09 01:46:53] Felipe "Juca" Sanches: Pato(IO) seria as placas do próprio patinho feio que implementam o subsistema de entrada e saida
+[2018-05-09 01:47:07] Felipe "Juca" Sanches: que é algo que vc ve nos esquematicos no livro do fregni
+[2018-05-09 01:47:31] Felipe "Juca" Sanches: vou abrir aqui o PDF e verificar
+[2018-05-09 01:47:41] Felipe "Juca" Sanches: alias... vou abrir o livro, que tá aqui do meu lado hahaha
+[2018-05-09 01:48:19] Affonso Amendola: Tava achando que a cpu interage direto com a placas de interface
+[2018-05-09 01:48:59] Felipe "Juca" Sanches: ok, achei!
+[2018-05-09 01:49:06] Felipe "Juca" Sanches: Página 214 do livro do fregni
+[2018-05-09 01:49:19] Affonso Amendola: Quando ce faz uma instruçao ENT por exemplo, ele pega o registrador (teoricamente na placa de interface) e joga pro acumulador
+[2018-05-09 01:50:01] Felipe "Juca" Sanches: é o esquemático de uma das placas do Pato chamada "PRANCHA VI - DADOS PARA CARTÕES DE INTERFACE"
+[2018-05-09 01:51:11] Affonso Amendola: Eu vi isso, mas no pdf ficou bem dificil de ler as coisinhas
+[2018-05-09 01:51:42] Felipe "Juca" Sanches: eu acho que eu tenho um scan melhor que o do livro
+[2018-05-09 01:51:45] Felipe "Juca" Sanches: vou ver se acho aqui
+[2018-05-09 01:52:13] Affonso Amendola: Mais atras ele descreve uma placa de interface sem entrar muito em detalhes, e ele fala que os detalhes dela tao na prancha vi
+[2018-05-09 01:53:28] Felipe "Juca" Sanches: perfeito
+[2018-05-09 01:54:06] Felipe "Juca" Sanches: todas essas pranchas de esquemáticos que estão no capítulo 5 do livro são reprodução da tese de mestrado do Fregni
+[2018-05-09 01:54:14] Felipe "Juca" Sanches: e eu tenho scan da tese também
+[2018-05-09 01:54:34] Affonso Amendola: Nice
+[2018-05-09 01:54:36] Felipe "Juca" Sanches: o scan da tese tá melhor, por que o livro é A5 e a tese é aproximadamente A4
+[2018-05-09 01:55:36] Felipe "Juca" Sanches: mas a qualidade da impressão do livro é melhor. Então talvez valha a pena eu escanear do livro com ajustes extremos do scanner e gerar um PDF só dos esquemáticos
+[2018-05-09 01:55:44] Felipe "Juca" Sanches: por enquanto a melhor opção é https://github.com/ArqueologiaDigital/PatinhoFeio/blob/master/Projeto_Logico_da_Unidade_de_Controle_de_um_Minicomputador__EFregni_1972.pdf
+[2018-05-09 01:55:58] Felipe "Juca" Sanches: que é o scan da tese
+[2018-05-09 01:57:21] Felipe "Juca" Sanches: mas eu tenho grande parte do circuito transcrito para o KICAD (usando o próprio livro e um microscópio USB), disponível aqui: https://github.com/ArqueologiaDigital/PatinhoFeio_KICAD
+[2018-05-09 01:58:09] Affonso Amendola: Perfeito
+[2018-05-09 01:58:26] Affonso Amendola: Amanha eu vou dar uma olhada melhor nos esquematicos
+[2018-05-09 01:58:43] Affonso Amendola: Pag 192 do livro ele fala da placa de interface
+[2018-05-09 01:58:50] Affonso Amendola: FIN-8
+[2018-05-09 01:59:00] Affonso Amendola: E na otra pag tem uma imagem
+[2018-05-09 01:59:08] Felipe "Juca" Sanches: é um baita trampo transcrever esses esquemáticos. Mas a idéia é justamente revisar o projeto todo e ver onde há erros no esquemático original (já achei vários)
+[2018-05-09 01:59:27] Affonso Amendola: É a mesma coisa do esquematico, mas mais entendivel
+[2018-05-09 01:59:32] Felipe "Juca" Sanches: e gerar um PDF dos esquemáticos usando notação moderna e qualidade legível
+[2018-05-09 02:01:30] Affonso Amendola: Imagino
+[2018-05-09 02:02:15] Felipe "Juca" Sanches: mas foi o passo que viabilizou montar a réplica da placa decodificadora de opcodes
+[2018-05-09 02:02:19] Felipe "Juca" Sanches: CDE-3
+[2018-05-09 02:03:31] Felipe "Juca" Sanches: aquela placa réplica que eu fiz, e que te mostrei no museu e tambem nesse final desemana, corresponde à Prancha X, página218 do livro do fregni
+[2018-05-09 02:06:25] Affonso Amendola: As FIN-8 sao antes dos cartoes de interface
+[2018-05-09 02:06:38] Affonso Amendola: Apatentemente tem 8 delas
+[2018-05-09 02:06:58] Felipe "Juca" Sanches: vi agora que eu não transcrevi ainda essa parte dos esquemáticos
+[2018-05-09 02:07:20] Felipe "Juca" Sanches: e vi lá no desenho na tese que não tem flipflop nenhum nessas placas FIN-8
+[2018-05-09 02:07:44] Felipe "Juca" Sanches: então realmente os FF ficam nas placas de interface, as quais são fósseis perdidos hoje em dia
+[2018-05-09 02:07:58] Affonso Amendola: Pois é
+[2018-05-09 02:08:20] Felipe "Juca" Sanches: bem... é possível que ainda estejam espetadas lá no Patinho Feio da diretoria da poli...
+[2018-05-09 02:08:55] Felipe "Juca" Sanches: mas eu acho que ainda não chegamos no ponto de pedir autorização da diretoria para inspecionar o hardware real
+[2018-05-09 02:09:26] Felipe "Juca" Sanches: tem bastante material impresso pra gente mastigar ainda e se tornar expert no tema antes de arriscar por as mãos no hardware original
+[2018-05-09 02:10:35] Affonso Amendola: Acho que da pra dar uma extrapolada de como deveria ser as placas de interface
+[2018-05-09 02:11:20] Felipe "Juca" Sanches: sim, dá
+[2018-05-09 02:11:25] Affonso Amendola: Pior das hipoteses a gente faz uma placa generica pra teletype só pra gente ter essa interface funcionando
+[2018-05-09 02:12:06] Affonso Amendola: A do sintetizador que eu acho que seria diferente
+[2018-05-09 02:12:10] Felipe "Juca" Sanches: ligar o emulador na Teletype ASR33 real seria muito legal
+[2018-05-09 02:12:20] Felipe "Juca" Sanches: e talvez até mais fácil que interfacear com o Synth
+[2018-05-09 02:12:42] Affonso Amendola: A placa interface do synth deve ser muito diferente
+[2018-05-09 02:12:55] Felipe "Juca" Sanches: acho que não muito, viu...
+[2018-05-09 02:13:01] Affonso Amendola: Pq ela manda dois bytes pro synth e recebe um sinal de sincronia
+[2018-05-09 02:13:24] Felipe "Juca" Sanches: suspeito que o synth usa multiplos slots de I/O
+[2018-05-09 02:13:37] Affonso Amendola: Faria sentido
+[2018-05-09 02:13:42] Felipe "Juca" Sanches: digo isso por conta do código assembly de interface entre o pato e o synth
+[2018-05-09 02:14:13] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/PatinhoFeio/blob/master/fitas_perfuradas/FITA%23011.txt
+[2018-05-09 02:14:18] Affonso Amendola: Eu n olhei o assembly dele ainda
+[2018-05-09 02:16:03] Affonso Amendola: Yup
+[2018-05-09 02:16:06] Affonso Amendola: Canal 6 e 7
+[2018-05-09 02:16:51] Affonso Amendola: Mas o conector so tinha 9 pinos
+[2018-05-09 02:17:09] Affonso Amendola: A interface é serial?
+[2018-05-09 02:17:21] Felipe "Juca" Sanches: e ele falou algo sobre ser uma serial
+[2018-05-09 02:17:59] Felipe "Juca" Sanches: é possível que a serial seja invisivel no código por ser talvez implementada na placa de interface
+[2018-05-09 02:18:23] Affonso Amendola: Acredito que sim
+[2018-05-09 02:18:31] Affonso Amendola: Tem um wait for flag logo depois
+[2018-05-09 02:19:09] Affonso Amendola: FNC /68 MODO SERIE PARA CANAL 6 FNC /78 MODO SERIE PARA CANAL 7 FNC /7A MODO ACOPLADO
+[2018-05-09 02:19:10] Felipe "Juca" Sanches: e que tenha sido usado serialização com par trançado pra viabilizar a comunicação à distância entre as salas do departamento
+[2018-05-09 02:19:48] Affonso Amendola: Cada fnc e sal tbem é definido pela placa de interface?
+[2018-05-09 02:20:36] Felipe "Juca" Sanches: SAL = salto condicional (evita a execução da instrução seguinte em função de uma flag (estado dum flip-flop) de um dos slots de I/O)
+[2018-05-09 02:21:18] Affonso Amendola: O que é essa flag depende só da placa de interface né
+[2018-05-09 02:21:30] Felipe "Juca" Sanches: acho que sim
+[2018-05-09 02:22:26] Felipe "Juca" Sanches: acho que um bom caminho pode ser inspecionar o esquemático da interface do synth no manual de hardware (um dos cadernos) do stolfi
+[2018-05-09 02:22:46] Affonso Amendola: Agreed
+[2018-05-09 02:23:08] Affonso Amendola: Otro dia, preciso dormir
+[2018-05-09 02:23:27] Affonso Amendola: See ya 😄😄😄😄
+[2018-05-09 02:25:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4798.jpg
+[2018-05-09 02:27:24] Felipe "Juca" Sanches: falou! Té mais!
+[2018-05-09 12:13:57] L C: @fsanches Eita to aki! Sumi por que to te devendo um site! LOL :D
+[2018-05-09 12:14:38] Felipe "Juca" Sanches: hahaha
+[2018-05-09 12:23:23] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4802.jpg
+[2018-05-09 12:23:34] Felipe "Juca" Sanches: Affonso, essa parte aqui é um oscilador de 100kHz
+[2018-05-09 12:53:35] Leonardo Roman: Qual era a frequência de trabalho desse computador? Imagino que não era 100khz
+[2018-05-09 12:59:26] Felipe "Juca" Sanches: esse circuito faz parte da interface do sintetizador musical
+[2018-05-09 12:59:45] Felipe "Juca" Sanches: essa frequencia eu suspeito que seja dividida adiante no circuito
+[2018-05-09 13:00:03] Felipe "Juca" Sanches: e acho que serve de referencia de tempo para a recepção de dados via linha de dados seriais
+[2018-05-09 13:00:21] Felipe "Juca" Sanches: tem uns shift registers nesse circuito também
+[2018-05-09 13:00:36] Felipe "Juca" Sanches: e os dados do conector da interface entram nos shift registers
+[2018-05-09 13:00:46] Felipe "Juca" Sanches: então o circuito tá começando a fazer sentido pra mim

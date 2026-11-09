@@ -1,0 +1,17 @@
+[2024-04-05 07:35:47] Felipe "Juca" Sanches: inventando moda...
+[2024-04-05 07:35:48] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=-Qn5l0eDmAg
+[2024-04-05 07:36:45] Felipe "Juca" Sanches: ainda falta muita coisa, mas já tem um bom pedaço do render de polígonos implementado. Entretanto, ainda cheio de bugs.
+[2024-04-05 07:41:42] Pablo Vasques Bravo-Villalba: Haha, muito legal
+[2024-04-05 12:05:36] Leonardo Roman: Já carrega arquivos custom de forma mais fácil ou ainda precisa de hack no firmware?
+[2024-04-05 13:47:22] Felipe "Juca" Sanches: ainda com hacks no firmware
+[2024-04-05 13:53:13] L.: Era o objetivo final né? 🙃
+[2024-04-05 13:53:35] Felipe "Juca" Sanches: kkkkk
+[2024-04-05 13:56:21] L.: Porta Doom também pra manter a tradição
+[2024-04-05 14:01:37] Felipe "Juca" Sanches: meu objetivo é mudar a tradição kkkk
+[2024-04-05 15:01:30] Felipe "Juca" Sanches: mas agora falando sério... meu  objetivo sempre foi conseguir escrever programas pra rodar no teclado de verdade. O fato de eu estar tentando portar o Another World é só consequência de eu ter múltiplos projetos se atropelando mutuamente
+[2024-04-05 15:02:27] Felipe "Juca" Sanches: e uma  das coisas divertidas desse port é que eu não tenho um compilador C para o TLCS900. Então tô tendo que escrever a VM em assembly
+[2024-04-05 15:50:03] L.: Faz um compilador de webassembly pra tlcs900
+[2024-04-05 15:50:18] L.: Aí compila o código normal em C pra wasm com o clang
+[2024-04-05 15:52:12] Felipe "Juca" Sanches: se eu precisasse de mais um projeto... :-P
+[2024-04-05 15:53:04] L.: Só mais um :P
+[2024-04-05 15:53:10] Felipe "Juca" Sanches: sempre cabe mais um

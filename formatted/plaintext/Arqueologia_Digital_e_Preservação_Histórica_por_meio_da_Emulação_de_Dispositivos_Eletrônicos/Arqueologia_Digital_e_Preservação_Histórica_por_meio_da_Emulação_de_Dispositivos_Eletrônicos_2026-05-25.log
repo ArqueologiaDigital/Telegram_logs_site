@@ -1,0 +1,30 @@
+[2026-05-25 00:00:11] RicBit: foi !
+https://github.com/ricbit/mega-assembler
+[2026-05-25 00:01:58] RicBit: mas foi sem revisão haha, eu ainda preciso eyeballar pra ver se não passou nenhuma bobagem
+[2026-05-25 00:02:30] RicBit: e eu acho que daria pra fazer em 18h se eu tivesse um jeito de impedir a preguiça da AI
+[2026-05-25 00:04:09] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38912.jpg
+[2026-05-25 00:04:09] RicBit: eu coloquei named parameters no sjasmplus, ficou bonito
+[2026-05-25 00:04:37] RicBit: por enquanto só tem no meu fork, mas o PR no main já está revisando
+[2026-05-25 00:06:53] RicBit: acho que ele roubou pra terminar no prazo, ainda tem uns labels faltando, tipo 1113h. isso é dentro do basic, acho que ele ficou com preguica de procurar no redbook
+[2026-05-25 00:07:03] RicBit: vou usar inteligencia humana para consertar
+[2026-05-25 00:08:19] RicBit: 1113h é bug no original haha. Ele está chamando BIOS_BEEP na implementacao, ao inves de chamar na interface que é 00C0h
+[2026-05-25 03:24:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38917.jpg
+[2026-05-25 04:32:47] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=dyiwHF67Gvg
+[2026-05-25 15:22:14] L.: Meio off topic: https://github.com/crazii/SBEMU
+
+Emulação de Sound Blaster em DOS usando placas modernas
+[2026-05-25 16:30:18] L.: https://www.analogmuseum.org/english/library.html
+[2026-05-25 18:08:54] RicBit: ESC L , ESC K , ESC J, eu não lembrava disso, mega assembler desenterrando memorias
+[2026-05-25 18:09:05] RicBit: sao epson codes para impressora
+[2026-05-25 18:13:55] L.: tô rodando aquele museu virtual de SOs. fizeram um launcher legalzinho, até. dá pra filtrar por CPU, país, família de SO, etc. brasil só tem o tropix da ufrj :)
+[2026-05-25 18:14:08] L.: tem que mandar os sisne & família pra lá
+[2026-05-25 18:14:16] L.: uzix também
+[2026-05-25 18:42:15] Felipe "Juca" Sanches: E o SIM/M da Itautec
+[2026-05-25 19:44:33] RicBit: acho que eu vou abrir o command.com pra ver se ele compara com o command.com do 86-dos
+[2026-05-25 19:46:01] RicBit: dá para abrir o turbo pascal tambem
+[2026-05-25 20:11:35] RicBit: enquanto isso eu usei H.I. para dar uma melhorada no mega assembler:
+https://github.com/ricbit/mega-assembler
+[2026-05-25 20:30:29] Leonardo Roman: Sempre quis saber se o SISNE é implementação clean room do DOS, como a Scopus sempre disse.
+[2026-05-25 20:30:51] RicBit: se tiver o binario eu posso abrir
+[2026-05-25 22:05:20] Leonardo Roman: Tá em .DSK, mas o 7-zip abre: https://datassette.org/pt-br/softwares/ibm-pc/sistemas-operacionais/br-brasil/sisne-plus-330-r05
+[2026-05-25 23:44:05] RicBit: nem precisa abrir, meu sistema já sabe desmontar dsk sozinho

@@ -1,0 +1,25 @@
+[2026-09-16 09:36:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40531.jpg
+[2026-09-16 09:36:18] Felipe "Juca" Sanches: Estou tentando aprender a usar o Blender pra tentar fazer um modelo melhor para os jacarés...
+[2026-09-16 09:36:54] Felipe "Juca" Sanches: eu manjo de openscad, mas tem algumas limitações para desenhos mais orgânicos
+[2026-09-16 09:38:17] Felipe "Juca" Sanches: o ideal mesmo é usar scanner 3d. Eu queria apenas ter um modelo mais bonitinho pra usar de prova de conceito. Pra diferenciar arte interna simplificada de arte externa mais detalhada (com modelos mais pesados, meshes mais complexas)
+[2026-09-16 10:17:35] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40534.jpg
+[2026-09-16 10:17:35] Felipe "Juca" Sanches: A parte que eu sei fazer com os pés nas costas são as texturas vetoriais ;-)
+[2026-09-16 10:19:23] Felipe "Juca" Sanches: Vou tentar usar aquele outline vetorial que está em magenta no SVG como ponto de partida pra conseguir o formato correto no modelo 3D. Preciso aprender como se faz pra importar SVG no Blender e a partir daí derivar o resto da forma tridimensional dos olhos do jacaré
+[2026-09-16 10:59:04] L.: eu tentaria o mais obvio: arrasta o .svg pra janela do blender :P
+[2026-09-16 11:28:55] Pablo Vasques Bravo-Villalba: Will it blend?
+[2026-09-16 12:43:54] Leonardo Roman: Ou pedir pro Claude usar o Blender por você.
+[2026-09-16 13:05:38] RicBit: eu ia falar isso, tem um mcp de blender quer funciona super bem
+[2026-09-16 13:14:12] Felipe "Juca" Sanches: hahaha. Tem algumas coisas na vida que eu ainda quero aprender a fazer manualmente!
+[2026-09-16 15:45:03] Felipe "Juca" Sanches: importar é fácil. O difícil é fazer todo o resto da mesh 3d ao redor da forma inicial
+[2026-09-16 16:10:24] Felipe "Juca" Sanches [forwarded]: https://www.tomshardware.com/video-games/playstation/26-year-old-sony-ps2-security-chip-broken-wide-open-after-four-years-of-effort-reverse-engineering-enthusiast-successfully-unlocks-cxp102064-mechacon-chip
+[2026-09-16 16:10:24] Felipe "Juca" Sanches [forwarded]: Adeus Maledeto Magic Gate!
+[2026-09-16 16:15:38] RicBit: dia desses eu modelei um negocio assim, mas nao lembro exatamente o que foi. deixa procurar no log aqui
+[2026-09-16 16:23:10] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40545.jpg
+[2026-09-16 16:23:10] RicBit: lembrei, eu tinha um modelo gigante, mas queria só a luva do modelo. então eu mandei o blender fazer cortes aleatorios, até o reconhecedor de imagem falar que tinha uma luva na imagem. ele fez binary search e conseguiu.
+[2026-09-16 16:25:28] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40546.jpg
+[2026-09-16 16:25:28] RicBit: ai eu pedi para ele colocar a textura metalica e usei como referencia de pintura, ficou assim depois de pintado.
+[2026-09-16 17:15:19] Felipe "Juca" Sanches: Tem gente que faz parecer fácil!
+
+https://www.youtube.com/watch?v=bwK7uk-A1y4
+[2026-09-16 18:20:53] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40548-uPD6383GF-unofficial-datasheet-2026-09-15.pdf
+[2026-09-16 18:20:53] Felipe "Juca" Sanches: faz algumas semanas que estou aos poucos decodificando o dsp não-documentado. Alguns dias atrás gerei um 'datasheet não-oficial' com tudo o que já se sabe com base na engenharia reversa...

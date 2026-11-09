@@ -1,0 +1,34 @@
+[2026-08-13 00:21:35] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40030-minimsx.zip
+[2026-08-13 00:21:35] RicBit: nice!
+eu otimizei e agora precisa de menos memoria:
+[2026-08-13 00:21:56] RicBit: lento nao tem jeito, ou é rapido ou cabe em 4kb, os dois juntos não dá haha
+[2026-08-13 00:22:05] RicBit: pra velocidade ainda tem o brmsx
+[2026-08-13 09:23:42] L.: acessa do disco direto!
+[2026-08-13 09:24:24] RicBit: Sim, não tem espaço para a imagem do disco!
+[2026-08-13 10:28:41] L.: Digo, acessa a megarom do disco
+[2026-08-13 10:28:53] L.: Deixa só a página atual em RAM
+[2026-08-13 10:45:48] RicBit: ah isso nao tem como, os megarom usualmente fazem switch varias vezes por irq. nao iria rodar nem em hardware moderno
+[2026-08-13 15:28:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40038.jpg
+[2026-08-13 16:30:56] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40039-minimsx.zip
+[2026-08-13 16:30:56] RicBit: versão nova que conserta varios erros com sprites (agora ele obedece o limite de 4 sprites). Testei num emulador de XT, funciona, mas para chegar no logo do goonies são algumas dezenas de minutos haha. Tem que ser um XT com VGA.
+[2026-08-13 16:32:04] RicBit: eu deixei a noite toda rodando simulated annealing, liberou mais 50 bytes.
+[2026-08-13 16:32:26] RicBit: com 50 bytes acho que dá para colocar save state
+[2026-08-13 16:33:26] RicBit: ainda 4kb
+[2026-08-13 16:42:31] RicBit: nope acho que save state nao cabe ainda
+[2026-08-13 16:42:49] RicBit: teria que cavar mais espaço antes
+[2026-08-13 17:36:41] L.: eu tenho um 386 de verdade aqui, se pá eu testo nele outro dia. só não sei onde foi parar a fonte dele.
+[2026-08-13 17:37:03] L.: (é um daqueles mini-laptops novos com 386.)
+[2026-08-13 18:27:20] Pablo Vasques Bravo-Villalba: Por que é tão lento?
+[2026-08-13 19:14:32] RicBit: é a natureza das coisas, se você otimiza para espaço a velocidade quebra, e vice-versa. como está muito otimizado para espaço, também fica muito lento.
+[2026-08-13 19:14:48] RicBit: mas muito lento ainda é real time no meu pc com dosbox
+[2026-08-13 19:18:42] Pablo Vasques Bravo-Villalba: Sim, compreendo isso, fico mais curioso sobre a natureza específica dessa otimização que "pesa" tanto. Mas é mais uma curiosidade mesmo. Entendo que um XT a 4,77MHz penaria para emular um MSX de qualquer forma. Tem ideia da especificação mínima "real" para rodar esse miniemulador?
+[2026-08-13 19:19:24] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40051.jpg
+[2026-08-13 19:19:24] RicBit: aqui um pedaço da alu. basicamente é "if add then ... else if adc then ... else if sub then ... else if sbc then ..." etc etc. Para cada opcode tem uma arvore de ifs, fica lento.
+[2026-08-13 19:19:38] Pablo Vasques Bravo-Villalba: Inclusive acho que 1MB de RAM só em clones, na Wikipédia diz que os modelos da IBM só suportavam um máximo de 640kB
+[2026-08-13 19:20:09] RicBit: nao, teria que fazer busca binaria no dosbox para achar a freq que nao perde quadros. posso deixar rodando à noite.
+[2026-08-13 19:20:18] Pablo Vasques Bravo-Villalba: Mostrando assim faz bastante sentido pra mim, agradeço pela paciência
+[2026-08-13 19:20:35] RicBit: goonies roda em 640 agora, na versao nova.
+[2026-08-13 19:21:46] RicBit: esse loop da alu usa o truque do djnz-pra-frente que eu aprendi abrindo jogo da konami.
+[2026-08-13 19:23:11] RicBit: outro exemplo é o psg. nao tem psg no emulador. são oito canais de scc, e tres deles preenchidos com ondas quadradas. seria muito mais rapido fazer o psg custom sem precisar parsear forma de onda. mas scc com oito canais é menor.
+[2026-08-13 19:23:45] RicBit: o ruido é custom porque nao tem como emular ruido na minha engine de scc.
+[2026-08-13 19:39:57] Alexandre Villares: https://www.tomshardware.com/video-games/retro-gaming/germanys-1-5-million-project-to-build-the-worlds-largest-game-archive-collapses-after-funding-dries-up

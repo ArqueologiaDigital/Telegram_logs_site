@@ -1,0 +1,10 @@
+[2026-07-10 10:04:30] Felipe "Juca" Sanches: video: (not yet published)
+[2026-07-10 10:05:57] Pedro de Medeiros 👾: Pessoal agora tá vibe coding títulos de arcade de 82/83 que usam Z80 para o MSX2... 😱 https://www.msx.org/forum/msx-talk/development/mr-do-on-msx2
+[2026-07-10 10:16:35] Guilherme Ranoya: GTA2 versão Javascript rodando direto do navegador:
+https://gta2js.vercel.app/
+[2026-07-10 10:22:28] Érico Andrei: Não crítico. Estou perto de tentar algo similar
+[2026-07-10 10:23:04] Pedro de Medeiros 👾: Essa thread no fórum tem muitas dicas pra quem quer começar.
+[2026-07-10 10:25:49] Érico Andrei: Mudando de assunto, e o seu jogo?
+[2026-07-10 10:25:54] Pedro de Medeiros 👾: Esses jogos de uma tela só do arcade costumam ser relativamente fáceis de portar se você for usar só o blitter sem operações lógicas e desligar os sprites para ganhar mais velocidade.
+[2026-07-10 10:30:19] Pedro de Medeiros 👾: Esbarrei na falta de cores no SCREEN 5 pra deixar os sprites fiéis ao arcade. Estou testando em breve uma versão SCREEN 8 que, apesar de ter cores horríveis, me dá mais liberdade sem precisar ficar fazendo microgerenciamento das cores na minúscula paleta da SCREEN 5.
+[2026-07-10 10:41:04] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=V2PIE-ZOiCQ

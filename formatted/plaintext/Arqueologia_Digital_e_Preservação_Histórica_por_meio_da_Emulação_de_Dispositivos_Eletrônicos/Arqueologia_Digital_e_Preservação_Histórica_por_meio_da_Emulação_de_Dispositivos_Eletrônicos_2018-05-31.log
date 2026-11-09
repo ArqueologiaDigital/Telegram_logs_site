@@ -1,0 +1,14 @@
+[2018-05-31 01:12:31] Felipe "Juca" Sanches: https://games.slashdot.org/story/18/05/30/2247224/hacker-gets-super-nes-games-running-on-unmodified-nes
+[2018-05-31 01:13:02] Affonso Amendola: Eita
+[2018-05-31 01:13:04] Felipe "Juca" Sanches: Eu li meio por cima e achei meio gambiarra demais. Preciso depois ver os detalhes pra entender melhor.
+[2018-05-31 01:13:28] Felipe "Juca" Sanches: Tem uma roubadona de um raspberry pi dentro do cartucho
+[2018-05-31 01:13:32] Felipe "Juca" Sanches: isso não cheira bem...
+[2018-05-31 02:43:32] Affonso Amendola: Ahhh interessante
+[2018-05-31 02:44:05] Affonso Amendola: Bizarro tbem, depois eu leio tudo
+[2018-05-31 02:44:10] Felipe "Juca" Sanches: 😊
+[2018-05-31 15:33:29] Leonardo Roman: Basicamente usa o NES só como placa de vídeo.
+[2018-05-31 17:27:57] Affonso Amendola: Sera que é possivel fazer um master system inteiro num cartucho e usar uma ideia dessas pra "rodar" um jogo de master system no nes?
+[2018-05-31 19:29:13] DQ: Uma foto de uma "belezinha" que eu tenho. A gambiarra horrorosa é de fábrica.
+[2018-05-31 19:29:43] DQ: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/5078-TK82C_4.jpg
+[2018-05-31 19:35:12] DQ: Para quem não conhece, é um TK82-C da Microdigital, clone do Sinclair ZX81. Nesta versão a placa principal corresponde ao ZX80 e a gambiarra são os circuitos adicionais para operar como ZX81 (o chamado "modo SLOW").
+[2018-05-31 19:40:27] DQ: O meu primeiro micro foi um TK82C (que ainda está comigo), mas uma versão posterior. A Microdigital conseguiu de alguma forma obter uma cópia da ULA (uncommited logic array) que substitui todos os integrados menores, reduzindo o número de CIs para quatro (não contando o 7805 da fonte).

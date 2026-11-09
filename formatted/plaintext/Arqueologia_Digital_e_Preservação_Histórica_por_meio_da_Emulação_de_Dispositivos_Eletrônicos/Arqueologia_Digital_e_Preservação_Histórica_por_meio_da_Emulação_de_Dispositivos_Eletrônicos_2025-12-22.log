@@ -1,0 +1,23 @@
+[2025-12-22 04:40:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36686.jpg
+[2025-12-22 04:40:49] Felipe "Juca" Sanches: Tá quase... 29 erros!
+[2025-12-22 04:43:03] Felipe "Juca" Sanches: Assim que eu zerar o número de erros, o montador vai conseguir fazer o second pass pra calcular os endereços corretos. E aí teremos uma segunda etapa de ajustes a fazer. (aposto que mais umas dezenas de milhares de ajustes...)
+[2025-12-22 04:43:39] Felipe "Juca" Sanches: Sem usar REGEX isso seria impossível!
+[2025-12-22 11:10:15] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36689.jpg
+[2025-12-22 11:27:22] Felipe "Juca" Sanches: haha, como previsto!
+[2025-12-22 11:27:37] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36691.jpg
+[2025-12-22 11:27:37] Felipe "Juca" Sanches: matei o último erro e ganhei mais 14 mil
+[2025-12-22 17:50:47] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36692.jpg
+[2025-12-22 17:50:47] Felipe "Juca" Sanches: Primeira versão do código que montou sem erros de montagem. Mas com certeza com muitos bytes incorretos.
+Score de byte-matching: 69.65% :-P
+[2025-12-22 17:59:28] L.: Nice
+[2025-12-22 17:59:41] Felipe "Juca" Sanches: haja saco...
+[2025-12-22 17:59:43] Felipe "Juca" Sanches: kkkk
+[2025-12-22 18:00:00] Felipe "Juca" Sanches: a gente se mete nuns buracos sem fundo de vez em quando, né?
+[2025-12-22 18:00:17] L.: É, fazer byte matching de recompilação é um trampo ingrato
+[2025-12-22 18:01:05] Felipe "Juca" Sanches: Isso começou com uma visita do @rodrigopitanga aqui em casa semana passada
+[2025-12-22 18:01:14] Felipe "Juca" Sanches: numa conversa boba eu disse: "Seria legal algum dia tentar remontar essa porra"
+[2025-12-22 18:01:23] Felipe "Juca" Sanches: NERDSNIPPED!
+[2025-12-22 18:05:03] Felipe "Juca" Sanches: Mas um aprendizado importante é que talvez seja esse o motivo de eu ter tido dificuldade em implementar a VM do Another World pra rodar no KN5000. O assembler que estou usando é pra uma CPU ligeiramente diferente.
+[2025-12-22 18:05:44] Felipe "Juca" Sanches: Então arrumar o assembler pra conseguir montar a ROM original é um bom passo para estabelecer um bom ambiente de desenvolvimento, com um assembler que funcione minimamente bem para a CPU alvo.
+[2025-12-22 18:06:42] Felipe "Juca" Sanches: E olha que essa última semana de trabalho braçal nem mesmo começou a envolver escrita de patches pro assembler. Estou ainda apenas documentando quais são as instruções que preciso implementar.
+[2025-12-22 18:06:52] Felipe "Juca" Sanches: e botando uns bytes zero no lugar delas

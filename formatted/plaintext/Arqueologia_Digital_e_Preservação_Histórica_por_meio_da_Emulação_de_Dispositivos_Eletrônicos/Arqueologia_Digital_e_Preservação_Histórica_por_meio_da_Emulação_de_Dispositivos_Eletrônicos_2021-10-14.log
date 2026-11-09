@@ -1,0 +1,33 @@
+[2021-10-14 00:44:49] Aylons Hazzud: Bem, não é bem digital, mas é arqueologia tecnológica: https://telephoneworld.org/landline-telephone-history/pink-floyds-young-lust-explained-and-demystified/
+[2021-10-14 05:13:53] Felipe "Juca" Sanches: https://twitter.com/9600/status/1448307785431666688
+[2021-10-14 05:16:28] Flávio Amieiro: Me lembrou de um projeto que vi esses dias que me apresentou uma arquitetura interessante que eu nunca tinha ouvido falar
+[2021-10-14 05:18:18] Flávio Amieiro: (tentando achar aqui)
+[2021-10-14 05:21:51] Flávio Amieiro: Achei!
+[2021-10-14 05:21:52] Flávio Amieiro: https://www.youtube.com/watch?v=MV_q7ltG8gY
+[2021-10-14 05:22:18] Flávio Amieiro: Essa pessoa tá usando os PIOs do pico pra simular transputers: https://en.wikipedia.org/wiki/Transputer
+[2021-10-14 05:23:42] Flávio Amieiro: Achei muito maneiro a galera na década de 80 pensando em computação paralela e colocando porta serial direto no processador, com instruções pra isso
+[2021-10-14 05:24:21] Flávio Amieiro: Tinha que voltar essa coisa de fazer CI dourado
+[2021-10-14 05:33:09] Felipe "Juca" Sanches: vou te contar uma coisa... o projeto acho que de mestrado do Marcelo Zuffo foi um computador baseado nesses chips Transputer
+[2021-10-14 05:35:41] Felipe "Juca" Sanches: "O meu envolvimento com a área de computação gráfica, processamento de imagens, realidade virtual foi crescente. No meu projeto de mestrado (entre 1989 e 1993) um dos problemas existentes na época era o desenvolvimento de placas especializadas para o processamento gráfico. Juntamente com a profa. Roseli  de Deus Lopes, projetamos, construímos e testamos a placa multitransputadora gráfica TRGR_01 (Transputadores “transputers” = microprocessadores que podiam ser ligados entre si como transistores, eram fabricados por uma empresa inglesa chamada INMOS). Para provar o funcionamento e desempenho da TRGR-01, instalamos programas gráficos como o algoritmo de traçado de raios (“Ray-tracing”). No meu projeto de doutorado (1993-1997) decidi ir mais longe, pois estava interessado em novas técnicas de síntese de imagens que estavam surgindo como a visualização volumétrica, neste caso o meu projeto foi o desenvolvimento de um ambiente de programação paralela para volumes, denominado PVV (“The Parallel Volume Visualization Toolkit”), no caso a nossa plataforma de  desenvolvimento foi um multicomputador (aglomerado de estações gráficas ou “cluster”) fornecido por uma empresa inglesa denominada MEIKO."
+
+fonte: http://www.lsi.usp.br/~mkzuffo/
+[2021-10-14 05:38:10] Flávio Amieiro: Que irado!
+[2021-10-14 09:21:40] Ismael Luceno: @fsanches PDP-11!!! :O sabia que o PDP-11 é mixed-endian?
+[2021-10-14 09:24:58] Ismael Luceno: esse é o maior problema para portar software de PDP-11 pro m68k
+[2021-10-14 15:41:10] Ismael Luceno: eu fiquei com vontade de seguir com o desenvolvimento do hexitch :D
+[2021-10-14 15:41:29] Felipe "Juca" Sanches: eu fiz alguns ajustes. Vou comitar então
+[2021-10-14 15:43:15] Felipe "Juca" Sanches: pronto.
+[2021-10-14 15:43:36] Felipe "Juca" Sanches: fiz o push do meu commit pós-code-review da live passada😉
+[2021-10-14 15:43:54] Felipe "Juca" Sanches: a navegacao no CodeMode ainda está incorreta
+[2021-10-14 16:59:48] Ismael Luceno: sim
+[2021-10-14 17:06:02] Ismael Luceno: ta ficando melhor
+[2021-10-14 18:45:55] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16760-sticker.webp
+[2021-10-14 19:05:57] Felipe "Juca" Sanches: talvez faça sentido a gente continuar o desenvolvimento sem ser em lives por um tempo e depois retomar as lives quando o programa estiver um pouquinho mais avançado, mas não muito.
+
+E então poderíamos retomar com um novon code-review, pra mostrar em que ponto chegou e fazer ao vivo mais aprimoramentos iterativos.
+[2021-10-14 19:34:32] Felipe "Juca" Sanches: L
+[2021-10-14 19:35:25] L.: Chamou? lol
+[2021-10-14 19:36:42] Felipe "Juca" Sanches: ooops
+[2021-10-14 19:39:02] Felipe "Juca" Sanches: Era só "Laughing"...
+mas não "Out Loud" :-P
+[2021-10-14 21:57:18] L.: https://twitter.com/adumont/status/1448771988852457475?t=zEaUWWmlOi75czX2Cqj6mg&s=09

@@ -1,0 +1,50 @@
+[2023-02-11 01:19:12] Felipe "Juca" Sanches: O universo tem seus jeitinhos de criar coincidências curiosas, né?!
+Hoje eu estava retomando o projeto de disassembly do bytecode do Another World e esbarrei mais uma vez na dúvida sobre como as strings do jogo são armazenadas. Por conta disso, fui lá na issue ler o que eu já documentei a respeito. E olha só qual foi a data exata de abertura da issue (!!!!):
+
+https://github.com/fabiensanglard/Another-World-Bytecode-Interpreter/issues/7
+[2023-02-11 08:50:31] Pablo Vasques Bravo-Villalba: Coincidência: tem um povo fazendo uma placa de som com o SAA1099 para MSX. Esse chip também foi usado no SAM Coupé, um micro britânico de 8 bits lançado em 1989 similar ao ZX Spectrum em vários aspectos. Eu acho legal ter placas modernas com chips clássicos para usar em micros reais. Só que entendo que, mais cedo ou mais tarde, não vai ser nada fácil achar esses chips em boas condições. O chip em si é um tipo de PSG estéreo com seis canais de som e capacidades similares à do clássico AY-3-8910 (melhor em alguns aspectos, pior em outros).
+[2023-02-11 09:03:08] Augusto Almeida: Tem uma interface pro ZX Spectrum que usa esse (e outros Chips ao mesmo tempo)
+[2023-02-11 09:03:48] Augusto Almeida: https://youtu.be/vjb3N_Lk0c0
+[2023-02-11 09:06:08] Felipe "Juca" Sanches: Eu deveria me sentir deprimido por estar tocando adiante o mesmo projeto há 10 anos?! :-P
+[2023-02-11 09:06:56] Pablo Vasques Bravo-Villalba: Eu sinceramente acho admirável, nenhuma razão para depressão 😉
+[2023-02-11 09:07:10] Flávio Amieiro: Ou orgulhoso de seguir devagar e sempre
+[2023-02-11 09:07:13] Flávio Amieiro: Exatamente
+[2023-02-11 09:08:09] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25840-sticker.webp
+[2023-02-11 09:09:10] Felipe "Juca" Sanches: Devia ter um sticker assim:
+[2023-02-11 09:09:16] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25842.jpg
+[2023-02-11 09:39:31] Augusto Almeida: O que dizer do mame então?
+[2023-02-11 09:49:49] Felipe "Juca" Sanches: ah, sim, claro! Mas o MAME tem zilhares de usuários. Tem demanda.
+
+É só que às vezes eu acho que a investigação sober a VM do Another World me dá uma trabalheira enorme para algo que pouca gente realmente se importa. Então dá uma desanimada...
+
+Eu continuo fazendo pois tenho uma enorme curiosidade por ver tudo nos mínimos detalhes. Então a motivação é pessoal mesmo. (apesar de eu achar que sou meio doido da cabeça kkkk)
+[2023-02-11 09:51:06] Felipe "Juca" Sanches: hoje mesmo, o que mais desmotivou foi perceber que estou fazendo disassembly em paralelo de 5 binários do mesmo jogo, cada um com suas peculiaridades, mas provavelmente uns 99% idênticos.
+[2023-02-11 10:22:21] Augusto Almeida: Honestamente não vejo problema algum, muito pelo contrário.
+[2023-02-11 10:36:35] * Tiago Ribeiro joined the group
+[2023-02-11 14:24:48] Sebastiao Barretto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25848.jpg
+[2023-02-11 14:24:48] Sebastiao Barretto: Minha filha estava olhando uma caixa que era do meu sogro e achou uma pilha de cartuchos de 8 pistas
+[2023-02-11 14:30:34] Sebastiao Barretto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25849.jpg
+[2023-02-11 14:30:34] Sebastiao Barretto: Interessante, as unicas aberturas são desse lado, a tração de ve ser feito por um eixo que pressiona a roldana de borracha e o cabecote de leitura deve encostar na abertura central. Fiquei com vontade de fazer um leitor, mas deve ser difícil achar um cabeçote de leitura para esse formato.
+[2023-02-11 14:38:34] Nano Gennari: A fita é um loop infinito, ela puxa fita do meio do rolo e faz o rolo girar enrolar o outro lá do de volta
+[2023-02-11 14:39:06] Nano Gennari: Ele pinça a fita em um desses cortes
+[2023-02-11 14:45:42] Felipe "Juca" Sanches: Olha só que bonitinho o que acabei de fazer!
+
+A VM do Another World "troca de fase" fazendo bank-switching. Mas a instrução é feia:
+[2023-02-11 14:45:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25853.jpg
+[2023-02-11 14:45:56] Felipe "Juca" Sanches: Então fiz isso aqui:
+[2023-02-11 14:46:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25855.jpg
+[2023-02-11 14:46:20] Felipe "Juca" Sanches: E esse é o resultado do disasm agora:
+[2023-02-11 14:46:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25857.jpg
+[2023-02-11 14:47:07] Felipe "Juca" Sanches: https://github.com/felipesanches/AnotherWorld_VMTools/commit/71e03e568d737cfcafb9dca6eb08c96345ba55e9
+[2023-02-11 22:13:02] Felipe "Juca" Sanches: Offtopic:
+
+https://www.youtube.com/watch?v=4nacF2HAuQ4
+[2023-02-11 22:14:12] Felipe "Juca" Sanches: Mas eu vi esse cara ao vivo hoje. Fui a um show da banda dele aqui em Londres, no Jazz Café. E fiquei colado no palco, há uns 2 metros de distância direto em frente aos teclados.
+[2023-02-11 22:16:28] Felipe "Juca" Sanches: Hoje ele estava tocando um Vintage Vibes (que é um piano elétrico no estilo do Rhodes, mas de fabricação moderna, por uma outra empresa hoje em dia), um sintetizador da Yamaha (algum modelo da linha Montage) e um synth analógico SEQUENTIAL Prophet 6.
+[2023-02-11 22:18:06] Felipe "Juca" Sanches: com pedais de efeitos como o Electroharmonix V256 Vocoder e o MXR phase 100
+[2023-02-11 22:18:37] Felipe "Juca" Sanches: um espetáculo!
+[2023-02-11 22:18:47] Felipe "Juca" Sanches: e a banda dele também é sensacional!
+[2023-02-11 22:19:28] Felipe "Juca" Sanches: ah! E não mencionei, mas esse cara é o tecladista do Jamiroquai.
+[2023-02-11 22:19:57] Felipe "Juca" Sanches: mas enfim... o semi-off-topic era o synth analógico argentino ;-D
+[2023-02-11 23:15:47] Felipe "Juca" Sanches: o baterista era do Jamiroquai também
+[2023-02-11 23:15:49] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=e4b7GILJOtQ

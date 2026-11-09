@@ -1,0 +1,15 @@
+[2024-04-20 00:19:44] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-04/31004.jpg
+[2024-04-20 00:19:53] L.: Última chance de comprar z80 da zilog hein
+[2024-04-20 02:43:53] RicBit: uia
+[2024-04-20 02:45:42] RicBit: acho que eu nao tenho nenhum
+[2024-04-20 09:13:33] Pablo Vasques Bravo-Villalba: Pelo menos a versão CMOS. Será que a versão NMOS ainda é fabricada? Improvável, né?
+[2024-04-20 22:54:01] Lord Spy: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-04/31009.jpg
+[2024-04-20 23:04:18] RicBit: Eu chuto que hoje em dia deve ter mais fabricação comercial de tubo de CRT que de chip NMOS.
+[2024-04-20 23:09:27] RicBit: Pô eu ia toda semana pra milpitas, nunca passei na zilog. Vacilo.
+[2024-04-20 23:48:50] Pablo Vasques Bravo-Villalba: Uma coisa que eu vejo muito é essa discussão sobre qual era o melhor processador de 8 bits. Certamente o 6502 e o Z80 eram os mais populares, e por acaso também são os dois que eu conheço um pouquinho melhor. O 6809 me parece legal, mas conheço bem pouco.
+
+Pessoalmente, o Z80 é meu preferido. Não que o 6502 não seja legal. Página zero é uma ideia interessante, e tem uns modos de endereçamento interessantes também. E os registradores são limitados mas ainda assim bastante versáteis. É um processador bem eficiente, também.
+
+Mas ainda prefiro o Z80 com seus montes de registradores e poder agrupar em registradores de 16 bits. Uma grande variedade de operações possíveis, um conjunto de registradores alternativo, instruções de I/O, muita coisa legal. 
+
+Há quem diga que o Z80 era ineficiente e consumia muitos ciclos para realizar ações simples. Mas no final da década de 1970 memória era muito cara, e memória rápida era mais cara ainda. Então o que muitos acham que é um bug eu considero uma feature para a época, permitindo máquinas projetadas com o Z80 usarem memória mais comum e terem arquiteturas mais baratas. 😊

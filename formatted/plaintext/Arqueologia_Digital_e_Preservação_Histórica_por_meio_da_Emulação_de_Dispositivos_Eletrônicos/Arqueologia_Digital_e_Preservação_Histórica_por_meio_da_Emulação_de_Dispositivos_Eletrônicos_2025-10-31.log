@@ -1,0 +1,84 @@
+[2025-10-31 00:04:03] Felipe "Juca" Sanches: MAME 0.281 release
+
+https://www.mamedev.org/?p=555
+
+Peço desculpas! O release de Outubro ainda não saiu: (v0.282)
+[2025-10-31 00:12:52] Felipe "Juca" Sanches: Mas deve sair muito em breve
+[2025-10-31 00:34:08] Felipe "Juca" Sanches: Mas bora inaugurar uma nova tradição!
+
+MAME 0.281 release (Setembro de 2025)
+https://www.mamedev.org/?p=555
+
+Contribuições daqui do nosso grupo:
+
+Merged pull requests
+
+#14049: ensoniq/esq1.cpp: Added internal interactive artwork for the Ensoniq ESQ-1. [Felipe Sanches]
+
+#14068: bus/technics/kn5000: Added the Technics KN5000 expansion bus and a skeleton HD-AE5000 board. [Felipe Sanches]
+
+#14097: roland/pg1000.cpp: Added a skeleton device to hold ROMs for the PG-1000 control surface. [Felipe Sanches]
+
+#14128: ensonq/esq1.cpp: Updated copyright and to-do comments. [Felipe Sanches]
+
+#14179: roland/roland_d50.cpp: Added button inputs for the D-50 and D-550 (not hooked up to anything). [Felipe Sanches]
+
+#14181: cpu/tlcs900: Show special function register symbols in disassembled code for the TMP94C241. [Felipe Sanches]
+[2025-10-31 10:46:54] Flávio Amieiro: https://alex-j-lowry.github.io/z80tvg.html
+[2025-10-31 10:47:34] Flávio Amieiro: In1987, an electronics hobbyist from Japan developed this 8-bit games console
+entirely from scratch! Despite the simplicity of its circuitry (Only
+19 ICs are needed to construct the system, none of which are dedicated
+graphics chips), it's possible to write surprisingly advanced games
+for it!
+The specifications are as follows:
+
+
+
+4MHz Z80 processor (The timing of the video circuit is derived from
+a source separate to the computer, so running the CPU at a higher clockspeed
+would be fairly simple.)
+
+
+Address space of 32KB for ROM cartridges (ROMs larger than 32KB should
+be possible with bank switching.)
+
+
+16KB of system ROM
+
+
+8KB of separate video RAM
+
+
+168x210 pixel black/white graphics
+
+
+60Hz composite video output
+
+
+1-bit audio output
+
+
+1 controller (4 direction buttons, 2 fire buttons)
+
+As of the time of writing, 26 game programs have been developed for the
+Z80 TV Game: 6 games by Mr. Isizu (the designer of the Z80 TV Game),
+and 20 games by Inufuto, who has developed a multi-platform compiler that supports
+the Z80 TV Game.
+[2025-10-31 10:49:27] Flávio Amieiro: Esse link é de alguém que fez um clone desse sistema, mas tem o link pro que parece ser a documentação original (em japonês): http://w01.tp1.jp/~a571632211/z80tvgame/index.html
+[2025-10-31 12:01:39] Pablo Vasques Bravo-Villalba: https://x.com/davepl1968/status/1983651336400077030?t=7hgz_hd96-39JFi_93IfuA&s=35
+[2025-10-31 12:01:39] Pablo Vasques Bravo-Villalba: Ainda não tive tempo de ver, mas parece interessante ☝️🏽
+[2025-10-31 19:49:41] Ismael Carvalho: Isso aqui é bem legal
+[2025-10-31 20:11:00] Leonardo Roman: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36286.jpg
+[2025-10-31 20:11:00] Leonardo Roman: Olhem bem o nome desse. Mas não é meu. Parece que estão surgindo.
+[2025-10-31 20:11:03] Leonardo Roman: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36287.jpg
+[2025-10-31 20:11:17] Leonardo Roman: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36288.jpg
+[2025-10-31 20:11:24] L.: Uia
+[2025-10-31 20:18:01] Hilton Fernandes: Tem muita gente boa na Microsoft. Os livros costumavam ser muito bons. 
+
+O livro do Petzold para programação Win16 e Win32 era praticmente poesia.
+[2025-10-31 20:20:38] L.: Sim, quando eu trabalhei lá eu soube de várias lendas -- Petzold incluso. Algumas estavam por lá ainda! Conheci o Anders Heljsberg (autor do C# e TypeScript, mas também Turbo Pascal e tal) e trabalhei com o Guido van Rossum também :)
+[2025-10-31 20:37:11] Felipe "Juca" Sanches: Foi você que tirou essas fotos?
+[2025-10-31 21:29:30] Leonardo Roman: Não, foi em um grupo de whats de TK que postei as fotos do meu e outra pessoa apareceu com esse: https://chat.whatsapp.com/ERuHEa7TYIP0LT7y5HJvvu
+[2025-10-31 21:44:12] Felipe "Juca" Sanches: E essa pessoa estaria interessada em colaborar com um dump da ROM?
+[2025-10-31 21:44:37] Felipe "Juca" Sanches: Principalmente se a gente mostrar o que foi feito no MAME com o VET3000
+[2025-10-31 23:21:53] Leonardo Roman: Perguntei pra ele. Acho que ainda não viu a mensagem.

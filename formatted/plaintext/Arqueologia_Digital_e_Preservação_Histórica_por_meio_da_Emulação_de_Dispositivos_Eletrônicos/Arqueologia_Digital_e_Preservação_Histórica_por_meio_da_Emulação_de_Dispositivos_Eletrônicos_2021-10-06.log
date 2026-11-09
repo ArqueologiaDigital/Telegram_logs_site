@@ -1,0 +1,63 @@
+[2021-10-06 16:38:54] Felipe "Juca" Sanches: nada consta
+[2021-10-06 16:40:06] Felipe "Juca" Sanches: Alguém aqui sabe descrever como é passo-a-passo o procedimento de carga em memória e execução de um programa .EXE no MSDOS?
+
+Sabem dizer como o sistema operacional decide em qual endereço de memória carregar o arquivo do programa?
+[2021-10-06 16:42:00] Felipe "Juca" Sanches: E existe um limite de tamanho do executável?
+
+Como faz pra rodar um programa maior do que os 20bits de endereçamento da memória, por meio de CS:IP?
+
+Já ouvi falar que tem formas de lidar com isso, mas eu não conheço os detalhes. Nem sei exatamente como buscar por documentação disso na Internet. Alguém conhece algum documento que descreva isso?
+[2021-10-06 16:46:56] kretcheu: Conhece pev é um pacote de ferramentas para análise de arquivos PE.
+[2021-10-06 16:51:09] Felipe "Juca" Sanches: não conhecia
+[2021-10-06 16:51:12] Felipe "Juca" Sanches: acabei de instalar
+[2021-10-06 16:51:26] Felipe "Juca" Sanches: e estou recebendo um ERROR [-17]: invalid e_lfanew (No such file or directory)
+[2021-10-06 16:51:42] kretcheu: E do Fernando Mercês (mente binária)
+[2021-10-06 16:51:59] Ismael Luceno: o endereço está especificado no cabeçalho do exe
+[2021-10-06 16:52:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16200.jpg
+[2021-10-06 16:52:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16201.jpg
+[2021-10-06 16:52:46] Felipe "Juca" Sanches: tem erro de inglês na man-page
+[2021-10-06 16:53:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16202.jpg
+[2021-10-06 16:53:25] Ismael Luceno: limite da carga do SO são 64KB por secção, mas pode ter un exe maior e carregar mais segmentos manualmente
+[2021-10-06 16:56:49] Ismael Luceno: ... carrega o primeiro segmento (você não têm controle do CS) e pega o salto ao endereço ip especificado no cabeçalho...
+[2021-10-06 16:59:24] Felipe "Juca" Sanches: o sistema escolhe o code-segment que achar mais adequado no momento?
+[2021-10-06 17:00:35] Felipe "Juca" Sanches: o arquivo executável de uma das mesas do pinball fantasies tem uns 530 kbytes. O MSDOS carrega só os primeiros 64k disso? Se for isso mesmo, qual é o mecanismo pra carregar mais partes?
+[2021-10-06 17:02:24] Ismael Luceno: sim
+[2021-10-06 17:04:11] Ismael Luceno: ele carrega 64kb de código (cs) e 64kb de dados (ds), mas depois você pode abrir o exe e fazer un read para qualquer endereço
+[2021-10-06 17:04:52] Ismael Luceno: alguns runtimes já fazem coisas extras desse tipo, depende do compilador
+[2021-10-06 17:05:53] Ismael Luceno: por exemplo os loaders do djgpp carregan o código de 32bits direto pra memória alta do xms
+[2021-10-06 17:13:00] Ismael Luceno: olhando o loader do freedos, não, ele tem un número de páginas então é baseado só em isso
+[2021-10-06 17:13:36] Ismael Luceno: talvez a limitação de 64kb que eu lembro é coisa do compilador
+[2021-10-06 17:14:52] Felipe "Juca" Sanches: eu to inventando moda aqui e fiquei com vontade de carregar o código de uma das mesas do pinball fantasies na memória do PC sem usar o MSDOS, e substituir as chamadas do DOS (int 21h) e da VGA BIOS (int 10h) por um código mínimo meu mesmo. E assim conseguir bootar direto no jogo standalone.
+[2021-10-06 17:15:45] Ismael Luceno: o cabeçalho é signature, tamanho da última pagina, número de páginas nos primeiros 6 bytes
+[2021-10-06 17:15:56] Felipe "Juca" Sanches: por isso eu precisaria fazer meu próprio loader. Ou até mesmo espetar uma ROM na placa-mãe com o jogo já em memória
+[2021-10-06 17:16:19] Ismael Luceno: eu posso ajudar com isso ;)
+[2021-10-06 17:17:07] Felipe "Juca" Sanches: seria uma pcb sem placa VGA. O objetivo é transformar o jogo em um firmware para uma placa de controle de pinball
+[2021-10-06 17:17:24] Felipe "Juca" Sanches: retirar do hardware tudo que não é necessário
+[2021-10-06 17:17:44] Felipe "Juca" Sanches: se for possível fazer alguns patches no binário para retirar chips e simplificar o hardware, melhor ainda
+[2021-10-06 17:18:54] Felipe "Juca" Sanches: escolher apenas um dos drivers de som que for mais adequado... (ou até mesmo escrever um driver de som novo para algum chip de som que possa ser colocado onboard na placa controladora)
+[2021-10-06 17:19:19] Felipe "Juca" Sanches: projeto completamente frankenstein mesmo
+[2021-10-06 17:19:37] Felipe "Juca" Sanches: projeto de refatoração de hardware 😉
+[2021-10-06 17:20:14] Felipe "Juca" Sanches: e a idéia é validar o conceito por meio da implementação de um emulador dessa placa controladora no MAME
+[2021-10-06 17:20:31] Felipe "Juca" Sanches: (num fork do MAME, é claro! Pois o MAME não aceitaria um pull request desse tipo de coisa)
+[2021-10-06 17:42:32] Felipe "Juca" Sanches: eu lembro que tinha um projeto que fazia algo parecido, para criar discos de boot para carga direta de jogos específicos sem usar o DOS
+[2021-10-06 17:42:47] Felipe "Juca" Sanches: bootava direto do disquete, sem nem precisar ter HD no PC
+[2021-10-06 17:42:56] Felipe "Juca" Sanches: mas no meu caso eu gostaria de bootar o jogo direto da ROM
+[2021-10-06 17:43:17] Felipe "Juca" Sanches: e sem a intro. Cair direto no código principal da mesa de jogo
+[2021-10-06 17:44:04] Felipe "Juca" Sanches: re-implementar as chamadas de leitura de arquivos do MSDOS pra enganar o jogo e carregar valores default para o arquivo de configuracao
+[2021-10-06 17:44:30] Felipe "Juca" Sanches: ou quem sabe até ler esses valores de um conjunto de dip switches na placa
+[2021-10-06 18:52:05] RicBit: Mais fácil rodar um emulador num rpi
+[2021-10-06 18:52:57] Felipe "Juca" Sanches: Mas a graça aqui não é fazer o mais fácil. A diversão é explorar as possibilidades dessa idéia de "refatoração de hardware"
+[2021-10-06 18:53:28] Felipe "Juca" Sanches: re-projetar uma plataforma de hardware para otimiza-la a uma aplicação específica
+[2021-10-06 18:53:56] Felipe "Juca" Sanches: é o mais puro diletantismo!
+[2021-10-06 19:56:11] Ismael Luceno: são mais problemas no caso da ROM, mas é possível
+[2021-10-06 19:57:19] Ismael Luceno: eu acho o único problema que não vai poder solucionar é o Copyright desse código
+[2021-10-06 19:59:48] Ismael Luceno: pois todo poderia ser considerado um derivado...
+[2021-10-06 20:59:26] Felipe "Juca" Sanches: ah sim claro
+[2021-10-06 20:59:49] Felipe "Juca" Sanches: estou ignorando a questão do copyright mesmo
+[2021-10-06 21:00:48] Felipe "Juca" Sanches: já faz uns 15 anos que ignoro a questão do copyright em relacao a esse jogo. É projeto de hobby, sem fins comerciais. Um tributo ao legado cultural deste jogo.
+[2021-10-06 22:57:23] Shideravan: Viram que vazou todo o código fonte da Twitch?
+[2021-10-06 23:00:52] Shideravan: Acabaram vazando um monte de dados privados de usuários e essa é com certeza, a parte mais zoada na coisa toda
+[2021-10-06 23:01:15] Shideravan: Deve ter sido um saco para quem vazou ir atrás disso e só digo uma coisa: provavelmente se a plataforma fosse open source, isso não teria acontecido hahaha
+[2021-10-06 23:02:58] Shideravan: Olhando o copo meio cheio nessa história, ao menos tem material de sobra agora para quem quiser estudar o desenvolvimento de plataformas de streaming
+[2021-10-06 23:07:19] Shideravan: Achei que isso iria derrubar o preço das ações da Amazon (dona do Twitch), mas não, eles tiveram uma alavancada monstra hoje
+[2021-10-06 23:10:07] Shideravan: A Amazon fechou com alta

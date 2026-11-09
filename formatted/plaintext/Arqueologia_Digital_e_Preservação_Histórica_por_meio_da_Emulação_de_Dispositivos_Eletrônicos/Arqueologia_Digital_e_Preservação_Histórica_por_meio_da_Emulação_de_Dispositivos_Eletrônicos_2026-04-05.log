@@ -1,0 +1,16 @@
+[2026-04-05 01:41:38] Felipe "Juca" Sanches: Estou usando o Claude pra gerar uma versão em LaTeX de todos os documentos do Patinho Feio
+[2026-04-05 01:42:17] Felipe "Juca" Sanches: Os scans originais são importantes como "source of truth". São o mais próximo do registro histórico mais fiel.
+[2026-04-05 01:42:42] Felipe "Juca" Sanches: Mas versões de PDF compilados com LaTeX têm a vantagem de serem mais convenientes para leitura
+[2026-04-05 01:43:41] Felipe "Juca" Sanches: Com funcionalidades do tipo (a) indíce com links clicáveis, (b) possibilidade de fazer busca no texto, etc
+[2026-04-05 01:44:24] Felipe "Juca" Sanches: Estou impressionado com a qualidade do OCR que o Claude consegue fazer. Acho que é consequência dele operar de forma multi-modal
+[2026-04-05 01:47:17] Felipe "Juca" Sanches: Além disso, tem uma outra camada interessante: ontem extraí o conteúdo das tabelas de sequenciamento de micro-operacoes em um arquivo JSON e fiz um script python que converte esses dados no desenho das tabelas usando LaTeX (TikZ). Então agora os dados podem também ser usados para implementar um emulador em nível de micro-operações. E dá pra adicionar procedimentos de validação cruzada das informações técnicas dos documentos, com os desenhos dos circuitos e com os códigos de emulação.
+[2026-04-05 01:47:56] Felipe "Juca" Sanches: Documentação cruzada com validação dos dados. Acho que vai ajudar a dar mais robustes aos dados.
+[2026-04-05 01:48:14] Felipe "Juca" Sanches: E nos ajudar a encontrar erros nos documentos originais
+[2026-04-05 01:48:45] Felipe "Juca" Sanches: talvez em algum momento eu consiga até mesmo cruzar com netlist gerado a partir dos esquemáticos feitos no KICAD
+[2026-04-05 01:49:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38036.jpg
+[2026-04-05 01:52:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38037.jpg
+[2026-04-05 02:16:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38038.jpg
+[2026-04-05 02:16:11] Felipe "Juca" Sanches: Me parece promissor...
+[2026-04-05 16:20:03] Hugo (Agaelebê): Vc tem usado todos seus creditos diários ou tá de boa?
+[2026-04-05 16:24:17] Felipe "Juca" Sanches: Às vezes sim, às vezes não
+[2026-04-05 19:58:47] Hugo (Agaelebê): depois tenta o caveman: https://github.com/JuliusBrussee/caveman

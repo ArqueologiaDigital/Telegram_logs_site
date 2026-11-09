@@ -1,0 +1,25 @@
+[2026-05-22 12:53:41] RicBit: Coloquei no repo o disasm do antarctic argentino. Também descobri o que eram os bytes secretos no fim da rom europeia:
+
+https://github.com/ricbit/antarctic/
+[2026-05-22 16:06:39] Felipe "Juca" Sanches: E o que eram os bytes secretos no fim da rom europeia? ;-)
+[2026-05-22 18:03:05] RicBit: é o nome do jogo, de tras pra frente, em kana, usando um encoding secreto
+[2026-05-22 18:04:09] RicBit: pra descobrir o encoding eu peguei todos os jogos da konami, extraí os bytes finais e deduzi a partir dos nomes. felizmente era o mesmo encoding para todo mundo.
+[2026-05-22 18:04:52] RicBit: e a rom argentina com 100% de certeza é um bad dump, tem pelo menos 5 bytes errados nela.
+[2026-05-22 18:05:01] RicBit: alguem teria que redumpar
+[2026-05-22 18:24:37] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38854.jpg
+[2026-05-22 19:59:12] RicBit: tive uma ideia idiota
+[2026-05-22 20:00:19] RicBit: no goonies cada cena tem 4 salas né (5 fases com 4 cenas com 4 salas cada cada). as 4 salas são conectadas, então cada cena é um tetromino. dá para fazer um tetris com as fases do goonies
+[2026-05-22 20:48:03] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38857.jpg
+[2026-05-22 20:48:07] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38858.jpg
+[2026-05-22 20:48:26] Guilherme Ranoya: https://archive.org/details/creative-computing-sept-oct-1976/Creative_Computing_Sept_Oct_1976/
+[2026-05-22 22:24:29] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38860.jpg
+[2026-05-22 22:25:43] Felipe "Juca" Sanches: primeira vez que vejo essa tela. Significa que o servidor que estou criando está começando a acertar o protocolo
+[2026-05-22 22:26:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38862.jpg
+[2026-05-22 22:26:39] Felipe "Juca" Sanches: Mas, depois de alguns segundos deu "ERRO DE COMUNI CACAO"...
+[2026-05-22 22:27:32] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38863.jpg
+[2026-05-22 22:27:32] Felipe "Juca" Sanches: Pra quem não conhece, a tela anterior era essa.
+[2026-05-22 22:32:07] Felipe "Juca" Sanches: Huge milestone - "Aguarde. Estamos recebendo dados." The cart got past T.30 training and into the real data phase. Notably frame #3 changed from ff c8 22 (FTT = Failure To Train) to ff c8 21 (CFR = Confirmation to Receive) - the cart accepted our training. Then it errored. Let me see where
+[2026-05-22 22:49:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38865.jpg
+[2026-05-22 23:19:28] Pablo Vasques Bravo-Villalba: O que é isso?
+[2026-05-22 23:22:29] Felipe "Juca" Sanches: Cartucho TeleBradesco para Mega Drive.
+[2026-05-22 23:23:41] Felipe "Juca" Sanches: https://segaretro.org/TeleBradesco_Residência

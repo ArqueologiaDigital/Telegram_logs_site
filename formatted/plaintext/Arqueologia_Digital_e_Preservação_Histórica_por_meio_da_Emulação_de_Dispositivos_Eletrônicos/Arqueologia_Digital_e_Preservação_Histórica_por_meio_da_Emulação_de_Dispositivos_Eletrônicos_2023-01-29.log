@@ -1,0 +1,40 @@
+[2023-01-29 05:32:03] Felipe "Juca" Sanches: Meu disassembler de TLCS900 tá com alguma encrenca de performance. Para analisar todo o grafo de execução de um binário de 2 MBytes tá levando uns 4 minutos. Aposto que devo ter feito alguma cagadinha de programação em python.
+[2023-01-29 05:32:35] Felipe "Juca" Sanches: ou a tarefa é complicada mesmo. São umas 8 mil rotinas nesse binário
+[2023-01-29 09:06:46] RicBit: um grafo de 2mb levando 4min parece ok para mim
+[2023-01-29 09:07:01] RicBit: se for qualquer coisa maior que linear
+[2023-01-29 09:07:28] RicBit: sobe o codigo que eu olho
+[2023-01-29 09:40:12] Pablo Vasques Bravo-Villalba: Maneiro demais!
+[2023-01-29 14:31:48] Felipe "Juca" Sanches: Adicionei uma lógica no meu código pra contabilizar quantas jump-tables já documentei, e quantas instruções de CALL ou JP para endereço em registrador ainda são encontradas no código sem ter sido ainda feita uma análise humana (ou seja, correspondentes a outras tabelas que ainda pracisam ser documentadas)
+[2023-01-29 14:32:15] Felipe "Juca" Sanches: com isso, o programa me dá uma mensagem motivacional no final dos 4 minutos de análise:
+[2023-01-29 14:32:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25612.jpg
+[2023-01-29 14:33:24] Felipe "Juca" Sanches: E aqui a cara do script onde eu documento as tabelas que já analisei:
+[2023-01-29 14:33:29] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25614.jpg
+[2023-01-29 14:49:25] Felipe "Juca" Sanches: código publicado:
+
+https://github.com/felipesanches/TLCS900_ExecTrace
+[2023-01-29 14:49:32] Felipe "Juca" Sanches: divirtam-se!
+[2023-01-29 17:39:18] Pedro de Medeiros 👾: Existe um desses processadores TLCS que é compatível com Z80
+[2023-01-29 18:14:07] Felipe "Juca" Sanches: sim
+[2023-01-29 18:14:28] Felipe "Juca" Sanches: o TLCS900 é um parente do Z80, mas com instruções de 32 bits
+[2023-01-29 18:14:42] Felipe "Juca" Sanches: o instruction set tem várias semelhanças
+[2023-01-29 18:20:18] Felipe "Juca" Sanches: https://garoa.net.br/wiki/PVE-500
+[2023-01-29 18:20:44] Felipe "Juca" Sanches: Essa mesa de controle da SONY tem 2 CPUs Z80 da linha TLCS-Z80
+[2023-01-29 18:20:49] Felipe "Juca" Sanches: https://github.com/mamedev/mame/blob/master/src/mame/sony/pve500.cpp
+[2023-01-29 18:22:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25624.jpg
+[2023-01-29 18:30:14] RicBit: Da uma olhada no operador match case, fica melhor que os elif que você usou.
+[2023-01-29 18:31:29] Felipe "Juca" Sanches: uia! Eu nem sabia que python tinha isso!
+[2023-01-29 18:31:48] RicBit: É recente, eu já incorporei
+[2023-01-29 18:31:48] Felipe "Juca" Sanches: ah! é coisa relativamente recente, do python 3.10
+[2023-01-29 18:32:37] Felipe "Juca" Sanches: é... no dia-a-dia eu escrevo código que precisa rodar em versões um pouco mais antigas do python, então eu acabo não prestando muita atenção para novas features. Mas é sempre bom saber que existe. E pra um projeto como esse (o disassembler), acho que é OK usar
+[2023-01-29 18:39:17] RicBit: Já vi porque está lento, seu código está acidentalmente quadratico.
+[2023-01-29 18:40:16] RicBit: Transforma visited_ranges e labeled_addresses em set() que deve melhorar.
+[2023-01-29 18:54:20] Felipe "Juca" Sanches: boa!
+[2023-01-29 18:54:22] Felipe "Juca" Sanches: vou tentar
+[2023-01-29 20:41:53] Leonardo Roman: document: (not yet published)
+[2023-01-29 20:42:12] Leonardo Roman: Sobre as instruções desconhecidas que você colocou no TODO, veja nas páginas 32 e 33 desse manual.
+[2023-01-29 21:06:23] Felipe "Juca" Sanches: obrigado!
+[2023-01-29 21:06:51] Felipe "Juca" Sanches: Tem uma explicação das instruções LINK e UNLK (em processadores da Motorola) aqui:
+https://www.cs.mcgill.ca/~cs573/fall2002/notes/lec273/lecture16/16_2.htm
+[2023-01-29 21:07:10] Felipe "Juca" Sanches: Creio que o TLCS900 faça exatamente a mesma coisa
+[2023-01-29 22:16:17] L.: O cara que implementou isso tá no meu time!
+[2023-01-29 22:55:29] RicBit: Manda os parabéns que ficou bem bom!

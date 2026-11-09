@@ -1,0 +1,111 @@
+[2022-05-30 00:14:39] Pablo Vasques Bravo-Villalba: Bem legal esse vídeo
+[2022-05-30 02:50:34] Pedro de Medeiros 👾: Criei um código inicial pra input no MSX.
+[2022-05-30 02:50:49] Felipe "Juca" Sanches: boa!
+[2022-05-30 02:50:52] Felipe "Juca" Sanches: manda o pull request
+[2022-05-30 02:51:25] Felipe "Juca" Sanches: eu criei uma implementação inicial de setup do minefield
+[2022-05-30 02:52:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20772.jpg
+[2022-05-30 02:52:57] Felipe "Juca" Sanches: e estou tarbalhando no draw_minefield em ncurses agora mesmo
+[2022-05-30 02:52:59] Pedro de Medeiros 👾: tá criado.
+[2022-05-30 02:55:00] Felipe "Juca" Sanches: fiz o merge
+[2022-05-30 02:55:11] Felipe "Juca" Sanches: você já tem um Makefile ou algo parecido?
+[2022-05-30 02:55:17] Pedro de Medeiros 👾: Vou fazer agora
+[2022-05-30 02:55:20] Felipe "Juca" Sanches: maravilha
+[2022-05-30 02:57:20] Flávio Amieiro: Boa!
+[2022-05-30 02:57:31] Felipe "Juca" Sanches: começou a farra! 😃
+[2022-05-30 02:57:52] Flávio Amieiro: Eu tava pensando em começar por aí tbm, mas não consegui parar pra pensar numa estrutura de dados pra guardar o campo
+[2022-05-30 02:58:05] Felipe "Juca" Sanches: bom, a estrutura já tá feita
+[2022-05-30 02:58:07] Flávio Amieiro: Curioso pra ler os prs
+[2022-05-30 02:58:22] Felipe "Juca" Sanches: agora falta o resto da lógica do jogo
+[2022-05-30 02:59:01] Felipe "Juca" Sanches: mas já tenho o código genérico de inicializacao do minefield, posicionamento aleatorio das bombas e cálculo de quantas bombas vizinhas existem em cada célula
+[2022-05-30 02:59:12] Felipe "Juca" Sanches: falta a interação com o jogador
+[2022-05-30 02:59:44] Felipe "Juca" Sanches: que é ler o teclado e ir atualizando o status de aberto ou fechado das células
+[2022-05-30 03:00:10] Felipe "Juca" Sanches: e a cada jogada decidir se deu game-over, ou abrir em cascata algumas das células vizinhas
+[2022-05-30 03:00:59] Felipe "Juca" Sanches: e faltam as implementacoes especificas de cada plataforma também, é claro. Que é o que o @pvm1337 acabou de começar a fazer pra MSX
+[2022-05-30 03:01:00] Flávio Amieiro: Show!
+[2022-05-30 03:06:24] Flávio Amieiro: Vamo manter os commits em inglês então?
+[2022-05-30 03:06:33] Felipe "Juca" Sanches: sim
+[2022-05-30 03:06:39] Flávio Amieiro: Blz!
+[2022-05-30 03:31:39] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/3
+[2022-05-30 03:36:13] Flávio Amieiro: Boa!
+[2022-05-30 03:36:21] Flávio Amieiro: Tô trabalhando no input da ncurses
+[2022-05-30 03:51:04] Felipe "Juca" Sanches: ótimo!
+[2022-05-30 03:52:06] Flávio Amieiro: https://github.com/ArqueologiaDigital/Mines/pull/4
+[2022-05-30 03:52:18] Flávio Amieiro: Sugestão rapidinha, só pra facilitar a vida
+[2022-05-30 04:22:58] Felipe "Juca" Sanches: merged!
+[2022-05-30 05:09:04] Pedro de Medeiros 👾: Build system tá no PR
+[2022-05-30 05:09:20] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/5
+[2022-05-30 05:10:47] Felipe "Juca" Sanches: merged
+[2022-05-30 05:13:34] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/6
+[2022-05-30 05:18:32] Felipe "Juca" Sanches: @pvm1337:
+
+https://github.com/ArqueologiaDigital/Mines/issues/7
+[2022-05-30 05:19:30] Pedro de Medeiros 👾: Isso é porque o SDCC puro não serve pra compilar pra MSX. Um workaround é criar uma função putchar() temporária que não faz nada.
+[2022-05-30 05:19:47] Pedro de Medeiros 👾: Ou a gente usa Fusion-C.
+[2022-05-30 05:20:08] Felipe "Juca" Sanches: não entendi o motivo
+[2022-05-30 05:24:16] Flávio Amieiro: Eita. Vai dar conflito brabo com o meu 😅
+[2022-05-30 05:24:31] Flávio Amieiro: Mas eu tento consertar antes de abrir o PR
+[2022-05-30 05:24:40] Felipe "Juca" Sanches: sorry... :-P
+[2022-05-30 05:24:51] Flávio Amieiro: Eu já gastei mais tempo do que podia nisso hoje :p
+[2022-05-30 05:24:55] Flávio Amieiro: Normal... rs
+[2022-05-30 05:25:36] Felipe "Juca" Sanches: manda teu PR com conflito mesmo que eu posso tentar arrumar
+[2022-05-30 05:31:06] Flávio Amieiro: Eu tento aqui. É só a redefinição das cores mesmo, acho...
+[2022-05-30 05:31:20] Flávio Amieiro: Mas se eu não conseguir eu mando o pr assim mesmo, valeu :)
+[2022-05-30 05:42:56] Pedro de Medeiros 👾: Tá compilando agora. Criei um PR novo
+[2022-05-30 05:46:49] Flávio Amieiro: Foi de boa, na real
+[2022-05-30 05:46:53] Flávio Amieiro: https://github.com/ArqueologiaDigital/Mines/pull/9
+[2022-05-30 05:50:20] Flávio Amieiro: Já programei mais em C hoje do que na minha vida toda 😅
+[2022-05-30 05:51:12] Flávio Amieiro: Então, por favor, não hesitem em apontar o que eu estiver fazendo de errado...
+[2022-05-30 05:51:44] Felipe "Juca" Sanches: tá ótimo!
+[2022-05-30 05:52:34] Flávio Amieiro: Ah, eu acho que dei uma misturada em espaços e tabs aí tbm 😬
+Tenho que configurar o Emacs direito pra C ainda...
+[2022-05-30 05:53:43] Pedro de Medeiros 👾: Aqui explica o problema: https://ftp.clubemsx.com.br/clubemsx10/list/Fusion%20C%20no%20Linux.docx
+[2022-05-30 05:54:13] Felipe "Juca" Sanches: vou sim, to arrumando isso
+[2022-05-30 05:54:43] Flávio Amieiro: Obrigado, cara!
+[2022-05-30 05:55:05] Flávio Amieiro: Só pra eu configurar aqui: é tab ou espaço? (E se espaço, quantos?)
+[2022-05-30 05:55:25] Felipe "Juca" Sanches: tab
+[2022-05-30 05:55:30] Flávio Amieiro: Show!
+[2022-05-30 06:19:30] Felipe "Juca" Sanches: @flavioamieiro:
+
+https://github.com/ArqueologiaDigital/Mines/pull/10
+[2022-05-30 06:19:58] Flávio Amieiro: Boa! Tava na dúvida de qual tecla usar. As duas é bom!
+[2022-05-30 06:20:22] Felipe "Juca" Sanches: @pvm1337 que programa é esse hex2bin? Tem pacote no Debian?
+[2022-05-30 06:21:29] Flávio Amieiro: Ah, tem pra cima e pra baixo tbm. Ótimo!
+[2022-05-30 08:13:12] Ismael Luceno: não diz nada de porquê são incompatíveis... e o jeito de arrumar o problema é totalmente errado
+[2022-05-30 12:48:15] Pedro de Medeiros 👾: Faz parte do toolchain padrão de desenvolvimento MSX. Todo mundo usa. E acho que não.
+[2022-05-30 12:49:33] Pedro de Medeiros 👾: Talvez seja possível mudar pro makebin. Eu alterei o script de compilação do Danilo Angelo uma vez pra usar isso, mas ele nunca aceitou o pull request.
+[2022-05-30 13:17:34] Pedro de Medeiros 👾: Bom, deve ser na verdade porque precisa do dd também, que não existe nativo no windows e no template do Danilo windows é cidadão de primeira classe. https://github.com/DamnedAngel/MSX-Templates-for-VisualStudio/pull/29
+[2022-05-30 13:20:31] Pedro de Medeiros 👾: @fsanches Se você achar que vale a pena perseguir isso, eu reaproveito esse código no Mines.
+[2022-05-30 14:15:10] Ismael Luceno: @pvm1337  não pode usar o parametro -o do makebin para evitar usar dd?
+[2022-05-30 14:17:38] Ismael Luceno: também deveria usar o parâmetro -s na segunda rama do branch
+[2022-05-30 14:20:47] Pedro de Medeiros 👾: Desconheço esse parâmetro -o. Não achei em nenhuma documentação.
+[2022-05-30 14:27:05] Ismael Luceno: https://dpaste.com/3S889KM49
+[2022-05-30 14:37:35] Pedro de Medeiros 👾: Ah, que bom. Isso foi adicionado em novembro. Meu patch é mais velho que isso.
+[2022-05-30 14:38:01] Pedro de Medeiros 👾: Até na internet a documentação do makebin tá defasada. 😅
+[2022-05-30 14:43:42] Pedro de Medeiros 👾: Correção: essa alteração é de fevereiro.
+[2022-05-30 14:47:47] Pedro de Medeiros 👾: Ismael se quiser eu deixo pra você atualizar isso.
+[2022-05-30 17:35:33] Pedro de Medeiros 👾: Aliás, essa alteração do makebin exige SDCC 4.1.14, que a maioria das distros não está shippando ainda. Então é aquele velho problema ainda.
+[2022-05-30 19:07:25] Felipe "Juca" Sanches: @pvm1337,
+ 
+No Makefile pra MSX2, na linha openmsx -carta build/minesweeper.rom -machine msx2
+
+Posso trocar a máquina por C-BIOS_MSX2?
+[2022-05-30 19:08:44] Felipe "Juca" Sanches: To vendo que temos algumas dependencias não triviais, então acho que vou adicionar umas instrucoes no README
+[2022-05-30 19:09:14] Felipe "Juca" Sanches: por "não trivial" me refiro a casos como o hex2bin
+[2022-05-30 19:09:43] Felipe "Juca" Sanches: cheguei a achar um repo chamado hex2bin, mas não era a ferramenta correta:
+https://github.com/Keidan/hex2bin
+[2022-05-30 19:10:08] Felipe "Juca" Sanches: Depois descobri que o correto era esse aqui:
+https://gitlab.com/reidrac/ubox-msx-lib/-/blob/main/tools/hex2bin-2.0/src/hex2bin.c
+[2022-05-30 19:10:15] Felipe "Juca" Sanches: (eu acho)
+[2022-05-30 19:10:19] Pedro de Medeiros 👾: https://hex2bin.sourceforge.net/
+[2022-05-30 19:10:28] Felipe "Juca" Sanches: haha
+[2022-05-30 19:10:32] Felipe "Juca" Sanches: tá vendo?!
+[2022-05-30 19:12:14] Pedro de Medeiros 👾: Link pra download tá aqui https://sourceforge.net/projects/hex2bin/files/
+[2022-05-30 19:12:23] Felipe "Juca" Sanches: aí tem também as dependencias de runtime, que são os emuladores: openmsx para o target MSX2, mame para um target que tenho em mente, a placa de arcade GunSmoke que tenho aqui em casa
+[2022-05-30 19:13:04] Pedro de Medeiros 👾: Você vai colocar um README por plataforma ou vai fazer um global gigante?
+[2022-05-30 19:19:44] Felipe "Juca" Sanches: vou fazer um readme por plataforma com os detalhes, e um geral apenas com links para as plataformas suportadas
+[2022-05-30 19:19:58] Felipe "Juca" Sanches: o geral seria meio que um índice
+[2022-05-30 19:20:11] Felipe "Juca" Sanches: e talvez também um bom lugar para listar o status de cada port
+[2022-05-30 19:20:48] Felipe "Juca" Sanches: tipo: "boilerplate - non-working" / "working / no-audio", "working", etc...
+[2022-05-30 19:40:11] Felipe "Juca" Sanches: feito!
+
+https://github.com/ArqueologiaDigital/Mines/pull/11

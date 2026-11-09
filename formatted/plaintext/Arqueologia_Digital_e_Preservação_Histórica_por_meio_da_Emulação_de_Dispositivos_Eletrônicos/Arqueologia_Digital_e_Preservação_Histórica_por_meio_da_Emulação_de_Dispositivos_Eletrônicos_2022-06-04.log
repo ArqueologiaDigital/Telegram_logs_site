@@ -1,0 +1,40 @@
+[2022-06-04 01:07:29] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/25
+[2022-06-04 01:21:50] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/26
+[2022-06-04 01:35:30] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/27
+[2022-06-04 01:36:09] Felipe "Juca" Sanches: É incrível como tem um monte de corner-cases na regra desse jogo!
+[2022-06-04 05:52:11] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/28
+[2022-06-04 05:52:59] Felipe "Juca" Sanches: Esse PR aqui eu vou deixar aberto por algum tempo como "draft", pois não tá bom ainda, mas eu já queria mostrar pra vocês. Continuarei trabalhando nele e só vou fazer o merge quando eu achar que tá OK.
+[2022-06-04 05:54:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21063.jpg
+[2022-06-04 05:54:30] Felipe "Juca" Sanches: Fiz uns desenhos no GIMP para os tiles e o Makefile contém regras para converter esse arquivo do GIMP no formato de dados que o hardware da placa JAMMA do jogo GunSmoke espera para seu modo de vídeo.
+[2022-06-04 05:55:07] Felipe "Juca" Sanches: Esse setup é herdado de um outro joguinho que eu fiz pra rodar nessa placa muitos anos atrás, então algumas coisas ainda estão com o nome "Pixo", que refere-se ao pixotosco, um personagem criado por uma amigo meu.
+[2022-06-04 06:40:26] Pablo Vasques Bravo-Villalba: Quais são as especificações do vídeo do Gun.Smoke? Digo, quantas cores por tile? Quantas paletas estão disponíveis? Qual a paleta global? A resolução eu sei que é 256x224.
+[2022-06-04 06:40:46] Pablo Vasques Bravo-Villalba: Eu procurei essas informações e o único lugar onde achei foi no código do MAME, mas não entendi o suficiente
+[2022-06-04 06:40:53] Felipe "Juca" Sanches: nao me lembro dessas coisas de cabeça
+[2022-06-04 06:41:02] Felipe "Juca" Sanches: estou ainda massageando o codigo
+[2022-06-04 06:41:09] Felipe "Juca" Sanches: pra conseguir compilar e rodar
+[2022-06-04 06:41:36] Felipe "Juca" Sanches: faz uns 8 anos que fiz isso
+[2022-06-04 06:44:37] Pablo Vasques Bravo-Villalba: Pelas especificações e pela época parece bastante similar ao Commando
+[2022-06-04 11:53:16] Pedro de Medeiros 👾: Aliás, sobre isso: o makebin tá bugado. Até abri um chamado pra ser arrumado: https://sourceforge.net/p/sdcc/bugs/3411/
+[2022-06-04 12:03:21] Pedro de Medeiros 👾: Eu até poderia mandar um patch, mas eles usam subversion... eca. 😅
+[2022-06-04 14:32:18] Pedro de Medeiros 👾: @fsanches o comportamento do random_number mudou, né? Antes era [min, max) e agora virou [min, max].
+[2022-06-04 14:33:07] Felipe "Juca" Sanches: nao tenho certeza
+[2022-06-04 14:36:25] Pedro de Medeiros 👾: Hm, acho que me enganei. Vou arrumar a documentação.
+[2022-06-04 14:45:08] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/29
+[2022-06-04 16:29:20] Felipe "Juca" Sanches: merged!
+[2022-06-04 16:30:17] Pedro de Medeiros 👾: @fsanches Você conhece kitty? https://github.com/kovidgoyal/kitty
+[2022-06-04 16:31:45] Pedro de Medeiros 👾: Eu fiz um app que usa os recursos desse terminal pra exibir imagens. Eu estava pensando em fazer um joguinho só de zona que usa os recursos desse terminal.
+[2022-06-04 16:37:30] Felipe "Juca" Sanches: interessante... eu nao conhecia
+[2022-06-04 17:03:06] Pedro de Medeiros 👾: Aí eu fiz essa brincadeira: https://github.com/pvmm/kotlin-native-project-boilerplate
+[2022-06-04 17:20:32] Felipe "Juca" Sanches: Essa vaquinha foi desenhada no Inkscape, com certeza!
+[2022-06-04 17:30:28] Pedro de Medeiros 👾: kkkkk
+[2022-06-04 19:21:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21085.jpg
+[2022-06-04 19:22:14] Felipe "Juca" Sanches: merged!
+[2022-06-04 19:22:45] Felipe "Juca" Sanches: As cores ainda não estão boas, mas o jogo já funciona na placa JAMMA do jogo GunSmoke
+[2022-06-04 20:17:58] Augusto Almeida: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21088-AnimatedSticker.tgs
+[2022-06-04 23:34:07] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/30/commits
+[2022-06-04 23:34:23] Felipe "Juca" Sanches: já consertei isso agora há pouco
+[2022-06-04 23:36:01] Pedro de Medeiros 👾: Você consertou há 42 minutos, mas eu consertei antes. Meu PR foi aberto faz duas horas. 😝
+[2022-06-04 23:36:04] Felipe "Juca" Sanches: curioso que eu não tinha visto
+[2022-06-04 23:36:06] Felipe "Juca" Sanches: hehe
+[2022-06-04 23:36:08] Felipe "Juca" Sanches: tudo bem
+[2022-06-04 23:36:15] Felipe "Juca" Sanches: por algum motivo eu não vi

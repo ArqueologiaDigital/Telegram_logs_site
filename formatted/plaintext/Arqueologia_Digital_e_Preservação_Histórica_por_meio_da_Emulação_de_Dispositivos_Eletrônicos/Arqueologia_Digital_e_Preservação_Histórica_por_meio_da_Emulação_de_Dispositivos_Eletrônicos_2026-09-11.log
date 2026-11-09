@@ -1,0 +1,23 @@
+[2026-09-11 02:56:06] Ismael Luceno: https://www.pasteboard.co/WC8PF2lPdcDi.jpg
+[2026-09-11 09:17:05] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=h0Y1x_iq4Bw
+[2026-09-11 09:17:37] Felipe "Juca" Sanches: https://archive.org/details/KNCT_Keyer_Graphics
+[2026-09-11 14:37:49] Marcelo: https://dmitry.gr/?r=05.Projects&proj=27.%20rePalm
+[2026-09-11 14:38:01] Marcelo: Projetinho de Palm pirata
+[2026-09-11 15:53:11] RicBit: 1 byte livre -> 48h rodando namagiri -> 79 bytes livres
+[2026-09-11 18:32:48] RicBit: na verdade é meio perigoso otimizar tanto de uma vez só, namagiri pode ter começado a cavar um minimo local, aí fica mais difícil escapar no futuro.
+[2026-09-11 18:33:38] Shideravan: Para o emulador de GB?
+[2026-09-11 18:34:10] RicBit: isso, é dificil colocar features novas em 1 byte
+[2026-09-11 18:35:24] Shideravan: Quanto da biblioteca ele já suporta?
+[2026-09-11 18:37:32] RicBit: 97.7% ainda. eu tive que parar as features para abrir espaço
+[2026-09-11 18:38:33] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40483.jpg
+[2026-09-11 18:38:33] RicBit: do 16 ao 19 foi eu perdendo tempo com sgb. tirei o sgb e boom, um monte de features novas.
+[2026-09-11 18:44:11] Shideravan: Faz o SGB num módulo separado depois, acho que fica até mais preciso
+[2026-09-11 18:44:49] Shideravan: Quando você for fazer emulador compacto de SNES você retoma o SGB para linkar esses dois projetos kkkkkkkkk
+[2026-09-11 18:46:12] Shideravan: Agora que ficou no ponto mais divertido do projeto, sofrer para abrir espaço para features hahaha
+[2026-09-11 18:46:27] Shideravan: Cada byte é uma conquista!
+[2026-09-11 19:01:44] Shideravan: @fsanches como estarão as visitações para o Garoa em novembro?
+[2026-09-11 19:02:31] Shideravan: Queria levar um amigo lá para conhecer
+[2026-09-11 19:39:43] RicBit: 100% verdade!
+[2026-09-11 20:33:58] Felipe "Juca" Sanches: Não sei dizer. Hoje em dia eu moro no Reino Unido.
+[2026-09-11 23:06:15] Shideravan: Sabe quem tá tomando conta lá?
+[2026-09-11 23:06:41] Shideravan: Se bem que realmente, não é a mesma coisa sem você

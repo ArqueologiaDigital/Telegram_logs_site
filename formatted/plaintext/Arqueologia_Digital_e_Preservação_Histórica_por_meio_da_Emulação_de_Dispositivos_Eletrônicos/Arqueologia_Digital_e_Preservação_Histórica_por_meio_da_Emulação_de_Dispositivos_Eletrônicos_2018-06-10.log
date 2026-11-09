@@ -1,0 +1,11 @@
+[2018-06-10 01:25:08] Felipe "Juca" Sanches: nessa semana eu zerei Moonwalker, Sonic 1 e Sonic 2 no emulador de SEGA Genesis
+[2018-06-10 01:25:32] Felipe "Juca" Sanches: É uma pena que o meu Mega Drive da infância não funciona mais... :-(
+[2018-06-10 01:25:58] Felipe "Juca" Sanches: Mas tenho jogado na Tevê usando um Raspberry Pi com a distro Lakka, focada em emulação
+[2018-06-10 01:26:02] Felipe "Juca" Sanches: com RetroArch
+[2018-06-10 01:26:28] Felipe "Juca" Sanches: e tenho usado um joystick USB similar aos de SNES
+[2018-06-10 01:27:07] Felipe "Juca" Sanches: seria bom eu arranjar um joystick USB similar aos de Mega Drive :-P
+[2018-06-10 01:28:13] Felipe "Juca" Sanches: Mas enfim... por conta dessa nova onda de interesse pelo Mega Drive, fui atrás de formas de programar para o console e descobri um SDK chamado SGDK (Sega Genesis Development Kit)
+[2018-06-10 01:28:23] Felipe "Juca" Sanches: só que o SGDK só funciona em Windows
+[2018-06-10 01:28:48] Felipe "Juca" Sanches: então teve gente que adaptou pra MacOS e GNU/Linux
+[2018-06-10 01:29:50] Felipe "Juca" Sanches: no caso, meu interesse é em rodar o toolchain (que é baseado em gcc) no GNU, então pra mim parece que a melhor solução no momento é o gendev: https://github.com/kubilus1/gendev
+[2018-06-10 02:59:04] Felipe "Juca" Sanches: Pronto. Acabei de zerar o Sonic 3 também :-P

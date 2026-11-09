@@ -1,0 +1,17 @@
+[2024-09-18 12:51:33] Felipe "Juca" Sanches: Preciso de ajuda com um projeto de backup de software. Tem um site muito rico sobre teclados da Technics com uma página de dowloads cheia de coisas legais. Quem está disposto a arregaçar as mangas e me ajudar a arquivar 100% do que está lá?
+
+http://www.ca-software.com/technics/downloads/
+[2024-09-18 12:52:35] Felipe "Juca" Sanches: Eu tenho algumas orientações a dar sobre cuidados que precisam ser tomados para fazer o backup completo corretamente. Então se alguém quiser ajudar, me avisa que eu detalho.
+[2024-09-18 19:42:53] RicBit: nao dá para automatizar um crawler?
+[2024-09-18 19:43:10] Felipe "Juca" Sanches: talvez dê
+[2024-09-18 19:44:32] Felipe "Juca" Sanches: eu joguei o pedido de ajuda aqui por que sei que é importante ter uma cópia disso tudo antes que saia do ar (sabe-se lá quando) e eu tenho dedicado grande parte do meu tempo livre à tentativa de emular esses teclados, então se outra pessoa quiser ajudar, seria ótimo
+[2024-09-18 19:44:46] RicBit: eu tenho um aqui que escrevi para um site de modelos, deve ser só adaptar
+[2024-09-18 19:44:47] RicBit: perai
+[2024-09-18 19:45:35] RicBit: here, dá para usar como base -> https://github.com/ricbit/Oldies/blob/master/2022-04-getloot/getloot.py
+[2024-09-18 22:25:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/32998.jpg
+[2024-09-18 22:25:56] Felipe "Juca" Sanches: Me preparando para fazer 2 hacks: dump de ROM via porta paralela da placa de extensão, e depois tentar criar um programa "monitor" que me permita fazer "peek" e "poke" no KN5000 por meio de comandos enviados do meu laptop
+[2024-09-18 22:26:46] Felipe "Juca" Sanches: Ao longo dos últimos dias eu levantei o esquemático da placa de extensão para HD. E hoje eu montei esse cabo customizado para ligar a porta paralela num arduino
+[2024-09-18 22:32:41] Felipe "Juca" Sanches: Não apenas "peek & poke". Acho que seria bacana também ser capaz de enviar payloads executáveis para rodar pequenos experimentos no aparelho sem precisar ficar o tempo todo fazendo update da flash ROM inteira com patches experimentais (que além de ser demorado também sempre me dá ansiedade a respeito do risco de transformar o aparelho em um tijolo)
+[2024-09-18 22:45:40] L.: ah, peek, poke, e brick
+[2024-09-18 22:48:24] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/33002-el-risitas-juan-joya-borja.mp4
+[2024-09-18 23:52:06] L.: conhece o openocd, Juca?

@@ -1,0 +1,6 @@
+[2026-02-11 00:09:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37461.jpg
+[2026-02-11 00:09:33] Felipe "Juca" Sanches: Montei um pequeno website para documentar o projeto: https://felipesanches.github.io/kn5000-anotherworld/
+[2026-02-11 12:09:40] Leonardo Roman: Ele carrega do disquete ou é uma ROM que vai no lugar da original?
+[2026-02-11 13:33:02] Felipe "Juca" Sanches: No momento o código está com 2 opções de compile-time. Pode escolher pra compilar a VM como ROM substituta da ROM principal. Ou pode compilar como ROM de extensão da placa HDAE5000. Mas eu só testei a primeira opção (ROM principal)
+[2026-02-11 13:34:29] Felipe "Juca" Sanches: o legal de substituir a ROM principal é que tem muito menos código do firmware original podendo bagunçar o rolê (interrupções, etc)
+[2026-02-11 13:35:05] Felipe "Juca" Sanches: o ruim é que é uma solução bala de canhão. O bicho deixa de ser um teclado musical e vira um computador dedicado a jogar Another World

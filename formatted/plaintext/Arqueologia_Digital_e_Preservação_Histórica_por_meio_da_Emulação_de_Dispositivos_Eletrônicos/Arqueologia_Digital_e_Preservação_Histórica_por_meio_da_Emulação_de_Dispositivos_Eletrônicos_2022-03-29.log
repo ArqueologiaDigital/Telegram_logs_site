@@ -1,0 +1,15 @@
+[2022-03-29 15:54:59] Anne Isabelle: NOSSA eu tb fazia papercraft quando era criança
+[2022-03-29 17:13:00] Felipe "Juca" Sanches: É muito legal ver esse tipo de trabalho extremamente técnico sendo feito:
+
+https://github.com/mamedev/mame/pull/9483
+[2022-03-29 17:13:31] Felipe "Juca" Sanches: olha o nível desse comentário!
+
+Some further explanation, as the reasoning is unclear:
+
+The logic for handling the Stop Marker command would check if the delta between the Stop Marker and the most recently processed frame index hit 0 (indicating we're directly on the desired mark), of the sign of the delta is different to the sign of the delta between the Stop Marker and the previously-processed frame index (indicating we passed by the marker in multi-speed mode).
+
+Due to the order in which things are processed (player_update moves the slide position at line 0, marker-match checks are performed when processing VBI data at line 19/38), issuing a Multi-Speed Forward or Multi-Speed Reverse command with a target frame equal to our current frame would result in the slide position advancing past the desired stop point, and the sign of the delta values would never change, resulting in the player seeking backward forever, or seeking forward forever.
+
+The other issue was that multi-speed forward/reverse with a speed of over 1x could potentially skip multiple frames, leading to the player ending up in Still mode at least one frame "out" from the desired stopping point. This was particularly noticeable during the era-select screen in Time Traveler, as the pulsing glow is produced by constantly switching between multi-speed forward and multi-speed reverse at 2x speed. The player would sometimes overshoot, resulting in the selection box popping to the wrong location for one frame when the player ended up in the frames for the pulsing glow animation for a different era selection. The slide position is now clamped during multi-speed mode in order to eliminate overshoot.
+
+In principle, the clamping of the slide movement should also avoid the need for the previous adjustments to not enter multi-speed mode when the player is already on the desired frame, but the player itself most likely also doesn't bother to enter multi-speed mode if it's already on-frame.

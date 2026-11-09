@@ -1,0 +1,132 @@
+[2022-06-07 00:07:45] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21304-sticker.webp
+[2022-06-07 00:07:50] Felipe "Juca" Sanches: Muito legal isso!
+[2022-06-07 00:08:00] Felipe "Juca" Sanches: Amei!
+[2022-06-07 00:11:45] Pedro de Medeiros 👾: Ah, esqueci que ajustar a paleta. Bem que o Pablo falou que poderia estar fora de ordem. 😅
+[2022-06-07 00:15:07] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21308.jpg
+[2022-06-07 00:15:07] Pedro de Medeiros 👾: Ficou... interessante ainda assim. 😛
+[2022-06-07 00:15:47] Pedro de Medeiros 👾: Fase da neve. 😂
+[2022-06-07 00:42:03] Felipe "Juca" Sanches: precisamos aprender como se implementa essa conversao de PNG para o formato do SCREEN 5 que esse website faz, pra podermos automatizar isso no build
+
+https://msx.jannone.org/conv/
+[2022-06-07 00:43:56] Pedro de Medeiros 👾: Isso é bem documentado. Só não foi prioridade ainda, mas agora que a gente está ajustando arte acho que subiu de repente. 😛
+[2022-06-07 02:51:26] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/41
+[2022-06-07 02:52:56] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21313.jpg
+[2022-06-07 02:52:56] Pedro de Medeiros 👾: Agora tá mais bonito!
+[2022-06-07 02:53:06] Felipe "Juca" Sanches: sim, tá da hora
+[2022-06-07 02:53:24] Felipe "Juca" Sanches: mas acabei de notar que o highlight do numero dois fica tudo preto
+[2022-06-07 02:53:32] Felipe "Juca" Sanches: não dá pra ver o número
+[2022-06-07 02:54:33] Felipe "Juca" Sanches: o 1 é azul e com highlight fica amarelo
+o 3 é vermelho e com highlight fica branco
+mas o 2 fica preto, e aí não se distingue do fundo preto e não dá pra ler
+[2022-06-07 02:55:11] Felipe "Juca" Sanches: o 4 é azul e fica rosa, OK
+[2022-06-07 02:55:42] Felipe "Juca" Sanches: o 5 é rosa e fica azul. OK também
+[2022-06-07 03:03:26] Felipe "Juca" Sanches: a interrogacao é uma bandeira de outra cor. Com a troca de cores do highlight isso causa confusão. É difícil saber de imediato se estou atualmente selecionando uma célula que tem uma bandeira ou uma interrogacao
+[2022-06-07 03:05:32] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21321.jpg
+[2022-06-07 03:05:32] Felipe "Juca" Sanches: Eu não gostei do desenho das minas. Não parecem ser minas.
+[2022-06-07 03:08:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21322.jpg
+[2022-06-07 03:08:14] Felipe "Juca" Sanches: agora em fullscreen
+[2022-06-07 03:16:37] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/42
+[2022-06-07 03:16:54] Pedro de Medeiros 👾: Elas parecem as minas do Metal Gear do MSX2.
+[2022-06-07 03:17:20] Pedro de Medeiros 👾: Acho que foi de propósito.
+[2022-06-07 03:17:31] Felipe "Juca" Sanches: é... faltou referencia cultural pra mim
+[2022-06-07 03:18:51] Pedro de Medeiros 👾: O botão Q faz reboot
+[2022-06-07 03:19:00] Felipe "Juca" Sanches: merged!
+[2022-06-07 03:20:17] Pedro de Medeiros 👾: Eu acho que a forma correta de resolver esse problema do cursor é fazer a cor zero ser verde. Porque aí as operações de VDP vão substituir o verde por qualquer outra cor que a gente escolher (OP_IMP).
+[2022-06-07 03:20:25] Felipe "Juca" Sanches: você percebeu que os numeros aleatorios não sao verdadeiramente aleatorios?
+[2022-06-07 03:20:33] Felipe "Juca" Sanches: nem no msx nem no gunsmoke
+[2022-06-07 03:20:46] Pedro de Medeiros 👾: Qual método você implementou no gunsmoke?
+[2022-06-07 03:21:10] Felipe "Juca" Sanches: usei o random da propria biblioteca padrao C
+[2022-06-07 03:21:38] Felipe "Juca" Sanches: vi que voce usou um outro metodo escrito em asm pro msx2 né?
+[2022-06-07 03:21:55] Pedro de Medeiros 👾: Usei um método chamado xorshift em assembly
+[2022-06-07 03:22:13] Felipe "Juca" Sanches: no gunsmoke to semeando com o relógio, mas isso acontece logo no boot, então deve estar pegando sempre o mesmo tempo em relacao ao boot
+[2022-06-07 03:22:34] Pedro de Medeiros 👾: Ah, no MSX2 a seed inicial também é sempre a mesma (1).
+[2022-06-07 03:22:42] Felipe "Juca" Sanches: se eu pegasse em funcao do momento em que o jogador pressiona a primeira tecla, aí teria essa incerteza, esse sorteio
+[2022-06-07 03:23:30] Felipe "Juca" Sanches: acho que a semente ser sempre a mesma é um bug pra um jogo como campo minado
+[2022-06-07 03:24:24] Felipe "Juca" Sanches: acho que um jeito simples de resolver é botar umas leituras espúrias de números aleatórios no idle_loop
+[2022-06-07 03:26:42] Pedro de Medeiros 👾: Real time clock é padrão no MSX2. Vou colocar pro código usar.
+[2022-06-07 03:27:21] Pedro de Medeiros 👾: Mas agora vou dormir. Vou deixar pra amanhã. Boa noite! 😉
+[2022-06-07 03:28:24] Felipe "Juca" Sanches: valeu!
+[2022-06-07 03:28:29] Felipe "Juca" Sanches: boa noite!
+[2022-06-07 03:28:45] Felipe "Juca" Sanches: Estou achando muito legal essa experiencia de desenvolver esses ports
+[2022-06-07 03:29:04] Felipe "Juca" Sanches: nos falamos mais nos próximos dias, vou sair aqui também. Até mais!
+[2022-06-07 08:14:13] Pablo Vasques Bravo-Villalba: Na verdade são minas terrestres, mas vistas em perspectiva (e feitas de míseros 28 pixels coloridos). As minas tradicionais, que são minas aquáticas de profundidade, são bem difíceis de desenhar em 8x8 pixels.
+[2022-06-07 08:17:11] Pablo Vasques Bravo-Villalba: Eu não entendi muito bem o highlight. Ele muda as cores do tile? Em 16 cores tem muito pouca cor para fazer esse tipo de coisa. Além disso, o highlight fica restrito a um único tile, certo? Eu sugeriria desenhar a indicação de qual tile está selecionado por meio dos tiles ao redor. Por exemplo, os tiles a nordeste, sudeste, noroeste e sudoeste. Isso no Gun.Smoke. No MSX poderia até ser um sprite de 16x16 animado (ou dois empilhados um em cima do outro), para tornar o cursor ainda mais visível
+[2022-06-07 08:17:34] Felipe "Juca" Sanches: eu não queria entrar num debate semiótico aqui. Mas pondero sobre o quão efetiva é essa representação da idéia de "bomba"/"mina"
+[2022-06-07 08:18:19] Pablo Vasques Bravo-Villalba: Eu estava pensando em desenhar originalmente tiles mais abstratos, mas me pareceu que vocês curtiram a ideia de tiles mais figurativos, então segui por esse caminho
+[2022-06-07 08:18:48] Felipe "Juca" Sanches: "highlight" foi o nome que usei num método de fachada da API para a ação de destacar qual é a célula atual sobre a qual as ações do jogador operam. Fica livre a cada port decidir qual é a melhor forma de comunicar isso.
+[2022-06-07 08:19:39] Felipe "Juca" Sanches: eu só perdi a referência a um outro game famoso de MSX. E pondero sobre o quão amplamente difundida é essa iconografia
+[2022-06-07 08:20:01] Pablo Vasques Bravo-Villalba: Não tinha a intenção de ser referência. Talvez eu tenha feito parecido subconscientemente
+[2022-06-07 08:22:33] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21354-sticker.webp
+[2022-06-07 08:22:40] Pablo Vasques Bravo-Villalba: Eu sinceramente não pensei em iconografia. Só quis desenhar uma mina. 😅 Mas se preferirem algo menos figurativo, estou plenamente aberto a sugestões
+[2022-06-07 08:23:06] Felipe "Juca" Sanches: eu tenho um apego forte à simbologia do Win3.1
+[2022-06-07 08:23:43] Felipe "Juca" Sanches: a mina é representada como uma "bola" com "espinhos"
+[2022-06-07 08:23:52] Pablo Vasques Bravo-Villalba: É uma mina aquática de profundidade
+[2022-06-07 08:23:56] Felipe "Juca" Sanches: sim
+[2022-06-07 08:24:04] Pablo Vasques Bravo-Villalba: Mas é super difícil de desenhar em 8x8 pixels
+[2022-06-07 08:24:14] Pablo Vasques Bravo-Villalba: Fica parecendo um asterisco
+[2022-06-07 08:24:23] Felipe "Juca" Sanches: campo minado na verdade deveria se chamar, em português,  "oceano minado"
+[2022-06-07 08:24:49] Felipe "Juca" Sanches: um asterisco é perfeito, na minha opinião! kkkk
+[2022-06-07 08:25:20] Pablo Vasques Bravo-Villalba: Ou caça-minas, que se não me engano é o nome em português do navio que varre o oceano em busca de minas
+[2022-06-07 08:29:44] Pablo Vasques Bravo-Villalba: Poderiam por gentileza disponibilizar uma ROM com a situação atual? Vai facilitar prototipar ajustes nos tiles
+[2022-06-07 09:28:01] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21367-minesweeper.rom
+[2022-06-07 09:28:01] Felipe "Juca" Sanches: commit 2781bee6a5e3245f62c51f35acdc63c4eabaf722
+[2022-06-07 09:31:37] Felipe "Juca" Sanches: Tá aí a ROM atual, do último commit feito. Mas nos ajude a te ajudar. Do que você precisa pra ficar mais fácil gerar sua própria ROM a partir do código-fonte?
+[2022-06-07 09:32:59] Pablo Vasques Bravo-Villalba: Fanx very mucho
+[2022-06-07 09:33:15] P. M: caralho, foda
+[2022-06-07 09:34:18] Pablo Vasques Bravo-Villalba: Eu ainda não sei, ainda não tive tempo para ver. Aqui é Windows, né? Não sei como fazer os makefiles funcionarem aqui
+[2022-06-07 09:34:52] Felipe "Juca" Sanches: ok. Tenta aí digitar "make" no teu terminal e ver o que acontece
+[2022-06-07 09:35:02] Felipe "Juca" Sanches: talvez precise instalar umas paradas, não tenho idéia
+[2022-06-07 09:35:21] Felipe "Juca" Sanches: seja qual for a sua dificuldade, conta pra gente que a gente vê o que dá pra fazer
+[2022-06-07 09:35:21] Pablo Vasques Bravo-Villalba: Poizé. Estou em horário de expediente, então agora fica meio complicado para eu fazer esse tipo de coisa
+[2022-06-07 09:35:31] Felipe "Juca" Sanches: ok, sem pressa!
+[2022-06-07 09:35:36] Pablo Vasques Bravo-Villalba: Tem make não. Nem instalei o SDCC ainda 😅
+[2022-06-07 09:35:48] Pablo Vasques Bravo-Villalba: Sei que tem alternativas
+[2022-06-07 09:35:53] Felipe "Juca" Sanches: bom, então quando puder/quiser instale
+[2022-06-07 09:35:55] Pablo Vasques Bravo-Villalba: A mais exagerada seria instalar o WSL
+[2022-06-07 09:36:15] Pablo Vasques Bravo-Villalba: Mas aí eu teria um ambiente bastante parecido com o de vocês
+[2022-06-07 09:36:32] Felipe "Juca" Sanches: é, acho que sim
+[2022-06-07 09:36:59] Pablo Vasques Bravo-Villalba: Engraçado instalar um treco de dezenas de GB para compilar uma ROMzinha de 32kB... 😂
+[2022-06-07 09:37:15] Felipe "Juca" Sanches: pois zé!
+[2022-06-07 09:37:19] Felipe "Juca" Sanches: kkkk
+[2022-06-07 09:38:29] Felipe "Juca" Sanches: mas isso não é cagada não. É só consequência natural da evolução por algumas gerações do conceito de abstração de software.
+[2022-06-07 09:47:15] Pablo Vasques Bravo-Villalba: Ah, sim, com certeza. Nem estou metendo pau no WSL não, tenho certeza de que valeria a pena instalar se eu usasse realmente os recursos que ele oferece. Mas já me resignei ao fato de que sou um bicho Windows mesmo 😂
+[2022-06-07 09:50:25] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21388-animation.gif.mp4
+[2022-06-07 11:07:28] RicBit: Se quiser eu fiz uma rotina de random bem rápida no tetrinet.
+[2022-06-07 11:11:24] RicBit: Eu lembro de ter escolhido o polinômio maximal em 16 bits, perai que eu pego.
+[2022-06-07 11:14:25] RicBit: Procura RAND https://github.com/ricbit/Oldies/blob/master/2000-05-tetrinet/tetrinet.mac
+[2022-06-07 11:23:25] Pedro de Medeiros 👾: Talvez ainda fique faltando instalar o píton
+[2022-06-07 11:24:04] Pedro de Medeiros 👾: Porque acho que algumas ferramentas pra capturar e converter imagem serão escritas nele
+[2022-06-07 11:28:28] Pedro de Medeiros 👾: Eu tenho algumas pra reaproveitar escritas nele.
+[2022-06-07 11:31:28] Pedro de Medeiros 👾: Eu alterei alguns tiles do mines.png. se você quiser alterar os gráficos só precisa fazer o download da nova versão da imagem
+[2022-06-07 11:34:55] Pablo Vasques Bravo-Villalba: Não consigo abrir
+[2022-06-07 11:36:03] Pablo Vasques Bravo-Villalba: Ah, já entendi o que houve
+[2022-06-07 11:36:50] Pedro de Medeiros 👾: Faltou login?
+[2022-06-07 11:36:54] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/blob/main/platforms/msx2/mines.png
+[2022-06-07 11:41:09] Pedro de Medeiros 👾: Eu acabei esticando a imagem porque não tem nenhuma opção no conversor do Jannone de deixar a imagem sempre no topo. Ele sempre vai mover a imagem pro meio da tela se for menor.
+[2022-06-07 11:44:43] Pedro de Medeiros 👾: Tava pensando que talvez o melhor seja deixar umas ferramentas já compiladas numa pasta tools na plataforma em questão 🤔
+[2022-06-07 12:34:17] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/43
+[2022-06-07 13:51:06] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21404.jpg
+[2022-06-07 13:51:06] Pablo Vasques Bravo-Villalba: Desenho novo da mina
+[2022-06-07 13:51:17] Pablo Vasques Bravo-Villalba: Estou melhorando o contraste também
+[2022-06-07 14:21:37] Pedro de Medeiros 👾: A gente depois podia fazer umas "animações" com palette swap. A gente até já tem uma função (idle_loop) onde pendurar isso.
+[2022-06-07 14:23:12] Pedro de Medeiros 👾: Atualizei esse PR pra colocar função que atualiza o seed do gerador de número aleatório usando o relógio do MSX2 no segundo commit.
+[2022-06-07 14:27:14] RicBit: Seed = value | 1;
+[2022-06-07 14:27:30] RicBit: Sem isso você vai ter problemas.
+[2022-06-07 14:28:18] Pedro de Medeiros 👾: Feito!
+[2022-06-07 14:58:55] Pedro de Medeiros 👾: Quebrei o PR em dois. O outro agora está aqui: https://github.com/ArqueologiaDigital/Mines/pull/44
+[2022-06-07 14:59:34] Pedro de Medeiros 👾: Não convém misturar commits independentes no mesmo PR. Porque se um tiver problema vai embarreirar os dois.
+[2022-06-07 17:48:48] Pedro de Medeiros 👾: Merged!
+[2022-06-07 17:49:30] Pedro de Medeiros 👾: Ditto
+[2022-06-07 17:50:23] Felipe "Juca" Sanches: :-)
+[2022-06-07 23:18:48] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/45
+[2022-06-07 23:21:59] Pedro de Medeiros 👾: O openMSX tem um dispositivo virtual chamado "debugdevice" que permite ao programa enviar dados pro emulador. Eu fiz essa interface com base nisso.
+[2022-06-07 23:22:42] Pedro de Medeiros 👾: Ela já está funcionando no MSX, mas depois eu mando o restante.
+[2022-06-07 23:26:03] Pedro de Medeiros 👾: Isso é baseado em código que eu fiz antes pra Forth de Z80.
+[2022-06-07 23:36:38] Pedro de Medeiros 👾: @mrparn estava esperando por isso: https://github.com/ArqueologiaDigital/Mines/pull/46
+[2022-06-07 23:52:44] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/45#issuecomment-1149395599
+
+Acho que ficou faltando incluir no commit um arquivo C com a implementação das funções:
+- void debug_mode(uint8_t mode);
+- void debug(char* msg, uint8_t value);
+[2022-06-07 23:53:18] Felipe "Juca" Sanches: merged!
+[2022-06-07 23:55:32] Pedro de Medeiros 👾: Comentei lá no PR.

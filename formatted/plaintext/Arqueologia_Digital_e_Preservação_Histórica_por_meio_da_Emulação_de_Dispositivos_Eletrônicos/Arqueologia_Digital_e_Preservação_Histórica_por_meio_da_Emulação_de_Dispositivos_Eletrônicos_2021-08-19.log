@@ -1,0 +1,21 @@
+[2021-08-19 00:00:23] L.: https://archives.loomcom.com/contraltojs/
+[2021-08-19 01:57:06] * Felipe "Juca" Sanches added Deleted Account
+[2021-08-19 02:00:52] Felipe "Juca" Sanches: Lucas, acho que esse aqui é o ponto inicial da conversa toda sobre o Technics KN5000
+[2021-08-19 03:15:18] Felipe "Juca" Sanches: Acabei de comprar uma nova placa-mãe de KN5000. Pra ter de peça de reposição caso eu consiga consertar esse aparelho que tenho em mãos agora. Ou para colocar ele de volta em funcionamento pleno caso eu não consiga consertar.
+[2021-08-19 03:16:17] Felipe "Juca" Sanches: como não quebrou por completo, ainda vai ser útil continuar trabalhando com esse aparelho defeituoso ao longo dos próximos meses
+[2021-08-19 03:30:46] Felipe "Juca" Sanches: Estou com uma idéia interessante na cabeça...
+
+o painel de controle do teclado, que tem mais de cem botões, é controlado por 2 microcontroladores que não são reprogramáveis e que suspeito ser quase impossível de se fazer um dump de firmware (acho que o código deles já vem de fábrica gravado em maskrom dentro da própria pastilha do microcontrolador)
+
+Então só me resta fazer uma emulação de alto nível de abstração (HLE - high level emulation) só implementando o protocolo que esses chips usam, mas sem de fato emular o instruction set e o firmware deles.
+
+Pra poder entender esse protocolo, uma abordagem possível seria achando o código assembly onde ele é implementado (do lado da CPU principal).
+
+Mas uma outra abordagem possível que acabei de imaginar seria implementando um sniffer! Eu cheguei a pensar em usar um sniffer de RS232 em hardware, mas hoje percebi que talvez seja possível implementar em software! Fazendo um pequeno programinha TSR (terminate and stay resident) que se instale no vetor de interrupcoes (pendurado na rotina de interrupção de tratamento de dados recebidos ou enviados pela porta serial usada para o painel de controle) como um "man-in-the-middle" fazendo grampo das comunicações.
+
+Talvez eu tente implementar isso. Mas acho que só depois que eu tiver um assembler em mãos.
+[2021-08-19 14:45:33] L.: https://gunkies.org/wiki/SITS
+[2021-08-19 16:48:13] Ismael Luceno: http://dangerousprototypes.com/docs/Bus_Pirate <-- @fsanches
+[2021-08-19 16:51:11] Flávio Amieiro: Bus pirate é irado. Mas, aproveitando, acho o Shell dele muito ruinzinho. Alguém sabe se tem uma implementação melhor?
+[2021-08-19 17:08:36] Felipe "Juca" Sanches: eu usei bastante o bus-pirate uns 5 anos atrás. Mas depois não sei onde o deixei. Acho que ficou no Garoa e "sumiu". Ou eu larguei no meio da minha bagunça e nunca mais achei. Ou ainda pode ter ficado no laboratório da Metamáquina... sei lá
+[2021-08-19 20:50:23] * Felipe "Juca" Sanches pinned a message

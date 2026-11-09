@@ -1,0 +1,42 @@
+[2025-01-17 00:52:11] L.: o overhead de emulação de poder aquisitivo pra país do norte global emulado usando o poder aquisitivo do sul global não bate mesmo😆
+[2025-01-17 01:37:29] Felipe "Juca" Sanches: E quanto você acha que custa uma pizza importada?!
+[2025-01-17 05:36:45] Shideravan: Uns R$1700 fazendo uma regrinha de 3
+[2025-01-17 18:39:06] L.: Fuçando aí pra ver se tinha backend de z80 pra llvm mantido, pra ver se conseguiria programar em rust pro msx, aí achei um negócio 
+
+Usa rust pra gerar código pro IR do llvm pro atmega328 (que é 8 bit)
+
+Pega esse IR e usa o llvm-cbe pra converter pra C
+
+Compila esse C pra z80 usando sdcc
+
+Esse projeto vai além, convertendo o z80 raiz em z80 de gameboy e tal
+[2025-01-17 18:39:19] L.: Que máquina de rube goldberg. Adorei
+[2025-01-17 20:08:37] Felipe "Juca" Sanches: BARBARIDADE!!!!!
+[2025-01-17 20:09:00] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-01/33905-sticker.webp
+[2025-01-17 22:28:27] RicBit: nooo o codigo vai ficar muito ruim
+[2025-01-17 22:28:43] RicBit: o llvm nativo de 6502 é impressionante, codigo muito bom
+[2025-01-17 22:51:55] L.: sim, o código deve ficar ruim demais😆
+
+mas pelo menos dá pra fazer joguinho em rust!
+[2025-01-17 22:52:18] RicBit: sim sim
+[2025-01-17 22:52:31] RicBit: eu estava aprendendo z3 hoje
+[2025-01-17 22:52:40] RicBit: com z3 dá para fazer supercompilador sem brute force
+[2025-01-17 22:52:58] L.: não sabia que tinha! imagino que se usar página zero dá pra emular ter um monte de registrador e ajuda bem evitar fill/spill excessivo
+[2025-01-17 22:53:09] L.: sim! Z3 é legal! já viu o souper também?
+[2025-01-17 22:54:06] L.: o souper também usa z3
+[2025-01-17 22:54:21] L.: mas já tem o plumbing pronto hehe
+[2025-01-17 22:54:35] L.: https://github.com/google/souper
+[2025-01-17 22:54:53] RicBit: souper eu nao conhecia, vou ver!
+[2025-01-17 22:55:00] RicBit: aqui o llvm 6502 -> https://godbolt.org/z/e93EdG5P5
+[2025-01-17 22:55:53] L.: nossa, branchless e tudo, só nas contera basica
+[2025-01-17 22:57:21] RicBit: pois é, impressive
+[2025-01-17 22:58:19] L.: 6502 é bastante usado pra microcontrolador hoje em dia. tipo 8051. os bagulhos não morrem. faz sentido manterem backend de 6502 no llvm
+[2025-01-17 23:07:45] L.: talvez seja possível melhorar um pouquinho mais esse 6502 específico aí usando uma multiplicação pra calcular o mod (ja que é constante), mas aí depende da biblioteca de operações de 32bit
+[2025-01-17 23:13:31] RicBit: aí tem que colocar no z3 pra ver haha
+[2025-01-17 23:14:24] L.: teve um post da whitequark uns anos atrás usando racket pra otimizar pra 8051, xô ver se acho
+[2025-01-17 23:15:07] L.: https://lab.whitequark.org/notes/2020-04-06/synthesizing-optimal-8051-code/
+
+ideia legal também!
+[2025-01-17 23:35:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-01/33926.jpg
+[2025-01-17 23:35:33] Felipe "Juca" Sanches: Por um breve momento me deu um nó na cabeça, mas agora entendi o que foi que aconteceu...
+[2025-01-17 23:43:25] L.: se tivesse modificado 3 horas antes ia ter sido engraçado

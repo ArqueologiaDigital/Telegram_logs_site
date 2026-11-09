@@ -1,0 +1,19 @@
+[2022-02-02 07:37:04] Erin Pinheiro 🐿: então sucesso 😉
+[2022-02-02 10:20:44] Ricardo Bánffy: Alguém ainda fabrica processadores POWER além da IBM? Tinha algumas empresas fazendo eles pra embedded, mas não lembro quem.
+[2022-02-02 12:11:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/18972.jpg
+[2022-02-02 12:11:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/18973.jpg
+[2022-02-02 12:11:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/18974.jpg
+[2022-02-02 12:11:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/18975.jpg
+[2022-02-02 12:11:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/18976.jpg
+[2022-02-02 12:11:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/18977.jpg
+[2022-02-02 12:13:14] Felipe "Juca" Sanches: me desculpem, acho que mandei os prints fora de ordem kkkk
+[2022-02-02 12:14:28] Felipe "Juca" Sanches: mas é a isso que me refiro quando digo que histórico de conversas de Telegram podem conter informações preciosas apresentadas informalmente, mas ainda assim importantes de serem preservadas.
+[2022-02-02 12:16:27] Felipe "Juca" Sanches: ah, não, não estão fora de ordem não. Tá certinho, ordenado.
+[2022-02-02 13:33:08] Gustavo Romero: @rbanffy Não. A NXP fabricava embedded, mas não mais. Por outro lado agora tem uma implementação FPGA (microwatt), que roda linux de boa, por exemplo, então é ainda mais interessante pra usar.
+[2022-02-02 13:33:42] Gustavo Romero: s/NXP/freescale/
+[2022-02-02 13:34:20] Gustavo Romero: Implementação de POWER10 só processador mesmo da IBM
+[2022-02-02 13:34:42] Gustavo Romero: E agora ficou uma droga pq a OpenPOWER foundation derreteu
+[2022-02-02 13:35:12] Gustavo Romero: Pra POWER9 ainda tem as maquinas da Raptor Eng., tipo Talos e Blackbird. Mas os processadores são IBM  também
+[2022-02-02 13:36:42] Gustavo Romero: iirc desde a ISA 2.07 droparam suporte pra embedded também... ou seja, nem POWER8 acho que tem embedded
+[2022-02-02 13:39:32] Gustavo Romero: @rbanffy PowerPC virou ainda mais arch nicho nos ultimos anos...
+[2022-02-02 20:17:12] L.: https://twitter.com/javmast3r/status/1488684581037424644?t=0HerFVnlIquLBWZ38wkDkw&s=09

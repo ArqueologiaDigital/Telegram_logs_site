@@ -1,0 +1,106 @@
+[2022-06-25 02:36:44] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/126/commits/cb338182853b3a6befcc742cb3ca3eb6abdafecb
+[2022-06-25 08:46:25] Felipe "Juca" Sanches: Merged!
+[2022-06-25 11:41:54] Pedro de Medeiros 👾: Bizarro como o SDCC passou a reclamar de variável redeclarada, mesmo dentro de laço for e aí eu tive que chamar variável de x1, y1 e x2, y2. 🤷 https://github.com/ArqueologiaDigital/Mines/actions/runs/2559589465
+[2022-06-25 11:54:21] Felipe "Juca" Sanches: é, eu vi essa mudança de nomes e achei meio estranho, mas não falei nada
+[2022-06-25 13:13:36] Anne Isabelle: Sei que votaram em outros consoles, mas eu comecei a brincar com desenvolvimento de PlayStation num fork :) 
+
+Assim que eu conseguir implementar alguma coisa do mines eu abro um PR
+[2022-06-25 13:13:53] Felipe "Juca" Sanches: WOW
+[2022-06-25 13:14:36] Felipe "Juca" Sanches: Nesse ponto em que estamos qualquer novo port é bem vindo!
+[2022-06-25 13:14:42] Anne Isabelle: Yaaaay
+[2022-06-25 13:17:23] Felipe "Juca" Sanches: Como você deve ter visto, meu PR pra Vectrex tá quebrado, mas tudo bem
+[2022-06-25 13:18:21] Felipe "Juca" Sanches: O legal de abrir um Draft PR antes de estar pronto é que dá chance de outras pessoas verem o código e darem opinião
+[2022-06-25 13:19:08] Felipe "Juca" Sanches: Eu tô dando murro em ponta de faca nesse port pra Vectrex, viu... Mas aos poucos sinto que tá avançando
+[2022-06-25 13:20:38] Anne Isabelle: Heheh! Vou só fazer um housekeeping então e abrir!
+[2022-06-25 13:21:03] Felipe "Juca" Sanches: Maravilha!
+[2022-06-25 13:21:19] Anne Isabelle: I.e. implementar um platform_init e tal
+[2022-06-25 13:26:01] João Carlos: Opa cara, você tem alguma experiência com desenvolvimento no play?
+[2022-06-25 13:26:44] Anne Isabelle: Not really, é a primeira vez que tô tentando implementar algo no psx
+[2022-06-25 13:27:05] Anne Isabelle: Eu achei um sdk interessante
+[2022-06-25 13:27:31] Anne Isabelle: https://github.com/Lameguy64/PSn00bSDK
+[2022-06-25 13:28:30] João Carlos: Opa dahora, eu também não então seria perfeito kkkkkkkk
+[2022-06-25 13:28:50] João Carlos: Depois me passa seu fork e a gente começa a mexer nesse junto
+[2022-06-25 13:28:54] Anne Isabelle: Hehehe bele!
+[2022-06-25 13:29:39] Felipe "Juca" Sanches: É justamente essa a ideia ao abrir um Draft PR
+[2022-06-25 13:38:39] Anne Isabelle: https://github.com/ArqueologiaDigital/Mines/pull/127
+[2022-06-25 13:39:23] João Carlos: O que é esse draft
+[2022-06-25 13:42:32] Anne Isabelle: É tipo o que eu abri, o PR não pode ser mergeado até eu marcar ele como pronto pra revisar
+[2022-06-25 13:43:16] Anne Isabelle: Daí a gente pode ir trabalhando nele antes de ficar pronto pra review :)
+[2022-06-25 16:10:06] L.: https://github.com/ArqueologiaDigital/Mines/pull/128 <-- PC speaker pra versão MS-DOS. Eu tô fazendo alguma merda aqui por que só funciona fora do modo gráfico.
+[2022-06-25 16:10:19] L.: O debugger do dosbox é meio esquisito. Eu me perco toda naquilo LOL
+[2022-06-25 16:18:59] Pedro de Medeiros 👾: Talvez a melhor forma de trabalhar isso seja criando uma branch?
+[2022-06-25 16:20:44] Anne Isabelle: Nao sei exatamente, eu to trabalhando num fork/branch (um branch no meu fork)
+[2022-06-25 16:22:02] Pedro de Medeiros 👾: Você pode fazer um pull request pra uma branch específica na fonte. Aí o Juca cria uma branch do lado dele e você faz pr pra ela.
+[2022-06-25 16:22:56] Pedro de Medeiros 👾: Aí não precisa ser draft.
+[2022-06-25 16:23:23] Felipe "Juca" Sanches: façam como se sentirem mais à vontade
+[2022-06-25 16:23:44] Felipe "Juca" Sanches: eu gosto de PR draft, mas se quiser fazer diferente tudo bem
+[2022-06-25 16:24:09] Anne Isabelle: Eu gosto de short lived branches tb
+[2022-06-25 16:26:24] Felipe "Juca" Sanches: é... se entendi direito o que você quer dizer com essa expressão, acho que estamos falando da mesma coisa. Em geral eu recomento se usar branches para todos PRs. Então no meu dia-a-dia eu costumo fazer branches só pra abrir um PR, esperar passar nos testes e fazer o merge. Depois disso posso deletar a branch. Se não me engano eu já criei umas 3 ou 4 mil branches ao longo dos últimos 5 anos no projeto de software livre que eu desenvolvo profissionalmente
+[2022-06-25 16:27:43] Anne Isabelle: Exatamente! Minha ideia é sempre criar um fork, deixar a main atualizada no meu fork e ir trabalhando em pequenas features num branch. Daí quando termino, eu abro PR e deleto o branch depois do merge
+[2022-06-25 16:28:06] Felipe "Juca" Sanches: perfeito! Esse é o meu workflow também
+[2022-06-25 16:28:59] Felipe "Juca" Sanches: o bom disso é que o main nunca contém alteracoes locais, então dá pra fazer diversos branches a partir desse main limpo caso seja necessário trabalhar em mais de uma feature simultaneamente
+[2022-06-25 16:29:22] Anne Isabelle: Siiiim
+[2022-06-25 16:29:55] Anne Isabelle: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22229.jpg
+[2022-06-25 16:29:55] Anne Isabelle: Anyways 😄
+[2022-06-25 16:30:41] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22230-sticker.webp
+[2022-06-25 16:36:02] Felipe "Juca" Sanches: seria interessante mover as rotinas de audio para um arquivo separado, audio.c
+[2022-06-25 16:38:58] Anne Isabelle: Tipo o idle_update?
+[2022-06-25 16:39:22] Felipe "Juca" Sanches: nao entendi a pergunta
+[2022-06-25 16:40:02] Felipe "Juca" Sanches: me refiro ao PR da Acidx
+[2022-06-25 16:40:18] Anne Isabelle: 🤦‍♀️ li errado hahaha
+[2022-06-25 16:40:55] L.: Ah, sim, assim que resolver o problema eu faço isso
+[2022-06-25 18:09:44] Felipe "Juca" Sanches: tô aqui lendo disasm da BIOS do Vectrex:
+
+https://www.playvectrex.com/designit/chrissalo/bios.htm
+[2022-06-25 18:10:46] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22238-will-ferrell-confused.mp4
+[2022-06-25 19:09:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22239.jpg
+[2022-06-25 19:09:42] Felipe "Juca" Sanches: Acidx, eu não manjo muito de inline asm com GCC. Tentei buscar documentação de como funciona, mas fiquei meio perdido. Rascunhei isso aqui, que acho que faz sentido e compila, mas não sei se tá certo. O que você acha?
+[2022-06-25 19:10:50] L.: asm __volatile("jsr $0xf517" : "=a"(number))
+[2022-06-25 19:11:31] L.: E declara number normal, sem bloco asm
+[2022-06-25 19:12:47] L.: A sintaxe de assembly inline do gcc é bem esquisita
+[2022-06-25 19:13:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22243.jpg
+[2022-06-25 19:13:19] L.: Mas a ideia geral é: asm (codigo : saida : entrada : clobbers)
+[2022-06-25 19:13:25] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22245.jpg
+[2022-06-25 19:13:58] Felipe "Juca" Sanches: não entendi por que raios alguns exemplos usam asm e outros __asm__
+[2022-06-25 19:14:14] L.: É meio que diferente em cada target
+[2022-06-25 19:14:24] L.: É uma merda😅
+[2022-06-25 19:14:41] Felipe "Juca" Sanches: e o que é o __volatile ?
+[2022-06-25 19:15:13] L.: No caso do asm, cê diz pro compilador "não tira esse código asm que botei aqui e gera nesse lugar que escrevi, não reordena"
+[2022-06-25 19:15:32] L.: Evita do compilador fazer umas otimizações estúpidas
+[2022-06-25 19:15:41] Felipe "Juca" Sanches: ah, saquei
+[2022-06-25 19:16:09] L.: Compilou?
+[2022-06-25 19:16:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22255.jpg
+[2022-06-25 19:16:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22256.jpg
+[2022-06-25 19:18:18] Felipe "Juca" Sanches: "impossible register constraint in 'asm'"
+[2022-06-25 19:34:21] L.: Aí tem que ver no manual
+[2022-06-25 19:34:50] L.: Deve ter uma lista dos constraints
+[2022-06-25 19:40:43] Felipe "Juca" Sanches: essa página lista os possíveis constraints, mas obviamente não lista as opcoes do port não oficial para m6809 :-P
+[2022-06-25 19:40:49] Felipe "Juca" Sanches: acho que vou ter que ler código-fonte do compilador
+[2022-06-25 20:09:45] Felipe "Juca" Sanches: voltei pra essa implementação que compila e rodei no debugger do MAME pra ver o resultado. Aparentemente tá OK. O assembly gerado parece equivalente ao que eu queria mesmo.
+[2022-06-25 20:13:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22263.jpg
+[2022-06-25 20:13:12] Felipe "Juca" Sanches: Mas percebi uma coisinha curiosa...
+
+Escrevi isso:
+uint8_t test = 0;
+void platform_init()
+{
+    test = vectrex_bios_Random();
+
+    video_init();
+}
+
+E o resultado, guardado no registrador B (copiado do conteúdo do A que é resultado da rotina da BIOS), é armazenado em uma variável (uint8_t test;) que foi colocada no endereço 0x1D91.
+[2022-06-25 20:13:33] Felipe "Juca" Sanches: Mas...
+
+0x1D91 é ROM.
+
+A RAM do Vectrex fica na faixa de enredeços C800-CBFF
+[2022-06-25 20:13:49] Felipe "Juca" Sanches: então vou precisar escrever um linker script pra descrever o layout de memória do Vectrex
+[2022-06-25 20:19:33] Felipe "Juca" Sanches: E eu nem sei se essa RAM é de uso geral, ou se é só pra guardar as cordenadas dos vetores, pois o MAME descreve o memory map do Vectrex assim, ó:
+[2022-06-25 20:20:00] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22267.jpg
+[2022-06-25 20:21:10] Felipe "Juca" Sanches: suspeito que o próprio cartucho possa conter um pouco de RAM. Mas preciso checar no código do emulador, ou em alguma documentação online
+[2022-06-25 20:23:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22269.jpg
+[2022-06-25 20:23:56] Felipe "Juca" Sanches: aparentemente o cartucho pode ser inteiro de SRAM ou inteiro de ROM, mas não misto.
+[2022-06-25 20:24:05] Felipe "Juca" Sanches: e não entendo pra que serve um cartucho inteiro de RAM
+[2022-06-25 20:26:37] Felipe "Juca" Sanches: acho que é útil pra isso aqui:
+http://www.vectrex.co.uk/files/articles/VecDev%20developer's%20cartridge%20v1-4.pdf

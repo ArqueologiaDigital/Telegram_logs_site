@@ -1,0 +1,36 @@
+[2023-03-10 06:07:07] Alexandre Villares: https://omnidocs.vercel.app/materiais/arqueologiadesign
+[2023-03-10 14:10:25] Felipe "Juca" Sanches: Alguém por aqui agora?
+
+Tô pensando em pegar minha câmera de vídeo e fazer uma pequena live para contar sobre o KN5000
+
+Pergunto isso por que pode ser que alguns aqui se interessem em assistir ao vivo pra poder mandar comentarios e perguntas.
+[2023-03-10 14:18:42] Hugo (Agaelebê): Opa, se gravar eu vejo mais tarde :D
+[2023-03-10 15:25:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26412.jpg
+[2023-03-10 15:25:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26413.jpg
+[2023-03-10 16:34:04] Felipe "Juca" Sanches: Terceira chamada para Live sobre KN5000. Quem quer ver ao vivo? Tô com o setup de câmera pronto aqui
+[2023-03-10 16:42:02] Felipe "Juca" Sanches: Muita gente aqui sabe que eu escrevo emuladores por prazer. Mas ultimamente entrei numa aventura bem mais intensa. Comecei a conseguir ter avanços significativos na emulação de um teclado musical japonês modelo Technics KN5000, da década de 90 e estou agora usando tudo o que aprendi na última década para emular um equipamento realmente sofisticado.
+
+O processo é longo e estou ainda muito longe de ter um emulador funcional, mas já dá pra sentir os resultados desse esforço.
+
+Para quem tem interesse em ver os bastidores de como emuladores são feitos, eu vou fazer uma transmissão ao vivo no meu canal do youtube daqui a pouquinho.
+
+Por favor, me dê um alô aqui, quem está interessado nesse tipo de assunto, pois eu gostaria de entrar ao vivo só depois que eu souber que tem algumas pessoas conhecidas acompanhando. Pra não ficar aquela sensação de estar falando com as paredes.
+[2023-03-10 17:12:44] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=fZRbTArow1A
+[2023-03-10 18:15:45] Pablo Vasques Bravo-Villalba: Eu tenho interesse, mas os horários não estão batendo pra mim 😬
+[2023-03-10 19:17:14] Alexandre Villares: https://www.theregister.com/2022/10/29/kathleen_booth_obit/
+[2023-03-10 19:59:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26419.jpg
+[2023-03-10 19:59:21] Felipe "Juca" Sanches: Achei o bug!
+[2023-03-10 20:01:41] Ismael Luceno: é só uma capa, ne?
+[2023-03-10 20:25:06] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=vTUtQ3MXQzI
+[2023-03-10 21:02:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26422.jpg
+[2023-03-10 21:02:53] Felipe "Juca" Sanches: Esse aqui é o micro controlador do pained de controle
+[2023-03-10 21:03:29] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26423.jpg
+[2023-03-10 21:03:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26424.jpg
+[2023-03-10 21:03:44] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26425.jpg
+[2023-03-10 21:20:04] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26426.jpg
+[2023-03-10 21:21:11] Felipe "Juca" Sanches: Não vou tentar consertar. Comprei uma PCB nova. Vou tentar interfacear com essa placa danificada usando um arduino pra decodificar o protocolo.
+[2023-03-10 21:22:33] Felipe "Juca" Sanches: e quem sabe talvez descobrir algum jeito de fazer o dump do firmware
+[2023-03-10 21:26:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26429.jpg
+[2023-03-10 22:25:52] Felipe "Juca" Sanches: Se entendi direito, esse chip contém uma mask ROM. Ou seja, é fabricado "já com o software dentro"
+
+Então só com decapping pra fazer um dump

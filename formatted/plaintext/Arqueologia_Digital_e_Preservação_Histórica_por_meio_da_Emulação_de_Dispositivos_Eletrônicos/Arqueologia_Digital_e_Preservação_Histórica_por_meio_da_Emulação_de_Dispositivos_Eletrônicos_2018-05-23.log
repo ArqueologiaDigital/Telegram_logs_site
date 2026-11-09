@@ -1,0 +1,199 @@
+[2018-05-23 11:07:36] * Felipe "Juca" Sanches added Silas
+[2018-05-23 11:08:26] Felipe "Juca" Sanches: Este é um grupo de estudos focado em articular uma força-tarefa para a preservação de hardware histórico. O resgate histórico do Patinho Feio será um dos nossos principais projetos (via emulação, digitalização de documentos, construção de réplicas-funcionais, etc) mas há abertura para a discussão de outros projetos de emulação e de preservação histórica de hardware sempre que houver interesse.
+
+Este grupo tem seu histórico registrado publicamente em: http://arqueologiadigital.org/Telegram_logs/formatted/html/
+[2018-05-23 11:09:13] Silas: Opa, obrigado @fsanches
+[2018-05-23 11:09:43] Silas: Estou curtindo muito "vintage computing" (na falta de um termo melhor) mas não entendo nada de eletrônica, apesar de ter vontade de aprender.
+[2018-05-23 11:10:06] Felipe "Juca" Sanches: muita gente usa o termo "retro computação"
+[2018-05-23 11:10:21] Silas: melhor :-)
+[2018-05-23 11:10:30] Felipe "Juca" Sanches: e aqui a gente cunhou "Arqueologia Digital"
+[2018-05-23 11:10:49] Felipe "Juca" Sanches: estamos lentamente montando um site em arqueologiadigital.org
+[2018-05-23 11:14:09] Affonso Amendola: Vo aproveitar que o juca ta aí lendo, vc dumpou as roms de quais terminais da scopus?
+[2018-05-23 11:14:28] Felipe "Juca" Sanches: acho que todos
+[2018-05-23 11:14:28] Affonso Amendola: Falta daqueles 2(?) novos né
+[2018-05-23 11:14:33] Felipe "Juca" Sanches: ah
+[2018-05-23 11:14:52] Felipe "Juca" Sanches: é... é sempre bom fazer o dump e comparar com o que já temos em maos
+[2018-05-23 11:15:09] Felipe "Juca" Sanches: por que mesmo sendo do mesmo modelo, podemos ter versões distintas de firmware
+[2018-05-23 11:15:20] Felipe "Juca" Sanches: e podemos também ter dumps de EPROMs corrompidas
+[2018-05-23 11:15:28] Felipe "Juca" Sanches: então quanto mais dumps melhor
+[2018-05-23 11:15:36] Affonso Amendola: Sim, vo dumpar hoje e marcar quais ja foram
+[2018-05-23 11:15:44] Felipe "Juca" Sanches: maravilha!
+[2018-05-23 11:16:02] Affonso Amendola: Eu liguei um dos novos antes
+[2018-05-23 11:16:16] Affonso Amendola: So lembrei que precisava dumpar a rom depois
+[2018-05-23 11:16:32] Felipe "Juca" Sanches: A quantas anda aquele idéia de instalar uma mesa na sala da reserva técnica para montar um pequeno laboratório de restauro?
+[2018-05-23 11:16:35] Affonso Amendola: Liguei ontem, quer dizer
+[2018-05-23 11:16:55] Affonso Amendola: Yeeeeeeah....., sobre isso
+[2018-05-23 11:17:00] Affonso Amendola: Absolutamente nada
+[2018-05-23 11:17:04] Felipe "Juca" Sanches: :-P
+[2018-05-23 11:17:20] Affonso Amendola: Tem umas madeiras la no deposito, na boa, to quase fazendo uma bancada
+[2018-05-23 11:18:08] Felipe "Juca" Sanches: eu gosto muito da abordagem mão na massa, pra não ficar refém de lentidões e burocracias...
+[2018-05-23 11:18:21] Affonso Amendola: Yeah
+[2018-05-23 11:18:30] Affonso Amendola: Aí se chegar uma nova
+[2018-05-23 11:18:38] Affonso Amendola: Fica duas bancadas :)
+[2018-05-23 11:18:56] Felipe "Juca" Sanches: eu preciso renovar minha autorização de acesso para os finais de semana... e voltar a frequentar o espaço
+[2018-05-23 11:19:07] Affonso Amendola: Btw, funciona daorao
+[2018-05-23 11:19:13] Felipe "Juca" Sanches: legal!
+[2018-05-23 11:19:26] Affonso Amendola: Tava tentando ligar no pc atraves de um serial to usb
+[2018-05-23 11:19:27] Felipe "Juca" Sanches: conseguiu interfacear com laptop via cabo usb-serial?
+[2018-05-23 11:19:33] Affonso Amendola: N deu muito certo
+[2018-05-23 11:20:02] Affonso Amendola: O cabo rs232 n era um cross
+[2018-05-23 11:20:04] Affonso Amendola: E tava meio bugado
+[2018-05-23 11:20:11] Felipe "Juca" Sanches: o @silasdb deve estar adorando esse papo... 😃
+[2018-05-23 11:20:23] Silas: sim
+[2018-05-23 11:20:23] Affonso Amendola: Aí eu peguei ele e transformei num cabo cross
+[2018-05-23 11:20:30] Silas: tive problemas com cabos seriais tbm
+[2018-05-23 11:20:33] Affonso Amendola: Ta na mala agora
+[2018-05-23 11:20:39] Affonso Amendola: Vo testar logo que chegar
+[2018-05-23 11:20:44] Felipe "Juca" Sanches: oh yeah!
+[2018-05-23 11:21:30] Affonso Amendola: Até agora todos os maiores empecilhos no museu foram por causa de rs232
+[2018-05-23 11:21:31] Silas: cara, eh mto triste que mtos computadores novos nao venham mais com uma porta serial original
+[2018-05-23 11:21:54] Affonso Amendola: Dificuldade em transferir dados do nexus vem em mente
+[2018-05-23 11:22:45] Affonso Amendola: Se esse cabo funfar vo ser se finalmente consigo tirar dados daquele hd
+[2018-05-23 11:23:06] Affonso Amendola: Ahh, adaptador usb serial tai pra isso
+[2018-05-23 11:23:16] Affonso Amendola: Ou placa serial pci
+[2018-05-23 11:24:30] Silas: a placa ate vai, mas em alguns casos nao tem como usar o USB, como depurar um kernel de sistema operacional, por exemplo
+[2018-05-23 11:25:05] Silas: esses adaptadores funcionam de boa em Linux?
+[2018-05-23 11:25:12] Affonso Amendola: Ahhh, justo, n to nesse nivel ainda
+[2018-05-23 11:25:20] Affonso Amendola: O que eu to usando foi suavão
+[2018-05-23 11:25:35] Affonso Amendola: No ubuntu, nem precisei instalar nada
+[2018-05-23 11:25:41] Affonso Amendola: Foi de primeira
+[2018-05-23 11:25:45] Silas: legal
+[2018-05-23 11:25:48] Felipe "Juca" Sanches: sim.
+[2018-05-23 11:26:22] Affonso Amendola: Aparentemente eles usam tudo o mesmo chip pra converter
+[2018-05-23 11:26:26] Affonso Amendola: Algo assim
+[2018-05-23 11:26:47] Affonso Amendola: Prolific alguma coisa
+[2018-05-23 11:26:50] Felipe "Juca" Sanches: Sim. A maioria acho que usa chip FTDI
+[2018-05-23 11:27:03] Silas: funciona com driver livre?
+[2018-05-23 11:27:10] Felipe "Juca" Sanches: SIM!
+[2018-05-23 11:27:17] Silas: ah entao de boas! :-)
+[2018-05-23 11:27:21] Felipe "Juca" Sanches: é basicão, não tem nada de mais
+[2018-05-23 11:27:41] Felipe "Juca" Sanches: eu uso isso no Trisquel GNU/Linux, por exemplo
+[2018-05-23 11:28:54] Silas: mto bom! (alias, nao sabia o que era o Trisquel GNU/Linux, obrigado por compartilhar)
+[2018-05-23 11:36:22] Felipe "Juca" Sanches: já faz uns 8 anos que uso o Trisquel cotidianamente. Não é o fim do mundo viver sem binary-blobs
+[2018-05-23 11:37:55] Silas: Um problema que acho dos GNU/Linux são também os drivers escritos por NDA, isso é uma prática cotidiana infelizmente (só pra contextualizar: sou usuário de BSD).
+[2018-05-23 13:38:30] Affonso Amendola: Heeeey
+[2018-05-23 13:39:18] Affonso Amendola: FINALMENTE consegui fazer meu programinha de transferencia de dados do nexus funcionar
+[2018-05-23 13:39:56] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4905.jpg
+[2018-05-23 13:40:04] Affonso Amendola: No fundo da pra ver os dados no terminal do ubuntu
+[2018-05-23 13:40:23] Affonso Amendola: (Ignorem o computador no meio, eu to consertando ele ainda)
+[2018-05-23 13:40:49] Affonso Amendola: (Aquilo é um monitor de ibm ps2)
+[2018-05-23 13:41:11] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4909.jpg
+[2018-05-23 13:42:10] Affonso Amendola: Agora falta só colocar os dados entrando no serial num arquivo .img, e teremos uma imagem (hopefully perfeita) do hd do nexus 2600
+[2018-05-23 13:51:19] Affonso Amendola: E quanto ao terminal scopus tva80
+[2018-05-23 13:51:22] Affonso Amendola: Sem sucesso
+[2018-05-23 13:51:31] Affonso Amendola: O cabo n funcionou
+[2018-05-23 13:51:47] Affonso Amendola: E o conector, aparentemente n é rs232
+[2018-05-23 13:51:58] Affonso Amendola: Ou se for, tem alguns pinos de controle faltando
+[2018-05-23 13:52:28] Affonso Amendola: I dont get it, alguma ideia?
+[2018-05-23 13:52:39] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4917.jpg
+[2018-05-23 14:17:39] Felipe "Juca" Sanches: 😊
+[2018-05-23 14:47:18] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4919.jpg
+[2018-05-23 14:47:23] Affonso Amendola: Fazendo a transferencia
+[2018-05-23 14:47:36] Affonso Amendola: Daqui a algumas horas eu posto a imagem aqui
+[2018-05-23 14:47:48] Affonso Amendola: To LOCO pra botar isso no mame e ver se funfa
+[2018-05-23 14:50:24] Affonso Amendola: Só vai demorar 4 horas pra transferir tudo
+[2018-05-23 14:50:41] Affonso Amendola: Ta salvando no arquivo, se travar ou crashar oua lgo do tipo, da pra voltar de onde parou
+[2018-05-23 14:50:58] Felipe "Juca" Sanches: boa!
+[2018-05-23 15:15:25] DQ: Ficou um pouco difícil de ver na foto quais pinos estão presentes. Os sinais "clássicos" do RS-232 assíncrono são TxD(2), RxD(3), RTS(4), CTS(5), DSR(6), GND(7), DCD(8), DTR(20) e RI(22). O mínimo é o TxD, RXD e GND. Os pinos 15 e 17, se não me engano são clocks para operação síncrona. Pode ser que este terminal esteja usando elo de corrente ao invés de RS232...
+[2018-05-23 15:16:41] DQ: Se der manda umas fotos melhores do conector e do terminal.
+[2018-05-23 15:17:53] DQ: Aliás, eu não consegui comunicar com o Lepus 200 quando estive aí. Está na lista voltar e fazer mais testes.
+[2018-05-23 15:36:57] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4929.jpg
+[2018-05-23 15:36:57] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4930.jpg
+[2018-05-23 15:36:57] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4931.jpg
+[2018-05-23 15:38:29] Affonso Amendola: 1 a 4, 7, 18, 20 25 Sao os pinos
+[2018-05-23 15:40:56] Affonso Amendola: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4933-nexus.out
+[2018-05-23 15:41:06] Affonso Amendola: Resultado parcial, falta 3 cabecotes
+[2018-05-23 15:41:20] Affonso Amendola: Farei isso sexta
+[2018-05-23 15:41:27] Affonso Amendola: Mas ja da pra ver que ta daorinha
+[2018-05-23 15:41:38] Affonso Amendola: (Não testei no mame ainda)
+[2018-05-23 22:24:38] Felipe "Juca" Sanches: Baixei esse pedaço de dump do HD e usei o comando strings
+[2018-05-23 22:24:43] Felipe "Juca" Sanches: o restuldato é promissor
+[2018-05-23 22:25:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4940.jpg
+[2018-05-23 22:25:36] Affonso Amendola: Tem bastante coisa que da pra ver
+[2018-05-23 22:25:46] Affonso Amendola: Da pra ver o codigo do reader que eu escrevi
+[2018-05-23 22:25:58] Affonso Amendola: Pq a source dele ta no hd :D
+[2018-05-23 22:26:55] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4944.jpg
+[2018-05-23 22:27:11] Affonso Amendola: There it is :D
+[2018-05-23 22:27:19] Felipe "Juca" Sanches: hahaha
+[2018-05-23 22:27:23] Felipe "Juca" Sanches: eu tinha suspeitado
+[2018-05-23 22:27:47] Affonso Amendola: Mas esse aí ta desatualizado
+[2018-05-23 22:27:57] Affonso Amendola: O mais recente ainda nem ta no git, pq eu alterei ele no nexus mesmo
+[2018-05-23 22:28:21] Felipe "Juca" Sanches: qual repo git vc tá usando?
+[2018-05-23 22:29:07] Affonso Amendola: https://github.com/affonsoamendola/xt-hd-imager
+[2018-05-23 22:29:10] Affonso Amendola: O reader ta aqui
+[2018-05-23 22:29:18] Affonso Amendola: Tenho que transferir pro arqueologia digital
+[2018-05-23 22:29:41] Affonso Amendola: Eu chamei de XT imager pq ele funciona em qualquer clone de xt
+[2018-05-23 22:29:48] Affonso Amendola: E na verdade de PC mesmo
+[2018-05-23 22:33:55] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4956.jpg
+[2018-05-23 22:33:55] Felipe "Juca" Sanches: "Este programa somente pode serexecutado no NEXUS" / "Velocidade inicial do processador:" / "8 MHz" / "5 MHz"/ "12 MHz" ... Hmmmmm... Interessante...
+[2018-05-23 22:34:40] Affonso Amendola: Brasoft?
+[2018-05-23 22:35:20] Affonso Amendola: Que eu me lembre brasoft era uma empresa publicadora de software no BR nos anos 90
+[2018-05-23 22:35:27] Affonso Amendola: Mainly jogos
+[2018-05-23 22:35:34] Felipe "Juca" Sanches: Isso significa que esse programa será util pra rodar no MAME com watch points em endereços de I/O suspeitos e ser usado pra validar quais endereços de fato são usados pra chavear a velocidade da CPU
+[2018-05-23 22:35:59] Affonso Amendola: Exatamente
+[2018-05-23 22:36:06] Affonso Amendola: Muito interessante
+[2018-05-23 22:36:38] Felipe "Juca" Sanches: Isso aí é o software entregando o hardware 😊
+[2018-05-23 22:36:49] Affonso Amendola: Mas pq ta com tanto espaço?
+[2018-05-23 22:37:07] Affonso Amendola: Sera que meu codigo comeu uns pedaços da data?
+[2018-05-23 22:37:18] Felipe "Juca" Sanches: espaço?
+[2018-05-23 22:37:28] Felipe "Juca" Sanches: nao entendi a pergunta sobre espaço
+[2018-05-23 22:37:59] Affonso Amendola: A BraSoft foi fundada em 1984 por Paulo Milliet Roque[1][2], e seu objetivo inicial era traduzir e adaptar software estrangeiro para o mercado brasileiro.[1] Seu primeiro produto foi um processador de texto chamado WordStar, que era totalmente em português, incluindo sua caixa e manuais. Em 1986, a empresa conseguiu alcançar 50% do mercado brasileiro de processadores de texto.[3]
+[2018-05-23 22:38:15] Affonso Amendola: Parece que tem uns pedaços faltando
+[2018-05-23 22:38:27] Felipe "Juca" Sanches: ascii extendido
+[2018-05-23 22:38:29] Felipe "Juca" Sanches: talvez
+[2018-05-23 22:38:40] Affonso Amendola: Tipo, "Modo de opera"
+[2018-05-23 22:38:52] Felipe "Juca" Sanches: veja se as quebras de linha acontecem em caracteres acentuados
+[2018-05-23 22:38:55] Felipe "Juca" Sanches: ou cedilha
+[2018-05-23 22:39:16] Felipe "Juca" Sanches: opera.... (çã) ...o
+[2018-05-23 22:39:37] Affonso Amendola: Yeaaah, isso ai
+[2018-05-23 22:39:51] Affonso Amendola: os caracteres especiais n aparecem normalmente
+[2018-05-23 22:39:52] Affonso Amendola: Boa
+[2018-05-23 22:39:59] Felipe "Juca" Sanches: mas deveriam
+[2018-05-23 22:40:13] Affonso Amendola: V(í)deo
+[2018-05-23 22:40:24] Felipe "Juca" Sanches: vc jogou fora tudo que não é ASCII 7 bits na sua rotina de dump?
+[2018-05-23 22:40:32] Felipe "Juca" Sanches: Se vc fez isso então o dump tá errado
+[2018-05-23 22:40:36] Affonso Amendola: Nope
+[2018-05-23 22:40:40] Affonso Amendola: Eu mandei puro pra serial
+[2018-05-23 22:40:45] Affonso Amendola: recebe bit manda bit
+[2018-05-23 22:40:52] Felipe "Juca" Sanches: e por que sumiu?
+[2018-05-23 22:41:20] Affonso Amendola: ve o hexcode nessas partes aí
+[2018-05-23 22:41:26] Affonso Amendola: onde quebra
+[2018-05-23 22:41:48] Felipe "Juca" Sanches: ah! será que o programa strings ignora?
+[2018-05-23 22:41:51] Felipe "Juca" Sanches: pode ser mesmo...
+[2018-05-23 22:42:21] Affonso Amendola: Eu n consigo ver aqui agora
+[2018-05-23 22:42:51] Affonso Amendola: Mas assim o código le puro do hd, guarda num array de char de 512 bytes e manda o array pela serial
+[2018-05-23 22:43:47] Affonso Amendola: Teoricamente falando, cada byte que ta no hd, vai pra serial
+[2018-05-23 22:45:30] Felipe "Juca" Sanches: é... o LibreOffice mostra os caracteres acentuados, mas nao os decodifica corretamente
+[2018-05-23 22:45:48] Felipe "Juca" Sanches: suspeito que a tabela ascii extendida do nexus seja não padronizada
+[2018-05-23 22:46:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4996.jpg
+[2018-05-23 22:46:23] Affonso Amendola: Talvez seja do DOS
+[2018-05-23 22:47:05] Affonso Amendola: Pq geralmente quando eu abro coisa do DOS em qualquer coisa moderna e tem acento aparece assim
+[2018-05-23 22:47:18] Affonso Amendola: Codepage do dos, essas parada
+[2018-05-23 22:47:34] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/5001-sticker.webp
+[2018-05-23 22:48:07] Affonso Amendola: :D
+[2018-05-23 22:48:17] Affonso Amendola: Well
+[2018-05-23 22:48:27] Affonso Amendola: O dado ta la, o encoding que ta meio cagado
+[2018-05-23 22:48:56] Affonso Amendola: Se fosse uma falha aleatoria na leitura n estaria esse efeito so nos acentos
+[2018-05-23 22:49:02] Felipe "Juca" Sanches: tá perfeito
+[2018-05-23 22:49:23] Affonso Amendola: Digo a leitura em software moderno
+[2018-05-23 22:49:56] Affonso Amendola: BOM, sexta eu pego o resto do hd
+[2018-05-23 22:50:10] Affonso Amendola: Comecando da cabeca 2
+[2018-05-23 22:50:18] Affonso Amendola: Digo cabeca 1, pq comeca do 0
+[2018-05-23 22:50:40] Affonso Amendola: Ou pego tudo denovo, vo ter umas 4h por la mesmo
+[2018-05-23 22:50:57] Felipe "Juca" Sanches: legal
+[2018-05-23 22:51:20] Felipe "Juca" Sanches: amanhã vou no Garoa instalar um cartucho NeoGeo de 150 jogos no arcade
+[2018-05-23 22:51:28] Felipe "Juca" Sanches: se puder, aparece lá de noite
+[2018-05-23 22:51:40] Affonso Amendola: HmmmmmmmMMmMmMMmmmMMmmmmmmmmmmm
+[2018-05-23 22:51:49] Felipe "Juca" Sanches: a Sala de Jogos tá ficando legal! https://garoa.net.br/wiki/Sala_de_Jogos
+[2018-05-23 22:51:59] Affonso Amendola: Ce me chama bem no dia que eu vo sair com uma amiga minha
+[2018-05-23 22:52:20] Felipe "Juca" Sanches: bom... vai lá!
+[2018-05-23 22:52:24] Affonso Amendola: Mas se pa eu colo la sim
+[2018-05-23 22:52:38] Affonso Amendola: Que horas ce vai ta por la?
+[2018-05-23 22:52:48] Felipe "Juca" Sanches: Você pode aparecer no Garoa no sábado também.Eu acho que vou estar ládurante o final de semana
+[2018-05-23 22:53:02] Affonso Amendola: Eu vo me mudar no sabado
+[2018-05-23 22:53:06] Felipe "Juca" Sanches: amanhã por volta das 19h
+[2018-05-23 22:53:23] Affonso Amendola: Mas eu vo la pra perto, entao vo estar do lado
+[2018-05-23 22:53:30] Affonso Amendola: Beleza, anotado
+[2018-05-23 22:53:43] Felipe "Juca" Sanches: Obs:Lembre-se de que este chat tem log público hospedado na web
+[2018-05-23 22:54:22] Affonso Amendola: Exatamente por isso que só falei do lado :)
+[2018-05-23 22:54:38] Felipe "Juca" Sanches: hehe

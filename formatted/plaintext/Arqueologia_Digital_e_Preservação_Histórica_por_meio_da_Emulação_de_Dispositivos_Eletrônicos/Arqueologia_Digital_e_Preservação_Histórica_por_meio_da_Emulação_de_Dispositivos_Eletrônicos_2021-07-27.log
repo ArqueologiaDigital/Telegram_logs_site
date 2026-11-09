@@ -1,0 +1,116 @@
+[2021-07-27 04:52:05] Felipe "Juca" Sanches: PQP! Matei a pau! Desvendei o algoritmo de compressão e descomprimi o arquivo de update de firmware!
+[2021-07-27 04:57:06] Felipe "Juca" Sanches: compressed = open("HKMSPRG.SLD.v10", "rb").read()
+raw = open("HKMSPRG.SLD.v10.raw", "wb")
+
+data_buffer = [0] * 4096
+read_pointer = 0x0B # skip header bytes: "SLIDE4K", 00 20 00 00
+write_pointer = 0x00
+
+def output(data_byte):
+  global write_pointer
+  global data_buffer
+  data_buffer[write_pointer%4096] = data_byte
+  raw.write(bytes([data_byte]))
+  write_pointer += 1
+
+
+def fetch_byte():
+  global read_pointer
+  data = compressed[read_pointer]
+  read_pointer += 1
+  return data
+
+
+while read_pointer < len(compressed):
+  counter = 0
+  compression_map_byte = fetch_byte()
+#  print(hex(compression_map_byte))
+  while counter < 8:
+    is_raw = compression_map_byte & 1
+    compression_map_byte >>= 1
+    counter += 1
+
+    if is_raw:
+      output(fetch_byte())
+    else:
+      compression_word = fetch_byte()
+      compression_word |= fetch_byte() << 8
+      chunk_length = 3 + ((compression_word & 0x0F00) >> 8)
+      chunk_address = ((compression_word & 0xF000) >> 4) | (compression_word & 0xFF)
+#      print(f'chunk_length: {hex(chunk_length)}\tchunk_address: {hex(chunk_address)}')
+      while chunk_length > 0:
+        output(data_buffer[((chunk_address+18)%4096)])
+        chunk_address += 1
+        chunk_length -= 1
+[2021-07-27 04:57:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13684.jpg
+[2021-07-27 04:57:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13685.jpg
+[2021-07-27 04:57:41] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13686.jpg
+[2021-07-27 04:57:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13687.jpg
+[2021-07-27 05:01:49] Felipe "Juca" Sanches: vou dormir. Amanhã devo experimentar um pouco de disasm...
+[2021-07-27 07:35:44] kretcheu: Caracas!! Como foi a magia???
+[2021-07-27 09:00:16] Hugo (Agaelebê): Agora sim, vc tem um novo significado para 'Jucar' :) Literalmente Jucou o equipamento! :D
+[2021-07-27 09:01:23] Ronaldo Verardo: Parabéns amigo, isso mesmo, com trabalho e esforço somos recompensados. Muito massa. Parabéns.
+[2021-07-27 09:11:33] kretcheu: Já tem TB o código do compactador?
+[2021-07-27 11:05:06] Felipe "Juca" Sanches: esse é um dos próximos passos. Não deve ser muito difícil de implementar, pois o algoritmo no final das contas nem é tão complicado. Só foi trabalhoso descobri-lo.
+[2021-07-27 11:06:09] Felipe "Juca" Sanches: método científico. Mudando uma coisa por vez e vendo o que acontece. Depois de ver muitos exemplos, começaram a ficar mais evidentes os padrões até que a ficha caiu.
+[2021-07-27 11:18:35] Felipe "Juca" Sanches: vamos lá. Vou usar essa string "FOOT CONTROLER" pra explicar como funciona.
+
+a sequencia de bytes é:
+46 ef 4f 4f 54 20 ae c4 4c 45 52
+
+que corresponder a:
+"F" ef "OOT " ae c4 "LER"
+
+o byte da letra "F" vem do intervalo de codificação anterior. Aí temos esse byte ef que eu tava chamando de "marcador". Pois bem... ele é um mapa de bits indicando se os próximos dados são crus (1) ou compactados (0).
+
+ef = 1110 1111
+
+lendo a partir do bit menos significativo, ficam 4 dados raw seguidos de 1 dado compactado e mais 3 dados raw.
+
+de fato "OOT " são 4 bytes raw, ae c4 é a codificação de uma compressão, e depois "LER" são mais 3 bytes raw.
+
+e o ae c4 a gente já tinha entendido que é uma referencia ao trecho de 7 bytes (4 + 3) localizado no endereço 0xcae do buffer cíclico de 4k-bytes, que nesse caso é a palavra de 7 letras "CONTROL".
+[2021-07-27 11:20:12] Felipe "Juca" Sanches: esse código python faz exatamente isso
+[2021-07-27 13:05:38] RicBit: aeee
+[2021-07-27 13:06:46] RicBit: É um lz77 chunchado então
+[2021-07-27 13:20:06] Felipe "Juca" Sanches: kkkk  defina "chunchado" kkkk
+[2021-07-27 15:07:02] Erin Pinheiro 🐿: termo técnico 😉😂
+[2021-07-27 15:07:28] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13701-mp4.mp4
+[2021-07-27 17:15:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13702.jpg
+[2021-07-27 17:15:59] Felipe "Juca" Sanches: Primeiro asset gráfico encontrado no arquivo depois de descomprimido: a imagem do texto "FADE IN"
+[2021-07-27 17:17:56] Erin Pinheiro 🐿: mais um adepto do binxelview 😉
+[2021-07-27 17:19:01] Felipe "Juca" Sanches: eu não lembrava o nome. Mas lembrava que você tinha tido sucesso no uso disso. Então uns 15 minutos atrás vim aqui no grupo e percorri o histórico de fotos até achar aquela do videokê da Raf Electronics, pra eu poder ver qual era mesmo o nome da ferramenta
+[2021-07-27 17:19:43] Felipe "Juca" Sanches: Essa aqui! 😃
+[2021-07-27 17:20:11] L.: Teria sido útil na época que fazia romhacking de SNES na unha😂
+[2021-07-27 17:20:52] Erin Pinheiro 🐿: quem fez foi um amigo meu que hoje é dev de NES
+[2021-07-27 17:22:06] Erin Pinheiro 🐿: https://github.com/bbbradsmith/binxelview
+[2021-07-27 17:39:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13709.jpg
+[2021-07-27 17:39:20] Felipe "Juca" Sanches: Aqui uma foto de onde esse "FADE IN" aparece na interface de usuário
+[2021-07-27 17:41:48] L.: https://twitter.com/veepixels/status/1418289793411264514?s=09
+[2021-07-27 17:46:15] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13711.jpg
+[2021-07-27 17:46:15] Felipe "Juca" Sanches: E aqui o FADE OUT assim como os gráficos desses triângulos de fade-in e fade-out
+[2021-07-27 17:46:16] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13712.jpg
+[2021-07-27 17:46:16] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13713.jpg
+[2021-07-27 17:50:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13714.jpg
+[2021-07-27 17:50:24] Felipe "Juca" Sanches: E o logotipo da Technics que aparece durante o boot! 😃
+[2021-07-27 17:50:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13715.jpg
+[2021-07-27 17:52:29] Felipe "Juca" Sanches: Já tenho coisas legais pra fazer pra testar o compressor assim que eu terminar de escrevê-lo, mas antes de ir para a parte de estudar e modificar código executável.
+
+É mais fácil validar o compressor alterando desenhos. Tem menos coisas pra dar errado.
+[2021-07-27 17:55:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13717.jpg
+[2021-07-27 17:56:15] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13718-sticker.webp
+[2021-07-27 17:57:40] Felipe "Juca" Sanches: https://forum.fiozera.com.br/t/replicas-funcionais-de-arcades-eletro-mecanicos-com-mame-e-rpi/25
+[2021-07-27 18:09:07] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13720.jpg
+[2021-07-27 18:09:07] Felipe "Juca" Sanches: Vai umas sanfoninhas aí?😉
+[2021-07-27 18:11:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13721.jpg
+[2021-07-27 18:11:53] Felipe "Juca" Sanches: Pixel-art do próprio teclado (isso acho que aparece durante a demonstração automática das features do produto)
+[2021-07-27 18:31:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13722.jpg
+[2021-07-27 18:31:24] Felipe "Juca" Sanches: Essas barrinhas numéricas são da interface de ajuste dos tubos de um órgão "drawbar" estilo Hammond. Acho que tem 3 desenhos dentro do binário por que tem 3 cores diferentes de barrinhas na interface. Acho que como é tudo cores 8bits não usaram truques de paleta pra salvar um desenho só na memória. Não devia valer o esforço.
+[2021-07-27 18:31:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13723.jpg
+[2021-07-27 18:31:35] Felipe "Juca" Sanches: video: (not yet published)
+[2021-07-27 18:36:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13725.jpg
+[2021-07-27 18:36:50] Felipe "Juca" Sanches: Não sei onde aparecem esses tecladinhos na interface...
+[2021-07-27 18:37:52] Felipe "Juca" Sanches: Ah! Lembrei! É a interface de split-point 😊
+[2021-07-27 18:38:48] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13727.jpg
+[2021-07-27 18:44:04] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13728.jpg
+[2021-07-27 18:44:04] Felipe "Juca" Sanches: Aqui 3 belos diagramas de conexões MIDI

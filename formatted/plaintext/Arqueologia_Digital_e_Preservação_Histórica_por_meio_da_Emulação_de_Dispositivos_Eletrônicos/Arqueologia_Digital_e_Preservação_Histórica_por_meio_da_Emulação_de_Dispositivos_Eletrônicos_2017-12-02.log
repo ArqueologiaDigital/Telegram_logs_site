@@ -1,0 +1,58 @@
+[2017-12-02 00:33:25] Felipe "Juca" Sanches: compilô !
+[2017-12-02 00:33:34] Felipe "Juca" Sanches: bora tentá rodá
+[2017-12-02 00:34:04] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2426.jpg
+[2017-12-02 00:34:24] Felipe "Juca" Sanches: :-(
+[2017-12-02 00:49:09] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2428.jpg
+[2017-12-02 00:49:11] Werner: tenta isso
+[2017-12-02 00:49:46] Felipe "Juca" Sanches: credo!
+[2017-12-02 00:51:24] Werner: passou longe?
+[2017-12-02 00:52:16] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2432.jpg
+[2017-12-02 00:54:53] Werner: Aqui tem alguns outros palpites. Mas não sei se qemu tem relação com isso: https://askubuntu.com/questions/854335/ubuntu-server-and-qemu-could-not-initialize-sdl
+[2017-12-02 00:57:38] Werner: todo mundo q eu vejo reclamando desse erro parece q a solução é rodar qemu -curses ou qemu -nographic
+[2017-12-02 00:58:02] Werner: ou é problema devido a estar em modo console
+[2017-12-02 00:58:13] Werner: vc está em modo gráfico?
+[2017-12-02 01:01:48] Felipe "Juca" Sanches: instalei o Xorg-server agora
+[2017-12-02 01:02:02] Felipe "Juca" Sanches: e consegui rodar, só que trava na tela do menu de seleção de jogos
+[2017-12-02 01:02:07] Felipe "Juca" Sanches: o teclado nao responde
+[2017-12-02 01:02:16] Felipe "Juca" Sanches: nao sei se é X malconfigurado
+[2017-12-02 01:02:23] Felipe "Juca" Sanches: ou se o MAME trava depois que abre
+[2017-12-02 01:02:37] Felipe "Juca" Sanches: ou se tá tão lento a ponto de eu não conseguir usar
+[2017-12-02 01:02:54] Felipe "Juca" Sanches: travou geral. Tiver que dar sudo reboot via SSH
+[2017-12-02 01:03:35] Werner: 😕
+[2017-12-02 01:03:46] Werner: O Pi roda emuladores numa boa
+[2017-12-02 01:04:25] Werner: Isto é, se vc rodar aquelas distros prontas e otimizadas, tipo o RetroPie
+[2017-12-02 01:05:59] Werner: https://www.raspbian.org/
+[2017-12-02 01:06:40] Werner: Talvez se vc instalasse esse num sd separado, e tentasse rodar o executável embaixo dessa distro.
+[2017-12-02 01:08:28] Werner: ou muda o memory split pra um valor maior
+[2017-12-02 01:08:57] Felipe "Juca" Sanches: vamos ver... tentei de novo aqui e parece que ta melhorando
+[2017-12-02 01:09:00] Werner: pode ser q esteja travando por requerer mais memória de video do q o sistema está configurado para liberar
+[2017-12-02 01:09:03] Felipe "Juca" Sanches: vou copiar as ROMs aqui
+[2017-12-02 01:09:14] Felipe "Juca" Sanches: um passo por vez
+[2017-12-02 01:09:35] Werner: Tente essa minha última sugestão antes
+[2017-12-02 01:10:44] Felipe "Juca" Sanches: copiei as ROMs
+[2017-12-02 01:10:50] Felipe "Juca" Sanches: vou tentar rodar lá e já volto
+[2017-12-02 02:50:32] Felipe "Juca" Sanches: olha aqui um tarefa pendente de mulação de hardware nacional:
+[2017-12-02 02:50:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2458.jpg
+[2017-12-02 02:52:05] Felipe "Juca" Sanches: Scopus Spectrum ED,1985
+[2017-12-02 08:38:47] Alexandre Villares: Check out James Gilleard (@jgilleard): https://twitter.com/jgilleard?s=09
+[2017-12-02 08:39:15] Alexandre Villares: Confiram este ilustrador e suas brincadeiras com trilhas sonoras de games...
+[2017-12-02 08:41:55] Alexandre Villares: No feed do Twitter dele....
+[2017-12-02 08:42:07] Alexandre Villares: (link de cima)
+[2017-12-02 11:47:54] Felipe "Juca" Sanches: Quem vem para a Demoparty no Garoa hoje ?
+[2017-12-02 11:48:06] Felipe "Juca" Sanches: Pretendo em algum momento fazer uma mini-oficina de emulação
+[2017-12-02 12:02:32] Guilherme Kenzo: vou tentar ir mais tarde!
+[2017-12-02 12:02:48] Felipe "Juca" Sanches: legal
+[2017-12-02 16:06:28] Werner: Conseguiu rodar o mame no RPi ontem?
+[2017-12-02 16:07:10] Felipe "Juca" Sanches: to tentando ainda
+[2017-12-02 16:07:10] Felipe "Juca" Sanches: agora mesmo
+[2017-12-02 16:07:30] Felipe "Juca" Sanches: tive que recompilar a lib SDL2 por que a versão que tem no raspbian stretch não vem com suporte a aceleração por hardware
+[2017-12-02 16:08:09] Felipe "Juca" Sanches: e agora estou tentando botar pra funcionar o MAME no framebuffer (pra nao usar o X)
+[2017-12-02 16:08:11] Felipe "Juca" Sanches: mas o site do projeto directfb foi vandalizado
+[2017-12-02 16:09:14] Werner: ?
+[2017-12-02 16:13:58] Werner: https://github.com/DirectFB
+[2017-12-02 16:15:29] Felipe "Juca" Sanches: Jan 30, 2014
+[2017-12-02 16:20:45] Werner: https://github.com/deniskropp/DirectFB/issues/3
+[2017-12-02 16:21:13] Werner: Não sei se terá alguma atualização aí. Acho q não.
+[2017-12-02 16:21:57] Werner: Acho q foi completamente abandonado. Não é possível pegar os fontes q tem e tentar compilar pra plataforma Arm?
+[2017-12-02 16:35:01] Felipe "Juca" Sanches: sim, é possível tentar
+[2017-12-02 16:35:33] Werner: Eu acho q seria o único jeito.

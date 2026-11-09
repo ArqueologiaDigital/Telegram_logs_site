@@ -1,0 +1,16 @@
+[2025-02-27 02:43:32] Erin Pinheiro 🐿: é tudo cópia de open source com o número de série raspado
+[2025-02-27 02:44:21] Erin Pinheiro 🐿: aposto que essa situação foi porque o 8086yes já foi pego nessa vendendo o book8086 com bios gpl com crédito autoral apagado
+[2025-02-27 02:44:35] Erin Pinheiro 🐿: esse aí é malandro de longa data já
+[2025-02-27 08:36:25] Pablo Vasques Bravo-Villalba: É assim, o circuito dele claramente é uma variação (ou o mesmo circuito) do Zemmix Neo coreano, que por sua vez é uma modificação do circuito do OCM original. O Zemmix Neo foi usado como base para todos os outros derivados de OCM subsequentes, porque inclui o gerador de scanlines (o OCM não tem isso).
+
+Agora, até um certo ponto todos os derivados usavam exatamente o mesmo FPGA do OCM, enquanto mais recentemente o Victor Trucco fez um novo projeto, que podemos chamar de MSX em FPGA de segunda geração, com um FPGA bem maior e mais recente também. Tudo isso naturalmente é código aberto porque a licença é contagiosa.
+
+O MSXBook usa o mesmo FPGA do OCM e tem gerador de scanlines, portanto em tese o firmware do KdL funcionaria nele. Inclusive para algumas pessoas ele até orientou que a pessoa buscasse o firmware do KdL lá no site dele e enviasse diretamente para o vendedor do MSXBook, que faria a instalação para o comprador. A justificativa é que ele não estava autorizado a distribuir pessoalmente o firmware do KdL. Óbvio que, se ele mesmo instala o firmware, na prática está distribuindo, e provavelmente por isso parou de fazer.
+
+Agora, o problema é que o KdL não dá suporte ao uso do seu próprio firmware em outro hardware, mesmo que seja baseado no mesmo circuito. Ele diz que o problema principal é que o firmware para os FPGAs de primeira geração usa o FPGA praticamente até o limite, o que gera instabilidades que às vezes só se manifestam em um hardware específico. Ele testa dezenas de variações toda vez que vai lançar uma versão nova.
+
+Ele disse que não tem condições de dar suporte a um novo conjunto de variações, e que inclusive pretende que a próxima versão do firmware para FPGA de primeira geração seja a derradeira, que a partir de agora ele só vai trabalhar com os de segunda geração que dão muito menos dor de cabeça (e tem menos modelos também). Então você usa o firmware dele em um hardware não suportado por sua conta e risco. Pode ser que funcione, pode ser que não. Pode ser que uma versão anterior funcione melhor, etc. e tal.
+
+Agora, tudo isso foi feito com pleno conhecimento de todas as partes envolvidas, apesar do histórico questionável do 8086yes. E no site tem os créditos, tem o projeto e a indicação sobre a compatibilidade com o firmware do KdL. Para saber mais, vale a pena ler este tópico no fórum do MSX Resource Center: https://msx.org/forum/msx-talk/hardware/msxbook-onechipmsx-msx2-computer
+[2025-02-27 22:12:26] L.: Muito obrigada!
+[2025-02-27 23:02:02] L.: https://86box.net/2025/02/25/riva128-part-1.html

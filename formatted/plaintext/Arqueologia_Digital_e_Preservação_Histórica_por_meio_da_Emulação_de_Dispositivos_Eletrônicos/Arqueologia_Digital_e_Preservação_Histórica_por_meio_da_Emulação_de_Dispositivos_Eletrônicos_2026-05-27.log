@@ -1,0 +1,36 @@
+[2026-05-27 00:23:06] RicBit: comecinho do sisne.sis:
+https://gist.github.com/ricbit/e1c9c0ff7d5430a1bc5ebcbabcceb5bb
+[2026-05-27 00:23:39] RicBit: nesse trecho a maioria é assembly mesmo, mas tem umas que são compiladas, tipo ATOI_DECIMAL
+[2026-05-27 00:29:56] RicBit: o agente está tentando me convencer de que é C, não Pascal como eu achava
+[2026-05-27 00:30:25] RicBit: ele tem um argumento bom, o codigo do ATOI testa a condição antes de iniciar o loop, no pascal ele só testaria no final.
+[2026-05-27 02:20:51] Felipe "Juca" Sanches: PUTA MERDA!!! HAHAHAHAHAH
+[2026-05-27 02:21:12] Felipe "Juca" Sanches: Que fantástico isso, @macabeus!
+[2026-05-27 02:21:55] Felipe "Juca" Sanches: Um produto de 30 anos atrás e, do nada, duas pessoas resolvem desvendá-lo no mesmo mês!
+[2026-05-27 02:22:14] Felipe "Juca" Sanches: Independentemente
+[2026-05-27 02:22:26] Felipe "Juca" Sanches: Isso me traz esperança pro futuro
+[2026-05-27 02:23:14] Felipe "Juca" Sanches: parece que ainda há um potencial dormente e que talvez  o advento das IAs tenha destravado esses tipos de projetos...
+[2026-05-27 09:24:12] L.: Se pá rola jogar no BinaryNinja pra descompilar (e não só desassemblar)
+[2026-05-27 09:52:10] RicBit: seria bom hein, dá para mandar descompilar só o que foi compilado e deixar asm o resto
+[2026-05-27 09:54:19] L.: Tem versão grátis dele pra uso não comercial. Não sei se entende binário de 8086, mas é sussa olhar
+[2026-05-27 10:07:17] Ismael Carvalho: Isso é uma certeza
+[2026-05-27 10:07:58] Ismael Carvalho: A acessibilidade pra lidar com esses tópicos mesmo cansado tá sendo bem maneiro
+[2026-05-27 10:08:12] Ismael Carvalho: Tenho até alguns amigos procurando saber mais sobre retro computação
+[2026-05-27 10:08:34] Ismael Carvalho: Tô tentando fazer wololo neles pra conhecer mais sobre o trabalho de preservação
+[2026-05-27 10:12:59] Aurélio GNU: Pode ser útil fazer uma site para interagir com hardware antigo? (claro que vai precisar de código específico pra cada, mas pode nascer algo legal)
+
+https://hacks.mozilla.org/2026/05/web-serial-support-in-firefox/
+[2026-05-27 17:57:53] L.: https://www.youtube.com/watch?v=sDei4Tyo6yA
+[2026-05-27 19:16:06] RicBit: disasm completo do game master:
+https://github.com/ricbit/game-master
+[2026-05-27 19:19:28] RicBit: a parte engraçada do codigo é que para descobrir se tem uma unidade de disco, ele procura por "isk BASIC" em todos os slots lol
+[2026-05-27 19:20:30] RicBit: nao iria funcionar em ddx ou microsol
+[2026-05-27 22:25:08] Pablo Vasques Bravo-Villalba: Não tem um jeito melhor de detectar isso? E o que acontece se o Game Master estiver em um slot mais baixo, ele não roda antes da interface de disco inicializar?
+[2026-05-27 23:06:26] RicBit: ah deve ter varios jeitos melhores de detectar
+[2026-05-27 23:07:06] RicBit: eu acho que a ideia de procurar o slot da disk rom é pra inicializar ela mesmo se estiver em slot mais alto
+[2026-05-27 23:07:11] RicBit: deixa eu conferir perai
+[2026-05-27 23:12:25] RicBit: yup ele chupa o 4002h do subslot onde achou a disk rom e executa
+[2026-05-27 23:14:00] RicBit: o jeito certo eu acho é se colocar no fim da fila. o cartucho fala, beleza eu existo, roda os outros cartuchos e depois volta pra mim
+[2026-05-27 23:19:16] RicBit: vou deixar ele abrindo o rally-x hoje. eu tinha uma vaga lembrança de que o rally-x tinha codigo ruim. pois bem, não é pouco ruim, é muito ruim haha
+[2026-05-27 23:20:48] RicBit: GROG ACHAR LOOP COMPLICADO. GROG REPETIR O CODIGO 10 VEZES. UGA
+[2026-05-27 23:26:47] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/39004.jpg
+[2026-05-27 23:26:47] RicBit: nem dá para falar que é unroll porque é codigo de init

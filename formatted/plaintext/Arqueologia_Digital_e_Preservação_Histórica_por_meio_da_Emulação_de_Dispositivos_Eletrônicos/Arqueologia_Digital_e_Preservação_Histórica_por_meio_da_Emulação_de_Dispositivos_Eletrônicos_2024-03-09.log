@@ -1,0 +1,52 @@
+[2024-03-09 01:31:12] Shideravan: Não rolou um acordo deles permitirem a Apple de usar a marca?
+[2024-03-09 02:06:08] Felipe "Juca" Sanches: Caraca! Dessa eu não tava sabendo!
+
+Agora resta saber se esse novo  modelo já funciona com o software livre que eu usava para controlar o TL866 (https://gitlab.com/DavidGriffith/minipro/)
+[2024-03-09 02:06:54] Felipe "Juca" Sanches: Ah! Parece que tem suporte sim:
+
+https://gitlab.com/DavidGriffith/minipro/-/blob/master/t48.c
+[2024-03-09 10:30:45] Felipe "Juca" Sanches: há! Destijolei!
+[2024-03-09 10:31:09] Felipe "Juca" Sanches: Até sei o que fiz. Entretanto, não entendo por que funcionou.
+[2024-03-09 10:31:27] Felipe "Juca" Sanches: De todo modo, já tenho uma idéia do que fazer proxima vez que enroscar
+[2024-03-09 14:54:41] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30139.jpg
+[2024-03-09 14:54:41] Lucas Alberto: Está dando certo a ideia de usar o ImGUI
+[2024-03-09 14:55:11] Lucas Alberto: Acho que vai dar uma ferramenta muito legal para emular/debuggar/codar para o patinho feio
+[2024-03-09 14:56:30] L.: Negócio é fazer recompilação dinâmica de patinho feio pra x86-64
+[2024-03-09 14:57:24] L.: 😅
+[2024-03-09 15:02:19] Lucas Alberto: KKKKKKKKK arquitetura patinho feio é muito bom
+[2024-03-09 15:29:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30144.jpg
+[2024-03-09 15:29:05] Felipe "Juca" Sanches: Estou desenhando SVG hoje... pra fazer no MAME uma interface pro teclado Technics KN5000, no mesmo estilo desse painel do Patinho Feio
+[2024-03-09 15:29:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30145.jpg
+[2024-03-09 15:29:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30146.jpg
+[2024-03-09 15:30:14] Lucas Alberto: Vi aqui que tem como puxar um svg no sdl, depois vou fazer isso pra ficar mais bonito
+[2024-03-09 16:58:52] Lucas Alberto: Consegui fazer o emulador carregar um programa partir um arquivo .bin do repositorio de binarios do patinho feio ❤️ to feliz
+[2024-03-09 17:00:05] Lucas Alberto: O complicado é que ta sem padrão para onde começa o programa :/
+
+Pelo menos o binario do "hello world" tem uns "lixos" no inicio
+[2024-03-09 17:01:03] Anne Isabelle: Gente, alguém já importou algo de grande porte, tipo um Macintosh antigo, pelo eBay?
+[2024-03-09 17:01:18] Anne Isabelle: Eu to mto na pilha de comprar um Macintosh Classic ou SE nos próximos meses
+[2024-03-09 17:03:07] Lucas Alberto: Máximo que eu comprei foi circuitos integrados :/
+[2024-03-09 17:03:18] Lucas Alberto: O valor do frete não ta um absurdo ?
+[2024-03-09 17:03:23] Anne Isabelle: Sim
+[2024-03-09 17:03:40] Anne Isabelle: Mas eu encontrei um Macintosh no mercado livre que é mais q o preco do frete
+[2024-03-09 17:04:59] Lucas Alberto: É, vc tem um ponto
+[2024-03-09 17:11:23] Anne Isabelle: To pensando em criar um botzinho de anúncios de macs antigos
+[2024-03-09 17:11:33] Anne Isabelle: Um crawler e tal
+[2024-03-09 17:27:59] Lucas Alberto: Eu passo a mesma situação com meus equipamentos de laboratório da HP
+[2024-03-09 17:28:16] Lucas Alberto: Eu tenho q ficar olhando no mercado livre pra ver se aparece algum anuncio em conta
+[2024-03-09 17:47:47] Lucas Alberto: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30161-2024-03-09%2017-46-13.mp4
+[2024-03-09 17:47:47] Lucas Alberto: To muito feliz ❤️
+[2024-03-09 19:31:58] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30163.jpg
+[2024-03-09 19:31:58] Lucas Alberto: Consegui implementar um Mnemonico, to feliz
+[2024-03-09 19:32:11] Lucas Alberto: Parece está funcionando, consegui avançar no codigo
+[2024-03-09 20:01:34] Lucas Alberto: @fsanches Felipe, sobre aquele programa q vc falou, o apendice_g__hexam.bin.
+
+Eu consegui adiantar bastante, fiz ele rodar, porem parou na parte do IO, está aguardando a entrada de dados ou a liberação do dispositivo
+[2024-03-09 20:02:02] Lucas Alberto: Acho que é um bom avanço
+[2024-03-09 21:17:51] Anne Isabelle: https://www.ele.uva.es/~jesus/a2.pdf
+[2024-03-09 21:18:09] Anne Isabelle: Apple Ii na fpga
+[2024-03-09 21:41:18] Felipe "Juca" Sanches: Faz parte. Prática da época. Você precisa saber o endereço de entrada do código
+[2024-03-09 21:41:55] Felipe "Juca" Sanches: E forneçê-lo pelas chaves quando for rodar o programa
+[2024-03-09 21:43:06] Felipe "Juca" Sanches: Acho que era comum começar no endereço 0x006, pois os anteriores são reservados para registradores da CPU
+[2024-03-09 21:51:25] Lucas Alberto: O programa que usa para escrever na memória começa no 00F se não engano, dive que aumentar a memória para 4k para conseguir rodar ele
+[2024-03-09 22:26:05] Felipe "Juca" Sanches: A memória do Pato tem, de fato, 4kbytes

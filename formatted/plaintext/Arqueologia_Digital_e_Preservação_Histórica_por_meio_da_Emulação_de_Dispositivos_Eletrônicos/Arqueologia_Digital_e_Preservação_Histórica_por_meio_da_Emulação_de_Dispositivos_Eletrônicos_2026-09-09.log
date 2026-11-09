@@ -1,0 +1,29 @@
+[2026-09-09 18:55:21] RicBit: gbemu está funcionando em 97.7% das roms, bem melhor que os 90% que estava antes.
+[2026-09-09 18:55:42] RicBit: 100% não dá pra chegar porque eu não vou emular a camera
+[2026-09-09 18:57:12] Shideravan: O Game Boy Camera e Game Boy Printer são dispositivos externos que contam com seu próprio hardware externo para funcionar. Por que você não faz como módulos de outros 4kb para usar em conjunto quando quiser emular eles?
+[2026-09-09 18:57:40] RicBit: é uma ideia
+[2026-09-09 18:58:04] Shideravan: Pois é, ai você consegue deixar completo sem sair do seu escopo de manter os 4kb
+[2026-09-09 18:58:21] Shideravan: Afinal o game boy "por si só" já não rodava a camera
+[2026-09-09 18:58:31] RicBit: atualmente eu estou com 1 byte livre
+vou ter que deixar namagiri rodando a noite toda pra achar espaco
+[2026-09-09 18:59:02] RicBit: deixa fazer um pacote perai
+[2026-09-09 18:59:13] Shideravan: Se você for fazer de famicom depois, você vai ter que pensar em soluções assim, porque são centenas de mappers hahaha
+[2026-09-09 18:59:48] Shideravan: Aí não vira mais um trabalho só de otimização, passa a ter a questão de como listar...
+[2026-09-09 18:59:50] Shideravan: Se bem que...
+[2026-09-09 18:59:59] Shideravan: Muitos mappers compartilham estruturas em comum
+[2026-09-09 19:00:56] Shideravan: Então talvez houvesse espaço para otimizar isso
+[2026-09-09 19:00:59] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40455-minigb.zip
+[2026-09-09 19:00:59] RicBit: 97.7%, 4kb
+[2026-09-09 19:01:22] RicBit: sim, o espaco de hoje veio juntando partes comuns de 3 mappers do gameboy
+[2026-09-09 19:01:30] Shideravan: Esses 97,7% são só do DMG ou GBC também?
+[2026-09-09 19:01:44] RicBit: nao, só dmg !
+[2026-09-09 19:02:05] RicBit: dmg é dificil de emular porque tem que emular subinstrucoes
+[2026-09-09 19:02:33] RicBit: no msx eu nunca precisei de subinstrucoes, inclusive ia ser divertido fazer um cartucho assim, só pra ver todos os em,uladores falharem
+[2026-09-09 19:03:03] Pablo Vasques Bravo-Villalba: Subinstruções?
+[2026-09-09 19:03:55] RicBit: é, alguma coisa que acontece depois de voce começar a instrucao, e mas antes de terminar a instrucao
+[2026-09-09 19:04:01] RicBit: o efeito é no meio
+[2026-09-09 19:14:51] Shideravan: Você está buscando ser cycle-accurate?
+[2026-09-09 19:23:35] RicBit: Tem que ser cycle accurate, senão não passa dos 90%
+[2026-09-09 19:31:47] Shideravan: Dá para passar, mas talvez não em 4kb kkkkkkkk
+[2026-09-09 19:52:30] Pedro de Medeiros 👾: E como se invoca isso?
+[2026-09-09 20:20:19] RicBit: se voce tiver um dispositivo memory mapped e executar codigo nele, por exemplo

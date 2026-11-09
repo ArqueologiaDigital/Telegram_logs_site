@@ -1,0 +1,14 @@
+[2021-12-22 18:03:01] Felipe "Juca" Sanches [forwarded]: Quando penso que não tem mais o que inventarem, acho uma CPU feita com um monte de 555:
+https://hackaday.io/project/182915-555enabled-microprocessor
+[2021-12-22 18:03:21] L.: Lembrei daquele concurso que fizeram uns anos atrás que usava 555
+[2021-12-22 18:03:59] Felipe "Juca" Sanches: foi a Jeri Elsworth que organizou o concurso? Ou ela participou? Não me lembro bem, mas acho que ela teve algum envolvimento...
+[2021-12-22 18:06:38] L.: É, acho que ela foi uma das organizadoras/juradas
+[2021-12-22 18:06:53] L.: Faz tempo que isso rolou, não lembro de detalhes
+[2021-12-22 18:07:44] Felipe "Juca" Sanches: me lembro de assistir livestreams da jeri elsworth direto do laboratório na casa dela. Numa época em que não existia youtube. Ela foi pioneiríssima das lives 😃
+[2021-12-22 18:08:14] Felipe "Juca" Sanches: ela simplesmente largava a câmera ligada por muitas horas enquanto trabalhava no lab e ficava falando com as pessoas no chat
+[2021-12-22 18:08:27] Felipe "Juca" Sanches: se nao me engano usava um text-to-speech do chat
+[2021-12-22 18:08:34] Felipe "Juca" Sanches: e respondia falando mesmo
+[2021-12-22 19:58:53] Felipe "Juca" Sanches [forwarded]: Imagine esse cara fazendo um Z80 gigante
+https://hackaday.io/project/182863-giant-555-timer
+[2021-12-22 20:09:49] Flávio Amieiro: Ou dar a volta completa e usar uns attiny85 emulando 555 pra fazer uma CPU
+[2021-12-22 20:09:51] Flávio Amieiro: https://hackaday.com/2021/12/15/you-can-always-use-an-attiny-instead-of-a-555/

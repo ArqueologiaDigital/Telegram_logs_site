@@ -1,0 +1,21 @@
+[2025-02-02 17:18:57] L.: https://www.blackintoys.org/post/the-black-engineer-and-entrepreneur-who-changed-video-games
+[2025-02-02 19:20:28] Felipe "Juca" Sanches: Mandei pro espaço o código que desenha janela do  pinball fantasies. Não vou precisar disso em um controlador de máquina de pinball.
+
+Com a deleção violenta de código,  matei uma quantidade enorme de dependências. Eram 212 crates. Agora são "apenas" 89 😉
+[2025-02-02 19:21:08] Felipe "Juca" Sanches: Ooops! Vazei o plano nem tão secreto...
+[2025-02-02 19:47:48] L.: Quero só ver hein
+[2025-02-02 20:04:31] Felipe "Juca" Sanches: kkkk
+[2025-02-02 20:05:20] Felipe "Juca" Sanches: preciso diminuir minha fama de vapourwarezeiro
+[2025-02-02 20:08:15] L.: Hoje em dia dá pra fazer mais fácil, eu acho. Por exemplo, os LEDs podem ser daqueles que tem um microcontrolador por LED RGB, e aí usar só 1 pino pra controlar a cor
+[2025-02-02 20:09:28] L.: Dá pra mandar cortar a mesa toda no laser, mesmo que faça com compensado de 3mm, se fizer uma malha de apoio também cortada no laser
+[2025-02-02 20:10:48] L.: A mesa pode ser feita de acrílico com arte colada por baixo, e onde tem iluminação a arte pode ser branca e o acrílico pode ser deixado fosco com o laser (e usando LED RGB, acende da cor que quiser)
+[2025-02-02 20:21:14] Felipe "Juca" Sanches: Estou com 4 módulos desses:
+https://github.com/david-sawatzke/hub75-rs
+[2025-02-02 20:38:24] L.: Massa! A gente tá brincando com uns desses no LHC (eu tô fazendo um forthzinho pra rodar coisas numa Pi e mostrar nessas telas tipo shader)
+[2025-02-02 20:39:36] L.: Esses módulos são perfeitos pro marquee
+[2025-02-02 20:56:24] Felipe "Juca" Sanches: Compilação do pinball  fantasies em Rust feita direto no Raspberry Pi Zero W 2, agora removendo as bibliotecas de janelagem, foi  concluída em 10 minutos, em comparação a quase 1 hora de build ontem  com o código original.
+[2025-02-02 20:56:41] Felipe "Juca" Sanches: E o binário resultante roda
+[2025-02-02 21:05:32] Felipe "Juca" Sanches: e toca a música do  attract  mode
+[2025-02-02 21:05:57] Felipe "Juca" Sanches: só que do jeito  que tá agora não  tem  como interagir, pois ainda não implementei varredura de matriz de sensores
+[2025-02-02 21:06:07] Felipe "Juca" Sanches: vou  ler isso de alguns pinos de GPIO
+[2025-02-02 21:06:45] Felipe "Juca" Sanches: a performance do binário tá ótima, que era o que mais me preocupava

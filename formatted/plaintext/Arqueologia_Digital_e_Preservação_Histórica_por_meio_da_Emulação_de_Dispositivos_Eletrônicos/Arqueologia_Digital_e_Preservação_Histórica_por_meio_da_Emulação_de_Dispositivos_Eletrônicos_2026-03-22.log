@@ -1,0 +1,9 @@
+[2026-03-22 20:46:34] Felipe "Juca" Sanches: meio off-topic, mas acho que é um assunto que o pessoal aqui talvez queira discutir (então talvez não seja tão off-topic :-P)
+
+https://www.theguardian.com/commentisfree/2026/mar/22/young-people-are-longing-for-the-low-tech-90s-and-so-would-i-if-i-could-only-remember-them
+[2026-03-22 21:23:19] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37808.jpg
+[2026-03-22 21:23:19] L.: hmmm, década de 90
+[2026-03-22 21:35:22] L.: https://noquiche.fyi/voodoo falando em década de 90
+[2026-03-22 23:25:59] Ismael Luceno: um modelo específico é muito melhor; eu estou estudando isso e as capacidades dos modelos abertos para escrever código real, mas é pouco competitivo, e até agora o único modelo fechado competitivo é claude sonnet 4.6, é o único modelo que consegue programar sem introduzir uma montante de bugs, mas não é perfeito, mas eu consegui kimi e deepseek converger mediante interaçoes de refinamento com uma "IR", Mistral em qualquer das suas versões não consegui ele seguir instruçoes e começaba a truncar as respostas
+[2026-03-22 23:27:10] Ismael Luceno: eu consegui traduzir software antigo só parcialmente mesmo que tiver o código
+[2026-03-22 23:29:47] Ismael Luceno: o meu objetivo atual é eles produzir a test suite sem erros

@@ -1,0 +1,23 @@
+[2026-10-28 14:04:32] Felipe "Juca" Sanches: Eu tô com uma sensação de que talvez postergue novamente esse mês...
+[2026-10-28 14:55:45] Shideravan: Caramba....
+[2026-10-28 15:21:03] Shideravan: Pessoal, vocês viram como está o processo para engenharia reversa usando o Gemini 4 Argon + REA em comparação com o REA + Opus 5.5?
+[2026-10-28 15:21:36] Shideravan: Eu estava vendo que parece que o Gemini 4 está dando resultados melhores que o Opus 5.5 antes dos bloqueios da Anthropic
+[2026-10-28 15:22:17] Shideravan: Será que esse pode ser um novo caminho agora que a Anthropic começou a colocar bloqueios?
+[2026-10-28 15:23:17] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41955.jpg
+[2026-10-28 15:23:36] Shideravan: Será que isso se confirma?
+[2026-10-28 21:11:18] RicBit: o meu sistema ainda está funcionando perfeito, 0% REA
+[2026-10-28 21:11:40] RicBit: dito isso o problema do gemini é que os tokens duram meia hora por dia com sorte
+[2026-10-28 21:12:03] Shideravan: Bom ponto
+[2026-10-28 21:12:36] Shideravan: Você já testou o Gemini 4 RicBit ?
+[2026-10-28 21:13:40] RicBit: pra disasm ainda não
+[2026-10-28 21:13:55] RicBit: fiquei a semana toda fazendo uma replica de terminator
+[2026-10-28 21:15:00] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41963.jpg
+[2026-10-28 21:15:00] RicBit: trabalheira da porra
+[2026-10-28 21:17:59] RicBit: na real eu acho que o melhor nao seria nem opus nem argon, era usar deepseek. mas eu não tentei ainda.
+[2026-10-28 21:45:07] Shideravan: Não seria melhor o GLM 5.3?
+[2026-10-28 21:45:55] Shideravan: Acho que para codar o GLM tem se mostrado extremamente competitivo com esses modelos de fronteira mais famosos
+[2026-10-28 21:46:40] Shideravan: E a grande vantagem de ter um custo-benefício imbatível
+[2026-10-28 21:59:40] Shideravan: Está para sair o GLM 5.4 e se eles aumentarem a quantidade de tokens de saída e melhorar o gargalo da confiabilidade de rota melhorando o acceptance rate, ele pode ser tornar um novo xodó para esse tipo de tarefa, porque eu duvido que a z.ai esteja preocupada de ficar restringindo o uso para tarefas de engenharia reversa
+[2026-10-28 22:01:47] Shideravan: Aí vamos ver os EUA abertamente começando a tentar coibir o uso de IAs chinesas kkkkk
+[2026-10-28 22:02:12] Shideravan: Não só por causa de engenharia reversa mas porque a adoção em todo tipo de tarefa deve aumentar muito
+[2026-10-28 22:03:33] Shideravan: Mas acho muito difícil conseguirem aumentar a saída tão rapidamente, a Google deu uma exagerada nesse lance de 1M de token de saída com o Gemini 4

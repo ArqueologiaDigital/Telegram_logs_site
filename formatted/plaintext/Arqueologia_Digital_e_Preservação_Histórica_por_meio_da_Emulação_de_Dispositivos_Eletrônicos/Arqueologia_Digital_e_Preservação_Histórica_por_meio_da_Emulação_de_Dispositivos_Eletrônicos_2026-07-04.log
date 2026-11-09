@@ -1,0 +1,75 @@
+[2026-07-04 06:20:39] Felipe "Juca" Sanches: Comprei um teclado musical Technics KN7000.
+[2026-07-04 06:22:08] Felipe "Juca" Sanches: E, portanto, iniciei um processo de pesquisa sobre os arquivos de update do sistema desse teclado. Rapidamente consegui adaptar os scripts de descompressão de assets. E já tenho em mãos uma imagem da Flash com o sistema principal (mas não tenho ainda dump da ROM de boot, pois para isso precisarei escrever um pequeno trojan, semelhante ao que fiz com o KN5000)
+[2026-07-04 06:22:24] Felipe "Juca" Sanches: Aqui estão imagens extraídas da flash rom:
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39426.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39427.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39428.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39429.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39430.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39431.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39432.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39433.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39434.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39435.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39436.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39437.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39438.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39439.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39440.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39441.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39442.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39443.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39444.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39445.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39446.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39447.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39448.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39449.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39450.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39451.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39452.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39453.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39454.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39455.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39456.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39457.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39458.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39459.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39460.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39461.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39462.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39463.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39464.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39465.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39466.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39467.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39468.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39469.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39470.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39471.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39472.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39473.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39474.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39475.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39476.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39477.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39478.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39479.jpg
+[2026-07-04 06:23:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39480.jpg
+[2026-07-04 06:23:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39481.jpg
+[2026-07-04 06:23:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39482.jpg
+[2026-07-04 06:23:29] Felipe "Juca" Sanches: Benvindos a 2002 ;-)
+[2026-07-04 08:05:29] L.: 📁 D:¥Documents and Settings¥alguem¥My Documents
+[2026-07-04 08:09:53] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39485.jpg
+[2026-07-04 08:09:53] Pablo Vasques Bravo-Villalba: Achei ótima esta foto, tipo "isto é um órgão"
+[2026-07-04 08:13:06] L.: Os laptops, câmeras, gravador de SD,  e até o cartão SD mesmo são todos Panasonic. A Technics é da Matsushita?
+[2026-07-04 08:39:39] Felipe "Juca" Sanches: Sim, é.
+[2026-07-04 08:40:08] Felipe "Juca" Sanches: No MAME é src/mame/matsushita/kn5000.cpp
+[2026-07-04 08:45:02] L.: Abaixo do "sx 7000" tem "winner! Best musical!"😅
+[2026-07-04 09:03:18] Felipe "Juca" Sanches: É muito clichê! Kkkkk
+[2026-07-04 23:18:27] Shideravan: O fim da mídia física vai gerar MUITO problema no futuro para quem faz preservação, viu?
+[2026-07-04 23:18:56] Shideravan: Porque se não houver a mídia para dumpar, como você desassocia de pirataria?
+[2026-07-04 23:20:09] Shideravan: É muito louco, porque a Sony e Microsoft vão vender as mídias digitais pelo mesmo preço da mídia física ou até mais caro, já que não existirão as promoções feitas no varejo ou mercado de usados
+[2026-07-04 23:21:44] Shideravan: Mas quando o servidor deles sair do ar, bye bye e não vai ter meio de você dizer que era "dono" do jogo para você no futuro usar como quiser. O contrato de licença das plataformas digitais isenta o dono da plataforma fornecer aquele produto que você "comprou" indefinidamente, ainda que eles cobrem como se mídia física fosse
+[2026-07-04 23:23:25] Shideravan: É necessário atenção sobre os precendentes que o judiciário ao redor do mundo vai gerar com tudo isso, porque a tendência são os fabricantes terem um controle tal do mercado para poderem perseguir quem por hobby desenvolver emuladores no futuro
+[2026-07-04 23:23:54] Shideravan: Eu considero tudo isso bastante sério

@@ -1,0 +1,94 @@
+[2021-01-22 12:05:12] Felipe "Juca" Sanches: comecei a escanear os livros de Pense Bem da minha coleção e subir no datassette 😉
+[2021-01-22 12:05:22] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12107.jpg
+[2021-01-22 12:05:22] Felipe "Juca" Sanches [forwarded]: https://datassette.org/livros/br-brasil-pense-bem-livros/pense-bem-especial-volta-ao-mundo
+[2021-01-22 12:05:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12108.jpg
+[2021-01-22 12:05:31] Felipe "Juca" Sanches [forwarded]: https://datassette.org/livros/br-brasil-pense-bem-livros/pense-bem-especial-sonic-e-tails-em-alta-velocidade
+[2021-01-22 16:08:32] pitanga: Coitado do (da?) Tails, nem logo tinha
+[2021-01-22 18:45:38] pitanga: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12110.jpg
+[2021-01-22 18:46:05] pitanga: Alguem sabe qual a fonte usada nesses videokes dos anos 2k?
+[2021-01-22 18:50:55] Erin Pinheiro 🐿: não é o mesmo mas https://www.dafont.com/vcr-osd-mono.font
+[2021-01-22 18:54:35] Aylons Hazzud: O livro trata no masculino
+[2021-01-22 19:02:22] Felipe "Juca" Sanches: eu tenho esse videokê aqui em casa. Desse EXATO modelo: VMP-3700plus (Na verdade tenho 2 deles. Um quebrado e outro funcionando)
+[2021-01-22 19:02:53] Felipe "Juca" Sanches: se pá deve dar pra extrair a fonte da EPROM
+[2021-01-22 19:03:01] Felipe "Juca" Sanches: (óbvio que eu já fiz os dumps)
+[2021-01-22 19:03:30] Erin Pinheiro 🐿: uuu, passa, eu tento achar
+[2021-01-22 19:03:35] Felipe "Juca" Sanches: mas, pitanga... a pergunta que não quer calar... por que?
+[2021-01-22 19:03:45] Felipe "Juca" Sanches: ok
+[2021-01-22 19:04:44] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12120-cmp2ks.odd_rev_6.1.u13
+[2021-01-22 19:04:45] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12121-cmp2ks.evn_rev_6.1.u20
+[2021-01-22 19:06:10] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12122-vmp3700.u1
+[2021-01-22 19:06:38] Felipe "Juca" Sanches: os arquivos cmp2ks são de um outro aparelho de videokê da raf também. A ROM do VMP3700 é esse último arquivo que mandei agora
+[2021-01-22 19:08:27] Felipe "Juca" Sanches: me lembrei agora que na verdade tenho 3 videokês da Raf aqui kkkk (2 do modelo vmp3700 e 1 do modelo vmp2000s)
+[2021-01-22 19:12:18] Felipe "Juca" Sanches: agora o pitanga vai dizer algo do tipo: "não esperava menos de você, juquinha!"
+[2021-01-22 19:12:31] pitanga: Essa é a pergunta que eu queria fazer ao enviar a resposta para a pessoa que perguntou
+[2021-01-22 19:13:06] Felipe "Juca" Sanches: ah! É uma curiosidade de terceiro?
+[2021-01-22 19:14:10] pitanga: Sim. Não sei para que ele quer mas tinha certeza que alguem q eu conheço saberia 😂
+[2021-01-22 19:19:26] RicBit: little endian ou big endian?
+[2021-01-22 19:19:30] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12130.jpg
+[2021-01-22 19:20:12] Erin Pinheiro 🐿: tem que fazer o interleave da even e odd...
+[2021-01-22 19:20:22] Erin Pinheiro 🐿: @fsanches tu tem um util pronto pra fazer isso pra mim já?
+[2021-01-22 19:30:25] Felipe "Juca" Sanches: não sabemos nada
+[2021-01-22 19:31:56] Felipe "Juca" Sanches: não tenho. Mas um pythonzinho de poucas linhas resolve
+[2021-01-22 19:32:10] Erin Pinheiro 🐿: já tava tentando mas ainda não consegui fazer direito :P
+[2021-01-22 19:32:45] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12136.jpg
+[2021-01-22 19:32:45] Erin Pinheiro 🐿: ficou corrompido na minha tentativa
+[2021-01-22 19:34:19] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12137.jpg
+[2021-01-22 19:34:19] Erin Pinheiro 🐿: aha!
+[2021-01-22 19:34:29] Erin Pinheiro 🐿: @rodrigopitanga isso ajuda?
+[2021-01-22 19:37:10] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12139.jpg
+[2021-01-22 19:37:10] Erin Pinheiro 🐿: com os offsets certos
+[2021-01-22 19:37:23] Erin Pinheiro 🐿: existe mais de uma fonte, essa tem 32px de largura, encontrei outras de 16px e 12px
+[2021-01-22 19:37:55] Erin Pinheiro 🐿: binxelview é amor
+[2021-01-22 19:38:13] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12142-interleave.py
+[2021-01-22 19:38:25] Erin Pinheiro 🐿: eu corrigi o meu já heuhaeuh desculpa juca
+[2021-01-22 19:38:25] Felipe "Juca" Sanches: nesse meio tempo escrevi o python que vc nao precisa mais kkk
+[2021-01-22 19:38:35] Felipe "Juca" Sanches: nao tem problema
+[2021-01-22 19:39:02] Erin Pinheiro 🐿: mas aí fica pra você a dica do binxelview quando quiser extrair bitmaps de binários :)
+[2021-01-22 19:39:09] Erin Pinheiro 🐿: é uma mão na roda incrível
+[2021-01-22 19:39:49] Felipe "Juca" Sanches: muito bom!
+[2021-01-22 19:40:05] Erin Pinheiro 🐿: vou extrair todas e já mando um zip bonitinho
+[2021-01-22 19:40:54] Felipe "Juca" Sanches: você chegou a ver algo que pareca ser a arte do logotipo da raf electronics tambem?
+[2021-01-22 19:40:59] Erin Pinheiro 🐿: ainda não
+[2021-01-22 19:41:04] Erin Pinheiro 🐿: caço assim que terminar as fontes
+[2021-01-22 19:41:20] Erin Pinheiro 🐿: qtas cores ele tem pra ajudar a chutar o bpp?
+[2021-01-22 19:41:32] Felipe "Juca" Sanches: existe a possibilidade de estar em alguma outra ROM na placa. Nao tenho certeza se essa é a única ROM do sistema
+[2021-01-22 19:41:51] Felipe "Juca" Sanches: nao sei, precisariamos olhar umas capturas de tela
+[2021-01-22 19:42:00] Felipe "Juca" Sanches: aqui, por exemplo
+[2021-01-22 19:42:08] Erin Pinheiro 🐿: ah!
+[2021-01-22 19:43:47] Erin Pinheiro 🐿: acho que me enganei sobre serem 3 fontes, acho que só tem 2
+[2021-01-22 19:45:08] pitanga: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12159-sticker.webp
+[2021-01-22 19:45:32] Felipe "Juca" Sanches: sabe o que seria divertido?
+Fazer um programinha em python que faz esse decode aí com esses enderecos e parametros e, tendo os bitmaps em mãos, usa a API do fontTools pra gerar uma fonte TTF
+[2021-01-22 19:45:39] Felipe "Juca" Sanches: entra ROM, sai TTF kkk
+[2021-01-22 19:45:52] Erin Pinheiro 🐿: acho que achei o logo "Videokê"
+[2021-01-22 19:46:37] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12163.jpg
+[2021-01-22 19:46:37] Erin Pinheiro 🐿: quase
+[2021-01-22 19:48:05] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12164.jpg
+[2021-01-22 19:48:05] Erin Pinheiro 🐿: tem coisa aqui sim, só não acertei os parâmetros ainda
+[2021-01-22 19:53:44] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12165.jpg
+[2021-01-22 19:53:44] Erin Pinheiro 🐿: esse é o mais próximo que cheguei, não consigo achar o formato certo pra informação que tem acima do logo
+[2021-01-22 19:54:29] Erin Pinheiro 🐿: aqui as fontes, mas falta cortar
+[2021-01-22 19:54:29] Erin Pinheiro 🐿: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12167-fonte-24x36.png
+[2021-01-22 19:54:29] Erin Pinheiro 🐿: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12168-fonte-32x48.png
+[2021-01-22 19:54:35] Erin Pinheiro 🐿: @rodrigopitanga
+[2021-01-22 19:57:14] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12170.jpg
+[2021-01-22 19:57:14] Erin Pinheiro 🐿: aposto que tem RLE aqui
+[2021-01-22 19:57:23] Erin Pinheiro 🐿: a silhueta parece do leãozinho
+[2021-01-22 20:01:54] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12172.jpg
+[2021-01-22 20:01:54] Erin Pinheiro 🐿: olha! strings!
+[2021-01-22 20:03:51] pitanga: https://github.com/ali1234/bitmap2ttf
+[2021-01-22 20:04:20] pitanga: Só precisa de algo para juntar os BMP e criar a fonte BMP. Alguem já deve ter feito, né?
+[2021-01-22 20:06:10] pitanga: Valeeeu
+[2021-01-22 20:08:30] Erin Pinheiro 🐿: agora to vendo a outra rom
+[2021-01-22 20:08:35] Erin Pinheiro 🐿: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12177-vmp3700-24x48.png
+[2021-01-22 20:10:58] Erin Pinheiro 🐿: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12178-vmp3700-20x36.png
+[2021-01-22 20:12:25] Erin Pinheiro 🐿: nesse aposto que as imagens estão comprimidas, não achei nada além das fontes de olho
+[2021-01-22 20:15:38] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12180.jpg
+[2021-01-22 20:15:38] Erin Pinheiro 🐿: achei um telefone de 7 dígitos : ^)
+[2021-01-22 20:15:47] pitanga: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12181.jpg
+[2021-01-22 20:16:05] pitanga: Será que achei um easter egg?
+[2021-01-22 20:17:04] Erin Pinheiro 🐿: sim, no alfabeto... vc encontrou o fato de que G, N e U estão equidistantes xD
+[2021-01-22 20:18:13] pitanga: 👾👾
+[2021-01-22 20:37:27] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12185.jpg
+[2021-01-22 20:37:27] Erin Pinheiro 🐿: @fsanches acho que o logo do leãozinho tá num formato de bloco com cor indexada
+[2021-01-22 20:37:40] Erin Pinheiro 🐿: olha a repetição ali

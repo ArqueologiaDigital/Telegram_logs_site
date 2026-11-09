@@ -1,0 +1,88 @@
+[2026-11-03 00:16:00] Shideravan: Ciclos do MAME
+
+0.289 "Que saudades quando o MAME tinha lançamentos mensais"
+0.290 "Que saudades quando o MAME tinha lançamentos"
+[2026-11-03 02:49:36] RicBit: eu nao entendo a nóia de lançamentos, build from HEAD e boa
+[2026-11-03 06:03:10] Felipe "Juca" Sanches: Um lançamento é um ato de cuidado com a base de usuários, que não necessariamente sabe fazer coisas técnicas como compilar software.
+
+É também um momento de receber uma quantidade maior de feedback da comunidade.
+
+E, por fim, também é um tipo de celebração de um ciclo concluído, onde podemos ter o gostinho de dizer: fui eu que fiz! Me orgulho do produto final.
+
+Ou até mesmo um deadline artificial que nos faz correr um pouquinho mais pra tentar deixar no melhor estado possível como algo apresentável ao público, mesmo que ainda incompleto.
+[2026-11-03 08:27:00] Emerson BRANCORP2000: O q ficou marcado em mim foi a revista CPU MSX com um carro de F1 na capa, falando do TURBO R
+[2026-11-03 08:32:33] Érico Andrei: Boa lembrança
+[2026-11-03 10:45:01] Felipe "Juca" Sanches: Eu lembro de ter visto na biblioteca da engenharia elétrica na Poli uma revista antiga que dizia na capa: "486 DX4, a Ferrari dos PCs!"
+[2026-11-03 10:45:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42054.jpg
+[2026-11-03 11:46:42] Shideravan: A comunidade do MAME não são só os devs
+[2026-11-03 11:46:53] Shideravan: Usuários leigos não compilam
+[2026-11-03 11:47:31] Shideravan: Galera que mantém os extras do MAME se baseiam em lançamentos oficiais
+[2026-11-03 11:48:45] Shideravan: Os frontends se baseiam em lançamentos oficiais
+[2026-11-03 11:49:16] Shideravan: Tudo funciona ao redor dos lançamentos
+[2026-11-03 11:50:49] Shideravan: Eu por exemplo, estou esperando o MAME iniciar um novo ciclo antes de fazer contribuições
+[2026-11-03 11:51:40] RicBit: Enquanto isso, eu aqui tinha falado que o ys3 estava ruim no webmsx porque o webmsx era ruim
+[2026-11-03 11:52:01] RicBit: Mudei de ideia, agora eu acho que o webmsx estava certo e o openmsx que é ruim
+[2026-11-03 11:52:27] RicBit: Eu preciso testar no hardware pra confirmar, mas consertar o turbor ainda demora um pouco
+[2026-11-03 11:52:29] Felipe "Juca" Sanches: E eu tenho um driver de impressora 3D com mudança mais profunda no layout de renderização que julgo nao ser adequado enviar às vésperas de um release.
+[2026-11-03 11:52:36] Shideravan: Do jeito que está, dá a sensação que eles não estão dando conta de cumprir com os lançamentos do ciclo e minhas contribuições vão se perder no limbo, já que nem o que eles estabeleceram prazo para fazer que são os lançamentos eles não estão fazendo kkkk
+[2026-11-03 11:52:48] RicBit: Então hoje eu vou tentar rodar no hotbit.
+[2026-11-03 11:53:19] Shideravan: Tem toda uma questão até psicológica envolvendo fechamento de cada ciclo de release
+[2026-11-03 11:53:28] RicBit: Vai ser engraçado rodar ys3 no hotbit stock
+[2026-11-03 11:53:42] Shideravan: É muito ruim para a comunidade do MAME essas incertezas
+[2026-11-03 11:53:58] Felipe "Juca" Sanches: Era uma vez por mes, mudou a política pra ser a cada 2 meses. Aí houve um atraso jogando pro terceiro mês. Agora estamos entrando no quarto mes e ninguém nem toca no assunto...
+[2026-11-03 11:54:27] Felipe "Juca" Sanches: Quando eu toquei no assunto, levei invertida.
+[2026-11-03 11:54:28] Shideravan: Dá uma sensação de "crise" no projeto
+[2026-11-03 11:54:56] Shideravan: Eu já não pergunto mais nada para os dinossauros do MAME porque eles tem essa arrogância
+[2026-11-03 11:55:32] Felipe "Juca" Sanches: Dá a sensação de que o Cuavas não gosta de IA, mas não tem poder suficiente para proibir. Com isso ele está sobrecarregado, mas não larga o osso.
+[2026-11-03 11:55:38] Shideravan: Aliás, um dos motivos que eu passei a contribuir mais em outros projetos como o Ares do que no MAME foi porque eu acho a galera lá muito toxica
+[2026-11-03 11:56:38] Shideravan: Eu acho que o arbee seria mais competente para dirigir o MAME no ciclo atual, já que ele sabe lidar melhor com IA
+[2026-11-03 11:57:01] Felipe "Juca" Sanches: E acho que é o que vai acontecer
+[2026-11-03 11:57:30] Shideravan: Não tem problema nenhum do cuavas não dar conta, então passa o bastão para quem consegue
+[2026-11-03 11:57:38] Felipe "Juca" Sanches: acho que o Cuavas vai surtar e o Arbee vai assumir o posto. Mas ninguém falou nada. Isso é 100% especulação minha.
+[2026-11-03 11:57:40] Shideravan: Tem bastante gente competente no MAME
+[2026-11-03 11:58:40] Shideravan: briga de dinossauro isso
+[2026-11-03 11:58:50] Shideravan: Tipo um Primal Rage 3
+[2026-11-03 13:28:34] RicBit: ugh, não rodou, e não rodou do mesmo jeito do turboR. então ou meu codigo de init de v9990 tá bichado ou meu cart tá bichado.
+[2026-11-03 13:29:02] RicBit: nao tem motivo pro cart estar bichado, o turboR eu entendo porque é velho, mas o cart não tem nem 5 anos ainda
+[2026-11-03 13:30:20] RicBit: eu ainda posso testar em outro hotbit, ou então usar a saida vga ao inves da saida cvbs
+[2026-11-03 13:30:47] RicBit: mas o pvm não tem vga então vai ter que ser nesse monitor do pc
+[2026-11-03 13:31:20] RicBit: enfim a vida do retro developer
+[2026-11-03 13:33:49] RicBit: a tela tá cheia de glitches e BW
+[2026-11-03 13:34:03] RicBit: cheia de glitches normalmente é ram, mas BW não bate com ram bichada
+[2026-11-03 13:34:33] RicBit: bw parece algum registro que eu não setei
+[2026-11-03 16:02:55] Ismael Luceno: boa tarde/noite; estou desenvolvendo uma linguagem de programação e estou precisando ajuda com o nome!
+[2026-11-03 16:16:44] RicBit: Chama de Capivara
+[2026-11-03 16:18:11] L.: eu tava fazendo um compilador python quando tava no time de cpython da ms chamado capy 🙃
+[2026-11-03 16:18:47] Ismael Luceno: é compilado e vai ter suporte para plataformas retro :)
+[2026-11-03 16:19:02] Ismael Luceno: ja tenho implementado x86_64
+[2026-11-03 16:20:47] Ismael Luceno: vou tentar atingir suporte completo para 16 e 32 bits na x86, e depois acho que começarei com alguma CPU de 8 bits
+[2026-11-03 16:23:19] RicBit: Guarda-chuva é um bom nome também
+[2026-11-03 16:33:59] Jecel Assumpcao Jr: dois nomes horríveis de linguagem são "Self" (a minha favorita) e "Go". É bem complicado buscar por elas e ai você tem que fazer algo como "golang" para contornar isso
+[2026-11-03 16:44:22] RicBit: Puts eu estava lá quando decidiram nomear a linguagem como Go, na hora todo mundo achou o máximo.
+[2026-11-03 16:47:18] RicBit: com o android foi a mesma coisa, a idéia era que nem precisava se preocupar com seo, porque se ficasse popular o termo naturalmente iria subir na busca.
+[2026-11-03 16:47:48] RicBit: dito isso, eu fui a primeira pessoa a procurar android no google.
+[2026-11-03 16:48:47] Jecel Assumpcao Jr: a Guerra nas Estrelas popularizou "droid" de modo que este termo e "robot" são mais comuns que "android"
+[2026-11-03 16:49:19] RicBit: eu trabalhava no google health e era responsavel por buscas de remedios. na epoca, se voce buscasse um remedio, aparecia uma caixinha dizendo "voce tambem pode procurar pelos sintomas x y z ou equivalente a b c". e tem um remedio chamado android que é pra reposicao hormonal.
+[2026-11-03 16:50:56] RicBit: aí no dia do lançamento do android, eu tinha que tirar esse remedio da lista que disparava a caixinha exatamente na hora do lançamento. quando anunciaram publicamente o android, às 9:00, exatamente nesse horario eu fiz o push que tirava a caixinha e busquei por android pra forçar o cache eviction.
+[2026-11-03 16:51:52] Jecel Assumpcao Jr: trata "andropause" e "hemorroid" ao mesmo tempo? 😉
+[2026-11-03 16:53:45] RicBit: se um dia inventarem um nanorobô que substitui as celulas vermelhas do sangue, ele tem que chamar hemoroid
+[2026-11-03 16:57:13] Jecel Assumpcao Jr: Eu criei um processador de 8 bits chamado Baby8 e defini uma linguagem para ele chamada Bla (Baby 8 LAnguage). O nome dá uma idéia boa da qualidade dela
+[2026-11-03 16:57:42] Jecel Assumpcao Jr: https://github.com/jeceljr/baby8/blob/main/examples/bla/bla.md
+[2026-11-03 17:07:57] RicBit: a ultima linguagem que eu fiz foi a namagiri mesmo, preciso parar para publicar algum dia.
+[2026-11-03 17:08:00] RicBit: https://gist.github.com/ricbit/9c6caa08682de26a2771cf4451070da6
+[2026-11-03 17:10:42] RicBit: nem o gbzin eu publiquei ainda, a nóia de consertar o v9990 me impede
+[2026-11-03 17:18:38] L.: esse android aí que deve dar uma boa recepção de 5G, e não as vacinas
+[2026-11-03 19:10:30] RicBit: well novo round de testes. rodei outros jogos v9990 no hotbit e funcionam, mas BW. se funcionam então certeza que eu estou inicializando alguma coisa errada nos registros. achei também um led no pvm que diz se detectou ntsc ou pal, e não acendeu neenhum, então pelo menos no composto o cart não está gerando a subportadora de cor. descobri tambem que meu monitor do pc não tem vga. então o proximo passo é fazer um adaptor de vga pra 4 coaxiais (ugh), e revisar os registros nos outros jogos.
+[2026-11-03 19:11:13] RicBit: o bug é muito peculiar, os sprites ficam todos malucos. provavelmente eu descobri sem querer algum modo secreto
+[2026-11-03 19:11:36] RicBit: e eu achei o bug na emulacao do openmsx e já escrevi um patch, mas sem testar no hardware eu nao tenho como mandar
+[2026-11-03 19:16:52] Pablo Vasques Bravo-Villalba: Qual é seu cart?
+[2026-11-03 19:26:59] RicBit: Tecnobytes versão grande
+[2026-11-03 19:27:09] Pablo Vasques Bravo-Villalba: 🤔
+[2026-11-03 19:28:02] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42119.jpg
+[2026-11-03 19:28:02] RicBit: A gata está nervosa, ela quer jogar ys3
+[2026-11-03 19:32:03] RicBit: Mas olha, parece que tem um pixel sim e um pixel não para cada sprite. Normalmente isso acontece quando você seta o modo para P1 e a RAM para B1, aí os pixels entrelaçam na horizontal
+[2026-11-03 19:32:23] RicBit: Quer dizer, pelo menos é isso que acontece no v9958
+[2026-11-03 20:19:38] RicBit: canseira ficar indo e vindo com arquivos, vou botar o agente pra controlar direto o hotbit
+[2026-11-03 21:13:55] RicBit: Puts eu acho que era isso mesmo
+[2026-11-03 21:15:39] RicBit: Então são dois bugs que eu vou ter que mandar pro openmsx
+[2026-11-03 21:15:44] RicBit: Mais o modo secreto

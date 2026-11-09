@@ -1,0 +1,38 @@
+[2022-06-18 02:05:27] L.: https://twitter.com/hackaday/status/1538024027222028288?t=sXcWuu2rGxi_IiEmLDngSA&s=09
+[2022-06-18 02:06:22] Felipe "Juca" Sanches: Essa pessoa aí tem participado do issue tracker do MAME reportando coisas que não funcionam direito na emulação da placa Naomi e que foram descobertas durante o desenvolvimento desse port do DOOM
+[2022-06-18 02:07:42] Felipe "Juca" Sanches: por exemplo aqui:
+
+https://github.com/mamedev/mame/pull/9745
+[2022-06-18 11:01:54] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/74
+[2022-06-18 11:02:37] Pedro de Medeiros 👾: A implementação mais completa desse PR está no ncurses.
+[2022-06-18 11:12:35] Felipe "Juca" Sanches: da hora
+[2022-06-18 11:13:05] Felipe "Juca" Sanches: me avisa quando estiver pronto para o merge, pois eu tava revisando e quando terminei vi que você fez mais um commit hahaha
+[2022-06-18 11:13:27] Pedro de Medeiros 👾: Tá. Acho que não vou mexer mais. Estava só arrumando a macro UNUSED. 😁
+[2022-06-18 11:14:17] Felipe "Juca" Sanches: olha meu terminal agora mesmo:
+[2022-06-18 11:14:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21710.jpg
+[2022-06-18 11:15:04] Felipe "Juca" Sanches: compilando o compilador
+[2022-06-18 11:15:11] Felipe "Juca" Sanches: pra poder fazer um port pra MSDOS
+[2022-06-18 11:16:12] Felipe "Juca" Sanches: me incomoda não existirem pacotes Debian desse GCC pra X86 16-bits
+[2022-06-18 11:16:38] Felipe "Juca" Sanches: Tem um PPA pra Ubuntu, então talvez até dê pra reaproveitar isso no Debian, mas eu não tenho certeza de como se faz
+[2022-06-18 11:17:37] Felipe "Juca" Sanches: o ideal seria alguém submeter esses pacotes pro Debian mesmo. Mas não me lembro mais como se faz, pois fui um aluno com déficit de atenção no curso de empacotamento para debian do professor @kretcheu
+[2022-06-18 11:24:18] Pedro de Medeiros 👾: Isso funciona no Debian?  sudo add-apt-repository ppa:<endereco>/ppa
+[2022-06-18 11:24:52] Pedro de Medeiros 👾: Provavelmente não.
+[2022-06-18 11:26:30] Felipe "Juca" Sanches: me dá medo tentar uma coisa dessas kkk
+[2022-06-18 11:27:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21719.jpg
+[2022-06-18 11:27:05] Felipe "Juca" Sanches: você já tropeçou numa tela dessas?
+[2022-06-18 11:27:08] Pedro de Medeiros 👾: Qualquer coisa faz backup do seu /etc/apt
+[2022-06-18 11:27:34] Felipe "Juca" Sanches: pressionei N em cima de uma bomba explodida e apareceu essa baguncinha aí
+[2022-06-18 11:27:54] Felipe "Juca" Sanches: tentei outras vezes e nem sempre acontece. Mas consegui reproduzir o bug depois de tentar algumas vezes
+[2022-06-18 11:28:48] Pedro de Medeiros 👾: Não. Vou tentar aqui mais tarde.
+[2022-06-18 11:29:32] Felipe "Juca" Sanches: merged!
+[2022-06-18 11:50:34] kretcheu: Vamos marcar um dia para ver Isso!!
+[2022-06-18 11:56:44] Felipe "Juca" Sanches: vamos sim!
+[2022-06-18 14:54:14] Felipe "Juca" Sanches: https://twitter.com/veepixels/status/1422194043677822976
+[2022-06-18 14:57:19] Felipe "Juca" Sanches: https://twitter.com/veepixels/status/1422196013146775557
+[2022-06-18 15:18:36] Felipe "Juca" Sanches: Acabei de perceber que esse port do GCC usa um assembler não-livre com aquela licença problemática OpenWatcom
+[2022-06-18 16:37:23] L.: Que esquisito! Eu acho que tem um GCC que usa o gas ou o nasm pra x86 16 bit por que o Linux usava isso pra umas coisas
+[2022-06-18 16:37:28] L.: Calma aí que eu acho
+[2022-06-18 16:39:33] L.: The -m16 option is the same as -m32, except for that it outputs the .code16gcc assembly directive at the beginning of the assembly output so that the binary can run in 16-bit mode.
+[2022-06-18 16:39:40] L.: Isso é o que o Linux usa
+[2022-06-18 16:40:18] L.: Não sei o quão 8086-compativel é isso. Pode ser que não rode em 8086, 186, 286, e precise de 386+
+[2022-06-18 20:54:08] L.: https://youtu.be/NAHJVa4Gkm4

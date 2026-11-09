@@ -1,0 +1,32 @@
+[2019-06-28 00:45:44] L.: Massa demais!  :D
+[2019-06-28 00:45:54] L.: Aproveita que o MS-DOS é livre agora também :)
+[2019-06-28 00:45:58] Felipe "Juca" Sanches: 😊
+[2019-06-28 00:46:14] L.: (Aliás, tô tentando abrir código de mais velharia da Microsoft. Já achei uns contatos mas é foda.)
+[2019-06-28 00:46:41] Felipe "Juca" Sanches: eu to com uma idéia maluca na cabeça... de enfiar alley-cat numa EPROM e bootar sem precisar de disquete nem sistema operacional. Uma versão bare-metal de alleycat
+[2019-06-28 00:47:07] L.: Eu acho que você comprou esse kit justamente pra isso, pra enfiar na máquina de arcade do Garoa
+[2019-06-28 00:47:13] Felipe "Juca" Sanches: kkkk
+[2019-06-28 00:47:15] Felipe "Juca" Sanches: jura?
+[2019-06-28 00:48:02] Felipe "Juca" Sanches: eu comprei esse kit pra inventar moda
+[2019-06-28 00:48:12] Felipe "Juca" Sanches: simples assim
+[2019-06-28 00:53:53] Felipe "Juca" Sanches: Eu comprei esse kit pra inventar moda, sim. Mas tem também um lance simbólico com a minha infância. Me lembro de ver dicas de programação em QBASIC que envolviam usar operações de INP e OUT pra interfacear com hardware de vídeo, mouse, teclado, speaker, etc... E tudo aquilo era muito enigmático. De onde vêm esses números? Por que é tudo tão complicado e esquisito? Então com o passar do tempo aprendi assembly, desenvolvi minhas próprias técnicas de engenharia reversa, me enfiei em projetos de desenvolvimento de emuladores, estudei eletronica digital, tudo em busca de entender como é que funcionam essas coisas. Voltar ao mais antigo dos PCs e montá-lo com minhas próprias mãos, um chip por vez, é como um ritual com forte significado na minha vida. Acho que é mais ou menos como se sentem alpinistas, por exemplo. Muita gente acha sem sentido alguém escalar uma montanha. Mas pra quem o faz, há motivos e simbologias em jogo.
+[2019-06-28 00:55:12] L.: Pois é. Sei bem como é isso. Eu tô montando um MSX2 pelo mesmo motivo. Só consegui entender como funciona o esquema de slot/subslot do MSX estudando o circuito.
+[2019-06-28 00:56:28] Felipe "Juca" Sanches: Exatamente! 😃
+[2019-06-28 01:04:54] L.: Não que seja um conhecimento útil :D Mas finalmente entender alguma coisa depois de ficar anos boiando em discussões do povo lá em Jaú...
+[2019-06-28 01:05:59] Felipe "Juca" Sanches: sim... sim... não é uma questão de utilidade. É uma questão de prazer pelo domínio da técnica.
+[2019-06-28 01:25:10] Felipe "Juca" Sanches: @netoarmando e @andre_bla, em breve pretendo fazer um relato detalhado desse projeto no Fórum Fiozera!
+[2019-06-28 01:26:10] Felipe "Juca" Sanches: Pra quem não conhece ainda... https://forum.fiozera.com.br/
+[2019-06-28 10:14:07] Felipe "Juca" Sanches: Não é software nem hardware. E nem digital. Mas é uma história que nos lembra de como coisas muito importante são diversas vezes tratadas como lixo: https://www.reuters.tv/v/PArr/2019/06/27/sotheby-s-to-auction-apollo-11-moon-landing-tapes
+[2019-06-28 10:28:33] FTMaciel: Aqui tem a última versão.
+[2019-06-28 10:28:36] FTMaciel: http://www.phatcode.net/downloads.php?id=101
+[2019-06-28 10:59:39] Felipe "Juca" Sanches: https://www.kickstarter.com/projects/wayo/little-big-adventure-symphonic-suite
+[2019-06-28 15:00:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-06/9787.jpg
+[2019-06-28 15:00:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-06/9788.jpg
+[2019-06-28 16:07:39] Ismael Luceno: boa tarde galera
+[2019-06-28 16:10:59] Ismael Luceno: OT: estive fazendo um port da Source Mage para x86_64 com musl libc: http://dl.iodev.co.uk/sourcemage/rootfs/
+[2019-06-28 16:20:45] kretcheu: O que dá para rodar aí?
+GNU? Free-DOS?
+[2019-06-28 16:49:59] FTMaciel: Tá usando a saída Composite da placa CGA?
+[2019-06-28 16:51:00] FTMaciel: Depois ve o modelo do chip e bota o circuito da saída composta pra poder adicionar nas placas que não tenham essa saída. Eu vi algumas que não tem
+[2019-06-28 17:47:44] L.: Rola usar até o MS-DOS original, que agora é MIT. :)
+[2019-06-28 17:48:02] L.: Tem pouca memória pra rodar um FreeDOS eu acho
+[2019-06-28 20:55:32] L.: Falando em FreeDOS, tá fazendo 25 anos já! https://lwn.net/Articles/792355/

@@ -1,0 +1,9 @@
+[2021-05-01 06:30:08] Flávio Amieiro: Bom saber!
+[2021-05-01 06:31:15] Flávio Amieiro: Pois é. A primeira versão é de 87 pro zx spectrum. Mas ele ainda vende licença mesmo. Tem uma versão free com certa limitações, e aí você pode pagar pra tirar as limitações...
+[2021-05-01 16:38:48] L.: @fsanches Mudei meu blog pra usar pikchr, e refiz uns diagramas na linguagem dele: https://tia.mat.br/posts/2014/10/06/life_of_a_http_request.html
+
+Fica bem melhor que PNG ali... é SVG embutido no HTML, que é comprimido junto com o resto da página. Dá pra selecionar texto, é vetorial, etc.
+[2021-05-01 16:38:56] L.: (Esse é um blog post velho com dois diagramas.)
+[2021-05-01 16:40:41] Felipe "Juca" Sanches: da hora!
+[2021-05-01 16:41:01] Felipe "Juca" Sanches: vi que tem umas caixinhas com texto estourando pra fora: "{{#sequence}}"
+[2021-05-01 21:35:44] L.: Estranho, aqui não estoura :(

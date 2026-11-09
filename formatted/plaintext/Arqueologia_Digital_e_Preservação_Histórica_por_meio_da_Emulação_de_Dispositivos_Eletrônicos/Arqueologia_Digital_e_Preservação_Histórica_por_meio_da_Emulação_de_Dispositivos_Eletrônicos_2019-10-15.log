@@ -1,0 +1,24 @@
+[2019-10-15 04:08:54] Felipe "Juca" Sanches: https://games.slashdot.org/story/19/10/15/0013215/internet-archive-releases-2500-ms-dos-games
+[2019-10-15 06:07:05] Ricardo Bánffy: O cool-retro-term?
+[2019-10-15 10:44:02] Ismael Luceno: sim?
+[2019-10-15 10:44:22] Ismael Luceno: acho que debe ser o mesmo
+[2019-10-15 11:51:49] Ricardo Bánffy: Eu até usava o CRT na Canonical, mas aqui na Workday me deram um Mac.
+[2019-10-15 11:52:55] Ricardo Bánffy: Mudando de assunto, será que tem jeito de usar as emulações de VT-xxx do MAME como terminal num Unix?
+[2019-10-15 18:31:04] Ismael Luceno: claro que é possível, só há que conectar a porta serial a um pseudo-tty.
+[2019-10-15 18:34:33] Felipe "Juca" Sanches: não tenho certeza de como se faz isso, mas já vi coisas similares. Por exemplo, o Ramiro Polla interfaceou o GIMP (ou qualquer programa que imprima em /dev/lpt0) com a emulação no MAME de uma matricial EPSON
+[2019-10-15 18:34:44] Felipe "Juca" Sanches: ele interfaceou até mesmo com o CUPS
+[2019-10-15 18:36:17] Felipe "Juca" Sanches: http://blog.arrozcru.org/?p=11
+[2019-10-15 18:36:41] Felipe "Juca" Sanches: http://blog.arrozcru.org/?p=38
+[2019-10-15 18:36:55] Felipe "Juca" Sanches: http://blog.arrozcru.org/?p=122
+[2019-10-15 18:37:05] Felipe "Juca" Sanches: vejam esses 3 blogposts em sequencia
+[2019-10-15 18:41:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-10/10264.jpg
+[2019-10-15 18:41:58] Felipe "Juca" Sanches: e depois esse vídeo:
+
+https://www.youtube.com/watch?v=TwgGlEtEzWo
+[2019-10-15 18:48:16] Ismael Luceno: no caso dos tty é até mais simples, não têm mais que ler e escrever do dispositivo virtual
+[2019-10-15 18:51:05] Ismael Luceno: creio que é assim: mame vt240 -bitb /dev/ttyXXXX
+[2019-10-15 18:51:49] Ismael Luceno: provavelmente têm que dar outros parâmetros
+[2019-10-15 18:52:02] Ismael Luceno: para a velocidade, etc
+[2019-10-15 18:58:56] Ismael Luceno: acho que pode usar alguma implementação de openvt para lançar o mame direitinho
+[2019-10-15 18:59:46] Ismael Luceno: só tem que usar forkpty no lugar do open da vtty
+[2019-10-15 19:03:36] L.: Eu tava na hora que ele tava fazendo isso. Foi um hackzão criando pipes nomeados no dosbox e no mame, e fazendo o dosbox interceptar as ints de impressora do DOS pra escrever no pipe

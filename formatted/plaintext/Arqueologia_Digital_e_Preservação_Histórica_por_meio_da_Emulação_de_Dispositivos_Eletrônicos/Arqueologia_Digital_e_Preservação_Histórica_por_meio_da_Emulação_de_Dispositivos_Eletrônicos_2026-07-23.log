@@ -1,0 +1,8 @@
+[2026-07-23 06:05:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39752.jpg
+[2026-07-23 06:05:57] Felipe "Juca" Sanches: Agora investigando semelhanças no tone-generator LSI usado no KN5000, se comparado ao usado no KN7000 (ou também nos KN6000 e KN6500)
+[2026-07-23 06:07:12] Felipe "Juca" Sanches: Emular uma família de equipamentos semelhantes resulta em refactoring isolando funcionalidades comuns do chipset e delegando apenas os detalhes para subclasses
+[2026-07-23 06:08:01] Felipe "Juca" Sanches: aos poucos vai nascendo uma biblioteca de emuladores de todo o chipset do fabricante
+[2026-07-23 16:25:13] RicBit: sisne com 60% das funções descompiladas -> https://github.com/ricbit/sisne
+[2026-07-23 23:29:35] Pedro de Medeiros 👾: https://youtu.be/Nb3GSJZOruY sobre preservação e jogos perdidos
+[2026-07-23 23:31:55] RicBit: para mim a parte mais assustadora do sisne é a quantidade de variaveis globais
+[2026-07-23 23:32:22] RicBit: eles ainda não ensinavam na escola dominical que é pecado escrever sistema operacional não-reentrante.

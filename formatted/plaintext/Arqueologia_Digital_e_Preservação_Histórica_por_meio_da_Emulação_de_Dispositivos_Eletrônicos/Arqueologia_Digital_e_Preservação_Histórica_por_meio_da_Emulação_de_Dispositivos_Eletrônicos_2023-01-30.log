@@ -1,0 +1,47 @@
+[2023-01-30 02:08:41] L.: https://github.com/snesrev/zelda3
+[2023-01-30 02:10:25] L.: Zelda de SNES descompilado e compilavel!
+[2023-01-30 12:32:35] Sebastiao Barretto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25643.jpg
+[2023-01-30 12:32:35] Sebastiao Barretto: Esse fim de semana acabei de ler as 3 caixas de fita de papel com a nova leitora. Aquela coisa estranha à esquerda é um solenoide pesado para pressionar o eixo motor. Na parte de cima da caixa branca ficam os 9 leds brancos acionados por um CD4017 e na de baixo o fototransistor que está ligado na entrada analogica de um Arduino, que também controla os pinos de clock e reset do 4017
+[2023-01-30 12:34:11] Sebastiao Barretto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25644.jpg
+[2023-01-30 12:37:18] Sebastiao Barretto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25645.jpg
+[2023-01-30 12:37:18] Sebastiao Barretto: A parte mecânica é bem simples
+[2023-01-30 12:40:15] Sebastiao Barretto: O maior problema foi descobrir qual era o nivel de 0 ou 1 para cada bit, porque só usei um fototransistor e a luz dos leds do canto ficou bem mais fraca que no meio
+[2023-01-30 12:43:16] Sebastiao Barretto: No inicio funcionou para fita amarelo escuro mas deu erro na fita preta e amarelo clara. Depois de vários testes encontrei os valores corretos e agora funciona com todas as cores de fita
+[2023-01-30 12:46:50] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25648-sticker.webp
+[2023-01-30 12:47:16] Felipe "Juca" Sanches: Quero uma cópia de todos os dumps, por favor!
+[2023-01-30 12:47:18] Sebastiao Barretto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25650.jpg
+[2023-01-30 12:47:18] Sebastiao Barretto: Pena que a brincadeira acabou, agora vem a parte chata de tentar descobrir qual é a última versão de cada sw
+[2023-01-30 12:47:34] Felipe "Juca" Sanches: Tem coisas do Patinho Feio aí?
+[2023-01-30 12:48:36] Felipe "Juca" Sanches: preserve todas versões e não apenas a última!
+[2023-01-30 12:49:19] Felipe "Juca" Sanches: o ideal seria subir todos os dumps, do jeito que estão, em um repositório parecido com esse: https://github.com/ArqueologiaDigital/PatinhoFeio
+[2023-01-30 12:49:41] Felipe "Juca" Sanches: E, em seguida, ir aos poucos aprimorando a documentação do que é o que
+[2023-01-30 12:49:45] Felipe "Juca" Sanches: eu posso ajudar nisso
+[2023-01-30 12:51:19] Sebastiao Barretto: Tem o compilador Patol, mas não achei a biblioteca do Patol, nem programas escritos em Patol nem o Carregador. Por sorte eu tenho as listagens e estou digitalizando
+[2023-01-30 12:51:36] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25657-sticker.webp
+[2023-01-30 12:55:22] Sebastiao Barretto: Nas fitas tem muitos programas em Basic do HP2000, especialmente jogos, e tem algumas coisas em assembler do HP, como rotinas de blocagem em disco, e um job processor descompilado e alterado para incluir contabilização de usuários
+[2023-01-30 13:03:06] Sebastiao Barretto: Acho que dá para fazer vários repositórios, um do Pato, um do HP time-sharing, HP DOS e um do IBM1130 que também tem umas coisas legais em cartão
+[2023-01-30 13:15:05] Felipe "Juca" Sanches: maravilha
+[2023-01-30 13:15:11] Felipe "Juca" Sanches: vamos fazer isso, então!
+[2023-01-30 13:15:39] Felipe "Juca" Sanches: Se quiser me mandar um arquivo ZIP com 100% do que você já digitalizou, eu posso subir os repositórios
+[2023-01-30 13:16:27] Felipe "Juca" Sanches: eu tenho também uma caixa de fitas comigo que acho que eram do professor JJNeto. Posso enviar as fitas pra você digitalizar também
+[2023-01-30 13:16:58] Felipe "Juca" Sanches: na verdade estou com dificuldade de me lembrar se essa caixinha que eu tenho era sua ou se era do JJNeto
+[2023-01-30 13:18:55] Felipe "Juca" Sanches: Essa caixinha eu deixei com um amigo meu, em São Paulo
+[2023-01-30 13:19:16] Felipe "Juca" Sanches: Aliás... ele está aqui! É o @andre_bla 😉
+[2023-01-30 13:19:44] Felipe "Juca" Sanches: sõ não tenho certeza se ele está lendo todas as mensagens que a gente troca aqui no grupo
+[2023-01-30 13:51:06] Sebastiao Barretto: Não me lembro de ter deixado nenhuma fita com você, mas minha memória não é das melhores ...
+[2023-01-30 13:51:38] Sebastiao Barretto: Vou zipar e depois te envio
+[2023-01-30 13:53:47] Felipe "Juca" Sanches: ok, obrigado
+[2023-01-30 15:48:18] Pablo Vasques Bravo-Villalba: Achei legal essa história
+https://www.youtube.com/watch?v=nIwdhPOVOUk
+[2023-01-30 16:32:10] L.: http://www.righto.com/2023/01/understanding-x86s-decimal-adjust-after.html?m=1
+[2023-01-30 17:52:01] Felipe "Juca" Sanches: Acabei de gastar mil reais no ebay...
+[2023-01-30 17:53:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25675.jpg
+[2023-01-30 17:55:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25676.jpg
+[2023-01-30 17:58:11] Felipe "Juca" Sanches: a "lógica perversa" foi... melhor do que gastar 355 libras em mais um teclado KN5000 que não vou ter como levar embora daqui de Londres quando eu voltar pro Brasil
+[2023-01-30 18:03:55] Felipe "Juca" Sanches: o segundo argumento perverso foi... "no Mercado Livre tá uns 3 mil reais"
+[2023-01-30 18:18:33] Felipe "Juca" Sanches: agora resta a dúvida... que porra eu vou fazer com um neo geo pocket color ?!
+[2023-01-30 18:19:11] Pablo Vasques Bravo-Villalba: Pode jogar... E pode fuçar o hardware 😉
+[2023-01-30 18:41:38] L.: Fazer o firmware do teclado rodar nele
+[2023-01-30 18:41:52] L.: Muito Util(tm)
+[2023-01-30 19:14:56] Felipe "Juca" Sanches: Kkkk
+[2023-01-30 19:16:39] Felipe "Juca" Sanches: Eu tinha pensado em portar a VM do Another World. Mas a tela do Neogeo Pocket Color não tem resolução suficiente

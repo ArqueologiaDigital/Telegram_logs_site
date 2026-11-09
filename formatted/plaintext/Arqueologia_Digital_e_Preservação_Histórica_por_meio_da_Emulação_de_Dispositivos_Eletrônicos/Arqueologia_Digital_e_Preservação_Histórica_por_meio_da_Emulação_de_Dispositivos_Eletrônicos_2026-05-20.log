@@ -1,0 +1,8 @@
+[2026-05-20 11:16:26] Felipe "Juca" Sanches: Agora estou tentando botar pra rodar o cartucho de VT52 no Itautec I-7000 (e corrigir a emulação da porta serial) pra tentar se conectar a um pty no Debian
+[2026-05-20 11:16:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38812.jpg
+[2026-05-20 11:17:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38813.jpg
+[2026-05-20 11:17:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38814.jpg
+[2026-05-20 11:27:15] Lord Spy: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38815.jpg
+[2026-05-20 12:13:35] Toy: Grande Kao
+[2026-05-20 20:46:35] Ismael Carvalho: Cara, eu fui estudar como a coisa funciona a opção A ela processa na primeira interação e depois fica tudo rápido para as próximas execuções eu fiquei encucado por que o circuito não funcionna assim pelo o que eu entendi, tentei caçar se o ht1130 dizia alguma coisa sobre isso e nada, o B parece mais fiel ao comportamento real, agora eu também procurei se isso era um antipattern no mame e nada, até o gemini aqui me passou que é normal fazer essa abordagem de carregar tudo no boot.
+[2026-05-20 21:40:43] Hugo (Agaelebê): https://dos.zone/

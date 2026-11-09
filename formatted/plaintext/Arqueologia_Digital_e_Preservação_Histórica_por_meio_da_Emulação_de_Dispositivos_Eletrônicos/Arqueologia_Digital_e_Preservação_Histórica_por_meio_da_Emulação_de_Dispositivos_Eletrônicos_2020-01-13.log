@@ -1,0 +1,34 @@
+[2020-01-13 15:17:22] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-01/10395.jpg
+[2020-01-13 15:17:36] Felipe "Juca" Sanches: tá aqui a comprinha divertida
+[2020-01-13 15:18:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-01/10397.jpg
+[2020-01-13 15:19:44] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-01/10398.jpg
+[2020-01-13 15:19:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-01/10399.jpg
+[2020-01-13 15:19:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-01/10400.jpg
+[2020-01-13 15:20:20] L.: Uia!
+[2020-01-13 15:44:46] Eduardo Loos: Pqp!!!
+[2020-01-13 15:44:48] Eduardo Loos: Tb quero
+[2020-01-13 15:44:52] Eduardo Loos: Onde achou isso ?
+[2020-01-13 15:46:36] Felipe "Juca" Sanches: Tem à venda no site dos correios
+[2020-01-13 15:47:01] Felipe "Juca" Sanches: Tiragem de 160 mil selos de cada um dos 3 desenhos
+[2020-01-13 15:47:52] Felipe "Juca" Sanches: https://www.seligaalagoinhas.com.br/2018/10/15/correios-lanca-selos-sobre-a-historia-da-computacao-brasileira/
+[2020-01-13 15:54:14] Eduardo Loos: Felipe
+[2020-01-13 15:54:28] Eduardo Loos: Por favor, me fale sobre este Zezinho
+[2020-01-13 15:54:31] Felipe "Juca" Sanches: Eduardo
+[2020-01-13 15:54:39] Eduardo Loos: Nunca tinha ouvido falar
+[2020-01-13 15:55:14] Eduardo Loos: Bem que os correios podiam ter lançado um tb do Dismac D8000
+[2020-01-13 15:55:21] Felipe "Juca" Sanches: https://pt.wikipedia.org/wiki/Zezinho
+[2020-01-13 15:55:23] Eduardo Loos: O primeiro micro pessoal daqui
+[2020-01-13 15:55:34] Felipe "Juca" Sanches: http://www.aeitaonline.com.br/wiki/index.php?title=Zezinho
+[2020-01-13 15:56:09] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/PatinhoFeio/tree/master/Zezinho%20-%20ITA
+[2020-01-13 16:01:32] Eduardo Loos: Obrigado
+[2020-01-13 16:01:38] Eduardo Loos: Vou dar uma olhada
+[2020-01-13 16:01:41] Felipe "Juca" Sanches: 😃
+[2020-01-13 16:02:26] Felipe "Juca" Sanches: esse repo git, apesar de ser focado nas coisas do Patinho Feio, temos 2 PDFs de documentos do inicio da década de 60 descrevendo os detalhes técnicos do Zezinho, do ITA
+[2020-01-13 16:02:41] Felipe "Juca" Sanches: esse repo aqui
+[2020-01-13 16:12:56] L.: Suficiente pra fazer um emulador?
+[2020-01-13 16:13:21] Felipe "Juca" Sanches: já fiz uma parte. Mas eu tiv e dificuldade em entender todas as informaćões
+[2020-01-13 16:18:33] Felipe "Juca" Sanches: em novembro de 2017
+[2020-01-13 16:18:37] Felipe "Juca" Sanches: https://github.com/felipesanches/mame/blob/zezinho/src/mame/drivers/zezinho.cpp
+[2020-01-13 16:19:34] Felipe "Juca" Sanches: A CPU tá emulada aqui: https://github.com/felipesanches/mame/blob/zezinho/src/devices/cpu/zezinho/zezinho.cpp
+[2020-01-13 16:20:16] Felipe "Juca" Sanches: parcialmente
+[2020-01-13 16:22:46] Felipe "Juca" Sanches: acho que tem mais opcodes do que esta implementado nesse meu branch do MAME. Isso aí é pouca coisa demais! Preciso olhar de novo para os documentos. O foda é que são bem dificeis de ler. É um scan bem porco. Alguém precisa ir lá no ITA e fazer um scan em alta resolućão desses documentos que, se entendi bem, estam ainda guardados na biblioteca.

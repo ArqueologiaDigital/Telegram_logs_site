@@ -1,0 +1,10 @@
+[2018-08-13 17:14:34] Felipe "Juca" Sanches: Estou estudando sobre Truetype hinting
+[2018-08-13 17:14:54] Felipe "Juca" Sanches: https://developer.apple.com/fonts/TrueType-Reference-Manual/RM05/Chap5.html
+[2018-08-13 17:15:23] Felipe "Juca" Sanches: E implementei um descompilador da linguagem VTT Talk da Microsoft: https://github.com/felipesanches/Hinting_Decompiler
+[2018-08-13 17:16:48] Felipe "Juca" Sanches: Há uma ironia nisso tudo, entretanto. O manual da Apple parece que não teve as ilustrações atualizadas nos últimos 20 anos
+[2018-08-13 17:17:33] Felipe "Juca" Sanches: então eu estou aqui arrancando os cabelos com a ironia de um texto sobre hinting (técnica usada para otimizar a qualidade da renderização de texto em baixas resoluções) ter ilustrações com texto tão tosco:
+[2018-08-13 17:17:41] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7047.jpg
+[2018-08-13 17:20:24] Felipe "Juca" Sanches: dá até a sensação de que o autor está trolando os leitores
+[2018-08-13 17:23:00] Felipe "Juca" Sanches: Um texto muito mais didático sobre o tema é esse do capítulo 3. É bem interessante: https://developer.apple.com/fonts/TrueType-Reference-Manual/RM03/Chap3.html
+[2018-08-13 17:24:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7050.jpg
+[2018-08-13 21:57:30] Gustavo Romero: huahua cara, esse circulo do simbolo de origin tá bem bizarro mesmo

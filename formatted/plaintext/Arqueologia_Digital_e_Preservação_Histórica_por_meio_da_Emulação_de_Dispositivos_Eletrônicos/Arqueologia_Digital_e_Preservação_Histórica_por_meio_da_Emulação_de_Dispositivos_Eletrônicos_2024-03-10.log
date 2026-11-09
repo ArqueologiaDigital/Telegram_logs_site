@@ -1,0 +1,59 @@
+[2024-03-10 06:58:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30174.jpg
+[2024-03-10 06:58:21] Felipe "Juca" Sanches: desenho vetorial de interfaces costuma ser uma aula de construção geométrica 😉
+[2024-03-10 07:10:41] Lucas Alberto: Ainda não acabou ? 🤯
+[2024-03-10 07:13:11] Felipe "Juca" Sanches: Ainda não. Falta eu desenhar todo o silk dos textos
+
+E também tô tentando deixar o layout mais equilibrado, pois a parte da direita tá meio espremida no canto, mas não quero deixar a tela descentralizada
+[2024-03-10 07:13:36] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30177.jpg
+[2024-03-10 07:14:08] Felipe "Juca" Sanches: simplesmente tem mais botão do lado direito
+[2024-03-10 07:14:15] Lucas Alberto: Tá ficando legal
+[2024-03-10 07:14:22] Felipe "Juca" Sanches: talvez por uma consideração de design favorecendo pessoas destras
+[2024-03-10 07:14:40] Lucas Alberto: Na vida real é como ? Tem um espaço a mais ?
+[2024-03-10 07:15:34] Felipe "Juca" Sanches: os conjuntos de botões que estão à esquerda e à direita da tela na verdade ficam embaixo também, só que aí não caberia na tela do emulador
+[2024-03-10 07:16:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30183.jpg
+[2024-03-10 07:21:53] Lucas Alberto: Ahhh, agora faz sentido
+[2024-03-10 07:22:34] Lucas Alberto: Acho q vc vai ter q deixar ele um pouquinho mais largo
+[2024-03-10 07:42:06] Felipe "Juca" Sanches: é que já tá bem largo: 1280 x 600 px
+[2024-03-10 07:42:15] Felipe "Juca" Sanches: E a tela precisa ficar com 320x240 px
+[2024-03-10 07:49:46] Lucas Alberto: É por conta do formato do teclado, realmente vai ficar bem largo
+[2024-03-10 09:49:32] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30189.jpg
+[2024-03-10 09:49:32] Felipe "Juca" Sanches: Tá cada vez melhor. Ainda falta fazer todo o texto. Botei uma captura de tela pra imaginar como será quando o emulador estiver avançando além das primeiras etapas do boot
+[2024-03-10 09:50:32] Lucas Alberto: ficou muito legal. 
+
+Ainda bem que não precisa construir um desses na vida real, cheio de botões XD
+[2024-03-10 09:51:32] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30191-melissabug-thinking.mp4
+[2024-03-10 10:26:20] Pablo Vasques Bravo-Villalba: Anne, eu não tenho experiência com isso, mas sei de pessoas que importam coisas e recomendam fortemente que fuja de couriers tipo DHL, FedEx, essas coisas, porque com eles a cobrança de imposto por aqui é certeira, e dependendo do que for você pode ter muitos problemas (e prejuízo). É bom dar uma pesquisada com pessoal que costuma fazer esse tipo de importação. Ou tentar achar algum que esteja sendo vendido por aqui mesmo
+[2024-03-10 10:51:27] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30194.jpg
+[2024-03-10 10:52:10] Felipe "Juca" Sanches: vou usar essa foto que acabei de tirar pra fazer o ajuste de cores do layout pro MAME
+[2024-03-10 10:59:23] Anne Isabelle: Valeuuu :)
+[2024-03-10 11:39:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30197.jpg
+[2024-03-10 11:39:40] Felipe "Juca" Sanches: adicionados texto, cores e sombras nos botões do lado esquerdo
+[2024-03-10 11:41:00] Lucas Alberto: Mds ksksk que trabalho
+[2024-03-10 11:59:49] Felipe "Juca" Sanches: divertido, né?!
+[2024-03-10 12:14:00] Lucas Alberto: Ksksksk ferro de solda é mais legal 🤣
+[2024-03-10 18:50:58] Felipe "Juca" Sanches: Pronto. Terminei! O que acham?
+[2024-03-10 18:51:05] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30204-layout-kn5000.png
+[2024-03-10 18:51:05] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30205-layout-kn5000.svg
+[2024-03-10 19:42:01] Felipe "Juca" Sanches: subi num repo
+[2024-03-10 19:42:03] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/KN5000_MAME_artwork/
+[2024-03-10 19:42:35] Felipe "Juca" Sanches: Agora vou ter que me contorcer do avesso pra converter essa imagem em um layout do MAME
+[2024-03-10 19:43:12] Lucas Alberto: Ainda não subi meu emulador/deve tool lá, mas vi que tô com permissão
+[2024-03-10 19:43:24] Lucas Alberto: Tô arrumando o código ainda
+[2024-03-10 19:43:42] Lucas Alberto: Ele não aceita SVG?
+[2024-03-10 19:44:17] Felipe "Juca" Sanches: oh boy...
+[2024-03-10 19:44:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30214.jpg
+[2024-03-10 19:44:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30215.jpg
+[2024-03-10 19:44:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30216.jpg
+[2024-03-10 19:54:19] Lucas Alberto: Gambiarra is on
+[2024-03-10 20:01:18] Felipe "Juca" Sanches: Aqui, o desenho com a tela desligada e os LEDs apagados. Isso será o ponto de partida pra usar no emulador:
+[2024-03-10 20:01:29] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30219-layout-kn5000.png
+[2024-03-10 20:01:37] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30220.jpg
+[2024-03-10 20:01:51] Lucas Alberto: A tela pelo menos é fácil de por no mame ?
+[2024-03-10 20:02:01] Felipe "Juca" Sanches: sim
+[2024-03-10 20:02:05] Felipe "Juca" Sanches: (acho que sim)
+[2024-03-10 20:02:12] Lucas Alberto: Ufa
+[2024-03-10 20:02:24] Lucas Alberto: Ou talvez não
+[2024-03-10 21:55:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30228.jpg
+[2024-03-10 21:55:58] Felipe "Juca" Sanches: Primeiros sinais de vida desse layout no MAME. (só pendurei um PNG e posicionei a tela - ainda falta declarar os LEDs e botões)
+[2024-03-10 21:55:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30229.jpg
+[2024-03-10 23:26:46] Pablo Vasques Bravo-Villalba: Acho incrível

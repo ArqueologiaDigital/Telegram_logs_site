@@ -1,0 +1,25 @@
+[2023-02-23 10:08:20] Robson França: Bom dia! Consegui fazer funcionar no XRoar!
+[2023-02-23 10:08:34] Robson França: Hoje a noite eu gravo um vídeo e subo no Youtube
+[2023-02-23 10:08:53] Robson França: Ainda estou analisando o código de máquina, estou achando algo estranho ali...
+[2023-02-23 10:09:28] Robson França: E toca direitinho os 4 canais, hehehe
+[2023-02-23 10:49:54] Pablo Vasques Bravo-Villalba: Olha que interessante
+[2023-02-23 10:50:12] Pablo Vasques Bravo-Villalba: Seria legal se eles disponibilizassem uma documentação do player e qual o formato das sequências
+[2023-02-23 10:51:38] Pablo Vasques Bravo-Villalba: Ah, já vi aqui, é bem limitadinho 😅
+[2023-02-23 11:08:47] Robson França: Sim
+[2023-02-23 11:08:59] Robson França: Vou tentar fazer uma documentação
+[2023-02-23 11:09:30] Pablo Vasques Bravo-Villalba: Mas o player em si parece razoavelmente capaz
+[2023-02-23 11:09:39] Pablo Vasques Bravo-Villalba: Em tese daria pra ter várias waveforms
+[2023-02-23 11:09:52] Pablo Vasques Bravo-Villalba: 🤔
+[2023-02-23 11:10:06] Pablo Vasques Bravo-Villalba: Seria legal se desse para especificar notas com durações diferentes em cada canal
+[2023-02-23 11:10:33] Robson França: Exato
+[2023-02-23 11:10:52] Robson França: Sim, mas aí ficaria mais complexo
+[2023-02-23 11:11:20] Robson França: Quem sabe se rolar uma evolução desse player? 😉
+[2023-02-23 11:14:00] Pablo Vasques Bravo-Villalba: Precisaria separar as filas de cada canal e reservar contadores, pelo menos
+[2023-02-23 11:14:11] Pablo Vasques Bravo-Villalba: Mas eu acho bem legal de ver um player bem simples assim
+[2023-02-23 15:20:25] Pablo Vasques Bravo-Villalba: A atualização de hoje chegou um pouquinho tarde. É, na minha humilde opinião, a melhor faixa da trilha sonora do Mega Man IV. Foi um pedido do meu irmão Ariel, que mora em São Paulo e adora o jogo. Como de costume, tentei fazer um arranjo com o VRC7 da Konami buscando uma sonoridade mais parecida com o MSX:
+https://on.soundcloud.com/3H8ib
+[2023-02-23 20:01:06] Robson França: Eu tenho uma teoria sobre esse negocio estranho. Assim que chegar em casa detalhou mais.
+
+Estou pensando em fazer um tracker para o CoCo tendo como base esse player. Vou disponibilizar o código dele
+[2023-02-23 20:29:04] L.: https://infosec.exchange/@lcamtuf/109916609085240910
+[2023-02-23 20:29:30] L.: Esse joguinho seria ideal praquele framework que a gente fez pro minesweeper

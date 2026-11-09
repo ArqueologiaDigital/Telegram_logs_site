@@ -1,0 +1,47 @@
+[2022-05-16 06:23:31] Ismael Luceno: [fwd SPAM remote-job] 12+ mo kdev job for x86; salary not specified, ask and share, expect >=60k GBP/y, probably <=100k GBP [I have no relation to the company]
+[2022-05-16 10:27:33] Pedro de Medeiros 👾: Este projeto é muito legal: https://www.youtube.com/watch?v=dTGOEe8f8ls
+[2022-05-16 12:24:14] Felipe "Juca" Sanches: MUITO LEGAL!!!
+[2022-05-16 12:37:43] Flávio Amieiro: Mitxella é muito bom! Eu acho que já li todos os projetos que ele documentou no site dele
+[2022-05-16 12:38:23] Flávio Amieiro: O último foi como eu descobri que HDMI (e aparentemente VGA e dvi tbm) tem dois pinos dedicados pra i2c
+[2022-05-16 12:39:40] Flávio Amieiro: https://mitxela.com/projects/ddc-oled
+[2022-05-16 12:39:58] RicBit: ah tem que ter né, se não tivesse não teria como fazer auto detect de monitor
+[2022-05-16 12:40:32] Flávio Amieiro: É, eu só nunca tinha pensado em como isso é implementado
+[2022-05-16 12:40:57] Flávio Amieiro: Acho maneiro essa ideia de ter uma EEPROM i2c ali e o computador pode só pegar a configuração
+[2022-05-16 13:05:19] Felipe "Juca" Sanches: gostei muito desse aqui:
+[2022-05-16 13:05:22] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=Qw-VvGsYpSU
+[2022-05-16 13:05:42] Felipe "Juca" Sanches: eu me lembro de ter também ficado fascinado com o ROCKbox naquela época
+[2022-05-16 13:06:33] Flávio Amieiro: Esse é muito bom tbm!
+Não conhecia o rockbox até ver, mas reconheci o sentimento descobrindo software livre...
+[2022-05-16 13:07:29] Felipe "Juca" Sanches: eu cheguei a sonhar em portar o ROCKbox para alguns modelos de mp3 players que tinha por aqui em camelôs, mas na época eu desisti depois de umas duas semanas
+[2022-05-16 13:11:24] Pedro de Medeiros 👾: Usei muito o rockbox com meu SanDisk Clip
+[2022-05-16 13:20:34] P. M: tive um mp3 sandisk desses já no crepúsculo dos mp3, ahah
+[2022-05-16 13:20:44] P. M: queria algo só pra meter uns podcasts
+[2022-05-16 13:20:49] P. M: sem medo de ser roubado
+[2022-05-16 14:38:02] João Carlos: Eu já tinha visto esse video mas não lembrava que ele usa um osciloscópio de tela, fica um gráfico incrível!
+[2022-05-16 14:39:40] João Carlos: Um vídeo parecido com esse que eu gosto é desse doido que usou um chip minúsculo para um console também https://youtu.be/PZsWqOuJFKI
+[2022-05-16 15:08:07] Pedro de Medeiros 👾: @fsanches vai fazer algum bate-papo hoje sobre Python como semana passada?
+[2022-05-16 15:19:58] Felipe "Juca" Sanches: não... aquele evento é mensal
+[2022-05-16 15:20:23] Felipe "Juca" Sanches: e normalmente é outra pessoa que faz. Eu só fiz esse mês por que o @villares não ia estar disponível naquela data
+[2022-05-16 17:50:50] L.: https://twitter.com/DJ_Link/status/1526090320554778625?t=Ij8oHM5kvkWW3Xo70BI4Bw&s=09
+[2022-05-16 17:51:38] Alexandre Villares: Opa, e mesmo eu este semestre não tenho estado muito disponível o Edson que tem tocado...  Pedro, tem um grupo no Telegram do Python Lab se quiser entrar...
+[2022-05-16 17:52:31] Felipe "Juca" Sanches: @pvm1337, aqui está o link:
+
+https://t.me/Garoa_PythonLab
+[2022-05-16 17:53:34] Shideravan: Shelton olha aí o poder do N64 e da comunidade em ação
+[2022-05-16 18:50:35] L.: Se esse jogo tivesse sido lançado na época do N64...😅
+[2022-05-16 21:28:51] Shelton Ribeiro: Rapaz a turma compartilhou, os caras estão empenhados viu? Portal e Tomb Raider pra 64, tá ruim não a cena do console, a poucos anos era totalmente nula. 👏🏼👏🏼👏🏼
+[2022-05-16 21:29:47] Shelton Ribeiro: Nula é a cena do Playstation 1, o que me impressiona porque foi um console popular e com kits “acessíveis”
+[2022-05-16 21:30:00] Shelton Ribeiro: Pelo menos não vejo muita coisa na mídia dele
+[2022-05-16 21:59:31] Felipe "Juca" Sanches: vocês têm vontade de programar alguma coisa juntos para alguma dessas plataformas? Se tiver algumas pessoas interessadas, podemos tentar inventar moda 😉
+[2022-05-16 22:13:50] P. M: Só penso em game boy, haha
+[2022-05-16 22:13:59] P. M: Já fucei
+[2022-05-16 22:14:03] P. M: Fiz umas animações
+[2022-05-16 22:14:11] P. M: Mas falta me empenhar num projeto aí
+[2022-05-16 22:20:04] João Carlos: Você conseguiu?? Eu já tentei o básico mas não consegui fazer mais que o tutorial ensinou 😆
+[2022-05-16 22:20:04] João Carlos [forwarded]: Fiz umas animações
+[2022-05-16 22:20:57] João Carlos: Bem, se rolar algo do tipo me inclui!
+[2022-05-16 22:37:47] P. M: Hj tem mto material online
+[2022-05-16 22:38:07] P. M: Fui seguindo o que achei na internet no gb studio
+[2022-05-16 22:39:08] P. M: Eu confesso que jogos 3d de primeira e segunda geração eu num consigo mais jogar não, haha
+[2022-05-16 22:57:04] João Carlos: É, acho que só desisti muito rápido também
+[2022-05-16 22:57:31] João Carlos: Tinha já passado muito tempo estudando o asm dele, e quando chegou para programar nele acabou a energia

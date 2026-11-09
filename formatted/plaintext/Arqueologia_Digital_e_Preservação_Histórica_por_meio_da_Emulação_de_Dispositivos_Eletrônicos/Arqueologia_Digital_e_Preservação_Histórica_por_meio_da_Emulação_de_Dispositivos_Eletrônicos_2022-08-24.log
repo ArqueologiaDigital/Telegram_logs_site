@@ -1,0 +1,103 @@
+[2022-08-24 00:56:59] Dario Junior [forwarded]: https://youtu.be/YIkKbMcJL_4
+[2022-08-24 00:57:11] Dario Junior: Nao sei se os vcs ja viram
+[2022-08-24 00:57:19] Dario Junior: Eu vi hj e gostei bastante
+[2022-08-24 03:56:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23413.jpg
+[2022-08-24 04:00:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23414.jpg
+[2022-08-24 04:01:36] Felipe "Juca" Sanches: hoje eu tentei pela primeira vez na vida usar o método d efabricação de PCB com fotolito e dry-film fotossensível
+[2022-08-24 04:02:26] Felipe "Juca" Sanches: o fotolito visto na parte debaixo da foto eu imprimi em transparência na minha impressora HP Deskjet
+[2022-08-24 04:02:45] Felipe "Juca" Sanches: A imagem dele eu tinha escaneado de um fotolito original de 1974, do Guido Stolfi
+[2022-08-24 04:03:34] Felipe "Juca" Sanches: Esse circuito é a interface de recebimento de dados do sintetizador musical do professor Guido (que era usado ligado a computadores da época, inclusive pelo Patinho Feio)
+[2022-08-24 04:04:42] Felipe "Juca" Sanches: a placa da esquerda foi minha primeira tentativa. Deu errado. Suspeito que a minha transparência impressa não era escura o suficiente e acabou curando um pouco mesmo onde não deveria curar o dry-filme
+[2022-08-24 04:07:54] Felipe "Juca" Sanches: a placa da direita foi a segunda tentativa. Deu bastante certo! Mas ficou um pouco torto, por dois motivos: (1) eu não colei o fotolito com fita adesiva pois eu não queria danificá-lo (usei o fotolito dos anos 70 nessa segunda tentativa) (2) o próprio dryfilm ficou mal-aplicado, com algumas partes onduladas. Foi isso que me fez tomar coragem de aproveitar o filme amassado para checar o quão diferente seria fazer com um fotolito um pouco mais escuro. Tolerei a imprecisão de não adesivar, em troca de um insight sobre a importância do fotolito ser mais opaco.
+[2022-08-24 04:08:42] Felipe "Juca" Sanches: Ainda tenho o desafio de fazer a furação e alinhar uma segunda camada de circuito (pois essas placas são dupla-face)
+[2022-08-24 04:10:06] Felipe "Juca" Sanches: e, claro, não corroí nada ainda. Só vou pro percloreto depois que eu melhorar minnha técnica de impressão do layout com dryfilm, banho de UV e revelação em barrilha
+[2022-08-24 04:11:04] Felipe "Juca" Sanches: ah! Estou aplicando o dryfilm usando uma bacia dágua (mergulho a placa e jogo o dryfilm por cima da água pra conseguir alinhar bem antes de encostar na placa
+[2022-08-24 04:11:43] Felipe "Juca" Sanches: e estou afixando o dryfilm com o uso de uma máquina plastificadora Menno 2401
+[2022-08-24 04:22:12] Felipe "Juca" Sanches: http://cbpfindex.cbpf.br/publication_pdfs/notasTecnicas_2020-02-10-15-56-15bm90YXNUZWNuaWNhcw==.pdf
+[2022-08-24 04:28:12] Flávio Amieiro: @fsanches , a ideia é reproduzir usando os métodos da época?
+[2022-08-24 04:29:24] Flávio Amieiro: Eu acho interessante, mas talvez fosse também uma opção legal fazer uma versão importando o scan em alta resolução no kicad mesmo, não?
+[2022-08-24 13:33:29] Felipe "Juca" Sanches: Ah... Sei lá
+[2022-08-24 13:33:31] Felipe "Juca" Sanches: Kkkkk
+[2022-08-24 13:33:50] Felipe "Juca" Sanches: Me deu vontade de tentar a técnica do dryfilm
+[2022-08-24 13:34:34] Felipe "Juca" Sanches: E fazer o que? Redesenhar o esquemático e gerar uma nova PCB?
+[2022-08-24 13:35:02] Felipe "Juca" Sanches: É um caminho bacana. Já avancei um pouquinho nessa direção também
+[2022-08-24 14:08:49] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/152
+[2022-08-24 14:12:51] Shideravan: Galera, muito importante
+[2022-08-24 14:12:52] Shideravan: https://twitter.com/Irdeto/status/1562384806843133953
+[2022-08-24 14:13:03] Shideravan: Esse tipo de coisa deveria ser ilegal
+[2022-08-24 14:13:17] Shideravan: Afinal, emulação não é ilegal em nenhum lugar do mundo
+[2022-08-24 14:13:42] Shideravan: As empresas lançarem DRM anti-emulação não deveria configurar como uma limitação do direito do consumidor?
+[2022-08-24 14:14:17] Shideravan: Afinal, cabe ao consumidor escolher onde rodar um produto que ele tenha adquirido legalmente...
+[2022-08-24 14:15:47] Shideravan: Agora isso traz um novo desafio na brincadeira: conseguir driblar essas medidas anti-emulação no desenvolvimento de emuladores
+[2022-08-24 14:16:26] Shideravan: https://irdeto.com/news/denuvo-by-irdeto-launches-the-industrys-first-nintendo-switch-emulator-protection/
+[2022-08-24 14:24:05] Pedro de Medeiros 👾: Era de se esperar. Nintendo totalmente hostil com a comunidade de emulação.
+[2022-08-24 14:24:43] Shideravan: Talvez isso acarrete que mesmo jogos offline, tenham que constantemente rodar online
+[2022-08-24 14:25:15] Erin Pinheiro 🐿: quem fez isso foi a denuvo não a Nintendo
+[2022-08-24 14:25:49] Erin Pinheiro 🐿: pelo que eu entendi isso é uma biblioteca que detecta falhas de emulador pra saber se está rodando em hardware ou emulador
+[2022-08-24 14:25:55] Shideravan: Com certeza a Denuvo enxergou um mercado em potencial aí
+[2022-08-24 14:26:01] Erin Pinheiro 🐿: isso é feito desde a época do NES
+[2022-08-24 14:26:12] Shideravan: Se for isso é tranquilo
+[2022-08-24 14:26:36] Erin Pinheiro 🐿: se um jogo detectasse SRAM num cartucho que não deveria ter, ou SRAM de tamanho errado, o jogo travava
+[2022-08-24 14:26:38] Shideravan: É só mais um incentivo para os emuladores em geral focarem mais em accuracy
+[2022-08-24 14:26:56] Erin Pinheiro 🐿: nada de novo sob o sol
+[2022-08-24 14:27:06] Shideravan: Isso jogo velho, né?
+[2022-08-24 14:27:17] Erin Pinheiro 🐿 [forwarded]: isso é feito desde a época do NES
+[2022-08-24 14:27:24] Shideravan: O problema é que a tecnologia de detecção evolui muito
+[2022-08-24 14:27:29] Pedro de Medeiros 👾: Claro, mas ela enxerga o potencial de atender a nintendo e outras..
+[2022-08-24 14:27:35] Shideravan: Cartuchos hoje em dia não possuem mais SRAM
+[2022-08-24 14:27:40] Erin Pinheiro 🐿: ué, o sistema emulado também evolui muito
+[2022-08-24 14:27:48] Shideravan: Com certeza hahaha
+[2022-08-24 14:27:51] Pablo Vasques Bravo-Villalba: Conhecendo as soluções da Denuvo eu não ficaria surpreso se isso provocasse incompatibilidade dos jogos que incluíssem a solução com modelos específicos de Switch
+[2022-08-24 14:27:55] Erin Pinheiro 🐿: entendi foi nada
+[2022-08-24 14:27:58] Shideravan: Isso é um alerta para a gente
+[2022-08-24 14:28:08] Erin Pinheiro 🐿: mas tudo bem já dei meus dois centavos
+[2022-08-24 14:28:08] Shideravan: Sim, com certeza
+[2022-08-24 14:28:24] Shideravan: 2 centavos muito bem dados hehehe
+[2022-08-24 14:28:42] Shideravan: São ótimos pontos
+[2022-08-24 14:28:47] Erin Pinheiro 🐿: eu sei
+[2022-08-24 14:28:56] Shideravan: Mas Denuvo, ao menos para jogos de PC é uma parada "especial"
+[2022-08-24 14:29:33] Shideravan: Da mesma forma, medidas de bloqueio a pirataria existem desde os anos 80
+[2022-08-24 14:29:46] Shideravan: Mas a Denuvo no PC foi além do que qualquer uma foi
+[2022-08-24 14:30:07] Shideravan: A ponto de destruir a performance de jogos, exigir conexão constante a internet em jogos offline, etc
+[2022-08-24 14:30:27] Erin Pinheiro 🐿: se você ler minhas mensagens com mais calma e ignorando as outras mensagens no meio pra ter coerência entre apenas as minhas mensagens o que eu falei sobre SRAM foi apenas um exemplo de detecção de emulador na época do SRAM
+[2022-08-24 14:30:33] Shideravan: Isso chegando para jogos de Switch para tentar atrapalhar a emulação
+[2022-08-24 14:30:44] Shideravan: Sim sim, eu concordo com você Erin
+[2022-08-24 14:30:52] Shideravan: Como disse, seus pontos são muito válidos hehehe
+[2022-08-24 14:31:19] Shideravan: Não estou vendo como uma briga ou discussão, apenas complementações hehehe
+[2022-08-24 14:31:44] Shideravan: Mas bem, isso chegando para jogos de Switch, traz uma nova camada de desafio aos projetos
+[2022-08-24 14:31:59] Shideravan: É algo que vale a pena acompanharmos de perto
+[2022-08-24 14:32:46] Shideravan: Eu ACHO (e aí talvez não tenha tanto valor, porque não é algo que eu sei, estou no achismo ainda) que podem utilizar, por exemplo, conexão com a internet para validar o jogo
+[2022-08-24 14:33:00] Shideravan: Isso seria PÉSSIMO para preservação
+[2022-08-24 14:34:00] Shideravan: Porque ou a gente pensa em formas de driblar essa verificação online, o que sacrifica a accuracy ou se contenta com os jogos não abrindo, o que é fiel do ponto de vista técnico mas não de preservação
+[2022-08-24 14:34:35] Shideravan: A Denuvo nunca se preocupou com preservação
+[2022-08-24 14:34:44] Shideravan: A grande maioria das desenvolvedoras também não
+[2022-08-24 14:37:25] Shideravan: Isso difere de verificação de SRAM por exemplo. Porque a forma de um emulador driblar a verificação de SRAM é melhorar a precisão de forma a dar uma resposta idêntica ao jogo que uma gravação na SRAM de um cartucho. Isso significa que os objetivos de preservação e precisão de emulação seriam os mesmos. É bastante diferente do que acontece com a Denuvo no PC
+[2022-08-24 14:41:54] Shideravan: Online para emulação é sempre uma questão bastante complicada, porque demanda questões diferentes de apenas lidar com precisão
+[2022-08-24 14:57:00] Flávio Amieiro: Entendo 100%!
+Hahahaha
+[2022-08-24 14:58:00] Flávio Amieiro: Dá pra gerar a PCB sem um esquemático. Você pode importar os svgs na camada de cobre e pronto. Só não consegui pensar em como faria os furos. Talvez tivesse que ser manualmente mesmo, mas é mole.
+[2022-08-24 15:29:41] FTMaciel: Da uma escurecida extra no toner com tinta nanquim
+[2022-08-24 16:03:33] Leonardo Roman: O maior trabalho mesmo é ter que soldar os componentes pelos dois lados da placa.
+[2022-08-24 16:10:40] Felipe "Juca" Sanches: pois é... eu tava pensando nisso esses dias
+[2022-08-24 16:11:53] Felipe "Juca" Sanches: o principal motivo de eu estar experimentando essa técnica de dryfilm é por que faz uns 10 anos que eu sinto a necessidade de fazer protótipos de PCBs sem ter que esperar umas duas semanas e pagar uma nota preta para fazer na China
+[2022-08-24 16:12:15] Felipe "Juca" Sanches: eu queria poder ter a capacidade de fazer minhas placas, mesmo que toscas, em 1 dias, pra poder iterar mais rápido
+[2022-08-24 16:14:14] Felipe "Juca" Sanches: aliás... essa infraestrutura para produção de PCBs me parece algo óbvio de que deveria ter disponível em hackerspaces
+[2022-08-24 16:14:47] Felipe "Juca" Sanches: mais até do que impressoras 3d, que é o que a gente mais costuma ver nesses espaços
+[2022-08-24 16:29:42] Flávio Amieiro: Sim, isso é bem maneiro mesmo! Eu sinto bastante falta
+[2022-08-24 16:30:22] Flávio Amieiro: Se usar uma fábrica e usar um footprint de PTH no kicad deveria funcionar bem, acho.
+[2022-08-24 16:30:55] Flávio Amieiro: Mas eu super entendo essa necessidade de prototipagem. Eu só nunca encontrei uma solução mesmo
+[2022-08-24 16:31:22] Flávio Amieiro: Mas acho muito válido experimentar
+[2022-08-24 16:32:01] Flávio Amieiro: Eu acharia ótimo também ter a possibilidade de iterar mais rápido nos protótipos
+[2022-08-24 16:32:20] Flávio Amieiro: Enfim, só perguntei mesmo. Não queria cortar a onda não, pelo contrário!
+[2022-08-24 16:34:29] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23500-sticker.webp
+[2022-08-24 18:48:17] RicBit: É nota preta mesmo? Eu lembro de ter procurado isso uns anos atrás e não era muito caro não.
+[2022-08-24 18:50:32] Felipe "Juca" Sanches: bom... depende 😉
+[2022-08-24 18:51:02] Felipe "Juca" Sanches: mas o principal fator é o tempo de espera, que limita a iteração, fica aquela sensação de que não posso errar
+[2022-08-24 19:37:15] Shideravan: Excelentes notícias
+[2022-08-24 19:37:16] Shideravan: https://github.com/cemu-project/Cemu
+[2022-08-24 19:37:23] Shideravan: Cemu agora é open-source
+[2022-08-24 19:38:03] Shideravan: Um projeto de emulação a menos mantendo o código fechado
+[2022-08-24 19:38:23] Shideravan: Esse era bem emblemático, sempre fui muito crítico
+[2022-08-24 20:40:08] Pedro de Medeiros 👾: @fsanches não sei se você passou batido, mas eu fiz esse PR.
+[2022-08-24 20:41:15] Felipe "Juca" Sanches: posso revisar pra dar merge?
+[2022-08-24 20:41:53] Felipe "Juca" Sanches: ok, vejo daqui a pouco. To meio ocupado agora

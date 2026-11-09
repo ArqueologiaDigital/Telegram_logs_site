@@ -1,0 +1,35 @@
+[2026-01-26 00:44:05] Felipe "Juca" Sanches: Algum dia talvez eu vá atrás de um workflow desses para o KN5000. Mas por enquanto nem compilador C temos...
+[2026-01-26 10:21:28] Hugo (Agaelebê): Acho que com o tempo ele vai testar outras alternativas como o opencode (https://github.com/anomalyco/opencode/) e com o tempo também terá opções  de modelos abertos com desempenho bem similar ao claude. É que o pessoal vai por default no claude code mesmo.
+[2026-01-26 10:28:04] Francisco: Opencode é bem top, recomendo. Uso junto do nvim
+[2026-01-26 11:01:51] Macabeus: está no meu roadmap pessoa testar o opencode também
+[2026-01-26 11:02:06] Macabeus: se algum dia eu quiser automatizar completamente a descompilação de jogos
+[2026-01-26 11:02:22] Macabeus: não vai dar para depender do Claude, pois fica proibitivamente caro
+[2026-01-26 11:02:35] Macabeus: teria que fazer selfhosted
+[2026-01-26 11:03:38] Francisco: Eu uso com o plano plus do gpt para usar o codex
+[2026-01-26 12:40:17] Robson França: Boa tarde aê! Meu medo é a régua do bom o bastante ser reduzida demais...
+IA como ferramenta - busca com plus a mais rs - é muito boa. Para o resto, desconfie
+[2026-01-26 13:21:57] L.: https://github.com/ran-j/PS2Recomp
+
+Projeto pra fazer recompilação estática de binários de ps2
+
+Aparentemente feito por brasileiro!
+[2026-01-26 13:54:50] Macabeus: bacana, recompilação é algo bem interessante que ainda gostaria de estudar mais sobre (e também de ter uma talk disso na gambiconf 👀)
+[2026-01-26 13:55:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37200.jpg
+[2026-01-26 13:55:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37201.jpg
+[2026-01-26 13:55:44] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37202.jpg
+[2026-01-26 14:05:47] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37203.jpg
+[2026-01-26 14:05:47] Felipe "Juca" Sanches: oh yeah! :-D
+[2026-01-26 14:41:31] Felipe "Juca" Sanches [forwarded]: Olha o poder disso!
+[2026-01-26 14:41:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37205.jpg
+[2026-01-26 14:41:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37206.jpg
+[2026-01-26 14:41:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37207.jpg
+[2026-01-26 14:41:31] Felipe "Juca" Sanches [forwarded]: dá vontade de chorar de alegria vendo isso
+[2026-01-26 14:41:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37208.jpg
+[2026-01-26 14:41:31] Felipe "Juca" Sanches [forwarded]: Lindo demais!
+[2026-01-26 15:17:11] Robson França: Se vc curte recompilação estática de código,  procure o port do Donkey Kong para Tandy Color Computer 3 feito pelo Sock Master:
+https://youtu.be/UNzgMeFsj5Y?si=rJ0t1npqMl4bRHu8
+[2026-01-26 16:04:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37210.jpg
+[2026-01-26 20:29:03] Pedro de Medeiros 👾: A página original do artigo sumiu, mas o wayback machine tem uma cópia: https://web.archive.org/web/20210710010708/https://users.axess.com/twilight/sock/dk/index.html
+[2026-01-26 22:26:20] Felipe "Juca" Sanches: O Claude já é muito melhor que eu em engenharia reversa e implementação de emuladores.
+[2026-01-26 22:26:22] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37213.jpg
+[2026-01-26 22:26:22] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37214.jpg

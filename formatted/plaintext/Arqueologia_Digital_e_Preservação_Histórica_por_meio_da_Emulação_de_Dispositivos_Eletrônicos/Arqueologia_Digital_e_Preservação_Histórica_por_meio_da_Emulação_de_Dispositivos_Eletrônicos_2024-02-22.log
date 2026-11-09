@@ -1,0 +1,11 @@
+[2024-02-22 12:44:53] L.: https://tempestfpga.com/ <-- simulação de modem usando wifi, com barulho de discagem e tudo lol
+[2024-02-22 23:05:41] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29260.jpg
+[2024-02-22 23:06:06] Felipe "Juca" Sanches: tentando adaptar um drive de disquete pra usar no teclado TECHNICS KN5000 aqui no Calango Hacker Clube junto com o @pvm_NoCryptoScams
+[2024-02-22 23:06:37] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29262-FDD_Technics_modification_instructions.ods
+[2024-02-22 23:47:33] Felipe "Juca" Sanches: o teclado KN5000 usa 2 pinos reservados do padrão de pinagem de floppy IBM-AT, os pinos 4 e 6
+[2024-02-22 23:48:15] Felipe "Juca" Sanches: um deles é usado para o disk change (ao invés do pino 34 padrão) e o outro eu não sei pra que serve
+[2024-02-22 23:51:21] Felipe "Juca" Sanches: Curiosamente, os nomes usados também são diferentes.
+
+Ao invés de chamar /DISK_CHANGE, o sinal usado para esse fim se chama FD I/O e vai do conector ao pino do bit 6 da porta D do processador principal.
+
+E o outro que eu não sei pra que serve, se chama FD H/D e é ligado ao pino de interrupção número 6 do processador principal

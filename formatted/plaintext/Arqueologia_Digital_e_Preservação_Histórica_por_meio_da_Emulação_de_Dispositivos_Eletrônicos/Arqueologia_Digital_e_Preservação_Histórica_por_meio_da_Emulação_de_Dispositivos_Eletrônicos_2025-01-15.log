@@ -1,0 +1,29 @@
+[2025-01-15 02:56:11] Erin Pinheiro 🐿: adoro essas coisas que só funcionam em chrome, reforçam muito o monopólio e lobbying do google sobre os padrões web
+[2025-01-15 02:56:29] Erin Pinheiro 🐿: microsoft de 1998 fica com inveja
+[2025-01-15 11:17:45] Shideravan: Me recuso a abrir PDF com o Chrome
+[2025-01-15 11:25:13] Shideravan: Até a própria Microsoft já se rendeu ao Chromium
+[2025-01-15 13:50:26] RicBit: nesse caso específico é o contrario, o doom pdf usa features arcanas do padrão pdf que os outros readers não implementaram. no pdf reader original da adobe deve funcionar.
+[2025-01-15 13:50:51] Shideravan: O da Adobe sem condição de usar também
+[2025-01-15 13:51:04] Shideravan: Muito mal otimizado
+[2025-01-15 13:51:29] Shideravan: Produtos da Adobe historicamente já são muito pesados
+[2025-01-15 13:51:49] Shideravan: O software profissional deles, é muito bom, mas exige muito da máquina
+[2025-01-15 13:52:25] Shideravan: Mas para PDF não faz muito sentido ao meu ver
+[2025-01-15 13:52:35] Shideravan: Fora que... Software livre ftw lol
+[2025-01-15 13:53:15] Shideravan: Mas é bem legal como feito
+[2025-01-15 13:54:28] Shideravan: Não sei se valeria a pena outros readers implementarem todas as features que o Adobe Reader tem, mas bem, pelo menos ele roda Doom kkkkkkkkk
+[2025-01-15 14:01:57] Guilherme Ranoya: Tenho medo da pessoa que re-escreveu o código em PostScript.
+[2025-01-15 14:35:31] Erin Pinheiro 🐿: não é postscript, é só asm.js mesmo
+[2025-01-15 14:36:26] Erin Pinheiro 🐿: você não tá errado mas o próprio pdf menciona o Chromium
+[2025-01-15 14:37:16] Erin Pinheiro 🐿: logo, o efeito social é o mesmo
+[2025-01-15 14:37:28] Erin Pinheiro 🐿: "ah o firefox não presta pq tudo só funciona no Chrome"
+[2025-01-15 14:43:53] RicBit: pelo que eu entendi ele usa o chrome só para ler o teclado, se for isso é rapidinho fazer um PR. mas tem que ser um pdf reader que suporte as features lá.
+[2025-01-15 14:43:56] RicBit: src -> https://github.com/ading2210/doompdf
+[2025-01-15 14:46:08] RicBit: é, dá para colocar um third-party pdf reader no firefox:
+https://support.mozilla.org/en-US/kb/choose-your-preferred-pdf-viewer-firefox
+[2025-01-15 14:46:24] RicBit: aí deve funcionar sem mexer no binario
+[2025-01-15 16:05:19] L.: isso me lembrou de um cara que trabalhava comigo 
+
+ele usava o ghostscript como calculadora
+
+um dia a gente precisou gerar uns negócios pra imprimir e ele fez em PostScript. com um editor de texto normal. fez até rotina pra justificar texto
+[2025-01-15 16:05:48] L.: eu aqui xingando impressora e o cara simplesmente falava impressorês

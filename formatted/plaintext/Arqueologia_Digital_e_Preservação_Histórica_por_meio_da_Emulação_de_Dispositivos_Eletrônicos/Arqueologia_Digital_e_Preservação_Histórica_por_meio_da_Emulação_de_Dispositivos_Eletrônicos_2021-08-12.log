@@ -1,0 +1,111 @@
+[2021-08-12 18:07:25] Felipe "Juca" Sanches: CARACA! Hoje é um dia daqueles em que faço algo ousado e DÁ CERTO!
+
+Descobri uma técnica simples de fazer dump de ROM do kn5000 e salvar em disquete!
+
+Já já conto os detalhes aqui...
+[2021-08-12 18:11:42] Felipe "Juca" Sanches: Inicialmente eu tinha a idéia de escrever minha própria rotina em assembly para programar o controlador de drive de disquete e depois usar isso pra implementar um "trojan" que faça a leitura de uma região da memória e grave os dados lidos em um arquivo de dump de rom no disquete.
+[2021-08-12 18:14:19] Felipe "Juca" Sanches: mas depois, em uma conversa com o @kretcheu, eu enunciei uma versão melhorada dessa idéia, que foi o que eu de fato consegui fazer hoje:
+
+O equipamento já possui rotinas de ler e escrever em disquete. Eu poderia tentar re-utilizá-las. Mas sabe-se lá onde ficam essas rotinas na memória. Uma outra forma de utilizá-las entretanto é por meio do menu de sistema onde há a opção de fazer um backup dos dados de uma sessão de trabalho (ajustes que um usuário tenha feito no teclado e queira guardar pra recuperar depois)
+[2021-08-12 18:16:14] Felipe "Juca" Sanches: Então nos meus testes de hoje fiz o seguinte:
+
+Usei essa opcao para fazer um backup comum com o teclado completamente zerado, ou seja, logo após instalar o sistema e sem ter feito nenhuma modificação em nenhum ajuste.
+
+Dessa forma, o arquivo de backup gerado deve ser idêntico aos "ajustes de fábrica".
+[2021-08-12 18:18:17] Felipe "Juca" Sanches: Aí eu abri num editor hexadecimal lado a lado o arquivo de backup e o arquivo de instalacao do sistema (após ser descomprimido). 
+
+E consegui achar na imagem da flash (imagem do sistema) o endereço em que os dados desse arquivo de backup estão. Ou seja, onde estão no sistema os dados de "factory settings"
+[2021-08-12 18:21:06] Felipe "Juca" Sanches: anotei o valor desse endereço: 0x0016F62F no arquivo de update descomprimido, que corresponde ao endereço 0x00F6F62F na memória do sistema, pois o sistema fica instalado na faixa de endereços de 0x00E00000 até 0x00FFFFFF
+[2021-08-12 18:22:40] Felipe "Juca" Sanches: Aí pensei:
+
+Alguma parte do programa precisa acessar esse bloco de dados pra fazer a gravacao no disquete. Então deve estar em algum lugar uma instrução do tipo LD registrador, 0x00F6F62F
+[2021-08-12 18:24:33] Felipe "Juca" Sanches: pra achar isso, busquei com o editor hexadecimal pela sequencia de bytes 2F F6 F6 00 (é de tras pra frente mesmo, pois é como a CPU acessa números de 32 bits)
+
+E achei esses bytes em apenas um único lugar: no endereço 0x0016F330 do arquivo.
+[2021-08-12 18:25:41] Felipe "Juca" Sanches: Então a coisa ousada que fiz foi alterar esses 4 bytes, substituindo pelo endereço do início da memória FLASH, o 0x00E00000.
+
+Então fiz o patch binário no arquivo colocando lá os bytes 00 00 E0 00.
+[2021-08-12 18:26:23] Felipe "Juca" Sanches: Instalei esse update do sistema hackeado, liguei o teclado e fui no menu de backup e mandei salvar um backup em disquete.
+[2021-08-12 18:27:03] Felipe "Juca" Sanches: Minha esperança era ver no arquivo de backup o mesmo conteúdo que já conheço do dump da FLASH, pra confirmar que a técnica funciona.
+
+Entretanto, não funcionou de primeira.
+[2021-08-12 18:27:12] Felipe "Juca" Sanches: Aí depois de pensar um pouco entendi por que!
+[2021-08-12 18:29:39] Felipe "Juca" Sanches: os dados de sessão do usuário devem ser salvos em algum outro lugar da memória. E é de lá que se lê pra salvar o backup em disquete.
+
+A instrucao que eu modifiquei não era a de salvar em disquete, mas sim a de resetar os "factory settings".
+
+Então fiz uma segunda tentativa:
+
+Fui no menu de resetar o teclado e mandei carregar os "factory settings". E, sem seguida mandei salvar um backup em disquete.
+
+Aí deu certo! O arquivo que li do disquete no meu computador tem exatamente o que eu esperava, ou seja, aquele início da imagem da FLASH do sistema.
+
+A técnica funciona!
+[2021-08-12 18:31:47] Felipe "Juca" Sanches: Agora vou usar essa técnica novamente para ler o conteúdo de outra região de memória, a faixa entre os endereços 0xC00000 e 0xDFFFFF que acredito ser onde fica a ROM de boot pra valer (aquela do chips IC1 e IC3 que não consegui fazer o dump com acesso direto aos chips dessoldados)
+[2021-08-12 18:32:42] Felipe "Juca" Sanches: Essas ROMs chamadas "TABLE DATA ROM" EVEN e ODD aqui.
+[2021-08-12 18:33:01] Felipe "Juca" Sanches: Uma delas eu fiz o dump aparentemente correto usando leitor de chips. Mas a outra não rolou.
+[2021-08-12 18:33:46] Felipe "Juca" Sanches: Se usando a técnica que desenvolvi hoje eu conseguir obter dados que coincidem com a ROM IC1, aí significa que terei conseguido finalmente uma cópia da ROM IC3 também. Bora tenta!
+[2021-08-12 18:34:03] Felipe "Juca" Sanches: Bora tentar isso já! Agoríssima mesmo!
+[2021-08-12 18:37:00] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14105.jpg
+[2021-08-12 18:37:00] Felipe "Juca" Sanches: Colocando o valor 0x00D00000 na imagem de update de sistema...
+[2021-08-12 18:39:04] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14106.jpg
+[2021-08-12 18:39:04] Felipe "Juca" Sanches: Comprimindo a imagem de update modificada e salvando o resultado em um disquete
+[2021-08-12 18:46:16] Felipe "Juca" Sanches: Estou instalando o update no teclado agora
+[2021-08-12 18:54:50] Felipe "Juca" Sanches: fiz o procedimento todo aqui mas...
+[2021-08-12 18:55:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14109.jpg
+[2021-08-12 18:55:38] Felipe "Juca" Sanches: Veio um conteúdo interessante (janela pequena na frente). Mas não parece corresponder à ROM que eu esperava (janela em fullscreen)...
+[2021-08-12 18:56:22] Felipe "Juca" Sanches: vou tentar descobrir o que são esses dados lidos. Talvez conste na própria imagem do sistema. Agora vou ter que parar e pensar um pouco pra decidir qual o próximo passo.
+[2021-08-12 19:13:22] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14111.jpg
+[2021-08-12 19:13:22] Felipe "Juca" Sanches: Entendi o que aconteceu.
+
+Esse dump que fiz está exatamente no endereço do meio da FLASH. (0x00100000 do arquivo, 0x00F00000 da memória)
+[2021-08-12 19:15:19] Felipe "Juca" Sanches: Acontece que o sistema está deixando a FLASH espelhada em duas faixas de memória, com o mesmo conteúdo de 2Mbytes simultaneamente visível nas faixas [0xC00000, 0xDFFFFF] e [0xE00000, 0xFFFFFF]
+
+Acho que com isso a table data ROM não está mais visível (ao menos não nessa faixa de enderecos)
+[2021-08-12 19:17:05] Felipe "Juca" Sanches: o segredo está aqui, nesse trecho da inicializacao... talvez eu consiga enganar ele por aqui também...
+[2021-08-12 19:17:51] FTMaciel: Quando eu crescer quero ser inteligente igual o juca
+[2021-08-12 19:17:55] FTMaciel: E a erin
+[2021-08-12 19:19:19] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14116-sticker.webp
+[2021-08-12 19:19:23] FTMaciel: E o ricbit
+[2021-08-12 19:19:44] Felipe "Juca" Sanches: aí sim!
+[2021-08-12 19:19:57] FTMaciel: O que tu ia fazer com aquela cga que te arrumei aquela vez?
+[2021-08-12 19:20:25] Felipe "Juca" Sanches: ligar num clone de IBM PC que montei do zero aqui usando um kit de PCB + chips
+[2021-08-12 19:20:34] Felipe "Juca" Sanches: e funcionou!
+[2021-08-12 19:23:03] Felipe "Juca" Sanches: Esse aqui é você?
+[2021-08-12 19:23:30] FTMaciel: Sim
+[2021-08-12 19:23:39] Felipe "Juca" Sanches: então tá aí!
+[2021-08-12 19:23:39] FTMaciel: É nois
+[2021-08-12 19:23:56] Felipe "Juca" Sanches: Aqui a sua placa espetada no meu clone de IBM PC
+[2021-08-12 19:24:30] Felipe "Juca" Sanches: E aqui ela bootando 😉
+[2021-08-12 19:24:35] FTMaciel: Ah esse kit é bacana
+[2021-08-12 19:24:44] FTMaciel: A mão coça pra comprar
+[2021-08-12 19:25:13] Felipe "Juca" Sanches: aqui uma foto melhor da placa pronta com a CGA espetada 😉
+[2021-08-12 19:26:33] Felipe "Juca" Sanches: Preciso arrumar alguma coisa divertida pra fazer com essa placa. A maior diversão foi soldar tudo e ver bootando com sucesso. Depois o brinquedo meio que perdeu a graça.
+[2021-08-12 19:26:41] Felipe "Juca" Sanches: Até surgir um novo desafio...
+[2021-08-12 19:27:07] Felipe "Juca" Sanches: Mas no momento não estou precisando de novos desafios, pois já tenho um peixe grande no colo aqui, o teclado Techincs KN5000 😃
+[2021-08-12 19:39:55] RicBit: Mira mais alto, hoje eu fiquei dez minutos procurando meus óculos e estavam na minha cabeça.
+[2021-08-12 19:40:40] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14135-sticker.webp
+[2021-08-12 19:41:19] Felipe "Juca" Sanches: ricbit tá quietinho aí só lendo... kkkk
+[2021-08-12 19:43:16] Felipe "Juca" Sanches: minhas postagens aqui são um misto de (a) rubber-ducking e (b) vontade genuína de compartilhar as descobertas, pois hackear sozinho não tem graça
+[2021-08-12 19:45:39] Felipe "Juca" Sanches: O pato de borracha completamente mudo, inanimado, já serve pra exercitar os raciocínios. Mas eu prefiro mesmo quando o pato começa a falar 😃
+[2021-08-12 19:46:10] RicBit: 100% a favor do pato, uso muito
+[2021-08-12 19:46:21] Felipe "Juca" Sanches: Pra quem não estiver entendendo nada sobre essa história de pato:
+
+https://pt.wikipedia.org/wiki/Debug_com_Pato_de_Borracha
+[2021-08-12 19:47:54] Alexandre Villares: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14141-sticker.webp
+[2021-08-12 19:48:56] Deleted Account: Kkkk... Sensacional.
+[2021-08-12 19:57:00] Felipe "Juca" Sanches: um problema dessa técnica é que o arquivo de backup tem apenas 5 kbytes, então fazer um dump de uma ROM de 1MByte demoraria um bocado, pois precisaria repetir o procedimento varias vezes pra ir dumpando os pedacinhos.
+
+To tentando pensar em uma forma de fazer dumps maiores de uma vez só, mas se eu simplesmente aumentar o tamanho do buffer a ser copiado acho que posso acabar zoando alguma coisa (tipo buffer overflow). Preciso pensar com calma antes de tentar esse tipo de coisa.
+[2021-08-12 20:18:30] Felipe "Juca" Sanches: ok, descobri uma outra opcao de backup que me dá um arquivo de 77kb. Isso já facilita um pouco, mas ainda não é o ideal
+[2021-08-12 21:24:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14145.jpg
+[2021-08-12 21:24:54] Felipe "Juca" Sanches: Esse aqui é o procedimento que tenho usado para instalar o sistema a partir de disquete
+[2021-08-12 21:25:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14146.jpg
+[2021-08-12 21:25:59] Felipe "Juca" Sanches: Mas tem essa segunda parte aqui, que até então eu achava que era só pra dados de rítmos e sons. Mas agora suspeito que tenha código da sub-cpu também nesse arquivo do "Initial data disk"
+[2021-08-12 22:52:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14147.jpg
+[2021-08-12 22:52:56] Felipe "Juca" Sanches: Comprei um cabo mini-din 8 pinos / DB9 pra tentar transferir dados do teclado por uma porta serial que ele tem na parte de trás.
+[2021-08-12 22:53:28] Felipe "Juca" Sanches: Mas acho que isso vai ser complicado por que os sinais dessa porta serial são ligados à sub-cpu, que eu ainda não consigo controlar
+[2021-08-12 22:59:49] Elson (McGuyver) ☠️: Eu sou basicamente o pato de borracha aqui… Não entendo nada mas fico escutando com curiosidade! 😂
+[2021-08-12 23:00:41] Felipe "Juca" Sanches: eu estou fazendo questão de ser bastante didático 😉 Lendo com calma dá pra entender sim!
+[2021-08-12 23:01:00] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14151-AnimatedSticker.tgs
+[2021-08-12 23:04:18] Elson (McGuyver) ☠️: Com certeza! 😉 👍👏👏👏

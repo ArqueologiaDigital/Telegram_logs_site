@@ -1,0 +1,20 @@
+[2025-09-16 03:03:17] Felipe "Juca" Sanches: Exemplo do MAME emulando teclado musical:
+https://www.youtube.com/watch?v=k11eDo2_rvU
+[2025-09-16 08:14:06] Pablo Vasques Bravo-Villalba: Muito massa
+[2025-09-16 08:24:33] Felipe "Juca" Sanches: Não acho que é estritamente necessário eu dizer isso, mas... as imagens desse vídeo são o display de cristal líquido do teclado também sendo emulado
+[2025-09-16 08:32:53] Pablo Vasques Bravo-Villalba: Não é necessário, mas aparentemente tem coisas que são do display emulado e coisas que são fixas, presumivelmente impressas em alguma parte do display, já que são visíveis mesmo com o dispositivo desligado. Em um display real, a gente quase sempre consegue distinguir claramente um do outro. Gostaria que isso, em especial, tivesse sido emulado, talvez com uma tonalidade de cinza mais clara nos segmentos emulados
+[2025-09-16 08:35:11] Pablo Vasques Bravo-Villalba: Mas admito que é uma enorme frescura da minha parte 😅
+[2025-09-16 08:35:19] Felipe "Juca" Sanches: Sim, isso é fácil de fazer. É só um pequeno ajuste nas cores do layout
+[2025-09-16 08:36:15] Felipe "Juca" Sanches: É nada! Eu sou atento a detalhes assim também!
+[2025-09-16 10:19:46] Luciana Marques: Que legal Juca! Vi suas mensagens sobre o Mame aqui! Estou um pouco ocupada recentemente mas quero me inteirar mais logo mais!
+[2025-09-16 18:23:35] Felipe "Juca" Sanches: Bora!
+[2025-09-16 19:05:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-09/35543.jpg
+[2025-09-16 19:06:55] Felipe "Juca" Sanches: Contexto: 
+
+Aqui o Sebastião Barreto está falando sobre os nomes de variáveis no compilador Patol para o computador Patinho Feio.
+
+Nem todos os caracteres eram usados para identificar as variáveis. Apenas os 2 primeiros e o último eram considerados.
+
+Esses comentários foram feitos em uma conversa similar que tava rolando sobre as variáveis de implementações antigas de BASIC.
+[2025-09-16 19:32:50] L.: Patol usava Duck Typing 🦆?
+[2025-09-16 19:38:43] Felipe "Juca" Sanches: tá achando que isso aqui é o grupo do pavê?! 🤣

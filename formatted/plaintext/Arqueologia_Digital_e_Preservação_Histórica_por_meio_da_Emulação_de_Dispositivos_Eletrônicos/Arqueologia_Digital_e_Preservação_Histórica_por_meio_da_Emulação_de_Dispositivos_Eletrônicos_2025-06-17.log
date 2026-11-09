@@ -1,0 +1,34 @@
+[2025-06-17 00:23:24] Shideravan: @fsanches sabe se existe alguma limitação no MAME que justifique até hoje não ter um modo de vídeo no modo janela sem bordas?
+[2025-06-17 01:43:18] Felipe "Juca" Sanches: Não sei.
+[2025-06-17 03:38:47] Shideravan: Se eu tivesse tempo até toparia olhar e ir atrás e implementar, acho que nem ia ser muito complicado... Mas ficar brigando para defender PR com o pessoal chato do MAME não sei se tenho a disposição hahaha
+[2025-06-17 03:40:30] Shideravan: Ainda mais que agora eles estão refatorando uma parte grande no audio, né? pessoal lá tá com outras prioridades
+[2025-06-17 03:48:59] Felipe "Juca" Sanches: Entendo. Mas acho que depende muito também do quanto a gente quer fazer coisas. Como é software livre, nada me impede de fazer melhorias em meu próprio fork, independentemente de aceitarem no principal.
+[2025-06-17 03:49:28] Felipe "Juca" Sanches: Mas é muito mais legal quando nossas contribuições são incorporadas ao projeto grande.
+[2025-06-17 03:49:30] Shideravan: É que ia demandar de estudo e esforço da minha parte
+[2025-06-17 03:49:46] Shideravan: E eu tenho pesado ultimamente se meu esforço dará fruto ou não
+[2025-06-17 03:50:01] Shideravan: Eu tinha curiosidade de olhar isso, sabe?
+[2025-06-17 03:50:10] Felipe "Juca" Sanches: Eu tenho vontade de ver virar realidade um framework para 3D artwork
+[2025-06-17 03:50:25] Shideravan: Até fui pesquisar e vi que teve gente que até implementou isso
+[2025-06-17 03:50:49] Shideravan: Só não deve ter tentado/conseguido incorporar no fork principal
+[2025-06-17 03:50:50] Felipe "Juca" Sanches: mas eu acho que não tenho familiaridade suficiente com a infraestrutura gráfica do projeto para conseguir começar uma conversa técnica sobre isso
+[2025-06-17 03:51:27] Shideravan: E fazer algo do tipo no próprio fork, não acho que valha a pena, porque na próxima versão já fica defasado
+[2025-06-17 03:51:57] Shideravan: Tinha que ser algo que permanecesse como recurso no MAME para valer a pena, mesmo simples
+[2025-06-17 03:54:19] Shideravan: É diferente do framework 3D que você pode implementar como algo a parte, complementar ao MAME, como em um frontend ou sistema de plugin, "desvinculado" do código principal
+[2025-06-17 03:54:33] Shideravan: Tipo o que o pessoal do PinMAME faz
+[2025-06-17 03:54:58] Felipe "Juca" Sanches: https://github.com/mamedev/mame/issues/388
+[2025-06-17 03:57:09] Shideravan: O ideal é que fosse parte do projeto principal, mas vai rolar? Quantos anos vai demorar? Esses caras prometem fazer as coisas, mas nunca de fato fazem e no dia a dia eles vão fazer só o que estiver no interesse daquele momento e tá tudo certo também, porque é um hobby, mas me frustra que eles não fazem mas não deixam os outros fazerem também
+[2025-06-17 03:58:12] Shideravan: De repente fazer como um projeto "a parte" que você tenha mais controle do código valha mais a pena do que entrar em briga de ego, sabe?
+[2025-06-17 03:58:23] Shideravan: Quando ver já tem o projeto paralelo rodando
+[2025-06-17 03:59:45] Shideravan: O MAME é de 1997, mas ficou mais de 20 anos só funcionando via linha de comando até finalmente passar a ter um frontend bem básico
+[2025-06-17 04:01:18] Shideravan: Nesse meio tempo, quantas centenas de projetos de frontend para o MAME surgiram, a ponto da galera poder escolher o que preferia? Eu mesmo colaborei por anos com o QMC2
+[2025-06-17 04:06:46] Shideravan: Acho que o MAME até hoje não tem suporte a rumble
+[2025-06-17 04:09:17] Shideravan: A questão é que tipo de output certas componentes podem fornecer para executar uma simulação 3D externa (ou mesmo fazer trabalhar mecanicamente alguns outputs desses)?
+[2025-06-17 04:10:17] Shideravan: Se o MAME não fornecer nenhum, fracassou homericamente no objetivo de documentar esses hardwares, porque isso era parte do hardware original
+[2025-06-17 13:01:50] RicBit: fork, be happy, e integra as mudanças vindas do upstream usando AI
+[2025-06-17 14:22:41] L.: o ideal era existir algo tipo libmame
+[2025-06-17 14:22:56] L.: e aí você fazer o frontend/UI que quiser
+[2025-06-17 14:23:34] L.: agora, se galera do mame vai aceitar algo assim, aí... sei lá
+[2025-06-17 14:24:34] Shideravan: Sim, porque mesmo que implementassem, vocês iam confiar naquela meia dúzia lá do mame dando manutenção nisso?
+[2025-06-17 14:25:30] Shideravan: O melhor é algo que propiciasse soluções externas mesmo
+[2025-06-17 22:20:53] Felipe "Juca" Sanches: Wacky Gator: Internal layout improvements by felipesanches · Pull Request #13843 · mamedev/mame · GitHub
+https://github.com/mamedev/mame/pull/13843

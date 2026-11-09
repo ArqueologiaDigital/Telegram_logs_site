@@ -1,0 +1,76 @@
+[2022-02-15 07:08:04] Ricardo Bánffy: Alguém aqui tem acesso a isso? https://www.tandfonline.com/doi/full/10.1080/17445760.2019.1587435?scroll=top&needAccess=true
+[2022-02-15 10:25:15] RicBit: Não tem no sci hub?
+[2022-02-15 10:27:43] RicBit: Tinha sim
+[2022-02-15 10:28:06] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/19070-17445760.2019.1587435.pdf
+[2022-02-15 10:38:13] Pablo Vasques Bravo-Villalba: Fascinante!
+[2022-02-15 10:38:41] Pablo Vasques Bravo-Villalba: O autor fez parte da equipe de desenvolvimento do MSX
+[2022-02-15 10:38:53] RicBit: Uia, vou ler
+[2022-02-15 10:39:17] RicBit: Eu uma revista aleatória aqui eu tenho uma entrevista com o designer do r800
+[2022-02-15 10:39:45] RicBit: Ele disse que o DAA quase ficou incompatível porque ele não entendia como funcionava haha
+[2022-02-15 10:39:59] RicBit: Dica: ninguém entende como o DAA funciona
+[2022-02-15 10:40:26] Pablo Vasques Bravo-Villalba: Interessante isso. Acho que até hoje existem questionamentos sobre o R800 que talvez ele pudesse responder se fosse entrevistado com essa finalidade
+[2022-02-15 10:40:35] Pablo Vasques Bravo-Villalba: DAA?
+[2022-02-15 10:41:06] RicBit: DAA é um opcode do z80 que serve para acelerar aritmética em BCD
+[2022-02-15 10:41:42] Pablo Vasques Bravo-Villalba: Ah, tá, sim
+[2022-02-15 10:42:05] Pablo Vasques Bravo-Villalba: Existe possibilidade de compartilhar essa entrevista? Ou estaria online em algum lugar?
+[2022-02-15 10:43:11] RicBit: Vixe eu acho que cheguei a scanear mas não lembro onde publiquei
+[2022-02-15 10:43:20] RicBit: E nem em qual revista foi haha
+[2022-02-15 10:43:32] RicBit: Perai deixa ver se está aqui no ap
+[2022-02-15 10:43:45] Pablo Vasques Bravo-Villalba: Vige. Procurei na Internet mas não achei nada
+[2022-02-15 10:44:09] Pablo Vasques Bravo-Villalba: Agradecimentos especiais à Canon por chamar um de seus sensores (ou uma de suas câmeras) de R800
+[2022-02-15 10:47:31] Pablo Vasques Bravo-Villalba: Achei uma referência sua no MRC, RicBit
+[2022-02-15 10:47:50] Pablo Vasques Bravo-Villalba: Seria a MSX Magazine 2 de 2003?
+[2022-02-15 10:49:31] RicBit: ah deve ser essa sim
+[2022-02-15 10:49:35] RicBit: tem uma banana na capa
+[2022-02-15 11:00:20] Pablo Vasques Bravo-Villalba: Achei, é essa conversa entre o Kazuya Kishioka (criador do R800) e o Hitoshi Suzuki (criador do BASIC-kun), certo?
+https://archive.org/details/MSXMAGAZINE2/page/n69/mode/2up
+[2022-02-15 11:36:23] RicBit: Ah era essa sim! Mas eu lembrei errado, nao era o DAA, era o EX.
+[2022-02-15 11:36:52] Pablo Vasques Bravo-Villalba: Ah sim. Muito engenhoso
+[2022-02-15 19:19:00] L.: Achei um repositório com todo o código publicado na Revista Spooler (revista Portuguesa no estilo da Brasileira Microsistemas): https://github.com/ACParucker/spooler-magazine
+[2022-02-15 19:25:15] Felipe "Juca" Sanches: miuito legal!
+
+Mas não é todo o código. É apenas referentes aos disquetes das revistas número 28 a 39.
+
+Mas ainda assim, muito legal quando as pessoas fazem esse esforço de preservar, mesmo que parcialmente, na medida do possível, esse tipo de conteúdo.
+[2022-02-15 19:27:15] L.: Quando eu encontrava essas revistas na banca eu comprava, mas eu raramente entendia alguma coisa. Eu estava procurando o programa de compressão de arquivos que saiu na edição 35, por que estou escrevendo um negócio pra (des)comprimir nas horas vagas, e queria ver se eu conseguiria entender o código que na época era só ruído.
+[2022-02-15 19:27:56] L.: Aí encontrei o código (programa SHOCK), e vi que a descompressão é *bem* ineficiente e que a que estou implementando está ficando bem melhor. :D
+[2022-02-15 19:28:53] Felipe "Juca" Sanches: sucesso! 😃
+[2022-02-15 19:29:47] Felipe "Juca" Sanches: Não apenas entendeu, como também viu que era um código ruim. Significa que você deu um enorme avanço nos estudos nessas últimas décadas
+[2022-02-15 20:02:59] Shelton Ribeiro: No grupo do Openlara alguém perguntou se ele iria trabalhar com Brew pra tentar, mas ele disse que não conseguia porque não tinha um Zeebo aí alguém disse que ia ver se conseguia, mas  parece que não tem como né?
+[2022-02-15 20:27:32] Shideravan: O problema é que esses consoles mais novos como o zeebo teriam uma performance sofrível no mame
+[2022-02-15 20:28:11] Shideravan: Mas toda documentação é sempre valida
+[2022-02-15 20:29:01] Shideravan: Só de criar um driver no mame, já dá muita visibilidade para a plataforma
+[2022-02-15 20:29:29] Shelton Ribeiro: Mas acho que ele tava perguntando sobre a viabilidade de lançar o Tomb Raider no Zeebo
+[2022-02-15 20:30:01] Shideravan: Ahh pode crer, no open Lara, né?
+[2022-02-15 20:30:06] Shelton Ribeiro: Isso
+[2022-02-15 20:30:09] Shideravan: Eu quem misturei os assuntos
+[2022-02-15 20:30:18] Shelton Ribeiro: Ahahahah acontece 🤭
+[2022-02-15 20:31:18] Shelton Ribeiro: Ele disse que não conseguia porque precisava do hardware pra testar o brew, aí alguém deve ter falado com o triple aí ele deve ter pelo menos incluído o console lá no “não roda” quem sabe futuramente
+[2022-02-15 20:34:38] Shideravan: É... Ele só incluiu como skeleton mesmo
+[2022-02-15 20:35:33] Shideravan: Até as informações que ele incluiu na documentação, são um copicola do triple oxigen
+[2022-02-15 20:37:14] Shelton Ribeiro: Mas acho que se alguém ceder um console desbloqueado e alguma biblioteca o cara desenrole.
+[2022-02-15 20:37:25] Shideravan: Também acho
+[2022-02-15 20:37:38] Shelton Ribeiro: Estou entrando em contato com o pessoal
+[2022-02-15 20:37:46] Shelton Ribeiro: Pra ver se a turma se mexe
+[2022-02-15 20:38:17] Shideravan: O haze já até fez emuladores stand alone no passado
+[2022-02-15 20:39:07] Shideravan: Se ele ficar motivado, mesmo que o mame gargale ele consegue desenrolar bem sim
+[2022-02-15 20:40:37] Shelton Ribeiro: Não duvido 🙌🏻🙌🏻🤯🤯🤯
+[2022-02-15 20:40:41] Shideravan: O que mais atrasa o meio de campo é o processador arm11
+[2022-02-15 20:40:58] Shelton Ribeiro: Bucho né?
+[2022-02-15 20:42:01] Shideravan: Nível de 3DS para emular basicamente
+[2022-02-15 20:43:00] Shideravan: Não é a coisa mais difícil do mundo mas certamente não é trivial. Para o mame ainda acho fora de questão rodar a velocidade decente
+[2022-02-15 20:43:14] Shideravan: Mas para stand alone é mais jogo
+[2022-02-15 20:44:13] Shideravan: Até porque existem soluções bem interessantes para emulação do arm11 com boa performance
+[2022-02-15 20:44:33] Shideravan: O arm11 está longe de ser uma arquitetura mal documentada
+[2022-02-15 20:45:26] Shideravan: Mas é certamente bastante trampo
+[2022-02-15 20:48:57] Shideravan: (eu não sei se é uma boa ideia eu comparar com o 3ds porque ele envolve outras coisas além do arm11, como a sincronia com o resto da arquitetura, e o 3ds tem 2 arm11 que funcionam em paralelo mas acho que dá para pegar o nível)
+[2022-02-15 20:51:32] Shideravan: O próprio haze já falou a esse respeito a uns 2 anos atrás
+[2022-02-15 20:51:38] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/19129.jpg
+[2022-02-15 20:52:34] Shideravan: Só que claro, de lá para cá algumas coisas melhoraram. Por exemplo, já temos tudo basicamente dumpado
+[2022-02-15 20:53:47] Shelton Ribeiro: Quem sabe com o tempo, dê certo. Quem imaginaria que hoje o cara estivesse programando esse Tomb Raider pra consoles improváveis? É um trampo medonho, massss.
+[2022-02-15 20:54:19] Shideravan: Pois é
+[2022-02-15 20:56:19] Shideravan: Mas se ele pegasse um brinquedinho desses para portar o open Lara, 105% de certeza que ele também usaria o conhecimento para colocar um pouco de "carne" nesse esqueleto
+[2022-02-15 20:58:22] Shideravan: Talvez até uma coisa complementaria outra (o emulador ajudaria a testar coisas portadas para o brew e o que ele aprender portando ele colocaria no mame)
+[2022-02-15 20:58:57] Shideravan: Penso eu que são coisas a serem consideradas
+[2022-02-15 21:42:21] L.: Port do kernal do C64 pro NES https://forums.nesdev.org/viewtopic.php?t=23693
+[2022-02-15 21:42:28] L.: kernal + basic :D

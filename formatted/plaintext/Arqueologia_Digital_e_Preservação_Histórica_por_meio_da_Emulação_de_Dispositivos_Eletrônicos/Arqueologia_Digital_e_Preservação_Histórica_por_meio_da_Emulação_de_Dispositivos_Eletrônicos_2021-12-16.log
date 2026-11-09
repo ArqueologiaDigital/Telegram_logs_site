@@ -1,0 +1,53 @@
+[2021-12-16 01:23:56] Felipe "Juca" Sanches: "dada essa diferenca ridicula, sera que vale a pena adicionar?"
+
+SEMPRE VALE A PENA ADICIONAR!!!
+[2021-12-16 01:24:11] Felipe "Juca" Sanches: Manda as ROMs pra mim
+[2021-12-16 01:24:15] Felipe "Juca" Sanches: e eu cadastro lá
+[2021-12-16 08:20:37] Augusto Almeida: O Juan tá no grupo ZX TK CP BR, já contactei ele pedindo a ROM
+[2021-12-16 08:22:57] Augusto Almeida: Ah sim
+[2021-12-16 08:23:11] Augusto Almeida: Parabéns @fsanches 👏👏👏👏👏👏
+[2021-12-16 10:00:58] FTMaciel: Manda pro Datassette tbem
+[2021-12-16 11:39:24] Augusto Almeida: @fsanches
+[2021-12-16 11:39:24] Augusto Almeida: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-12/18235-as1000.zip
+[2021-12-16 11:39:24] Augusto Almeida [forwarded]: ROMs AS-1000
+[2021-12-16 11:46:02] Ismael Luceno: comprei um lote de calculadoras quebradas
+[2021-12-16 11:46:44] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-12/18237-sticker.webp
+[2021-12-16 13:19:50] Pablo Vasques Bravo-Villalba: Leitura bem interessante
+https://spectrum.ieee.org/atari-2600
+[2021-12-16 13:23:04] Augusto Almeida: https://www.epicgames.com/store/pt-BR/p/shenmue-3?purchaseIntentId=5d582c08e31a43128a61093a2c3ff7f0%7C30e0d1b99ced430b825239b395ff140c
+[2021-12-16 13:23:15] Augusto Almeida: Corram enquanto tá grátis
+[2021-12-16 14:23:41] Felipe "Juca" Sanches: https://twitter.com/AkBKukU/status/1471167589090938882
+[2021-12-16 14:24:13] Felipe "Juca" Sanches: https://www.techpowerup.com/review/adata-adata-super-info-sd/images/backofcard.jpg
+[2021-12-16 14:41:02] Augusto Almeida: Isso é muito legal
+[2021-12-16 14:56:56] Ismael Luceno: Mas como funciona isso?
+[2021-12-16 14:57:16] Ismael Luceno: Com um driver?
+[2021-12-16 14:57:43] Ismael Luceno: Ou espera seja um sistema de arquivo específico
+[2021-12-16 15:17:01] Aylons Hazzud: Muito foda
+[2021-12-16 15:18:10] Aylons Hazzud: Por isso não deve ter mais. Antigamente, um pen-drive ou era fat, ou era fat
+[2021-12-16 15:21:09] Felipe "Juca" Sanches: acho que o próprio firmware do sd card toma conta de controlar o display e-ink. E deve trabalhar só com FAT mesmo
+[2021-12-16 15:47:03] Aylons Hazzud: Justamente
+[2021-12-16 15:47:09] Ismael Luceno: sim, tal vez ele interpreta o free-count quando você atualiza um cluster
+[2021-12-16 15:47:25] Aylons Hazzud: Não é difícil fazer um firmware para ler fat, mesmo se você precisar implementar do zero
+[2021-12-16 15:47:54] Aylons Hazzud: Talvez hoje em dia, naquela época duvido, não tinha padrão para isso
+[2021-12-16 15:48:05] Ismael Luceno: mas ele provavelmente só atualiza o número, mas não interpreta, pois não faz sentido
+[2021-12-16 15:48:24] Ismael Luceno: em FAT16 sim
+[2021-12-16 15:48:33] Felipe "Juca" Sanches: o que mais me deu vontade foi de pegar um pendrive desses com display e (1) emular o firmware dele e (2) implementar um firmware substituto que mostre o nome do disco na telinha junto com a barra de porcentagem de disco usada
+[2021-12-16 15:49:12] Felipe "Juca" Sanches: resolveria o eterno problema de se ter vários pendrives e nao saber exatamente o que tem em cada um deles
+[2021-12-16 15:49:31] Ismael Luceno: XD
+[2021-12-16 15:49:35] Ismael Luceno: seria legal
+[2021-12-16 15:49:43] Ismael Luceno: pois o FAT mesmo tem label, não é?
+[2021-12-16 15:53:27] Felipe "Juca" Sanches: é, isso.
+[2021-12-16 17:49:27] Deleted Account: Bom mesmo eram aqueles pen drives de santa efigenia de 40 reais e capacidade de 256GB.
+[2021-12-16 17:53:32] Erin Pinheiro 🐿: lembro quando trabalhava no labhacker na armênia, tinha um pessoal que vinha porque sabia que a gente "consertava computador", veio uma moça com um cartão SD que comprou por 10 reais perguntando por que não funcionava... "e pq vocês não consertam? e eu vou fazer o que agora? como que vou pegar meu dinheiro de volta, comprei no metrô!"
+[2021-12-16 17:55:23] Deleted Account: Putz. Teve um colega que colocou o TCC em um desses pen drives de capacidade absurda e preço baixo. 
+
+O resultado foi desastroso. Perdeu o TCC. No início o pen drive funcionava normal. Depois, conforme ia enchendo ele ia perdendo tudo.
+[2021-12-16 17:56:24] Erin Pinheiro 🐿: quando ainda são daqueles que se dá pra encontrar a capacidade real e reformatar aí tudo bem.. o foda é quando usam aquele silício de flash que caiu da esteira na fab house e queima depois da primeira escrita
+[2021-12-16 18:47:38] Felipe "Juca" Sanches: colocar uma coisa importante dessas num pendrive sem ter mais nenhuma outra copia em nenhum outro lugar é uma grande cagada mesmo. Ouso dizer que mereceu a consequencia da imprudencia
+[2021-12-16 20:13:13] FTMaciel: Quando eu trabalhava na assistência veio uma mulher desesperada com um disquete. Disse que não abria mais e que o TCC dela estava lá. Quando abri a proteção metálica, a superfície do disco estava toda arranhada.
+[2021-12-16 20:13:22] FTMaciel: Um disquete
+[2021-12-16 20:13:36] FTMaciel: E nunca fez backup no PC nem no e-mail
+[2021-12-16 20:17:05] Deleted Account: Nossa, TCC parece que é algo que de alguma forma aumenta em 90% a chance de estragar o dispositivo de armazenamento. 
+
+Muita gente vai desenvolvendo o TCC no notebook durante o semestre e não faz nenhum backup.
+[2021-12-16 23:38:36] Felipe "Juca" Sanches: Eu acredito que todas essas perdas catastróficas tem uma função social. Entretanto, o povo é burro e parece que nunca aprende...

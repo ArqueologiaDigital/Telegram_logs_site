@@ -1,0 +1,58 @@
+[2024-08-17 12:47:39] Felipe "Juca" Sanches: MERGED!!!
+[2024-08-17 12:47:41] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/12649
+[2024-08-17 12:48:15] Felipe "Juca" Sanches: Agora vou preparar um segundo PR pra submeter mais um pedaço para code-review
+[2024-08-17 12:53:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32655.jpg
+[2024-08-17 12:53:34] Felipe "Juca" Sanches: Technics SX-WSA1R
+[2024-08-17 12:54:48] Felipe "Juca" Sanches: Eu estava vendo hoje pela manhã alguns artigos de época descrevendo esse sintetisador da Technics, lançado em 1995 em dois formatos: com um teclado, ou como um módulo para instalação em rack (esse da foto).
+[2024-08-17 12:55:11] Felipe "Juca" Sanches: Nota-se uma semelhança enorme com o layout do painel de controle do KN5000
+[2024-08-17 12:56:13] Felipe "Juca" Sanches: E tem um vídeo em que um cara abre um desses (modelo com teclado) e mostra por dentro, e eu consigo ver que ele usa um processador TLCS900 também (suspeito que sejam 2 CPUs também, como no KN5000)
+[2024-08-17 12:56:34] Felipe "Juca" Sanches: Esse é o vídeo: 
+
+https://www.youtube.com/watch?v=tORBhP2e_ok
+[2024-08-17 12:58:23] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32660.jpg
+[2024-08-17 12:58:23] Felipe "Juca" Sanches: e nesse frame dá pra ver as 4 ROMs e as duas CPUs
+[2024-08-17 12:59:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32661.jpg
+[2024-08-17 12:59:40] Felipe "Juca" Sanches: Em outro frame dá pra ver o modelo da CPU: TOSHIBA TMP95C061AF (idêntica à do NeoGeoPocket)
+[2024-08-17 13:01:21] Felipe "Juca" Sanches: Direfente, mas muito parecida, com as CPUs do KN5000 (que são TOSHIBA TMP94C241)
+[2024-08-17 13:04:23] Felipe "Juca" Sanches: O pulo do gato aqui é o seguinte... Eu acho que eu  posso aprender mais sobre o protocolo de comunicação inter-CPUs do KN5000 vendo o disasm da CPU secundária do WSA1(R). Pois aposto que o protocolo é o mesmo. E apesar de eu não ter o dump da bootrom da subcpu do kn5000, no caso do WSA1(r) essas ROMs são soquetadas e alguém já fez o dump
+[2024-08-17 13:04:57] Felipe "Juca" Sanches: olhando no video anotei o código das etiquetas e com isso achei numa busca no Google um site que hospeda dumps de ROMs de synths
+[2024-08-17 13:05:10] Felipe "Juca" Sanches: então tenho aqui os dumps dessas 4 ROMs
+[2024-08-17 13:07:01] Felipe "Juca" Sanches: Ah! e sabe por que são 4 ROMs?
+
+Por que são duas CPUs de 32 bits de barramento de dados. Então cada uma delas usa um par de ROMs 27C4002, que têm 16 bits de dados.
+[2024-08-17 13:32:01] Felipe "Juca" Sanches: document: (not yet published)
+[2024-08-17 13:32:01] Felipe "Juca" Sanches: Comprei o service manual do WSA1R em PDF agora, por 45 reais. Aos interessados, segue cópia em anexo.
+[2024-08-17 13:36:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32668.jpg
+[2024-08-17 13:36:59] Felipe "Juca" Sanches: Como eu suspeitava, é bem parecido!
+[2024-08-17 13:51:31] Felipe "Juca" Sanches: https://www.soundonsound.com/reviews/technics-sx-wsa1
+[2024-08-17 13:51:43] Felipe "Juca" Sanches: https://www.soundonsound.com/reviews/technics-sx-wsa1r
+[2024-08-17 13:51:59] Felipe "Juca" Sanches: https://www.vintagesynth.com/technics/SX-WSA1
+[2024-08-17 13:52:23] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=LY7sZDd_4WM
+[2024-08-17 13:52:40] Felipe "Juca" Sanches: http://www.javelinart.com/technics-sx-wsa1.html
+[2024-08-17 14:27:47] L.: Já colocou 2 desses no carrinho né?
+[2024-08-17 15:08:08] Felipe "Juca" Sanches: LOL
+[2024-08-17 15:08:18] Felipe "Juca" Sanches: Não é fácil de achar isso não
+[2024-08-17 15:08:24] Felipe "Juca" Sanches: esses aí são mais raros
+[2024-08-17 15:09:14] L.: Ah, colocou um só então
+[2024-08-17 15:10:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32679.jpg
+[2024-08-17 15:54:13] Robson França: Boa tarde aê
+[2024-08-17 15:54:58] Robson França: Alguém já pensou em portar Another World para o Mega Drive usando o chip SVP?
+[2024-08-17 16:05:24] RicBit: Não dá para fazer nativo? A CPU nativa do mega é boa.
+[2024-08-17 16:14:21] L.: Dá pra fazer compilador gerando 68k a partir do código da VM também
+[2024-08-17 16:15:44] L.: Aí não tem o custo de rodar um interpretador
+[2024-08-17 16:17:43] Felipe "Juca" Sanches: Você sabe que já tem Another World pra Mega Drive, né?
+[2024-08-17 16:18:59] Erin Pinheiro 🐿: lol
+[2024-08-17 16:28:24] Pablo Vasques Bravo-Villalba: Só tem um detalhe: tem que ser gasolina sem chumbo e sem álcool 😬
+[2024-08-17 16:39:45] Pedro de Medeiros 👾: Another World para o PC Engine então 😁
+[2024-08-17 16:45:03] Robson França: Sim, eu sei.
+[2024-08-17 16:46:17] Robson França: Eu fiquei pensando se usasse o SVP (chip que está no Virtua Racing) o jogo poderia rodar a 30 fps ou mais
+[2024-08-17 16:47:29] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32691.jpg
+[2024-08-17 16:47:29] Felipe "Juca" Sanches: Olha a cara desse código de boot da maincpu do WSA1R, gente! hahaha
+[2024-08-17 17:38:29] Felipe "Juca" Sanches: Pra quem não sacou, esse código é muito parecido com o boot da maincpu do kn5000. Só mudam os valores de inicialização das portas de I/O, mas a estrutura geral do código é a mesma
+[2024-08-17 17:39:08] Felipe "Juca" Sanches: Acho que escreveram um único código em C e deve apenas ter uns #define s para as caracteristicas específicas de cada modelo
+[2024-08-17 18:02:55] Felipe "Juca" Sanches: video: (not yet published)
+[2024-08-17 18:19:40] Pedro de Medeiros 👾: É o primeiro PR do KN5000?
+[2024-08-17 18:20:19] Felipe "Juca" Sanches: sim!
+
+Esse é o PR enxuto. Tirei um monte de coisa, pra conseguir fazer passar no code-review
+[2024-08-17 18:20:31] Felipe "Juca" Sanches: agora o resto eu vou enfiando devagarzinho, aos poucos

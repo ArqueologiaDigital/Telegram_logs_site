@@ -1,0 +1,83 @@
+[2023-01-23 04:00:05] L.: https://hackaday.com/2023/01/22/reading-data-from-a-cd-with-a-microscope/
+[2023-01-23 09:51:48] RicBit: Eu quero um para hd, ainda tenho 12 HDs quebrados aqui
+[2023-01-23 10:40:23] Felipe "Juca" Sanches: Vocês se lembram que eu tava hackeando um teclado musical Technics KN5000?
+[2023-01-23 10:42:42] Felipe "Juca" Sanches: Como nessas últimas semanas eu retomei o projeto de estudo da VM do Another World e acabei modularizando o ExecTrace e o empacotando no PyPI (Python Package Index), resolvi "dar um descanso" para a cabeça, deixando de lado por alguns dias o Another World (dado o cansaço da tarefa repetitiva de documentar o disasm do bytecode) e decidi iniciar um disassembler de Toshiba TLCS900H (a CPU usada no teclado KN5000) usando o ExecTrace.
+[2023-01-23 10:43:32] Felipe "Juca" Sanches: Eu já tinha começado a escrever um disassembler para essa arquitetura no passado usando o codebase do GNU binutils. Mas eu fiquei todo atrapalhado com o instruction-set complicadinho e acabem me perdendo no meio do caminho
+[2023-01-23 10:44:05] Felipe "Juca" Sanches: Então essa é uma segunda tentativa de escrever um disassembler para essa CPU, mas agora usando um codebase que tenho muita familiaridade, pois eu mesmo sou autor do ExecTrace
+[2023-01-23 10:44:33] Felipe "Juca" Sanches: E com a vantagem de poder ter uma listagem asm melhor estruturada (que é a melhor feature, e razão de existir do ExecTrace)
+[2023-01-23 10:44:58] Felipe "Juca" Sanches: Tenho a esperança de com isso conseguir facilitar meu entendimento do firmware do teclado
+[2023-01-23 10:45:07] Felipe "Juca" Sanches: segue um screenshot:
+[2023-01-23 10:45:43] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25333.jpg
+[2023-01-23 10:45:43] Felipe "Juca" Sanches: "Juca descansando o cérebro"
+[2023-01-23 10:48:37] Felipe "Juca" Sanches: Essa é a mesma CPU usada no Neo Geo Pocket, by the way...
+[2023-01-23 11:29:35] Felipe "Juca" Sanches: dá pra adicionar código de "probing" pra tentar identificar se é cartucho de Neo Geo Pocket e, se for, interpretar o cabeçalho pra automaticamente detectar o entry-point do código a ser desmontado
+[2023-01-23 11:30:52] Felipe "Juca" Sanches: e uma outra rotina de probing pra tentar identificar vetor de boot nos endereços mais altos da ROM (que é o comportamento comum da CPU, quando estamos lidando com a própria ROM de boot)
+[2023-01-23 11:31:41] Felipe "Juca" Sanches: cartucho é diferente, por que a bios boota antes e depois faz a leitura de um cabeçalho arbitrário inventado pela SNK
+[2023-01-23 18:00:54] Anne Isabelle: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25338.jpg
+[2023-01-23 18:00:54] Anne Isabelle: 3D graphics 😎
+[2023-01-23 18:01:03] Anne Isabelle: C/c @mynameiserin
+[2023-01-23 19:18:04] Anne Isabelle: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25340.jpg
+[2023-01-23 20:15:32] Shideravan: @retpolanne seu monitor tem uma linha de pixel morto ou é impressão minha?
+[2023-01-23 20:15:41] Anne Isabelle: Tem sim :(
+[2023-01-23 20:16:11] Anne Isabelle: Eu tenho um outro iBook que é maior mas tá com a bateria zoada
+[2023-01-23 20:18:52] Shideravan: Maldita obsolescência programada 😕
+[2023-01-23 20:19:54] Anne Isabelle: Pois éee
+[2023-01-23 20:20:23] Shideravan: que ferramenta você está usando para essas artes @retpolanne ?
+[2023-01-23 20:20:36] Anne Isabelle: Bryce 3
+[2023-01-23 20:21:28] Shideravan: Achei a interface bastante nostálgica
+[2023-01-23 20:21:49] Shideravan: Parece alguns jogos do final dos anos 90/começo dos anos 2000
+[2023-01-23 20:21:55] Anne Isabelle: Sii, to testando alguns softwares antigos de rendering e de criação de sites
+[2023-01-23 20:22:00] Anne Isabelle: Exatamente!
+[2023-01-23 20:22:10] Anne Isabelle: Me falaram que parece capa de livro de CG hahaha
+[2023-01-23 20:22:15] Shideravan: hahahahaha
+[2023-01-23 20:22:37] Shideravan: É que a maior parte das capas de livros clássicos de CG foram produzidos nessa época hahaha
+[2023-01-23 20:22:45] Anne Isabelle: Sim kajskaj
+[2023-01-23 20:23:42] Shideravan: As aplicações mais modernas são todas em dark mode para não cansar a vista, mas dá saudades dessas interfaces aí dos anos 2000 hahahaha
+[2023-01-23 20:23:54] Anne Isabelle: Hauahauahau sii
+[2023-01-23 20:24:16] Anne Isabelle: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25358.jpg
+[2023-01-23 20:24:16] Anne Isabelle: O sitezinho que tava tentando fazer no iWeb
+[2023-01-23 20:24:22] Anne Isabelle: Mas achei mto moderno
+[2023-01-23 20:24:57] Shideravan: Bota uns gifs dançando do lado que ele resgata o espírito dessa época uhauhauhahua
+[2023-01-23 20:25:03] Anne Isabelle: HAUAHAUHA
+[2023-01-23 20:25:21] Anne Isabelle: http://www.homerswebpage.com/
+[2023-01-23 20:25:55] Shideravan: Eu lembro desse episódio lol
+[2023-01-23 20:26:09] Anne Isabelle: O episódio é de 2008, até que novo
+[2023-01-23 20:26:40] Shideravan: Eu curto isso aqui
+[2023-01-23 20:26:41] Shideravan: https://www.spacejam.com/1996/
+[2023-01-23 20:26:51] Anne Isabelle: Clássico hahahah
+[2023-01-23 20:26:53] Shideravan: O site oficial do primeiro space jam está no ar até hoje uhauhauha
+[2023-01-23 20:27:34] Shideravan: Parece que cogitaram de tirar do ar com o novo filme, mas ia ser uma divulgação muito negativa nos tirar esse clássico hahahaha
+[2023-01-23 20:27:39] Anne Isabelle: https://news.ycombinator.com/item?id=23709016
+[2023-01-23 20:27:44] Shideravan: Só mudaram a URL acho
+[2023-01-23 20:29:05] Shideravan: Olha isso :O
+[2023-01-23 20:29:13] Anne Isabelle: Foda ne?
+[2023-01-23 20:29:44] Shideravan: Estou decepcionado com os RHs que nunca perguntaram sobre esse site nas entrevistas
+[2023-01-23 20:34:14] Anne Isabelle: Pse kajskaja
+[2023-01-23 20:42:34] L.: Em 1995 o site do filme Hackers foi hackeado e quando arrumaram botaram uma nota no site todo felizes que tinham sido pwned por "real hackers"
+[2023-01-23 20:44:46] Felipe "Juca" Sanches: Em 2010 em Nova Iorque eu fui, junto com outros hackers de verdade, numa balada que era festa de aniversário de 15 anos do lançamento do filme. A festa tinha gente jogando andando de patins e jogando video-game no telão.
+[2023-01-23 20:45:27] Felipe "Juca" Sanches: E a entrada dava direito a escolher um item de roupa num mini-brechó de roupas tipicas parecidas com as do filme.
+[2023-01-23 20:45:30] L.: Faz tempo que não assisto a esse filme, inclusive
+[2023-01-23 20:45:48] L.: Especialmente por que começa aqui em Seattle
+[2023-01-23 20:45:53] Felipe "Juca" Sanches: eu tenho e uso até hoje a camisa que selecionei na entrada dessa festa
+[2023-01-23 20:46:26] L.: O jwz (ex-Mozilla, xscreensaver) tem um bar em SF no estilo cyberdelia
+[2023-01-23 20:46:57] L.: https://www.dnalounge.com/
+[2023-01-23 20:48:41] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25384.jpg
+[2023-01-23 20:48:41] Felipe "Juca" Sanches: era muito parecida com essa aqui
+[2023-01-23 20:49:09] Felipe "Juca" Sanches: Se bobear tem algum vídeo meu no canal de youtube do Garoa Hacker Clube, ou talvez no Happy Hacking Video Blog usando essa camisa
+[2023-01-23 20:50:12] Felipe "Juca" Sanches: ah, sim! Conheço a fama dessa pessoa (mozilla/xcreensaver)😉
+[2023-01-23 20:50:36] Felipe "Juca" Sanches: mas nunca tive chance de ir visitar o bar
+[2023-01-23 20:50:51] L.: Sempre esqueço e com pandemia, tô fora de aglomeração
+[2023-01-23 22:46:24] Felipe "Juca" Sanches: Terminei a primeira etapa de implementação do instruction-set do TOSHIBA TLCS900H.
+Nesse momento ele faz o disasm com sucesso de uma sequência linear de 184 instruções a partir do ponto de entrada do firmware do teclado musical KN5000 até a primeira ocorrência de uma instrução RET, sem "fazer curva". Ou seja, sem seguir desvios e chamadas de subrotinas.
+
+Pelo menos a implementação da interpretação do instruction set parece que tá bem completa. Pode ser que mais alguns bugs sutis apareçam conforme eu for fazendo disasm de blocos maiores de código
+[2023-01-23 22:47:19] Felipe "Juca" Sanches: agora o próximo passo é começar a declarar quais instruções são de branching, para que o disassembler aprenda a seguir o grafo todo do código
+[2023-01-23 22:48:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25391.jpg
+[2023-01-23 22:49:23] Felipe "Juca" Sanches: a sintaxe do meu disassembler tá meio feia, com as virgulas fora do lugar, mas isso é meramente cosmético. Quando eu estiver entediado arrumo isso como passa-tempo 😉
+[2023-01-23 22:49:52] L.: Vai botar suporte à midi no mame pra controlar o teclado emulado?
+[2023-01-23 22:50:28] Felipe "Juca" Sanches: já tem
+[2023-01-23 22:50:37] L.: Nice
+[2023-01-23 22:50:53] Felipe "Juca" Sanches: mas o projeto no momento é fazer um disassembler
+[2023-01-23 22:51:23] Felipe "Juca" Sanches: emular o teclado é um projeto antigo que pode talvez ser desengavetado assim que o disassembler estiver confiável
+[2023-01-23 22:52:08] Felipe "Juca" Sanches: programar sw pra rodar no teclado é outro projeto que também pode ser desengavetado uma vez que eu tiver um emulador razoável funcionando
+[2023-01-23 22:52:53] Felipe "Juca" Sanches: portar a VM do Another World pra rodar no teclado musical... (deixa pra lá, nem vou continuar esse pensamento :-P)

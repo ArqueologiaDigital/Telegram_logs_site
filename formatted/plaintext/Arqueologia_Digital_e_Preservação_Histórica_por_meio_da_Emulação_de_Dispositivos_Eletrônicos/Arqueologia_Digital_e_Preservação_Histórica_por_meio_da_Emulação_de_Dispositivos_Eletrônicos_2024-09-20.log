@@ -1,0 +1,25 @@
+[2024-09-20 00:28:35] Felipe "Juca" Sanches: Inspecionando um disasm do arquivo ppkn50.dll usado pelo programa de Windows HD-TechManager5000, estou conseguindo começar a inferir como funciona o protocolo de comunicação com a placa HDAE5000. Existem algumas funções fornecidas pela DLL que quando executadas chamam a função 0x10002810 com um valor numérico passado pela pilha. Eu acho que esse valor numérico deve também ser enviado via porta paralela para identificar a operação requisitada. Segue abaixo uma tabela dos valores numéricos e respectivas funções:
+
+    0x01: Test The KN PP
+    0x02: Escape Keyboard To Play
+    0x03: Read Fsb From Kn Hd To Kn Mem
+    0x04: Send Fsb From Kn Mem To PC
+    0x05: Send Fsb From PC To Kn Mem
+    0x06: Write Fsb From Kn Mem To Kn Hd / Send Several File Direct To KN HD
+    0x07: Load File From Kn Hd To Kn Mem
+    0x08: Load File From Kn Hd To PC
+    0x09: Load File From Kn Hd Direct To PC
+    0x0A: Send File From PC To KN Mem / Send File From PC To KN HD
+    0x0B: Save File From KN Mem To KN Hd
+    0x0D: Save File From PC Direct To KN Hd / Save PC Mem Direct To KN Hd
+    0x0E: Test Song Info From Kn Hd
+    0x10: Delete File On Kn Hd
+    0x11: Format The Kn 50 Hard Disk
+    0x12: Turn Off The Kn 50 Hd Motor
+[2024-09-20 07:39:24] Pablo Vasques Bravo-Villalba: Parece mais alto nível do que eu imaginaria
+[2024-09-20 13:36:06] L.: https://dmitry.gr/?r=05.Projects&proj=35.%20Linux4004 LMAO
+[2024-09-20 14:20:52] RicBit: Wat
+[2024-09-20 14:28:07] RicBit: Não tem opcode que acessa memória, isso eu nunca tinha visto.
+[2024-09-20 17:44:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/33038.jpg
+[2024-09-20 17:44:33] Felipe "Juca" Sanches: primeiros bytes lidos da porta paralela do KN5000
+[2024-09-20 17:45:15] Felipe "Juca" Sanches: próximo passo: preparar um patch para a maincpu ROM

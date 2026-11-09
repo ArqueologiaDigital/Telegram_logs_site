@@ -1,0 +1,23 @@
+[2026-05-12 06:29:06] Felipe "Juca" Sanches: Vou ver uma palestra com esse cara na sexta feira.
+
+Gary Bracey - Former Development Director - Ocean Software
+
+https://www.youtube.com/watch?v=lfNTSEIT01k
+[2026-05-12 06:29:45] Felipe "Juca" Sanches: Nesse evento: https://www.tickettailor.com/events/fusionretrobooks/2032360
+[2026-05-12 06:49:36] Felipe "Juca" Sanches: E os desenvolvedores desse jogo também estarão lá: https://psytronik.itch.io/sherwood
+[2026-05-12 07:10:52] Pedro de Medeiros 👾: Usuários de MSX tinham uma bronca com a Ocean por causa dos ports de ZX Spectrum. 😁
+[2026-05-12 17:45:15] Érico Andrei: Tinham? Eu ainda tenho!!
+[2026-05-12 19:34:24] RicBit: meu sistema faz todas essas coisas, tem um arquivo .rev para mapeamento e traducao, depois um arquivo .port para os ports. Por isso que eu consigo fazer update em tres versoes do antartic ao mesmo tempo.
+[2026-05-12 19:37:49] RicBit: alias meu rant de hoje é a falta de named structs nos assemblers
+[2026-05-12 19:40:09] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38662.jpg
+[2026-05-12 19:40:09] RicBit: se eu faço uma macro com parametros 26, 7, 0, 38 não dá para entender nada.
+seria bom se eu pudesse chamar a macro com {y=26, x=7, coin=0, delay=38} mas não tem named struct. então eu tenho que fazer um milhão de constantes redundantes para ficar legivel. Tipo X_0 = 0, X_1 = 1 etc
+[2026-05-12 19:40:32] RicBit: vou acabar fazendo um pr para colocar isso
+[2026-05-12 20:35:34] L.: usa cpp antes
+[2026-05-12 20:39:44] Tevo: m4!
+[2026-05-12 20:56:44] Pablo Vasques Bravo-Villalba: Se não me engano o Glass, do Grauw, permite parâmetros de macro com nomes. Isso ajuda?
+[2026-05-12 22:08:50] Pedro de Medeiros 👾: Você fala o pré-processador do C?
+[2026-05-12 22:10:32] Pedro de Medeiros 👾: Qual assembler você usa?
+[2026-05-12 22:13:18] RicBit: eu uso o sjasmplus
+[2026-05-12 22:19:57] RicBit: olhei o glass, ele nao tem low, high e dh. então também precisaria de pr para consertar
+[2026-05-12 23:00:22] L.: Ahan

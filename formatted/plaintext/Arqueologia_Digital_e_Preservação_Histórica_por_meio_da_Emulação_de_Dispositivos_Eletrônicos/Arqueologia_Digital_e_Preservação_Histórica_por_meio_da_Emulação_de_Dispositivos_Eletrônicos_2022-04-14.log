@@ -1,0 +1,15 @@
+[2022-04-14 15:50:52] Carlos Daniel: Boa tarde, gente! Tudo bem?
+[2022-04-14 15:50:58] Carlos Daniel: Gostaria de tirar uma dúvida...
+[2022-04-14 15:51:13] Carlos Daniel: Tenho conhecimento em C, C++, C# e Java.
+[2022-04-14 15:51:41] Carlos Daniel: Qual seria o console "mais tranquilo" para um primeiro projeto de emulação?
+[2022-04-14 15:53:28] Pablo Vasques Bravo-Villalba: Quando você diz console, está restringindo o universo especificamente a consoles de videogame?
+[2022-04-14 15:54:06] Erin Pinheiro 🐿: chip8
+[2022-04-14 15:54:14] Carlos Daniel: De preferência, sim. Mas posso começar por outros tipos de dispositivos também.
+[2022-04-14 15:54:21] Erin Pinheiro 🐿: https://en.wikipedia.org/wiki/CHIP-8
+[2022-04-14 15:55:03] Carlos Daniel: Boa!!! Vou fazer uma leitura, obrigado 😁
+[2022-04-14 15:56:17] Carlos Daniel: Atualmente tenho trabalhado em uma ferramenta assistiva com C e C++, utilizando Arduinos
+[2022-04-14 15:56:30] Carlos Daniel: Tô gostando bastante dessa programação mais de baixo nível
+[2022-04-14 15:56:40] Carlos Daniel: E sempre tive curiosidade sobre o funcionamento de emuladores
+[2022-04-14 20:59:06] L.: Chip-8 é divertido emular! Eu comecei um há um tempo atrás e roda umas ROMs de teste: https://tia.mat.br/temp/chip8.txt
+[2022-04-14 21:05:00] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19639.jpg
+[2022-04-14 21:05:00] L.: Eu não tenho muitos screenshots, mas achei esse aqui dele rodando um teste de CPU (e dando [e]rro 03). Nem lembro o que significa esse erro. :P

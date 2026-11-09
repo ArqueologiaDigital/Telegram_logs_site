@@ -1,0 +1,9 @@
+[2020-12-26 00:28:44] Felipe "Juca" Sanches: o que é m.2 ?
+[2020-12-26 00:45:02] Erin Pinheiro 🐿: https://en.wikipedia.org/wiki/M.2
+[2020-12-26 09:58:37] Nano Gennari: Eu chuto que isso é só um conversor de sata para ide, a única diferença é que é para discos data no formato m.2
+[2020-12-26 10:00:16] Nano Gennari: O cara fala como se fosse mais rápido, mas m.2 é só o formato e não a interface e para completar o fator limitante aí é o barramento IDE.
+[2020-12-26 10:09:33] Ismael Luceno: é bem mais rápido que um disco IDE normal, mesmo que não chegue a usar toda a capacidade do M.2
+[2020-12-26 10:11:53] Nano Gennari: Com certeza, mas não vai ser mais rápido que um SSD sata comum com uma interface sata-ide
+[2020-12-26 10:12:27] Nano Gennari: Na verdade eu tento quase certeza que isso é sata-ide, só é sata num formato m.2.
+[2020-12-26 10:13:32] Nano Gennari: Não acredito que tenha interface de nvme para ide ainda e é uma coisa que não faria muito sentido se sata ainda é tão comum.
+[2020-12-26 10:35:22] Ismael Luceno: sim, eu acho também que é só pra m.2 sata

@@ -1,0 +1,35 @@
+[2025-08-31 02:14:27] Pedro de Medeiros 👾: https://www.macrumors.com/2023/01/19/computer-history-museum-apple-lisa-code/
+[2025-08-31 11:26:39] Felipe "Juca" Sanches: Estou de saco cheio do sistema de criação de layouts pros drivers do MAME. E estou estudando o código para melhorar o suporte a SVG de modo a poder fazer mais dos layouts em SVG e menos do xml schema específico do MAME
+[2025-08-31 11:27:49] Felipe "Juca" Sanches: Uma das tretas é que o suporte a renderização de SVG do MAME é feito por meio de uma biblioteca chamada nanosvg que é uma implementação minimalista que não suporta renderização de texto!
+[2025-08-31 11:27:51] Felipe "Juca" Sanches: https://github.com/memononen/nanosvg
+[2025-08-31 11:28:37] Felipe "Juca" Sanches: E o xml schema do mamelayout tem seu próprio mecanismo para desenhar texto (que eu acho um lixo!)
+[2025-08-31 11:32:02] Felipe "Juca" Sanches: Pra mostrar um texto, precisa primeiro criar um elemento que define a string e a cor:
+ <element name="midi_channel_text"><text string="MIDI CHANNEL"><color red="0.83" green="0.86" blue="0.83" /></text></element>
+
+E, depois, dentro de um <view> que representa as variantes de layout disponíveis para um driver, precisamos referenciar esse elemento, dando a ele uma bounding-box (posição e dimensões):
+<element ref="midi_channel_text"><bounds x="225" y="164" width="75" height="8"/></element>
+[2025-08-31 11:33:26] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-08/35416.jpg
+[2025-08-31 11:33:26] Felipe "Juca" Sanches: Com isso, acho que vocês conseguem entender minha raiva, ao usar esse método verboso e entediante pra desenhar algo assim...
+[2025-08-31 11:35:00] Felipe "Juca" Sanches: Eu acho que deveria ser possível declarar diretamente dentro da view algo como <text x="225" y="164" width="75" height="8" string="MIDI CHANNEL"/>
+[2025-08-31 11:36:00] Felipe "Juca" Sanches: e que deveria ser possível declarar globalmente definições de cores e depois referenciá-las por um nome simbólico na hora de desenhar o texto
+[2025-08-31 11:38:12] Felipe "Juca" Sanches: talvez assim:
+<color name="white_silkscreen" value="#fcf8f9" />
+e assim:
+<text color="white_silkscreen" x=... />
+[2025-08-31 11:39:21] Felipe "Juca" Sanches: mas... antes de propor uma nova versão para o xml schema do mame, achei que seria interessante tentar implementar suporte a text-rendering na nanosvg e usar um SVG para todos os gráficos e texto que não sejam interativos
+[2025-08-31 11:39:42] Felipe "Juca" Sanches: e deixar só os botões clicáveis e LEDs sendo descritos com as tags do mamelayout schema
+[2025-08-31 11:40:48] Felipe "Juca" Sanches: achei essa issue de alguém que estava com a mesma demanda: https://github.com/memononen/nanosvg/issues/203
+[2025-08-31 11:41:37] Felipe "Juca" Sanches: a implementação referenciada nessa issue adiciona suporte a parsing das features de texto do SVG, mas não do rendering
+[2025-08-31 11:42:13] Felipe "Juca" Sanches: então estou fazendo agora uma prova de conceito em que eu uso esse parser melhorado, e uso a API gráfica interna do MAME pra renderizar o texto
+[2025-08-31 11:42:30] Felipe "Juca" Sanches: minha implementação ainda tá cagada, mas está começando a dar sinais de vida
+[2025-08-31 11:42:58] Felipe "Juca" Sanches: e acho que o motivo de ter bug é que o gerenciamento de fontes do sistema interno de rendering do MAME também é bem porco
+[2025-08-31 11:43:07] Felipe "Juca" Sanches: E de fontes eu entendo! ;-)
+[2025-08-31 11:43:24] Felipe "Juca" Sanches: mas eu vou ter que arregaçar as mangas, e enfiar o pé na lama.
+[2025-08-31 11:43:47] Felipe "Juca" Sanches: Talvez eu só saia desse mangue mês que vem...
+[2025-08-31 11:45:42] Felipe "Juca" Sanches: O desafio em tentar consertar isso é que já existem mais de mil layouts feitos com a implementação cagada. Então qualquer mudança na implementação vai ter que levar em consideração que um monte de coisa vai "quebrar"
+[2025-08-31 11:47:50] Felipe "Juca" Sanches: aí fica o desafio. Quando a implementação correta faz os layouts velhos deteriorarem-se, a reação natural é de rejeitá-la e continuar com a implementação cagada. Vou ter que achar um meio-termo.
+[2025-08-31 12:17:31] Pablo Vasques Bravo-Villalba: Pela mãe do guarda
+[2025-08-31 12:18:49] Pablo Vasques Bravo-Villalba: Parece estranha a mistura de elementos e propriedades
+[2025-08-31 12:19:50] Pablo Vasques Bravo-Villalba: Não dá pra fazer um superset?
+[2025-08-31 14:45:08] Felipe "Juca" Sanches: Meu objetivo é tentar deixar os dois métodos disponíveis simultaneamente e depois ir gradativamente migrando do método antigo pro novo
+[2025-08-31 21:47:47] L.: https://www.youtube.com/watch?v=GQwTPH67YqY

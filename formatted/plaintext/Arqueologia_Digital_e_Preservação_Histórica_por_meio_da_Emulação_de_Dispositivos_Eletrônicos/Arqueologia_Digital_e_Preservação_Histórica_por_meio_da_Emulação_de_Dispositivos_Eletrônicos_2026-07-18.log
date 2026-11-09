@@ -1,0 +1,9 @@
+[2026-07-18 00:23:24] RicBit: so testando pra ver. eu vi a cdx2
+[2026-07-18 00:24:59] RicBit: mas eu suspeito fortemente que toda diskrom deve ser igual de 4000h até 7494h
+[2026-07-18 10:00:05] RicBit: a cdx22 tem um loop de busy wait de meio segundo no boot
+[2026-07-18 10:00:17] RicBit: a ddx10 aumentou o loop pra 2.5s
+[2026-07-18 10:00:55] RicBit: o drive da ddx10 devia ser muito porcaria, o unico motivo para aumentar o loop é dar mais tempo para o drive inicializar
+[2026-07-18 10:20:39] Pedro de Medeiros 👾: Até poderia funcionar se os escudos aguentassem a colisão com a estação espacial até chegar do outro lado. Provavelmente se estiver bem rápido também.
+[2026-07-18 10:52:25] RicBit: confirmo que a ddx10 e ddx12 são patches da cdx2
+[2026-07-18 21:57:58] RicBit: cdx-2 completa -> https://github.com/ricbit/diskrom
+[2026-07-18 21:58:29] RicBit: eu consigo documentar bit por bit do codigo, mas tenho zero paciencia para escrever README

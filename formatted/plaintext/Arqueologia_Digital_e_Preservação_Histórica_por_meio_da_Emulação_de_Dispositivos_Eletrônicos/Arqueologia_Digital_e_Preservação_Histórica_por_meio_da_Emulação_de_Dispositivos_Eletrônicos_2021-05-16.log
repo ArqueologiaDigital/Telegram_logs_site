@@ -1,0 +1,30 @@
+[2021-05-16 00:46:52] Felipe "Juca" Sanches: document: (not yet published)
+[2021-05-16 00:46:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13363.jpg
+[2021-05-16 03:04:08] Felipe "Juca" Sanches: document: (not yet published)
+[2021-05-16 03:04:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13365.jpg
+[2021-05-16 03:04:08] Felipe "Juca" Sanches [forwarded]: No datassette, já tem a "edição atualizada" desse. Esse PDF aqui é a edição original. Tem diferenças, por exemplo, por causa dos mascotes das olimpíadas que sempre mudam.
+[2021-05-16 21:05:38] Felipe "Juca" Sanches: document: (not yet published)
+[2021-05-16 21:05:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13368.jpg
+[2021-05-16 21:52:25] Erin Pinheiro 🐿: eu tô tendo problemas tentando comunicar com a minha plotter por serial. já chequei todos os lados da comunicação, o manual diz que o pino DTR deve controlar quando o computador manda instruções pra plotter ou não, mas mesmo assim com hardware flow ligado e tentando ouvir o DSR do lado do pc pra saber quando esperar, eu não consigo fazer a plotter não perder/ignorar certas informações
+[2021-05-16 21:53:38] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13370.jpg
+[2021-05-16 21:53:38] Erin Pinheiro 🐿: acima, com delays arbitrários de 3 segundos entre cada instrução, uma solução ruim ao meu ver.
+abaixo, várias tentativas com controle de fluxo por hardware, veja que vários círculos nunca foram desenhados, e outros desenhados várias vezes porque o comando de mover foi ignorado
+[2021-05-16 21:53:57] Erin Pinheiro 🐿: alguém tem alguma sugestão? estou tentando usar pySerial mas posso tentar algum outro software
+[2021-05-16 22:56:35] Felipe "Juca" Sanches: implementar o protocolo via software (bit bang) talvez? Imagino que isso possa ser algum bug da pySerial
+[2021-05-16 23:35:25] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=cTVXKfYOYxo
+[2021-05-16 23:35:32] Erin Pinheiro 🐿: não sei bem se é bug da pyserial, eu usei meu osciloscópio pra ver o sinal DTR e ele liga por bem pouco tempo, acho que pode ser alguma pequena diferença como serial era implementado em computadores dos anos 80, ou a plotter nunca foi projetada pra receber tantas instruções de uma vez só
+[2021-05-16 23:36:27] Erin Pinheiro 🐿: eu posso estar implementando do lado do meu programa de forma errada, por isso se alguém souber algum outro programa pra linux moderno que seja bom pra controlar impressoras antigas assim, aceito sugestões
+[2021-05-16 23:36:32] Erin Pinheiro 🐿: (a penwriter é de 1986)
+[2021-05-16 23:36:44] Erin Pinheiro 🐿: tem instruções no manual sobre como ligar numa commodore 64 :^)
+[2021-05-16 23:36:52] Erin Pinheiro 🐿: acho que vai ser um bom par pro meu hotbit
+[2021-05-16 23:37:18] Erin Pinheiro 🐿: aqui na página 39 tem infos sobre a serial https://archive.org/details/panasonic-rk-p-400-c-manual/page/n39/mode/2up
+[2021-05-16 23:37:38] Erin Pinheiro 🐿: na página 38 aliás
+[2021-05-16 23:38:06] Erin Pinheiro 🐿: quem subiu foi o paul rickards, que tem uma igual, ele faz bastante plotter art no twitter, mandei um tweet pra ele perguntando como ele resolveu isso e estou esperando resposta
+[2021-05-16 23:38:25] Felipe "Juca" Sanches: que bom!
+[2021-05-16 23:42:50] Felipe "Juca" Sanches: se for um tweet público, compartiliha aí o link com a gente!
+[2021-05-16 23:43:03] Erin Pinheiro 🐿: é essa thread https://twitter.com/maplesbian/status/1394060762574901250
+[2021-05-16 23:43:35] Erin Pinheiro 🐿: e tem essa thread bem longa sobre tudo o que eu fiz nela até agora https://twitter.com/maplesbian/status/1391824328535183360
+[2021-05-16 23:43:43] Erin Pinheiro 🐿: teve um processo de desmontar o teclado inteiro pra limpar
+[2021-05-16 23:44:36] Erin Pinheiro 🐿: meus processos de recuperar as canetas originais infelizmente tiveram resultados mistos, mas eu tô com uma idéia de como fazer novas do zero
+[2021-05-16 23:44:41] Erin Pinheiro 🐿: ainda não tentei
+[2021-05-16 23:45:09] Erin Pinheiro 🐿: e tô esperando resposta de um vendedor dos EUA que tem new old stock das canetas da plotter atari 1020, que usa o mesmo mecanismo e portanto as mesmas canetas

@@ -1,0 +1,16 @@
+[2026-01-25 05:42:35] Felipe "Juca" Sanches: http://arqueologiadigital.org/KN5000-docs/
+[2026-01-25 19:15:48] Felipe "Juca" Sanches: Está sendo extremamente útil usar o Claude Code para documentar as descobertas de engenharia reversa. E até mesmo para fazer novas descobertas.
+[2026-01-25 19:41:39] Felipe "Juca" Sanches: A descoberta da semana é que Claude Code + PDFs de service manual e datasheet do processador + issue tracker Beads do Steve Yegge resultam em um sistema que consegue fazer disassembly, engenharia reversa e documentação sob demanda com alto grau de confiabilidade.
+[2026-01-25 22:09:09] Erin Pinheiro 🐿: nunca achei que eu ia ver o dia que o Juca pagasse para e aplaudisse software de código fechado 🤭
+[2026-01-25 22:32:44] Macabeus: Yeah! Finalmente abri o repositório de um projeto de descompilação que estive programando (e vibecodando) nos últimos 16 dias 🎉
+
+Executor de pipeline baseado em plugins para projetos de matching decompilation.
+
+O Mizuchi automatiza o ciclo de escrever código C, compilar e comparar com um binário alvo em projetos de matching decompilation. Ele orquestra um pipeline baseado em plugins que usa LLMs para gerar código e, em seguida, e retentar automaticamente com um contexto de erro detalhado quando a compilação ou match falham.
+
+https://github.com/macabeus/mizuchi
+[2026-01-25 22:33:23] Macabeus: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37184.jpg
+[2026-01-25 22:33:23] Macabeus: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37185.jpg
+[2026-01-25 22:33:23] Macabeus: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37186.jpg
+[2026-01-25 22:33:23] Macabeus: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37187.jpg
+[2026-01-25 22:33:28] Macabeus: alguns screenshots da UI de report

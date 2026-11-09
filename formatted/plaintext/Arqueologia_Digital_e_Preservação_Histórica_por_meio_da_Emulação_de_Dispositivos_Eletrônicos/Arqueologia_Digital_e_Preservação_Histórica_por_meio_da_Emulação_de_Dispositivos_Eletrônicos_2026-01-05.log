@@ -1,0 +1,40 @@
+[2026-01-05 11:23:57] Silas: Bom dia gente. Queria pedir uma ajuda.
+
+Em um lote que adquiri anos atrás vieram três workstations Unix: uma DEC VAXstation 7090, uma DEC AlphaStation e uma Sun SparcStation. As três estão funcionando, embora as três estejam com HDs defeituosos. Quero passar pra frente essas máquinas e recuperar parte do valor que gastei no lote na época. Alguém sabe como precificar esses equipamentos?
+[2026-01-05 19:07:00] Felipe "Juca" Sanches: não consegui achar online nada a respeito desse modelo "DEC VAXstation 7090"
+[2026-01-05 19:07:08] Felipe "Juca" Sanches: foi um erro de digitação?
+[2026-01-05 19:07:20] Felipe "Juca" Sanches: sabe onde há informações a respeito?
+[2026-01-05 19:15:43] Silas: Perdão, é a VAXstation 4000/90.
+[2026-01-05 20:21:32] Silas: A SPARC é uma SPARCclassic (lunchbox) e a workstation alpha é uma 500au
+[2026-01-05 21:35:38] L.: Eu desovei algumas Sparcstation e UltraSPARC pro Tevo um tempo atrás. Foi uma JavaStation também!
+[2026-01-05 21:35:53] L.: (Mas eu consegui todas essas máquinas de graça então não fez sentido vender pra ele.)
+[2026-01-05 23:28:25] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36779-FTBMP01.BMP
+[2026-01-05 23:28:25] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36780-FTBMP02.BMP
+[2026-01-05 23:28:25] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36781-FTBMP03.BMP
+[2026-01-05 23:28:25] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36782-FTBMP04.BMP
+[2026-01-05 23:28:25] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36783-FTBMP05.BMP
+[2026-01-05 23:28:25] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36784-FTBMP06.BMP
+[2026-01-05 23:28:25] Felipe "Juca" Sanches: Achei esses 6 arquivos BMP dentro da "table_data" ROM
+[2026-01-05 23:28:58] Felipe "Juca" Sanches: cacete, o Telegram não fez o preview...
+[2026-01-05 23:32:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36786.jpg
+[2026-01-05 23:32:53] Felipe "Juca" Sanches: Aqui estão as imagens convertidas pra PNG
+[2026-01-05 23:32:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36787.jpg
+[2026-01-05 23:32:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36788.jpg
+[2026-01-05 23:32:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36789.jpg
+[2026-01-05 23:32:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36790.jpg
+[2026-01-05 23:32:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36791.jpg
+[2026-01-05 23:33:52] Felipe "Juca" Sanches: Todas essas imagens são usadas na animação de demonstração do aparelho
+[2026-01-05 23:34:56] Felipe "Juca" Sanches: Isso significa que eu provavelmente já posso fazer um show de slides para a minha próxima palestra rodando no próprio teclado kkkk
+[2026-01-05 23:41:14] L.: holy clip art batman
+[2026-01-05 23:52:28] Felipe "Juca" Sanches: extraí usando:
+dd if=original_ROMs/kn5000_table_data.rom bs=1 count=77878 of=maincpu/images/FTBMP01.BMP skip=525336
+dd if=original_ROMs/kn5000_table_data.rom bs=1 count=42678 of=maincpu/images/FTBMP02.BMP skip=603214
+dd if=original_ROMs/kn5000_table_data.rom bs=1 count=39478 of=maincpu/images/FTBMP03.BMP skip=645892
+dd if=original_ROMs/kn5000_table_data.rom bs=1 count=39507 of=maincpu/images/FTBMP04.BMP skip=685370
+dd if=original_ROMs/kn5000_table_data.rom bs=1 count=41078 of=maincpu/images/FTBMP05.BMP skip=724848
+dd if=original_ROMs/kn5000_table_data.rom bs=1 count=77878 of=maincpu/images/FTBMP06.BMP skip=765926
+[2026-01-05 23:53:41] Felipe "Juca" Sanches: a ROM principal referencia as artes pelo nome do arquivo. A ROM "table_data" tem um array de uma struct que contém: string do nome do arquivo, offset de início, e tamanho do bloco de bytes
+[2026-01-05 23:55:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36797.jpg
+[2026-01-05 23:57:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36798.jpg
+[2026-01-05 23:57:50] Felipe "Juca" Sanches: Aqui cada bloco corresponde a uma entidade gráfica da apresentação DEMO. O tipo 0x6C é arquivo BMP. Os outros tipos que aparecem nessa captura de tela eu ainda não desvendei (tipo 0x34 e tipo 0x66)
+[2026-01-05 23:59:39] Felipe "Juca" Sanches: Eu tô suspeitando que aquela word 0x0079 deve ser o timestamp de quando o BMP deve ser mostrado durante a demo, pois o valor desse campo está estritamente crescente ao longo das 6 instâncias dos BMPs.

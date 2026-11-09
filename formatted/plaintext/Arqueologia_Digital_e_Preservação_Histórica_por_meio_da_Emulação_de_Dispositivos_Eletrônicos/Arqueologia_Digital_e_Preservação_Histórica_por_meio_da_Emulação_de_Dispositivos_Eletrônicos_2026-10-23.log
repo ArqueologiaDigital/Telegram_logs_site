@@ -1,0 +1,36 @@
+[2026-10-23 00:33:57] Pedro de Medeiros 👾: Está usando layers agora?
+[2026-10-23 00:35:34] RicBit: 2 layers por hardware + sprites, o resto é software mesmo
+[2026-10-23 02:38:44] Shideravan: O fato da internet ficar falando que o Switch 2 era "inviolável" fez eu criar uma tabela interessante
+[2026-10-23 02:39:09] Shideravan: Com o tempo que os consoles demoraram para terem seu primeiro jailbreak
+[2026-10-23 02:40:20] Shideravan: O Switch 2 não é nem de longe um dos consoles que mais demoraram para desbloquear
+[2026-10-23 02:50:12] Shideravan: O WiiU demorou o dobro do tempo, por exemplo
+[2026-10-23 02:50:14] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41793.jpg
+[2026-10-23 05:30:22] Alexandre Villares: https://social.coop/@cwebber/117487830866598200
+[2026-10-23 05:31:06] Alexandre Villares: https://aftermath.site/ai-slop-hobbies-in-software-emulation/
+[2026-10-23 10:44:48] Pablo Vasques Bravo-Villalba: Talvez por falta de interesse, dada a menor popularidade do WiiU?
+[2026-10-23 10:46:09] Shideravan: Provável, visto que o XBox One não tem desbloqueio até hoje inclusive, não porque o hardware é especialmente difícil de desbloquear
+[2026-10-23 10:47:42] Shideravan: Mas é interessante porque o Switch 2 tinha toda essa aura criada pela mídia de que seria "inviolável" e estamos vendo aí, um ano e meio depois, ele completamente violado hahaha
+[2026-10-23 10:49:02] Pablo Vasques Bravo-Villalba: Povo não aprende. Nada é inviolável.
+[2026-10-23 10:49:35] Shideravan: Metade do tempo que um WiiU que não era um hardware especialmente protegido foi desbloqueado
+[2026-10-23 10:51:23] Shideravan: Tem todo um lance de "fazer justiça" na cena de desbloqueio com empresas que tem tomado atitudes vistas como abusivas sobre o consumidor
+[2026-10-23 10:51:55] Shideravan: A Sony mesmo está com um grande alvo pintado por acabar com a mídia física
+[2026-10-23 10:54:01] Shideravan: Eu lembro que com o PS Vita por exemplo, mesmo sendo um hardware que teria um potencial enorme desbloqueado (tanto que por muito tempo foi "o" console para rodar emuladores e meio que ainda segue sendo até hoje, mesmo sendo um hardware antigo) a cena esperou o suporte da Sony acabar para desbloquearem
+[2026-10-23 10:54:28] Shideravan: Porque a situação era completamente diferente do que a Sony e a Nintendo estão fazendo
+[2026-10-23 10:58:14] Shideravan: Analisando a história, mostra que a única barreira efetiva para um hardware ser ou não desbloqueado envolve interesse. E digamos que empresas não terem vergonha de terem atitudes abusivas é uma das coisas que mais geram interesse na comunidade
+[2026-10-23 10:59:45] RicBit: otimizei a intro, agora tá full speed, coisa linda -> https://www.ilafox.com.br/ricbit/ys3/
+[2026-10-23 11:00:11] RicBit: mas fica bem ruim no webmsx, acho que o jeito vai ser consertar o emulador mesmo
+[2026-10-23 11:17:00] Emerson BRANCORP2000: fala com o peccin
+[2026-10-23 11:56:38] Felipe "Juca" Sanches: o Technics KN5000 levou uns 5 anos pra eu achar um "soft-jailbreak" kkkk
+[2026-10-23 12:00:48] RicBit: nah, mais facil consertar e depois mandar o PR.
+[2026-10-23 12:01:45] RicBit: mas eu preciso de um baseline, acho que o jeito vai ser ligar o turbor com 9990 na rede, conectar o claude nele, e deixar ele medir todos os delays experimentalmente
+[2026-10-23 12:06:24] RicBit: Hum se eu ligar um celular com camera 120 fps eu consigo medir o tearing também
+[2026-10-23 12:06:26] RicBit: Veremos
+[2026-10-23 12:38:44] RicBit: com um setup desses eu tambem consigo consertar o meu tmnt, ele tem um bug que nao aparece no openmsx, só no hardware.
+[2026-10-23 15:03:06] Emerson BRANCORP2000: mas se aparece no hardware seria falha no openmsx?
+[2026-10-23 15:45:23] RicBit: se falha no hardware mas não falha no emulador, quem tá errado é o emulador.
+[2026-10-23 15:51:09] Pedro de Medeiros 👾: TMNT? Teenage mutant ninja turtles?
+[2026-10-23 15:51:40] RicBit: é, ele tem um bug de uma linha
+[2026-10-23 17:54:22] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41819.jpg
+[2026-10-23 17:54:22] RicBit: é só tirar o olho da tela que ele já quer invocar satan
+[2026-10-23 17:55:24] RicBit: (suspeito que seja sprite attribute table analyser)
+[2026-10-23 18:44:29] L.: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41821-animation.gif.mp4

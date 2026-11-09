@@ -1,0 +1,16 @@
+[2025-04-27 09:08:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-04/34816.jpg
+[2025-04-27 09:08:38] Felipe "Juca" Sanches: (17 hours ago) Hey, just a friendly reminder that I'm still here and happy to help when you're ready to start reviewing the code. Also happy to continue the above discussion when you're ready. https://github.com/mamedev/mame/pull/13444#issuecomment-2832528095
+[2025-04-27 12:53:50] Anne Isabelle: Off topic, mas isso me lembra quando abri um PR no apache spark e fui ignorada com sucesso
+[2025-04-27 12:54:17] Anne Isabelle: Até mandei e-mail perguntando na mailing list se alguém podia revisar e fui ignorada ;-;
+[2025-04-27 13:02:38] Felipe "Juca" Sanches: Existem muitas camadas nessa questão
+[2025-04-27 13:04:24] Felipe "Juca" Sanches: Por exemplo, já vi pesquisas acadêmicas sobre o impacto da identidade de gênero na forma como contribuições são avaliadas em projetos de software livre.
+[2025-04-27 13:12:57] Pedro de Medeiros 👾: Pra isolar algumas variáveis, tem que ver também se o Apache Spark tem o hábito de aceita contribuições pontuais e qual o tempo de demora nessas respostas.
+[2025-04-27 13:13:33] Pedro de Medeiros 👾: Eu lembro de fazer contribuição pro apt-get do Debian e a resposta levar uns 5 anos. 😅
+[2025-04-27 13:15:24] Pedro de Medeiros 👾: Foi mais algo do tipo, "estamos concluindo um ciclo, então vamos pegar todos os PR abertos, dar uma olhada e fechar o que não é mais relevante/útil"
+[2025-04-27 13:15:54] Pedro de Medeiros 👾: Limpando a casa basicamente.
+[2025-04-27 13:48:29] Felipe "Juca" Sanches: Eu tive contribuição pro Firefox que levou vários anos para aplicarem uma tag indicando que não iriam nem sequer fazer um code-review
+[2025-04-27 14:25:08] RicBit: vixe eu costumo dar sorte então, nesse ano ainda não tive nenhuma que durou mais de um mês
+[2025-04-27 14:46:47] Anne Isabelle: A minha do Python-pip demorou 8 meses, mas com mta pressão de outras pessoas que estavam com a mesma treta
+[2025-04-27 14:49:00] Pedro de Medeiros 👾: Se eu vejo que o projeto que eu quero ajudar está jogado às moscas com contribuições fazendo aniversário, eu nem me dou o trabalho. Considero apenas que morreu e esqueceram de enterrar.
+[2025-04-27 15:02:03] RicBit: acabei de mandar uma pro networkx, vamos ver quanto demora -> https://github.com/networkx/networkx/pull/8003
+[2025-04-27 22:12:47] L.: https://www.leadedsolder.com/2025/04/22/vtech-socrates-pickup.html

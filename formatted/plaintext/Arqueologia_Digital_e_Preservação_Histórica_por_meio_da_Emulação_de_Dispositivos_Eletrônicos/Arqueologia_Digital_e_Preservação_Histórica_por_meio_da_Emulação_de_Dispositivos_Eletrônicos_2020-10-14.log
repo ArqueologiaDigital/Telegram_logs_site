@@ -1,0 +1,44 @@
+[2020-10-14 15:48:51] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=4BlpONgj74A
+[2020-10-14 16:43:48] L.: Vai tentar extrair o FW com modo de teste mesmo?
+[2020-10-14 17:34:44] Felipe "Juca" Sanches: é... comprei alguns PenseBem pra detonar
+[2020-10-14 17:35:18] Felipe "Juca" Sanches: suspeito que vou fritar algumas CPUs até conseguir fazer o hack pra valer
+[2020-10-14 17:49:15] Leonardo Roman: Vai ser legal descobrir de vez o algoritmo certo que usaram.
+[2020-10-14 17:54:48] L.: Vai ser aquela decepção 😂
+[2020-10-14 18:01:15] Felipe "Juca" Sanches: hahaha
+[2020-10-14 18:01:30] Felipe "Juca" Sanches: minha aposta: LFSR
+[2020-10-14 18:01:37] Felipe "Juca" Sanches: linear feedback shift register
+[2020-10-14 18:09:36] Leonardo Roman: Só movem uns bits pra esquerda ou direita?
+[2020-10-14 18:26:01] Felipe "Juca" Sanches: a técnica de LFSR, que suspeito ser a forma que usaram pra gerar os números psudo aleatórios, usa um shift register de N bits com alguns deles sendo resetados em funćão de algumas portas lógicas (isso é o tal do feedback). Dependendo de quais bits sofrem esse feedback e de qual funcao booleana é implementada no feedback, gera-se uma sequencia pseudoaleatória diferente no padrão de zeros e uns da saída do shift register
+[2020-10-14 19:40:45] L.: Sim, é algo bem simples
+[2020-10-14 19:40:58] L.: Pouco estado, barato de implementar
+[2020-10-14 19:41:14] L.: E dá resultado satisfatório pro propósito do brinquedo
+[2020-10-14 20:32:16] Felipe "Juca" Sanches: https://www.sega60th.com
+[2020-10-14 21:31:28] RicBit: Se for lfsr é só medir a saída e interpolar o polinômio
+[2020-10-14 22:15:07] Felipe "Juca" Sanches: um dos vendedores cancelou a venda: 
+
+"Opa Felipe tudo bem? você comprou o pense bem, mas minha mãe já se desfez dele..que pena desculpe"
+
+kkkk
+[2020-10-14 22:16:06] Felipe "Juca" Sanches: e a gente com dó de desoldar o chip pra extrair a ROM... esse aí deve ter ido pro lixo
+[2020-10-14 22:20:29] Felipe "Juca" Sanches: já um outro vendedor me disse:
+
+- ola amigo, grato pela compra. Leu todo o anuncio, correto? Restauro...
+
+- Sim, eu li 😊
+
+- olha fui ligar para ver e agora parou de vez, muito tempo parado. Pedirei para voce cancelar a compra, ok? Desculpe, estou tentando ligar mas acho que não vai funcionar mais esse anuncio tambem é ja faz tempo.
+
+- nao tem problema. Pode me mandar do jeito que está. Eu assumo o risco e tento consertar.
+
+- vou deixar um pouco no sol e ver depois umidade talvez, mas ele liga fraco e depois desliga. nada liga e apaga fraco. 
+
+- pode me mandar do jeito que tá. Eu vou abrir e estudar o circuito e ver se consigo consertar. Pra mim tá tudo bem me mandar nas condições em que se encontra.
+
+- OK. pode ser amanha? Tô na rua.
+
+- OK 😉
+[2020-10-14 22:21:33] Felipe "Juca" Sanches: a galera não entende que queremos comprar algo "quebrado" e tudo bem
+[2020-10-14 23:03:51] Leonardo Roman: hahaha, catador de lixo do ML.
+[2020-10-14 23:09:40] Felipe "Juca" Sanches: 25 contos um PenseBem quebrado kkkk
+[2020-10-14 23:13:15] L.: https://twitter.com/NanoRaptor/status/1254278875854458880?s=19
+[2020-10-14 23:13:29] L.: A/UX era legal demais

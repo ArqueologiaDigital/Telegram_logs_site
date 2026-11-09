@@ -1,0 +1,27 @@
+[2026-03-23 00:04:31] Ismael Luceno: eu não estou pagando para usar... então estou limitado à web, mas não deve ter grão diferencia; o claude parece ter treinado melhor para produzir melhores micro-decisões na hora de produzir o código, e melhores decisões de arquitetura, então té um efeto bola de neve, e faz iterar menos e obter melhores resultados
+[2026-03-23 00:09:25] Ismael Luceno: dos modelos abertos, Kimi é bastante competitivo, mas as decisões que ele toma eu não gostei tanto, após dar instruçoes ele ficou aceitavel
+[2026-03-23 11:25:49] Felipe "Juca" Sanches: O Claude me deu uma especulação bem interessante e que parece fazer sentido:
+
+The "HAMA" Codename Connection
+
+The memory dump tool lives inside the "HAMA" diagnostic subsystem. "HAMA" is likely an abbreviation of Hamamatsu the city where Matsushita's musical instrument division was headquartered and where the KN5000 was designed and manufactured. Embedding the factory's name as a codename in the diagnostic system is a common practice in Japanese engineering culture, connecting the diagnostic tools to the physical factory where they would be most frequently used.
+[2026-03-23 11:31:32] Ismael Luceno: Se alguém tiver interesse, podemos fazer um repo com as memórias que melhoram o rendimento dos bots, com regras comuns e específicas.
+[2026-03-23 11:32:35] Ismael Luceno: Eu tenho algumas que reduzem bastante as roundtrips
+[2026-03-23 11:34:26] Ismael Luceno: E no caso do Kimi, regras para ele fazer coisas que tem limitadas de outro jeito kkkk
+[2026-03-23 11:35:00] Felipe "Juca" Sanches: Eu tenho muita coisa desse tipo documentada nos repos de reversa do KN5000
+[2026-03-23 11:35:39] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/kn5000-roms-disasm/blob/main/CLAUDE.md
+[2026-03-23 11:38:18] Ismael Luceno: Eu estou tentando fazer que todos eles se comportar do mesmo jeito e fazer das regras úteis para todos os meus projetos. BTW as capacidades de análise do Kimi K2.5 Thinking são muito boas, eu acho que com um mecanismo de censura ele poderia ser top.
+[2026-03-23 11:38:42] Ismael Luceno: Vou olhar mais tarde ❤️
+[2026-03-23 12:46:54] Felipe "Juca" Sanches: Abri o PR final dessa jornada do painel de controle interativo pro Technics KN5000. Vamos ver...
+[2026-03-23 12:46:58] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/15143
+[2026-03-23 17:55:13] Ismael Luceno: https://gist.github.com/ismaell/ce74a9bb5c831e03cbb564758ae05fc2
+[2026-03-23 18:20:25] Ismael Luceno: regras #1 e #7 ajudam a reduzir a queima de tokens
+[2026-03-23 18:21:23] Ismael Luceno: regra #8 faz que ele se comporte mais como Claude (mais o menos)
+[2026-03-23 18:27:50] Ismael Luceno: regra #5 permite subir e baixar arquivos, sem isso o bot está limitado
+[2026-03-23 18:32:36] Ismael Luceno: regra #9, a última parte, ensina como aproveitar DSOs do sistema e faz bypass do atributo noexec do filesystem
+[2026-03-23 19:10:57] Ismael Luceno: eu vou tentar extrair as regras do Claude no final de semana, pois ja esgotei as mensajens.
+[2026-03-23 19:17:05] L.: https://github.com/mikechambers84/BasicBox
+
+Falando em década de 90 (cont.): emulador de 486 feito em VB6, capaz de rodar VB6
+[2026-03-23 22:06:55] Ismael Luceno: muito específico a o projeto, mas seguro Claude consegue generalizar sozinho se vc pedir ;)
+[2026-03-23 22:09:29] Felipe "Juca" Sanches: sim, claro!

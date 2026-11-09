@@ -1,0 +1,41 @@
+[2026-09-19 00:58:11] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40614-minigb.zip
+[2026-09-19 00:58:11] RicBit: Agora ele roda o Wizard & Warriors, ainda 4kb.
+[2026-09-19 00:58:40] RicBit: pelo menos das roms que eu tenho aqui, falta só uma para rodar 100%.
+[2026-09-19 01:16:47] Shideravan: Qual está faltando?
+[2026-09-19 01:20:18] RicBit: zerd no densetsu
+[2026-09-19 01:20:53] RicBit: mas meu romset nao é completo, talvez tenha mais roms selvagens por aí
+[2026-09-19 01:29:51] Shideravan: Já testou road rash, prehistorik man, deadalian opus e Mr. Do?
+[2026-09-19 01:30:15] Shideravan: São uns edge cases chatinhos de emulação do DMG
+[2026-09-19 01:31:34] Shideravan: Altered space sofre das mesmas questões do pinball fantasies
+[2026-09-19 01:33:49] Shideravan: Precisa de uma precisão cirúrgica nos subciclos
+[2026-09-19 01:39:19] Shideravan: The Legend of Zerda
+[2026-09-19 01:40:55] Shideravan: (dsclp, não resisti)
+[2026-09-19 01:40:58] RicBit: altered space roda, prehistorik man roda (esse foi o que precisou de pixel perfect emulation)
+[2026-09-19 01:41:24] RicBit: os outros eu nao lembro, deixa ver
+[2026-09-19 01:41:44] RicBit: se eu tiver deve funcionar, senao o unit test teria berrado
+[2026-09-19 01:44:13] RicBit: ah o road rash a abertura funciona, mas o jogo trava, cool
+[2026-09-19 01:45:05] RicBit: daedelian opus funciona
+[2026-09-19 01:45:43] RicBit: mr do funciona
+[2026-09-19 01:46:18] RicBit: entao foi o road rash mesmo
+[2026-09-19 01:54:29] RicBit: acho que o fix do zerd vai consertar o road rash tambem
+[2026-09-19 01:54:42] RicBit: mas precisa de 9 bytes e eu só tenho 7 free
+[2026-09-19 01:55:22] RicBit: vou deixar namagiri rodando pra liberar o espaço
+[2026-09-19 01:57:06] RicBit: já achou lol
+[2026-09-19 01:57:14] RicBit: amanha eu monto tudo então
+[2026-09-19 03:01:23] Shideravan: Olha o 100% chegando!
+[2026-09-19 15:12:14] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40638-minigb.zip
+[2026-09-19 15:12:14] RicBit: agora ele roda o zerd no densetsu e o road rash, era o mesmo bug indeed. ainda 4kb.
+[2026-09-19 15:14:14] RicBit: namagiri rodou à noite e ainda tem 5 bytes livres. hoje à noite eu vou rodar o sweep pra ver se conseguiu 100% mesmo.
+[2026-09-19 15:31:14] Shideravan: Então os piores edge cases funcionam, nice!
+[2026-09-19 16:42:05] L.: https://github.com/mindbox77/zxdesk
+
+Da série: "se existe um tipo de software pra qualquer computador, tem versão pra Speccy", temos aí um ambiente desktop
+[2026-09-19 19:30:45] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40642.jpg
+[2026-09-19 19:30:45] RicBit: rhythmland lol
+[2026-09-19 19:54:31] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40643.jpg
+[2026-09-19 19:54:31] RicBit: fixd
+[2026-09-19 19:58:08] RicBit: peguei um romset novo, tem mais algumas que nao rodavam no pack
+[2026-09-19 19:58:45] RicBit: e ainda tem 1 byte livre. 1 byte são oito bits, ainda cabe bastante coisa.
+[2026-09-19 21:32:07] Shideravan: Sacanagem a ROM zoar seu trabalho árduo kkkkkkkkkkkk
+[2026-09-19 23:53:02] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40647-minigb.zip
+[2026-09-19 23:53:02] RicBit: agora roda rhythmland, lunarchaser, pokemon gin/kin, ainda 4kb.

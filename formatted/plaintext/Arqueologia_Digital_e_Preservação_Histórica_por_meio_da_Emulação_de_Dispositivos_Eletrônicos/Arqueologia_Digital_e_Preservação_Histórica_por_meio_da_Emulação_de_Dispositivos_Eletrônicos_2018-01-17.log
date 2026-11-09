@@ -1,0 +1,134 @@
+[2018-01-17 02:36:38] Y K: Pascal Compiler pour 300 dólares vinha como?
+[2018-01-17 06:34:41] DQ: Como todo software profissional da época: disquetes 5 1/4 dentro do fichário do manual. A primeira versão do SISNE (SIstema operacional do NExus) foi feita com este compilador (e doses adequadas de assembler)
+[2018-01-17 08:45:11] Felipe "Juca" Sanches: o nexus rodava SISNE ?
+[2018-01-17 08:45:25] Felipe "Juca" Sanches: tanto o nexus 1600 quanto o nexus 2600 ?
+[2018-01-17 08:45:49] Felipe "Juca" Sanches: Esse que temos no laboratório da USP está com IBM PC DOS 3.3
+[2018-01-17 09:19:23] DQ: O SISNE era o sistema oficial, mas muita gente rodava o PC DOS (pirateado) ou MS DOS (pirateado ou legal).
+[2018-01-17 09:23:17] DQ: Entre outros motivos do nome está a ligação com o Patinho Feio.
+[2018-01-17 09:32:01] Felipe "Juca" Sanches: qual é a ligação com o Patinho?
+[2018-01-17 09:33:06] DQ: O Edson Fregni.
+[2018-01-17 09:33:13] Felipe "Juca" Sanches: ah
+[2018-01-17 09:33:16] Felipe "Juca" Sanches: :-D
+[2018-01-17 09:33:58] DQ: Se não me engano, na época do desenvolvimento do Nexus o Patinho Feio (ou o que sobrou dele) ficava em exposição na entrada do prédio.
+[2018-01-17 13:15:23] Affonso Amendola: Pensando em um jeito de transferir os dados do nexus pra um pc moderno (pra gente n ter que sofrer com um hd morrendo antes que a gente consiga ver tudo que tem la dentro), eu achei essa thread, http://www.vcfed.org/forum/showthread.php?49915-IBM-PC-XT-and-3-5-quot-floppy-support. Quais sao as chances do meu emuladorzinho gotek funcionar?
+[2018-01-17 13:15:43] Affonso Amendola: Eu assumi que n ia pq ele n formata 360k
+[2018-01-17 13:28:47] Felipe "Juca" Sanches: acho que o HD é relativamente pequeno. Talvez faça sentido a gente desenvolver um programinha simples que leia os setores do disco rígido e envie via porta serial
+[2018-01-17 13:29:34] Felipe "Juca" Sanches: podemos desenvolver o programa num computador moderno, gerar um binário de 8088 e transferir pro nexus via disquete
+[2018-01-17 13:35:20] Affonso Amendola: Alllright
+[2018-01-17 13:47:02] DQ: Eu tenho um programa de comunicação para DOS, precisa ver se o disco de 5 1/4 ainda está bom.
+[2018-01-17 13:48:00] DQ: Outro jeito é digitar um programinha simples no debug.
+[2018-01-17 13:48:21] DQ: 30 anos atrás eu faria isto sem suar.
+[2018-01-17 14:58:23] Felipe "Juca" Sanches: hehehe
+[2018-01-17 14:59:02] Felipe "Juca" Sanches: eu preciso estudar os detalhes de leitura de disco e de setup da serial em asm...
+[2018-01-17 15:22:28] Felipe "Juca" Sanches: eu tentei fazer o dump das duas ROMs do nexus 2600 usando o debug.com
+[2018-01-17 15:23:05] Felipe "Juca" Sanches: deixei os arquivos resultantes no disco ridigo do nexus e hoje o Affonso me passou os arquivos
+[2018-01-17 15:23:34] Felipe "Juca" Sanches: ele transferiu do nexus prum PC moderno usando disquetes 5 1/4 e uma interface GOTEK que emula um drive de disquetes usando um pendrive USB
+[2018-01-17 15:24:14] Felipe "Juca" Sanches: é uma versão moderna e um pouquinho mais complicada que o clássico protocolo de comunicação DPL/DPC
+[2018-01-17 15:24:31] Felipe "Juca" Sanches: "Disquete Pra Lá / Disquete Pra Cá"
+[2018-01-17 15:29:52] Affonso Amendola: (A tentativa de melhorar o classico protocolo de comunicação envolvendo a conexão do gotek direto do nexus que eu acabei de tentar, não funcionou, tenho que ver direito como faz, da seek error na hora de acessar o a:)
+[2018-01-17 15:39:52] Felipe "Juca" Sanches: Eu sei que tinha um pessoal desenvolvendo firmware alternativo pra GOTEK
+[2018-01-17 15:39:57] Felipe "Juca" Sanches: só não sei se é software livre
+[2018-01-17 15:40:13] Felipe "Juca" Sanches: se for, podemos sujar as mãos :-)
+[2018-01-17 15:41:03] Felipe "Juca" Sanches: se não for, sobra a possibilidade de mergulhar no brejo e voltar com um firmware novo escrito do zero daqui uns 2 meses
+[2018-01-17 15:41:32] Felipe "Juca" Sanches: ou partir pra outro caminho
+[2018-01-17 16:48:30] Affonso Amendola: Eu tava vendo pela internet aí de uns caras que instalaram o firmware desse otro negocio aqui http://hxc2001.free.fr/floppy_drive_emulator/
+[2018-01-17 16:48:45] Affonso Amendola: Vo ver se eu acho o artigo especifico
+[2018-01-17 16:49:15] Affonso Amendola: https://www.vogons.org/viewtopic.php?f=46&t=43416
+[2018-01-17 16:50:27] Affonso Amendola: (E só pq achei legalzão, um drive caddie de cd da IBM, scsi, liga, n testei com uma placa scsi ainda)
+[2018-01-17 16:50:42] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/3190.jpg
+[2018-01-17 21:07:28] Affonso Amendola: Oookay, alguns problemas
+[2018-01-17 21:07:47] Felipe "Juca" Sanches: lá vamos nós... :-)
+[2018-01-17 21:07:51] Affonso Amendola: O nexus quando liga, fica incessantemente tocando o speaker
+[2018-01-17 21:08:04] Affonso Amendola: O hd n esta mais sendo reconhecido :(
+[2018-01-17 21:08:25] Affonso Amendola: Nao boota mais pelo disquete de boot de dos 3.3 que eu tinha feito mais cedo
+[2018-01-17 21:08:27] Felipe "Juca" Sanches: wooops
+[2018-01-17 21:08:43] Affonso Amendola: (Ele bootava hoje mais cedo pelo mesmo disco)
+[2018-01-17 21:08:48] Felipe "Juca" Sanches: chegou a bootar alguma vez?
+[2018-01-17 21:08:49] Felipe "Juca" Sanches: ah ok
+[2018-01-17 21:09:03] Affonso Amendola: A tela estava tremendo um pouco
+[2018-01-17 21:09:08] Affonso Amendola: Mais agora n ta mais
+[2018-01-17 21:09:15] Affonso Amendola: N sei se isso é um indicador
+[2018-01-17 21:09:38] Affonso Amendola: Mas o primeiro problema de tudo foi que uma das teclas do teclado tava sendo pressionada sem pedir
+[2018-01-17 21:10:04] Affonso Amendola: A uns 40 minutos, um pessoal passou aqui e eu demonstrei o nexus pra eles
+[2018-01-17 21:10:25] Affonso Amendola: E as vezes, sem pressionar nada, aparecia ^Z na tela
+[2018-01-17 21:10:34] Felipe "Juca" Sanches: "pessoal" o que? Visita ao museu?
+[2018-01-17 21:10:46] Felipe "Juca" Sanches: ou pesquisadores do laboratório ?
+[2018-01-17 21:10:50] Affonso Amendola: Yeah, uns alunos de mestrado eu acho
+[2018-01-17 21:10:55] Affonso Amendola: A tereza que trouxe
+[2018-01-17 21:10:57] Felipe "Juca" Sanches: legal
+[2018-01-17 21:11:04] Affonso Amendola: Anyway
+[2018-01-17 21:11:14] Affonso Amendola: Eu abri o teclado
+[2018-01-17 21:11:25] Affonso Amendola: Foi a primeira coisa que comecou a morrer
+[2018-01-17 21:11:37] Affonso Amendola: Entao ta sendo onde eu to comecando a procurar
+[2018-01-17 21:11:47] Affonso Amendola: (Ah, o boot parece estar mais lento tbem)
+[2018-01-17 21:11:53] Felipe "Juca" Sanches: ah, que coisa! Esquecemos de fazer a leitura da ROM do teclado
+[2018-01-17 21:12:02] Felipe "Juca" Sanches: e aí, tirou fotos do teclado por dentro?
+[2018-01-17 21:12:10] Affonso Amendola: Incoming
+[2018-01-17 21:12:14] Felipe "Juca" Sanches: tem mesmo uma ROM lá?
+[2018-01-17 21:12:22] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/3220.jpg
+[2018-01-17 21:12:28] Felipe "Juca" Sanches: e também um microcontrolador
+[2018-01-17 21:12:35] Felipe "Juca" Sanches: possivelmente as duas coisas num só chip
+[2018-01-17 21:12:45] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/3223.jpg
+[2018-01-17 21:13:00] Affonso Amendola: Descobri o que estava travando tantas teclas
+[2018-01-17 21:13:13] Felipe "Juca" Sanches: ah! que legal! Precisamos extrair essa ROM aí!
+[2018-01-17 21:13:28] Affonso Amendola: Alguem, quando remontou, nao prestou atencao e meio que empurrou uma parte do teclado pro lado
+[2018-01-17 21:13:37] Affonso Amendola: Ai emperrou todas as teclas do lado direito
+[2018-01-17 21:13:53] Affonso Amendola: Sim
+[2018-01-17 21:14:17] Affonso Amendola: Eu vou ver se eu religo e o beep incessante para
+[2018-01-17 21:14:50] Affonso Amendola: (Uma das tentativas de boots falhas apareceu FF TEC, que imaginamos ser uma falha de teclado)
+[2018-01-17 21:14:59] Affonso Amendola: Chequei todas as conexoes
+[2018-01-17 21:25:56] Affonso Amendola: Oookay, problema identificado, o teclado ta com mal contato no cabo
+[2018-01-17 21:26:30] Affonso Amendola: (Ainda n consegui bootar pelo disquete, mas o hd funciona)
+[2018-01-17 21:26:53] Affonso Amendola: Suspeito que o malvado seja este conector
+[2018-01-17 21:27:07] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/3235.jpg
+[2018-01-17 21:28:04] Affonso Amendola: (O hd foi cagada minha, só foi ao mesmo tempo de um otro problema
+[2018-01-17 21:34:08] Felipe "Juca" Sanches: maravilha!
+[2018-01-17 21:49:09] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/3238.jpg
+[2018-01-17 21:49:21] Affonso Amendola: Era pra isso que eu queria ligar ele
+[2018-01-17 21:50:32] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/3240.jpg
+[2018-01-17 21:50:37] Affonso Amendola: N sabia se ia rodar
+[2018-01-17 21:57:18] Felipe "Juca" Sanches: :-) Muito bom !
+[2018-01-17 21:57:28] Felipe "Juca" Sanches: (-: Bom demais !
+[2018-01-17 22:03:11] DQ: Aquela caixa preta no canto inferior direito da 1a foto do teclado é o relê que eu tanto falava (para fazer click do teclado)?
+[2018-01-17 22:03:39] Felipe "Juca" Sanches: acho que é, por que na primeira vez que ligamos eu ouvi click-click-click
+[2018-01-17 22:03:48] Felipe "Juca" Sanches: MAS... depois nunca mais clicou
+[2018-01-17 22:03:53] Felipe "Juca" Sanches: aí achei que eu estava enganado
+[2018-01-17 22:04:05] Felipe "Juca" Sanches: talvez esteja com mal funcionamento
+[2018-01-17 22:04:30] Affonso Amendola: Acredito ser o rele
+[2018-01-17 22:04:45] Felipe "Juca" Sanches: DQ, vc sabe dizer se o relé dava click por conta própria (sem o 8088 do nexus precisar pedir)?
+[2018-01-17 22:04:57] DQ: Um dos disquetes que eu tenho é o Space Quest I original. Outro é o Hitchhikers Guide to the Galaxy. Acho que são os jogos originais mais antigos que eu tenho
+[2018-01-17 22:04:57] Felipe "Juca" Sanches: o próprio fw do teclado faz os clicks?
+[2018-01-17 22:05:05] Felipe "Juca" Sanches: ou nem software tem nisso dos clicks ?
+[2018-01-17 22:05:33] DQ: Que eu me lembre é o fw do teclado.
+[2018-01-17 22:05:58] Affonso Amendola: Depois de eu dar minha mechida o rele clicou bastante
+[2018-01-17 22:06:13] Affonso Amendola: Mas agora parou
+[2018-01-17 22:06:21] DQ: Tem uma tecla do lado da barra de espaço que acho que é para ligar/desligar o click.
+[2018-01-17 22:06:34] DQ: Pode ser que o relê tenha engripado depois de todo este tempo.
+[2018-01-17 22:07:40] Felipe "Juca" Sanches: Uma coisa divertida que a infraestrutura do MAME permite é adicionar samples de áudio como recursos do driver de emulação (assim como as ROMs, porém os samples são opcionais). Aí o código do emulador pode mandar tocar os samples em determinadas circunstâncias. Por exemplo, daria pra ter um sample de um click do relé e fazer o emulador tocar quando o firmware do teclado sinalizar em algum pino de I/O.
+[2018-01-17 22:09:21] Felipe "Juca" Sanches: sabe dizer o que é a tecla da extrema direita na linha superior do teclado? É uma que tem LED liga/desliga embutido na tecla.
+[2018-01-17 22:09:32] Felipe "Juca" Sanches: Essa tecla está sem a capinha e não sabemos o que ela é.
+[2018-01-17 22:10:02] Felipe "Juca" Sanches: Tem uma outra faltando, mas já identificamos que é o sinal de soma. Mas essa do canto superior direito a gente ainda não sabe qual é.
+[2018-01-17 22:10:25] DQ: Um curiosidade sobre o KQ1 (e SQ1 e outros softwares da Sierra usando o SCI) rodando em placa CGA: ligando à TV tem 16 cores mas com um monitor RGB só 4. A placa de vídeo do Nexus só suporta RGB daí a imagem esquisita.
+[2018-01-17 22:11:35] Felipe "Juca" Sanches: O 8-bit guy fez um vídeo sobre truques de cores em saída de video composto em alguns PCs com CGA
+[2018-01-17 22:12:05] Felipe "Juca" Sanches: Eu acho que é esse: https://www.youtube.com/watch?v=niKblgZupOc
+[2018-01-17 22:12:06] DQ: Eu estava tentando rodar o SQ1 em modo CGA no DOSBox, mas não deu muito certo.
+[2018-01-17 22:13:12] DQ: Eu desconfio que a tecla que falta a capa é o Scroll Lock.
+[2018-01-17 22:23:21] DQ: Eu acho que nunca tinha visto uma CGA ligada pelas saída de vídeo composto. Só descobri isto quando vi o SQ1 no DOSBox e fui investigar.
+[2018-01-17 22:24:09] Felipe "Juca" Sanches: o SQ1 faz uso desse truque de conseguir mais cores pela saída de video composto da CGA ?
+[2018-01-17 22:24:23] Felipe "Juca" Sanches: E sabe dizer se algum emulador implementa esse modo?
+[2018-01-17 22:25:38] Felipe "Juca" Sanches: sei que o MAME implementa o vídeo do Apple II que faz uso dessas questões de temporização do canhão. Para CGA com video composto teoricamente deveria ser simples implementar a emulação também, mas não sei se alguém já se preocupou em fazer isso.
+[2018-01-17 22:44:07] Affonso Amendola: Tem como mudar o graphics mode do kq1, aí fica uma imagem bem melhor no monitor monocromatico
+[2018-01-17 22:44:20] Affonso Amendola: Mas eu esqueci de tirar foto 😅
+[2018-01-17 22:44:44] Felipe "Juca" Sanches: tudo bem... amanhã vc faz de novo e fotografa
+[2018-01-17 22:44:52] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/3275-sticker.webp
+[2018-01-17 22:45:43] Affonso Amendola: 😀😀
+[2018-01-17 22:46:04] Affonso Amendola: Descobri pq zork se recusava a funcionar tbem
+[2018-01-17 22:46:12] Felipe "Juca" Sanches: tava faltando um arquivo
+[2018-01-17 22:46:15] Affonso Amendola: Uma pasta n foi copiada
+[2018-01-17 22:46:17] Felipe "Juca" Sanches: o arquivo de dados
+[2018-01-17 22:46:42] Affonso Amendola: Dentro da pasta que n foi copiada, tava o zork1.dat
+[2018-01-17 22:46:43] Felipe "Juca" Sanches: eu fiquei pensando nisso depois que voltei pra casa e concluí que devia ser algo desse tipo
+[2018-01-17 22:47:58] Affonso Amendola: Amanha eu copio direito e vejo se funfa
+[2018-01-17 22:52:57] DQ: Os jogos antigos da Sierra usam  o truque do vídeo composto. O Dosbox emula o modo vídeo composto. O que ele não emula é o modo RGB, pois o alvo dele é jogos. No KQ1 você escolhe o modo na primeira tela.
+[2018-01-17 22:55:11] DQ: Eu ia falar do arquivo do Zork, mas esqueci. Eu estava jogando em dezembro, preciso retomar. Mas é jogo só texto, não tem nada especial no Nexus.
+[2018-01-17 22:55:43] DQ: O Sebastião também tem uns discos antigos, vai procurar.

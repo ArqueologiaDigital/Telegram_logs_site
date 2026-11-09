@@ -1,0 +1,121 @@
+[2022-06-22 00:23:44] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/107
+[2022-06-22 12:25:49] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/109
+[2022-06-22 12:26:20] Pedro de Medeiros 👾: Isso diminui bastante o código reescrito na plataforma opengl. ☝️
+[2022-06-22 12:56:41] RicBit: Ah acabei de notar que não temos contador de quantas minas faltam. Isso é importante, tem cenários de endgame que só dá para desambiguar contando minas.
+[2022-06-22 13:15:11] Pedro de Medeiros 👾: Não é esta issue? https://t.me/arqueologiadigital/21974
+[2022-06-22 13:16:34] Pedro de Medeiros 👾: Acho que vou ter que alterar a função de highlight pra cada plataforma ter mais controle de como o highlight é feito. Já que a estrutura minefield já contem o current_cell e a gente passa a própria pra função de highlight, acho que não precisa mandar o x e y junto.
+[2022-06-22 13:32:03] L.: https://github.com/ArqueologiaDigital/Mines/pull/110 reduzi mais quase 1200 bytes
+[2022-06-22 14:30:18] Pedro de Medeiros 👾: @fsanches está pronto!
+[2022-06-22 14:58:10] L.: Eu acho que dá pra diminuir bem mais o executável ainda. O CRT usa malloc e coisas do tipo. Se parar de usar a stdlib, etc, aí talvez caia mais alguns kb do jogo.
+[2022-06-22 14:58:30] L.: Só que aí provavelmente vou precisar fazer minha própria crt0 e talvez um linker script lol
+[2022-06-22 15:00:41] Felipe "Juca" Sanches: acho que se as otimizações de um port não afetarem a legibilidade dos demais ports tudo bem
+[2022-06-22 15:01:35] Felipe "Juca" Sanches: gostaria de manter o "core" bem limpo/genérico para viabilizar uma coleção grande de ports
+[2022-06-22 15:01:54] L.: Ah, sim
+[2022-06-22 15:02:00] L.: Não vai mudar nada outros ports
+[2022-06-22 15:02:16] L.: Essa bagunça fica toda contida no port msdos
+[2022-06-22 15:02:21] Felipe "Juca" Sanches: estou rascunhando desde ontem de noite um port pra Vectrex
+[2022-06-22 15:02:58] Felipe "Juca" Sanches: mas tô dando murro em ponta de faca no compilador CMOC
+[2022-06-22 15:03:01] L.: uia
+[2022-06-22 15:03:31] L.: faz port pra osciloscópio então :)
+[2022-06-22 15:03:35] Felipe "Juca" Sanches: vou publicar o PR, caso queiram ver como tá. (dica: completamente quebrado)
+[2022-06-22 15:03:54] L.: quando o @pvm1337 fizer o port pra android, faz ele soltar audio pra jogar no osciloscópio
+[2022-06-22 15:04:15] Felipe "Juca" Sanches: tentei desenhar o jogo com caracteres de texto raster no vectrex usando uma funcao da bios. Então nem vetorialzão tá ainda.
+[2022-06-22 15:04:31] Felipe "Juca" Sanches: mas nada aparece na tela
+[2022-06-22 15:05:02] Felipe "Juca" Sanches: e depois do merge desse ultimo commit do @pvm1337, o meu rascunho de vectrex nem compila mais kkkk
+[2022-06-22 15:09:43] Felipe "Juca" Sanches: PR onzenta-e-um:
+[2022-06-22 15:09:44] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/111
+[2022-06-22 15:10:26] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22002-my-precious-precious.mp4
+[2022-06-22 15:13:25] L.: O SDCC não suporta 6809?
+[2022-06-22 15:13:32] Felipe "Juca" Sanches: não sei
+[2022-06-22 15:14:20] L.: https://code.google.com/archive/p/gcc6809/
+[2022-06-22 15:14:25] L.: GCC de 2011
+[2022-06-22 15:14:26] L.: lol
+[2022-06-22 15:14:45] Felipe "Juca" Sanches: é... eu tinha visto esse. Mas não pesquisei em detalhes como compilá-lo
+[2022-06-22 15:15:10] L.: Um pouco mais novo https://gitlab.com/dfffffff/gcc6809
+[2022-06-22 15:15:25] Felipe "Juca" Sanches: bom... o Vectrex é de 1982 kkkk
+[2022-06-22 15:15:59] L.: do mesmo jeito que componente estraga (tipo capacitor que vaza), código apodrece com os anos :)
+[2022-06-22 15:16:18] Felipe "Juca" Sanches: é verdade
+[2022-06-22 15:16:51] Felipe "Juca" Sanches: aí tem que usar compilador velho pra compilar compilador velho
+[2022-06-22 15:34:25] L.: -rwxr-xr-x 1 l l 4612 Jun 22 11:33 build/mines.com
+[2022-06-22 15:34:27] L.: LOL
+[2022-06-22 15:34:52] L.: Olha só a minha implementação do free(): void free(void *ptr) {}
+[2022-06-22 15:36:34] Felipe "Juca" Sanches: Kkkk
+Bota lá um comentário // ...e foda-se!
+[2022-06-22 16:07:18] L.: Com UPX tá menos de 4k
+[2022-06-22 16:07:27] L.: Tô no clube de demos de 4k agora LOL
+[2022-06-22 16:07:37] Felipe "Juca" Sanches: pois é! Era exatamente isso que eu ia dizer
+[2022-06-22 16:36:53] L.: https://github.com/ArqueologiaDigital/Mines/pull/112 <-- pronto, 4.6kb de executável lol
+[2022-06-22 16:37:41] L.: Agora só falta arrumar a velocidade de novo por que eu tô fazendo a cópia dos tiles na mão ao invés de usar _fmemcpy() da libi86. Eu tô apanhando do rep movsb pra fazer isso. Mas fica pra outro dia, talvez
+[2022-06-22 16:38:01] L.: Eu acho que essas otimizações aí dão um blog post legal!
+[2022-06-22 17:00:05] Felipe "Juca" Sanches: Reimplementacoes necessárias para um port PC Booter:
+
+* int 0x1A ah=0: READ_RTC
+* int 0x21 ah=4c: fim do programa, provavelmente viraria um jmp para _start
+* int 0x16: READ_CHAR
+* int 0x10 ah=0: para setar modo de video 13h (não precisa de modo de texto, pois ficariamos presos pra sempre dentro do jogo)
+[2022-06-22 17:03:36] Felipe "Juca" Sanches: aliás... pra "sair" do programa poderíamos fazer um jump para F000:FFF0, né?
+[2022-06-22 17:04:35] Felipe "Juca" Sanches: que acho que resultaria num reboot do PC
+[2022-06-22 17:05:54] L.: int 0x10 é da vga bios, então é de boa
+[2022-06-22 17:06:09] L.: int 0x1a e int 0x16 são da bios mesmo, não são do dos
+[2022-06-22 17:06:11] Felipe "Juca" Sanches: ah! verdade!
+[2022-06-22 17:06:27] L.: int 0x21 é do dos, mas aí é sussa por que só usa o de sair do programa mesmo
+[2022-06-22 17:06:38] Felipe "Juca" Sanches: pô, então tá feito
+[2022-06-22 17:06:39] L.: dá pra simplesmente ignorar pedido pra sair também
+[2022-06-22 17:08:00] L.: bom, quase, precisa dum bootloaderzinho né. carrega em 7c00:0000 (se me lembro bem), bota 0x55aa (ou 0xaa55, nao lembro) no offset 510, e pronto. dá sussa pra suportar FAT inclusive em 510 bytes só pra ler do disco, botar na RAM e fazer um jum
+[2022-06-22 17:08:49] Felipe "Juca" Sanches: pô, me deu vontade de adaptar isso para uma EPROM de boot para a minha placa de clone de IBM PC 5150
+[2022-06-22 17:08:56] Felipe "Juca" Sanches: teria que adaptar para CGA
+[2022-06-22 17:09:08] L.: CGA eu nunca brinquei, nem manjo
+[2022-06-22 17:09:14] L.: eu só usava CGA pelo qbasic lol
+[2022-06-22 17:09:43] L.: eu lembro de ter visto que tinham uns problemas com neve (tipo escrever na memoria na hora errada)
+[2022-06-22 17:14:34] L.: o legal de ter diminuído pra pouco mais de 4k é que agora tem muito espaço pra botar um mod player qualquer
+[2022-06-22 17:19:54] Felipe "Juca" Sanches: http://www.mtmscientific.com/pc-retro.html
+[2022-06-22 18:20:55] Erin Pinheiro 🐿: cga é só bitmap 2bpp
+[2022-06-22 18:21:18] Erin Pinheiro 🐿: mas com interleave 8k
+[2022-06-22 18:21:55] Erin Pinheiro 🐿: pra um projeto meu em andamento fiz carregamento de imagem pra cga em x86 assembly
+[2022-06-22 18:22:22] Erin Pinheiro 🐿: se uma retardada desempregada que nem eu consegue vocês também conseguem
+[2022-06-22 18:44:13] Felipe "Juca" Sanches: não se auto-deprecie assim. Você manda bem demais!
+[2022-06-22 20:01:52] L.: https://numachitamanegi.itch.io/artemis-minesweeper pra uma versão um pouco diferente com uma tela de abertura legal
+[2022-06-22 20:54:20] Erin Pinheiro 🐿: queria mandar bem suficiente pra conseguir uma empresa que no mínimo fizesse uma entrevista antes de me negar um emprego 🙂
+[2022-06-22 20:54:31] Erin Pinheiro 🐿: desde abril só merda
+[2022-06-22 21:12:50] Felipe "Juca" Sanches: Tomei coragem e estou agora compilando esse bagulho aqui.
+
+cd devel/
+mkdir gitlab_dfffffff_gcc6809
+cd gitlab_dfffffff_gcc6809
+git clone https://gitlab.com/dfffffff/gcc6809.git
+cd gcc6809/     ; note: default branch is "dftools"
+cd build-6809/
+sudo apt install libgmp-dev libmpfr-dev
+make everything
+[2022-06-22 21:13:40] Felipe "Juca" Sanches: que merda isso...
+[2022-06-22 21:15:40] Augusto Almeida: https://youtu.be/YU6eMyiT2TM
+[2022-06-22 22:09:30] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22052.jpg
+[2022-06-22 22:09:30] L.: Leitor de MOD tá indo
+[2022-06-22 22:10:14] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22053-sticker.webp
+[2022-06-22 22:18:12] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22054.jpg
+[2022-06-22 22:18:12] L.: Eu acho que tá com algum bug. Outros ports acontecem isso também? :P
+[2022-06-22 23:00:04] Felipe "Juca" Sanches: isso pode ser correto
+[2022-06-22 23:05:43] L.: Outra vez que rodei tinha 0 minas
+[2022-06-22 23:05:56] L.: Outra vez tinham sei lá, umas 70
+[2022-06-22 23:06:11] Felipe "Juca" Sanches: ai, caramba
+[2022-06-22 23:06:16] Felipe "Juca" Sanches: agora que entendi a imagem
+[2022-06-22 23:06:29] L.: Eu não mudei parâmetro nenhum. Devo estar inicializando alguma coisa errada
+[2022-06-22 23:07:11] Felipe "Juca" Sanches: meu cérebro interpretou errado. Achei que era 9 casas abertas apenas e o resto tudo fechado. Mas agora que entendi que é o campo quase inteiro limpo
+[2022-06-22 23:07:29] L.: Tipo, inicializo o BSS mas deve ter algo faltando
+[2022-06-22 23:07:43] L.: Isso que dá fazer coisa do zero LOL
+[2022-06-22 23:08:41] Felipe "Juca" Sanches: eu tava tentando compilar o gcc6809 aqui e tava quebrando numa etapa de compilacao duns docs em texinfo
+[2022-06-22 23:09:40] Felipe "Juca" Sanches: utf8 "\xA0" does not map to Unicode at ParserNonXS.pm line 1796, <FH> line 908.
+Malformed UTF-8 character: \xa0 (unexpected continuation byte 0xa0, with no
+preceding start byte) in pattern match (m//) at ParserNonXS.pm line 3364.
+Malformed UTF-8 character (fatal) at ParserNonXS.pm line 3364.
+[2022-06-22 23:10:49] Felipe "Juca" Sanches: aí eu fucei um monte e descobri, usando um editor hexa, onde estavam os caracteres \a0 e os substituí por espaços comuns (0x20)
+[2022-06-22 23:11:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22067.jpg
+[2022-06-22 23:11:42] Felipe "Juca" Sanches: E com isso passou daquele ponto no build. Aparentemente foi até o fim e fez até o install direitinho
+[2022-06-22 23:12:56] Felipe "Juca" Sanches: to com o gcc compilado aqui, mas ao tentar compilar o esboço de mines pra vectrex tomo isso aqui na cara:
+
+?ASlink-Error: Cannot find or open library "libstdc++.a"
+[2022-06-22 23:13:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22070.jpg
+[2022-06-22 23:26:57] Felipe "Juca" Sanches: Notei que eu tava sem querer usando o m6809-unknown-none-c++
+
+Troquei por m6809-unknown-none-gcc e agora...
+?ASlink-Error: Cannot find or open library "libc.a"

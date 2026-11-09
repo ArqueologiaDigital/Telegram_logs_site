@@ -1,0 +1,45 @@
+[2026-10-14 00:01:28] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41530.jpg
+[2026-10-14 00:01:28] RicBit: eu sou lerdo pra desenhar mas tá indo
+[2026-10-14 03:36:19] Danilo Bento: Eu esbarrei com o REA agora a pouco e vim falar dele aqui, REA+ghidra parece uma combinação interessante, inclusive para 6502: https://github.com/morluto/rea/blob/main/docs/raw-binary.md
+[2026-10-14 08:15:51] Paulo: eu ainda não entendi qual o apelo desse REA, já existe MCP de ghidra e de IDA Pro há séculos, e qualquer modelo de fronteira já segue a mesma metodologia do REA naturalmente
+[2026-10-14 08:20:38] Paulo: que pena 😢 quando eu comecei a usar Linux, eu brincava bastante com o gnome basic, pq tava acostumado com vb5 no windows
+
+vi que mataram o projeto por causa do mono, é uma pena ele ter pouca retrocompatibilidade
+[2026-10-14 08:39:03] Shideravan: Eu particularmente acho bem útil. O ponto principal ao meu ver não é fazer algo que um modelo de fronteira não consiga, mas sim a orquestração. MCP é só a API de comunicação e dar a API do Ghidra pro LLM não significa que ele vai conduzir uma análise sistêmica sem se perder no contexto de um arquivo ASM enorme. Acaba tendo muito trabalho manual ali. O apelo do REA (especialmente no caso de binários crus e arquiteturas como 6502) é criar um workflow agêntico estruturado que força a IA a documentar, testar hipóteses e mapear memória sem alucinar, poupando a gente de ter que microgerenciar o LLM a cada função analisada.
+[2026-10-14 08:50:13] Paulo: se vc planejar o workflow pro seu projeto antes de mandar executar, isso não acontece
+[2026-10-14 08:50:40] Shideravan: Aí já criamos uma camada a mais de trabalho
+[2026-10-14 08:52:06] Paulo: mas o REA vai acabar fazendo a mesma coisa, não? ou ele vai no tudão sem planejar?
+[2026-10-14 08:52:54] Shideravan: Literalmente o REA é uma ferramenta para planejar o workflow
+[2026-10-14 08:54:54] Shideravan: Se você tiver que parar para arquitetar as chamadas do MCP, criar o sistema de validação de hipóteses, ditar as heurísticas de como ele deve ler a memória e fazer a gestão de limpeza de contexto pra IA não esquecer as variáveis... você literalmente acabou de programar o REA do zero hahahaha
+[2026-10-14 08:55:36] Shideravan: O apelo do projeto é exatamente não ter que 'planejar e microgerenciar' esse workflow a cada binário. Em arquiteturas chatas como 6502, onde rola bank switching e tabela de salto na mão, um workflow estático via prompt sempre quebra, enquanto um agente focado tem loops de correção de erro automáticos e gestão de estado
+[2026-10-14 08:55:41] Paulo: eu nunca precisei parar pra fazer isso, eu peço pro próprio agente montar customizado pro projeto e ele faz super rápido
+[2026-10-14 08:56:08] Paulo: sei lá, eu nunca gostei de ficar usando SKILL de terceiros, acho que vai pelo mesmo caminho
+[2026-10-14 08:57:04] Shideravan: Ahhh sim, aí é uma questão pessoal sua, não um argumento pela irrelevância de uma ferramenta
+[2026-10-14 08:57:15] Shideravan: Você tem todo o direito de não usar
+[2026-10-14 09:02:14] Paulo: sim, deve ser um desconforto pessoal mesmo
+[2026-10-14 09:03:04] Paulo: isso é amplificado pelos modelos estarem avançando muito rápido, eu sinto que quando sai uma nova versão um workflow ou skill antigo pode acabar segurando em vez de ajudar
+[2026-10-14 09:03:31] Paulo: por isso eu prefiro ficar experimentando sempre em vez de usar algo fixo
+[2026-10-14 09:09:21] Shideravan: Ahhh sim, isso é um ótimo ponto. Eu mesmo sempre zoo que volta e meia aparece propaganda de "curso de engenheiro de prompt" quando eu estou assistindo a vídeos no youtube, que éuma parada que ignora completamente prompt rot
+[2026-10-14 09:11:27] Shideravan: Mas aí outra vantagem do REA: sendo um projeto de código aberto, a comunidade consegue atualizar o boilerplate em questão de dias para se atualizar sempre que surgem novos modelos
+[2026-10-14 09:12:08] Shideravan: Isso tira a gente dessa necessidade de a todo momento precisar reinventando a roda para aproveitar ao máximo o avanço dos modelos
+[2026-10-14 09:12:35] Shideravan: E focar na engenharia reversa em si
+[2026-10-14 13:44:51] meleu: 😮‍💨
+[2026-10-14 13:45:20] Shideravan: Seja bem-vindo @meleu_zord pelo jeito você é humano hahaha
+[2026-10-14 13:46:04] meleu: You're absolutely right!
+[2026-10-14 13:46:19] meleu: também não sou scammer 😇
+[2026-10-14 13:46:39] Shideravan: Isso é importante hahaha
+[2026-10-14 13:49:13] meleu: entrei aqui por indicação do Felipe "Juca" Sanches
+
+tou querendo (re)começar a fuçar esse mundo de emulação e engenharia reversa de games antigos.
+
+minhas contribuições anteriores foram com o RetroArch e mais relacionadas às features de RetroAchievements.
+(isso lá entre 2016-2021)
+
+agora tou tentando dar uma focada na emulação em si.
+[2026-10-14 13:50:37] Shideravan: Massa demais, então está no lugar certo
+[2026-10-14 13:51:48] meleu: como rito de iniciação estou qurendo codar um emulador de CHIP-8 usando C++
+vamos ver no que vai dar... 🤷‍♂️
+[2026-10-14 13:53:47] L.: não sei se já implementou um chip-8, mas é meio chato por que tem coisas que não são muito bem documentadas, e aí às vezes você arruma uma coisa e quebra 5 heh
+[2026-10-14 13:55:49] L.: https://github.com/Timendus/chip8-test-suite/ ajuda bastante
+[2026-10-14 13:56:10] L.: esse aqui é o que eu escrevi. algumas coisas funcionam mas desencanei de terminar https://gist.github.com/lpereira/bfa181a0dc58085d200c6cfb129bdb13
+[2026-10-14 17:20:47] Jecel Assumpcao Jr: Eu não sabia que existe um prêmio por arqueologia digital. O recepiente do prêmio Tony Sale de 2026 foi o Usagi Electric por sua restauração do Bendix G15 - https://www.youtube.com/watch?v=jmUtew0NaTQ

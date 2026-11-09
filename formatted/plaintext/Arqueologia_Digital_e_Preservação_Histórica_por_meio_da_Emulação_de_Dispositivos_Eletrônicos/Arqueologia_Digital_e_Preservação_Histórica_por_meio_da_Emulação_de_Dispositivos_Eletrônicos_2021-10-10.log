@@ -1,0 +1,24 @@
+[2021-10-10 00:31:04] Felipe "Juca" Sanches: https://twitter.com/2point21/status/1446826624784244739
+[2021-10-10 10:22:56] Felipe "Juca" Sanches: https://www.folklore.org/StoryView.py?project=Macintosh&story=Stolen_From_Apple.txt
+[2021-10-10 15:38:48] Ismael Luceno: @fsanches pode agregar o tag #hacktoberfest nos seus repos ;)
+[2021-10-10 15:38:59] Ismael Luceno: https://hacktoberfest.digitalocean.com/
+[2021-10-10 15:57:00] Pedro de Medeiros 👾: Tenho três contribuições do Gitlab sem o carimbo do Hacktoberfest 😥
+[2021-10-10 18:16:50] Ismael Luceno: eles fizeram a qualificação pro 2021 um pouco mais difícil
+[2021-10-10 18:17:09] Ismael Luceno: antes qualquer contribuição funcionava
+[2021-10-10 18:18:57] Felipe "Juca" Sanches: Eu não me vinculo ideologicamente ao Open Source.
+[2021-10-10 18:19:55] Felipe "Juca" Sanches: Minha linha de pensamento está muito mais alinhada ao Movimento do Software Livre
+[2021-10-10 18:19:57] Ismael Luceno: eu tampouco mas gosto das camisetas grátis :P
+[2021-10-10 18:20:29] Ismael Luceno: e eu penso é melhor estar presente e indicar pra gente o que é o software livre
+[2021-10-10 18:20:51] Ismael Luceno: porque de outro jeito eles só vão conhecer a ideia de open source
+[2021-10-10 18:21:19] Ismael Luceno: eu pensei muito sobre isso e não da para excluir
+[2021-10-10 19:28:46] Ismael Luceno: eu também conversei várias vezes com o Richard Stallman do assunto, e do problema das distribuições que são cópia de outras distribuição com software não livre, e chegamos à conclusão que na verdade seria mais produtivo ter uma advertência nos pacotes não livres, e isso seria aceitável pra FSF
+[2021-10-10 19:33:41] Ismael Luceno: hoje día acho que já ficou demostrado empiricamente que as distribuições livres quase não têm influência nenhuma, infelizmente
+[2021-10-10 19:41:11] Ismael Luceno: a minha teoria é que no futuro, dado o limitado influxo de gente para essas distribuições, a pouca difusão, e o monte de gente chegando desde sistemas privativos que vão promover o uso de software privativo e de distribuições e comunidades com valores contrários aos do software livre, o efeito será que se não mudar a estratégia o movimento do software livre voltará-se ainda mais minoritário do que ele já é hoje dia
+[2021-10-10 20:45:45] Ismael Luceno: contrariamente, o discurso do código aberto, é bem mais fácil de ser aceito por um espectro mais amplo de gente
+[2021-10-10 20:53:50] Ismael Luceno: eu acho que muitos câmbios técnicos recentes, como a adoção de snap e flatpak por várias distribuições já está erosionando o ecosistema do software livre e está ficando cada vez mais em mão dos desenvolvedores somente muita decisão importante de cara pro usuário, ao mesmo tempo que permite maior concentração de poder nas distribuições grandes, elas tem mais recursos para forzar a adoção de interfases e promover a diminuição da diversidade
+[2021-10-10 20:54:31] Ismael Luceno: e que maior exemplo disso que o dbus e systemd, cada vez requerido por mais software
+[2021-10-10 20:55:47] Ismael Luceno: daqui a pouco vamos ver muitos parches de compatibilidade rejeitados quase sem discussão
+[2021-10-10 20:56:33] Ismael Luceno: ja é uma realidade que mesa não compila todo nos sistemas bsd
+[2021-10-10 20:58:21] Ismael Luceno: também ha muitos problemas com gnome
+[2021-10-10 21:01:28] Ismael Luceno: i daqui a pouco o xserver ja vai ser reemplazado completamente pelo wayland, e aí vamos ter toda outra luta de compatibilidade pois isso ta maioritariamente testado só em linux, mas já não vai ser viável fazer aplicativos para x11 se os maiores toolkits não tem mais esa base de usuários no GNU/Linux
+[2021-10-10 21:04:36] Ismael Luceno: no longo prazo isso só vai terminar em uma importante divisão que e muito beneficiosa pro movimento de código aberto, pois quase todos os usuários vão ficar pressos das decisões das empresas grandes que investem do lado da Linux Foundation

@@ -1,0 +1,35 @@
+[2021-08-10 04:18:54] Toy: Opa, vou checar hoje!
+[2021-08-10 04:20:38] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14032-sticker.webp
+[2021-08-10 04:21:12] Felipe "Juca" Sanches: Estou aqui fritando o cérebro às 4:20 da madrugada...
+[2021-08-10 04:22:08] Felipe "Juca" Sanches: "Implementei" grande parte do suporte a timers, interrupcoes, interfaces seriais e conversor AD
+[2021-08-10 04:22:22] Felipe "Juca" Sanches: na verdade foi um copia e cola danado de trechos de código de outros drivers
+[2021-08-10 04:23:08] Felipe "Juca" Sanches: tem bastante duplicacao de código do emulador de uma das outras variantes dessa CPU, mas com ajustes pra se adaptar ao que consta no datasheet dessa variante que eu preciso pro kn5000
+[2021-08-10 04:24:15] Felipe "Juca" Sanches: eu aceitei por enquanto manter esse monte de código duplicado pois quero ter algo funcionando antes de sair refatorando pro código comum ser compartilhado pelas duas implementacoes (provavelmente colocando essas partes comuns numa classe da qual as duas implementaçôes derivam)
+[2021-08-10 04:24:35] Felipe "Juca" Sanches: já é complicado o suficiente fazer funcionar. O refactoring fica pra depois
+[2021-08-10 04:25:14] Felipe "Juca" Sanches: faz uns 10 minutos que finalmente compilou. Agora tenho certeza que tem uma quantidade gigantesca de bugs. Preciso passar o pente fino revisando meu código inteiro
+[2021-08-10 04:25:28] Felipe "Juca" Sanches: e depois rodar e ver o que muda no runtime com a ROM do kn5000
+[2021-08-10 07:59:04] * Elson (McGuyver) ☠️ joined the group
+[2021-08-10 08:13:07] Toy: Peguei meu note com os antigos arquivos encontrei alguns commits, vou checar se tem algum relacionado. 
+
+Mais tarde dou uma olhada mais minuciosa.
+[2021-08-10 15:50:55] * Deleted Account joined the group
+[2021-08-10 15:51:31] * Deleted Account joined the group
+[2021-08-10 15:53:12] * Cráudio joined the group
+[2021-08-10 15:56:24] Felipe "Juca" Sanches: Tá chegando aqui uma turma lá do DebXP, que é uma comunidade de software livre. De vez em quando eu faço relatos dos projetos de engenharia reversa e emulação nos encontros (atualmente via video-conferência no Jitsi Meet) do DebXP hackerspace, nas noites de sextas-feiras:
+
+https://hackerspace.debxp.org/
+[2021-08-10 16:04:12] Cráudio: Que legal! Boa tarde, galera! Obrigado pelo convite @fsanches !
+[2021-08-10 16:07:27] Felipe "Juca" Sanches: Quem chegou aqui interessado em saber mais sobre o projeto de estudo do teclado musical KN5000, a conversa começou exatamente nessa mensagem que troquei com o RicBit mês passado, no dia 22 de Julho.
+[2021-08-10 16:10:56] Felipe "Juca" Sanches: Tem uma outra parte divertida da conversa que rolou aqui em Março, sobre dessoldar chips para fazer dump das ROMs do teclado.
+[2021-08-10 17:32:14] * simplex joined the group
+[2021-08-10 17:49:20] Elson (McGuyver) ☠️: Show! Estou por aqui também!😉 👏🏼 👏🏼 👏🏼
+[2021-08-10 18:34:32] * Andre joined the group
+[2021-08-10 18:38:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14053.jpg
+[2021-08-10 18:38:31] Felipe "Juca" Sanches: @amendo, não posso deixar de elogiar a arte do seu perfil. Foi você que fez esse desenho?
+
+Thunder Cats, Batman, De Volta Pro Futuro, Tartarugas Ninja e GhostBusters...  Na Avenida Paulista!!! kkkk
+
+Muito bom! 😊
+[2021-08-10 18:41:33] Andre: Não foi eu que fiz não. Ela completa https://www.deviantart.com/kikomauriz/art/The-Winner-is-501447961
+[2021-08-10 18:41:59] Andre: Aqui tem varias dele https://www.deviantart.com/kikomauriz/gallery
+[2021-08-10 18:42:13] Felipe "Juca" Sanches: ah! Esse ia ser meu segundo comentário. Perguntar se era parte de um desenho maior, pois as tartarugas estão tão espremidinhas no canto... 😉

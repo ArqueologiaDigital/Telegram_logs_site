@@ -1,0 +1,6 @@
+[2025-07-16 10:02:25] Pedro de Medeiros 👾: https://github.com/joexbayer/RetrOS-32
+[2025-07-16 12:55:28] L.: https://chaos.if.uj.edu.pl/~wojtek/MARS.COM/
+[2025-07-16 19:54:22] Felipe "Juca" Sanches: Será que não seria relativamente fácil portar esse compilador de C de x86 pra tlcs900? E depois, quem sabe, rodar esse SO no Technics KN5000...
+Digo... mais fácil que portar o LLVM ou o GCC...
+[2025-07-16 20:16:38] L.: O sdcc parece que já suporta o tcls90 (não o 900), talvez seja um ponto de partida?
+[2025-07-16 20:16:54] L.: Aí o fuzix fica portável

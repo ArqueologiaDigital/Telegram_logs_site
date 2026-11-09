@@ -1,0 +1,45 @@
+[2021-10-07 03:42:31] Felipe "Juca" Sanches [forwarded]: https://youtu.be/uUCLerEA9vA
+[2021-10-07 03:42:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16248.jpg
+[2021-10-07 03:42:31] Felipe "Juca" Sanches [forwarded]: Tem um lá no CCUEC.
+[2021-10-07 05:08:36] Ismael Luceno: ja tem faz tempo soluções de streaming abertas...
+[2021-10-07 09:53:25] Leonardo Roman: Queria encontrar uma cópia do SOX. É um sistema que se perdeu na história.
+[2021-10-07 11:56:49] L.: https://canyonmid.com/
+[2021-10-07 11:58:31] L.: Leu a tese da Marcia Cardoso? Ela fez um trabalho de arqueologia fenomenal procurando o SOX: http://sox-4s.pbworks.com/w/page/7219509/FrontPage
+[2021-10-07 14:19:42] Flávio Amieiro: Gente, não sei se vocês viram uma matéria da Jacobin sobre um computador pessoal de 8 bits projetado na Iugoslávia na década de 80: https://jacobin.com.br/2021/10/a-historia-perdida-do-computador-socialista-estilo-faca-voce-mesmo/
+[2021-10-07 14:20:18] Flávio Amieiro: Achei que podia interessar de qualquer jeito, mas ri quando li "O microcomputador de Antonić continha apenas 4 Kbytes de memória para os programas – um verdadeiro pingo num balde, em comparação com qualquer laptop atual. Devido a essa restrição, o sistema só era capaz de exibir três mensagens de erro de uma palavra, esplendidamente divertidas: os usuários recebiam um “QUÊ?” se seu código em linguagem BASIC tivesse um erro de sintaxe; um “COMO?” se as entradas enviadas fossem irreconhecíveis e um “DESCULPE” se a máquina excedesse a capacidade de memória."
+[2021-10-07 14:23:33] L.: Na Hackaday Supercon em Belgrado rolou um badge que era um Galaxija emulado: https://hackaday.io/project/161859-2018-hackaday-superconference-badge
+[2021-10-07 14:24:50] Flávio Amieiro: Ah, que irado!!
+[2021-10-07 14:25:13] L.: E o Antonić tava no time que projetou o crachá!
+[2021-10-07 14:26:55] Flávio Amieiro: !!
+[2021-10-07 14:27:52] L.: Eles usam o uBasic do Adam Dunkels
+[2021-10-07 14:27:58] L.: Que é esse aqui https://github.com/adamdunkels/ubasic
+[2021-10-07 14:28:20] L.: Pensando em portar isso praquele leitor de email que peguei um tempo atrás. Mais fácil que portar o MS-Basic :P
+[2021-10-07 15:39:20] Flávio Amieiro: Boa!
+Parece um bom primeiro passo pra ports mesmo
+[2021-10-07 16:00:09] Felipe "Juca" Sanches: Muitos anos atrás em um FISL algum funcionário de alguma estatal me disse que uma vez encontrou listagens do sox num porão. Diz que tava tudo impresso em papel mofado, estragando. E que rolou alguma treta com o chefe dele que parece que não autorizou dedicar tempo para a recuperação daquele material. Ou algo assim.
+[2021-10-07 16:00:47] Felipe "Juca" Sanches: mas é muito vago esse meu relato. Me falha a memória. Nem sei mais qual era o nome da pessoa.
+[2021-10-07 16:00:50] L.: Que merda :(
+[2021-10-07 16:01:03] L.: A tese dela vale a pena ler, de qualquer forma
+[2021-10-07 16:02:09] Deleted Account: Sensacional.
+[2021-10-07 16:04:20] Deleted Account: Vou ler. 
+
+O curioso é que o Brasil meio que perdeu o boom do unix do final da década de 70 até meados da década de 80.
+
+Aí quando acaba a reserva de mercado a gente lança um unix.
+[2021-10-07 16:05:17] Felipe "Juca" Sanches: Eu preciso levar adiante o levantamento empírico dos esquemáticos do Itautec I7000 para completar a emulação dele que comecei a fazer no MAME.
+
+Depois disso daria pra eu correr atrás de contactar algum museu que tem um computador COBRA pra fazer o mesmo. Não dá pra botar o carro na frente dos bois.
+[2021-10-07 16:05:22] Deleted Account: Aqui os mainframes que floreceram já que não entraram na reserva. Mas o minicomputadores eram mais difíceis de comprar.
+[2021-10-07 16:05:55] Felipe "Juca" Sanches: o próprio Patinho Feio ainda está mal emulado no MAME...
+[2021-10-07 16:06:05] Felipe "Juca" Sanches: É muita coisa para um nerd só
+[2021-10-07 16:06:47] Deleted Account: Juca. Mudando de assunto.
+
+A USP ainda tem o know how e fábrica de chips por fotolitografia?
+[2021-10-07 16:21:12] Felipe "Juca" Sanches: pergunta pro Zuffo
+[2021-10-07 16:21:14] Felipe "Juca" Sanches: kkkk
+[2021-10-07 16:22:00] Felipe "Juca" Sanches: olha... eu não sei de nada.
+O Marcelo Zuffo vem falando disso há tempo, que a USP agora tem um "laboratório aberto" de microeletrônica
+[2021-10-07 16:22:50] Felipe "Juca" Sanches: mas eu não confio em nada que o Marcelo Zuffo diga, sem antes ir lá e fazer o devido fact-checking.
+[2021-10-07 19:07:09] Deleted Account: Ah, foi mais de curiosidade mesmo.
+[2021-10-07 19:08:22] Deleted Account: Eu ouvi um professor falando que "a USP TINHA a capacidade" de fazer chips desde o torugo de silício até o encapsulamento.
+[2021-10-07 19:08:41] Deleted Account: Aí eu queria saber se esse TINHA é que perdemos todo o know how.

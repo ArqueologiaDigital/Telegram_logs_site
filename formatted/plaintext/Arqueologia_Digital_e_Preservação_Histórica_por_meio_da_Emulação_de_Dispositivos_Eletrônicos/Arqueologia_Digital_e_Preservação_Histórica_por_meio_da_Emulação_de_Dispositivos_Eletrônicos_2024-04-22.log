@@ -1,0 +1,15 @@
+[2024-04-22 10:08:15] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-04/31034-good-morning.mp4
+[2024-04-22 17:35:09] Felipe "Juca" Sanches: L., cadê a ROM do PenseBem? kkkk
+[2024-04-22 17:35:41] Felipe "Juca" Sanches: O Travis Goodspeed fez o decapping pra gente, mas a gente não deu conta de desembaralhar os bits...
+[2024-04-22 17:35:56] Felipe "Juca" Sanches: eu tentei um pouco e não consegui ainda
+[2024-04-22 17:37:22] Felipe "Juca" Sanches: um jeito de fazer seria tentando todos embaralhamentos possíveis, e ir rejeitando os que resultam em opcodes inválidos
+[2024-04-22 17:37:38] Felipe "Juca" Sanches: mas acho que não é trivial descrever o que são todas as possibilidades de embaralhamento
+[2024-04-22 17:38:04] Felipe "Juca" Sanches: e também é provavel que muitos embaralhamentos resultem em binários incorretos mas que não possuem opcodes invalidos
+[2024-04-22 17:38:15] Felipe "Juca" Sanches: sei lá... tô só especulando
+[2024-04-22 17:45:37] L.: Ih nem brinquei com aquilo
+[2024-04-22 17:46:15] L.: Parei com tudo que é hobby
+[2024-04-22 17:46:19] Felipe "Juca" Sanches: fica de side-quest pra algum momento em que você estiver com energia para tentar desvendar
+[2024-04-22 17:56:37] L.: Tem tanta sidequest na vida que parece que tô jogando um skyrim misturado com fallout cheio de mods pra por mais
+[2024-04-22 17:59:38] Pablo Vasques Bravo-Villalba: Skyout ou Fallrim? 😅
+[2024-04-22 18:00:10] Lord Spy: Skyout Redemption : The Night Walkers
+[2024-04-22 18:00:55] L.: Fus-ro-dahdahdahdhdahdah (o contador geiger do pipboy)

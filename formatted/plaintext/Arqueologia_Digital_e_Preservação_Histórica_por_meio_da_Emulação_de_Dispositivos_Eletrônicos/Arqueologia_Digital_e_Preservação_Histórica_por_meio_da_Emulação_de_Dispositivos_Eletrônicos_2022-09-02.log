@@ -1,0 +1,22 @@
+[2022-09-02 18:00:20] L.: https://twitter.com/furan/status/1565801591721975809?t=wNcUXrt6OXHfFYpsjRkq_Q&s=35
+[2022-09-02 20:04:35] Augusto Almeida [forwarded]: Obra de arte que fizemos, livro "de cabeceira" do @Augusto1974. Vejam que espetáculo! Já em pré-venda!
+[2022-09-02 20:04:35] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23677.jpg
+[2022-09-02 20:04:35] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23678.jpg
+[2022-09-02 20:04:35] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23679.jpg
+[2022-09-02 20:04:35] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23680.jpg
+[2022-09-02 20:04:35] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23681.jpg
+[2022-09-02 20:04:35] Augusto Almeida [forwarded]: Pré-venda: https://www.bitnamic.com.br/produto/insira-ficha-o-fliperama-no-brasil-ontem-e-hoje/
+[2022-09-02 20:06:56] FTMaciel: Ta usando o Kicad?
+[2022-09-02 22:20:07] Felipe "Juca" Sanches: SENSACIONAL!
+
+Parabéns, @Augusto1974!
+[2022-09-02 22:20:23] Felipe "Juca" Sanches: sim 😉
+[2022-09-02 22:21:33] FTMaciel: Como ta fazendo? Colocou o chapeado como tela de fundo e foi jogando no schematic?
+[2022-09-02 22:22:40] Felipe "Juca" Sanches: Escaneei os fotolitos dessa placa em 1200 dpi, joguei no Inkscape e ajustei o alinhamento pra ficar perfeitamente horizontal, vetorizei.
+
+Depois importei os 2 SVGs (um pra cada camada) no kicad como "User layers"
+[2022-09-02 22:22:47] Felipe "Juca" Sanches: e agora tô desenhando por cima
+[2022-09-02 22:23:28] Felipe "Juca" Sanches: Ao mesmo tempo, comecei a desenhar o esquemático que consta (desenhado a lapis grafite) no caderno no qual o professor documentou o sintetizador
+[2022-09-02 22:23:59] Felipe "Juca" Sanches: e aí estou gradativamente descobrindo onde cada footprint desse esquemático se encaixa no layout escaneado dos fotolitos
+[2022-09-02 22:24:25] Felipe "Juca" Sanches: cruzando as duas informações, o circuito vai aos poucos sendo re-documentado. Tanto no nível de layout de PCB quanto de esquemático.
+[2022-09-02 22:25:41] Felipe "Juca" Sanches: Tenho a intenção de entender o funcionamento do circuito, para poder emular no MAME (e também num Raspberry Pi Pico que estou usando na réplicano que fiz do painel frontal do Patinho Feio)

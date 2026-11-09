@@ -1,0 +1,47 @@
+[2022-08-16 04:55:09] Pedro de Medeiros 👾: Documentação gerada com pandoc & pygments: https://https://pvmm.github.io/common-ref.html
+https://pvmm.github.io/game-ref.html
+[2022-08-16 04:55:19] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/150
+[2022-08-16 07:48:16] Augusto Almeida [forwarded]: Caramba
+[2022-08-16 07:48:16] Augusto Almeida [forwarded]: Notícia do dia, pelo menos pra mim. Decompilaram o Sonic Mania. Pra quem não sabe, é um dos últimos Sonic oficiais que inclusive tem Port direto pra geração passada PS4, XBox One, PC : https://github.com/Rubberduckycooly/Sonic-Mania-Decompilation
+[2022-08-16 07:49:11] Augusto Almeida: https://youtu.be/iNJLX15aEn4
+[2022-08-16 08:11:49] Shideravan: Eu conheço sonic mania
+[2022-08-16 08:12:43] Shideravan: Eu não me surpreendo de fãs estarem trabalhando em deconpilacao dele não
+[2022-08-16 08:13:19] Shideravan: O motor em que ele é desenvolvido é deveras interessante e as técnicas de deconpilacao estão melhorando
+[2022-08-16 08:13:52] Pablo Vasques Bravo-Villalba: Talvez uma das motivações recentes seja o lançamento da coleção de Sonic do Mega Drive para plataformas modernas, que usa o motor do Sonic Mania e parece que foi lançada com bugs consideráveis.
+[2022-08-16 08:14:49] Shideravan: Me preocupa são as empresas que vão inevitavelmente começar a se juntar para tentar dar rasteiras em projetos do tipo
+[2022-08-16 08:15:40] Shideravan: Afinal de contas, se os fãs deconpilarem os motores, fica mais difícil para eles tentarem lucrar vendendo jogo mal finalizado
+[2022-08-16 08:16:21] Shideravan: Lembro da rockstar correndo para ferrar projetos de decompilação da trilogia gta do ps2, porque iriam lançar aquela coletânea quebrada
+[2022-08-16 08:17:19] Shideravan: Será que a sega pode acabar perseguindo projetos assim também?
+[2022-08-16 08:18:54] Shideravan: Aquilo foi uma decepção tremenda. Começa pelo fato de venderem a coletânea a preço cheio e inventarem formas de fazer dlc em cima de jogo antigo
+[2022-08-16 08:19:18] Pablo Vasques Bravo-Villalba: Achei deprimente.
+[2022-08-16 08:19:45] Shideravan: Tô chocado com a cara de pau desses caras ultimamente
+[2022-08-16 08:20:22] Shideravan: Lançar jogo velho cheio de bug a preço cheio éo fim da picada
+[2022-08-16 08:21:19] Shideravan: Parece estar se tornando "tendência"
+[2022-08-16 11:37:01] Felipe "Juca" Sanches: imagino que o preço cheio se justifique por um trabalho legítimo de fazer o port para a nova plataforma e passar por todo o pipeline de validação, controle de qualidade, alguma burocracia de homologação para a plataforma escolhida, eventuais custos de licenciamento (dependendo do jogo), e distribuição, propaganda, jurídico, etc...
+[2022-08-16 11:37:32] Shideravan: Uma coisa eu aprendi sobre precificação
+[2022-08-16 11:37:41] Shideravan: Ela não funciona 1:1 de acordo com os gastos
+[2022-08-16 11:37:54] Shideravan: Ela funciona na base de "quanto meu cliente está disposto a pagar?"
+[2022-08-16 11:38:08] Pablo Vasques Bravo-Villalba: Mas é estranho porque esses jogos já tinham sido quase todos lançados antes a preços muito mais camaradas e usando uma versão anterior do mesmo engine
+[2022-08-16 11:38:09] Shideravan: E tem muita gente aceitando pagar esses preços cheios em jogo bugado
+[2022-08-16 11:38:40] Shideravan: É um ótimo negócio ser uma grtande desenvolvedora de games hoje em dia
+[2022-08-16 11:38:56] Shideravan: Você pode gastar o mínimo e faturar o máximo,  pois o cliente é trouxa para pagar
+[2022-08-16 11:39:12] Pablo Vasques Bravo-Villalba: E ainda tinha essa do jogo estar bugado, então todo o processo acima falhou em algum lugar
+[2022-08-16 11:39:23] Shideravan: A maior barreira de entrada nesse negócio é que são poucas as desenvolvedoras com franquias grandes o suficiente para fazer esse esquema
+[2022-08-16 11:39:46] Pablo Vasques Bravo-Villalba: E além de tudo logo antes do lançamento a Sega detalhou o DLC e divulgou os preços e aí ficou escancarado o caráter caça-níqueis da coisa toda.
+[2022-08-16 11:39:55] Shideravan: A falha está no investimento mínimo. Mas quando você olha os números, não é falha, é design
+[2022-08-16 11:40:39] Shideravan: Paga uma coca-cola e um pastel para algum desenvolvedor indie portar o jogo usando uma engine moderna, como a Unreal 4 e dá poucos meses de prazo. Custo imensamente baixo
+[2022-08-16 11:41:08] Shideravan: Aí você vende a preço cheio e consegue milhões em venda, nem que seja de gente para chorar de jogo mal feito no youtube
+[2022-08-16 11:42:03] Shideravan: O pessoal vai meter o pau em quem desenvolveu o port, você justifica o preço dizendo que está tendo que bancar um trabalho novo e lucra muito mesmo com um valor agregado fora de série
+[2022-08-16 11:42:17] Shideravan: Enquanto isso, as ações dessas companhias disparam
+[2022-08-16 11:42:58] Shideravan: A THQ que é dona da marca GTA mesmo, tá vendo o valor das ações subir fora de série. Nem lançar jogo novo estão precisando mais
+[2022-08-16 11:43:20] Shideravan: O último GTA novo que lançaram foi em 2013. Desde então, requentaram ele por 3 gerações
+[2022-08-16 11:44:25] Shideravan: Estão nos últimos anos soltando rumores assim "GTA 6 está em desenvolvimento, hein? Alguma hora a gente lança, só não tem data" e todo mundo esquece as práticas anti-consumidor
+[2022-08-16 11:45:08] Shideravan: Na verdade, a galera está feliz comprando jogo requentado a preço cheio... Tá dando tão certo que várias desenvolvedoras tem aderido
+[2022-08-16 11:45:55] Shideravan: As vezes eu tenho até a impressão que lançar o jogo bugado é melhor porque vai ter mais gente engajada na internet de falar mal do jogo o que ajuda a divulgar mais ainda ele
+[2022-08-16 11:46:44] Shideravan: "Nossa que povo chato reclamando que o CJ entra dentro do chão de vez em quando. Fico feliz em comprar e poder jogar esse jogo no meu Switch. Acho que se não tivessem reclamado, nem saberia que ele tinha sido lançado"
+[2022-08-16 12:05:45] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-08/23337.jpg
+[2022-08-16 12:09:11] Shideravan: kkkkkkk bem por aí
+[2022-08-16 20:28:06] Anne Isabelle: https://youtu.be/6On5zpld7Rk
+[2022-08-16 20:33:36] Anne Isabelle: Vocês já repararam que sonic é o weezer dos jogos?
+[2022-08-16 20:35:32] Anne Isabelle: https://www.reddit.com/r/weezer/comments/9imsnm/the_weezer_sonic_parallel/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
+[2022-08-16 23:04:35] L.: https://twitter.com/hackaday/status/1559721834878205953?t=ugBh78ZREAfqDP_8UI8OzA&s=35

@@ -1,0 +1,13 @@
+[2020-07-12 00:56:11] L.: Foi ela que bootou OS X num 68k rodando PearPC, não?
+[2020-07-12 01:13:30] Felipe "Juca" Sanches: faz um pouco mais de uma semana que estou escrevendo na unha um disassembler para 286
+[2020-07-12 01:13:33] Felipe "Juca" Sanches: em python
+[2020-07-12 01:13:49] Felipe "Juca" Sanches: hoje joguei a toalha e abri o código fonte do disasm do MAME pra me ajudar
+[2020-07-12 01:46:08] L.: Dica: instruções do 8086, se olhadas em octal, agrupam em funções de 8 em 8
+[2020-07-12 01:47:44] L.: Eu desisti se fazer meu emulador de 8086 mas já tinha o decoder de instrução quase pronto (tava ficando legal, com C++ e templates, gerando o código pras várias versões de mod/rm, etc.)
+[2020-07-12 01:48:30] L.: Uma das coisas que fazia era justamente agrupar as instruções. Acho que aprendi melhor 8086 e C++ nos últimos anos pra fazer isso mais limpo
+[2020-07-12 01:48:41] Felipe "Juca" Sanches: estou expandindo aquele disassembler espertinho que eu comecei muitos anos atrás e recentemente apelidei de ExecTrace
+[2020-07-12 01:49:49] Felipe "Juca" Sanches: tá com suporte a algumas CPUs, como o 8048 do Odyssey2, o Z80 (em particular com algumas funcoes dedicadas ao ambiente da bios do MSX) e agora x86 visando retomar um projetinho antigo de reversa do pinball fantasies
+[2020-07-12 01:50:02] Felipe "Juca" Sanches: https://github.com/felipesanches/ExecTrace
+[2020-07-12 01:50:18] L.: Ahhh, o bom e velho pinball fantasies
+[2020-07-12 01:50:30] Felipe "Juca" Sanches: dizem que todo mundo tem um projeto de vida...
+[2020-07-12 01:50:55] Felipe "Juca" Sanches: o Patinho Feio deve estar sentindo inveja...

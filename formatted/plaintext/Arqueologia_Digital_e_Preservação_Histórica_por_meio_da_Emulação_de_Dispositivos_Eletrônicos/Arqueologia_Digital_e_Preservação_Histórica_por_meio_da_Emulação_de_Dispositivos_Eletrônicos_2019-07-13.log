@@ -1,0 +1,29 @@
+[2019-07-13 14:56:26] Felipe "Juca" Sanches: Saiu o segundo vídeo sobre a placa de vídeo em protoboard! https://www.youtube.com/watch?v=uqY3FMuMuRo
+[2019-07-13 14:56:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-07/9838.jpg
+[2019-07-13 14:57:04] Felipe "Juca" Sanches: E essa aqui foi a minha tentativa uns 6 meses atrás de fazer praticamente a mesma coisa...
+[2019-07-13 14:58:07] Felipe "Juca" Sanches: Cheguei a desenhar o esquemático duma PCB pra fazer isso... com base naquele livro "Build Your Own Custom TV Games"
+[2019-07-13 14:58:20] Felipe "Juca" Sanches: https://garoa.net.br/wiki/How_to_Design_and_Build_Your_Own_Custom_TV_Games
+[2019-07-13 14:59:18] Felipe "Juca" Sanches: Mas eu fiquei com dúvidas sobre o circuito e por conta do receio de estar errado acabei não encomendando a fabricação da pcb
+[2019-07-13 14:59:57] Felipe "Juca" Sanches: Esse vídeo esclarece algumas das minhas dúvidas. Posso talvez revisar o circuito levando em consideração os conceitos aprendidos (ou reforçados) nesse vídeo
+[2019-07-13 15:00:30] Felipe "Juca" Sanches: o meu objetivo era ter um circuito de vídeo com resolução e paleta de cores suficientes para implementar a VM do Another World
+[2019-07-13 15:01:10] Felipe "Juca" Sanches: projeto de 3 anos atrás...
+[2019-07-13 15:01:12] Felipe "Juca" Sanches: https://twitter.com/juca_gnu/status/762719829035982848
+[2019-07-13 15:30:50] L.: Animal o vídeo do Ben! Rola fazer versão VGA do Pong agora :D
+[2019-07-13 15:30:59] Felipe "Juca" Sanches: kkkk
+[2019-07-13 15:31:52] Felipe "Juca" Sanches: é curioso isso... eu assiti o vídeo inteiro dizendo (mentalmente) "é óbvio isso! É óbvio!" Mas eu não consegui fazer sozinho quando tentei...
+[2019-07-13 15:37:33] L.: Hehehe, pois é. Chegou a perceber que quando ele menciona "não vou ligar num computador ainda", aparece o micro dele por um frame no video?
+[2019-07-13 15:38:07] L.: Mas, sim, ele explica muito bem.
+[2019-07-13 15:38:54] Felipe "Juca" Sanches: me dá a impressao de que esse vídeo foi gravado primeiro e depois de editado ele fez a narração sobre o video final
+[2019-07-13 15:39:28] Felipe "Juca" Sanches: por que o rítmo da explicação é muito bom. Não tem pausas desnecessarias, etc
+[2019-07-13 15:39:35] Felipe "Juca" Sanches: parece que tem um bom roteiro
+[2019-07-13 15:39:49] Felipe "Juca" Sanches: apesar de incluir "erros" didáticos
+[2019-07-13 18:42:10] L.: Sim, deve ser tudo filmado numa tacada só e editado em partes. Até por que, primeiro vídeo já tinha thumbnail com foto do monitor
+[2019-07-13 18:42:47] L.: Quase pegando um osciloscópio pra brincar com isso hehe
+[2019-07-13 18:43:43] Felipe "Juca" Sanches: 😊
+[2019-07-13 18:45:55] Felipe "Juca" Sanches: eu acho que se ele colocar um registrador de 8 bits na saída da EPROM ele consegue matar as linhas pretas pois o próximo pixel pode ser lido enquanto um está sendo exibido, e o tempo de acesso ao registrador é mais rápido que o acesso à EPROM
+[2019-07-13 18:46:23] Felipe "Juca" Sanches: só seria complicado se o tempo da EPROM for muito maior
+[2019-07-13 18:46:47] Felipe "Juca" Sanches: (mas eu posso estar falando besteira, pensando melhor talvez não dê certo o que eu acabei de falar)
+[2019-07-13 18:48:20] Felipe "Juca" Sanches: mas miutas placas de arcade carregam tiles e sprites de ROMs... como lidam com esse problema?
+[2019-07-13 18:56:31] L.: Rola botar 3 ROMs, uma pra cada cor
+[2019-07-13 18:56:37] L.: E fazer 8bpp
+[2019-07-13 18:57:33] L.: Aliás, isso é divertido. Pensando como faria um gerador de caracteres.

@@ -1,0 +1,30 @@
+[2021-05-14 01:56:17] L.: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13303-Screenshot%20from%202021-05-13%2021-56-09.png
+[2021-05-14 02:03:07] L.: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13304-Screenshot%20from%202021-05-13%2022-02-59.png
+[2021-05-14 02:03:53] L.: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13305-Screenshot%20from%202021-05-13%2022-03-47.png
+[2021-05-14 11:16:02] Felipe "Juca" Sanches: ah! Já fizeram um!
+[2021-05-14 11:16:14] Felipe "Juca" Sanches: onde está o código-fonte disso?
+[2021-05-14 11:25:38] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13308.jpg
+[2021-05-14 11:25:38] Erin Pinheiro 🐿: Penwriter remontada, teclado 100% e mecanismo do eixo x ajustado, não perde mais passo
+[2021-05-14 11:26:00] Erin Pinheiro 🐿: por sorte não tinha nenhuma engrenagem quebrada, uma delas só estava meio solta
+[2021-05-14 11:26:46] Erin Pinheiro 🐿: ainda não consegui fazer a RS232 funcionar, parece que precisa de null modem, vou ver se consigo gambiarrar alguma coisa durante minha hora de almoço do serviço
+[2021-05-14 11:39:19] L.: Tem link acima
+[2021-05-14 11:39:59] Felipe "Juca" Sanches: ah!
+[2021-05-14 11:40:05] Felipe "Juca" Sanches: só agora li a URL
+[2021-05-14 11:40:56] L.: O binário da ROM não tá lá mas se procurar pelo nome do arquivo acha um diretório no mesmo domínio com varias versões
+[2021-05-14 11:42:14] Felipe "Juca" Sanches: beleza
+[2021-05-14 11:42:22] L.: Dei um tapa no emulador pra compilar em não-Windows e fazer o modo escalonado funcionar (monitor 3k no laptop faz o negócio ficar tão grande quanto um ícone😂)
+[2021-05-14 11:42:23] Felipe "Juca" Sanches: infelizmente não vou poder reusar o código-fonte no MAME
+[2021-05-14 11:42:40] L.: Não mas rola ver coisa tipo porta de i/o usada etc
+[2021-05-14 11:43:09] Felipe "Juca" Sanches: pois o cabeçalho de copyright diz:
+This software is free to use/modify/distribute... [SUSPENSE] ...for non-commercial purposes only.
+[2021-05-14 11:43:16] Felipe "Juca" Sanches: sim, isso rola!
+[2021-05-14 11:44:26] L.: Tem umas informações legais no site também. O cara fuçou no circuito pra botar mais RAM e rodar CP/M😂
+[2021-05-14 11:46:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13322.jpg
+[2021-05-14 11:46:34] Felipe "Juca" Sanches: nem precisa ler código fonte. As informacoes necessárias tão no site já: 
+
+http://www.fybertech.net/mailstation/info.php
+[2021-05-14 12:54:05] FTMaciel: Vou deixar guardado então
+[2021-05-14 14:11:54] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13324-sticker.webp
+[2021-05-14 21:14:10] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-05/13325.jpg
+[2021-05-14 21:14:10] Erin Pinheiro 🐿: que raiva.
+[2021-05-14 21:14:31] Erin Pinheiro 🐿: a razão pela qual não consigo comunicar com a plotter? o cabo que eu pensei ser RS232 é TTL.

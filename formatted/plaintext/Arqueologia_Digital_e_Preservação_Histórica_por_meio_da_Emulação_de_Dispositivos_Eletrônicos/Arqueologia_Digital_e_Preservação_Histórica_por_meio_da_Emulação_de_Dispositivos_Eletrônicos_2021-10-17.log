@@ -1,0 +1,29 @@
+[2021-10-17 10:32:18] Ismael Luceno: @fsanches a nossa conversa o outro dia me deixou pensando em alternativas melhores que gitlab e achei uma aqui: https://sourcehut.org/
+[2021-10-17 12:05:40] Aylons Hazzud: Eu acho que já falei aqui, mas o que eu realmente estou esperando ansiosamente é uma alternativa federada
+[2021-10-17 16:39:34] Ismael Luceno: mas federar o que?
+[2021-10-17 17:53:45] L.: Git já é federado. Você diz algo além, tipo com issue tracker, UI web bonitinha, etc?
+[2021-10-17 17:54:04] L.: Bom, git não é federado, é distribuído, mas é meio caminho andado
+[2021-10-17 18:17:11] Aylons Hazzud: Git é federado. Issues, releases, e essas outras coisas não são
+[2021-10-17 18:18:15] Aylons Hazzud: E eu tenho uso real para isso. É muito ruim colaborar em equipes diferentes em um mesmo projeto de hardware e manter tudo no mesmo servidor
+[2021-10-17 18:29:37] Ismael Luceno: hmm... eu não vejo grão diferença... pode ter qualquer sistema para os issues e para a distribuição de arquivos...
+[2021-10-17 18:33:15] Ismael Luceno: na verdade se você usa URLs como identificador, já tem aí um médio para integração, se precisar algo
+[2021-10-17 20:07:41] Aylons Hazzud: Eu vejo. Eu trabalho com equipes que vão ter acesso privilegiado a certos repositórios, e isso é administrado pelos grupos de trabalho. E colaboramos com outros laboratórios nos mesmos projetos, cada um com suas políticas de acesso e compartilhamento.
+[2021-10-17 20:08:41] Aylons Hazzud: Se simplesmente URL bastasse, não íamos precisar de github, gitlab, nada. O git sozinho já faz isso, aí estaríamos usando o redmine e linkando URLs para lá e para cá. Acho que é bem óbvio que tem uma função aí
+[2021-10-17 20:26:42] L.: Fazer algo que trabalha em cima do git pra botar essas coisas é de boa, não? Algo que gerencie isues e mantenha tudo num branch por exemplo
+[2021-10-17 20:51:02] Ismael Luceno: git-issues?
+[2021-10-17 20:59:15] Ismael Luceno: GitHub - duplys/git-issues: A distributed issue tracking system based on Git repositories, written in Python
+https://github.com/duplys/git-issues
+[2021-10-17 21:06:57] Ismael Luceno: GitHub - jashmenn/ditz: Ditz is a simple, light-weight distributed issue tracker designed to work with distributed version control systems like git, darcs, Mercurial, and Bazaar
+https://github.com/jashmenn/ditz
+[2021-10-17 23:16:29] Aylons Hazzud: Propus algo assim no hacker news há um tempão atrás.
+[2021-10-17 23:17:21] Aylons Hazzud: Legal esses dois. Vou dar uma olhada
+[2021-10-17 23:20:53] L.: Parecem legais mesmo. Com uma interface por cima fica legal demais.
+[2021-10-17 23:22:42] L.: https://twitter.com/hackaday/status/1449918648748023813?t=Xh0swn_DxcRwpZ7pxZPPbw&s=09
+[2021-10-17 23:22:47] L.: Ooohhh☝️
+[2021-10-17 23:22:57] L.: Emulador de floppy open source!
+[2021-10-17 23:23:29] L.: Se eu terminar meu MSX2 feito do zero, vou botar um negócio desses ao invés dos proprietários
+[2021-10-17 23:25:15] L.: Ahh: "fddEMU is based on MFM encoding which is used by HD (High Density) disks so there is no DD (Double Density) support as of now. So unless host FDC supports HD it won't work."
+[2021-10-17 23:41:49] Aylons Hazzud: Ah, putz, não tem interface web? Tipo, a ideia é usar com gente de hardware, vários não gostam, não sabem ou não querem linha de comando
+[2021-10-17 23:43:25] Aylons Hazzud: Tem que ter gerenciamento d usuário por ldap (sério, o ti sempre exige), controle de níveis de acesso, guardar releases de binários (essa é uma das partes em que ser federado é muito importante - cada um quer ter um controle estrito do que mandou fabricar)
+[2021-10-17 23:53:16] L.: Pelo que vi o git-issues não tem. Mas deve ser possível sem muito galho fazer uma em cima.
+[2021-10-17 23:54:06] L.: Não sei como funciona com relação ao histórico, especialmente com relação a autoria das issues e tal. Isso deve complicar um pouco.

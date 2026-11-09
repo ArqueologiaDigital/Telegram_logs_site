@@ -1,0 +1,32 @@
+[2018-11-11 02:34:07] Felipe "Juca" Sanches: FILMÃO!!!
+[2018-11-11 02:37:22] Felipe "Juca" Sanches: anotei o endereço de uma das variáveis não inicializadas aqui, 0x46C. Rodei a emulação sem nenhum patch na BIOS e depois de terminar a sequencia inicial do boot, quando aparece na tela "RUN SETUP UTILITY" "Press <F1> to RESUME", bati o olho na janela de visualização de conteúdo de memória e notei que o byte naquele endereço 0x46C fica o tempo todo mudando de valor
+[2018-11-11 02:37:27] Felipe "Juca" Sanches: crescente
+[2018-11-11 02:37:40] Felipe "Juca" Sanches: e notei também que dá carry para os bytes vizinhos
+[2018-11-11 02:38:12] Felipe "Juca" Sanches: aquilo é um contador de 4 bytes nas posições de memória 0x46C até 0x46F
+[2018-11-11 02:38:32] Felipe "Juca" Sanches: provavelmente aquilo é a quantidade de tempo que se passou desde o boot
+[2018-11-11 02:39:43] Felipe "Juca" Sanches: então deve ter alguma interrupção (supostamente causada pelo RTC) que resulta na atualização desses bytes
+[2018-11-11 08:01:27] Alexandre Villares: Check out @aaronpenne’s Tweet: https://twitter.com/aaronpenne/status/1061463080318595072?s=09
+[2018-11-11 08:47:01] Ricardo Bánffy: https://arxiv.org/abs/1811.02035
+[2018-11-11 10:58:08] Alexandre Villares: Que legal!
+[2018-11-11 11:07:30] Deleted Account: Meu trabalho de graduação do Técnico foi nessa base.  A gente fez um sistema cujo escopo incluía a geração de gráficos de utilização no final do mês. Era em Clipper e não em Basic. Tentamos um dia inteiro e a biblioteca Funky não funcionava de jeito nenhum. O jeito foi apelar e fazer os gráficos com caracteres ASCII. Peguei um livro do RAMALHO (O Luis Antônio, não o do Garoa) e saí adaptando os gráficos... até que ficou bom, passamos com boa nota.
+[2018-11-11 11:20:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-11/8171.jpg
+[2018-11-11 11:20:51] Felipe "Juca" Sanches: http://www.o3one.org/hwdocs/bios_doc/dosref22.html
+[2018-11-11 11:30:00] Deleted Account: Bohemian Rapsody?
+[2018-11-11 14:20:48] Felipe "Juca" Sanches: sim!
+[2018-11-11 14:38:34] Ismael Luceno: Seguramente
+[2018-11-11 14:41:15] Ismael Luceno: Sim, sem dúvida vai ter que programar o RTC
+[2018-11-11 14:44:21] Ismael Luceno: Já pesquisou na RBIL? Eu acho já tinha documentado algumas das áreas comuns
+[2018-11-11 14:47:02] Ismael Luceno: Tem que establecer toda a BDA corretamente
+[2018-11-11 14:47:18] Ismael Luceno: Pois e muito usada
+[2018-11-11 15:32:14] Anchises: Que coisa linda de se ver 😍 a galera mais antiga plotou muito gráfico usando caracteres ASCII ❤️
+[2018-11-11 15:32:31] Anchises: Ou melhor, <3 em vez de ❤️
+[2018-11-11 16:02:16] Alexandre Villares: :)
+[2018-11-11 17:32:02] Felipe "Juca" Sanches: o que é RBIL?
+[2018-11-11 17:32:17] Felipe "Juca" Sanches: o que é BDA?
+[2018-11-11 17:33:08] Felipe "Juca" Sanches: RBIL = Ralph Brown's Interrupt List http://www.ctyme.com/rbrown.htm
+[2018-11-11 17:34:06] Ismael Luceno: Ralf Brown's Interrupt List
+[2018-11-11 17:34:18] Felipe "Juca" Sanches: BDA = BIOS Data Area http://stanislavs.org/helppc/bios_data_area.html
+[2018-11-11 17:34:24] Ismael Luceno: Isso
+[2018-11-11 17:35:09] Ismael Luceno: 0x100 até 0x400 se não me lembro errado
+[2018-11-11 17:37:05] Ismael Luceno: Não, 0x400+
+[2018-11-11 17:37:09] Ismael Luceno: XD

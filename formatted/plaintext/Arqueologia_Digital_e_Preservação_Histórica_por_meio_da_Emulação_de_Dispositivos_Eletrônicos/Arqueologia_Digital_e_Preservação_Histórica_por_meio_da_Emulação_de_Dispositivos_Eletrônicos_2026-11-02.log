@@ -1,0 +1,26 @@
+[2026-11-02 07:49:41] Felipe "Juca" Sanches: estou implementando isso hoje
+[2026-11-02 07:50:34] Felipe "Juca" Sanches: ontem eu joguei o jogo inteiro no kn7000 e la no finalzinho achei um bug da VM
+
+era um detalhe minimo, mas fazia o jogo ser impossivel de zerar
+[2026-11-02 07:54:42] Felipe "Juca" Sanches: E sabe como foi corrigido? Fiz o Claude gerar uma versao com logging de inputs. Usei a tela de codigos de fase pra comejar o jogo ja na fase em que dava problema. Joguei um pouquinho até o bug se manifestar, e passei o log pro Claude. Ele rodou o jogo replicando o log de inputs tanto no MAME quando numa implementação de referencia da VM (rustyworld -- https://github.com/EdMcBane/rustyworld) e calculando checksum de todos os frames e fazendo log junto com o estado de todas as 256 variaveis da VM. Desse jeito ele conseguiu achar onde a execucao das VMs diverge, e assim achou a instrução defeituosa. Era uma implementação errada de "shift right"
+[2026-11-02 07:55:03] Felipe "Juca" Sanches: agora ta corrigido e consegui zerar o jogo
+[2026-11-02 07:55:22] Felipe "Juca" Sanches: agora estou fazendo o controle de qualidade final, fazendo um monte de ajustes finos para melhorar a qualidade
+[2026-11-02 07:56:00] Felipe "Juca" Sanches: as transicoes de fase mostravam a GUI do KN7000 enquanto carregava novos bancos de assets. Agora fica tela preta para nao quebrar a imersão do jogo
+[2026-11-02 07:57:07] Felipe "Juca" Sanches: e estou fazendo o render num buffer em alta resolução (usando 384x240 ao inves de 320x200)
+[2026-11-02 07:58:19] Felipe "Juca" Sanches: Preciso verificar como ficou o render de texto, pois nao rola redimensionar o texto sem ficar deformado. Mas ficando no tamanho original, pode desalinhar um pouco dos outros gráficos da animação da intro. Vou ver e avaliar...
+[2026-11-02 07:59:50] Felipe "Juca" Sanches: Também estou pensando em fazer umas firulas... Andei pensando em implementar algo no estilo "ambilight" com truques de paleta na área que sobra da tela dos dois lados.
+[2026-11-02 13:36:54] L.: https://digerati.vinizinho.net/cds.html
+[2026-11-02 14:04:50] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42038.jpg
+[2026-11-02 14:04:50] RicBit: As pilhas no meu turbor são tão antigas que ainda eram National haha
+[2026-11-02 15:40:12] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42039.jpg
+[2026-11-02 15:40:12] RicBit: Não entendo quem não gosta do turbor, até os parafusos dessa porra são bonitos.
+[2026-11-02 15:48:12] Érico Andrei: Eu me pergunto se o Brasil, depois do Japão, é hoje o país com mais exemplares do turbor. 
+Ele foi o sonho de consumo da nossa geração e parece que toda vez que um aparece a venda, rapidamente é arrematado
+[2026-11-02 15:48:38] Érico Andrei: (sim, percepção seletiva se aplica a postagem acima)
+[2026-11-02 16:02:24] RicBit: O meu eu não comprei, eu ganhei.
+[2026-11-02 16:30:25] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42045.jpg
+[2026-11-02 16:30:25] RicBit: Damn, eu estava apostando que o C10 estaria estufado, mas nem está. Mais tarde eu ligo o osciloscópio pra ver.
+[2026-11-02 20:05:22] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42046.jpg
+[2026-11-02 20:05:22] Felipe "Juca" Sanches: Exemplo de "ambilight" na minha VM do Another World no KN7000
+[2026-11-02 21:53:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42047.jpg
+[2026-11-02 21:53:59] Felipe "Juca" Sanches: olha o nivel de detalhe...

@@ -1,0 +1,137 @@
+[2021-11-05 20:57:37] Shideravan: Então vamos por partes
+[2021-11-05 20:58:55] Shideravan: O 32X tinha sim capacidades 3D assim como já existiam arcades 3D e experimentos com 3D antes da 5a geração de videogames
+[2021-11-05 20:59:09] Shideravan: Mas eram pouco mais que curiosidades
+[2021-11-05 20:59:23] Shideravan: Aliás, o 3DO se encaixa nisso também
+[2021-11-05 21:00:37] Shideravan: O que diferenciou o PlayStation é que ele era PENSADO para o processamento 3D, principalmente em polígonos texturizados, ainda que concessões precisaram ser feitas para um projeto desse se viabilizar
+[2021-11-05 21:01:13] Shideravan: É como por exemplo, os consoles da atual geração serem pensados no ray tracing
+[2021-11-05 21:01:31] Shideravan: Existiam jogos com Ray tracing antes? Claro que sim
+[2021-11-05 21:02:02] Shideravan: Mas nessa geração passamos a ter componentes de hardware pensando no ray tracing
+[2021-11-05 21:02:18] Shideravan: Acho que é meio dessa forma que tem que ser encarada
+[2021-11-05 21:03:10] Shideravan: Se o PlayStation não tivesse colocado o polígono na mesa, existiriam sim jogos em 3D até num volume ainda maior que nos 16bit
+[2021-11-05 21:04:07] Shideravan: Até porque isso aconteceu com o 3DO e o jaguar. Mais desenvolvedores passaram a arriscar ali em suas curiosidades e técnicas para rodar 3D naquele hardware
+[2021-11-05 21:04:12] Shelton Ribeiro: Acho incrível que tenham conseguido rodar Tomb Raider em um console que gerava no máximo 90 mil polígonos que no caso é o 3DO. 😱😱😱
+[2021-11-05 21:05:01] Shideravan: Mas isso foi de desenvolvedor se desafiando, né? É tipo a parada de rodar doom em tudo
+[2021-11-05 21:05:06] Shelton Ribeiro: Lembrando que o primeiro “survival Horror” 100% 3D, foi pra 3DO que é o Doctor Hausen
+[2021-11-05 21:05:32] Shideravan: Caramba, anterior ao alone in the dark?
+[2021-11-05 21:05:48] Shelton Ribeiro: Sim, sim, 3D de verdade e em larga escala dentro do fabricante, só foi rolar no M2
+[2021-11-05 21:06:26] Shideravan: Então, essa aí que é a diferença
+[2021-11-05 21:06:28] Shelton Ribeiro: Acho que sim, mas o Aline tem cenários pré renderizados o Dr Hausen é 100% 3D,
+[2021-11-05 21:06:37] Shelton Ribeiro: Deixa pegar aqui o vídeo dele
+[2021-11-05 21:07:00] Shideravan: A mesma coisa, a nvidia lançou umas gambiarras que as linhas anteriores das placas dela poderiam rodar Ray tracing
+[2021-11-05 21:07:13] Shideravan: O que inclusive engloba a minha 1070
+[2021-11-05 21:07:18] Shideravan: Mas cara....
+[2021-11-05 21:07:49] Shideravan: O hardware não tem uma seção especializada nisso, isso obriga muitas concessões
+[2021-11-05 21:08:14] Shelton Ribeiro: https://youtu.be/f69UMqCSyks
+
+Inclusive o loading dele é nas portas, esse jogo é de 1994 eu acho.
+[2021-11-05 21:08:28] Shideravan: É realmente algo ousado o movimento que a Sony fez e isso agitou o mercado
+[2021-11-05 21:09:04] Shideravan: Agora... Se na geração não rolasse 3D acelerado, pode ficar tranquilo que dá outra não passava
+[2021-11-05 21:09:27] Shideravan: O receio que existia é que as tecnologias eram muito primitivas naquele momento
+[2021-11-05 21:09:44] Shelton Ribeiro: O Nintendo 64 já estava vindo a todo vapor desde 1993 com o project Reality, o 3D viria na força do ódio kkkkkk
+[2021-11-05 21:10:23] Shideravan: O próprio PlayStation, para ele rodar 3D texturizado com a desenvoltira que tem até com alguns shaders mais rústicos ele pagou um preço caro
+[2021-11-05 21:10:53] Shideravan: Ele não trabalha com aplicação de vertices usando float, ele usa inteiros
+[2021-11-05 21:11:41] Shideravan: Isso gera uma aberração: se você se move rápido, ele faz uns arredondamentos
+[2021-11-05 21:12:23] Shideravan: Isso causa wobbling de texturas e até quebra de texturas o que é muito comum no PlayStation 1
+[2021-11-05 21:13:26] Shideravan: Até texturas sobrepostas ficam piscando rápido porque fica meio inconclusiva de qual mostrar antes
+[2021-11-05 21:13:26] Shelton Ribeiro: Depois de jogar Turok 2, Ocarine of time, Banjo Kazoiee, você vê que os caras acertaram. O grande pecado foi só não ter os cartuchos de 256mb já no lançamento, todos os jogos que citei acima usam esse cartucho e simbolizaram a chegada de jogos “cavalares” no console, com “mundos grandes” esses cartuchos de alta capciosas só surgiram em 1998, dois anos depois do lançamento. Aí complicou : /
+[2021-11-05 21:13:43] Shideravan: Vou ser polêmico agora
+[2021-11-05 21:14:01] Shideravan: Cartuchos naquele momento não traziam apenas desvantagens
+[2021-11-05 21:14:49] Shideravan: Havia um problema sério
+[2021-11-05 21:15:12] Shideravan: O N64 é basicamente uma estação gráfica da sgi simplificada
+[2021-11-05 21:15:31] Shideravan: Isso é um hardware muito caro para seu tempo por si só
+[2021-11-05 21:15:53] Shideravan: Mas ele precisava sair mais barato que um PlayStation sem gerar prejuízo por unidade
+[2021-11-05 21:15:55] Shelton Ribeiro: Sim, de certa forma, empresas como a Lucas Arts declararam que jogos como Naboo, Indiana Jonas e rogue squadron só foram possíveis como conhecemos por conta do cartucho.
+[2021-11-05 21:16:41] Shideravan: Incorporar um leitor de CD aumentaria muito os custos por aparelho, fora que a Nintendo estava atravessando uma crise interna em relação a licenciamentos
+[2021-11-05 21:16:53] Shelton Ribeiro: Sim
+[2021-11-05 21:17:24] Shideravan: Só que parte do "poder" do Nintendo 64 provém dele poder contar com um acesso rápido ao jogo
+[2021-11-05 21:17:35] Shelton Ribeiro: Imagine que o custo de um cartucho de 64mb, era em média 14 dólares contra os 4 dólares do CD 😱
+[2021-11-05 21:17:46] Shideravan: Isso é um ponto que muita gente ignora porque houveram periféricos cono o Sega CD
+[2021-11-05 21:18:31] Shideravan: Mas na verdade, o Sega CD tem um outro mega drive dentro dele, só para cuidar das operações do CD
+[2021-11-05 21:19:33] Shideravan: Para a gente ter um Nintendo 64 rodando cd com a qualidade do Nintendo 64, a gente precisaria de um hardware que não é o Nintendo 64
+[2021-11-05 21:19:37] Shelton Ribeiro: A nintendo não queria migrar pro CD porque não queria pagar 💰 royalities pra ninguém, eles nunca pagaram pra ninguém isso, é uma política interna deles da época do yamauchi que perdura até hoje, todas as mídias são proprietárias
+[2021-11-05 21:19:52] Shelton Ribeiro: Porque lucram com venda de mídia virgem pros desenvolvedores
+[2021-11-05 21:19:58] Shideravan: O bagulho é complexo mesmo e esse é um dos motivos que o Nintendo 64 atrasou tanto
+[2021-11-05 21:21:04] Shelton Ribeiro: Imagine você comprar da nintendo 100 mil cartuchos virgens de Switch pro seu game, você tem que pagar adiantado 50 mil e se você vender só 10 mil cópias o prejuízo é todo seu.
+[2021-11-05 21:21:16] Shideravan: Sim, o grande negócio da Nintendo com o SNES e NES não era a venda de consoles nem dos jogos. Era na licença que eles metiam a faca podiam ter controle das desenvolvedoras
+[2021-11-05 21:21:20] RicBit: O primeiro foi o 3D monster maze do zx81.
+[2021-11-05 21:21:42] Shideravan: Esse não é tecnicamente um dos primeiros fps?
+[2021-11-05 21:22:06] RicBit: nao tem como ser fps porque nao tem tiro
+[2021-11-05 21:22:17] RicBit: é só fp, nao fps
+[2021-11-05 21:22:31] Shideravan: De certa forma faz sentido hahaha
+[2021-11-05 21:23:07] Shideravan: FP 3d survivor horror, a hideo Kojima game
+[2021-11-05 21:24:14] Shideravan: Acho que dá para dizer que ele foi um precursor das duas coisas, mas não é nem uma coisa nem outra. Acho que ele estava se referindo a survivor horror poligonal no estilo resident evil
+[2021-11-05 21:24:37] Shelton Ribeiro: Acredita que no Switch ainda é assim? Eu me liguei quando a Namco perguntou no Twitter se os fãs queriam um Dragonball xenoverse no console, aí como a receptividade foi boa, eles liberaram a pré-venda, o game estourou, aí eles partiram para lojas convencionais.
+[2021-11-05 21:25:28] Shelton Ribeiro: Isso e de consoles “globais”
+[2021-11-05 21:25:34] Shideravan: Acredito sim, mesmo desenvolvedores tem um pouco de dificuldades de lançar indies na plataforma
+[2021-11-05 21:25:43] Shideravan: E isso digital
+[2021-11-05 21:25:52] Shideravan: Agora imagina mídia física? Pootz
+[2021-11-05 21:26:09] Shideravan: Muita burocracia para lançar um jogo hahaha
+[2021-11-05 21:26:40] Shelton Ribeiro: Pra lançar esse Dragon Ball em mídia física eles fizeram esse balaio de gato todo, porque esses cartuchos de Switch são caros, e agora na pandemia, mais ainda.
+[2021-11-05 21:27:41] Shideravan: Por isso eles lançam em outras plataformas primeiro e se o jogo render, eles lançam na Nintendo. No caso de indies, as vezes até lançam edição especial com mídia física, mas numa tiragem limitadíssima
+[2021-11-05 21:27:59] Shideravan: A Nintendo é até meio sem noção as vezes quanto a isso
+[2021-11-05 21:28:35] Shideravan: Muita gente falava que os indies poderiam "salvar" o wiiu, mas a Nintendo era irredutível
+[2021-11-05 21:28:54] Shelton Ribeiro: Eles ganham na venda de consoles, ganham na venda do software final e ganham na venda da mídia pros devs. Nesse modelo aí, não existe crise, né?
+[2021-11-05 21:29:42] Shideravan: Tecnicamente existe, porque a Nintendo é uma empresa altamente hierarquizada. Isso é muito custoso para as operações internas
+[2021-11-05 21:30:02] Shideravan: Mas dinheiro em caixa eles tem infinito
+[2021-11-05 21:30:40] Shelton Ribeiro: Tô dizendo assim, eles sempre tem uma forma de tirar dinheiro, seja vendendo hardware ou nas “comissões” dos softwares.
+[2021-11-05 21:31:12] Shideravan: Eles lançam emulação bugada  com input lag altissimo e até áudio quebrado quando está no online e os fãs correm e assinam o serviço a preços absurdos para rodar meia dúzia de joguinho
+[2021-11-05 21:31:32] Shelton Ribeiro: Eles estão confortáveis com o Switch, e acho eu que eles não voltam mais pros consoles de mesa.
+[2021-11-05 21:31:41] Shelton Ribeiro: Sem concorrentes
+[2021-11-05 21:31:48] Shideravan: Ahhh sim, isso é algo que eles fazem questão: lucrar em todas as operações
+[2021-11-05 21:32:09] Shideravan: Mas isso é uma exigência do conselho de investidores da companhia
+[2021-11-05 21:32:34] Shideravan: Inclusive, rolou uma treta feia com o 3DS por conta disso
+[2021-11-05 21:33:13] Shelton Ribeiro: Muito espartano com os devs, foi justamente isso que o 3DO quebrou, com bons lucros pros desenvolvedores, tanto que a SNK e Capcom cresceram os olhos kkkkk
+[2021-11-05 21:33:18] Shideravan: O 3DS era um console caro de produzir no lançamento e quando colocaram na prateleira ele estava mal precificado. O mercado rejeitou.
+[2021-11-05 21:34:01] Shideravan: Precisaram as pressas rever o custo que o 3ds chegaria aí consumidor final, com as unidades já produzidas encalhadas
+[2021-11-05 21:34:15] Shideravan: O iwata quase rodou nessa brincadeira
+[2021-11-05 21:34:15] Shelton Ribeiro: Me lembro, Iwata cortou o próprio salário, pediu desculpas aos acionistas e disse que faria de tudo pra virar o jogo. Deu certo. : /
+[2021-11-05 21:34:29] Shideravan: Ele fez um acordo com o conselho de investidores
+[2021-11-05 21:34:36] Shideravan: Exatamente
+[2021-11-05 21:34:44] Shideravan: Cortou na própria carne
+[2021-11-05 21:35:17] Shideravan: Só porque os investidores estavam não acostumados e não aceitariam um console vendido a prejuízo assim de bandeja
+[2021-11-05 21:35:28] Shideravan: Sendo que isso é basicamente regra de mercado
+[2021-11-05 21:35:35] Shelton Ribeiro: Ele manobrou rápido, cortou o preço do portátil, apertou os ovos da galera pra sair bons jogos em tempo hábil e principalmente, não demitiu ninguém pra todo mundo trabalhar tranquilo.
+[2021-11-05 21:36:25] Shideravan: Não se pode ganhar em tudo então as desenvolvedoras tecnicamente vendem os consoles com "prejuízo" para garantir market share e ganhar no licenciamento depois
+[2021-11-05 21:37:13] Shideravan: Não demitiu uma ova, acabou rolando downsizing depois, mas isso é outra história
+[2021-11-05 21:37:25] Shideravan: Naquele momento ele tranquilizou todo mundo
+[2021-11-05 21:37:45] Shelton Ribeiro: Pois é, já vinha sendo um “padrão” da indústria, aí esses investidores pnc, não queriam ter prejuízo no hardware e ganhar lá na frente com jogos? Queriam ganhar com ambos, desse jeito não dá. 3DO quebrou por isso.
+[2021-11-05 21:39:08] Shelton Ribeiro: Não dá pra esperar ganhos com hardware caro.
+[2021-11-05 21:39:20] Shideravan: o caso do 3do é ainda mais complicado, a 3DO não queria fabricar um 3DO sequer, eles vendiam o licenciamento para a fabricante quê vai produzir ainda produzir e ter lucro e pagar o licenciamento
+[2021-11-05 21:39:32] Shideravan: Era uma aberração, não tinha como dar certo
+[2021-11-05 21:39:49] RicBit: mas deu certo por 10 anos
+[2021-11-05 21:39:53] RicBit: é o mesmo modelo do msx
+[2021-11-05 21:40:12] Shideravan: Do MSX era diferente
+[2021-11-05 21:40:32] Shideravan: Não se paga licenciamento no software só no hardware
+[2021-11-05 21:41:24] Shideravan: O custo se paga com a oferta da biblioteca e para o desenvolvedor não precisar pagar licenciamento estimula a biblioteca ficar mais abarrotada de software
+[2021-11-05 21:42:11] Shideravan: O problema do 3DO era o pessoal ter que pagar mais de mil dólares em valores atuais no console E depois ter que comprar jogo a preço cheio
+[2021-11-05 21:42:29] Shideravan: A máquina era legal e quando era novidade ainda rolou
+[2021-11-05 21:42:41] Shideravan: Mas veio a concorrência e destroçou
+[2021-11-05 21:43:30] Shideravan: Claro que quando o PlayStation chegou o 3DO já não era vendido pelos $650 do lançamento
+[2021-11-05 21:43:57] Shideravan: Mas mesmo assim, ele tinha que ser vendido caro para ser viável na cadeia de produção
+[2021-11-05 21:46:37] Shideravan: Aí chega um videogame tecnicamente superior custando mais barato, com uma promessa de muitos jogos vindo no futuro e o preço do lançamento custando na mesma faixa, você tem uma escolha digamos, não muito difícil para fazer...
+[2021-11-05 21:47:22] Shideravan: A real é a gente não tem tanto essa visão porque não somos mercado primário
+[2021-11-05 21:47:42] Shelton Ribeiro: Verdade
+[2021-11-05 21:47:54] Shideravan: Mas praticamente durante toda a sua vida o 3do servia como opção de segundo console para os gringos
+[2021-11-05 21:48:44] Shideravan: No início eles já tinham um genesis ou super Nintendo ou até ambos, compravam o 3do porque ele prometia além de rodar jogos de ser uma central multimídia
+[2021-11-05 21:49:36] Shelton Ribeiro: https://youtu.be/4jTSKR89Rys
+
+O que acham disso? Eu só não curti por ser preto e branco, mas fora isso achei legal a proposta é os indies parece que abraçaram a ideia. 🙏🏼🙌🏻
+[2021-11-05 21:50:08] Shideravan: Eu parei de ler no "eu não curti por ser preto e branco"
+[2021-11-05 21:50:27] Shideravan: Cara, esse é o console mais hipster da história, eu adorei ele hahaha
+[2021-11-05 21:51:04] Shideravan: Não é fácil de ter acesso a um, ele é produzido em quantidades limitadíssima e esgota muito rápido
+[2021-11-05 21:51:27] Shideravan: Ele não pretende ser mainstream
+[2021-11-05 21:51:31] Shelton Ribeiro: Nã mah, ninguém merece, o mundo já passou muito tempo sem cores. Cores e luz nessa chibanca aí fica top. 🤭🤭
+[2021-11-05 21:51:45] Shideravan: Então é até uma pergunta besta "será que vai dar certo"
+[2021-11-05 21:51:56] Shideravan: Dentro da proposta dele ele já deu hahahaha
+[2021-11-05 21:52:13] Shideravan: Mas é eink
+[2021-11-05 21:54:31] Erin Pinheiro 🐿: memory lcd
+[2021-11-05 21:55:04] Erin Pinheiro 🐿: playdate é pra quem gosta de indies
+[2021-11-05 21:55:12] Erin Pinheiro 🐿: não é pra quem quer um ps5 portátil
+[2021-11-05 21:56:31] Shelton Ribeiro: Só cores e luz tá de bom tamanho.  😄
+[2021-11-05 21:59:26] Augusto Almeida: Pessoal mencionou raytracing, eu lembro de um demo antigo que nem placa gráfica com GPU era necessário, um verdadeiro milagre para época
+[2021-11-05 21:59:35] Augusto Almeida: Heaven Seven
+[2021-11-05 22:00:53] Augusto Almeida: https://www.pouet.net/prod.php?which=5
+[2021-11-05 22:01:36] Augusto Almeida: https://youtu.be/-Qw5bavWxBs
+[2021-11-05 22:20:25] Erin Pinheiro 🐿: PSP-1000
+[2021-11-05 22:20:38] Erin Pinheiro 🐿: saiu em 2005
+[2021-11-05 22:20:44] Erin Pinheiro 🐿: dá pra achar barato no ML

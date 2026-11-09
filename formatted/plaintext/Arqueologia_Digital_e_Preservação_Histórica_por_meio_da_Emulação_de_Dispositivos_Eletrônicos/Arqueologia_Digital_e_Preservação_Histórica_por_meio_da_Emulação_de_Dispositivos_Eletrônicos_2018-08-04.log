@@ -1,0 +1,25 @@
+[2018-08-04 08:47:58] FTMaciel: Osso é achar um drive de 8. Esses dias achei um pra vender, mas o cidadão queria um rim por ele. Com a moda do "vintage", ficou difícil adquirir equipamentos antigos.
+[2018-08-04 09:18:42] Felipe "Juca" Sanches: é que o Affonso tem acesso a um drive de 8 polegadas lá no acervo do museu da USP
+[2018-08-04 09:18:54] Felipe "Juca" Sanches: zeradão
+[2018-08-04 09:19:12] Felipe "Juca" Sanches: parece até que foi fabricado ontem
+[2018-08-04 09:19:30] Felipe "Juca" Sanches: uma relíquia
+[2018-08-04 09:44:11] FTMaciel: E os disquetes ?
+[2018-08-04 10:26:49] Ronaldo: Os drives do Amiga funcionam assim, eu acho, em termos da seleção de drive
+[2018-08-04 10:27:11] Ronaldo: Eu tenho que colocar meu drive pra funcionar
+[2018-08-04 10:30:35] Ronaldo: Em alguns drives o sinal de trilha alta é automático
+[2018-08-04 13:05:53] Affonso Amendola: Tem varios
+[2018-08-04 13:06:19] Affonso Amendola: Bom, eu n achei nada sobre ser automatico no manual
+[2018-08-04 13:06:50] Affonso Amendola: E na listagem dos pinos ele mostra o de chaveamento pra trilha alta/baixa
+[2018-08-04 13:23:41] Ronaldo: Tem que tomar cuidado com os discos
+[2018-08-04 13:25:21] Ronaldo: Um disco sujo pode sujar o drive, um drive sujo pode danificar um disco
+[2018-08-04 16:23:46] FTMaciel: Disco é só dar um bom banho. Hehe
+[2018-08-04 16:59:21] Ronaldo: Os discos estão frágeis nessa altura. A cobertura magnética dele descasca com uma certa facilidade, dependendo da marca.
+[2018-08-04 22:26:02] Affonso Amendola: Yeeeah, tudo isso é coisa pra se pensar quando eu for ler eles
+[2018-08-04 22:26:39] Affonso Amendola: Tem coisas muito legais nesses discos. Quero maximizar a chance de conseguir os dados, e minimizar a chance de cagada
+[2018-08-04 22:27:29] Affonso Amendola: Provavelmente dados bons mesmo vai ser impossivel de conseguir, mas eu vou tentar
+[2018-08-04 22:28:08] Affonso Amendola: Teoricamente o esquematico de adaptadorzinho que eu fiz DEVERIA funfar
+[2018-08-04 22:28:22] Affonso Amendola: Tem algumas coisas que precisam ser melhor vistas
+[2018-08-04 22:29:10] Affonso Amendola: No manual do tm848 diz que é tudo ativo baixo, n sei quanto a saida do controlador floppy standard dos ibm pc
+[2018-08-04 22:29:14] Deleted Account: O arrasto do disco dentro do drive seria suficiente pra descascar?
+[2018-08-04 23:36:23] Ronaldo: Acho que não, mas sujeira no disco pode fazer a cabeça grudar e raspar a cobertura magnética, daí a cabeça vira uma máquina de destruir disquete
+[2018-08-04 23:37:15] Ronaldo: A própria cobertura presa na cabeça ajuda a destruir

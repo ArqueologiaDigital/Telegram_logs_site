@@ -1,0 +1,44 @@
+[2018-06-05 16:04:56] Affonso Amendola: https://archive.org/details/nexus2600hd
+[2018-06-05 16:05:08] Felipe "Juca" Sanches: Ah, mulequeeeee!!!!!
+[2018-06-05 16:05:17] Affonso Amendola: Link para a imagem do HD do Nexus 2600, ainda n tentei montar no MAME
+[2018-06-05 16:05:30] Felipe "Juca" Sanches: Demais! 😃
+[2018-06-05 16:05:31] Affonso Amendola: Tentarei daqui a poco
+[2018-06-05 16:05:48] Affonso Amendola: Demorou mas foi ^^
+[2018-06-05 16:05:57] Felipe "Juca" Sanches: maravilha 😊
+[2018-06-05 16:06:18] Felipe "Juca" Sanches: não descarte apossibilidade de ter que fazer de novo, pois pode estar errado
+[2018-06-05 16:06:56] Felipe "Juca" Sanches: a olhadinha rápida que demos semana passada parecia ok, mas precisamos olhar com mais calma pra coletarmaisevidências de que deu tudo certo mesmo
+[2018-06-05 16:07:07] Felipe "Juca" Sanches: atélá guarde com carinho o HD original intacto
+[2018-06-05 16:07:28] Affonso Amendola: Com certeza
+[2018-06-05 16:07:36] Affonso Amendola: Ta aqui deboas
+[2018-06-05 16:07:50] Affonso Amendola: There were some bad sectors detected, they were rewritten as 0s to maintain the locations of the following sectors constant, they were located in the following positions:
+
+Head 1, Track 42, Sector 1 to Head 1, Track 43, Sector 17
+
+Some sectors had to have multiple attempts do read them, and eventually they read, but I don't really trust the data in them, if there is something wrong on the following positions, it might be because of that:
+
+Head 0, Track 208, Sector 1
+Head 0, Track 216, Sector 1
+Head 0, Track 228, Sector 1
+Head 0, Track 232, Sector 1
+Head 0, Track 258, Sector 1
+[2018-06-05 16:08:23] Affonso Amendola: Tem uns kBs perdidos aí em bad sector
+[2018-06-05 16:08:26] Felipe "Juca" Sanches: qual ferramenta dá essa mensagem?
+[2018-06-05 16:08:35] Affonso Amendola: O meu programinha la
+[2018-06-05 16:08:38] Felipe "Juca" Sanches: ah ok
+[2018-06-05 16:08:44] Felipe "Juca" Sanches: que pena...
+[2018-06-05 16:08:54] Affonso Amendola: Mas assim
+[2018-06-05 16:08:56] Felipe "Juca" Sanches: mas se no real boota, no emulado também vai bootar
+[2018-06-05 16:09:01] Affonso Amendola: Eles tão marcados como bad sectors
+[2018-06-05 16:09:04] Felipe "Juca" Sanches: mesmo com esses badsectors
+[2018-06-05 16:09:16] Affonso Amendola: Então na hora de formatar eles foram marcados como ruins não?
+[2018-06-05 16:09:23] Affonso Amendola: Entao n deve ter coisa guardada la
+[2018-06-05 16:09:37] Felipe "Juca" Sanches: não sei dizer.Perguntemos ao @DQuadros
+[2018-06-05 16:10:01] Affonso Amendola: Esses otros ai foram lidos varias vezes até funcionar sem erro
+[2018-06-05 16:10:05] Affonso Amendola: Mas n confio muito
+[2018-06-05 16:10:26] Felipe "Juca" Sanches: Affonso eu to na correria do trampo aqui. não vou poderbater papo agora. Mas mais tarde ou amanhã a gente conversa mais sobre isso
+[2018-06-05 16:10:44] Affonso Amendola: Belezura, vo ver o bagulho do mame, depois nois conversa
+[2018-06-05 16:35:50] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5121-sticker.webp
+[2018-06-05 16:50:08] Affonso Amendola: Okay, juca, foque no trabalho, depois le isso, tentativa no mame e no montador de imagens no linux falhou
+[2018-06-05 16:50:28] Affonso Amendola: O parted e o mount nem reconhecem filesystems dentro da imagem
+[2018-06-05 16:52:30] Affonso Amendola: Comparando uma imagem padrão (Que funciona) num editor hex com a imagem tirada da pra ver umas coisas bem diferentes
+[2018-06-05 21:30:51] Felipe "Juca" Sanches: https://arcadeblogger.com/2017/06/23/arcade-raid-computer-space-barn-finds/

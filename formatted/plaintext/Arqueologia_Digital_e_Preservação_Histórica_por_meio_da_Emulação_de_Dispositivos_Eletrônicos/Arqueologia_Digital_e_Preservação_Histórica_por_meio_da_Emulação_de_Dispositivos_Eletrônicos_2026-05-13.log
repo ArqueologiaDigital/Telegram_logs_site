@@ -1,0 +1,13 @@
+[2026-05-13 08:18:40] Pedro de Medeiros 👾: dh?
+[2026-05-13 08:50:22] Pedro de Medeiros 👾: DH não é só D, já que DE é o registrador de 16 bits?
+[2026-05-13 09:21:28] RicBit: dh é define hex
+tipo
+dh      "88332F263437213225"
+[2026-05-13 10:34:00] L.: https://dmitry.gr/?r=05.Projects&proj=37.%20Pixter
+[2026-05-13 11:15:17] Felipe "Juca" Sanches: sinto a mesma necessidade. Tanto é que estou usando C misturado com asm para representar structs no disasm do KN5000
+[2026-05-13 11:30:34] RicBit: Eu queria assembly fortemente tipado. Na falta disso estou usando Hungarian notation para chunchar os tipos.
+[2026-05-13 16:18:46] L.: https://grantmestrength.github.io/S100/
+[2026-05-13 18:22:44] RicBit: alias ontem antes de dormir eu falei pra AI: você tem a noite toda, faz o que quiser com o codigo
+[2026-05-13 18:22:55] RicBit: ai ela escreveu um livro oO
+[2026-05-13 18:24:25] RicBit: vou ter que mover tudo pra comentario
+[2026-05-13 18:24:26] RicBit: https://gist.github.com/ricbit/ab92db158f60e294f4d0a5872f08f937

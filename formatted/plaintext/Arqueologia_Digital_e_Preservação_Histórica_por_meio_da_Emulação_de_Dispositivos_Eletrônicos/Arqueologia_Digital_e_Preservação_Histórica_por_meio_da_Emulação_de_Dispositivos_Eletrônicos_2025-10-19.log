@@ -1,0 +1,30 @@
+[2025-10-19 00:10:04] L.: na real acho que foi esse! https://winworldpc.com/product/xerox-presents/10
+[2025-10-19 01:02:18] L.: achei a palestra! https://www.youtube.com/watch?v=ieYriPDSC7Q
+[2025-10-19 01:32:31] Felipe "Juca" Sanches: Arcade Raid: The Duke of Lancaster Ship – The Arcade Blogger
+https://arcadeblogger.com/2016/05/06/arcade-raid-the-duke-of-lancaster-ship/
+[2025-10-19 03:59:38] Felipe "Juca" Sanches: Na verdade, no caso da fonte principal usada para edição das telas, são 24 bytes por glifo :-P
+[2025-10-19 03:59:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36045.jpg
+[2025-10-19 06:59:14] Pablo Vasques Bravo-Villalba: Ah, legal isso. Então os metadados estão em outro lugar, já que são 104 caracteres incluindo os gráficos e os acentuados, e a fonte de títulos usa 48 bytes por caracter
+[2025-10-19 12:33:59] L.: esse fontão é legal!
+[2025-10-19 15:48:50] Ismael Carvalho: Eu não sei se é exatamente isso mas eu genuinamente achei maneiro a velocidade que a coisa toda se desenrolou aqui
+[2025-10-19 15:49:19] Ismael Carvalho: Eu tava viajando então só dava pra ver aos pedaços mas tava pra abrir seu PR pra tentar entender direito o que rolou
+[2025-10-19 15:50:47] Ismael Carvalho: Se eu me encontrar no meio da discussão toda mando aqui, o que eu consegui entender
+[2025-10-19 16:51:38] Ismael Luceno: .git/objects/info/alternates permite desduplicar os objetos sem unir as ramas numa sola cópia; poderia usar un repo de referência único bem definido para evitar confusão. Depois de agregar una referência no arquivo alternates e só executar git repack -a -d
+[2025-10-19 19:02:41] Ismael Carvalho: @fsanches percebi no PR que você utilizou o tms9928a.h ao invés do TMS9128NL
+
+teve algum motivo em especifico?
+[2025-10-19 19:03:18] Ismael Carvalho: No caso tô aproveitando pra entender o processo de ponta a ponta até chegar no mame
+[2025-10-19 19:05:07] Pablo Vasques Bravo-Villalba: Existe um .h específico do 9128?
+[2025-10-19 19:05:27] Pablo Vasques Bravo-Villalba: Desculpa perguntar. A energia está instável aqui na região e a internet fica instável junto
+[2025-10-19 19:05:47] Ismael Carvalho: eu não sei dizer XD a pergunta era realmente pra saber como funciona
+[2025-10-19 19:06:08] Pablo Vasques Bravo-Villalba: É que funcionalmente os dois são iguais
+[2025-10-19 19:06:41] Ismael Carvalho: saquei, mas aí se aplica por documentação existente ou por experiência e já ter uma noção que é mais ou menos a mesma coisa?
+[2025-10-19 19:08:16] Pablo Vasques Bravo-Villalba: Até onde eu sei os dois são iguais mesmo. Não sei por que têm códigos diferentes. A família tem alguns outros chips com umas pequenas diferenças, como saída em vídeo componente ou vídeo composto, e funcionamento em 60Hz ou 50Hz
+[2025-10-19 19:09:02] Ismael Carvalho: saquei, vou anotar aqui
+[2025-10-19 19:10:07] Pablo Vasques Bravo-Villalba: Se eu pudesse, dava uma informação mais detalhada, mas a região aqui está com instabilidade na energia elétrica e, por consequência, também na Internet. Estou acessando via celular
+[2025-10-19 19:11:00] Ismael Carvalho: tá tranquilo, eu tô organizando as informações que vocês já foram discutindo
+[2025-10-19 19:11:26] Ismael Carvalho: algumas coisas é mais dúvidas minhas por não ter tanto contato com eletrônica e meu conhecimento de baixo nível também não é lá essas coisas e é algo que estou me desenvolvendo
+[2025-10-19 19:14:42] Ismael Carvalho: o que eu tô mais animado é na análise dos bytes da ROM pra entender qual era o CPU
+[2025-10-19 19:34:44] L.: Segundo https://segaretro.org/TMS9918 -- "The difference between '1' and the '2' in 'TMS9918A' and 'TMS9928A' is that the '1' version outputs composite NTSC video, while the '2' versions (including the TMS9929A) outputs YPbPr, more precisely the Y, R-Y and B-Y color differences (luminance and color difference signals). The need for the latter was predominant in the 50Hz world, including Europe, due to the different video signal standards PAL and SECAM. It was more cost-effective to output Y, R-Y and B-Y and encode them into PAL or SECAM in the RF modulator, than to try and have a different console for every different color standard. All of the ICs in this family are usually referred to by the TMS9918 name, sometimes with an 'A' postfix. "
+[2025-10-19 19:35:08] L.: será que TMS micro sistemas não tem a ver com o TMS do chip de vídeo? hehe
+[2025-10-19 20:24:08] Pablo Vasques Bravo-Villalba: Poizé, só não sei se tem alguma diferença real entre o 9928 e o 9128

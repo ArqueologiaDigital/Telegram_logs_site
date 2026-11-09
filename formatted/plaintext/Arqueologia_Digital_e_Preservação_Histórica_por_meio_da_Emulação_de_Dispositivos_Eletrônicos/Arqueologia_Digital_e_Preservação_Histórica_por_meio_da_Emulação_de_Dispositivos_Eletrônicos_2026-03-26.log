@@ -1,0 +1,14 @@
+[2026-03-26 18:32:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37886.jpg
+[2026-03-26 18:32:38] Felipe "Juca" Sanches: https://x.com/straceX/status/2036935872260538762
+[2026-03-26 20:33:03] Pedro de Medeiros 👾: O assembler de TCLS-900 está completo? Ele poderia ser usado pra fazer jogo em Neo Geo Pocket.
+[2026-03-26 20:54:27] Felipe "Juca" Sanches: "completo" é um termo muito forte
+[2026-03-26 20:54:32] Felipe "Juca" Sanches: mas sim, está funcional
+[2026-03-26 20:55:09] Felipe "Juca" Sanches: tem umas instruções com sintaxe meio bizonha, que eu quero melhorar
+[2026-03-26 20:55:13] Felipe "Juca" Sanches: mas funciona
+[2026-03-26 20:56:10] Felipe "Juca" Sanches: Hoje em dia não uso mais o ASL. Agora tenho usado o meu backend de TLCS900 pro LLVM para assemblar
+[2026-03-26 20:56:44] Felipe "Juca" Sanches: (e pra compilar alguns códigos em C também, mas ainda bem pouco... mais pra structs que são usadas pelos .s)
+[2026-03-26 21:16:40] Felipe "Juca" Sanches: mas, sim! Eu desde o início imaginei essa possibilidade de ser útil pro Neo Geo Pocket
+[2026-03-26 22:51:41] Hugo (Agaelebê): VC tem um neo geo pocket?
+[2026-03-26 23:22:06] L.: autor do xv morreu :(
+
+https://voxday.net/2026/03/25/rip-john-bradley/

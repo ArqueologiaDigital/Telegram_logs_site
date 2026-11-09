@@ -1,0 +1,93 @@
+[2020-12-15 00:20:55] Erin Pinheiro 🐿: quem quiser levar meu hotbit e devolver com o kit instalado (tenho a placa + V9958 mas nenhum dos outros componentes) podemos discutir um preço hahaha...
+[2020-12-15 00:21:40] Erin Pinheiro 🐿: tinha até um sonho de cortar a carcaça e instalar um drive de disquete interno, trocando a fonte original por uma ATX pra dar espaço...
+[2020-12-15 02:16:32] Emerson Moura: Eu acho que drive não vale mais a pena. O negócio é emulador de drive.
+[2020-12-15 02:17:54] Emerson Moura: Se alguém tiver interesse, estou reinaugurando a lista de discussão ClassicMacBr no Google Groups (por conta do encerramento do Yahoo):
+https://groups.google.com/g/classicmacbr
+[2020-12-15 08:57:51] FTMaciel: Se tu morasse em bsb eu arriscava fazer.
+[2020-12-15 09:05:44] Erin Pinheiro 🐿: a questão pra mim não é valer a pena ou não, é gosto. se eu quisesse emular emulava no PC. tirava o hotbit e adaptava um raspberry pi dentro. se não eu não tinha comprado uma Sony Mavica FD75...
+[2020-12-15 09:42:25] Emerson Moura: Quando falo de valer a pena é pq os disquetes dão muito problema atualmente (os velhos estão mofados e os novos são pouco confiáveis) a ponto de atrapalhar a experiência... Mas é só minha opinião a respeito.
+[2020-12-15 09:42:59] Erin Pinheiro 🐿: sim, eu entendi e meu ponto persiste..
+[2020-12-15 15:26:56] Emerson Moura: Revendo as mensagens dessa conversa, me toquei q a experiência de uso atual das tecnologias antigas não é a mesma da época. Explico (ou tento): Usei disquetes entre 87 e 92 como mídia principal com Apple II e MSX, apesar de ter HD nos PCs do trabalho desde 1988. Os disquetes eram incrivelmente confiáveis, principalmente se comparados as fitas k7, que usei entre 84 e 87...
+[2020-12-15 15:29:05] Emerson Moura: Mas vai além: até efetivamente a forma de usar e programar mudou. Os entusiastas das plataformas continuam criando hw tentando manter as velhas plataformas de alguma forma, em contato com tecnologias mais novas...
+[2020-12-15 15:30:16] Erin Pinheiro 🐿: sim, e eu acho válido! emulador de disquete pra quem quer emulador de disquete. eu gosto da fisicalidade do disquete, da sensação tátil de colocar e tirar de drive e de ter a coleção em um meio físico que eu posso bisbilhotar, embaralhar e escolher a dedo
+[2020-12-15 15:30:23] Emerson Moura: E a forma de programar também passou por modernizacões como o desenvolvimento com emuladores, que oferecem formas bem avançadas de debug.
+[2020-12-15 15:30:55] Erin Pinheiro 🐿: não estou desmereçendo o avanço. eu quero disquete porque se não nem hotbit teria, colocava só um ícone no meu desktop pra abrir um emulador.
+[2020-12-15 15:32:01] Erin Pinheiro 🐿: pra mim é questão de gosto
+[2020-12-15 15:32:49] Emerson Moura: Não, não... Não estou desmerecendo o hobby (ou pesquisa, ou ambos), estou apenas conjecturando sobre como essa experiência se dá, ao menos na maioria dos casos.
+[2020-12-15 15:34:31] Emerson Moura: Eu, por exemplo, se for fazer um projeto de sw, prefiro sempre o bare metal (não gosto de emuladores - apesar de meu melhor MSX ser um FPGA, o q é bem dúbio).
+[2020-12-15 15:36:26] Emerson Moura: Citando o ponto inicial da conversa, pra um projeto de sw, eu também não daria confiança a disquetes pra manter o trabalho.
+[2020-12-15 15:44:01] Erin Pinheiro 🐿: ah, com certeza. meu foco no disquete não é confiança, é diversão.
+[2020-12-15 15:44:08] Erin Pinheiro 🐿: se não não teria comprado a mavica :)
+[2020-12-15 15:44:15] Erin Pinheiro 🐿: meu celular tem câmera muito melhor
+[2020-12-15 15:44:19] Erin Pinheiro 🐿: mas só a mavica grava em disquete
+[2020-12-15 15:47:21] Emerson Moura: Esse lance de experiência é bizarro do ponto de vista lógico. Essa madrugada eu passei algumas horas pesquisando e paquerando Palms (não tenho mais nenhum) e Newtons (tenho alguns em mal estado) pra usar com tecnologias e conceitos atuais... Bastou pensar na utilidade, praticidade e baixo custo do Xiaomi que tenho aqui, que repensei tudo e me imbui do foco (nos outros 500 projetos que tenho em andamento)!!!
+[2020-12-15 15:47:39] Erin Pinheiro 🐿: exato!
+[2020-12-15 15:47:56] Erin Pinheiro 🐿: nenhum hobby de retrocomputação pode ser visto do ponto de vista da praticidade
+[2020-12-15 15:48:11] Erin Pinheiro 🐿: por isso eu não entendo o pessoal que esnoba quem quer um drive de disquete só porque estamos em 2020
+[2020-12-15 15:48:22] Erin Pinheiro 🐿: e tem MUITA gente assim nos círculos de MSX, pqp...
+[2020-12-15 15:50:00] Erin Pinheiro 🐿: se eu quisesse foto perfeita não compraria rolos de filme 35mm e químicos pra revelar em casa
+[2020-12-15 15:50:41] Erin Pinheiro 🐿: e se eu quisesse foto analógica com praticidade mandava revelar ao invés de ter aprendido como revelar em casa
+[2020-12-15 15:50:59] Erin Pinheiro 🐿: o processo  que é a diversão
+[2020-12-15 15:53:01] Emerson Moura: No meu caso, não é esnobar. Eu apenas estava afirmando que não é a mesma experiência pq, em 2020, eles não tem a mesma confiabilidade e experiência que ofereciam em 1990. Mas ai vai do seu gosto pessoal (como concordamos, do ponto de vista prático e lógico e a bizarrice do hobby).
+[2020-12-15 15:54:02] Erin Pinheiro 🐿: pode não ser o seu caso mas é o de muita gente que faz esse tipo de gatekeeping
+[2020-12-15 15:54:21] Emerson Moura: Eu, por exemplo, estou com um projeto em andamento (há mais de uma década) com Mac OS 9 e descobri recentemente que o QEMU se tornou uma solução quase universal, complementada por outras soluções em sw...
+[2020-12-15 15:55:28] Emerson Moura: O projeto só foi retomado (depois de alguns anos parado) pq, há 1 ano, ganhei um Powerbook G3 funcional. Não gosto de emuladores exatamente por conta da experiência.
+[2020-12-15 15:58:44] Emerson Moura: Infelizmente sou obrigado a usar um PC "moderno" (meu PC mais novo tem 8 anos, mas roda Linux up-to-date), mas gostaria de poder acessar a web, onde consigo o material para o projeto, a partir do próprio Powerbook (o que é inviável pela falta de um navegador atual e mesmo de desempenho pra renderizar web atual).
+[2020-12-15 15:59:27] Erin Pinheiro 🐿: classilla é o mais próximo que tem mas realmente não quebra muito o galho
+[2020-12-15 15:59:41] Erin Pinheiro 🐿: eu sinto falta nem tanto de css/js moderno mas sim de suporte ssl
+[2020-12-15 16:00:20] Emerson Moura: Infelizmente, com o Classilla eu não consigo acessar nem o Macintosh Garden, nem o Macintosh Repository.
+[2020-12-15 16:00:36] Erin Pinheiro 🐿: uai, jurava que até um tempo atrás dava
+[2020-12-15 16:00:51] Erin Pinheiro 🐿: vai ver eles atualizaram o host e não suporta TLS 1.0 mais
+[2020-12-15 16:01:37] Emerson Moura: O MG colocou um tema de festas que até no i7 eventualmente gera alertas de lentidão!!!
+[2020-12-15 16:01:54] Erin Pinheiro 🐿: credo
+[2020-12-15 16:02:14] Erin Pinheiro 🐿: eu tento deixar meus sites navegáveis até no links
+[2020-12-15 16:07:36] Emerson Moura: A web levou a níveis inimagináveis o conceito de obsolescência programada (com direito a trocadilho óbvio). A durabilidade do hw teve de ser protegida por lei em diversos locais e momentos diferentes, mas isso deixou de ser uma preocupação com o efeito causado pelo sw.
+[2020-12-15 16:10:02] Emerson Moura: Minha opinião (que é o mesmo que um burro cagando): o uso de IA "localmente" e esse salto dos ARM (via Apple) sobre o desempenho dos x86, tornará todo o parque tecnológico atual em sucata em 2 anos. Nem a web e suas tecnologias foram tão efetiva.
+[2020-12-15 16:13:36] L.: Tem uns negócios que atuam como proxy pra browser velho
+[2020-12-15 16:14:02] L.: Renderizam tudo usando engine moderna no teu PC novo, e te manda uns GIFs pre-renderizados
+[2020-12-15 16:14:15] L.: Com imagemap pra você conseguir clicar
+[2020-12-15 16:14:40] Erin Pinheiro 🐿: 100% de acordo. eu tenho aqui um Chromebook Cr48 (o pré-release só pra funcionários da google) de 2010 e ele não carrega nem o twitter mais por SSL defasado.
+[2020-12-15 16:14:44] L.: Gambiarra, mas pelo menos não demora 15min pra abrir uma página que vai não vai funcionar
+[2020-12-15 16:15:28] Emerson Moura: Só pra causar: Onde essa tecnologia surgiu primeiro?
+[2020-12-15 16:16:01] L.: Primeiro não sei mas é essencialmente o fudebrowser pro uzix
+[2020-12-15 16:17:04] Erin Pinheiro 🐿: não sei onde surgiu primeiro mas a primeira vez que eu vi foi alguém usando um RPi 1 pra carregar página da web num Mac 68k
+[2020-12-15 16:17:18] Emerson Moura: Por isso que eu falei que era pra causar... Dizer que foi primeiro no MSX, sem ter a menor certeza!
+[2020-12-15 16:18:41] L.: Hoje usam isso pra mobile, né? Chamam de AMP
+[2020-12-15 16:19:24] L.: O fudebrowser era meio diferente desse negócio com GIFs por que texto era texto mesmo, e imagens eram comprimidas separadamente, mas no final das contas dá na mesma
+[2020-12-15 16:20:40] Erin Pinheiro 🐿: e lá vai mais um projeto google pra parar de funcionar quando a infra todas deles cai...
+[2020-12-15 16:20:53] L.: Sim
+[2020-12-15 16:21:17] L.: E um produto que não dá muito pra escolher se usa ou não
+[2020-12-15 16:24:25] Emerson Moura: Mas a ideia de um coprocwssador de pré-render para web com RPi é, ao mesmo tempo, tosca (ter muito mais poder como auxiliar) e genial (mantém a experiência de uso no sistema legado)...
+[2020-12-15 16:25:22] Emerson Moura: E pode até mesmo ser útil para manter sistemas comerciais legados em funcionamento!
+[2020-12-15 16:51:32] L.: Pois é. Rola inclusive usar uma rpi0w com serial e usar o bom e velho PPP ou SLIP e ter wifi nos velhinhos😂
+[2020-12-15 16:53:09] FTMaciel: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-12/11812.jpg
+[2020-12-15 16:53:32] FTMaciel: Queria achar um drive de 8"
+[2020-12-15 16:55:30] tarh̭untaš: povo, alguém sugere lugar, de preferencia em SP, q corte aço a laser?
+[2020-12-15 17:00:16] Erin Pinheiro 🐿: o mais elegante achei o com o ESP8266
+[2020-12-15 17:00:22] Erin Pinheiro 🐿: esqueci que nome deram pro projeto
+[2020-12-15 17:06:49] Emerson Moura: Tem um aqui perto de casa, mas estou nos confins de Santo André.
+[2020-12-15 17:09:25] Emerson Moura: Se é mais elegante, eu não sei, mas deve ser bem mais barato. Mas perde-se a possibilidade do pré-render de html, uma vez que ESP (mesmo o ESP32) ter bem menos poder de processamento eu um RPi.
+[2020-12-15 17:09:46] tarh̭untaš: ah, quis dizer o estado mesmo :))
+[2020-12-15 17:09:57] tarh̭untaš: e é só pela impaciência tmb 🙄
+[2020-12-15 17:10:19] Erin Pinheiro 🐿: ah sim, mas no caso não é para páginas, esse artefato é pra usar wifi em micros com serial, podendo fazer telnet em BBS over IP
+[2020-12-15 17:11:30] L.: Mas aí não rola fazer esse proxy pra web, né?
+[2020-12-15 17:11:54] Erin Pinheiro 🐿: o que você mencionou faz? então entendi errado
+[2020-12-15 17:12:23] L.: É uma Raspberry Pi 0.
+[2020-12-15 17:13:05] Erin Pinheiro 🐿: isso eu entendi...
+[2020-12-15 17:13:12] Emerson Moura: O Alexandre "Pacman" me disse há alguns meses que usou o serviço deles algumas vezes pra fazer gabinetes de alguns projetos esse ano e que o resultado, custo e tempo foram bem melhores do que usar impressora 3D.
+
+https://www.lumalaser.com.br/
+[2020-12-15 17:14:04] Erin Pinheiro 🐿: https://hackaday.com/2017/06/17/bbsing-with-the-esp8266/
+[2020-12-15 17:14:12] Erin Pinheiro 🐿: é esse que eu tô falando
+[2020-12-15 17:14:24] Erin Pinheiro 🐿: liga qualquer micro com serial no wifi ao invés da linha discada
+[2020-12-15 17:14:43] Erin Pinheiro 🐿: é um substituto ao modem
+[2020-12-15 17:15:22] L.: Ah, sim. Funciona bem se quiser uma serial sem fio
+[2020-12-15 17:15:36] L.: (serial numa ponta, wifi na outra)
+[2020-12-15 17:15:58] Emerson Moura: Vc muda a mídia e acho que também processa parte da pilha TCP, dando uma aliviada no processamento da máquina hospedeira. Mas o proxy de pré-render web não tem como.
+[2020-12-15 17:16:31] Erin Pinheiro 🐿: sim, mas eu tinha entendido que o assunto no caso da serial era outro.
+[2020-12-15 17:16:38] L.: Mas dá pra fazer a mesma coisa com uma pi, especialmente essas baratinhas, e botar um proxy tipo https://github.com/tenox7/wrp
+[2020-12-15 17:16:42] Erin Pinheiro 🐿: não disse que esse faz render html
+[2020-12-15 17:16:51] Erin Pinheiro 🐿: ele é só telnet.
+[2020-12-15 17:18:06] L.: Sim, eu entendi :)
+[2020-12-15 19:07:45] tarh̭untaš: tx, Emerson!
+[2020-12-15 22:50:30] L.: https://twitter.com/CarterBen/status/1338871495016136705?s=09

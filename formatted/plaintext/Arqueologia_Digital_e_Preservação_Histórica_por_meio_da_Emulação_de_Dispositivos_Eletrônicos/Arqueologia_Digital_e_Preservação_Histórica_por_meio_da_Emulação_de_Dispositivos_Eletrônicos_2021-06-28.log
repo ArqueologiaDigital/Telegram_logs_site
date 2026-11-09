@@ -1,0 +1,14 @@
+[2021-06-28 03:10:37] Felipe "Juca" Sanches: alguém aqui já usou esse port do GCC pra x86 16 bits?
+https://flaterco.com/kb/gcc-i16.html
+[2021-06-28 03:11:21] Felipe "Juca" Sanches: vou compilar esse toolchain aqui pra fazer alguns experimentos de programacao de ROM homebrew 
+pra uns aparelhos que estou emulando no MAME
+[2021-06-28 03:12:31] Felipe "Juca" Sanches: mais especificamente para o painel de controle do mixer de vídeo dfs-500 da SONY, que tem uma cpu NEC V20 (compativel com Intel 8088)
+[2021-06-28 03:13:06] Felipe "Juca" Sanches: chip NEC D70108C-8
+[2021-06-28 03:15:07] Felipe "Juca" Sanches: Existe um PPA pra Ubuntu com pacotes já compilados. Mas eu preferi aqui no Debian tentar compilar eu mesmo usando os scripts disponibilizados nesse repo:
+
+https://github.com/tkchia/build-ia16
+[2021-06-28 11:35:36] RicBit: O tp1 não é free?
+[2021-06-28 11:39:16] L.: Essa pessoa aí fez o gwbasic assemblar e rodar, btw
+[2021-06-28 12:12:31] Felipe "Juca" Sanches: não conheço
+[2021-06-28 12:13:20] RicBit: Turbo pascal 1 da borland
+[2021-06-28 13:16:14] Felipe "Juca" Sanches: https://www.reenigne.org/blog/8086-microcode-disassembled/

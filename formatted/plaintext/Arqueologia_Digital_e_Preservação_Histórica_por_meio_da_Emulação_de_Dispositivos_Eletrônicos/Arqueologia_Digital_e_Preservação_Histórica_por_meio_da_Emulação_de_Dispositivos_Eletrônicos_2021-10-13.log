@@ -1,0 +1,126 @@
+[2021-10-13 15:54:26] Shideravan: @fsanches sabe em que pé está a implementação do formato CHD v6 no MAME?
+[2021-10-13 15:55:32] Shideravan: Estamos discutindo de dar suporte ao formato no ares (e em alguns outros projetos), mas é um pouco complicado sem ter uma roadmap para o formato
+[2021-10-13 15:57:43] Felipe "Juca" Sanches: não estou acompanhando isso
+[2021-10-13 15:57:46] Shideravan: Às vezes eu me pego pensando se já não seria hora do formato CHD ganhar um repositório próprio, onde ficasse mais fácil de acompanhar o progresso, visto que desde o advento do CHD v5 ele passou a ganhar muito mais espaço como formato definitivo de armazenar determinados tipos de arquivos (mídias óticas, HDDs, etc)
+[2021-10-13 15:58:30] Felipe "Juca" Sanches: sei que existe o formato de arquivo CHD para representar mídias (como dump do conteúdo de discos rígidos usados em alguns jogos) mas não sei quais são as diverenças nas versões do formato de arquivo
+[2021-10-13 15:58:49] Shideravan: CHD v5 é a versão atual
+[2021-10-13 15:59:03] Shideravan: Existem alguns problemas no v5 que serão corrijidos no v6, como possuir uma forma mais adequada de representar subcanais
+[2021-10-13 16:00:06] Shideravan: Provavelmente ele também deve utilizar um formato de compactação mais moderno que o lzma que vem utilizado na maior parte das conversões do CHDman
+[2021-10-13 16:04:26] Shideravan: Um dos motivos, por exemplo, que jogos de Playstation da região PAL não são documentados no MAME é que o CHD v5 não possui uma forma interna de lidar com os sub-canais, o que dependeria de arquivos .sbi separados. Os CDs do Sega CD também sofrem com problemas do tipo.
+[2021-10-13 16:05:18] Felipe "Juca" Sanches: interessante!
+[2021-10-13 16:05:47] Felipe "Juca" Sanches: o formato CHD foi criado pelo pessoal do MAME? Ou foi alguém de fora que fez as primeiras implementacoes?
+[2021-10-13 16:05:55] Shideravan: Nasceu no MAME
+[2021-10-13 16:06:37] Shideravan: Originalmente, era um formato que servia para armazenar os dados de HDDs de algumas máquinas de fliperama (como Street Fighter III)
+[2021-10-13 16:06:49] Shideravan: Só que o formato foi evoluindo bastante desde então
+[2021-10-13 16:07:31] Shideravan: Ao ponto, que hoje, a maior parte dos emuladores que usam mídias óticas usam ou planejam usar o formato
+[2021-10-13 16:08:35] Shideravan: É um formato bastante legal, ele armazena por exemplo, as faixas de audio redbook internamente como FLAC (que é um formato de áudio sem perdas)
+[2021-10-13 16:09:36] Shideravan: Eu na verdade fico muito feliz do formato estar ganhando cada vez mais espaço, porque ao meu ver, é a forma mais adequada de armazenar imagens de "mídias grandes"
+[2021-10-13 16:10:44] Felipe "Juca" Sanches: Eu acho que vou precisar de ajuda quando eu for lidar com a emulacao do boot do sistema operacional do Itautec I7000. Tem uma imagem de disquete que algum brasileiro gerou e me mandou. Mas eu nunca cheguei no ponto da emulacao onde o sistema chegaria no boot via disco. O driver no momento apenas rodas as rotinas internas da ROM (com um menu de diagnóstico do hardware)
+[2021-10-13 16:10:49] Shideravan: Além do ares, eu sei de mais dois projetos de emulação que estão aguardando o padrão v6 sair para implementarem o uso: o PPSSPP (emulador de PSP) e o PCSX2 (emulador de Playstation 2)
+[2021-10-13 16:14:45] Shideravan: Tem uma outra questão importantíssima que é saber qual é o formato de compactação que eles irão usar no v6, já que ficou claro que o lzma não é mais o método ideal de compactação (ele não é mais mantido há anos e há anos já existem algorítimos de compactação abertos muito mais eficientes, por exemplo, o zstd)
+[2021-10-13 16:16:05] Shideravan: Isso, é algo que a gente vai ter que implementar na unha para dar suporte no ares, um dos maiores motivos de estarmos aguardando o padrão v6 ser lançado para poder implementar corretamente, porque não adianta nada implementar um decodificador lzma para chegar a v6 e tornar isso obsoleto hahaha
+[2021-10-13 16:17:02] Shideravan: A gente = Luke. Por mim eu mudaria a licensa e usaria um decodificador pronto hahahaha
+[2021-10-13 16:41:10] Felipe "Juca" Sanches: qual é a treta de licença do Ares?
+[2021-10-13 16:41:22] Shideravan: ISC
+[2021-10-13 16:41:56] Shideravan: Se for usar um decodificador GPL-3, o ares deixa de ser ISC e vira GPL-3 automaticamente
+[2021-10-13 18:16:13] Felipe "Juca" Sanches: leitura pesada:
+
+http://gendev.spritesmind.net/forum/viewtopic.php?t=1091
+[2021-10-13 18:21:10] Shideravan: O TascoDLX que está comentando ali estava ajudando a melhorar os cores de Mega Drive no ares
+[2021-10-13 18:22:47] Shideravan: Mas realmente, esse assunto é bastante denso hahaha
+[2021-10-13 18:24:14] Shideravan: Eu acho o 68k um chip fantástico para a época dele
+[2021-10-13 18:25:30] Felipe "Juca" Sanches: eu ouvi dizer que alguém fez uma lisp-machine há muitas décadas atrás por meio de escrita de um novo conjunto de micro-códigos para o motorola 68k
+[2021-10-13 18:26:19] Shideravan: Nossa, que maneiro
+[2021-10-13 18:27:48] Shideravan: Tem documentação disso aí?
+[2021-10-13 18:28:07] Felipe "Juca" Sanches: pois é... to procurando. Não lembro mais onde foi que vi isso...
+[2021-10-13 18:30:30] Shideravan: Acho que vale dar um background para quem não souber o que é uma lisp-machine: é um hardware feito para interpretar linguagem lisp a nível de hardware. Você consegue programar direto no metal (uma forma de dizer que programa o mais baixo nível possivel) de uma forma muito mais, digamos, humanamente viável do que ficar escrevendo instruções com opcodes diretamente
+[2021-10-13 18:30:41] Shideravan: Isso tem algumas aplicações específicas
+[2021-10-13 18:31:03] Shideravan: Estou certo, Juca?
+[2021-10-13 18:32:00] Shideravan: Uma aplicação comum para esse tipo de coisa é para alguns sistemas de inteligência artificial
+[2021-10-13 18:32:46] Aylons Hazzud: Peraí, uma lisp machine vai ter que ter opcode. Só muda que o interpretador é implementado diretamente em hardware
+[2021-10-13 18:34:48] Shideravan: Não sabia disso, meu conhecimento sobre lisp-machines  é, como pode ver, bem superficial
+[2021-10-13 18:35:23] Aylons Hazzud: Eu também não manjo muito
+[2021-10-13 18:35:30] Aylons Hazzud: Manjo d hardware, só
+[2021-10-13 18:36:56] Aylons Hazzud: Mas enfim, pelo que eu entendo, uma lisp machine tem uma arquitetura não procedural. Mas tem que receber código objeto, não dá para montar um analisador sintático em hardware.
+[2021-10-13 18:38:00] Shideravan: Imagino que programar num trem desses é um outro nível de nerdice hahaha
+[2021-10-13 18:41:59] Felipe "Juca" Sanches: "não dá"...
+[2021-10-13 18:42:07] Ismael Luceno: LZMA na verdade não está obsoleto ainda, ele tem a maior compressão
+[2021-10-13 18:42:43] Ismael Luceno: mas é lentão
+[2021-10-13 18:42:46] Aylons Hazzud: Beleza, não faz sentido
+[2021-10-13 18:42:57] Shideravan: Parece que já tem vários anos sem atualizar
+[2021-10-13 18:43:12] Felipe "Juca" Sanches: olha, eu quero retirar o que eu disse aqui, pois não estou de jeito nenhum achando referencias que embasem o que eu disso. Talvez eu tenha viajado na maionese
+[2021-10-13 18:43:50] Felipe "Juca" Sanches: é... eu diria mais: é muito pouco prático. Mas acho que no passado teve gente propondo esse tipo de coisa
+[2021-10-13 18:44:27] Aylons Hazzud: Eu estou aqui pensando como imoelemtsr um analisador sintático em hardware. Mano, que horror. Um monte d módulos diferentes interagindo com as mesmas memórias...
+[2021-10-13 18:44:43] Aylons Hazzud: Análise sintática é a coisa mais máquina de Turing que tem
+[2021-10-13 18:45:26] Felipe "Juca" Sanches: https://en.wikipedia.org/wiki/High-level_language_computer_architecture
+[2021-10-13 18:52:44] Felipe "Juca" Sanches: Suspeito que uma CPU capaz de rodar nativamente o bytecode da VM do Another World seria talvez um exemplo de um high-level language computer
+
+Pois a VM tem instrucoes do tipo "PlaySong" ou "DrawText" ou "Draw" (apontando para um estrutura de dados inteira de um desenho feito com polígonos). E cada uma dessas funcionadidades viram um opcode no bytecode e são inteiramente implementadas por instrucoes individuais para cada ação.
+[2021-10-13 18:52:56] Aylons Hazzud: In less extreme examples the source code is first parsed to bytecode, which is then the machine code that is passed to the processor.
+[2021-10-13 18:53:02] Aylons Hazzud: Ia falar disso
+[2021-10-13 18:53:04] Felipe "Juca" Sanches: tem instrução de Fill_Screen_Buffer
+[2021-10-13 18:53:10] Ismael Luceno: @Shideravan qual implementação?
+[2021-10-13 18:53:17] Aylons Hazzud: Até separei o quotation para isso :cP
+[2021-10-13 18:53:23] Deleted Account: Acho que já foi tentado no passado. O burroughs era assim se não me engano. Era feito pra fortran ou algol.
+[2021-10-13 18:53:32] Aylons Hazzud: Enfim, concordo
+[2021-10-13 18:54:36] Ismael Luceno: @fsanches é, isso é muito alto nível, mas mesmo tem alguns CPUs que executam bytecode java ou forth
+[2021-10-13 18:54:51] Ismael Luceno: isso aí já é alto nível
+[2021-10-13 18:55:48] Ismael Luceno: http://forth.org/cores.html
+[2021-10-13 18:56:29] Felipe "Juca" Sanches: Ismael, como estavamos convresando ontem a respeito de termos "infinitos" projetos inacabados, esse da "CPU de Another World" é um que eu já retomei e re-engavetei diversas vezes. Quero algum dia concluir.
+[2021-10-13 18:57:06] Ismael Luceno: eu acho esse projeto muito legal
+[2021-10-13 18:57:18] Aylons Hazzud: Putz
+[2021-10-13 18:57:21] Aylons Hazzud: Eu queria ajudar
+[2021-10-13 18:57:31] Aylons Hazzud: Mas não é realista para este ano
+[2021-10-13 18:57:33] Aylons Hazzud: Ponto
+[2021-10-13 18:57:39] Aylons Hazzud: Sem hobbies para mim este ano
+[2021-10-13 18:58:14] Felipe "Juca" Sanches: eu queria fazer em chips TTL com microcódigo salvo em EPROM, mas depois a suposta praticidade de usar FPGAs me fez mudar de rumo e acabei tropeçando na minha inexperiencia com FPGAs...
+[2021-10-13 18:59:14] Felipe "Juca" Sanches: eu tenho em algum lugar um grande esboço do esquemático de uma implementacao em TTL com unidade de controle micro-programada (acho que eu algum repo meu no github)
+[2021-10-13 18:59:29] Aylons Hazzud: É muito mais razoável mesmo...
+[2021-10-13 18:59:29] Deleted Account: Deve ser legal tentar implementar algo como o IAS em TTL.
+[2021-10-13 19:01:20] Deleted Account: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16708.jpg
+[2021-10-13 19:01:20] Deleted Account: Foto de Marcio
+[2021-10-13 19:01:23] Deleted Account: Falando em projetos pessoais.
+[2021-10-13 19:01:45] Deleted Account: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16710.jpg
+[2021-10-13 19:01:45] Deleted Account: É tão velho que está escrito "Alemanha ocidental". Ou seja. Foi antes da queda do muro de Berlin.
+[2021-10-13 19:02:25] Aylons Hazzud: Teve commodore nos anos noventa?
+[2021-10-13 19:02:27] Deleted Account: Pena que é PAL-G é nenhuma tv que tenho funciona direito com ele. Preciso arranjar um cabo pra fazer AV tradicional.
+[2021-10-13 19:02:44] Deleted Account: Acho que não. Teve o amiga né?
+[2021-10-13 19:02:54] Deleted Account: Esse aqui que eu tenho deve ser antes de 89.
+[2021-10-13 19:03:10] Aylons Hazzud: 84 na etiqueta
+[2021-10-13 19:03:23] Deleted Account: Hauahajauaua... Nossa nem vi isso.
+[2021-10-13 19:03:49] Deleted Account: Agora como ele veio parar no Brasil não faço ideias.
+[2021-10-13 19:05:20] Shideravan: Eu queria muito um desses. Mas que desse vídeo em algo que eu tenho hahaha
+[2021-10-13 19:05:39] Shideravan: Acho o C64 um equipamento sensacional!
+[2021-10-13 19:06:42] Felipe "Juca" Sanches: Se não me engano, nesse repo aqui tem duas abordagens distintas para o mesmo problema: https://github.com/felipesanches/AnotherWorld_JAMMA
+
+Abordagem 1: Esquemáticos no Kicad de uma placa JAMMA com o circuito de uma CPU micro-programável com todos os sinais necessários para fazer a VM do AW. E um início de implementacao do bytecode (escrito numa DSL em python).
+
+Abordagem 2: Códigos em C para implementar os subsistemas de (i) vídeo (ii) som e (iii) cpu usando três processadores Z80. Comecei a prototipar isso junto com o Rafael Moretti alguns anos atrás num dia que visitei a casa dele lá em Brasília. A gente até esboçou um driver de MAME para essa placa JAMMA com três Z80, pra poder testar esses firmwares.
+[2021-10-13 19:08:36] Deleted Account: Another World é aquele jogo do 3DO?
+[2021-10-13 19:08:38] Felipe "Juca" Sanches: O divertido dessas coisas é que tem inúmeras formas possíveis de se implementar.
+
+O chato é que essa dispersão inviabiliza terminar logo o projeto.
+[2021-10-13 19:08:45] Felipe "Juca" Sanches: não apenas 😊
+[2021-10-13 19:09:08] Deleted Account: Ele tem uma vm dentro dele?
+[2021-10-13 19:09:11] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=J0gv2bV9ok4
+[2021-10-13 19:09:19] Felipe "Juca" Sanches: sim
+[2021-10-13 19:09:56] Deleted Account: Caramba! Isso é ainda mais impressionante que o próprio jogo.
+[2021-10-13 19:10:05] Deleted Account: Sensacional.
+[2021-10-13 19:11:09] Deleted Account: Vou assistir. Esse jogo sempre me intrigou...
+
+
+...e me deixava com mta raiva em algumas sequências.
+
+Mas o jeito dele de contar uma história sem nenhum diálogo é de outro mundo mesmo (pun intended).
+[2021-10-13 19:11:40] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16730-sticker.webp
+[2021-10-13 19:19:01] RicBit: Dá sim.
+[2021-10-13 19:21:14] RicBit: Inclusive não só dá como eu já fiz. Dona barata tem um analisador sintático em fpga no chip de som.
+[2021-10-13 19:23:17] Deleted Account: Mas como que monta as estruturas de um analisador sintátic, árvore e tal, dentro do hardware?
+[2021-10-13 19:26:18] L.: https://github.com/k4zmu2a/SpaceCadetPinball
+[2021-10-13 19:28:55] L.: > On 64-bit bug that killed the game:
+I did not find it, decompiled game worked in x64 mode on the first try.
+It was either lost in decompilation or introduced in x64 port/not present in x86 build.
+Based on public description of the bug (no ball collision), I guess that the bug was in TEdgeManager::TestGridBox
+[2021-10-13 19:37:30] RicBit: Se a sua linguagem for regular, não precisa de árvore.
+[2021-10-13 19:38:27] RicBit: Linguagem regular tratada em hardware o povo chama de máquina de Mealy.
+[2021-10-13 19:38:30] RicBit: https://en.m.wikipedia.org/wiki/Mealy_machine

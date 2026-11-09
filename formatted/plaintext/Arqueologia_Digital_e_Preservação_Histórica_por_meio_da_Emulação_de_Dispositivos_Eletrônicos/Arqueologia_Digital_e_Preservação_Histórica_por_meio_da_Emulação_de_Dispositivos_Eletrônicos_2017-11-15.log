@@ -1,0 +1,31 @@
+[2017-11-15 19:23:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1161.jpg
+[2017-11-15 19:23:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1162.jpg
+[2017-11-15 19:23:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1163.jpg
+[2017-11-15 19:23:55] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1164.jpg
+[2017-11-15 19:40:02] DQ: Não se esqueça de me mandar o dump da EPROM
+[2017-11-15 19:52:19] Felipe "Juca" Sanches: acabei de mandar
+[2017-11-15 19:52:39] Felipe "Juca" Sanches: confirma pra mim que recebeu, por favor
+[2017-11-15 19:52:47] Felipe "Juca" Sanches: mandei pro werner e pro prof fernando tambem
+[2017-11-15 19:54:38] Werner: Já vi aqui
+[2017-11-15 19:54:52] Felipe "Juca" Sanches: legal
+[2017-11-15 19:54:57] DQ: Chegou. Amanhã vou tentar analisar.
+[2017-11-15 19:55:42] Felipe "Juca" Sanches: DQ, depois que vc foi embora nõs tentamos mapear de onde vem o sinal de chip select do 8251, por exemplo, e vimos que vem de uma daquelas duas PROMs
+[2017-11-15 19:56:02] Felipe "Juca" Sanches: e o enderecamento das PROMs vem dos bits altos da CPU
+[2017-11-15 19:56:37] Felipe "Juca" Sanches: bits a15, a14 e a13 do 8085 ligados aos enderecos a4, a3 e a2 de uma das PROMs
+[2017-11-15 19:57:02] Felipe "Juca" Sanches: os enderecos a1 e a0 das PROMs entretanto nao vem dos bits a12 e a11 da CPU
+[2017-11-15 19:57:10] DQ: Faz muito sentido.
+[2017-11-15 19:57:30] Felipe "Juca" Sanches: um desses dois (nao lembro qual) vem dum pino de serial output do 8085
+[2017-11-15 19:58:03] Felipe "Juca" Sanches: entao parece ser uma forma de trocar a tabela da PROM que define os endereos dos chips auxiliares no mapa de memoria
+[2017-11-15 19:58:11] Felipe "Juca" Sanches: nao sei por que fariam isso...
+[2017-11-15 19:58:49] Felipe "Juca" Sanches: mas uma coisa parece clara: o conteudo das PROMs define os endereos dos chips auxiliares
+[2017-11-15 19:58:53] DQ: Talvez para permitir colocar mais Ram.
+[2017-11-15 19:59:13] Felipe "Juca" Sanches: olha so... faz sentido
+[2017-11-15 19:59:58] Felipe "Juca" Sanches: mais ou menos... ainda eh um pouco confuso pra mim
+[2017-11-15 20:00:24] Felipe "Juca" Sanches: talvez nao seja isso DQ
+[2017-11-15 20:05:09] Werner: Precisamos encontrar o bloco d código onde é definida a máscara SIM
+[2017-11-15 20:05:52] Werner: Agora vou comer 🌮🌮🌮
+[2017-11-15 20:06:23] Felipe "Juca" Sanches: vou jantar. te mais tarde pessoal
+[2017-11-15 23:56:04] Felipe "Juca" Sanches: Intel 8275: http://www.cpu-galaxy.at/cpu/ram%20rom%20eprom/other_intel_chips/other_intel-Dateien/8275_Datasheet.pdf
+[2017-11-15 23:57:44] Felipe "Juca" Sanches: Intel 8276: http://www.eolpartfinder.com/eolpartdetail.php?q=P8276&Brand=INTEL+CORP
+[2017-11-15 23:59:44] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1190.jpg
+[2017-11-15 23:59:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1191.jpg

@@ -1,0 +1,14 @@
+[2026-04-21 08:02:04] Ismael Carvalho: Inclusive @Shideravan fiquei animado e acabei usando minha insônia aqui pra testar algumas coisas que já estavam na minha cabeça tem um tempo pra agilizar meu aprendizado, tive uns avanços maneiros aqui!
+[2026-04-21 08:17:18] Ismael Carvalho: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38399-Peek%202026-04-21%2007-20%20%28online-video-cutter.com%29.mp4
+[2026-04-21 08:18:53] Ismael Carvalho: Temos som agora, para os handhelds LCD's que usam o ht11xx como base
+[2026-04-21 08:20:13] Ismael Carvalho: eu use IA pra agilizar a descoberta dos pontos que eu já imaginava que era simplesmente por que eu não entendia como o mame ou a implementação física funcionava.
+[2026-04-21 08:20:51] Ismael Carvalho: tava testando alguns conceitos que eu já queria verificar, se isso agilizaria o meu aprendizado e minha distribuição desse aprendizado(proximos passos)
+[2026-04-21 08:21:43] Ismael Carvalho: agora tô estudando sobre LFSR, eu sabia que a frequência era a bronca, mas eu não sabia o que é que eu não sabia, e agora eu sei o que não sei XD
+[2026-04-21 08:23:38] Ismael Carvalho: Teoricamente, após eu entender de fato tanto sobre o mame quanto sobre esses gaps técnicos, eu vou me sentir a vontade de fazer as mudanças necessárias e fazer o PR dado que consigo criticar de forma mais clara a implementação
+[2026-04-21 14:27:49] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38405.jpg
+[2026-04-21 14:27:49] RicBit: TILE_SCRIPT_A3E4 é muito feio, vou mudar para TILE_SCRIPT_GREEN_ROUND_ISLAND
+[2026-04-21 14:34:34] RicBit: nope TILE_SCRIPT_ROUND_GREEN_ISLAND
+[2026-04-21 14:41:19] Shideravan: Maravilhoso! Que insônia produtiva ❤️
+[2026-04-21 14:43:34] Shideravan: Nesse processo que é autodidata, já que não tem ninguém para te ensinar, exceto quem esteja na mesma situação de estar descobrindo, porque se alguém já soubesse já teríamos o emulador... A parte MAIS IMPORTANTE é saber o que a gente ainda não sabe para saber que informação ir atrás de aprender
+[2026-04-21 14:44:15] Shideravan: Esse é o maior desafio de todos na minha opinião
+[2026-04-21 14:44:28] Shideravan: Então você já deu um passo gigantesco!

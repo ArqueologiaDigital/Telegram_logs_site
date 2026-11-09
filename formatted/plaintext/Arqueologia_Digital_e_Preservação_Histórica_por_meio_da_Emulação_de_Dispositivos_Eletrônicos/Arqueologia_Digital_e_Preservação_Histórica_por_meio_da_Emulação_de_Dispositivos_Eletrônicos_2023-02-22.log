@@ -1,0 +1,28 @@
+[2023-02-22 07:02:31] Pablo Vasques Bravo-Villalba: Sim, também curto! 😉👍🏽
+[2023-02-22 07:03:12] Pablo Vasques Bravo-Villalba: No canal da 8-bit Big Band tem o show completo deles. Eu não vi ainda mas tenho certeza que é excelente 😅
+[2023-02-22 07:40:25] Anne Isabelle: Ele tem um vídeo sobre a música do Wii Sports
+[2023-02-22 07:40:50] Anne Isabelle: https://youtu.be/5RS3bO9dW84
+[2023-02-22 07:45:02] Pablo Vasques Bravo-Villalba: Tem vários dele sobre música de videogame. 😊
+[2023-02-22 07:48:30] Anne Isabelle: E tem um sobre Thomas o trenzinho :p
+[2023-02-22 10:50:00] Pablo Vasques Bravo-Villalba: Hoje tenho uma música curtinha: um medley dos divertidos e memoráveis temas musicais do jogo Konami's Soccer, que é exclusivo do MSX1. Além do 2A03 padrão do Nintendinho, usei também os chips de som VRC7 da Konami e o MMC5 da Nintendo nesse arranjo:
+https://on.soundcloud.com/CHFVN
+[2023-02-22 11:15:37] Robson França: Bom dia, pessoal! Beleza?
+[2023-02-22 11:18:45] Robson França: Estou dando uma estudada sobre como tocar música nos micros da linha TRS Color
+[2023-02-22 11:47:45] Pablo Vasques Bravo-Villalba: Beleza, Robson? 😊
+[2023-02-22 11:48:04] Pablo Vasques Bravo-Villalba: Se me permite a curiosidade, por que o CoCo, especificamente?
+[2023-02-22 11:48:37] Pablo Vasques Bravo-Villalba: O som dele é um tanto limitado mas imagino que seja possível mixar canais virtuais por software
+[2023-02-22 11:51:36] Pablo Vasques Bravo-Villalba: De fato é, achei um exemplo no YouTube: https://youtu.be/YYMT2va9kog
+[2023-02-22 12:30:21] Robson França: Claro! É que eu cresci com um clone do CoCo. E quero fazer alguns experimentos até para usar em futuros projetos, leia-se jogos 😁
+[2023-02-22 12:30:49] Robson França: Sim, por software há exemplos de mixagem de 4 canais
+[2023-02-22 12:33:59] Robson França: Por exemplo, neste vídeo:
+https://youtu.be/6xcVEj4sSKc?t=494
+[2023-02-22 12:34:35] Robson França: Acho que nesse caso são "só" dois canais
+[2023-02-22 12:35:40] Robson França: O CoCo tem um DAC de 6 bits. Dá para fazer coisas bem legais com ele
+[2023-02-22 12:35:55] Pablo Vasques Bravo-Villalba: Estou ouvindo três 😁
+[2023-02-22 12:38:25] Robson França: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/26136-AnimatedSticker.tgs
+[2023-02-22 20:29:04] Robson França: Achei o fonte Assembly de uma música:
+https://colorcomputerarchive.com/repo/Programming/Source/Assembly%20music/willtell.asm
+[2023-02-22 20:29:20] Robson França: Esse código é Assembly do 6809
+[2023-02-22 20:29:40] Robson França: E a música tem 4 canais
+[2023-02-22 20:30:33] Robson França: A única coisa é que as 4 notas são tocadas ao mesmo tempo,  imagino que seja para fazer um acorde
+[2023-02-22 20:31:18] Robson França: Quando eu chegar em casa vou colocar esse código para rodar no emulador

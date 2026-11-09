@@ -1,0 +1,147 @@
+[2022-07-03 03:03:31] Shideravan: Só os modelos mais antigos. Eu por exemplo tinha um fat modelo 9001 que não tinha a porta não
+[2022-07-03 03:04:51] Shideravan: Curti que a USP é uma empresa hahahaha
+[2022-07-03 03:05:59] Felipe "Juca" Sanches: Bom... Em lugar nenhum é dito que os nomes de diretório são nomes de empresas...
+[2022-07-03 03:06:34] Shideravan: Em algum lugar vai ter que estar dito alguma coisa... Ter um padrão para a gente seguir hahahaha
+[2022-07-03 03:07:00] Felipe "Juca" Sanches: Se pensarmos que são nomes de fabricantes até que faz sentido.
+[2022-07-03 03:07:50] Shideravan: Mas e no caso de empresas que possuem a fabricação terceirizada? É para se pensar hahaha
+[2022-07-03 03:08:36] Shideravan: Tem também casos onde a "guarda" é compartilhada. No caso de um licensiamento por exemplo
+[2022-07-03 03:08:39] Felipe "Juca" Sanches: Verdade. Talvez seja então melhor entender que são projetistas ;-)
+[2022-07-03 03:08:49] Shideravan: Já melhora
+[2022-07-03 03:09:05] Shideravan: Eu não peguei para ver
+[2022-07-03 03:09:08] Shideravan: A fundo
+[2022-07-03 03:09:55] Shideravan: Mas coisas que eu sei que tem um potencial de gerar uma treeeta
+[2022-07-03 03:10:48] Felipe "Juca" Sanches: Mas suspeito que o critério atual seja meio vago. Pois tem src/mame/sega/ (para os arcades da SEGA) e tem também src/mame/segacons/ (para os consoles da SEGA)
+[2022-07-03 03:11:21] Felipe "Juca" Sanches: Que é uma coisa meio tosca, eu acho
+[2022-07-03 03:11:26] Shideravan: vixe
+[2022-07-03 03:11:42] Felipe "Juca" Sanches: Me faz lembrar de MAME e MESS
+[2022-07-03 03:12:02] Shideravan: E como está o APF M-1000?
+[2022-07-03 03:12:11] Shideravan: Eles já fizeram uma lambança antes
+[2022-07-03 03:12:21] Felipe "Juca" Sanches: Nem sei o que é isso
+[2022-07-03 03:12:28] Shideravan: Foi um console da segunda geração
+[2022-07-03 03:12:36] Shideravan: Mas a história dele é uma bagunça
+[2022-07-03 03:12:55] Shideravan: Porque ele foi licensiado e relicensiado e teve uma época que cada país europeu teve o seu
+[2022-07-03 03:13:03] Shideravan: Alguns eram diretamente licensiados
+[2022-07-03 03:13:06] Shideravan: Outros eram clones
+[2022-07-03 03:13:24] Shideravan: E em alguns a porta para os cartuchos eram compatíveis em outros não...
+[2022-07-03 03:13:28] Shideravan: Uma bagunça
+[2022-07-03 03:13:59] Shideravan: Só de organizar questão de quem é console pai, quem é filho e quais softwarelists eram quais já fizeram bagunça
+[2022-07-03 03:14:08] Shideravan: Quero nem ver com essa organização interna hahahaha
+[2022-07-03 03:14:46] Shideravan: Eu mesmo acabei confundindo aqui
+[2022-07-03 03:14:56] Shideravan: O console da treta é o Interton Video Computer 4000
+[2022-07-03 03:15:12] Shideravan: Quer dizer... Tem pessoas que se referem a ele como pai
+[2022-07-03 03:15:13] Felipe "Juca" Sanches: Se pá ficou em src/mame/misc/ por enquanto
+[2022-07-03 03:15:19] Shideravan: Mas muita gente se refere ao
+[2022-07-03 03:15:40] Shideravan: 1292 Advanced Programmable Video System
+[2022-07-03 03:16:02] Shideravan: São a mesmíssima arquitetura... Mas tem bibliotecas próprias
+[2022-07-03 03:16:12] Shideravan: E esses consoles em algum nível são meio obscuros
+[2022-07-03 03:16:45] Shideravan: Alguns documentos datam a arquitetura como sendo de 1976
+[2022-07-03 03:17:27] Shideravan: Ou seja, antes do Fairchild Channel F e mais ainda que o Atari 2600
+[2022-07-03 03:17:40] Shideravan: E já era um console com cartuchos intercambiáveis
+[2022-07-03 03:18:38] Shideravan: Como são consoles meio obscuros, outros documentos registram o Interton VC 4000 de 77, 78 e sendo o console original e não o 1292
+[2022-07-03 03:18:57] Shideravan: Enfim, o console em sí já é uma lambança hahaha
+[2022-07-03 03:19:16] Shideravan: Eu se fosse procurar o driver nessa nova organizaç~]ao, nem saberia onde procurar primeiro hahahahaha
+[2022-07-03 03:19:44] Shideravan: Acho que o MAME atualmente separa os dois em linhas próprias, por conterem softwarelists próprias
+[2022-07-03 03:19:56] Shideravan: Mas ambos tem uma cacetada de clones também
+[2022-07-03 03:23:02] Shideravan: Tá aqui @fsanches
+[2022-07-03 03:23:03] Shideravan: mame/src/mame/drivers/vc4000.cpp
+[2022-07-03 03:23:08] Shideravan: E engraçado
+[2022-07-03 03:24:00] Shideravan: Atualmente o "pai" é o VC4000 mas ele está com o ano de 1978. Já o 1292 está como filho, mesmo sendo um lançamento anterior, de 1976 segundo o próprio MAME
+[2022-07-03 03:25:22] Shideravan: Ou seja, ainda não decidiram para onde mover ele hahahaha
+[2022-07-03 03:26:49] Felipe "Juca" Sanches: Eu achava que não tinha mais esse diretório src/mame/drivers
+[2022-07-03 03:27:15] Shideravan: Eu imagino que a tendência é ir tirando as coisas de lá e ir pondo na nova estrutura
+[2022-07-03 03:27:23] Shideravan: Mas tem muita coisa lá ainda
+[2022-07-03 03:27:27] Felipe "Juca" Sanches: Certo
+[2022-07-03 03:28:32] Shideravan: Imagino que eles devem ir fazendo isso aos poucos, durante esse mês, refatorando tudo para não ferrar com a estrutura de arquivos
+[2022-07-03 03:29:16] Shideravan: Esse tipo de mudança normalmente costuma atravessar o ciclo todo da versão. É muito driver para arrumar um a um
+[2022-07-03 03:29:43] Shideravan: Mas é só palpite meu, não conversei com ninguém sobre isso, só contigo
+[2022-07-03 03:32:48] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22675.jpg
+[2022-07-03 03:32:48] Felipe "Juca" Sanches: Screenshot (3 de jul de 2022 03:32:24)
+[2022-07-03 03:35:10] Shideravan: https://github.com/mamedev/mame/blob/23bbd37da65e7d9783b8fa697039fa85257fa6de/src/mame/drivers/vc4000.cpp
+[2022-07-03 03:36:57] Felipe "Juca" Sanches: mame/apf.cpp at master · mamedev/mame
+https://github.com/mamedev/mame/blob/master/src/mame/apf/apf.cpp
+[2022-07-03 03:37:48] Shideravan: Foi confusão minha, APF M-1000 é outra família. Procura o VC4000
+[2022-07-03 03:37:56] Felipe "Juca" Sanches: Isso é um commit antigo
+[2022-07-03 03:38:05] Shideravan: Verdade, é o sono
+[2022-07-03 03:38:29] Shideravan: Sábado para Domingo, 4 da manhã. Preciso dormir já estou fazendo confusão hahahaha
+[2022-07-03 03:39:04] Shideravan: Mas depois verifica onde essa belezinha está. Agora fiquei curioso
+[2022-07-03 03:39:10] Felipe "Juca" Sanches: E eu teclando no celular deitado na cama
+[2022-07-03 03:41:04] Shideravan: Eu agora a pouco estava fazendo isso. Tava upando dumps para uma nuvem particular no Terabox para fazer um backup. Pelo celular. Disse não... Isso não é qualidade de vida hahahaha
+[2022-07-03 03:41:08] Felipe "Juca" Sanches: mame/vc4000.cpp at master · mamedev/mame
+https://github.com/mamedev/mame/blob/master/src/mame/interton/vc4000.cpp
+[2022-07-03 03:41:36] Shideravan: Interton
+[2022-07-03 03:41:55] Shideravan: Fracos... Interton nem foi a primeira a lançar o console com essa arquitetura hahahaha
+[2022-07-03 03:42:20] Felipe "Juca" Sanches: Abre uma issue lá
+[2022-07-03 03:42:31] Shideravan: Nah... É treta idiota hahaha
+[2022-07-03 03:42:41] Felipe "Juca" Sanches: Quando estiver com menos sono hehehe
+[2022-07-03 03:44:13] Shideravan: Devem ter ido na Interton por ser a mais "famosa" fabricante que usou a arquitetura. Tanto que é a versão dela que está sendo considerada "pai" uhauhahua
+[2022-07-03 03:45:32] Shideravan: Eu aguardaria ter um documento que registrasse qual é o padrão que vão usar nessas pastas
+[2022-07-03 03:46:24] Shideravan: Se soltarem um documento assim e eu ver incongruência com o padrão, prometo que até abro a issue
+[2022-07-03 10:39:46] Augusto Almeida: Em geral os modelos 1000, 5000 e 7000 tem, eu particularmente nunca vi um 9000, aliás não sei porque tiraram ela
+[2022-07-03 11:27:38] Anne Isabelle: @fsanches pode mergear https://github.com/ArqueologiaDigital/Mines/pull/127
+[2022-07-03 11:42:20] Felipe "Juca" Sanches: Merged!
+
+Fiz também mais alguns ajustes nos arquivos README
+[2022-07-03 11:42:33] Anne Isabelle: Okay!
+[2022-07-03 12:18:58] Anne Isabelle: https://github.com/ArqueologiaDigital/Mines/pull/135
+
+O draw scenario tava causando um bug no port de psx
+[2022-07-03 13:55:13] L.: 30% de desconto na loja da editora com cupom FIREWORKS
+[2022-07-03 13:56:17] L.: Dá $42. Melhor que nada😅
+[2022-07-03 14:28:06] Shelton Ribeiro: https://www.instagram.com/p/CfhSXVqsLVV/?igshid=YmMyMTA2M2Y=
+
+Desenvolvedores de Postal liberam gratuitamente, download da versão digital do game para Dreamcast. 👆🏻👆🏻👍🏼👍🏼👍🏼
+[2022-07-03 14:47:13] Shideravan: Economia
+[2022-07-03 15:14:48] Shideravan: O governo passou aquela medida ridícula para taxar livros, né? Tá aí, a tendência é só de encarecer...
+[2022-07-03 15:16:26] Shideravan: É "jabuticaba nossa" que fala, né?
+[2022-07-03 15:16:33] Shideravan: Livros técnicos, pior ainda
+[2022-07-03 15:16:42] Pedro de Medeiros 👾: Mas isso é livro digital. Não tem produto pra taxar.
+[2022-07-03 15:18:21] Shideravan: Tem que combinar isso com a Amazon agora, que eleva o valor do livro digital e absorve os lucros
+[2022-07-03 15:18:47] Shideravan: A justificativa é de "equiparar melhor os preços"
+[2022-07-03 15:19:17] Shideravan: É tipo essa parada de derrubar ICMS do combustível e esperar que o dono do posto abaixe o preço de boa vontade
+[2022-07-03 15:22:39] Shideravan: A pessoa precisa do livro técnico para estudar/trabalhar. O físico tá custando o olho da cara em qualquer lugar. Dá para aumentar o preço do digital também, porque quem precisa vai continuar precisando e vai dar um jeito de comprar. O "livre mercado" precisa de dispositivos para não virar casa da mãe joana, principalmente com relação a esse tipo de coisa, que causam exclusão educacional e barram o progresso científico
+[2022-07-03 15:24:48] Shideravan: A Amazon tecnicamente não "está errada", a função dela como empresa é gerar lucro para acionistas mesmo. Responsabilidade social cabe ao governo
+[2022-07-03 15:42:43] Ismael Luceno: só porque não está requerido também na lei... mas é algo para corregir tal vez? o objetivo de lucro sem limites só pode virar ruim
+[2022-07-03 16:24:14] Robson França: Juca, depois vc. descobriram o motivo de não rodar em hardware real?
+[2022-07-03 16:48:32] Augusto Almeida: Pra quem curte PC "antigo", uma coisa interessante é que os blocos são compactados via LHA, programa esse muito usado no Amiga, curioso. https://youtu.be/VwZT40sRMzM
+[2022-07-03 17:44:36] Ismael Luceno: eu posso falar bastante disso, é usado em toda clase de firmware pre-UEFI para x86, não somente os antigos
+[2022-07-03 17:46:08] Ismael Luceno: e no caso de firmware UEFI, eu não testei, mas é provável que muitos ainda usem os mesmos métodos pro early stage
+[2022-07-03 18:05:24] Shideravan: Pois é, no mundo inteiro os países criaram formas de mitigar a falta de acesso a livros, pois isso impacta diretamente no desenvolvimento deles. Sobretudo literatura técnica. Mas para isso é necessário primeiro ter um governo... Enquanto ainda tivemos governo, por piores que fossem livros ainda eram subsidiados. Menos que o ideal é verdade. Mas agora não são mais, em nenhum nível... Afinal a prioridade não é mais essa
+[2022-07-03 18:06:26] Shideravan: audio: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22719.ogg
+[2022-07-03 18:08:17] Shideravan: https://www.google.com/amp/s/noticias.uol.com.br/colunas/leonardo-sakamoto/2022/06/30/bolsonaro-diz-que-eleito-lula-transformara-clubes-de-tiro-em-bibliotecas.amp.htm
+[2022-07-03 18:16:31] Shideravan: Em qualquer lugar do mundo, isso seria publicidade negativa, dar a entender que clubes de tiro são mais importantes que bibliotecas. Mas aqui no Brasil não faltou gente para bater palmas. Eu me sinto envergonhado vendo essas coisas... Uma coisa é o terror moral padrão, mas chegar no nível de ameaçar "tome cuidado que o meu adversário quer mais livros e menos clube de tiro". Tipo, mesmo se a gente considerar armas a coisa mais importante do mundo, até para se construir armas, a indústria bélica precisa de livros técnicos...
+[2022-07-03 19:05:49] Augusto Almeida: Em algum momento dormimos no ponto e tomamos uma realidade alternativa
+[2022-07-03 19:09:11] Shideravan: É o que eu sinto as vezes também 😢
+[2022-07-03 19:12:14] Pablo Vasques Bravo-Villalba: Sinto que é um processo. Um processo em que não se levou a sério um político (e sua família) que alcançou notoriedade dizendo e fazendo as maiores barbaridades sem nenhuma consequência real. É muito deprimente ver o ponto em que as coisas chegaram.
+[2022-07-03 19:13:30] Shideravan: Enfim, voltando ao tópico do grupo, as vezes eu sinto que esse esforço que fazemos de tentar aprender, fuçar, buscar informação e nos ajudarmos atualmente também é uma forma de resistência a isso tudo
+[2022-07-03 19:14:21] Shideravan: Se tem gente que quer impedir o acesso dos cidadãos a informação, nosso trabalho é justamente o contrário. E lutar por esse acesso!
+[2022-07-03 19:15:59] Felipe "Juca" Sanches: eu nao me lembro mais. Eu teria que voltar a ler o que foi dito na época em um fórum. Aliás... preciso até tentar achar onde é que foram feitos os comentários
+[2022-07-03 19:17:27] Shideravan: É um causo muito legal com uma lição importante mesmo
+[2022-07-03 19:17:52] Shideravan: Sabe que isso é uma parada que gerou muito problema na cena do super nintendo
+[2022-07-03 19:18:20] Shideravan: Super Nintendo foi um dos consoles que mais recebiam hacks e demos feitos pelos fãs
+[2022-07-03 19:19:05] Shideravan: Mas acontece que a maior parte dos primeiros trabalhos, inconscientemente utilizavam coisas que eram possíveis apenas nos emuladores (muito imprecisos) da época
+[2022-07-03 19:19:35] Shideravan: Conforme os emuladores foram progredindo e se tornando mais precisos, esses softwares foram deixando de funcionar
+[2022-07-03 19:20:51] Shideravan: É interessante que hoje em dia até o emulador mais preciso de SNES (o bsnes) precisou deixar opções para usar hacks para ter compatibilidade com esses softwares do final dos anos 90/começo dos anos 2000
+[2022-07-03 19:22:14] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22734.jpg
+[2022-07-03 19:22:14] Shideravan: Essas opções aqui servem só para simular comportamentos de versões antigas do SNES9x e do ZSnes
+[2022-07-03 19:23:34] Shideravan: Um exemplo de coisa que quebravam esses demos eram a forma como os emuladores da época lidavam com pseudo-randomização
+[2022-07-03 19:25:09] Shideravan: Em jogos "normais" isso importava pouco, porque o emulador dar um resultado ou outro, tá tudo bem, era uma randomização mesmo, é de esperar que as vezes dava um resultado e outras horas outra. Mesmo que isso na verdade fizesse que alguns dados de sorte fossem mais fáceis ou mais difíceis que no hardware original, tá tudo bem, o software original não "quebrava" por conta disso
+[2022-07-03 19:26:37] Shideravan: Agora se num software criado para rodar no emulador para lidar com um ambiente com essas imprecisões... Se você fosse para um lugar que não tivesse resultados tão "previsíveis" assim, o software desgringola todo. Em algumas situações isso pode impedir até do software bootar
+[2022-07-03 19:27:22] Shideravan: Isso é um exemplo de coisa que acontece bastante em software que roda em emuladores imprecisos mas não em hardware original
+[2022-07-03 19:30:09] Shideravan: Outro caso comum de software quebrar é quando o emulador tem um atalho onde "a entrada x sempre dá o resultado y" e o software do emulador é feito para automaticamente pular as etapas e só colocar o valor "esperado" direto. Nossa, isso quebra software criado para rodar em emuladores que é uma beleza...
+[2022-07-03 19:30:51] Shideravan: Você faz uma coisa que funciona numa boa no emulador, mas no hardware original a teoria é outra hahahaha
+[2022-07-03 20:32:05] Robson França: Pois é, estou achando meio estranho, já que o Odyssey não é tão complexo assim para um jogo só funcionar no emulador...
+[2022-07-03 20:34:11] Robson França: Esses casos do SNES realmente fazem sentido
+[2022-07-03 20:40:21] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22743.jpg
+[2022-07-03 20:40:21] Pedro de Medeiros 👾: Quase terminando aqui...
+[2022-07-03 21:04:44] Pedro de Medeiros 👾: Não é só acionista, mas o vendedor da plataforma é quem estipula o preço. Só acho incompatível cobrar quase o mesmo tanto por um bem digital que custa zero pra replicar infinitamente e que mesmo o custo de mantê-lo hospedado no site da amazon é ridiculamente baixo. Ainda tenho o direito de sentir que isso é... problemático, independente do que acionistas e a própria amazon acham ou deixam de achar.
+[2022-07-03 22:01:52] Ismael Luceno: 300 BRL é muito caro, objetivamente
+[2022-07-03 22:13:25] RicBit: Normalmente é o contrário, quanto mais antigo mais fácil de fazer software que só roda em emulador.
+[2022-07-03 22:14:34] Ismael Luceno: eu tive experiências similares até no PC, onde o VT-d da Intel gera importantes diferencias na emulação do bus PCI e das ROM
+[2022-07-03 22:15:23] RicBit: Facinho uma dessas pirongas aí precisar de código de inicialização para ligar o hardware. Se você não emular esse código os jogos oficiais vão rodar no emulador, então o autor do emulador nem fica sabendo que o tal código existe.
+[2022-07-03 22:15:43] RicBit: Aí alguém faz um jogo no emulador e não roda no hardware porque não inicializou.
+[2022-07-03 23:11:20] Felipe "Juca" Sanches: eu reconfigurava os sprites no meio da tela, para ter um numero total de sprites maior
+[2022-07-03 23:11:37] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22751-sticker.webp
+[2022-07-03 23:13:43] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22752.jpg
+[2022-07-03 23:13:43] Felipe "Juca" Sanches: montei o setup pra PSX aqui com toolchain e emulador (no Debian), me o resultado não parece correto. É isso mesmo, @cy_us ?
+[2022-07-03 23:19:18] Pedro de Medeiros 👾: Pensando em criar uma função que faz inicializações específicas da plataforma já de posse do tabuleiro. Do que a gente pode chamar isso?
+[2022-07-03 23:23:40] Felipe "Juca" Sanches: pra que isso seria util? Ou por que seria talvez necessario?

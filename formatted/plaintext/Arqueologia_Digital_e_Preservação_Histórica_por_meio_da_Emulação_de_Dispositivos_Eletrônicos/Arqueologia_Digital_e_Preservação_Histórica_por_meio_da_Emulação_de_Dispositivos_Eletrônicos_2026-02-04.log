@@ -1,0 +1,153 @@
+[2026-02-04 08:43:46] RicBit: tem string FRANCE no jogo, ai quando ele precisa de um F, vai pegar num tile lá longe (c9)
+
+TXT_FRANCE:
+        ; "FRANCE" string (Encoding: ASCII-0x20)
+        ; Format: FORMAT_ENCODED_STRING
+        ; Strings with custom encoding.
+        ; - Mostly ASCII-0x20 (e.g., 'A' is 21h, Space is 00h).
+        ; - Terminators vary by routine (often 00h or FFh).
+        db      020h, 0C9h, 032h, 021h                         ;#55B0
+        db      02Eh, 023h, 025h, 020h                         ;#55B4
+        db      0FFh                                           ;#55B8
+[2026-02-04 17:27:40] RicBit: o antartic é desafinado, que coisa. nunca percebi
+[2026-02-04 17:28:14] RicBit: o player usa só 8 bits para guardar a frequencia da nota, mas o psg suporta até 12. Ele esta jogando 4 bit de precisao fora.
+[2026-02-04 17:29:33] RicBit: SOUND_PITCH_OFFSET_TABLE:
+        ; Table of pitch/period offsets (accessed by low nibble)
+        ; Format: FORMAT_PITCH_TABLE
+        db      06Ah ; C  (2110 Hz)                                     ;#7AD8
+        db      064h ; C# (2237 Hz)                                     ;#7AD9
+        db      05Fh ; D  (2355 Hz)                                     ;#7ADA
+        db      059h ; D# (2514 Hz)                                     ;#7ADB
+        db      054h ; E  (2663 Hz)                                     ;#7ADC
+        db      050h ; F  (2796 Hz)                                     ;#7ADD
+        db      04Bh ; F# (2983 Hz)                                     ;#7ADE
+        db      047h ; G  (3151 Hz)                                     ;#7ADF
+        db      043h ; G# (3339 Hz)                                     ;#7AE0
+        db      03Fh ; A  (3551 Hz)                                     ;#7AE1
+        db      03Ch ; A# (3729 Hz)                                     ;#7AE2
+        db      038h ; B  (3995 Hz)                                     ;#7AE3
+[2026-02-04 17:29:56] RicBit: para o A 440, teria que ter uma base de 3520 Hz
+[2026-02-04 20:17:47] Pablo Vasques Bravo-Villalba: Não entendi a lógica dessa tabela. Para o lá, ele está escrevendo 3 nos registradores ímpares e 240 nos registradores pares? E a frequência, como ela foi calculada?
+[2026-02-04 20:53:32] RicBit: ele multiplica esse valor por 16 e depois quebra em dois pedaços
+[2026-02-04 20:59:27] RicBit: here
+
+        ld      hl,SOUND_PITCH_OFFSET_TABLE                    ;#7AB5: 21 D8 7A
+        call    ADD_HL_A                                       ;#7AB8: CD D1 48
+        ld      l,(hl)                                         ;#7ABB: 6E
+        ld      h,0                                            ;#7ABC: 26 00
+        ld      a,(ix+005h)                                    ;#7ABE: DD 7E 05
+        or      a                                              ;#7AC1: B7
+        jr      z,PS_WRITE_PERIOD                              ;#7AC2: 28 04
+        ld      b,a                                            ;#7AC4: 47
+PS_PITCH_SHIFT_LOOP:
+        ; Small loop to shift the pitch value in HL
+        add     hl,hl                                          ;#7AC5: 29
+        djnz    PS_PITCH_SHIFT_LOOP                            ;#7AC6: 10 FD
+PS_WRITE_PERIOD:
+        ; Write 12-bit period to PSG frequency registers
+        ld      a,c                                            ;#7AC8: 79
+        out     (PSG_ADDR),a                                   ;#7AC9: D3 A0
+        ld      a,h                                            ;#7ACB: 7C
+        out     (PSG_WRDATA),a                                 ;#7ACC: D3 A1
+        dec     c                                              ;#7ACE: 0D
+        ld      a,c                                            ;#7ACF: 79
+        out     (PSG_ADDR),a                                   ;#7AD0: D3 A0
+        ld      a,l                                            ;#7AD2: 7D
+        out     (PSG_WRDATA),a                                 ;#7AD3: D3 A1
+[2026-02-04 20:59:29] Pablo Vasques Bravo-Villalba: Sim, o que estou perguntando é como esse valor vai para os dois registradores de período. O que estou entendendo do que você está me dizendo é exatamente o que eu disse acima. Se o valor é 03Fh, então vai 03h para o registrador ímpar e 0F0h para o registrador par correspondente.
+
+E a outra pergunta é como você chegou ao valor em frequência ali entre parênteses, porque 03F0h nos meus cálculos corresponde à frequência de 111Hz.
+[2026-02-04 21:00:45] RicBit: ix+5 é a oitava
+[2026-02-04 21:07:30] RicBit: talvez tenha um fator de 2 errado na tabela, para a oitava mais aguda ele não multiplica por nada, então tinha que ser 1775?
+[2026-02-04 21:07:35] RicBit: preciso pensar mais
+[2026-02-04 21:07:53] RicBit: a duração eu nem tentei entender ainda haha
+[2026-02-04 21:07:56] Pablo Vasques Bravo-Villalba: Sim, acho que é isso mesmo
+[2026-02-04 21:08:00] Pablo Vasques Bravo-Villalba: Faz mais sentido pra mim
+[2026-02-04 21:08:12] RicBit: SOUND_DURATION_TABLE:
+        ; Table of note durations
+        ; Format: FORMAT_DURATION_TABLE
+        db      008h, 010h, 020h, 030h, 040h, 060h, 005h, 00Ah, 00Fh, 014h, 064h, 01Eh ; Note duration values  ;#7AE4
+[2026-02-04 21:08:16] Pablo Vasques Bravo-Villalba: A duração é em tiques da interrupção, até onde sei
+[2026-02-04 21:09:45] RicBit: é o logico, mas nao entendo porque nao está ordenado
+[2026-02-04 21:10:14] RicBit: deixa eu copiar o music player inteiro perai
+[2026-02-04 21:11:08] Pablo Vasques Bravo-Villalba: Então, se você converter 1760Hz para o valor do período, dá 03Fh, mas como a frequência é muito alta e a resolução não é grande o suficiente, de fato dá uma diferença de 1%. Então se a Konami usa a mesma frequência base pra tudo e vai "subindo" na tabela, fica tudo 1% deslocado mesmo, mas pelo menos funciona
+[2026-02-04 21:11:37] Pablo Vasques Bravo-Villalba: É porque são durações para andamentos diferentes
+[2026-02-04 21:11:49] RicBit: aaah eu nao entendo essas coisas
+[2026-02-04 21:11:58] RicBit: codigo -> https://gist.github.com/ricbit/207deb6a6623f86d409e62eab93ec4a3
+[2026-02-04 21:12:12] RicBit: se eu nao estiver off by one, tem um sound effect nao usado no final
+[2026-02-04 21:12:28] Pablo Vasques Bravo-Villalba: E estas são as coisas que eu não entendo 😅
+[2026-02-04 21:15:35] RicBit: eu sempre ouvi a lenda de que tinha uma versao arcade desse jogo, pelo codigo faz algum sentido, ele usa 0% da bios, é tudo nas portas
+[2026-02-04 21:15:46] RicBit: se for conversao de um arcade, o codigo estaria sem bios mesmo
+[2026-02-04 21:18:45] RicBit: e foi preguiça nao usar os 12 bits inteiros para o periodo. espaco tinha, tem 400 bytes sobrando no final da rom
+[2026-02-04 21:18:52] Pablo Vasques Bravo-Villalba: Apesar de que seria estranho existir uma versão arcade e nunca ninguém ter visto nesses anos todo, não acha?
+[2026-02-04 21:19:06] Pablo Vasques Bravo-Villalba: Talvez para simplificar a rotina, aí só precisaria incrementar o valor de HL, nunca decrementar
+[2026-02-04 21:19:14] RicBit: pode ter sido um prototipo interno que nunca foi lançado
+[2026-02-04 21:20:08] Pablo Vasques Bravo-Villalba: Bom, pode ser
+[2026-02-04 21:20:31] Pablo Vasques Bravo-Villalba: Acho curioso a Konami ter lançado no ano seguinte uma versão quase idêntica para o Nintendinho, só que mais feia 😅
+[2026-02-04 21:20:53] RicBit: eu tambem fiquei curioso com a bandeira
+[2026-02-04 21:21:23] RicBit: aparentemente acontece alguma coisa com a bandeira se o ultimo digito do tempo quando voce termina a fase é igual ao numero da fase
+[2026-02-04 21:21:49] RicBit: estou chutando que ele troca a bandeira atual pela do japao, mas é chutão mesmo, tem que jogar para testar
+[2026-02-04 21:23:29] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37307.jpg
+[2026-02-04 21:23:29] RicBit: os labels estao errados, mas tem a bandeira do japao ali, e o japao nao é um dos paises normais
+[2026-02-04 21:23:31] Pablo Vasques Bravo-Villalba: Sei que no Nintendinho não acontece nada de especial
+[2026-02-04 21:24:59] Pablo Vasques Bravo-Villalba: São dez estágios, então alguns países devem se repetir. Não tem nenhum do Japão?
+[2026-02-04 21:35:40] Pablo Vasques Bravo-Villalba: No MSX:
+Stage 1: USA
+Stage 2: The South Pole
+Stage 3: USA
+Stage 4: USA
+Stage 5: Argentina
+Stage 6: United Kingdom
+Stage 7: Japan
+Stage 8: Australia
+Stage 9: Australia
+Stage 10: France
+
+No NES:
+Stage 1: Australia
+Stage 2: France
+Stage 3: Australia
+Stage 4: New Zealand
+Stage 5: The South Pole
+Stage 6: USA
+Stage 7: Argentina
+Stage 8: USA
+Stage 9: United Kingdom
+Stage 10: Japan
+
+E a ordem das fases no mapa é diferente. Nos dois casos o Japão está no mesmo lugar, mas no Nintendinho ele é a última fase
+[2026-02-04 21:36:25] Pablo Vasques Bravo-Villalba: Por alguma razão não aparece base da Nova Zelândia no MSX
+[2026-02-04 21:36:56] Pablo Vasques Bravo-Villalba: E no longplay que eu vi o cara termina uma vez com o mesmo dígito no final da fase e do tempo e não acontece nada
+[2026-02-04 21:38:15] Pablo Vasques Bravo-Villalba: Esse aqui. Veja a partir de 10:37: https://youtu.be/f_Dnb7M4x08?si=AqfPXYm8tgPuYYZ6&t=637
+[2026-02-04 21:58:20] RicBit: esse do video é a versao europeia, é outra rom praticamente
+[2026-02-04 21:58:34] RicBit: a versao que estou usando é a japonesa, eu acho que foi a primeira
+[2026-02-04 21:58:56] RicBit: a japonesa tem KEYBOABD ao inves de KEYBOARD
+[2026-02-04 22:04:15] RicBit: na minha rom parece que está assim
+COUNTRY_NAME_POINTERS:
+        ; Table of pointers to country name strings
+        dw      TXT_AUSTRALIA                                  ;#558A: A4 55
+        dw      TXT_AUSTRALIA                                  ;#558C: A4 55
+        dw      TXT_FRANCE                                     ;#558E: B0 55
+        dw      TXT_NEW_ZEALAND                                ;#5590: B9 55
+        dw      TXT_SOUTH_POLE                                 ;#5592: EA 55
+        dw      TXT_USA                                        ;#5594: C7 55
+        dw      TXT_USA                                        ;#5596: C7 55
+        dw      TXT_ARGENTINA                                  ;#5598: CD 55
+        dw      TXT_UK                                         ;#559A: D9 55
+[2026-02-04 22:04:28] RicBit: vou profanar ele para descobrir qual é a do digito
+[2026-02-04 22:23:02] RicBit: acho que é viagem, deve ter alguma variavel com nome errado
+[2026-02-04 22:34:59] RicBit: aaah a tabela tem só 9 posicoes
+[2026-02-04 22:35:07] RicBit: ta faltando uma, deve ser o japao
+[2026-02-04 22:44:33] RicBit: pronto ta corrigido
+
+134. Country Name Refactoring & Japan Discovery (2026-02-04)
+Data Refactoring:
+Identified that stage 0 (Japan) uses the pointer at 5588h, which was previously mislabeled as a standalone table.
+Mapped COUNTRY_NAME_POINTERS to start at 5588h, now correctly covering all 10 stages (Japan to South Pole).
+Simplified the [words] section by defining these pointers as FORMAT_PTR in the [data] section.
+Lost Text Found:
+Discovered the TXT_JAPAN string at 559Ch, encoded with the standard -20h offset.
+Correctly labeled and formatted TXT_JAPAN as a FORMAT_VRAM_STRING.
+Code Optimization: Updated the disassembly for the country name lookup routine at 5534h to reference COUNTRY_NAME_POINTERS directly instead of using a negative offset.
+Verification: Verified a bit-perfect ROM match and passed all 33 tests in the suite.
+[2026-02-04 22:46:09] RicBit: o japao é a fase 10, mas aparece na primeira posicao da tabela, porque ele indexa a fase pelo ultimo digito da fase em bcd

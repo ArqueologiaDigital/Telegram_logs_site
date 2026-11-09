@@ -1,0 +1,6 @@
+[2022-05-05 04:26:08] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/9693
+[2022-05-05 09:56:08] Ismael Luceno: alguém está interessado em gcc-ia32 (suporte x86 de 16 bits no gcc)? Pretendo portá-lo para o gcc 12, mas será um processo lento e estou procurando ajuda
+[2022-05-05 10:02:19] Pedro de Medeiros 👾: Isso inclui suporte a C++17 para ia32?
+[2022-05-05 12:16:48] Felipe "Juca" Sanches: Da hora!!
+[2022-05-05 13:06:48] Ismael Luceno: em teoria não haveria problema de suportar c++17, mas o runtime é bastante mais complexo, eu não sei...
+[2022-05-05 13:08:04] Ismael Luceno: a ideia seria suportar até o modo standalone no início, eu não preciso DOS/ELKS/*

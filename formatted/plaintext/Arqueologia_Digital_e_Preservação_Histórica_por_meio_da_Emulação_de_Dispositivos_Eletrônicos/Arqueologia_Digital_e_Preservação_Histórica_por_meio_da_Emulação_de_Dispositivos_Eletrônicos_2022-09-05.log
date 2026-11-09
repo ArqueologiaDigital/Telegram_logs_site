@@ -1,0 +1,47 @@
+[2022-09-05 10:50:04] Felipe "Juca" Sanches: https://tedium.co/2022/08/24/atari-2600-joystick-port-history/
+[2022-09-05 11:16:08] Pablo Vasques Bravo-Villalba: Sabe que isso dá treta até hoje? Pelo menos na galera de MSX tem um povo altamente tretado
+[2022-09-05 11:17:34] Pablo Vasques Bravo-Villalba: Isso porque o joystick padrão do Atari 2600 funciona sem modificações no MSX, embora a pinagem seja ligeiramente diferente. Aí tem gente que quer dizer que o MSX aceita joystick padrão Atari. Só que se você ligar uma coisa diferente como um paddle de Atari 2600 pode dar ruim, queimar o PSG, sei lá
+[2022-09-05 11:18:55] Pablo Vasques Bravo-Villalba: Não sei os detalhes
+[2022-09-05 11:22:16] Robson França: Bom dia aê. Se não me engano um dos pinos do conector do lado do MSX tem 5V por causa da Light pen. No controle padrão Atari tem outra coisa, e quando vc usa alguns controles do Atari no MSX dá um curto brabo, podendo queimar o PSG porque ele também é utilizado para I/O do joystick
+[2022-09-05 11:23:03] Pablo Vasques Bravo-Villalba: Esse é só um exemplo. Tem vários outros
+[2022-09-05 12:24:04] L.: https://twitter.com/inf_ufg/status/1566804692348403714?t=O3kcqLmh4zno5_US5bcxGg&s=35
+[2022-09-05 15:17:46] RicBit: Um dos pinos do joystick do msx é de i/o, quando boota ele é configurado como input. O mesmo pino no atari é gnd. Se alguém ligar o joystick do atari no msx e configurar o pino para output em 1, está ligando o vcc no gnd e produzindo fumaça.
+[2022-09-05 17:12:28] Robson França: Entendo. Tinha a ver com a Lightpen?
+[2022-09-05 17:32:35] Pablo Vasques Bravo-Villalba: Eu acho que no MSX você não conecta lightpen nas portas de joystick não
+[2022-09-05 17:45:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23709.jpg
+[2022-09-05 17:45:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23710.jpg
+[2022-09-05 17:51:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23711.jpg
+[2022-09-05 17:51:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23712.jpg
+[2022-09-05 17:51:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23713.jpg
+[2022-09-05 17:54:23] Felipe "Juca" Sanches: Essa placa é uma modificação feita na teletype que está no LASSU, na Poli.
+[2022-09-05 17:54:30] Felipe "Juca" Sanches: Estamos tentando entender o que ela faz
+[2022-09-05 17:55:52] * Sebastiao Barretto joined the group
+[2022-09-05 18:31:01] RicBit: É um bit genérico de i/o, dá para colocar qualquer coisa lá. Eu usava para transferir arquivo.
+[2022-09-05 18:38:15] Shideravan: Sinceramente, isso só reforça que a indústria demorou demais para adotar um padrão único como o USB
+[2022-09-05 18:38:29] Pablo Vasques Bravo-Villalba: E olha lá, porque USB é uma zona
+[2022-09-05 18:38:35] Shideravan: A vontade de adotarem um padrão único já existia desde antes
+[2022-09-05 18:38:54] Shideravan: Não deveria ser, mas por incompetencia deles no início, virou mesmo
+[2022-09-05 18:39:03] Pablo Vasques Bravo-Villalba: Mas realmente é muito melhor do que a zona anterior 😅
+[2022-09-05 18:39:10] Shideravan: Sim
+[2022-09-05 18:39:18] Shideravan: É uma tentativa de padronização, né?
+[2022-09-05 18:39:32] Shideravan: Mas hoje em dia o padrão está mais ou menos definido no que tange a portas
+[2022-09-05 18:39:43] Shideravan: Os padrões mais novos sõ tem o tipo-C
+[2022-09-05 18:39:47] Pablo Vasques Bravo-Villalba: Pelo menos a conexão física
+[2022-09-05 18:39:57] Pablo Vasques Bravo-Villalba: Mas saber o que uma porta tipo C efetivamente suporta é complicado
+[2022-09-05 18:40:13] Shideravan: O que dá conflito é essa coisa de PD, diferentes velocidades e cabos, compatibilidade ou não com o Thunderbolt, etc
+[2022-09-05 18:40:19] Shideravan: E a nomeclatura HORRÍVEL
+[2022-09-05 18:40:36] Pablo Vasques Bravo-Villalba: Por exemplo, meu notebook tem algumas portas desse tipo e eu sei que algumas coisas só são suportadas por algumas delas, mas não tenho a menor ideia sem olhar no manual. E mesmo depois de olhar fica dúvida
+[2022-09-05 18:40:46] Shideravan: Sério, deviam expulsar quem propõe nomes como USB 3 Gen 2x2
+[2022-09-05 18:40:57] Pablo Vasques Bravo-Villalba: Apoiado
+[2022-09-05 18:41:01] Shideravan: Eu tinha achado que com o USB4 eles iriam sossegar
+[2022-09-05 18:41:10] Shideravan: Anunciaram essa semana o USB4 2.0
+[2022-09-05 18:41:15] Shideravan: a pa pqp
+[2022-09-05 18:41:36] Shideravan: Por que não chama logo de USB5?
+[2022-09-05 18:41:59] Shideravan: Vai gerar confusão, com certeza
+[2022-09-05 18:42:32] Shideravan: Outra bagunça é o USB PD que é usado, por exemplo, para carregadores de notebook
+[2022-09-05 18:42:36] Shideravan: A ideia é maravilhosa
+[2022-09-05 18:42:45] Shideravan: Mas se não usa os cabos corretos, não carrega
+[2022-09-05 18:43:31] Shideravan: https://www.youtube.com/watch?v=36CKsP9YQ1E
+[2022-09-05 18:43:45] Shideravan: Esse vídeo é muito bom a respeito dos formatos de porta
+[2022-09-05 20:08:48] Robson França: Interessante
+[2022-09-05 22:52:19] FTMaciel: Pessoal, estou atrás de ideias para resolver um problema. To restaurando alguns consoles antigos e precisava refazer a serigrafia em algumas partes plásticas e outras metálicas. Estou com duas caixinhas de RF pra refazer as letras. Já pensei em Letraset, em imprimir em uma folha transparente e colar... mas fica muito ruim. Pensei em dry transfer...

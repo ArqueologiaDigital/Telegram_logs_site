@@ -1,0 +1,112 @@
+[2022-07-06 00:39:48] Shideravan: @fsanches Sabe se hoje em dia já existe uma forma de fazer o MAME ler os arquivos de dump direto da nuvem?
+[2022-07-06 00:41:12] Shideravan: Por exemplo, eu jogos os meus dumps de BIOS em uma nuvem que só eu tenho acesso e o MAME pode baixar os arquivos de BIOS por exemplo, direto dalí, fazendo um "streaming" de um conteúdo que normalmente ficaria na pasta "roms"?
+[2022-07-06 00:42:00] Shideravan: Se ainda não for possível isso, com certeza é algo que alguém precisava muito implementar. Iria facilitar imensamente em termos de facilidade e portabilidade do MAME
+[2022-07-06 00:42:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22875.jpg
+[2022-07-06 00:42:52] Shideravan: Isso iria ajudar muito, principalmente com relação aos CHDs e consoles que usam CHDs
+[2022-07-06 00:44:49] Felipe "Juca" Sanches: Isso atrapalharia a missão do projeto, que é a preservação. Se todo mundo confiar em acessar remotamente as ROMs, corre-se o risco delas se perderem por conta de takedown nos servidores
+[2022-07-06 00:45:55] Shideravan: Pelo contrário, possibilitaria com que mais pessoas mantivessem guardadas as ROMs em nuvens particulares
+[2022-07-06 00:46:50] Shideravan: Eu mesmo, tinha comprado um HD de 4TB com intenção primária de armazenar arquivos do MAME
+[2022-07-06 00:47:03] Shideravan: Hoje, eu jogo esses arquivos numa nuvem particular no Terabox
+[2022-07-06 00:47:12] Felipe "Juca" Sanches: Guardadas "no computador dos outros" kkk
+[2022-07-06 00:47:17] Shideravan: E eu baixo "sob demanda"
+[2022-07-06 00:47:41] Shideravan: Exato, não vai destoar do objetivo de preservação, se no fundo está dando "na mesma" hahahaha
+[2022-07-06 00:48:01] Shideravan: É que hoje em dia está saindo muito mais barato ter espaços na nuvem do que localmente
+[2022-07-06 00:48:21] Shideravan: O Terabox mesmo, dá 1TB gratuito por conta
+[2022-07-06 00:49:36] Shideravan: Existem outros serviços também, que oferecem um espaço bem grande, por uma mensalidade bem baratinha
+[2022-07-06 00:50:42] Shideravan: Só que essa operação de "baixar os arquivos conforme irei utilizar e deletar depois" não é nada prática...
+[2022-07-06 00:54:59] Shideravan: O valor que você paga por 1TB de HD externo, você paga numa lifetime offer de 10TB no Degoo, por um espaço que em tese, é seu "para sempre" sem nenhum custo adicional
+[2022-07-06 00:55:21] Shideravan: https://degoo.com/2020lifetimeoffer
+[2022-07-06 00:57:28] Shideravan: Tem vários serviços assim que tem pipocado e oferecido espaços bem generosos na nuvem, gratuitamente ou com custos bem mais acessíveis que comprar os HDs em sí. E o futuro querendo ou não vai ser esse hahahaha
+[2022-07-06 01:00:05] Shideravan: Eu estava pensando em uma solução, que não necessarimente estivesse atrelada ao core do MAME e sim como um frontend, um plugin, etc
+[2022-07-06 01:02:37] Shideravan: Com a conexão no mundo ficando cada vez mais rápida, esse tipo de solução fica bem viável para ser utilizada
+[2022-07-06 01:04:38] Shideravan: Só que primeiro eu tenho que ver se alguém já fez alguma coisa nesse sentido. A comunidade do MAME é imensa, tem forte possibilidade de alguém já ter feito algo do tipo
+[2022-07-06 10:43:53] RicBit: Não é trivial isso aí? Intercepta as chamadas para o open() e redireciona para um proxy.
+[2022-07-06 11:28:34] Pedro de Medeiros 👾: Eu sei que não é o ponto da conversa, mas https://cloudstorageinfo.org/degoo-review não avaliou muito bem esse serviço. Só pra quem estiver pensando em assinar por causa do anúncio. 😁
+[2022-07-06 12:03:28] L.: Vários discos na nuvem tem esquema que te permitem montar localmente
+[2022-07-06 12:04:08] L.: Pro mame não teria diferença se tá num disco local ou em algum datacenter em outro continente
+[2022-07-06 13:50:43] Felipe "Juca" Sanches: a única diferença seria o breve intervalo de tempo entre a requisição e a abertura do arquivo
+[2022-07-06 13:51:10] Felipe "Juca" Sanches: creio que o sistema operacional toma conta disso transparentemente
+[2022-07-06 13:52:29] Felipe "Juca" Sanches: drivers de sistema de arquivo virtual, né? FUSE é o nome disso, se não me falha a memõria
+[2022-07-06 13:52:48] L.: FUSE é um deles, sim
+[2022-07-06 13:52:49] Felipe "Juca" Sanches: https://www.kernel.org/doc/html/latest/filesystems/fuse.html
+[2022-07-06 13:54:31] Felipe "Juca" Sanches: Eu lembro que uma vez instalei um "wikipedia filesystem" implementado usando FUSE.
+
+Os artigos da Wikipédia podiam ser editados como arquivos num editor de texto comum e ao salvar já atualizava direto lá nos servidores da Wikimedia.
+[2022-07-06 14:33:47] Felipe "Juca" Sanches: Pessoal, eu tenho uma dúvida que talvez alguns de vocês saibam responder.
+
+Num programa para Windows 3.11, as chamadas para a API do Windows viram o quê no binário compilado? Viram instruções de CALL para endereços hardcoded? (se sim, existe uma listagem desses endereços?) Ou viram chamadas para DLLs? E se for isso, como funciona esse mecanismo de chamada? Eu não conheço quase nada dessas coisas, por isso que estou perguntando. Como eu poderia escrever um programa em C hoje em dia usando o gcc-ia16 para usar essa API e gerar um executável válido para Win 3.11?
+[2022-07-06 15:21:03] Anne Isabelle: Completely unrelated mas interessante
+
+https://youtu.be/TIfNIWn2Ad4
+[2022-07-06 15:27:31] Pedro de Medeiros 👾: Provavelmente nem toda chamada de função vai ser tratada dessa forma, mas as chamadas de estão em DLL são associadas em tempo de ligação dinâmica que ocorre antes do programa executar.
+[2022-07-06 15:28:17] Pedro de Medeiros 👾: Uma estratégia que eu sigo geralmente é... eu procuro se existe um módulo python que faz isso e vejo como ele faz. Geralmente o código já é fácil de seguir anyway.
+[2022-07-06 15:30:08] Pedro de Medeiros 👾: ctypes no python faz isso. E ele faz a busca do nome da função como uma string (acho que com algum tipo de mangling automático como C++ faz pra encontrar as funções em linkedição com os parâmetros embutidos).
+[2022-07-06 15:38:31] Felipe "Juca" Sanches: boiei
+[2022-07-06 15:38:34] Felipe "Juca" Sanches: LOL
+[2022-07-06 15:39:18] Pedro de Medeiros 👾: Olha o ctypes do Python.
+[2022-07-06 15:39:38] Felipe "Juca" Sanches: nas entrelinhas da minha pergunta está o interesse de fato que é: como portar Mines para Win3.11 usando o gcc-ia16? 😉
+[2022-07-06 15:42:50] Felipe "Juca" Sanches: acho que esse site pode conter parte das respostas (mas eu ainda não li, pois acabei de encontrar!): https://www.toptensoftware.com/blog/win3mu-5/
+[2022-07-06 15:46:38] Pedro de Medeiros 👾: Você vai precisar dos headers em C de windows 3.11 no mínimo. Na falta disso, talvez o wine resolva.
+[2022-07-06 15:47:05] Felipe "Juca" Sanches: que podem muito bem ser escritos por mim mesmo, certo?
+[2022-07-06 15:47:24] Felipe "Juca" Sanches: ah, sim, acho que o wine deve ter isso, verdade!
+[2022-07-06 15:52:18] Pedro de Medeiros 👾: Claro, mas acho que é trabalho desnecessário. Eu suponho que pelo menos os headers de windows devem ter licença permissiva já que são feitos pra interfacear com outro software que pode por sua vez ter qualquer licença.
+[2022-07-06 15:52:42] Felipe "Juca" Sanches: é, faz sentido
+[2022-07-06 15:53:21] Felipe "Juca" Sanches: se bobear o lugar pra achar isso é em alguma imagem de disquete de devtools da época hospedado no internet archive
+[2022-07-06 15:53:46] Felipe "Juca" Sanches: disquetes que vinham junto com livros de papel
+[2022-07-06 15:55:03] Felipe "Juca" Sanches: eu me lembro que quando eu estava querendo aprender a desenvolver jogos eu trouxe pro meu pai um livro de C++ que tinha um disquete junto, mas o rapaz da livraria disse pro meu pai "Isso aqui é avançado demais. Compra esse outro livro aqui, que acho que é melhor para a idade dele."
+[2022-07-06 15:55:36] Pedro de Medeiros 👾: Se bobear já tem doido fazendo isso em algum projeto aberto no github.
+[2022-07-06 15:55:44] Felipe "Juca" Sanches: verdade
+[2022-07-06 16:04:50] Felipe "Juca" Sanches: https://github.com/TransmissionZero/Win16-Example-Application
+[2022-07-06 16:05:48] Felipe "Juca" Sanches: https://www.transmissionzero.co.uk/computing/win16-apps-in-c/
+[2022-07-06 16:19:13] Pedro de Medeiros 👾: Watcom C/C++ tem uma versão open: https://github.com/open-watcom/open-watcom-v2
+[2022-07-06 16:19:46] Pedro de Medeiros 👾: Compilador C/C++ clássico pra fazer app de windows em 199X.
+[2022-07-06 16:30:20] Lord Spy: tinha o DJGPP também... acho que tenho um instalador/cd dele aqui em algum canto
+[2022-07-06 16:35:06] Pedro de Medeiros 👾: Que eu saiba DJGPP não gera executável windows. Ele é pra DOS modo protegido.
+[2022-07-06 16:56:54] Felipe "Juca" Sanches: a licença do OpenWatcom não é considerada software livre
+[2022-07-06 16:57:41] Felipe "Juca" Sanches: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=376431
+[2022-07-06 16:59:08] Felipe "Juca" Sanches: Em particular essa mensagem aqui lista vários problemas:
+https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=376431#22
+[2022-07-06 17:35:36] Pedro de Medeiros 👾: Mas isso é problema de distribuições. Se alguém oferecerer um container com o compilador já instalado a gente pode só usar isso.
+[2022-07-06 17:36:31] Pedro de Medeiros 👾: Mesmo uma forma programada de instalar o compilador em um container já serviria
+[2022-07-06 17:37:23] Felipe "Juca" Sanches: isso é um problema que o compilador é não livre e portanto um programa que depende de um compilador não-livre também é não-livre
+[2022-07-06 17:40:00] Pedro de Medeiros 👾: Se a gente vai entrar nesse mérito, deveríamos discutir o uso de sistemas operacionais não-livres, que são para eles que nós estamos criando releases.
+[2022-07-06 17:42:25] Pedro de Medeiros 👾: O programa também não seria não-livre por ser usado num sistema operacional não-livre?
+[2022-07-06 17:42:50] Felipe "Juca" Sanches: 😉
+[2022-07-06 17:44:25] Felipe "Juca" Sanches: Eu encaro compiladores como sendo ferramentas. Eu quero ter controle sobre as ferramentas.
+
+O sistema operacional antigo para o qual meu programa é criado eu encaro como peça de museu. Não cabe a mim querer alterar o Windows 3.11
+[2022-07-06 17:45:13] Felipe "Juca" Sanches: Mas esse é com certeza um debate que cada um de nós talvez tenha uma opinião distinta
+[2022-07-06 17:46:48] Felipe "Juca" Sanches: eu coloquei para mim esse critério, pois já pensei muito a respeito dessa aparente inconsistência de ser um ativista de software livre e ao mesmo tempo fuçar em softwares proprietários antigos. Meu critério parece razoável pra mim ao misturar retro-computação com meus valores referentes à causa do sw livre.
+[2022-07-06 20:45:45] L.: Lê esses blog posts https://hackernoon.com/win3mu-part-1-why-im-writing-a-16-bit-windows-emulator-2eae946c935d
+[2022-07-06 20:47:20] L.: Se você conseguir gerar um .exe com o stub do Win16, e gerar código que tenha a mesma ABI das DLLs do Windows, deve rolar de boa usar esse gcc pra fazer port pra Windows velho
+[2022-07-06 20:52:59] L.: (O mines pra MS-DOS é um .com, que é a coisa mais de boa do universo: carrega tudo num segmento e pula pra um endereço fixo. O Win16 usa um .exe, igual o do MS-DOS, mas tem um header secundário com informações extras -- tipo qual DLL é linkada durante a carga e qual símbolos tem que importar -- chamado de NE, ou new executable)
+[2022-07-06 20:54:14] L.: Win32 usa PE (portable executable), por que foi feito pro windows nt e o NT é portável (tinha pra MIPS e PowerPC na década de 90!)
+[2022-07-06 20:54:35] L.: Mas a ideia é a mesma, só que 32 bit e tal
+[2022-07-06 20:55:44] L.: O header do NE/PE vem depois dum stubzinho que roda em DOS ("this program must be run under windows" ou que chama o Windows e abre o programa), e o Windows ignora isso quando carrega
+[2022-07-06 20:56:29] L.: Até assembly de .NET em 2022 é PE e tem código 8086/16 bit mesmo não tendo código nativo dentro🙃
+[2022-07-06 20:57:31] L.: Tem como fazer compilação cruzada pra Windows usando o wine e os cabeçalhos dele, aí nem precisa pegar nada proprietário. Sei que rola Win32 mas não sei se rola Win16.
+[2022-07-06 21:03:12] Robson França: Opa, chego em casa em 30 minutos, aí eu te ajudo
+[2022-07-06 21:08:20] Felipe "Juca" Sanches: É por que tem 2 entry points, né?
+
+O Entry point do header MZ é usado pelo DOS e o entry point do header NE é usado pelo Windows.
+[2022-07-06 21:08:30] L.: Isso
+[2022-07-06 21:09:28] Robson França: Isso mesmo
+[2022-07-06 21:09:28] Felipe "Juca" Sanches: Eu lembro de ter visto esse entry point de MSDOS em programas de Windows na época em que eu tava começando a estudar disasm. E lembro que foi divertido ler o código que simplesmente printa a string "No DOS não rola!"
+[2022-07-06 21:09:55] Robson França: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22957-AnimatedSticker.tgs
+[2022-07-06 21:10:32] Felipe "Juca" Sanches: fiquei pensando se não seria possível compilar o Mines de MSDOS com a versão VGA Mode 13h no header MZ e a versão de janelinha do Windows no outro header. Ou seja, botar os dois ports num só binário
+[2022-07-06 21:12:02] Robson França: Uia
+[2022-07-06 21:12:11] Robson França: Se nao for muito grande...
+[2022-07-06 21:12:24] Robson França: Qual o tamanho do binario?
+[2022-07-06 21:12:35] L.: Deve rolar fazer até versão pra windows 1!
+[2022-07-06 21:12:51] L.: O jogo pra dos tem 4.7k até agora
+[2022-07-06 21:13:01] Robson França: Tranquilo!
+[2022-07-06 21:13:24] L.: Rola fazer isso sim -- inclusive tinha programa na época que fazia isso
+[2022-07-06 21:13:46] L.: Se rodasse no Windows, tinha Gui, e se rodasse no DOS era linha de comando/TUI
+[2022-07-06 21:30:52] Felipe "Juca" Sanches: da hora
+[2022-07-06 21:36:28] L.: Ah, tem 4.7k *sem* a libc né
+[2022-07-06 21:37:10] L.: Pro jogo ficar pequeno assim tem umas maracutaias
+[2022-07-06 21:55:30] L.: https://github.com/tkchia/gcc-ia16/issues/52
+[2022-07-06 22:00:03] L.: https://github.com/open-watcom/open-watcom-v2/discussions/271
+[2022-07-06 22:01:02] L.: Parece que a SAP (atual detentora do copyright) acha de boa mudar a licença mas é complicado se considerar tudo que foi feito desde então por pessoas fora da SAP/Sybase.
+[2022-07-06 22:39:31] Shideravan: Eu testei com o Google Drive e rolou muito bem
+[2022-07-06 22:40:23] Shideravan: Olha que interessante!

@@ -1,0 +1,33 @@
+[2022-02-22 14:50:19] L.: https://twitter.com/fabynou/status/1495816862558752768?t=4SC0jlElifss_keYZTEHrw&s=09
+[2022-02-22 14:50:48] L.: O simulador com essa UI em perspectiva vai ficar legal!
+[2022-02-22 14:51:15] L.: Aliás, preciso arrumar o negócio do livro lá, Juca. Não fucei mais depois que você mandou aquele PR.
+[2022-02-22 14:51:45] L.: Inclusive botar o simulador com wireframe fica doidimais
+[2022-02-22 14:51:46] Pablo Vasques Bravo-Villalba: Eu acho muito interessantes essas máquinas da Capcom com trocentos bilhões de sprites
+[2022-02-22 14:51:49] Felipe "Juca" Sanches: bom... acho que o PR tá aberto lá ainda
+[2022-02-22 14:51:55] L.: Ahan
+[2022-02-22 14:52:03] L.: Eu comecei a arrumar o JS mas nem terminei
+[2022-02-22 14:52:45] Felipe "Juca" Sanches: ele desencanou desse ângulo em perspectiva, e recomeçou o desenho em outro ponto de vista
+
+mas ele me mandou o SVG pela metade para eu poder usar como achar melhor
+[2022-02-22 14:53:14] Felipe "Juca" Sanches: Esse aqui é o novo objetivo:
+[2022-02-22 14:53:14] Felipe "Juca" Sanches [forwarded]: Hola, que tal!... he decido comenzar nuevamente el diseño, no me siento satisfecho con el resultado que estoy obteniendo, siento que tu vector SVG tiene algunas impresiciones y no me permite trabajar con la comodidad que yo esperaba. Pero si me será de ayuda los LEDs de tu SVG :) ... Te compartiré el SVG del diseño que yo tenía avanzado por si quieres revisarlo o darle alguna utilidad de momento... También decidí usar esta foto que te muestro como referencia... solo que ahora me tardaré un poco más... pero siento que será lo mejor para obtener el mejor resultado que estoy buscando... Espero que esta decisión mía no te cause inconvenientes...
+[2022-02-22 14:53:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/19245.jpg
+[2022-02-22 14:53:23] L.: Ahhh, massa!
+[2022-02-22 14:53:34] L.: Rola fazer um fundo com coisas
+[2022-02-22 14:53:43] L.: Inclusive livro de atividades aberto
+[2022-02-22 14:53:59] Felipe "Juca" Sanches: sim sim sim!!! Eu tava pensando justamente nessa possibilidade outro dia 😉
+[2022-02-22 14:54:28] L.: Um pacote de pilha D
+[2022-02-22 14:54:49] Felipe "Juca" Sanches: Mas uma coisa muito bacana que eu gostaria de fazer algum dia seria carregar PNGs de scans dos livros e dar zoom automaticamente na área de cada pergunta conforme o jogo vai avançando
+[2022-02-22 14:58:00] L.: Um fundo tipo esse fica massa: https://www.youtube.com/watch?v=KNtJ8foc0HA
+[2022-02-22 14:59:01] L.: É legal mas dá trabalho, hein? A posição das perguntas/respostas não é padronizada
+[2022-02-22 15:00:03] Felipe "Juca" Sanches: pois é... alguém teria que criar algum metadado das regiões retangulares de interesse para cada um dos livros. É um trampo quase da mesma ordem de grandeza que fazer o escaneamento dos livros
+[2022-02-22 15:00:32] L.: É, eu realmente acho que não compensa :D
+[2022-02-22 15:00:41] L.: Mas mostrar um iframe com o livro do lado é legal
+[2022-02-22 15:00:52] L.: Já na página do livro/seção que selecionou
+[2022-02-22 15:00:57] L.: E a pessoa que se vire pra fazer o scroll
+[2022-02-22 15:01:05] Felipe "Juca" Sanches: talvez dê pra fazer um chute inicial com alguma euristica e depois deixaar alguém corrigir só o que o algoritmo errou numa passagem de controle de qualidade e ajuste fino
+[2022-02-22 15:02:15] Felipe "Juca" Sanches: a forma como as opcoes de múltipla escolha se apresentam é mais ou menos padronizada com os 4 quadradinhos coloridos próximos a um número. Deve dar pra um algoritmo reconhecer isso e palpitar um bounding box aproximado
+[2022-02-22 15:49:28] L.: De fato
+[2022-02-22 16:00:57] L.: https://clasqm.github.io/freedos-repo/
+[2022-02-22 16:01:08] L.: A repository of FreeDOS-compatible freeware and OSS software. No "abandonware".
+[2022-02-22 21:07:43] L.: https://github.com/nbarkhina/N64Wasm <-- emulador de n64 rodando no browser com wasm

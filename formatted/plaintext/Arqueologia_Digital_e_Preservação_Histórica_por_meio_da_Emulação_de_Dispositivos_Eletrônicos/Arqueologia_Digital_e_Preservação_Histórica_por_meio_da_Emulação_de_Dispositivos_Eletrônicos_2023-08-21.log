@@ -1,0 +1,25 @@
+[2023-08-21 04:33:59] Felipe "Juca" Sanches: É o livro do Patinho Feio!
+[2023-08-21 10:26:17] RicBit: Na teoria eu sou citado nesse livro, mas na prática eu nunca vi
+[2023-08-21 10:26:30] RicBit: Deve aparecer só em versão recente se tiver
+[2023-08-21 14:36:25] Felipe "Juca" Sanches: Conta mais! Você achou algum erro no livro?
+[2023-08-21 18:43:44] RicBit: Vixe
+[2023-08-21 18:45:14] RicBit: Professor de eletronica digital no meio da aula passou um exercício do livro, disse que quem fosse esperto conseguiria fazer usando só três chips. Eu falei que dava pra fazer com dois, ele me mandou ir para a lousa dizendo que seria um bom exercício para a turma achar o problema no meu design.
+[2023-08-21 18:46:05] RicBit: Só que o meu design funcionava, ele ficou meio cabisbaixo, disse que ia sugerir pro autor colocar minha solução no livro, na semana seguinte eu mudei de professor.
+[2023-08-21 18:46:22] RicBit: Já teve gente que disse que viu minha solução no livro mas eu mesmo nunca vi.
+[2023-08-21 18:50:40] RicBit: E era um troço bobo, tipo um chip era um shift register e tinha um AND e um OR como glue logic. Do jeito que estava no livro realmente a solução era ótima com três chips, mas aparentemente ninguém percebeu que o tal shift register tinha Q e /Q, se você usasse o /Q como input, dava para transformar o AND e o OR em um punhado de NANDs que cabiam em um único 7400.
+[2023-08-21 18:51:02] RicBit: Mas tem 30 anos isso então alguns detalhes podem ser diferentes.
+[2023-08-21 18:54:11] RicBit: Eu não lembro se era Q e /Q ou se a entrada era um daqueles mux bizarros que tem select e /select ao mesmo tempo.
+[2023-08-21 19:54:06] Felipe "Juca" Sanches: bom... o livro tá aqui:
+
+https://github.com/ArqueologiaDigital/PatinhoFeio/blob/master/Projeto_de_Computadores_Digitais_2a_ed__EFregni_GLangdonJr_1974__reimpressao_de_1979.pdf
+[2023-08-21 19:54:23] Felipe "Juca" Sanches: escaneado e publicado na internet com autorizaçao do autor
+[2023-08-21 19:56:32] Felipe "Juca" Sanches: é a segunda edição, que teve impressões em 1977 e em 1979
+[2023-08-21 21:53:02] RicBit: 79 com certeza não tem nada meu haha
+[2023-08-21 23:44:40] Giga: Sim. Fascinante, tanto quanto o Patinho Feio
+[2023-08-21 23:45:21] Giga: Intrigante. Vou pesquisar mais edições
+[2023-08-21 23:45:38] Giga: O meu é de 74, acho
+[2023-08-21 23:47:33] Giga: Sacada genial
+[2023-08-21 23:49:28] Giga: Eu estou é economizando o máximo em CIs. O meu projeto é baseado no 74181. Resumi toda a parte de Contador de Programa, Decodificador de Instrução e Unidade de Controle a um Arduino Mega
+[2023-08-21 23:49:44] Giga: O restante estou fazendo com os TTLs mesmo
+[2023-08-21 23:51:27] Giga: 74ls174 para registador, 74ls125 para buffers no barramento, 74181 para ULA
+[2023-08-21 23:53:19] Giga: No final tem que sobrar um money ainda kkkkkk quero arranjar um terminal burro para ser a interface do minicomp rsrs

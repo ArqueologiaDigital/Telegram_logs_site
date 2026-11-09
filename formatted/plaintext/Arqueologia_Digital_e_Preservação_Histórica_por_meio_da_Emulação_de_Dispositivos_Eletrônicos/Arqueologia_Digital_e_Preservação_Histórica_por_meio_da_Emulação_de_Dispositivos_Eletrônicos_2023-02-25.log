@@ -1,0 +1,68 @@
+[2023-02-25 01:00:56] Robson França: Boa noite aê! Consegui gerar o vídeo! Agora bora subir para o Youtube
+[2023-02-25 16:22:59] Pablo Vasques Bravo-Villalba: Lembram que eu falei isso?
+[2023-02-25 16:23:10] Pablo Vasques Bravo-Villalba: Então, a surpresinha é esta:
+[2023-02-25 16:26:52] Pablo Vasques Bravo-Villalba: Esta é Ice Times, um mashup do tema da Ice Cap Zone, Act 1 do Sonic the Hedgehog 3, com a canção Hard Times da banda Jetzons. Fiz usando o chip de som VRC6 da Konami. Essa é uma das sobreviventes da colaboração entre Michael Jackson e a Sega na produção da trilha sonora de Sonic 3. Foi composta pelo Brad Buxer, amigo e membro da banda do MJ, e é um reaproveitamento de uma canção previamente inédita da banda anterior desse cara. Infelizmente, como várias outras faixas, foi excluída dos relançamentos posteriores de Sonic 3. Achei que seria divertido combinar as duas versões da música:
+https://on.soundcloud.com/SMHfV
+[2023-02-25 17:37:48] Felipe "Juca" Sanches: teve uma vez que eu tentei fazer chiptunes. Me dediquei um final de semana tentando usar o DefleMask e fiz um trecho de uma música de City Pop usando o chip FM do Mega Drive
+[2023-02-25 17:37:57] Felipe "Juca" Sanches: vou ver se acho aqui o vídeo
+[2023-02-25 17:41:18] Felipe "Juca" Sanches: (MENSAGEM E VIDEO DE 04/JULHO/2020)
+[2023-02-25 17:41:18] Felipe "Juca" Sanches [forwarded]: Andei experimentando programar chiptunes com o deflemask. Pra treinar, peguei um pedaço de uma canção japonesa e tentei transcrever. Esse vídeo mostra como tá ficando. Falta muita coisa ainda, mas já estou bem feliz, pois é a primeira vez que faço qualquer coisa pra valer com tracker de chiptunes.
+[2023-02-25 17:41:18] Felipe "Juca" Sanches: video: (not yet published)
+[2023-02-25 17:43:23] Felipe "Juca" Sanches: Nada demais, né? Mas foi o que eu consegui fazer naquele final de semana. E, como de costume na maioria dos meus projetos, abandonei. Nunca mais lidei com chiptunes.
+[2023-02-25 17:49:09] Felipe "Juca" Sanches: Comprei agora um HD de 1GB por mil reais
+[2023-02-25 17:49:52] Felipe "Juca" Sanches: Aliás... um HD com mais de 20 anos de idade
+[2023-02-25 17:49:57] Felipe "Juca" Sanches: e sem nada gravado nele
+[2023-02-25 17:50:35] Felipe "Juca" Sanches: Isso parece estranho?
+[2023-02-25 17:50:49] Felipe "Juca" Sanches: Pois é!
+
+É um HD muito especial!
+[2023-02-25 17:51:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/26197.jpg
+[2023-02-25 17:51:07] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/26198.jpg
+[2023-02-25 17:51:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/26199.jpg
+[2023-02-25 17:56:35] Felipe "Juca" Sanches: Meu documento sobre a pesquisa para emulação do KN5000 no MAME já tá com 22 páginas. Acho que vai virar um livro! kkkk
+
+https://docs.google.com/document/d/16cTsiIKNgGmAu4DQSjqs78iasDQ6pHe8tT1biLsCr7g/
+[2023-02-25 17:57:36] Felipe "Juca" Sanches: Descobri que desenvolver emulador escrevendo um documento como esses é mais gostoso do que simplesmente guardar tudo isso de informação dentro da cabeça. Eu mesmo volto pra ler o que eu escrevi.
+[2023-02-25 17:59:11] Robson França: Legal!
+[2023-02-25 18:00:47] Augusto Almeida: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/26203-AnimatedSticker.tgs
+[2023-02-25 18:01:11] Felipe "Juca" Sanches: se possível, leiam e comentem
+[2023-02-25 18:02:39] Felipe "Juca" Sanches: caso tenham interesse, é claro!
+[2023-02-25 18:11:28] Robson França: Continuando a minha investigação sobre música no TRS Color, eu consegui o formato da onda usado para gerar o som de órgão:
+[2023-02-25 18:11:43] Robson França: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/26207.jpg
+[2023-02-25 18:12:22] Robson França: Em tese se quiser gerar o som de outro instrumento, basta trocar os samples
+[2023-02-25 18:23:18] Pablo Vasques Bravo-Villalba: Eu acho bem difícil fazer ritmos mais "funky" em trackers.
+[2023-02-25 18:24:54] Pablo Vasques Bravo-Villalba: Forma de onda com 256 amostras? Suntuoso! 😁
+[2023-02-25 18:25:27] Robson França: sim, bastante
+[2023-02-25 18:25:53] Felipe "Juca" Sanches: parece simples de representar como uma soma ponderada de muito poucas senóides
+[2023-02-25 18:25:57] Robson França: E o lance que eu estava achando estranho e que entendi foi o seguinte:
+[2023-02-25 18:26:42] Pablo Vasques Bravo-Villalba: Parece simples mesmo, ainda mais considerando que daria pra fazer algo mais complexo
+[2023-02-25 18:27:24] Felipe "Juca" Sanches: se é PCM poderia ser qualquer bagunça doida que o autor quisesse
+[2023-02-25 18:42:40] Robson França: Basicamente para tocar as notas o código faz o seguinte:
+1. Inicializa 4 ponteiros na tabela de sample
+2. Para cada linha do "tracker", pega-se a duração e as notas de cada canal
+3. Pega-se o sample de cada canal e os soma
+4. Pega-se o resultado e toca-o no DAC
+5. A informação da nota diz qual passo deve ser utilizado para pular o ponteiro da tabela de sample
+6. O ponteiro é ajustado conforme o passo (nota)
+7. Repete-se os passos de 3 a 6 até a duração terminar
+[2023-02-25 18:44:10] Robson França: O que eu estava achando estranho é que o passo é 16 bits, até aí tudo bem. Mas na hora de atualizar o ponteiro, ele fazia assim:
+                ldd     MVoice1+1
+                addd    MInc1
+                std     MVoice1+1
+[2023-02-25 18:44:49] Robson França: D é um registrador 16 bits (na verdade é a junção dos registradores acumuladores A e B, pensem no H e L do Z80)
+[2023-02-25 18:45:10] Robson França: O ponteiro para a voz1 é o MVoice1
+[2023-02-25 18:45:36] Robson França: eu pensando "ué, não era para ser MVoice1 apenas? Por que esse +1?"
+[2023-02-25 18:46:53] Robson França: Lá na definição do MVoice1 (e dos outros, aliás), acabei descobrindo o lance: eles não são 16 bits, mas 24 bits! Na verdade 16.8 bits:
+         MVoice1         rmb     3
+[2023-02-25 18:47:50] Robson França: Os incrementos são 16 bits justamente para pegar os 8 bits da parte "inteira" do ponteiro e os 8 bits da parte "fracionária" do ponteiro]
+[2023-02-25 18:49:09] Robson França: Aí na hora de ler o sample, ele usa apenas os 16 bits da parte "inteira". Por sinal a tabela de samples está no endereço $3E00 , justamente para que o byte mais significativo do endereço não mude
+[2023-02-25 21:35:03] Robson França: Fiz alguns experimentos agora: coloquei uma onda quadrada e depois uma onda triangular
+[2023-02-25 22:24:13] Pablo Vasques Bravo-Villalba: Cadê? 😉
+[2023-02-25 22:53:01] Robson França: Ah, é mesmo!
+[2023-02-25 23:03:38] Robson França: https://youtu.be/1EGhKH6hIGg
+[2023-02-25 23:07:18] Pablo Vasques Bravo-Villalba: Ficou melhor do que eu esperava
+[2023-02-25 23:08:54] Robson França: Né? Coisa fina
+[2023-02-25 23:25:57] Robson França: Já achei mais informações:
+- A frequência de base é 8085 Hz
+- Há 65 notas (incrementos) disponíveis
+[2023-02-25 23:26:07] Robson França: - O tempo é 132 (?)

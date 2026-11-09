@@ -1,0 +1,45 @@
+[2018-01-23 08:47:56] Ricardo Bánffy: Pergunta: onde eu acho "ascii-art" que use caracteres de Videotexto e que possa ser reproduzida livremente?
+[2018-01-23 08:59:39] Felipe "Juca" Sanches: Demo "Nothing But PETSCII" no Commodore 64
+[2018-01-23 09:00:02] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=86fX4s7tPBA
+[2018-01-23 09:29:14] Ricardo Bánffy: https://news.ycombinator.com/item?id=16212695
+[2018-01-23 10:37:13] Felipe "Juca" Sanches: @DQuadros, @agaelebe e Affonso: O Sebastião Barreto me disse agora que prefere ir lá na USP na 6a feira. Tudo bem pra vocês ?
+[2018-01-23 10:38:27] Felipe "Juca" Sanches: Outras pessoas daqui desse grupo que tiverem interesse em visitar a mostra de computadores antigos lá na Poli junto com a gente precisam avisar com antecedência para eu poder fazer um pedido de autorização pra entrar no campus aos finais de semana e feriados.
+[2018-01-23 10:39:04] Felipe "Juca" Sanches: (A não ser, é claro, que queiram visitar em dias úteis, quando o acesso à USP é livre para o público geral.)
+[2018-01-23 10:39:26] Felipe "Juca" Sanches: Talvez o @rbanffy se interesse em ir lá algum dia, né?
+[2018-01-23 10:41:23] Affonso Amendola: Por mim ta deboas
+[2018-01-23 10:52:58] DQ: Por mim pode ser sexta na metade para o final da tarde.
+[2018-01-23 10:54:15] Felipe "Juca" Sanches: ok, combinado então
+[2018-01-23 10:55:03] Hugo (Agaelebê): É, eu não consigo, só no final de semana mesmo :( 
+@fsanches tenta fazer uns vídeos fotos lá pra adicionarmos no Happy Hacking
+[2018-01-23 10:55:09] Felipe "Juca" Sanches: 6a feira. Eu pretendo chegar logo depois do almoço lá pras 13 ou 14h (por que na USP não tem opção de alimentação aos feriados)
+[2018-01-23 10:56:28] Felipe "Juca" Sanches: OK. Podemos ir lá de novo no Sábado pra gravar uns episódios, @agaelebe
+[2018-01-23 10:56:38] Hugo (Agaelebê): blza
+[2018-01-23 10:58:36] Felipe "Juca" Sanches: @DQuadros um dos itens interessantes que temos lá agora é esse aparelho aqui: https://archive.org/stream/affonsoamendola_bol_A/TechDescription
+[2018-01-23 10:58:57] Felipe "Juca" Sanches: Um leitor de fitas perfuradas. Fabricado na Suécia em 1974.
+[2018-01-23 11:04:16] Felipe "Juca" Sanches: Pedi pro Tião trazer a caixa de fitas perfuradas dele, da época do Patinho Feio
+[2018-01-23 11:04:29] Felipe "Juca" Sanches: pra gente fazer a leitura e documentar
+[2018-01-23 11:04:39] Felipe "Juca" Sanches: e ver o que dá pra rodar no emulador
+[2018-01-23 11:14:58] DQ: Beleza, eu vi nas mensagens anteriores.
+[2018-01-23 18:33:00] Affonso Amendola: Eu e o felipe estavamos conversando aqui sobre o que priorizar em termos dos projetos relacionados ao acervo daqui
+[2018-01-23 18:33:08] Affonso Amendola: Check it
+[2018-01-23 18:33:16] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/3417.jpg
+[2018-01-23 18:34:22] Felipe "Juca" Sanches: As colunas são: "A = Affonso", "J = Juca" e "Pub = Público geral"
+[2018-01-23 18:34:54] Felipe "Juca" Sanches: indicam as prioridades dos items sob a ótica de cada um de nós e também em relação ao que nós consideramos ter maior apelo para o público em geral
+[2018-01-23 18:35:37] Felipe "Juca" Sanches: dessa tabela elencamos 3 projetos principais para dedicarmos esforços prioritários:
+[2018-01-23 18:37:29] Felipe "Juca" Sanches: A: Coisas relacionadas ao Patinho Feio como: (1) leitura das fitas perfuradas do acervo pessoal do Sebastião Barreto (2) emular o conteúdo dessas fitas no MAME (3) interfacear o EMU com a leitora de fitas perfuradas Facit 4021 (4) interfacear o emulador do Patinho Feio no MAME com a teletype de verdade, integrar tudo com a réplica do painel frontal do Patinho Feio rodando emulação num Arduino ou RaspberryPi, etc
+[2018-01-23 18:38:48] Felipe "Juca" Sanches: B: Coisas relacionadas ao CP-500 pois supostamente têm apelo emotivo para as pessoas que viveram aquela época. Entretanto parece um projeto de restauro meio complicado pois o computador está "no estado" e todo desmontado.
+[2018-01-23 18:39:24] Felipe "Juca" Sanches: C: dumpar o restante das ROMs do Nexus 2600 e extrair uma imagem do conteúdo do HD
+[2018-01-23 18:40:02] Felipe "Juca" Sanches: do lado direito da foto tem uma lista de sub-tarefas relacionados a esses 3 principais projetos
+[2018-01-23 23:49:02] Felipe "Juca" Sanches: https://github.com/felipesanches/mame/tree/nexus2600
+[2018-01-23 23:51:00] Affonso Amendola: Ooooh nice
+[2018-01-23 23:51:02] Affonso Amendola: Thanks
+[2018-01-23 23:51:45] Affonso Amendola: Eu to tentando fazer do meu jeito aqui (levando um pau, mas vamo que vamo) se eu encontrar alguma barreira que eu n consiga passar eu dou uma comparada aí com o que vc fez
+[2018-01-23 23:53:07] Felipe "Juca" Sanches: legal hahaha
+[2018-01-23 23:53:07] Felipe "Juca" Sanches: é uma boa mesmo
+[2018-01-23 23:53:32] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/3431-bios_v5.03_2de2.u14
+[2018-01-23 23:53:33] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/3432-bios_v5.03_1de2.u1
+[2018-01-23 23:53:34] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/3433-1600_27a3_t.u603
+[2018-01-23 23:53:55] Felipe "Juca" Sanches: a rom do adaptador CGA eu ainda não dumpei
+[2018-01-23 23:54:16] Affonso Amendola: Ahh, no worries
+[2018-01-23 23:54:18] Felipe "Juca" Sanches: por enquanto to usando uma ROM de bitmap de gráficos duma outra placa CGA que já tem no MAME
+[2018-01-23 23:54:27] Felipe "Juca" Sanches: assim que eu dumpar eu aviso e mando aqui

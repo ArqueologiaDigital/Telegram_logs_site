@@ -1,0 +1,11 @@
+[2022-01-14 16:20:30] L.: Eu tinha um editor, escrito em qbasic, pra editar a fonte do modo texto!
+[2022-01-14 16:21:30] L.: Era tosco mas divertido. Eu tinha umas fontes com recriação dos ícones usados nos apps da Norton, incluindo borda que a cor do texto fica de fato na beirada
+[2022-01-14 16:21:52] Felipe "Juca" Sanches: quando eu era moleque eu escrevi em qbasic um programa que lia da ROM os bitmaps da fonte e usava essa informação pra desenhar texto grandão no modo gráfico
+[2022-01-14 16:32:22] L.: https://www.youtube.com/watch?v=ppQaXDBI5EQ
+[2022-01-14 16:50:05] Shideravan: @fsanches você nem comentou nada sobre a parada que eu falei das 3D artworks
+[2022-01-14 16:51:43] Shideravan: Quem tá tomando conta do MAME hoje em dia mesmo?
+[2022-01-14 16:53:55] Shideravan: Troca uma ideia em particular com ele e levanta esses pontos, é importante já começar a colocar isso no roadmap. Nem eu, nem você sozinhos iremos conseguir implementar isso sozinhos, porque vai demandar um trabalho colossal implementar da forma correta. Mas é importante já ir conduzindo o planejamento para alocar colaboradores para ao menos já irem pesquisando e escaneando os hardwares
+[2022-01-14 16:57:07] Shideravan: O fato das técnicas de fotogrametria e a realidade virtual estar ficando cada vez mais acessíveis, junto com o desenvolvimento de técnicas mais realistas de física, tendem a deixar uma implementação mais "correta" dos 3D artworks mais acessíveis e inclusive fundamentais para manterem o MAME e a preservação de hardwares sempre relevantes
+[2022-01-14 17:01:09] Shideravan: Não esperem o hardware que hoje já é raro, virar sucata amanhã, porque aí vai ser tarde
+[2022-01-14 17:03:49] Shideravan: Projetos que precisam ser levados em paralelo com essa implementação, envolvem o estudo de técnicas de simulação física o mais realista que for possível em ambiente virtual e um repositório de arquivos dumpando o escaneamento 3D dos diversos hardwares emulados no MAME
+[2022-01-14 17:07:14] Shideravan: Eu mesmo gostaria muito de ajudar num repositório de modelos escaneados com base nos hardwares reais, se ninguém estiver fazendo isso ainda

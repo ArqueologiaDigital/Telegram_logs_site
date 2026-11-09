@@ -1,0 +1,33 @@
+[2026-08-05 02:54:45] RicBit: ei isso aqui é muito bom
+[2026-08-05 02:55:24] RicBit: suponha que você quer repetir alguma coisa 8 vezes. o normal é ld b,8 ; ... coisa ... djnz loop né. voce usa o registro b para o loop
+[2026-08-05 02:55:35] RicBit: mas e se você precisar do registro?
+[2026-08-05 02:56:03] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/39927.jpg
+[2026-08-05 02:56:03] RicBit: repete 8 vezes, 0 registros
+[2026-08-05 02:56:30] RicBit: os caras do death wish eram ruins de msx, mas muito bons de z80
+[2026-08-05 12:21:46] Felipe "Juca" Sanches: barbaridade!
+[2026-08-05 13:47:39] L.: #include <stdio.h>
+
+int main(void)
+{
+  void *stack[8];
+  int sp = 0;
+
+  stack[sp++] = &&fim;
+
+  a7f0: stack[sp++] = &&a7f3;
+  a7f3: stack[sp++] = &&a7f6;
+  a7f6: stack[sp++] = &&a7f9;
+  a7f9: printf("coisa\n");
+        goto *stack[--sp];
+  fim:
+}
+
+Fiz usando computed goto e não é que funciona mesmo?
+[2026-08-05 14:26:18] RicBit: nem precisa de stack[8], o gasto de stack é O(log n)
+[2026-08-05 15:28:28] L.: Ah, sim, eu botei mais por costume de deixar uma gordurinha em buffers. Nem fiz pensando no custo total.
+[2026-08-05 21:41:33] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/39933.jpg
+[2026-08-05 21:41:33] RicBit: rotina de multiplicação usando a mesma técnica. sei não mas eu acho que isso é mais lento que o tradicional, só se ele realmente quisesse muito economizar registros.
+[2026-08-05 21:43:29] RicBit: puts pior que no z80 deve ser mais rapido mesmo. o tradicional precisaria de um sbc hl,de no meio do loop, que sao 17 clocks, contra o pop de que sao só 11
+[2026-08-05 21:43:53] RicBit: no r800 o sbc é mais rapido
+[2026-08-05 21:45:00] RicBit: mas no r800 tem mulub então nem precisaria
+[2026-08-05 23:37:41] L.: https://oldbytes.space/@gloriouscow/117045701876951834

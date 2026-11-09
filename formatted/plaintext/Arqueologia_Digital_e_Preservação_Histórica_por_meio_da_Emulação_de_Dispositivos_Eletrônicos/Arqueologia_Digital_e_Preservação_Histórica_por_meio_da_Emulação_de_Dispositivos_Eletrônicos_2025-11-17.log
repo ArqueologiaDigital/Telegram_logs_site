@@ -1,0 +1,27 @@
+[2025-11-17 00:11:04] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-11/36405.jpg
+[2025-11-17 00:11:04] Felipe "Juca" Sanches: Access Virus Rack XL
+https://github.com/mamedev/mame/pull/14538
+[2025-11-17 07:53:59] Felipe "Juca" Sanches: merged!
+[2025-11-17 07:54:48] Felipe "Juca" Sanches: Alguém aqui se interessa em emular V9990 no MAME, então? :-)
+[2025-11-17 10:21:48] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-11/36408.jpg
+[2025-11-17 10:21:48] Felipe "Juca" Sanches: Access Virus Rack (Ver. T)
+https://github.com/mamedev/mame/pull/14542
+[2025-11-17 15:04:40] Felipe "Juca" Sanches: merged!
+[2025-11-17 15:06:35] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-11/36410.jpg
+[2025-11-17 15:06:35] Felipe "Juca" Sanches: Patinho Feio (Layout criado por @felipens27 e @nicolyslo)
+https://github.com/mamedev/mame/pull/14543
+[2025-11-17 15:18:26] Hugo (Agaelebê): aí sim
+[2025-11-17 15:59:01] Felipe "Juca" Sanches: @figur8, já escolheu qual será seu próximo PR pro MAME depois que o mini-game pikorin55in1 foi aceito mês passado?
+[2025-11-17 17:12:17] Ismael Carvalho: Eu queria fazer o botão de reset funcionar, mas não tenho conseguido codar no tempo livre
+[2025-11-17 17:12:40] Ismael Carvalho: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-11/36414-sticker.webp
+[2025-11-17 17:13:52] Ismael Carvalho: Eu tinha revirado a implementação toda mas tudo parecia certo
+[2025-11-17 17:14:22] Ismael Carvalho: No caso do som eu só não entendi a implementação generalista mesmo
+[2025-11-17 18:15:06] Felipe "Juca" Sanches: Bora abraçar uma abordagem mais simples de apenas adicionar ao driver o que já consta no emulador original (aquele feito em python) e deixar pra depois os esforços nas áreas onde a gente ainda tem dúvidas? Pode ser mais prático e satisfatório, pois dá resultados mais rápido.
+[2025-11-17 22:06:20] Erin Pinheiro 🐿: https://www.pcgamer.com/gaming-industry/legendary-game-designer-programmer-space-invaders-champion-and-lgbtq-trailblazer-rebecca-heineman-has-died
+[2025-11-17 22:08:49] Pablo Vasques Bravo-Villalba: Poxa. Eu tinha acabado de ver postagens dela no Twitter. Como não estava acompanhando, não entendi direito o que estava acontecendo com ela. Uma tristeza
+[2025-11-17 22:38:14] Felipe "Juca" Sanches: Ela fez o port de Another World pra SNES. E as histórias sobre a engenhosidade desse port são fenomenais!
+[2025-11-17 22:38:59] Erin Pinheiro 🐿: https://wiki.superfamicom.org/sluggo-iii
+[2025-11-17 22:39:31] Erin Pinheiro 🐿: ela montou o próprio devkit pra desenvolver pro snes com um IIgs
+[2025-11-17 23:00:13] Pablo Vasques Bravo-Villalba: Sim, volta e meia releio artigos do site do Fabien Sanglard. Esse especificamente é um dos que achei mais interessantes: https://fabiensanglard.net/another_world_polygons_SNES/index.html
+[2025-11-17 23:16:34] Felipe "Juca" Sanches: O Fabien fez uma chamada de vídeo comigo alguns anos atrás quando ele tava começando a se preparar pra escrever esses artigos. Tenho a gravação da conversa mas, infelizmente, capturou só as imagens e não o áudio. Portanto é inútil, a não ser que alguém saiba fazer leitura labial :-P
+[2025-11-17 23:36:32] Felipe "Juca" Sanches: https://bsky.app/profile/biggestsonicfan.bsky.social/post/3m5sh2if2zs2g

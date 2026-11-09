@@ -1,0 +1,22 @@
+[2026-02-07 08:34:00] L.: https://arcadeblogger.com/2026/02/02/unseen-footage-of-atari-battlezone-cabinet-production/
+[2026-02-07 17:57:48] RicBit: acho que eu vou conseguir recriar o historico de forks do jogo
+[2026-02-07 17:58:01] RicBit: da pra ver direitinho a diferenca em cada versao
+[2026-02-07 18:11:05] RicBit: tem uma versao "scc" que eu nao conhecia, ela só pega as notas do psg e toca pelo scc. é diferente daquela que tem as musicas scc recriadas
+[2026-02-07 19:33:13] Pablo Vasques Bravo-Villalba: Eu imagino que a versão SCC do Konami Game Collection use um driver mais novo
+[2026-02-07 19:34:03] Pablo Vasques Bravo-Villalba: Acho um saco que tem um montão de versões no File-Hunter. Imagino que oficiais mesmo não tenha mais do que umas três ou quatro, sem contar a do KGC
+[2026-02-07 19:34:24] Pablo Vasques Bravo-Villalba: Seria legal se tivesse um jeito de identificar quais foram de fato lançadas oficialmente em algum lugar
+[2026-02-07 20:35:48] RicBit: a minha versao de trabalho nem tem no file hunter
+[2026-02-07 20:36:02] RicBit: e eu sei que é a primeira porque é a unica que tem debug code perdido no meio
+[2026-02-07 20:36:23] RicBit: a versao scc do game master eu nem vi ainda porque sao 64kb
+[2026-02-07 20:37:17] RicBit: mas de olho aqui eu achei 4 forks do original que parecem oficiais
+[2026-02-07 20:38:10] RicBit: tem a primeira, a segunda que nao tem o debug mas tem um fix de teclado, a terceira e a quarta sao as versoes que usam bios japonesa/europeia
+[2026-02-07 20:45:44] RicBit: alias tem uma rom que é igual a minha mas tá escrito KEYBOARD ao inves de KEYBOABD
+[2026-02-07 20:45:54] RicBit: nao sei se a original é a minha ou a outra
+[2026-02-07 20:46:11] RicBit: o jeito de saber seria procurando em revista velha por screenshot da abertura
+[2026-02-07 20:47:04] Pablo Vasques Bravo-Villalba: Seria legal de passar para o Arnaud então
+[2026-02-07 20:47:24] L.: isso me lembrou dessa beleza aqui https://fabiensanglard.net/sf2_warrier/index.html
+[2026-02-07 20:48:38] Pablo Vasques Bravo-Villalba: Não poderia ser uma beta?
+[2026-02-07 20:49:39] RicBit: o beta eu nunca vi mas sei que existe, tem foto dele na msx magazine
+[2026-02-07 20:49:54] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37388.jpg
+[2026-02-07 20:50:02] RicBit: tem os nomes das estacoes na tela do mapa
+[2026-02-07 20:51:01] Pablo Vasques Bravo-Villalba: Pode ser um beta mais próximo do lançamento do jogo. Acho que é o Nemesis 2 que tem dois betas rolando por aí, um com as fases diferentes e um bem mais próximo da versão final

@@ -1,0 +1,32 @@
+[2025-03-10 12:33:52] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/13444
+[2025-03-10 12:54:30] L.: massa! e eu concordo com o ajrhacker
+[2025-03-10 12:55:02] L.: formato texto que humano e máquina conseguem entender = ❤️
+[2025-03-10 13:11:38] Pedro de Medeiros 👾: Não me parece que essa PR vai ser integrada tão facilmente apesar de ser uma feature importante
+[2025-03-10 13:12:47] Pedro de Medeiros 👾: Alguém tem que testar com a arquitetura Z80.
+[2025-03-10 13:16:45] L.: aliás, da pra pegar aquele xml que o mame já usa no debugger pra comentários e melhorar ele pra isso
+[2025-03-10 13:18:40] RicBit: Eu acho que o brmsx tinha isso em 1999
+[2025-03-10 13:20:27] Pedro de Medeiros 👾: O OpenMSX tinha isso antes da versão 20, mas perdeu agora com o debugger integrado. Então estamos perseguindo features antigas ainda e longe de resolver isso. 😅
+[2025-03-10 13:21:57] RicBit: yup 11 de julho de 1999
+[2025-03-10 13:22:18] RicBit: sim eu usava no openmsx faz um tempo, mas eu imagino que o debugger antigo deve funcionar ainda
+[2025-03-10 13:24:27] Pedro de Medeiros 👾: Funciona mais ou menos. Os breakpoints do OpenMSX mudaram a interface em Tcl na última versão e algumas pessoas reportaram terem perdido os breakpoints salvos nesse processo de subir e descer uma nova instância do debugger
+[2025-03-10 13:26:16] RicBit: ugh
+[2025-03-10 13:26:34] RicBit: mas happens as vezes tem que quebrar para ir pra frente
+[2025-03-10 13:27:09] Pedro de Medeiros 👾: O OpenMSX atual permite manter breakpoints desabilitados e tem interface em Tcl pra isso. O antigo mantinha os breakpoints desativados no GUI apenas e fora do Tcl
+[2025-03-10 13:28:00] RicBit: alias falando em codigo velho
+[2025-03-10 13:28:41] RicBit: no fds eu restaurei o segundo raytracer que eu escrevi em 1994 (o primeiro é do mesmo ano mas eu achei ainda)
+[2025-03-10 13:29:28] RicBit: ele nao compilou nada no g++, era escrito numa versão ancient de C++ que por motivos de falta de time travel não era compativel com C++98
+[2025-03-10 13:30:30] RicBit: ai eu fui atualizando, tinha muito bug, mas muito mesmo. alguns bugs nem compilam no g++ atual (tipo pegar endereço de objeto temporario no stack), mas o que eu ri foi que todas as implementacoes de lista ligadas estavam erradas.
+[2025-03-10 13:31:16] RicBit: aparentemente o borlandc compilava *NULL para 0, então p->next == NULL funcionava mesmo com o p NULL
+[2025-03-10 13:31:29] RicBit: entao tava bugado mas funcionava
+[2025-03-10 13:32:56] RicBit: para escrever na tela eu fazia tudo na base do int 10h, mas eu tive o bom senso na epoca de isolar isso numa classe Video separada
+[2025-03-10 13:33:05] RicBit: então só precisei reescrever essa do zero
+[2025-03-10 13:33:55] RicBit: a versao nova tem makefile moderno e deve compilar no BC antigo ainda, fiz tudo com condicional -> https://github.com/ricbit/Oldies/tree/master/1994-11-raytracer
+[2025-03-10 13:34:52] RicBit: confesso que fiquei curioso de ver como era o borlandc por dentro. o turbo pascal eu sei que compilava para uma virtual machine stack-based.
+[2025-03-10 13:39:00] L.: o turbo pascal tem um site explicando tudo como funciona por dentro. provável que seja igual ao turbo c.
+
+o bcc eu não sei
+[2025-03-10 13:39:43] L.: turbopascal.org
+[2025-03-10 14:21:46] Felipe "Juca" Sanches: Não sei se todos viram,  mas a issue referencia um vídeo do youtube com demonstração da feature:
+
+https://www.youtube.com/watch?v=2tu4t2bBjzo
+[2025-03-10 14:22:32] Felipe "Juca" Sanches: Eu adoraria usar isso junto com o resultado dos disasms que tenho feito da ROM de boot do KN5000

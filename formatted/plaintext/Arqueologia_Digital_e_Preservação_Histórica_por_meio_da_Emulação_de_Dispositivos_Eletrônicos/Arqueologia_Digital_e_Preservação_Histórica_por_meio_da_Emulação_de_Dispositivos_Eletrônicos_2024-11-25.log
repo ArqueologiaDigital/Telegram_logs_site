@@ -1,0 +1,4 @@
+[2024-11-25 01:01:21] L.: Dica: se for trabalhar no LLVM, não usa make, usa ninja. Configura com o cmaken usando -GNinja
+
+Me agradece depois (build incremental é leeeeeeeeeeento com make)
+[2024-11-25 02:34:54] Felipe "Juca" Sanches: é... eu tinha pensado mesmo em usar isso. Eu já conheço ninja de alguns outros projetos

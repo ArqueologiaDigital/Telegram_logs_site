@@ -1,0 +1,118 @@
+[2021-12-29 09:46:09] P. M: primeiro jogo de pc da minha vida
+[2021-12-29 09:46:24] P. M: lembro até hoje de pegar um disquete com o sobrinho de uma vizinha (haha)
+[2021-12-29 17:50:02] Pablo Vasques Bravo-Villalba: Vocês já tinham ouvido falar desse treco?
+https://youtu.be/kLyHQpdnjpA
+[2021-12-29 18:47:45] FTMaciel: Nunca será melhor que o Zeebo
+[2021-12-29 18:49:00] Pablo Vasques Bravo-Villalba: O Zeebo tem a vantagem de ter existido de fato. Mas um elemento que me deixou curioso na história toda é que tem um momento em que um jogo é mostrado rodando em um emulador. Confesso que não fui atrás da informação para saber mais detalhes sobre isso.
+[2021-12-29 18:51:09] Shideravan: Já sim, tem emulador dele, inclusive e ao menos o código de um jogo (incompleto) que vazou e terminaram ele
+[2021-12-29 18:51:35] Pablo Vasques Bravo-Villalba: Ah bom, então é isso o que aparece no vídeo. Obrigado pela elucidação 😉👍🏽
+[2021-12-29 18:51:59] Shideravan: Aliás, eu estava juntando todo o material que eu podia sobre esse cacareco que há muitos anos atrás eu pensei em implementar isso um dia no MAME
+[2021-12-29 18:52:19] Shideravan: Depois eu repasso esse meu dossiê de documentação aqui para vocês se tiverem interesse
+[2021-12-29 18:52:47] Shideravan: Mas é foda não ter acesso a esse bichinho fisicamente
+[2021-12-29 18:53:18] Shideravan: O que existem são vários protótipos jogados por aí, sobre fases diferentes desse projeto
+[2021-12-29 18:53:34] Shideravan: Em tese, ele "evoluiu" até se tornar o Atari Jaguar
+[2021-12-29 18:53:59] Shideravan: Mas é que foram anos em fase de protótipo com mudanças significativas em sí
+[2021-12-29 19:00:14] Shideravan: Eu posso postar essas coisas direto aqui?
+[2021-12-29 19:03:03] Shideravan: A RetroGamer nº 08 tem uma matéria bem bacana do Konix Multi-System, foi com base nessa matéria que o savorysnax criou o Slipstrem, primeiro emulador de Konix Mult-System
+[2021-12-29 19:03:50] Shideravan: https://datassette.org/revistas/retrogamer-videogames-revistas/retrogamer-no-8
+[2021-12-29 19:04:53] Shideravan: Documentação do sistema em 1989
+[2021-12-29 19:04:58] Shideravan: document: (not yet published)
+[2021-12-29 19:05:09] Shideravan: Guia de referência do slipstream
+[2021-12-29 19:05:38] Shideravan: document: (not yet published)
+[2021-12-29 19:06:21] Shideravan: document: (not yet published)
+[2021-12-29 19:06:24] Shideravan: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-12/18378-Dumps%20e%20emuladores.zip
+[2021-12-29 19:09:19] Shideravan: document: (not yet published)
+[2021-12-29 19:09:19] Shideravan: Aí uma parte do material que eu tinha juntado, se alguém quiser se aventurar hahaha
+[2021-12-29 19:09:19] Shideravan: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-12/18380-KONIX_ATTACK_OF_THE_MUTANT_CAMELS_V0_4.P88
+[2021-12-29 19:09:19] Shideravan: Esse daqui é o dump do jogo Attack of the Mutant Camels
+[2021-12-29 19:10:31] Shideravan: Websites:
+http://www.konixmultisystem.co.uk/
+https://github.com/SavourySnaX/AOTMC89 (Github com o código do Attack of the mutant camels, com permissão do autor)
+http://mamedev.emulab.it/haze/the-path-ahead-of-us/2/
+https://en.wikipedia.org/wiki/Konix_Multisystem
+
+Até onde eu sei existem 4 "Multi-Systems"
+-Z80
+-Devkit com 8080 - é nesse que roda o Attack of the mutant camels
+-8086 (sistema)
+-MSU
+
+Baseado no computador Flare Technologies 'Flare One' (talvez ele possa ser emulado junto também como esqueleto)
+[2021-12-29 19:20:46] Shideravan: Mas ainda acho de mais valor a gente trabalhar num drive para o Zeebo. O Konix Multi-System com certeza vai eventualmente ser emulador por algum gringo, já o Zeebo e outros hardwares tupiniquins, ou a gente faz ou ninguém faz, porque os gringos vão simplesmente ignorar a tecnologia desenvolvida por aqui...
+[2021-12-29 19:57:06] Ricardo Bánffy: Muitos produtos morrem porque a experiência do usuário é ruim. Parece ter sido esse o caso - era caro e não dava pra comprar jogos piratas.
+[2021-12-29 20:00:20] Shideravan: Sim, ele era caro em todos os aspectos
+[2021-12-29 20:00:48] Ricardo Bánffy: Eu tinha uma vaga lembrança e estou olhando a página sobre ele na Wikipedia. Que puta idéia idiota.
+[2021-12-29 20:00:49] Shideravan: A pirataria, não influenciava muito nesse tipo de produto, mas o fato dele demandar acessórios específicos para os jogos
+[2021-12-29 20:01:41] Shideravan: Se os caras fossem donos de uma puta empresa gigante do tamanho de uma microsoft ou Sony já seria uma ideia idiota. Mas os caras estavam tendo a ideia idiota sem ter o dinheiro para bancar ela
+[2021-12-29 20:01:49] Ricardo Bánffy: Parece que a Qualcomm queria por que queria vender o gaming engine deles e conseguiu enganar a Tectoy.
+[2021-12-29 20:02:17] Shideravan: Eles passaram anos mudando a arquitetura do sistema e tentando conseguir parceiros
+[2021-12-29 20:02:36] Ricardo Bánffy: Quantas vezes mesmo a Microsoft tentou fazer telefones? 😆
+[2021-12-29 20:02:37] Shideravan: O final da história foram eles vendendo a tecnologia para a Atari, que usou para projetar o Jaguar
+[2021-12-29 20:03:38] Shideravan: Eu divido o Konix multi-system em 4 arquiteturas principais, que foi o projeto mudando ao passar dos anos
+[2021-12-29 20:04:09] Shideravan: Mas com certeza devem ter existido variações que a gente sequer vai conseguir imaginar
+[2021-12-29 20:04:49] Shideravan: O Zeebo era uma ideia boa, no timing completamente errado...
+[2021-12-29 20:06:00] Shideravan: Ele mirava um público que comprava playstation e jogos piratas. A diferença é que os jogos piratas de PS2 custavam uns 3 reais nessa época e existia muito mais variedade e qualidade nas produções
+[2021-12-29 20:06:39] Shideravan: Outra coisa absurda é ter um hardware de celular, basicamente
+[2021-12-29 20:07:17] Shideravan: Só que não eram os smartphones de hoje em dia, são os celulares dos anos 2000, sofrendo para rodar jogos com qualidade similar ao Playstation 1
+[2021-12-29 20:08:06] Shideravan: Eles até tentaram pegar uma onda no sucesso do Wii, vendendo um videogame para o público "casual" e depois até como "videogame educativo" que permitia dar "acesso a internet"
+[2021-12-29 20:09:09] Ricardo Bánffy: Não sei. Hardware pouco inspirado, distribuição via celular... Seria uma idéia boa se o hardware fosse diferente, se o modelo de negócio fosse completamente outro e se a biblioteca de jogos existisse. Em outras palavras, seria uma idéia boa, se fosse outra idéia em vez da que acabou sendo.
+[2021-12-29 20:09:26] Shideravan: O problema é que ele não fazia nenhuma dessas coisas bem e ainda houve a lei de acesso a inforrmática, que baixou preço dos computadores que custassem até 2000 reais e minou as chances do zeebo nesse mercado no Brasil (tanto que no México, deu relativamente certo)
+[2021-12-29 20:10:06] Shideravan: O complicado também é que a ideia de distribuir jogos por via de rede de celular se tornou um calcanhar de aquiles
+[2021-12-29 20:10:29] Shideravan: Os jogos precisavam sempre serem minúsculos, com tamanho de poucos megas
+[2021-12-29 20:10:37] Ricardo Bánffy: Preciso me lembrar dessa do computador popular como mais uma das grandes realizações dos nossos governos da época... Eu sempre esqueço essa.
+[2021-12-29 20:10:59] Shideravan: Nem para ter jogos indies ele conseguiu se estabelecer
+[2021-12-29 20:11:21] Ricardo Bánffy: Mas ele podia salvar os jogos, né? Tinha um giga inteirinho de flash.. 😆
+[2021-12-29 20:11:54] Shideravan: Pior que ela foi uma ideia muito boa mesmo, tornou o computador muito mais acessível para as pessoas e até ajudou a fomentar todo um mercado de lan-houses
+[2021-12-29 20:12:02] Ricardo Bánffy: A primeira coisa que eu faria é tornar o SDK grátis e preparar um monte de arte que pudesse ser usada livremente.
+[2021-12-29 20:12:26] Shideravan: Isso foi outra coisa que a TecToy errou o timing
+[2021-12-29 20:12:39] Shideravan: O mercado de jogos indies só veio a ganhar força alguns anos depois...
+[2021-12-29 20:12:43] Ricardo Bánffy: Pelo menos morreu um ano antes do Raspberry Pi aparecer.
+[2021-12-29 20:13:12] Shideravan: Cara, o Zeebo teve tantos erros...
+[2021-12-29 20:13:42] Ricardo Bánffy: Como eu falei - teria sido uma idéia brilhante, se fosse uma outra idéia, completamente diferente.
+[2021-12-29 20:13:44] Shideravan: Por exemplo, em toda as imagens promocionais eles mostravam imagens do Sonic Adventures, porque a Sega tinha (e se bobear tem até hoje) uma relação muito boa com a TecToy
+[2021-12-29 20:14:02] Shideravan: Nunca saiu nenhum jogo de Sonic para o sistema...
+[2021-12-29 20:14:05] Ricardo Bánffy: Falando em Sonic, eu vi que tem um port pro Commodore 64
+[2021-12-29 20:14:30] Shideravan: Quer erro maior que esse? Até o lançamento do Zeebo, o Sonic era mais associado a TecToy no Brasil do que a própria Sega...
+[2021-12-29 20:14:55] Shideravan: Alguém postou um vídeo aqui.... Achei BIZARRO!
+[2021-12-29 20:15:12] Ricardo Bánffy: Eu preciso comprar pra rodar no C64 maxi.
+[2021-12-29 20:15:44] Shideravan: Mas um bizarro bom, achei bem feito
+[2021-12-29 20:16:07] Shideravan: É basicamente o jogo do Sonic 1 de Master System
+[2021-12-29 20:17:33] Ricardo Bánffy: Eu nunca vi Sonic no Master System
+[2021-12-29 20:18:11] Shideravan: Sonic no commodore 64
+[2021-12-29 20:18:12] Shideravan: https://www.youtube.com/watch?v=_Cg8r-VmeMk
+[2021-12-29 20:18:30] Shideravan: https://www.youtube.com/watch?v=SQPvA0OvR24
+[2021-12-29 20:18:34] Shideravan: Sonic no master
+[2021-12-29 20:19:00] Shideravan: Aliás... O primeiro jogo de Sonic que eu de fato joguei (sem ser ver os primos jogando) foi o Sonic 2 de Master
+[2021-12-29 20:19:17] Shideravan: Em alguns pontos eu prefiro eles do que os de Mega Drive, acredita?
+[2021-12-29 20:19:34] Shideravan: Acho o de MEga Drive meio confuso, com muita coisa acontecendo ao mesmo tempo
+[2021-12-29 20:19:46] Shideravan: Os de Master tem uma pegada mais Mario Bros.
+[2021-12-29 20:20:06] Shideravan: Mas aprendi a gostar dos de Mega também
+[2021-12-29 21:57:50] Ricardo Bánffy: Não tem como ter aquele tanto de coisa acontecendo no Master ou no C64.
+[2021-12-29 22:01:36] Erin Pinheiro 🐿: 🤔
+[2021-12-29 22:01:53] Erin Pinheiro 🐿: o sonic do C64 é homebrew recente, mas o sonic do master é original da sega, cara.. huauhuha
+[2021-12-29 22:02:21] Erin Pinheiro 🐿: o mesmo jogo também foi lançado no game gear
+[2021-12-29 22:02:39] Erin Pinheiro 🐿: são conhecidos como os sonics 8-bit, teve 1 e 2.. eu tenho o 2 em cartucho
+[2021-12-29 22:11:41] Ricardo Bánffy: Eu vou baixar esse port pra brincar.
+[2021-12-29 22:12:22] Ricardo Bánffy: É bem possível que seja um port direto do original, junto com a arte.
+[2021-12-29 22:15:11] Erin Pinheiro 🐿: o do SMS/GG não é, é um jogo original que fizeram logo depois do primeiro do mega drive
+[2021-12-29 22:15:23] Erin Pinheiro 🐿: não tem as mesmas fases
+[2021-12-29 22:21:41] Anne Isabelle: Eu me lembro de quando eu era obcecada por sonic e queria jogar todos os jogos e me deparei com a versão de master system
+[2021-12-29 22:29:52] Anne Isabelle: Nao tão retrô, mas acho super interessante ver versões pré release de firmwares de videogames 
+
+https://youtu.be/A2ODV1VP0J8
+[2021-12-29 23:11:18] Shideravan: Isso mesmo e eu particularmente prefiria assim hahahaha
+[2021-12-29 23:11:25] Shideravan: Mas eles possuem problemas também
+[2021-12-29 23:13:41] Shideravan: Eu também nessa vibe, aí eu joguei (e tive saco de terminar) o horrível Sonic Blast de Master system que é uma bela 💩
+[2021-12-29 23:14:14] Shideravan: Meio que depois disso eu disse "chega, não vou jogar tudo dessa série não, meu limite foi esse" hahaha
+[2021-12-29 23:16:31] Shideravan: Procurem aí e me digam o que é pior: os gráficos pré-renderizados que ficaram horríveis no master, os cenários que são feios e confusos ou a trilha sonora que é aguda e feia e destrói os tímpanos
+[2021-12-29 23:17:02] Shideravan: Se vocês acharem um vídeo e acharem que é ruim, pensem que no videogame é pior ainda, porque a jogabilidade é horrível também
+[2021-12-29 23:17:27] Shideravan: Não responde direito, as colisões são mal programadas, enfim... É um lixo de jogo hahahaha
+[2021-12-29 23:18:52] Shideravan: E esse jogo é da "época clássica" do Sonic. Se na "época clássica" já faziam uns lixos assim, imaginem nas "outras"? hahahaha
+[2021-12-29 23:19:27] Shideravan: Você tem um bom gosto, o Sonic 2 8-bit é ótimo!
+[2021-12-29 23:19:37] Shideravan: Apesar de que eu odeio as fases de asa delta
+[2021-12-29 23:19:57] Erin Pinheiro 🐿: não comprei, quando vim a esse mundo já fazia parte da família 😉
+[2021-12-29 23:20:02] Erin Pinheiro 🐿: era da minha irmã mais velha
+[2021-12-29 23:20:07] Shideravan: hahahaha
+[2021-12-29 23:20:26] Shideravan: Jogaste Turma da Mônica em O Resgate no Master?
+[2021-12-29 23:27:20] Shideravan: Eu tenho mais nostalgia com esses jogos até do que com Alex Kidd
+[2021-12-29 23:31:19] Shideravan: Ou seja, é evidente que minha visão sobre eles são completamente enviesadas hahaha

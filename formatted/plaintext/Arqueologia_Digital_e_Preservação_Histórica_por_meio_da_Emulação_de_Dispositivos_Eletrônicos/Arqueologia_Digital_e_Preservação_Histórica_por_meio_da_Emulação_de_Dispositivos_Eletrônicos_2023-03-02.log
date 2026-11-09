@@ -1,0 +1,32 @@
+[2023-03-02 08:52:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26308.jpg
+[2023-03-02 08:52:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26309.jpg
+[2023-03-02 10:18:17] Felipe "Juca" Sanches: hoje eu extraí os dados do disquete de instalação desse disco rígido opcional
+[2023-03-02 10:18:59] Felipe "Juca" Sanches: e fiquei surpreso ao ver que o mecanismo de update da flash rom da placa controladora do disco rígido é diferente do update da flash ROM principal da placa-mãe (o sistema operacional em si)
+[2023-03-02 10:19:20] Felipe "Juca" Sanches: o nome do arquivo de update é diferente, e o conteúdo não está comprimido
+[2023-03-02 10:19:58] Felipe "Juca" Sanches: ou seja... acho que encontrei um bom candidato a ser vetor para minha injeção de código para fazer um dump bom sem corromper a ROM principal
+[2023-03-02 10:21:48] Felipe "Juca" Sanches: por que o meu dilema até agora era que pra fazer um dump da ROM eu precisava alterar a ROM. E como estou com dúvidas se os meus algoritmos de descompressão e recompressão do arquivo de update estão implementados corretamente, qualquer dump feito com ROM alterada pode ser um dump de uma ROM corrompida pelos meus eventuais bugs
+[2023-03-02 10:22:23] Felipe "Juca" Sanches: poder alterar uma ROM secundária para ler a ROM primária é uma saída que me surgiu hoje ao estudar essa placa de disco rigido
+[2023-03-02 10:24:23] Felipe "Juca" Sanches: nota: o código de ambas as Flash ROMs rodam no mesmo processador.
+[2023-03-02 10:24:48] Felipe "Juca" Sanches: ainda não descobri qual é o ponto de entrada do firmware do disco rígido, entretanto
+[2023-03-02 10:26:24] Felipe "Juca" Sanches: como não tem um cabeçalho conhecido ainda, e também não entra pela via comum do vetor de interrupções, então deve ter algum outro endereço (supostamente padronizado para "periféricos opcionais do KN5000") que ainda preciso descobri a partir do qual a ROM da placa mãe executa código do firmware do periférico
+[2023-03-02 10:40:07] Felipe "Juca" Sanches: @Ronaldoverardo só observando... 😉
+[2023-03-02 10:40:39] Felipe "Juca" Sanches: @Ronaldoverardo, tá vendo aí, né?! Comprei mais um KN5000 semana passada :-P Essa luta vai longe...
+[2023-03-02 10:42:51] Felipe "Juca" Sanches: Uma coisa boa, @Ronaldoverardo, é que pelo menos um daqueles chips que você desoldou pra mim foi lido corretamente. Vi evidencias ontem de noite nas rotinas de auto-teste do boot que checam se os primeiros 4 bytes de uma das ROMs é 0x00 0x01 0x04 0x05. E inspecionando o conteúdo da ROM que foi dumpada do chip dessoldado, bate certinho.
+[2023-03-02 10:43:16] Felipe "Juca" Sanches: Então aquele nosso esforço inicial foi um sucesso.
+[2023-03-02 11:15:36] Ronaldo Verardo: @fsanches nossa mais um KN5000 que massa. E fico super feliz que os esforços estão sendo recompensados con sucesso. Muito feliz por ti querido. E saiba se precisar de algo que eu possa ajudar é só pedir. E sim só observo hheeheheh.
+[2023-03-02 11:23:02] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26324-sticker.webp
+[2023-03-02 11:58:27] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26325.jpg
+[2023-03-02 11:59:09] Felipe "Juca" Sanches: Colocaram uma porta paralela para interface com IBM PC (pra fazer backups do HD, e para gerenciar os conteúdos usando um programa no Windows 95)
+[2023-03-02 12:00:17] Felipe "Juca" Sanches: E também adicionaram uma saída extra de áudio para usuários que desejam ter alguns instrumentos indo pra outro emplificador separado do resto do que o teclado está tocando (por exemplo, um canal separado numa mesa de som para o acompanhamento automático de ritmos do teclado)
+[2023-03-02 12:01:05] Felipe "Juca" Sanches: https://www.keysoftservice.ch/hdae5000-e.htm
+[2023-03-02 18:03:27] Felipe "Juca" Sanches: PROCURA-SE!
+Software de Windows 95 chamado HD-TechManager5000
+[2023-03-02 18:03:41] Felipe "Juca" Sanches: Não tô achando em lugar nenhum
+[2023-03-02 18:10:40] Felipe "Juca" Sanches: Esse aqui: https://www.keysoftservice.ch/HD-TM5000.htm
+[2023-03-02 18:10:57] Felipe "Juca" Sanches: Só tô achando páginas descritivas, mas nenhum link para download
+[2023-03-02 18:11:24] Felipe "Juca" Sanches: acho que só era distribuido em disquete e talvez ninguém tenha disponibilizado na web
+[2023-03-02 18:38:00] Felipe "Juca" Sanches: opa! Achei algo que talvez ajude...
+[2023-03-02 18:38:15] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26336.jpg
+[2023-03-02 18:38:15] Felipe "Juca" Sanches: https://www.keysoftservice.ch/kn7000/index-e.htm
+[2023-03-02 18:48:34] Felipe "Juca" Sanches: Olha que legal esse artigo de 1998:
+https://www.soundonsound.com/reviews/technics-kn5000

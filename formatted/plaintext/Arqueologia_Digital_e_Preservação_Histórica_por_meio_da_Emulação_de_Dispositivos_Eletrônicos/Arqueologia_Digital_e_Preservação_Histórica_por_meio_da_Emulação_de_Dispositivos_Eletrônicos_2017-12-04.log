@@ -1,0 +1,98 @@
+[2017-12-04 00:10:52] Felipe "Juca" Sanches: acho que esse aqui é legal! https://choccyhobnob.com/tutorial-hardware-accelerated-sdl2-on-raspberry-pi/
+[2017-12-04 00:20:35] Werner: O distro jessie é usado como base em varias distros para RPi (osmc, volumio, etc)
+[2017-12-04 00:22:22] Werner: https://choccyhobnob.com/raspberry-pi/sdl2-2-0-8-on-raspberry-pi/
+[2017-12-04 00:24:13] Werner: https://choccyhobnob.com/raspberry-pi/compiling-mame-on-raspberry-pi/
+[2017-12-04 00:24:25] Werner: Agora ou vai ou racha.
+[2017-12-04 00:26:58] Werner: Só q vc vai precisar trocar de distro.
+[2017-12-04 14:21:22] Felipe "Juca" Sanches: eu já tinha feito tudo isso
+[2017-12-04 14:21:44] Felipe "Juca" Sanches: e de fato esse update de distro para stretch e a recompilação da SDL resultou em uma melhoria da performance
+[2017-12-04 14:21:48] Felipe "Juca" Sanches: mas ainda não é o ideal
+[2017-12-04 14:21:54] Felipe "Juca" Sanches: e ainda tava rodando com X
+[2017-12-04 14:22:15] Felipe "Juca" Sanches: nao consegui ainda fazer a SDL desenhar diretamente no framebuffer sem usar o X
+[2017-12-04 14:22:44] Felipe "Juca" Sanches: hoje é segunda feira, então vou focar no trampo. Mas em breve deve chegar meu LCD de 3,2 polegadas para ligar no RPi
+[2017-12-04 14:22:50] Felipe "Juca" Sanches: quando chegar farei novos experimentos
+[2017-12-04 14:23:38] Felipe "Juca" Sanches: hoje de manhã eu li um pouco um artigo sobre o subsistema de framebuffer do kernel Linux e descobri que ele nasceu no port do kernel para motorola 68k :-O
+[2017-12-04 14:24:24] Felipe "Juca" Sanches: pois não havia suporte a modo texto como nas placas VGA e os consoles de texto originalmente eram altamente amarrados na VGA dos 386, onde o Linux nasceu
+[2017-12-04 14:26:16] Felipe "Juca" Sanches: junto com a infraestrutura de drivers para framebuffers (que visa abstrair em uma API uniforme o acesso básico a renderização de buffers de pixels nos diversos hardwares existentes) aconteceu também uma generalização do console, tirando os vínculos amarrados no modo texto da VGA e fazendo uso dessa API genérica / abstrata
+[2017-12-04 14:26:47] Felipe "Juca" Sanches: eu concluí que se eu quero fazer a coisa direito eu preciso entender melhor qual é a função de cada coisa nesse quebra cabeça.
+[2017-12-04 14:27:03] Felipe "Juca" Sanches: não dá pra ficar simlesmente correndo atrás de tutoriais cegamente
+[2017-12-04 14:27:12] Felipe "Juca" Sanches: o bom mesmo é entender
+[2017-12-04 14:27:40] Felipe "Juca" Sanches: E é mais prazeroso também quando a gente entende os detalhes do problema (e das soluções)
+[2017-12-04 14:28:00] Felipe "Juca" Sanches: bom... daqui a algum tempo tem uma outra coisa que deve chegar aqui em casa também:
+[2017-12-04 14:28:06] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2622.jpg
+[2017-12-04 14:53:39] Werner: Me mantenha informado sobre isso, qdo a fornada for preparada q daí conversaremos sobre os componentes a serem comprados.
+[2017-12-04 14:57:46] Werner: Qto à questão da renderização a conclusão a q cheguei (depois de acompanhar todas essas threads e tutos que foram divulgados aqui) é q realmente não dá pra deixar ele fazendo isso em soft, tem que eliminar o subsistema X da equação e forçar a escrita diretamente no fb. Isso em teoria, deveria ter sido proporcionado pela biblioteca DirectFB - acontece que ninguém parece ter chegado a uma solução integral, mesmo as poucas soluções parciais postadas são linkadas à página original da biblioteca (q sumiu do mapa há anos).
+[2017-12-04 14:59:09] Werner: Então nesse aspecto, a sensação que ficou em mim é de q estamos correndo em círculos. No meu entender, o jeito de quebrar esse círculo é escrevendo (ou reaproveitando) uma biblioteca nova. Se nada do q lemos vai servir para ajudar, o negócio é limpar a mesa e recomeçar td do zero.
+[2017-12-04 14:59:18] Werner: O q já será um puta trampo...
+[2017-12-04 15:20:16] Felipe "Juca" Sanches [forwarded]: Os argentinos do grupo PVM (Pungas de Villa Martelli) fizeram uma demo de Commodore 64 para o Garoa. Trata-se de um "music disk" com canções brasileiras em chip-tunes. No final tem um easter-egg que só aparece se deixar tocar tudo do inicio ao fim sem mudança manual de faixa. E tem uma mensagem dedicando aos "amigos do Garoa Hacker Clube" : 
+https://www.youtube.com/watch?v=fzAirWD7cjI
+[2017-12-04 15:55:24] Werner: Sensacional!
+[2017-12-04 15:56:25] Werner: pode repassar o arquivo pra rodar aqui no ccs64?
+[2017-12-04 15:59:05] Felipe "Juca" Sanches: https://github.com/c64scene-ar/chipdisk-brazil_bits
+[2017-12-04 16:10:33] Felipe "Juca" Sanches: Caramba, que chato!
+[2017-12-04 16:10:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2632.jpg
+[2017-12-04 16:11:12] Werner: O q aconteceu?
+[2017-12-04 16:11:46] Felipe "Juca" Sanches: sei lá... vai ver o vendedor não tem mais o produto e tinha esquecido de atualizar a publicação no mercado livre
+[2017-12-04 16:11:53] Felipe "Juca" Sanches: vou ter que ir atrás de comprar outro
+[2017-12-04 16:13:32] Werner: Vai aqui: https://www.banggood.com/search/raspberry-pi-lcd-touchscreen.html?p=JY0211749485201409KV
+[2017-12-04 16:13:39] Werner: Nunca falha
+[2017-12-04 16:17:09] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2638.jpg
+[2017-12-04 16:17:12] Werner: Eu não compro no BR pois qdo vejo isso
+[2017-12-04 16:17:42] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2640.jpg
+[2017-12-04 16:18:01] Felipe "Juca" Sanches: eu quero display menor
+[2017-12-04 16:18:09] Felipe "Juca" Sanches: tava comprando de 3,2 polegadas
+[2017-12-04 16:18:11] Werner: Sim, vai lá no link q eu te passei antes
+[2017-12-04 16:18:15] Werner: tem lá cara
+[2017-12-04 16:18:19] Werner: 3.5"
+[2017-12-04 16:18:32] Werner: vai pagar 77 reais
+[2017-12-04 16:19:06] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2647.jpg
+[2017-12-04 16:19:21] Felipe "Juca" Sanches: a resolução do game é 320x224, então 320x240 é o ideal
+[2017-12-04 16:19:34] Werner: ctz q vc vai achar o q quer nesse site.
+[2017-12-04 16:19:37] Felipe "Juca" Sanches: e aquele de 3,2 pol era 320x240
+[2017-12-04 16:19:44] Werner: só te passei uns poucos exemplos.
+[2017-12-04 16:21:03] Werner: Ó, tem esse... https://www.banggood.com/3_5-LCD-Touch-Screen-Display-Module-Board-320x480-RGB-For-Raspberry-Pi-2-B-B-p-1145103.html?p=JY0211749485201409KV
+[2017-12-04 16:21:19] Werner: R$44,00
+[2017-12-04 16:22:28] Werner: https://www.banggood.com/3_2-Inch-TFT-LCD-Display-Module-Touch-Screen-For-Raspberry-Pi-B-B-A-p-1011516.html?p=JY0211749485201409KV
+[2017-12-04 16:23:21] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2655.jpg
+[2017-12-04 16:24:09] Werner: Só q esse tá em falta
+[2017-12-04 16:26:36] Werner: Mais fácil de achar é o de 320x480 3.5".
+[2017-12-04 16:50:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2661.jpg
+[2017-12-04 16:51:29] Werner: Blz, vc consegue pra mim aquele BOM?
+[2017-12-04 16:51:43] Felipe "Juca" Sanches: sim, mas não agora
+[2017-12-04 16:51:57] Werner: Td bem não precisa ser já. Tem uma semana ainda
+[2017-12-04 16:52:13] Werner: Daí eu começo a caçar os componentes
+[2017-12-04 16:52:25] Felipe "Juca" Sanches: Tem mais de um mês ainda
+[2017-12-04 16:52:36] Felipe "Juca" Sanches: eu só volto pra casa ano que vem
+[2017-12-04 16:52:42] Werner: blz
+[2017-12-04 16:52:51] Felipe "Juca" Sanches: viajo no dia 15
+[2017-12-04 16:53:08] Felipe "Juca" Sanches: lá pra metade de janeiro eu devo montar esse circuito aí
+[2017-12-04 16:53:31] Werner: então. Só pra gente se manter sincronizado
+[2017-12-04 16:54:00] Felipe "Juca" Sanches: se bobear é melhor eu mesmo comprar os chips também e depois acertar com você uma divisão homogênea dos gastos, se vc se interessar em montar um seu também.
+[2017-12-04 16:54:56] Felipe "Juca" Sanches: bom... a gente vê isso ao longo do mês
+[2017-12-04 16:57:21] Werner: 👍 como vc achar melhor
+[2017-12-04 17:14:20] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=NB_VBl7ut9Y
+[2017-12-04 17:15:21] Werner: Eu vi ontem esse video dele
+[2017-12-04 17:16:36] Werner: É bacana ver como por lá eles conseguem produzir as coisas sem custos e burocracia exagerados, tudo na cooperação mútua...
+[2017-12-04 17:18:36] Werner: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2678.jpg
+[2017-12-04 17:18:39] Werner: E pelo visto, vendeu bem...
+[2017-12-04 17:51:19] Ismael Luceno: @fsanches SDL 1.2 suporta fbdev direto, mas SDL 2 não
+[2017-12-04 18:15:51] Felipe "Juca" Sanches: ué!
+[2017-12-04 18:15:55] Felipe "Juca" Sanches: sabe dizer por que ?
+[2017-12-04 18:24:11] Ismael Luceno: porque ninguém implementou :P
+[2017-12-04 18:57:10] Ismael Luceno: acho que pode copiar e adaptar o driver sem problema
+[2017-12-04 20:15:55] Felipe "Juca" Sanches: seria uma boa mesmo. Talvez eu tente. Mas um outro caminho talvez seja simplesmente desinstalar os pacotes da SDL 2 e instalar os pacotes da 1.2
+[2017-12-04 20:16:24] Felipe "Juca" Sanches: é um teste mais fácil de se fazer antes de arregaçar as mangas pra escrever código
+[2017-12-04 20:17:52] Felipe "Juca" Sanches: outra questão é o uso de displays LCD. Vi que um deles usa barramento SPI para envio dos dados dos pixels. Isso deve ter um limite de performance também. E talvez a performance seja diferente (pior?) que pela saída HDMI
+[2017-12-04 20:44:30] Werner: coincidentemente, estava pesquisando sobre isso agora há pouco: https://learn.adafruit.com/hdmi-uberguide/rtd2660-hdmi-vga-ntsc-pal-driver-board
+[2017-12-04 20:44:48] Werner: http://aitendo3.sakura.ne.jp/aitendo_data/product_img/lcd_controller/Xs/RTD2660.jsp.pdf
+[2017-12-04 21:31:04] Ismael Luceno: @fsanches muito pior
+[2017-12-04 21:37:02] Felipe "Juca" Sanches: talvez tenha alguma forma de ter execução do emulador em tempo real mas com framerate reduzido
+[2017-12-04 21:37:36] Felipe "Juca" Sanches: bem... o MAME tem configurações de frameskip se for necessário
+[2017-12-04 21:38:10] Felipe "Juca" Sanches: já que a idéia é montar uma maquete em miniatura, talvez o framerate 100% não seja estritamente necessário para o efeito visual desejado
+[2017-12-04 21:38:25] Felipe "Juca" Sanches: acho que o playback de áudio pode ser mais importante nessa aplicação
+[2017-12-04 22:06:12] Ismael Luceno: provavelmente
+[2017-12-04 22:06:49] Ismael Luceno: talvez da para implementar um driver de fbdev direto no mame
+[2017-12-04 22:07:09] Ismael Luceno: essa parte é modular?
+[2017-12-04 22:11:01] Felipe "Juca" Sanches: acho que é mais negócio ainda passar pela SDL
+[2017-12-04 22:11:18] Felipe "Juca" Sanches: deve ser um pesadelo querer lidar com isso no próprio código do MAME
+[2017-12-04 22:11:27] Felipe "Juca" Sanches: (mas eu posso estar equivocado, é claro)

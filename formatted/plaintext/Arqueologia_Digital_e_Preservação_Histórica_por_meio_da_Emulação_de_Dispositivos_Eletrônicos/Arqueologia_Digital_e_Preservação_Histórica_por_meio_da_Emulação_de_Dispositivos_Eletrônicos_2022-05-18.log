@@ -1,0 +1,25 @@
+[2022-05-18 05:55:17] Leonardo Roman: GitHub - ericb59/Fusion-C-v1.2: MSX C Library for SDCC compiler
+https://github.com/ericb59/Fusion-C-v1.2
+[2022-05-18 09:28:45] Ismael Luceno: legal
+[2022-05-18 10:06:08] Felipe "Juca" Sanches: a licença Creative Commons CC BY SA é livre, mas é bem incomum de ser usada para código-fonte de software.
+[2022-05-18 10:08:05] Pablo Vasques Bravo-Villalba: Capaz de ter escolhido essa porque é bem fácil de entender para leigos. Eu, como leigo, posso ver o apelo.
+[2022-05-18 10:09:37] Pablo Vasques Bravo-Villalba: Pessoalmente considero que para hobby quanto mais livre uma licença for, melhor. Até para não inibir outros hobbistas que queiram usar o material.
+[2022-05-18 10:10:31] Pablo Vasques Bravo-Villalba: O @pvm1337 já mexeu com Fusion C e com ubox. Teria algo a comentar?
+[2022-05-18 11:08:11] Pedro de Medeiros 👾: Fusion C permite fazer jogos pra MSX2. Ubox só pra MSX1 no momento. Nenhuma das duas está preparada pra ser usada com SDCC 4.2.0 infelizmente. Parece que o Eric Boez está trabalhando nisso, mas faz tempo que não solta versão nova do Fusion C.
+[2022-05-18 11:10:30] Pedro de Medeiros 👾: A famigerada versão 1.3 do Fusion C seria supostamente bem otimizada, mas só existem vídeos sobre isso no youtube e nenhum código. https://www.youtube.com/watch?v=qea2uPJaBuA
+[2022-05-18 11:17:09] Pedro de Medeiros 👾: Isso porque apesar de ser software livre, o Eric não é realmente um desenvolvedor de software livre, tanto que ele escolheu uma licença CC e adotou mais o estilo catedral de desenvolvimento. Acho que pra vender o livro do Fusion C que ele escreveu junto com a biblioteca em si. Mas ter o livro não é realmente um pré-requisito.
+[2022-05-18 11:19:58] Pedro de Medeiros 👾: Apesar disso tudo, a Fusion C ainda é uma boa opção.
+[2022-05-18 11:20:32] Pedro de Medeiros 👾: Aliás, o livro está um pouco defasado com a Fusion C 1.2
+[2022-05-18 11:22:37] Pedro de Medeiros 👾: O livro, que eu não recomendo comprar, está aqui: https://www.ebsoft.fr/shop/fr/19-fusion-c
+[2022-05-18 11:31:05] Pedro de Medeiros 👾: Ah, só a documentação no site usa essa licença.
+[2022-05-18 11:32:56] Felipe "Juca" Sanches: pois é... ficou ambíguo aquele rodapé do site
+[2022-05-18 11:33:46] Pedro de Medeiros 👾: Eu comentei com o Juan. Mas não sei se ele vai fazer alguma coisa. 😅
+[2022-05-18 11:42:16] Pedro de Medeiros 👾: O Danilo Angelo fez uma série de vídeos sobre desenvolvimento pra MSX1 no canal 8bit saga usando só Fusion C. https://www.youtube.com/channel/UC-QPKENS07P_5q-7a7ps2HA/videos
+[2022-05-18 11:44:28] Felipe "Juca" Sanches: A coisa trivial a se fazer é deixar mais explícito, da seguinte forma:
+
+The library source code is released under the terms of the MIT license.
+Contents of this website are under CC By NC SA.
+[2022-05-18 11:46:30] Felipe "Juca" Sanches: Agora... a coisa bacana de se fazer seria usar uma licença livre para a documentação também. Afinal de contas, software livre precisa de documentação livre. ("precisa" é opinião pessoal minha, é claro!)
+[2022-05-18 11:50:48] Pedro de Medeiros 👾: Aliás, ele usa também uns scripts de integração com Visual Studio que ele mesmo criou. Pra GNU e Mac eu converti o script de compilação que ele fez, que eram uns arquivos .bat exclusivamente pra windows. Senão os vídeos dele seriam exclusivos pra windows. 😁
+[2022-05-18 13:15:10] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20470.jpg
+[2022-05-18 13:15:10] Pedro de Medeiros 👾: http://www.javalemmings.com/DMA/Lem_1.htm

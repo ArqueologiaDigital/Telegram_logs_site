@@ -1,0 +1,101 @@
+[2025-10-18 00:10:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35946.jpg
+[2025-10-18 00:11:30] Felipe "Juca" Sanches: Agora vou dormir, então vou deixar o layout para terminar amanhã
+[2025-10-18 00:14:26] Felipe "Juca" Sanches: Mas aqui está o commit mais atual: https://github.com/felipesanches/mame/commits/vet3000/
+[2025-10-18 00:23:44] Felipe "Juca" Sanches: Mas mesmo assim seria bacana documentar quais sinais chegam ali
+[2025-10-18 00:42:20] Felipe "Juca" Sanches: Só agora que entendi o pavê
+[2025-10-18 01:15:40] L.: Essa fonte é legal
+[2025-10-18 09:17:16] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35952.jpg
+[2025-10-18 21:27:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35953.jpg
+[2025-10-18 21:27:52] Felipe "Juca" Sanches: Fiz os ajustes finais e abri o pull request: https://github.com/mamedev/mame/pull/14364
+[2025-10-18 21:30:14] Felipe "Juca" Sanches: Esse é a primeira vez que mando um driver pro MAME considerando que está perfeito!
+[2025-10-18 21:31:59] Felipe "Juca" Sanches: A única coisa que faltaria nesse driver seria a habilidade de fazer o video-compositing, mas a infra-estrutura de código do MAME, que eu saiba, ainda não suporta esse tipo de coisa (rodar um driver e jogar a saída de vídeo dele para outro driver processar como sinal de "video in").
+[2025-10-18 21:33:31] Felipe "Juca" Sanches: Ah, e também não sabemos pra que serve aquele conector de interface (ou como seus pinos estão ligados ao processador). Mas não parece ser parte fundamental para operar o dispositivo, e ainda rola aquela suposição de que não serve pra nada.
+[2025-10-18 21:34:24] Felipe "Juca" Sanches: Eu acho que consegui descobrir quase todas as features do aparelho
+[2025-10-18 21:34:41] Felipe "Juca" Sanches: Mas tem algumas teclas que não saquei pra que servem:
+[2025-10-18 21:35:42] Felipe "Juca" Sanches: Aquela tecla amarelha com uma letra "C" eu não sei pra que serve. Eu imaginaria algo como um "clear screen", mas já temos a tecla "CLEAR" pra isso
+[2025-10-18 21:35:54] Felipe "Juca" Sanches: (que, aliás, limpa a linha atual)
+[2025-10-18 21:36:29] Felipe "Juca" Sanches: mas a combinação SHIFT+CLEAR limpa a tela toda
+[2025-10-18 21:37:41] Felipe "Juca" Sanches: a tecla EXT MODE eu também não sei pra que serve
+[2025-10-18 21:38:35] Felipe "Juca" Sanches: Suspeito que seja relacionado ao sinal de vídeo "externo" (ou seja, que é recebido pelo conector de Video In). Mas o que seriam "modos" relacionados a isso?
+[2025-10-18 21:39:09] Felipe "Juca" Sanches: No emulador, não vejo nenhuma evidência aparente do que esteja sendo feito ao pressionar essa tecla.
+[2025-10-18 21:40:04] Felipe "Juca" Sanches: percebi que a tecla BORDER BLANK parece alternar entre mostrar o overlay ou escondê-lo.
+[2025-10-18 21:41:19] Felipe "Juca" Sanches: E descobri que SHIFT+BORDER BLANK muda a cor de fundo da tela inteira (e temos umas 15 opções de cores)
+[2025-10-18 21:42:03] Felipe "Juca" Sanches: tive a impressão de que preto aparece duas vezes. Então uma deve ser preto de verdade e a outra deve ser o sinal de Video In (talvez)
+[2025-10-18 21:42:46] Felipe "Juca" Sanches: digo que tá "perfeito" e depois vomito uma dúzia de mensagens mostrando onde não tá perfeito haha
+[2025-10-18 21:45:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35969.jpg
+[2025-10-18 21:45:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35970.jpg
+[2025-10-18 21:47:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35971.jpg
+[2025-10-18 22:08:09] L.: Se quiser fazer só pela zoeira é só usar OBS com chromakey!
+[2025-10-18 22:08:26] L.: Ficaria bem engraçado usar essa ROM pra isso 😆
+[2025-10-18 22:10:18] L.: Chuto que é algo super simples, só expondo o barramento da CPU e alimentação, mais uns 2/3 sinais tipo clock e coisas de memória
+[2025-10-18 22:10:24] Felipe "Juca" Sanches: ah, inclusive declarei a memória como NVRAM no driver e, assim, qualquer coisa que eu crie persiste mesmo depois de fechar e reabrir o emulador
+[2025-10-18 22:10:59] L.: Deve ter algo na ROM pra buscar coisas lá, e eu vou chutar que seja pra algo tipo fontes extras
+[2025-10-18 22:11:26] Felipe "Juca" Sanches: dá pra compor slides de uma palestra (sim, o VET 3000 tem suporte a salvar várias páginas na memória e depois alternar entre elas) e depois apresentar a palestra usando o aparelho emulado
+[2025-10-18 22:11:44] L.: Seria animal fazer isso!
+[2025-10-18 22:12:17] L.: Uma vez eu vi palestra de alguém que usou dosbox e o precursor do PowerPoint pros slides
+[2025-10-18 22:13:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35980.jpg
+[2025-10-18 22:13:10] Felipe "Juca" Sanches: Provavelmente esses endereços aqui...
+[2025-10-18 22:13:49] L.: endereço redondinho pra não ser algo interessante hehe
+[2025-10-18 22:14:44] Felipe "Juca" Sanches: @lrrosa o aparelho tem buzzer ou qualquer outra coisa que possa ser usada para fazer som? Mesmo que seja só pra fazer beep beep
+[2025-10-18 22:15:11] Felipe "Juca" Sanches: declarei no driver que o aparelho não tem hardware de som. Mas queria checar isso com você, pra ter certeza que tá correto
+[2025-10-18 22:15:56] Felipe "Juca" Sanches: Repara no detalhe das bordas arredondadas da arte do teclado (a região cinza escuro) e também o led vermelho de Power On
+[2025-10-18 22:17:03] Pablo Vasques Bravo-Villalba: Uma é preto e outra é "transparente"
+[2025-10-18 22:20:35] Felipe "Juca" Sanches: isso! Era bem isso que eu tava pensando mesmo
+[2025-10-18 22:21:31] Pablo Vasques Bravo-Villalba: É coisa do TMS. A convenção é que qualquer coisa transparente assume a cor do "backdrop". O backdrop, por sua vez, é uma área maior do que a área da imagem, e contém o que a gente percebe como borda
+[2025-10-18 22:21:39] Pablo Vasques Bravo-Villalba: Fica atrás de tudo
+[2025-10-18 22:22:43] Pablo Vasques Bravo-Villalba: Tem alguns modelos desse VDP que permitem sobrepor a imagem de um VDP à de outro VDP igual, e nesse caso se você setar a cor do backdrop do VDP de maior prioridade como transparente, aparece a imagem do outro VDP atrás
+[2025-10-18 22:22:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35990.jpg
+[2025-10-18 22:22:45] Felipe "Juca" Sanches: acho que você tem razão
+[2025-10-18 22:22:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35991.jpg
+[2025-10-18 22:22:48] Pablo Vasques Bravo-Villalba: Se não tiver nada atrás, é preto mesmo
+[2025-10-18 22:23:33] L.: botão EXT MODE pode ser relacionado à extensão também
+[2025-10-18 22:23:42] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35994.jpg
+[2025-10-18 22:23:42] Pablo Vasques Bravo-Villalba: Do manual do TMS
+[2025-10-18 22:24:31] Felipe "Juca" Sanches: li em algum lugar que esse sinal de vídeo "de outro VDP" na verdade pode muito bem ser qualquer outro sinal de vídeo. Então talvez seja isso que o VET3000 use para misturar o Video In com os gráficos gerados pelo VDP
+[2025-10-18 22:25:42] Pablo Vasques Bravo-Villalba: Sim, mas tem umas especificidades na forma como ele detecta o sinal e faz o genlock, então não sei se ele encara qualquer sinal de vídeo assim facilmente. Teria que analisar o circuito e ver se tem um genlock completo ou só parte
+[2025-10-18 22:26:05] Pablo Vasques Bravo-Villalba: Eu realmente não entendo nada disso
+[2025-10-18 22:26:24] Felipe "Juca" Sanches: Aqui o código logo no boot lê algo desses dois endereços (4000 e 6000) e compara com umas strings conhecidas. Creio que isso seja a busca por um cabeçalho de cartucho, pra saber como tratar os dados. Uma dessas strings é "OBJECT" e a outra que encontrei é "FONT".
+[2025-10-18 22:26:42] Pablo Vasques Bravo-Villalba: Por exemplo, acho muito pouco provável que ele entenda PAL-M
+[2025-10-18 22:26:52] L.: hehe, é, realmente deve ser isso aí mesmo
+[2025-10-18 22:27:30] Felipe "Juca" Sanches: Não sei o que seria o OBJECT (mas temos uma tecla com esse nome que mostra uma seta grandona). Mas vou fazer um teste criando um arquivo de ROM com o cabeçalho FONT e com qualquer lixo no resto do arquivo e ver se aparecem fontes todas aleatórias
+[2025-10-18 22:27:46] L.: vou supor que seja tipo sprite
+[2025-10-18 22:27:55] Pablo Vasques Bravo-Villalba: Object poderia ser shapes, não?
+[2025-10-18 22:28:07] L.: por exemplo, sprite de sol/nuvem/chuva pra ser usado em estação de TV pra mostrar previsão do tempo
+[2025-10-18 22:28:12] L.: ou coisas do tipo
+[2025-10-18 22:28:24] Felipe "Juca" Sanches: se for isso, já é um bom sinal, pois daria pra declarar a interface como entrada de cartucho e brincar de criar cartuchos com fontes modernas pra esse emulador hahaha
+[2025-10-18 22:28:53] L.: cartucho com comic sans ms
+[2025-10-18 22:29:39] Felipe "Juca" Sanches: É verdade, pode ser mesmo, pois a seta se move livremente e não só no grid de caracteres (tiles)
+[2025-10-18 22:39:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36009.jpg
+[2025-10-18 22:39:02] Felipe "Juca" Sanches: Parece que é isso mesmo... agora falta entender o formato de dados dos bitmaps de fonte
+[2025-10-18 22:45:02] Leonardo Roman: Não tem nada pra fazer som mesmo.
+[2025-10-18 22:45:02] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36011.jpg
+[2025-10-18 22:45:02] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36012.jpg
+[2025-10-18 22:45:37] Felipe "Juca" Sanches: ah!
+[2025-10-18 22:45:56] Felipe "Juca" Sanches: amei seu método de prototipagem hahaha
+[2025-10-18 22:46:12] Pablo Vasques Bravo-Villalba: Eu queria porque queria "ver" esse bitmap
+[2025-10-18 22:47:31] Felipe "Juca" Sanches: deve ter um arranjo melhor desses pixels pra fazer eles aparecerem num bitmap organizadinho da fonte inteira
+[2025-10-18 22:48:07] Pablo Vasques Bravo-Villalba: Sim, e dá pra ver que tem fontes de tamanhos variados, então deve ter metadados em algum lugar também
+[2025-10-18 22:48:46] Felipe "Juca" Sanches: a diferença de tamanhos acho que é só por que tem maiúscula e minúscula
+[2025-10-18 22:50:32] Pablo Vasques Bravo-Villalba: Parece ter uma repetição de 48 em 48 bytes, o que me parece muito. Só existe uma fonte? Se forem, por exemplo, 160 caracteres, isso já gasta quase 8kB
+[2025-10-18 22:51:34] Felipe "Juca" Sanches: 8kB é o intervalo entre 0x4000 e 0x6000
+[2025-10-18 22:54:40] Pablo Vasques Bravo-Villalba: Tem um lugar em que tem uma fonte 8x8
+[2025-10-18 23:05:00] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36022.jpg
+[2025-10-18 23:07:04] Felipe "Juca" Sanches: interessante...
+[2025-10-18 23:07:27] Pablo Vasques Bravo-Villalba: Começa no offset 7583 do arquivo binário
+[2025-10-18 23:07:54] Pablo Vasques Bravo-Villalba: Mas não sei se é muito útil, porque não tem caracteres acentuados
+[2025-10-18 23:08:44] Felipe "Juca" Sanches: eu concatenei a string "FONT" e o byte 0x00 aos primeiros 48*160 bytes da ROM (mas eu pulei os 48 primeiros bytes) e isso resultou na ROM ficar deslocada de aproximadamente 2 letras. Ao pressionar "a" aparece um desenho do "c" só que meio deslocado pra cima.
+[2025-10-18 23:09:00] Felipe "Juca" Sanches: então cada glifo tem aproximadamente 24 bytes, mas não exatamente
+[2025-10-18 23:09:19] Felipe "Juca" Sanches: teria que tentar mais valores próximos desse pra ver o que acontece
+[2025-10-18 23:10:32] Pablo Vasques Bravo-Villalba: Bom, eu realmente não consigo ir muito além disso, pelo menos não no momento 😅
+[2025-10-18 23:15:47] Felipe "Juca" Sanches: são 16 bytes por glifo
+[2025-10-18 23:16:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36031.jpg
+[2025-10-18 23:16:56] Felipe "Juca" Sanches: essa é a fonte usada para escrever essa parte da tela de abertura
+[2025-10-18 23:25:09] L.: um espaço antes desse "TMS  MICROSISTEMAS" e ficaria alinhado no centro
+[2025-10-18 23:26:04] Felipe "Juca" Sanches: Já saquei o encoding. É muito simples. Vou tentar fazer umas brincadeiras com isso
+[2025-10-18 23:28:16] Felipe "Juca" Sanches: mas agora vou descansar, pois minha cabeça está explodindo de ficar tanto tempo fritando
+[2025-10-18 23:29:08] Felipe "Juca" Sanches: Esse bichinho merece uma página web contando essa história toda e com o MAME transpilado pra javascript e embutido na página
+[2025-10-18 23:29:30] Felipe "Juca" Sanches: Alguém quer escrever uma documentação desse tipo pra gente botar em arqueologiadigital.org ?
+[2025-10-18 23:50:41] Shideravan: Conheci 2: VCN ExecuVision e Harvard Graphics
+[2025-10-18 23:50:49] Shideravan: https://www.youtube.com/watch?v=dvTW2S4Hko0
+[2025-10-18 23:51:39] Shideravan: Isso para DOS, para Mac tinha outro monte
+[2025-10-18 23:52:42] Shideravan: Mas é inegável que o PowerPoint popularizou esse tipo de programa em específico para as massas

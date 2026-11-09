@@ -1,0 +1,44 @@
+[2023-01-13 07:59:07] * Giga joined the group
+[2023-01-13 08:05:30] Giga: Bom dia amigos! Muito prazer, me chamo Guilherme. Sou um entusiasta em Computação. Recebi o convite do Felipe, para participar do grupo. Estou muito grato de poder fazer parte, o termo arqueologia digital tem um significado muito grande para mim. Espero poder contribuir, como forma de gratidão pelo convite!
+[2023-01-13 08:22:02] Anne Isabelle: Boas vindas :)
+[2023-01-13 08:22:57] Giga: Muito obrigado 😁
+[2023-01-13 09:30:15] Lord Spy: Seja bem vindo, Guilherme! :1)
+[2023-01-13 09:48:06] Giga: Muito obrigado, Lord 🙏🏼
+[2023-01-13 12:05:46] L.: http://floppy.museum/
+[2023-01-13 12:08:39] L.: https://www.mikekohn.net/micro/nintendo64_java.php
+[2023-01-13 19:57:34] Felipe "Juca" Sanches: subi mais um montão de documentação dos nomes de subrotinas e assets gráficos da fase inicial (llevel #2) do Another World. Dá uma olhada nos últimos commits lá em https://github.com/felipesanches/AnotherWorld_VMTools e me diz o que acha, @toymak3r
+[2023-01-13 19:58:48] Felipe "Juca" Sanches: Olhar o conteúdo dos commits em si no repositório nem é tão interessante... O que é bacana mesmo é rodar a ferramenta e ver o disassembly resultante do level #2 do release de MSDOS
+[2023-01-13 20:26:07] Felipe "Juca" Sanches: na verdade o convite vale a todos interessados, é claro!
+[2023-01-13 20:27:24] Felipe "Juca" Sanches: um disasm completo e documentado do jogo inteiro vai demorar pra sair. Só a fase inicial já tá dando bastante trabalho. Mas tá divertido. E tô cada vez mais entendendo os design-patterns de desenvolvimento para essa VM. É muito legal quando a gente começa a ver uma certa regularidade na estrutura dos códigos
+[2023-01-13 20:28:31] Felipe "Juca" Sanches: por exemplo, como o Eric Chahi usava algumas variáveis da VM para saber se já mostrou uma determinada animação e evitar de mostrar ela uma segunda vez quando o jogador entra em uma tela que já havia sido visitada anteriormente
+[2023-01-13 20:29:48] Felipe "Juca" Sanches: e também comecei a perceber a uniformidade dos códigos que fazem caching de renderização do cenário de fundo de uma dada tela, e como o cache é invalidado quando se muda de tela, pois é preciso fazer o cache da nova tela
+[2023-01-13 20:30:41] Felipe "Juca" Sanches: e aí o double-buffering de uma dada tela é feito sempre com base o rendering em cache, adicionando os "sprites" por cima, sem ter que redesenhar o cenário inteiro N vezes por segundo
+[2023-01-13 20:31:11] Felipe "Juca" Sanches: digo "sprites" (entre aspas) por que na verdade não existe conceito de sprites na VM. É tudo render de polígono.
+[2023-01-13 20:42:18] L.: Um dia uma VM/conversor pra JS ou WASM rodando no browser renderizando em SVG vai existir 🙃
+[2023-01-13 21:51:29] Felipe "Juca" Sanches: kkkk
+[2023-01-13 21:58:41] Felipe "Juca" Sanches: tentando me aplicar um nerd-snipping, é?
+[2023-01-13 22:01:26] Felipe "Juca" Sanches: seria bacana um compilador de uma linguagem de alto nível capaz de gerar bytecode dessa VM.
+
+acho que a parte divertida desse desafio seria como lidar com o conceito de threads da VM. E também como automaticamente alocar variáveis de escopo local dentre as 256 vars de 16 bits disponíveis na VM.
+[2023-01-13 22:03:24] Felipe "Juca" Sanches: por que o código fonte do jogo parece fazer manualmente o controle de qual var é usada para qual propósito. Da mesma forma que um programador de assembly gerencia mentalmente quais registradores usar para cada propósito em um programa. Com 256 variáveis da VM, é como se fosse uma CPU com 256 registradores general purpose de 16 bits.
+[2023-01-13 22:42:44] Giga: Há alguns dias vi uma breve matéria dizendo que a USP está recolhendo/doando hardware e computadores usados para estudos, tem até uma ala reservada a isso, vi fotos de algumas prateleiras com PCs de época em exposição. Porém não achei mais nada sobre. Moro perto da USP mas não tenho contatos lá. Alguém sabe de algo?
+[2023-01-13 22:44:10] Giga: Com certeza a USP tem uma riqueza e tanto em história da tecnologia, começando pelo Patinho Feio, e o G-10. Verdadeiras lendas reais!
+[2023-01-13 23:04:31] Felipe "Juca" Sanches: Professor Fernando Redigolo (fernando@larc.usp.br) e Professora Tereza Cristina Melo de Brito Carvalho (terezacarvalho@usp.br) do laboratório LASSU (http://www.lassu.usp.br/)
+[2023-01-13 23:05:43] Felipe "Juca" Sanches: https://forum.fiozera.com.br/t/imageamento-do-hd-de-um-pc-xt-scopus-nexus-2600/210
+[2023-01-13 23:06:26] Felipe "Juca" Sanches: https://forum.fiozera.com.br/t/leitora-de-fita-perfurada-modelo-facit-4021-suecia-1974/186
+[2023-01-13 23:07:00] Felipe "Juca" Sanches: https://forum.fiozera.com.br/t/terminais-seriais-da-scopus-modelos-sagitta-150-e-sagitta-180/154
+[2023-01-13 23:25:07] Giga: Obrigado, Felipe 🙏🏼 vou entrar em contato com eles, talvez em alguma oportunidade, fazer uma visita 😁
+[2023-01-13 23:25:19] Felipe "Juca" Sanches: sim, faça isso!
+[2023-01-13 23:25:26] Felipe "Juca" Sanches: pode falar que fui eu que passei o contato
+[2023-01-13 23:25:38] Felipe "Juca" Sanches: acho que eles me conhecem como Juca
+[2023-01-13 23:25:48] Felipe "Juca" Sanches: mas talvez saibam também que meu nome é felipe sanches
+[2023-01-13 23:26:14] Felipe "Juca" Sanches: por isso que sempre assino como Felipe "Juca" Sanches
+[2023-01-13 23:27:12] Giga: Só de ver as fotos do acervo, me deu uma tremenda vontade de ir lá. Incrível!
+[2023-01-13 23:28:09] Giga: Pode deixar, amanhã mesmo, mandarei mensagem
+[2023-01-13 23:28:45] Giga: Este no caso é apelido/sobrenome? Só conhecia como Felipe haha
+[2023-01-13 23:29:01] Giga: De todos esses anos que venho acompanhando o seu trabalho
+[2023-01-13 23:34:56] Felipe "Juca" Sanches: Juca é apelido
+[2023-01-13 23:41:15] L.: Felipe Sanches é pseudônimo, o nome real é Juan Carlos
+[2023-01-13 23:41:24] L.: Aí ficou Juca
+[2023-01-13 23:44:57] Felipe "Juca" Sanches: Felipe Sanches foi o apelido que minha mãe me deu
+[2023-01-13 23:46:12] Felipe "Juca" Sanches: Na verdade minha mãe me deu o Corrêa da Silva. Quem me apelidou de Sanches foi meu pai.

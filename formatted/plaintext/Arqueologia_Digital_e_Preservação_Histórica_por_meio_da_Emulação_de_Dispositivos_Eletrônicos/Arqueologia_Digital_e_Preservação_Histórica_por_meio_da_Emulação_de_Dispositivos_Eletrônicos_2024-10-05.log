@@ -1,0 +1,27 @@
+[2024-10-05 01:00:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-10/33269.jpg
+[2024-10-05 01:39:33] Felipe "Juca" Sanches: Estou enviando um video gravado em 3 partes.
+[2024-10-05 01:49:21] Felipe "Juca" Sanches: O Telegram tem me dado dor de cabeça ultimamente com o envio de videos... carrega 99.8% e depois fica enrolando...
+[2024-10-05 01:50:22] Felipe "Juca" Sanches: Quando chegar chegou. Apenas lembrem-se que são 3 videos!
+[2024-10-05 01:54:58] Felipe "Juca" Sanches: Se continuar enroscado vou ver se consigo concatená-los em um video só e subir no youtube...
+[2024-10-05 02:02:35] Felipe "Juca" Sanches: video: (not yet published)
+[2024-10-05 02:06:41] Felipe "Juca" Sanches: video: (not yet published)
+[2024-10-05 02:08:32] Felipe "Juca" Sanches: video: (not yet published)
+[2024-10-05 08:18:16] Pablo Vasques Bravo-Villalba: Não precisaria concatenar, você pode colocar em uma playlist; ou então compartilhar em qualidade menor no Telegram. 105MB me parecem muito para 3m27s de vídeo
+[2024-10-05 08:25:00] Pablo Vasques Bravo-Villalba: @fsanches , tenho algumas considerações sobre o que você falou no vídeo, vou tomar a liberdade de enviar em áudio. Quem quiser escuta, quem não estiver interessado não precisa esbarrar com textão 😅
+[2024-10-05 08:30:09] Pablo Vasques Bravo-Villalba: audio: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-10/33279.ogg
+[2024-10-05 09:44:46] Felipe "Juca" Sanches: Obrigado pelos comentários, Pablo. Estou refletindo aqui, depois respondo.
+[2024-10-05 09:57:35] Pablo Vasques Bravo-Villalba: De boas, são só ideias mesmo 😊
+[2024-10-05 12:16:20] Clemar Folly Jr: Esse projeto do SE/30 é bem interessante. O problema mais critico desses Macs clássicos são danos permanentes por conta de vazamento de bateria.
+
+No caso do SE/30 é cheio de chip custom, o que impede de fazer uma reprodução sem placa doadora. Ai entram as placas estragadas.
+[2024-10-05 12:21:05] Clemar Folly Jr: Sobre o Technics, todo o projeto de documentação é valido. Eu fiquei conhecendo o projeto quando entrei no grupo.
+
+Acredito que para conectar interessados é fundamental publicação dos avanços em blogs, hackaday ou video no youtube.
+[2024-10-05 12:32:23] Pablo Vasques Bravo-Villalba: Ou reimplementar os chips custom com FPGA ou CPLD
+[2024-10-05 12:42:06] Leonardo Roman: Portar jogos de Neo Geo Pocket pro KN seria mais trampo que ports de x86?
+[2024-10-05 12:42:32] Pablo Vasques Bravo-Villalba: A arquitetura de vídeo e de som é completamente diferente, teria que abstrair isso de alguma forma
+[2024-10-05 12:43:30] Pablo Vasques Bravo-Villalba: Mas Neo Geo Pocket é bem legal 😊
+[2024-10-05 12:44:04] Pablo Vasques Bravo-Villalba: O som dele em tese é compatível com som de Tandy. O T6W28 é um superset do SN76489
+[2024-10-05 13:48:33] Felipe "Juca" Sanches: O hardware de vídeo do Neo Geo Pocket precisaria ser emulado. O hardware de vídeo do IBM PC é uma placa VGA, que o KN5000 também tem.
+[2024-10-05 13:49:02] Felipe "Juca" Sanches: a vantagem do Neo Geo Pocket é que ele usa a mesma CPU que o KN5000
+[2024-10-05 13:49:51] Felipe "Juca" Sanches: Mas acho que é mais fácil traduzir assembly de x86 pra tlcs900 do que emular o vídeo do neo geo pocket (programando em asm de tlcs900)

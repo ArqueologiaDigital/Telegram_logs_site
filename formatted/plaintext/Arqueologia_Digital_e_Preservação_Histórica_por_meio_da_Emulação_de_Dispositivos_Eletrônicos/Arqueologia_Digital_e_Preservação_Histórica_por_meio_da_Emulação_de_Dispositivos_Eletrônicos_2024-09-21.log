@@ -1,0 +1,56 @@
+[2024-09-21 11:26:55] Felipe "Juca" Sanches: Estarei em Brasilia de  22 a 29 de OUT.  @mrparn e @pvm_NoCryptoScams, botem na agenda pra gente fazer mais uma sessão de hacking no Calango
+[2024-09-21 11:27:18] Felipe "Juca" Sanches: Não sei se tem mais alguém de Brasília aqui no grupo, mas se tiver, fica o convite também!
+[2024-09-21 11:31:59] Pedro de Medeiros 👾: OK. Dia 22 cai numa terça. De terça a terça.
+[2024-09-21 11:33:57] Felipe "Juca" Sanches: Pessoal...  estou conseguinto injetar código executável no boot do KN5000, no endereço da rotina "usuário não requisitou firmware update".
+
+Nessa rotina injetada eu coloquei escritas para a PPI, de modo a enviar bytes lidos da ROM para a porta paralela. Pra testar estou fazendo o dump de um trechinho de alguns poucos bytes do início da Program ROM onde tem a string "Technics" e os bytes estão chegando OK no meu laptop.
+
+Ao final da rotina injetada, eu coloquei uma tentativa de retornar pro código original do boot, mas estou errando alguma coisa nesse ponto, pois o teclado congela.
+[2024-09-21 11:34:39] Felipe "Juca" Sanches: Eu também tento desenhar na tela, mas nada aparece pois acho que a VGA não foi inicializada ainda naquele ponto do código. Mas se eu tento chamar uma rotina de setup da VGA, congela também
+[2024-09-21 11:35:14] Felipe "Juca" Sanches: o legal é que agora com a habilidade de escrever na porta paralela, eu tenho um feedback se o código ainda tá rodando, ou se se perdeu
+[2024-09-21 11:35:22] Felipe "Juca" Sanches: famoso "debug via print"
+[2024-09-21 11:38:01] Pedro de Medeiros 👾: Alto nível já. Melhor que "debug via código morse nos leds do painel"
+[2024-09-21 12:13:22] Pablo Vasques Bravo-Villalba: Também melhor do que "debug via tabuleiro ouija"
+[2024-09-21 12:14:24] Felipe "Juca" Sanches: hoje quando comecei a ver os bytes corretos aparecendo no monitor da porta serial (do Arduino) eu gritei: "UIA!" 😊
+[2024-09-21 12:43:29] L.: Olha o pavê!😆
+[2024-09-21 12:47:41] Pablo Vasques Bravo-Villalba: Se estiver precisando, tenho um Ouya dando sopa em algum lugar 😝
+[2024-09-21 14:18:45] Felipe "Juca" Sanches: Acabei de fazer um dump dos primeiros 512kbytes da Program ROM
+
+O checksum bateu com  o dump que eu já tinha feito por outros métodos.
+
+Agora vou só mudar o endereço, pra fazer o dump da placa HDAE5000, que foi o objetivo de toda essa treta até agora.
+[2024-09-21 14:31:47] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/33053-fearless_dump.bin
+[2024-09-21 14:31:47] Felipe "Juca" Sanches: Feito!
+[2024-09-21 14:32:17] Felipe "Juca" Sanches: Não dá pra ter certeza se tá perfeito. Mas olhando no editor hexa, parece que tá tudo razoável
+[2024-09-21 14:32:57] Felipe "Juca" Sanches: talvez seja boa idéia repetir o dump mais algumas vezes com outras velocidades de conexão pra ver se diverge, ou se se mantém sempre com o mesmo resultado (checksum)
+[2024-09-21 14:34:12] Felipe "Juca" Sanches: fora isso, o próximo desafio é fazer comunicação bidirecional nessa porta paralela para, com isso, implementar um pequeno protocolo de carga de payloads executáveis
+[2024-09-21 14:34:23] Felipe "Juca" Sanches: e peek/poke...
+[2024-09-21 14:44:27] Felipe "Juca" Sanches: ok. refiz o dump com a velocidade menor e ainda tá batendo
+[2024-09-21 14:57:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/33059.jpg
+[2024-09-21 14:57:21] Felipe "Juca" Sanches: Olha que legal! A versão que fiz dump  hoje é mais recente que todas as outras que eu já tinha!
+
+Antes eu só tinha as versões v1.10i, v1.15i e v2.01i
+
+Essa de hoje é a v2.06i 😉
+[2024-09-21 15:28:29] Felipe "Juca" Sanches: Eu fico tão feliz quando uma sequencia elaborada de ações funciona perfeitamente!
+
+Agora... fazer o dump da mask rom de boot da subcpu vai ser um processo um pouquinho mais nervoso... kkk
+[2024-09-21 17:14:30] Felipe "Juca" Sanches: video: (not yet published)
+[2024-09-21 18:50:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/33062.jpg
+[2024-09-21 18:50:19] Felipe "Juca" Sanches: Bom... vamos lá!
+
+
+Resolvi tentar achar onde está na memória do teclado o payload executável que é enviado para a subcpu.
+Esse payload tem 196kbytes e é comprimido nos arquivos de update juntom com a imagem da CPU principal.
+
+Eu tinha extraido ele (dos floppies de upgrade de sistema) com os nomes kn5000_subcpu_v142.rom (e também v140 e  v141)
+
+Aqui nessa imagem vocês vêem o v142 numa região em que achei uma concentração de valores 0x0E (que é o opcode da instrução RET)
+
+O trecho destacado eu usei como critério de busca nos dumps que fiz hoje
+[2024-09-21 18:51:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/33063.jpg
+[2024-09-21 18:51:01] Felipe "Juca" Sanches: E achei dentro do intervalo 900000-9fffff uma sequencia bem parecida, mas não idêntica, como visto nessa outra imagem.
+[2024-09-21 18:52:02] Felipe "Juca" Sanches: inicialmente pensei: será que não bate identico por que tem algum tipo de compressão de dados?
+
+Mas depois me toquei. Acredito que essa divergência aí seja falha no procedimento de dump. Vou então dumpar tudo de novo com uma velocidade mais lenta pra ver se resolve...
+[2024-09-21 21:03:22] Pablo Vasques Bravo-Villalba: Que massa

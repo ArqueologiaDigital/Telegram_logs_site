@@ -1,0 +1,38 @@
+[2021-07-28 00:10:05] Felipe "Juca" Sanches: vou colocar os scripts aqui:
+https://github.com/felipesanches/kn5000_homebrew
+[2021-07-28 00:10:19] Felipe "Juca" Sanches: em breve devo subir um compressor também
+[2021-07-28 00:12:25] kretcheu: 👍👍👍
+[2021-07-28 00:13:20] Felipe "Juca" Sanches: não é super divertido quando finalmente o nó desenrosca na reversa, @kretcheu ? 😊
+[2021-07-28 00:15:17] Felipe "Juca" Sanches: seria legal se o binxelview fosse também editor. Ele tem uma função "save as png". Mas não tem um load PNG
+[2021-07-28 00:16:01] Felipe "Juca" Sanches: dado que o sw já tem toda a lógica de desembaralhamento, ele poderia muito bem re-embaralhar uma nova imagem e salvar no arquivo
+
+me parece uma necessidade óbvia para ROM hacking
+[2021-07-28 00:19:36] Felipe "Juca" Sanches: em retrospecto, vendo agora a solução do problema, duvido que exista alguma ferramenta que descomprima esse arquivo, que não o meu script customizado
+[2021-07-28 00:20:03] Felipe "Juca" Sanches: (além é claro do toolchain interno da technics)
+[2021-07-28 00:42:21] Erin Pinheiro 🐿: open source!!!!!111
+[2021-07-28 00:42:25] Erin Pinheiro 🐿: faça você mesmo!!!!
+[2021-07-28 00:42:32] Felipe "Juca" Sanches: claro!
+[2021-07-28 00:42:49] Felipe "Juca" Sanches: tá pregando pra convertido, Erin
+[2021-07-28 00:43:03] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13741-sticker.webp
+[2021-07-28 00:43:30] Erin Pinheiro 🐿: você quem me tagueou hauhauha
+[2021-07-28 00:43:36] Erin Pinheiro 🐿: agora aguenta a chacota
+[2021-07-28 00:44:05] Felipe "Juca" Sanches: só pra contextualizar que era uma mensagem sobre o binxelview
+[2021-07-28 00:44:45] Felipe "Juca" Sanches: mas olha só... teria que renomear a ferramenta. Passaria a ser binxeledit
+[2021-07-28 00:44:50] Felipe "Juca" Sanches: ou algo do tipo
+[2021-07-28 00:45:28] Felipe "Juca" Sanches: e eu tenho um pouquinhozinho de preguiça de tentar editar C# :-P
+[2021-07-28 00:49:19] kretcheu: Sim, super delicioso!
+[2021-07-28 00:49:49] Felipe "Juca" Sanches: eu fiquei hiperativo quando vi o nó se desenroscando em frente aos meus olhos
+[2021-07-28 00:49:52] Felipe "Juca" Sanches: era 5 da madrugada
+[2021-07-28 00:49:56] Felipe "Juca" Sanches: decidi ir dormir
+[2021-07-28 00:50:07] Felipe "Juca" Sanches: fiquei me revirando na cama de excitação
+[2021-07-28 00:50:24] Felipe "Juca" Sanches: 15 anos antes eu tinha tido a idéia e finalmente consegui dar um passo significativo
+[2021-07-28 03:49:24] Felipe "Juca" Sanches: uma pessoa na comunidade MAMEDev me deu a dica de que esse algoritmo é quase identico ao LZSS que, segundo essa mesma pessoa, era muito popular em software japonês
+[2021-07-28 03:49:29] Felipe "Juca" Sanches: http://multimedia.ufp.pt/codecs/compressao-sem-perdas/codificacao-baseada-em-dicionarios/lzss/
+[2021-07-28 03:51:19] Felipe "Juca" Sanches: Tá aí RicBit, parece que em nihon-go "lz77 chunchado" se diz LZSS, né?! 😊
+[2021-07-28 04:52:45] Felipe "Juca" Sanches: https://forum.fiozera.com.br/t/technics-kn5000-homebrew-development/321
+[2021-07-28 04:53:26] Felipe "Juca" Sanches: de vez em quando gosto de fazer posts resumão. Em breve teremos mais.
+[2021-07-28 10:39:24] RicBit: lzss não é o algoritmo do pma?
+[2021-07-28 10:40:54] Felipe "Juca" Sanches: Não sei. O que é pma?
+[2021-07-28 13:20:49] RicBit: É o compressor que os japoneses usavam nativamente no msx dos.
+[2021-07-28 13:33:30] Felipe "Juca" Sanches: ah, eu não conheço. Nunca usei
+[2021-07-28 23:26:47] Alexandre Villares: https://twitter.com/MrVGBrow/status/1417313854753845270?s=20

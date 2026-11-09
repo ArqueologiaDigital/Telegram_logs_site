@@ -1,0 +1,23 @@
+[2025-12-28 17:19:47] Felipe "Juca" Sanches: Tão perto de 100%! Mas começa a ficar difícil de avançar...
+[2025-12-28 17:20:23] Felipe "Juca" Sanches: E acho que encontrei um bug no assembler
+[2025-12-28 17:35:13] Felipe "Juca" Sanches: O unidasm (disassembler do MAME) me diz que os bytes B3 E8 correspondem à instrução CALL T, XHL (Chamada incondicional para a sub-rotina cujo enderenço está salvo no registrador XHL)
+[2025-12-28 17:35:51] Felipe "Juca" Sanches: A chamada é incondicional por que a condição é T, que significa "True", ou seja, chama a subrotina sempre.
+[2025-12-28 17:43:36] Felipe "Juca" Sanches: O assembler que estou usando se chama AS (mas já vi sendo chamado de ASL também, não entendo por que) e é desenvolvido desde os anos 80 para múltiplas arquiteturas de CPUs por um cara chamado Alfred Arnold.
+Ele não usa (ao menos publicamente) nenhum sistema de controle de versão. Mas ele posta em um site de tempos em tempos um tar.gz do código fonte conforme o projeto vai evoluindo:
+http://john.ccac.rwth-aachen.de:8000/as/
+[2025-12-28 17:44:15] Felipe "Juca" Sanches: Semana passada o site tava OK, mas hoje não tá abrindo. Então, ao menos por enquanto, temos a opção de ver um snapshot do Internet Archive aqui: https://web.archive.org/web/20251102114940/http://john.ccac.rwth-aachen.de:8000/as/
+[2025-12-28 17:44:45] Felipe "Juca" Sanches: Várias pessoas abriram repositórios no github com o código do assembler.
+[2025-12-28 17:46:44] Felipe "Juca" Sanches: Do site do Arnold eu baixei a versão 1.42 (Build 298)
+E de um repo git eu compilei a versão 1.42 Beta (Build 212)
+[2025-12-28 17:47:06] Felipe "Juca" Sanches: A Beta build 212 é a que eu estou usando para tentar replicar a ROM do KN5000
+[2025-12-28 17:49:23] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36747.jpg
+[2025-12-28 17:49:23] Felipe "Juca" Sanches: Como a Build 298 é supostamente mais recente, eu esperava que fosse melhor. Mas nela a montagem da instrução CALL T, XHL falha com a mensagem error: addressing mode not allowed here
+[2025-12-28 17:51:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36748.jpg
+[2025-12-28 17:51:14] Felipe "Juca" Sanches: Já com o assembler versão Beta Build 212, a montagem está OK, e concorda com a interpretação do unidasm
+[2025-12-28 17:51:39] Felipe "Juca" Sanches: Então agora estou com esse dilema:
+Adotar pra sempre a versão velha?
+Ou consertar a versão nova?
+[2025-12-28 18:49:39] Ramiro Polla: Se quiser eu dou um pulo em Aachen e converso com ele :)
+[2025-12-28 18:49:46] Felipe "Juca" Sanches: kkkk
+[2025-12-28 18:50:59] Felipe "Juca" Sanches: São 23 minutos de trem com uma passagem de uns 200 reais, né?
+[2025-12-28 23:36:08] L.: https://www.ninakalinina.com/notes/win2apri/

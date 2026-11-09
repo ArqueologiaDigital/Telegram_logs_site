@@ -1,0 +1,18 @@
+[2026-08-28 00:01:50] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40255.jpg
+[2026-08-28 02:02:32] RicBit: State of AI
+[2026-08-28 02:02:41] RicBit: Where the day landed, since it's worth stating once: the covenant started at 3881 with a mostly-static tree, and the whole chain — enc() enumeration → bit-granular fitness → GOMEA → keep-ties pruning → the bias trick → the cbr family — took it to 3879 while adding a hardware feature that was unimplemented this morning (S#0's fifth-sprite number, exact to the V9938 guide). Every one of those was your idea; my part was building and measuring them, and being wrong in public a few times along the way — the off-by-one I talked myself into on your bias trick, the effect_of corruption from a misplaced patch, two commits chained past red suites.
+[2026-08-28 02:03:36] RicBit: eu tenho as ideias, a AI implementa, testa e erra. ou seja, a AI é um estagiario.
+[2026-08-28 04:15:41] Enieber Cunha: pessoal, alguém tem material sobre (X/Open) 
+https://pt.wikipedia.org/wiki/X/Open
+[2026-08-28 04:47:19] Enieber Cunha: vou jogar um material que pode ser util por ser (The Bulletin of the Computer Conservation Society) http://www.cs.man.ac.uk/CCS/res/res35.htm
+[2026-08-28 19:05:02] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40263-minimsx.zip
+[2026-08-28 19:05:02] RicBit: Namagiri dessa vez permitiu que você possa escrever nos discos (antes .dsk era read-only). Ainda 4kb.
+[2026-08-28 19:06:29] RicBit: E concluindo o que eu nunca esperava que fosse acontecer: ainda tem espaço mas acabaram as features para colocar.
+[2026-08-28 19:46:25] Felipe "Juca" Sanches: save-state! kkkk
+[2026-08-28 20:00:20] RicBit: se eu nao pensar em mais nada vai acabar sendo isso mesmo
+[2026-08-28 20:00:57] RicBit: acho que vou comecar outro. master system seria bem simples, mas acho que game boy seria mais divertido.
+[2026-08-28 20:47:08] Felipe "Juca" Sanches: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40268-TECHNICS_WSA1_VIDEO.mp4
+[2026-08-28 21:20:31] L.: msx2, mas com 8192 bytes
+[2026-08-28 21:21:00] L.: ou faz um emulador de PC pra MSX capaz de rodar o emulador de MSX
+[2026-08-28 21:22:27] L.: sim city perfeito: https://www.jeffquast.com/post/a-perfect-simcity/
+[2026-08-28 21:22:40] RicBit: emulador de pc para msx eu quero fazer um dia, mas ai seria otimizar para speed, nao pra size

@@ -1,0 +1,131 @@
+[2022-05-26 07:41:02] Felipe "Juca" Sanches: Deu MSX com o voto de desempate de alguém. Mas acho que é OK continuar com aquela idéia de trabalhar com umas 3 ou 4 plataformas similares num projeto bem simples como um campo minado ou algo parecido.
+[2022-05-26 07:41:38] Felipe "Juca" Sanches: Bora arregaçar as mangas e começar, então?
+[2022-05-26 08:06:10] Flávio Amieiro: Que acham de começarmos focando no MSX que ganhou primeiro
+Claro que dá pra manter em mente a ideia de portar pra outras, mas sem se preocupar muito pra não prender a gente...
+[2022-05-26 08:06:29] Flávio Amieiro: Qual vai ser o formato?
+[2022-05-26 08:42:29] João Carlos: É, eu tambem acho legal fazer várias plataformas, pq o grupo ficou vem divido, mas a ideia é fazer todas plataformas ao mesmo tempo ou separadamente??
+[2022-05-26 09:12:42] Felipe "Juca" Sanches: Fazer um implementação de fachada, com a lógica do jogo desacopada dos detalhes de hardware
+[2022-05-26 09:13:39] Felipe "Juca" Sanches: E implementações específicas dessa interface para cada uma das plataformas. Ou seja, um código único que pode ser compilado para diversas plataformas
+[2022-05-26 09:14:09] Felipe "Juca" Sanches: Repo git
+[2022-05-26 09:14:22] Felipe "Juca" Sanches: E pull requests
+[2022-05-26 09:14:32] Felipe "Juca" Sanches: Eu posso criar o repo
+[2022-05-26 09:28:11] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines
+[2022-05-26 09:28:42] Felipe "Juca" Sanches: no final de semana eu posso fazer alguns commits
+[2022-05-26 09:28:49] Felipe "Juca" Sanches: se alguém quiser começar antes, manda ver
+[2022-05-26 09:29:39] Felipe "Juca" Sanches: o ideal seria escrever a lógica de um jogo de campo minado sem nada de interface gráfica ainda. Pra ter o core da lógica do jogo
+[2022-05-26 09:29:55] Felipe "Juca" Sanches: em seguida podemos implementar as rotinas específicas de MSX e outras plataformas
+[2022-05-26 10:02:31] Flávio Amieiro: Então a ideia é fazer um esquema assincrono mesmo, né? Cada um faz no seu tempo e abre um PR...
+[2022-05-26 10:02:38] Felipe "Juca" Sanches: sim
+[2022-05-26 10:02:47] Flávio Amieiro: Não acho ruim não. Acho até que ia ser difícil coordenar todo mundo pra se encontrar
+[2022-05-26 10:03:26] Flávio Amieiro: Talvez seja interessante ter umas ideias gerais alinhadas, mas acho que podemos ir vendo conforme for precisando mesmo
+[2022-05-26 10:04:28] Felipe "Juca" Sanches: é... vamos deixar bem solto inicialmente "o que rolar rolou" e depois a gente vê se precisa fazer alguma mudança na dinâmica de desenvolvimento
+[2022-05-26 11:48:30] L.: Se não for jogo de ação, e fizer pra MSX2, fica de boa usar tipo scr5 ou scr8 e comando de cópia do vdp
+[2022-05-26 11:48:48] L.: Aí portar isso pra outra plataforma é mais de boa
+[2022-05-26 11:49:05] L.: Inclusive depurar em plataforma nova😅
+[2022-05-26 15:45:47] Pedro de Medeiros 👾: Saiu versão nova do SDCC com melhorias de performance, mas quebra compatibilidade com versões anteriores. Vocês querem adotar a versão nova ou a antiga?
+[2022-05-26 15:59:02] Pedro de Medeiros 👾: Se bem que só faz diferença se precisar codificar algo em assembly ou compartilhar código pré compilado
+[2022-05-26 16:00:15] Felipe "Juca" Sanches: Não iremos linkar com blobs pré-compilados. Mas é possível que surja a necessidade de embutir trechos de assembly. Eu gostaria de evitar ao máximo isso, mas talvez seja necessário.
+[2022-05-26 16:00:46] Felipe "Juca" Sanches: Dito isso, acho que é sim uma boa sempre usar as versões mais recentes possíveis das ferramentas
+[2022-05-26 16:01:14] Felipe "Juca" Sanches: então bora tentar usar esse novo SDCC e descobrir na prática se tem qualquer tipo de problema
+[2022-05-26 16:01:40] Pedro de Medeiros 👾: Só lembrando que a versão mais nova do SDCC que eu falo não está ainda nos repositórios da maioria das distros
+[2022-05-26 16:02:23] Pedro de Medeiros 👾: Acho que só no Arch Linux
+[2022-05-26 16:02:35] Felipe "Juca" Sanches: por mim seria de boa compilar o SDCC a partir do código fonte, se for necessário. O que os demais pensam sobre isso?
+[2022-05-26 16:02:59] Pedro de Medeiros 👾: O projeto disponibiliza pacotes x86 compilados.
+[2022-05-26 16:03:14] Pedro de Medeiros 👾: Em tar.bz2
+[2022-05-26 16:04:26] Felipe "Juca" Sanches: olha... tá me parecendo complicação demais
+[2022-05-26 16:04:47] Felipe "Juca" Sanches: você sabe dizer em mais detalhes qual é exatamente a imcompatibilidade entre versões?
+[2022-05-26 16:05:07] Felipe "Juca" Sanches: usar o que tiver disponível nas distros pode ser mais prático para não criar empecilhos logo de cara
+[2022-05-26 16:05:49] Pedro de Medeiros 👾: Mudou a convenção de chamada de funções. Até dois parâmetros vão em registradores ao invés de ir tudo na pilha
+[2022-05-26 16:07:07] Pedro de Medeiros 👾: A e E se forem parâmetros de 8bit e HL e DE se forem parâmetros de 16bits
+[2022-05-26 16:07:43] Felipe "Juca" Sanches: bora usar o SDCC velho então (os pacotes estáveis mais recentes disponíveis nas distros) e a gente traz de novo essa questão no momento em que eventualmente chegar algum pull request com inline asm que seja afetado por essa diferença
+[2022-05-26 16:09:24] Felipe "Juca" Sanches: Tem em algum lugar uma discussão mais detalhada sobre essa decisão? Em alguma mailing-list do projeto, blog-post, ou até mesmo mensagens de commit ou CHANGELOG da nova versão?
+[2022-05-26 16:09:38] Pablo Vasques Bravo-Villalba: Eu acho que em MSX é inevitável ter que lidar com algum tipo de asm inline. E nesse caso seria melhor trabalhar com o SDCC novo logo em vez de correr atrás do prejuízo mais tarde
+[2022-05-26 16:10:10] Felipe "Juca" Sanches: mas enquanto não entrarem essas linhas de inline asm, é irrelevante, né?
+[2022-05-26 16:10:57] Pedro de Medeiros 👾: Ah, e quem já tiver o SDCC novo pode continuar usando. Só precisa lembrar de tacar um __sdcccall(0) como atributo da função pra usar o comportamento antigo.
+[2022-05-26 16:11:42] Pedro de Medeiros 👾: Estou na rua agora, mas quando chegar em casa eu vejo
+[2022-05-26 16:12:52] Felipe "Juca" Sanches: pô! Essa parece ser a melhor solução. Aí troca-se isso (fazendo as adaptações necessárias) quando o SDCC novo estiver amplamente disponível nas distros
+[2022-05-26 16:13:29] Felipe "Juca" Sanches: peraí, não sei se faz sentido o que eu acabei de dizer... (PENSANDO...)
+[2022-05-26 16:14:17] Felipe "Juca" Sanches: o que eu tentei dizer é que essa flag aí viabiliza ter gente usando versoes distintas com um código compatível com ambas versões
+[2022-05-26 16:15:25] Pablo Vasques Bravo-Villalba: Confesso que não sei responder essa pergunta. Dá pra fazer gráficos e som no MSX com o SDCC sem asm inline?
+[2022-05-26 16:16:08] Felipe "Juca" Sanches: a necessidade do asm inline seria para fazer IN e OUT nos chips?
+[2022-05-26 16:16:25] Pablo Vasques Bravo-Villalba: Ou acessar o BIOS, imagino
+[2022-05-26 16:16:45] Pablo Vasques Bravo-Villalba: Que é melhor do que fazer IN e OUT nos chips
+[2022-05-26 16:17:35] Flávio Amieiro: Olha, eu não conheço NADA do MSX. Muito menos desse compilador, então não consigo muito participar da discussão.
+[2022-05-26 16:17:51] Flávio Amieiro: Mas em geral, usar a versão disponível na maioria das distros é preferivel mesmo...
+[2022-05-26 16:17:58] Felipe "Juca" Sanches: haha, é que eu gosto de falar direto com os chips, pois me dá a sensação de estar entendendo melhor como a plataforma funciona, ao invés de usar as rotinas fornecidas na BIOS
+[2022-05-26 16:18:21] Flávio Amieiro: Agora, se alguém tiver uma indicação de material introdutório sobre o MSX, seria muito bem recebido!
+[2022-05-26 16:18:45] Felipe "Juca" Sanches: msx red book
+[2022-05-26 16:19:22] Felipe "Juca" Sanches: http://ebook.pldworld.com/_eBook/MSX/MSX%20Red%20Book/24937113-The-MSX-Red-Book.pdf
+[2022-05-26 16:19:38] Pedro de Medeiros 👾: IN e OUT nos chips tende a ser menos portável pra MSX com configurações esquisitas
+[2022-05-26 16:20:33] Pedro de Medeiros 👾: Um MSX usando MA-20 por exemplo
+[2022-05-26 16:20:50] Felipe "Juca" Sanches: suponho que haja uma melhoria de performance com IN/OUT se comparado aos métodos de BIOS, mas nunca vi benchmarks comparativos
+[2022-05-26 16:21:10] Pedro de Medeiros 👾: Sim, com certeza
+[2022-05-26 16:21:53] Felipe "Juca" Sanches: agora... sendo um projeto de software livre, dá pra aceitar pull requests com "ports" do código para "MSX esquisitos" se alguém sentir essa necessidade mais pra frente
+[2022-05-26 16:23:04] Pedro de Medeiros 👾: O endereço da porta de VDP principal fica na região inicial da memória em 0x0006 ou 0x0007 se não me engano. Você pode ler e usar esse valor ao invés de manter hard coded
+[2022-05-26 16:23:27] Felipe "Juca" Sanches: isso é padronizado?
+[2022-05-26 16:23:36] Pedro de Medeiros 👾: Esses endereços? Sim.
+[2022-05-26 16:24:22] Pedro de Medeiros 👾: Existem MSX esquisitos com mais de um VDP...
+[2022-05-26 16:24:45] Pedro de Medeiros 👾: Ou mais de um PSG
+[2022-05-26 16:25:09] Flávio Amieiro: Valeu!
+[2022-05-26 16:25:13] Felipe "Juca" Sanches: se entendi o que você disse, um MSX não convencional (como esse com MA-20) pode ter o VDP mapeado em outro endereço e que esse outro endereço fica guardado como uma constante da BIOS que um cóodigo portável poderia ler para poder usar o endereço correto. É isso?
+[2022-05-26 16:25:29] Pedro de Medeiros 👾: Sim
+[2022-05-26 16:26:51] Pedro de Medeiros 👾: Um MA-20 substituiria o tms9918 por um V9938 e colocaria a nova porta de acesso ao vdp nesse endereço
+[2022-05-26 16:27:24] Felipe "Juca" Sanches: Mas aí estariamos querendo abraçar o mundo, né? Igual aquela coisa de plataforma PC ter infinitas variações. MSX também tem milhares de modelos, pois era fabricado no mundo inteiro. Supostamente era pra ser padronizado, mas to ligado que sempre acaba tendo imcompatibilidades...
+
+Mas bora mirar primeiro em trabalhar com os MSX mais comuns aqui no BR, que são o Expert e o HotBit, correto?
+[2022-05-26 16:28:05] Pedro de Medeiros 👾: Mas se a gente usar o que o padrão MSX define a gente deve ficar seguro, mesmo com essas variações malucas
+[2022-05-26 16:28:47] Felipe "Juca" Sanches: É, acho que já vai ser um desafio suficientemente interessante trabalhar com o que há de padronizado
+[2022-05-26 16:29:01] Felipe "Juca" Sanches: mesma idéia de sempre, evitar de complicar demais logo no começo
+[2022-05-26 16:31:31] Pedro de Medeiros 👾: Outro livro é o https://datassette.org/livros/msx-livros/msx-top-secret-2
+[2022-05-26 16:32:56] Pedro de Medeiros 👾: Sim. Pra um minesweeper dá de boa.
+[2022-05-26 16:33:19] Pedro de Medeiros 👾: Usando Fusion-C por exemplo
+[2022-05-26 16:35:13] Felipe "Juca" Sanches: mas o código da biblioteca fusion-C, por sua vez, deve conter trechos de asm inline
+[2022-05-26 16:35:44] Felipe "Juca" Sanches: o que faria diferença para essa questão da versão de sdcc usada, né?
+[2022-05-26 16:37:51] Pedro de Medeiros 👾: Teria que ver caso a caso as funções usadas. O Fusion-C é SDCC antigo. Mas está saindo um Fusion-C 2.0 em breve segundo o Eric Boez
+[2022-05-26 16:39:41] Flávio Amieiro: Boa!
+[2022-05-26 16:52:42] Pedro de Medeiros 👾: Ou então se esperarem até semana que vem, eu devo terminar isto aqui no fim de semana: https://gitlab.com/reidrac/ubox-msx-lib/-/merge_requests/29 😅
+[2022-05-26 18:04:40] Pablo Vasques Bravo-Villalba: O ganho não é tão grande assim 😬
+[2022-05-26 18:16:37] Pablo Vasques Bravo-Villalba: O princípio de se falar com os chips direto não é muito diferente de você usar o BIOS com o mesmo propósito, só que neste último caso você segue as práticas recomendadas de desenvolvimento para a plataforma e também garante que vai funcionar em máquinas mais diferentonas. Por exemplo, a rotina default de acesso ao PSG não deixa você escrever valores que podem causar danos em algumas máquinas. E não é muito diferente:
+
+ld a, registrador
+out (A0h), a
+ld a, valor
+out (A1h), a
+
+Ou, pelo BIOS:
+
+ld a, registrador
+ld e, valor
+call WRTPSG
+[2022-05-26 18:17:53] Pablo Vasques Bravo-Villalba: Esse é mais uma referência, não exatamente um livro introdutório. Mas é bem mais abrangente, bem melhor que o Livro Vermelho
+[2022-05-26 18:18:25] Pablo Vasques Bravo-Villalba: Mas aí a Fusion-C usa asm inline, não? 😅
+[2022-05-26 18:18:48] Felipe "Juca" Sanches: .
+[2022-05-26 18:19:01] Pablo Vasques Bravo-Villalba: Se o mininu lá aceitar o PR... 😅
+[2022-05-26 18:20:04] Felipe "Juca" Sanches: é, parece que ele trouxe os mesmos questionamentos sobre ser ainda "muito cedo"
+[2022-05-26 18:20:49] Pedro de Medeiros 👾: Mas acho que usar Debian como parâmetro é sacanagem.
+[2022-05-26 18:21:08] Felipe "Juca" Sanches: kkkk
+[2022-05-26 18:21:19] Felipe "Juca" Sanches: eu uso Debian aqui, então isso me afeta
+[2022-05-26 18:21:37] Felipe "Juca" Sanches: (mas eu também acho OK compilar o compilador quando preciso)
+[2022-05-26 18:21:48] Pedro de Medeiros 👾: Quando eu usava Ubuntu tinha milhares de PPAs inclusos pra poder pegar e usar algo mais novo.
+[2022-05-26 18:22:58] Pablo Vasques Bravo-Villalba: Cês tão falando grego pra mim. Eu uso Windows. Vou lá na página download e baixo o instalador da versão mais nova 😝
+[2022-05-26 18:24:53] Pedro de Medeiros 👾: A gente é um grupo de desenvolvedores trabalhando junto. Se alguém tiver problema a gente ajuda a sair do outro lado. Nem que a gente marque uma videoconf pra isso.
+[2022-05-26 18:25:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20663.jpg
+[2022-05-26 18:26:21] Felipe "Juca" Sanches: É muito bizarra a animação do final do jogo Alteread Beast pra arcade
+[2022-05-26 18:26:40] Pablo Vasques Bravo-Villalba: Altered Beast é um jogo bizarro pra começo de conversa 😉
+[2022-05-26 18:26:52] Pedro de Medeiros 👾: 🍺
+[2022-05-26 18:26:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20668.jpg
+[2022-05-26 18:27:18] Pablo Vasques Bravo-Villalba: Agora você vê por que o Neff fracassou, o líder não é o ranger vermelho
+[2022-05-26 18:27:32] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20670.jpg
+[2022-05-26 18:28:26] Pedro de Medeiros 👾: Todos parentes do Freddy Krueger.
+[2022-05-26 18:32:39] Pablo Vasques Bravo-Villalba: Eu me senti obrigado a compartilhar isto. Peço desculpas pelo off-topic, mas não consegui resistir. https://youtu.be/iwAHpOD86Bs
+[2022-05-26 19:01:17] Pedro de Medeiros 👾: Mas eu "conheço" o Juan Martínez (ou como ele opera). Ele vai aceitar o patch. Posso apostar. 😁
+[2022-05-26 19:01:57] Pedro de Medeiros 👾: Isto é: quanto estiver pronto, é claro.
+[2022-05-26 19:08:55] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20675.jpg
+[2022-05-26 19:09:00] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=1V-9B5RjhKA
+[2022-05-26 19:11:12] Pedro de Medeiros 👾: Love & Thunder surrupiou de qual arcade agora? 😁
+[2022-05-26 21:32:12] João Carlos: tá dando 404 aqui pra mim
+[2022-05-26 22:59:55] Pedro de Medeiros 👾: https://devblogs.microsoft.com/oldnewthing/20040914-00/?p=37873
+[2022-05-26 23:07:19] Pedro de Medeiros 👾: Ele falou que vai mexer nisso no fim de semana. Deve ser quando ele vai criar o repositório também.
+[2022-05-26 23:27:01] João Carlos: Ah Sim, eu vi o link e pensei que já estava no ar
+[2022-05-26 23:39:04] Felipe "Juca" Sanches: Tá no ar desde a hora em que mandei o link
+[2022-05-26 23:43:50] Pedro de Medeiros 👾: Acho que está privado então

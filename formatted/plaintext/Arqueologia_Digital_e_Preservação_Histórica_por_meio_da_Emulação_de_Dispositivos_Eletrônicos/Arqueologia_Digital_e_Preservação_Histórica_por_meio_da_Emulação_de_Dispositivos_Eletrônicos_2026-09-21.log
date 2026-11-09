@@ -1,0 +1,38 @@
+[2026-09-21 03:03:39] Felipe "Juca" Sanches: RicBit, você pretende publicar seus nanoemuladores em algum lugar? Eu estava conversando com uns desenvolvedores do MAME e eles ficaram interessados em ver. Posso mandar pra eles os binários que você compartilhou aqui?
+[2026-09-21 05:19:22] RicBit: O de msx tem release já
+[2026-09-21 05:19:55] RicBit: https://ricbit.github.io/msxzin/
+[2026-09-21 05:20:12] RicBit: o de gameboy vou fazer essa semana, acho que ele está ficando no limite já
+[2026-09-21 05:20:42] RicBit: mas eu acabei de inventar um conceito novo vai melhorar muito
+[2026-09-21 05:20:55] RicBit: o milibit
+[2026-09-21 05:21:09] RicBit: que é um milesimo de um bit
+[2026-09-21 05:21:21] RicBit: usando milibits namagiri está muito mais rapida
+[2026-09-21 05:37:05] Felipe "Juca" Sanches: ;-D
+[2026-09-21 10:21:10] Leonardo Roman: Daqui a pouco ela descobre a computação quântica
+[2026-09-21 14:03:13] Felipe "Juca" Sanches: Lá vem o Cuavas de novo... 
+
+https://github.com/mamedev/mame/pull/16219
+[2026-09-21 15:21:29] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40670.jpg
+[2026-09-21 15:21:29] RicBit: deixei o milibit rodando por oito horas, depois comecei a rodar o bit inteiro. abortei já, em 2h já deu pra ver que o milibit domina.
+[2026-09-21 15:26:08] RicBit: a semente é a mesma então deve convergir pro mesmo lugar, mas o milibit converge mais rapido porque o gradiente é melhor. com bit inteiro ele fica um tempao deslizando de lado igual ao urso do pica pau.
+[2026-09-21 16:27:48] Hugo (Agaelebê): "It Trivialises The Hobby" - GoldenEye Running On SNES Triggers More Debate Over Vibe-Coded Retro Projects | Time Extension https://www.timeextension.com/news/2026/09/it-trivialises-the-hobby-goldeneye-running-on-snes-triggers-more-debate-over-vibe-coded-retro-projects
+[2026-09-21 16:42:10] L.: InfiniteMac agora roda A/UX!
+
+https://blog.persistent.info/2026/09/infinite-mac-snow-and-aux.html?m=1
+[2026-09-21 17:23:45] Felipe "Juca" Sanches: MERGED! (Technics WSA1R)
+[2026-09-21 17:56:08] L.: Copland (protótipo falido do MacOS clássico com modo protegido e perempção num microkernel) rodando em emulador pela primeira vez
+
+https://www.pagetable.com/300
+[2026-09-21 18:04:34] L.: PDP11 rodando 2.11BSD e servindo páginas http
+
+https://pdp1173.com/
+[2026-09-21 20:47:27] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/16220
+[2026-09-21 20:47:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40679.jpg
+[2026-09-21 21:04:24] Ismael Carvalho: o homi tá on fire
+[2026-09-21 21:04:48] Felipe "Juca" Sanches: kkkkkk
+[2026-09-21 21:05:42] Ismael Carvalho: tá aparecendo na internet umas paradas que parece muito as coisas que já vi tu contribuir
+[2026-09-21 21:05:55] Ismael Carvalho: é maneiro ver uma galera nova se ligando que o mame é mais que só arcade
+[2026-09-21 21:22:18] Felipe "Juca" Sanches: pois é...
+[2026-09-21 22:09:42] Marcelo: Ainda faltam mais uns consoles obscuros pra acrescentar
+[2026-09-21 22:21:43] L.: Já tem emulador de Zeebo fora, em breve alguém faz driver pro mame
+[2026-09-21 23:11:42] Shideravan: Já tem skeleton
+[2026-09-21 23:12:38] Shideravan: https://github.com/mamedev/mame/blob/master/src/mame/skeleton/zeebo_qualcomm_adreno130.cpp

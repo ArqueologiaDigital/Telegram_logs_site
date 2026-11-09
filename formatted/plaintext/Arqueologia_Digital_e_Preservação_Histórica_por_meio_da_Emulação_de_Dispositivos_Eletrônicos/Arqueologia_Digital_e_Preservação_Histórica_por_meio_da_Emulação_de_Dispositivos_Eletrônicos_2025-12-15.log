@@ -1,0 +1,10 @@
+[2025-12-15 11:29:10] Alexandre Villares: https://technicshistory.com/2025/12/13/the-rise-of-computer-games-part-i-adventure/
+[2025-12-15 11:33:39] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=CWCUmTTVjMY
+[2025-12-15 23:53:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36659.jpg
+[2025-12-15 23:53:05] Felipe "Juca" Sanches: Há alguns anos venho fazendo um disasm da ROM versão 10 do KN5000.
+Hoje resolvi tentar montá-la para comparar com a ROM original byte-a-byte.
+[2025-12-15 23:53:42] Felipe "Juca" Sanches: São 2 megabytes de ROM. Resultando em um arquivo .asm com 11 megabytes...
+[2025-12-15 23:54:08] Felipe "Juca" Sanches: Falta arrumar a sintaxe pra consertar aqueles 63 mil erros
+[2025-12-15 23:54:20] Felipe "Juca" Sanches: (usando regexp, é claro!)
+[2025-12-15 23:56:25] Felipe "Juca" Sanches: eu já extraí 42 arquivos binários de imagens (360kbytes). E uso a diretiva binclude para re-incluílos no arquivo .asm
+[2025-12-15 23:56:39] Felipe "Juca" Sanches: deve ter mais blocos grandes de dados para fazer a mesma coisa

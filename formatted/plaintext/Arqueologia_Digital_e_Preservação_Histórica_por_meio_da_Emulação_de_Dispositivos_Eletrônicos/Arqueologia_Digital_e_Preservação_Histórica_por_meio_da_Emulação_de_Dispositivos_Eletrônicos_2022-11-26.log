@@ -1,0 +1,6 @@
+[2022-11-26 08:48:44] Felipe "Juca" Sanches: sim
+[2022-11-26 10:18:32] FTMaciel: E os cartuchos do tipo x em 1?
+[2022-11-26 11:41:27] Felipe "Juca" Sanches: se o cartucho tiver hardware adicional para o chaveamento de banco, precisa ter a emulação disso (e o MAME faz essa emulação de cartuchos especiais). Mas tem cartuchos que fazem tudo por software mesmo, só usando uma ROM um pouco maior
+[2022-11-26 11:41:50] Felipe "Juca" Sanches: o cartucho do Telebradesco, por exemplo, não é emulado ainda. Ele tem hardware adicional: um modem
+[2022-11-26 14:15:28] L.: https://twitter.com/RetroGameMechEx/status/1596538607439081472?t=QnsHDTeDm2qmofpxw1TDoQ&s=35
+[2022-11-26 19:31:21] FTMaciel: Tipo os XX em 1 tem só um ou outro ci lógico extra. Tipo os de atari

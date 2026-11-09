@@ -1,0 +1,19 @@
+[2021-01-20 21:27:59] Felipe "Juca" Sanches: Acidx Leandro: https://www.bokborsen.se/view/-/Smart-Start-Matchbook-Bok-5-%C3%85lder-8-9-%C3%85r/9853277
+[2021-01-20 21:29:11] L.: Vai comprar pra aprender Sueco?
+[2021-01-20 21:32:07] Felipe "Juca" Sanches: kkkk
+[2021-01-20 21:32:14] Felipe "Juca" Sanches: estou completando a colecao de livros
+[2021-01-20 21:32:23] Felipe "Juca" Sanches: já tenho quase tudo dos livros que sairam no brasil
+[2021-01-20 21:32:50] Felipe "Juca" Sanches: e faltam uns 4 livros originais em ingles (dos que foram vendidos originalmente nos EUA)
+[2021-01-20 21:33:09] Felipe "Juca" Sanches: mas agora descobri que teve na Suécia também. Mas acho que não vou encarar expandir tanto assim a colećão
+[2021-01-20 22:53:48] Felipe "Juca" Sanches: vocês já conheciam isso aqui?
+
+https://www.etsy.com/il-en/listing/648241546/original-smart-start-speller-video?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=smart+start&ref=sr_gallery-1-1&organic_search_click=1
+[2021-01-20 23:24:47] Felipe "Juca" Sanches: a partir do endereco 0x149 do binário do Pense Bem 2017, temos uma sequencia de bytes que corresponde ao gabarito das 150 questoes do livro 3 codificadas com 2 bits por resposta sendo 00 = a, 01 = b, 10 = c, 11 = d
+[2021-01-20 23:25:11] Felipe "Juca" Sanches: a tectoy incluiu os gabaritos explicitos, precalculados no firmware de 2017 (feito em ATMEGA). Mas suspeito que o firmware de Z8 (do Pense Bem da década de 80 use um Linear Feedback Shift Register para calcular essas respostas)
+[2021-01-20 23:25:29] Felipe "Juca" Sanches: ou algum outro algoritmo de geracao de numeros pseudo aleatorios
+[2021-01-20 23:26:30] Felipe "Juca" Sanches: pra quem quiser brincar de matemática, aqui está o gabarito do livro 3 com a codificacao descrita acima:
+
+['0xe', '0x70', '0xe5', '0xbf', '0xdc', '0x47', '0x22', '0x9c', '0x47', '0x22', '0x9f', '0xee', '0xfc', '0x81', '0x81', '0x35', '0x6e', '0xfc', '0x80', '0xd3', '0x5f', '0xa4', '0xd3', '0x5e', '0xa4', '0xd3', '0x71', '0x71', '0xc6', '0xbe', '0xbc', '0x2d', '0x7d', '0x72', '0x57', '0x1f', '0xee']
+[2021-01-20 23:27:31] Felipe "Juca" Sanches: se preferem inteiros, aqui está a mesma lista:
+
+[14, 112, 229, 191, 220, 71, 34, 156, 71, 34, 159, 238, 252, 129, 129, 53, 110, 252, 128, 211, 95, 164, 211, 94, 164, 211, 113, 113, 198, 190, 188, 45, 125, 114, 87, 31, 238]

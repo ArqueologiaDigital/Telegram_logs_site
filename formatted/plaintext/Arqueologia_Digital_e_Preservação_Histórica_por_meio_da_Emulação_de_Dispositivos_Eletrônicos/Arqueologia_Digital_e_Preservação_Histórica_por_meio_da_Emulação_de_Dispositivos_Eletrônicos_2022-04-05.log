@@ -1,0 +1,39 @@
+[2022-04-05 00:09:23] L.: https://twitter.com/Tegglington/status/1510649920042283021?t=pWJ0s0efljQZYTpv3lS6Gg&s=09
+[2022-04-05 00:09:23] L.: Isso é extremamente Juca
+[2022-04-05 00:42:39] Felipe "Juca" Sanches: AMAZING!!!!! 😃
+[2022-04-05 00:43:09] Felipe "Juca" Sanches: Estou ainda degustando Another World
+[2022-04-05 00:43:29] Felipe "Juca" Sanches: hoje destrinchei algumas partes do port para Symbian OS
+[2022-04-05 00:44:17] Felipe "Juca" Sanches: baixei uma cópia de uma versão demo do jogo para Symbian OS - Series 60 aqui: http://www.mobyware.org/series-60-os/another-world-get-69293.html
+[2022-04-05 00:44:48] Felipe "Juca" Sanches: o arquivo de instalação tem a extensão .sis
+[2022-04-05 00:45:01] Felipe "Juca" Sanches: achei uma documentação do formato aqui:
+
+https://thoukydides.github.io/riscos-psifs/sis.html
+[2022-04-05 00:45:14] Felipe "Juca" Sanches: e comecei a decodificar mentalmente o arquivo acompanhando os bytes no editor hexadecimal e lendo a descrição do formato de arquivo
+[2022-04-05 00:45:47] Felipe "Juca" Sanches: aí eu vi que os arquivos são comprimidos usando zlib e tive a idéia de usar o programa binwalk pra extrair esses arquivos com compressão.
+
+E com isso achei várias coisas legais:
+[2022-04-05 00:46:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19464.jpg
+[2022-04-05 00:46:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19465.jpg
+[2022-04-05 00:46:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19466.jpg
+[2022-04-05 00:46:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19467.jpg
+[2022-04-05 00:46:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19468.jpg
+[2022-04-05 00:46:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19469.jpg
+[2022-04-05 00:46:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19470.jpg
+[2022-04-05 00:46:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19471.jpg
+[2022-04-05 00:46:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19472.jpg
+[2022-04-05 00:46:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19473.jpg
+[2022-04-05 00:47:06] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19474-CE4D0.mod
+[2022-04-05 00:49:22] Felipe "Juca" Sanches: Achei um dos blocos de dados de polígonos desse port do symbian e é bem parecido, porém não é idêntico aos dos outros ports. Não sei quais são as diferenças, mas talvez tenham feito ajustes finos nas cordenadas dos polígonos para renderizar melhor na resolução limitada do port pra Symbian.
+[2022-04-05 00:51:22] Felipe "Juca" Sanches: Aqui está o pequeno script que automatiza em python o que inicialmente descobri usando o binwalk:
+
+https://github.com/felipesanches/AnotherWorld_VMTools/commit/8f1272bd528d551e2801c3d27d3fdaf239e1aad3
+[2022-04-05 18:22:47] Felipe "Juca" Sanches: fiz uma bela duma refatorada no código hoje. Tá ficando com uma estrutura cada vez melhor para facilitar a adição de suporte de diversos releases do jogo:
+
+https://github.com/felipesanches/AnotherWorld_VMTools/commit/63b20208050a98fc6364d63753dd34cad9ec2d1f
+[2022-04-05 18:22:58] Felipe "Juca" Sanches: Agora cada release tem seu próprio diretório no toolchain dentro do qual estão todos os dados específicos como:
+
+* nomes de labels e subrotinas conhecidas (que já tenham sido documentadas por engenharia reversa)
+* trechos de blocos de código não utilizados (código vestigial)
+* rotinas de decodificação e recodificação dos assets
+* checksums tanto dos arquivos originais, quanto dos assets extraídos
+[2022-04-05 18:30:43] Felipe "Juca" Sanches: tá virando um projeto com filosofia/metodologia quase idêntica à do MAME

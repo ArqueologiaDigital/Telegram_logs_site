@@ -1,0 +1,32 @@
+[2025-08-15 10:50:53] Pablo Vasques Bravo-Villalba: Answer to Why did IBM create a 640k limit in the original IBM PC, instead of allowing the full 1024k be usable, but Macs, Atari ST, Amiga's had no such limit? by Ira J Perlow https://www.quora.com/Why-did-IBM-create-a-640k-limit-in-the-original-IBM-PC-instead-of-allowing-the-full-1024k-be-usable-but-Macs-Atari-ST-Amigas-had-no-such-limit/answer/Ira-J-Perlow?ch=18&oid=153221790&share=4b529cd2&srid=nuj1&target_type=answer
+[2025-08-15 10:51:43] Pablo Vasques Bravo-Villalba: A resposta em si não tem tanta novidade, mas é uma perspectiva interessante da época, pelo autor do BIOS da Phoenix para PCs ☝️🏽
+[2025-08-15 16:01:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-08/35310.jpg
+[2025-08-15 16:01:58] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/14049#discussion_r2279652884
+[2025-08-15 16:03:11] Felipe "Juca" Sanches: (leiam essa parte da conversa sobre lei de trademark, uso de logotipos em emuladores e considerações sobre legibilidade de SVG escrito à mão)
+[2025-08-15 16:04:46] Felipe "Juca" Sanches: "You aren’t going to be able to do this with reasonably human-readable SVG" --Cuavas
+[2025-08-15 16:08:10] Pablo Vasques Bravo-Villalba: Em defesa do Cuavas, 99% de SVG não é remotamente legível como esse que você fez
+[2025-08-15 16:09:02] Felipe "Juca" Sanches: Por isso que eu sou cauteloso e escrevo à mão. Uso o Inkscape para fazer o primeiro desenho e depois abro um editor de texto e passo a limpo simplificando ao máximo.
+[2025-08-15 16:14:57] Pablo Vasques Bravo-Villalba: Haha, isso parece o tipo de coisa que eu faria se lidasse com arte vetorial.
+
+FYI eu faço protótipos de sistemas web direto em HTML 😅
+[2025-08-15 16:46:20] L.: Já fiz demais esse tipo de coisa (usando gtk, um negócio do enlightenment que uma empresa que trabalhava usava, e android) pra achar que cês são maluco de querer usar svg feito a mão 😆
+[2025-08-15 16:48:34] Felipe "Juca" Sanches: O que eu queria mesmo era poder importar SVG de um arquivo externo no layout do MAME. E com isso eu não teria tanta preocupação com legibilidade. Trataria como meramente um formato de imagem qualquer. Entretanto, o MAME não suporta isso ainda. Aí, sendo obrigado a inserir o SVG inline, o pessoal reclama se for muito verboso.
+[2025-08-15 16:49:08] Pablo Vasques Bravo-Villalba: Me parece tão arbitrário isso
+[2025-08-15 16:49:16] L.: Ahhh, é, isso facilita demais
+[2025-08-15 16:49:37] L.: Não tem uns bin2hex no mame?
+[2025-08-15 16:49:41] Felipe "Juca" Sanches: Outra coisa é que o schema XML de layouts do MAME é pouco expressivo. Se tivesse como desenhar um botão em forma de pílula com uma primitiva rect que tivesse atributo de rounded corners, eu não precisaria desenhar a pílula em SVG
+[2025-08-15 16:50:44] L.: https://github.com/lpereira/lwan/blob/master/src/bin/tools/bin2hex.c
+
+Esse que escrevi usa diretiva asm pra incluir quando suportado, aí nem precisa de converter pra hex!
+[2025-08-15 16:51:16] Felipe "Juca" Sanches: É por que ninguém implementou. E quando perguntamos por que, a resposta típica é: "Temos planos para um sistema moderno para lidar com isso". Aí 5 anos depois você pergunta: "Cadê o sistema moderno?" e só dão respostas vagas se esquivando. Isso me emputece.
+[2025-08-15 16:52:17] Felipe "Juca" Sanches: Um exemplo clássico é o sistema de artwork 3d: https://github.com/mamedev/mame/issues/388
+[2025-08-15 17:01:14] Pablo Vasques Bravo-Villalba: Ter planos e nunca colocar nada a prática é o mesmo que não ter planos
+[2025-08-15 17:32:33] L.: Descreveu a minha vida
+
+Tenho vontade de fazer tudo, aí não faço nada
+[2025-08-15 17:39:07] Felipe "Juca" Sanches: eu tenho planos de fazer mil coisas e acabo fazendo apenas 100
+[2025-08-15 17:43:30] L.: 100? Pô, tá no lucro
+[2025-08-15 21:07:12] Felipe "Juca" Sanches: Tô fazendo um experimento. Abri um PR trivial:
+
+https://github.com/mamedev/mame/pull/14055
+[2025-08-15 23:01:15] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=TRystewP0Ek

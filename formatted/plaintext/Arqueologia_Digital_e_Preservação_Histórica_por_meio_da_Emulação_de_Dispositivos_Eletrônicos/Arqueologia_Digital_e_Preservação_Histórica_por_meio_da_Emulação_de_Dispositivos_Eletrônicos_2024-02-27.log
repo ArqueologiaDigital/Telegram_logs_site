@@ -1,0 +1,35 @@
+[2024-02-27 01:05:54] Felipe "Juca" Sanches: Cheguei em São Paulo, instalei a placa-mãe do KN5000 de Brasilia no daqui de São Paulo. Tudo está OK, não teve nenhum dano por conta do manuseio e da viagem
+[2024-02-27 01:06:36] Felipe "Juca" Sanches: De imediato testei o meu script em processing que mostra acordes de guitarra para as notas tocadas no teclado (com o laptop recebendo os eventos via MIDI)
+[2024-02-27 01:06:40] Felipe "Juca" Sanches: e aqui funciona
+[2024-02-27 01:07:16] Felipe "Juca" Sanches: então ou tem algum defeito no circuito da saída MIDI do KN5000 de Brasilia, ou...
+[2024-02-27 01:07:38] Felipe "Juca" Sanches: minha melhor hipótese agora é que talvez a chavinha traseira com a label "COMPÙTER" não esteja na posição "MIDI"
+[2024-02-27 01:08:01] Felipe "Juca" Sanches: as outras opção são: MAC, PC1 e PC2
+[2024-02-27 01:10:22] Felipe "Juca" Sanches: ah! Acho que é isso mesmo!
+[2024-02-27 01:10:31] Felipe "Juca" Sanches: mudei a chavinha aqui e parou de funcionar
+[2024-02-27 01:10:37] Felipe "Juca" Sanches: depois desvirei e voltou a funcionar
+[2024-02-27 01:10:55] Felipe "Juca" Sanches: então tá aí a explicação do problema que estávamos tendo com MIDI no Calango Hacker Clube essa semana
+[2024-02-27 01:11:34] Felipe "Juca" Sanches: Agora meu próximo passo vai ser instalar a versão 10 do sistema, sem modificações, pra ter certeza de que o mecanismo de update de firmware tá funcionando corretamente nessa placa-mãe
+[2024-02-27 01:46:20] Felipe "Juca" Sanches: Curiosamente, enquanto eu tento completar os dumps do KN5000, tem alguém fazendo dump de mim!
+[2024-02-27 01:46:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29297.jpg
+[2024-02-27 02:50:42] L.: vai emular no mame também?
+[2024-02-27 02:51:00] Felipe "Juca" Sanches: LOL
+
+Que treta!
+[2024-02-27 02:52:28] Felipe "Juca" Sanches: Boa notícia. Pela primeira vez , acabei de conseguir fazer uma instalação de firmware modificado no KN5000 em que a subcpu não dá "Sound Name Error". Isso finalmente prova que zerei o desafio de determinar o formato do arquivo de update. Agora já posso fazer versões modificadas 100% funcionais. Antes era "com hack mas não toca" ou "toca, mas sem hack"
+[2024-02-27 02:53:08] Felipe "Juca" Sanches: Estou com um splash screen the "Happy Hacking KN5000" nessa versão que acabei de instalar
+[2024-02-27 02:55:59] Felipe "Juca" Sanches: video: (not yet published)
+[2024-02-27 02:59:11] Felipe "Juca" Sanches: E também suspeito que aquela outra placa que tenho aqui em casa que eu achei que eu tivesse tijolado o sistema de update, talvez esteja OK. Preciso botar ela de volta aqui e testar uma nova instalação.
+
+Acho que a treta era que ele não estava gostando do disquete que eu mesmo formatei. Acontecei algo muito parecido hoje agora há pouco com essa placa que eu trouxe de Brasilia, e me deu um desespero e um frio na barriga. Achei que eu tivesse tijolado mais uma placa. Mas aí resolvi recriar o disquete de instalação usando um comando dd a partir da imagem de disco fornecida pelo fabricante, e funcionou bem.
+
+Talvez seja algum detalhe da formatação VFAT que fiz manualmente que o kn5000 não gosta, e que na imagem fornecida pela própria technicas tá ok
+[2024-02-27 02:59:53] Felipe "Juca" Sanches: mas partindo de um disco criado com dd, posso alterar os dados e instalar versões modificadas sem problemas
+[2024-02-27 03:11:37] L.: às vezes é besteira, tipo número de série do disco
+[2024-02-27 06:38:10] Pablo Vasques Bravo-Villalba: Que massa. Muita evolução 😊
+[2024-02-27 12:10:57] Pedro de Medeiros 👾: E o gotek? Conseguiu fazer ele funcionar?
+[2024-02-27 12:11:17] Felipe "Juca" Sanches: Nem tentei
+[2024-02-27 12:11:47] Felipe "Juca" Sanches: To usando o drive de disquete original do kn5000 aqui
+[2024-02-27 12:12:52] Felipe "Juca" Sanches: Não pretendo mexer nisso agora, pois está funcionando
+[2024-02-27 14:50:02] Pedro de Medeiros 👾: https://fabiensanglard.net/Compile_Like_Its_1992/index.php
+[2024-02-27 20:21:28] L.: oof https://overkill.wtf/nintendo-sue-yuzu-emulator/
+[2024-02-27 20:51:26] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29313.jpg

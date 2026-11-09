@@ -1,0 +1,57 @@
+[2022-06-20 00:29:05] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/77
+[2022-06-20 00:43:45] L.: @fsanches curl https://tia.mat.br/temp/direct-vga-write.diff | git am
+[2022-06-20 00:43:54] L.: No Dosbox ficou *bem* mais rápido
+[2022-06-20 00:45:22] L.: Deve dar pra mover umas expressões comuns pra fora do loop
+[2022-06-20 04:24:57] Felipe "Juca" Sanches: merged!
+[2022-06-20 06:08:00] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/78
+[2022-06-20 06:08:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21804.jpg
+[2022-06-20 06:08:49] Felipe "Juca" Sanches: Algém aí manja de OpenGL? Estou meio perdido tentando fazer esse bagulho funcionar.
+[2022-06-20 06:19:05] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/79
+[2022-06-20 06:19:10] Felipe "Juca" Sanches: merged!
+[2022-06-20 07:18:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21807.jpg
+[2022-06-20 07:18:40] Felipe "Juca" Sanches: consertei agora o modelo 3D dos ladrilhos
+[2022-06-20 07:19:26] Felipe "Juca" Sanches: mas ainda falta fazer funcionar o jogo. Nao sei por quê não tá atualizando as imagens
+[2022-06-20 09:14:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21809.jpg
+[2022-06-20 09:14:20] Felipe "Juca" Sanches: melhorou um pouquinho, mas ainda estou tendo dificuldade pra desenhar com essa API
+[2022-06-20 09:42:24] Felipe "Juca" Sanches: Que tal Campo Minado para Palm OS? 😉
+[2022-06-20 09:43:02] Erin Pinheiro 🐿: não mexo em repositório gpl
+[2022-06-20 09:43:48] Erin Pinheiro 🐿: a próxima coisa que eu pensei fazer pra Palm OS era 2048, quando eu tiver vontade
+[2022-06-20 12:00:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21813.jpg
+[2022-06-20 12:00:20] Felipe "Juca" Sanches: tá melhorando bastante. Descobri por que a cena não tava sendo redesenhada. Era cagada minha mesmo (como sempre)
+[2022-06-20 13:25:47] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21814.jpg
+[2022-06-20 13:25:49] Felipe "Juca" Sanches: acho que só falta eu descobrir como declarar as cores 😉
+[2022-06-20 13:34:09] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21816.jpg
+[2022-06-20 13:34:09] Felipe "Juca" Sanches: Fica em tons de cinza quando "ligo as luzes". Sem setar a iluminação da cena, fica colorido, mas sem sombras...
+[2022-06-20 14:08:35] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21817.jpg
+[2022-06-20 14:08:35] Felipe "Juca" Sanches: Por hoje é isso. Agora vou trabalhar! kkkk
+[2022-06-20 14:08:46] Felipe "Juca" Sanches: merged!
+[2022-06-20 15:06:49] L.: https://twitter.com/toughkidcst/status/1538784448220925953?t=Rzyp8yAm_1o3u3sYrXDE0A&s=09
+[2022-06-20 15:07:25] Pablo Vasques Bravo-Villalba: Imagino se eles teriam desligado a música de fundo porque o Arkanoid 2 do MSX é lerdo pra burro
+[2022-06-20 15:13:24] Augusto Almeida: Que esquisito, aparentemente não haveria muito motivo pra que essa música tivesse sido descartada, mas se for por questões de velocidade, pode-se fazer um teste, quando for o estágio em questão, mudar o apontador da música que utilizaram, para a que não foi utilizada, simples assim, mas não quer dizer que seja fácil, teria que ver como eles implementaram a chamada das músicas.
+[2022-06-20 15:16:23] Pablo Vasques Bravo-Villalba: Veremos quando o ToughkidCST fizer a versão dele com música de arcade. Teoricamente ficaria um pouco mais pesado já que a música em FM requer mais escritas do que a música em PSG
+[2022-06-20 15:26:08] Augusto Almeida: Sim, em FM custa um pouco mais, porém a que já está montada em PSG eu particularmente não entendi o porquê de não utilizarem
+[2022-06-20 16:53:52] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/80
+[2022-06-20 18:19:17] L.: Patch pra desenhar cursor no port de MS-DOS: for f in 0001-msdos-Reindent-video.c-so-it-s-consistent-all-around.patch 0001-msdos-Draw-transparent-cursor.patch;  do curl https://tia.mat.br/temp/$f | git am ; done
+[2022-06-20 18:57:59] Pedro de Medeiros 👾: @fsanches está pronto
+[2022-06-20 19:21:46] Pedro de Medeiros 👾: Todas as implementações fora Gunsmoke até agora ficaram com ~32 kb.
+[2022-06-20 19:23:41] Pedro de Medeiros 👾: Bom, ncurses é a menor com 26k
+[2022-06-20 19:26:07] Felipe "Juca" Sanches: Que é bastante coisa prum jogo tão simples, né?
+[2022-06-20 19:27:39] Pedro de Medeiros 👾: Um strip deve remover um tanto do mines.com do msdos
+[2022-06-20 19:28:30] Pedro de Medeiros 👾: No caso ia16-strip do binutils específico.
+[2022-06-20 19:47:29] L.: Deixa ver umas coisas aqui
+[2022-06-20 19:48:47] L.: Só botando um -Os já reduziu pra 25k
+[2022-06-20 19:50:02] L.: A imagem usa bastante espaço também. Uma hora rola usar um formato mais amigável (tem só 16 cores, mesmo bitmap já ajudaria bem)
+[2022-06-20 19:51:12] L.: Strippar o executável (ou linkar com "-s") não ajudou
+[2022-06-20 19:55:07] Pedro de Medeiros 👾: Podemos tentar algo como aPLib também.
+[2022-06-20 19:56:04] L.: Tentei várias outras opções, tipo mudar alinhamento de loops e funções (pra 1 byte lol), omitir o base pointer, forçar a não fazer unroll de loop, etc, e não mudou nada
+[2022-06-20 19:57:26] L.: Se tirar todo o espaço em branco no mines.xpm, já desce pra 17k com -Os lol
+[2022-06-20 20:16:36] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21839.jpg
+[2022-06-20 20:16:36] L.: Botei mais grama e umas pedras lol
+[2022-06-20 20:17:29] Pablo Vasques Bravo-Villalba: Noice!
+[2022-06-20 20:34:42] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21841.jpg
+[2022-06-20 20:34:42] L.: Botei umas frô também
+[2022-06-20 20:38:19] L.: A função de desenhar o fundo devia saber a geometria do campo também pra evitar desenhar no meio.
+[2022-06-20 21:16:08] Pablo Vasques Bravo-Villalba: Isto não é novo mas talvez alguns achem interessante. É um cover do tema do filme dos Transformers da década de 80, feito para o chip de som do Nintendinho em conjunto com o N163, um chip wavetable usado em alguns jogos de Famicom da Namco. https://youtu.be/w6RWTE0U260
+[2022-06-20 22:42:14] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/82
+[2022-06-20 23:35:48] L.: -rwxr-xr-x 1 l l 10187 Jun 20 18:13 mines.com
+[2022-06-20 23:35:54] L.: 10kb :D

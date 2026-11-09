@@ -1,0 +1,42 @@
+[2022-06-24 00:24:36] Felipe "Juca" Sanches: https://www.pcjs.org/
+[2022-06-24 00:57:11] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22151.jpg
+[2022-06-24 00:57:11] L.: LOL
+[2022-06-24 00:57:23] L.: (A paleta de cores escurece quando tem um diálogo na tela)
+[2022-06-24 01:55:11] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/122
+[2022-06-24 08:32:13] Felipe "Juca" Sanches: Merged!
+[2022-06-24 08:33:31] Felipe "Juca" Sanches: Presumo que isso vai deixar mais fácil de implementar o timer, né?
+[2022-06-24 12:22:34] Pedro de Medeiros 👾: A necessidade de timer vai depender da plataforma na verdade. No MSX a gente usa uma interrupção pra isso, o hook HTIMI que é chamado no vertical retrace a 60 ou 50Hz. Anexando código aí a gente garante que esse pequeno trecho de código vai executar no tempo exato esperado (atualizar o cronômetro do jogo por exemplo), nas outras plataformas mais poderosas (que dão voltas ao redor do estado do jogo) pode nem precisar do timer e o idle_update com um delay flexível (wait_tick()) só pra "fechar o frame" pode ser suficiente.
+[2022-06-24 12:49:52] Felipe "Juca" Sanches: o port vectrex acho que vai precisar fazer um wait_vsync logo antes de desenhar na tela (pois é necessário ficar redesenhando o tempo todo, dada a curta persistencia do fósforo na tela)
+[2022-06-24 12:50:51] Felipe "Juca" Sanches: acho que por conta disso, o minefield vai ter que ser menor no vectrex, pra reduzir a quantidade de elementos gráficos desenhados por frame
+[2022-06-24 12:51:25] Felipe "Juca" Sanches: e nao vou desenhar borda nenhuma. Apenas o conteúdo
+[2022-06-24 13:18:17] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/123/files
+[2022-06-24 17:40:40] L.: LOL, achei o fonte de um mod player de 1991 pra sparcstation
+[2022-06-24 17:40:57] L.: Ao invés de abrir o /dev/audio, salvei num arquivo e botei pro sox tocar. Funciona LOL
+[2022-06-24 18:50:26] Felipe "Juca" Sanches: @pvm1337, alguns arquivos estavam com indentação mista, então limpei o port opengl e optei por tabs. Posso fazer o mesmo no port msx2? Ou você prefere indentação com espaços?
+[2022-06-24 18:51:47] Felipe "Juca" Sanches: pensando melhor aqui... talvez eu opte por espaços, pra não ter ambiguidade dependendo de qual configuração de editor esteja sendo usada.
+[2022-06-24 18:52:39] Felipe "Juca" Sanches: é um detalhe bobo, mas eu gostaria de consultar vocês antes de fazer
+[2022-06-24 19:00:07] Pedro de Medeiros 👾: Você pode rodar o arquivo dentro Atom, que eu acho que ele arruma. Tabs só são realmente obrigatórios no Makefile.
+[2022-06-24 19:00:33] Felipe "Juca" Sanches: bora usar espaços então
+[2022-06-24 19:00:42] Pedro de Medeiros 👾: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22168-sticker.webp
+[2022-06-24 19:01:50] L.: #time-espaço
+[2022-06-24 19:02:02] Felipe "Juca" Sanches: perfeito!
+[2022-06-24 19:38:17] L.: Com espaço, o código fica um foguete🚀
+[2022-06-24 19:38:39] Felipe "Juca" Sanches: tu-dum-tsss
+[2022-06-24 19:38:52] Felipe "Juca" Sanches: essa foi do outro mundo!
+[2022-06-24 19:56:51] L.: OK, tenho código que consegue tocar áudio em PWM (8-bit, 16KHz) no PC speaker
+[2022-06-24 19:57:08] Felipe "Juca" Sanches: awesome!
+[2022-06-24 20:00:48] L.: @fsanches Consegue rodar um mines.com de teste no teu 386? Só pra ver se presta? Deve tocar ruído branco no começo do programa por uns 2s
+[2022-06-24 20:01:53] Felipe "Juca" Sanches: manda aí
+[2022-06-24 20:02:38] L.: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22178-mines.com
+[2022-06-24 20:02:38] L.: mines.com com ruído no pc speaker
+[2022-06-24 20:17:43] Felipe "Juca" Sanches: ok, confirmado. Tá funcionando o playback de ruído
+[2022-06-24 20:18:07] Felipe "Juca" Sanches: não consegui filmar pois acabou a bateria do meu celular
+[2022-06-24 20:18:29] Felipe "Juca" Sanches: mas ouvi o ruido sim, por alguns segundos (acho que mais do que 2)
+[2022-06-24 20:24:18] L.: massa :D
+[2022-06-24 20:24:25] L.: valeu por testar
+[2022-06-24 20:26:45] L.: só precisa pendurar na interrupção algo que faça pegar próximo sample quando o timer estourar
+[2022-06-24 21:45:04] Felipe "Juca" Sanches: atualizei agora o PR do port para vectrex:
+
+https://github.com/ArqueologiaDigital/Mines/pull/111
+[2022-06-24 21:45:14] Felipe "Juca" Sanches: ainda não compila, mas agora to usando o gcc-6809
+[2022-06-24 21:45:47] Felipe "Juca" Sanches: e percebi que o problema dele não achar libc.a era por que eu precisava compilar o repo newlib-6809

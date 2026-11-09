@@ -1,0 +1,30 @@
+[2021-11-29 02:13:00] Felipe "Juca" Sanches: Eu tenho uma missão pros nerds arqueólogos digitais
+[2021-11-29 02:13:24] Felipe "Juca" Sanches: TECNOPONTA PARK pra MSDOS
+[2021-11-29 02:13:36] Felipe "Juca" Sanches: é um ícone de uma era
+[2021-11-29 02:14:10] Felipe "Juca" Sanches: parte da nossa cultura IBM-PC/MSDOS
+[2021-11-29 02:14:18] Felipe "Juca" Sanches: mas também soa um pouco como bullshit
+[2021-11-29 02:14:38] Felipe "Juca" Sanches: ou se não for baboseira, então é, no mínimo, algo curioso da época
+[2021-11-29 02:14:49] Felipe "Juca" Sanches: a missão é fazer um disasm do código
+[2021-11-29 02:14:57] Felipe "Juca" Sanches: e desvendar o que o programa realmente fazia
+[2021-11-29 02:15:26] Felipe "Juca" Sanches: se realmente controlava o hardware do disco rígido para estacionar o cabeçote e evitar danos ao disco
+[2021-11-29 02:15:38] Felipe "Juca" Sanches: ou se era só baboseira marqueteira mesmo
+[2021-11-29 03:34:30] Erin Pinheiro 🐿: cadê binário
+[2021-11-29 03:58:45] Felipe "Juca" Sanches: peraí que já te passo
+[2021-11-29 03:59:22] Felipe "Juca" Sanches: https://datassette.org/softwares/ibm-pc/tecnoponta-park
+[2021-11-29 04:00:10] Felipe "Juca" Sanches: se a pesquisa der resultados, prometo um episódio no Happy Hacking Video Blog ;-D
+[2021-11-29 06:52:15] Deleted Account: Eu fiz vários cursos na Tecnoponta em Santos. Inclusive o de Debian. Acho que eles ainda existem aqui na região e continuam dando curso. Eu lembro do dono da Tecnoponta falando sobre o park e tal. Isso em 2011 a ultima vez que fiz curso lá. Kkkkk
+[2021-11-29 06:59:06] Pablo Vasques Bravo-Villalba: Lá nos idos de guaraná com rolha eu usava um outro programa para "estacionar" meu drive (um MFM de 32MB da Seagate). Eu não sei se ele estacionava de verdade ou não, mas dava pra escutar o apito do motor e o LED ficava aceso enquanto rolava o apito, ao mesmo tempo em que uma elegante animação em modo texto dava uma representação visual das cabeças se movendo. Pessoal apelidava esse drive de "grilo" por causa dos barulhinhos agudos que ele emitia ao presumivelmente mudar de um cilindro para outro.
+[2021-11-29 08:56:56] Ismael Luceno: era um tipo de software comum na epoca dos 80 pois os discos mais antigos não tinhan auto-parking, mas falamos de discos realmente antigos, de 30 MB o menos
+[2021-11-29 08:57:12] Ismael Luceno: acho que un jeito de estacionar o hdd é fazer un reset
+[2021-11-29 08:59:08] Ismael Luceno: opa, os drives ESDI tinham um comando no driver http://www.delorie.com/djgpp/doc/rbinter/id/53/6.html
+[2021-11-29 08:59:37] Ismael Luceno: http://www.delorie.com/djgpp/doc/rbinter/id/38/6.html
+[2021-11-29 09:04:07] Ismael Luceno: http://www.delorie.com/djgpp/doc/rbinter/id/37/7.html
+[2021-11-29 09:04:19] Ismael Luceno: http://www.delorie.com/djgpp/doc/rbinter/id/38/7.html
+[2021-11-29 09:04:29] Ismael Luceno: http://www.delorie.com/djgpp/doc/rbinter/id/42/7.html
+[2021-11-29 09:14:01] Ismael Luceno: é difícil pesquisar pois acho que nenhum driver pata moderno suporta parking explícito
+[2021-11-29 09:17:14] Ismael Luceno: o park.com esse é um EXE :(
+[2021-11-29 09:17:31] Ismael Luceno: é gigante
+[2021-11-29 09:30:51] Ismael Luceno: hmm, tem aspeito de ser programado em asm
+[2021-11-29 10:29:46] Augusto Almeida: Opa, passa ele no IDA-Pro ou no GHidra o executável e ele fica bonitinho lá
+[2021-11-29 10:29:58] Augusto Almeida: O resto é interpretação de código
+[2021-11-29 10:40:24] Ismael Luceno: eu vou tentar com o r2ghidra, mas tenho que compilar para o meu sistema com musl-libc

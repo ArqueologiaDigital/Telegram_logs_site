@@ -1,0 +1,90 @@
+[2023-10-02 10:24:52] Gustavo Romero: Se interessar alguém, nada novo, mas resumo interessante: https://www.youtube.com/watch?v=brOtbWIViWM
+[2023-10-02 15:40:20] L.: https://oldvcr.blogspot.com/2023/10/finally-mos-76007601-video-game-array.html?m=1
+[2023-10-02 15:41:05] L.: Qual? O R800 ou o ZX80?
+[2023-10-02 15:41:56] L.: Aliás, o R800 parece estranho por dentro. Será que usaram um equivalente a autorouter pra integrado?😅
+[2023-10-02 15:42:50] Pablo Vasques Bravo-Villalba: Para os meus olhos completamente destreinados, parece mais desorganizado que outros processadores da época
+[2023-10-02 18:55:30] L.: O Travis tá decapando os Z8 fo Pense Bem -- primeiro com um genérico, depois o com a ROM do negócio: https://twitter.com/travisgoodspeed/status/1708962407421182280
+[2023-10-02 19:20:54] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/27995-its-happening-friday.mp4
+[2023-10-02 19:23:12] L.: Já tem esqueleto no mame?
+[2023-10-02 19:23:22] L.: (pra versão z8)
+[2023-10-02 19:24:05] Felipe "Juca" Sanches: Não tem. Mas é fácil de fazer
+[2023-10-02 19:24:25] Felipe "Juca" Sanches: se você quiser fazer, recomendo botar no mesmo arquivo da versão de 2017
+[2023-10-02 19:24:50] Felipe "Juca" Sanches: pois parte do hardware é semelhante (inputs do teclado e outputs no LCD)
+[2023-10-02 19:25:15] Felipe "Juca" Sanches: e os metadados também são semelhantes, afinal, é uma variante do mesmo equipamento
+[2023-10-02 19:25:33] L.: Verei como faz quando voltar pra casa e tiver perto do meu laptop
+[2023-10-02 19:25:33] Felipe "Juca" Sanches: e o MAME já emula z8
+[2023-10-02 19:25:38] Felipe "Juca" Sanches: ok
+[2023-10-02 19:26:16] L.: Conclusão do capítulo que começou lá no garoa da Cracolândia!😂
+[2023-10-02 19:26:25] Felipe "Juca" Sanches: existe sempre a chance do core de Z8 estar incompleto e ser necessário implementar suporte para alguma instrução adicional que o firmware do Smart Start use
+[2023-10-02 19:26:33] Felipe "Juca" Sanches: Exato!
+[2023-10-02 19:27:01] Felipe "Juca" Sanches: Ficarei feliz em fazer uma chamada de vídeo pra gente olhar junto o arquivo quanto o cara terminar o dump
+[2023-10-02 19:27:19] L.: Mal posso esperar pra achar a maldita função que dá resposta dos livros
+[2023-10-02 19:27:28] Felipe "Juca" Sanches: se bem que... ele provavelmente vai nos dar uma imagem e a gente que se vire pra extrair os bits, né?!
+[2023-10-02 19:27:33] L.: Por que, com 2kb de ROM, não tem tabelão igual da versão com atmega
+[2023-10-02 19:27:35] Felipe "Juca" Sanches: EXATAMENTE!!!
+[2023-10-02 19:27:46] Felipe "Juca" Sanches: Essa é a minha maior curiosidade
+[2023-10-02 19:28:04] Felipe "Juca" Sanches: minha aposta é FORTE em um linear feedback shift register pseudo number generator
+[2023-10-02 19:28:10] L.: Ah, já é um belo começo. Tem uns programas aí que ajudam.
+[2023-10-02 19:28:22] L.: É um prng simples, com certeza
+[2023-10-02 19:28:26] Felipe "Juca" Sanches: o Degate, por exemplo
+[2023-10-02 19:28:39] Shideravan: Me refresca a memória?
+[2023-10-02 19:28:43] L.: Nada muito elaborado por que o z8 não tem nem barrel shifter ou algo do tipo
+[2023-10-02 19:28:57] Shideravan: Quais outros sistema utilizaram o z8?
+[2023-10-02 19:28:57] Felipe "Juca" Sanches: DRAM? 😉
+[2023-10-02 19:29:24] L.: Bom, é um microcontrolador, então deve ter um monte de coisa que a gente nem faz idéia
+[2023-10-02 19:29:32] Shideravan: Sim
+[2023-10-02 19:29:45] L.: Não é assim 8051 que povo faz até hoje
+[2023-10-02 19:30:09] L.: Eu devo ter sem saber uns 10 8051 em casa se não mais😂
+[2023-10-02 19:31:42] Shideravan: Eu acho super digno se você se considerar um garbage collector
+[2023-10-02 19:32:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28027.jpg
+[2023-10-02 19:34:36] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28028.jpg
+[2023-10-02 19:34:36] Felipe "Juca" Sanches: src/devices/bus/isa/pcmidi.cpp
+[2023-10-02 19:35:40] Shideravan: O Quantel DPB-7001 já roda legal no MAME?
+[2023-10-02 19:35:44] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28030.jpg
+[2023-10-02 19:35:44] Felipe "Juca" Sanches: Jugend+Technik CompJU+TEr
+src/mame/ddr/jtc.cpp
+[2023-10-02 19:36:19] Shideravan: Eu lembro do mog ter divulgado progresso nele há pouco tempo
+[2023-10-02 19:38:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28032.jpg
+[2023-10-02 19:38:03] Felipe "Juca" Sanches: DPB-7001 (c) 1981 Quantel
+src/mame/quantel/dpb7000.cpp
+[2023-10-02 19:38:33] Shideravan: https://www.youtube.com/watch?v=NEWM92olPFI
+[2023-10-02 19:40:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28034.jpg
+[2023-10-02 19:40:08] Felipe "Juca" Sanches: Fidelity Mini Sensory Chess Challenger (model MSC, 1981 version)
+src/mame/fidelity/msc.cpp
+[2023-10-02 19:40:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28035.jpg
+[2023-10-02 19:41:27] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28036.jpg
+[2023-10-02 19:41:27] Felipe "Juca" Sanches: Basic Einplatinen Rechner für TV-Serie.
+src/mame/skeleton/bert.cpp (SKELETON)
+[2023-10-02 19:47:08] Shideravan: 🤔
+[2023-10-02 19:51:35] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28038.jpg
+[2023-10-02 19:51:35] Felipe "Juca" Sanches: Lear Siegler ADM 23 Smart Terminal
+src/mame/learsiegler/adm23.cpp
+[2023-10-02 20:02:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28039.jpg
+[2023-10-02 20:02:50] Felipe "Juca" Sanches: Ameri-Hockey
+src/mame/misc/amerihok.cpp
+[2023-10-02 20:05:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28040.jpg
+[2023-10-02 20:05:01] Felipe "Juca" Sanches: E também é usado como "coin mcu" (ou seja, provavelmente só pra detectar moedas/fichas) num arcade japonês:
+
+Unies Corporation, Puzzlet (Japan)
+src/mame/metro/metro.cpp
+[2023-10-02 20:30:23] RicBit: O zx80! Tudo que você precisa para gerar sinal de vídeo é um contador, eles acharam um de graça dentro do z80, usando o refresh como contador. Genius. O refresh incrementa o addr a cada instrução, então é um contador de graça.
+[2023-10-02 20:30:41] RicBit: R800 certeza que é um microcode igual ao 8086.
+[2023-10-02 20:36:20] RicBit: alias no fds eu fui testar o conversor de imagens do msx do janone e 100% de certeza que está bugado
+[2023-10-02 20:37:04] RicBit: eu fiz um pr mas acho que ele não lê, então se alguem quiser é esse aqui -> https://github.com/jannone/msx-screen-converter/pull/2
+[2023-10-02 20:45:18] Felipe "Juca" Sanches: Bom, então resumindo...
+Segundo o codebase do MAME, o microcontrolador Zilog Z8 foi usado em diversas coisas como, por exemplo:
+
+* Uma placa MIDI para barramento ISA (nos PCs) fabricada por uma empresa chamada Music Quest, por volta de 1989, e relativamente compatível com a Roland MPU401.
+* Um tal de Jugend+Technik CompJU+TEr, que se entendi bem deve ser um computador em forma de kit vendido junto a uma revista alemã de tecnologia entre 1987 e 1990... ?! https://en.wikipedia.org/wiki/Jugend_und_Technik
+* O Quantel DPB-7001 de 1981, um sistema de computação gráfica (um "digital paintbox") descrito aqui: https://www.youtube.com/watch?v=TyCmIH06rQE E também aqui: https://www.youtube.com/watch?v=NEWM92olPFI (leia a descrição completa desse video!)
+* Um tabuleiro eletrônico de xadrez de 1981 chamado Fidelity Mini Sensory Chess Challenger (https://www.amazon.com/Vintage-Fidelity-Electronics-Challenger-Computer/dp/B00RRLP6RW)
+* Um single-board computer educacional alemão de 1987 chamado **Basic Einplatinen Rechner für TV-Serie.** (https://hc-ddr.hucki.net/wiki/doku.php/homecomputer/bert)
+* Um "terminal burro" de 1982, modelo ADM 23 Smart Terminal fabricado pela Lear Siegler
+* E o "coin mcu" dos arcades japoneses Puzzlet e Metabee Shot de 2000 e 2001, respectivamente
+[2023-10-02 20:46:47] Felipe "Juca" Sanches: E o PENSE BEM, claro!
+[2023-10-02 20:50:08] Felipe "Juca" Sanches: L., se esse rolê de fazer dump do Smart Start funcionar, vou precisar mandar também um Smart Start Speller pro Travis Goodspeed
+
+https://www.ebay.co.uk/itm/164946531390
+[2023-10-02 20:50:24] L.: LOL
+[2023-10-02 20:50:36] L.: Só os brinquedo bão
+[2023-10-02 23:53:58] Shideravan: Um nome maravilhoso para se dar para um terminal burro é "Smart Terminal" kkkkkkkkkkkkkkk

@@ -1,0 +1,22 @@
+[2021-01-25 01:04:28] Felipe "Juca" Sanches: https://github.com/lpereira/Pense-Bem/pull/11
+[2021-01-25 01:05:06] Felipe "Juca" Sanches: Acidx Leandro, me ajuda a dar um tapinha final na sintaxe javascript do port do meu script python?
+[2021-01-25 01:08:03] Erin Pinheiro 🐿: topo não, sorry :(
+[2021-01-25 01:08:10] Erin Pinheiro 🐿: tenho o suficiente no meu prato já
+[2021-01-25 01:10:00] Felipe "Juca" Sanches: tudo bem
+[2021-01-25 01:10:48] Felipe "Juca" Sanches: se algum dia mudar de idéia, ou quiser se aventurar numa madrugada com isso, estou sempre à disposićão pra trocar idéias
+[2021-01-25 01:12:35] Erin Pinheiro 🐿: vou manter em mente :)
+[2021-01-25 01:23:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12264.jpg
+[2021-01-25 01:23:18] Felipe "Juca" Sanches: fiz uma implementacao 100% correta do calculo das respostas de todos os livros de Pense Bem, sem usar um bloco de dados hardcoded com 150*2/8 * 99 bytes = approx. 3,6kbytes 
+
+Minha implementacao ainda usa 2 blocos de dados hardcoded, mas o volume total é agora de "apenas" 738 bytes. Ou seja, cerca de 20% do tamanho dos dados crus.
+
+Acho que ainda dá pra diminuir muito. Mas pra isso precisamos ter alguma sacada mais esperta sobre como esses dados foram gerados algoritmicamente.
+[2021-01-25 01:25:45] Felipe "Juca" Sanches: quer tentar espremer mais, RicBit?
+[2021-01-25 01:26:25] RicBit: Amanhã eu vejo sim
+[2021-01-25 01:27:02] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12267-sticker.webp
+[2021-01-25 01:35:29] L.: Animal! Já dá pra botar na versão JS
+[2021-01-25 01:42:05] Felipe "Juca" Sanches: aqui
+[2021-01-25 03:18:18] L.: Vejo quando estiver no computador
+[2021-01-25 03:18:26] L.: Massa demais!
+[2021-01-25 04:59:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12272.jpg
+[2021-01-25 04:59:52] Felipe "Juca" Sanches: https://datassette.org/livros/br-brasil-pense-bem-livros/pense-bem-especial-disney-animais

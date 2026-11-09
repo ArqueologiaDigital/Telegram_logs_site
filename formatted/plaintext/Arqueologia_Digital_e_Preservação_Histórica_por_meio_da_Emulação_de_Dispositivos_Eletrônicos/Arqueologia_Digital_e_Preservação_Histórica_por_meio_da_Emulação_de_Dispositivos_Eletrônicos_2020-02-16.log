@@ -1,0 +1,10 @@
+[2020-02-16 02:49:52] Felipe "Juca" Sanches: cliquei em "blame" pra ver quando essa linha foi alterada no código. Parece que foi uns 3 meses atrás
+[2020-02-16 02:50:42] Felipe "Juca" Sanches: https://github.com/mamedev/mame/commit/dc17f70c3bd9bd41586106faa637a3d39740cb62#diff-dfef051fcc13aac9af8fa25f542facbeR1392
+[2020-02-16 02:51:39] Felipe "Juca" Sanches: entrou no código em Nov 20, 2019
+[2020-02-16 02:52:07] Felipe "Juca" Sanches: e teve um release 7 dias depois, a versão 0.216
+
+https://github.com/mamedev/mame/releases/tag/mame0216
+[2020-02-16 02:52:58] Felipe "Juca" Sanches: então eu procuraria na internet por um ROMset update da versão 0.215 para a 0.216 e nesse pacote estará a ROM que vc procura
+[2020-02-16 02:54:14] Felipe "Juca" Sanches: acho que aqui tem: https://www.retroroms.info/forum/topic/MAME-0-216-ROMs-sooner-arcade-mess-.htm
+[2020-02-16 02:55:39] Felipe "Juca" Sanches: yep! Tá lá mesmo!
+[2020-02-16 02:55:59] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-02/10552-coppc400.zip

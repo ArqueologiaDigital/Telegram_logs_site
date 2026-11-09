@@ -1,0 +1,31 @@
+[2018-08-14 14:08:24] Affonso Amendola: Galerinha, eu to com um leve questionamento aqui
+[2018-08-14 14:08:54] Affonso Amendola: Quando o cabo flat tem um fio vermelho ou colorido diferente, aquele é o indicador do primeiro pino não?
+[2018-08-14 14:09:03] Affonso Amendola: Pergunto pq isso
+[2018-08-14 14:09:21] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7055.jpg
+[2018-08-14 14:22:17] DQ: A convenção é fio vermelho no pino 1, mas....
+[2018-08-14 14:23:12] DQ: Dá uma olhada na outra ponta, principalmente se tiver conector também. Pode ser que tenham virado dos dois lados.
+[2018-08-14 14:24:27] Affonso Amendola: Yup
+[2018-08-14 14:24:34] Affonso Amendola: Ta invertido do otro lado tbem
+[2018-08-14 14:25:21] DQ: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7060.jpg
+[2018-08-14 14:48:36] Affonso Amendola: Desmontei todo o tk3000, apertei tudo que tinha que apertar
+[2018-08-14 14:48:42] Affonso Amendola: Refiz as conexoes
+[2018-08-14 14:48:49] Affonso Amendola: E ainda mesma coisa
+[2018-08-14 14:49:01] Affonso Amendola: Mode nao faz nada
+[2018-08-14 14:49:19] Affonso Amendola: Unica coisa quecontinua aparecendo é o ç
+[2018-08-14 14:49:31] Affonso Amendola: E nada que eu digito aparece na tela
+[2018-08-14 14:49:43] Affonso Amendola: O teclado teoricamente ta funfando
+[2018-08-14 14:49:59] Affonso Amendola: Pq ctrl, bolacheia e reset vai pro teste
+[2018-08-14 14:50:10] Affonso Amendola: E ctrl bola vazia e reset faz o cold reset
+[2018-08-14 14:50:29] Affonso Amendola: Otra coisa estranha que só notei agora
+[2018-08-14 14:50:44] Affonso Amendola: Todos os leds do teclados tao fixos ligados
+[2018-08-14 14:51:08] Affonso Amendola: Menos o penultimo, que ta mais fraquinho
+[2018-08-14 14:51:33] Affonso Amendola: Que é o marcado como mode
+[2018-08-14 14:54:15] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7074.jpg
+[2018-08-14 14:54:26] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7075.jpg
+[2018-08-14 14:54:39] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7076.jpg
+[2018-08-14 15:03:09] DQ: Tem alguma coisa zoneada com o teclado.
+[2018-08-14 15:27:49] Ronaldo: O importante é só diferenciar de um lado pro outro
+[2018-08-14 15:28:21] Ronaldo: *do outro
+[2018-08-14 19:56:11] Leonardo Roman: Se eu entendi o esquema do tk3000, o mode é acionado por um LS259 na posição H12: https://datassette.org/tech/apple-ii/esquema-eletrico-do-tk3000
+[2018-08-14 19:59:59] Leonardo Roman: O diagrama de blocos também pode ajudar: https://datassette.org/tech/apple-ii/diagrama-de-blocos-do-tk3000
+[2018-08-14 22:26:36] Ronaldo: Pode ser uma tecla ruim no teclado

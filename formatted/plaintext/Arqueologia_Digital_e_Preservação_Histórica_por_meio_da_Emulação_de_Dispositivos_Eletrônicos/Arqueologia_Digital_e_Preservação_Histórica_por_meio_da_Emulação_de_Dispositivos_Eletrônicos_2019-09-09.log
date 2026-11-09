@@ -1,0 +1,28 @@
+[2019-09-09 00:12:39] L.: Tem gente que liga um AVR nisso aí pra carregar programa mais rápido. Tem acesso total ao barramento de memória.
+[2019-09-09 11:02:25] Emerson Moura: Arduino facilita tudo... Mas como eu disse, estraga o foco da brincadeira retrô.
+[2019-09-09 11:04:27] Emerson Moura: Tem uns esquemas simples e interessantes pra ligar RAM e EPROM (E2PROM/flash) nesse kit, o que permite uns programas mais interessantes. Se acrescentar um 6850 (ACIA), fica fácil usar um micrão como terminal e carregador de programas...
+[2019-09-09 11:14:44] L.: Pode crer.
+[2019-09-09 11:15:03] L.: Chegou a achar o esquema da placa de Basic pra ele?
+[2019-09-09 11:22:59] Emerson Moura: Eu tinha um esquema guardado pra acrescentar ROM nele... E mais o firmware de um tiny BASIC. Se juntar os dois, acho que dá praia.
+[2019-09-09 11:24:09] Emerson Moura: O duro é saber de onde peguei isso, pq juntei no HD toda a documentação que achei dele há uns 3 anos e não faço mais ideia de quais foram as fontes.
+[2019-09-09 11:25:43] L.: Eu sei que tem bastante coisa no grupo et3400 no Yahoo
+[2019-09-09 11:25:52] L.: Vários scans e tal
+[2019-09-09 11:36:23] Emerson Moura: Acho q peguei bastante coisa de lá. Preciso dar outro passeio pela home do grupo pra ver se tem algo a mais.
+[2019-09-09 11:37:09] Emerson Moura: Quero pendurar as expansões no conector de flat sem fazer alterações na placa.
+[2019-09-09 11:37:18] L.: Faz tempo que não recebo mensagens de lá. Suspeito que o grupo tenha morrido mesmo
+[2019-09-09 11:37:28] Emerson Moura: Achei estranho que, para acrescentar a expansão da própria Heathkit tenha que fazer tantas alterações.
+[2019-09-09 11:37:32] L.: A expansão oficial de basic era assim.
+[2019-09-09 11:37:47] L.: Eita, sério? Só vi foto
+[2019-09-09 11:38:08] L.: Pensei que era só espetar o flat cable, considerando que tem tudo lá
+[2019-09-09 11:40:30] Emerson Moura: Tenho a impressão que eles querem manter as RAMs e a ROM originais. Ai tem que acrescentar/alterar a decodificação de endereços.
+[2019-09-09 11:41:00] Emerson Moura: ...e aproveitam os chips de decodificação já presentes.
+[2019-09-09 11:42:17] Emerson Moura: Eu pretendo acrescentar o circuito no barramento, com uma placa externa, e retirar os chips de RAM e ROM da placa principal (deixar guardado) e ignorar a decodificação já existente.
+[2019-09-09 11:42:39] Emerson Moura: Pra voltar no original, é só retirar a placa do barramento e devolver os 3 chips originais de memória.
+[2019-09-09 11:42:42] L.: Hoje em dia não precisa tanto economizar chip
+[2019-09-09 11:42:49] Emerson Moura: ...que são soquetados.
+[2019-09-09 11:49:24] Emerson Moura: A lista de discussão está parada como praticamente todas as listas por e-mail. Essa do ET-3400 teve 2 tópicos/4 mensagens em agosto... E antes disso, 3 tópicos lá em maio!!!
+[2019-09-09 12:06:13] Emerson Moura: Vixi... Os servidores de arquivos das listas do Yahoo estão fora do ar: 
+Unknown Host
+Description: Unable to locate the server requested —- the server does not have a DNS entry. Perhaps there is a misspelling in the server name, or the server no longer exists. Double-check the name and try again.
+[2019-09-09 12:14:21] Emerson Moura: Acordou... Acho que fazia tanto tempo que ninguém acessava o Yahoo que os DNSs tinham perdido o endereço da cache!!!
+[2019-09-09 17:43:02] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-09/10136.jpg

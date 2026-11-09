@@ -1,0 +1,82 @@
+[2022-06-29 03:27:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22391.jpg
+[2022-06-29 03:27:23] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22392.jpg
+[2022-06-29 11:16:47] L.: O Manual do Mundo tá fazendo uma série de computadores
+[2022-06-29 11:16:56] L.: Seria massa mostrar o Patinho lá
+[2022-06-29 11:17:11] L.: Pra não ficar só com coisa gringa🙃
+[2022-06-29 11:30:40] Felipe "Juca" Sanches: Vou ver
+[2022-06-29 11:30:52] Felipe "Juca" Sanches: Tentar entrar em contato
+[2022-06-29 14:57:12] Pedro de Medeiros 👾: Pra resolver isso temos que parar de usar a função game_over() pois ela altera o estado do tabuleiro de forma destrutiva, ou seja, não tem como saber qual a célula que causou a explosão depois que ela executou. Além disso, vai ter que mudar a função draw_single_cell() pra fazer ela desenhar a explosão.
+[2022-06-29 14:58:52] Pedro de Medeiros 👾: De qualquer forma a função terá que conhecer o estado do tabuleiro pra desenhar mina não detonada quando a célula estiver fechada. E ela só poderá fazer isso se a partida tiver terminado.
+[2022-06-29 15:04:50] Felipe "Juca" Sanches: faz sentido
+[2022-06-29 15:04:58] Felipe "Juca" Sanches: acho que é esse o caminho mesmo
+[2022-06-29 15:06:09] Pedro de Medeiros 👾: Outra opção seria codificar mina detonada nos atributos da célula, mas não sobrou espaço pra isso no byte.
+[2022-06-29 15:06:22] Felipe "Juca" Sanches: eu dei uma enroscada no port pra vectrex e agora estou focado em desenhar umas PCBs para construir mais réplicas do painel do patinho feio. Devo em breve retormar a implementação do port vectrex, mas acho que só depois que eu encomendar essas PCBs
+[2022-06-29 15:06:42] Felipe "Juca" Sanches: mas continuarei revisando PRs que vocês mandarem
+[2022-06-29 15:07:11] Felipe "Juca" Sanches: é que o aniversário de 50 anos do patinho feio é esse ano entao nao posso perder o timing 😉
+[2022-06-29 15:08:34] Felipe "Juca" Sanches: a FDTE encomendou 4 painéis para usar em atividades relacionadas à celebração dos 50 anos, então preciso fazer ficar mais prático de montar essas réplicas, já que o jeito que fiz o primeiro protótipo é bem trabalhoso: um caos de fios
+[2022-06-29 15:10:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22408.jpg
+[2022-06-29 15:11:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22409.jpg
+[2022-06-29 15:11:18] Felipe "Juca" Sanches: Então tô documentando essa bagunça toda e vai virar um par de PCBs
+[2022-06-29 15:15:28] Felipe "Juca" Sanches: https://github.com/tkchia/build-ia16/issues/21#issuecomment-1170247388
+[2022-06-29 15:18:01] Felipe "Juca" Sanches: O tkchia preparou pacotes de Ubuntu Kinetic que podem ser usados para facilitar a instalação num GHAction.
+
+Eu não sou muito familiarizado com o uso de dockers e sinto que estou dependendo do @pvm1337 sempre que precisamos de ajustes no setup de continuous integration. Eu acho que seria mais interessante, sempre que possível, instalar pacotes via apt direto nas imagens oficiais de VMs do GitHub Actions, ao invés de usar docker.
+
+O que acha, @pvm1337 ?
+[2022-06-29 15:28:28] Pedro de Medeiros 👾: Tem que ver porque mesmo a versão Focal e Jammy que eu tinha gerado a partir do apt-get dos pacotes dele não incluía todos os headers. O próprio conio.h não ia pro pacote por algum motivo.
+[2022-06-29 15:32:43] L.: Não usa mais esse header, mas
+[2022-06-29 15:33:18] L.: Viu como é o PiDP/11 que eu tenho?
+[2022-06-29 15:33:38] Felipe "Juca" Sanches: acho que muito tempo atrás eu vi foto, mas não lembro dos detalhes
+[2022-06-29 15:33:57] L.: https://obsolescence.wixsite.com/obsolescence/pidp-11-building-instructions
+[2022-06-29 15:34:13] L.: Tudo numa placa só
+[2022-06-29 15:34:22] Felipe "Juca" Sanches: o painel do patinho feio que to controlando zilhares de LEDs usando 2 chips MAX7219 (que são controladores daquelas matrizes de 8x8 LEDs
+[2022-06-29 15:48:47] Felipe "Juca" Sanches: muito legal! To assistindo os videos agora pra ver se tem algo que eu possa fazer parecido
+[2022-06-29 15:49:17] L.: Nada muito especial mas o painel tem várias chaves e LEDs
+[2022-06-29 15:49:28] Felipe "Juca" Sanches: sim, é parecido nesse sentido
+[2022-06-29 15:49:31] L.: E a Pi pluga direto na placa
+[2022-06-29 15:49:50] L.: Mas é tudo soldado na placa: chaves, LEDs, etc
+[2022-06-29 15:49:50] Felipe "Juca" Sanches: é... eu to usando um Arduino hoje em dia
+[2022-06-29 15:50:01] Felipe "Juca" Sanches: pensei em usar um RPi, mas vi que tá super caro
+[2022-06-29 15:50:05] L.: Ah, dá na mesma
+[2022-06-29 15:50:26] L.: Se tiver CPU forte suficiente pra emular e controlar a I/O toda
+[2022-06-29 15:50:30] Felipe "Juca" Sanches: o Arduino não dá conta de emular o Patinho Feio na velocidade correta. Fica mais lento que o computador real
+[2022-06-29 15:50:50] L.: Tentou fazer overclock?
+[2022-06-29 15:51:04] Felipe "Juca" Sanches: claro que deve dar pra otimizar o código, mas aí começo a esbarrar na questão de legibilidade do código. Gostaria de deixar bem legível
+[2022-06-29 15:51:06] L.: Com cristal os 328 chegam fácil em 24mhz
+[2022-06-29 15:51:13] Felipe "Juca" Sanches: nunca nem pensei nisso.
+[2022-06-29 15:51:28] Felipe "Juca" Sanches: posso ver isso como uma opção
+[2022-06-29 15:51:47] Felipe "Juca" Sanches: estou com algumas placas de RPi Zero, que podem servir também
+[2022-06-29 15:51:54] Felipe "Juca" Sanches: e são baratas
+[2022-06-29 15:52:00] L.: Ah, sim
+[2022-06-29 15:52:25] L.: Beeeem mais rápido que um atmega328 que funciona em 20mhz rodando em 16🙃
+[2022-06-29 15:52:38] L.: (todo arduíno vem com underclock de fábrica LOL)
+[2022-06-29 15:52:40] Felipe "Juca" Sanches: acho que vou colocar na PCB um conector para RPi Zero e outro pra Arduino, assim posso trocar conforme disponibilidade
+[2022-06-29 15:53:12] L.: Nível de tensão é diferente né
+[2022-06-29 15:53:18] Felipe "Juca" Sanches: ah, verdade!
+[2022-06-29 15:53:23] Felipe "Juca" Sanches: eu tinha visto isso outro dia
+[2022-06-29 15:53:24] L.: 3.3v vs 5v
+[2022-06-29 15:53:33] Felipe "Juca" Sanches: é... isso complica um pouco
+[2022-06-29 15:53:53] L.: Assim, é só chave e LED
+[2022-06-29 15:54:19] Felipe "Juca" Sanches: mas o chip que controla os LEDs opera em 5V
+[2022-06-29 15:54:25] L.: Ahhhh, sim
+[2022-06-29 15:54:28] Felipe "Juca" Sanches: MAX7219
+[2022-06-29 15:55:04] L.: Dependendo, até funciona com 3.3v
+[2022-06-29 15:55:56] L.: Sinal alto é mais de 2V geralmente
+[2022-06-29 15:56:19] L.: Tem que ver no datasheet do max7219
+[2022-06-29 15:57:19] L.: Ah, 3.5v mínimo pra nível alto
+[2022-06-29 15:57:32] L.: Precisaria de level shifter então
+[2022-06-29 15:59:52] L.: Ou só troca o cristal do Arduino mesmo -- eles vêm com cristal abaixo (16mhz) da frequência nominal dos 328 por questão de compatibilidade com sketch velho, mas é de boa trocar pra 20mhz (nominal) ou um bocado mais sem galho nenhum
+[2022-06-29 16:00:18] L.: Dá um bom ganho de desempenho sem tanto trabalho
+[2022-06-29 16:35:50] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/134
+[2022-06-29 17:01:16] Pedro de Medeiros 👾: Aproveitei pra fazer o serviço completo 👆
+[2022-06-29 17:12:27] Pedro de Medeiros 👾: Acho que a gente pode deixar os (x « 1) pro compilador otimizar.
+[2022-06-29 17:12:46] Felipe "Juca" Sanches: concordo. Vi essa mudança e gostei.
+[2022-06-29 17:16:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22460.jpg
+[2022-06-29 17:16:05] Felipe "Juca" Sanches: Perfeito!
+[2022-06-29 19:36:33] Shelton Ribeiro: https://www.instagram.com/p/CfZ10EDMsRx/?igshid=YmMyMTA2M2Y=
+
+Nova Demo de Metal Slug mega drive liberada!
+[2022-06-29 19:37:14] Shelton Ribeiro: Boa noite, turma? 😁👏🏼
+[2022-06-29 20:16:53] L.: Consegui fazer áudio funcionar no PC speaker, mas agora preciso de uns efeitos sonoros
+[2022-06-29 20:17:19] L.: 8-bit mono, signed, 16KHz ou 8KHz de sample rate
+[2022-06-29 20:17:40] L.: Uma hora termino o mod player LOL

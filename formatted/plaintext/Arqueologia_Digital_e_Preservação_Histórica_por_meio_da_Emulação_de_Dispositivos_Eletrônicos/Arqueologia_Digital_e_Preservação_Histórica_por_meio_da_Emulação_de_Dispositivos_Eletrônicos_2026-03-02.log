@@ -1,0 +1,20 @@
+[2026-03-02 07:58:59] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=vm71LBGSUu0
+[2026-03-02 15:13:52] L.: https://www.youtube.com/watch?v=ohzzGy5K9Dk
+
+Vídeo sobre o projeto cURL... que começou de um projeto brasileiro chamado HTTPGet. :)
+[2026-03-02 18:13:12] RicBit: eu estava dando uma olhada na versao scc do jogo, a minha ferramenta automatica que mapeia versoes do jogo nao conseguia converter
+[2026-03-02 18:13:32] RicBit: ai eu resolvi abrir na mao e praticamente nao tem codigo original nenhum ali
+[2026-03-02 18:13:51] RicBit: estou seriamente desconfiado de que a versao scc é um emulador/recompilador
+[2026-03-02 18:20:58] RicBit: hum ou entao só está muito shuffled
+[2026-03-02 18:21:00] RicBit: vou pensar
+[2026-03-02 18:30:44] RicBit: o algoritmo conseguiu lol
+eu só não tinha esperado o suficiente
+[2026-03-02 18:34:34] RicBit: pior que é a segunda vez já
+[2026-03-02 18:34:50] RicBit: no fim de semana eu olhei a compressão da konami, levava 11kb para 6kb
+[2026-03-02 18:35:08] RicBit: ai eu pensei, consigo melhor que isso, fiz um stream novo que comprimiu para 3.3kb
+[2026-03-02 18:35:27] RicBit: mandei a ai implementar em z80, mas não funcionou
+[2026-03-02 18:35:44] RicBit: falei pra ai: te vira ai, acha o bug
+[2026-03-02 18:36:02] RicBit: e ela "nao tem bug, é que demora 75s para descomprimir"
+[2026-03-02 18:36:04] RicBit: lol
+[2026-03-02 18:36:28] RicBit: consegue escrever z80 asm -> SIM
+consegue escrever codigo bom -> NAO

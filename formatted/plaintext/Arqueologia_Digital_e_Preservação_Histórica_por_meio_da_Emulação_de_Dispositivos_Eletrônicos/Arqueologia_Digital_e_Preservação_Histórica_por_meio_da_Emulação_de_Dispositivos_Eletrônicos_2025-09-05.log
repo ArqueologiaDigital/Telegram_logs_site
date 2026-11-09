@@ -1,0 +1,15 @@
+[2025-09-05 00:00:08] Pablo Vasques Bravo-Villalba: Programinha em BASIC para MSX que mostra todos os padrões do Mac clássico original na SCREEN 1. As setas servem para escolher o padrão, de 00 a 37.
+[2025-09-05 00:01:46] L.: Ficou muito legal!
+[2025-09-05 00:02:28] Pablo Vasques Bravo-Villalba: Eu sempre curti esses padrões. Achei que seria uma boa oportunidade para ver como ficava no MSX. Apesar da resolução muito menor, acho que fica bacaninha. 😊
+[2025-09-05 01:58:54] L.: Eu gostava de brincar com isso no Windows 3.11 também
+[2025-09-05 01:59:40] L.: https://nicholas.carlini.com/writing/2025/ioccc-intel-4004-in-4004-bytes-c.html <-- explicando como o emulador a nível de portas lógicas de 4004 em 4004 bytes de C funciona
+[2025-09-05 07:35:46] Pablo Vasques Bravo-Villalba: Nessa época eu ainda não conhecia nadinha do Mac 😅
+[2025-09-05 11:39:10] Pedro de Medeiros 👾: Conhecem este projeto? https://github.com/asiekierka/reconstruction-of-zzt/
+[2025-09-05 11:39:34] Pedro de Medeiros 👾: ZZT é isto aqui: https://museumofzzt.com/article/view/534/about-zzt/
+[2025-09-05 12:19:43] L.: É meio fora do tópico mas tem a ver com demoscene e Forth: https://tia.mat.br/posts/2025/08/30/forth-haiku.html :P
+[2025-09-05 22:07:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-09/35493.jpg
+[2025-09-05 22:07:46] Felipe "Juca" Sanches: Ficou um tesão! Terminei hoje. Vou abrir PR e ver se vai liso, ou se levo algum esporro :-P
+https://github.com/felipesanches/mame/tree/roland_pg1000
+[2025-09-05 22:09:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-09/35494.jpg
+[2025-09-05 22:09:01] Felipe "Juca" Sanches: E incluí também a descrição das portas MIDI, pra poder conectar esse emulador no meu Roland D-550 de verdade!
+[2025-09-05 22:11:41] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-09/35495.jpg

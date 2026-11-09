@@ -1,0 +1,69 @@
+[2024-03-06 07:01:50] Anne Isabelle: https://youtu.be/k4J8AF25PjA?si=KFdJO7DL_W4JxgCb
+[2024-03-06 07:04:13] Anne Isabelle: Quando me mandaram pela primeira vez eu pensei “quão hard é portar pro macOS no Apple silicon?”
+[2024-03-06 10:16:01] Lucas Alberto: A API do metal deve ser hard :c
+[2024-03-06 10:16:17] Anne Isabelle: Sim :c
+[2024-03-06 10:16:19] Lucas Alberto: Se eles usam vulkan talvez seja mais facil, mas não conheço o projeto
+[2024-03-06 10:37:56] Anne Isabelle: Acho q eles usam vulkab
+[2024-03-06 10:38:02] Anne Isabelle: Vulkan
+[2024-03-06 10:40:17] Lucas Alberto: Então é um pouco mais facil.
+[2024-03-06 12:18:56] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29910.jpg
+[2024-03-06 12:18:56] Lucas Alberto: Eu achei que estava louco quando vi que isso estava torno no meu emulador 🤡
+
+Estava começando a duvidar da matemática
+[2024-03-06 12:31:51] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29911.jpg
+[2024-03-06 12:31:51] Lucas Alberto: ✅
+[2024-03-06 14:09:06] Lucas Alberto: @fsanches vc tem algum video com um demo do patinho feio com arduino rodando alguma coisa ?
+[2024-03-06 14:10:22] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29913.jpg
+[2024-03-06 14:10:22] Lucas Alberto: acho que consegui fazer ele rodar, mas tem q testar com algum programa
+[2024-03-06 14:20:37] Lucas Alberto: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29914-2024-03-06%2014-19-54.mp4
+[2024-03-06 14:20:37] Lucas Alberto: Não sei se ta certo...
+[2024-03-06 14:27:01] Lucas Alberto: As fases parecem não está mudando, mas no codigo do arduino não tem nada que mude a fase... Unica função quer usa isso é a de random leds
+[2024-03-06 16:12:57] Lucas Alberto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29916.jpg
+[2024-03-06 16:12:57] Lucas Alberto: Fiz um sisteminha pra fazer o hexdump da ram durante a execução
+[2024-03-06 19:41:08] Felipe "Juca" Sanches: transbordo e vai-um também são LEDs
+[2024-03-06 19:41:17] Felipe "Juca" Sanches: as luzes de fases são brancas
+[2024-03-06 19:41:52] Felipe "Juca" Sanches: os botoes/luzes de modos de operação são verdes
+[2024-03-06 19:42:17] Felipe "Juca" Sanches: as chaves eu recomendariz representar em cinza claro/cinza escuro
+[2024-03-06 19:43:02] Lucas Alberto: Detalhes KSKKSSK
+[2024-03-06 19:43:21] Felipe "Juca" Sanches: as fases não mudam pois a emulação foi feita no nível de instrução. Se algum dia alguém reimplementar o emulador no nível de transição de fases das operações, aí as luzes de fases irão mudar
+[2024-03-06 19:45:31] Felipe "Juca" Sanches: se você implementar um render do que seria impresso em papel pela teletype, dá pra rodar um hello world que imprime "PATINHO FEIO\n" na ASR-33
+[2024-03-06 19:46:45] Lucas Alberto: oq é essa ASR-33 ?
+[2024-03-06 19:46:59] Lucas Alberto: É a impressora da vida real ?
+[2024-03-06 19:47:42] Lucas Alberto: @fsanches tem como codar para o patinho usando NASM ?
+[2024-03-06 19:48:32] Felipe "Juca" Sanches: alguém precisaria implementar um assembler
+[2024-03-06 19:49:11] Felipe "Juca" Sanches: https://en.wikipedia.org/wiki/Teletype_Model_33
+[2024-03-06 19:49:45] Lucas Alberto: Eita ferro 🫠
+
+Queria mais alguns programas para eu poder rodar e testar
+[2024-03-06 19:50:03] Lucas Alberto: Ela mesma
+[2024-03-06 19:53:21] Felipe "Juca" Sanches: tinha um programa maior, que eu nunca testei
+
+chamado HEXAM
+[2024-03-06 19:53:27] Felipe "Juca" Sanches: veja apendice_g__hexam.bin
+[2024-03-06 19:54:29] Lucas Alberto: Sabe oq ele faz ?
+[2024-03-06 21:02:29] Felipe "Juca" Sanches: suspeito que seja um "monitor" de sistema
+[2024-03-06 21:02:36] Felipe "Juca" Sanches: com funções para hexdump
+[2024-03-06 21:02:56] Felipe "Juca" Sanches: e edição do conteúdo da memória
+[2024-03-06 21:03:13] Felipe "Juca" Sanches: por meio de comandos digitados no teclado da ASR33
+[2024-03-06 21:03:26] Felipe "Juca" Sanches: e listagens impressas na ASR-33 também
+[2024-03-06 21:03:30] Lucas Alberto: Tem algum manual de uso ? nao né :/
+[2024-03-06 21:03:32] Felipe "Juca" Sanches: mas não tenho certeza se é isso mesmo
+[2024-03-06 21:04:03] Felipe "Juca" Sanches: não me lembro. Talvez tenha alguma coisa junto à listagem de onde extraí esse código
+[2024-03-06 21:04:20] Felipe "Juca" Sanches: mas acho que o mais provável é que o código-fonte seja a própria documentação
+[2024-03-06 21:04:43] Felipe "Juca" Sanches: "pra que escrever a mesma coisa duas vezes?" —RicBit
+[2024-03-06 21:05:10] Lucas Alberto: Eu tenho que ver como faz a entrada com o teletype, por enquanto tem só a saida.
+[2024-03-06 21:23:26] Lucas Alberto: @fsanches depois me dá permissão na org do Github, para eu subir esse repo
+[2024-03-06 21:23:40] Lucas Alberto: Se vocês tiverem interesse nesse emulador, lógico
+[2024-03-06 22:16:25] Felipe "Juca" Sanches: Te adicionei lá
+[2024-03-06 22:16:31] Felipe "Juca" Sanches: temos, sim!
+[2024-03-06 22:17:58] Lucas Alberto: Tá bom, amanhã eu crio um repo e subo
+[2024-03-06 22:19:15] Lucas Alberto: Ele ainda tá bem desorganizado, uma mistura de inglês com português...
+
+Mas ainda estou focando em funcionar, e fazer o básico das funcionalidades de carregar programa e debugar
+[2024-03-06 22:34:26] Felipe "Juca" Sanches: dica: adquira o hábito de criar repos git mesmo que não esteja ainda subindo o conteúdo em alguma plataforma como github, gitlab, etc
+
+o git é útil por si só, pra evitar que você atire no próprio pé deletando por engano arquivos. Permite também experimentar à vontade, tendo a certeza de que se for necessário, dá pra jogar fora todas as novas alterações e voltar ao estado anterior do código
+[2024-03-06 22:48:10] Lucas Alberto: Eu criei um git local
+[2024-03-06 22:48:19] Lucas Alberto: Só não subi para o Github
+[2024-03-06 22:49:35] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/29954-sticker.webp
+[2024-03-06 22:50:08] Felipe "Juca" Sanches: eu interpretei errado quando você disse "amanhã eu crio um repo"

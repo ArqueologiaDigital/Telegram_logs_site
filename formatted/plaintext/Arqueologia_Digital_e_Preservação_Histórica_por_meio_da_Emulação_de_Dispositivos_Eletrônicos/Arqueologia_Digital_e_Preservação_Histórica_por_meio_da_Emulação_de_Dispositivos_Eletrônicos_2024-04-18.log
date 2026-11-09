@@ -1,0 +1,63 @@
+[2024-04-18 09:40:39] Pablo Vasques Bravo-Villalba: Pessoal, nesses últimos dias estive acompanhando a evolução do Nuked-SC55 (emulador do módulo SC-55mkII baseado no decap do chip sintetizador), e há poucos dias saiu uma versão que emula os outros módulos que usam o mesmo chip. Alguém sabe onde conseguir as ROMs de firmware? Eu já tenho algumas do SCC-55mkII original, mas foi compartilhado em um link do Google Drive e não sei mais onde é que eu arranjei esse link 🤦🏽‍♂️
+[2024-04-18 14:12:42] Pedro de Medeiros 👾: https://github.com/kevinbentley/Descent3
+[2024-04-18 14:38:22] L.: Descent tinha uma música muito massa
+[2024-04-18 14:40:06] Pablo Vasques Bravo-Villalba: E ela soava especialmente bem em um módulo Sound Canvas 😉😉😉
+[2024-04-18 14:40:26] L.: Mesmo com adlib é massa
+[2024-04-18 16:10:05] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-04/30945.jpg
+[2024-04-18 16:10:05] Pablo Vasques Bravo-Villalba: Neste exato instante minha mente foi devidamente explodida ao adquirir o conhecimento da existência de QuickBASIC para Mac. Nunca fiz nem ideia
+[2024-04-18 16:11:00] L.: Nem eu!
+[2024-04-18 16:11:19] L.: E o QuickBasic completo, não o qbasic
+[2024-04-18 16:11:28] Pablo Vasques Bravo-Villalba: E sim, ele compila (opcionalmente) binários para 68020 e 68881
+[2024-04-18 16:11:29] L.: Então deve gerar ou 68k ou pcode
+[2024-04-18 16:11:35] L.: Nice!
+[2024-04-18 16:12:02] L.: Um qbasic no msx seria legal
+[2024-04-18 16:12:03] Pablo Vasques Bravo-Villalba: Estou um pouco abismado com a data, também. 1992? Caramba
+[2024-04-18 16:12:08] L.: Com a IDE dele e tudo mais
+[2024-04-18 16:12:23] Pablo Vasques Bravo-Villalba: Temo que seria horrivelmente lento, mas seria legal sim
+[2024-04-18 16:13:25] Pablo Vasques Bravo-Villalba: Aliás eu achei magia negra a última loucura do Prodatron
+[2024-04-18 16:14:02] Pablo Vasques Bravo-Villalba: Ele é um cara que fez um SO gráfico para MSX (e algumas outras plataformas)
+[2024-04-18 16:14:29] Pablo Vasques Bravo-Villalba: Na última atualização ele introduziu uma máquina virtual CP/M, para rodar aplicações CP/M em janela dentro do ambiente gráfico
+[2024-04-18 16:14:31] Pablo Vasques Bravo-Villalba: Coisa de maluco
+[2024-04-18 16:15:22] Pablo Vasques Bravo-Villalba: Aparentemente o objetivo era rodar WordStar, mas tem outras coisas que rodam, como Turbo Pascal por exemplo
+[2024-04-18 16:17:22] L.: Que legal! Como será que fez isso? Redefine a interrupção pra jogar tudo pra um buffer do symbos?
+[2024-04-18 16:18:13] L.: Aliás, symbos é coisa de doido. Projeto animal
+[2024-04-18 16:18:36] Pablo Vasques Bravo-Villalba: Nem imagino. Já fico passado com os demos multitarefa com coisas se mexendo em janelas variadas
+[2024-04-18 16:18:42] L.: Pra quem já tentou fazer interface gráfica em PC, sabe o trabalho que dá. Aí fazer portável pra micro de 8bit... oof
+[2024-04-18 16:20:47] Pablo Vasques Bravo-Villalba: Inclusive a VM tem 63kB livres na TPA. Segundo eles a VM roda mais rápido do que o CP/M 2.2 original porque é código Z80, não 8080. Mas sei lá se é verdade.
+[2024-04-18 16:25:00] L.: Preciso ver isso depois
+[2024-04-18 16:25:30] Pablo Vasques Bravo-Villalba: Ah, parece que é mais rápido no CPC, uma das arquiteturas suportadas pelo SymbOS
+[2024-04-18 16:25:39] Pablo Vasques Bravo-Villalba: A emulação de terminal parece ser especialmente lenta
+[2024-04-18 16:26:37] L.: Achei o forum aqui 👀
+[2024-04-18 16:27:09] L.: CP\/M
+
+V de virtual😆
+[2024-04-18 16:28:17] L.: Imagino que dê pra fazer umas coisas legais, tipo não precisar uma interrupção pra cada caracter de saída
+[2024-04-18 16:28:36] L.: E fazer flush do buffer em certos intervalos se tiver sujo
+[2024-04-18 16:28:45] L.: E outras coisas assim pra ganhar desempenho
+[2024-04-18 16:30:02] L.: https://symbos.org/cpvm.htm com screenshots
+[2024-04-18 16:33:34] L.: https://github.com/danielgaskell/cpvm fonte
+[2024-04-18 16:34:09] L.: uia, feito em C😍
+[2024-04-18 18:11:58] RicBit: wordstar roda em 8080?
+[2024-04-18 18:13:34] Felipe "Juca" Sanches: Juca tenta desviar o olhar com notório desconforto, sem conseguir esconder o entusiasmo com uma idéia excitante.
+[2024-04-18 18:14:12] L.: Um qbasic num teclado musical seria legal
+[2024-04-18 18:14:39] Felipe "Juca" Sanches: VSF!!! kkkk
+[2024-04-18 18:15:43] RicBit: ruim de programar no teclado musical é que as letras só vão até G
+[2024-04-18 18:15:45] L.: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-04/30981-animation.gif.mp4
+[2024-04-18 18:15:50] L.: nerd sniping
+[2024-04-18 18:15:54] Felipe "Juca" Sanches: Hahahaha
+[2024-04-18 18:16:27] L.: Pelo menos dá pra escrever C#
+[2024-04-18 18:16:37] Felipe "Juca" Sanches: Vishhhhh
+[2024-04-18 18:17:22] Felipe "Juca" Sanches: Sharp comment. Flat truth.
+[2024-04-18 18:21:58] Felipe "Juca" Sanches: Meu port da VM de Another World pra rodar no teclado musical KN5000 está "quase" (eu acho)
+[2024-04-18 18:22:10] Felipe "Juca" Sanches: Esbarrei num bug chato
+[2024-04-18 18:22:35] Hugo (Agaelebê): Bora marcar um dia para vc apresentar no garoa
+[2024-04-18 18:22:39] Felipe "Juca" Sanches: Uma peculiaridade do context switching das threads da VM
+[2024-04-18 18:22:52] Felipe "Juca" Sanches: Sim, com certeza!
+[2024-04-18 18:23:01] Hugo (Agaelebê): e aí já fazemos uma live tb hehe
+[2024-04-18 18:23:08] Felipe "Juca" Sanches: ;-)
+[2024-04-18 18:25:00] Felipe "Juca" Sanches: Minha implementação em asm de Toshiba Tlcs-900 tá entrando num loop infinito, preso numa única thread.
+[2024-04-18 18:28:21] Felipe "Juca" Sanches: Vou recompilar o MAME com suporte (em HLE) à VM do Another World, que sei que funciona. Aí vou anotar em papel a sequência exata dos momentos em que ocorre task switching para outras threads. E com base nisso detector qual o ponto exato em que a execução do meu port pro kn5000 diverge. E, assim, encontrar onde está meu bug.
+[2024-04-18 19:13:38] Pedro de Medeiros 👾: Jogo novo, gráficos velhos. https://store.steampowered.com/app/1098770/The_Crimson_Diamond/
+[2024-04-18 20:32:13] Guilherme Ranoya: Falando em CP/M....
+
+https://computerhistory.org/blog/fifty-years-of-the-personal-computer-operating-system/

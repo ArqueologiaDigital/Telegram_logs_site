@@ -1,0 +1,40 @@
+[2026-11-04 00:38:40] Pedro de Medeiros 👾: Será que você não está definindo o bit 7 do componente vermelho da cor sem querer e ligando a transparência?
+[2026-11-04 00:39:46] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42127.jpg
+[2026-11-04 00:47:15] RicBit: esse era o problema da palette errada do galaga num dos clones fpga, eu falei isso pro autor e ele consertou
+[2026-11-04 00:47:36] RicBit: mas no ys3, se fosse isso a transparencia seria por cor, não por coluna.
+[2026-11-04 00:48:06] Pedro de Medeiros 👾: Sprites no modo P2 usam uma paleta por coluna do sprite.
+[2026-11-04 00:48:26] RicBit: faz sentido, mas o ys3 é P1
+[2026-11-04 00:53:43] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42132.jpg
+[2026-11-04 00:53:43] RicBit: o bug era isso aqui
+[2026-11-04 00:55:20] RicBit: comando no v9990 é um pouco diferente do v9958. o v9990 sempre escreve nos dois chips ao mesmo tempo, mesmo quando está em modo P1. se você deixar o 46 e o 47 com FF ao mesmo tempo, o pixel que você escreve no plano A vaza pro plano B, que era o que estava acontecendo
+[2026-11-04 00:55:59] RicBit: agora eu sei que em modo P1, ou voce faz 46=ff 47=0, ou 46=0 e 47=ff. os dois ao mesmo tempo duplica o pixel. ninguem emula isso ainda
+[2026-11-04 00:58:16] RicBit: o galaga e o death wish nao davam problema porque eu sempre escrevia com out. só o ys3 que usa comando do vdp (precisa usar, senão não dá tempo de desenhar tudo e manter o scroll a 60Hz)
+[2026-11-04 01:01:03] RicBit: alias é legal que ele faz masking dos bits individuais. esse é um dos truques que o gbzin usa pra caber em 4kb, eu guardo informação nos bits mais altos e uso uma mascara para desenhar só os bits mais baixos
+[2026-11-04 01:04:54] Pedro de Medeiros 👾: vai mandar um patch?
+[2026-11-04 01:05:17] RicBit: yup, assim que tiver todos os bugs corrigidos
+[2026-11-04 01:07:55] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42139.jpg
+[2026-11-04 01:07:55] RicBit: Bug consertado graças à gata do debugging.
+[2026-11-04 01:10:26] Shideravan: Se tivesse uma gata dessas nas eleições dos EUA, eles já tinham abandonado o papelzinho e já teriam o resultado na mão kkkkkkkkkk
+[2026-11-04 01:10:29] Pedro de Medeiros 👾: Esse visualizador de tile, bitmap e sprite para o V9990 vai ser muito bem-vindo. 😍
+[2026-11-04 01:10:50] Shideravan: É a pressão felina que toca o mundo
+[2026-11-04 01:15:12] RicBit: o debugger que eu mandei ontem?
+[2026-11-04 01:15:33] RicBit: eu estou usando ele faz mais de mês, só ontem que eu resolvi mandar haha
+[2026-11-04 01:15:56] RicBit: 100% slop inclusive
+[2026-11-04 01:27:45] Pedro de Medeiros 👾: Acho que pode melhorar consideravelmente a emulação do V9990 a partir disso.
+[2026-11-04 01:32:05] RicBit: a ideia de ligar o agente no msx é deixar ele fazer tudo sozinho. ele cria os casos de teste, renderiza, checa e faz o PR.
+[2026-11-04 01:32:24] RicBit: vai ser especialmente util para medir os timings dos comandos do vdp que estão bem errados.
+[2026-11-04 01:32:59] RicBit: acho que amanhã eu termino o agente
+[2026-11-04 06:39:39] Felipe "Juca" Sanches: parecido com o que tenho feito via protocolo DPLDPC no KN7000 (usando SD card)
+[2026-11-04 06:40:23] Felipe "Juca" Sanches: DPLDPC = "disco pra lá, disco pra cá"
+[2026-11-04 07:39:02] L.: olha a pose dessa gata ❤️
+[2026-11-04 08:11:38] Felipe "Juca" Sanches: https://github.com/pedrocatalao/pinball-fantasies-encore/issues/63
+[2026-11-04 09:01:21] Pablo Vasques Bravo-Villalba: Fantástica a documentação em Engrish. Yamaha, te amamos (NOT)
+[2026-11-04 09:01:59] Pablo Vasques Bravo-Villalba: A emulação do V9990 no OpenMSX tem mais furos que uma peneira, mas entendo que eles estão dispostos a melhorar
+[2026-11-04 09:02:38] Pablo Vasques Bravo-Villalba: Debugata
+[2026-11-04 09:03:31] Pablo Vasques Bravo-Villalba: Pior que lá mais gente vota pelo correio do que presencialmente. Como tirar as cédulas desse jeito?
+
+Uma curiosidade é que tem lugar por lá que a cédula tem TRÊS FOLHAS
+[2026-11-04 09:04:24] Pablo Vasques Bravo-Villalba: Se funciona bem, não é slop. Slop é só quando é tosco, quando faz o mínimo, ou quando foi testado mal e porcamente
+[2026-11-04 09:07:00] Shideravan: Excelente nome kkkkkkkkkkkkkk
+[2026-11-04 22:55:17] RicBit: já foi mergeado, pode usar!
+[2026-11-04 23:07:25] L.: https://fireflyk64.github.io/wcmulti/

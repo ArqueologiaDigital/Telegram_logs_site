@@ -1,0 +1,12 @@
+[2023-03-06 01:12:41] RicBit: ficou massa
+[2023-03-06 01:12:46] RicBit: tempo é a velocidade da musica
+[2023-03-06 01:13:11] RicBit: tipo star wars do msx que tinha o tempo elevado
+[2023-03-06 01:13:52] RicBit: https://www.youtube.com/watch?v=tCB-aT4fBMc
+[2023-03-06 01:15:45] RicBit: https://en.wikipedia.org/wiki/Tempo
+[2023-03-06 06:22:26] Pablo Vasques Bravo-Villalba: No contexto de música, o que se chama "tempo" em inglês é "andamento" em português 😉
+[2023-03-06 06:25:25] Pablo Vasques Bravo-Villalba: Pensando aqui sobre os valores das amostras terem sido divididos por quatro. Isso não seria mais ou menos o mesmo que dizer que, na prática, a resolução da amostra é de 6 bits? Não sei se isso seria muito relevante.
+[2023-03-06 09:00:15] Robson França: Sim, é isso mesmo
+[2023-03-06 09:01:06] Robson França: É que na hora de escrever na porta de E/S o valor precisa ser multiplicado por 4
+[2023-03-06 22:38:02] Felipe "Juca" Sanches: firquei surpreso hoje ao descobrir que a Technics também fabricava pianos digitais, com a mesma arquitetura de hardware do KN5000 (e dos seus sucessores, como o KN7000)
+[2023-03-06 22:38:02] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=tQBT33sVwA8
+[2023-03-06 23:04:10] Felipe "Juca" Sanches: https://fxtwitter.com/ComputerLove_/status/1632582977258663937

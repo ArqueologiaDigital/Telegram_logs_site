@@ -1,0 +1,56 @@
+[2026-10-17 02:59:32] Shideravan: https://github.com/ZeebxTeam/zeebx-emu
+[2026-10-17 03:10:41] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41631.jpg
+[2026-10-17 03:10:41] Felipe "Juca" Sanches: Altíssimo nível!
+[2026-10-17 03:13:00] Felipe "Juca" Sanches: sim, 7h da manhã dum sábado... kkkkk!!!
+[2026-10-17 03:14:50] Felipe "Juca" Sanches: ironicamente fazendo isso enquanto leio esse artigo...
+[2026-10-17 03:19:00] Felipe "Juca" Sanches: Desses 5 PRs, todos os de softlists foram incorporados (merges feitos pelo rb6502 e pelo ajrhacker) e só permanece aberto o mais antigo, da placa opcional HD-SX6
+[2026-10-17 03:26:17] Felipe "Juca" Sanches: Esse pedaço do texto dá a entender que o autor tem uma percepção um pouco errada ou talvez desatualizada sobre o tema:
+
+3) LLMs can at most have a limited, if not empty context of the entire codebase.
+
+4) The nondeterministic output is still only a guess. The deterministic compiler makes the final call.
+
+5) Most likely, the output can’t be copy pasted into the codebase, because it makes guesses on variable names, addresses, and does not follow coding standards.
+[2026-10-17 03:34:50] Felipe "Juca" Sanches: minhas opinioes:
+
+(3) persistir em um git-repo auxiliar arquivos Markdown com anotações estruturadas (com progressive-disclosure) sobre os mais diversos aspectos desvendados durante a engenharia reversa
+
+(4) Usar técnicas de Test Driven Development. Escrever testes para domar a fera. Automatizar o loop binário original -> disasm -> fontes regenerados -> binario recompilado -> 100% byte-match
+
+(5) A documentação do item 3 informa o processo de atribuir símbolos semanticos 'as funcoes e 'as variaveis. Ainda é um pouco de chute, mas é um "chute" bem-informado, com fundamentação na pesquisa em andamento.
+[2026-10-17 03:36:13] Shideravan: Faz anos que não faço TDD, deu até saudades hahaha
+[2026-10-17 03:36:34] Felipe "Juca" Sanches: os agentes escrevem os testes! LOL
+[2026-10-17 03:38:37] Shideravan: Esse mundo novo de aventuras que quebra kkkkk
+[2026-10-17 03:39:00] Shideravan: Gostoso era fazer na raça kkkk
+[2026-10-17 03:39:27] Felipe "Juca" Sanches: `Some experienced decompilers have experimented with using LLMs in their projects. But (and this is important), they did not steal someone else’s thunder. They did not take an existing project and decide, “Mommy! Finish this for me!!”. They used it as a form of experimenting, or to help with tedious, non-decompiling related tasks like matching naming conventions, formatting, etc.`
+
+Parece o dilema dos matemáticos:
+"As IAs estão tirando nosso brinquedo."
+[2026-10-17 03:41:00] Shideravan: Uma coisa que eu gosto em muitos contos do Asimov é que eles foram escritos numa época que achavam que o acesso fácil a calculadoras eletrônicas iria acabar com o aprendizado de matemática 🫠
+[2026-10-17 03:41:43] Felipe "Juca" Sanches: Minha meta atual é maximizar a documentacao de toda a familia de teclados musicais e sintatizadores da Technics no MAME. O trabalho "manual" que eu ainda preciso fazer eu mesmo é desaparafusar gabinete, extrair chips, fazer dumps por meio de intervencoes no hardware real... enquanto nao ha ainda robos humanoides fazendo engenharia reversa de hardware retro...
+[2026-10-17 03:42:33] Shideravan: Aí eu lembro de um conto num futuro distópico em que ninguém sabia matemática e todos confiavam cegamente no que uma IA programada numa época onde ainda se sabia matemática ditava sobre quais as regras matemáticas. E ela tinha um erro crasso...
+[2026-10-17 03:43:18] Shideravan: Décadas depois e estamos vendo essa mesma discussão de novo com as IAs hahaha
+[2026-10-17 04:47:11] Felipe "Juca" Sanches: Final de semana que vem eu pego um trem para Edimburgo, que é o local mais próximo para eu ir votar.
+
+Me perdoem pelo off-topic, mas isso aqui é muito importante:
+
+https://www.youtube.com/watch?v=T3gZ6Nn7kZY
+[2026-10-17 05:07:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41648.jpg
+[2026-10-17 05:07:19] Felipe "Juca" Sanches: Acabou de passar na minha frente um exemplo bacana de "chute direcionado" que considero ser de boa qualidade justamente por conta dessa sistematização da pesquisa!
+[2026-10-17 05:15:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41649.jpg
+[2026-10-17 05:15:59] Felipe "Juca" Sanches: E coisas do tipo...
+[2026-10-17 05:39:00] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41650.jpg
+[2026-10-17 05:39:00] Felipe "Juca" Sanches: avançando bem! ;-)
+[2026-10-17 16:09:58] Leonardo Roman: document: (not yet published)
+[2026-10-17 16:09:58] Leonardo Roman: Documentação técnica I-7000 e I-7000 PC
+[2026-10-17 16:11:00] Leonardo Roman: @fsanches nesse arquivo tem várias documentações que um pessoal digitalizou há um tempo. Tem bastante coisa do i7000PC, mas deve ter uma coisa ou outra do I-7000 normal.
+[2026-10-17 16:12:09] Felipe "Juca" Sanches: me lembro vagamente de ter visto esse arquivo e so ter achado coisas do i7000pc. Mas vou dar uma segunda chance, pois posso ter perdido algum detalhe
+[2026-10-17 16:23:39] Jecel Assumpcao Jr: Pelo que me lembro eram dois computadores completamente diferentes e foi infeliz a Itautec reusar o nome. O I-7000 original era um micro com um processador estranho da National mais ou menos compatível com o 8080 da Intel, certo? E aceitava software na forma de cartuchos
+[2026-10-17 16:30:16] Felipe "Juca" Sanches: a cpu usada era um clone de z80 nesse modelo que rodava um sistema CP/M
+[2026-10-17 16:31:19] Felipe "Juca" Sanches: e é o modelo que tenho, apesar de estar todo desmembrado. Nunca nem tentei ligar, apenas inspecionei o circuito da placa para escrever o emulador no MAME
+[2026-10-17 16:42:07] Jecel Assumpcao Jr: Interessante - realmente é compatível a nível de software com Z80 - https://www.cryptomuseum.com/spy/fs5000/files/NSC800.pdf
+[2026-10-17 16:43:37] Jecel Assumpcao Jr: Mas a pinagem é mais parecida com o 8085 e por isso eu tinha ficado com a impressão que a compatibilidade era com este processador
+[2026-10-17 16:55:36] Jecel Assumpcao Jr: Um amigo meu que trabalhava no laboratório de desenvolvimento da Itautec na época me disse que o I-7000 era o pior projeto que eles tinham criado mas que por alguma razão a diretória tinha escolhido justamente este para ser comercializado e tinha ignorado tudo o resto do que eles tinham feito
+[2026-10-17 21:37:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41660.jpg
+[2026-10-17 21:37:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41661.jpg
+[2026-10-17 21:37:38] Felipe "Juca" Sanches: Alguém adivinha o que eu estou tentando fazer aqui?

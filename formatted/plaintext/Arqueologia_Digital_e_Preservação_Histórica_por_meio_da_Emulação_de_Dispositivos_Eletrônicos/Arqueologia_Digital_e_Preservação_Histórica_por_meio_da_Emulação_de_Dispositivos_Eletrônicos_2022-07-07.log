@@ -1,0 +1,49 @@
+[2022-07-07 00:58:30] Pedro de Medeiros 👾: Mas a gente já está usando componentes do OpenWatcom, não está? O tkchia/build-ia16 não usa um assembler não-livre do OpenWatcom?
+[2022-07-07 01:01:01] Felipe "Juca" Sanches: pois é... eu nem lembrava disso, mas agora vi essa minha mensagem aqui
+[2022-07-07 01:03:54] Felipe "Juca" Sanches: mas eu não sei se eu tinha razão quando eu disse isso, ou se eu estava confuso. Olhando de novo nas instruções de build do port msdos, não to achando onde está a instalação da dependencia proprietária
+[2022-07-07 01:08:22] Felipe "Juca" Sanches: se entendi bem, não podem mudar a licença do projeto unilateralmente por conta disso. Mas o truque que alguém sugeriu me pareceu muito interessante: dado que a licença afirma que podem valer também os termos de quaisquer futuras versoes da licença, significa que a SAP poderia criar uma versão 2 da licença cujo texto seja idêntico (ou legalmente equivalente) ao da Apache 2.0 e isso afetaria (totalmente dentro da lei) todo o codebase, mesmo o que não é de copyright da SAP
+[2022-07-07 01:18:40] L.: Pode crer
+[2022-07-07 01:18:57] L.: Seria o ideal pra esse projeto de fazer versão do jogo pra Windows 3.11
+[2022-07-07 01:47:37] Felipe "Juca" Sanches: uma coisa que não entendo é o porque de tanta gente usar esse openwatcom. O que ele realmente tem de especial?
+[2022-07-07 02:11:57] L.: Vai gerar executável win16 direto 🙃
+[2022-07-07 02:12:08] L.: Rola fazer os headers na mão com um assembler também
+[2022-07-07 02:12:18] L.: Vi aqui e é sossegado
+[2022-07-07 02:13:19] L.: https://board.flatassembler.net/topic.php?t=11964
+[2022-07-07 08:21:52] Ismael Luceno: eu recomendaria você usar win32s
+[2022-07-07 08:22:07] Ismael Luceno: https://en.wikipedia.org/wiki/Win32s
+[2022-07-07 08:24:31] Ismael Luceno: você precisa do SDK original para ter licenciamento, não é exatamente assim permissivo
+[2022-07-07 08:24:59] Ismael Luceno: (da MS)
+[2022-07-07 08:25:24] Ismael Luceno: por isso cada SDK de cada empresa tem versões ligeiramente incompatíveis das headers
+[2022-07-07 08:30:05] Ismael Luceno: é possível combinar os binarios sim, há alguns games que usavam
+[2022-07-07 08:33:11] Ismael Luceno: o gnu-as suporta código de 16 bits
+[2022-07-07 08:34:08] Ismael Luceno: precisa 386
+[2022-07-07 08:36:35] Ismael Luceno: a licencia pode usar indireção ;), nem precisa copiar o texto
+[2022-07-07 08:37:40] Ismael Luceno: Watcom era muito popular, não tem nada de especial, mas lembre que todos os compiladores para DOS são incompatíveis com os outros
+[2022-07-07 08:39:39] Ismael Luceno: Watcom era popular por barato (que o da MS e Borland), porque suportava 16 e 32 bits (contrario do GCC), e porque tinha melhor compatibilidade com os compiladores da MS
+[2022-07-07 08:41:50] Ismael Luceno: e na época gerava melhor código que os outros proprietários, mas pior que GCC, se não me lembro errado
+[2022-07-07 08:44:27] Ismael Luceno: me lembro também que a iD software usava GCC nas estações SGI deles
+[2022-07-07 08:44:36] Ismael Luceno: mais antes disso usavam Watcom
+[2022-07-07 08:45:05] Ismael Luceno: o Quake I então está cross-compilado com o DJGPP
+[2022-07-07 08:45:46] Ismael Luceno: nessa época o DJGPP ja era MUITO melhor que o Watcom
+[2022-07-07 08:47:07] Ismael Luceno: o runtime usava menos memoria que o DOS4GW e gerava muito melhor código
+[2022-07-07 08:53:34] Ismael Luceno: eu sei que o DJ consultava para a iD software na época por conta dessa migração
+[2022-07-07 08:56:41] Ismael Luceno: o DJGPP melhorou muito nessa época, e depois eu lembro que agregaram DXE, que eu acho estava relacionado com o desenvolvimento do Quake
+[2022-07-07 08:57:01] Ismael Luceno: mas eles usavam una branch diferente da v2
+[2022-07-07 08:57:35] Ismael Luceno: DJGPP v2 foi resultado das mudanças da iD software
+[2022-07-07 09:02:12] Ismael Luceno: não me lembro a data da release da v2 beta 2, mas ~1995?
+[2022-07-07 09:03:15] Ismael Luceno: a cygnus também teve muito a ver com o desenvolvimento da v2
+[2022-07-07 09:08:46] Ismael Luceno: BTW muitos games foram portados do Watcom para GCC, por exemplo se não me lembro errado o DOOM II pra Final DOOM release
+[2022-07-07 09:09:18] Ismael Luceno: e muitos dos ports do DOOM II da época eu acho seriam compilados com o GCC
+[2022-07-07 09:10:37] Ismael Luceno: também muitas re-releases da gog.com
+[2022-07-07 09:11:22] Ismael Luceno: eu sei que o Tomb Raider I foi portado pro DJGPP também, mas não lembro quando
+[2022-07-07 09:11:41] Ismael Luceno: a versão original era compilada com o Watcom
+[2022-07-07 11:14:07] Ismael Luceno: btw, seria muito legal ter GCC-IA16 portado para GCC 12+
+[2022-07-07 11:31:21] Felipe "Juca" Sanches: eu não sei qual é o empecilho. Mas suspeito que um dos motivos seja o fato de não estarem usando binutils. A interface do compilador com o assembler é um shell script que traduz as opções do GNU as para as opções de um outro assembler.
+
+Não tem objdump, por exemplo. Não tem nada que o binutils ofereça.
+[2022-07-07 11:33:12] Felipe "Juca" Sanches: ai, caramba! Estou me confundindo. Esqueça o que eu disse
+[2022-07-07 11:34:05] Felipe "Juca" Sanches: acabei de lembrar que na verdade esse lance de não usar binutils e ter um script tradutor de interface com assembler é sujeira feita por um outro port não-oficial de GCC, o pra Motorola 6809.
+[2022-07-07 11:36:57] Ismael Luceno: ahhhhh
+[2022-07-07 11:37:08] Ismael Luceno: eu achava que o gcc-ia16 usava binutils sim
+[2022-07-07 11:37:54] Ismael Luceno: de qualquer jeito o problema é o mesmo de sempre, desenvolvedor que não tem experiência com o projeto e não consegue fazer merge porque começa na versão incorreta, etc.
+[2022-07-07 11:54:48] Felipe "Juca" Sanches: sim, acho que é isso mesmo. Acho que o gcc-ia16 tá usando binutils e o gcc-m6809 tá usando um outro assembler com o shell script fazendo a "cola" entre as interfaces

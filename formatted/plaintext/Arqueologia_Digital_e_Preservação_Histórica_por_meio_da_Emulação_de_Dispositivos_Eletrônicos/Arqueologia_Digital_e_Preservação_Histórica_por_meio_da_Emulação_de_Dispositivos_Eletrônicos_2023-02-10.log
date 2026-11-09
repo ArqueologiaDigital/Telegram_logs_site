@@ -1,0 +1,25 @@
+[2023-02-10 14:30:01] Shelton Ribeiro: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25809.jpg
+[2023-02-10 14:30:01] Shelton Ribeiro: Estamos fechando a edição número 4, quem adquirir ela, irá participar do sorteio de uma fita do RE2, mas a versão digital, será gratuita, sempre!
+[2023-02-10 14:30:01] Shelton Ribeiro: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25810.jpg
+[2023-02-10 14:30:01] Shelton Ribeiro: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25811.jpg
+[2023-02-10 14:30:23] Shelton Ribeiro: @Shideravan mestre, boa tarde? Sobre a Nation 64,
+[2023-02-10 15:10:05] Shideravan: Aí sim, fico feliz de saber que os trabalhos estão ativos 😊
+[2023-02-10 15:10:58] Shideravan: Essa fita é daora, hein? A versão de RE2 do N64 tem toda uma aura em cima, de fodice dos caras na época terem compactado o jogo para caber em um cartucho de N64
+[2023-02-10 15:15:51] Shideravan: Dia desses, eu encontrei um artigo questionando um pouco algumas coisas que se falam sobre o "milagre" de transpor o RE2 para o N64
+[2023-02-10 15:15:53] Shideravan: https://universonintendo.com/o-milagre-de-resident-evil-2-no-64-uma-mentira-acreditada-ate-hoje/
+[2023-02-10 15:16:54] Shideravan: Mas mesmo quando você considera todos os fatores, não dá para deixar de pensar em como foi um grande feito esse port, ainda mais que ele conta com vídeos e tudo o mais, que não é comum em jogos de N64
+[2023-02-10 15:44:28] Shelton Ribeiro: Este artigo é do tempo do Wii Brasil, o cara que escreveu praticamente disse que os caras só "moveram" o conteúdo dos discos e lascaram no cartucho, sendo que não foi assim, os caras trabaram sem um devkit bom, tiveram que criar seus próprios codecs do zero, já que o Nintendo 64 não tinha codecs via hardware, enfim, entrevistamos o Alexander Einhart que foi o cara que desenvolveu o código do game, ele explica tudo direitinho de como foi o processo do porte que praticamente foi uma criação dada a falta de material, fora as coisas engraçadas do processo, kkk ele hoje é o criador do código do Roblox
+[2023-02-10 15:48:31] Shideravan: hmmm eu bem que notei um monte de erros no texto, como dizer que "colocar um disco a mais no jogo não teria custo nenhum para a desenvolvedora". Não é bem assim...
+[2023-02-10 15:49:07] Shideravan: Fora que outros jogos da Capcom da mesma época não aderiram a esse "marketing", inclusive a própria sequencia RE3
+[2023-02-10 15:56:56] Shideravan: Outra coisa é que se fosse assim tão simples criar uma solução para executar vídeos no N64, com certeza haveriam muito mais jogos que fariam isso no console
+[2023-02-10 16:04:29] Shideravan: E me corrija se eu estiver errado, mas o Resident Evil 2 foi um dos jogos que usaram o sistema MusyX da Factor 5, não?
+[2023-02-10 16:09:13] Shideravan: https://archive.org/details/MusyXAudioToolsForNintendo64AndGameBoy/page/n385/mode/2up
+[2023-02-10 16:12:13] Shideravan: Manualzinho de 400 páginas só para conseguir usar bem a ferramenta hahaha
+[2023-02-10 19:49:37] Shelton Ribeiro: Isso, eles pediram "socorro" à Factor 5 pra ajudar na compressão do áudio. Os caras tinham muita experiência com compressão dado o fantástico trabalho deles em Stat Wars Rogue Squadron, Pokémon Stadium e outros games, ainda deu pra colocar suporte a Dolby Surround no game. Apesar da compressão "espartana" no fim, foi o que deu pra fazer, num cartucho.
+[2023-02-10 19:50:31] Shelton Ribeiro: Excelente material 👏🏽😅
+[2023-02-10 19:51:40] Shelton Ribeiro: Rogue Squadron, Naboo e Indiana Jones também usam, eu acho. Se não me falha a memória, no Nintendo 64 são estes três games que usam.
+[2023-02-10 20:24:35] Shideravan: Sim e não por acaso, são os jogos mais complicados de emular do N64
+[2023-02-10 21:17:34] Shelton Ribeiro: https://www.ign.com/articles/2000/11/10/bringing-indy-to-n64
+
+Falando em Indiana Jones Infernal Machine, o pessoal da LucasArts e Factor 5, deram essa entrevista ao IGN, e explicaram como conseguiram fazer com que o game pudesse ver a luz do dia no Nintendo 64, inclusive com mais efeitos de luz até que a versão do PC, uma parte curiosa é que eles falam que o cartucho foi de grande vantagem em alguns momentos, porque as texturas eram geradas via streaming usando a própria mídia e poupando o hardware para outras tarefas.
+[2023-02-10 23:54:12] Felipe "Juca" Sanches: https://twitter.com/TubeTimeUS/status/1624112297005445120

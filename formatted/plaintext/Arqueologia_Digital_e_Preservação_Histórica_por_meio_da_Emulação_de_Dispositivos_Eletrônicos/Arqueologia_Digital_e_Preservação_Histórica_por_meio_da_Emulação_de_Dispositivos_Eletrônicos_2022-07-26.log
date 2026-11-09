@@ -1,0 +1,10 @@
+[2022-07-26 00:14:25] Felipe "Juca" Sanches: merged!
+[2022-07-26 01:19:04] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/0142
+[2022-07-26 01:34:09] Pedro de Medeiros 👾: Quando for implementar a solução do ms-dos, só precisa chamar a função set_minefield_cell(mf, cell_x, cell_y, input); no código do mouse pra mudar a célula naquele ponto.
+[2022-07-26 01:34:39] L.: Massa!
+[2022-07-26 01:35:35] Pedro de Medeiros 👾: input é um desses: MINE_INPUT_OPEN_BLOCK, MINE_INPUT_OPEN, MINE_INPUT_FLAG.
+[2022-07-26 03:16:11] Felipe "Juca" Sanches: merged!
+[2022-07-26 09:16:21] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/143
+[2022-07-26 09:16:34] Pedro de Medeiros 👾: Última mudança a respeito de mouse.
+[2022-07-26 09:18:32] Pedro de Medeiros 👾: Depois eu vou mexer com som.
+[2022-07-26 11:26:27] Felipe "Juca" Sanches: merged

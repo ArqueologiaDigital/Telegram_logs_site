@@ -1,0 +1,13 @@
+[2025-11-26 10:44:01] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=KCyRnm2wn2s
+[2025-11-26 12:06:45] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=JYVurBHj1WU
+[2025-11-26 13:02:01] Pedro de Medeiros 👾: Isso está num repositório?
+[2025-11-26 13:02:13] Erin Pinheiro 🐿: .
+[2025-11-26 13:13:48] Pedro de Medeiros 👾: Tem jogo que altera o banco de memória a cada frame? Se tiver vai ficar injogavél, né?
+[2025-11-26 13:15:12] Erin Pinheiro 🐿: sim, exatamente isso que aconteceu
+[2025-11-26 13:15:45] Erin Pinheiro 🐿: eu achei que ia ser rápido o suficiente mas o SPI não comportou, nem lendo SD nem a PSRAM externa
+[2025-11-26 13:16:03] Erin Pinheiro 🐿: a solução foi usar o resto da flash do pico
+[2025-11-26 13:17:42] Erin Pinheiro 🐿: o problema agora é que funciona se o smsplus é o único firmware gravado direto, mas no picocalc o mais comum é usar um bootloader, e eu ainda não consegui fazer a gravação do flash funcionar quando lançado do bootloader
+[2025-11-26 21:10:29] Pedro de Medeiros 👾: https://youtu.be/Y8RODQZM2HY?si=bhJ9UWMMvPP2hGPl
+[2025-11-26 22:54:31] Pedro de Medeiros 👾: O cara descobrindo como o sistema de som do Commando funciona investigando pelo MAME. https://www.youtube.com/watch?v=_Qhc8kqZyHU
+[2025-11-26 23:17:12] Pablo Vasques Bravo-Villalba: Muito bons esses vídeos, tanto este como o anterior da mesma série
+[2025-11-26 23:20:12] Pedro de Medeiros 👾: Ele teve o trabalho fácil investigando o jogo pelo MAME. O difícil é fazer o contrário: investigar o hardware do arcade pra emular no MAME.

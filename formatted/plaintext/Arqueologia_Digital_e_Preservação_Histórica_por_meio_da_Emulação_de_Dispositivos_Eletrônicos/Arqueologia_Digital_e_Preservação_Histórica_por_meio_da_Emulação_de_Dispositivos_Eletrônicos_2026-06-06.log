@@ -1,0 +1,48 @@
+[2026-06-06 10:49:47] Felipe "Juca" Sanches: https://www.computinghistory.org.uk/det/77032/Z80-at-50-Saturday-18th-Sunday-19th-July-2026/
+[2026-06-06 13:23:21] L.: Vai levar um TK85?
+[2026-06-06 13:23:46] Felipe "Juca" Sanches: não tenho nada aqui com Z80...
+[2026-06-06 15:38:30] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39191.jpg
+[2026-06-06 15:39:45] RicBit: o sistema está muito bom, eu cheguei nisso com exatas quatro frases
+[2026-06-06 15:40:35] RicBit: 14:26 — User
+start project elite, do 20 cycles
+16:26 — User
+do more 20 cycles, I'm interested in the math routines
+17:06 — User
+do more 20 cycles
+18:19 — User
+more 20 cycles, focus on drawing a ship wireframe
+[2026-06-06 15:40:47] RicBit: that's it, tudo que eu digitei até cheegar nas naves
+[2026-06-06 15:41:30] RicBit: a parte ruim é que eu desisti de vencer a preguiça, então eu preciso de hora em hora pedir mais 20 ciclos
+[2026-06-06 15:45:01] Felipe "Juca" Sanches: pois é... o mundo mudou.
+[2026-06-06 15:45:05] Felipe "Juca" Sanches: não tem volta
+[2026-06-06 15:45:17] Érico Andrei: Precisa de tester para qualquer coisa?
+Há alguns anos eu pensei em me aventurar no código fonte do Elite para BBC (que está publicado), mas meu autocontrole venceu 😂
+[2026-06-06 15:45:55] RicBit: pois é, o de 6502 tem todas as versões online. o de z80 não achei nenhuma
+[2026-06-06 15:48:32] RicBit: mas foi um trampo até chegar no ponto em que ele faz sozinho. meu harness está com 4017 linhas de prompt setup, fora as libs em python
+[2026-06-06 15:57:04] RicBit: log do que ele estava pensando -> https://gist.github.com/ricbit/ca5e8b7c5edbb1b6d6a8035f45052137
+[2026-06-06 15:57:27] Érico Andrei: Eu procurei um monte e não achei também. Por isso que ver a imagem ativou o gatilho aqui 😊
+[2026-06-06 20:57:34] Luciano Ramalho: Em 1994 eu colaborei num CD-ROM interativo para crianças que rodava no Windows 3.11 e no Mac System 7. Agora eu e um amigo estamos tentando refazer com HTML5.
+[2026-06-06 20:58:00] Luciano Ramalho: Temos o CD-ROM e estamos extraindo os assets
+[2026-06-06 20:58:54] Luciano Ramalho: Como referência temos este vídeo: https://youtu.be/fSS629rAUwY?si=4fqg3spMAVh4gU_J
+[2026-06-06 20:59:20] Luciano Ramalho: Peço ajuda para duas coisas:
+[2026-06-06 20:59:53] Luciano Ramalho: 1) como baixar o vídeo do YouTube com a qualidade máxima disponível?
+[2026-06-06 21:01:14] Luciano Ramalho: 2) onde encontrar mídia instalável do Windows XP (a última versão compatível com aquele CD-ROM?
+[2026-06-06 21:03:58] L.: yt-dlp
+[2026-06-06 21:04:26] L.: archive.org deve ter, mas se não tiver, winworld possivelmente tenha
+[2026-06-06 21:07:48] L.: https://archive.org/details/WindowsXPProfessional_201905 SP3
+[2026-06-06 21:09:41] L.: O seu CD tá aqui https://archive.org/details/aturma-da-cozinha :P
+[2026-06-06 21:11:06] L.: Deve rodar no Windows mais recente com o winevdm (basicamente Wine pra Windows usando emulador de 486 do MAME, fazendo thunking da API do Win16 pra Win32). Eu rodei umas coisas aqui, como o CD "Como as coisas funcionam" e foi de boa!
+[2026-06-06 21:11:36] L.: https://github.com/otya128/winevdm
+[2026-06-06 21:12:41] Luciano Ramalho: Muito grato L!
+[2026-06-06 21:12:58] Luciano Ramalho: Vou testar suas dicas
+[2026-06-06 21:14:38] Luciano Ramalho: Curiosidade: o CD-ROM da Turma da Cozinha funcionava no Windows 3.11, mas parou de funcionar no Windows 95 e só voltou a funcionar quando saiu o Windows XP
+[2026-06-06 21:15:03] L.: Foi feito com o que? Director?
+[2026-06-06 21:16:44] L.: Espero que funcione com o winevdm!
+[2026-06-06 21:17:01] Luciano Ramalho: Imagino que a razão é que o XP foi o primeiro Windows para o mercado “home” baseado no kernel do NT, então eles fizeram um mega trabalho de emulação para rodar softwares feitos para os Windows mais antigos
+[2026-06-06 21:17:30] Luciano Ramalho: Sim, Diretor 3 ou 4, não lembro e não tá claro pelos assets
+[2026-06-06 21:17:32] L.: A versão Mac deve rodar no browser com o Infinitemac. Ele tem suporte à carregar ISO direto
+[2026-06-06 21:18:52] L.: É, eu lembro que o Director tinha dessas aí mesmo.
+[2026-06-06 21:19:23] Luciano Ramalho: Eu não tenho certeza se o CD que eu tenho é híbrido Win+Mac. Ao extrair a ISO só encontramos os arquivos para Windows
+[2026-06-06 23:02:53] FTMaciel: Ow eu to terminando o do MegaNet. Ja mapeei tudo, faltam alguns ajustes só.
+[2026-06-06 23:13:54] FTMaciel: Depois ia começar o telebradesco, mas o cara aí já fez. Kkk
+[2026-06-06 23:17:56] FTMaciel: Mas queria fazer ele responder ligação telefônica e tudo mais.

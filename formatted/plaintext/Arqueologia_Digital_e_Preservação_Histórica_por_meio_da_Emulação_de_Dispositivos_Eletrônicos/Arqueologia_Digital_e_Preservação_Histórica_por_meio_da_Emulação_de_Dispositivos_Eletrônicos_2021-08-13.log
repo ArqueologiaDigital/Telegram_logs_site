@@ -1,0 +1,55 @@
+[2021-08-13 11:47:08] Felipe "Juca" Sanches: ontem de madrugada consegui executar uma versão aprimorada do hack para dump via disquete. Agora consigo extrair 512kbytes de uma vez só. E com isso fiz em 2 passos o dump da ROM de "dados rítmicos", que tem 1MByte.
+[2021-08-13 11:47:21] Felipe "Juca" Sanches: Depois explico aqui em mais detalhes como foi essa técnica aprimorada.
+[2021-08-13 11:48:04] Felipe "Juca" Sanches: Entretanto, não estou mais conseguindo fazer o teclado voltar a funcionar corretamente, mesmo após instalar uma imagem original do sistema. Devo ter feito alguma merdinha no mei odo caminho e não tá claro como faço pra consertar 😞
+[2021-08-13 11:48:52] Felipe "Juca" Sanches: Mas pelo menos o teclado ainda dá boot, mesmo que com a imagem parcialmente corrompida com a qual não funciona o gerador de som (virou um teclado mudo)
+[2021-08-13 11:49:32] Felipe "Juca" Sanches: ainda consigo executar código arbitrário, então ainda tenho uma porta aberta para inspecionar o aparelho e tentar achar onde larguei sujeira pra trás nas minhas últimas tentativas de invasão :-P
+[2021-08-13 12:23:21] Felipe "Juca" Sanches: talvez esse enrosco seja o momento ideal para eu ler tudo o que escrevi aqui e redigir uma postagem melhor estruturada contando essa história lá do Fórum Fiozera
+
+E usar esse tempo pra repensar todo o processo, na esperança de ter algum novo insight sobre o que pode ter dado errado.
+
+Continuar fuçando agora só vai me colocar em risco de piorar a situação.
+[2021-08-13 12:24:44] Flávio Amieiro: Boa, Juca!
+[2021-08-13 12:24:57] Felipe "Juca" Sanches: Ah! E postar isso em inglês será muito útil pois poderei mandar lá pro pessoal do MAMEDev ler e quem sabe dar alguma idéia também
+[2021-08-13 12:25:00] Flávio Amieiro: Eu tô acompanhando mais ou menos aqui, mas pra mim é meio difícil pelo grupo
+[2021-08-13 12:25:18] Flávio Amieiro: Um post no fiozera seria perfeito se tu tivesse a disposição :)
+[2021-08-13 12:25:55] Felipe "Juca" Sanches: Eu já fiz um post lá. Preciso fazer uma segunda postagem atualizando o que aconteceu depois.
+
+https://forum.fiozera.com.br/t/technics-kn5000-homebrew-development/321
+[2021-08-13 12:31:59] Flávio Amieiro: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14164-sticker.webp
+[2021-08-13 17:08:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14165.jpg
+[2021-08-13 17:08:45] Felipe "Juca" Sanches: Imagens da demonstração do equipamento estão na "table data" ROM. Essas imagens aí têm apenas os pixels ímpares, pois a região "table data" fica em um par de ROMs entrelaçadas, das quais consegui fazer o dump apenas de uma
+[2021-08-13 17:10:11] Felipe "Juca" Sanches: acho que o aparelho chaveia o mapeamento de memória em runtime pra selecionar entre a ROM principal de código e essa outra ROM aí.
+[2021-08-13 17:10:28] Felipe "Juca" Sanches: pois até então o meu entendimento é de que as duas ficam na mesma faixa de endereços
+[2021-08-13 17:19:22] Felipe "Juca" Sanches: eu acho importante eu mencionar aqui o que foi que eu fiz ontem e que pode ter sido o motivo de ter bichado o equipamento...
+
+Logo no inicio do código tem um setup dos chip-selects. Eu troquei o endereço em que o /CS2 é mapeado, do valor original 0xC0 para 0x40, pois eu achava que essa ROM ficava eternamente indisponível depois do boot e, portanto seria seguro mapeá-la em um outra faixa de memória pra eu poder fazer  o dump do conteúdo dela.
+
+Entretanto, ao fazer isso, o sistema ao bootar ficou em tela preta dando estalos periódicos nas caixas de som. Acho que era o gerador de sons sendo inicializado e, em seguida, o firmware dando crash e resetando automaticamente (ou alguma outra falha similar, que tenha causado o reboot em loop infinito)
+[2021-08-13 17:19:31] Felipe "Juca" Sanches: eu realmente não entendo o que aconteceu
+[2021-08-13 17:20:18] Felipe "Juca" Sanches: fiquei com um pouco de receio de eu poder ter danificado chips ao colocar mais de um chip ativo no barramento simultaneamente. Não sei se isso é possível. Se for, é tosco.
+[2021-08-13 17:21:34] Felipe "Juca" Sanches: @agaelebe já pode dizer que "juquei" o equipamento.
+[2021-08-13 17:23:29] Felipe "Juca" Sanches: estou me sentindo como um controlador de voo tentando re-estabelecer o bom funcionamento de uma espaço-nave desgovernada. Tentando achar alguma brecha, alguma boa sacada, pra re-estabeceler o bom funcionamento.
+[2021-08-13 22:47:29] RicBit: Se você roda código arbitrário, então é só renomear o projeto de "emulador de teclado" para "fiz meu teclado rodar o Doom"
+[2021-08-13 22:47:36] RicBit: Vai ter mais views
+[2021-08-13 22:47:54] Felipe "Juca" Sanches: kkkk
+[2021-08-13 22:48:29] Felipe "Juca" Sanches: estou nesse exato momento procurando (de novo, depois de 14 anos) um compilador C (ou um assembler) pra TLCS900 :-P
+[2021-08-13 22:49:10] Felipe "Juca" Sanches: 14 anos atrás eu gastei uma semaninha freneticamente tentando escrever um port do GNU Assembler:
+
+https://code.google.com/archive/p/tlcs900archc/
+[2021-08-13 22:51:05] Felipe "Juca" Sanches: não estrague a surpresa! hahaha
+[2021-08-13 22:51:28] Felipe "Juca" Sanches: (na verdade a "surpresa" que tenho em mente é outra)
+[2021-08-13 23:06:22] RicBit: https://github.com/libcpu/libcpu
+[2021-08-13 23:09:44] Felipe "Juca" Sanches: a descrição diz "emulates", mas depois fala em "dynamic as well as static recompilation", o que parece ser muito interessante!
+
+Você já usou isso?
+[2021-08-13 23:47:29] Leonardo Roman: Tem o compilador oficial da Toshiba: https://archive.org/details/ToshibaTLCS900CompilerV1.10
+[2021-08-13 23:47:47] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14183-sticker.webp
+[2021-08-13 23:48:28] Felipe "Juca" Sanches: Eu posso até usar isso aí pra experimentar durante o inicio da pesquisa. Mas minha meta a longo prazo é trabalhar com software livre
+[2021-08-13 23:48:47] Felipe "Juca" Sanches: obrigado por achar e compartilhar o link!
+[2021-08-13 23:49:32] Felipe "Juca" Sanches: eu já tinha ouvido falar desse compilador, mas não tinha achado ainda onde baixar. O fato de estar no Internet Archive nunca me decepciona 😊
+[2021-08-13 23:50:33] Leonardo Roman: Descobri que é o processador usado no Neo Geo Pocket. Tem alguns sites sobre desenvolvimento pra ele.
+[2021-08-13 23:50:38] Felipe "Juca" Sanches: sim!
+[2021-08-13 23:52:07] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14189.jpg
+[2021-08-13 23:52:07] Felipe "Juca" Sanches: eu compilei uma pequena lista de dispositivos que usam essa CPU (14 anos atrás...)
+
+https://code.google.com/archive/p/tlcs900archc/wikis/Devices.wiki

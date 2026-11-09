@@ -1,0 +1,92 @@
+[2023-05-25 14:26:48] Shelton Ribeiro: Você fica impossibilitado de desbloquear o 3DS
+[2023-05-25 15:21:19] L.: desbloqueio é pra rodar 🏴‍☠️ e homebrew?
+[2023-05-25 20:31:31] Ismael Luceno: mas o quê significa isso?
+[2023-05-25 20:31:53] Ismael Luceno: em quê consiste o bloqueio?
+[2023-05-25 20:52:23] Shideravan: O bloqueio é um sistema que as desenvolvedoras inserem nos consoles para impedir a execução de software não licenciado, por exemplo, homebrew
+[2023-05-25 20:52:47] Shideravan: Mas muitos legisladores pelo mundo enxergam isso como uma forma de abuso
+[2023-05-25 20:54:05] Shideravan: Pela legislação de muitos lugares, o que incluem o Brasil, se você tem um hardware é direito seu executar nele o que você bem entender, desde que para isso você não esteja violando nenhuma legislação
+[2023-05-25 20:55:32] Shideravan: Eu lembro uma época em que o PS3 era um hardware muito barato para o que ele possuía, várias universidades e institutos de pesquisa compravam PS3, desbloqueavam e rodavam Linux, de forma a conseguir ter um processamento bruto grande em cima de um hardware bem abaixo do que custaria
+[2023-05-25 20:58:53] Shideravan: Mas de forma mais abrangente, o público em geral, quando "desbloqueia" a proteção para execução de software de terceiros nos consoles também consegue instalar homebrews que permitem a instalação e/ou execução de backups de jogos (que a priori também não é ilegal) ou cópias piratas (cópia para o qual o utilizador não tenha legalmente comprado antes, aí sim, pirataria)
+[2023-05-25 21:01:16] Shideravan: Até países mais rigorosos nessa questão do copyright, como os EUA, dizem que um usuário pode fazer um backup pessoal de seus conteúdos. Só que se os consoles impedem a execução de backups, complica, né? hahahaha
+[2023-05-25 21:14:58] Ismael Luceno: mas do ponto de vista do hardware... há algum efuse combinado com TPM o alguma outra coisa prevenindo modificar o firmware?
+[2023-05-25 21:19:28] Shideravan: Sim
+[2023-05-25 21:19:38] Shideravan: No caso do Switch pelo menos tem
+[2023-05-25 21:19:49] Ismael Luceno: não, mas pensando no 3DS
+[2023-05-25 21:20:11] Shideravan: No caso do 3DS não sei dizer com certeza, mas acredito que sim
+[2023-05-25 21:20:27] Shideravan: Poruqe não conheço nenhum processo que dê para "reverter" a versão do firmware
+[2023-05-25 21:20:50] Shideravan: No Switch eu posso te dizer com total certeza que ele faz uso de efuses sim
+[2023-05-25 21:37:10] Anne Isabelle: Eu lembro que no Xbox tinha o lance do reset glitch, que era um fault injection
+[2023-05-25 21:52:09] Ismael Luceno: o perigo é se o efuse é usado na ROM dentro do CPU, aquela que carrega o firmware da flash
+[2023-05-25 21:52:36] Ismael Luceno: se esse código não verifica, então não há problema
+[2023-05-25 21:52:57] Ismael Luceno: mas se a ROM usa um efuse para deixar o produto inusável, provavelmente o produto é (o deveria ser) ilegal
+[2023-05-25 21:53:54] Ismael Luceno: então é um detalhe muito importante
+[2023-05-25 21:54:56] Ismael Luceno: eu acho que o método mais efetivo para lutar contra do abuso não é somente técnico
+[2023-05-25 21:56:46] Shideravan: Eu concordo que é uma prática abusiva. Mas é uma prática normalizada já
+[2023-05-25 21:57:04] Shideravan: No Switch verifica sim
+[2023-05-25 21:57:38] Shideravan: Inclusive um jeito que você pode facilmente bricar o console: injetar uma firmware incompatível com o número de efuses
+[2023-05-25 21:57:56] Ismael Luceno: normalizada ou não, eu acho que há que ilegalizar a prática como primeira medida
+[2023-05-25 21:58:13] Shideravan: Deveria, mas acho que já é uma batalha perdida isso
+[2023-05-25 21:58:16] Shideravan: Já normalizaram
+[2023-05-25 21:58:19] Ismael Luceno: porque?
+[2023-05-25 21:58:27] Ismael Luceno: sempre se pode cambiar a lei
+[2023-05-25 21:58:38] Shideravan: Ninguém reclamou de abuso quando começou e todo mundo aceitou "isso é para combater pirataria"
+[2023-05-25 21:58:59] Shideravan: No caso do Switch, não é um problema tão grande
+[2023-05-25 21:59:14] Shideravan: Porque se você instala uma emunand, você consegue atualizar a emunand sem queimar efuse
+[2023-05-25 21:59:36] Ismael Luceno: eu não sei, deveria ser ilegal o método mesmo
+[2023-05-25 22:00:01] Shideravan: Existe um baita lobby para esse tipo de coisa
+[2023-05-25 22:00:15] Shideravan: Não existem muitas empresas que produzem CPUs e chipsets
+[2023-05-25 22:02:22] Shideravan: Se por exemplo, um país como o Brasil lança uma legislação impedindo esse tipo de coisa sozinho, o que vai acontecer? Só vai parar de vender os consoles no mercado legal mesmo
+[2023-05-25 22:03:18] Shideravan: Eu concordo que é abusivo, mas uma legislação para impedir isso é complicada, principalmente se não for adotada conjuntamente no mundo inteiro
+[2023-05-25 22:05:10] Shideravan: No caso do Switch, o recurso está associado ao Tegra
+https://switchbrew.org/wiki/Fuses
+[2023-05-25 22:05:36] Ismael Luceno: mas a questão não é se o feature está implementado, mas se ele é usado
+[2023-05-25 22:05:58] Ismael Luceno: o único que vai acontecer é que o mercado Brasileiro teria uma versão diferente do chip
+[2023-05-25 22:06:08] Shideravan: Mas por conta do exploit que foi encontrado logo no início da vida do console, já temos muito bem documentada toda a engenharia reversa disso
+[2023-05-25 22:06:23] Shideravan: Éeerrr... Na prática só não vai ter mesmo
+[2023-05-25 22:06:59] Shideravan: Nintendo durante parte da vida do Switch nem vendia ele legalmente no Brasil, só mais recentemente que ela está vendendo o hardware homologado pela Anatel e etc
+[2023-05-25 22:07:13] Ismael Luceno: provavelmente seria o mesmo firmware com um efuse extra pro Brasil :P, se esse está queimado então aplica o controle de firmware :P
+[2023-05-25 22:07:18] Shideravan: Eles nem traduzir jogo para o mercado nacional traduzem kkkkkk
+[2023-05-25 22:07:41] Shideravan: Só não seria e seria vendido no contrabando e é isso
+[2023-05-25 22:07:44] Ismael Luceno: mas que o aparelho seja ilegal é bom
+[2023-05-25 22:08:04] Ismael Luceno: na medida que essas legislações começam a se espalhar, fica mais pressão pois há risco econômico (pois eles teriam que trocar os consoles existentes se o  usuário reclamar)
+[2023-05-25 22:09:49] Shideravan: Olha, eu concordo, mas essa é uma batalha perdida hahaha
+[2023-05-25 22:09:51] Shideravan: De qualquer forma
+[2023-05-25 22:10:30] Shideravan: Dá para você fazer engenharia reversa nesses hardwares e criar meios de se evitar que os efuses sejam queimados
+[2023-05-25 22:10:47] Shideravan: No Switch mesmo, é possível
+[2023-05-25 22:11:02] Shideravan: Graças, claro, a muita engenharia reversa
+[2023-05-25 22:12:48] Shideravan: No meu Switch, por exemplo, ele possui a mesmíssima nand de quando eu comprei ele em 2018. 
+Se não me engano, ele veio com a 6.0.0
+Mas eu tenho uma emunand com a versão do update mais recente que é a 16.0.3
+[2023-05-25 22:12:51] Shideravan: No caso do 3DS
+[2023-05-25 22:13:41] Ismael Luceno: sim, mas seria melhor evitar o risco de algum jeito regulatório
+[2023-05-25 22:13:55] Shideravan: Com certeza seria
+[2023-05-25 22:14:13] Shideravan: Mas os países não estão conseguindo se unir nem contra o aquecimento global kkkkkkkkkk
+[2023-05-25 22:14:21] Ismael Luceno: eu estou pensando seriamente de me involucrar no tema
+[2023-05-25 22:14:25] Shideravan: Quanto mais em cima de uma regulação de hardware do tipo
+[2023-05-25 22:14:36] Ismael Luceno: mas ainda não sou cidadão aqui
+[2023-05-25 22:14:37] Shideravan: Eu dou todo apoio
+[2023-05-25 22:14:47] Ismael Luceno: (estou na UE)
+[2023-05-25 22:15:38] Shideravan: Eu apoio com certeza, mas já aviso que é uma batalha difícil hahaha
+[2023-05-25 22:16:13] Shideravan: O Brasil não tem força para uma coisa dessas, como disse, se o Brasil sozinho sair com isso, simplesmente a Nintendo para de vender e o console chega por contrabando hahahaha
+[2023-05-25 22:16:32] Shideravan: A UE já consegue ter um pouco mais de força nesse sentido
+[2023-05-25 22:17:55] Shideravan: Pelo menos eles conseguiram fazer com que o Windows vendido em alguns países não viesse de fábrica com o Internet Explorer, né? 😁
+[2023-05-25 22:22:54] Shideravan: Só que é uma batalha que precisa começar na conscientização das pessoas. A maior parte das pessoas ainda associa "desbloquear console" com pirataria e sistemas como o de efuses com "proteção contra a pirataria"
+[2023-05-25 22:23:44] Shideravan: A maior parte das pessoas sequer sabe que legalmente, na maior parte do mundo, você ter um hardware significa ter o direito de rodar o que você quiser com ele
+[2023-05-25 22:25:22] Shideravan: Tem muita gente que acha que é uma questão "fisica" de que por exemplo, um Switch não possa rodar qualquer coisa que não seja um jogo de Switch mesmo kkkk
+[2023-05-25 22:25:52] Shideravan: Muita gente não faz ideia, de que por exemplo, você possa rodar um jogo de PSP que possua legalmente num switch quando ele é desbloqueado por exemplo
+[2023-05-25 22:28:43] Shideravan: Quanto mais imaginar que você possa mudar os clocks do sistema e rodar o Zelda novo de forma muito mais fluida do que o console nativamente. Inclusive com mods que permitem rodar o jogo com 60 FPS no próprio Switch
+[2023-05-25 22:34:13] Shideravan: Ou que você possa converter o save de um jogo que esteja jogando no PC e usar numa versão do jogo para Switch. Ou que você possa usar traduções de fãs (ok, esse último até os influencers de nintendo no Brasil tem falado nos últimos anos, mas é porque o fato da Nintendo não querer traduzir os jogos oficialmente acabou dando bastante holofote em trabalhos de fãs)
+[2023-05-25 22:35:28] Ismael Luceno: sim, e aqui em vários países os mods de hardware são 100% legais
+[2023-05-25 22:35:34] Shideravan: Quanto mais imaginar que você pode instalar Linux no Switch
+[2023-05-25 22:35:41] Shideravan: No Brasil também
+[2023-05-25 22:35:47] Shideravan: E se pá, até nos EUA
+[2023-05-25 22:37:40] Ismael Luceno: então eu acho viável fazer ilegal o código anti-mod na CPU
+[2023-05-25 22:38:19] Shideravan: É que também deve ser difícil ter uma lei contra isso né? A polícia chega na sua casa "recebemos denúncias que alguém aqui está usando um hardware que comprou legalmente para rodar coisas que a fabricante não quer que você rode, teje preso"
+[2023-05-25 22:40:26] Shideravan: Acaba que as modificações por hardware acabam sendo uma extensão disso
+[2023-05-25 22:41:33] Shideravan: Existe um consenso meio que geral, que se você comprar um hardware e sei lá, jogar ele no lixo, é um direito seu
+[2023-05-25 22:42:23] Shideravan: O que as pessoas em geral muitas vezes não terão conhecimento técnico de entender é que um hardware ser projetado para impedir a pessoa de rodar aquilo que ela quiser, seja uma violação de um direito dela
+[2023-05-25 22:43:00] Shideravan: O papo de "isso é um recurso de 'segurança' para evitar a pirataria" cola
+[2023-05-25 22:44:27] Shideravan: Existem recursos que são removidos apenas por questões mercadológicas muitas vezes estúpidas
+[2023-05-25 22:46:08] Shideravan: Por exemplo, o Wii vem com um leitor de DVD de fábrica. Mas a Nintendo simplesmente resolveu que o leitor de DVD não iria servir para o usuário assistir um DVD de filme, porque ela não queria dividir o mercado dela com quem fosse assistir filmes no Wii ao invés de jogar
+[2023-05-25 22:47:51] Shideravan: O PS2 foi o vídeogame mais vendido da história porque era um DVD Player barato. Mas no Wii a lógica é: enquanto o usuário estiver vendo filme, ele não está jogando nossos jogos então é prejuízo para a gente se ele puder usar o leitor para assistir filmes.
+[2023-05-25 22:49:45] Shideravan: É o mesmo motivo que os videogames da Nintendo não possuem browsers para acesso a internet e por aí vai

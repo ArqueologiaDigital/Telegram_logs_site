@@ -1,0 +1,57 @@
+[2021-08-09 14:20:02] RicBit: Teve aquela vez que eu bati um papo como criador do spacewar, minha dúvida sempre foi como é que ele calculava a posição das naves naquele PDP velhão. No msx que é quase uma década depois eu sofria para normalizar vetor.
+[2021-08-09 14:20:40] RicBit: Ele disse que no PDP era fácil porque tinha divisão por hardware. Eu não sabia que PDP tinha divisão por hardware, fiquei espantado.
+[2021-08-09 14:21:30] RicBit: Aí ele disse "não, ESSE pdp tem divisão por hardware, nessa época você podia comprar opcodes separado com o fabricante".
+[2021-08-09 18:55:14] Felipe "Juca" Sanches: eu já li meia-dúzia de vezes errado essa sua mensagem. Eu sei que tá escrito PDP, mas meu cérebro continua insistindo em ler "não, ESSE FDP tem divisão por hardware!"
+[2021-08-09 19:24:34] Augusto Almeida [forwarded]: https://m.youtube.com/watch?v=RyW0lXnoFOA&t=0s
+[2021-08-09 19:24:34] Augusto Almeida [forwarded]: Fala sério!
+[2021-08-09 20:19:30] Felipe "Juca" Sanches: OK. Vou contar mais um pouco sobre a engenharia reversa e tentativa de emulação do teclado Technics KN5000
+[2021-08-09 20:21:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14013.jpg
+[2021-08-09 20:21:13] Felipe "Juca" Sanches: O ponto de entrada do código na FLASH fica no endereço EF03C6 (lido pela CPU a partir do vetor de inicialização localizado em FFFF00
+
+As primeiras instuções configuram o watchdog
+[2021-08-09 20:22:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14014.jpg
+[2021-08-09 20:22:42] Felipe "Juca" Sanches: Em seguida são inicializadas todas as portas de I/O
+
+Entender o que cada porta faz é possível lendo o esquemático. Já fiz várias anotações sobre isso para implementar as interconexoes da CPU com outros periféricos no emulador.
+[2021-08-09 20:23:06] Felipe "Juca" Sanches: E o MAME não emulava corretamente essas portas, mas já consertei isso no final de semana.
+[2021-08-09 20:25:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14016.jpg
+[2021-08-09 20:25:08] Felipe "Juca" Sanches: Depois é feita a inicialização de alguns timers. Nada desses timers está emulado ainda. Alguns deles disparam interrupcões. E como os timers não estão emulados, o código mais pra frente entra num loop infinito esperando a escrita de alguns semáforos que acaba nunca acontecendo pois ainda não estamos emulando nem os timers e nem as interrupcoes.
+[2021-08-09 20:27:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14017.jpg
+[2021-08-09 20:27:24] Felipe "Juca" Sanches: Em seguida temos essas instrucoes de setup dos chip selects. Essa CPU tem 6 sinais de chip-select configuráveis. Esses SFRs (special function registers) configuram os endereços e o mascaramento de memória das regiões que estarão mapeadas em cada sinal de chip select (de /CS0 até /CS5)
+[2021-08-09 20:30:01] Felipe "Juca" Sanches: Com a interpretação desses valores, consigo documentar perfeitamente o memory map dessa CPU no layout desse equipamento.
+
+O MAME não está emulando essa funcionalidade de memory map dinâmico, mas eu posso declarar esse mapa de forma estática no driver e vai funcionar.
+
+Só não funcionaria se esses endereços mudassem durante a execução do firmware depois desse setup inicial, o que suponho não ser o caso (e por que alguém faria uma coisa dessas?!).
+[2021-08-09 20:33:04] Felipe "Juca" Sanches: Acontece que ao estudar essa parte do código e olhar para os esquematicos mais uma vez, me caiu a ficha: Sim, acho que tem um truque interessante aí.
+
+Tenho a impressão de que talvez o processador na verdade não boote pela flash, mas sim por um ponto de entrada mapeado em uma mask rom que aparece descrita como "table data rom" no esquemático.
+
+E então depois de fazer a tarefa de verificar se há update de firmware via floppy, essa boot rom deve reconfigurar o memory map pra colocar a flash rom no lugar e "rebootar" com o sistema instalado.
+[2021-08-09 20:34:52] Felipe "Juca" Sanches: Essa "table data rom" está separada em 2 chips, dos quais um eu já consegui fazer dump (com um leitor de ROMs, um adaptador, e as ROMs que o @Ronaldoverardo dessoldou pra mim de um kn5000 quebrado). Mas do outro chip eu não consegui fazer o dump. Então tenho só meio dump por enquanto :-P
+[2021-08-09 20:35:32] Felipe "Juca" Sanches: pretendo essa semana tentar novamente fazer o dump da segunda metade. Mas se isso não der certo, ainda existe o plano de extrair com um trojan
+[2021-08-09 20:37:01] Felipe "Juca" Sanches: uma imagem modificada do sistema que contenha uma rotina que lê essa custom data rom e salva um dump dela em disquete.
+[2021-08-09 20:37:47] Felipe "Juca" Sanches: eu ainda não criei coragem pra escrever rotinas de programacao do chip controlador de disquete em assembly de TOSHIBA entretanto...
+[2021-08-09 20:42:25] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14024.jpg
+[2021-08-09 20:42:25] Felipe "Juca" Sanches: Essa é a interpreteação do significado dos registradores do gerador de chip-selects
+[2021-08-09 20:43:48] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14025.jpg
+[2021-08-09 20:43:48] Felipe "Juca" Sanches: E esse é o memory map "perfeito" resultante dessa análise. Tenho algumas dúvidas ainda, mas a estrutura geral tá toda aí e duvido que seja muito diferente disso.
+[2021-08-09 20:48:41] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14026.jpg
+[2021-08-09 20:48:41] Felipe "Juca" Sanches: Um pouquinho mais pra frente no código vejo o que parece ser a parte em que são habilitadas as interrupções vinculadas aos timers #0 e #4 (nesse ponto destacado na linha vermelha da imagem)
+
+Tem algumas chamadas de subrotinas antes disso, mas acho que são só auto-teste de RAM. Precisarei analisar com mais calma depois.
+[2021-08-09 20:50:21] Felipe "Juca" Sanches: Se eu quiser ver alguma coisa aparecer desenhada na VGA no emulador vou ter que arregaçar as mangas e implementar as funcionalidades de timers e do sistema de tratamento de interrupçoes dessa CPU no MAME, pois tá tudo muito cru ainda. O MAME basicamente apenas implementa o instruction set da CPU e mais nada. É bem trabalhoso o que ainda precisa ser feito, mas eu tô gostando do desafio! 😊
+[2021-08-09 21:02:40] * Felipe "Juca" Sanches added Toy
+[2021-08-09 21:06:38] Felipe "Juca" Sanches: @toymak3r, estou 100% focado na emulação do teclado Technics KN5000 no MAME (como você pode ler nas mensagens no histórico recente aqui desse grupo).
+
+Mas ontem uma pessoa me chamou no Facebook pra reportar um bug nas minhas ferramentas de disassembly do jogo Another World. E também tem uma issue aberta (acho que pela mesma pessoa), no início do ano sobre o mesmo problema:
+
+https://github.com/felipesanches/AnotherWorld_VMTools/issues/11
+
+Acho que você chegou a comentar algo sobre isso comigo algum tempo atrás. Tem interesse em dar uma olhadinha?
+
+Eu não quero perder o foco agora. Mas depois vou ter que ver isso também, pois é sempre ótimo quando temos essas evidências de que tem gente usando nossos códigos. Seria importante consertar esses pequenos deslizes que estão fazendo quebrar nas mãos de outros usuários 😉 Principalmente para não desmotivar a participação dessas outras pessoas!
+[2021-08-09 21:55:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14030.jpg
+[2021-08-09 21:55:14] Felipe "Juca" Sanches: Essa é uma planilha que fiz em março/2021 quando iniciei as tentativas de fazer dumps das ROMs dessoldadas pelo @Ronaldoverardo
+
+Reparem que naquela época eu ainda achava que era a sub-cpu que fazia o boot.

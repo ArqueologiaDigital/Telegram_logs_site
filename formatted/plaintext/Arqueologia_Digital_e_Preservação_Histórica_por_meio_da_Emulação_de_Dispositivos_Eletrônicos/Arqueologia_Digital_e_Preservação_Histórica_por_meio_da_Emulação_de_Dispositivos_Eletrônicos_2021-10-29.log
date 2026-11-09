@@ -1,0 +1,36 @@
+[2021-10-29 15:10:54] Felipe "Juca" Sanches: https://torrentfreak.com/adobe-uses-dmca-to-nuke-project-that-keeps-flash-alive-secure-adware-free-211012/
+[2021-10-29 15:19:15] Pablo Vasques Bravo-Villalba: História curiosa essa. O autor, darktohka, afirmou ao TorrentFreak que estava apenas hospedando o código do instalador, que foi escrito por ele e portanto não poderia infringir os direitos autorais da Adobe. E embora o repositório no GitHub tenha sido suspenso, o artigo fornece um link para o GitLab, e lá tem um Readme afirmando que "estaremos reformulando o software para que não redistribua qualquer pacote binário". Então ele estava distribuindo binários da Adobe, afinal?
+[2021-10-29 15:19:54] Pablo Vasques Bravo-Villalba: IANAL and all that jazz...
+[2021-10-29 19:24:34] L.: https://www.wired.co.uk/article/vintage-computers-data
+[2021-10-29 19:31:06] Felipe "Juca" Sanches: o 386 que comprei alguns meses atrás ainda está com o HD cheio de arquivos de planejamento de eventos. Festas de 15 anos, orçamentos de buffet, etc. De 1997.
+[2021-10-29 19:31:21] Felipe "Juca" Sanches: catálogo de clientes da empresa
+[2021-10-29 19:31:43] Felipe "Juca" Sanches: "cheio", né? O HD tem só uns 20 Mbytes
+[2021-10-29 19:33:24] L.: Pra esse tipo de dado, é coisa pra caramba
+[2021-10-29 19:38:05] L.: O meu XT deve ter umas coisas que não tem online, tipo WordStar em Português
+[2021-10-29 19:38:39] L.: O problema é que o HD RLL deve ser uma pilha de mofo e ferrugem nesse ponto
+[2021-10-29 19:41:07] FTMaciel: Eu comprei umas fitas D/CAS de um vendedor da Alemanha. Uma está escrito VW Augs. Assim que eu arrumar uma placa scsi vou por o drive pra funcionar e copiar os dados.
+[2021-10-29 21:08:22] Deleted Account: Passa o Stacker nele. Lembra? 
+
+Dobrava a capacidade do disco mas ferrava um monte de coisas. Kkkk
+[2021-10-29 21:08:50] Deleted Account: Stacker e QEMM eram reis na época do DOS pra ajudar a extrair o máximo dos PCs.
+[2021-10-29 21:09:53] Felipe "Juca" Sanches: o que você acha que é "VW Augs"?  VolksWagen, ok... mas e "Augs"?
+[2021-10-29 21:11:19] Felipe "Juca" Sanches: Eu comprei uma caixa com algumas dezenas de fitas BETACAM-SP supostamente virgens, pois eu queria testar alguns players/recorders que tenho aqui.
+
+Quando botei a primeira fita percebi que na verdade são gravações de alta-qualidade (qualidade de estúdio de TV) de um encontro internacional da Igreja Adventista
+[2021-10-29 21:11:26] Felipe "Juca" Sanches: lá da década de 90
+[2021-10-29 21:12:29] Felipe "Juca" Sanches: tem um trecho bem curtinho desse mesmo conteúdo no youtube com uma qualidade muito porca (tipo VHS gravado da TV) e com comentários de gente dizendo "nossa! Fazia 20 anos que eu procurava uma gravação disso! Muito obrigado por compartilhar!!!"
+[2021-10-29 21:13:48] Deleted Account: Tem um cara no youtube, cathode ray dude, que fez um vídeo de arqueologia de uma fita que veio junto de um aparelho de tv antigo que ele tinha comprado. Ele resgatou o conteúdo e algumas pessoas descobriram a origem totalmente obscura da fita (não vou dar spoilers pq o vídeo é ótimo).
+[2021-10-29 21:13:52] Felipe "Juca" Sanches: Me sinto dividido pois sou ateu e portanto não vejo valor em dedicar meu tempo para tornar mais amplamente difundido esse tipo de conteúdo.
+
+Mas por outro lado tenho esse perfil de arquivista, que não tolera deletar  / destruir conteúdos.
+[2021-10-29 21:14:38] Deleted Account: https://youtu.be/OgOwTm2XTkU
+[2021-10-29 21:15:24] Felipe "Juca" Sanches: Eu tenho também um conjunto de uns 100 slides fotográficos que mostram a viagem de uma família brasileira à Suécia na década de 70 (e provavelmente também outros países europeus) para a participação em competições de natação.
+
+Mas não sei quem é essa família. Simplesmente me mandaram os slides junto com o projetor de slides que comprei. Fiquei curioso em tentar descobrir mais informações.
+[2021-10-29 21:59:25] Leonardo Roman: Tem uma cidade chamada Augsburg, na Alemanha. De repente é de uma fábrica da VW de lá.
+[2021-10-29 21:59:44] Felipe "Juca" Sanches: da hora 😊
+[2021-10-29 22:27:10] Felipe "Juca" Sanches: “We all have SSDs in our laptops now. These are hard to wipe because they come with firmware that stops the same sector being written over multiple times. This means the data you want to wipe isn’t completely removed, or at the very least, can be recovered by someone sufficiently motivated,”
+[2021-10-29 22:32:41] L.: Por isso uso criptografia de disco inteiro
+[2021-10-29 22:51:46] Ismael Luceno: não necessariamente é suficiente, sem controle geracional, várias versões de um setor (com o mesmo IV) estarão disponíveis pro análise...
+[2021-10-29 22:54:25] Ismael Luceno: acima disso vai ter muitas estruturas do sistema de arquivos que poderiam ser usadas para verificar/acelerar o processo de quebra
+[2021-10-29 23:29:57] Deleted Account: E se jogar um /dev/random no ssd até encher ele? Isso em teoria não deveria funcionar? Ainda ficariam setores íntegros mesmo fazendo isso?

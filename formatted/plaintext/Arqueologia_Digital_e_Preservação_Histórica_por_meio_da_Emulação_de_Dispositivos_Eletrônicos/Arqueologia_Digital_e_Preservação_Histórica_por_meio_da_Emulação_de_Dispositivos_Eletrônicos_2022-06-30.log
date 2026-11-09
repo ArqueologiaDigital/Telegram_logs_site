@@ -1,0 +1,39 @@
+[2022-06-30 11:17:17] * Robson França joined the group
+[2022-06-30 11:17:50] Robson França: Bom dia, pessoal! Tudo beleza?
+[2022-06-30 11:18:08] Felipe "Juca" Sanches: a-há!
+[2022-06-30 11:18:18] Felipe "Juca" Sanches: Seja bem vindo!
+[2022-06-30 11:18:44] Robson França: Valeu!
+[2022-06-30 11:19:15] Robson França: Vim de um link do @lrrosa lá no grupo de TRS Color
+[2022-06-30 11:20:36] Felipe "Juca" Sanches: que grupo é esse de TRS Color?
+[2022-06-30 11:21:24] Felipe "Juca" Sanches: se for um grupo público, manda o link pra eu entrar, por favor
+[2022-06-30 11:22:14] Robson França: Opa, claro!
+[2022-06-30 11:24:09] Felipe "Juca" Sanches: https://t.me/+F-hMg3dqm75kZWI5
+[2022-06-30 11:24:15] Robson França: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22476-AnimatedSticker.tgs
+[2022-06-30 11:51:06] Pedro de Medeiros 👾: Já tem um minesweeper pra TRS-Colors, @robsonfr?
+[2022-06-30 11:51:08] Pedro de Medeiros 👾: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22478-agatha-wink.mp4
+[2022-06-30 11:52:53] Robson França: Ainda não, mas tem um rapaz lá na lista de Color que pode resolver isso😉
+[2022-06-30 11:54:08] Felipe "Juca" Sanches: vai ficar um CoCo
+[2022-06-30 11:54:52] Felipe "Juca" Sanches: (calma... CoCo = Color Computer)
+[2022-06-30 12:04:20] Pedro de Medeiros 👾: O Coco 3 parece uma máquina bem legal
+[2022-06-30 12:47:21] Felipe "Juca" Sanches: Portar o Mines para CP400 usaria um toolchain parecido com o que estou usando para o Vectrex, pois também usa o processador MC6809
+[2022-06-30 13:05:29] Felipe "Juca" Sanches: Alguém acabou de abrir um pull request no MAME melhorando a emulação que eu tinha começado a fazer muitos anos atrás do jogo GranTrak10 da Atari, de 1974
+[2022-06-30 13:05:31] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/10013
+[2022-06-30 13:05:46] Shideravan: Galera, alguém aqui usa o Terabox?
+[2022-06-30 13:06:43] Shideravan: Eles tem costume de deletar arquivos porque, sei lá... Questões de Copyright ou algo assim?
+[2022-06-30 13:07:38] Shideravan: Tenho conteúdos pessoais que quero mandar para lá para esvaziar um pouco meus HDs, mas precisava ter essa segurança
+[2022-06-30 13:09:29] Shideravan: Eu ainda sou meio pé atrás com nuvens assim, tenho o costume de deixar as coisas em HDs locais, mas HD hoje em dia tá caro e 1TB de armazenamento gratuito me deixa muito animado com o Terabox
+[2022-06-30 13:10:50] Shideravan: Mas sei lá, o Google eu sei que tem costume de deletar coisas alegando Copyright, mas os robôs são chatos e muitas vezes tiram até coisas nada a ver por Copyright
+[2022-06-30 16:49:57] Felipe "Juca" Sanches: Acabei de perceber que o código-fonte do MAME acabou de passar por uma re-estruturação e não existe mais o diretório src/mame/drivers
+
+Se entendi direito o que aconteceu...
+agora, abaixo de src/mame/ existe um subdiretório para cada fabricante. E dentro os drivers dos equipamentos correspondentes.
+O que não coube nessa classificação ficou "de resto" no diretório src/mame/misc/. E tem também um diretório src/mame/skeleton/ que é pros drivers que ainda estão em estado muito inicial de desenvolvimento, ainda sendo "rascunhados".
+[2022-06-30 17:55:18] Lord Spy: Salve @robsonfr ... seja bem vindo :)
+[2022-06-30 18:13:05] Robson França: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22493-AnimatedSticker.tgs
+[2022-06-30 18:25:35] Lord Spy: Bora voltar pro modo Ghost que tem coisa da Gamegesis pra publicar... :)
+[2022-06-30 19:40:58] Shideravan: Me parece uma organização um pouco confusa para o MAME, já que muitos drivers acabariam caindo em "misc", inclusive aqueles com fabricante incerto
+[2022-06-30 19:41:56] Shideravan: Tem muita fabricante também que teria um driver só
+[2022-06-30 19:42:05] Shideravan: E alguns drivers, mais de uma fabricante
+[2022-06-30 19:43:02] Shideravan: Eu teria que ver melhor sobre como estão organizados, mas a princípio parece que não tenha sido uma organização muito intuitiva não
+[2022-06-30 20:05:12] Shideravan: Bem, tem uma justificativa lá, parece que visando facilitar a escrita de scripts Lua
+[2022-06-30 20:05:49] Shideravan: Depois vejo com calma

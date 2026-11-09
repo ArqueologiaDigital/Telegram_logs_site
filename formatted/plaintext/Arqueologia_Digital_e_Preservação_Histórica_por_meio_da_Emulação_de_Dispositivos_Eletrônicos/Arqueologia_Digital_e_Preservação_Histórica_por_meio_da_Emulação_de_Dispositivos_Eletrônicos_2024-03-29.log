@@ -1,0 +1,35 @@
+[2024-03-29 06:47:04] Anne Isabelle: Acho q eu adicionei :3
+[2024-03-29 15:08:25] Erin Pinheiro 🐿: oi! não lembro por que saí, faz tempo
+[2024-03-29 15:08:41] Erin Pinheiro 🐿: vou repassar umas mensagens de ontem
+[2024-03-29 15:08:53] Erin Pinheiro 🐿 [forwarded]: (offtopic) caí num buraco de minhoca lendo sobre o unitron mac pela milionésima vez. uma coisa está me perturbando:
+[2024-03-29 15:08:53] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30669.jpg
+[2024-03-29 15:08:53] Erin Pinheiro 🐿 [forwarded]: de onde veio essa imagem?
+[2024-03-29 15:08:53] Erin Pinheiro 🐿 [forwarded]: a única ROM disponível na internet é quase-idêntica ao do mac original, então não é dela. existe outra variante da rom?
+[2024-03-29 15:08:53] Erin Pinheiro 🐿 [forwarded]: tem outra: as histórias todas dizem que a ROM do unitron é 128k. a rom que existe na internet é 64k. então não temos dump da rom "final" do unitron? ou eu quem não achei mesmo?
+[2024-03-29 15:08:54] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30673.jpg
+[2024-03-29 15:08:54] Erin Pinheiro 🐿 [forwarded]: 👀
+[2024-03-29 15:09:15] Erin Pinheiro 🐿: caçando a verdadeira rom do Mac512, acabei encontrando uma rom do Unitron 1024, sucessor
+[2024-03-29 17:11:05] Shideravan: Seja bem-vinda de volta @mynameiserin
+[2024-03-29 17:22:50] Shideravan: O Mac512 não chegou a ser realmente vendido, chegou?
+[2024-03-29 17:23:11] Erin Pinheiro 🐿: não, mas teve trabalho na ROM. por isso "final" em aspas
+[2024-03-29 17:23:17] Erin Pinheiro 🐿: o que "seria" distribuido
+[2024-03-29 17:24:38] Shideravan: A versão "final" tem drives para disquetes de 5 1/4?
+[2024-03-29 17:25:01] Erin Pinheiro 🐿: eu só tenho essa screenshot, sem fonte. quero saber de que ROM veio!
+[2024-03-29 17:25:46] Shideravan: Será que não é um mockup ou um hack da rom original do Mac dos EUA?
+[2024-03-29 17:25:46] Erin Pinheiro 🐿: pelas histórias, não, a Unitron se recusou e "prometeu" começar fabricação própria de drive 3 1/2. duvido que saiu do papel
+[2024-03-29 17:25:59] Erin Pinheiro 🐿: pode até ser, mas por que temos screenshot e não temos essa rom?
+[2024-03-29 17:26:32] Shideravan: Meu palpite seria que alguém queria ilustrar como era
+[2024-03-29 17:26:41] Shideravan: Mas não sei em que contexto você pegou
+[2024-03-29 17:26:58] Shideravan: Mas... Pode significar também a existência do dump
+[2024-03-29 17:27:10] Erin Pinheiro 🐿: https://www.velasco.com.br/item/unitronmac512/ na seção "capturas de tela"
+[2024-03-29 17:27:42] Shideravan: Você tentou entrar em contato com ele?
+[2024-03-29 17:27:45] Erin Pinheiro 🐿: dentro de um dos discos salvos da unitron encontrei uma fonte do bitmap do disquete com a etiqueta "MAC 512" como tem na screenshot
+[2024-03-29 17:27:46] Shideravan: Tem até um zap zap lá
+[2024-03-29 17:28:02] Erin Pinheiro 🐿: duvido que ele tenha alguma idéia, é só um aglomerado de informações de outros lugares.
+[2024-03-29 17:28:09] Erin Pinheiro 🐿: os disquetes postados ali são de outro lugar
+[2024-03-29 17:28:14] Shideravan: Ahhh sim
+[2024-03-29 17:28:32] Shideravan: Mas acho que o melhor que temos é de ir fazendo o caminho reverso hahaha
+[2024-03-29 17:28:44] Shideravan: Tentar encontrar de onde saiu
+[2024-03-29 17:29:03] Shideravan: Se existir esse dump, é ouro
+[2024-03-29 17:30:12] Shideravan: Talvez o dono do site consiga dar alguma dica preciosa
+[2024-03-29 17:31:46] Shideravan: Marcos Velasco não me é um nome estranho...

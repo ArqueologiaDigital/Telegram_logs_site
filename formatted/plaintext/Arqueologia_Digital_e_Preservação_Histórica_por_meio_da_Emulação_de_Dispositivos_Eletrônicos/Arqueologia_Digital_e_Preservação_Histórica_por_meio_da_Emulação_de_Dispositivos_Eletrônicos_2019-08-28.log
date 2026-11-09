@@ -1,0 +1,13 @@
+[2019-08-28 00:29:22] Deleted Account: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-08/10028-sticker.webp
+[2019-08-28 03:34:38] L.: Passa no Super Potato
+[2019-08-28 03:44:20] Felipe "Juca" Sanches: O que é isso?
+[2019-08-28 05:27:18] L.: Loja de video game velho em Akihabara
+[2019-08-28 05:27:53] L.: São uns 3 ou 4 andares (não lembro mais) forrado de jogos, consoles, etc
+[2019-08-28 05:40:45] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-08/10033-sticker.webp
+[2019-08-28 08:15:04] Ricardo Bánffy: Pergunta: existe algum jeito fácil de encontrar as ROMs de gerador de caracteres dos sistemas que tem dumps pro MAME?
+[2019-08-28 08:26:07] Felipe "Juca" Sanches: consulte o código fonte do driver no MAME correspondente ao dispositovo que te interessa. Lá constará o nome da ROM do gerador de caracteres. Normalmente identificada como "cgrom". Às vezes como "chargen" ou talvez "gfx". Aí baixe o zip das ROMs desse driver e dentro desse ZIP vc vai achar o arquivo da ROM em questão.
+[2019-08-28 08:26:31] Ricardo Bánffy: Valeu!
+[2019-08-28 08:27:32] Ricardo Bánffy: É pra fase 2 disso aqui: https://www.unicode.org/L2/L2019/19025-terminals-prop.pdf
+[2019-08-28 08:30:30] Felipe "Juca" Sanches: que loucura! hahahah
+[2019-08-28 08:30:49] Felipe "Juca" Sanches: pretendo ler com calma depois
+[2019-08-28 08:40:10] Ricardo Bánffy: Na fase 2 já tem uns caracteres do Sharp MZ-80

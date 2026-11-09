@@ -1,0 +1,39 @@
+[2025-06-25 00:01:32] Felipe "Juca" Sanches: kkkk
+[2025-06-25 00:02:00] Felipe "Juca" Sanches: e eu nem conhecia essa lenda de REIROM
+[2025-06-25 00:02:04] Felipe "Juca" Sanches: tô me informando agora
+[2025-06-25 00:05:36] Felipe "Juca" Sanches: Será que não era o Ginseng dos encontros de MSX?!
+[2025-06-25 00:21:25] L.: Não, não tem nada a ver! O Ginseng é gente boa
+[2025-06-25 00:22:03] L.: Faz parte do cânone da cena de emulação brasileira
+[2025-06-25 00:28:12] Felipe "Juca" Sanches: eu só brinquei por que ele é meio doidinho hehe
+[2025-06-25 00:29:00] Felipe "Juca" Sanches: pois é... eu nunca tinha nem sequer ouvido falar!
+[2025-06-25 00:29:38] L.: Se procurar pelos filmes do reirom da grajaú movies, vai conhecer a pérola
+[2025-06-25 00:29:52] L.: É coisa do final dos anos 90
+[2025-06-25 00:30:50] L.: Hahahaha, o site ainda existe http://grajau.free.fr/home.html
+[2025-06-25 00:31:05] L.: Alerta pra tosqueira incrível hauehuahe
+[2025-06-25 09:14:48] Flávio Amieiro: Pô, galera do meu bairro
+[2025-06-25 09:15:13] Flávio Amieiro: Tinha uma tradição lá de fazer videos toscos com as primeiras câmeras digitais que a gente conseguia
+[2025-06-25 09:15:35] Flávio Amieiro: Tinha a galera da pepa filmes também
+[2025-06-25 09:16:15] Flávio Amieiro: Com os famosos jedi do Grajaú
+[2025-06-25 17:57:41] Felipe "Juca" Sanches: https://youtube.com/shorts/qRqmfJRzJcM?si=pcH4ZsEyhdfceYu9
+[2025-06-25 19:57:30] L.: https://github.com/polpo/picogus
+[2025-06-25 20:02:17] L.: https://www.downtowndougbrown.com/2025/06/finding-a-27-year-old-easter-egg-in-the-power-mac-g3-rom/
+[2025-06-25 20:03:36] L.: Tevo o g3 tá funcionando ainda? 👀
+[2025-06-25 20:14:32] Tevo: Eu, uhh, ainda não cheguei a testar ele, to enrolando de pegar um dia no LHC pra soldar o adaptador do monitor
+[2025-06-25 20:16:29] Tevo: Comprei uns MOSFETs pra montar o level shifter pro Sun->ADB que eu tava querendo montar e estou esperando chegarem, junto com umas peças pra outros projetos. Julho devo pegar um fim de semana pra passar lá e fazer esse monte de coisa que to enrolando faz tempo de fazer
+[2025-06-25 20:20:03] L.: O adaptador de monitor é sossegado
+[2025-06-25 20:25:55] Tevo: To ligado, eu só preciso pegar um dia pra fazer. Ia pegar pra montar essa schematic, e talvez soldar um DIP switch nos 3 pinos de sense: https://old.pinouts.ru/Audio-Video-Hardware/MacVideoToVGA_pinout.shtml
+[2025-06-25 20:26:38] Tevo: (se bem que eu não tenho muita prática com solda, e outro dia tava me matando pra soldar os cabos no mini-DIN 8 pra conectar no teclado da Sun, então...)
+[2025-06-25 20:27:33] L.: só tem um jeito de melhorar hehehe
+[2025-06-25 20:51:53] Tevo: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-06/35083.jpg
+[2025-06-25 20:51:53] Tevo: Ah, inclusive, outro dia estava instalando NeXTSTEP na SS4, queria brincar com Display PostScript e dar uma fuçada pra ver se acho mais alguma coisa legal pra fazer. Queria instalar SunOS 4 e fuçar com NeWS, que era um servidor de display da Sun que também usava PS, mas até aonde eu ouvi falar tinha um foco um pouco maior em escrever a lógica da interface em PostScript, ao invés de so usar o modelo de imagem igual o NeXTSTEP. Mas preciso pensar em um emulador pro mouse da Sun. O protocolo é bem simples, é um mouse serial 1200bps que manda os botões, X e Y em 5 bytes, mas é 5V TTL invertido, e eu não tenho nenhum microcontrolador com saída 5V por agora, então tenho que esperar as coisas que comprei chegarem de qualquer forma. (considerei só tentar conectar direto e ver se ele leria o sinal 3.3V de qualquer forma, mas já tava tarde e acabei não testando)
+[2025-06-25 20:53:10] L.: Pior que eu tenho uns mouses da Sun!
+[2025-06-25 20:53:21] L.: Nem lembro se foi no bolo de coisas que foram pra você
+[2025-06-25 20:54:24] L.: Deve ter algum Arduino véio no lhc. Deve dar pra ler ps/2 de um lado e fazer ele cuspir Sun mouse do outro
+[2025-06-25 20:57:01] Tevo: Queria ver se revivia o port do 9front pra SPARC também. Os kernels foram removidos entre o Plan 9 2e e 3e, então teria que escrever um novo (acho que coisa de mais mudou depois da 2e pra dar pra reaproveitar), mas os compiladores ainda estão no sistema, e a userland compila. Supostamente existiu um port pra SPARC64 também, a algum ponto. Mas preciso parar de inventar projeto um fim de semana pra depois desistir no outro, então eh
+[2025-06-25 20:57:18] Tevo: Pior que não, vieram só os teclados ^^;
+[2025-06-25 20:57:43] Tevo: Pensei em pegar um da última vez que fui lá, mas esqueci
+[2025-06-25 20:57:58] L.: É, quando voltar esse ano eu continuo fuçando lá pra ver se acho. Deve ter uns 3 ou 4 mouse lá perdido
+[2025-06-25 20:58:07] L.: Só não tenho o Mousepad
+[2025-06-25 20:58:54] L.: Faz userland rodar em cima do netbsd pra sparc
+[2025-06-25 21:09:53] Tevo: Parte da ideia era aprender como era OSdev pra SPARC, mas sei lá. Dava pra tentar coagir o kernel no NetBSD a carregar a.out do Plan 9, entender 9p e as syscalls, que não são muitas, e rodar a userland em cima disso, daí vira um negócio estilo o que o Glendix tava tentando fazer com Linux. Ou daria pra ensinar ELF pros linkers do Plan 9 e fazer todo o resto em cima da ABI do NetBSD padrão, e tentar emular coisas tipo namespaces, mas daí já existe o plan9port de qualquer forma então não tem tanta graça
+[2025-06-25 21:10:49] Tevo: Uma época tava me perguntando se daria pra fazer um esquema desses mas como um subsistema do NT, mas nem cheguei a pegar pra investigar

@@ -1,0 +1,38 @@
+[2026-10-02 12:02:07] RicBit: foi de 80 até 7. estou chocado com o tanto que ela conseguiu.
+[2026-10-02 14:35:43] RicBit: ainda estou pasmo, duas semanas atras era alegria imensa quando ela tirava 5. tirou 73 agora.
+[2026-10-02 14:36:09] RicBit: minha melhor hipotese é que eu estava usando errado
+[2026-10-02 14:36:51] L.: já coube em 4096 bytes?
+[2026-10-02 14:37:05] RicBit: é diferente pegar uma versao consolidada, e rodar no vazio para liberar espaço, do que adicionar codigo até passar do limite, e espremer até caber.
+[2026-10-02 14:37:09] RicBit: nao, falta 7 bytes ainda
+[2026-10-02 14:37:45] RicBit: mas estou colocando mais contratos e mais graus de liberdade, ela provavelmente vai conseguir depois disso
+[2026-10-02 15:41:13] Macabeus: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41023.jpg
+[2026-10-02 15:41:13] Macabeus: o jogo do Klonoa: Empire of Dreams está 100% descompilado 🎉
+
+esse é o trabalho que outra pessoa começou, e não usou IA no processo
+[2026-10-02 15:41:19] Macabeus: https://github.com/testyourmine/kleod
+[2026-10-02 16:36:25] RicBit: falta 7 -> falta 4
+[2026-10-02 19:09:21] RicBit: falta 4 -> falta 2
+[2026-10-02 19:51:28] Felipe "Juca" Sanches: My boy....
+[2026-10-02 20:52:14] RicBit: hell yeah falta 0
+[2026-10-02 21:14:31] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41030-minigb.zip
+[2026-10-02 21:14:31] RicBit: roda mario 2, ainda 4kb
+[2026-10-02 21:15:32] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41031.jpg
+[2026-10-02 21:15:50] Shideravan: Esse é outro emulador @fsanches kkkkkkkkk
+[2026-10-02 21:16:09] Shideravan: Está rodando tudo agora?
+[2026-10-02 21:16:30] RicBit: nao sei
+[2026-10-02 21:16:59] RicBit: tem jogo que nao roda, mas nao sei se era pra rodar. uns .gbc que tem no header compatibilidade com dmg, mas na pratica os emus que eu tenho aqui nao rodam
+[2026-10-02 21:20:29] Shideravan: Poootz deve ser rom corrompida ou bad dump
+[2026-10-02 21:20:40] Shideravan: Usa um fullset do No-Intro
+[2026-10-02 21:20:49] RicBit: ah é deeixa eu rodar a ferramenta
+[2026-10-02 21:21:14] Shideravan: Talvez você já esteja com 100% de compatibilidade e não sabe kkkkkkkkkkk
+[2026-10-02 21:32:25] RicBit: no intro diz que é nonlicensed taiwan
+[2026-10-02 21:32:30] RicBit: deve ser mais um mapper bizarro
+[2026-10-02 21:37:49] Shideravan: Já está sendo útil então. Quais jogos não estão funcionando?
+[2026-10-02 21:40:29] RicBit: uns 150
+[2026-10-02 21:41:19] RicBit: mas eu acho que me liguei o que é . o  jogo tenta detectar se esta num gbc ou dmg, se estiver no dmg ele trava. mas esse teste deve estar faltando, entao os jogos tentam rodar e corromper. o certo era travar
+[2026-10-02 21:43:19] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41045.jpg
+[2026-10-02 21:43:19] RicBit: tem um monte que é frescura, aqui é o meu x sameboy, a unica diferenca é o valor do rng que o jogo sorteou pra desenhar as gotas
+[2026-10-02 21:44:14] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41046.jpg
+[2026-10-02 21:44:14] RicBit: esse é um que o sameboy travou e o meu continuou corrompido, é um jogo gbc only então o certo é travar
+[2026-10-02 21:51:07] RicBit: 19 bytes pra consertar
+[2026-10-02 22:20:36] RicBit: 19 -> 8

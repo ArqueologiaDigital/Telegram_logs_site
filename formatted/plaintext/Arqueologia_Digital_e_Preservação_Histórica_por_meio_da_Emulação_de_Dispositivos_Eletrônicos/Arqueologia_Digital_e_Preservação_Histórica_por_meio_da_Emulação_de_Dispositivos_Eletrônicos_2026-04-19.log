@@ -1,0 +1,80 @@
+[2026-04-19 21:31:17] RicBit: eu ainda não saquei qual é a do zanac 2. é diferente demais para ser só um hack. certeza que foi feito por alguem que tinha o source.
+[2026-04-19 21:32:01] RicBit: e tem uns negocios que não fazem sentido, tipo no zanac original o game over é feito com tiles, no zanac 2 é com sprites. alguém teve que reprogramar isso.
+[2026-04-19 21:32:26] RicBit: minha hipotese atual é que isso veio de algum takeru
+[2026-04-19 22:55:51] RicBit: tambem é curioso que o zanac tem uma rotina de multiplicacao e uma de divisão. a de mult ele nunca usa, é dead code. a divisão ele usa para calcular a direção dos inimigos teleguiados
+[2026-04-19 22:56:07] RicBit: (as trajetorias sao todas fixed point 8.8)
+[2026-04-19 22:56:41] Felipe "Juca" Sanches: Topa fazer um encontro Arqueologia Digital?
+[2026-04-19 22:56:43] Felipe "Juca" Sanches: Online
+[2026-04-19 22:56:51] Felipe "Juca" Sanches: chamada de video gravada
+[2026-04-19 22:56:58] Felipe "Juca" Sanches: pra gente bater papo sobre as coisas que temos feito
+[2026-04-19 22:57:14] Felipe "Juca" Sanches: todo mundo que estiver fazendo algo relacionado pode apresentar
+[2026-04-19 22:57:26] Felipe "Juca" Sanches: que acha da idéia?
+[2026-04-19 22:57:48] Felipe "Juca" Sanches: pra publicar no youtube
+[2026-04-19 22:58:28] Felipe "Juca" Sanches: num canal próprio a ser criado, com o nome Arqueologia Digital. Ou no meu canal Happy Hacking Video Blog
+[2026-04-19 22:59:49] RicBit: eu topo se nao for gravado
+[2026-04-19 23:00:05] Felipe "Juca" Sanches: bom... então mais fácil dizer que não topa hahahaha
+[2026-04-19 23:00:22] Felipe "Juca" Sanches: o propósito da proposta era justamente ter o registro gravado e publicado
+[2026-04-19 23:00:39] Felipe "Juca" Sanches: mas te dou tempo pra pensar e reconsiderar
+[2026-04-19 23:01:05] RicBit: nao fico confortavel de falar publicamente de projeto nao terminado, povo fica enchendo o saco depois
+[2026-04-19 23:01:45] Felipe "Juca" Sanches: sendo dado o devido disclaimer tudo se resolve
+[2026-04-19 23:02:18] Felipe "Juca" Sanches: abertura: Este é um relato de projeto em andamento. Nada garante que haverá sucesso. O foco é no processo.
+[2026-04-19 23:03:41] Felipe "Juca" Sanches: o objetivo é compartilhar com os amigos e com o público idéias, métodos, ferramentas, abordagens. Como num simpósio acadêmico
+[2026-04-19 23:05:44] RicBit: eu tenho um monte de artefatos que uso como memoria externa
+[2026-04-19 23:06:30] Felipe "Juca" Sanches: estou tentando entender esse comentário
+[2026-04-19 23:06:45] RicBit: tipo assim
+
+https://gist.github.com/ricbit/83e5db933afd77863c14adc224bab624
+[2026-04-19 23:07:31] Felipe "Juca" Sanches: Se significa que "já publico em outros lugares", então posso apenas seguir adiante com o convite para outras pessoas que queiram participar e torcer que você em algum momento talvez tope participar também
+[2026-04-19 23:08:10] Felipe "Juca" Sanches: sei que @macabeus, por exemplo, tem feito coisas inteiressantes com bytematching recomp
+[2026-04-19 23:08:36] Felipe "Juca" Sanches: E @figur8 / @Shideravan estão investigando emulação de handhelds LCD
+[2026-04-19 23:08:51] RicBit: memoria externa = coisas que estao em um arquivo para eu nao ter que decorar
+[2026-04-19 23:10:16] Felipe "Juca" Sanches: E Ismael Luceno também tem experimentado com agentic-AI para engenharia reversa
+[2026-04-19 23:10:37] Felipe "Juca" Sanches: Estou pensando em trazer toda essa turma para falar sobre esses assuntos
+[2026-04-19 23:10:51] Felipe "Juca" Sanches: me avisem se gostam da idéia
+[2026-04-19 23:11:53] Felipe "Juca" Sanches: E obviamente o convite se extende a qualquer pessoa que quiser enviar uma proposta de apresentação. Seria como uma conferência online de Arqueologia Digital.
+[2026-04-19 23:12:52] Felipe "Juca" Sanches: Em Português, mesmo. Ou em Espanhol, em casos como o do Ismael Luceno, se ele preferir.
+[2026-04-19 23:13:31] RicBit: alias tem umas coisas curiosas nos artefatos. eu tenho certeza que o manual do zanac foi feito antes do jogo estar pronto, porque tem um monte de coisas que nao batem
+[2026-04-19 23:13:51] RicBit: por exemplo, ele fala que se voce completar o jogo, precisa apertar ESC para voltar para a tela inicial
+[2026-04-19 23:13:59] RicBit: mas o jogo nem lê a tecla ESC
+[2026-04-19 23:14:03] Felipe "Juca" Sanches: Acho que algo assim em Inglês seria bacana no futuro, pois teria um público mais amplo. Mas me parece que o começo modesto seria mais focado aqui no nosso grupo mesmo.
+[2026-04-19 23:15:20] Felipe "Juca" Sanches: Ramiro faz tempo que não fala nada por aqui, mas já fez várias coisas muito legais ;-)
+[2026-04-19 23:16:48] Felipe "Juca" Sanches: Sebastiao Barreto, por exemplo, foi programador do Patinho Feio nos anos 70!
+[2026-04-19 23:18:29] Felipe "Juca" Sanches: e qual outra máquina tinha ESC? ;-D
+[2026-04-19 23:21:01] RicBit: outra coisa que eu nunca tinha reparado é que o playfield do zanac é quadrado, 24x24 tiles
+[2026-04-19 23:21:15] RicBit: eu nunca li como quadrado por causa do aspect ratio
+[2026-04-19 23:22:35] Felipe "Juca" Sanches: eu me lembro da primeira vez na vida em que parei pra pensar sobre aspect ratios e lembro que fiquei chocado em descobrir que existia pixel retangular!
+[2026-04-19 23:22:59] RicBit: eu fiquei chocado quando vi pixel quadrado pela primeira vez
+[2026-04-19 23:23:15] RicBit: no vga 640x480 se minha memoria nao falha
+[2026-04-19 23:23:34] Felipe "Juca" Sanches: pixel quadrado pra mim era idéia platônica
+[2026-04-19 23:24:42] Felipe "Juca" Sanches: eu tinha uma noção conceitual de pixel como ponto de luz. Então não fazia muito sentido pra mim pensar em algo não uniforme (mais alto ou mais largo)
+[2026-04-19 23:24:55] Felipe "Juca" Sanches: só me caiu a ficha quando parei pra olhar os detalhes
+[2026-04-19 23:26:13] Felipe "Juca" Sanches: na verdade descobri isso na prática ao escrever um programinha em basic pra plotar os pixels de um círculo e ter como resultado uma elipse
+[2026-04-19 23:26:29] Felipe "Juca" Sanches: foi o meu momento "what the fuck?!"
+[2026-04-19 23:27:39] Felipe "Juca" Sanches: e ao modificar o programa pra desenhar uma elipse de modo que resultasse em um circulo perfeito na tela, determinei empiricamente o aspect-ratio do pixel
+[2026-04-19 23:27:56] Felipe "Juca" Sanches: como sempre na vida, eu fazendo as coisas da forma mais complicada...
+[2026-04-19 23:28:22] RicBit: eu li o aspect ratio direto do red book
+[2026-04-19 23:28:23] Felipe "Juca" Sanches: acho que esses meus hábitos são maldição de autodidata
+[2026-04-19 23:29:25] Felipe "Juca" Sanches: ficar dando murro em ponta de faca até descobrir algo
+[2026-04-19 23:29:59] RicBit: no brmsx voce podia ligar pixels retangulares iguais ao do msx usando -res 1 se minha memoria nao falha
+[2026-04-19 23:30:02] Felipe "Juca" Sanches: é claro que (com certa frequencia) existem fontes mais confiáveis para grande parte do conhecimento
+[2026-04-19 23:30:13] Felipe "Juca" Sanches: mas eu tenho essa teimosia de ir descobrindo as coisas na marra
+[2026-04-19 23:30:32] RicBit: eu usei o aspect ratio do red book e futuquei os contadores da vga para ele ficar um pouco mais lenta, aí os pixels saiam corretamente
+[2026-04-19 23:31:18] RicBit: placa de video que tinha output em crt era muito legal, voce podia mudar todos os timings
+[2026-04-19 23:31:34] RicBit: e quase sempre o monitor nao queimava
+[2026-04-19 23:32:12] Felipe "Juca" Sanches: e quase nunca o monitor queimava
+[2026-04-19 23:32:48] Felipe "Juca" Sanches: "lowering" de negativa dupla
+[2026-04-19 23:33:07] RicBit: eu experimentava no sony pvm do lsi que nunca queimava, ele sincronizava em qualquer frequencia maluca que voce colocasse
+[2026-04-19 23:33:15] RicBit: eu tenho um desses em casa agora
+[2026-04-19 23:36:49] Felipe "Juca" Sanches: Acho que a Erin também tem um desses
+[2026-04-19 23:37:31] Felipe "Juca" Sanches: Ou tinha. Agora estou me lembrando que ela estava tentando vender isso algum tempo atrás. Acho que o Fractal levou!
+[2026-04-19 23:38:18] Pablo Vasques Bravo-Villalba: No Generation MSX diz que é um release de 1987 da Takeru. Talvez também tenha sido usado para competições? Tem um ranking em tela
+[2026-04-19 23:38:55] RicBit: muita coisa diferente, até o logo é diferente
+[2026-04-19 23:39:06] RicBit: o efeito metalico é invertido no zanac 2
+[2026-04-19 23:39:15] RicBit: e a arma 7 nao funciona direito
+[2026-04-19 23:39:29] RicBit: mas eu entendo a arma 7 nao funcionar direito, senao o jogo nao teria graça.
+[2026-04-19 23:39:50] RicBit: no zanac 1 a arma 7 mata tudo, atée os tiros dos inimigos
+[2026-04-19 23:40:00] RicBit: no zanac 2 ela mata os inimigos mas nao os tiros
+[2026-04-19 23:40:30] RicBit: como no zanac 2 voce pode escolher a arma no teclado, faz sentido que voce nao coloque a arma boa a qualquer momento, ficaria sem graça
+[2026-04-19 23:43:12] L.: um dia pego um PVM também. nos EUA era bem caro. ainda bem que não comprei senão teria ficado lá
+[2026-04-19 23:58:47] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38289.jpg
+[2026-04-19 23:58:47] RicBit: ultimo artefato e vou dormir

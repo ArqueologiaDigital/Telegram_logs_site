@@ -1,0 +1,33 @@
+[2018-10-26 07:56:28] Eduardo Loos: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-10/7978.jpg
+[2018-10-26 11:46:54] Alexandre Villares: Vou fazer umas experiências com uma impressora matricial, mas ela ainda não chegou. Queria ordenar por peso visual / área de cobertura um conjunto de caracteres. Alguém tem uma versão de tela ou convertida (ttf/otf) de uma fonte dessas matriciais?
+[2018-10-26 11:47:52] Felipe "Juca" Sanches: http://blog.arrozcru.org/?p=38
+[2018-10-26 11:49:18] Alexandre Villares: Legal, vou estudar!
+[2018-10-26 11:49:21] Alexandre Villares: Obrigado
+[2018-10-26 11:50:15] Deleted Account: Eu usava a fonte DotMatrix
+https://www.dafont.com/pt/dot-matrix.font
+[2018-10-26 11:51:21] Deleted Account: É gratuita
+[2018-10-26 12:00:28] Ronaldo: A alternativa mais automática pra fazer ASCII art é converter cada pixel em um caractere, mas dá pra fazer coisa melhor. Dá pra considerar cada quadrante de um caractere como um subpixel e escolher o que mais se enquadre com a luminância desse subpixel, dá pra fazer difusão de erro...
+[2018-10-26 12:01:09] Ronaldo: *desses subpixels
+[2018-10-26 12:04:21] Ronaldo: Uma coisa que não costuma ser levada em consideração no que eu vejo é que a imagem vai sempre ficar mais clara, por conta do espaçamento obrigatório dos caracteres, então é bom escurecer o "gamma", eu acho.
+[2018-10-26 12:06:17] Alexandre Villares: legal, Ronaldo
+[2018-10-26 12:08:20] Alexandre Villares: Nos exemplos da biblioteca de vídeo do Processing tem um conversor bem básico que aplica a conversão a um stream de vídeo, é muito divertido. O Bernardo me mostrou outro dia uma biblioteca Python simpática também.
+[2018-10-26 12:10:34] Alexandre Villares: O Waldermar Cordeiro com o Moscati na USP usavam sobreposições de caracteres para conseguir os valores mais escuros... tem muita coisa divertida para testar.
+[2018-10-26 12:10:50] Alexandre Villares: http://www5.usp.br/18320/giorgio-moscati-e-waldemar-cordeiro-quando-o-computador-encontrou-a-arte/
+[2018-10-26 12:11:23] Ronaldo: A tabela de substituição de caracteres pode ser precalculada. Convertendo a tela original pra 16 tons de cinza dá pra transpor cada 2x2 pixels pra um caractere impresso. Com isso, uma lookup table de 64 kilobytes pode ter todos os caracteres pré-calculados pra conversão. Claro, o ideal seria fazer uma segunda tabela com o erro da imprecisão de conversão, pra ser compensado no caractere adjacente.
+[2018-10-26 12:13:17] Ronaldo: O erro da imprecisão de conversão pode ser difundido pros outros quadrantes do caractere na hora de pré-calcular a tabela, também.
+[2018-10-26 12:13:21] Alexandre Villares: ötimas ideias, vou guardar na algibeira
+[2018-10-26 12:14:18] Alexandre Villares: para minha atividade de 2h vou fazer a conversão de 1 pixel amostrado em 256 brilhos possíveis para 1 caractere em uma lista de 256 ordenada mesmo...
+[2018-10-26 12:14:33] Ronaldo: Sim, é o mais fácil
+[2018-10-26 12:14:38] Alexandre Villares: pq vou ler com os participantes o código junto e tal
+[2018-10-26 12:14:45] Ronaldo: Sim
+[2018-10-26 12:14:58] Alexandre Villares: mas para uma atividade mais longa e com pessoas que já sabem porgramar ia ser massa gerar essas tabelas
+[2018-10-26 12:15:58] Deleted Account: Se existir uma biblioteca de rasterização, poderia aproveitar ela e modificar a saída
+[2018-10-26 12:18:53] Ronaldo: Também dá pra considerar que a difusão de erro pode ser recursiva, e não limitada a um caractere como tendo necessariamente 2x2. Colocando 4x4 num caractere ainda seria possível tentar transpor o erro de conversão pro quadrante ou caractere adjacente.
+[2018-10-26 12:19:21] Ronaldo: Claro, isso é complicar o complicado
+[2018-10-26 12:20:35] Deleted Account: E provavelmente já tem pronto em algum lugar 😋
+[2018-10-26 12:20:44] Ronaldo: Tipo, um O tem uma quantidade de preto parecida com um H, mas a distribuição em subpixels é diferente.
+[2018-10-26 12:21:00] Ronaldo: Sempre tem
+[2018-10-26 12:21:22] Alexandre Villares: Mudando de assunto....
+[2018-10-26 12:21:54] Alexandre Villares: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-10/8009.jpg
+[2018-10-26 12:22:08] Alexandre Villares: (mas não muito... pioneiros da arte computacional)
+[2018-10-26 12:24:00] Ronaldo: Sim

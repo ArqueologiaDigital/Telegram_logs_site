@@ -1,0 +1,50 @@
+[2026-10-10 00:07:06] RicBit: é uma coisa quântica com gatos
+[2026-10-10 00:07:10] RicBit: só sei que funciona
+[2026-10-10 00:07:21] RicBit: faltando 4 bits -> sobrando 3 bytes
+[2026-10-10 00:19:21] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41302-minigb.zip
+[2026-10-10 00:19:21] RicBit: agora roda rockman 8, ainda 4kb
+[2026-10-10 01:19:50] Shideravan: Completou então? Ou agora vai aproveitar que está esbanjando e add alguma feature?
+[2026-10-10 01:38:03] Marcelo: Você vai descompilar e depois botar a namagiri pra diminuir o tamanho?
+[2026-10-10 01:41:10] RicBit: só completa quando os testes passam. ainda tem que testar todas as roms de novo, do zero, pra ver se não teve regressão
+[2026-10-10 01:44:03] RicBit: e eu sei que vai ter um monte de jogo diferente porque eu mudei a semente do rng. tipo, tanto faz onde começa, mas eu não tenho como comparar screenshot porque as coisas podem estar em lugares diferentes.
+[2026-10-10 01:44:14] RicBit: tipo as gotas de chuva na abertura do zelda
+[2026-10-10 01:52:58] RicBit: vai levar 9h pra rodar, só amanha mesmo
+[2026-10-10 02:04:43] Felipe "Juca" Sanches: do protótipo eu só tenho a fotografia :-)
+[2026-10-10 02:05:03] Felipe "Juca" Sanches: certeza que era diferente!
+[2026-10-10 02:05:49] Shideravan: Então tecnicamente não dá para fazer um driver no MAME hahaha
+[2026-10-10 02:07:18] Felipe "Juca" Sanches: Algum dia pretendo adicionar ao MAME um driver de emulação do Technics KN2000. Mas no momento estou me focando nos outros modelos mais modernos em que já coloquei as mãos
+[2026-10-10 02:08:06] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=qmQUQVyYRD8
+[2026-10-10 02:09:05] Felipe "Juca" Sanches: com o da foto, não. Mas tem varios KN2000, modelo final que saiu das fabricas, ainda 'a venda no ebay ou mercado livre
+[2026-10-10 03:21:44] Pedro de Medeiros 👾: Ele colocou aqui https://github.com/jawaidbazyar2/mspacman
+[2026-10-10 13:12:10] Felipe "Juca" Sanches: Alguns sucessos por aqui!
+[2026-10-10 13:12:27] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41317.jpg
+[2026-10-10 13:12:36] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41318.jpg
+[2026-10-10 13:12:41] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41319.jpg
+[2026-10-10 13:13:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41321.jpg
+[2026-10-10 13:13:47] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41322.jpg
+[2026-10-10 13:13:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41323.jpg
+[2026-10-10 13:16:09] Felipe "Juca" Sanches: esses prints que mandei agora sao do driver do KN7000 rodando a versao customizada do sistema que integra com esse produto alemao de leitor de cartao SD mais avancado que o drive de cartao SD comum do KN7000. Eu ja tinha mencionado ele aqui alguns dias atras
+[2026-10-10 13:44:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41328.jpg
+[2026-10-10 13:44:40] Felipe "Juca" Sanches: vamo que vamo!
+[2026-10-10 14:01:53] Hugo (Agaelebê): https://web.archive.org/web/20260412143311/https://www.thomas-huehn.com/knuth-reward-check/
+
+RicBit já mandou a foto do seu cheque do Knuth aqui? Lembro que vc falou uma vez...
+
+https://web.archive.org/web/20260416012116/https://www-cs-faculty.stanford.edu/~knuth/boss.html
+[2026-10-10 14:33:18] RicBit: vixe eu tenho 4 cheques do knuth
+[2026-10-10 14:39:34] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41331.jpg
+[2026-10-10 14:40:01] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41332.jpg
+[2026-10-10 14:40:44] RicBit: meu predileto é o terceiro, porque o erro era no concrete mathematics e eu gosto bastante desse livro.
+[2026-10-10 14:43:21] Shideravan: Brabo demais, ele envia para o mundo inteiro esses cheques? É um souvenir muito bacana
+[2026-10-10 14:43:55] Shideravan: Dá vontade de caçar erros nos livros dele só para ganhar um desses e botar num quadro hahaha
+[2026-10-10 15:04:43] Felipe "Juca" Sanches: bem vindo de volta ao grupo, @Quinquinel
+[2026-10-10 15:22:41] RicBit: é divertido!
+[2026-10-10 15:56:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41340.jpg
+[2026-10-10 15:56:59] Felipe "Juca" Sanches: protecao por senha crackeada com sucesso!
+[2026-10-10 17:18:47] Guilherme: Gratidão, irmão 🙏🏼 é uma honra estar de volta
+[2026-10-10 21:45:15] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41342.jpg
+[2026-10-10 21:45:15] L.: O Tevo botou NT no Wii aqui no LHC
+[2026-10-10 21:45:15] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41343.jpg
+[2026-10-10 21:45:15] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41344.jpg
+[2026-10-10 21:45:15] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41345.jpg
+[2026-10-10 21:45:27] L.: (sim, a TV tá zoada.)

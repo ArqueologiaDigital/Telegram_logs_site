@@ -1,0 +1,59 @@
+[2026-02-05 07:40:05] Pablo Vasques Bravo-Villalba: Ah, a sequência japonesa é idêntica à sequência do Nintendinho
+[2026-02-05 07:42:10] Pablo Vasques Bravo-Villalba: Mas é curioso, por que será que mudaram a sequência de fases no mapa também? Não tinha necessidade de fazerem isso. E também é curioso limarem a Nova Zelândia da versão internacional.
+[2026-02-05 10:43:16] RicBit: quando eu chegar na roms variantes eu tento descobrir o que aconteceu
+[2026-02-05 10:52:14] Felipe "Juca" Sanches: "bit-perfect ROM match" <= Ainda tem blocos de código em raw bytes? Ou já fez disasm de todo código alcançável? Tudo que restou de raw bytes são com certeza regiões de dados?
+[2026-02-05 10:53:58] Felipe "Juca" Sanches: Pergunto isso (por mera curiosidade) por que no meu caso do ROM set do KN5000 eu também alcancei 100% byte-match, mas sei que ainda tem mais código alcançavel que o meu disasm inicial largou como raw bytes pois não interpretou várias jump-tables / call-tables
+[2026-02-05 15:09:51] RicBit: rom match quer dizer só que ele compilou e deu rom match. ainda tem um pouco de data identifcado como codigo. mas é bem pouco, tá quase pronto haha
+[2026-02-05 15:10:11] RicBit: o que falta é só descobrir como o level esta guardado na rom (onde é curva, onde é reta, etc)
+[2026-02-05 15:10:32] RicBit: (de outra maneira, tudo que é codigo já esta marcado como codigo)
+[2026-02-05 15:10:54] RicBit: achei legal que a konami tem switch case inline
+[2026-02-05 15:11:59] RicBit: tipo assim
+GAME_STATE_8_DISPATCH:
+        ; Jump table for substate in state 8
+        ld      a,(GAME_SUBSTATE)                              ;#41D4: 3A 01 E0
+        call    JUMP_TABLE_DISPATCHER                          ;#41D7: CD 98 40
+        dw      AUTO_DEMO_RESTART                              ;#41DA: E2 41
+        dw      TITLE_MENU_INIT                                ;#41DC: F3 41
+        dw      TITLE_MENU_BLINK_UPDATE                        ;#41DE: 06 42
+        dw      START_GAME_PREP                                ;#41E0: 36 42
+[2026-02-05 15:12:27] RicBit: o jump table fica inline depois do call, ele faz uma magia com o stack para achar o jump table
+[2026-02-05 15:13:17] RicBit: e no fim acabou que meu disassmbler virou sem querer um compilador
+[2026-02-05 15:14:10] RicBit: eu falei para ele que regiao de data é obrigada a ter um validador com auto comentario, então agora tem uma mini linguagem de descricao de dados
+[2026-02-05 15:15:54] RicBit: o formato -> https://gist.github.com/ricbit/261a2aad0da4fcd88f78ec450830584b
+[2026-02-05 17:26:57] RicBit: que doido, a versao europeia usa a bios
+[2026-02-05 17:28:30] L.: o gwbasic faz isso também 
+
+eu usei técnica similar pra fazer shellcode de exploit também (pra não precisar saber onde que alguma coisa tá)
+[2026-02-05 17:36:41] RicBit: o antartic original vai direto na 98, o europeu le a rom. então só o europeu funciona naqueles cartuchos de msx2
+[2026-02-05 17:38:48] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37341.jpg
+[2026-02-05 17:38:48] RicBit: a lá ele usando a bios
+[2026-02-05 17:40:52] L.: Rola depois fazer um .s com ifdef
+[2026-02-05 17:41:29] RicBit: eu tinha medo das rotinas estarem em lugares diferentes, aí seria complicado o ifdef. mas parece que ele nao mudou as ordens não
+[2026-02-05 17:45:57] RicBit: nao tem mais a rotina de debug no fim da europeia. mas tem uns bytes que devem ser easter egg
+[2026-02-05 17:46:17] RicBit: 00003fe0  ff ff ff ff ff ff ff ff  ff ac 88 82 b7 9d 81 b7  |................|
+00003ff0  8f 00 87 b3 86 ac 94 00  87 b3 86 b5 88 14 01 aa  |................|
+o negocio é que vai saber o encoding
+[2026-02-05 17:46:26] RicBit: parece shift jis mas não é, eu acho
+[2026-02-05 22:03:19] RicBit: @mrparn isso faz sentido para voce?
+SOUND_DATA_STAGE_CLEAR:
+        SET_OCTAVE_SUSTAIN 1, 0Bh                              ;#7C79
+        NOTE NOTE_C, DURATION_20                               ;#7C7B
+        NOTE NOTE_C, DURATION_15                               ;#7C7C
+        NOTE NOTE_C, DURATION_5                                ;#7C7D
+        NOTE NOTE_C, DURATION_20                               ;#7C7E
+        SET_OCTAVE_SUSTAIN 2, 0Bh                              ;#7C7F
+        NOTE NOTE_B, DURATION_15                               ;#7C81
+        NOTE NOTE_A, DURATION_5                                ;#7C82
+        NOTE NOTE_G, DURATION_20                               ;#7C83
+        NOTE NOTE_E, DURATION_20                               ;#7C84
+        NOTE NOTE_G, DURATION_20                               ;#7C85
+[2026-02-05 23:14:04] RicBit: mais um ponto para o jogo ser um port de arcade, o codigo todo assume joystick, quando voce pede teclado ele converte os inputs de teclado para formato de joystick.
+[2026-02-05 23:22:45] Pablo Vasques Bravo-Villalba: Total faz! 😍
+[2026-02-05 23:26:13] Pablo Vasques Bravo-Villalba: É interessante a oitava aumentar à medida em que você desce a frequência. Isso porque ela é um multiplicador em vez de um divisor
+[2026-02-05 23:29:50] Pablo Vasques Bravo-Villalba: Se a Konami tivesse gastado 24 bytes em vez de 12 na tabela de frequências, talvez pudesse começar na oitava mais baixa e subir arbitrariamente. Mas aí precisaria usar shift e rotate em vez de inc hl
+[2026-02-05 23:29:58] Pablo Vasques Bravo-Villalba: Imagino eu
+[2026-02-05 23:37:17] RicBit: sim, daria tranquilo. se bobear o suposto arcade usava um chip com menos bits
+[2026-02-05 23:37:50] RicBit: o player tem a opcao de sustain, mas ele sempre usa o sustain 0Bh
+[2026-02-05 23:38:40] RicBit: o andamento eu saquei, a musiquinha principal usa durations 8, 16, 32 etc, as outras musicas usam 5, 10, 20 etc
+[2026-02-05 23:40:47] Pablo Vasques Bravo-Villalba: Você entendeu como funciona esse sustain?
+[2026-02-05 23:41:28] RicBit: eu acho que é tipo duty cycle, a nota dura 15 ticks, com sustain 12 ele mata no 12 e fica 3 silencio

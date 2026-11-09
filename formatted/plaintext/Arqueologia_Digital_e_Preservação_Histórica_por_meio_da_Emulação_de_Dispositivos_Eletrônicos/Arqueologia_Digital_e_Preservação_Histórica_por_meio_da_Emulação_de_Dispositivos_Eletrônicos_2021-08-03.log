@@ -1,0 +1,16 @@
+[2021-08-03 00:09:16] Felipe "Juca" Sanches: A forma como cheguei às fortes evidencias que começa mesmo no offset zero foi divertida, entretanto!
+
+Eu tinha alguns dias atrás achado um trecho do arquivo que contém rotinas de inicializacao da VGA. Então eu anotei os endereços das duas chamadas de subrotinas que usam endereçamento absoluto: tinha um call # 0xFF0D99 e um call 0xFF0FFA.
+
+Costuma ser muito comum ter uma instrução ret (retorno de subrotina) imediatamente antes do ponto de entrada de uma subrotina pois, em geral, os compiladores fazem o melhor uso possível da memória disponível e as rotinas ficam grudadinhas umas nas outras. Uma possível excessão seria a presença de um bloco de dados logo antes de uma rotina, é claro. Mas eu achei que seria um chute bom (com alta probabilidade) procurar todas as ocorrências do valor 0x0e (que é o opcode da instrução ret) que estejam distantes entre si em 0x261 bytes, que é a diferença entre os endereços absolutos daquelas duas rotinas que identifiquei nos `call`s.
+
+Escrevi um código python bem simples pra fazer essa busca. E dentre os resultados achei um endereço que me fez abrir um grande sorriso: 0x1F0D98.
+
+Isso significa que a flash fica mapeada no intervalo de 0xe0000 até 0xfffff da CPU (o que já era esperado) e seu conteúdo começa no offset zero do arquivo de update.
+[2021-08-03 00:09:36] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13993.jpg
+[2021-08-03 00:10:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13994.jpg
+[2021-08-03 00:10:54] Felipe "Juca" Sanches: E fazendo esse recorte simples do arquivo da ROM, eis aqui a linda rotina presente no ponto de entrada da CPU principal 😊
+[2021-08-03 00:12:30] Felipe "Juca" Sanches: com isso, o meu próximo passo é voltar a implementar o driver de emulação pendurando os controladores de VGA e de disquete nos endereços que já conheço e cruzando os dedos pra ver em breve alguma tela gráfica no emulador
+[2021-08-03 00:13:37] Felipe "Juca" Sanches: aposto que uma das telas que irei encontrar em breve será uma mensagem de erro de comunicação com a subcpu e também com os microcontroladores que fazem a leitura das muitas dezenas de botões do painel de controle do teclado
+[2021-08-03 00:15:33] Felipe "Juca" Sanches: contei aqui. São 131 botões no painel 😃
+[2021-08-03 18:30:07] L.: https://twitter.com/bsdphk/status/1422669393029443591?s=09

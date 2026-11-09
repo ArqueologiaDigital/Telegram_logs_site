@@ -1,0 +1,31 @@
+[2022-03-24 03:04:48] L.: https://twitter.com/NYTScience/status/1506778683880714245?t=I9p4KFtOwU0SzXzcZiqoNg&s=09
+[2022-03-24 10:20:14] RicBit: Eita
+[2022-03-24 19:03:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-03/19382.jpg
+[2022-03-24 19:03:52] Felipe "Juca" Sanches: Código da VM no MAME agora tá atualizado/modernizado. Já dá pra usar junto com o meu toolchain AWVMTools
+
+https://github.com/felipesanches/mame/tree/anotherworld
+[2022-03-24 19:04:39] Felipe "Juca" Sanches: @toymak3r, olha aqui
+[2022-03-24 19:05:38] Felipe "Juca" Sanches: a VM funciona bem, exceto um único bug conhecido, na instrução de scroll vertical
+[2022-03-24 19:06:19] Felipe "Juca" Sanches: se não me engano, dá pra jogar bem o jogo todo, apenas com uns glitches gráficos nas poucas partes do jogo que usam esse scroll vertical
+[2022-03-24 19:07:20] Felipe "Juca" Sanches: Agora estou implementando save states. Isso vai ajudar bastante no debugging do scroll vertical, pois poderei salvar o jogo no momento imediatamente antes de uma animação de scroll vertical e com isso testar recompilacoes do emulador até eu conseguir consertar a implementacao do scroll
+[2022-03-24 19:08:09] Felipe "Juca" Sanches: o save state já está quase completamente implementato. "funciona" kkk. Exceto para o playback de músicas
+[2022-03-24 19:08:39] Felipe "Juca" Sanches: até os samples de áudio já estão sendo salvos. Apenas a estrutura de dados do tracker de música que eu to tendo um pouco mais de dificuldade pra implementar o salvamento de estado
+[2022-03-24 19:09:16] Felipe "Juca" Sanches: preciso reler o algoritmo todo desse music tracker pra entender melhor como funciona e, assim, ter mais facilidade em determinar a melhor estratégia para implementar o save state corretamente
+[2022-03-24 19:10:25] Felipe "Juca" Sanches: não parece ser nada de outro mundo. É só que eu já estava bem cansado e precisando descançar um pouco antes de voltar a essa tarefa
+[2022-03-24 19:28:19] Toy: Cara até hoje me dói não ter conseguido voltar! Vai agora ? Alinharam os planetas ?
+[2022-03-24 19:29:11] Felipe "Juca" Sanches: kkkk
+[2022-03-24 19:29:14] Felipe "Juca" Sanches: agora vai!
+[2022-03-24 19:29:38] Toy: Vou dar um pulo lá para ler com calma, e o que tiver faltando
+[2022-03-24 19:42:43] Felipe "Juca" Sanches: No issue tracker tenho algumas coisas listadas: https://github.com/felipesanches/mame/labels/Another%20World%20Virtual%20Machine
+[2022-03-24 19:44:03] Toy: E lá nas tools ?
+[2022-03-24 19:45:06] Felipe "Juca" Sanches: Essa tarefa aqui é muito interessante de se usar a AWVMTools pra comparar as listagens de disasm de diferentes versoes do jogo: https://github.com/felipesanches/mame/issues/13
+[2022-03-24 19:51:22] Felipe "Juca" Sanches: Aqui mais uma issue fresquinha pra você 😊
+
+https://github.com/felipesanches/AnotherWorld_VMTools/issues/12
+[2022-03-24 19:52:41] Toy: Esse é boooa!
+[2022-03-24 20:26:08] Felipe "Juca" Sanches: Mais uma pra você:
+
+https://github.com/felipesanches/AnotherWorld_VMTools/issues/13
+[2022-03-24 21:55:28] L.: Como assim? É precisamente de Outro Mundo!
+[2022-03-24 22:16:42] Pedro de Medeiros 👾: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-03/19403-giphy.mp4
+[2022-03-24 22:23:09] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-03/19404-animation.gif.mp4

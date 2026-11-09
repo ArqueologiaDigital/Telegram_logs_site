@@ -1,0 +1,55 @@
+[2018-10-03 07:58:39] Ricardo Bánffy: Eu nunca entendi o MSX. Um monte de empresas japonesas querendo fazer computadores com quase nenhuma diferença além de design iam acabar se canibalizandop numa guerra de preços.
+[2018-10-03 07:59:29] Ronaldo: Olha, o PC é isso
+[2018-10-03 07:59:40] Ronaldo: E o mercado sobreviveu
+[2018-10-03 07:59:43] Felipe "Juca" Sanches: curiosamente eu estava EXATAMENTE agora lendo a página que descreve a especificação do padrão MSX1
+[2018-10-03 07:59:54] Felipe "Juca" Sanches: https://www.msx.org/wiki/MSX1
+[2018-10-03 08:00:56] Ronaldo: Um PC-XT não é tão diferente de um MSX em termos funcionais, e mesmo assim muita gente correu pra fazer e vender clones.
+[2018-10-03 08:01:13] Felipe "Juca" Sanches: fiquei com uma dúvida bem básica. Por que constam 3 VDPs no padrão MSX1 ? "Video Display Processor: Texas Instruments TMS-9918/TMS-9928/TMS-9929"
+[2018-10-03 08:01:23] Ronaldo: Ah
+[2018-10-03 08:01:33] Ronaldo: PAL, NTSC
+[2018-10-03 08:01:50] Felipe "Juca" Sanches: se é um padrão, não deveria ter uma única opção de chip de video?
+[2018-10-03 08:01:56] Felipe "Juca" Sanches: ah! faz sentido...
+[2018-10-03 08:02:10] Ronaldo: Por exemplo, um deles é o que os computadores daqui usam, pra gerar PAL-M
+[2018-10-03 08:02:42] Ronaldo: A pinagem é ligeiramente diferente, mas do ponto de vista do software os três são iguais.
+[2018-10-03 08:03:08] Ronaldo: (fora os 50/60 Hz, claro)
+[2018-10-03 08:03:32] Felipe "Juca" Sanches: saquei
+[2018-10-03 08:05:35] Ronaldo: A partir do MSX2 a funcionalidade de gerar padrões de vídeo diferentes foi incorporada ao mesmo chip
+[2018-10-03 08:07:51] Ronaldo: O VDP do MSX2 é 100% compatível com o do MSX1, e tem funcionalidade extra. Eu, pelo menos, não conheço nada de MSX1 que não rode no MSX2 por causa do VDP. O problema de incompatibilidade que aparece é por conta do jeito que se expande a memória.
+[2018-10-03 08:07:58] Felipe "Juca" Sanches: teve uma época, uns 15 anos atrás que eu estudei essas coisas e até programei coisas em asm de z80 pro MSX. Mas hoje já não lembro quase nada
+[2018-10-03 08:08:49] Ronaldo: Eu fiz um emulador de MSX1 escrito em BASIC, bem bugado, pra PC. Eu só fiz o suficiente pra rodar alguns jogos simples.
+[2018-10-03 08:09:06] Felipe "Juca" Sanches: legal
+[2018-10-03 08:09:13] Felipe "Juca" Sanches: qual BASIC?
+[2018-10-03 08:09:19] Felipe "Juca" Sanches: QuickBASIC?
+[2018-10-03 08:09:30] Ronaldo: Blitz Basic
+[2018-10-03 08:09:38] Felipe "Juca" Sanches: nunca ouvi falar
+[2018-10-03 08:10:21] Ronaldo: Ele é de Amiga, originalmente
+[2018-10-03 08:10:29] Felipe "Juca" Sanches: mas vc usou ele no Windows?
+[2018-10-03 08:10:36] Ronaldo: Sim
+[2018-10-03 08:10:47] Felipe "Juca" Sanches: to lendo sobre aqui: https://pt.wikipedia.org/wiki/Blitz_Basic
+[2018-10-03 08:10:57] Ronaldo: Uma versão feita pra Windows, mais moderna
+[2018-10-03 08:11:16] Ronaldo: Já ouviu falar num jogo chamado Lemmings?
+[2018-10-03 08:11:24] Felipe "Juca" Sanches: opa!
+[2018-10-03 08:11:41] Felipe "Juca" Sanches: joguei isso na época do MSDOS 6.22 no 386
+[2018-10-03 08:11:54] Felipe "Juca" Sanches: (e Win 3.11)
+[2018-10-03 08:11:57] Ronaldo: Se eu não me engano ele foi programado originalmente no Amiga em Blitz Basic
+[2018-10-03 08:12:07] Felipe "Juca" Sanches: Ah, que interessante!
+[2018-10-03 08:12:53] Ronaldo: É o feito mais notável do Blitz Basic, hahahaha
+[2018-10-03 08:12:55] Felipe "Juca" Sanches: Tem vestígios deixados no executável? Dá pra perceber que foi feito com esse BASIC só observando o binário?
+[2018-10-03 08:13:09] Ronaldo: Do Lemmings?
+[2018-10-03 08:13:12] Felipe "Juca" Sanches: isso
+[2018-10-03 08:13:16] Ronaldo: Eu não sei
+[2018-10-03 08:13:27] Ronaldo: Nunca cheguei a procurar
+[2018-10-03 08:13:30] Felipe "Juca" Sanches: ou a empresa afirmou: "fizemos usando tecnologia xyz..."  ?
+[2018-10-03 08:14:05] Ronaldo: Talvez os arquivos de mídia, ou talvez exista uma assinatura nos binários compilados
+[2018-10-03 08:14:35] Ronaldo: No de PC ele incorporava ao exe um runtime gigantesco
+[2018-10-03 08:14:53] Ronaldo: O de Amiga eu nunca usei
+[2018-10-03 08:16:48] Ronaldo: No de PC ele praticamente embutia um interpretador inteiro junto com o exe, só isso pra explicar o tamanho
+[2018-10-03 08:22:12] Felipe "Juca" Sanches: faz sentido
+[2018-10-03 08:22:17] Felipe "Juca" Sanches: já vi coisas similares
+[2018-10-03 08:52:53] Deleted Account: O PC-XT sobreviveu como justamente pela arquitetura aberta e "clonável".
+[2018-10-03 08:55:11] Deleted Account: Até mais aberta e expansível que o MSX. Você poderia por exemplo plugar uma placa de video CGA, EGA ou VGA. No MSX só havia um VDP padrão para cada versão.
+[2018-10-03 12:47:47] Leonardo Roman: Se foi isso mesmo foi um feito e tanto. Tenho lido o blog do programador que está desenvolvendo o lemmings pro Spectrum next, e mesmo com muitas funcionalidades que existiam no amiga, como dma e processador Copper, tem tantos desafios que acho que Basic não daria conta.
+[2018-10-03 12:48:15] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=veDGUTuUsWI
+[2018-10-03 12:48:48] Felipe "Juca" Sanches: https://gamehistory.org/aladdin-source-code/
+[2018-10-03 13:19:06] Ronaldo: Eu não lembro direito, a memória pode ter me pregado uma peça
+[2018-10-03 13:19:21] Ronaldo: O Lemmings tem muitos elementos móveis

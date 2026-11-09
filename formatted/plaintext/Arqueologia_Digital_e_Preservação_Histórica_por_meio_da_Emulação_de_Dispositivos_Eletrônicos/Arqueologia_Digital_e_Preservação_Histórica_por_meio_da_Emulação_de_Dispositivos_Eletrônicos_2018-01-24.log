@@ -1,0 +1,61 @@
+[2018-01-24 01:25:42] Affonso Amendola: Well, entao, sexta da pra mim, mas existe alguma possibilidade de ser sabado? (Se atrapalhar muito, sem problemas, rola sexta memo deboas)
+[2018-01-24 01:26:27] Felipe "Juca" Sanches: eu devo ir no sabado pra gravar um episodio do meu video blog
+[2018-01-24 01:26:35] Felipe "Juca" Sanches: https://www.youtube.com/c/HappyHackingVideoBlog
+[2018-01-24 01:26:47] Felipe "Juca" Sanches: mas a galera toda vai mesmo é na sexta
+[2018-01-24 01:27:22] Affonso Amendola: Hmmm
+[2018-01-24 01:27:36] Affonso Amendola: Se eu vazar umas 5:30 da merda?
+[2018-01-24 01:28:07] Affonso Amendola: Na sexta isso é?
+[2018-01-24 01:28:59] Affonso Amendola: Duvido que ces precisem muito de mim
+[2018-01-24 03:04:18] Affonso Amendola: Eu to brincando aqui com o emulador de xt rodando com as roms que o felipe tirou do nexus 2600, tentando descobrir o que é que deveria estar na port d550, eu achei interessante que essa é a quarta coisa que a bios faz, a primeira é mandar 0 pra A0 que desativa a non mask interrupt, depois ele manda 4 para um chip de DMA (Eu dei uma lida, isso parece desativar o controlador, segundo a datasheet do 8237A, mas eu n tenho tanta certeza), depois manda 28 para o endereço 61, que parece ser algum tipo de configuração relacionada a interfaces paralelas, logo depois disso manda 0 para o endereço D550, o que eu n faço ideia do que é
+[2018-01-24 03:05:20] Affonso Amendola: Basicamente cheguei na mesma coisa que o felipe a alguns dias e fiquei travadão aí
+[2018-01-24 03:05:35] Affonso Amendola: http://philipstorr.id.au/pcbook/book1/post.htm
+[2018-01-24 03:13:08] Affonso Amendola: Achei esse link que descreve o processo de post do xt e do pc original, eu esperava encontrar algum ponto de partida pra descobrir o que é issoae, o ibm pc xt original começa tudo fazendo uma checagem da propria integridade da bios aparentemente, e já parte pra inicializar o timer 8253, depois o PIC 8259A, o controlador de DMA, e checa a quantidade de memoria no sistema e nas expansões determinadas pelo dip switch que a placa original do pc/xt tinha
+[2018-01-24 03:14:37] Affonso Amendola: Sei la, ta tarde, vo dormir
+[2018-01-24 08:19:37] Felipe "Juca" Sanches: o DQ deu a dica aqui semana passada de que talvez a porta D550 pudesse ser a forma como o Nexus seleciona a frequencia do master clock entre 4,77 MHz ou 8 MHz
+[2018-01-24 08:20:38] Felipe "Juca" Sanches: A conversa começou aqui
+[2018-01-24 08:21:39] Felipe "Juca" Sanches: E a parte mais relevante da resposta do DQ começou aqui ^
+[2018-01-24 08:34:52] DQ: No Technical Reference tem a listagem do BIOS da IBM, dá para ver o que é igual.
+[2018-01-24 08:44:50] DQ: Em 6X o PC tem uma 8255 mas acho que o Nexus não.
+[2018-01-24 08:50:12] DQ: No Nexus o endereço 60 é o registrador de dados de uma 8251 que é usada para comunicar com o teclado. O endereço 61 deve ser um registrador de saída que simula (em parte) o Port B da 8255 do PC original. Para aplicações o que importa são os dois bits menos significativos, que controlam o alto falante. Não tenho ideia do que o valor 28 faz (fora desligar o alto falante).
+[2018-01-24 08:52:52] DQ: Para descobrir o registrador de controle / status da 8251 de comunicação com o teclado, procure uma sequência de escrita de três zeros seguido de 40. A 8251 pode acordar em qualquer estado e esta sequência a coloca em um modo conhecido.
+[2018-01-24 08:54:13] DQ: Estou tentando falar com os projetistas do hardware do Nexus e do Lepus (foi a mesma dupla), mas até agora não tive sucesso.
+[2018-01-24 09:33:51] Felipe "Juca" Sanches: Adoro esse tipo de conhecimento :-D
+[2018-01-24 09:34:04] Felipe "Juca" Sanches: ah! que legal! Tomara que consiga contactá-los.
+[2018-01-24 09:50:21] Felipe "Juca" Sanches: isso nao quebra compatibilidade de sw com o padrão ibm-pcxt ?!
+[2018-01-24 09:59:42] DQ: Em parte. Continua obtendo o scancode da tecla quando lê no endereço 60 e a interrupção de recepção de tecla é a mesma. A coisa complica quando se tenta interagir com o teclado pela porta B da 8255
+[2018-01-24 10:00:29] Felipe "Juca" Sanches: saquei
+[2018-01-24 10:01:07] Felipe "Juca" Sanches: por que raios acharam que seria util botar duas uarts (uma adicional na placa mãe e outra no teclado) ?!
+[2018-01-24 10:01:53] Felipe "Juca" Sanches: não era mais fácil fazer cópia do hw da ibm ?
+[2018-01-24 10:07:21] DQ: Mais fácil não tem graça!
+[2018-01-24 10:07:35] Felipe "Juca" Sanches: hahaha
+[2018-01-24 10:12:34] DQ: Existem vários fatores. A Scopus era uma empresa com tradição em comunicação de dados (particularmente terminais de vídeo). A IBM implementou comunicação serial na raça, usando shift register, quando já existiam componentes específicos para isto. Não estava muito claro naquele tempo o que era ser compatível. O primeiro caso específico de incompatibilidade devido ao teclado foi visto quando alguém tentou rodar um sistema operacional diferente, que se metia a ressetar o teclado. Pessoalmente eu acho que no Nexus 2660 a interface do teclado deveria ter sido mudada para o padrão da IBM. Mas isto implicaria também em mudar o teclado (e ter teclados diferentes para o 1600 e 2600).
+[2018-01-24 10:16:00] Felipe "Juca" Sanches: de fato eu notei que a ROM do teclado usado no 2600 está com uma etiqueta "1600"
+[2018-01-24 10:16:19] DQ: O espírito dos projetistas era fazer algo melhor. O processador rodando a 8MHz ao invés de 4.77. Permitir acesso pelo processador à memória de vídeo no modo texto sem causar interferência na apresentação (o que dava um ganho significativo em comparação a esperar o retraço e evitava a piscada quando rolava a tela). Suportar HD (o projeto começou antes da IBM lançar o XT).
+[2018-01-24 10:17:29] Felipe "Juca" Sanches: então o projeto começou baseado no 5150 ?
+[2018-01-24 10:20:34] DQ: Infelizmente, faltava um pouco de experiência para os projetistas e não se tinha muita ideia de como este mercado ia evoluir. A principal orientação que nós recebemos do Marketing era que tinha que suportar disquetes de 8" pois nenhuma empresa ia levar a sério os de 5 1/4"... Felizmente eles aceitaram os drives de 8" ficarem em um gabinete externo. Que eu saiba nunca foi vendido ou mesmo fabricado.
+[2018-01-24 10:21:17] Felipe "Juca" Sanches: chegou a ter protótipo dos drives de 8 polegadas?
+[2018-01-24 10:21:52] Felipe "Juca" Sanches: alguém tem isso guardado em algum porão?
+[2018-01-24 10:21:53] DQ: Sim, e o software foi escrito. Talvez ainda esteja na ROM.
+[2018-01-24 10:22:29] DQ: Duvido que ainda exista.
+[2018-01-24 10:22:40] DQ: (o hardware)
+[2018-01-24 10:22:46] Ricardo Bánffy: @fsanches eu moro meio longe... 😞
+[2018-01-24 10:22:57] Felipe "Juca" Sanches: Zoropa ?
+[2018-01-24 10:23:26] Felipe "Juca" Sanches: Murica ?
+[2018-01-24 12:57:03] Affonso Amendola: Ahhh, maneiro, entao isso significa que o endereco D550 deveria aparecer em algum lugar na rom do teclado tbem?
+[2018-01-24 12:58:15] Affonso Amendola: Ou tudo isso é feito na cpu, que intercepta (tipo o ctrl alt del), e aí ele escreveria pra essa porta?
+[2018-01-24 12:59:37] Affonso Amendola: E o que teria nessa porta que controlaria o clock? Como que isso funciona?
+[2018-01-24 13:14:17] DQ: O teclado não é envolvido nesta mudança de clock. Toda vez que uma tecla é pressionada ou solta, ele envia um código para a CPU. Este código indica no bit mais significativo se a tecla foi solta ou apertada e nos demais bits qual a tecla (o chamado "scancode"). Quando o código chega, uma interrupção é gerada (8 se lembro corretamente). Inicialmente esta interrupção é tratada pelo BIOS (mas pode ser interceptada pelo SO ou aplicações, o que confunde um pouco). O BIOS mantem o estado das teclas "modificadoras" (shift, control, alt, caps, num lock e scroll lock). Acho que coloquei aqui o trecho do BIOS da IBM que trata Ctrl Alt Del: ele detecta quando solta o Del com Ctrl e Alt apertados. Eu acho que a mudança de velocidade é algo como Ctrl Alt + e Ctrl Alt - (+  e - do bloco numérico), mas posso estar enganado.
+[2018-01-24 13:17:49] DQ: Do ponto de vista de hardware, basicamente a porta controla um MUX entre os dois sinais de clock (4.77 e 8MHz). A implementação deve ser um pouco complicada, pois os clocks não são sincronizados e precisa tomar o cuidado de não gerar acidentalmente um clock mais curto.
+[2018-01-24 13:20:10] DQ: Uma busca por "clock mux circuit" achou isto aqui: http://vlsiuniverse.blogspot.com.br/2017/03/clock-multiplexer.html
+[2018-01-24 13:22:02] Affonso Amendola: Muito obrigado pela explicaçao
+[2018-01-24 13:22:38] DQ: às ordens
+[2018-01-24 13:25:25] Affonso Amendola: Antes de sair pra poli, eu tava vendo quantas vezes, e que valores a bios manda pra essa porta aí.
+[2018-01-24 13:26:13] Affonso Amendola: Se eu n me engano( foi a uns 20 minutos mas minha memoria é horrivel), ele escreve pra essa porta umas 5 ou 6 vezes
+[2018-01-24 13:26:32] Affonso Amendola: E sempre 0, 1, 5 e 6
+[2018-01-24 13:26:34] Affonso Amendola: Algo do tipo
+[2018-01-24 13:26:42] Affonso Amendola: Chegando la eu vejo denovo e confirmo
+[2018-01-24 13:27:28] Affonso Amendola: Bate com o esperado de um switcher de clock desse tipo?
+[2018-01-24 13:29:16] Affonso Amendola: No comecinho da bios isso é, n chequei ela inteirassa
+[2018-01-24 20:31:51] Ricardo Bánffy: Sobre arqueologia digital, eu vou fazer mais algumas. https://teespring.com/anachronistic-geek-micronet800#pid=389&cid=100019&sid=front
+[2018-01-24 20:57:34] Felipe "Juca" Sanches: https://en.wikipedia.org/wiki/Micronet_800
+[2018-01-24 21:01:18] Ricardo Bánffy: "telesoftware", seja lá o que for...

@@ -1,0 +1,26 @@
+[2025-11-20 14:49:21] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/14558
+[2025-11-20 14:50:25] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-11/36437.jpg
+[2025-11-20 14:50:25] Felipe "Juca" Sanches: After a month-long side-quest dedicated to implementing the layouts for the Access Virus synths, I'm now back to the Technics KN5000 main-quest 😉
+So I've use my gained XP in crafting fine layouts to improve the KN5000 one.
+It used to be dark and ugly, focusing on being merely functional, while the external artwork provided the nice colors and the button shapes.
+[2025-11-20 14:52:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-11/36440.jpg
+[2025-11-20 14:52:21] Felipe "Juca" Sanches: For reference, here is what the external artwork looks like
+[2025-11-20 14:52:57] Felipe "Juca" Sanches: But now (via PR #14558) most of that is available in the internal layout. I think the only thing missing are the gradients because the svg renderer in MAME does not support that yet. 
+I was very careful to make smart use of hand-crafted SVG snippets for describing each kind of button shape and then reuse it across the layout, so it is not a big wall of floats, but instead a carefully optimized file. 
+It also now contains 2 views:
+[2025-11-20 14:53:16] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-11/36442.jpg
+[2025-11-20 14:53:16] Felipe "Juca" Sanches: The "compact" one
+[2025-11-20 14:53:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-11/36443.jpg
+[2025-11-20 14:53:31] Felipe "Juca" Sanches: And the "Screen close-up" one
+[2025-11-20 14:53:43] Felipe "Juca" Sanches: At some point in the future I may still add a third one, to represent the full unit (instead of this rearrangement of the panel that I made on the "compact" one to fit comfortably on a typical laptop screen).
+Similar to what I did for some other synths such as on the Ensoniq ESQ-1 layout.
+So, my next step in this project will be to resume work on emulating the serial port used for both MIDI and (more importantly at this point to unlock user interaction with the system's menus) for the control panel buttons and LEDs.
+I have some WIP at https://github.com/mamedev/mame/pull/14420 and that's what I'll try to fix next.
+[2025-11-20 14:54:18] Felipe "Juca" Sanches: Nota: Me desculpem pelas mensagens em inglês. Apenas copiei e colei do chat que rolou no servidor Discord do MAME
+[2025-11-20 15:22:45] L.: https://opensource.microsoft.com/blog/2025/11/20/preserving-code-that-shaped-generations-zork-i-ii-and-iii-go-open-source
+[2025-11-20 16:22:30] Felipe "Juca" Sanches: https://mastodon.sdf.org/@fvzappa/115574872559813280
+[2025-11-20 18:06:15] Felipe "Juca" Sanches: E hoje é aniversário do Windows. A versão 1.0 foi lançada 40 anos atrás.
+[2025-11-20 19:34:29] Pedro de Medeiros 👾: https://opensource.microsoft.com/blog/2025/11/20/preserving-code-that-shaped-generations-zork-i-ii-and-iii-go-open-source
+[2025-11-20 21:58:04] Guilherme Ranoya: tá na mão pra quem quiser recordar a experiência...
+https://www.ranoya.com/aulas/dos/windows1.html
+[2025-11-20 22:58:46] FTMaciel: https://www.cnx-software.com/2025/11/14/windows-95-made-to-run-on-esp32-s3-hardware-with-tiny386-x86-pc-emulator

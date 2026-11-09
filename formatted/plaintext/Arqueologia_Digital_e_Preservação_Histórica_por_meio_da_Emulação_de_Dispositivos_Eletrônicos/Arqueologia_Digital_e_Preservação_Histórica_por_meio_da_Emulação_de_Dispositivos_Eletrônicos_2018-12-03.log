@@ -1,0 +1,30 @@
+[2018-12-03 06:50:20] L.: Emula o jogo e vê o hardware que ele usa.
+[2018-12-03 11:47:17] Anchises: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-12/8346.jpg
+[2018-12-03 17:32:01] Deleted Account [forwarded]: Pessoal, hoje teremos o segundo encontro pra fazermos o Garoa melhor delineando o nosso código de conduta. Às 19h30! Apareçam!
+[2018-12-03 18:57:00] Felipe "Juca" Sanches: To querendo montar a PCB disso aqui, na esperança de ver funcionando...
+[2018-12-03 18:57:00] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-12/8350.jpg
+[2018-12-03 18:57:00] Felipe "Juca" Sanches [forwarded]: Depois de um dia inteiro sozinho no Garoa... Êta sabadão !!!
+[2018-12-03 18:58:01] Felipe "Juca" Sanches: Isso aí não funcionou, por motivos óbvios...
+[2018-12-03 19:06:31] Ronaldo: Gostei da protoboard com soquete, hahahaha... O que era pra ser?
+[2018-12-03 19:07:11] Felipe "Juca" Sanches: gerador de sinal de vídeo a partir da imagem armazenada na EPROM
+[2018-12-03 19:07:57] Felipe "Juca" Sanches: possivelmente viraria (no mínimo) um shield VGA pra arduino
+[2018-12-03 19:08:04] Ronaldo: Ahh
+[2018-12-03 19:08:20] Felipe "Juca" Sanches: no mínimo... por que eu tenho planos mais ambiciosos...
+[2018-12-03 19:09:02] Ronaldo: Eu tô há milênios tentando sentar pra fazer um gerador de vídeo com microcontrolador
+[2018-12-03 19:09:32] Felipe "Juca" Sanches: é... tipo isso. Mas esse aí era em hardware puro, sem MCU+firmware
+[2018-12-03 19:09:39] Ronaldo: Arrã
+[2018-12-03 19:09:54] Ronaldo: Percebi, pela quantidade de fios
+[2018-12-03 19:10:00] Felipe "Juca" Sanches: hahaha
+[2018-12-03 19:10:09] Felipe "Juca" Sanches: foram umas 4 horas de meditação
+[2018-12-03 19:10:12] Ronaldo: Com um microcontrolador ia ser mais compacto, sério
+[2018-12-03 19:10:51] Ronaldo: Tem que dividir em blocos funcionais e testar cada um em separado
+[2018-12-03 19:10:59] Felipe "Juca" Sanches: sim, eu sei
+[2018-12-03 19:11:17] Felipe "Juca" Sanches: me deu a loucura de sair fazendo naquela tarde/noite
+[2018-12-03 19:11:20] Ronaldo: Gerador de sincronismo horizontal, vertical, contador de endereços...
+[2018-12-03 19:11:28] Felipe "Juca" Sanches: mas eu to ligado que o ideal é fazer coisas menores e aos poucos
+[2018-12-03 19:12:03] Ronaldo: Eu sei como é
+[2018-12-03 19:12:37] Ronaldo: É um dos motivos pelos quais eu ainda não consegui fazer nada
+[2018-12-03 19:12:55] Ronaldo: Quero fazer tudo de uma vez, e bonito
+[2018-12-03 19:14:25] Ronaldo: Usar delays pra gerar os sinais de sincronismo? Não, usar geradores PWM encadeados, é passar dois dias tentando entender a documentação do microcontrolador.
+[2018-12-03 19:14:33] Ronaldo: E*
+[2018-12-03 19:14:57] Ronaldo: Quero fazer bonito e limpo e acabo não fazendo nada.

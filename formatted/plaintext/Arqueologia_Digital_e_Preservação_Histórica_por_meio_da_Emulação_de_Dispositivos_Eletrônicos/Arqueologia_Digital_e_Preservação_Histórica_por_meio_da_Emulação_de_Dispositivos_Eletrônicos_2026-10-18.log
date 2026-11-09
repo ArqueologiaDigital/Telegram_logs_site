@@ -1,0 +1,37 @@
+[2026-10-18 14:57:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41662.jpg
+[2026-10-18 14:57:56] Felipe "Juca" Sanches: Caralho! Achei uma solução!
+[2026-10-18 15:02:56] Felipe "Juca" Sanches: olha que coisa mais linda!
+
+Eu estou esse tempo todo tentando achar uma forma de rodar código arbitrário no teclado, e acabei de descobrir que existe um mecanismo oficial para isso!
+
+A própria Technics publicou disquetes contendo conversores de formato de dados de sons e ritmos de outros fabricantes. E esses conversores sao implementados como código executável carregável do disquete. Ou seja, na prática são programas carregados por um loader oficial presente na ROM original da Technics.
+[2026-10-18 15:34:20] Ramiro Polla: E funciona pro kn5000 também?
+[2026-10-18 15:35:14] Felipe "Juca" Sanches: creio que sim! Ainda nao testei, por que o que tenho em maos aqui é um kn7000.
+[2026-10-18 15:35:51] Felipe "Juca" Sanches: mas como o desenvolvimento está sendo feito primeiro no emulador, eu posso obviamente testar no kn5000 no MAME tambem e ver o que acontece.
+[2026-10-18 15:35:57] Felipe "Juca" Sanches: em teoria deve funcionar
+[2026-10-18 15:43:26] Felipe "Juca" Sanches: https://youtu.be/4hm7CiudQkM?is=UOYfQqjBISf-3kIs
+[2026-10-18 15:51:41] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=I-y44_P2NuA
+[2026-10-18 16:09:42] Felipe "Juca" Sanches: mas a prioridade agora é de fazer o dump das ROMs versão 1.3 que é o que está instalado aqui no meu KN7000 de verdade
+[2026-10-18 16:09:54] Felipe "Juca" Sanches: esse mecanismo abriu as portas!
+[2026-10-18 16:11:29] Felipe "Juca" Sanches: Essa luta vem de muito tempo atrás...
+[2026-10-18 16:14:07] Felipe "Juca" Sanches: Bastante tempo
+[2026-10-18 16:16:10] Felipe "Juca" Sanches: olha as ideias de 2021...
+[2026-10-18 16:17:11] Felipe "Juca" Sanches: o RicBit ajudou bastante
+[2026-10-18 16:18:31] Felipe "Juca" Sanches: A ajuda mais importante do RicBit veio nessa data aqui...
+[2026-10-18 16:19:34] Felipe "Juca" Sanches: Aqui, pra ser mais preciso. 22 de Julho de 2021.
+
+5 anos e 3 meses de trabalho... :-)
+[2026-10-18 16:24:31] Felipe "Juca" Sanches: Mas a vontade vem de bem mais tempo atrás. Tenho um backup aqui de umas mensagens que troquei com Lucas Villa Real em Julho de 2008 sobre o assunto...
+
+Ou seja, esse projeto já tem mais de 18 anos.
+Já pode beber! kkkkk
+[2026-10-18 16:42:24] Felipe "Juca" Sanches: Que bizarro! Deu nó no meu cérebro e eu escrevi vendor-sanctioned duas vezes nesse prompt quando na realidade o que eu queria ter dito era vendor-endorsed :-P
+
+E o Claude nem ligou. Captou a essencia da mensagem e seguiu adiante.
+[2026-10-18 17:22:10] RicBit: o meu projeto mais antigo é fazer o jogador perfeito de jogo da velha 5x5x5. tentando faz uns 30 anos já
+[2026-10-18 17:23:21] RicBit: por coincidencia semana passada eu quase peguei minha digilent para implementar o core do jogo da velha na fpga.
+[2026-10-18 19:25:41] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41682.jpg
+[2026-10-18 19:25:41] Felipe "Juca" Sanches: Lá vamos nós! Tá na hora de fazer dumps de ROM :-D
+[2026-10-18 19:45:26] Felipe "Juca" Sanches: Dump de ROMs, debate eleitoral e pipoca.
+[2026-10-18 19:47:06] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41684.jpg
+[2026-10-18 20:24:31] Felipe "Juca" Sanches: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41685.mp4

@@ -1,0 +1,20 @@
+[2019-09-26 04:21:00] Felipe "Juca" Sanches: Tenho uma prova de conceito funcional de emulador do Patinho Feio rodando num Arduino instalado no painel réplica. Consigo alternar modos de operação, endereçar a mamória, armazenar dados e ler o conteúdo da memória. Consigo também disparar a execução de código e, aparentemente, ele executa o hello world que imprime "PATO FEIO" na teletype. Entretanto não tenho ainda uma saída gráfica para imitar a teletype. Talvez eu use um pequeno display de caracteres para esse propósito.
+[2019-09-26 04:21:27] Felipe "Juca" Sanches: Em breve farei um vídeo disso. Mas agora vou dormir. Feliz😉
+[2019-09-26 04:22:32] Felipe "Juca" Sanches: código fonte publicado aqui: https://github.com/ArqueologiaDigital/PatinhoFeio_Arduino
+[2019-09-26 06:31:29] Lord Spy: Parabéns Juca... ainda quero ver o bixim funcionando! :)
+[2019-09-26 10:02:45] Emerson Moura: Se tem uma coisa da qual sinto falta, é o Newton... E o que mais tem me impressionado é a volta do uso das canetas stylo com tablets (e celulares). Pen computing rox-a-lot!!!
+[2019-09-26 18:00:18] Felipe "Juca" Sanches: Subi 2 PDFs novos no git:
+1973: MARIA ALICE GRIGAS VARELLA FERREIRA. "Anexo 21: Sistema Cross Montador"
+1973: MARIA ALICE GRIGAS VARELLA FERREIRA. "Anexo 22: Sistema Cross Carregador"
+
+Estes PDFs foram gerados pela própria prof. Maria Alice e entregues pra mim em pendrive. Mas ela também doou para mim os originais. Então se houver problemas no escaneamento eu posso re-escanear.
+
+Esse material descreve os sistemas que a prof. Maria Alice desenvolveu no computador IBM-1130 para gerar código objeto para o Patinho Feio
+
+https://github.com/ArqueologiaDigital/PatinhoFeio/commit/671887efd405c7a81bd61cd55ddf3077306c648b
+[2019-09-26 18:07:01] Felipe "Juca" Sanches: Ela também doou para mim alguns outros materiais relacionados, mas que ainda não foram digitalizados. Entre eles está o volume 2 da publicação de artigos do IV semiinário sobre desenvolvimento integrado de software e hardware, de 1977, da Universidade Federal de Minas Gerais.
+
+Nesse volume, destaco:
+* um artigo da prof. Maria Alice sobre o computador G10 com o título "FORTRAN ESTRUTURADO PARA O COMPUTADOR G-10"
+* um artigo de João José Neto, Moshe Bain, Charlie Lin e Sebastião Santiago Barreto com o título "O Patinho Feio como RJE do Borroughs 6700"
+[2019-09-26 18:07:30] Felipe "Juca" Sanches: Nota: Sebastião Barreto é nosso amigo, que frequenta o Garoa nos dias de hoje 😊

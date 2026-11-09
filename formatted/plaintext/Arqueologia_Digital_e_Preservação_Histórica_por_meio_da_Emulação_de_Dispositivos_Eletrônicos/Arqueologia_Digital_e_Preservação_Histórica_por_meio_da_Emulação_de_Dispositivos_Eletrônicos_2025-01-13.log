@@ -1,0 +1,14 @@
+[2025-01-13 13:58:42] Felipe "Juca" Sanches: Eu tinha um plano bem complicado em mente para fazer o dump da ROM de boot da subcpu do kn5000 fazendo um patch tanto na flash da maincpu quanto do payload executável que é transferido para a RAM da subcpu e, em seguida, fazer a subcpu dumpar sua própria mask ROM, transferi-la para a maincpu que então a gravaria na porta paralela da placa de extensão opcional de disco rígido, a partir de onde um Arduino a enviaria pro meu laptop via USB-serial.
+Só que ontem bem tarde da madrugada, enquanto eu finalmente estava desvendando o memory map e o entrypoint da subcpu, eu tive a ideia de fazer a subcpu enviar o dump diretamente pro meu laptop por meio de uma porta RS-422 que está disponível neste conector na parte traseira do aparelho:
+[2025-01-13 13:58:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-01/33824.jpg
+[2025-01-13 13:59:17] Felipe "Juca" Sanches: Originalmente eu tinha negligenciado essa "interface de computador" exatamente porque ela é programada via subcpu, e tudo o que eu sabia até então era como programar a maincpu
+[2025-01-13 14:01:54] Felipe "Juca" Sanches: Hoje de manhã encomendei um conversor RS-232/RS-422 e uns plugues din-8 macho tipo H
+[2025-01-13 14:02:24] Felipe "Juca" Sanches: Ao longo dessa semana vou montar um cabo, escrever uns patches e tentar fazer esse trojan-dump
+[2025-01-13 14:36:41] Felipe "Juca" Sanches: Eu também esbocei uma interrupt vector table falsa e aloquei o payload da subcpu direto no endereço em que ela é carregada (pro sistema já começar com o código prá-carregado em ROM, ao invés de depender da carga inicial para a RAM)
+[2025-01-13 14:37:05] Felipe "Juca" Sanches: o lance é que essa carga inicial para a RAM acontece usando uma feature chamada "microdma" que não está emulada ainda no core de TLCS900 do MAME
+[2025-01-13 14:37:40] Felipe "Juca" Sanches: com isso, a subcpu agora tá rodando o código de payload, mas ainda não é o suficiente
+[2025-01-13 14:38:11] Felipe "Juca" Sanches: a conversa entre as CPUs também parece depender de microdma,  então não tem jeito, vou ter que implementar mesmo
+[2025-01-13 14:38:48] Felipe "Juca" Sanches: (bom,cedo ou tarde eu teria que implementar microdma,  eu apenas estava tentando pegar uns atalhos pra me dar mais insights sobre o firmware das CPUs)
+[2025-01-13 14:39:11] Felipe "Juca" Sanches: e, de fato,  aprendi algumas coisas com esses experimentos que já vão ajudar a dar mais alguns passos
+[2025-01-13 14:39:22] Felipe "Juca" Sanches: sempre digo que é igual jogo de sudoku
+[2025-01-13 14:39:37] Felipe "Juca" Sanches: aos poucos o jogo vai abrindo...

@@ -1,0 +1,49 @@
+[2023-10-21 09:03:38] * José Antonio Lozano joined the group
+[2023-10-21 11:15:10] Flávio Amieiro: Não sei se já passou por aqui: https://www.701c.org/
+[2023-10-21 13:09:19] * Deleted Account joined the group
+[2023-10-21 16:42:42] Shideravan: https://www.youtube.com/watch?v=GC_jLsxZ7nw
+[2023-10-21 16:44:22] Shideravan: Muito legal isso, porque na época, eles tinham que criar múltiplos modelos para usar em distâncias diferentes por causa do poly count
+[2023-10-21 16:47:58] Shideravan: Com uns truquezinhos você pode pular as partes mais pesadas do processo e aumentar muito a quantidade de polígonos em tela o que já não tornaria necessário, por exemplo, ter que usar modelos mais simples, além de poder exibir muito mais elementos em tela etc etc etc
+[2023-10-21 16:51:10] Shideravan: Minha dúvida para os especialistas em Nintendo 64 do grupo: certamente a Nintendo, a Silicon Graphics e a NEC conheciam todos esses detalhes e (espera-se) forneciam documentação para os estúdios a respeito de otimizações nos jogos. Por que isso parece ser ignorado nos jogos da época?
+[2023-10-21 17:23:17] L.: http://www.ultrafp64.com/
+[2023-10-21 17:23:24] L.: N64 em fpga!
+[2023-10-21 17:40:16] Robson França: Boa pergunta
+[2023-10-21 18:01:51] L.: Jogo 3D não era tão comum na época, vou suspeitar que muita gente tava aprendendo isso
+[2023-10-21 18:21:25] Shideravan: Isso é um ótimo ponto
+[2023-10-21 18:22:16] Shideravan: Inclusive, essa é a justificativa para o modelo padrão do Mario 64 parecer mais quadrado do que o do Mario 64 DS, mas na verdade ele ter MAIS polígonos kkkkkkkkkkkkkkkk
+[2023-10-21 18:23:21] L.: O Mario 64 foi o primeiro jogo feito pro N64 né?
+[2023-10-21 18:23:38] Shideravan: Sim
+[2023-10-21 18:23:54] Shideravan: Mas ele não foi rushado não
+[2023-10-21 18:24:18] Shideravan: Eles puderam trabalhar com traquilidade nele, até porque o console atrasou e tals
+[2023-10-21 18:24:22] L.: O jogo foi compilado com -O0 e símbolo de debug, acho que tinham mais problemas que otimização de coisa 3D🙃
+[2023-10-21 18:26:25] Shideravan: Na versão retail?
+[2023-10-21 18:26:39] L.: Eu não sei, mas lembro de ter visto algo assim
+[2023-10-21 18:26:44] Shideravan: Eles lançaram sem otimização em tempo de compilação?
+[2023-10-21 18:27:08] L.: A ROM é pequena na versão retail, então talvez não tenha símbolo de debug, só compilado sem otimização mesmo
+[2023-10-21 18:27:51] Shideravan: Acho que o fato da rom ser pequena tem mais a ver com outras coisas, como não haver tantos modelos assim no jogo e as texturas serem simples
+[2023-10-21 18:28:09] Shideravan: Ele é pequeno por ser pequeno mesmo hahaha
+[2023-10-21 18:28:47] L.: https://www.resetera.com/threads/so-apparently-the-ntsc-build-of-mario-64-didnt-use-any-compiler-optimizations.166277/
+[2023-10-21 18:30:27] Shideravan: Compara com um Zelda Majora's Mask por exemplo
+[2023-10-21 18:30:52] Shideravan: Maaano kkkkkkk
+[2023-10-21 18:31:21] Shideravan: Eu achava que a compilação final desses jogos era uma coisa até meio ritualística na época
+[2023-10-21 18:31:51] L.: Eu trabalhei na MS né
+[2023-10-21 18:31:56] L.: No time do .net
+[2023-10-21 18:32:32] L.: As histórias que ouvi de gente copiando .dll de CD retail por que era mais fácil que compilar eles mesmos pra produto novo
+[2023-10-21 18:32:59] L.: Vários produtos eram tipo "compila.bat" com um monte de xcopy
+[2023-10-21 18:33:42] L.: Eu me acostumei demais com software livre🙃
+[2023-10-21 18:35:06] Shideravan: Pior que eu vejo esse tipo de coisa acontecendo em aplicações para PC na época kkkk
+[2023-10-21 18:36:23] Shideravan: Mas no caso, gravar um cartucho era um processo caro e geralmente não era viável de se reverter
+[2023-10-21 18:36:34] Shideravan: Imagina nas primeiras levas de jogos?
+[2023-10-21 18:36:40] L.: Prensar CD também!
+[2023-10-21 18:36:58] L.: Mas deve ter algo também tipo "testou, funcionou, shipou"
+[2023-10-21 18:37:20] L.: Do tipo não valer o risco de compilar com otimização e quebrar algo
+[2023-10-21 18:37:27] Shideravan: Aí eles pegam o jogo mais importante da vida do console e fazem de qualqeur jeito?
+[2023-10-21 18:37:37] Shideravan: Se tiver problema, não dá para corrigir depois
+[2023-10-21 18:37:58] Shideravan: Esse é um bom ponto!
+[2023-10-21 18:38:32] Shideravan: Eu aceito melhor a hipótese de ter sido proposital do que ter sido um acidente
+[2023-10-21 18:39:09] Shideravan: Mas no link que você mandou diz que isso aconteceu só na versão NTSC. Na europeia, corrigiram isso
+[2023-10-21 18:39:28] Shideravan: Ai eu to incrédulo kkkkkkk
+[2023-10-21 18:39:30] L.: Talvez por que veio depois e aí tiveram mais tempo pra testar?
+[2023-10-21 21:25:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28490.jpg
+[2023-10-21 21:26:00] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28491.jpg
+[2023-10-21 21:30:36] RicBit: Até hoje é assim! A maioria é automatizado mas para modelos chaves o mipmap é feito na unha.

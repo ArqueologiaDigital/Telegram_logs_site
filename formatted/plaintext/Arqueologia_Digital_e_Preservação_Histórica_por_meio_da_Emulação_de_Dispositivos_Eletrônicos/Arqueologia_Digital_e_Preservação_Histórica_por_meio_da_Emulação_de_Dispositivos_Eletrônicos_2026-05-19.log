@@ -1,0 +1,41 @@
+[2026-05-19 05:31:07] Felipe "Juca" Sanches: Estou descobrindo um monte de coisa legal sobre o Itautec I-7000. Ele tem um BASIC com suporte nativo a comunicação serial. Ele tem também um arquivos de overlay (.OVL) que funcionam como um "engine" de aplicação bancária
+[2026-05-19 05:32:17] Felipe "Juca" Sanches: Estou agora escrevendo um terminal bancário em BASIC que conversa no protocolo que esses overlays implementam. E estou fazendo um mainframe em python para simular uma consulta de saldo e transferência bancária
+[2026-05-19 05:33:02] Felipe "Juca" Sanches: o protocolo serial é o original do disco do SIM/M, a aplicação escrita em BASIC é inventada
+[2026-05-19 06:18:37] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38781.jpg
+[2026-05-19 07:27:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38782.jpg
+[2026-05-19 08:00:32] Ismael Carvalho: ih! eu achei que tinha mandado aqui, tinha aberto o PR pra a implementação de som pros brick games que usam o holtek 1130 como base lá no mame:
+https://github.com/mamedev/mame/pull/15350
+[2026-05-19 08:17:26] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38784-ht1130_lfsr_proposal.cpp
+[2026-05-19 08:17:26] Felipe "Juca" Sanches: O Claude fez uma análise. Eu bati o olho e parece razoável, mas vou deixar de lição de casa pra você ler e avaliar e me contar o que acha. Segue em anexo.
+[2026-05-19 08:26:32] Ismael Carvalho: Vou revisar depois por causa do trampo, eles fi
+[2026-05-19 08:27:54] Ismael Carvalho: eles fizeram* comentários lá sobre a implementação de som estar dentro do cpu também, problema que o ht1130 tem mesmo essa parte de som, eu ia dar uma olhada pra ver se eu só não tinha entendido o que eles queriam dizer
+[2026-05-19 08:29:52] Felipe "Juca" Sanches: acho que você não precisa dar muita bola pro MoogyGuy, não.
+[2026-05-19 08:30:13] Felipe "Juca" Sanches: foca no LFSR por enquanto e vamos ver no que dá
+[2026-05-19 09:05:39] Felipe "Juca" Sanches: Alguém sabe dizer se tinha alguma forma de fazer o Itautec I-7000 exibir cores? Que eu saiba o monitor era um CRT de fósforo monocromático. Mas será que tinha alguma saída de vídeo secundária com suporte a cores?
+[2026-05-19 09:06:28] Felipe "Juca" Sanches: Pergunto isso por que tem um cartucho emulador de VT52 que tem umas rotinas de seleção de cores (escritas em português: "Modo Colorido")
+[2026-05-19 09:07:03] Felipe "Juca" Sanches: Fica a dúvida se é só software portado de outras máquinas que suportavam cores. Ou se o próprio I7000 poderia dar conta de exibir cores de alguma forma
+[2026-05-19 09:18:45] Pablo Vasques Bravo-Villalba: Na Wikipédia (é, eu sei) diz que tinha um cartão de vídeo que dava suporte às resoluções de 640x200 monocromática (presumivelmente gráfica) ou 320x200 com 16 cores. É de se imaginar que talvez usasse alguma coisa baseada no CRTC da Motorola (MC6845), como era relativamente comum na época.
+[2026-05-19 09:19:46] Felipe "Juca" Sanches: Me lembro vagamente de ter visto um chip MC6845 na placa-mãe. Mas já faz uns 10 anos... eu precisaria olhar de novo. A placa tá em SP...
+[2026-05-19 09:20:20] Pablo Vasques Bravo-Villalba: Você não tirou fotos da placa? 😅 Imagino que o esquema que você estava fazendo esteja incompleto,  né?
+[2026-05-19 09:20:49] Felipe "Juca" Sanches: E pra achar essas fotos?! kkkkk
+[2026-05-19 09:20:59] Felipe "Juca" Sanches: sim, incompleto
+[2026-05-19 09:36:35] Pablo Vasques Bravo-Villalba: Bom, vi aqui umas fotos das PCBs do I-7000 Júnior E e do I-7010 que estão no Datasette. Ambos usam o MC6845P
+[2026-05-19 12:51:34] Felipe "Juca" Sanches: boa!
+[2026-05-19 12:58:35] RicBit: agente corno preguiçoso do inferno
+[2026-05-19 12:58:58] RicBit: pedi para ele fazer um mapa de tiles no ys3, igual ao do goonies e do psycho world.
+[2026-05-19 12:59:26] RicBit: ele fez rapidinho, mas ai eu fui olhar o codigo e ele chamava o openmsx e tirava screenshot
+[2026-05-19 13:00:12] RicBit: antes de dormir eu explicitamente disse que não podia usar o openmsx, tinha que usar o codigo do jogo para extrair os tiles
+[2026-05-19 13:00:49] RicBit: aí quando eu acordei o corno preguiçoso tinha feito um emulador do zero só para não ter que entender o source
+[2026-05-19 13:02:29] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38804.jpg
+[2026-05-19 13:11:07] Guilherme Ranoya: eles estão ficando espertos né?...
+[2026-05-19 13:26:34] RicBit: a maior parte do meu harness é para impedir o agente de fazer bobagem.
+[2026-05-19 16:03:36] Hugo (Agaelebê): https://virtualosmuseum.org/
+[2026-05-19 17:11:14] Felipe "Juca" Sanches: Aqui as mensagens iniciais e as fotos de quando comprei meu Itautec I-7000-G...
+[2026-05-19 19:12:50] Lord Spy: Amanhã, às 22h, no canal da Gamegesis, entrevistaremos o jornalista e idealizador do Indie Brasilis, Kao Tokio, sobre a campanha "Aposta não é Jogo!".
+Ajude-nos divulgando em sua rede!
+
+Abraços... e joguemos!
+
+
+www.youtube.com/gamegesis
+[2026-05-19 22:16:07] L.: Vim aqui postar isso hehe

@@ -1,0 +1,29 @@
+[2018-02-02 02:39:03] Affonso Amendola: Hey guys, cuidadosamente eu tirei aquelas romzinha tbp28l22n da placa mãe do nexus e fiz um leitorzinho com um arduino que o juca tinha me emprestado (Thanks!), segue os dumps das roms e o código que eu usei, eu não sei muito o que eu esperava em termos de conteúdo delas, entao pra mim parece meio estranho, vejam aí, e chequem o código, pq se eu fiz uma cagada que passou despercebida e alterou o dump inteiro, eu conserto e refaço
+[2018-02-02 02:39:27] Affonso Amendola: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-02/3949-EPROM-Pr4.u19
+[2018-02-02 02:39:28] Affonso Amendola: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-02/3950-CsScopPr2.u98
+[2018-02-02 02:39:28] Affonso Amendola: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-02/3951-CsIBMPr1.u99
+[2018-02-02 02:39:28] Affonso Amendola: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-02/3952-RamV03Pr3.u82
+[2018-02-02 02:39:59] Affonso Amendola: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-02/3953-leitoraRoms.ino
+[2018-02-02 02:40:43] Affonso Amendola: Eu vou dormir, pq eu to morrendo ja
+[2018-02-02 03:13:24] Felipe "Juca" Sanches: a-ha!
+[2018-02-02 03:13:28] Felipe "Juca" Sanches: muito bm!
+[2018-02-02 03:13:59] Felipe "Juca" Sanches: sobe no git um repo com o seu código de arduino que fez esse dump aí (e bota uma licença de software livre, é óbvio!)
+[2018-02-02 03:14:47] Felipe "Juca" Sanches: sugiro "GNU GPL v3 or later", mas fica ao seu critério
+[2018-02-02 03:15:16] Felipe "Juca" Sanches: pode ser "dedicado ao domínio público" também e tá valendo :-D
+[2018-02-02 03:19:10] Felipe "Juca" Sanches: não vejo necessidade para o delay de 10 segundos na função setup
+[2018-02-02 03:19:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-02/3961.jpg
+[2018-02-02 03:20:14] Felipe "Juca" Sanches: eu teria sido "espertinho" e aproveitado o loop de 8 passos pra inicializar tanto os pinos de address quanto os de data
+[2018-02-02 03:20:38] Felipe "Juca" Sanches: E também não vejo necessidade de inicializar em LOW todos os pinos de endereçamento
+[2018-02-02 03:24:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-02/3965.jpg
+[2018-02-02 03:25:32] Felipe "Juca" Sanches: Essa função bitRead não tá definida em lugar nenhum. Tem certeza que você mandou o código mais atualizado?
+[2018-02-02 03:25:52] Felipe "Juca" Sanches: do jeito que tá suspeito que não deveria nem compilar
+[2018-02-02 03:26:29] Felipe "Juca" Sanches: ooops!!!
+[2018-02-02 03:26:32] Felipe "Juca" Sanches: legal
+[2018-02-02 03:26:36] Felipe "Juca" Sanches: essa eu nao conhecia
+[2018-02-02 03:26:44] Felipe "Juca" Sanches: https://www.arduino.cc/reference/en/language/functions/bits-and-bytes/bitread/
+[2018-02-02 03:26:55] Felipe "Juca" Sanches: parece que tá certinho então
+[2018-02-02 03:27:42] Felipe "Juca" Sanches: mas é meio inútil (e talvez perigoso)
+[2018-02-02 03:28:32] Felipe "Juca" Sanches: bitRead(data, i) é equivalente a data & (1 << i )
+[2018-02-02 03:28:55] Felipe "Juca" Sanches: bitRead provavelmente só tá disponível na biblioteca do arduino
+[2018-02-02 03:29:19] Felipe "Juca" Sanches: data & (1 << i) funciona em qualquer lugar que você possa programar em linguagem C
+[2018-02-02 03:30:01] Felipe "Juca" Sanches: e possivelmente em outros lugares onde você possa escrever uma expressão equivalente em outra linguagem de programação. É importante conhecer os conceitos. A linguagem a gente adapta.

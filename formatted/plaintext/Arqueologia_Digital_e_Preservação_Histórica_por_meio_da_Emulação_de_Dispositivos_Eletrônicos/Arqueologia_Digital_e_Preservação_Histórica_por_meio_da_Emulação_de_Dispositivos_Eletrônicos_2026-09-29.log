@@ -1,0 +1,101 @@
+[2026-09-29 00:40:06] Shideravan: Brabíssmo @lrrosa
+[2026-09-29 01:37:20] Shideravan: @fsanches o cuavas não fez o feature freeze para o novo ciclo de release?
+[2026-09-29 01:37:39] Shideravan: Xiii isso parece sinal que vai adiar mesmo 🫠
+[2026-09-29 02:04:26] Shideravan: https://forums.bannister.org/ubbthreads.php?ubb=showflat&Number=125601
+[2026-09-29 02:06:13] * Felipe "Juca" Sanches pinned a message
+[2026-09-29 12:40:15] Felipe "Juca" Sanches: Eu so vejo na foto um cristal de 3.579545
+
+Mas 10.738635 dividido por 3 da exatamente 3.579545
+
+Alguma coisa no circuito multiplica a frequencia do cristal por 3?
+Eu to mais acostumado a ver circuito de divisao de frequencia...
+[2026-09-29 14:09:09] Leonardo Roman: Sim, tem algo assim na placa. Eu pedi a explicação pro chatgpt e ele me disse que basicamente é isso: O ponto principal é: o cristal de 3,579545 MHz que aparece na placa não precisa ser o clock aplicado diretamente ao TMS9128. Ele funciona como referência NTSC. O TMS9128 foi projetado para trabalhar com um master clock de aproximadamente 10,738635 MHz. A documentação da família TMS9918A/9928A/9128 especifica essa frequência e explica que internamente ela é dividida por 2 para o pixel clock e por 3 para produzir um clock de ~3,58 MHz.
+E existe, sim, um “multiplicador” na placa
+Não é um multiplicador digital simples ×3. É um PLL sintetizador de frequência formado principalmente por:
+- MC4044P — detector de fase/frequência;
+- MC4024P — oscilador controlado por tensão, VCO;
+- 74LS191 ×2 — divisores programáveis;
+- 4066 — chaveamento entre os modos interno e externo.
+O MC4024 é justamente um VCO adequado a PLLs, e a documentação da Motorola mostra a combinação MC4044 + MC4024 sendo usada como sintetizador de frequência.
+[2026-09-29 14:15:49] Leonardo Roman: Inclusive ele encontrou uma evidência fortíssima de que o VET é uma implementação do titulador divulgado na página 65 dessa Radio Electronics de 1985: https://datassette.org/pt-br/revistas/eletronica/us-estados-unidos/radio-electronics/radio-electronics-1985-12
+[2026-09-29 14:39:27] Leonardo Roman: Qualquer coincidência não é mera semelhança: https://youtu.be/CXMPhwOAQ1A?t=661
+[2026-09-29 18:18:30] RicBit: deu trabalho mas consegui congelar a sintaxe da namagiri, agora pelo menos o source do msxzin eu consigo subir.
+[2026-09-29 20:08:23] Shideravan: @macabeus um grupo nada a ver com TI que eu faço parte estava repercutindo o seu 12 axis political quiz. Você está em todas hahaha
+[2026-09-29 20:08:42] Shideravan: Pessoa famosa é assim
+[2026-09-29 20:11:57] Macabeus: Eu nao criei o teste kek
+[2026-09-29 20:12:11] Shideravan: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40878-fui-tapeado-fui-enganado.mp4
+[2026-09-29 20:12:11] Macabeus: Eu só vi no Twitter e compartilhei num grupo
+[2026-09-29 20:12:48] Macabeus: Porque você achou que eu havia criado? 😵‍💫
+[2026-09-29 20:13:04] Shideravan: Porque estava seu perfil no link kkkkkkkkkkk
+[2026-09-29 20:13:27] Shideravan: Foi tipo "pera, é o Macabeus do decomp do Klonoa de GBA" hahaha
+[2026-09-29 20:13:52] Shideravan: Até comentei com o pessoal para dar uma lida nos seus artigos no medium que eu acho muito interessantes hahaha
+[2026-09-29 20:13:59] Shideravan: Sobre recomp usando Claude
+[2026-09-29 20:14:16] Macabeus: Obrigado ~~
+[2026-09-29 20:14:26] Macabeus: ah, mas eu mexo com *decomp*, nao *recomp*
+[2026-09-29 20:14:32] Macabeus: sim, os termos são confusos
+[2026-09-29 20:14:45] Macabeus: Algum dia ainda vou escrever sobre a  diferença, pois muita gente confunde
+[2026-09-29 20:15:21] Shideravan: Eu escrevi errado, dscp
+[2026-09-29 20:16:06] Shideravan: Mas é que hoje em dia já estão usando os termos como sinônimos, inclusive, misturando com o conceito de ports também
+[2026-09-29 20:17:11] Shideravan: E recriações
+[2026-09-29 20:18:30] Shideravan: Acho que o que faz falta é um termo guarda-chuva
+[2026-09-29 20:19:57] Shideravan: Já que muitas pessoas leigas estão consumindo os resultados disso e inevitavelmente não irão ter esse cuidado de não misturar
+[2026-09-29 20:20:03] Shideravan: Tipo aquele projeto de Pokémon em Lua, que é uma recriação usando Löve2D, mas todo mundo chama de "recomp"
+[2026-09-29 20:20:32] Macabeus: yeah, e como isso é um fenomeno relativamente recente, ainda não está estabilizado
+[2026-09-29 20:21:22] Shideravan: Inevitavelmente vai surgir um termo guarda-chuva para tudo, movido por pessoas mais leigas e até agora tudo caminha para ser "recomp" hahaha
+[2026-09-29 20:22:19] Macabeus: e o pior é que “recomp” fica ambíguo se é “recompilação estática” ou “recompilação dinamica"
+[2026-09-29 20:22:20] Macabeus: argh
+[2026-09-29 20:22:40] Shideravan: Mas usam para coisas que nem recompilação são kkkkkkk
+[2026-09-29 20:23:32] Macabeus: algum tempo atrás o Modern Vintage Gamer fez um vídeo falando sobre esses termos, pois num vídeo anterior ele havia usado os termos de forma errada
+[2026-09-29 20:23:54] Shideravan: Verdade, alias o vídeo dele é bem legal
+[2026-09-29 20:23:59] Shideravan: Várias pessoas já trataram disso
+[2026-09-29 20:24:40] Shideravan: Mas não adianta, as pessoas não vão olhar no detalhe, só vão querer usar o resultado do projeto e faz parte também
+[2026-09-29 20:25:23] Shideravan: 99% das pessoas que usam emuladores não sabem a diferença entre HLE e LLE
+[2026-09-29 20:26:07] Shideravan: Eu já perdi tempo falando com amigos sobre conceitos de precisão de ciclos para elas acabarem só escolhendo emuladores que achavam a interface mais bonitinha hahaha
+[2026-09-29 20:26:39] Macabeus: kek
+[2026-09-29 20:26:55] Macabeus: é que isso também só importa meeesmo para speed runners
+[2026-09-29 20:27:17] Shideravan: Ou para os malucos como nós que nos importamos com a preservação do comportamento do hardware
+[2026-09-29 20:27:52] Shideravan: Para quem quer só matar a saudade do Super Mario World da infância, nem fazem questão dessa precisão toda, só de ligar e jogar hahaha
+[2026-09-29 20:28:02] Macabeus: yep
+[2026-09-29 20:28:09] Shideravan: E tá tudo bem
+[2026-09-29 20:28:20] Shideravan: Mas em linguística, os termos que pegam são os que mais pessoas usam
+[2026-09-29 20:29:06] Shideravan: Tem uns projetos bem legais para pessoas leigas terem acesso fácil a muitos projetos de decomp, ports, recriações, etc como o Quiver Launcher
+[2026-09-29 20:29:58] Shideravan: É legal porque enquanto a gente tem vários projetos espalhados no github, esse tipo de projeto que faz uma curadoria e disponibiliza, ajuda a mais pessoas conhecerem e popularizar os trabalhos
+[2026-09-29 20:30:55] Shideravan: Mas para o usuário que clica e baixa, fica transparente qual a natureza daquilo que ela está instalando. É só um "olha, posso jogar Klonoa em widescreen, 4k, 144 FPS e suporte fácil a mods"
+[2026-09-29 20:31:17] Macabeus: oh, não conhecia o Quiver Launcher
+[2026-09-29 20:31:56] Shideravan: É bem legal, né?
+[2026-09-29 20:32:08] Shideravan: https://github.com/tgeorgiadis/quiver-launcher/
+[2026-09-29 20:32:54] Shideravan: Ele é na verdade um fork com muitas melhorias de um projeto que está parado, chamado Github Launcher
+[2026-09-29 20:33:34] Shideravan: O Quiver Launcher só coloca projetos open source e já atualiza facilmente para cada novo release que soltam nos projetos
+[2026-09-29 20:33:44] Shideravan: É bastante útil
+[2026-09-29 20:35:20] Shideravan: Eu já recomendei o kl-eod-decomp lá, mas eles precisam checar um a um os projetos, para assegurar a qualidade deles antes de incluir na listagem
+[2026-09-29 20:36:17] Shideravan: Eles dão os créditos certinho e permitem você visitar os repositórios dos projetos pela própria ferramenta
+[2026-09-29 20:36:43] Macabeus: ah, o kl-eod-decomp está meio abandonado
+[2026-09-29 20:36:44] Shideravan: É mais um jeito de ter tudo em um só lugar e facilitar o gerenciamento
+[2026-09-29 20:36:53] Macabeus: pois outra pessoa começou a fazer decomp do mesmo jogo, usando como inspiração meu projeto
+[2026-09-29 20:36:55] Macabeus: mas sem IA kek
+[2026-09-29 20:37:06] Macabeus: e ele acabou avançando bem rápido, pois gasto muito tempo com tooling e outras coisas
+[2026-09-29 20:37:16] Macabeus: https://github.com/testyourmine/kleod
+[2026-09-29 20:37:31] Shideravan: Ahhh que maneiro, não sabia disso
+[2026-09-29 20:37:36] Macabeus: o dele está 99% completo
+[2026-09-29 20:37:37] Shideravan: Vou conferir o projeto
+[2026-09-29 20:37:42] Macabeus: falta exatamente 1 função
+[2026-09-29 20:41:39] Hugo (Agaelebê): Lol
+[2026-09-29 20:41:51] Shideravan: Quando ele estiver completo vale a pena recomendar para incluir ele também
+[2026-09-29 20:43:21] Shideravan: Quando surgiram os primeiros projetos de decompilação de Mario 64 houve toda uma discussão sobre legalidade e tal e até se evitava mostrar vídeos de gameplay no youtube, porque muita gente ficava com medo de ser considerado ilegal, ainda que nenhum projeto disponibilize os assets
+[2026-09-29 20:44:10] Shideravan: Mas acho que chegamos num nível que já se tornaram parte da cultura de retrogaming e é algo que veio para ficar e só tende a crescer mais e mais
+[2026-09-29 20:45:08] Shideravan: Porque é inegável a quantidade infinita de possibilidades que tudo isso propicia
+[2026-09-29 20:46:40] Macabeus: yeah, ouvi falarem que o decomp do SM64 era “secreto” e demorou até divulgarem
+[2026-09-29 20:46:48] Macabeus: só quando estava mais perto do final que liberaram
+[2026-09-29 20:46:59] Macabeus: alguns vídeos do youtube levaram takedown, tho
+[2026-09-29 20:47:00] Shideravan: Esse ano tem explodido a quantidade de projetos, muitos deles se beneficiando de ferramentas de IA
+[2026-09-29 20:47:50] Shideravan: Ai corta para 2026 com canais como Video Game Esoterica basicamente falando quase exclusivamente disso kkkkkkkkkkkkk
+[2026-09-29 21:03:05] RicBit: done, src do msxzin no github: https://github.com/ricbit/msxzin
+[2026-09-29 21:03:30] RicBit: eu recomendo scroll até o final para ver a versao com syntax highlight, ler cru é meio ruim
+[2026-09-29 21:03:51] RicBit: tambem nao garanto que é legivel, foi otimizado para tamanho, nao para leitura
+[2026-09-29 21:06:38] Shideravan: Eu nunca esperaria legibilidade em algo assim hahaha
+[2026-09-29 21:07:29] Shideravan: Mas caramba, legal demais
+[2026-09-29 21:07:53] Shideravan: O projeto inteiro (sem incluir o debbuger) em menos de 4 mil linhas
+[2026-09-29 21:11:33] RicBit: a complexidade está escondida em namagiri, que tem 20 mil linhas
+[2026-09-29 21:11:53] RicBit: tinha 40 mil linhas semana passada, caiu metade quando eu fui limpando a sintaxe
+[2026-09-29 21:12:35] Shideravan: A namagiri é uma divindade bastante dinâmica hahaha
+[2026-09-29 22:50:29] Felipe "Juca" Sanches: https://forum.vcfed.org/index.php?threads/the-upd765-microcode.1259162/

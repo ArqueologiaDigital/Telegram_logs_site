@@ -1,0 +1,20 @@
+[2018-04-10 17:10:21] Affonso Amendola: Breve coisinha daora que eu consegui fazer
+[2018-04-10 17:10:29] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-04/4331.jpg
+[2018-04-10 17:10:42] Affonso Amendola: Sempre quis ver zork rodando num monitor de fosforo verde
+[2018-04-10 17:10:52] Affonso Amendola: Ta ai uma coisa riscada da minha listinha
+[2018-04-10 17:11:31] Affonso Amendola: Foi muito mais dificil do que eu esperava fazer essa desgrama rodar no nexus 2600
+[2018-04-10 19:53:48] Felipe "Juca" Sanches: quer contar pra gente os detalhes dessa aventura? Quais foram as dificuldades? É assunto suficiente para uma postagem no Fiozera?
+[2018-04-10 23:49:05] Affonso Amendola: Entao, eu testei varias versoes
+[2018-04-10 23:49:53] Affonso Amendola: Eu queria pegar uma imagem de disco original, gravar em um 5 1/4, botar la e rodar
+[2018-04-10 23:50:58] Affonso Amendola: Mas eu n consegui achar em nenhum lugar uma imagem que parecesse boa pra isso, a melhor que eu achei era um .dsk que eu n conseguia de jeito nenhum transferir pro disquete
+[2018-04-10 23:51:11] Affonso Amendola: Entao eu baixei tudo solto memo, só os arquivos
+[2018-04-10 23:52:05] Affonso Amendola: Algumas versoes rodaram, mas com uns artefatos no texto, eu tiro uma foto e mando
+[2018-04-10 23:52:29] Felipe "Juca" Sanches: e alguma versão chegou a rolar 100% ?
+[2018-04-10 23:52:44] Affonso Amendola: Sim, mas eu considero meio hack
+[2018-04-10 23:53:01] Affonso Amendola: Pq foi uma versao de zork rodando pelo frotz
+[2018-04-10 23:53:46] Affonso Amendola: Entao TECNICAMENTE n é o jogo original, pq ta rodando por um interpretador
+[2018-04-10 23:53:52] Affonso Amendola: Eu acho
+[2018-04-10 23:54:10] Affonso Amendola: Mas mesmo rodando pelo frotz teve umas peculiaridades
+[2018-04-10 23:54:37] Affonso Amendola: No modo Mono e Text de graficos o jogo se recusava a carregar o arquivo de dados
+[2018-04-10 23:54:44] Affonso Amendola: Falava que n encontrava, ou algo do tipo
+[2018-04-10 23:55:00] Affonso Amendola: Mas no modo CGA, rodava suavão

@@ -1,0 +1,86 @@
+[2021-07-22 13:26:56] Erin Pinheiro 🐿: se alguém tiver amigos perto de Houston https://mobile.twitter.com/timjclevenger/status/1418209993690697728
+[2021-07-22 15:53:51] FTMaciel: Que tristeza. Queria um DEC
+[2021-07-22 15:54:04] FTMaciel: Tem uma DECnet global funcionando
+[2021-07-22 15:57:46] Felipe "Juca" Sanches: isso aí não tem cara de museu. Tem mais cara é de estoque. Tudo sujo, largado. Quem operava esse espaço aí ou não dava o devido amor aos equipamentos ou não tinha braço suficiente para fazê-lo.
+[2021-07-22 16:02:00] Erin Pinheiro 🐿: tá
+[2021-07-22 16:39:11] RicBit: um monte de aptiva, nem de peso de papel serve haha
+[2021-07-22 16:39:18] RicBit: mas aquele osciloscopio redondo é massa
+[2021-07-22 16:39:28] RicBit: se tivesse umas sun sparc eu pegava
+[2021-07-22 16:41:11] Felipe "Juca" Sanches: RicBit, eu tenho um arquivo de dados em que consigo ver pedaços de strings conhecidas, mas incompletas. Deve ter algum esquema de compressão dos dados. Você poderia dar uma olhadinha pra ver se é algum esquema de compressão que você já conheça?
+[2021-07-22 16:41:45] RicBit: manda, vejo já
+[2021-07-22 16:42:31] Felipe "Juca" Sanches: ok. Vou tirar uma foto aqui da tela do equipamento e também te enviar o arquivo e mais uns screenshots do hexdump onde achei os pedaços das strings. Já te mando já já, tô juntando as coisas aqui
+[2021-07-22 16:43:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13573.jpg
+[2021-07-22 16:45:32] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13574.jpg
+[2021-07-22 16:45:48] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13575-Kn5kv10.img
+[2021-07-22 17:21:12] RicBit: Certeza que é lz77, só precisa entender o encoding
+[2021-07-22 17:24:49] RicBit: Oi então é um lz78 e isso é a árvore com o dicionário
+[2021-07-22 17:27:42] RicBit: Acho que é lz78 mesmo, são tokens seguidos de terminadores
+[2021-07-22 17:28:32] RicBit: Tem pouca ram esse device? Esse método é bom quando você tem muita ROM mas pouca ram.
+[2021-07-22 18:19:27] L.: Tenho umas no Brasil, se quiser são suas
+[2021-07-22 18:19:49] L.: Mas precisa levar com o monitor CRT😂
+[2021-07-22 18:20:00] RicBit: Aaah
+[2021-07-22 18:20:06] RicBit: Não funciona em pvm?
+[2021-07-22 18:20:52] L.: Esses tem de monte no Craigslist, eBay, etc. Era especialmente comum quando morava em Hillsboro, OR, por que é perto de Beaverton, a sede da Tektronix. Sempre tinha coisa sendo vendida por lá
+[2021-07-22 18:21:15] L.: São ultrasparc, mas eu quero liberar o espaço né.
+[2021-07-22 18:21:30] L.: Deve funcionar em VGA normal se adaptar a pinagem
+[2021-07-22 18:21:44] L.: Acho que tem 2 javastation, e umas 4 ultrastation
+[2021-07-22 18:21:53] RicBit: Perguntei aqui e a Ila liberou \o/
+[2021-07-22 18:22:01] L.: E uns discos SCSI externos
+[2021-07-22 18:22:18] L.: Legal! Espero que ela lembre ano que vem quando (e se) eu for pro Brasil 😂
+[2021-07-22 18:22:30] RicBit: Eu lembro
+[2021-07-22 18:22:35] L.: 😂
+[2021-07-22 18:25:37] Felipe "Juca" Sanches: esse arquivo .img é o arquivo de instalação do sistema. Deve estar comprimido pra caber no disquete de 1.44MB
+[2021-07-22 18:26:06] RicBit: Uai
+[2021-07-22 18:26:17] Felipe "Juca" Sanches: pode explicar isso em mais detalhes? Eu não conheço nada sobre esse assunto
+[2021-07-22 18:26:33] RicBit: Se for pra instalação tem metodos melhores.
+[2021-07-22 18:26:53] Felipe "Juca" Sanches: Teria algum cabeçalho que eu precisaria procurar pra usar como ponto de partida pra tentar descomprimir?
+[2021-07-22 18:27:10] L.: Cabeçalho só se for alguma implementação específica e conhecida
+[2021-07-22 18:27:37] L.: Você pode implementar a compressão e bolar teu cabeçalho (ou nem mesmo ter algo, já que você pode fazer hardcode de tudo por exemplo)
+[2021-07-22 18:27:37] RicBit: Lz78 é compressão baseada em dicionário, você atribui um código de bits com comprimento inversamente proporcional à probabilidade.
+[2021-07-22 18:27:43] Felipe "Juca" Sanches: eu acho que o algoritmo de leitura desses dados está na ROM de boot do aparelho
+[2021-07-22 18:27:58] RicBit: Eu sei que é isso por que tem substrings separadas
+[2021-07-22 18:28:21] L.: @fsanches Assiste esses vídeos: https://www.youtube.com/watch?v=Eb7rzMxHyOk&list=PLOU2XLYxmsIJGErt5rrCqaSGTMyyqNt2H
+[2021-07-22 18:28:29] L.: É um curso de compressão feito por uma galera do Google
+[2021-07-22 18:29:10] RicBit: Tipo ao invés de OVERALL tem OVER token porque o token AL já apareceu antes em INITIAL
+[2021-07-22 18:29:20] RicBit: então fez um token só pro AL
+[2021-07-22 18:30:08] RicBit: W token PAPER
+[2021-07-22 18:30:52] RicBit: Se fosse lz77 teria um ponteiro pra trás apontando pra string repetida
+[2021-07-22 18:31:07] Felipe "Juca" Sanches: interessante...
+[2021-07-22 18:31:09] RicBit: Mas aqui parece que é uma árvore mesmo
+[2021-07-22 18:31:57] Felipe "Juca" Sanches: mas pra eu descomprimir isso eu precisaria achar o ponto de partida, né? O offset inicial dos dados. Que pode muito bem ser o byte zero do arquivo img. Mas talvez não seja
+[2021-07-22 18:32:27] RicBit: O lz77 precisa de uma sliding window guardando os últimos 32kb para os ponteiros terem para onde apontar, então a máquina precisa de pelo menos 32kb só pra isso
+[2021-07-22 18:32:48] RicBit: Com pouca ram é melhor o lz78 que só precisa do dicionário e ele pode ficar em ROM
+[2021-07-22 18:33:20] RicBit: Ah sim a implantação desse lz78 parece ad hoc.
+[2021-07-22 18:33:32] RicBit: Duvido que seja uma lib
+[2021-07-22 18:33:59] RicBit: Se fosse lib ele não iria guardar em ascii e jogar fora um bit por letra
+[2021-07-22 18:50:52] Felipe "Juca" Sanches: bom... estou tentando compreender isso aqui. A sequencia de bytes
+
+46 ef 4f 4f 54 20 ae c4 4c 45 52
+parece corresponder ao texto "FOOT CONTROLLER".
+
+"F" ef "OOT " ae c4 "LER"
+
+o byte ef eu não sei dizer por que está alí.
+já o par de bytes ae c4 parece ser usado para de alguma forma dizer que alí entra um dado que já apareceu antes, a string "CONTROL" (que foi usada também no título dessa tela: "CONTROL MENU")
+
+No caso de "CONTROL MENU" vejo um pouco antes no arquivo os seguintes bytes:
+ed 61 c0 ae 40 4f f5 d0 4f 4c 20 5f 4d 45 4e 55 00
+
+que seriam:
+ed 61 c0 ae 40 4f f5 d0 "OL " 5f "MENU"  00
+
+não sei quantos desses primeiros bytes são realmente parte da codificação do uso da string "CONTR" ali antes de "OL".
+
+E o 5f também não faz sentido pra mim ali logo antes de "MENU"
+[2021-07-22 18:56:11] RicBit: eu acho que o ef é um terminador
+[2021-07-22 18:56:26] RicBit: tem um token F, um token OOT, um token LER
+[2021-07-22 18:56:49] RicBit: e em algum outro canto tem o lugar onde usam os tokens. Esse aí o lugar onde definem os tokens.
+[2021-07-22 18:58:27] Felipe "Juca" Sanches: o que você faria para tentar descomprimir na marra esses dados?
+[2021-07-22 19:04:03] RicBit: ta emulado já ou ainda nao? se estiver eu colocaria um watchpoint nesse addr e veria o que o codigo está escrevendo
+[2021-07-22 19:09:20] Felipe "Juca" Sanches: Ainda não. A intenção é descomprimir esse arquivo de instalacao do sistema pra poder com isso observar código daí e conseguir mais insights sobre o hardware. Tenho em mãos o service manual do aparelho. E até tenho as ROMs dessoldadas de uma placa mãe de outro aparelho igual a esse, mas não tive muito sucesso em fazer dump delas.
+[2021-07-22 19:10:03] RicBit: eu imagino que nao dá pra instalar toda hora entao, tem que ser um metodo só de leitura?
+[2021-07-22 19:10:28] Felipe "Juca" Sanches: não entendi essa mensagem
+[2021-07-22 19:10:55] RicBit: tipo voce troca um terminador por 00 e instala de novo para ver o que acontece
+[2021-07-22 19:12:08] Felipe "Juca" Sanches: é... esse tipo de coisa parece arriscado de fazer... mas talvez seja impossível de brickar, pois a rotina de boot vem da ROM, então acho que sempre tem como rodar de novo com os dados não corrompidos pra reestabelecer o sistema
+[2021-07-22 19:12:22] Felipe "Juca" Sanches: mas tenho um pouco de medo de já ir de uma vez só pra essa abordagem mais agressiva
+[2021-07-22 20:10:45] FTMaciel: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13629-mp4.mp4

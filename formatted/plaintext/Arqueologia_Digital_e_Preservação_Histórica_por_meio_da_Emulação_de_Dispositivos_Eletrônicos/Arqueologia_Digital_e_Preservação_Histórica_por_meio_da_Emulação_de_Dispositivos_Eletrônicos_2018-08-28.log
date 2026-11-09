@@ -1,0 +1,52 @@
+[2018-08-28 13:37:03] Felipe "Juca" Sanches: https://www.nytimes.com/2018/08/28/science/plastics-preservation-getty.html
+[2018-08-28 13:37:53] Felipe "Juca" Sanches: Não é relacionado a preservação de software ou de eletrônica, mas tem uma certa relação, se pensarmos no que vai acontecer com as carcaças plásticas dos computadores e video-games...
+[2018-08-28 13:38:48] Felipe "Juca" Sanches: Por conta disso que eu tenho interesse em escaneamento 3D das carcaças de equipamentos, como discutido aqui: https://github.com/mamedev/mame/issues/388
+[2018-08-28 15:15:22] Affonso Amendola: To 100% junto da ideia de preservar o 3d
+[2018-08-28 15:15:34] Affonso Amendola: A construcao fisica do objeto
+[2018-08-28 15:15:47] Affonso Amendola: Até das entranhas
+[2018-08-28 15:16:17] Affonso Amendola: E mais um objeto daora do museu
+[2018-08-28 15:16:18] Felipe "Juca" Sanches: exato! Ao ponto de algum maluco no futuro ser capaz de refazer um molde
+[2018-08-28 15:16:29] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7457.jpg
+[2018-08-28 15:16:35] Affonso Amendola: Me sinto um Bond da vida
+[2018-08-28 15:37:35] Ronaldo: Nem me fala... Os computadores da Silicon Graphics são fragilíssimos hoje em dia
+[2018-08-28 15:37:46] Ronaldo: Quebram só de olhar torto
+[2018-08-28 15:38:08] Ronaldo: Eu tenho uns com problema por conta disso.
+[2018-08-28 15:38:46] Emerson Moura: Aqui em casa tem uma porção de Macs PPC que não tem como remontar por conta dos gabinetes em ABS que esfarelaram.
+[2018-08-28 15:38:59] Ronaldo: Nossa
+[2018-08-28 15:39:25] Emerson Moura: Alguns razoavelmente clássicos: Powermac 6100 e 8100.
+[2018-08-28 15:40:41] Ronaldo: Eu tenho um Performa 6400, espero que o plástico não seja frágil
+[2018-08-28 15:42:52] Emerson Moura: Mesma geração de ABS de péssima qualidade. Praticamente tudo que foi fabricado de 91 até o surgimento dos iMacs (que substituiu quase todo o ABS por policarbonato) são uma porcaria. Ressecam e começam a esfarelar.
+[2018-08-28 15:43:26] Ronaldo: Ihhh
+[2018-08-28 15:43:36] Alexandre Villares: Duas perguntas: um amigo disse que o pai tem um MSX em bom estado pra se desfazer. Tem mercado especial pra isso?
+[2018-08-28 15:43:47] Alexandre Villares: Ou é mercado livre essas bagaças?
+[2018-08-28 15:43:52] Ronaldo: Tem duas opções
+[2018-08-28 15:44:08] Ronaldo: ML, onde geralmente se cobra mais caro que vale
+[2018-08-28 15:44:38] Ronaldo: Listas especializadas de MSX, onde o pessoal vai pechinchar mais
+[2018-08-28 15:44:56] Ronaldo: Aqui no próprio Telegram tem uma lista de MSX
+[2018-08-28 15:45:12] Ronaldo: Também tem uns grupos de venda no Facebook
+[2018-08-28 15:45:31] Alexandre Villares: Legal! Obrigado, Ronaldo.
+[2018-08-28 15:46:57] Emerson Moura: Se for nacional, loose (sem caixa, no estado), vale de 100 a 200 golpes.
+[2018-08-28 15:47:37] Alexandre Villares: A outra pergunta é sobre como arrumar uma impressora matricial barata pra tentar reproduzir umas proto-ascii-art
+[2018-08-28 15:47:39] Emerson Moura: Se for nacional, completinho, testado, com caixa, isopores, cabos, manuais, pode valer mais de 500 fácil.
+[2018-08-28 15:48:06] Alexandre Villares: Parece que está em ótimo estado...
+[2018-08-28 15:48:48] Emerson Moura: Perfeitão tem que "pida" mais de 1000.
+[2018-08-28 15:49:40] Alexandre Villares: Pida?
+[2018-08-28 15:50:00] Emerson Moura: peça
+[2018-08-28 15:51:05] Alexandre Villares: Valeu Emerson
+[2018-08-28 15:51:09] Emerson Moura: Perfeitão tem quem peça mais de 1000 reais.
+[2018-08-28 15:51:44] Emerson Moura: Mas como eu disse, pra isso, precisa tem caixa, isopores, manuais, cabos, estar em perfeitas condições.
+[2018-08-28 15:51:59] Alexandre Villares: Entendi, vou passar pra ele
+[2018-08-28 16:29:32] Felipe "Juca" Sanches: Eu tenho umas matriciais paradas aqui em casa. Quer fazer algum projeto com elas?
+[2018-08-28 16:31:07] Felipe "Juca" Sanches: Eu tenho um amigo que fez um projeto muito legal com uma dessas que eu tenho: http://blog.arrozcru.org/?p=38
+[2018-08-28 16:32:47] Alexandre Villares: Sim!
+[2018-08-28 16:32:47] Alexandre Villares: Legal
+[2018-08-28 17:11:48] Felipe "Juca" Sanches [forwarded]: Viu isso? Recriaram o amiga 1200 com fotos da placa https://hackaday.com/2018/08/28/recreating-the-amiga-1200-pcb-from-pictures/
+[2018-08-28 17:12:31] * Felipe "Juca" Sanches added L.
+[2018-08-28 17:21:41] Ronaldo: A placa só tem duas camadas?
+[2018-08-28 17:26:38] L.: Muitas placas dessa época tinham. Mas mesmo que tenha duas camadas internas como ground plane, e um vcc plane, dá pra inferir pelas ligações
+[2018-08-28 17:27:05] L.: Software de desenho de PCB tipo o Kicad faz isso sozinho inclusive
+[2018-08-28 17:34:41] Ronaldo: Hmm, não sabia
+[2018-08-28 17:52:25] Aylons Hazzud: Até os anos 80, praticamente tudo tinha só duas camadas. Multilayer com trilha no meio só começa a ficar mais comum nos anos 90, com o advento do SMD
+[2018-08-28 17:53:38] Aylons Hazzud: E ainda teve um bom período somente com planos nas layers internas, sem trilha.
+[2018-08-28 17:54:37] Aylons Hazzud: Tem a ver com software também. É muito caro, complicado e arriscado fazer multilayer sem CAD
+[2018-08-28 18:20:37] Ronaldo: Sim

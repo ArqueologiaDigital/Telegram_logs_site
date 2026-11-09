@@ -1,0 +1,16 @@
+[2023-07-25 02:19:00] L.: https://fxtwitter.com/ShriramKMurthi/status/1672713972951179264
+[2023-07-25 16:08:15] L.: https://sarahkmarr.com/retrohp1973.html
+[2023-07-25 16:36:11] Pedro de Medeiros 👾: https://msx.org/forum/msx-talk/general-discussion/making-a-die-shot-based-scc-core
+[2023-07-25 16:49:23] L.: Uia. Decappar o S-1990 seria interessante
+[2023-07-25 16:52:40] Pablo Vasques Bravo-Villalba: Mais detalhes aqui
+https://twitter.com/RCAVictorCo/status/1683831415643963403?s=20
+[2023-07-25 16:56:50] Pedro de Medeiros 👾: Plantei a ideia lá
+[2023-07-25 16:58:14] L.: Com preço de microcontrolador hoje em dia, se pá rola até fazer uns negócios em cartuchos bem mais capazes que o SCC
+[2023-07-25 16:59:23] Pablo Vasques Bravo-Villalba: Ah, com certeza, aliás essa é a parte fácil. Reproduzir as idiossincrasias do SCC é que seria desafiante. Não tem nenhuma implementação de SCC que seja 100% fiel, e olha que o meu ouvido nem é dos melhores
+[2023-07-25 16:59:41] L.: Se bem que coisas tipo https://github.com/dwhinham/mt32-pi existem e são bem decentes
+[2023-07-25 17:00:20] Pablo Vasques Bravo-Villalba: Eu acho que essa é a melhor saída para coisas mais complexas, pelo menos por enquanto
+[2023-07-25 17:01:03] L.: Pois é. Sendo MIDI é usável em praticamente qualquer coisa né
+[2023-07-25 17:01:12] Pablo Vasques Bravo-Villalba: Poizé, e MIDI é um nível relativamente alto
+[2023-07-25 17:01:30] Pablo Vasques Bravo-Villalba: Contanto que a saída do outro lado seja suficientemente próxima, não importa muito como funciona do lado de dentro
+[2023-07-25 17:02:20] Pablo Vasques Bravo-Villalba: Agora, coisas como esses chips de MSX costumam não ter implementações perfeitas nem em software nem em hardware. E ainda tem coisas como S1990, ainda um tanto misteriosas
+[2023-07-25 18:13:24] Shideravan: No lo créo 😂

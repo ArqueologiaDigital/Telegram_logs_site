@@ -1,0 +1,269 @@
+[2022-05-03 00:00:12] Shideravan: Eu achei engraçado ele ter ficado "puto" contigo hahahaha
+[2022-05-03 00:01:26] Shideravan: Numa situação dessas era para o cara ter achado ótimo, tem um caminho ali que pode render mais performance que você deve ter descoberto e é justamente uma coisa que ele tava fissurado em perseguir ao ponto de abrir mão até de precisão
+[2022-05-03 00:02:46] Shideravan: Eu teria achado ótimo alguém ter conseguido espremer um pouco de água da pedra ali, ainda mais se for algo que pudesse ser adaptado hahahaha
+[2022-05-03 00:08:57] RicBit: Acho que foi em 98 ou 99, teria que ir no bkp para ver
+[2022-05-03 00:09:23] Shideravan: Nessa época a comunidade de emulação era bem diferente de hoje em dia, né?
+[2022-05-03 00:09:45] RicBit: eu não sei, não escrevo emulador hoje!
+[2022-05-03 00:10:02] Shideravan: Tenho a impressão que nessa época não era tão viva essa cultura de compartilhar conhecimento
+[2022-05-03 00:10:19] Shideravan: Quando eu vejo a "guerra" da emulação de SNES a impressão que me passa é essa
+[2022-05-03 00:10:32] RicBit: era pega pra capar e um contra o outro
+[2022-05-03 00:10:35] Shideravan: Mas eu não vivi essa época também
+[2022-05-03 00:10:49] Shideravan: Minha desconfiança era real então kkkkk
+[2022-05-03 00:11:26] Shideravan: Se tiver acesso a esse email antigo, compartilha com a gente, isso é documentação histórica!
+[2022-05-03 00:11:47] RicBit: tenho, tá nos bkps, só preciso achar alguma coisa que leia o formato do bkp
+[2022-05-03 00:11:56] RicBit: deve ser facil em python, deixa ver
+[2022-05-03 00:19:09] RicBit: nope, o bkp local que eu tenho aqui é 2000 em diante
+[2022-05-03 00:19:20] RicBit: teria que caçar cd antigo de bkp
+[2022-05-03 00:22:11] RicBit: achei log de mirc, log de icq
+[2022-05-03 00:31:29] Shideravan: Ahh sem problemas, se vc achar traz aqui depois, adoro essas coisas hahaha
+[2022-05-03 00:31:48] Shideravan: Como se chamava seu emulador @RicBit ?
+[2022-05-03 00:31:51] Pedro de Medeiros 👾: Não é uma distro Linux, mas um derivado de FreeBSD. Os desenvolvedores do Spine até dizem que trabalhar com ele é meio como trabalhar com uma camada de compatilibização, como o Wine.
+[2022-05-03 00:32:19] Shideravan: Comparação interessante
+[2022-05-03 00:32:35] Shideravan: Mesmo assim, imagino que isso demanda emulação em algum nível
+[2022-05-03 00:32:56] Felipe "Juca" Sanches: essa comparação com o Wine foi uma das primeiras coisas que pensei quando começou aqui no grupo essa conversa sobre emulação de sistemas baseados em x86
+[2022-05-03 00:33:13] Shideravan: O hardware do PS4 é um tanto quanto específico em alguns pontos
+[2022-05-03 00:34:05] Shideravan: Por exemplo, eu acho bem interessante a solução de usar a VRAM como RAM no sistema, foi uma solução elegante para trazer uma memória rápida e farta (para a época) sem onerar tanto o projeto final
+[2022-05-03 00:34:55] Pedro de Medeiros 👾: O motivo de ser exclusivo em uma plataforma é por ser software fechado e seu desenvolvedor chefe preferir desenvolver nela. Só isso.
+[2022-05-03 00:34:56] Shideravan: 8 GDD5 bateu como uma bomba no lançamento
+[2022-05-03 00:35:35] Felipe "Juca" Sanches: BINGO!
+[2022-05-03 00:35:40] Felipe "Juca" Sanches: É isso aí mesmo
+[2022-05-03 00:36:02] Shideravan: Poootz política bem zoada então
+[2022-05-03 00:36:08] RicBit: EITA
+[2022-05-03 00:36:11] Shideravan: Preservação manda abraços nisso aí
+[2022-05-03 00:36:16] RicBit: achei o texto da unicomp no bkp
+[2022-05-03 00:36:24] RicBit: estava procurando isso há anos
+[2022-05-03 00:36:27] Felipe "Juca" Sanches: kkkk
+[2022-05-03 00:36:32] Felipe "Juca" Sanches: o que é a unicomp?
+[2022-05-03 00:36:34] Shideravan: Enquanto isso tá um monte de gente tentando fazer emulador de PS4 e quebrando a cara hahaha
+[2022-05-03 00:37:03] Shideravan: Monte de gente tentando reinventar a roda 😜
+[2022-05-03 00:37:10] Felipe "Juca" Sanches: o nome disso é "nerd se divertindo e cagando pro resto"
+[2022-05-03 00:37:32] Shideravan: Tem uns aí que não sei se se "divertiram" tanto assim
+[2022-05-03 00:37:50] Shideravan: Saíram achando que perderam tempo demais sem conseguir resultado
+[2022-05-03 00:38:08] Shideravan: Mas tem alguns sim
+[2022-05-03 00:38:56] Shideravan: Teve uma mina que conseguiu um  feito, tipo sei lá, exibir uma tela e enterrou o projeto dela "minha intenção era essa mesmo de conseguir esse feito, consegui, tchau, tenho uma filha para cuidar" huahuahuahua
+[2022-05-03 00:39:08] Pedro de Medeiros 👾: Diz ele também que vai se tornar foss no futuro quando estiver mais maduro.
+[2022-05-03 00:39:25] Shideravan: Pelo menos isso então
+[2022-05-03 00:39:43] Felipe "Juca" Sanches: me refiro ao desenvolvedor que quer manter o código do emulador em segredo "para não diluir o desenvolvimento em um grupo grande de programadores" (li isso em uma das matérias sobre esse Spine)
+[2022-05-03 00:39:44] Shideravan: Se abrir, a portabilidade vem
+[2022-05-03 00:40:10] Shideravan: Cara, mas conhecimento não se "dilui"
+[2022-05-03 00:40:18] Shideravan: O cara pode ter argumentos bons para isso
+[2022-05-03 00:40:31] Shideravan: Sei lá, poder trabalhar no ritmo dele sem muita gente enchendo o saco, por exemplo
+[2022-05-03 00:40:50] Shideravan: Mas isso de "diluir" é uma desculpa fajuta
+[2022-05-03 00:41:06] Felipe "Juca" Sanches: sim, claro. Deve ser um nerdão semi-genial mas com dificuldade de interação social
+[2022-05-03 00:43:32] RicBit: Ei-lo ! O texto original da unicomp ! -> https://ricbitpermanente.blogspot.com/2022/05/unicomp.html
+[2022-05-03 00:49:24] Felipe "Juca" Sanches: Otocomputorrinocomputolaringocomputologia
+[2022-05-03 00:58:18] RicBit: é genial isso
+[2022-05-03 01:00:10] Felipe "Juca" Sanches: Esses Setubal e Stolfi foram professores seus lá na Poli? Ou foram colegas de curso?
+[2022-05-03 01:00:45] Felipe "Juca" Sanches: qual o contexto da criação desse texto?
+[2022-05-03 01:10:04] RicBit: acho que eles eram professores de computacao na unicamp
+[2022-05-03 01:10:31] RicBit: o texto rodava na esquina das listas, que foi o primeiro servidor de mailing list no brasil
+[2022-05-03 01:10:53] Shideravan: Super normal. Aí o cara pode justificar assim: "eu trabalho mais rápido desse jeito". A comunidade vai entender numa boa... 💁
+[2022-05-03 01:11:46] Shideravan: Bem, o importante é que ele tem intenção de depois liberar o código então pelo menos isso 😊
+[2022-05-03 09:05:16] Anne Isabelle: O protótipo do PlayStation https://youtu.be/ug-CyGXMabg
+[2022-05-03 09:15:52] Pedro de Medeiros 👾: Talvez seja um tipo de reação contra a comunidade tóxica de emulação que já fez bullying e assédio até causar suicídio.
+[2022-05-03 13:02:30] Thaís Blue Bunnies: Pesado
+[2022-05-03 13:02:53] Thaís Blue Bunnies: Não sei se é isso não, o contexto é muito diferente
+[2022-05-03 13:03:32] Thaís Blue Bunnies: Sdds byuu 😭
+[2022-05-03 14:25:11] Erin Pinheiro 🐿: o caso do Near não tem nada a ver com a comunidade de emulação. RetroArch até fez uma homenagem. quem levou Near ao suicídio foi o fórum de fascistas KiwiFarms.
+[2022-05-03 14:26:13] Erin Pinheiro 🐿: é um buraco BEM mais em baixo.
+[2022-05-03 14:27:05] Erin Pinheiro 🐿: Near foi assediado por pessoas que caçoam das comunidades furry e LGBT.
+[2022-05-03 14:28:10] Erin Pinheiro 🐿: e quando a gente fala que esse tipo de opressão é coisa séria riem da nossa cara e viram as costas fingindo que foi outra coisa que aconteceu.
+[2022-05-03 14:59:25] Pedro de Medeiros 👾: Não quero que fique a impressão de que eu faço pouco caso de bullying e assédio de pessoas LGBTQIA+ como se estivesse comparando com bullying e assédio de pessoas não-LGBTQIA+. Dito isso, se eu desenvolver software que me torne famoso de alguma forma, eu iria querer me resguardar de assédio diminuindo minha superfície de contato com redes sociais (para diminuir a chance de escavarem coisas a meu respeito que poderiam ser usadas contra mim, bem como o feedback da parte tóxica da comunidade) ou talvez fazendo contribuições mais controladas para evitar me tornar famoso em certos nichos em primeiro lugar (daí talvez uma abordagem adotada pelo desenvolvedor).
+
+Isso seria uma estratégia a partir de lição aprendida a respeito de bullying de forma geral, porque somos todos alvos de bullying e assédio em potencial. Mas isso sou eu dizendo o que eu faria.
+[2022-05-03 14:59:37] Eduardo Loos: https://www.youtube.com/watch?v=tzFyz1BOb_E
+[2022-05-03 15:00:43] Erin Pinheiro 🐿: DADT funcionou bem nas forças armadas dos estados unidos. Só que não
+[2022-05-03 15:01:16] P. M: pois é
+[2022-05-03 15:01:51] Erin Pinheiro 🐿: Fama ou falta de não vai mudar porra nenhuma, cara. Near era uma das pessoas em círculos de emulação que tinha o melhor opsec, não tinha conta pública assim como você conta.
+[2022-05-03 15:02:20] Erin Pinheiro 🐿: Você tá culpando o grupo errado
+[2022-05-03 15:02:29] Erin Pinheiro 🐿: e pior: culpando as vítimas também
+[2022-05-03 15:02:34] P. M: Na verdade, não é como se vc pudesse se proteger passivamente dessas coisas "se expondo menos"
+[2022-05-03 15:02:35] Pedro de Medeiros 👾: OK, confesso que não pesquisei muito o assunto.
+[2022-05-03 15:02:55] Pedro de Medeiros 👾: E peço desculpas por isso.
+[2022-05-03 15:23:38] * Pedro de Medeiros 👾 joined the group
+[2022-05-03 15:23:50] Pedro de Medeiros 👾: Pessoal, peço desculpas pela falta de conhecimento sobre o caso da Near. Mas estou disposto a aprender.
+[2022-05-03 15:24:27] Shideravan: Isso mesmo. Cara, isso foi muito muito triste
+[2022-05-03 15:24:37] Pedro de Medeiros 👾: Tenho a impressão de que tinha sido banido porque eu não conseguia mais encontrar o canal pra entrar.
+[2022-05-03 15:25:44] Felipe "Juca" Sanches: eu não te bani. E vendo no log do grupo também acho que ninguém te baniu. Consta apenas "Pedro saiu" e depois "Pedro entrou"
+[2022-05-03 15:26:10] Shideravan: Erin falou tudo
+[2022-05-03 15:26:23] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20012.jpg
+[2022-05-03 15:26:25] Shideravan: Cara, eu conheci Near
+[2022-05-03 15:26:30] Pedro de Medeiros 👾: Bom, deve ser loucura da internet temporariamente.
+[2022-05-03 15:26:34] Shideravan: Foi uma pessoa incrível
+[2022-05-03 15:26:53] Shideravan: E um dos melhores desenvolvedores que a cena já teve, em todo sentido
+[2022-05-03 15:26:57] Erin Pinheiro 🐿: e N.B. eu nem sabia que tinha admin nesse grupo
+[2022-05-03 15:27:10] Felipe "Juca" Sanches: kkkk
+[2022-05-03 15:27:26] Shideravan: É uma perda imensurável
+[2022-05-03 15:27:33] Shideravan: Por causa de uma covardia absurda
+[2022-05-03 15:27:36] Felipe "Juca" Sanches: sim, @mynameiserin, eu te dei direito de admin muitos meses atrás, por admiração
+[2022-05-03 15:27:49] Shideravan: O cara foi basicamente assassinado
+[2022-05-03 15:28:32] Erin Pinheiro 🐿: o que me irrita mais é que eu não sei de onde veio essa de que o bullying veio da comunidade de emulação, onde todos adoravam Near. acho que é scapegoating que surgiu de dentro do kiwifarms mesmo
+[2022-05-03 15:28:34] Pedro de Medeiros 👾: Só pra que fique claro, eu não quis dizer "o que eu faria se eu fosse a Near", eu quis dizer "o que eu faria se eu ficasse famoso".
+[2022-05-03 15:28:35] Felipe "Juca" Sanches: na dúvida eu diria "a pessoa"
+[2022-05-03 15:28:45] Shideravan: Sim
+[2022-05-03 15:28:53] Erin Pinheiro 🐿: isso, Near usava pronomes neutros
+[2022-05-03 15:29:02] Erin Pinheiro 🐿: o que é um problema no português
+[2022-05-03 15:29:14] Pablo Vasques Bravo-Villalba: História muito triste. E muita gente sabe do que aconteceu só por alto. Eu me incluo nesse grupo. Faz a gente pensar no que poderia ter feito para ajudar a evitar que coisas assim acontecessem
+[2022-05-03 15:29:50] Shideravan: Na verdade... Tinha dentro da cena uma certa "inveja" do trabalho dele também (mas isso é normal, tem muita gente estrelinha) e também o lead lá do RetroArch foi muito cescroto com o Near de graça
+[2022-05-03 15:30:02] Shideravan: Tirando isso, ele era muito amado na cena
+[2022-05-03 15:30:16] Shideravan: O pessoal escroto mesmo não era um pessoal relacionado
+[2022-05-03 15:30:27] Shideravan: Mesmo o RetroArch se beneficiava do Near vivo
+[2022-05-03 15:30:44] Felipe "Juca" Sanches: eu fiquei sabendo da notícia no próprio dia, por meio do Discord do Mamedev. Na verdade as pessoas nem tinham certeza ainda do que tinha acontecido e tava todo mundo esperando mais notícias naquele dia
+[2022-05-03 15:30:54] Shideravan: Sim
+[2022-05-03 15:30:59] Shideravan: Cara, foi chocante
+[2022-05-03 15:31:11] Shideravan: Sobre pronomes
+[2022-05-03 15:31:25] Erin Pinheiro 🐿: eu não sei dessa história, só sei que retroarch fez uma homenagem, por isso achava que essa questão não tinha baseamento
+[2022-05-03 15:31:28] Pablo Vasques Bravo-Villalba: Pode ser, mas sabe como a imprensa, mesmo a especializada, noticia as coisas de forma incompleta e às vezes enviesada? A gente fica sem a visão completa da coisa.
+[2022-05-03 15:31:33] Shideravan: No início, bem no início, o Near ainda se incomodava com pronomes
+[2022-05-03 15:32:31] Shideravan: Mas a certa altura, ele percebeu que para ele, isso era o de menos. Repeitava claro o direito das pessoas que optam por um pronome, mas não era o caso dele, ele dizia que tinha outras frentes que ele preferia lutar, como o caso do assédio na internet e tal que eram mais caros para ele
+[2022-05-03 15:33:25] Shideravan: Então para ele, tanto faz usar ele, ela, pronome neutro ou nenhum pronome
+[2022-05-03 15:34:12] Erin Pinheiro 🐿: eu não conheci near pessoalmente, só vi outros usando pronomes neutros, então me baseei nisso, mas entendo
+[2022-05-03 15:34:15] Shideravan: Acima de tudo, ele se declarava como não-binário. É o bastante.
+[2022-05-03 15:34:28] Shideravan: Pessoalmente eu também não, mas troquei muita ideia com ele na internet
+[2022-05-03 15:34:33] Shideravan: Era uma pessoa fantástica
+[2022-05-03 15:34:46] Shideravan: Na cena de emulação tem muita estrelinha
+[2022-05-03 15:34:56] Shideravan: Ele era uma pessoa humilde e muito generosa
+[2022-05-03 15:35:09] Shideravan: Aprendi muito com ele
+[2022-05-03 15:36:14] Felipe "Juca" Sanches: olha, eu preciso concordar que minha esperiência de convívio com a turma do mamedev é meio traumática. Tem muita gente tosca/escrota.
+[2022-05-03 15:36:17] Pedro de Medeiros 👾: Eu não estava fazendo nenhuma comparação com Near, estava comparando com o uso que eu mesmo faço das redes sociais hoje.
+[2022-05-03 15:36:21] Felipe "Juca" Sanches: mas tem pessoas bacanas também
+[2022-05-03 15:36:26] Shideravan: Infelizmente, né?
+[2022-05-03 15:36:31] Shideravan: Tem também
+[2022-05-03 15:36:41] Shideravan: O MAME é um projeto grande que existe há muito tempo
+[2022-05-03 15:36:46] Felipe "Juca" Sanches: mas eu frequentemente tenho medo de falar nos grupos. Medo de mandar pull requests e ser achincalhado
+[2022-05-03 15:36:47] Shideravan: Então aparece todo tipo de gente lá
+[2022-05-03 15:37:33] Shideravan: O problema do MAMEdev é que eles não fizeram o dever de casa de botar limite enquanto dava e os escrotos foram criando raízes e acostumando a manter o comportamento escroto
+[2022-05-03 15:37:39] Pablo Vasques Bravo-Villalba: Às vezes os "donos" de um projeto têm uma atitude um tanto defensiva, afugentando contribuições externas. Eu não tenho muita experiência nessa área mas já vi acontecendo
+[2022-05-03 15:37:42] Shideravan: Isso é um problema crucial ali
+[2022-05-03 15:37:55] Shideravan: E eu acredito que o ambiente influencia as pessoas
+[2022-05-03 15:38:17] Shideravan: Se você tem muita pessoa escrota num lugar a tendência é o comportamento escroto se legitimar
+[2022-05-03 15:38:51] Shideravan: Então por isso, hoje, minha participação no MAMEdev é mais restrita
+[2022-05-03 15:39:12] Shideravan: Acompanho o projeto, claro, acho que é um conhecimento absurdo que temos acumulado alí
+[2022-05-03 15:39:19] Shideravan: Mas eu interajo pouco
+[2022-05-03 15:39:37] Shideravan: E faz algum tempo que não colaboro em nada relacionado ao MAME também
+[2022-05-03 15:40:00] Felipe "Juca" Sanches: Caramba! Isso parece uma descrição do "Garoa Hacker Clube"!
+[2022-05-03 15:40:18] Felipe "Juca" Sanches: Bom... parece uma descrição de grande parte da sociedade moderna
+[2022-05-03 15:40:29] Shideravan: Pois é
+[2022-05-03 15:40:48] Shideravan: Mas eu acho que nosso trabalho como cidadãos é evoluir disso aí
+[2022-05-03 15:41:10] Shideravan: O MAME não vai dar para uma pessoa só mudar, nem vai ser do dia para noite se mudar algum dia
+[2022-05-03 15:41:30] Shideravan: Então para mim, para manter minha sanidade e meus princípios, fazia mais sentido eu dar uma afastada
+[2022-05-03 15:42:05] Shideravan: Quando veio a onda da alt-right pelo mundo então, aí que os escrotos se sentiram legitimados para caramba, em todo lugar
+[2022-05-03 15:42:06] Pablo Vasques Bravo-Villalba: A impressão que dá é que um grupo com esse tamanho e tradição só tem conserto se for de maneira radical.
+[2022-05-03 15:42:38] Shideravan: Para não ser injusto, houveram coisas que melhoraram aos pouquinhos
+[2022-05-03 15:42:52] Shideravan: Por exemplo, quando vieram para o Github melhorou um bocado, já foi pior
+[2022-05-03 15:43:12] Pablo Vasques Bravo-Villalba: Talvez em parte por conta dos termos de uso do Github, não?
+[2022-05-03 15:43:30] Shideravan: No Github foram obrigados a receber contribuições significativas e ouvir opniões de gente com background muito diverso
+[2022-05-03 15:43:47] Shideravan: Não porque as comunicações dos devs ocorrem em outros lugares também
+[2022-05-03 15:43:51] Felipe "Juca" Sanches: acho que não. Acho que foi mais por exposição em público mesmo. Por estar mais visível ao público geral.
+[2022-05-03 15:44:05] Shideravan: Por exemplo, tem gente ali que usa IRC até hoje hahaha
+[2022-05-03 15:44:12] Shideravan: Exato
+[2022-05-03 15:44:23] Shideravan: Github tirou um pouco o MAME da "bolha"
+[2022-05-03 15:44:29] Pablo Vasques Bravo-Villalba: É um mundo universo de coisas que desconheço
+[2022-05-03 15:44:37] Shideravan: O MAME é enorme
+[2022-05-03 15:44:43] Shideravan: Existem muitas comunidades
+[2022-05-03 15:45:03] Shideravan: Ao mesmo tempo
+[2022-05-03 15:45:08] Shideravan: Uma coisa histórica no MAME
+[2022-05-03 15:45:17] Shideravan: As coisas são sempre muito lentas
+[2022-05-03 15:45:22] Shideravan: Pela natureza do projeto
+[2022-05-03 15:45:32] Shideravan: Toda mudança ocorre de forma muito demorada
+[2022-05-03 15:45:38] Shideravan: Isso se aplica a tudo
+[2022-05-03 15:45:44] Felipe "Juca" Sanches: E tem o discord que é pra convidados. E rola umas patadas fortes lá de alguns poucos escrotos de sempre. 
+
+Tem umas 300 pessoas lá. Agora mesmo tem 120 pessoas online.
+[2022-05-03 15:45:49] Shideravan: Inclusive, em como a comunidade se organiza
+[2022-05-03 15:46:11] Shideravan: Ahhh é, você me add lá, mas eu mesmo nunca interagi lá hahahaha
+[2022-05-03 15:46:28] Shideravan: Se fosse há uns anos atrás eu seria mais ativo
+[2022-05-03 15:46:45] Shideravan: Mas eu meio que me cansei já de dar murro em ponta de faca hahahahaha
+[2022-05-03 15:47:15] Shideravan: Ainda acho importante esse trabalho, até de dar murro em ponta de faca. Só não tenho mais o tesão para isso hahahaha
+[2022-05-03 15:48:06] Shideravan: Uma coisa que eu acho incrível é como o pessoal mais escroto parece que é online 24h por dia, é impressionante hahahahaha
+[2022-05-03 15:48:30] Shideravan: Não no discord que nem sei, mas em outros canais isso era marcante
+[2022-05-03 15:49:32] Shideravan: Tem uma parte do MAME que a sensação é que é um bando de incel que fica preso num porão de alguma casa nos EUA. Os caras tem tempo de contribuir no projeto mas também tem todo o tempo de manter o projeto hostil para todo mundo hahahahaha
+[2022-05-03 15:49:47] Shideravan: São poucos na real
+[2022-05-03 15:49:54] Shideravan: Mas são realmente ativos
+[2022-05-03 15:50:31] P. M: isso é quase um arquétipo de vários projetos open source
+[2022-05-03 15:50:46] P. M: muito comum essa figura
+[2022-05-03 15:51:14] Shideravan: Triste, os caras provavelmente levam uma vida merda, mas fazem questão que todos fiquem na merda junto com eles
+[2022-05-03 15:51:20] Shideravan: Eu na real, no fundo, sinto pena
+[2022-05-03 15:52:08] Shideravan: Mas claro, isso não dá o direito de ninguém assediar os outros
+[2022-05-03 15:53:49] P. M: isso é um real desafio na verdade de qualquer sistema aberto não hierárquico... como fazer que a abertura dele não subsidie a própria derrocada
+[2022-05-03 15:53:59] Shideravan: Com certezaq
+[2022-05-03 15:54:06] Shideravan: Mas o MAME até tem certa hierarquia
+[2022-05-03 15:54:23] P. M: tipo... ser aberto não previne que essas coisas aconteçam, muitas vezes subsidia
+[2022-05-03 15:54:32] Shideravan: O problema é que a hierarquia acaba ficando contaminada também, já que esse pessoal já está há bastante tempo no projeto...
+[2022-05-03 15:55:09] Shideravan: Uma forma de evitar esse comportamento é ter políticas rígidas de respeito a todos os membros, sejam iniciantes ou não
+[2022-05-03 15:55:21] Shideravan: Tipo, o básico
+[2022-05-03 15:55:49] Shideravan: No inicio, o MAME não fazia isso e com 20 e tantos anos de projeto não dá para querer resolver do dia para a noite
+[2022-05-03 15:55:57] Pablo Vasques Bravo-Villalba: Ter essas políticas e aplicar de modo irrestrito, independente de uma possível hierarquia
+[2022-05-03 15:56:10] Shideravan: Sim. Tem que valer para todos
+[2022-05-03 15:56:19] Shideravan: Mas o MAME fica meio amarrado em algumas coisas
+[2022-05-03 15:58:11] Shideravan: Tipo, os caras não querem "melindrar" (to lembrando do moro na vaza jato hahahaha) alguém que contribui muito a muito tempo
+[2022-05-03 15:58:42] Shideravan: Tem algum sentido
+[2022-05-03 15:59:15] Shideravan: Mas eu ainda acho que o prejuizo causado é maior do que as contribuições, visto a quantidade absurda de pessoas boas que desistiram do projeto por causa de gente escrota lá dentro
+[2022-05-03 15:59:18] P. M: sou meio radical nisso... um projeto que existe às custas das pessoas nem deveria existir
+[2022-05-03 15:59:28] Shideravan: Pois é, também acho
+[2022-05-03 16:00:12] Shideravan: Eu criei pele grossa colaborando no MAME e acredito que o @fsanches também
+[2022-05-03 16:00:22] Shideravan: Mas muita gente saia bem mal dali
+[2022-05-03 16:00:34] Felipe "Juca" Sanches: minha "pele grossa" vem do Garoa também
+[2022-05-03 16:00:36] Shideravan: Houveram várias situações traumáticas que presenciei
+[2022-05-03 16:01:59] Shideravan: E como está o Garoa hoje, @fsanches ?
+[2022-05-03 16:02:16] Shideravan: Eu queria fazer uma visita quando passar em Sampa
+[2022-05-03 16:03:15] Felipe "Juca" Sanches: tá fechado por conta da covid
+[2022-05-03 16:03:38] Shideravan: Há, ainda tá no último status que eu tinha visto então
+[2022-05-03 16:04:01] Shideravan: Tem perspectiva de voltarem as reuniões presenciais?
+[2022-05-03 16:25:15] RicBit: É o dilema do bar nazista, deixa ver se acho aqui
+[2022-05-03 16:28:52] Pablo Vasques Bravo-Villalba: "Se um nazista se senta à mesa com 10 pessoas e ninguém se levanta, então há 11 nazistas." Supostamente um ditado alemão
+[2022-05-03 16:29:17] RicBit: tem uma versao estendida
+[2022-05-03 16:31:08] Shideravan: Acho que para o caso do MAMEdev é forçar um pouco a barra
+[2022-05-03 16:31:27] Shideravan: No caso do nazismo, é realmente complicado, porque a ideologia não é uma ideologia comum
+[2022-05-03 16:32:10] Shideravan: Nunca existiu ou é possível existir a ideologia nazista descolada da prática nazista
+[2022-05-03 16:32:31] Shideravan: O nazismo prega literalmente o extermínio de populações inteiras
+[2022-05-03 16:32:50] L.: https://twitter.com/IamRageSparkle/status/1280891537451343873?s=20&t=UUmLcIAT28c8zt5OiCTF1g
+[2022-05-03 16:33:19] Shideravan: Tanto que isso é uma coisa curiosa, que o nazismo pode ser atrativo para determinadas pessoas, mas é um sistema de governo que depende do extermínio constante para continuar ativo
+[2022-05-03 16:33:48] RicBit: Esse mesmo, obrigado!
+[2022-05-03 16:33:53] Shideravan: Ou seja, ele inevitavelmente é destinado ao fracasso
+[2022-05-03 16:34:53] Pablo Vasques Bravo-Villalba: Acho que está longe de ser a única contradição moderna, inclusive há outras que as pessoas aceitam muito facilmente
+[2022-05-03 16:35:12] Shideravan: Pela lógica nazista, você sempre tem que procurar um inimigo para perseguir e aniquilar. Até a própria pessoa se tornar o próximo alvo
+[2022-05-03 16:35:23] Shideravan: Sim
+[2022-05-03 16:35:36] Shideravan: O nazismo, o fascismo são extremamente atrativos como ideologia
+[2022-05-03 16:35:48] Shideravan: Tanto que não é a toa que a alt-right bebe tanto dessa fonte
+[2022-05-03 16:36:34] Shideravan: Você coloca o militante numa posição muito privilegiada
+[2022-05-03 16:37:06] Shideravan: Ele se retira da categoria de "humano normal" e se coloca na posição de "raça superior"
+[2022-05-03 16:37:22] Shideravan: E pode fazer o que quiser com os inferiores, que tá liberado
+[2022-05-03 16:37:39] Shideravan: Mas para o sistema manter, você precisa constantemente subjulgar alguém
+[2022-05-03 16:37:55] Shideravan: Vai chegar uma hora, que o próprio militante vai ser o próximo subjulgado
+[2022-05-03 16:39:01] Shideravan: Por exemplo, o nazismo começou só com "judeus, gays, negros e ciganos são inferiores" mas já estava caminhando para "só quem é loiro de olhos azuis é superior, todos os outros são inferiores"
+[2022-05-03 16:39:12] Shideravan: Sabe quem não era loiro e de olhos azuis?
+[2022-05-03 16:39:51] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20157.jpg
+[2022-05-03 16:40:49] Shideravan: Mas como também é um certo culto a uma personalidade forte, era um sistema bastante personalista
+[2022-05-03 16:42:03] Shideravan: Então se não se extinguisse pela própria questão de sair exterminando pessoas, eventualmente se extinguiria também por perder a figura idolatrada
+[2022-05-03 16:42:08] Shideravan: Enfim...
+[2022-05-03 16:42:23] Shideravan: Nazismo é aquela questão de "isso não é um debate de ideias"
+[2022-05-03 16:42:47] Shideravan: Um ambiente tóxico pode ser tóxico sem que todas as pessoas sejam tóxicas
+[2022-05-03 16:43:20] Shideravan: Já o nazismo não tem como. Se você nega o extermínio, você é cúmplice.
+[2022-05-03 16:48:03] Shideravan: Os países são muito complexos. O nazismo é muito atrativo porque oferece uma simplificação e uma desculpa para você subjulgar os outros.
+[2022-05-03 16:48:58] Shideravan: Não é "o combustível subiu porque com o PPI deixamos o principal meio energético a mercê de flutuações de câmbio e variáveis internacionais e isso aliado ao fato de uma péssima política de câmbio e dependência do mercado interno do uso dessa fonte energética faz com que o valor do frete aumente, aumentando o preço de produtos na prateleira com a inflação...."
+[2022-05-03 16:49:43] Shideravan: Vira "o combustível tá caro por culpa dos malditos judeus. Vamos exterminá-los. Nosso füher vai saber cuidar deles"
+[2022-05-03 16:50:00] Shideravan: Você tira todo um peso de responsabilidade sua
+[2022-05-03 16:50:29] Shideravan: Não existe diálogo, não existe conversa. É a prática nazista.
+[2022-05-03 16:50:45] Shideravan: Por isso a luta contra o nazismo é diário
+[2022-05-03 16:51:38] Shideravan: Agora, o MAME é um lugar com muitos problemas. Mas não é um ambiente nazista. Tem muita gente boa lá também inclusive que não concorda com o lixo tóxico que o lugar se tornou.
+[2022-05-03 16:51:54] Shideravan: Não acho que a comparação seja justa, entende?
+[2022-05-03 16:52:21] Felipe "Juca" Sanches: não sei dizer
+[2022-05-03 16:55:33] Felipe "Juca" Sanches: a conversa tá seguindo um rumo que, se não tomarmos cuidado, logo logo não estaremos mais falando de emuladores e comunidades de desenvolvimento de emuladores, e projetos de preservação histórica de equipamentos eletrônicos
+[2022-05-03 16:55:59] Shideravan: Desculpe, Juca
+[2022-05-03 16:56:06] Shideravan: Eu achei importante pontuar isso
+[2022-05-03 16:56:48] Felipe "Juca" Sanches: não precisa se desculpar. É só estarmos atentos para manter o foco. Dito isso, dar umas voltinhas rápidas por outros assuntos é completamente OK.
+[2022-05-03 16:56:52] Erin Pinheiro 🐿: pode não ser uma conversa pertinente mas acho uma conversa importante que toda aglomeração deve discutir, seja grupo de telegram sobre desenvolvimento de emuladores e projetos de preservação histórica de equipamentos eletrônicos ou não
+[2022-05-03 16:57:09] Felipe "Juca" Sanches: sim sim, a conversa é extremamente pertinente!
+[2022-05-03 16:57:37] Shideravan: Esse ano, rolou uma parada sobre nazismo e eu percebi e fiquei assustado como as pessoas não entendiam sobre o tema e a gravidade dele
+[2022-05-03 16:57:46] Erin Pinheiro 🐿: entendo manter o tópico, lógico que não vou falar aqui sobre manutenção de motor de combustão refrigerado a ar, mas assuntos sociológicos são pertinentes a qualquer tópico
+[2022-05-03 16:57:58] Pablo Vasques Bravo-Villalba: Na verdade eu tenho a impressão de que um ambiente tóxico favorece que pessoas que normalmente seriam perfeitamente cordiais se sintam à vontade para se comportar de maneira tóxica, às vezes até de forma inconsciente. As pessoas ativamente tóxicas são uma minoria, na minha opinião
+[2022-05-03 16:58:19] Shideravan: Sim sim, isso sim
+[2022-05-03 16:58:26] Shideravan: A barra desce, né?
+[2022-05-03 16:58:50] Shideravan: Você vê o sujeito maltratando o amiguinho para algo simples e isso ser tratado como normal
+[2022-05-03 16:59:53] Shideravan: Alguém faz algo um pouco mais pesado, você julga na sua barra sobre qual o comportamento aceito naquele lugar e conclui que por menos fizeram coisa x, então tudo bem eu fazer x contra você também, porque poderia até ser pior se quem tivesse visto posso fulano
+[2022-05-03 17:00:31] Shideravan: Seres humanos também tem os seus comportamentos e seus limites baseados em comparação. É a forma como nosso "software" funciona.
+[2022-05-03 17:00:56] Shideravan: Fora que as vezes as pessoas perdem até a referência do que seja um lugar saudável se só convive em lugares tóxicos
+[2022-05-03 17:01:33] Shideravan: Eu lembro que quando eu entrei na universidade, trote era aceito como coisa normal
+[2022-05-03 17:03:20] Shideravan: Mesmo que você não concordasse com o trote, você nem tinha uma base de como se comportar com um iniciante fora da referência do ambiente de trote. Você era cordial com um calouro, já te julgavam "mano, é bixo, não sabe de nada, ele que depende de você, não é você que depende dele". Do ambiente que eu vim, isso é um absurdo, porque eu sou uma pessoa de origem humilde e todo mundo se ajudar e se dar bem com os outros é questão de sobrevivência. Mas e para pessoas sem esse background?
+[2022-05-03 22:19:15] L.: https://github.com/a2stuff/a2d

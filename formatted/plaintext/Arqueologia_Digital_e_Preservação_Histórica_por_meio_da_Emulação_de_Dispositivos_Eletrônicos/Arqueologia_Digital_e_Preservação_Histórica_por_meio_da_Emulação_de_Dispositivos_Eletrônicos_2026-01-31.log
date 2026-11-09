@@ -1,0 +1,39 @@
+[2026-01-31 00:46:51] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37223.jpg
+[2026-01-31 00:46:51] RicBit: gastando agua
+[2026-01-31 02:00:06] Felipe "Juca" Sanches: Podia estar gastando água assintindo porn, mas tá hackeando MSX. Acho que tá valendo!
+[2026-01-31 02:00:27] Felipe "Juca" Sanches: (ou vídeo de gatinho)
+[2026-01-31 02:30:48] RicBit: Amanhã eu vou configurar pra rodar tudo local, aí gasta pouca água.
+[2026-01-31 04:23:22] Erin Pinheiro 🐿: https://stonetools.ghost.io/
+[2026-01-31 05:53:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37228.jpg
+[2026-01-31 05:53:11] Felipe "Juca" Sanches [forwarded]: quase!
+[2026-01-31 05:53:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37229.jpg
+[2026-01-31 05:53:11] Felipe "Juca" Sanches [forwarded]: Mas quase ainda, exceto pela paleta...
+[2026-01-31 05:53:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37230.jpg
+[2026-01-31 05:53:11] Felipe "Juca" Sanches [forwarded]: Ah! Agora sim!!!!
+[2026-01-31 05:53:11] Felipe "Juca" Sanches [forwarded]: Benvindos aos anos 90 ;-)
+[2026-01-31 05:53:11] Felipe "Juca" Sanches [forwarded]: A farra continua acontecendo ao vivo em http://arqueologiadigital.org/KN5000-docs
+[2026-01-31 15:04:57] RicBit: o que nós fizemos ate agora (comecei ontem à noite):
+
+https://gist.github.com/ricbit/16a35a5d30d7608b88eef5a234b47c05
+[2026-01-31 15:05:18] RicBit: usando água, eu consigo fazer um jogo inteiro de 16kb em um fim de semana
+[2026-01-31 16:02:29] Guilherme Ranoya: Eu faço isso de forma aplicada... nas minhas aulas no curso de design da UFPE coloco os alunos para trabalharem com ferramentas da década de 80 e 90 para eles entenderem como era feito.
+Botei um monte de coisa online... eles acessam a ferramenta e tentam fazer aquilo que estão habituados a fazerem com as ferramentas de hoje (e falham miseravelmente 😆).
+
+Temos uma máquina monotype do Aloísio Magalhães (um dos primeiros designers gráficos brasileiros) onde também damos aula e colocamos os alunos para diagramarem livros com um equipamento de 1890 para entenderem como era.
+[2026-01-31 16:03:13] Guilherme Ranoya: https://visse.vercel.app/v2-preservaeditorial
+[2026-01-31 16:03:52] Guilherme Ranoya: https://visse.vercel.app/v2-preservacaomultimidia
+[2026-01-31 16:04:22] Guilherme Ranoya: https://visse.vercel.app/v2-preservacaodataviz
+[2026-01-31 16:58:32] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37239.jpg
+[2026-01-31 16:58:32] Felipe "Juca" Sanches: No meu caso, como o disasm era grande demais, eu comecei ontem a pedir pro "Cláudio" refatorar e separar subsistemas em arquivos dedicados.
+[2026-01-31 16:59:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37240.jpg
+[2026-01-31 17:10:50] RicBit: bom, cada arquivo tem um contexto menor, entao fica mais facil para ele
+[2026-01-31 17:11:22] RicBit: o meu nunca le o arquivo todo, se eu peço uma mudança em PROCESS_TABLE, ele faz um grep, acha a linha e le só o que precisa
+[2026-01-31 17:17:22] Felipe "Juca" Sanches: Tem uma técnica chamada "Progressive Disclosure" que ajuda a fazer um uso mais otimizado do contexto
+[2026-01-31 17:17:51] Felipe "Juca" Sanches: ele voluntariamente se aprodunda na documentação quando precisa. Mas só abre as partes que realmente precisa
+[2026-01-31 17:18:44] Felipe "Juca" Sanches: É basicamente um nome chique para "fazer boas escolhas na construção de um índice"
+[2026-01-31 21:58:37] RicBit: eu joguei o redbook.txt no repo e falei "te vira, o doc tá aí" haha
+[2026-01-31 22:18:42] RicBit: uhu ele achou debug code
+[2026-01-31 22:19:13] RicBit: tem uma rotina que le a vram, copia para ram e trava. deve ser para debug info no emulador que eles usavam
+[2026-01-31 22:47:36] Felipe "Juca" Sanches: Esse é o Antartic Adventure?
+[2026-01-31 23:00:30] RicBit: isso
+[2026-01-31 23:05:08] RicBit: te addei no repo

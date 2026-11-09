@@ -1,0 +1,55 @@
+[2026-10-01 09:29:25] Macabeus: Pessoas, terei ensaio com um palestrante da GambiConf, o Ricardo Gomes.
+A talk dele é “Super Nintendo: o PC que nunca foi”.
+
+O ensaio é amanhã às 18h (horário de SP).
+É basicamente entrar na sala da call, assistir a palestra dele, e dar feedback depois.
+
+Alguém daqui teria disponibilidade em participar do ensaio comigo?
+[2026-10-01 10:10:00] Ismael Carvalho: eu acho que consigo, mas não sei se consigo contribuir muita coisa, mas vou curtir assistir
+[2026-10-01 10:42:28] Macabeus: vou te enviar dm
+[2026-10-01 13:50:10] Shideravan: @RicBit por que você não usa um fullset já organizado como do No-Intro? Não facilitaria seu trabalho?
+[2026-10-01 13:52:01] Shideravan: Acho que consigo se não surgir demanda de ultima hora para fazer (sexta-feira sabe como é)
+[2026-10-01 17:06:17] RicBit: acho que eu uso o no-intro
+[2026-10-01 17:06:40] RicBit: o segundo pacote é o no-intro de gbc, tem um monte de roms dele que funcionam no dmg
+[2026-10-01 17:19:20] Felipe "Juca" Sanches: https://jonclegg.github.io/pacman-bakeoff/
+[2026-10-01 18:45:23] L.: Emulador de Chip8 em CSS!
+
+https://github.com/trustsig-eu/Chip8CSS
+[2026-10-01 18:47:10] L.: (precisa de chrome)
+[2026-10-01 18:49:56] Shideravan: Verifica as suas roms com o checksum do no-intro usando o clrmamepro
+
+É importante verificar, até para garantir a integridade das mesmas para se assegurar que não tenha nenhum bad dump no meio
+[2026-10-01 18:50:16] Shideravan: https://no-intro.org/
+[2026-10-01 18:50:51] Shideravan: Bad dump é uma das maiores causas de falso positivos em testes de emulação
+[2026-10-01 19:49:16] RicBit: vou baixar, obrigado!
+[2026-10-01 19:49:37] RicBit: descobri que o mario 2 não roda (nunca rodou, parece que dá pau na segunda fase e eu só tinha testado a primeira)
+[2026-10-01 19:49:52] Shideravan: Super Mario Land 2?
+[2026-10-01 19:50:00] RicBit: sem mario não tem release, ruim é que preciso de 80 bytes pra consertar
+[2026-10-01 19:50:01] RicBit: é
+[2026-10-01 19:50:02] Shideravan: Que irônico kkkkkkk
+[2026-10-01 19:50:40] RicBit: namagiri tira 20 local, talvez na nuvem ela tire 50 com esforço. o resto vai precisar de HI
+[2026-10-01 19:50:42] Shideravan: Você tá emulando um monte de coisa obscura bem e um dos jogos mais populares do DMG que todo mundo emula, deu problema hahaha
+[2026-10-01 19:51:28] Shideravan: Pior que vem ficando cada vez mais difícil conseguir economizar bytes hahaha
+[2026-10-01 19:51:42] Shideravan: Isso que deixa o desafio mais interessante!
+[2026-10-01 19:53:21] RicBit: o corno do mario 2 tem sram, mas ao invés de usar pra save games, ele usa como stack
+[2026-10-01 19:53:58] Macabeus: obrigado, mas já estou com uma pessoa disponível para esse ensaio; porém, quando tiver outro precisando vou te mandar DM
+[2026-10-01 20:00:57] L.: lei de Hyrum ataca novamente
+[2026-10-01 20:01:52] L.: sram = stack ram, obviamente
+[2026-10-01 20:11:20] RicBit: total
+[2026-10-01 20:15:14] L.: eu achei incrível 
+
+* sram precisa de pilha pra manter os dados
+* sram é usada como pilha
+
+motocontinuo!
+[2026-10-01 20:20:53] Shideravan: Constatação genial! kkkkkkkkk
+[2026-10-01 20:21:39] RicBit: claramente eram excelente engenheiros
+[2026-10-01 20:24:46] Shideravan: Wario Land de DMG também faz isso pelo que eu me lembre (se eu não estiver enganado é até a mesma engine)
+[2026-10-01 20:25:11] Shideravan: Chegou a testar o Wario com mais cuidado?
+[2026-10-01 21:24:40] RicBit: nope, vou testar
+[2026-10-01 21:25:09] RicBit: claramente a situação requer uma bateria de testes
+[2026-10-01 22:24:40] RicBit: usando só vnd na nuvem namagiri já abaixou para 48 bytes
+[2026-10-01 22:25:00] RicBit: vamos ver com gomea
+[2026-10-01 22:27:38] RicBit: ruim que nesse horário eu só consigo instancia E2. bom é de domingo a noite quando eu consigo C2D
+[2026-10-01 23:00:09] Alexandre Villares: https://post.lurk.org/@mediaarchaeologylab/117366353974486612
+[2026-10-01 23:28:26] RicBit: abaixou de 80 para 33 até agora, daqui a pouco vai começar a patinar

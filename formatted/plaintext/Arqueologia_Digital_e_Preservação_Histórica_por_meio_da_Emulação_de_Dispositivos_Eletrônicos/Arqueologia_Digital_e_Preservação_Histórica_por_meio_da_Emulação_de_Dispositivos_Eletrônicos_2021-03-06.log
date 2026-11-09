@@ -1,0 +1,100 @@
+[2021-03-06 06:18:33] L.: Simulando CRTs com ffmpeg: https://int10h.org/blog/2021/01/simulating-crt-monitors-ffmpeg-pt-1-color/
+[2021-03-06 06:18:56] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-03/12521-sticker.webp
+[2021-03-06 06:19:24] L.: Só falta mixar o zunido do sync horizontal pra ficar 100% autêntico :D
+[2021-03-06 06:20:03] L.: Whoa, na parte 3 tem simulação de outros tipos de display, tipo os LCDs de matriz passiva e tela de plasma monocromáticas!
+[2021-03-06 06:20:29] Felipe "Juca" Sanches: virei a madrugada perdendo o medo de desoldar CIs
+[2021-03-06 06:21:11] L.: lol
+[2021-03-06 06:21:57] Felipe "Juca" Sanches: já encomendei uns soquetes ZIF pra SOIC44 com adaptador pra DIP44 pra eu espetar em cima do adaptador de M27C322 pra dip40 que por sua vez espetarei no TL866CS
+[2021-03-06 06:22:18] L.: Você quis dizer: *pilha*
+[2021-03-06 06:25:17] Felipe "Juca" Sanches: para ler as mask ROMs dessoldadas da PCB principal do teclado technics SX KN5000
+[2021-03-06 06:26:05] Felipe "Juca" Sanches: que foi um teclado musical que eu usei ao longo dos últimos 25 anos
+[2021-03-06 06:26:13] Felipe "Juca" Sanches: e ainda uso de vez em quando
+[2021-03-06 06:26:28] Felipe "Juca" Sanches: quando vou para a casa dos meus pais
+[2021-03-06 06:26:47] Felipe "Juca" Sanches: acontece que eu comprei outro igual, pra deixar aqui em casa (e pra hackear)
+[2021-03-06 06:27:34] Flávio Amieiro: Não sei se o que vou falar é óbvio pra você, mas não era pra mim: flux. Bastante.
+[2021-03-06 06:27:42] Felipe "Juca" Sanches: a coisa mais legal desse teclado é o fato de ele ter uma telona de cristal liquido colorida para os menus de selecao de instrumentos e ritmos e outras configuracoes
+[2021-03-06 06:27:44] Flávio Amieiro: Bizarro como tudo fica mais fácil colocando flux
+[2021-03-06 06:28:37] Flávio Amieiro: Hahahahah
+[2021-03-06 06:30:48] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-03/12537.jpg
+[2021-03-06 06:30:48] Felipe "Juca" Sanches: é esse bicho aqui
+[2021-03-06 06:31:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-03/12538.jpg
+[2021-03-06 06:31:02] Felipe "Juca" Sanches: olha que coisa linda!
+[2021-03-06 06:31:32] Felipe "Juca" Sanches: faz uns 25 anos que eu sonho em escrever software pra rodar nesse painel kkkk
+[2021-03-06 06:33:56] Flávio Amieiro: Que foda!!
+[2021-03-06 06:34:18] Flávio Amieiro: Qual o processador?
+[2021-03-06 06:35:23] Felipe "Juca" Sanches: dois processadores TOSHIBA TLCS900H + um DSP + um TONE GENERATOR
+[2021-03-06 06:36:41] Felipe "Juca" Sanches: http://www.synthmanuals.com/manuals/technics/sx-kn5000/service_manual/technics_sx-kn5000_service_manual.pdf
+[2021-03-06 06:38:31] L.: Muito cara de fim da década de 80/começo da 90
+[2021-03-06 06:38:50] L.: Aquela estética tipo os paineis da Sound Blaster pra Windows 3.11 lol
+[2021-03-06 06:38:55] Flávio Amieiro: 30kb/s
+[2021-03-06 06:38:59] Flávio Amieiro: nostalgia até aí :p
+[2021-03-06 06:39:20] Flávio Amieiro: hahaha
+Será que é daí que veio?
+[2021-03-06 06:39:47] L.: Acho que não, provavelmente só tavam querendo simular uma mesa de mixagem mesmo
+[2021-03-06 06:39:55] L.: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-03/12550-maxresdefault.jpg
+[2021-03-06 06:40:23] Flávio Amieiro: Nossa..
+[2021-03-06 06:40:51] Flávio Amieiro: Não conheço o processador (e o manual não vem), mas pelo que vi é RISC, né?
+[2021-03-06 06:41:53] Felipe "Juca" Sanches: essa imagem do fundo que tem escrito o nome "Technics" pode ser mudada em um dos menus de configuracao, carregando um... (aguardem...!) arquivo BMP lido do drive de disquete 3 1/2
+[2021-03-06 06:42:15] Flávio Amieiro: Ele tem um drive de disquete?!
+[2021-03-06 06:42:19] Felipe "Juca" Sanches: sim
+[2021-03-06 06:42:31] Flávio Amieiro: Que incrível
+[2021-03-06 06:43:41] Felipe "Juca" Sanches: e dá pra fazer update do firmware via disquete. Eu tenho uma cópia do disquete de setup inicial do sistema. Pensei em fazer a extracao do firmware a partir dos arquivos de dados desse disco, mas não sei qual o formato de compactacao que usaram
+[2021-03-06 06:43:43] L.: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-03/12558-maxresdefault.jpg
+[2021-03-06 06:44:11] L.: Essa estética era bem comum pra coisa de áudio. Eu lembro desse outro programa, mod4win, que eu usava antes de sair do Windows
+[2021-03-06 06:44:18] Felipe "Juca" Sanches: aí resolvi apelar para a estratégia de dessoldar os chips e fazer a leitura na marra
+[2021-03-06 06:46:17] Felipe "Juca" Sanches: eu ainda tenho pouca familiaridade com o processador
+[2021-03-06 06:46:24] Felipe "Juca" Sanches: mas dá-se um jeito 😉
+[2021-03-06 06:47:59] Flávio Amieiro: É bonito!
+[2021-03-06 06:48:13] Flávio Amieiro: Sempre!
+[2021-03-06 06:48:19] L.: Eu gosto dessa estética do Windows 3
+[2021-03-06 06:48:25] Flávio Amieiro: Já tá no MAME ou tu que vai ter que emular? Hahahah
+[2021-03-06 06:48:32] Flávio Amieiro: Eu acho maneiro mesmo, real
+[2021-03-06 06:49:03] L.: Outro dia eu vi alguém no Twitter que refez o Visual Studio atual (só um mockup) usando essa estética. Eu achei animal, melhor que o clusterfuck atual: https://twitter.com/foxgirl_IRL/status/1364687719859957764
+[2021-03-06 06:49:05] Flávio Amieiro: Mas confesso que sempre me lembra do https://windows96.net/
+[2021-03-06 06:49:19] Felipe "Juca" Sanches: aqui um link decente pra download rapidão: 
+
+http://www.synthzone.com/midi/technics/kn5000/SXKN5000_SM_PANASONIC_EN.pdf
+[2021-03-06 06:49:41] Flávio Amieiro: Valeu!!! Agora veio!
+[2021-03-06 06:49:42] Flávio Amieiro: hahaha
+[2021-03-06 06:49:55] Flávio Amieiro: O servidor tava batendo a porta na minha cara sempre que chegava em 27%
+[2021-03-06 06:51:27] Flávio Amieiro: Eu me amarro nos botões em alto relevo. Mas sempre fico impressionado com a densidade de informação nessas UI. Ainda mais com as resoluções que a gente tinha...
+[2021-03-06 06:52:26] L.: Sim. No escritório, quando usava VS, eu tinha dois monitores 4K e sentia claustrofobia às vezes.
+[2021-03-06 06:52:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-03/12576.jpg
+[2021-03-06 06:52:39] Felipe "Juca" Sanches: Essa imagem aqui mostra que na verdade são 2 CPUs + 2 DSPs (eu lembrava errado de cabeca, tinha esquecido que tinha um par de DSPs)
+[2021-03-06 06:52:40] L.: Eu não lembro de sentir isso quando usava meu Syncmaster 3 rodando em 800x600 lol
+[2021-03-06 06:57:12] Felipe "Juca" Sanches: oh boy...
+[2021-03-06 06:57:48] Flávio Amieiro: 4MB vídeo RAM
+[2021-03-06 06:57:51] Flávio Amieiro: Interessante...
+[2021-03-06 06:58:17] Felipe "Juca" Sanches: https://github.com/mamedev/mame/blob/master/src/devices/cpu/tlcs900/tlcs900.cpp
+[2021-03-06 06:58:35] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-03/12582-sticker.webp
+[2021-03-06 06:58:42] Flávio Amieiro: Que vida diferente ter o manual com esquemático e tudo, né?
+[2021-03-06 06:59:10] Flávio Amieiro: Caralho. Tudo agora é uma caixa preta
+[2021-03-06 06:59:24] Flávio Amieiro: E com uns componentes tão pequenos que nem cabe texto
+[2021-03-06 06:59:25] Felipe "Juca" Sanches: e o esquemático é bem mais detalhado que isso. Isso aí é só o diagrama de blocos
+[2021-03-06 06:59:47] Flávio Amieiro: Eu imaginei que tivesse mais, tendo isso
+[2021-03-06 07:00:11] Flávio Amieiro: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-03/12588-mp4.mp4
+[2021-03-06 07:01:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-03/12589.jpg
+[2021-03-06 07:02:30] Flávio Amieiro: 🤤
+[2021-03-06 07:04:08] Felipe "Juca" Sanches: entretanto, o que acontece é que quando a gente carrega um firmware de um novo aparelho pra comecar a emular no MAME a gente descobre que ainda tem várias partes da CPU que ainda nao foram emuladas pois não eram usadas pelos firmwares dos dispositivos que o MAME já emula :-P
+
+Aí tem que arregacar as mangas e aprimorar a emulacao da CPU também
+[2021-03-06 07:04:59] Felipe "Juca" Sanches: super comum acontecer isso
+[2021-03-06 07:05:05] Flávio Amieiro: Ah, saquei
+[2021-03-06 07:05:14] Flávio Amieiro: Bem, mas pelo menos não é partir do zero...
+[2021-03-06 07:05:21] Felipe "Juca" Sanches: isso só não acontece se for um Z80, ou um M68k, por que já estao bem maduros
+[2021-03-06 07:05:48] Flávio Amieiro: Ou um 6502 que já se sabe cada transistor, literalmente
+[2021-03-06 07:05:54] Felipe "Juca" Sanches: coisas mais estranhas como esse toshiba aí, puta chance de estar tudo pela metade mesmo
+[2021-03-06 07:06:24] Flávio Amieiro: Mas sim, é totalmente compreensível que quem escreveu não tenha como implementar 100% a partir de um só caso...
+[2021-03-06 07:06:42] Flávio Amieiro: (mesmo pra mim, que sei próximo de zero sobre emuladores)
+[2021-03-06 07:06:57] Felipe "Juca" Sanches: nem é necessário emular tudo, já que as ROMs nao usam todas features do processador
+[2021-03-06 07:07:34] Felipe "Juca" Sanches: os devs vao implementando só o que precisa, conforme vao surgindo casos que demandem mais features da CPU
+[2021-03-06 07:08:02] Flávio Amieiro: Sim, faz sentido
+[2021-03-06 07:08:53] Flávio Amieiro: Aliás, existe algum "MAME 101" pra quem tá querendo começar a brincar com ele? Lembro de ter procurado um tempo atrás e não ter encontrado (mas acho que não fiz muito esforço não)
+[2021-03-06 07:09:05] Felipe "Juca" Sanches: bom... hora de dormir! 7AM BRT
+
+Guten Morgen!
+[2021-03-06 07:09:46] Flávio Amieiro: Tava na dúvida se já tinha acordado ou ainda não dormido. Hahaha
+[2021-03-06 07:09:50] Flávio Amieiro: Boa noite, cara
+[2021-03-06 07:09:52] Felipe "Juca" Sanches: vixe... outro dia me pergunta isso de novo. Acho que nao tem nada desse tipo. Mas eu posso ajudar (quando eu nao estiver zumbi morto de sono)
+[2021-03-06 07:10:11] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-03/12608-sticker.webp
+[2021-03-06 07:10:12] Flávio Amieiro: Show! Valeu, cara

@@ -1,0 +1,235 @@
+[2021-09-19 00:03:48] Shideravan: Talvez ele também nem tenha tanta familiaridade com a cena de emulação e como muita gente ele possa ter uma percepção errada, mas acho que até vale a pena comentar que a nossa intenção não é promover pirataria nem nada do tipo, mas sim preservar a história dos hardwares no Brasil e servir para fins educacionais
+[2021-09-19 00:04:11] Shideravan: Talvez a própria Tectoy venha a se beneficiar desse trabalho depois
+[2021-09-19 11:48:05] Deleted Account: Acho que a TecToy quer mais é esquecer do Zeebo para sempre. 😬 
+
+E o Zeebo teve parceria com uma empresa israelense não é? Acho que isso dificulta ainda mais a missão. Vai saber se a documentação está em hebreu.
+[2021-09-19 13:55:26] Shideravan: Se estiver temos tradutores aí para isso, isso seria o de menos, de verdade
+[2021-09-19 13:56:18] Shideravan: Para suportar alguns mappers obscuros eu tive que lidar com documentação em mandarim hahaha
+[2021-09-19 13:58:20] Shideravan: Se ela quer esquecer, melhor ainda, então teria zero motivos para encrencar com um bando de hobistas usando esse hardware que ela nem liga, para aprendizado hahaha
+[2021-09-19 14:02:04] Deleted Account: Isso é verdade. Rsrs.
+[2021-09-19 15:41:59] Felipe "Juca" Sanches: mas creio que o "esquecer" aqui é mais no sentido de "apagar da história"
+[2021-09-19 16:45:41] * Thaís Blue Bunnies joined the group
+[2021-09-19 16:47:25] Thaís Blue Bunnies: https://tecnoblog.net/494574/youtubers-encontram-us-100-mil-em-jogos-antigos-numa-casa-abandonada/amp/
+[2021-09-19 16:47:45] Thaís Blue Bunnies: Será que saí alguma rom de jogo raro dessa brincadeira?
+[2021-09-19 16:48:32] Shideravan: Mesmo assim, acho que vale a pena tentar. Não é como se estivéssemos fazendo qualquer coisa que prejudicasse qualquer um nessa história
+[2021-09-19 16:49:32] Shideravan: E mesmo que alguma coisa esteja sob NDA, algumas outras talvez não estejam. E para a gente, qualquer coisa ajuda bastante no nosso trabalho de documentar.
+[2021-09-19 16:50:57] Shideravan: Mas eu duvido que a Tectoy ou qualquer empresa tenha a intenção de "apagar" sua história. O console tendo feito sucesso ou não com o público, é uma história de bastante audácia e pioneirismo
+[2021-09-19 16:51:29] Shideravan: E olha, a Tectoy ultimamente tem colhido muitos benefícios de interesse por produtos antigos deles
+[2021-09-19 16:53:00] Shideravan: Veja por exemplo o re-lançamento do mega drive e do pense bem. Eles com certeza sabem que a comunidade de emulação e preservação foram co-responsaáveis por esse interesse e a viabilização desses lançamentos
+[2021-09-19 16:55:39] Shideravan: Acho improvável, até porque essas coisas foram parar todas nas mãos de colecionadores privados
+[2021-09-19 17:46:57] Felipe "Juca" Sanches: Olá Thaís, seja bem-vinda!
+
+Conta pra gente um pouco sobre você 😉
+[2021-09-19 19:45:05] Thaís Blue Bunnies: Oi, eu sou a Thais, eu gosto de eletrônica e achei que aqui ia ser um lugar legal pra falar dessas coisas e aprender mais
+[2021-09-19 19:52:07] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15027-sticker.webp
+[2021-09-19 19:57:15] Felipe "Juca" Sanches: É interessante, mas eu acho improvável ter aí coisas raras a ponto de não ter dump. Parece apenas um colecionador comum (compulsivo, é claro!).
+
+Meu palpite é que coisas não dumpadas por conta de raridade costumam ser encontradas nas casas / escritórios de pessoas envolvidas no desenvolvimento dos jogos e não de colecionadores comuns.
+[2021-09-19 19:58:51] Shideravan: O que daria para conseguir aí são caixas, manuais, etc de jogos em edição especial que valeria também alguém scanear e preservar
+[2021-09-19 19:59:05] Shideravan: Mas eu sinceramente duvido hahaha
+[2021-09-19 20:02:36] Felipe "Juca" Sanches: mais uma instruçãozinha disassemblada:
+
+https://github.com/felipesanches/binutils-tlcs900/commit/aa3940065d9877344673360b6241cc539ac9ea8c
+[2021-09-19 20:02:46] Felipe "Juca" Sanches: to evoluindo a passos de tartaruga :-P
+[2021-09-19 20:05:55] Shideravan: Passo de tartaruga nada, isso é legal para caramba haha
+[2021-09-19 20:06:17] Shideravan: Importante é seguir em frente sempre
+[2021-09-19 20:06:19] Felipe "Juca" Sanches: é que são muuuuuitas instrucoes
+[2021-09-19 20:07:07] Felipe "Juca" Sanches: e ainda tô só no disassembler no objdump do GNU binutils. Ainda depois vou ter que fazer o assembler (GNU as) e só depois encarar o port do gcc...
+[2021-09-19 20:07:44] Felipe "Juca" Sanches: é treta! kkkk
+[2021-09-19 20:09:25] Shideravan: Eu tô longe do meu desktop agora, mas depois eu posso te ajudar nisso se você quiser
+[2021-09-19 20:17:25] Felipe "Juca" Sanches: pode ser sim
+[2021-09-19 20:51:33] Deleted Account: Como vc identifica os opcodes? No chute? Eles tem tamanho fixo? 🤔
+[2021-09-19 20:51:58] Deleted Account: Não faço nem ideia desse trabalho. Você pega o binário e tenta analisar em um hexeditor?
+[2021-09-19 20:52:37] Felipe "Juca" Sanches: Tem um datasheet do processador que tem a tabela de opcodes
+[2021-09-19 20:52:46] Felipe "Juca" Sanches: e tem já uma implementacao de disassembler no MAME
+[2021-09-19 20:52:55] Felipe "Juca" Sanches: então uso as duas coisas lado-a-lado
+[2021-09-19 20:53:00] Deleted Account: Ah entendi.
+[2021-09-19 20:53:18] Felipe "Juca" Sanches: pra ir comparando a saída do meu disasm no binutils com o que o MAME já disassembla em seu debugger interativo
+[2021-09-19 20:53:29] Felipe "Juca" Sanches: onde diverge eu conserto
+[2021-09-19 20:54:05] Felipe "Juca" Sanches: to usando a ROM de boot do KN5000 para exercitar os disassemblers
+[2021-09-19 20:54:33] Deleted Account: Entendi. E o mapa de memória e i/o? Tem documentação ou vc tá desbravando tmb?
+[2021-09-19 20:54:47] Felipe "Juca" Sanches: eu poderia simplesmente implementar tudo com base no datasheet, mas acho mais divertido (e sinto mais segurança) fazendo o disasm de um código real e testando
+[2021-09-19 20:55:18] Felipe "Juca" Sanches: isso já não é no disassembler. Isso é na implementação do driver de emulação do teclado (que estou fazendo também, mas dei uma pausa)
+[2021-09-19 20:55:46] Felipe "Juca" Sanches: Pra descobrir o mapa de memória analisei o esquemático do aparelho, disponível no service manual
+[2021-09-19 20:56:06] Felipe "Juca" Sanches: e também interpretei um trecho do código de boot que faz um mapeamento de memória via software
+[2021-09-19 20:56:35] Felipe "Juca" Sanches: essa CPU permite definir faixas de endereço para cada um dos vários pinos de chip select usados pra ativar os periféricos
+[2021-09-19 20:57:15] Deleted Account: Show!
+[2021-09-19 20:57:20] Felipe "Juca" Sanches: então o mapa completo só dá pra inferir juntando as informacoes do esquemático com essa rotina de boot disponível na ROM
+[2021-09-19 20:58:16] Felipe "Juca" Sanches: a emulacao correta deveria, aliás, implementar esse mecanismo de memory-map dinâmico, mas por enquanto declarei um memory map estático que funciona com a ROM de boot do KN5000
+[2021-09-19 20:58:33] Shideravan: Quantos opcodes esse chip tem?
+[2021-09-19 20:58:44] Felipe "Juca" Sanches: vixe, nem sei! É coisa pra  caralho
+[2021-09-19 20:59:19] Deleted Account: E o framebuffer pro display? É fácil de endereçar?
+[2021-09-19 20:59:28] Felipe "Juca" Sanches: é um controlador VGA
+[2021-09-19 20:59:37] Felipe "Juca" Sanches: então acho que é simples
+[2021-09-19 20:59:49] Felipe "Juca" Sanches: mas no meu driver no MAME ainda tá com a tela preta
+[2021-09-19 20:59:58] Deleted Account: Caramba. O teclado tem um adaptador VGA?
+[2021-09-19 21:00:07] Deleted Account: Devia custar uma nota.
+[2021-09-19 21:00:09] Felipe "Juca" Sanches: o boot deve estar enroscando antes de chegar na parte do codigo que desenha na tela
+[2021-09-19 21:00:14] Felipe "Juca" Sanches: sim
+[2021-09-19 21:00:31] Felipe "Juca" Sanches: 5 mil reais em 1996
+1,500 reais em 2021
+[2021-09-19 21:01:04] Deleted Account: Nossa. É bem mais complexo que eu pensava. 😳 Quando imagino teclado logo me vem a mente aqueles Casio.
+[2021-09-19 21:01:15] Shideravan: Custava uma nota. 5 mil em 96 são quase 50 salários mínimos hahaha
+[2021-09-19 21:02:30] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=WMBto2wBEPg
+[2021-09-19 21:03:06] Shideravan: 44 salários mínimos para ser exato (estava em 112 reais na época hahaha)
+[2021-09-19 21:03:08] Deleted Account: Emulação é algo muito legal. O hardware morre mas não é esquecido. 
+
+Em mais algumas décadas o último SID chip vai deixar de funcionar (graças a 'qualidade' de manufatura da MOS) e só vamos poder apreciar rob hobbard no VICE mesmo.
+[2021-09-19 21:04:03] Deleted Account: Que coisa linda bixo.
+[2021-09-19 21:04:12] Shideravan: Emulação é essencial para a preservação
+[2021-09-19 21:07:10] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=Sggb_-xVvq0
+[2021-09-19 21:07:17] Deleted Account: Caramba, Felipe. O trabalho vai ser enorme. Esse não é um simples teclado arranjador. É um full sintetizador. 😳
+
+A ROM disso aí deve ser uma loucura.
+[2021-09-19 21:07:26] Ismael Luceno: https://www.fpgasid.de/
+[2021-09-19 21:07:30] Shideravan: Existe algum tipo de input que simule um teclado musical para ligar no PC, via USB port exemplo?
+[2021-09-19 21:08:21] Ismael Luceno: @Shideravan teclado midi?
+[2021-09-19 21:08:55] Shideravan: Não
+[2021-09-19 21:09:01] Ismael Luceno: porqué??
+[2021-09-19 21:09:06] Shideravan: Input mesmo
+[2021-09-19 21:09:25] Ismael Luceno: mas midi é input... tem midi usb...
+[2021-09-19 21:09:45] Deleted Account: Caramba. O SID está salvo. Chipzinho maravilhoso. 
+
+Incrível como o som dele tem um timbre tão bonito.
+[2021-09-19 21:11:30] Shideravan: Eu queria saber se existe um que fosse só o "controle", que dependesse de lugar num PC para funcionar, pois as internas seria como um teclado comum e portanto, barato
+[2021-09-19 21:11:57] Erin Pinheiro 🐿: controladora midi
+[2021-09-19 21:12:00] Ismael Luceno: tem outras implementações, mas eu acho que essa é das poucas que tem a parte dos filtros em analógico
+[2021-09-19 21:12:23] Erin Pinheiro 🐿: é só o controle, não faz som
+[2021-09-19 21:12:25] Ismael Luceno: @Shideravan você ta falando dum teclado midi :P
+[2021-09-19 21:12:28] Ismael Luceno: https://www.amazon.com/dp/B08WG4ZVV8
+[2021-09-19 21:12:44] Erin Pinheiro 🐿: midi não é som, é padrão de comunicação
+[2021-09-19 21:12:50] Deleted Account: O próprio SID deve ter tido umas 30 revisões. 
+
+Acho que mesmo os puristas não vão conseguir por defeito nesse projeto. Rsrs...
+[2021-09-19 21:13:12] Deleted Account: Tem gente que odeia o SID do C64C (que eu acho o mais bonito).
+[2021-09-19 21:13:20] Ismael Luceno: @mynameiserin exatamente
+[2021-09-19 21:13:28] Felipe "Juca" Sanches: É a minha sugestão seria usar um controlador MIDI-USB como esse pra interfacear com os drivers de teclados no MAME:
+
+https://produto.mercadolivre.com.br/MLB-1819457607-kfx-mini-25-ultra-teclado-controlador-midi-usb-25-teclas-16p-_JM#position=4&search_layout=grid&type=item&tracking_id=a15b5d78-1414-4ad4-a331-f45a48a97428
+[2021-09-19 21:13:46] Shideravan: Caraca, eu fui buscar aqui, não acha por menos de quinhentao
+[2021-09-19 21:13:51] Ismael Luceno: @mynameiserin  ele falou só dos eventos de input
+[2021-09-19 21:14:10] Deleted Account: 500 tá é barato. Hehehe... Quantas oitavas?
+[2021-09-19 21:14:25] Shideravan: Só duas
+[2021-09-19 21:14:39] Shideravan: 25 teclas
+[2021-09-19 21:14:58] Shideravan: Coisas que envolvem música são absurdamente caras hahaha
+[2021-09-19 21:15:27] Felipe "Juca" Sanches: eu provavelmente usaria o próprio KN5000 como controlador MIDI do MAME durante o desenvolvimento do driver 😉
+[2021-09-19 21:15:37] Felipe "Juca" Sanches: o que é bizarro, mas funciona
+[2021-09-19 21:16:09] Shideravan: Para em pagar 500 conto eu esperaria aí menos ele emitir som, não depender de lugar em um PC hahaha
+[2021-09-19 21:16:22] Ismael Luceno: @Shideravan é, mas só pq tem poucas ventas...
+[2021-09-19 21:16:30] Shideravan: Faz sentido
+[2021-09-19 21:16:40] Shideravan: Mas é caro hahaha
+[2021-09-19 21:17:00] Deleted Account: Hoje em dia, se não for pra fazer show, o controlador é o melhor custo benefício. Pq aí vc consegue tirar qualquer som do PC.
+[2021-09-19 21:17:18] Shideravan: Não tem daqueles flexíveis mais barato?
+[2021-09-19 21:18:35] Deleted Account: Cara. Se não for uma pergunta indelicada, como você encontrou essa raridade? Funcionando ainda.
+[2021-09-19 21:18:51] Felipe "Juca" Sanches: comprei no mercado livre
+[2021-09-19 21:18:56] Felipe "Juca" Sanches: por 1500 contos
+[2021-09-19 21:19:14] Shideravan: Éo melhor negócio hahaha
+[2021-09-19 21:19:15] Felipe "Juca" Sanches: e o cara ainda me vendeu um segundo, quebrado, um pouco mais barato, pra eu poder dumpar as ROMs
+[2021-09-19 21:19:23] Deleted Account: 😳
+[2021-09-19 21:19:33] Deleted Account: Um DX7 caindo aos pedaços é 4x isso.
+[2021-09-19 21:19:52] Ismael Luceno: @Shideravan eu recomendaria esperar alguma oportunidade no mercadolivre, sempre há quem vende barato, as vezes consegue algum teclado quebrado bem baratinho ;)
+[2021-09-19 21:19:52] Felipe "Juca" Sanches: eu comprei um DX7 em ótimas condicoes por 3000 reais no mercado livre também, uns 2 anos atrás
+[2021-09-19 21:20:19] Deleted Account: Esse aí você pode guardar que vai valer mais que bitcoin. Teclado perfeito demais.
+[2021-09-19 21:20:25] Felipe "Juca" Sanches: hahaha
+[2021-09-19 21:20:26] Ismael Luceno: XDD
+[2021-09-19 21:20:31] Felipe "Juca" Sanches: toquei nele hoje mesmo, de manhã
+[2021-09-19 21:20:37] Felipe "Juca" Sanches: é bem legal mesmo
+[2021-09-19 21:21:00] Deleted Account: Se o DX7 não tivesse sido inventado 90% da música dos anos 80 não iria existir. 😂
+[2021-09-19 21:21:18] Felipe "Juca" Sanches: correção: iria existir sim, mas seria MUITO DIFERENTE!
+[2021-09-19 21:21:54] Felipe "Juca" Sanches: digo mais: 100% da música dos anos 80 existiria independentemente de qualquer coisa hahaha
+[2021-09-19 21:22:11] Deleted Account: Kkkkkkkkkkk
+[2021-09-19 21:22:15] Deleted Account: Isso é verdadd.
+[2021-09-19 21:22:28] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15130-AnimatedSticker.tgs
+[2021-09-19 21:23:03] Felipe "Juca" Sanches: até mesmo se a humanidade estivesse extinta. Afinal de contas, 100% de zero é zero
+[2021-09-19 21:23:09] Shideravan: Correção. Depende da existência de humanos. Sem humanos, não existe música humana nos anos 80 hahaha
+[2021-09-19 21:23:14] Felipe "Juca" Sanches: aha!
+[2021-09-19 21:23:22] Felipe "Juca" Sanches: parece que eu previ seu comentário hahaha
+[2021-09-19 21:23:29] Shideravan: Droga
+[2021-09-19 21:24:04] Shideravan: Uma fração de segundo antes e o seu prederia o sentido hahaha
+[2021-09-19 21:24:39] Shideravan: Ou ganharia um sentido diferente
+[2021-09-19 21:25:13] Felipe "Juca" Sanches: @Shideravan, você então será um dos meus pupilos no desenvolvimento do MAME (e projetos correlatos)? 😉
+[2021-09-19 21:26:02] Felipe "Juca" Sanches: se você topar, posso te mostrar mais detalhes desse projeto. Avisa aí!
+[2021-09-19 21:30:57] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15140-mp4.mp4
+[2021-09-19 21:31:04] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15141-mp4.mp4
+[2021-09-19 21:31:11] Shideravan: Eu topo, mas eu acho que me interessaria mais de emular algumas outras coisas hahaha
+[2021-09-19 21:31:26] Felipe "Juca" Sanches: ué, diz aí!
+[2021-09-19 21:31:34] Deleted Account: Primeiro constrói o emulador ué.  😂
+[2021-09-19 21:32:05] Felipe "Juca" Sanches: não entendi
+[2021-09-19 21:32:22] Deleted Account: Ele falou que queria emular. Primeiro ajuda vc a contruir o emulador.
+[2021-09-19 21:32:26] Deleted Account: 😂
+[2021-09-19 21:32:36] Deleted Account: Construir*
+[2021-09-19 21:32:46] Felipe "Juca" Sanches: ah sim
+[2021-09-19 21:32:57] Felipe "Juca" Sanches: mas é legítimo ele estar interessado em emular outros devices
+[2021-09-19 21:33:10] Felipe "Juca" Sanches: eu comecei emulando impressora de cheque kkkk
+[2021-09-19 21:33:21] Felipe "Juca" Sanches: emulei pela metade um monte de bosta
+[2021-09-19 21:33:27] Felipe "Juca" Sanches: só pra pegar a experiência
+[2021-09-19 21:33:47] Felipe "Juca" Sanches: e agora to com a sensação de que finalmente cheguei no device que realmente quero emular por completo
+[2021-09-19 21:33:52] Deleted Account: 😳
+[2021-09-19 21:33:53] Shideravan: Eu tô aprendendo coisas na emulação de NES 8-bits
+[2021-09-19 21:33:59] Felipe "Juca" Sanches: mas que seria impossível se eu tivesse começado direto por ele
+[2021-09-19 21:34:00] Shideravan: Aliás... Quem se interessar
+[2021-09-19 21:34:07] Deleted Account: Eu tô tentanto terminar um de chip8 😭
+[2021-09-19 21:34:29] Felipe "Juca" Sanches: esses devices populares já estão ou muito bem emulados, ou o que resta fazer é nivel hard
+[2021-09-19 21:34:39] Felipe "Juca" Sanches: pode ter exceções, é claro
+[2021-09-19 21:34:48] Shideravan: https://youtu.be/F8kx56OZQhg
+[2021-09-19 21:35:01] Deleted Account: Implementei metade das instruções do chip8 (que nem são muitas) mas parei no sound pq não sei como gerar um beep np SDL. 🙈
+[2021-09-19 21:35:20] Deleted Account: Gerar um beep sintetizado. Sem wav
+[2021-09-19 21:35:35] Shideravan: Chip 8 é uma ótima porta de entrada
+[2021-09-19 21:36:21] Felipe "Juca" Sanches: chip8 eu não conheço os detalhes, apenas vi algumas coisas. Tenho a impressao de que tá mais próximo de uma VM né? Pois não é um processador de verdade
+[2021-09-19 21:36:34] Deleted Account: É um pseudo processador.
+[2021-09-19 21:36:47] Felipe "Juca" Sanches: parece mais ser uma especificação de instruction set, mas que nunca foi implementada em silício
+[2021-09-19 21:36:55] Shideravan: Você está fazendo em c?
+[2021-09-19 21:37:02] Deleted Account: Tem algumas roms pra ele. Mas a implementação é bem aberta. A página do cowgods tem tudo explicado. É beeeeem simples.
+[2021-09-19 21:37:06] Shideravan: Isso mesmo
+[2021-09-19 21:37:06] Deleted Account: Isso. Em c.
+[2021-09-19 21:37:13] Felipe "Juca" Sanches: então pode ter instrucoes mais complexas, que normalmente é o tipo de coisa que se vê em máquinas virtuais e não em chips de CPU
+[2021-09-19 21:37:48] Shideravan: https://stackoverflow.com/questions/29493837/how-to-make-a-beep-sound-in-c-on-windows
+[2021-09-19 21:37:48] Deleted Account: Ele tem um timer de som que quando maior que 0 toca um beep (frequência a ser definida).
+[2021-09-19 21:38:02] Deleted Account: Ah. No windows não rola. Kkkk...
+[2021-09-19 21:38:03] Felipe "Juca" Sanches: é o caso da VM do Another World que implementei no MAME. Tem umas instrucoes extremamente alto-nível, tipo "play song", que uma CPU típica não teria.
+[2021-09-19 21:38:27] Shideravan: Na verdade, amanhã eu te dou uma resposta mais certeira
+[2021-09-19 21:38:41] Deleted Account: Isso acho que sim.
+[2021-09-19 21:39:10] Shideravan: Tinha um comandinho em c que faz parte das bibliotecas básicas
+[2021-09-19 21:39:28] Shideravan: Eu lembro do livro de c da Viviane victorini
+[2021-09-19 21:39:29] Felipe "Juca" Sanches: sem pressa
+[2021-09-19 21:39:38] Deleted Account: Eu tava fazendo com printf("\a") pra dar o beep do console mesmo. Kkkkk
+[2021-09-19 21:39:48] Shideravan: Não é para você, é para ele hahaha
+[2021-09-19 21:40:00] Shideravan: Para você eu disse que topo sim hahaha
+[2021-09-19 21:40:04] Felipe "Juca" Sanches: ah, mas serviu pra mim kkkk
+[2021-09-19 21:40:10] Felipe "Juca" Sanches: MARAVILHA!
+[2021-09-19 21:40:14] Shideravan: É que eu tô longe do meu pc
+[2021-09-19 21:40:54] Felipe "Juca" Sanches: já faz bastante tempo que estou procurando gente que tenha interesse em emulação, alinhamento forte com software livre, e interesse em aprender mais sobre hardware
+
+sinto que é uma missão de vida pra mim, ajudar outras pessoas nessa área
+[2021-09-19 21:41:26] Felipe "Juca" Sanches: é o que sei fazer de melhor e tenho essa pegada de professor, com muito prazer em ensinar, orientar, etc...
+[2021-09-19 21:41:42] Shideravan: Fazem alguns anos que te mandei um e-mail lá no mame e você não respondeu até hoje hahaha
+[2021-09-19 21:41:52] Felipe "Juca" Sanches: vixe
+[2021-09-19 21:41:54] Felipe "Juca" Sanches: me desculpe
+[2021-09-19 21:41:58] Shideravan: Hahaha
+[2021-09-19 21:41:58] Felipe "Juca" Sanches: acho que não vi
+[2021-09-19 21:42:00] Shideravan: De boas
+[2021-09-19 21:42:31] Felipe "Juca" Sanches: fiquei curioso agora... se puder me encaminhar uma cópia, posso confirmar se vi e esqueci ou se nem sequer vi 😉
+[2021-09-19 21:42:39] Shideravan: Eu conheço um pouco da estrutura do MAME, inclusive já colaborei lá anteriormente
+[2021-09-19 21:43:01] Shideravan: Relaxa, já fazem tantos anos que nem devo conseguir achar hahaha
+[2021-09-19 21:43:05] Felipe "Juca" Sanches: ok
+[2021-09-19 21:44:14] Shideravan: Uma coisa que eu já fiz com alguns amigos é usar uma estrutura de dojo, com um ensinando o outro em intervalos por definidos
+[2021-09-19 21:44:29] Shideravan: Eu usei isso para treinarmos TDD
+[2021-09-19 21:44:34] Shideravan: Funcionou bem
+[2021-09-19 21:44:40] Felipe "Juca" Sanches: tenho essas 3 teorias:
+
+(1) vi, achei legal, resolvi responder decentemente ao invés de responder rápido, e acabei esquecendo
+
+(2) nem sequer vi
+
+(3) vi, mas descobri que você é um neo-nazi ou qualquer outra coisa desse tipo, bolsonarista, etc... e desisti
+
+
+Estou aqui torcendo pra ser opção 1 ou 2 kkkk 😉
+[2021-09-19 21:44:56] Shideravan: Se você topar assim, eu chamo a minha namorada para participar também
+[2021-09-19 21:45:32] Shideravan: Certamente é 1 ou 2, Deus me livre da 3 hahaha
+[2021-09-19 21:45:36] Felipe "Juca" Sanches: kkkkk
+[2021-09-19 21:45:38] Felipe "Juca" Sanches: ufa!
+[2021-09-19 21:45:47] Shideravan: Mas é uma pergunta importante
+[2021-09-19 21:46:10] Felipe "Juca" Sanches: já aconteceu a 3 comigo essa semana, inclusive!
+[2021-09-19 21:46:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15211.jpg
+[2021-09-19 21:46:40] Felipe "Juca" Sanches [forwarded]: Fico muito feliz quando aparece gente com interesse técnico elogiando meus vídeos. Mas fico puto, puto, muito puto, quando vejo o nome de usuário e a descrição... 😞 Dá uma mega-brochada...

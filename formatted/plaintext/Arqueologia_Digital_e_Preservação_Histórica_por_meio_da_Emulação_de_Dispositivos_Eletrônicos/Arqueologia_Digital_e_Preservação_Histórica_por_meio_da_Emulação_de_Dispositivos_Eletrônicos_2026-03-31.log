@@ -1,0 +1,22 @@
+[2026-03-31 06:22:19] Felipe "Juca" Sanches: Tá ficando enorme a linha de comando pra rodar o emulador 😂 
+
+./fs_mame -rp /mnt/shared/kn5000_project/original-roms ct486 -ui_active -window -isa1 svga_et4k -board4:lpt:lpt:centronics kn5000_cable -board3:ide:ide:0 hdd -board4:lpt:lpt:centronics:kn5000_cable:kn5000:extension hdae5000 -board4:lpt:lpt:centronics:kn5000_cable:kn5000:extension:hdae5000:ata:0 hdd -hard1 /mnt/shared/CHDs/w95-hdtm5000.img -hard2 /mnt/shared/mame/kn5000_disk.hd
+[2026-03-31 06:57:48] Ramiro Polla: Não tem conexão com ap2000 pra imprimir partituras? :P
+[2026-03-31 06:59:42] Felipe "Juca" Sanches: O KN5000 com a placa HDAE5000 são periféricos para o PC. Pro KN5000 controlar uma impressora precisaria reprogramar o firmware. Epa, peraí, caceta!
+[2026-03-31 07:00:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37965.jpg
+[2026-03-31 07:00:51] Felipe "Juca" Sanches: NERD-SNIPPED!
+[2026-03-31 07:03:55] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37966.jpg
+[2026-03-31 07:03:55] Felipe "Juca" Sanches: E eu continuo dando murro em ponta de faca aqui...
+[2026-03-31 08:16:28] Pablo Vasques Bravo-Villalba: Procura o runtime do VB4 instalável, capaz de dar certo. Ou disponibiliza o HD virtual desse Windows aí que eu tento dar um jeito
+[2026-03-31 08:20:03] Pablo Vasques Bravo-Villalba: Eu vi um no archive.org mas não tenho como testar
+[2026-03-31 11:05:19] Felipe "Juca" Sanches: OK. Te enviei o arquivo CHD em chat privado.
+[2026-03-31 15:28:02] Hugo (Agaelebê): photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37971.jpg
+[2026-03-31 15:28:02] Hugo (Agaelebê): @fsanches Vi esse monte de chicotes na Beep em Akihabara e lembrei de você...
+[2026-03-31 15:41:19] L.: Contexto é tudo mesmo né
+[2026-03-31 16:04:06] Jason Do Jamelão Preto: Bdsm de TI 😁
+[2026-03-31 16:18:43] Flávio Amieiro: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37974.jpg
+[2026-03-31 23:27:11] Felipe "Juca" Sanches: kkkk vocês não prestam! kkkk 🤣
+[2026-03-31 23:44:17] Felipe "Juca" Sanches: Descobri hoje que esse meu avanço aconteceu uns 3 dias antes da data de corte pro release desse mês. Ou seja, só vai entrar pra valer no MAME mês que vem, por volta de 25/04
+[2026-03-31 23:45:03] Felipe "Juca" Sanches: Isso aqui hoje foi bacana: https://github.com/mamedev/mame/commit/7b8205f45511ca94014bd7088609a711cc0ecdae
+[2026-03-31 23:45:43] Felipe "Juca" Sanches: https://www.ardent-tool.com/comms/an062_Updating_the_parallel_port.pdf
+[2026-03-31 23:46:05] Felipe "Juca" Sanches: E por falar em próximo mês... https://www.reddit.com/r/MAME/comments/1s925uk/future_plans_announcement/

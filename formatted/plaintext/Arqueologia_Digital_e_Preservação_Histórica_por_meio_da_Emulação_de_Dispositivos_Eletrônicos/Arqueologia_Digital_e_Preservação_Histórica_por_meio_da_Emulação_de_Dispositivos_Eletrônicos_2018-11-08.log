@@ -1,0 +1,20 @@
+[2018-11-08 00:10:31] Felipe "Juca" Sanches: exatamente
+[2018-11-08 00:10:45] Felipe "Juca" Sanches: como determinar?
+[2018-11-08 00:11:09] Felipe "Juca" Sanches: querem tentar investigar o caso do AlleyCat?
+[2018-11-08 00:34:51] Deleted Account: Existe maneira de fazer um log de chamadas ABI?
+[2018-11-08 00:35:13] Felipe "Juca" Sanches: não sei nem por onde começar...
+[2018-11-08 00:37:10] Felipe "Juca" Sanches: Ismael você se refere a chamadas de funções da BIOS? Sei que na época do 386 e do MSDOS, usava-se interrupções por software para se acessar uma biblioteca de rotinas úteis oferecida pelo sistema operacional. Da mesma forma, outras interrupções ofereciam acesso às rotinas da ROM da VGA BIOS
+[2018-11-08 00:37:49] Felipe "Juca" Sanches: mapear essas chamadas de interrupção é possível com o debugger do MAME
+[2018-11-08 00:38:14] Felipe "Juca" Sanches: Ismael, tem mais alguma outra coisa a que você se refira como "ABI" além disso?
+[2018-11-08 05:42:05] Ismael Luceno: Não, é isso somente. Pensa se implementar o chip de vídeo e o de som?
+[2018-11-08 21:08:40] Felipe "Juca" Sanches: https://www.raphnet.net/programmation/booterify/index_en.php
+[2018-11-08 21:23:25] * Felipe "Juca" Sanches removed Deleted Account
+[2018-11-08 21:23:29] * Felipe "Juca" Sanches removed Deleted Account
+[2018-11-08 21:34:27] Ismael Luceno: Excellent.
+[2018-11-08 21:35:14] Felipe "Juca" Sanches: eu preciso duma versáo ROM-ifier disso. Em vez de "Floppyfier"...
+[2018-11-08 21:36:15] Ismael Luceno: E exatamente igual só que começa no addr 0 do segmento...
+[2018-11-08 21:42:18] Ismael Luceno: Eu posso fazer o loader no final de semana, já tenho feito cosas similares. Você já tem uma ideia concreta da configuração da plataforma?
+[2018-11-08 21:45:58] Felipe "Juca" Sanches: não... só viagem na maionese até agora mesmo hahaha
+[2018-11-08 21:46:28] Felipe "Juca" Sanches: Estou naquele ponto de exploração mental de um projeto hipotético que nem sei ainda se faz sentido
+[2018-11-08 21:46:37] Felipe "Juca" Sanches: mas parece divertido
+[2018-11-08 21:50:20] Ismael Luceno: 👍

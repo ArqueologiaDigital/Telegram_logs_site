@@ -1,0 +1,13 @@
+[2020-12-10 16:02:24] L.: @fsanches Cê tem o dump do Pense Bem AVR fácil aí?
+[2020-12-10 16:12:32] L.: Achei no email!
+[2020-12-10 16:20:31] L.: O Ghidra descompila fácil o código!
+[2020-12-10 16:21:11] L.: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-12/11693-Screen%20Shot%202020-12-10%20at%2011.20.51%20AM.png
+[2020-12-10 16:30:02] L.: A função em 0b60 parece suspeita de ser o PRNG hein
+[2020-12-10 16:41:17] Felipe "Juca" Sanches: boa sorte! kkkk
+[2020-12-10 16:41:31] Felipe "Juca" Sanches: legal saber que vc tá investigando isso 😊
+[2020-12-10 16:41:35] L.: Acho que só com debugger mesmo. Achei uma função monstro aqui
+[2020-12-10 16:41:37] Felipe "Juca" Sanches: Nos mantenha informados
+[2020-12-10 16:42:15] L.: Curti esse Ghidra. Mais de boa usar que o IDA
+[2020-12-10 20:14:48] FTMaciel: @fsanches tu já fez dump de prom?
+[2020-12-10 20:15:19] FTMaciel: To com uma placa de um sid 502 e queria fazer o dump de uma prom dela
+[2020-12-10 21:33:37] Alexandre Villares: https://bbcmic.ro/#%7B%22v%22%3A1%2C%22program%22%3A%220MODE2%3AF%3D1%3AY%3D512%3AREPEAT%3AN%3D%28N%20MOD4%29%2B1%3AGCOL0%2CN%3AMOVE0%2CY%3ADRAW1280%2CY%3AY%3DY-F%3AF%3DF*1.2%3AUNTILY%3C0%5Cn1GCOL0%2C5%3AFORI%3D-8.5TO8.5%3AMOVE640%2BI*75%2C512%3ADRAW640%2BI*220%2C0%3ANEXT%3AMOVE0%2C512%3ADRAW1280%2C512%5Cn2COLOUR6%3APRINT%20TAB%282%2C11%29%3B%5C%22THIS%20IS%20THE%20ONLY%5C%22%3APRINT%5C%22%20%20WAY%20I%20TWEET%20NOW.%5C%22%5Cn3VDU19%2CN%2C0%2C0%2C0%2C0%3AN%3D%28N%20MOD4%29%2B1%3AVDU19%2CN%2C5%2C0%2C0%2C0%3AI%3DINKEY%2812%29%3AGOTO3%22%7D

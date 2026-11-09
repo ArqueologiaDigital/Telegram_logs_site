@@ -1,0 +1,40 @@
+[2024-06-11 22:18:51] Alexandre Villares: How Much of a Genius-Level Move Was Using Binary Space Partitioning in Doom?
+https://twobithistory.org/2019/11/06/doom-bsp.html
+[2024-06-11 23:16:01] RicBit: eu implementei uma bsp em 1995, muito orgulho de olhar esse codigo hoje em dia
+[2024-06-11 23:16:12] RicBit: https://github.com/ricbit/Oldies/blob/master/1995-09-doom/doom.cpp
+[2024-06-11 23:16:44] RicBit: No caso o orgulho é de ver o quanto eu melhorei desde essa época, porque esse código aí é lixo haha.
+[2024-06-11 23:17:22] RicBit: A criação da bsp é no LoadWall, que é uma burrice em vários níveis.
+[2024-06-11 23:19:14] RicBit: primeiro que recomputar a bsp toda vez que carrega é desperdicio, dava pra fazer uma vez só na compilacao, segundo porque nem precisava de bsp, minhas paredes eram axis-aligned então ordenação simples funcionava.
+[2024-06-11 23:20:09] RicBit: mas esse código foi feito ao contrario, o objetivo era aprender bsp, as faces eram axis-aligned porque eu fiquei com preguiça de escrever um mapa decente haha. então as paredes eram montadas em cima de um ascii art.
+[2024-06-11 23:23:06] L.: Melhor sensação
+[2024-06-11 23:24:16] RicBit: eu sempre falo, se o seu código antigo não parece ruim é porque você parou de aprender.
+[2024-06-11 23:26:09] RicBit: PrecYLine é um bresenham com texture mapping que dá gastura de tanto copy+paste
+[2024-06-11 23:26:11] RicBit: https://github.com/ricbit/Oldies/blob/master/1995-09-doom/fgraph.asm
+[2024-06-11 23:26:29] L.: As vezes eu tenho essa sensação até com código dos outros
+
+Por exemplo, quando eu escrevi um decoder de huffman pra http/2, eu tava aprendendo sobre compressão. Lembrei de um artigo que tinha lido e não entendido nada numa revista portuguesa há muito tempo atrás. Não tinha mais o disquete, mas consegui achar o código do compressor do artigo por aí. Não só entendi quanto achei terrível 😆
+[2024-06-11 23:26:53] RicBit: Mas olhando agora eu achei legal porque é x86 de 16 bits, eu nem lembrava disso, achei que já escrevia 32 bits nessa época
+[2024-06-11 23:27:23] RicBit: encaixar um bresenham com texture mapping no tantinho de registro do x86-16 foi corajoso
+[2024-06-11 23:27:43] L.: Eu também deixei de manter software por que o código era terrível. Hardinfo é um deles. Tem maintainer novo, que tá aprendendo então o código novo tá ruim, mas eu não tenho mais que fazer nada😆
+[2024-06-11 23:29:25] RicBit: codigo ruim dos outros eu acho dificil de ler porque é dificil entender os constraints. às vezes é ruim porque o cara fez em 30 minutos. o meu proprio codigo dá para apreciar melhor a tosquice
+[2024-06-11 23:30:08] RicBit: huffman tem um negocio que eu comecei a fazer na epoca e nunca terminei, eu acho que deve ser problema em aberto até hoje
+[2024-06-11 23:30:36] L.: Ah, sim, mas nesse caso do compressor foi de "nem faço ideia de como funciona" pra "vish, dá pra fazer beeeeem melhor"
+[2024-06-11 23:30:54] RicBit: a ideia do huffman é achar a probabilidade de cada simbolo, e um simbolo normalmente é um caractere ou um ngram, então é só computar o histograma e boa
+[2024-06-11 23:31:33] L.: Você diz pra gerar os códigos sem precisar fazer o varal?
+[2024-06-11 23:31:39] RicBit: mas o que eu tinha pensado era fazer símbolos de tamanho variavel
+[2024-06-11 23:32:32] RicBit: tipo "this is the theorem", ele pode perceber que "th" é um simbolo, "the" é outro simbolo, "t" é um terceiro, e achar qual é melhor combinacao para diminuir o stream
+[2024-06-11 23:32:56] L.: entendi
+[2024-06-11 23:33:19] RicBit: mas montar o varal nesse caso é np-completo e não tem ganho sobre o lz que é muito mais simples
+[2024-06-11 23:33:31] RicBit: EXCETO EM UM CASO
+[2024-06-11 23:34:01] RicBit: que é se voce for comprimir um texto uma unica vez e descomprimir pedacinhos em posicoes aleatorias
+[2024-06-11 23:34:21] RicBit: aka mensagens de um jogo de rpg em uma maquina de 8 bits
+[2024-06-11 23:34:39] L.: ahhh, sim, eu já pensei nisso, mas pra bitcode de interpretador
+[2024-06-11 23:35:05] RicBit: sim, mesmo problema
+[2024-06-11 23:35:28] RicBit: na epoca eu usei um metodo chamado mis que originalmente era de otimizacao booleana para asic
+[2024-06-11 23:35:31] RicBit: deixa ver aqui
+[2024-06-11 23:36:55] RicBit: o compressor era gigante e complicado:
+https://github.com/ricbit/Oldies/blob/master/2001-08-mis/mis.c
+[2024-06-11 23:37:51] RicBit: mas depois de criado descomprimir é tipo 10 linhas
+[2024-06-11 23:37:54] RicBit: https://github.com/ricbit/Oldies/blob/master/2001-08-mis/fumis.c
+[2024-06-11 23:38:15] RicBit: a descompressao é read_cover, o resto é codigo para ler a arvore do disco
+[2024-06-11 23:38:49] RicBit: tem versao uzix haha

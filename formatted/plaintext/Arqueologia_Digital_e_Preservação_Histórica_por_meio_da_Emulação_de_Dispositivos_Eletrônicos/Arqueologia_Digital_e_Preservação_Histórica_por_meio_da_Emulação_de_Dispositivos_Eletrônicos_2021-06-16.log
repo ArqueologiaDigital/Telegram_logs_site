@@ -1,0 +1,51 @@
+[2021-06-16 11:16:05] Eduardo Loos: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-06/13460.jpg
+[2021-06-16 11:16:09] Eduardo Loos: Obrigado a todos que acompanharam mais uma live do RetroSC 8, ontem! Este time aí deu uma verdadeira aula de desenvolvimento de jogos para plataformas retro e mostrou um pouco do quanto está sendo produzido aqui no Brasil. 
+
+Obrigado ao Mário Cavalcanti, do canal Clube MSX, que conduziu a live.
+
+Para quem não viu ou quiser rever, segue o link:
+https://www.youtube.com/watch?v=GSdzPWDSfY8
+[2021-06-16 16:40:37] Eduardo Loos: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-06/13462.jpg
+[2021-06-16 16:40:40] Eduardo Loos: Terceira live do RetroSC 8 online! Hoje 21:00. Em parceria com os amigos do canal WarpZone. 
+
+Uma das maiores rivalidades da história dos jogos eletrônicos: SEGA X NINTENDO. A turma da WarpZone, junto com dois convidados do RetroSC: de um lado, Jheison Balan, ‘seguista’ de carteirinha. Do outro lado Luis Gustavo Caon Demarchi, Fã da Nintendo! Prestigie !
+
+Link: https://www.youtube.com/watch?v=goZRl1YpONQ
+[2021-06-16 19:10:56] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-06/13464.jpg
+[2021-06-16 19:10:56] Erin Pinheiro 🐿 [forwarded]: eu tô tentando fazer desse cartucho pirata de mega num cartucho de EEPROMs. o pirata usava 2x 27C4000s e estou tentando substituir por 2x 39SF040. troquei o pino A18 e juntei WE a +5 pra habilitar leitura... mas nada do que eu faço faz esse cartucho funcionar, fica só na tela preta.
+[2021-06-16 19:10:56] Erin Pinheiro 🐿 [forwarded]: fiz um dump das 2 ROMs originais dessa placa e, como o mega tem barramento de dados 16bit, são 2 ROMs de 8bit interleaved (even/odd). fiz um scriptzinho pra juntar as duas, e sai uma ROM que funciona normal em emulador
+[2021-06-16 19:10:56] Erin Pinheiro 🐿 [forwarded]: mas se eu gravo de volta essas ROMs em 2 EEPROMs e coloco elas de volta no lugar, não funciona
+[2021-06-16 19:10:56] Erin Pinheiro 🐿 [forwarded]: tô deixando escapar alguma coisa e não sei por onde começar
+[2021-06-16 19:11:01] Erin Pinheiro 🐿: caso alguém aqui tenha alguma idéia
+[2021-06-16 19:11:55] Felipe "Juca" Sanches: será que o timing de leitura pode ser diferente?
+[2021-06-16 19:12:29] Erin Pinheiro 🐿: não deveria... o 27C4000 tem tempo máximo de dados depois de OE de 70ns, o 39SF040 é mais rápido
+[2021-06-16 19:14:00] Felipe "Juca" Sanches: o pinout é identico? O que vc faz com os pinos usados para gravar a EEPROM? Ficam soltos? Vão pro terra ou talvez vcc via pull up?
+[2021-06-16 19:14:38] Erin Pinheiro 🐿: o único pino a mais no 39SF040 é WE, write enable. ele deve ser HIGH pra habilitar leitura. fica logo abaixo do VCC, então apenas juntei
+[2021-06-16 19:15:16] Erin Pinheiro 🐿: o pino A18 em EEPROM tem posição diferente que em ROM. fiz essa mudança na placa também, nos dois chips, e chequei tudo
+[2021-06-16 19:15:37] Erin Pinheiro 🐿: endereçamento e dados parecem ok da ponta do cartucho até os chips
+[2021-06-16 19:16:20] Erin Pinheiro 🐿: já fiz essa mesma mudança num cartucho de master system, e nele funcionou de boa
+[2021-06-16 19:16:38] Erin Pinheiro 🐿: só que naquele caso era um bus de 8bits e um só chip de 512k, não dois
+[2021-06-16 19:17:19] Felipe "Juca" Sanches: você fez a leitura da EEPROM depois de gravá-la pra se certificar que a escrita foi feita corretamente?
+[2021-06-16 19:17:29] Erin Pinheiro 🐿: sim, o próprio gravador tem essa opção
+[2021-06-16 19:17:32] Felipe "Juca" Sanches: ok
+[2021-06-16 19:17:42] Felipe "Juca" Sanches: é... então eu também não sei o que está errado aí
+[2021-06-16 19:17:50] Erin Pinheiro 🐿: ha, pelo menos não sou só eu :)
+[2021-06-16 22:37:38] RicBit: Eu tenho um cartucho de mega que eu troquei a eprom e funcionou
+[2021-06-16 22:38:39] RicBit: Eu lembro de ter ido na Santa e aberto todos os carts do camelo até achar um que tinha duas eproms de 8 ao invés de uma de 16
+[2021-06-16 22:39:58] RicBit: Eu checaria se a ROM que você está usando está na mesma região do mega e se o checksum delas está correto.
+[2021-06-16 22:40:14] RicBit: O Master eu sei que não boota com checksum errado.
+[2021-06-16 22:46:19] Erin Pinheiro 🐿: eu tentei gravar as mesmas 2 ROMs que eu dumpei das 27C4000 e não rolou :(
+[2021-06-16 22:47:05] Erin Pinheiro 🐿: eu tenho outro cartucho com uma placa diferente que também usa 2x 8bit, vou tentar tirar as ROMs daquela
+[2021-06-16 22:53:53] RicBit: Não trocou a even com a odd?
+[2021-06-16 22:54:20] RicBit: Não tem trilha embaralhada no barramento? Isso é comum também
+[2021-06-16 23:10:10] L.: Se tivesse trilha embaralhada não teria diferença no dump né?
+[2021-06-16 23:13:39] Erin Pinheiro 🐿: pois é, essa é minha questão
+[2021-06-16 23:14:00] Erin Pinheiro 🐿: até devo ter trocado, mas toda vez tentei com cada rom em uma posição e trocando
+[2021-06-16 23:14:24] Erin Pinheiro 🐿: eu segui as trilhas e não parece ter nada de estranho com a PCB
+[2021-06-16 23:14:43] Erin Pinheiro 🐿: A0-A18 vão pros endereçamentos, D0-D7 vai pra uma rom e D8-D15 vai pra outra
+[2021-06-16 23:15:01] Erin Pinheiro 🐿: e CE, OE vão pros pinos devidos
+[2021-06-16 23:15:19] RicBit: Mas o Ax do barramento vai para o Ax da ROM?
+[2021-06-16 23:15:25] Erin Pinheiro 🐿: sim
+[2021-06-16 23:15:34] RicBit: Eita
+[2021-06-16 23:15:37] RicBit: Então não sei
+[2021-06-16 23:15:46] Erin Pinheiro 🐿: pois é 😅

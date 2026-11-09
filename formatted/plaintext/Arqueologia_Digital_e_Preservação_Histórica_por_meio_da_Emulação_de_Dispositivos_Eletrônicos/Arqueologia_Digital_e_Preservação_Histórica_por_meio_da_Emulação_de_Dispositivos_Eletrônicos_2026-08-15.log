@@ -1,0 +1,96 @@
+[2026-08-15 08:32:20] Felipe "Juca" Sanches: Nessa página há documentação sobre o sintetizador musical do professor Guido Stolfi, que continha uma interface de controle digital e que foi conectado ao computador Patinho Feio pra tocar música a partir de partituras codificadas em fitas de papel perfurado.
+
+https://www.lcs.poli.usp.br/~gstolfi/synthpage2.htm
+[2026-08-15 08:32:55] Felipe "Juca" Sanches: Eu tenho os dumps dessas fitas disponibilizados em https://github.com/ArqueologiaDigital/PatinhoFeio/tree/master/fitas_perfuradas
+[2026-08-15 08:33:21] Felipe "Juca" Sanches: Hoje de manhã instruí o Claude Code a implementar emulação do synth no driver do Patinho Feio no MAME
+[2026-08-15 08:34:08] Felipe "Juca" Sanches: Ele já conseguiu concluir uma primeira parte dessa tarefa. Já está tocando a primeira voz:
+[2026-08-15 08:34:32] Felipe "Juca" Sanches: audio: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40084-Bachianinha_No1_FITA015.mp3
+[2026-08-15 08:35:29] Felipe "Juca" Sanches: Esse é o áudio capturado do MAME rodando com os drivers do patinho feio e do synth interconectados
+[2026-08-15 08:35:58] Felipe "Juca" Sanches: Comparem com essa gravação do synth real sendo controlado pelo patinho feio de verdade: https://www.lcs.poli.usp.br/~gstolfi/gus_files/bachianinha_1.mp3
+[2026-08-15 10:34:40] Felipe "Juca" Sanches: audio: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40089-Bachianinha_No1_duas_vozes.mp3
+[2026-08-15 10:34:40] Felipe "Juca" Sanches: agora com duas vozes, por meio de overdubbing feito no emulador
+[2026-08-15 11:21:32] Macabeus: @fsanches acho que não te falei ainda
+[2026-08-15 11:21:38] Macabeus: mas o projeto de descompilação do Klonoa chegou aos 50%
+[2026-08-15 11:21:45] Felipe "Juca" Sanches: yay!!!
+[2026-08-15 11:21:48] Felipe "Juca" Sanches: sucesso!
+[2026-08-15 11:22:13] Macabeus: e durante esse processo, deu para descobrir um easter egg que ficou escondido por 25 anos
+[2026-08-15 11:22:36] Macabeus: https://fxtwitter.com/bmacabeus/status/2083678322500759648
+[2026-08-15 11:23:51] Macabeus: o Claude Code havia descompilado a função que triggava esse mini game, e durante o processo de nomear o que o código fazia por meio de análise em runtime, descobriu esse easter egg
+[2026-08-15 11:24:23] Macabeus: no primeiro momento, pensei que o Claude Code havia alucinado, mas depois vi que de fato era um easter egg inédito
+[2026-08-15 13:30:49] kretcheu [forwarded]: CONSTRUINDO UM SISTEMA OPERACIONAL "DA LATA" 😁
+[BMP/OS] #1 - Introdução: projeto e arquitetura
+
+AO VIVO HOJE (SÁBADO, 15/08), ÀS 14H UTC-3
+https://www.youtube.com/watch?v=CNskqcLimBY
+
+Torne-se membro para acompanhar a transmissão ao vivo:
+https://www.youtube.com/channel/UC8EGrwe_DXSzrCQclf_pv9g/join
+[2026-08-15 13:59:05] Shideravan: Os projetos de decompilação estão bombando mesmo!
+[2026-08-15 13:59:31] Shideravan: Só fico preocupado com a quantidade de vibe coding rolando
+[2026-08-15 13:59:49] Shideravan: Ainda posso ter nojinho de IA? kkkkkkkkkkkkk
+[2026-08-15 14:02:25] Shideravan: Por isso eu tenho gostado especialmente dos projetos que estão se posicionando firme contra isso, como o DK64Recomp e o SymphonyRecomp
+
+https://kotaku.com/team-behind-unofficial-pc-port-of-donkey-kong-64-dunks-on-vibe-coding-rival-project-2000711416
+https://github.com/BlackLabelHQ/SymphonyRecomp#warning-to-ai-bros
+[2026-08-15 14:04:40] Shideravan: Eu tendo a acreditar que projetos mais "handcrafted" se tornem mais sólidos a longo prazo, porque um problema que eu experiencio muito vendo vibe coding são os códigos irem se tornando difíceis de manter a longo prazo. Eu ainda acredito na solidez de projetos de recomp onde a equipe principal esteja ciente do que acontece em cada parte
+[2026-08-15 14:05:34] Shideravan: Massss... Pode ser só que eu seja um velho chato mesmo, o tempo dirá se minha preocupação se sustenta ou não
+[2026-08-15 14:10:46] Shideravan: Mas é que eu estava experimentando o Pokémon Gen1Recomp (que para ser sincero, é mais uma recriação em Lua do que um Recomp propriamente dito) e tenho ficado preocupado que a cada vez que ele tem uma atualização, o frontend do launcher muda completamente o design e fica cada vez mais quebrado. A última versão tem até cartuchinhos em 3D com geometria toda zoados, que não mexem direito e view que nem cabe direito na tela, interações que não conversam, mods que ficam quebrando, etc
+[2026-08-15 15:12:31] RicBit: eu nao teria feito emulador em 4kb sem ai
+[2026-08-15 15:12:45] RicBit: nao que eu nao conseguisse, é que eu nao teria paciencia mesmo
+[2026-08-15 15:13:06] RicBit: atualmente eu vejo o codigo, tenho a ideia pra melhorar, e falo pra ai codar o que eu pensei
+[2026-08-15 15:13:29] Shideravan: Sabe o que acho interessante, eu tenho esse preconceito meu, que em parte deve ser só preconceito mesmo
+[2026-08-15 15:14:06] Shideravan: E ai eu vejo você, o macabeus, o Juca que são excelentes programadores usando o Claude e fazendo coisas interessantíssimas
+[2026-08-15 15:16:40] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40112.jpg
+[2026-08-15 15:16:40] RicBit: acho legal que fica parecendo golpe dos cavaleiros do zodiaco
+[2026-08-15 15:16:51] RicBit: RICARDO'S DESCTRUCTIVE DECODER!
+[2026-08-15 15:19:37] Shideravan: Acho que bem usado, a tecnologia tem um potencial muito legal. Mas acho que o ponto mais importante é ter essa consciência do que está sendo gerada para não deixar a coisa virar bagunça e se tornar insustentável.
+
+Em emulação por exemplo, eu costumo dizer que a documentação é mais importante que o código em si, que no final do dia, o código de um emulador é uma estruturação da própria documentação (ou o próprio código como sendo a documentação em si, na prática).
+
+Talvez o conhecimento de quem esteja desenvolvendo os projetos acabe sendo mais importante que o código em si nesse processo. As ferramentas facilitando tanto codando como ajudando a ver as coisas de pontos de vista diferentes mesmo e isso no fim se torne um fator central para os projetos a longo prazo
+[2026-08-15 15:21:59] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40115-minimsx.zip
+[2026-08-15 15:21:59] RicBit: incidentalmente, versão nova que tem IM 2 e sprites 8x8. Agora roda Astro Marine Corps e Hundra. Ainda 4kb.
+[2026-08-15 15:33:10] Shideravan: Eu gosto como muitas funções em assembly sem querer acabam tendo esse efeito graças a termos como meltdown e execution e termos imperativos (tal qual os golpes em shonen).
+Eu lembro de uma vez eu estar explicando para um colega na faculdade sobre liberação de núcleo e a pessoa viajar e fazer toda uma narrativa estilo shonen em cima kkkkkkk
+[2026-08-15 15:38:20] Shideravan: Eu adoro que cada versão você frisa: "ainda 4kb". Se alguma hora não der para manter os 4kb, vai ser uma pequena decepção hahaha
+[2026-08-15 15:39:48] Shideravan: Isso é um estudo de otimização muito legal!
+[2026-08-15 16:06:01] Macabeus: Ah, sim. De fato, com AI você cria muito débito cognitivo que, em algum momento, vai cobrar a conta.
+[2026-08-15 16:06:31] Macabeus: Como LLMs sao uma coisa nova, "ninguém" sabe ainda como balancear isso
+[2026-08-15 16:07:05] Macabeus: Já vi algumas abordagens esquisitas, tipo reescrever manualmente tudo o que a LLM diz
+[2026-08-15 16:07:26] Macabeus: E tem outras em outros patamares
+[2026-08-15 16:07:41] Macabeus: Mas yeah, a preocupação e impressão sao validas
+[2026-08-15 16:59:43] Tataizinha: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40124.jpg
+[2026-08-15 17:12:03] RicBit: o save state não coube em 4kb!
+meu ciclo é implementa -> otimiza -> procura uma feature que cabe no espaço que sobrou.
+[2026-08-15 17:17:07] Shideravan: Que features você já conseguiu implementar?
+[2026-08-15 17:21:32] RicBit: z80 com im0, im1, im2, undocumented opcodes, vdp screen 0, 1, 2, sprites 8x8, 16x16, 5th sprite occultation, psg tone+noise, scc, slots, disk interface, megarom mapper konami, ascii8, ascii 16 com autodetect.
+[2026-08-15 17:21:41] RicBit: deve ter mais que esqueci
+[2026-08-15 17:23:26] RicBit: teclado. teclado deu trabalho
+[2026-08-15 17:24:39] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40130.jpg
+[2026-08-15 17:24:39] RicBit: teclado precisa de uma tabela enorme
+[2026-08-15 18:02:59] L.: usa um xlat da vida pra fazer o lookup?
+[2026-08-15 18:22:19] Felipe "Juca" Sanches: Eu adotei uma abordagem de ciclos expansão-filtragem. Passo um mês usando a IA com fé total, deixando expandir loucamente sem muito filtro, para "explorar o território e provar na marra, mesmo que porcamente, que algo é possível". Em seguida faço um refactoring com IA também para re-escrever tudo de forma mais organizada removendo os zigue-zagues que nasceram na fase prospectiva anterior - ou seja, é uma forma de linearizar as descobertas. E em seguida peço para a IA fatiar em commits bem auto-contidos e com mensagens de log objetivas e sucintas. E na última etapa eu finalmente leio os códigos, dou feedback e repito o ciclo mais algumas vezes para a IA refinar as partes que julgo estarem implementadas com hacks sujos demais. Só depois de tudo isso que eu abro pull-request.
+[2026-08-15 18:25:01] Felipe "Juca" Sanches: E na hora de abrir PR é comum eu fazer mais um recorte ainda. Faço PR de uma pequena feature e espero os maintainers darem feedback. Depois que consigo merge dum PR, eu peço para a IA fazer fetch & rebase e preparar outro PR para o próximo pedacinho do que já temos acumulado em mãos.
+[2026-08-15 18:25:32] Felipe "Juca" Sanches: por conta disso tenho uns 3 ou 4 ciclos desse rolando em paralelo (mas em fases diferentes do ciclo)
+[2026-08-15 18:27:16] Felipe "Juca" Sanches: nesse momento estou coordenando ciclos desses para (1) Technics KN5000, (2) Patinho Feio e synth do Guido Stolfi, (3) PenseBem dos anos 80 com chip Z8,  (4) Tarefas do serviço profissional pro Google Fonts
+[2026-08-15 18:35:48] kretcheu: https://youtu.be/oFWi0EUbpVE?si=9N4sLBjSHH2UPDhN
+[2026-08-15 18:37:18] Felipe "Juca" Sanches: A IA te deu uma rejuvenecida nessa imagem, hein?! kkkk
+[2026-08-15 18:37:48] Shideravan: O homem gosta tanto de IA que até a thumb ele fez na IA hahaha
+[2026-08-15 18:38:33] Shideravan: Mas ele tá presente no vídeo, a IA ainda não te substituiu totalmente meu nobre hahaha
+[2026-08-15 18:41:19] Shideravan: A sacanagem é que é a primeira thumb de IA do homem e a gente já tá criticando @fsanches kkkkkkkk
+[2026-08-15 18:41:42] Felipe "Juca" Sanches: a cutucada é amistosa ;-)
+[2026-08-15 18:42:13] Shideravan: Pois é, até me inscrevi no canal para apoiar
+[2026-08-15 19:07:27] kretcheu: Tem que servir para alguma coisa né!! Na verdade fiquei mais enxuto.
+[2026-08-15 19:29:39] Shideravan: É o famoso MounjAIro
+[2026-08-15 20:24:12] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40145.jpg
+[2026-08-15 20:24:12] RicBit: eu comecei com xlat, mas depois superotimizei um codigo menor.
+[2026-08-15 20:49:07] L.: compensa inverter os bits da tabela e comparar com 0 ao invés de 0ffh?
+[2026-08-15 20:54:40] RicBit: nao sei, vou testar. leva 30 min para testar haha
+[2026-08-15 21:40:28] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40148.jpg
+[2026-08-15 21:40:28] RicBit: invertido piorou 4 bytes, mas em compensação descobri que colocar um sentinela ganhou 4.
+[2026-08-15 21:41:18] RicBit: (levou 40 minutos para testar)
+[2026-08-15 23:34:37] Felipe "Juca" Sanches: O emulador conseguiu tocar uma música que estava em algumas fitas mas que não tínhamos gravações de áudio ainda...
+[2026-08-15 23:34:46] Felipe "Juca" Sanches: Aqui uma versão de uma só voz:
+[2026-08-15 23:35:01] Felipe "Juca" Sanches: audio: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40152-FITA006.mp3
+[2026-08-15 23:35:11] Felipe "Juca" Sanches: E aqui uma outra versão com duas vozes:
+[2026-08-15 23:35:23] Felipe "Juca" Sanches: audio: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40154-Peca2_fita078_fita038_duas_vozes.mp3

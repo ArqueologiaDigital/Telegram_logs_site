@@ -1,0 +1,177 @@
+[2021-09-20 00:35:40] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=V0kq0yCTpNE&t=13s
+[2021-09-20 00:35:55] Felipe "Juca" Sanches: fuck yeah!
+[2021-09-20 00:44:15] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=0XrPLBSlopQ
+[2021-09-20 00:44:19] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15216-sticker.webp
+[2021-09-20 01:12:00] Augusto Almeida: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15217-AnimatedSticker.tgs
+[2021-09-20 13:30:04] Deleted Account: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15218.jpg
+[2021-09-20 13:30:04] Deleted Account: Finalmente! Depois de uma longa viagem da terra do Tio Sam pra cá chegou a Ti-83.
+
+Eu queria algo pra brincar com assembly de z80 e quando ouvi falar que a Ti83 é totalmente aberta pra binários acabei comprando o kit.
+
+Agora é desenferrujar o assembly e começar a programar. Rsrs...
+[2021-09-20 13:31:36] Felipe "Juca" Sanches: https://github.com/mamedev/mame/blob/master/src/mame/drivers/ti85.cpp
+[2021-09-20 13:32:22] Deleted Account: Tem calculadora no mame?
+[2021-09-20 13:32:27] Felipe "Juca" Sanches: sim
+[2021-09-20 13:32:37] Felipe "Juca" Sanches: esse driver aí emula a TI-83 Plus também
+[2021-09-20 13:32:44] Felipe "Juca" Sanches: só não sei se emula bem
+[2021-09-20 13:32:45] Deleted Account: Show!
+[2021-09-20 13:33:06] Deleted Account: No linux eu só conhecia o wxwabbitemu que é um port de um emulador para windows.
+[2021-09-20 13:34:26] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15226.jpg
+[2021-09-20 13:34:26] Felipe "Juca" Sanches: "not working"
+[2021-09-20 13:34:45] Felipe "Juca" Sanches: Tá aí um projetinho legal pra você. Tentar melhorar esse driver da TI-83 Plus
+[2021-09-20 13:35:03] Deleted Account: Opa. Vou olhar isso sim juca.
+[2021-09-20 13:37:35] Thaís Blue Bunnies: Eu gosto que o Juca sempre encaixa alguém em algum projeto no mame hahaha
+[2021-09-20 13:37:53] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15230-mp4.mp4
+[2021-09-20 13:38:18] Thaís Blue Bunnies: Isso mesmo! Vamos preservar esses hardwares todos hehe
+[2021-09-20 13:41:17] Deleted Account: Cara. É gigantesco o mame. Hehehe...
+[2021-09-20 13:41:31] Thaís Blue Bunnies: Sim!
+[2021-09-20 13:43:30] Thaís Blue Bunnies: E tem gente que acha que mame só emula fliperama hahaha
+[2021-09-20 13:44:15] Thaís Blue Bunnies: Ele emula até o celular da cobrinha hahaha
+[2021-09-20 13:44:19] Felipe "Juca" Sanches: é por que antigamente era isso mesmo. E todo o resto ficava no MESS
+[2021-09-20 13:44:27] Thaís Blue Bunnies: Tamagotchi
+[2021-09-20 13:44:32] Felipe "Juca" Sanches: mas faz já vários anos que os dois projetos se uniram
+[2021-09-20 13:44:33] Thaís Blue Bunnies: Sim
+[2021-09-20 13:44:49] Thaís Blue Bunnies: Eu sempre fui a favor de juntar tudo
+[2021-09-20 13:45:02] Thaís Blue Bunnies: O mess tinha muito menos visibilidade
+[2021-09-20 13:45:40] Thaís Blue Bunnies: Acho que foram muito positivas essas mudanças
+[2021-09-20 14:08:11] Shideravan: O mame já tem emulador de Bandai Playdia?
+[2021-09-20 14:20:44] Felipe "Juca" Sanches: não sei. Precisaria dar um grep no diretório src/mame/drivers pra ver se tem algo lá
+[2021-09-20 14:20:52] Felipe "Juca" Sanches: você tem esse console?
+[2021-09-20 14:22:14] Deleted Account: Juca. Os arquivos no diretório drivers/ fazem o que exatamente? Eu vi que tem outros diretórios, videos/ por exemplo.
+[2021-09-20 14:28:51] Deleted Account: E no caso, a Ti83 é um z80 completo, com certeza deve ter emulação de z80 bem madura no mame. 🤔
+[2021-09-20 14:39:13] Felipe "Juca" Sanches: sim, o z80 e o motorola 68k são os 2 principais processadores usados em arcades e, portanto, são extremamente bem emulados no MAME
+[2021-09-20 14:41:42] Felipe "Juca" Sanches: os arquivos .cpp do diretório src/mame/drivers/ implementam a emulação de equipamentos inteiros, ou seja, instanciam emuladores de chips individuais e implementam a lógica de interconexão desses chips. Em outras palavras, os drivers "emulam a placa-mãe".
+[2021-09-20 14:42:27] Felipe "Juca" Sanches: no diretório src/devices estão os emuladores de chips individuais.
+
+Por exemplo, no subdiretório src/devices/cpu ficam os emuladores das diversas CPUs suportadas
+[2021-09-20 14:42:45] Felipe "Juca" Sanches: e no src/devices/video ficam os emuladores dos chips controladores de vídeo
+[2021-09-20 14:42:49] Felipe "Juca" Sanches: e assim por diante
+[2021-09-20 14:49:02] Deleted Account: Sensacional.
+[2021-09-20 14:49:11] Deleted Account: Vou dar uma olhada.
+[2021-09-20 14:51:48] Pablo Vasques Bravo-Villalba: E quando um chip é multifuncional, por curiosidade?
+[2021-09-20 14:53:23] Felipe "Juca" Sanches: aí acho que fica bagunçado mesmo
+[2021-09-20 14:53:27] Felipe "Juca" Sanches: não sei dizer
+[2021-09-20 14:55:41] Pablo Vasques Bravo-Villalba: Pelo que estou vendo aqui o chip aparece em mais de um lugar, aparentemente, com as funções segregadas
+[2021-09-20 14:55:50] Pablo Vasques Bravo-Villalba: O que faz algum sentido pra mim
+[2021-09-20 14:55:57] Felipe "Juca" Sanches: ah é! Suspeitei que pudesse ser assim também
+[2021-09-20 14:56:09] Felipe "Juca" Sanches: aliás... eu fiz isso no meu port da VM do Another World
+[2021-09-20 14:56:50] Felipe "Juca" Sanches: já que a VM faz tanto "coisas de CPU" quanto playback de música / sons e também renderizacao de polígonos e framebuffer
+[2021-09-20 14:57:01] Felipe "Juca" Sanches: aí deixei uma parte em cada lugar
+[2021-09-20 14:57:55] Felipe "Juca" Sanches: https://github.com/felipesanches/mame/commits/anotherworld
+[2021-09-20 14:59:10] Felipe "Juca" Sanches: os últimos commits são experimentais. Acho que o código que funciona bem está nesse commit aqui: https://github.com/felipesanches/mame/commit/1b943d2264b8d536b1815d8d21ef6234bb586b13
+[2021-09-20 19:31:36] Shideravan: https://www.tripleoxygen.net/wiki/console/zeebo/start
+[2021-09-20 19:31:51] Shideravan: Um material bacana para quando formos emular o Zeebo
+[2021-09-20 19:37:02] Felipe "Juca" Sanches: tem dump da flash em algum lugar?
+[2021-09-20 19:38:39] Felipe "Juca" Sanches: https://www.tripleoxygen.net/files/devices/zeebo/dump/
+[2021-09-20 19:38:57] Felipe "Juca" Sanches: Tá aí, meu camarada... agora é só começar a esboçar o driver
+[2021-09-20 19:42:30] RicBit: Opção 4, emacs
+[2021-09-20 19:43:02] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15272-sticker.webp
+[2021-09-20 19:50:08] Shideravan: Isso mesmo. Acho que vou criar um skeleton no mame, que tal? hahaha
+[2021-09-20 19:50:42] Shideravan: Mas lá não vai ficar rodável tão cedo. Emular arm11 na estrutura do mame vai ficar PESADO hahahaha
+[2021-09-20 20:22:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15276.jpg
+[2021-09-20 20:22:20] Felipe "Juca" Sanches: baixei aqui pra dar uma olhada e vi que tem um monte de trechos de 0xFF
+[2021-09-20 20:22:33] Felipe "Juca" Sanches: mas depois tem uma parte que é nitidamente código de CPU ARM
+[2021-09-20 20:23:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15278.jpg
+[2021-09-20 20:23:13] Felipe "Juca" Sanches: essa parte aqui, comecando em 0x140800 é código ARM
+[2021-09-20 20:23:33] Felipe "Juca" Sanches: sabe como eu sei? Tem um truque que dá pra bater o olho e dizer: "É código ARM!"
+[2021-09-20 20:24:01] Shideravan: Qual é o truque?
+[2021-09-20 20:25:39] Felipe "Juca" Sanches: É nitidamente código ARM quando a cada 4 bytes tem um valor que é 0xe? ou 0xf? com raras exceções.
+[2021-09-20 20:26:01] Felipe "Juca" Sanches: o motivo disso é o seguinte:
+[2021-09-20 20:26:17] Felipe "Juca" Sanches: as instrucoes em CPUs arm têm tamanho fixo, de 32bits
+[2021-09-20 20:26:37] Felipe "Juca" Sanches: e tem um campo de 3 bits que determina uma condição para a instrucao ser executada
+[2021-09-20 20:26:49] Felipe "Juca" Sanches: toda instrucao em ARM pode ser condicional
+[2021-09-20 20:26:59] Shideravan: Consegui encontrar o SDK do Zeebo
+[2021-09-20 20:27:46] Felipe "Juca" Sanches: não precisa fazer o equivalente em ASM de um if (condicao) { bloco de código }
+
+dá pra simplesmente marcar algumas instrucoes com flag condicional, o que é bem interessante e prático
+[2021-09-20 20:28:13] Felipe "Juca" Sanches: e esse campo de 3 bits é "execucao incondicional" se forem os bits 111
+[2021-09-20 20:28:44] Felipe "Juca" Sanches: e o campo fica nos 3 bits mais significativos dos 32 bits de cada instrucao
+[2021-09-20 20:29:28] Felipe "Juca" Sanches: portanto, se for 0xf? ou 0xe? significa que é uma flag dessas. Só vai ser diferente disso quando tiver uma instrucao com condicional. Mas isso é muito mais raro que instrucoes incondicionais
+[2021-09-20 20:29:57] Felipe "Juca" Sanches: agora olha lá no screenshot e veja as colunas de 0xe? a cada 4 bytes 😉
+[2021-09-20 20:30:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15292.jpg
+[2021-09-20 20:30:53] Felipe "Juca" Sanches: aqui, realçado pra facilitar a visualização do padrão
+[2021-09-20 20:31:08] Shideravan: É mesmo
+[2021-09-20 20:31:12] Shideravan: Nossa, que legal
+[2021-09-20 20:32:33] Shideravan: SDK do Zeebo
+[2021-09-20 20:32:34] Shideravan: https://archive.org/details/zeebo.7z
+[2021-09-20 20:35:15] Felipe "Juca" Sanches: "SDK of Zeebo. I haven't actually explored the contents, but it's got thorough documentation among many other things."
+[2021-09-20 20:35:21] Felipe "Juca" Sanches: documentação é importante!
+[2021-09-20 20:35:33] Felipe "Juca" Sanches: talvez conste um memory map nessa documentação?
+[2021-09-20 20:42:38] Shideravan: Ainda estou baixando. Vamos descobrir!
+[2021-09-20 20:42:44] Felipe "Juca" Sanches: eu também
+[2021-09-20 20:43:13] Shideravan: Estou tentando baixar as expectativas para não me decepcionar depois hahaha
+[2021-09-20 20:43:28] Shideravan: Mas existe a chance de nisso aí ter tudo o que a gente precisa!
+[2021-09-20 20:43:36] Felipe "Juca" Sanches: nunca tem tudo
+[2021-09-20 20:43:43] Felipe "Juca" Sanches: mas pode ter bastante coisa
+[2021-09-20 20:43:55] Shideravan: Tudo é um exagero hahaha
+[2021-09-20 20:44:08] Shideravan: Mas pode ao menos ter tudo o que precisamos para começar
+[2021-09-20 20:44:20] Felipe "Juca" Sanches: pra começar mesmo já temos algo
+[2021-09-20 20:44:29] Felipe "Juca" Sanches: sabemos que é ARM
+[2021-09-20 20:44:35] Felipe "Juca" Sanches: e temos um dump da flash
+[2021-09-20 20:44:42] Felipe "Juca" Sanches: e já vimos que tem código ARM ali
+[2021-09-20 20:44:55] Shideravan: Com isso dá para fazer o esqueleto hahaha
+[2021-09-20 20:44:57] Felipe "Juca" Sanches: agora precisa pegar o datasheet do ARM11 e ver onde fica o vetor de boot
+[2021-09-20 20:45:17] Shideravan: Pera que isso é mais fácil
+[2021-09-20 20:45:20] Felipe "Juca" Sanches: e tentar encaixar esse dump numa faixa de endereços que faça sentido para o boot
+[2021-09-20 20:45:46] Shideravan: https://datasheetspdf.com/datasheet/ARM11.html
+[2021-09-20 20:45:57] Felipe "Juca" Sanches: ou seja, uma faixa de enderecos em que o vetor de boot tenha valores de endereços que apontem pra um desses blocos de código ARM que estamos vendo
+[2021-09-20 20:46:59] Shideravan: Trivia time: trabalhar num código para o arm11 de quebra ainda dá as bases para emular o 3DS no MAME no futuro
+[2021-09-20 20:47:51] Felipe "Juca" Sanches: capítulo 11, parte 2: Reset, página 11-3
+[2021-09-20 20:48:39] Felipe "Juca" Sanches: página 351 do PDF
+[2021-09-20 20:48:50] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15321.jpg
+[2021-09-20 20:49:15] Felipe "Juca" Sanches: terminou o download aqui do SDK
+[2021-09-20 20:49:19] Felipe "Juca" Sanches: vou ver...
+[2021-09-20 20:49:43] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15324.jpg
+[2021-09-20 20:50:14] Shideravan: Será que é o mesmo conteúdo de
+[2021-09-20 20:51:06] Shideravan: https://github.com/tripleoxygen
+[2021-09-20 20:51:38] Shideravan: Não, no SDK tem mais coisas
+[2021-09-20 20:51:45] Felipe "Juca" Sanches: ah, tem uns dumps no SDK que são iguais aos que tão aqui: https://www.tripleoxygen.net/files/devices/zeebo/dump/
+[2021-09-20 20:52:25] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15329.jpg
+[2021-09-20 20:52:25] Felipe "Juca" Sanches: tem uns IDs de jogos
+[2021-09-20 20:52:30] Shideravan: Tem alguma forma fácil de baixar tudo o que está em https://www.tripleoxygen.net/files/devices/ mantendo a estrutura?
+[2021-09-20 20:52:44] Felipe "Juca" Sanches: wget
+[2021-09-20 20:53:08] Shideravan: Interessante. Acho que batem com os dumps do no-intro
+[2021-09-20 20:55:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15333.jpg
+[2021-09-20 20:55:28] Felipe "Juca" Sanches: achoque esse PDF aqui é coisa boa
+[2021-09-20 20:55:46] Shideravan: Opa, maneiro!
+[2021-09-20 21:04:43] Felipe "Juca" Sanches: caramba... é muita coisa
+[2021-09-20 21:04:53] Felipe "Juca" Sanches: vai demorar pra destrinchar tudo que tem nessa documentacao
+[2021-09-20 21:04:59] Shideravan: É mesmo
+[2021-09-20 21:05:26] Shideravan: Bem, pelo menos agora não podemos mais reclamar de falta de material hahaha
+[2021-09-20 21:15:55] Shideravan: Nossa, é muita coisa mesmo
+[2021-09-20 21:16:51] Shideravan: Tem documentação detalhada até dos periféricos, como do controle boomerang
+[2021-09-20 21:17:53] Shideravan: Em joypad_descriptor tem todos os detalhes da porta
+[2021-09-20 21:18:36] Shideravan: Tem fotos em alta resolução dos PCBs
+[2021-09-20 21:19:59] Shideravan: Não... Só tem da parte de trás do PCB
+[2021-09-20 21:20:41] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15344.jpg
+[2021-09-20 21:23:20] Shideravan: https://zeebowiki.blogspot.com/2019/02/como-abrir-o-zeebo.html
+[2021-09-20 21:23:39] Shideravan: Aliás... Não sei se eu já tinha passado essa wiki, mas nela tem algumas coisas interessantes
+[2021-09-20 21:27:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15348.jpg
+[2021-09-20 21:27:13] Felipe "Juca" Sanches: tem uma planiliha chamada zeeboo/research/memory_map.ods
+
+meio confusa... mas acho que ali tem bastante informacao util
+[2021-09-20 21:27:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15349.jpg
+[2021-09-20 21:27:51] Felipe "Juca" Sanches: Talvez isso aqui esteja nos dizendo que o conteúdo da memória NAND Flash fica em 0xa0a00000
+[2021-09-20 21:29:05] Felipe "Juca" Sanches: como tem outra coisa em 0xa0b00000, significa que para a flash temos um espaço máximo de 20 bits de enderecamento, o que corresponde a 1 MByte.
+[2021-09-20 21:29:53] Felipe "Juca" Sanches: o arquivo 1.1.2.bin tem 128MB...
+[2021-09-20 21:30:15] Felipe "Juca" Sanches: deve ter algum esquema de memory banking
+[2021-09-20 21:31:38] Shideravan: PCB do boomerang
+[2021-09-20 21:31:40] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15354.jpg
+[2021-09-20 21:33:26] Shideravan: Provavelmente
+[2021-09-20 21:37:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15356.jpg
+[2021-09-20 21:37:13] Felipe "Juca" Sanches: to tentando entender isso aqui
+[2021-09-20 21:38:15] Shideravan: Talvez ele inicializa em outro endereço se estiver em stand-by
+[2021-09-20 21:39:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15358.jpg
+[2021-09-20 21:39:57] Felipe "Juca" Sanches: tem uma quantidade enorme de strings aqui
+[2021-09-20 21:46:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15359.jpg
+[2021-09-20 22:05:25] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15360.jpg
+[2021-09-20 22:05:25] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15361.jpg
+[2021-09-20 22:06:16] Shideravan: Que isso!
+[2021-09-20 22:08:22] Shideravan: Deixa eu verificar uma coisa
+[2021-09-20 22:14:28] Shideravan: Esse aqui é só vídeo de curiosidade. Mas alguém por favor dumpe essa relíquia! https://www.youtube.com/watch?v=Wpg3UMApr5Y&ab_channel=WarpZone
+[2021-09-20 22:21:15] Shideravan: Esse logo da qualcomm parece que não aparece no boot
+[2021-09-20 23:30:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15366.jpg
+[2021-09-20 23:37:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15367.jpg
+[2021-09-20 23:41:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15368.jpg
+[2021-09-20 23:45:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15369.jpg
+[2021-09-20 23:50:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15370.jpg

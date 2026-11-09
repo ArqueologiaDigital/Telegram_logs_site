@@ -1,0 +1,40 @@
+[2026-07-06 06:51:22] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39508.jpg
+[2026-07-06 06:51:22] Felipe "Juca" Sanches: Tá melhorando... ;-)
+[2026-07-06 06:52:11] Felipe "Juca" Sanches: meio torto ainda...
+[2026-07-06 08:29:33] Shideravan: Passa uma ideia tão errada a ponto de eu não desvencilhar da ideia de você colocando no prompt: 
+
+"Claude, take a look at the following code for the KN5000 driver for MAME (...) and create a driver for the KN7000 based on it. Take into account the following documentation (...)"
+
+Kkkkkk
+[2026-07-06 08:34:19] Shideravan: Mas desde que você ao menos revise linha a linha o que o LLM gerou e tenha plena consciência do que o código faça nos mínimos detalhes, é de boa. O problema é que tem uma galera que acha que isso não importa 😢
+[2026-07-06 08:52:34] Shideravan: Ahh agora que eu vi que você postou sua conversa com a máquina hahaha
+
+Eu acho bem interessante esse experimento que você está fazendo. É que maior parte da galera na cena de emulação (eu incluso) está mais acostumado com aquela linha de desenvolvimento de emuladores nos anos 90 que era um processo quase artesanal. 
+E todo mundo vê todo dia uma galera abrindo pr nos projetos mandando código que eles nem entendem como funciona hahaha
+
+Vai rolar preconceito a frase "100% vibe-coded" - tome cuidado com ela. Mas sua abordagem de consciência com o código e estudos assistidos da plataforma em questão é bem legal
+[2026-07-06 09:27:28] Felipe "Juca" Sanches: olha... não foi muito diferente disso o ponto de partida ontem...
+[2026-07-06 09:28:16] Felipe "Juca" Sanches: Foi até mais simples. Foi assim: "Tenho uns arquivos de update de sistema do KN7000. Acho que o disquete usa compressão similar à do KN5000. Me ajuda a extrair isso."
+[2026-07-06 09:28:34] Felipe "Juca" Sanches: E, em seguida: "Agora faz com o KN7000 tudo o que eu já fiz com o KN5000"
+[2026-07-06 09:29:03] Felipe "Juca" Sanches: badabim-badaboom!
+[2026-07-06 09:30:04] Felipe "Juca" Sanches: detalhe: o MAME não emulava a CPU usada no KN7000. Então ele criou um core de emulação da CPU primeiro. E depois escreveu o driver do teclado.
+[2026-07-06 09:30:26] Felipe "Juca" Sanches: É de cair o cu da bunda
+[2026-07-06 10:19:37] Leonardo Roman: Usou o Fable?
+[2026-07-06 10:20:12] Felipe "Juca" Sanches: Tentei, mas a Anthropic não gostou do que eu tava fazendo e automaticamente fez downgrade pro Opus 4.8
+[2026-07-06 10:28:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39521.jpg
+[2026-07-06 10:29:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39522.jpg
+[2026-07-06 10:34:32] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39523.jpg
+[2026-07-06 10:35:00] Felipe "Juca" Sanches: Ferramenta é ferramenta!
+[2026-07-06 10:40:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39525.jpg
+[2026-07-06 10:40:11] Felipe "Juca" Sanches: E continua fazendo sucesso ;-D
+[2026-07-06 10:44:58] Shideravan: Sim, concordo. Por isso não podemos deixar o martelo decidir onde martelar por você kkkk
+[2026-07-06 15:26:03] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39527-Screencast%20From%202026-07-06%2019-24-41.mp4
+[2026-07-06 15:28:40] Felipe "Juca" Sanches: O Claude acabou de desvendar o bug. Era uma instrução cutomizada do instruction set (udf = user defined function). Que no caso dessa CPU a Matsushita implementou como um bit-search e o compilador usou na implementação de Huffman decoder, que faz parte do algoritmo de decodificar JPEG.
+[2026-07-06 15:29:38] Felipe "Juca" Sanches: The JPEG decoder. With the display fixed, the splash showed *noise* instead of green — the software JPEG decoder was producing garbage. The cause was a single unimplemented CPU instruction: the MN10300/AM33 udf07 op (a bit-search, BSCH) used in the decoder's Huffman step. The CPU core was silently skipping it, desyncing the entire bit stream. Implementing it (bit position of the most-significant set bit) made the splash decode pixel-clean — verified against a reference decode of the same table-ROM JPEGs.
+[2026-07-06 15:31:04] Felipe "Juca" Sanches: O mais doido foi que ele deduziu qual seria a função da instrução desconhecida. Pra fazer isso ele fez disasm do trecho problemático do código, percebeu qual era "a cara" do código, deduziu sua função, e concluiu qual seria a instrução exata necessária ali para que o assembly correspondesse a uma implementação válida de huffman decoding.
+[2026-07-06 15:38:56] Felipe "Juca" Sanches: Teve também diversos momentos em que eu dei palpites usando minha intuição. Por exemplo, eu tava vendo ele desenhar bloquinhos enchendo a tela gradativamente. Me parece óbvio que isso não é algo que o usuário deveria ver, então palpitei: "tem alguma chance de estarmos renderizando pro usuário um offscreen buffer?"
+E de fato era isso mesmo. Aí ele achou o outro endereço que é o front buffer e o resultado ficou melhor.
+[2026-07-06 15:52:49] RicBit: ele tem tenacidade mas não term criatividade
+[2026-07-06 17:32:42] L.: Depois do Linux pro Mega, vem aí: Linux pro Jaguar
+
+https://cakehonolulu.github.io/linux-for-jaguar/

@@ -1,0 +1,121 @@
+[2026-09-26 15:52:13] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40731-vhs-technics-kn7000-technote.pdf
+[2026-09-26 15:54:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40732.jpg
+[2026-09-26 15:54:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40733.jpg
+[2026-09-26 16:19:39] Shideravan: @fsanches será que o driver do Techincs KN7000 consegue entrar a tempo do lançamento do MAME 0.290?
+[2026-09-26 16:20:17] Shideravan: Tem isso dumpado já?
+[2026-09-26 16:21:52] Shideravan: Será que o conteúdo é o mesmo desse DVD aqui? https://www.strawberrymusicltd.com/product/dvd-the-new-features-of-the-kn7000/
+[2026-09-26 16:26:15] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40737-minigb.zip
+[2026-09-26 16:26:15] RicBit: mapper multicart MBC1M, agora roda bomberman collection and mortal kombat collection. ainda 4kb.
+[2026-09-26 16:26:41] RicBit: foi bem sofrido pra conseguir, acho que está no limite ou proximo do limite.
+[2026-09-26 17:22:11] Felipe "Juca" Sanches: o cuavas não tá dando conta de ser mantenedor
+[2026-09-26 17:22:40] Felipe "Juca" Sanches: ele acabou de falar que vai precisar de mais um mês antes de poder fazer um release
+[2026-09-26 17:23:03] Felipe "Juca" Sanches: suspeito que ele esteja se sentindo sobrecarregado por PRs feitos com IA
+[2026-09-26 17:23:23] Shideravan: Não teremos lançamento do MAME 0.290 dia 30 então?
+[2026-09-26 17:24:18] Shideravan: Cara, isso era estabelecido de ser um release a cada última quarta de todo mês, ele já tinha reduzido para 1 a cada 2 meses. E nem isso ele está dando conta?
+[2026-09-26 17:24:47] Shideravan: Eu só tenho visto PR mergido de gente que contribui há anos mesmo
+[2026-09-26 17:26:16] Shideravan: Vão precisar melhorar isso então, porque os PRs com IA que estão possibilitando progresso no MAME. Andava bem devagar o progresso lá antes do nosso amigo Claudio
+[2026-09-26 17:26:35] Shideravan: E a tendência é isso só intensificar
+[2026-09-26 17:26:52] Shideravan: Mesmo os devs mais antigos caíram de cabeça na IA
+[2026-09-26 17:27:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40750.jpg
+[2026-09-26 17:27:38] Felipe "Juca" Sanches: https://github.com/mamedev/mame/commit/d1a36d46880720b2a0f78e4ef6960c4dec735fab#commitcomment-202196125
+[2026-09-26 17:30:44] Felipe "Juca" Sanches: se isso fizer o cuavas cair eu tô feliz
+[2026-09-26 17:30:48] Shideravan: Vixe, por causa dessa confusão então deve ficar ainda mais díficil de mergir PR no MAME de agora em diante
+[2026-09-26 17:31:04] Shideravan: Acho mais provável limitarem ainda mais o envio de PRs
+[2026-09-26 17:31:22] Shideravan: Entre comunidade e dinossauros, o MAME sempre prefere os dinossauros
+[2026-09-26 17:32:27] Shideravan: Tinha gente enchendo o saco com autores que não são nativos em inglês e reclamando por eles estarem usando o Google Tradutor para se tentar se comunicar melhor na hora de defender os PRs, numa xenofobia desgracenta
+[2026-09-26 17:34:24] Shideravan: E eu estava tãaaao feliz com esse release, porque o MAME estava tendo o melhor mês em muito tempo em termos de progresso de drivers
+[2026-09-26 17:34:50] Shideravan: Mas realmente, a fila de PR aumentou muito
+[2026-09-26 17:34:58] Shideravan: O gargalo é na revisão
+[2026-09-26 17:36:20] Shideravan: Tem quase 300 PRs parados na fila
+[2026-09-26 17:43:18] Ramiro Polla: No FFmpeg a gente tem uma IA de revisão de código. No começo eu não gostava, mas agora tá dando uma boa ajuda. A maior parte das análises é boa e roda bastante teste (criando se precisar). No final das contas tem um humano pra merge.
+[2026-09-26 17:44:58] Shideravan: Em abril o MAME fez até piada com isso, não sei se eles vêm isso com bons olhos não, mas acho que vai chegar uma hora vão ter que começar a fazer isso nem que parcialmente
+[2026-09-26 17:47:57] Shideravan: Porque uma verdade inconveniente é que o MAME já chegou num nível há muitos anos que o progresso vinha acontecendo de forma muito lenta. Cada vez mais o que vai sobrando para o MAME emular corretamente é só bronca. E não vai ter jeito, vai ser necessário muito trabalho bruto para avanços significativos. E isso envolve não só uma necessidade crescente de colaboradores como ferramentas melhores. Mas agora que isso está rolando, é broxante ter gargalo na revisão
+[2026-09-26 17:48:41] Shideravan: O que era mais "fácil" já é emulado, agora o que sobrou é coisa obscura e bronca para resolver os problemas já existentes
+[2026-09-26 17:49:12] Pablo Vasques Bravo-Villalba: Ué, mas eles não demoram eras geológicas para aceitar PRs justamente porque são super ultra exigentes? Como agora estão tendo que lidar com regressões e mudanças em coisas que estavam estáveis há anos, talvez décadas?
+[2026-09-26 17:51:22] Shideravan: Né? kkkkkkk
+[2026-09-26 17:51:54] Shideravan: Mas o CHDv6 já virou lenda fazem vários anos
+[2026-09-26 17:53:48] Shideravan: Todo mundo sabe as limitações do padrão e o que precisava ser feito para poder ser adotado de forma universal. Eu vi anos deles sendo super rigorosos nisso para esse mês os caras reclamarem de vir alguém e mergir mudanças no padrão que supostamente quebraram tudo. Eu não entendo também...
+[2026-09-26 17:55:14] Shideravan: Vou acompanhar essa novela com um baldão de pipoca. Por favor @fsanches nos atualize porque isso é melhor que BBB
+[2026-09-26 17:56:28] Felipe "Juca" Sanches: kkkkk
+[2026-09-26 18:11:54] RicBit: aqui no meu projeto quem analisa os PRs é o Zé Pequeno. coisas automaticas tipo rebase, merge, teste, verificação, a máquina faz melhor que eu
+[2026-09-26 18:12:08] RicBit: eu estava pensando inclusive que não sei quantos emuladores de game boy eu escrevi
+[2026-09-26 18:13:05] RicBit: a ideia é escrever o mesmo código de dois jeitos diferentes e deixar a deusa escolher qual o melhor. aí na brincadeira todos os pedaços de código já devem ter tido mais de 2 variacoes
+[2026-09-26 18:13:57] RicBit: eu acho que foram entre 3 e 4 emuladores. e ainda tem pelo menos 1.5 emulador na tree, são uns negocios que genuinamente não dá pra saber qual é melhor.
+[2026-09-26 18:15:22] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40774.jpg
+[2026-09-26 18:15:22] RicBit: tipo essa aqui ele vai e vem, nunca decide qual é o melhor. depende do que está em volta.
+[2026-09-26 18:17:02] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40775.jpg
+[2026-09-26 18:17:02] RicBit: já essa aqui eu acho que vou tirar a opção, entre nada e alguma coisa, vai ser dificil alguma coisa ganhar de nada.
+[2026-09-26 18:57:43] Shideravan: É... "Nada" é sempre mais econômico que "alguma coisa" kkkkkkk
+[2026-09-26 19:22:14] RicBit: A opção existe porque em algum momento alguma coisa ganhava de nada. Provavelmente esquentava o cache do compressor. Mas namagiri trocou o código de lugar e aí o nada passou a ganhar.
+[2026-09-26 19:39:23] Shideravan: Ainda bem que código não tem auto-estima, já pensou se o código descobrisse que ele perde para o "nada"? kkkkkkkkkk
+[2026-09-26 20:30:25] Felipe "Juca" Sanches: Como o KN7000 inclui um core de CPU novo, acho difícil aceitarem rápido o suficiente pra entrar nesse release
+[2026-09-26 20:31:18] Felipe "Juca" Sanches: diga-se de passagem, o core foi 100% vibe-code e eu nem olhei pro código. O fato de bootar o KN7000 com sucesso é evidencia suficiente pra mim
+[2026-09-26 20:36:19] Shideravan: Se atrasar um mês, dá tempo de entrar kkkkkkkkkkkk
+[2026-09-26 20:36:33] Felipe "Juca" Sanches: pois é... pensei o mesmo
+[2026-09-26 20:36:44] Shideravan: Cara, eu acho engraçado o MAME criar os prazos só para não cumprir kkkkkkkkkkk
+[2026-09-26 20:36:53] Felipe "Juca" Sanches: eu até estava preparando um PR novo hoje e resolvi segurar um pouco
+[2026-09-26 20:37:02] Shideravan: Acho melhor
+[2026-09-26 20:37:30] Shideravan: Você já tem 2 PR lá, espera eles mergirem primeiro, senão vão te acusar de estar spammando PR kkkkkkkkkk
+[2026-09-26 20:37:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40787.jpg
+[2026-09-26 20:39:01] Shideravan: Uma prática usual do mercado de desenvolvimento é você quebrar as coisas em PRs menores para facilitar a revisão e corrigir eventuais erros
+[2026-09-26 20:39:08] Shideravan: Mas o MAME não funciona assim kkkkkkkkkk
+[2026-09-26 20:39:48] Felipe "Juca" Sanches: eu tenho quebrado em commits menores. Mas todos enviados num PR só
+[2026-09-26 20:40:02] Shideravan: Saquei
+[2026-09-26 20:40:13] Felipe "Juca" Sanches: na prática dão squash, mas pelo menos eu facilito os reviews
+[2026-09-26 20:42:00] Shideravan: Eu acho mais fácil de trackear problemas quando as coisas vão em múltiplos PRs
+[2026-09-26 20:44:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40794.jpg
+[2026-09-26 20:45:06] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40795.jpg
+[2026-09-26 20:52:35] Felipe "Juca" Sanches: O PR que eu estou me preparando pra enviar é interessante... eu mandei o PR do Technics WSA1R (https://github.com/mamedev/mame/pull/16204) e o rb6502 deu merge.
+
+Mas aí alguém percebeu que uma das modificações que eu fiz nos 'taps' dos timers da CPU acabaram impactando negativamente o áudio de um driver que antes funcionava bem: o NeoGeo Pocket.
+
+Aí eu fiz um outro PR só pra consertar rapidão a cagada...
+[2026-09-26 20:52:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40797.jpg
+[2026-09-26 20:54:01] Shideravan: Eles ainda não decidiram se vão ou não adiar então?
+[2026-09-26 20:54:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40799.jpg
+[2026-09-26 20:54:18] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/16255
+[2026-09-26 20:54:21] Shideravan: Acho que o Vas fez muita cagada isso sim kkkkkkk
+[2026-09-26 20:54:29] Shideravan: De deixar coisas zoadas passarem
+[2026-09-26 20:54:56] Shideravan: Aí ele percebe nos 45 do segundo tempo e fica nessa correria
+[2026-09-26 20:55:19] Felipe "Juca" Sanches: Se todo mundo (ou muita gente) usa IA, não tem como um mantenedor dar conta sem usar IA também.
+[2026-09-26 20:55:51] Shideravan: Quem trabalha com tecnologia, sabe que a forma de desenvolver muda de tempos em tempos
+[2026-09-26 20:56:14] Shideravan: No MAME aparentemente tem sido bom, a ponto de até os dinossauros terem se rendido à IA
+[2026-09-26 20:56:32] L.: rb6502 e rbz80, os dois a 80 por hora
+[2026-09-26 20:57:01] Shideravan: Eu acompanho o MAME/MESS desde 2008 e nunca vi tanto progresso de uma vez. E mais importante: em muita coisa difícil que ninguém tinha coragem de mexer
+[2026-09-26 20:57:21] Felipe "Juca" Sanches: Eu fui pioneiro em uso de IA no MAME. Provavelmente por conta de eu te uma conta paga pelo meu empregador desde janeiro.
+
+E desde o início eu fui muito cauteloso pra não ser acusado. Então todos meus PRs com ajuda de IA tem sido bem arrumadinhos. Chego a gastar 1 mês num único PR por que sou traumatizado...
+[2026-09-26 20:59:16] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40810.jpg
+[2026-09-26 20:59:16] Felipe "Juca" Sanches: Porra! Não tem GIF de 'rachando o bico' !!!!
+[2026-09-26 21:00:44] Felipe "Juca" Sanches: Tô aqui rachando o bit
+[2026-09-26 21:01:26] Felipe "Juca" Sanches: se bem que o RicBit é quem tava ultimamente com esse papo de mili-bit...
+[2026-09-26 21:03:44] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40813.jpg
+[2026-09-26 21:03:44] Felipe "Juca" Sanches: pronto! achei!
+[2026-09-26 21:04:17] L.: ele transcendeu a ideia de escovar bit, agora tá bombardeando nêutrons nos bits pra ver se eles se dividem
+[2026-09-26 21:12:27] Shideravan: O homem tem bit no nome, o que vocês esperavam? kkkkkkkkk
+[2026-09-26 21:23:24] Felipe "Juca" Sanches: Mas enfim... depois dessa rápida corrigida da cagada, percebi que isso fez o WSA1R passar a rodar MUITO lento. Então comecei a investigar mais a fundo e descobri que a contagem de ciclos das CPUs da família TLCS900 no MAME estão meio bagunçagas como legado técnico de um emulador do qual o MAME originalmente portou esse core. Acho que deve ter sido de onde veio o emulador do NeoGeo Pocket. Se chama NeoPop
+[2026-09-26 21:23:36] Felipe "Juca" Sanches: é, acho que é isso mesmo! 
+
+https://emulation.gametechwiki.com/index.php/NeoPop
+[2026-09-26 21:24:40] Felipe "Juca" Sanches: então agora, com ajuda do Claudinho, tô fazendo uma arrumação geral nesse core, pra poder computar os ciclos dos timers de forma coerente com os números que constam nos datasheets
+[2026-09-26 21:25:18] Felipe "Juca" Sanches: e é esse o PR que eu hoje mais cedo fiquei em dúvida se mando ou não, tão perto de um novo release...
+[2026-09-26 21:33:07] Felipe "Juca" Sanches: por um lado, eu quero que o WSA1R, mesmo que sem som, esjeta 'usável' nesse release. Do jeito que tá agora, dá muito lag, os LEDs do painel demoram a acender depois que o usuário pressiona botões...
+[2026-09-26 21:34:18] Felipe "Juca" Sanches: por outro lado, não quero fazer nem uma mudança porca só pra consertar isso por meio de gambiarra, e nem fazer uma mudança estrutural para consertar da forma certa mas acabar tendo vários drivers com efeitos colaterais imprevistos
+[2026-09-26 21:34:46] Felipe "Juca" Sanches: esse é o tipo de coisa que precisa de tempo para as consequẽncias surgirem naturalmente muito tempo antes de um release
+[2026-09-26 23:13:38] Shelton Ribeiro: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40823-ssstwitter.com_1790444895814.mp4
+[2026-09-26 23:13:55] Shelton Ribeiro: Tem alguém portando RE 1 para Nintendo 64
+[2026-09-26 23:14:36] Shelton Ribeiro: E o resultado, mesmo que ainda preliminar é bem interessante. Efeitos de luz, fumaça e textura dos personagens está muito interessante
+[2026-09-26 23:30:48] RicBit: milibit foi a melhor coisa da ultima semana na namagiri
+[2026-09-26 23:30:59] RicBit: é facil de explicar eu acho
+[2026-09-26 23:31:14] Enieber Cunha: https://m.youtube.com/watch?v=VFj9bwM10xg
+[2026-09-26 23:33:04] RicBit: namagiri faz busca por algoritmo genetico, o que funciona bem se a função é localmente smooth, porque aí é só seguir na direção do gradiente descendente (ie se um dos seus vizinhos é menor que voce, move pro vizinho). mas quando você esta minimizando bytes, tem um vizinho que diminui um byte, e 1500 vizinhos que nao diminuem byte nenhum, sao iguais. então não tem como estimar a direção em que você tem que andar
+[2026-09-26 23:34:21] RicBit: se ao inves de minimizar byte voce minimizar bit melhora, porque aí só 1/8 dos vizinhos que antes eram iguais sao iguais a você. e medir por bit é fácil porque a compressão comprime em bits, e faz padding com 0 no final para completar o ultimo byte, é só não fazer o padding.
+[2026-09-26 23:35:12] RicBit: mas 1/8 de 1500 ainda é muita coisa, seria bom se tivesse alguma metrica menor que o bit, o lance é onde você vai achar isso. aí vem a grande sacada:
+[2026-09-26 23:36:48] RicBit: o ultimo estágio do meu compressor usa compressão aritmetica. então se você dividir o intervalo da compressão aritmetica em mil, o ponto onde a compressão termina é uma metrica razoavel de quantos milibits faltam para completar o bit.
+[2026-09-26 23:37:26] RicBit: isso só funciona porque eu tive a presciencia de usar compressão aritmetica, se fosse huffman não dava. e eu só usei aritmetica porque o descompressor é menor haha
+[2026-09-26 23:37:59] RicBit: e agora que você tem milibit, todos os vizinhos são diferentes e é facil achar um gradiente descendente.
+[2026-09-26 23:40:15] RicBit: no fim das contas o milibit não comprime mais que o resto, mas converge muito mais rapido. eu não precisei subir namagiri na nuvem desde então, com milibit eu só otimizei local.
+[2026-09-26 23:41:34] RicBit: (milibit é nome fantasia, na pratica é 1/65536 de bit).
+[2026-09-26 23:43:23] RicBit: (o estagio anterior ao aritmetico é elias-coded lz com E8 retargeting, porque o 8086 é sem noção e só tem call relativo, que não comprime nada)
+[2026-09-26 23:48:11] Shideravan: Você viu que estão portando o RE 2 para o Saturn também?
+[2026-09-26 23:48:53] Shideravan: https://www.youtube.com/watch?v=G7vEmqR3sdU

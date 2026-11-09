@@ -1,0 +1,82 @@
+[2024-05-12 11:09:24] Eduardo Loos: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31342.jpg
+[2024-05-12 14:18:41] L.: Emulador de 6502 pra 6502! https://oldvcr.blogspot.com/2024/04/virtualizing-6502-with-6o6-and.html
+[2024-05-12 14:29:46] RicBit: eu nunca entendi porque o HALT é NC. se estivesse disponivel daria para fazer virtualização facil no msx
+[2024-05-12 14:34:10] RicBit: tem 2 NC no slot do msx, dá para ligar o halt em um deles. bota um switch na parte de tras para ligar/desligar, um buffer para proteger e resolve.
+[2024-05-12 19:16:23] L.: aliás, falando em zé oitenta
+
+https://floooh.github.io/2021/12/17/cycle-stepped-z80.html
+
+é legal, especialmente coisas tipo https://floooh.github.io/2021/12/17/cycle-stepped-z80.html#the-ei-di-and-retiretn-instructions que parece que um monte de emulador faz errado segundo https://stardot.org.uk/forums/viewtopic.php?t=24662
+[2024-05-12 21:22:47] RicBit: hum isso me lembra de um teste que eu nunca fiz e provavelmente ninguém fez
+[2024-05-12 21:23:19] RicBit: o que acontece se você colocar 500 EI em sequencia e trigar uma interrupcao no meio?
+[2024-05-12 21:23:41] RicBit: Eu não faço ideia do que acontece, estava na minha lista de coisas para testar
+[2024-05-12 21:23:52] RicBit: e eu acho que pode trigar esse bug aí
+[2024-05-12 21:25:48] RicBit: tem tres coisas que eu acho que todos os emuladores estao errados, esse combo de EI, o mux na entrada do FM PAC e o latch na saida PCM do turboR
+[2024-05-12 21:26:16] RicBit: o do FM eu tentei caçar com juca uma vez, mas eu nao tinha osciloscopio na epoca
+[2024-05-12 21:26:26] RicBit: agora eu tenho, deve dar para pegar melhor
+[2024-05-12 21:26:31] L.: como que usaria o halt pra virtualizar?
+[2024-05-12 21:27:16] RicBit: coloca um trem que salva todos os registros na NMI e troca o contexto
+[2024-05-12 21:27:32] L.: imaginei que fosse algo assim
+[2024-05-12 21:28:12] L.: aí faria algo trigar esse sinal periodicamente?
+[2024-05-12 21:28:28] L.: bota um 555 apertando a campainha
+[2024-05-12 21:28:46] RicBit: é, um circuitinho por fora. pode ser ativado por software tambem que é até mais legal
+[2024-05-12 21:29:15] L.: é, dá pra fazer isso
+[2024-05-12 21:29:32] RicBit: tipo out(porta), A e coloca no A quantos ciclos é para rodar antes da NMI
+[2024-05-12 21:29:45] L.: inclusive rola até fazer uma integração com mapper e tudo mais pra quando trocar o contexto já troca as páginas
+[2024-05-12 21:30:02] RicBit: entao isso nao dá haha
+[2024-05-12 21:30:28] RicBit: os registros da mapper sao read only, se voce quiser fazer isso tem mexer no circuito da mapper tambem
+[2024-05-12 21:30:40] RicBit: read only nao sorry
+[2024-05-12 21:30:42] RicBit: write only
+[2024-05-12 21:31:45] L.: sim, sim, rola fazer integrado
+[2024-05-12 21:31:49] RicBit: o mux do fm eu já expliquei minha teoria?
+[2024-05-12 21:32:03] L.: não, nem sei qual é o problema
+[2024-05-12 21:32:41] RicBit: no ym2413 voce precisa colocar um milhão de NOPs de delay depois que escreve em um registro
+[2024-05-12 21:33:00] RicBit: que é pé no saco de programar porque se você muda a velocidade do z80 seu codigo quebra
+[2024-05-12 21:33:07] RicBit: aí a duvida é WHY
+[2024-05-12 21:33:14] RicBit: por que precisa dos nops?
+[2024-05-12 21:33:48] RicBit: e a minha teoria é a seguinte: são 50 e tantos registros, fazer um circuito combinatorio para ligar o registro no bus ocupa muita área
+[2024-05-12 21:34:00] L.: ahhhh, lembrei
+[2024-05-12 21:34:08] L.: deve ter um shift register dentro né
+[2024-05-12 21:34:19] RicBit: entao ao inves disso eu acho que tem um contador que vai de 0 a 64, quando voce dá um out ele espera até o shift bater no valor certo e ai escreve.
+[2024-05-12 21:34:36] L.: (ou algo assim)
+[2024-05-12 21:34:44] RicBit: eu fiz as contas e o delay recomendado no datasheet bate com essa teoria
+[2024-05-12 21:34:47] RicBit: só precisa testar
+[2024-05-12 21:35:00] RicBit: ou ler na foto do die se você tiver paciencia
+[2024-05-12 21:35:06] RicBit: acho que tem foto do die já
+[2024-05-12 21:35:17] L.: deve ter, povo anda decapeando tudo
+[2024-05-12 21:35:35] RicBit: se isso estiver certo então tem uma coisa muito legal que dá pra fazer
+[2024-05-12 21:35:51] L.: até pense bem a gente decapeou, só não conseguimos entender como que a memória funciona
+[2024-05-12 21:36:13] RicBit: às vezes voce precisa mudar muitos registros ao mesmo tempo para fazer a nota da vez, e aí os delays para cada registro somam
+[2024-05-12 21:36:37] RicBit: agora se realmente for um shift, então você pode calcular e escrever os registros em sequencia no mesmo ciclo
+[2024-05-12 21:36:59] RicBit: povo fazia isso com disquete para ler mais rapido
+[2024-05-12 21:37:10] L.: é um jeito de testar inclusive
+[2024-05-12 21:37:26] RicBit: ao inves de colocar setores 1, 2, 3, .. etc 9, você fazia um interleave 1,4,9,2,5 etc
+[2024-05-12 21:37:37] RicBit: ai conseguia ler dois setores na mesma volta do disquete
+[2024-05-12 21:37:41] RicBit: (disquete gira)
+[2024-05-12 21:37:43] L.: organizar os setores considerando a velocidade de leitura pra evitar o seek pro próximo?
+[2024-05-12 21:38:07] L.: tipo um defrag com calibragem da velocidade de leitura de cada setor
+[2024-05-12 21:38:47] RicBit: isso
+[2024-05-12 21:39:12] RicBit: em teoria nao precisa porque o z80 consegue ler tudo de uma vez
+[2024-05-12 21:39:30] RicBit: mas o dos nao lê tudo de uma vez, ele decodifica a fat12 a cada setor lido
+[2024-05-12 21:39:41] RicBit: somando o tempo da fat ai não dá mais no mesmo ciclo
+[2024-05-12 21:40:04] RicBit: então disquete com interleave é mais rapido pelo dos/basic, mas lendo pelas portas é mais lento
+[2024-05-12 21:43:32] RicBit: INCLUSIVE
+[2024-05-12 21:44:06] RicBit: tem um capitulo do taocp sobre algoritmos de otimização de interleave em discos que giram, o knuth disse que vai tirar fora esse capitulo na proxima edição porque nao serve mais pra nada haha
+[2024-05-12 21:49:52] L.: hahaha
+[2024-05-12 21:51:34] L.: lembra demais do livro do dragao 1a edição, que 70% do livro é mostrando como armazenar coisa na memória enquanto parseia, sem precisar ler todo o fonte na memória, etc 
+
+hoje você mmapeia o arquivo todo na ram e usa slice e já era
+[2024-05-12 21:53:55] RicBit: tudo fica mais facil com mais ram, sempre dá para colocar mais ram
+[2024-05-12 21:54:15] RicBit: quer dizer aqui embaixo pelo menos, lá em cima é diferente
+[2024-05-12 21:55:43] RicBit: a chance de um bit de ram flipar aleatoriamente é baixa mas não é zero, e a densidade de erros por byte é constante
+[2024-05-12 21:55:51] RicBit: então quanto mais ram, mais erros
+[2024-05-12 21:56:06] L.: sim, tem aquele paper famoso do Google
+[2024-05-12 21:56:33] RicBit: se você estiver no espaço você quer a menor quantidade de ram possivel, porque fora da atmosfera = mais raios cosmicos, e mais raios são mais erros
+[2024-05-12 21:56:59] RicBit: ALIAS
+[2024-05-12 21:57:10] RicBit: deixa eu fazer um pergunta idiota aqui
+[2024-05-12 21:57:37] RicBit: eu guardo os hds velhos em um canto da casa e os disquetes e fitas k7 em outro canto da casa
+[2024-05-12 21:58:34] RicBit: será que se eu enrolar os disquetes em papel aluminio eu posso guardar os dois no mesmo lugar?
+[2024-05-12 22:00:37] RicBit: o hd parado é um campo magnetico estatico, aluminio nao é bom condutor de magnetismo estaticamente
+[2024-05-12 22:00:46] RicBit: acho que nao funciona mas preciso calcular
+[2024-05-12 22:01:08] RicBit: hum ou entao achar uma folha de outro material
+[2024-05-12 22:04:12] RicBit: 100 cm2 de iron foil, R$ 3000, nao compensa haha

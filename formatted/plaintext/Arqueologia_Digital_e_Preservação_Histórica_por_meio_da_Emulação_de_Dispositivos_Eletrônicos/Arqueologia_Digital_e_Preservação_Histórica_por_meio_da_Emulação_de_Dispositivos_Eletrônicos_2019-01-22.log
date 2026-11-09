@@ -1,0 +1,53 @@
+[2019-01-22 17:36:26] Gustavo Romero: @fsanches Resolveu essa treta?
+[2019-01-22 17:36:44] Felipe "Juca" Sanches: ainda não...
+[2019-01-22 17:36:58] Gustavo Romero: gera o codigo assembly intermediário
+[2019-01-22 17:37:06] Gustavo Romero: ficará mais fácil pra debugar
+[2019-01-22 17:37:13] Gustavo Romero: pode ser com gcc -S
+[2019-01-22 17:37:18] Felipe "Juca" Sanches: uia
+[2019-01-22 17:37:20] Felipe "Juca" Sanches: será?
+[2019-01-22 17:37:20] Gustavo Romero: ou o save temporaries
+[2019-01-22 17:37:44] Gustavo Romero: sim, aí você vai ver o assembly gerado e ficará mais fácil entender o que na linha gerada  o assembler não está curtindo
+[2019-01-22 17:37:59] Gustavo Romero: pode ser que o gcc esteja gerando um assembly errado
+[2019-01-22 17:38:33] Gustavo Romero: passa também -v que vai informar todas as flags usadas no compiler, assembler e linker (nesse caso nem chegou no linker), é erro do assembler
+[2019-01-22 17:39:12] Gustavo Romero: -S -save-temps
+[2019-01-22 17:39:29] Gustavo Romero: isso vai manter os arquivos intermediários da compilação
+[2019-01-22 17:39:37] Gustavo Romero: não deve ser dificil de resolver
+[2019-01-22 17:40:13] Gustavo Romero: se você depois compartilha o repo e os steps pra reproduzir, posso dar uma olhada com calma
+[2019-01-22 17:42:20] Gustavo Romero: ou pode ser que o gnu as usado na cross compilação está sendo o do sistema nativo... enfim -v irá dizer isso também
+[2019-01-22 17:42:37] Gustavo Romero: depois que o .S for gerado você pode usar o GNU as direto pra gerar o objeto:
+[2019-01-22 17:42:54] Gustavo Romero: as file.S -o file e reproduzir o erro isoladamente
+[2019-01-22 17:44:24] Gustavo Romero: pode ser também que o codigo gerado é pra 64-bit e se está tentando assemblar como se fosse de 32-bit, aí tem que passar algo como -m32 ...
+[2019-01-22 17:44:32] Gustavo Romero: enfim, tem que fazer o drill
+[2019-01-22 17:49:59] Gustavo Romero: btw, chutando, eu entendo que o problema é que o inline asm do codigo está supondo que você está com um assembler de 32-bit, mas seu sistema é de 64-bit, ou seja les é inválido
+[2019-01-22 17:50:07] Gustavo Romero: tenta passar -m32 para o gcc
+[2019-01-22 17:50:23] Gustavo Romero: @fsanches ^
+[2019-01-22 17:51:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-01/9080.jpg
+[2019-01-22 17:51:53] Felipe "Juca" Sanches: com -m32
+[2019-01-22 17:53:06] Gustavo Romero: acho que você precisa instalar as libs dev para 32-bit
+[2019-01-22 17:53:11] Gustavo Romero: let me see
+[2019-01-22 17:53:25] Felipe "Juca" Sanches: "If you are on an amd64 installation, you can try to install the package libc6-dev-i386."
+[2019-01-22 17:53:33] Felipe "Juca" Sanches: https://askubuntu.com/questions/470796/fatal-error-sys-cdefs-h-no-such-file-or-directory
+[2019-01-22 17:53:46] Gustavo Romero: exato
+[2019-01-22 17:53:48] Gustavo Romero: esse aí mesma
+[2019-01-22 17:53:56] Gustavo Romero: libc6-dev-i386
+[2019-01-22 18:07:28] Felipe "Juca" Sanches: isso já me deu um passo adiante
+[2019-01-22 18:07:37] Felipe "Juca" Sanches: obrigado pela ajuda
+[2019-01-22 18:07:50] Gustavo Romero: @fsanches mas compilou?
+[2019-01-22 18:08:01] Felipe "Juca" Sanches: agora vou largar o yak-shaving e voltar ao trampo, que é escrever scripts de controle de qualidade para fontes tipográicas...
+[2019-01-22 18:08:18] Felipe "Juca" Sanches: reclamou de outra coisa, mas acho que é vacilo meu no assembly
+[2019-01-22 18:08:24] Felipe "Juca" Sanches: vou estudar com mais calma de noite
+[2019-01-22 18:08:32] Gustavo Romero: ah, ok ...
+[2019-01-22 18:08:36] Gustavo Romero: boa sorte ;)
+[2019-01-22 18:08:39] Felipe "Juca" Sanches: valeu!
+[2019-01-22 18:08:41] Gustavo Romero: np
+[2019-01-22 18:10:45] Felipe "Juca" Sanches: ah! E sobre aquela nossa conversa de hoje no almoço sobre vetorização da arte do playfield da máquina de pinball baseada no design do jogo Pinball Fantasies...
+[2019-01-22 18:11:06] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-01/9099.jpg
+[2019-01-22 18:11:06] Felipe "Juca" Sanches: Esse é o antes.
+[2019-01-22 18:11:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-01/9100.jpg
+[2019-01-22 18:11:08] Felipe "Juca" Sanches: E esse é o depois.
+[2019-01-22 18:12:33] Gustavo Romero: hehe boa
+[2019-01-22 18:13:57] Felipe "Juca" Sanches: (foi por isso que eu cheguei 20 minutos atrasado no almoço :-P)
+[2019-01-22 18:15:33] Felipe "Juca" Sanches: o interessante é que vetorizar pixel arte às vezes nos faz simplesmente desenhar vetores em zigue-zague de 90 graus para preservar um pouco do aspecto quadriculado como no caso das tipografias originalmente utilizadas...
+[2019-01-22 18:21:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-01/9105.jpg
+[2019-01-22 18:21:38] Felipe "Juca" Sanches: A arte original era assim.
+[2019-01-22 20:45:59] Gustavo Romero: @fsanches haha cara, muito loco mesmo

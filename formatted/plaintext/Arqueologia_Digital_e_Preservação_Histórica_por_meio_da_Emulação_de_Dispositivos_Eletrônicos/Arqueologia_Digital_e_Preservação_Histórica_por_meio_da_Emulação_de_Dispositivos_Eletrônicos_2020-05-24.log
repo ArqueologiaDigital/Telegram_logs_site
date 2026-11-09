@@ -1,0 +1,18 @@
+[2020-05-24 17:58:59] pitanga: Ha!
+[2020-05-24 17:59:13] pitanga: No dia em que começo a reler este livro;
+[2020-05-24 17:59:38] pitanga: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-05/11050.jpg
+[2020-05-24 17:59:38] L.: Já tem bastante coisa gerada já, inclusive! O arquivo principal já tá sendo convertido, tô trabalhando nos outros
+[2020-05-24 18:00:06] pitanga: Vc quer converter pra assembly de Z80?
+[2020-05-24 18:00:43] L.: Já tô convertendo. Saca só o conversor que tô escrevendo: https://github.com/lpereira/GW-BASIC/blob/master/conv.py
+[2020-05-24 18:00:57] pitanga: Sim, já dei uma lida no código!
+[2020-05-24 18:01:15] L.: Ah, já tinha passado o link aqui haha
+[2020-05-24 18:16:07] L.: Tentando aprender assembly de Z80. Nunca fiz nada, só li. Algumas limitações são... Divertidas pra quem tá acostumado com x86_64
+[2020-05-24 19:06:24] Felipe "Juca" Sanches: mas vai ter um momento que que você vai ter que escrever rotinas manualmente né? Por exemplo, I/O.
+[2020-05-24 19:06:56] Felipe "Juca" Sanches: Pois tem detalhes específicos do hardware do MSX que o GW-BASIC para DOS em 8086 nao conhece
+[2020-05-24 19:10:34] L.: Ah, sim. O código é bem separado
+[2020-05-24 19:10:57] L.: Por exemplo, tem rotina gráfica mas elas falam com um driver
+[2020-05-24 19:11:03] Felipe "Juca" Sanches: legal
+[2020-05-24 19:11:05] Felipe "Juca" Sanches: muito bom
+[2020-05-24 19:11:25] L.: Tá começando a ficar difícil agora hehehe
+[2020-05-24 19:11:50] L.: Chegando num ponto onde tô tendo que pesquisar o que fazer pra continuar
+[2020-05-24 20:44:56] Felipe "Juca" Sanches: se quiser descrever aqui pra gente alguns desses desafios, talvez a gente saiba algumas coisas. E mesmo que não saiba, pode ser divertido descobrir juntos

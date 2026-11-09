@@ -1,0 +1,120 @@
+[2021-09-18 00:01:47] Felipe "Juca" Sanches: @Shideravan, você tá sabendo do meu projeto de emular um teclado musical da Technics?
+[2021-09-18 00:02:30] Felipe "Juca" Sanches: Eu já postei bastante aqui nesse grupo sobre isso, mas como você não estava aqui, provavelmente não está sabendo, ou, se está, viu bem menos do que eu tenho pra contar 😉
+[2021-09-18 00:03:27] Felipe "Juca" Sanches: Essa aqui foi uma postagem inicial que fiz em inglês sobre o projeto:
+
+https://forum.fiozera.com.br/t/technics-kn5000-homebrew-development/321
+[2021-09-18 00:03:47] Felipe "Juca" Sanches: E tem mais um monte de mensagens aqui no grupo, se você buscar no histórico de conversas
+[2021-09-18 00:03:58] Shideravan: Que maneiro
+[2021-09-18 00:04:08] Shideravan: O Leo comentou disso, achei bacana
+[2021-09-18 00:05:28] Felipe "Juca" Sanches: eu to com um driver no MAME incompleto aqui na minha cópia local. Ainda não abri pull request
+
+Mas dei uma pausa no driver pra me focar num port das ferramentas GNU: assembler, disassembler, linker, talvez até mesmo o gcc em algum momento futuro
+[2021-09-18 00:06:02] Felipe "Juca" Sanches: essas ferramentas são necessárias pra eu poder ter mais flexibilidade nos testes, pra inspecionar o hardware e entender melhor como algumas coisas funcionam
+[2021-09-18 00:06:15] Felipe "Juca" Sanches: e usar esse conhecimento pra levar adiante o desenvolvimento do driver no MAME
+[2021-09-18 00:06:27] Shideravan: É uma ótima ideia
+[2021-09-18 00:06:54] Felipe "Juca" Sanches: acho que devo mandar o pull request do jeito que tá e depois, quando voltar a aprimorar o driver, mandar outros PRs
+[2021-09-18 00:07:03] Shideravan: Acho que sim
+[2021-09-18 00:07:07] Felipe "Juca" Sanches: só pra não largar esse monte de código à toa no meu laptop
+[2021-09-18 00:07:07] Shideravan: O MAME possui alguns drives de teclados
+[2021-09-18 00:07:17] Shideravan: Porém, todos incompletos até onde me lembro
+[2021-09-18 00:07:30] Shideravan: O seu trabalho nesse aí pode servir de estopim para os outros
+[2021-09-18 00:07:40] Felipe "Juca" Sanches: é... acho que tem um Ensoniq que tá funcionando, vi video no youtube da emulacao funcionando
+[2021-09-18 00:07:53] Felipe "Juca" Sanches: ESQ1, se não me engano
+[2021-09-18 00:08:00] Shideravan: Não recomendo, HDs locais são coisas bem pouco confiáveis hahaha
+[2021-09-18 00:09:24] Shideravan: Ele emite "sons" ou ele só tem o display emulado?
+[2021-09-18 00:12:05] Felipe "Juca" Sanches: ah, não! Não tá só no meu HD local não!
+
+Sempre procuro deixar num branch público justamente pra dar uma chance caso eu do nada bata as botas sem aviso prévio :-P
+
+https://github.com/felipesanches/mame/commits/technics_keyboards
+[2021-09-18 00:12:22] Felipe "Juca" Sanches: tá nesse branch aí, ó
+[2021-09-18 00:13:16] Felipe "Juca" Sanches: tudo bagunçado, pois é work-in-progress...
+
+acho que vou fazer um outro branch e misturar todos commits num só, pra facilitar o code-review do cuavas
+[2021-09-18 00:13:58] Felipe "Juca" Sanches: ao resto do pessoal aqui do grupo, cuavas é o nome de usuário no GitHub do atual mantenedor do MAME
+[2021-09-18 00:15:51] Felipe "Juca" Sanches: ah, não era ESQ-1! É o Ensoniq SD-1.
+
+Aqui está:
+
+https://www.youtube.com/watch?v=ulQo5SjNTaQ
+[2021-09-18 00:19:06] Felipe "Juca" Sanches: olha só... tem um video novo, de 3 meses atrás:
+
+https://www.youtube.com/watch?v=kUJNIO8tavs
+[2021-09-18 00:22:20] Shideravan: Poxa, que maneiro!
+[2021-09-18 00:24:16] Felipe "Juca" Sanches: o meu driver do Technics KN5000 ainda fica em tela preta e completamente mudo.
+
+Mas consigo acompanhar os primeiros passos do código de boot no debugger e as coisas que ele faz na inicializacao já fazem bastante sentido pra mim. Tem algo faltando ainda, entretanto, pra chegar no ponto onde ele desenharia algo na tela
+[2021-09-18 00:25:12] Shideravan: Como é nas internas? Eu não estou muito familiarizado com o hardware de teclados
+[2021-09-18 00:25:21] Shideravan: É um SoC?
+[2021-09-18 00:25:53] Felipe "Juca" Sanches: esse KN5000 usa duas CPUs da TOSHIBA e também dois chips DSP e ainda um chip custom gerador de som
+[2021-09-18 00:26:00] Felipe "Juca" Sanches: e um chip controlador de disquete
+[2021-09-18 00:26:29] Felipe "Juca" Sanches: e um chip controlador de video (que é na verdade um controlador VGA)
+[2021-09-18 00:26:49] Shideravan: Aqui aquele treco que eu te falei
+[2021-09-18 00:26:50] Shideravan: https://github.com/aappleby/MetroBoy
+[2021-09-18 00:28:10] Felipe "Juca" Sanches: naquele video do batepapo de ontem sobre C64 que te mandei link do youtube agora há pouco, rolou uma conversa sobre simulacao do 6502 em nível de transistores
+[2021-09-18 00:28:26] Shideravan: Que maneiro
+[2021-09-18 00:28:34] Shideravan: Eu gostaria muito de manjar disso
+[2021-09-18 00:28:56] Shideravan: Tem um monte de pong caseiros dos anos 70 que a única forma de emular vai ser assim hahahaha
+[2021-09-18 00:29:10] Shideravan: Mas isso é outro nível para mim hahaha
+[2021-09-18 00:29:40] Felipe "Juca" Sanches: é... eu tentei fazer isso no MAME com o jogo GranTrak10 da Atari, de 1975. Mas não consegui terminar. Cheguei "quase lá"
+[2021-09-18 00:29:53] Shideravan: Que massa, não sabia disso
+[2021-09-18 00:30:18] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/GranTrak10
+[2021-09-18 00:30:52] Shideravan: Esse aí eu conheço, um dos priomeiros arcades de corrida, né?
+[2021-09-18 00:31:49] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/3795
+[2021-09-18 00:32:07] Shideravan: Massa demais
+[2021-09-18 00:32:17] Felipe "Juca" Sanches: 1974!
+[2021-09-18 00:32:29] Felipe "Juca" Sanches: eu tava lembrando errado, achando que era 1975
+[2021-09-18 00:32:45] Shideravan: Eu vou indo nessa aqui, que amanhã eu acordo cedo. Mas bacana trocar essas ideias contigo. As vezes eu sinto falta de trocar ideia sobre emulação em português hahaha
+[2021-09-18 00:32:58] Felipe "Juca" Sanches: estamos aí!
+[2021-09-18 00:33:04] Felipe "Juca" Sanches: sinta-se em casa
+[2021-09-18 00:33:08] Shideravan: Valeu!
+[2021-09-18 00:33:14] Felipe "Juca" Sanches: valeu, té mais!
+[2021-09-18 00:36:54] Ismael Luceno: :D
+[2021-09-18 00:37:22] Ismael Luceno: muito interessante
+[2021-09-18 00:45:48] Felipe "Juca" Sanches: acabei de implementar o disasm de mais uma instrução do TOSHIBA TLCS900 no binutils:
+
+https://github.com/felipesanches/binutils-tlcs900/commit/a3325bc312e02a88f73fab6692851b8d801dfffd
+[2021-09-18 10:36:41] Shideravan: Que maneiro
+[2021-09-18 10:39:41] Shideravan: Esse processador é usado no Neo Geo Pocket também
+[2021-09-18 10:40:45] Shideravan: Nossa, é mais complexo do que eu imaginava
+[2021-09-18 10:42:02] Shideravan: Vários co-processadores para manter a sincronia
+[2021-09-18 10:46:54] Felipe "Juca" Sanches: isso!
+[2021-09-18 11:44:53] Felipe "Juca" Sanches: meu entendimento atual é que um TOSHIBA toma conta da interface de usuário e periféricos (tela gráfica VGA, inputs via botoes do painel, drive de disquete, etc)
+
+e o segundo TOSHIBA é dedicado à engine de geração de som mesmo. Interfaceando com as teclas de piano e com os chips DSP e de geracao de timbres (é como se fosse o firmware duma "placa de som")
+[2021-09-18 11:56:13] Shideravan: Você tem fotos do PCB?
+[2021-09-18 12:03:18] * Pedro de Medeiros 👾 joined the group
+[2021-09-18 12:14:10] Felipe "Juca" Sanches: muito tempo atrás eu tirei foto. Mas foi uns 20 anos atrás hahahaha. Foi com camera fotografica analógica!
+[2021-09-18 12:15:13] Felipe "Juca" Sanches: mas temos o service manual com o circuito completo
+[2021-09-18 12:15:49] Felipe "Juca" Sanches: https://www.manualslib.com/manual/1005851/Technics-Sx-Kn5000.html
+[2021-09-18 12:25:35] Flávio Amieiro: Aliás
+[2021-09-18 12:25:37] Flávio Amieiro: https://twitter.com/frankcifaldi/status/1438959996578906118?s=19
+[2021-09-18 12:28:27] Shideravan: 😳
+[2021-09-18 12:28:36] Shideravan: Caramba!
+[2021-09-18 12:32:01] Flávio Amieiro: Se alguém tiver uns milhares de dólares aí sobrando...
+[2021-09-18 12:32:23] Shideravan: Parece que os caras já perderam o leilão, não?
+[2021-09-18 12:33:14] Flávio Amieiro: Ah, eu não tinha visto o último tweet da thread 😢
+[2021-09-18 12:35:32] Shideravan: Quando eu vi a foto eu fiquei animado, aí eu fui ver a thread foi a decepção hahaha
+[2021-09-18 12:35:59] Shideravan: Provavelmente quem arrematou só queria que eles não pegassem e disponibilizassem
+[2021-09-18 12:40:25] Shideravan: Essa coleção de protótipos nem vale tanto para quem arrematou, talvez o valor de prateleira nem se pague... Mas historicamente isso não ser dumpado é uma perda incalculável para a preservação da história do desenvolvimento de games...
+[2021-09-18 12:41:32] Flávio Amieiro: Sim, sem dúvida 😔
+[2021-09-18 12:44:02] Shideravan: Tenho outra teoria de quem arrematou vai usar para tentar ganhar um dinheiro em cima botando um valor bem acima em troca de disponibilizar os dumps. No final das contas ainda pode ser um final parcialmente feliz? Não vejo um private collector tão interessado assim em deixar mofando um monte de cartuchinho "velho" e "zoado" de jogos protótipos de um console que o mainstream nem dá bola...
+[2021-09-18 12:50:48] Shideravan: "enfeia" a coleção
+[2021-09-18 13:26:29] Leonardo Roman: C64 tem muito chip custom que os taiwaneses não clonaram. Hoje em dia se sabe por exemplo, que os chips custom do tk3000 são idênticos aos dos clones taiwaneses de Apple 2e. Então é fácil supor que por aqui não se clonou nenhum chip custom dos micros da época. Foi tudo importabandeado.
+[2021-09-18 14:04:53] Felipe "Juca" Sanches: eu tenho a esperança de que meu trabalho de emulação do teclado Technics KN5000 me leve a completar um port do binutils + GCC para TOSHIBA TLCS900 e que isso possa dar nova vida a uma cena de desenvolvimento homebrew para Neo Geo Pocket
+[2021-09-18 14:05:28] Felipe "Juca" Sanches: Cheguei até a ponderar se eu não deveria comprar um NeoGeo Pocket pra servir de incentivo extra 😉
+[2021-09-18 14:06:57] Felipe "Juca" Sanches: entretanto, existe publicamente acessível um compilador proprietário da linguagem C para TLCS900 desenvolvido pela própria TOSHIBA, então talvez não seja falta de um compilador o gargalo para uma cena homebrew.
+
+Aposto que, infelizmente, muito pouca gente se importa se o compilador é software livre.
+[2021-09-18 15:32:55] Shideravan: Faz bastante sentido
+[2021-09-18 15:34:45] Shideravan: Você sabe como está a cena do arm11?
+[2021-09-18 23:14:20] RicBit: O diretor da Tectoy na época do zeebo é o CTO do quinto andar hoje em dia.
+[2021-09-18 23:25:35] Shideravan: Você tem contato com ele RicBit ?
+[2021-09-18 23:25:48] RicBit: Sim, é meu chefe
+[2021-09-18 23:29:11] Shideravan: Será que ele toparia colaborar com a gente com documentações e informações para tirarmos do papel a ideia de um emulador para o zeebo?
+[2021-09-18 23:39:32] RicBit: Certamente não
+[2021-09-18 23:39:54] RicBit: Ele não tem direitos, são da Tectoy.
+[2021-09-18 23:42:22] Shideravan: Se você comentar dele sobre esse assunto, será que ele fica bravo?
+[2021-09-18 23:45:34] RicBit: Certamente não, até porque eu já perguntei antes
+[2021-09-18 23:46:05] Shideravan: Hahaha tá explicado
+[2021-09-18 23:48:08] Felipe "Juca" Sanches: sendo os direitos da TecToy e ele sendo o diretor da época, existe alguma chance dele simpatizar com a idéia e repassar a mensagem para os atuais detentores dos direitos?

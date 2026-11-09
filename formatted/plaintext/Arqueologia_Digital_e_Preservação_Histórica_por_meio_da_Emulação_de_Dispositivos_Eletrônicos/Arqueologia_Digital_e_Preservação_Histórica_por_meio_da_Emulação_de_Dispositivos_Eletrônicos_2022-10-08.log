@@ -1,0 +1,31 @@
+[2022-10-08 15:50:09] L.: https://www.forbes.com/sites/timbajarin/2022/10/05/celebrating-thinkpads-30th-anniversaryan-insiders-perspective/ ❤️
+[2022-10-08 21:36:05] Felipe "Juca" Sanches: Guido Stolfi me disse agora por chat no Facebook:
+
+——
+Felipe, notícias preocupantes.
+
+Troquei dúzias de Trimpots, todas as chaves ON/OFF, alguns operacionais, transistores e um diodo. Agora, TODOS OS MÓDULOS DO SINTETIZADOR ESTÃO FUNCIONANDO !
+
+Fiz um conversor de protocolo  para serial, estou pensando assim: quando aperta Start no synth, o conversor manda o caracter "S" a 115200 bps para o computador. Quando aperta Stop, manda o caacer "X". Ao receber o sinal de sincronismo em 1 kHz, manda um caracter "P"  para cada pulso recebido (cada milissegundo). Quando o computador quer enviar um comando para o synth, ele manda um caracter "C" seguido de um byte correspondendo ao endereço e outro byte correspondendo ao valor a ser enviado para o módulo endereçado.
+
+Porque notícia preocupante? Porque agora só falta o Patinho Feio...
+[2022-10-08 21:37:54] Felipe "Juca" Sanches: Minha resposta pra ele foi a seguinte:
+
+
+——
+ah!
+ótima notícia!
+agora preciso pensar aqui em como fazer a parte da emulação adaptar-se com esse protocolo
+e esboçar uma atualização no código do painel
+
+Uma coisa que me ajudaria bastante seria uma descrição de quais módulos são controlados por quais strobes
+pois assim consigo ao menos tentar imaginar o que o synth vai fazer quando eu rodar meus códigos de emulação
+
+talvez eu escreva um pequeno simulador do synth
+pra me auxiliar na emulação
+
+além disso, o André deve te entregar um painel em breve (assim que ele terminar de soldar os componentes)
+
+e eu tenho vontade de montar um painel pra mim também aqui em Londres, mas tenho uma outra prioridade nesse momento que é encontrar uma casa pra alugar aqui, pois ainda estamos em hospedagem temporária e visitando dezenas de agentes imobiliários em busca de algo que seja menos absurdamente caro
+
+acho que daqui umas duas semanas poderei tentar fabricar um painel pra mim por aqui também. Até lá, vai ter que ser tudo por emulação no PC mesmo.

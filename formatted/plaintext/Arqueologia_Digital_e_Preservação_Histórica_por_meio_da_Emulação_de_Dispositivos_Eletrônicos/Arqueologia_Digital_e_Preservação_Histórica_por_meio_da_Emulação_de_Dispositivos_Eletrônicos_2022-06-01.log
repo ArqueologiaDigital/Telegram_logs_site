@@ -1,0 +1,78 @@
+[2022-06-01 03:15:11] Pedro de Medeiros 👾: @fsanches https://github.com/ArqueologiaDigital/Mines/pull/19
+[2022-06-01 03:19:51] Felipe "Juca" Sanches: opa!
+[2022-06-01 03:19:55] Felipe "Juca" Sanches: there we go! ;-D
+[2022-06-01 03:21:10] Pedro de Medeiros 👾: Eu ia fazer um commit maior, mas decidi partir porque o restante é de MSX.
+[2022-06-01 03:23:03] Pedro de Medeiros 👾: Esses detalhes de implementação eu escolhi com base no tipo de jogo que estamos fazendo. Se eu fosse fazer um jogo tipo Elite em que os números pseudo-aleatórios precisam ser reproduzíveis, eu usaria outros requisitos.
+[2022-06-01 03:24:07] Felipe "Juca" Sanches: perfeito
+[2022-06-01 03:24:31] Felipe "Juca" Sanches: bora fazer juntos a parte gráfica do MSX?
+[2022-06-01 03:24:42] Pedro de Medeiros 👾: Depois do meu commit de input.
+[2022-06-01 03:24:42] Felipe "Juca" Sanches: ou você prefere trabalhar sozinho?
+[2022-06-01 03:25:05] Felipe "Juca" Sanches: Eu to pensando sobre o port pro GunSmoke Jamma
+[2022-06-01 03:25:18] Pedro de Medeiros 👾: uau
+[2022-06-01 03:25:33] Felipe "Juca" Sanches: e na parte eu uso um arquivo do GIMP e um código pra gerar os dados para o formato esperado
+[2022-06-01 03:25:54] Felipe "Juca" Sanches: poderia aproveitar essa infraestrutura pro MSX também se for parecido (e acho que é)
+[2022-06-01 03:26:14] Felipe "Juca" Sanches: eu fiz um joguinho bobinho de "snake" pra GunSmoke Jamma uns 5 anos atrás
+[2022-06-01 03:26:31] Felipe "Juca" Sanches: https://github.com/garoa/GunSmoke/tree/master/homebrew/Pixo
+[2022-06-01 03:26:45] Felipe "Juca" Sanches: pretendo reutilizar uma parte desse código
+[2022-06-01 03:27:02] Pedro de Medeiros 👾: A parte do vídeo deve ser completamente diferente do MSX2.
+[2022-06-01 03:27:14] Felipe "Juca" Sanches: é parecido, eu acho
+[2022-06-01 03:27:19] Felipe "Juca" Sanches: por que é tudo tile-based
+[2022-06-01 03:27:24] Felipe "Juca" Sanches: não tem como ser muito diferente
+[2022-06-01 03:27:53] Pedro de Medeiros 👾: Mas se a gente for fazer MSX2 a gente pode usar SCREEN5. Aliás, eu não vejo porque usar MSX2 se for fazer em SCREEN4. 😝
+[2022-06-01 03:27:59] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=jGZchmwxTrA
+[2022-06-01 03:28:33] Pedro de Medeiros 👾: SCREEN4 = SCREEN2 com 212 pontos na vertical e sprites modo 2.
+[2022-06-01 03:29:02] Felipe "Juca" Sanches: aliás... esse pode ser um segundo jogo a ser implementado nesse esquema cross-platform retrô
+[2022-06-01 03:29:43] Pedro de Medeiros 👾: Mas a gente pode fazer os dois (SC5 e SC4).
+[2022-06-01 03:30:21] Flávio Amieiro: Galera, eu tô super interessado no jogo, mas acordei hoje e me perguntei se a gente não tá floodando o grupo demais pra quem não quer acompanhar tão de perto o desenvolvimento
+[2022-06-01 03:30:36] Flávio Amieiro: O telegram tem algum jeito de organizar em threads ou algo do tipo?
+[2022-06-01 03:31:00] Flávio Amieiro: (foi mal, não quero cortar a onda de ninguém, mas isso inclui também a galera que tá no grupo por outros motivos...)
+[2022-06-01 03:31:07] Felipe "Juca" Sanches: pois é... eu nesse exato momento tenho muito pouca experiencia nessa distinção entre modos de video das diversas versoes de MSXzes
+[2022-06-01 03:31:16] Felipe "Juca" Sanches: tá tudo certo
+[2022-06-01 03:31:41] Felipe "Juca" Sanches: eu como "ditador benevolente" aqui dessa comunidade determino que TÁ TUDO CERTO, bola pra frente kkkk
+[2022-06-01 03:32:26] Pedro de Medeiros 👾: SCREEN5 não é tile-based. Ele é feito pra usar o blitter do V9938.
+[2022-06-01 03:33:10] Pedro de Medeiros 👾: SCREEN4 é tile-based, mas tem o famigerado attribute clash herdado do MSX1.
+[2022-06-01 03:33:38] Felipe "Juca" Sanches: te convido a fazer uma live comigo sobre o tema
+[2022-06-01 03:34:20] Pedro de Medeiros 👾: Pode ser, mas não hoje.
+[2022-06-01 03:34:47] Felipe "Juca" Sanches: tudo bem
+[2022-06-01 03:34:51] Felipe "Juca" Sanches: quando quiser
+[2022-06-01 03:35:02] Felipe "Juca" Sanches: dito isso, bola pra frente, bora codar
+[2022-06-01 03:35:06] Felipe "Juca" Sanches: 😉
+[2022-06-01 03:35:58] Pedro de Medeiros 👾: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21007-mp4.mp4
+[2022-06-01 03:36:24] Felipe "Juca" Sanches: tem um errinho de inglês lá no teu PR. Corrige que a gente dá merge e segue adiante
+[2022-06-01 03:37:30] Pedro de Medeiros 👾: Eita.
+[2022-06-01 03:38:42] Pedro de Medeiros 👾: Pronto!
+[2022-06-01 03:38:47] Felipe "Juca" Sanches: merged!
+[2022-06-01 03:38:59] Felipe "Juca" Sanches: FLOOOOOD!!!!! LOL
+[2022-06-01 03:39:07] Felipe "Juca" Sanches: @flavioamieiro to de zueira
+[2022-06-01 03:42:07] Felipe "Juca" Sanches: mas, agora falando sério, acho que essa sua preocupação é legítima. Queria saber o que os demais pensam sobre isso.
+[2022-06-01 03:42:37] Pedro de Medeiros 👾: L. até cantou a pedra sobre usar SC5 ou 8 no MSX2 dias atrás. 😉
+[2022-06-01 03:44:50] Flávio Amieiro: Boa! Valeu!
+[2022-06-01 03:45:31] Flávio Amieiro: Mas rola de pinar ela? Pq o problema é que quem mutou o grupo e tá pulando notificações pq a gente tá falando só disso não vai ver a enquete :p
+[2022-06-01 03:45:38] Flávio Amieiro: Rola um viés automático aí 😅
+[2022-06-01 03:45:50] Felipe "Juca" Sanches: ah, boa!
+[2022-06-01 03:45:55] * Felipe "Juca" Sanches pinned a message
+[2022-06-01 05:55:45] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/20#event-6716757533
+[2022-06-01 05:55:56] Pedro de Medeiros 👾: Só pra ficar o registro
+[2022-06-01 05:58:18] Felipe "Juca" Sanches: tá feito o merge!
+[2022-06-01 05:58:48] Pedro de Medeiros 👾: Essa função de input agora foi totalmente testada
+[2022-06-01 05:59:41] Felipe "Juca" Sanches: KAWABUNGA!
+[2022-06-01 05:59:53] Pedro de Medeiros 👾: Let's kick shell
+[2022-06-01 06:00:23] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21028-high-five-turtle.mp4
+[2022-06-01 06:07:32] Felipe "Juca" Sanches: to indo dormir, nos falamos amanhã!
+[2022-06-01 11:54:31] Pedro de Medeiros 👾: https://www.jessesquires.com/blog/2022/04/19/github-suspending-russian-accounts/
+[2022-06-01 11:54:52] Pedro de Medeiros 👾: Não é a primeira vez que GitHub faz esse tipo de coisa
+[2022-06-01 12:00:04] Pablo Vasques Bravo-Villalba: Que absurdo
+[2022-06-01 12:01:23] Pablo Vasques Bravo-Villalba: Bom, tem um update sobre a correção do problema. Mas me parece um precedente ruim
+[2022-06-01 12:03:38] Pedro de Medeiros 👾: Não é realmente um precedente. Alguns anos atrás o GitHub suspendeu contas cubanas por causa das políticas Trumpistas que tornaram a immigration and customs enforcement (ICE) mais dura com os imigrantes.
+[2022-06-01 12:04:17] Pablo Vasques Bravo-Villalba: Ou seja, não é precedente, é modus operandi
+[2022-06-01 12:04:23] Pedro de Medeiros 👾: Yup
+[2022-06-01 12:04:31] Pablo Vasques Bravo-Villalba: Que lixo
+[2022-06-01 12:05:51] Pedro de Medeiros 👾: Aquelas crianças isoladas dos pais imigrantes ilegais em campos de concentração é um exemplo dessas políticas escrotas
+[2022-06-01 12:06:33] Pablo Vasques Bravo-Villalba: Nem me fala disso. Mas essa das contas cubanas eu não entendo muito bem qual seria a ligação com as políticas antiimigratórias
+[2022-06-01 12:07:32] Pedro de Medeiros 👾: Eu lembro bem porque eu estava no DebianDay em Foz do Iguaçu nesse dia exato. Foi em 2019.
+[2022-06-01 12:08:05] Pablo Vasques Bravo-Villalba: Sobre isto, eu pessoalmente sou indiferente. Acho positivo ter um grupo específico para isso mas não acho que seja imprescindível
+[2022-06-01 12:08:21] Pedro de Medeiros 👾: https://www.theverge.com/2019/7/29/8934694/github-us-trade-sanctions-developers-restricted-crimea-cuba-iran-north-korea-syria
+[2022-06-01 12:15:39] Pedro de Medeiros 👾: Eu acho particularmente que a justificativa "fizemos isso porque fomos obrigados" não resolve quando é você que tem a conta bloqueada, né? 🤷
+[2022-06-01 12:16:08] Pedro de Medeiros 👾: Melhor espelhar seu projeto em outra casa.
+[2022-06-01 12:27:57] Pedro de Medeiros 👾: Não querendo levar isso pro lado político, mas com as eleições se aproximando, é possível que o Brasil sofra algum tipo de sanção internacional também e essas políticas antiimigratórias não são lá muito lógicas. 🤷‍♂️
+[2022-06-01 15:32:13] L.: https://www.washingtonpost.com/video-games/2022/01/12/video-game-preservation-emulation/

@@ -1,0 +1,117 @@
+[2022-10-20 18:25:22] Shideravan: Galera, me tirem uma dúvida?
+[2022-10-20 18:25:40] Shideravan: Eu acho muito interessante esses recursos novos que vão surgindo em hardwares mais novos
+[2022-10-20 18:26:28] Shideravan: As placas da série 4000 da NVidia mesmo, trazem o DLSS 3.0 que em tese, aumenta o framerate de jogos criando novos quadros do zero, através de inteligência artificial
+[2022-10-20 18:27:06] Shideravan: A questão é: será que será possível utilizar essa tecnologia para incorporarmos em emuladores, de forma a aumentar o framerate exibido em jogos antigos?
+[2022-10-20 18:27:32] Shideravan: Penso que se for possível, pode trazer uma nova dimensão em jogos antigos, bem interessante
+[2022-10-20 18:28:09] Shideravan: Mas não fui atrás de ver como é a implementação do DLSS 3.0 ainda, só me surgiu essa questão
+[2022-10-20 18:29:26] Shideravan: https://www.nvidia.com/pt-br/geforce/news/dlss3-ai-powered-neural-graphics-innovations/
+[2022-10-20 18:51:40] Augusto Almeida: Perfeitamente e com qualidade superior ao que é processado nos jogos atuais, pois o quadro gerado não é 100% fiel ao que deveria ser, mas com a ação e imperceptível essas falhas nos quadros
+[2022-10-20 18:52:38] Augusto Almeida: Aqui tem um vídeo não muito técnico que mostra esses detalhes nos frames gerados
+[2022-10-20 18:52:41] Augusto Almeida: https://youtu.be/zPM1g5Jrwfs
+[2022-10-20 18:52:43] Shideravan: Eu acho estranho que esse recurso não é algo nativo em tempo de renderização e precisa ser implementado nos jogos
+[2022-10-20 18:52:57] Shideravan: Eu estou ligado disso aí
+[2022-10-20 18:53:01] Augusto Almeida: Pra jogos antigos isso seria praticamente imperceptível
+[2022-10-20 18:53:07] Shideravan: Será?
+[2022-10-20 18:53:09] Shideravan: Porque assim
+[2022-10-20 18:53:23] Shideravan: Vamos pegar, sei lá, um super mario bros. rodando a 30 FPS
+[2022-10-20 18:54:00] Augusto Almeida: Sim, porque elementos que não são gerados corretamente em geral são em zonas de sombras e o depth field de cores dos jogos antigos não é tão profundo
+[2022-10-20 18:54:17] Shideravan: Se você tem um frame com Mario na altura 1 e depois pula, ele está na altura 3, em tese, o DLSS poderia "criar" o frame com Mario na altura 2 intermediaria
+[2022-10-20 18:54:51] Shideravan: Só que eu sei que em jogos 3D ele faz uso de recursos como os vector maps para ter maior precisão na criação de frames intermediários
+[2022-10-20 18:55:23] Shideravan: Será que usar o recurso seria possível em jogos antigos rodando em emuladores?
+[2022-10-20 18:55:39] Augusto Almeida: Em tese os jogos atuais são em vertex shaders e pixels shaders, então como eles estão muito complexos atualmente, é mais barato computacionalmente gera uma imagem bidimensional a partir de uma ou mais referências
+[2022-10-20 18:55:52] Shideravan: Semelhante ao tratamento que pode ser feito de upscaling antes de jogar as imagens ao framebuffer em jogos 3D para aumentar a resolução?
+[2022-10-20 18:55:54] Augusto Almeida: Em tese seria isso
+[2022-10-20 18:56:08] Augusto Almeida: Sim
+[2022-10-20 18:56:56] Shideravan: A questão é que eu imagino usar um recurso desse tipo, para deixar jogos antigos mais fluidos, sem tem que alterar a precisão do que está rodando por baixo dos panos
+[2022-10-20 18:57:25] Shideravan: Você roda normalmente o jogo de forma precisa e antes de jogar os frames para o framebuffer, usar esse recurso para criar novos quadros
+[2022-10-20 18:57:33] Augusto Almeida: A dúvida ficaria na questão das colisões, pois não haveria nos quadros intermediários
+[2022-10-20 18:57:59] Shideravan: A gente poderia ver jogos que rodavam a framerates baixos rodando a framerates mais altos
+[2022-10-20 18:58:09] Shideravan: Isso eu sei o que aconteceria.
+[2022-10-20 18:58:35] Shideravan: Os quadros intermediarios não respeitam a colisão nem em jogos 3D feitos pensando neles
+[2022-10-20 18:58:38] Shideravan: Mas não tem problema
+[2022-10-20 18:58:58] Augusto Almeida: Se a ação for rápida, então isso não deve interferir
+[2022-10-20 18:59:07] Shideravan: Exatamente, é imperceptível
+[2022-10-20 18:59:30] Shideravan: Mas os frames intermediarios, ao menos na versão inicial do DLSS 3.0 gera muita imagem "bizarra"
+[2022-10-20 18:59:42] Shideravan: Só que metade dos frames são frames reais do jogo
+[2022-10-20 18:59:53] Augusto Almeida: Uma outra questão é que boa parte dos jogos antigos são a 30 ou 60fps, não sei se seria tão perceptível em alguns jogos
+[2022-10-20 18:59:58] Shideravan: Então por causa da intermitencia, é imperceptivel quando algum quadro sai bizarro
+[2022-10-20 19:00:35] Shideravan: Rodar jogo de N64 feito para 30 FPS em 60 FPS te garanto que dá uma diferença monstra, só para começar
+[2022-10-20 19:00:36] Augusto Almeida: No outrrun é porque já existe a versão 60fps nativa
+[2022-10-20 19:00:50] Shideravan: Alguns ports de PC feitos por fãs de jogos de N64 mostram isso muito bem
+[2022-10-20 19:00:56] Augusto Almeida: Eles sim
+[2022-10-20 19:01:02] Shideravan: Mas a ideia é ir além até do 60 FPS
+[2022-10-20 19:01:12] Augusto Almeida: Jogos de Saturn, PSX também
+[2022-10-20 19:01:14] Shideravan: Rodar a 120, 144 Hz
+[2022-10-20 19:01:20] Shideravan: Com certeza
+[2022-10-20 19:01:39] Shideravan: Uma coisa fantástica é usar cheat de 60 FPS para jogos de dreamcast no emulador
+[2022-10-20 19:01:43] Shideravan: Rapaz, fica lindo
+[2022-10-20 19:01:56] Shideravan: Mas é cheat, né? E não é todo jogo que dá para fazer
+[2022-10-20 19:02:07] Augusto Almeida: Sim
+[2022-10-20 19:02:40] Shideravan: Então eu apoio a questão de usar recursos como esse para deixar jogos antigos mais fluidos
+[2022-10-20 19:02:52] Shideravan: Mas aí o problema é se é algo que dá para ser implementado
+[2022-10-20 19:02:55] Shideravan: Se der, maravilha
+[2022-10-20 19:03:02] Augusto Almeida: Muitos jogos são marcados em 30fps porque em determinados momentos há um overhead, então em tese o jogo roda a mais de 30fps mas não consegue se manter nesse framerate maior que os 30.
+[2022-10-20 19:03:06] Shideravan: Acho que temos que trabalhar nesse tipo de coisa o quanto antes
+[2022-10-20 19:03:43] Shideravan: Sim. Na emulação de alguns sistemas, você consegue liberar mais hardware do que o jogo originalmente tinha, então é correr para o abraço
+[2022-10-20 19:03:51] Shideravan: Mas o DLSS 3.0 é ainda mais interessante
+[2022-10-20 19:04:00] Shideravan: Porque você pode fazer no pós processamento
+[2022-10-20 19:04:08] Shideravan: Sem afetar nada de como o jogo em si está rodando
+[2022-10-20 19:04:36] Shideravan: É literalmente, o framebuffer tá pronto para ser encaminhado, ele vai criando novos frames intermediarios enquanto encaminha
+[2022-10-20 19:04:49] Shideravan: Não usa nada do processador, por exemplo
+[2022-10-20 19:05:01] Shideravan: Tudo feito enquanto os frames são enviados
+[2022-10-20 19:05:17] Shideravan: Segundo o que a NVidia divulgou (não fui a fundo ainda)
+[2022-10-20 19:05:49] Shideravan: Mas testes de hardware mostram que sim, o resto do hardware não afeta
+[2022-10-20 19:06:16] Shideravan: https://www.youtube.com/watch?v=kvo3abbAWHo
+[2022-10-20 19:06:28] Shideravan: Uma análise dessas em pt-br
+[2022-10-20 19:06:30] Augusto Almeida: Não sei como funciona o DLSS mas certamente usa técnicas de reconstrução de imagem com ajuda de IA
+[2022-10-20 19:06:42] Shideravan: Isso, a nível de framebuffer
+[2022-10-20 19:06:52] Shideravan: As imagens extras não afetam o jogo rodando
+[2022-10-20 19:07:09] Shideravan: Internamente, o jogo está rodando, por exemplo, a 30 FPS
+[2022-10-20 19:07:10] Augusto Almeida: Sim eles são figurativos
+[2022-10-20 19:07:20] Shideravan: Na hora de enviar os frames que novos frames vão sendo criados
+[2022-10-20 19:07:32] Shideravan: Semelhante ao que acontece no DLSS 2.0 em termos de resolução
+[2022-10-20 19:08:05] Shideravan: Internamente o jogo roda a uma resolução mais baixa, ex: 1080p
+E na hora de enviar para o framebuffer é utilizada IA para fazer o upscaling dos frames
+[2022-10-20 19:08:14] Shideravan: Ex.: 4k
+[2022-10-20 19:10:18] Augusto Almeida: Isso
+[2022-10-20 19:10:32] Augusto Almeida: Só não sei como ela processa isso
+[2022-10-20 19:11:38] Shideravan: Os detalhes de como isso acontece eu não sei também
+[2022-10-20 19:11:46] Shideravan: Precisava dar uma lida na documentação
+[2022-10-20 19:12:02] Shideravan: Mas pode ser um recurso interessante para se usar em emulação
+[2022-10-20 19:12:25] Shideravan: No MAME mesmo, isso não ficaria no código principal, mas se encaixaria como plugin, igual o plugin de cheat codes
+[2022-10-20 19:12:59] Shideravan: Adicionaria um plugin que mudasse a forma como é feita a renderização, para utilizar o recurso para ganhar fluidez
+[2022-10-20 19:13:16] Augusto Almeida: Mesmo porque ainda não é uma feature básica de toda placa de vídeo
+[2022-10-20 19:13:23] Shideravan: Mas aí teria que ver como se implementa coisas nessa tecnologia e se é viável de utilizar em jogos 2D
+[2022-10-20 19:13:46] Shideravan: Sim, mas é um recurso que pode ser bastante interessante
+[2022-10-20 19:14:10] Augusto Almeida: É em tese o motivo que ele não faz parte do core do MAME
+[2022-10-20 19:14:31] Shideravan: E não tem que fazer mesmo, mesmo se toda placa moderna tivesse suporte
+[2022-10-20 19:14:51] Shideravan: Mas os plugins do mame estão aí para isso, para trazer novas funcionalidades que não existiam nos arcades originais
+[2022-10-20 19:15:42] Shideravan: Mas por exemplo, se for possível, eu consigo falar com o pessoal do ares para dar uma olhada se é possível implementar por lá também. O mesmo para outros emuladores
+[2022-10-20 19:16:14] Shideravan: Eu estou com medo é de ser algo que não dê para ser implementado num emulador, por exemplo
+[2022-10-20 19:16:51] Shideravan: Porque, pode por exemplo, faltarem informações básicas no que o DLSS 3.0 precise para gerar esses frames intermediários
+[2022-10-20 19:17:28] Shideravan: Seria mais fácil se ele simplesmente funcionasse automaticamente para tudo, não dependesse de implementações específicas em cada jogo
+[2022-10-20 19:17:38] Shideravan: O fato de precisar pode ser um mal indicativo
+[2022-10-20 19:18:46] Augusto Almeida: Pelo que entendi o jogo precisa ativar essa funcionalidade, muitos jogos não tem isso implementado ainda
+[2022-10-20 19:18:52] Shideravan: Eu vou demorar até ter uma placa com suporte a esse recurso
+[2022-10-20 19:19:05] Shideravan: No Brasil, essa 4090 tá saindo a 15k
+[2022-10-20 19:19:13] Shideravan: Inviável
+[2022-10-20 19:19:48] Shideravan: Mas a tecnologia pode ser bem interessante
+[2022-10-20 19:19:56] Shideravan: Exatamente
+[2022-10-20 19:20:36] Shideravan: Apesar de ser implementado a nivel de framebuffer e rodar durante a fase de pós-processamento dos frames, ele depende de implementação manual em cada jogo ainda
+[2022-10-20 19:21:32] Shideravan: Em jogos não deve ser dificil
+[2022-10-20 19:21:44] Shideravan: Ainda mais, porque algumas engines vão dar suporte nativo à tecnologia
+[2022-10-20 19:21:57] Shideravan: Caso da frostbite e da UE 4 e 5
+[2022-10-20 19:22:58] Shideravan: A placa mal lançou e já tem uma lista de pelo menos 35 jogos que já davam suporte ao recurso no dia de lançamento da placa
+[2022-10-20 19:27:50] Augusto Almeida: Quem não vai ?rsrsrs
+[2022-10-20 19:28:25] Shideravan: kkkkkkkk
+[2022-10-20 19:28:40] Shideravan: Tem que trocar de governo para o dólar abaixar, senão não vai dar não kkkkkkkkkkkkk
+[2022-10-20 20:32:09] Augusto Almeida: Pois é rsrsrsr
+[2022-10-20 20:35:48] RicBit: Você pode fazer isso já, é só ligar o motion compensation da sua tv. Chama TruMotion na minha. É a mesma coisa que o dlss faz, mas com menos resolução.
+[2022-10-20 20:36:14] RicBit: Ambos vão ficar um lixo um jogos 2d.
+[2022-10-20 20:37:04] Shideravan: A qualidade do DLSS 3 tá melhor
+[2022-10-20 20:37:14] Shideravan: E isso porque está na versão "beta" ainda
+[2022-10-20 20:38:32] RicBit: Continua sendo a mesma coisa, é interpolação de quadros.
+[2022-10-20 20:39:12] RicBit: Em 2d você não pode interpolar quadros, tem que interpolar coordenadas.
+[2022-10-20 20:47:21] Shideravan: Interessante
+[2022-10-20 20:47:40] Shideravan: Tem algum vídeo desse efeito acontecendo? To procurando aqui e não to conseguindo achar
+[2022-10-20 20:48:43] Shideravan: Mas como existem algorítmos para aumentar a fluidez de filmes, achei que a mesma técnica poderia ser usada em jogos 2d

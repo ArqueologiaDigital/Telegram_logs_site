@@ -1,0 +1,33 @@
+[2021-01-24 00:01:00] RicBit: 2^4-1 = 15
+[2021-01-24 02:25:45] Erin Pinheiro 🐿: VMP3700  SELF TEST�Pack[  ]:    �PAUSE�Int. Mask : Image[    ]  Song[    ]�TOM:�MULHER�HOMEM�TEMPO:�abort
+�ReadCvtVector
+�Ext1:OK   �Ext1:NC   �Ext2:OK   �Ext2:NC   �Ext3:OK   �Ext3:NC   �<  1  > CANTOR�<  2  > TÍTULO�<ESC> SAIR�ESCOLHA O CANTOR : Waiting!!!�ESCOLHA O TÍTULO : �NÃO DESISTA,/TREINE COM/MAIS FREQUÊNCIA!�NÃO PERCA AS ESPERANÇAS,/TENTE OUTRA VEZ!�NÃO DESANIME,/HOJE VOCÊ NÃO/ESTÁ INSPIRADO!�CONTINUE TENTANDO,/NA PRÓXIMA VEZ/SERÁ MELHOR!�TREINAR SEMPRE É/A MELHOR SOLUÇÃO!�VOCÊ ESTÁ PROGREDINDO,/ESCOLHA OUTRA CANÇÃO!�CONTINUE ASSIM,/VOCÊ ESTÁ NO/CAMINHO CERTO!�PARABÉNS,/VOCÊ CANTOU BEM!�SENSACIONAL,/VOCÊ JÁ É QUASE/UM PROFISSIONAL!�NOSSA, QUE SHOW!!!/VOCÊ ESTÁ DE PARABÉNS!�QUE LOUCURA,/VOCÊ ARRASOU,/VOCÊ É O MELHOR!�[NORMAL]�[TODAS]�MENU�NÍVEL DO SCORE�TEMPO DE CADA IMAGEM�SELEÇÃO DE IMAGENS�SAIR�VIDEO IN 1,2,3 DESATIVADO�VIDEO IN 2,3 DESATIVADO�VIDEO IN 3 DESATIVADO
+[2021-01-24 02:26:03] Erin Pinheiro 🐿: treinar sempre é a melhor solução
+[2021-01-24 02:43:34] Erin Pinheiro 🐿: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12232-001.mid
+[2021-01-24 02:43:34] Erin Pinheiro 🐿: @fsanches
+[2021-01-24 03:51:25] Erin Pinheiro 🐿: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12233-videoke_midis.zip
+[2021-01-24 03:51:33] Erin Pinheiro 🐿: escrevi um python pra extrair todos os midis
+[2021-01-24 06:03:12] Felipe "Juca" Sanches: WOW
+[2021-01-24 06:03:22] Felipe "Juca" Sanches: manda o script python também
+[2021-01-24 13:18:17] Erin Pinheiro 🐿: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12237-extract_midis.py
+[2021-01-24 13:18:17] Erin Pinheiro 🐿: tá fuleirinha
+[2021-01-24 13:23:34] Felipe "Juca" Sanches: o importante é funfar
+[2021-01-24 13:29:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12239.jpg
+[2021-01-24 13:29:31] Felipe "Juca" Sanches: https://datassette.org/livros/br-brasil-pense-bem-livros/pense-bem-especial-disney-ze-carioca-na-copa-do-mundo
+[2021-01-24 13:57:59] L.: @fsanches roda o brute force do lfsr de 16bit nessa sequência que começa do livro 1
+[2021-01-24 13:59:46] Felipe "Juca" Sanches: as respostas comecam repetir (com pequenas variacoes) só depois da 149.a reposta
+[2021-01-24 14:03:32] Felipe "Juca" Sanches: isso daria um período de 2 * 149 = 298 bits. Me parece muita coisa prum LFSR
+[2021-01-24 15:00:52] Felipe "Juca" Sanches: alguns anos atrás eu comecei a escrever um emulador para esse videokê da ROM que você tá analizando. O driver já tem bastante coisa, mas acabou ficando encostado de lado por que me compliquei no processo de emular o chip 386EX (que é um 386 junto com boa parte do chipset típico de um ibm pc embutidos num único chip otimizado para dispositivos embarcados)
+[2021-01-24 15:01:58] Felipe "Juca" Sanches: o código tá num branch da minha cópia local do MAME aqui no meu laptop. Pretendo algum dia retomar esse projeto, pois ia ser muito muito muito divertido cantar videokê no MAME 😃
+[2021-01-24 15:02:44] Felipe "Juca" Sanches: @mynameiserin, se você tiver interesse em participar disso, eu posso tornar público o meu branch do vmp3700
+[2021-01-24 15:03:32] Erin Pinheiro 🐿: acho elegante quem tem cérebro pra desenvolver emulador, eu não tenho
+[2021-01-24 15:58:08] Felipe "Juca" Sanches: kkkk
+[2021-01-24 15:58:16] Felipe "Juca" Sanches: não se jogue pra baixo
+[2021-01-24 15:58:48] Felipe "Juca" Sanches: ontem mesmo eu estava aqui em casa conversando com a minha esposa e te elogiando
+[2021-01-24 15:59:04] Felipe "Juca" Sanches: por causa da facilidade com que decodificou as fontes e o logo
+[2021-01-24 16:05:59] Erin Pinheiro 🐿: o binxelview que fez todo o trabalho :)
+[2021-01-24 16:06:17] Erin Pinheiro 🐿: https://github.com/bbbradsmith/binxelview
+[2021-01-24 16:11:04] Felipe "Juca" Sanches: mas extrair os midis foi por outro caminho, né?
+[2021-01-24 16:24:37] Erin Pinheiro 🐿: isso foi só ver que tinha header midi dentro da rom e fazer um scriptzinho
+[2021-01-24 16:24:44] Erin Pinheiro 🐿: não se compara a emular um cpu
+[2021-01-24 16:48:48] Felipe "Juca" Sanches: bom... tem sempre uma primeira vez. Topa tentar?

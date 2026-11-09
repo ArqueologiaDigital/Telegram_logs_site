@@ -1,0 +1,30 @@
+[2018-07-08 23:18:45] Affonso Amendola: Hey guys, eu fiz um bagulhinho maneiro
+[2018-07-08 23:18:51] Affonso Amendola: (pelo menos pra mim foi maneiro)
+[2018-07-08 23:19:28] Affonso Amendola: Eu baixei esse livro pra dar uma olhada em como o padrão VGA funcionava
+[2018-07-08 23:19:29] Affonso Amendola: https://archive.org/details/BlackArt3DEBook
+[2018-07-08 23:19:36] Affonso Amendola: Recomendo o bagulho é daora
+[2018-07-08 23:19:40] Affonso Amendola: Tem uma copia dele no garoa
+[2018-07-08 23:20:23] Rodrigo Tadeu: Obrigado!
+[2018-07-08 23:21:10] Affonso Amendola: E pra brincar eu fiz uma versão do hunt the wumpus meio cagada pra VGA
+[2018-07-08 23:21:18] Felipe "Juca" Sanches: eu passei várias horas hoje de tarde/noite no Calango Hacker Clube montando um cabo VGA e escrevendo código Verilog para fazer um gerador de sinal de vídeo VGA numa FPGA
+[2018-07-08 23:21:44] Felipe "Juca" Sanches: mas não funcionou :-P
+[2018-07-08 23:22:05] Felipe "Juca" Sanches: acho que a tv nao aceita 72Hz
+[2018-07-08 23:22:45] Felipe "Juca" Sanches: vou modificar o verilog pra fazer um modo de video mais padrao: 640x480x60Hz
+[2018-07-08 23:23:04] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/5930.jpg
+[2018-07-08 23:23:06] Felipe "Juca" Sanches: a gente tava tentando 800x600x72Hz
+[2018-07-08 23:23:21] Affonso Amendola: Eita
+[2018-07-08 23:23:59] Felipe "Juca" Sanches: em C?
+[2018-07-08 23:24:15] Affonso Amendola: Ué
+[2018-07-08 23:24:18] Felipe "Juca" Sanches: msdos + interrupção 21h ?
+[2018-07-08 23:24:23] Affonso Amendola: Pq não, o q acontecia?
+[2018-07-08 23:24:41] Felipe "Juca" Sanches: nada. nem detectava o sinal.
+[2018-07-08 23:25:09] Affonso Amendola: Bom, o modo que eu to usando ali é o 13h, 320x200
+[2018-07-08 23:26:35] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/5939.jpg
+[2018-07-08 23:26:44] Felipe "Juca" Sanches: 320x200 é, no fim das contas, exatamente o que eu preciso. Mas andei brincando com outros modos de video por que já tinha código Verilog pronto na internet
+[2018-07-08 23:29:47] Affonso Amendola: VGA tem varios
+[2018-07-08 23:30:04] Affonso Amendola: Mas eu gostei bastante do 320x200
+[2018-07-08 23:30:12] Affonso Amendola: facilimo de acessar a memorio
+[2018-07-08 23:30:14] Affonso Amendola: memoria*
+[2018-07-08 23:30:19] Affonso Amendola: o refresh fica meio cagado
+[2018-07-08 23:30:22] Affonso Amendola: Mas tudo bem, ta bonito
+[2018-07-08 23:30:40] Affonso Amendola: Precisaria fazer um tipo de double buffering pra fazer ficar REALMENTE bonito

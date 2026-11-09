@@ -1,0 +1,27 @@
+[2026-08-04 01:31:31] RicBit: para mim está engraçado que, do nada, a AI aqui resolveu virar poeta
+[2026-08-04 01:31:56] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/39914.jpg
+[2026-08-04 01:32:34] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/39915.jpg
+[2026-08-04 01:33:20] RicBit: agora ele está escrevendo meu history como se fossem capitulos com titulos
+[2026-08-04 01:33:54] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/39917.jpg
+[2026-08-04 01:34:54] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/39918.jpg
+[2026-08-04 05:26:27] Felipe "Juca" Sanches: 📝 Blog — Part 127, "The keyboard that tells you its own version but won't hand over its ROM"
+
+Committed 70e925f, registered in posts.json. The Cave of Wonders framing runs through it as a light structural device, not a costume:
+- "The cave speaks its name" — the Version screen announcing PROGRAM : 941.
+- "You may look, but you may not take" — the ROM test computes the sums and throws them away, showing only OK.
+- "Touch nothing but the lamp" — no diagnostic hands over a byte; the update door only opens inward.
+- "Two ways into the cave" — the diamond-in-the-rough gentle clip read vs. the forbidden-treasure code-exec route — closing on the real note that even the guardian at the door (the safeguard) cares how you phrase the request.
+[2026-08-04 09:29:19] Ismael Luceno: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/39920.jpg
+[2026-08-04 09:29:19] Ismael Luceno [forwarded]: mi nuevo toolkit gráfico, y el uso de memoria:
+$ make footprint
+scenario         framebuffer    context     region      other      stack       total         -fb
+------------------------------------------------------------------------------------------------
+empty/64x64             16.0        6.4        1.2        7.7        1.9        33.2        17.2
+empty/256x256          256.0        6.4        1.2        7.7        0.5       271.9        15.9
+small-app/64x64         16.0        6.4        1.2       17.0        2.8        43.5        27.5
+empty/1920x1080       8100.0        6.4        3.5        8.7        0.5      8119.1        19.1
+
+KiB
+[2026-08-04 17:45:38] RicBit: eita estou chocado
+[2026-08-04 17:45:51] RicBit: death wish 3 TEM final
+[2026-08-04 17:46:06] RicBit: se voce matar 5 lideres aparece uma mensagem e recomeça

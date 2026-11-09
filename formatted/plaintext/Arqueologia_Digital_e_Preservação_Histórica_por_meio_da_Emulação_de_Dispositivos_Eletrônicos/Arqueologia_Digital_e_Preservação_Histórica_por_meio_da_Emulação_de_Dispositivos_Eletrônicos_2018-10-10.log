@@ -1,0 +1,55 @@
+[2018-10-10 12:03:07] Deleted Account: Alguém aqui manja de Fortran 77 e poderia me ajudar?
+[2018-10-10 12:41:39] DQ: Manjar não manjo, mas Fortran IV foi a primeira linguagem que eu aprendi.
+[2018-10-10 12:44:16] Deleted Account: Fortran 77 = IV?
+[2018-10-10 12:52:25] DQ: Não...  depois do Fortran IV teve o Fortran 66 e só depois o Fortran 77.
+[2018-10-10 12:54:04] DQ: Porque ensinavam na Poli em 1977 um Fortran de 1962, é um destes mistérios acadêmicos.
+[2018-10-10 12:56:53] Ronaldo: Em 2006 a gente tinha aula de Turbo Pascal na faculdade
+[2018-10-10 12:58:21] DQ: Ainda mais que o FORTRAN 66 foi o primeiro padrão ANSI e incluía o IF lógico (o FORTRAN IV só tinha o IF aritmético). O FORTRAN 77 acrescentou a versão de bloco do IF (IF/ENDIF) e o ELSE...
+[2018-10-10 12:59:23] Ronaldo: Talvez fosse mais difundido
+[2018-10-10 13:02:35] DQ: Eu acho que não. Inclusive acho que o compilador aceitava FORTRAN 66 (pelo menos o IF lógico eu sei que tinha). Eu acho que era uma inércia da escola, que já tinha tudo formatado para o FORTRAN IV.
+[2018-10-10 13:03:07] Ronaldo: É provável
+[2018-10-10 13:03:47] DQ: E tinha a tradicional briga matemática x engenharia. O curso era do IME mas a Poli é quem definia a linguagem.
+[2018-10-10 13:18:54] Ronaldo: Ah, no caso do Pascal que eu aprendi era parecido. Eu era aluno de matemática tendo aula no departamento de computação da faculdade. Os computadores eram os piores que o instituto tinha, micros rodando Windows 98.
+[2018-10-10 13:50:07] Deleted Account: Credo
+[2018-10-10 13:50:32] Deleted Account: Aqui só se usa Fortran
+[2018-10-10 13:50:39] Deleted Account: No ime
+[2018-10-10 13:51:08] Deleted Account: Por mim eu só uso C e python, o que não der pra fazer com isso, paciência :p
+[2018-10-10 13:55:44] Deleted Account: Faça um transpilador de Fortran pra C e só se preocupe com isso uma vez  😃
+[2018-10-10 13:55:54] Felipe "Juca" Sanches: hahahaha
+[2018-10-10 13:56:44] Felipe "Juca" Sanches: não seria um transpilador de C para Fortran?
+[2018-10-10 13:57:25] Felipe "Juca" Sanches: https://games.slashdot.org/story/18/10/10/0557225/internet-archive-launches-a-commodore-64-emulator
+[2018-10-10 13:59:53] Felipe "Juca" Sanches: Uns 2 anos atrás eu montei uma coleção de demos de MSDOS no Internet Archive usando um port javascript do dosbox. A coleção tem cerca de 4 mil itens. Naquela época eu conversei com o Jason Scott e sugeri fazermos o mesmo com demos de Commodore 64, mas mencionei que um impecilho era a falta de um emulador de C64 no Internet Archive, transpilado para javascript. Ele me respondeu dizendo algo do tipo: "Isso jamais irá acontecer. Esqueça!"
+[2018-10-10 14:00:48] Felipe "Juca" Sanches: Se você olhar os itens dessa coleção, vai ver que os uploads foram feitos ao longo desse mês de setembro/2018 por Jason Scott.
+[2018-10-10 14:03:30] Deleted Account: Lol hahaha
+[2018-10-10 14:55:16] Luciana Marques: Oi pessoal
+[2018-10-10 14:55:24] Luciana Marques: como anda a atividade de retroprogramação?
+[2018-10-10 14:55:41] Luciana Marques: eu olhei agora na wiki do garoa e está programada uma atividade para amanhã
+[2018-10-10 14:55:47] Luciana Marques: vai ter mesmo?
+[2018-10-10 14:55:49] Luciana Marques: saudades!
+[2018-10-10 14:55:52] Felipe "Juca" Sanches: yep
+[2018-10-10 14:55:59] Felipe "Juca" Sanches: amanhã estarei lá
+[2018-10-10 14:56:01] Luciana Marques: legal! Estarei lá
+[2018-10-10 14:56:04] Luciana Marques: blz!
+[2018-10-10 14:56:30] Felipe "Juca" Sanches: não sei ainda qual vai ser o formato
+[2018-10-10 14:56:35] Luciana Marques: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-10/7826-sticker.webp
+[2018-10-10 14:56:41] Felipe "Juca" Sanches: mas a gente bate um papo
+[2018-10-10 14:56:54] Luciana Marques: com ctz, preciso te mostrar umas coisas que eu fiz 😊
+[2018-10-10 14:57:03] Felipe "Juca" Sanches: maravilha!
+[2018-10-10 14:57:57] Deleted Account: Se eu tiver energia ainda eu vou
+Amanhã tem GameCon
+[2018-10-10 15:02:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-10/7831.jpg
+[2018-10-10 16:26:38] Luciana Marques: Não to conseguindo identificar, o que é esse booth?
+[2018-10-10 16:32:11] Felipe "Juca" Sanches: VGDB - Video Game Data Base
+[2018-10-10 16:32:24] Felipe "Juca" Sanches: acho que é no evento que o Sandro vai amanhã, mas posso estar enganado
+[2018-10-10 16:33:45] Deleted Account: Eu vou no Brasil Game Show
+[2018-10-10 16:34:44] Deleted Account: Porque eu ganhei ingresso rs. Não gosto muito de jogar videogame. Estou mais interessado em como eles são feitos 😋
+[2018-10-10 16:36:27] Felipe "Juca" Sanches: Perfeito! Eu também 😃
+[2018-10-10 23:06:04] Affonso Amendola: Eu escrevi bastante Fortran 90 pra uma matéria da astro (Aparentemente astronomia AINDA usa f90 pra bastante coisa)
+[2018-10-10 23:06:22] Affonso Amendola: Mas eu n sei muito das diferenças
+[2018-10-10 23:14:07] Deleted Account: Você tem os códigos que você fez pra eu dar uma olhada?
+[2018-10-10 23:35:21] Affonso Amendola: Acho que talvez, deixa eu dar uma olhada
+[2018-10-10 23:37:14] Affonso Amendola: Yup. Tem até alguns comentarios (o professor era meu orientador, acho que eu tava tentando impressionar ele :P)
+[2018-10-10 23:37:28] Affonso Amendola: (N deu muito certo, tirei 1.5 na prova final)
+[2018-10-10 23:38:08] Affonso Amendola: Ja passo o link aqui
+[2018-10-10 23:38:40] Affonso Amendola: https://github.com/affonsoamendola/eps/tree/master/metodosnumericos
+[2018-10-10 23:38:41] Affonso Amendola: Here

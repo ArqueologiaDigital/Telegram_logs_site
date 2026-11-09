@@ -1,0 +1,77 @@
+[2023-05-29 01:23:14] Augusto Almeida [forwarded]: Simplesmente genial, quase matei a charada logo no início de qual era a plataforma em que eles desenvolveram esse demo, mas  seguida ficou fácil acertar.
+[2023-05-29 01:23:14] Augusto Almeida [forwarded]: https://youtu.be/gDNFkfxhOGo
+[2023-05-29 06:27:45] Augusto Almeida: Aqui tem o level editor : http://www.abyss-online.de/
+[2023-05-29 15:36:18] Ismael Luceno: Eu não estou entendendo o mecanismo de segurança...
+[2023-05-29 15:40:03] Ismael Luceno: Mas não da para fazer crack da chave elegida pelo CPU? ou não é possível simplesmente modificar o resultado da leitura dos efuses no código da ROM via um breakpoint e mudança dos registros do CPU antes de continuar com um JTAG?
+[2023-05-29 15:40:43] Ismael Luceno: Ou os efuses são compartilhados entre um chip de segurança e o CPU?
+[2023-05-29 15:42:16] Shideravan: Você sabendo qual o mecanismo de queima de fuses, você tem meios de skippar sim
+[2023-05-29 15:42:42] Shideravan: Mas o que você está propondo é algo que é ainda mais complexo que isso
+[2023-05-29 15:42:51] Ismael Luceno: 😁
+[2023-05-29 15:42:57] Shideravan: A resposta é não, não dá para reverter fuse queimado hahahaha
+[2023-05-29 15:43:10] Shideravan: Agora, sobre leitura...
+[2023-05-29 15:43:41] Shideravan: Dá, parcialmente dá
+[2023-05-29 15:44:07] Ismael Luceno: Eu acho que deveria ser possível
+[2023-05-29 15:44:19] Shideravan: Você só precisa garantir que a NAND não impeça você de entrar em modo de segurança
+[2023-05-29 15:44:45] Shideravan: É que para você executar o exploit existem algumas coisas
+[2023-05-29 15:44:57] Shideravan: Se você foder a NAND ele simplesmente não boota
+[2023-05-29 15:46:50] Ismael Luceno: Mas eu falo de pegar controle do CPU antes de ele mapear a NAND
+[2023-05-29 15:47:12] Shideravan: Ele executa dois sisteminhas
+[2023-05-29 15:47:20] Shideravan: boot0 e boot1
+[2023-05-29 15:47:47] Shideravan: Que aliás, são únicos de cada aparelho e você deve fazer backup também
+[2023-05-29 15:48:14] Shideravan: Não conheço nenhum crack para esses sistemas de boot no Switch
+[2023-05-29 15:48:46] Shideravan: Eles executam, e nesse meio tempo, você pode ativar o modo de segurança da CPU para exploitar
+[2023-05-29 15:49:16] Shideravan: Que você pode ativar com um jumper em pontos específicos onde se liga o joycon direito
+[2023-05-29 15:50:04] Shideravan: Ou você pode, depois que exploitou, instalar um auto RCM personalizado
+[2023-05-29 15:50:29] Shideravan: O auto RCM é um "modo de recuperação" personalizado, que acontece logo no boot
+[2023-05-29 15:50:51] Shideravan: Que já não depende mais a partir daí de você utilizar um jumper
+[2023-05-29 15:51:08] Shideravan: Mas mesmo assim, você precisa injetar o payloader
+[2023-05-29 15:51:56] Shideravan: Existe um pequeno hardware que tem a função só de injetar o payloader mais facilmente no Switch em modo RCM (modo de recuperação)
+[2023-05-29 15:52:51] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-05/26953.jpg
+[2023-05-29 15:53:24] Shideravan: O que ele faz é simplesmente injetar diretamente o payloader sem que você precise de um hardware externo para isso
+[2023-05-29 15:53:38] Shideravan: Mas na prática, ele sempre irá executar durante o modo de recuperação
+[2023-05-29 15:54:13] Shideravan: O sistema de boot em si, não foi crackeado, só o modo de recuperação
+[2023-05-29 15:54:29] Shideravan: (não sei se consegui responder a pergunta?)
+[2023-05-29 15:57:37] Shideravan: O problema é que o boot0 e boot1 também estão armazenados na NAND e posso estar equivocado, mas pelo que entendo, ele depende da configuração da CPU o que inclui os fuses
+[2023-05-29 15:59:20] Shideravan: A questão é que isso tudo não é necessário, porque a comunidade do Switch já criou um sistema robusto de recuperação, desde que você não faça uma merda muito grande
+[2023-05-29 15:59:44] Shideravan: Não era para ser assim se o sistema de recuperação do Switch não tivesse sido encontrado
+[2023-05-29 16:00:49] Shideravan: Aí com o sistema encontrado, mesmo em modelos mais recentes que não possuem esse modo de recuperação (ao menos, ele não é ativado dessa forma atual e a forma é desconhecida) facilitou de fazerem engenharia reversa no sistema e criarem modchips para esses modelos posteriores
+[2023-05-29 16:01:36] Ismael Luceno: Isso parece tudo enfocado em não mexer com o CPU diretamente...
+[2023-05-29 16:01:45] Shideravan: Tecnicamente...
+[2023-05-29 16:02:25] Ismael Luceno: Ahh, então tem já modchips que fazem bypass do check de efuses?
+[2023-05-29 16:02:50] Ismael Luceno: Ou cômo eles funcionam?
+[2023-05-29 16:03:55] Shideravan: No projeto, os chips Tegra possuem um security system que impede que a CPU "ligue" se for detectado uso anormal
+[2023-05-29 16:04:26] Shideravan: Mas foi encontrada uma vulnerabilidade que permite que você "drible" isso
+[2023-05-29 16:06:00] Shideravan: O Switch possui um bootloader personalizado, que não é o utilizado na maior parte dos sistemas que utilizam o Tegra
+[2023-05-29 16:08:31] Shideravan: Mas os detalhes de como o hekate consegue skipar esse processo, eu não sei
+[2023-05-29 16:09:54] Shideravan: Mas muito provavelmente o sistema precise estar configurado previamente para permitir isso, semelhante ao que acontece no autoRCM
+[2023-05-29 16:11:48] Shideravan: Eu sei que quando o exploit já está rodando, é possível atualizar o sistema sem queimar novos efuses
+[2023-05-29 16:13:35] Ismael Luceno: Não está documentado na Wikipédia :(
+[2023-05-29 16:14:34] Shideravan: https://github.com/CTCaer/hekate
+[2023-05-29 16:15:32] Shideravan: "Hekate é um bootloader personalizado para o Nintendo Switch que permite que os usuários executem firmware personalizado (CFW). Quando você atualiza a versão do firmware do sistema e inicializa o sistema operacional padrão, o Nintendo Switch queima um fusível microscópico para impedir que o Switch possa fazer downgrade. Todos os firmwares personalizados ignoram essas verificações de fusíveis e as queimaduras de fusíveis. Ao habilitar o AutoRCM, você pode impedir que o bootloader padrão seja executado e manter seu Switch em um estado em que ele possa ser rebaixado novamente no futuro."
+[2023-05-29 16:16:09] Ismael Luceno: Eu posso dizer que no caso do Xavier, não tem documentado que seja possível desabilitar o debugging do CPU
+[2023-05-29 16:17:18] Shideravan: Você tem 3 opções ao inicializar o sistema pelo hakete
+[2023-05-29 16:17:29] Ismael Luceno: Ah, claro, então e só relevante porque o mesmo firmware checa isso...
+[2023-05-29 16:17:48] Shideravan: 1. Carregar a emunand
+2. Carregar o CFW
+3. Carregar o sistema padrão
+[2023-05-29 16:17:57] Ismael Luceno: Mas se você não pensa usar o firmware padrão então não é problema...
+[2023-05-29 16:18:03] Shideravan: Pois é
+[2023-05-29 16:18:20] Shideravan: Como eu te falei, existem usuários que usam normalmente
+[2023-05-29 16:18:41] Ismael Luceno: Bobagem então, isso não é restrição real...
+[2023-05-29 16:18:50] Shideravan: Executam o CFW e executam o sistema original para jogar online ou comprar jogos na eshop. É como se fosse um sistema 2 em 1
+[2023-05-29 16:19:26] Shideravan: Eu particularmente não faço isso, porque eu não quero correr o risco de "sujar" o OFW
+[2023-05-29 16:19:56] Shideravan: Eu quero que ele esteja o mais próximo possível dos backups de NAND que eu fiz originalmente
+[2023-05-29 16:20:25] Shideravan: Como eu não atualizo via OFW eu não preciso queimar efuse
+[2023-05-29 16:20:56] Shideravan: Embora sim, seja possível queimar efuse através do CFW também
+[2023-05-29 16:21:37] Shideravan: Os homebrew utilizados para fazerem a atualização, dão a opção de você queimar os efuses se quiser
+[2023-05-29 16:21:56] Shideravan: Imagino que em algumas situações isso possa ser útil
+[2023-05-29 16:22:20] Shideravan: Não sei quais, mas devem senão não estariam ali hahahaha
+[2023-05-29 16:22:54] Shideravan: Ahhh
+[2023-05-29 16:23:15] Shideravan: Se não me engano o Switch também não queima os efuses imediatamente quando você atualiza
+[2023-05-29 16:24:21] Shideravan: Se não me engano, o sistema atualizado, vai reiniciar e queimar os efuses após o processo de boot. Ele verifica o sistema e "queima" os efuses de acordo.
+[2023-05-29 16:25:16] Shideravan: Sempre que o sistema atualiza, ele reinicia. Isso vale inclusive para atualização via CFW
+[2023-05-29 16:26:38] Ismael Luceno: Interessante
+[2023-05-29 16:34:33] Shideravan: É como se o OFW atualizado "levantasse flags" dizendo: "estou numa versão mais recente, pode deixar n fuses queimados"
+[2023-05-29 22:59:17] Shelton Ribeiro: https://gamebanana.com/mods/49464 
+
+Patch das 8 pistas de Mario Kart 8 Deluxe do Switch, disponível para WiiU

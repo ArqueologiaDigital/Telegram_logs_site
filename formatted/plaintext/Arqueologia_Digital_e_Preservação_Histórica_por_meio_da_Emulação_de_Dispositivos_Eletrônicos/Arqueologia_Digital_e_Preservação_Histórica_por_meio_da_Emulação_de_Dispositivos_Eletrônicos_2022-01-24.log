@@ -1,0 +1,14 @@
+[2022-01-24 10:24:00] Ricardo Bánffy: Impressionante o que os terminais de antigamente conseguiam fazer que as nossas janelas não conseguem ainda. https://github.com/microsoft/terminal/issues/8687
+[2022-01-24 13:32:10] Felipe "Juca" Sanches: infelizmente o driver de emulação do VT520 no MAME está muito incompleto ainda:
+
+https://github.com/mamedev/mame/blob/master/src/mame/drivers/vt520.cpp
+[2022-01-24 13:33:16] Felipe "Juca" Sanches: no código tem um comentário interessante:
+
+On the board there is TC160G41AF (1222) custom chip doing probably all video/uart logic there is 43.320MHz xtal near by.
+[2022-01-24 13:33:28] Felipe "Juca" Sanches: talvez esse chip custom também gere áudio
+[2022-01-24 14:46:37] Ricardo Bánffy: Deve ser áudio bem simples.
+[2022-01-24 14:55:16] Ricardo Bánffy: Fico até surpreso se for mais que uma onda quadrada ;-)
+[2022-01-24 15:16:10] Felipe "Juca" Sanches: eu também
+[2022-01-24 15:17:01] Felipe "Juca" Sanches: mas minha esperança era que o driver do MAME já estivesse completo e funcionando, pois seria potencialmente a imitacao mais fiel possível do comportamento (rodando o firmware original do VT520)
+[2022-01-24 17:33:35] Ricardo Bánffy: A gente tem outros VT's já funcionando. O pessoal do VTE e do Windows Terminal estava olhando o comportamento deles com sixels.
+[2022-01-24 17:33:54] Ricardo Bánffy: Acho uma pena que nenhum dos dois grupos queira ter o smooth scrolling.

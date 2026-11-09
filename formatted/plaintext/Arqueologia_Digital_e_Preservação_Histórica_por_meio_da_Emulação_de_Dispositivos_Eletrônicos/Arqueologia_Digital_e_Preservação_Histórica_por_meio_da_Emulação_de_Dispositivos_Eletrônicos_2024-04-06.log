@@ -1,0 +1,29 @@
+[2024-04-06 00:37:06] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-04/30831.jpg
+[2024-04-06 00:37:06] Felipe "Juca" Sanches: comparando um SVG de um dos assets gráficos com o render cagado da minha implementação, acho que entendi qual é o problema. Só foi feita a rasterização do primeiro grupo de 4 nós de cada polígono.
+[2024-04-06 00:37:06] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-04/30832.jpg
+[2024-04-06 00:38:00] Felipe "Juca" Sanches: vou agora checar a iteração dos meus loops no rasterizador pra garantir que percorram todos os nós
+[2024-04-06 02:09:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-04/30835.jpg
+[2024-04-06 02:09:11] Felipe "Juca" Sanches: yep! Consertei 😉
+[2024-04-06 06:12:39] Guilherme Ranoya: https://youtu.be/hSoCmAoIMOU?si=j-njjSnQRUnYKIP7
+
+Doom rodando no Task Manager do Windows....... Daqui a pouco vão substituir um ícone de aplicativo com o Doom rodando.
+[2024-04-06 07:41:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-04/30837.jpg
+[2024-04-06 07:41:59] Felipe "Juca" Sanches: Arrumei a paleta de cores e fiz mais alguns ajustes.
+[2024-04-06 08:14:13] Felipe "Juca" Sanches: se alguém quiser ver o código, tô comitando aqui:
+
+https://github.com/felipesanches/kn5000_homebrew
+[2024-04-06 08:14:30] Felipe "Juca" Sanches: dentro do diretório demos/anotherworld
+[2024-04-06 11:47:38] RicBit: muito bom
+[2024-04-06 12:05:52] Hugo (Agaelebê): Po, não cai rodar doom nele? 😀
+[2024-04-06 13:58:40] Anne Isabelle: Novidades: meu Macintosh Plus já está em Curitiba 🤓
+[2024-04-06 14:43:59] Felipe "Juca" Sanches: Sim, talvez. Mas eu não tenho compilador C pra tlcs900.
+
+E eu sou mais fã de Another World.
+[2024-04-06 16:37:55] L.: Tem que portar o Windows, aí já tem o task manager pra rodar Doom
+[2024-04-06 16:39:14] Felipe "Juca" Sanches: agora estou implementando as funções de draw_char e draw_string
+[2024-04-06 23:37:21] Felipe "Juca" Sanches: Achei um bug no disassembly exibido no debugger do MAME para a CPU TLCS-900
+[2024-04-06 23:37:22] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-04/30847.jpg
+[2024-04-06 23:37:22] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-04/30848.jpg
+[2024-04-06 23:38:29] Felipe "Juca" Sanches: A instrução é emulada corretamente. Apenas é impressa incorretamente na janela, mostrando zero ao invés de 8. Acho que alguma variante dessa CPU devia usar só 3 bits para esse valor
+[2024-04-06 23:52:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-04/30850.jpg
+[2024-04-06 23:52:51] Felipe "Juca" Sanches: fiz alguma besteira na implementação de render de strings... Deve ser algum erro bobinho

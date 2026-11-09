@@ -1,0 +1,169 @@
+[2018-08-22 00:11:10] Deleted Account: Eu tive um desse
+[2018-08-22 00:12:18] Affonso Amendola: É mais um acervo exposto pequeno do que um museu
+[2018-08-22 00:12:54] Affonso Amendola: É o acervo do projeto Paideia aqui do LASSU/CEDIR na USP
+[2018-08-22 00:13:19] Affonso Amendola: E é onde eu trabalho, cuidando das parada
+[2018-08-22 14:38:02] Affonso Amendola: Otras coisas que chegaram aqui ontem e só olhei agora
+[2018-08-22 14:38:26] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7286.jpg
+[2018-08-22 14:38:44] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7287.jpg
+[2018-08-22 14:39:02] Affonso Amendola: Ambos conectores VGA
+[2018-08-22 14:39:38] Affonso Amendola: Uma pesquisa na FCC retornou que essa placa foi registrada pela AverMedia, entao imagino ter algo a ver com captura de imagem
+[2018-08-22 14:40:06] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7290.jpg
+[2018-08-22 14:40:16] Affonso Amendola: Vga PCI da cirrus logic
+[2018-08-22 14:41:29] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7292.jpg
+[2018-08-22 14:42:13] Affonso Amendola: IO, um bus expander II  e uma plaquinha estranha
+[2018-08-22 14:43:08] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7294.jpg
+[2018-08-22 14:43:39] Affonso Amendola: Uma placa de vga com slot VLB eu acho
+[2018-08-22 14:44:17] Affonso Amendola: E uma plaquinha de som da future acredito eu
+[2018-08-22 14:45:00] Affonso Amendola: Acredito ser um clone de sound blaster mas talvez seja uma daquelas outras
+[2018-08-22 14:45:27] Emerson Moura: Essas de Apple II são placas bem incomuns, eu acho.
+[2018-08-22 14:45:55] Affonso Amendola: Infelizmente a apple clock ta corroida PRACARAI
+[2018-08-22 14:46:05] Affonso Amendola: Mas a expandaram ta novinha
+[2018-08-22 14:46:17] Affonso Amendola: Tava num saquinho, ta LINDA
+[2018-08-22 14:47:15] Emerson Moura: Mountain Computer Bus Expander II Card
+[2018-08-22 14:47:25] Emerson Moura: https://www.worthpoint.com/worthopedia/vintage-mountain-computer-bus-1812044681
+[2018-08-22 14:48:45] Felipe "Juca" Sanches: O q é esse tal?
+[2018-08-22 14:49:14] Felipe "Juca" Sanches: Mountain Computer...
+[2018-08-22 14:49:43] Emerson Moura: Na foto com quatro placas, a placa acima, a direita.
+[2018-08-22 14:49:59] Affonso Amendola: Eu n so muito ligado em apple, meu esquema memo é PC entre 1990 e 2000
+[2018-08-22 14:50:18] Affonso Amendola: Entao voou por cima da minha cabeça, mas realmente, o link diz ser muito raro
+[2018-08-22 14:51:02] Affonso Amendola: Aqui, todas as placas que acredito ser apple
+[2018-08-22 14:51:30] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7310.jpg
+[2018-08-22 14:51:30] Emerson Moura: A placa ExpandaRAM parece ser uma expansão de 128kiB proprietária, aparentemente diferente das que se tornaram "padrão de fato", as Saturn 128.
+[2018-08-22 14:52:48] Emerson Moura: Nessa de cima (ou a direita, na foto tombada), qual o código do chip maior?
+[2018-08-22 14:53:01] Felipe "Juca" Sanches: Eu queria saber mais da historia desse "lendário Mountain Computer"...
+[2018-08-22 14:53:58] Emerson Moura: Provavelmente acrescentava slots externos ao Apple II (quem curte upgrade, sabe que 8 slots é beeeem pouco).
+[2018-08-22 14:54:05] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7315.jpg
+[2018-08-22 14:54:45] Felipe "Juca" Sanches: Jobs discordava veementemente
+[2018-08-22 15:04:00] Emerson Moura: Slot 0 - Expansão de memória
+Slot 1 - Interface paralela
+Slot 2 - Interface Serial
+Slot 3 - 80 colunas
+Slot 4 - CP/M
+Slot 5 - Interface de drive ProDOS (drives de 3,5", drives de PC etc.)
+Slot 6 - Interface de disco Disk II
+Slot 7 - Interface de drive ProDOS (HD)
+
+Sobrou:
+Interface de mouse
+Placa de som
+Placa de relógio
+Placa de rede
+
+E, como há uma infinidade de outras placas menos comuns, sim, falta slot pacas!!!
+[2018-08-22 15:04:21] Emerson Moura: Nem vou tecer comentários sobre o Jobs... Não sou exatamente um fã.
+[2018-08-22 15:04:37] Felipe "Juca" Sanches: Hehehe
+[2018-08-22 15:05:17] Felipe "Juca" Sanches: Sei que ele e o Woz discordavam muito nessa questao especifica dos slots
+[2018-08-22 15:06:15] Affonso Amendola: https://ia800308.us.archive.org/11/items/MountainCatalogNov1981/MountainCatalogNov1981.pdf aqui
+[2018-08-22 15:06:23] Affonso Amendola: Tem um poco de informaçao sobre o chassis de expansão
+[2018-08-22 15:06:30] Affonso Amendola: Adicionava + 8 slots aparentemente
+[2018-08-22 15:06:36] Affonso Amendola: Mas esse é de 1981
+[2018-08-22 15:06:49] Affonso Amendola: entao essa versão aqui deve ser de uma otra versão, ja que ta marcado 82
+[2018-08-22 15:07:32] Emerson Moura: Na verdade, o limite típico de 8 slots vem do projeto físico do computador (coisa do Woz) e, na verdade, a primeira vista (antes do mercado eclodir com tantas placas), era um exagero.
+[2018-08-22 15:08:45] Affonso Amendola: http://www.appleii-box.de/H054_1_MCEB01.htm
+[2018-08-22 15:09:30] Affonso Amendola: Juca vai pirar com esse link
+[2018-08-22 15:09:56] Affonso Amendola: O cara fez todos os esquematicos
+[2018-08-22 15:11:07] Affonso Amendola: Ta tudo explicadinho bonitinho
+[2018-08-22 15:11:09] Affonso Amendola: Que trabalho foda
+[2018-08-22 15:11:22] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7332-giphy.mp4
+[2018-08-22 15:11:22] Affonso Amendola: Mas é da primeira versão da caixa de expansão
+[2018-08-22 15:11:44] Emerson Moura: Bem interessante pra saber qual o milagre que o cara fez pra expandir os slots (que tem área/endereço de memória reservada).
+[2018-08-22 15:13:32] Emerson Moura: Neste sábado tem um encontro de Apple II na ZL de SP.
+[2018-08-22 15:13:50] Emerson Moura: Pra quem tem FB:
+https://www.facebook.com/events/2097041623852918/
+[2018-08-22 15:14:01] Affonso Amendola: Yeeeah, I know, pessoal do grupo de Apple II me chamou
+[2018-08-22 15:14:16] Affonso Amendola: Alias, eu devia mandar isso aqui la, ver que informações eles tem
+[2018-08-22 18:31:07] Deleted Account: 😱
+[2018-08-22 19:12:17] Ronaldo: O Apple IIe e o II GS diminuem um pouco a necessidade de placas, e um Apple II normalmente não teria tanta coisa instalada
+[2018-08-22 19:14:27] Ronaldo: 80 colunas não requer um slot, CP/M é um requisito bem específico. Acho que o II GS já tem mouse
+[2018-08-22 19:18:17] Ronaldo: Tipo, esses PCs modernos com 3-4 slots sim já me deram problema
+[2018-08-22 19:19:18] Ronaldo: Rede de Apple II é coisa que só iria se ver numa escola, eu acho. Daí não teria todos esses equipamentos instalados no mesmo micro.
+[2018-08-22 19:20:11] Ronaldo: E se for pra ter rede, no mínimo dois computadores iria haver, um deles poderia ser o servidor de horário da rede.
+[2018-08-22 19:21:11] Ronaldo: Essas interfaces todas eram absurdamente caras. Acho que alguém que precisasse de tantas coisas num mesmo micro compraria um PC.
+[2018-08-22 19:21:49] Ronaldo: É possível que os drives custassem mais caro que o micro.
+[2018-08-22 19:23:02] DQ: Eu cheguei a usar 6 slots no meu Unitron Ap][. Expansão de memória, impressora, serial (para acessar BBS), 80 colunas, CP/M (para rodar WordStar) e drive.
+[2018-08-22 19:28:19] DQ: E ainda tenho o micro e as placas.
+[2018-08-22 19:30:48] Deleted Account: naquela época meu pai preferiu comprar um carro usado em vez de um drive pra mim
+[2018-08-22 19:31:19] Deleted Account: um óbvio erro de prioridades
+[2018-08-22 19:31:47] Ronaldo: Hahahaha
+[2018-08-22 19:33:37] Emerson Moura: PCs surgiram em 1981, 4 anos após os Apple II e levaram mais 1 ou 2 anos pra se popularizarem lá fora,
+[2018-08-22 19:34:50] Emerson Moura: No IIe e IIgs, o "slot 0" não existe fisicamente e sei endereçamento é usado por uma "expansão on-board" de 16kiB.
+[2018-08-22 19:35:27] Ronaldo: Essa montanha de placas só foi surgir anos depois, também
+[2018-08-22 19:36:02] Emerson Moura: O slot 3 do IIe e do IIgs tem o firmware, circuitos (exceto RAM) e endereçamento ocupados por uma 80 colunas.
+[2018-08-22 19:36:39] Ronaldo: É um cenário de uso pouco realista um Apple II lotado. Claro, poderia acontecer, mas era um caso de uso bem incomum.
+[2018-08-22 19:37:16] Emerson Moura: O mouse do IIgs ocupa um slot na parte lógica e, pro slot ser usado por alguma outra coisa com firmware, precisa ser desabiltado na "BIOS".
+[2018-08-22 19:37:53] Ronaldo: Hoje em dia é fácil lotar esses computadores antigos de periféricos porque mesmo a gente achando esses preços de coisas retro altos eles custam uma fração do valor de quando eram novos.
+[2018-08-22 19:38:29] Deleted Account: O meu sonhado drive virou um fusca branco, e a minha impressora um fusca amarelo
+[2018-08-22 19:38:58] Emerson Moura: Em 1985 a Ford de SBC usava Unitron ApII TI nos seus escritórios (uns 500 espalhados pela planta), que só foram substituídos por XTs no final de 1988.
+[2018-08-22 19:39:13] Emerson Moura: Correção: sem "TI".
+[2018-08-22 19:39:24] Ronaldo: Hoje é mais fácil comprar o Apple, o drive e a impressora que o fusca, fica o consolo.
+[2018-08-22 19:39:45] Deleted Account: kkkk 😂
+[2018-08-22 19:40:35] Ronaldo: Sim, o pessoal esticou bastante esses micros, mas essas configurações maximizadas não eram comuns.
+[2018-08-22 19:41:02] Deleted Account: O tio da minha esposa trabalhou na Unitron. Era engenheiro eletrônico
+[2018-08-22 19:41:33] Emerson Moura: E as placas que demoraram a surgir foram as de rede, mouse e HD (dispositivos de armazenamento ProDOS em geral). O resto já existia em 1980.
+[2018-08-22 19:42:40] Ronaldo: Eu acho que quem precisava de um computador com muitas placas usava algum sistema S-100 nessa época
+[2018-08-22 19:43:49] Ronaldo: Eu não nego que alguém precisasse e pudesse instalar, mas 8 slots já era muito mais que a maioria ia conseguir encher até o computador ficar obsoleto.
+[2018-08-22 19:46:25] Ronaldo: O conceito de minicomputador, mainframe era muito forte nessa época, porque os sistemas eram caros. É pouco provável que um mesmo computador num ambiente de rede tivesse todas essas placas instaladas. Se faltassem slots um computador seria o da impressora, o outro o computador com HD e drive de PC, algo assim.
+[2018-08-22 19:53:31] Ronaldo: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7370.jpg
+[2018-08-22 19:53:31] Ronaldo: Tipo isso, 20 slots
+[2018-08-22 19:53:41] Ronaldo: Um sistema S-100
+[2018-08-22 20:01:25] Deleted Account: O MSX tinha 64 slots possíveis (4 principais * 4 subslots cada * 4 páginas)
+[2018-08-22 20:02:38] Deleted Account: bati
+[2018-08-22 20:03:06] Ronaldo: Hahahaha
+[2018-08-22 20:03:26] Ronaldo: É, mas cada página não era um slot
+[2018-08-22 20:04:07] Deleted Account: era sim. O cartucho tinha uma página (16kb)
+[2018-08-22 20:04:25] Deleted Account: mínimo
+[2018-08-22 20:05:10] Deleted Account: 1 slot lógico = até 4 físicos
+[2018-08-22 20:05:11] Ronaldo: Mas um periférico num desses 64 subsubslots não poderia usar todo o intervalo de 64 KB
+[2018-08-22 20:05:24] Ronaldo: Enfim
+[2018-08-22 20:05:56] Ronaldo: Alguém pode achar pouco poder engatar 255 periféricos numa porta USB
+[2018-08-22 20:06:11] Ronaldo: (claro, tô exagerando)
+[2018-08-22 20:06:52] Ronaldo: Eu só acho que 8 slots era um bom número. A maioria absoluta dos MSX, por exemplo, tinha só dois.
+[2018-08-22 20:07:18] Ronaldo: Isso sim complica bastante a vida.
+[2018-08-22 20:14:14] Deleted Account: sim, precisava comprar um expansor de slots.  também super caro
+[2018-08-22 20:20:00] Emerson Moura: Como eu sempre digo: MSX era um tremendo computador. Pena que ele era fabricado em forma de VG.
+[2018-08-22 20:20:28] Deleted Account: Aqui no BR
+[2018-08-22 20:21:12] Emerson Moura: Qual modelo que era mais que um console com 2 entradas de cartucho?
+[2018-08-22 20:25:16] Deleted Account: Alguns modelos japoneses vinham com fax e impressora embutidos. outros com modem e RS-232C. 
+Os MSX russos eram usados para trabalho assim como os árabes
+[2018-08-22 20:25:48] Deleted Account: No Brasil entrou como videogame para burlar imposto
+[2018-08-22 20:27:15] Emerson Moura: Não estou falando das burocracias. Estou falando da implementação... 99% dos modelos mundiais eram um console com duas entradas de cartucho.
+[2018-08-22 20:28:21] Emerson Moura: E, pra usar expansões, ficava aquele monte de tranqueiras penduradas. Minhas duas máquinas de trabalho na época (final da década de 80) eram um Expert 2+ com expansor de slot externo em casa e o Unitron Ap II na Ford.
+[2018-08-22 20:37:18] Emerson Moura: Acho uma pena... Se tivesse havido algum modelo de MSX com um formato físico semelhante a PC ou Apple II (com espaço interno pras expansões), teriam sido computadores tremendamente úteis no ambiente profissional.
+[2018-08-22 20:38:06] Emerson Moura: Ou tremendamente aceitos (úteis eram, uma vez que o formato físico não mudava a capacidade).
+[2018-08-22 20:43:45] Ronaldo: Algo me diz que o MSX é limitado de propósito nesse quesito - talvez por conta do envolvimento da Microsoft - pra não competir diretamente contra o PC.
+[2018-08-22 20:48:17] Deleted Account: MSX Pioneer com 6 slots internos, rs232c, superimposer, 2 drives, teclado separado
+http://msxarcheology.blogspot.com/2016/01/
+[2018-08-22 20:49:56] Ronaldo: Mosca branca
+[2018-08-22 20:50:29] DQ: Eu já não lembro direito ("os anos 80 foram muito loucos"), mas devo ter comprado o Unitron ApII TI em 83 ou 84. Talvez eu tenha usado por alguns dias com cassete, mas com certeza o floppy e a controladora foram os primeiros acréscimos. Depois vieram a placa de 80 colunas e o cartão CP/M.  Não lembro destas placas, ou da interface de impressora, terem sido significativamente caras. A compra da impressora exigiu coragem, mas certamente não foi o preço de um carro. A placa com 128K de Ram deve ter sido a última aquisição. A interface serial eu peguei no trabalho, era sobra de um projeto abortado. Depois dele eu tive um TK3000 //e. O primeiro PC foi só em 86. A cada micro novo o meu pai comprava o velho. Mais para frente os dois Apples voltaram para mim (já dos PCs sobrou só uma vaga lembrança).
+[2018-08-22 20:50:32] Ronaldo: Algo bem de nicho, os cartuchos de MSX eram feitos pra ser usados externamente.
+[2018-08-22 20:51:26] Emerson Moura: Pois é, MSX... 99% de modelos VG, mas aquele 1% computador!!!
+[2018-08-22 20:52:41] Emerson Moura: PC eu só fui ter em 92. Até então era meu MSX 2+ em casa.
+[2018-08-22 20:52:42] Ronaldo: É difícil contabilizar valores antigos, a economia toda mudou. Mas um Apple II não era nada barato. Os modelos compatíveis eram os computadores mais caros nos anúncios das revistas da época.
+[2018-08-22 20:53:21] Ronaldo: O MSX é o computador que mais me marcou.
+[2018-08-22 20:54:05] Ronaldo: Eu sempre me interessei pelo Apple II justamente pela quantidade grande de slots. Acabei conseguindo um TK3000.
+[2018-08-22 20:55:12] Ronaldo: Tenho uma TK Works com 512 KB, uma placa de CP/M, Disk II, SDisk II e uma Apple II Pi, que ainda não tive tempo de tentar colocar pra funcionar.
+[2018-08-22 20:55:50] Emerson Moura: TK3000IIe e IIgs eu só fui ter em 2003 e o Unitron ApII TI eu só consegui em 2006.
+[2018-08-22 20:56:27] Ronaldo: Pois é, eu só fui ter um Spectrum agora, algo que eu sempre quis
+[2018-08-22 20:57:29] Deleted Account: Eu queria arrumar uma info errada que dei. O MSX tinha até 16 sub-slots possíveis, e 64 páginas de memória possíveis (1 megabyte)
+[2018-08-22 20:58:36] Emerson Moura: Apesar de ainda ter alguns (incluindo vários Expert, Hotbits e alguns Apple II), já não tenho mais tempo e tesão pra brincar com eles. Meu foco, agora, é homebrew.
+[2018-08-22 21:02:20] DQ: Tesão eu ainda tenho, o que falta é tempo. Mas os meus não são itens de colecionador, são lembranças não muito bem cuidadas...
+[2018-08-22 21:04:06] Emerson Moura: Teoricamente, 16 subslots, cada um contendo 64kiB de RAM "normal" (total teórico de 1MiB de RAM), mas usando Mapper, vc poderia colocar teóricos 4MiB por subslot, o que daria 64MiB de RAM!!!
+[2018-08-22 21:05:20] Emerson Moura: O ruim é que gerenciar toda essa memória gasta muito código e tempo de processamento por não haver uma MMU.
+[2018-08-22 21:05:53] Emerson Moura: O pouco que eu tinha de colecionável já foi quase tudo.
+[2018-08-22 21:19:16] Deleted Account: isso que matou a linha, afinal
+[2018-08-22 21:24:03] Deleted Account: [ATENÇÃO AMANTES DE TECNOLOGIA]
+
+Que tal aprimorar seus conhecimentos nas áreas de Internet das Coisas, Design de Placas e FPGA?
+
+A partir das próximas semanas eu (Victor Fragoso), o Wagner Coimbra e o André Curvello estaremos ministrando uma série de cursos no Liceu Tech. Juntamente do nosso querido coordenador Alessandro Cunha, criamos uma ementa focada em unir a teoria e prática para formar um profissional diferenciado no mercado de trabalho.
+
+Ficou interessado? Então venha assistir a palestra inaugural no dia 1 de setembro.
+(Mas corre, pois as vagas são limitadas!)
+Acesse o site para mais informações:
+
+http://www.liceutech.com.br/
+[2018-08-22 21:24:25] Deleted Account: Se alguem ai se interessar nos cursos pode vir falar comigo!
+[2018-08-22 21:59:19] Deleted Account: De fato, seguindo algumas postagens desse blog  [http://msxarcheology.blogspot.com], vi que muitos destes MSX para aplicações específicas (por exemplo este com 6 slots e mais outro Sony  para edição de video), eram "hidden MSX", ou seja, não vinha com logo do MSX :O
+[2018-08-22 23:23:29] Ronaldo: De certa forma isso mostra que não queriam que computadores assim fossem associados ao MSX
+[2018-08-22 23:25:10] Ronaldo: Não existe muita necessidade disso, atualmente, porque uma interface que use cartão SD já funciona numa velocidade tão rápida em relação ao processador que já "satura" a velocidade das instruções.
+[2018-08-22 23:26:19] Deleted Account: não queriam pagar royalties

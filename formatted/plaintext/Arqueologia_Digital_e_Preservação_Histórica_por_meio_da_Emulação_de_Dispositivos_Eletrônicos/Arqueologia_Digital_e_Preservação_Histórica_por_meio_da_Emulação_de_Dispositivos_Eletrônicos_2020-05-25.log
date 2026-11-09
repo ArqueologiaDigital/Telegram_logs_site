@@ -1,0 +1,21 @@
+[2020-05-25 10:50:28] Felipe "Juca" Sanches: https://arcadeblogger.com/2020/05/25/williams-robotron-eu-restoration-3/
+[2020-05-25 13:50:30] L.: @fsanches O maior problema agora é achar um mapa de registradores que funcione em 100% dos casos, e que facilite a geração do código Z80.  O problema tá resolvido pra maioria deles, mas quando se usa o AH e AX, me zoa bastante, por que não tem um equivalente no Z80 direto (Z80 usa o AF pra guardar flags)...
+[2020-05-25 13:51:21] L.: Hoje o mapa tá assim, e parece fazer total sentido até agora (preciso rever todas as instruções por que nem tudo tem combinação válida no Z80):     regmap = {
+        'BX': 'HL', 'BH': 'H', 'BL': 'L',
+        'DX': 'DE', 'DH': 'D', 'DL': 'E',
+        'CX': 'BC', 'CH': 'B', 'CL': 'C',
+        'SI': 'IY', 'DI': 'IX',
+        'SP': 'SP',
+        'AL': 'A',
+        # FIXME: will need to spill/fill AX, AH, and AL using the Z80 prime
+        # registers because the code uses AX as a 16-bit register extensively
+    }
+[2020-05-25 13:51:28] Felipe "Juca" Sanches: vai ter que substituir 1 instrucao do 8086 por varias de z80 pra poder salvar as flags nesses casos?
+[2020-05-25 13:52:16] L.: É, tô pensando em fazer coisa tipo botar "AX" na memória, pelo menos por enquanto.
+[2020-05-25 13:52:17] Felipe "Juca" Sanches: (e perder performance)
+[2020-05-25 13:52:36] Felipe "Juca" Sanches: mas só de funcionar eu já fico feliz
+[2020-05-25 13:53:10] L.: Tem os registradores linha, mas aí complica usar por que não fui eu quem escreveu o código, né? Dá pra trocar o banco todo de registradores pelos registradores linha, mas aí deixa o código mais complicado por que eu quero fazer uma conversão mais próxima de 1:1
+[2020-05-25 13:53:34] L.: Sim, o importante é fazer funcionar. Já tem gente nos forks lá tentando assemblar isso e com algum sucesso; aparentemente tá faltando algumas coisas.
+[2020-05-25 13:55:04] L.: (Tentando pra PC mesmo.)
+[2020-05-25 15:31:15] L.: Ó que drive doido: 5.25" e 3.5" numa mesma baia https://twitter.com/TubeTimeUS/status/1264987147121000448
+[2020-05-25 15:33:48] Felipe "Juca" Sanches: https://twitter.com/TubeTimeUS/status/1264983575826333696

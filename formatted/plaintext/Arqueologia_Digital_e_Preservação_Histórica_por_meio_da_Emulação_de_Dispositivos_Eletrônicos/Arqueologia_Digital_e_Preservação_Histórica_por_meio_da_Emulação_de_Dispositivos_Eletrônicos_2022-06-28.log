@@ -1,0 +1,17 @@
+[2022-06-28 00:45:48] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22380.jpg
+[2022-06-28 00:45:48] Felipe "Juca" Sanches: Achei um bug.
+
+Coloquei uma bandeira errada de propósito e explodi a mina com uma ação de abertura de bloco.
+
+Vamos ver quem saca o que aconteceu aqui.
+[2022-06-28 00:53:04] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22381.jpg
+[2022-06-28 00:53:04] Felipe "Juca" Sanches: @cy_us, alguma necessidade de usar a versão 3.20 do cmake? Ou rola usar uma versão um pouquinho mais antiga? No Debian ainda não tem cmake 3.20
+[2022-06-28 00:53:47] Felipe "Juca" Sanches: se possível, por favor declare a versão 3.18.4 do cmake como dependencia de build, pra eu poder testar aqui no meu Debian
+[2022-06-28 00:59:41] Pedro de Medeiros 👾: Os números não condizem com as minas encontradas após game over
+[2022-06-28 01:00:32] Felipe "Juca" Sanches: o tile de explosao apareceu na posicao do cursor. Mas a explosão de fato aconteceu numa das casas vizinhas, por conta da ação de open block
+[2022-06-28 01:01:07] Felipe "Juca" Sanches: então a mina que explodiu ainda aparece como um tile de mina não-explodida. E o tile que tá mostrando explosão era um número 1
+[2022-06-28 01:02:11] Felipe "Juca" Sanches: com isso percebi que é possível ter múltiplas explosoes de uma vez só por meio de um posicionamento incorreto de bandeira e uma ação de open block
+[2022-06-28 01:02:36] Felipe "Juca" Sanches: mas esse caso não tá implementado corretamente ainda
+[2022-06-28 01:03:02] Felipe "Juca" Sanches: pois o código atual assume (incorretamente) que a explosão acontece sempre na posição do cursor
+[2022-06-28 07:02:50] Anne Isabelle: Oi Juca! A lib do psn00bsdk só funciona na 3.20 :/ por isso tem que instalar separado
+[2022-06-28 07:03:30] Anne Isabelle: Era o que tava na doc, mas eu não testei na versão anterior, vou fazer isso

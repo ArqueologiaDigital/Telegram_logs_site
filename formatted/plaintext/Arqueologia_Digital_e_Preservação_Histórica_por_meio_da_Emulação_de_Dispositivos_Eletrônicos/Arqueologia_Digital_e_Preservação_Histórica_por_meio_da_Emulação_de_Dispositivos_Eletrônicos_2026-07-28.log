@@ -1,0 +1,15 @@
+[2026-07-28 12:18:43] RicBit: 64.2% do sisne compilado: https://github.com/ricbit/sisne
+[2026-07-28 12:19:02] RicBit: esse é o limite, o resto não é C, é asm mesmo.
+[2026-07-28 12:21:19] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39799.jpg
+[2026-07-28 12:21:19] RicBit: e o mapa terminou com duas faixas vermelhas, como eu imaginava. ficou um buraco na segunda faixa, mas eu conferi na mão e realmente o buraco não é C.
+[2026-07-28 13:33:23] L.: É bem mais do que achei que seria na verdade!
+[2026-07-28 13:33:46] L.: Será que eles rodavam o compilador da MS no próprio Sisne?
+[2026-07-28 17:44:51] RicBit: aí eu já não sei, mas parece bem compativel com o dos 2.0, devia rodar tudo ou quase tudo
+[2026-07-28 17:45:40] RicBit: incidentalmente, tem um monte de stack overflow, tá fácil de fazer  um zero-day exploit do sisne
+[2026-07-28 18:35:00] L.: Ah, disso não tinha dúvidas mesmo
+[2026-07-28 18:35:40] L.: Especialmente considerando que é modo real com pilha executável, deve ser fácil mesmo
+[2026-07-28 18:36:18] L.: Seria legal se conseguisse fazer pela rede, parece que a parte de arquivos suporta isso né?
+[2026-07-28 18:54:38] Felipe "Juca" Sanches: Eu precisava exploitar o Technics KN7000... pra executar código arbitrário de modo a conseguir fazer dump das ROMs sem destruir as próprias ROMs que preciso dumpar
+[2026-07-28 18:56:35] Felipe "Juca" Sanches: Tem SD card. Se tiver algum bug nas funções relacionadas ao SD card talvez dê pra injetar um payload. Mas eu não manjo tanto assim pra fazer por conta própria, e o Claude Code se recusa a me ajudar pois dá bandeirada vermelha com alerta de limites de uso do modelo para cybersec.
+[2026-07-28 19:39:35] RicBit: pelo que eu entendi, o kernel não suporta network nativo, ao inves disso ele chama o int 2Fh que são os drivers. Aí você instalaria um driver de network que responde o 2Fh para o sistema usar.
+[2026-07-28 19:40:04] RicBit: o fable eu imagino que não faça mesmo, mas o opus também bloqueia?

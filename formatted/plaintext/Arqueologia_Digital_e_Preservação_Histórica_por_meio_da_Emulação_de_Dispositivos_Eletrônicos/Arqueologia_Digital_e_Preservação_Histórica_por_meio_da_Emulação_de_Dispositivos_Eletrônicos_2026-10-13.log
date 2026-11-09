@@ -1,0 +1,22 @@
+[2026-10-13 00:49:22] L.: https://github.com/snuri00/ps2-web-recomp
+[2026-10-13 03:03:13] Marcelo: https://github.com/morluto/rea/blob/main/README_pt-BR.md
+[2026-10-13 11:12:49] Guilherme Ranoya: Essas recompilações, principalmente para webassembly, estão ficando bem interessantes, mas não só para jogos. Recentemente descobri esse projeto aqui:
+
+https://foxscript.org/
+
+É uma forma de rodar scripts do FoxPro... mas quem iria querer rodar scripts FoxPro hoje em dia??? bom... tem um monte de gente que entende disso e esses skills foram para o ralo. A mesma coisa vale para Visual Basic... um monte de gente que sabia usar e construir coisas com VB, e que tiveram que jogar tudo fora.
+
+Aí estava construindo um ambiente para ensino de programação aqui, e resolvi tacar BASIC e Logo lá dentro para qualquer aluno que tiver a curiosidade de ver como eram as coisas há 40 anos atrás. Só que, claro, coloquei emuladores de Apple II e MSX lá... não criei um interpretador de BASIC e Logo para rodar código diretamente no navegador.
+
+Só que com essa moda de recompilação, não duvido que alguém acabe fazendo uma maneira de trazer todo o output desses sistemas para o navegador, e uma forma de rodar código feito para estas máquinas já ""quase nativo"" nele.
+[2026-10-13 11:15:01] Paulo: acho que ainda dá pra usar visual basic no mono (com VB.NET)
+[2026-10-13 11:51:04] Guilherme Ranoya: Dá sim... acho que rodava até no Unity3D para desenvolvimento de jogos, que também tinha suporte para mono.
+[2026-10-13 11:51:54] L.: o vb.net é bem diferente do vb6, e se você tem aplicação legada, não consegue portar fácil.
+
+mesmo assim, o mono já faz um tempo que é .net oficial também, embora seja usado mais pra lugares onde o .net (antigo .net core, open source etc) não roda
+[2026-10-13 14:57:46] RicBit: eu coloquei estrelas coloridas mas não sei se ficou bom. no arcade os pixels são menores, eu achei que desviam muito a atenção. check it out -> https://ricbit.github.io/galaga/
+[2026-10-13 15:29:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41526.jpg
+[2026-10-13 15:29:54] Felipe "Juca" Sanches: Dessa vez deixei um monte de trabalho pros maintainers...
+[2026-10-13 15:53:58] Felipe "Juca" Sanches: mas é coisa simples, só declaração de softlists
+[2026-10-13 22:51:58] Felipe "Juca" Sanches: Eu tava pensando aqui...
+[2026-10-13 22:52:59] Felipe "Juca" Sanches: Amo todos vocês! :-)

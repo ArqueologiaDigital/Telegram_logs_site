@@ -1,0 +1,17 @@
+[2021-07-21 02:00:32] Felipe "Juca" Sanches: video: (not yet published)
+[2021-07-21 02:00:32] Felipe "Juca" Sanches [forwarded]: Isso é bem ridículo, mas é divertido!
+
+FontBakery rodando num Debian mas sendo acessado a partir de um emulador de terminal (Kermit) conectado via porta serial e rodando em MSDOS num 386
+[2021-07-21 02:19:09] Erin Pinheiro 🐿: eu tenho essas mesmas caixas de som... as minhas pararam de funcionar
+[2021-07-21 02:19:23] Erin Pinheiro 🐿: preciso tentar arrumar, elas eram muito boas
+[2021-07-21 02:19:53] Erin Pinheiro 🐿: tem uns CIs JRC (Japan Radio Company) nelas que não encontrei datasheet, espero serem op-amps com substituições modernas possíveis
+[2021-07-21 02:20:15] Erin Pinheiro 🐿: preciso fazer eng reversa da placa pra começar a fazer troubleshooting
+[2021-07-21 02:25:56] Felipe "Juca" Sanches: as minhas caixinhas estavam com o ajuste de volume fazendo uma chiadeira desgraçada. E ficava mudo a não ser que eu ficasse com o dedo segurando, fazendo uma forcinha mínima em direção à posição máxima do ajuste.
+[2021-07-21 02:26:06] Felipe "Juca" Sanches: aí eu abri, passei um limpa-contato, e resolveu
+[2021-07-21 02:26:49] Felipe "Juca" Sanches: ainda faz um pouco de chiado ao girar. Mas pelo menos agora posso fazer ajustes de volume intermediário e não preciso ficar com a mão lá pra manter funcionando
+[2021-07-21 02:26:57] Erin Pinheiro 🐿: as minhas também tiveram isso, mas depois de um tempo sumiu tudo mesmo. não lembro se tentei trocar já o pot ou não (mas acho que já tinha trocado, lembro até que tinha ficado mais apertado que o original)
+[2021-07-21 02:27:25] Erin Pinheiro 🐿: acho que o problema das minhas é mais em baixo mesmo, mas deixei guardado depois disso faz tempo. agora que tenho um osciloscópio poderia debugar melhor
+[2021-07-21 06:17:56] Deleted Account: Da uma limpada nas trilhas dos potenciômetros,vai remover esse chiado,pode usar caso elas estiverem muito oxidadas acho melhor trocar,a maioria do que usam não devem ser maiores que 10ohms,ainda da pra achar rs
+[2021-07-21 06:18:13] Deleted Account: Gostei do gabinete,foi o mesmo que Meu primeiro pc
+[2021-07-21 06:25:07] Deleted Account: Uma coisa que podem analisar como fonte do problema,como algumas caixas já vinham com a fonte imbuída,pode ser que os capacitores de filtro estejam ruins e de tbm o ruído,outra coisa que pode ser problema tbm é o trafo que vem nessas caixinhas que pode estar com ruído alto
+[2021-07-21 07:45:50] FTMaciel: Pot quando não tá sujo está com as pistas gastas, como parece ser o caso do @fsanches . Mesmo limpando fica aquele chiado ou ajuste irregular

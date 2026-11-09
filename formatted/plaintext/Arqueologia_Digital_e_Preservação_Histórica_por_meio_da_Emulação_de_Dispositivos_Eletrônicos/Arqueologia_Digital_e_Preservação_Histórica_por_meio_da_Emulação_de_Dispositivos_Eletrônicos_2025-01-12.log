@@ -1,0 +1,26 @@
+[2025-01-12 00:13:50] Felipe "Juca" Sanches: Fazer aceitarem o pull request do KN5000 no MAME tem sido uma saga. (https://github.com/mamedev/mame/pull/12684)
+
+Então hoje fatiei mais um  pouquinho o código em commits menores e estou abrindo mais PRs individuais pra ver se vai entrando aos pouquinhos...
+[2025-01-12 00:14:13] Felipe "Juca" Sanches: Essa aqui é a parte mais importante que precisa entrar:
+
+https://github.com/mamedev/mame/pull/13220
+[2025-01-12 00:32:01] Felipe "Juca" Sanches: Agora há pouco foi aceito esse: https://github.com/mamedev/mame/pull/13219
+[2025-01-12 00:59:09] RicBit: mame emula calculadora? eu tava lendo aqui sobre as cpus das hp e parece divertido
+[2025-01-12 01:25:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-01/33805.jpg
+[2025-01-12 01:25:53] RicBit: hum deixa dar um refresh no meu src aqui
+[2025-01-12 01:27:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-01/33807.jpg
+[2025-01-12 01:27:59] RicBit: é, nao tem a minha hp42s
+[2025-01-12 01:28:09] Felipe "Juca" Sanches: bem vindo ao projeto 😉
+[2025-01-12 01:28:31] RicBit: cool amanha eu faco um driver entao
+[2025-01-12 01:28:46] RicBit: cpu deve ser parecida com a saturn
+[2025-01-12 01:29:19] RicBit: nao vou ver agora senao nao durmo
+[2025-01-12 01:29:24] Felipe "Juca" Sanches: kkkk
+[2025-01-12 02:43:30] Pedro de Medeiros 👾: Tem a TI-84 Plus CE? Calculadora programável com eZ80... Elas rodam TI-BASIC...
+[2025-01-12 03:06:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-01/33815.jpg
+[2025-01-12 03:07:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-01/33816.jpg
+[2025-01-12 16:06:03] RicBit: tentei achar a rom da hp42s e falhei, saudade de quanto voce achava rom facil pela interwebz
+[2025-01-12 17:18:53] L.: de calculadora hp é difícil mesmo! eu queria a da hp27s há um tempo atrás e acabei desistindo
+[2025-01-12 17:20:55] L.: (eu usei a hp27s na faculdade e gostava da funcionalidade de gravar fórmula nela e ela fazer ou manipulação algébrica ou achar raízes pra te dar um resultado independente das variáveis que você informou e qual cê tá querendo saber)
+[2025-01-12 17:22:23] L.: ela fazia integral definida também! era bem legal
+[2025-01-12 22:24:40] RicBit: eu achei um tutorial para passar a rom da hp42s para uma hp48 e dumpar de lá
+[2025-01-12 22:25:00] RicBit: mas nao tem como ser um protocolo tao secreto que eu nao consiga fazer com um arduino

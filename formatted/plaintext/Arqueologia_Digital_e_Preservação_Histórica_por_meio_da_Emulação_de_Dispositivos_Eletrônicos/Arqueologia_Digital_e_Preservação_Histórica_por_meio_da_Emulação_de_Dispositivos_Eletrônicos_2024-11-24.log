@@ -1,0 +1,21 @@
+[2024-11-24 20:38:40] Guilherme Ranoya: https://www.youtube.com/watch?v=Fe1wYwGcjlo
+[2024-11-24 23:33:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-11/33398.jpg
+[2024-11-24 23:33:19] Felipe "Juca" Sanches [forwarded]: Hoje eu, pela primeira vez, compilei o projeto LLVM. Levou quase exatamente duas horas.
+
+Próximos passos:
+* Testar o que foi compilado. Habilitei os backends de X86 e Motorola 68. Um por ser a CPU do meu laptop e o outro por ser um backend experimental, e também por ser uma CPU muito usada em máquinas de arcade.
+* Tentar começar a escrever um novo backend para a CPU TOSHIBA TLCS-900 usada no meu teclado musical Technics KN5000.
+[2024-11-24 23:33:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-11/33399.jpg
+[2024-11-24 23:33:19] Felipe "Juca" Sanches [forwarded]: Estou aqui há horas arrancando os cabelos pra aprender como faz pra usar o objdump do LLVM pra fazer disassembly de Motorola 68000.
+
+O disasm que ele me dá tem vários opcopes sendo marcados como "unknown", enquanto no debugger integrado ao MAME eu consigo ver o disasm completo direitinho. Entretanto, outras instruções ele faz o disasm correto.
+[2024-11-24 23:33:19] Felipe "Juca" Sanches [forwarded]: Nesse screenshot dá pra ver que no debugger do MAME (a janela em cima de tudo, no meio) temos duas instruções "LEA". A primeira, destacada em amarelo não é decodificada corretamente pelo llvm-objump (no terminal ao fundo, à esquerda). Só vemos os bytes dela (4f f8 00 00) marcados como <unknown>.
+
+Já a segunda instrução "LEA", destacada em vermelho, foi desmontada corretamente pelo disassembler do LLVM.
+[2024-11-24 23:33:19] Felipe "Juca" Sanches [forwarded]: A instrução "move.l" entre elas também não foi decodificada corretamente.
+[2024-11-24 23:33:19] Felipe "Juca" Sanches [forwarded]: Eu tava achando que eu estava falhando em especificar qual variante de CPU da motorola deveria ser usada para o disasm, dado que às vezes os instruction sets podem ser apenas parcialmente retro-compatíveis entre modelos similares.
+[2024-11-24 23:33:19] Felipe "Juca" Sanches [forwarded]: Mas agora descobri qual o problema. E é um problema bem simples de explicar...
+[2024-11-24 23:33:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-11/33404.jpg
+[2024-11-24 23:33:19] Felipe "Juca" Sanches [forwarded]: Aqui está a explicação simples.
+[2024-11-24 23:33:19] Felipe "Juca" Sanches [forwarded]: Vai acabar arrumando o LLVM!!
+[2024-11-24 23:33:19] Felipe "Juca" Sanches [forwarded]: cheguei querendo fazer meu backend, saí arrumando o backend dos outros

@@ -1,0 +1,16 @@
+[2024-08-26 09:18:33] L.: https://hackaday.com/2024/08/26/everything-you-wanted-to-know-about-early-macintosh-floppies/
+[2024-08-26 18:43:52] Felipe "Juca" Sanches: Eu tenho uma placa de máquina caça-níquel chinesa chamada Amazonia King, da IGS. Muitos anos atrás eu fiz o dump das ROMs pro MAME. Mas... a CPU dessa placa, um ARM7, tem uma ROM de boot que fica escondida dentro da própria pastilha do processador.
+[2024-08-26 18:44:58] Felipe "Juca" Sanches: E esse código de boot faz alguma inicialização do hardware e depois só executo o código do jogo, que fica numa ROM externa, se validar um checksum
+[2024-08-26 18:45:18] Felipe "Juca" Sanches: sem essa ROM secreta, o jogo não roda
+[2024-08-26 18:46:16] Felipe "Juca" Sanches: e se não passar na validação de checksum, aparece uma mensagem de erro, o que funciona como bloqueio contra execução de código modificado
+[2024-08-26 18:47:45] Felipe "Juca" Sanches: mas teve um pessoal do MAME que desenvolveu um ataque trojan que consegue passar nessa validação, lê o conteúdo da ROM interna e gospe ela pra fora por meio de uma porta serial localizada em um pinio específico da PCB, onde eu preciso soldar um fiozinho pra ligar num conversor serial-USB (como um daqueles da FTDI, por exemplo)
+[2024-08-26 18:48:08] Felipe "Juca" Sanches: me mandaram a ROM com o trojan pra eu fazer o dump
+[2024-08-26 18:48:14] Felipe "Juca" Sanches: mas não me mandaram o código fonte
+[2024-08-26 18:48:34] Felipe "Juca" Sanches: tentei desassemblar, mas a ROM é embaralhada
+[2024-08-26 18:48:55] Felipe "Juca" Sanches: li o código fonte do driver no MAME e escrevi um script python pra desembaralhar e poder fazer o disasm
+[2024-08-26 18:49:20] Felipe "Juca" Sanches: mas eu nem tinha terminado de escrever o código quando me toquei que tinha um caminho mais fácil
+[2024-08-26 18:49:32] Felipe "Juca" Sanches: carreguei a ROM no próprio MAME e abri o debugger haha
+[2024-08-26 18:50:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-08/32783.jpg
+[2024-08-26 18:50:12] Felipe "Juca" Sanches: TA-DA!!!!
+[2024-08-26 18:50:20] Felipe "Juca" Sanches: Quem precisa de código fonte?! kkkk
+[2024-08-26 18:51:15] Felipe "Juca" Sanches: (yak shaving forte aqui... preciso focar e ir arranjar uma EPROM e achar meu gravador para fazer o dump)

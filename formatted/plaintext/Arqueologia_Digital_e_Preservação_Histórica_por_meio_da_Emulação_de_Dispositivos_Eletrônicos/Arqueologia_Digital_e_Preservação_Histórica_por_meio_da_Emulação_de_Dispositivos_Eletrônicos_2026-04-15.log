@@ -1,0 +1,14 @@
+[2026-04-15 05:04:05] Shideravan: Legal para caramba @figur8
+[2026-04-15 05:04:25] Shideravan: Então o haze já começou a implementar o áudio?
+[2026-04-15 05:07:47] Shideravan: Eu estava pensando em aproveitar o trabalho do azya52 para dar um start nesses estudos de brick game para o mame mesmo. Já que ele tem feito muito esse trabalho de documentar e dumpar e a maior parte desses sistemas não têm driver no mame ainda. Mas pode ser um start interessante para outros handhelds do tipo
+[2026-04-15 05:10:43] Shideravan: Isso deve explicar a imprecisão no áudio de vários desses sistemas. A "voz" nos Apollo estão bem ruins e os efeitos sonoros bem mais altos que a música kkkk
+[2026-04-15 05:11:16] Shideravan: Deve ser resultado dessa "generalização"
+[2026-04-15 05:12:17] Shideravan: Eu queria ter acesso aos dumps que ele não incluiu direto com o emulador. Sabe se ele postou esses dumps em algum lugar?
+[2026-04-15 05:19:50] Shideravan: Vai ser bem complicado para conseguirmos dumpar sistemas novos, porque a maioria depende de decapping
+[2026-04-15 06:33:17] Ismael Carvalho: Nao lembro de cabeça, vou tentar procurar aqui nas minhas anotações
+[2026-04-15 06:45:08] Ismael Carvalho: Os binários tão no /assets do projeto dele
+[2026-04-15 06:45:36] Ismael Carvalho: inclusive as artes que ele faz também
+[2026-04-15 06:45:54] Ismael Carvalho: o haze tinha permissão pra poder usar e passar pro mame
+[2026-04-15 06:49:51] Ismael Carvalho: Mas é isso, a generalização só explica no projeto dele generalizado, na implementação do haze é estranho que não funcione, mas como eu sou novato tanto no projeto quanto em lidar com hardware pode só ser algo que eu não entendi
+[2026-04-15 11:34:35] Pedro de Medeiros 👾: https://www.youtube.com/watch?v=g4WBhww0HFk
+[2026-04-15 15:05:23] Flávio Amieiro: https://github.com/lasect/pg_6502

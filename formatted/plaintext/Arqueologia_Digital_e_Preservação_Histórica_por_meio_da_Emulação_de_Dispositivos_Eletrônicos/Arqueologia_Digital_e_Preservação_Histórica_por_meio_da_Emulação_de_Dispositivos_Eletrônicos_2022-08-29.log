@@ -1,0 +1,37 @@
+[2022-08-29 14:08:29] * L. added V Körbes
+[2022-08-29 14:11:46] L.: @vkorbes alô! O grupo aqui é bem variado e vai de gente que faz emulador (caiu placa com processador e memória no colo vira emulador), que programa pra plataforma velha, ou que simplesmente curte ver silício velho suando
+[2022-08-29 14:24:13] Shideravan: Nossa, vocês viram o site do TSE com o simulador de Urna Eletrônica?
+[2022-08-29 14:24:52] Shideravan: Achei horrivel, dá vontade de fazer um emulador de urna eletrônica no MAME para rodar embedded lá no site huauhauhauh
+[2022-08-29 14:25:47] Shideravan: https://www.tse.jus.br/hotsites/simulador-de-votacao/inicioVotacao.html
+[2022-08-29 14:26:22] Shideravan: Precisão baixíssima nesse simulador de urna
+[2022-08-29 14:28:06] Shideravan: https://www.youtube.com/watch?v=h4Yjmgd1DIo&list=PLljYw1P54c4wrgpmYEwUjfy25I_TgjxQ5
+[2022-08-29 14:28:58] Shideravan: Inclusive, ela teve uma revisão em 2022
+[2022-08-29 14:31:05] L.: Tinha uma urna da 1a geração em um centro acadêmico lá na Unicamp
+[2022-08-29 14:31:37] L.: Eu queria ter aquilo no hackerspace quando morava em Campinas😅
+[2022-08-29 14:33:46] Shideravan: Será que a gente não consegue acesso a uma urna de primeira geração para isso?
+[2022-08-29 14:34:56] L.: Não sei se essa urna tá lá ainda
+[2022-08-29 14:35:39] Shideravan: Elas possuem um módulo de criptografia, que lida com a assinatura digital de cada urna
+[2022-08-29 14:37:59] Shideravan: Acho que o código fonte que eles mostram de tempos em tempos é referente a esse módulo, né?
+[2022-08-29 14:42:06] Shideravan: Por uma questão de segurança, pode ser que isso não seja uma coisa plenamente disponível
+[2022-08-29 14:44:53] L.: Não faço ideia
+[2022-08-29 15:19:38] V Körbes: massa! thanks :) vou ficar lurkando aqui por enquanto. tô colocando as coisas de interesse aqui https://github.com/vkorbes/vdos. por enquanto seguindo o primeiro livro da lista: https://github.com/vkorbes/vdos/blob/main/data/assembly-primer-ibm-pc/README.md
+[2022-08-29 15:20:54] L.: O povo aqui tá fazendo um joguinho de campo minado e um dos ports é pra DOS. Tem vários truques lá pra ter binário pequeno. Compensa olhar :)
+[2022-08-29 15:21:07] V Körbes: massa! em que linguagem?
+[2022-08-29 15:21:31] L.: C e asm inline
+[2022-08-29 15:22:24] L.: https://github.com/ArqueologiaDigital/Mines
+
+E o port de MS-DOS tá aqui https://github.com/ArqueologiaDigital/Mines/tree/main/platforms/msdos
+[2022-08-29 15:23:37] V Körbes: massa! vou aprender mais um pouco e daí ir fuçar nisso aí
+[2022-08-29 15:24:33] L.: Eu bombei bastante coisa nesse port aí. Só perguntar coisas :)
+[2022-08-29 15:25:30] V Körbes: nerd!
+[2022-08-29 17:35:04] L.: https://www.youtube.com/watch?v=WZKklJG-UaY
+[2022-08-29 22:50:41] kretcheu: Esse é um argumento que usam, mas vc acredita que disponibilizar código fonte implica em risco a segurança?
+[2022-08-29 22:53:13] Shideravan: Não sei, mas a priori eu confio no TSE
+[2022-08-29 22:53:55] Shideravan: A real é que a urna é bastante segura, pois não se conecta online
+[2022-08-29 22:54:47] Shideravan: Existem coisas que a gente vai analisar, vai considerar até um "exagero"
+[2022-08-29 22:55:54] Shideravan: Mas até o momento não existem fraudes confirmadas associadas com as urnas
+[2022-08-29 22:57:26] Shideravan: Mas bem, isso de não disponibilizarem o hardware para desenvolvemos um emulador é um chute, nem entramos em contato ainda. Talvez nem existam maiores problemas sejam de ordem burocrática ou técnica para documentar e preservar esse hardware
+[2022-08-29 22:59:16] Shideravan: O TSE disponibilizou o código fonte para checagem durante uma cerimônia aberta a vários orgãos e a todos os partidos políticos que tivessem interesse, recentemente
+[2022-08-29 23:00:04] Shideravan: Mas pelo que eu vi, parece que foi só conferência "in-loco" mesmo, né?
+[2022-08-29 23:04:02] Shideravan: Se fosse trabalhar em algo do tipo, seria interessante pegar os modelos mais antigos e "ultrapassados" primeiro e só depois ir pegando os modelos mais novos
+[2022-08-29 23:04:15] Shideravan: https://www.tse.jus.br/eleicoes/urna-eletronica/seguranca-da-urna/apresentacao-dos-codigos-fonte

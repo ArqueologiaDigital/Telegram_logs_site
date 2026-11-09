@@ -1,0 +1,26 @@
+[2022-09-06 14:52:22] Felipe "Juca" Sanches: https://produto.mercadolivre.com.br/MLB-2786740766-jammer-slot-machine-_JM
+[2022-09-06 14:52:29] Felipe "Juca" Sanches: que porra é essa?
+[2022-09-06 14:56:35] Pedro de Medeiros 👾: Parece o tipo de coisa que te leva a expulsão nos casinos
+[2022-09-06 15:17:42] Shideravan: Se for o bagulho que eu estou pensando, ele promete alterar o resultado de máquinas de slots
+[2022-09-06 19:22:34] L.: https://twitter.com/kenshirriff/status/1567203153224892417?t=dmyx5LTUNq8F90dD3thoCQ&s=35
+[2022-09-06 19:53:35] Sebastiao Barretto: Ontem fomos no LASSU Poli USP para tentar reviver uma Teletype Model 33
+[2022-09-06 19:55:54] Sebastiao Barretto: Para wuem não sabe ela é um terminal teleimpressor ou uma impressora com teclado e foi fabricada entre 1963 e 1981
+[2022-09-06 19:58:40] Sebastiao Barretto: A idéia era utilizá-la como terminal do emulador do Pato Feio para a comemoração dos 50 anos do computador feito na Poli USP
+[2022-09-06 20:00:00] FTMaciel: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23754-a-gente-trabalha-com-imagens-thiessita.mp4
+[2022-09-06 20:00:22] FTMaciel: Meu sonho é ter um teletipo
+[2022-09-06 20:05:51] Sebastiao Barretto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23756.jpg
+[2022-09-06 20:05:51] Sebastiao Barretto: Era igual a essa, só a cor da fita de papel era diferente
+[2022-09-06 20:10:29] Sebastiao Barretto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23757.jpg
+[2022-09-06 20:10:29] Sebastiao Barretto: Levei uma fonte de corrente para alimentar a interface (loop de corrente de 20mA)
+[2022-09-06 20:12:20] Sebastiao Barretto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23758.jpg
+[2022-09-06 20:12:20] Sebastiao Barretto: Que devia ser conectada nessa ponte de terminais, mas já  havia uma coisa conectada lá
+[2022-09-06 20:15:49] Sebastiao Barretto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23759.jpg
+[2022-09-06 20:15:49] Sebastiao Barretto: Essa plaquinha provavelmente fabricada na Poli (o eletrolitico tinha inscrições em portugues) convertia o loop de corrente na conhecida RS-232
+[2022-09-06 20:22:16] Sebastiao Barretto: Aquele transistor redondo à direita é um 2N3133 que eu nunca tinha visto, mas o outro à esquerda era um AR17, que foi fabricado na Brasil pela Philco e bastante usado em amplificadores de áudio
+[2022-09-06 20:23:55] Sebastiao Barretto: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23761.jpg
+[2022-09-06 20:23:55] Sebastiao Barretto: Vista da placa pelo lado da solda. O Juca ficou de levantar o circuito
+[2022-09-06 20:30:08] Sebastiao Barretto: Uma vez identificada a placa, ligamos o fio de tx no de rx e, para surpresa de todos (eu, o Juca e o Fernando do LASSU), ao digitar A no teclado apareceu Q impresso no papel, ao digitar B apareceu R
+[2022-09-06 20:31:48] Augusto Almeida: Tem que ajustar o azimuth rsrsrs
+[2022-09-06 20:34:19] Sebastiao Barretto: Conclusão: ela funcionava, só que estava somando 16 ao codigo enviado. Como não sabiamos se era no teclado ou na impressora o problema, combinamos de voltar outro dia trazendo um Arduino ou equivalente para testarmos melhor a comunicação e vermos onde estava o problema  .
+[2022-09-06 20:37:39] Sebastiao Barretto: Detalhe descoberto depois: o Arduino não comunica a 110 Baud, velocidade da Teletype, mas o Raspberry Pico parece que sim, estamos avaliando também uma Esp32
+[2022-09-06 20:50:17] Pablo Vasques Bravo-Villalba: Fascinante!

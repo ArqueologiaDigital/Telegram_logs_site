@@ -1,0 +1,77 @@
+[2022-06-10 00:02:03] L.: Intrigas
+[2022-06-10 00:02:26] Felipe "Juca" Sanches: mas o cara costuma ser tosco mesmo
+[2022-06-10 00:06:38] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/52
+[2022-06-10 00:07:46] Pedro de Medeiros 👾: Achei um substituto pro srecord.
+[2022-06-10 00:09:17] Pedro de Medeiros 👾: Ah, aproveitei e apaguei srecord.sh agora
+[2022-06-10 00:10:56] Pedro de Medeiros 👾: O aoineko tem ainda um conversor de imagem e gerador de ROM, mas ainda não compila fora do windows
+[2022-06-10 00:12:45] Felipe "Juca" Sanches: tem um typo nos cabeçalhos de licença onde ele escreve CC BY-AS, mas o correto seria CC BY-SA
+[2022-06-10 00:13:48] Felipe "Juca" Sanches: a licença seria incompatível com nosso codebase GPLv2+ se o código fosse parte do nosso programa. Mas como é uma ferramenta usada no build, acho que não há questão de incompatibilidade, etnão de boa
+[2022-06-10 00:14:52] Pedro de Medeiros 👾: Cláusula BY, né?
+[2022-06-10 00:15:28] Felipe "Juca" Sanches: não... por causa da cláusula SA, que é copyleft. Duas licenças copyleft não se misturam
+[2022-06-10 00:16:09] Felipe "Juca" Sanches: mas como eu disse, acho que é OK por que é só uma ferramenta livre usada no build. Não é parte do programa em si. É parte do toolchain de compilação.
+[2022-06-10 00:18:55] Pedro de Medeiros 👾: Melhor mudar o erro no texto? Pensei que seria melhor deixar o código original do autor.
+[2022-06-10 00:19:35] Felipe "Juca" Sanches: deixa o typo. Acho que o ideal é abrir uma issue no repo upstream para alertar sobre o typo e esperar o autor fazer a correção
+[2022-06-10 00:28:08] Pedro de Medeiros 👾: Brotou 24% de código C++ no repositório agora. Falta só Python pra completar a bagunça.
+[2022-06-10 00:28:28] Felipe "Juca" Sanches: kkkk
+[2022-06-10 01:04:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21489.jpg
+[2022-06-10 01:04:05] Felipe "Juca" Sanches: cadê o arquivo MINES.SC5 ?
+[2022-06-10 01:09:29] Felipe "Juca" Sanches: acho que seria uma boa idéia a gente fazer um setup de continuous integration pra garantir que os pull requests pelo menos compilam
+[2022-06-10 01:09:35] Felipe "Juca" Sanches: eu fiz omerge na confiança
+[2022-06-10 01:09:46] Felipe "Juca" Sanches: mas acho que você esquecei de adicionar esse arquivo
+[2022-06-10 01:10:39] Felipe "Juca" Sanches: dei uma lida por cima nos commits e me parecia OK, mas só tentei compilar aqui depois de fazer o merge. Não é a coisa mais profissional da minha parte, mas é um projeto de hobby 😉
+[2022-06-10 01:13:29] Felipe "Juca" Sanches: na verdade parece que não precisa de um arquivo MINES.SC5. Era só uma dependencia antiga que sobrou no Makefile, eu acho
+[2022-06-10 01:14:43] Felipe "Juca" Sanches: @pvm1337 acho que consertei aqui:
+
+https://github.com/ArqueologiaDigital/Mines/commit/925074aa68ce16385b369f7d13a3ec8afafa108c
+[2022-06-10 01:17:02] Pedro de Medeiros 👾: Mas o $< contém o arquivo MINES.SC5. Sem isso como ele sabe o nome do arquivo?
+[2022-06-10 01:17:11] Pedro de Medeiros 👾: E que erro dava aí?
+[2022-06-10 01:17:47] Felipe "Juca" Sanches: aqui
+[2022-06-10 01:18:27] Pedro de Medeiros 👾: Acho que faltou subir o arquivo então.
+[2022-06-10 01:19:33] Pedro de Medeiros 👾: A ideia pro enquanto é gerar o arquivo de imagem compatível com SCREEN5 e tacar aí na pasta até o CMSXimg passar a funcionar.
+[2022-06-10 01:19:36] Felipe "Juca" Sanches: ah, entendi. o mines.c deveria ser gerado e não comitado
+[2022-06-10 01:19:59] Pedro de Medeiros 👾: Sim, ele é gerado.
+[2022-06-10 01:20:16] Felipe "Juca" Sanches: seu PR incluiu o mines.c e não incluiu o MINES.SC5
+[2022-06-10 01:22:48] Pedro de Medeiros 👾: vou subir
+[2022-06-10 01:31:34] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/53/commits
+[2022-06-10 01:32:39] Felipe "Juca" Sanches: você também precisa fazer git rm mines.c e adicionar o mines.c no .gitignore
+[2022-06-10 01:34:49] Pedro de Medeiros 👾: pronto
+[2022-06-10 01:36:50] Felipe "Juca" Sanches: maravilha
+[2022-06-10 01:37:06] Felipe "Juca" Sanches: tem um bug no open block eu que cedo ou tarde vou arrumar kkk
+[2022-06-10 01:37:40] Felipe "Juca" Sanches: open block bem na borda do campo dá zica
+[2022-06-10 01:37:49] Felipe "Juca" Sanches: acho que esqueci de checar os limites do campo
+[2022-06-10 01:37:53] Felipe "Juca" Sanches: vou ver depois
+[2022-06-10 01:44:55] L.: Esquema é botar um fuzzer depois
+[2022-06-10 01:45:15] L.: Plataforma = fuzzer. Pega um arquivo com descrição das teclas e faz a ação
+[2022-06-10 01:45:37] L.: Compila com gcc -fsanitizer=fuzzer,address
+[2022-06-10 02:00:43] L.: Opa, foi fácil fazer, se pá tá funcionando lol
+[2022-06-10 02:01:43] L.: Achou bug já :D
+[2022-06-10 02:01:57] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21518-sticker.webp
+[2022-06-10 02:02:05] Felipe "Juca" Sanches: manda um PR, please
+[2022-06-10 02:05:49] L.: Pior que tô deslogada do github e tô com preguiça de ir pegar o celular pra logar
+[2022-06-10 02:06:10] Felipe "Juca" Sanches: kkkkk tudo bem. Não há pressa
+[2022-06-10 02:06:48] L.: curl https://tia.mat.br/temp/mines-fuzz-target.patch | git am
+[2022-06-10 02:20:37] Felipe "Juca" Sanches: tá dando "multiple definition of main"
+[2022-06-10 02:21:28] Felipe "Juca" Sanches: e também:
+undefined reference to `platform_init'
+[2022-06-10 02:22:28] Felipe "Juca" Sanches: e também:
+implicit declaration of function 'main_gameplay_loop' is invalid in C99
+[2022-06-10 02:23:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21526.jpg
+[2022-06-10 02:30:28] L.: Ahhh, esqueci de mandar patch pra alguma coisa. Se pá só adicionei o diretório fuzz
+[2022-06-10 02:30:37] Felipe "Juca" Sanches: 😉
+[2022-06-10 02:30:47] L.: Amanhã vejo isso, já tô pra dormir aqui
+[2022-06-10 02:30:50] Felipe "Juca" Sanches: ok
+[2022-06-10 15:01:44] Pedro de Medeiros 👾: http://archives.somnolescent.net/web/hypercard/
+[2022-06-10 17:22:50] L.: Nó, que desenhos legais
+[2022-06-10 18:40:09] Felipe "Juca" Sanches: Deu vontade de fazer um pack de stickers pro Telegram com essas imagens. Mas mó preguiça de fazer manualmente! Talvez fosse viável criar um script para criar o pack de stickers...
+[2022-06-10 18:41:03] L.: Bot de telegram é sussa
+[2022-06-10 18:41:59] L.: A API que eu usava pro bot do LHC deixa mandar sticker com qualquer imagem. Aí é só salvar
+[2022-06-10 18:53:27] Pedro de Medeiros 👾: Um sticker de Telegram é basicamente um webp. Tanto que quando fazia paste de imagem nesse formato no cliente telegram ele convertia considerava automaticamente como sticker, o que é meio ruim porque ficava muito pequeno.
+[2022-06-10 18:54:09] Pedro de Medeiros 👾: Imagem você quer poder ampliar se quiser com pinch, mas sticker geralmente não precisa realmente.
+[2022-06-10 18:55:04] Felipe "Juca" Sanches: Mas acho que o mais enfadonho do processo de criação de packs de stickers é ter que atribuir um a um qual emoji o sticker "implementa"
+[2022-06-10 18:56:38] Pedro de Medeiros 👾: Acho que não é obrigatório. Tem stickers dentro do pacotes de stickers que não tem essa associação.
+[2022-06-10 19:00:59] Pedro de Medeiros 👾: Achei ter visto um pacote de sticker assim na época, mas agora não encontro nenhum exemplo. 😅
+[2022-06-10 19:09:16] Pedro de Medeiros 👾: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21541-sticker.webp
+[2022-06-10 19:09:41] Pedro de Medeiros 👾: Esses stickers de distros estão todos associados à mesma carinha feliz. ☝️
+[2022-06-10 19:10:10] Pedro de Medeiros 👾: Então daria pra automatizar o processo.
+[2022-06-10 21:27:27] Felipe "Juca" Sanches: quando puder/quiser, manda o PR (ou atualiza os patches hospedados no seu server)
+[2022-06-10 21:27:52] L.: Belê.

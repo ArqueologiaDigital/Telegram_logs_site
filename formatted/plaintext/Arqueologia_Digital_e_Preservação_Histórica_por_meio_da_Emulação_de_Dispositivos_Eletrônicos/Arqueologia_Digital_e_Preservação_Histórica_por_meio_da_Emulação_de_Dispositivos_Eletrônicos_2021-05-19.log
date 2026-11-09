@@ -1,0 +1,18 @@
+[2021-05-19 12:32:44] L.: 256 bytes https://linusakesson.net/scene/a-mind-is-born/
+[2021-05-19 13:01:15] Felipe "Juca" Sanches: Sou super fã do Linus Akesson! Ele que fez a demo em ATMEGA com saída VGA
+[2021-05-19 13:01:31] L.: lft é foda mesmo
+[2021-05-19 13:01:40] Felipe "Juca" Sanches: E fez também o chip-o-phone (um órgão eletrônico adaptado para tocar chip-tunes usando chips de som de videogame)
+[2021-05-19 13:01:43] L.: Eu curto o chipophone
+[2021-05-19 13:01:48] Felipe "Juca" Sanches: pronto!
+[2021-05-19 13:01:50] L.: LOL
+[2021-05-19 13:01:54] Felipe "Juca" Sanches: estamos falando a mesma coisa kkkk
+[2021-05-19 13:02:28] Felipe "Juca" Sanches: e eu gosto bastante também de uma demo que ele fez pra C64... não me lembro o nome agora, mas tem um tweet meu antigo sobre isso, já acho já já
+[2021-05-19 13:07:08] L.: Os bagulhos que ele usa pra fazer desenho de placa são legais
+[2021-05-19 13:07:32] L.: Um monte de macro que gera PS considerando layout de placa padrão
+[2021-05-19 13:08:47] pitanga: Caramba, muito foda! Código à parte (ou não), esteticamente é muito boa também.
+[2021-05-19 13:10:02] L.: A música é escutavel inclusive. Raro nesses códigos pequenos que geram musica
+[2021-05-19 13:10:58] pitanga: Exatamente. Agora me intrigou o fato de a melodia ser (pseudo)randômica. A cada execução sai uma coisa.
+[2021-05-19 15:48:34] Felipe "Juca" Sanches: Achei. A demo que adoro é essa: https://www.youtube.com/watch?v=XcAUlEkU05A
+[2021-05-19 15:48:56] Felipe "Juca" Sanches: https://linusakesson.net/scene/lunatico/index.php
+[2021-05-19 16:10:16] L.: Não segui o código, mas a música é gerada pelo autômato celular que também é usado pra desenhar a tela?
+[2021-05-19 16:35:01] pitanga: Não, o algoritmo gerador do video é alimentado pela música. Os frames da música são meio hard coded, com os timbres gerados algoritmicamente. São 3 pistas, uma de kick, uma de melodia e uma que se aproxima de um side chain effect. A pista da melodia é gerada com um LFSR. O lfsr começa zerado, então nos primeiros 8 tempos não tem melodia. Depois, as notas são geradas a partir de lixo de memoria, pelo q entendi, mas com essa randomicidade meio filtrada para dar valores "bons" - imagino que dentro de um range para as notas ficarem dentro de uma determinada escala.

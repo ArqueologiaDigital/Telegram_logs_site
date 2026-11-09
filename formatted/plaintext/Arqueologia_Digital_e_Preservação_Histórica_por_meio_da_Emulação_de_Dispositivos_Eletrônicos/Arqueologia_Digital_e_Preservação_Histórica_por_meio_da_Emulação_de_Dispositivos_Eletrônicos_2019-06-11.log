@@ -1,0 +1,96 @@
+[2019-06-11 14:09:59] Felipe "Juca" Sanches: chegou aqui em casa esse kit:
+[2019-06-11 14:10:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-06/9488.jpg
+[2019-06-11 15:05:19] L.: Ó, cê tinha comentado disso aí. Vai rolar vídeo no canal?
+[2019-06-11 15:05:30] Felipe "Juca" Sanches: hahaha
+[2019-06-11 15:05:46] Felipe "Juca" Sanches: estou me segurando aqui pra não sair rasgando a embalagem antes do Hugo combinar uma data comigo pra gravar
+[2019-06-11 15:11:25] Felipe "Juca" Sanches: olha que divertido e curioso isso:
+[2019-06-11 15:11:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-06/9493.jpg
+[2019-06-11 15:14:54] Aylons Hazzud: Capacitores de tantalo, claro.
+[2019-06-11 15:16:33] Felipe "Juca" Sanches: o manual recomenda usar uma "static-safe work surface". Isso é realmente perigoso de se manusear?
+[2019-06-11 15:18:26] Felipe "Juca" Sanches: e onde é que eu arrumo um teclado compatível com esse PC antigo?
+[2019-06-11 15:18:54] Felipe "Juca" Sanches: (que não me custe um rim)
+[2019-06-11 15:27:49] L.: Mais fácil pegar teclado ps/2 e adaptador
+[2019-06-11 15:28:03] Felipe "Juca" Sanches: perfeito! Onde arrumo um adaptador desses?
+[2019-06-11 15:28:12] L.: Deve ter adaptador livre no Github
+[2019-06-11 15:28:21] Felipe "Juca" Sanches: legal 😊
+[2019-06-11 15:28:32] L.: Não lembro bem se é só o conector que muda ou se tem mudança no protocolo
+[2019-06-11 15:29:19] L.: Eu sei que teclado com conector DIN dos grandes tinham chave pra operar com keycodes XT ou AT
+[2019-06-11 18:07:02] Felipe "Juca" Sanches: fiz um scan meio porco da PCB rapidão aqui. Posso tentar fazer um scan melhor depois, com mais calma.
+[2019-06-11 18:10:09] Felipe "Juca" Sanches: document: (not yet published)
+[2019-06-11 18:11:58] Felipe "Juca" Sanches: Gustavo, tá aí um possível input prum programinha levantador de esquemáticos por meio de análise de imagens. É o tipo de coisa que você gosta, não é?
+[2019-06-11 18:15:13] FTMaciel: São 2 camadas?
+[2019-06-11 18:15:25] Felipe "Juca" Sanches: acho que sim
+[2019-06-11 18:17:10] Felipe "Juca" Sanches: sim, apenas duas camadas
+[2019-06-11 18:22:49] L.: BTW, recomecei meu emulador de PC. Tava brincando de fazer o emulador de 8086 do zero, entendendo o processo de decodificação e tal
+[2019-06-11 18:23:34] Felipe "Juca" Sanches: emulador de PC-AT? PC-XT? 5150?
+[2019-06-11 18:25:46] Felipe "Juca" Sanches: https://www.cio.com/article/2405478/can-you-do-real-work-with-the-30-year-old-ibm-5150-.html
+[2019-06-11 18:29:18] Erin Pinheiro 🐿: nossa não gosto desse tipo de artigo
+[2019-06-11 18:29:30] Erin Pinheiro 🐿: "trabalho" é uma coisa tão subjetiva
+[2019-06-11 18:30:00] Erin Pinheiro 🐿: "você pode trabalhar com um computador de 30 anos atrás hoje?"
+se você for o george r r martin, sim
+[2019-06-11 18:30:23] Erin Pinheiro 🐿: se você for um editor da Vice, vai achar ruim que não dá pra ouvir spotify num mac 512k de 1984
+[2019-06-11 18:30:45] Erin Pinheiro 🐿: depende só do que tu quer fazer
+[2019-06-11 18:31:30] Erin Pinheiro 🐿: em tempo: meu problema é mais com o headline do que com o artigo em si. se o headline fosse menos clickbait, "eu tentei fazer essas x coisas num pc de 30 anos atrás", aí eu acharia menos ruim
+[2019-06-11 18:34:10] Erin Pinheiro 🐿: tinha um outro artigo de alguém tentando fazer isso de trabalhar nos dias de hoje com um mac classic. tô tentando achar
+[2019-06-11 18:37:20] Erin Pinheiro 🐿: não é esse mas parece interessante tbm https://arstechnica.com/gadgets/2014/09/my-coworkers-made-me-use-mac-os-9-for-their-and-your-amusement/
+[2019-06-11 18:48:04] Erin Pinheiro 🐿: eu _acho_ que o artigo que eu tava pensando era esse https://arstechnica.com/features/2018/07/classic-computing-joyride-cruising-through-modern-workloads-on-a-macintosh-iisi/
+[2019-06-11 18:49:04] Erin Pinheiro 🐿: "It's important to state this from the outset: the IIsi, or any other vintage computer, is generally not suitable for home or office use in modern times. And after doing it, I won't be advocating for the experience to others.
+
+But, what is “suitable” anyway? A vintage car enthusiast is probably not going to recommend many of their motors for getting from A to B, yet these older cars can still fulfill their primary role as a means of transportation—just not as quickly, or as reliably, or as safely, or with air conditioning."
+[2019-06-11 18:50:47] L.: XT pra baixo. Só quero ver o DOS (2.0, que é open source) bootar.
+[2019-06-11 18:52:54] L.: Um dos motivos de ter parado de usar meu Newton no dia a dia foi justamente interfacear com o mundo moderno. O NewtonOS é animal, a interface e integração de tudo no sistema é melhor que num Android da vida em muitos casos... Mas qualquer coisa que dependa de Internet fica complicado
+[2019-06-11 18:53:07] Erin Pinheiro 🐿: sim
+[2019-06-11 18:54:26] Erin Pinheiro 🐿: eu tenho vontade às vezes de montar um middleman com um raspberry pi ou coisa assim pra gerar uma espécie de "mainframe" com todos os serviços que eu preciso sendo formatados em 80x24 via serial, pra eu acessar de qualquer terminal :P
+[2019-06-11 18:54:41] L.: Outro motivo: é fácil botar coisa nele, mas tirar de lá... Boa sorte. Eu usava um emulador de Mac clássico pra rodar o programa da época via serial pra fazer backup em formato proprietário. Puta trampo.
+[2019-06-11 18:54:54] Erin Pinheiro 🐿: aliás conheço gente que faz isso e usa coisas tipo um apple II ou o TRS-80 model 100 pra postar no twitter
+[2019-06-11 18:55:01] L.: Se duvidar já existe uns troços assim
+[2019-06-11 18:55:14] L.: Eu lembro do Fudebrowser do RicBit por exemplo
+[2019-06-11 18:55:35] Erin Pinheiro 🐿: ah sim, com certeza já existem. mas eu tenho vontade de fazer coisas mais customizadas
+[2019-06-11 18:55:48] L.: Tem um browser moderno que renderiza no Firefox mas manda tudo em texto num estilo Lynx/Elinks
+[2019-06-11 18:56:13] L.: Se eu tivesse um daqueles terminais de Minitel eu faria :)
+[2019-06-11 19:47:43] Felipe "Juca" Sanches: A documentação que veio junto com o kit em CDROM inclui um scan bom da PCB. Mas só da parte da frente... :-P
+[2019-06-11 19:48:16] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-06/9535-brd1.png
+[2019-06-11 20:38:01] FTMaciel: Po se tivesse aqui em Brasília eu escaneava lá no trampo. Lá tem um scanner a3
+[2019-06-11 20:38:49] FTMaciel: Da uma de João sem braço e diz que faltou o scan da parte de baixo
+[2019-06-11 21:03:54] Felipe "Juca" Sanches: hahaha
+[2019-06-11 21:41:37] Felipe "Juca" Sanches: acho que são só duas camadas de trilhas, mas tem um plano de terra no miolo
+[2019-06-11 21:45:58] Felipe "Juca" Sanches: aliás... acho que tem 2 planos internos, um pra terra e outro para VCC
+[2019-06-11 21:49:05] L.: É, hoje em dia realmente não compensa fazer placa com duas camadas só. Plano terra+Vcc facilita *demais* o layout, e não fica (muito) mais caro.
+[2019-06-11 21:49:18] L.: KiCad aliás faz essas camadas automagicamente :D
+[2019-06-11 22:38:52] FTMaciel: Queria aprender a mexer no kicad. Único software de design que aprendi decentemente foi o Tango PCB nos tempos do Senai. E que não faço mais a mínima ideia de como usar
+[2019-06-11 22:41:35] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-06/9546.jpg
+[2019-06-11 22:41:35] Felipe "Juca" Sanches: Curioso você dizer isso exatamente agora... hahahaha
+[2019-06-11 22:42:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-06/9547.jpg
+[2019-06-11 22:43:06] Felipe "Juca" Sanches: Coloquei na minha cabeça que quero entender cada componente antes de soldá-lo / instalá-lo na PCB...
+[2019-06-11 22:43:43] Felipe "Juca" Sanches: desenhar no kicad costuma ser um passa-tempo útil para estudar melhor os detalhes dos circuitos
+[2019-06-11 22:45:29] FTMaciel: Quase decorei esse esquema do 5150. Tava com uma placa dessa morta aqui na bancada
+[2019-06-11 22:46:10] Felipe "Juca" Sanches: e ressucitou?
+[2019-06-11 22:46:46] FTMaciel: Sim. 2 integrados safados
+[2019-06-11 22:46:51] Felipe "Juca" Sanches: 😊
+[2019-06-11 22:46:52] FTMaciel: Um totalmente morto
+[2019-06-11 22:46:58] FTMaciel: Outro tava muito estranho
+[2019-06-11 22:47:14] FTMaciel: Na placa ele não funcionava de jeito nenhum
+[2019-06-11 22:47:28] FTMaciel: E no testador tava 100%
+[2019-06-11 22:47:29] Felipe "Juca" Sanches: mas você tem o resto do setup pra ligar e testar? Teclado, fonte de alimentação, placa CGA e monitor CGA?
+[2019-06-11 22:48:01] FTMaciel: Teclado usei um xt que tenho aqui. Placa de vídeo cga eu tenho
+[2019-06-11 22:48:23] FTMaciel: Funcionou redondo
+[2019-06-11 22:48:31] Felipe "Juca" Sanches: tem mais de uma? Eu vou precisar de uma depois de montar esse kit
+[2019-06-11 22:49:18] FTMaciel: Cga só tenho uma. Mas testei com uma vga 8bits da oti
+[2019-06-11 22:49:36] FTMaciel: Mas posso ver com um colega aqui
+[2019-06-11 22:49:37] Felipe "Juca" Sanches: funcionou?
+[2019-06-11 22:49:41] FTMaciel: Sim
+[2019-06-11 22:50:02] Felipe "Juca" Sanches: se nao tiver CGA, essa VGA 8bits também me interessa
+[2019-06-11 22:50:46] FTMaciel: Vou ver com o colega e te falo. Ele andou comprando um lote de placas
+[2019-06-11 22:51:21] Felipe "Juca" Sanches: legal
+[2019-06-11 22:51:28] Felipe "Juca" Sanches: você mora em Brasilia, né?
+[2019-06-11 22:51:36] FTMaciel: Sim
+[2019-06-11 22:51:43] Felipe "Juca" Sanches: estarei por aí semana que vem
+[2019-06-11 22:52:04] FTMaciel: Blza. Aí se já tiver com ela te entrego em mãos
+[2019-06-11 22:52:08] Felipe "Juca" Sanches: na verdade acho que é lá pro final de semana do 22/JUN que eu vou pra Brasilia
+[2019-06-11 22:52:28] Felipe "Juca" Sanches: devo ir lá no Calango Hacker Clube
+[2019-06-11 22:52:35] Felipe "Juca" Sanches: você já conhece lá?
+[2019-06-11 22:52:59] FTMaciel: Sim. Fui lá já. Sempre passo no contêiner que tem do lado de fora pra fazer a feira
+[2019-06-11 22:53:00] FTMaciel: Kkkk
+[2019-06-11 22:53:07] Felipe "Juca" Sanches: hahahaha
+[2019-06-11 22:53:08] Felipe "Juca" Sanches: eu também
+[2019-06-11 22:53:56] FTMaciel: Patroa não curte meus dumpster diving

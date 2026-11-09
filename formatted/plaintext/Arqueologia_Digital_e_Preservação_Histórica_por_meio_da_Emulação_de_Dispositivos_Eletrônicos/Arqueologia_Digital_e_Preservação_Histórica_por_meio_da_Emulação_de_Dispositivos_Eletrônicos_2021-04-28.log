@@ -1,0 +1,113 @@
+[2021-04-28 14:55:08] L.: @fsanches Quão trabalhoso seria refazer esse poster no Inkscape? http://pascal-central.com/images/pascalposter.jpg
+[2021-04-28 14:55:32] L.: Especialmente se conseguisse mudar as cores pra serem iguais à do original pelo Jef Raskin http://www.pascal-central.com/pascal-syntax.html
+[2021-04-28 16:27:33] Felipe "Juca" Sanches: é um baita trampo!
+[2021-04-28 16:27:46] Felipe "Juca" Sanches: quais são as cores originais?
+[2021-04-28 16:30:25] Felipe "Juca" Sanches: dá até vontade de escrever rotinas em pycairo pra desenhar essas setas e depois usar essas rotinas gráficas pra "compilar" esse poster a partir de uma DSL
+[2021-04-28 16:30:49] Felipe "Juca" Sanches: mas tem gente que faria em TeX... kkkk
+[2021-04-28 16:46:22] L.: https://wiki.tcl-lang.org/page/Generating+Syntax+Diagrams+Using+Tk <-- o sqlite usava tcl/tk até pouco tempo atrás, mas mudaram pra usar uma DSL que inventaram só pra fazer diagrama
+[2021-04-28 16:47:11] L.: Hoje usam isso aqui: https://pikchr.org/home/doc/trunk/homepage.md se pá seja a melhor opção: gera cada terminal na mão com um negócio desses aí e gera um SVG grandão na mão depois
+[2021-04-28 16:49:06] Felipe "Juca" Sanches: ok, escrever usando a notacao dessa ferramenta aí pode ser uma forma de fazer. Mas como faz pra customizar o aspecto visual do diagrama? É fácil escrever um renderizador customizado?
+[2021-04-28 16:50:09] Felipe "Juca" Sanches: estou ponderando se vale a pena o esforço de escrever código. Ou se isso seria mais trabalhoso do que desenhar o diagrama inteiro na mão mesmo
+[2021-04-28 16:52:02] L.: Acho que não mas deve ser divertido pra uso posterior. :)
+[2021-04-28 16:52:52] L.: Fuçarei nisso hoje à noite!
+[2021-04-28 17:00:48] L.: Ah, legal, o pikchr cospe SVG direto
+[2021-04-28 17:01:28] L.: Parece ser hackeável o suficiente pra fazer isso
+[2021-04-28 18:17:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-04/12950.jpg
+[2021-04-28 18:17:55] Felipe "Juca" Sanches: bom... agora é questão de ajustar o tamanho da fonte, escrever a spec toda daquele poster e depois programar a customização das funções gráficas
+[2021-04-28 18:48:48] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-04/12952.jpg
+[2021-04-28 18:48:48] Felipe "Juca" Sanches: gostei do desafio kkkk
+[2021-04-28 19:04:58] Felipe "Juca" Sanches: Acidx Leandro, você sabe dizer qual é a licença desse script tcl do sqlite? eu copiei o código a partir do browser ao invés de fazer um checkout do repositório
+[2021-04-28 19:05:30] Felipe "Juca" Sanches: quero acertar o licenciamento antes de subir esses códigos num repo público
+[2021-04-28 19:18:22] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-04/12955.jpg
+[2021-04-28 20:29:53] L.: Eu vou usar o pikchr mesmo, que é o negócio novo que tão usando no SQLite
+[2021-04-28 20:30:17] L.: Parece ser mais fácil de hackear e já cospe SVG legal
+[2021-04-28 20:31:10] L.: https://pikchr.org/home/file?name=pikchr.c é BSD, tá aí o fonte todo
+[2021-04-28 20:31:42] L.: Tem uns exemplos aqui https://pikchr.org/home/doc/trunk/doc/examples.md
+[2021-04-28 20:35:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-04/12960.jpg
+[2021-04-28 20:35:19] Felipe "Juca" Sanches: ok, vou ver
+[2021-04-28 20:36:24] L.: Curti esse pikchr, acho que vou usar no blog
+[2021-04-28 20:36:59] L.: O blog usa ReST, então rola botar um plugin que faz shell pro pikchr, pega o SVG da saída e bota no HTML
+[2021-04-28 20:42:36] Felipe "Juca" Sanches: o pikchr usa outra sintaxe pra declarar os diagramas?
+[2021-04-28 20:42:59] Felipe "Juca" Sanches: ou dá pra reutilizar a sintaxe usada no bubble-gen?
+[2021-04-28 20:46:22] L.: Acho que é outra sintaxe
+[2021-04-28 20:47:06] L.: O pikchr é mais manual
+[2021-04-28 20:47:47] Felipe "Juca" Sanches:   program {
+    line
+      PROGRAM
+      identifier
+      {opt (
+           {loop identifier ,}
+           )
+      }
+      ;
+      block
+      .
+  }
+[2021-04-28 20:50:07] L.: É, pikchr é mais complexo por que não é DSL pra esse tipo de diagrama específico
+[2021-04-28 20:51:18] Felipe "Juca" Sanches: vejo que vc tem 2 usos em mente: (a) fazer esse cartaz e (b) usos futuros no teu site
+[2021-04-28 20:52:07] Felipe "Juca" Sanches: pra fazer esse cartaz acho que o bubble-gen tá meio caminho andado já. Ele gera um arquivo postscript que eu posso facilmente importar no inkscape e salvar como SVG
+[2021-04-28 20:52:23] Felipe "Juca" Sanches: (daria até pra usar o inkscape sem GUI pela linha de comando pra converter)
+[2021-04-28 20:53:36] Felipe "Juca" Sanches: e fazer um SVG de template com o resto dos gráficos, aí o script pode até embutir tudo junto e nem precisar de edićão manual talvez. Se pá, faz tudo só com um make 😉
+[2021-04-28 20:54:23] L.: Problema é que se fizer tudo automático, fica difícil moldar o diagrama pra caber em quadrados pra botar no poster
+[2021-04-28 20:55:23] Felipe "Juca" Sanches: acho que dá pra calcular automaticamente o bounding box e inserir no template SVG com coordenadas centralizadas em certos pontos de referência do template
+[2021-04-28 20:55:32] Felipe "Juca" Sanches: no final, é igual editar LaTeX
+[2021-04-28 20:56:05] Felipe "Juca" Sanches: os gráficos adicionais são o logo no topo, a assinatura e o copyright na base
+[2021-04-28 20:56:27] L.: Tem que ver direito por que idealmente tudo teria que ter mesma escala
+[2021-04-28 20:56:51] L.: Ah, sim, se for distribuir isso não vai. No máximo bota uma Pêra (de Pereira😂)
+[2021-04-28 21:00:11] Felipe "Juca" Sanches: eu encaro esse tipo de coisa como "arqueologia digital". Ou, sendo mais específico, é mais ou menos como um trabalho de restauração. Eu faria absolutamente idêntico, preservando até mesmo assinaturas e copyrights. E sim, em teoria isso poderia ser enquadrado como infração de copyright. Mas o objetivo aqui é outro. 😉
+[2021-04-28 21:01:16] Felipe "Juca" Sanches: Eu adoraria imprimir um banner da versão vetorial disso e pendurar na parede.
+[2021-04-28 21:02:54] Felipe "Juca" Sanches: Eu e o @aylons fizemos algo similar uns 15 anos atrás com um cartaz sobre eletromagnetismo. Infelizmente, por receio dessa questão legal, fizemos todo o trabalho em um repositório privado num servidor que depois foi tirado do ar e acabamos perdendo pra sempre todo o trabalho que tínhamos feito. Vacilo total! (e não era um sistema decentralidade de versionamento como o git. Acho que usamos svn ou algo similar naquela época) Mas eu não cometerei esse erro outra vez. Prefiro ir pelo caminho da "desobediencia civil" e fazer a coisa ousada em público mesmo.
+[2021-04-28 21:11:35] L.: Aquele que o Dave do eevblog tem?
+[2021-04-28 21:12:09] L.: Eu tenho versão pra imprimir aqui mas rola preguiça (e sai uns $100 no tamanho que quero 😂)
+[2021-04-28 21:15:11] Felipe "Juca" Sanches: talvez. Não me lembro mais... o @aylons talvez consiga se lembrar da URL
+[2021-04-28 21:15:45] L.: https://secure.flickr.com/photos/llnl/9403051123/sizes/l/
+[2021-04-28 21:16:03] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-04/12987.jpg
+[2021-04-28 21:16:57] Felipe "Juca" Sanches: era parecido com esse, mas acho que era diferente. Se me lembro bem, a cor dominante era mais puxado pra preto do que pra marrom
+[2021-04-28 21:17:16] Felipe "Juca" Sanches: mas o conteúdo era nesse esquema aí mesmo
+[2021-04-28 21:17:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-04/12990.jpg
+[2021-04-28 21:17:45] Felipe "Juca" Sanches: bom... comecei a desenhar aqui a fonte do logo
+[2021-04-28 21:18:22] Felipe "Juca" Sanches: o scan do cartaz é meio torto. Não encaixa perfeitamente no grid retangular
+[2021-04-28 21:18:35] Felipe "Juca" Sanches: então a vetorização precisa ser meio "no olho"
+[2021-04-28 21:25:53] Aylons Hazzud: Está no meu github
+[2021-04-28 21:26:07] Aylons Hazzud: Não a nossa versão, a original, porque eu queria refazer
+[2021-04-28 21:26:21] Aylons Hazzud: Prefiro a outra
+[2021-04-28 21:27:55] L.: LOL, rolou nerd sniping no Juca mesmo 😂
+[2021-04-28 21:28:13] L.: SVG, fonte, e arqueologia de computador
+[2021-04-28 21:30:58] Felipe "Juca" Sanches: kkkk
+[2021-04-28 21:31:12] Felipe "Juca" Sanches: e eu tô de férias, então tô facinho
+[2021-04-28 21:31:30] Felipe "Juca" Sanches: WOW!
+[2021-04-28 21:31:33] Felipe "Juca" Sanches: Manda o link!
+[2021-04-28 21:32:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-04/13002.jpg
+[2021-04-28 21:32:49] Felipe "Juca" Sanches: Acho que estou satisfeito com o outline. Agora bora pro 3D-arco-íris!
+[2021-04-28 21:35:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-04/13003.jpg
+[2021-04-28 21:52:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-04/13004.jpg
+[2021-04-28 21:52:08] Felipe "Juca" Sanches: aos poucos a gente chega lá...
+[2021-04-28 21:57:37] Erin Pinheiro 🐿: vc traçou a fonte do zero?
+[2021-04-28 22:00:18] Felipe "Juca" Sanches: sim
+[2021-04-28 22:00:25] Felipe "Juca" Sanches: é muito simples
+[2021-04-28 22:00:30] Felipe "Juca" Sanches: um monte de círculos
+[2021-04-28 22:00:39] Erin Pinheiro 🐿: mais simples que só usar a tipografia? :P
+[2021-04-28 22:00:49] Felipe "Juca" Sanches: eu nem sabia que tinha em algum lugar
+[2021-04-28 22:00:54] Erin Pinheiro 🐿: motter tektura
+[2021-04-28 22:00:58] Erin Pinheiro 🐿: é a fonte da apple anos 80
+[2021-04-28 22:01:01] Felipe "Juca" Sanches: agora já foi... fiz em 2 minutinhos
+[2021-04-28 22:01:03] Erin Pinheiro 🐿: (e unitron)
+[2021-04-28 22:01:10] Felipe "Juca" Sanches: o 3D é mais demorado
+[2021-04-28 22:01:17] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-04/13016.jpg
+[2021-04-28 22:01:25] Felipe "Juca" Sanches: já era kkkk
+[2021-04-28 22:01:25] Erin Pinheiro 🐿: só queria saber se você conhecia
+[2021-04-28 22:01:35] Felipe "Juca" Sanches: obrigado pela informação
+[2021-04-28 22:01:45] Felipe "Juca" Sanches: vai ser útil da próxima vez que eu for fazer algo do tipo
+[2021-04-28 22:01:55] Felipe "Juca" Sanches: "do tipo" ;-D
+[2021-04-28 22:02:03] Erin Pinheiro 🐿: haaa
+[2021-04-28 22:16:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-04/13023.jpg
+[2021-04-28 22:16:46] Felipe "Juca" Sanches: haja saco...
+[2021-04-28 22:16:54] Felipe "Juca" Sanches: mas eu vou conseguir! 😃
+[2021-04-28 22:27:23] Leonardo Roman: As cores  da Apple desse cartaz estão muito escuras. Pega o original: https://upload.wikimedia.org/wikipedia/commons/8/84/Apple_Computer_Logo_rainbow.svg
+[2021-04-28 22:28:11] Leonardo Roman: Isso foi defeito do scan / foto
+[2021-04-28 22:51:15] Aylons Hazzud: Deve dar para compensar o efeito do filtro usando o original como referência
+[2021-04-28 22:51:30] Aylons Hazzud: Supondo que é um efeito linear para cada componente...
+[2021-04-28 23:42:17] L.: Encontrando um easter egg no MS Bob: https://benstoneonline.com/posts/microsoft-bob-easter-egg/
+[2021-04-28 23:58:09] Felipe "Juca" Sanches: é, eu tava pensando nisso mesmo!
+[2021-04-28 23:59:25] Felipe "Juca" Sanches: Alguns anos atrás eu trabalhei na implementação do suporte a perfis de cores ICC no Inkscape, então estou ciente dessas deformações que ocorrem intrinsecamente nas cores no momento da impressão, do escaneamento e também da exibição em tela das imagens.
+[2021-04-28 23:59:47] Felipe "Juca" Sanches: acho que é uma boa idéia usar alguma referencia melhor para as cores corretas do logo

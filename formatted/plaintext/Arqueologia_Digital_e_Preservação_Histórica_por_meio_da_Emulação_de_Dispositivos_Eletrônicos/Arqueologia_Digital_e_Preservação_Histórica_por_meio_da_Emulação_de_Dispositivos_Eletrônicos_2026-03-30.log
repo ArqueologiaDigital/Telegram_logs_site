@@ -1,0 +1,54 @@
+[2026-03-30 08:59:45] L.: https://www.datagubbe.se/aipixels/
+
+Pixel art da demoscene!
+[2026-03-30 13:55:19] Pedro de Medeiros 👾: https://youtu.be/KtTKwvDkoKA
+[2026-03-30 15:20:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37923.jpg
+[2026-03-30 15:20:11] Felipe "Juca" Sanches: Consegui emular a placa de disco rídigo HDAE5000 e formatei uma imagem de disco (CHD)
+[2026-03-30 15:20:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37924.jpg
+[2026-03-30 15:20:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37925.jpg
+[2026-03-30 15:20:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37926.jpg
+[2026-03-30 15:20:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37927.jpg
+[2026-03-30 15:20:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37928.jpg
+[2026-03-30 15:22:07] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37929.jpg
+[2026-03-30 15:22:07] Felipe "Juca" Sanches: Também implementei emulação da porta paralela da placa HDAE5000, que é usada para interfacear o KN5000 com um PC pra fazer gerenciamento de bibliotecas de sons e ritmos, sincronismo e restauração de backup do HD, etc...
+[2026-03-30 15:23:36] Felipe "Juca" Sanches: Esse aí é um driver de emulação de um 486 bootando windows com um KN5000 (com a placa HDAE5000) conectado ao PC via porta paralela. Aí o MAME mostra lado a lado as telas das duas máquinas (a tela do teclado e a tela do PC)
+[2026-03-30 15:24:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37931.jpg
+[2026-03-30 15:24:28] Felipe "Juca" Sanches: Aqui o setup da interconexão entre os drivers
+[2026-03-30 15:26:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37932.jpg
+[2026-03-30 15:26:01] Felipe "Juca" Sanches: Essa é a versão demo do software TechManager5000 (mas a versão demo não faz bosta nenhuma. É só um monte de janelas mockup e propaganda da empresa pra você comprar o software pra valer)
+[2026-03-30 15:27:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37933.jpg
+[2026-03-30 15:27:13] Felipe "Juca" Sanches: Já a versão pra valer do TechManager5000 eu não estou conseguindo rodar por falta de um componente do VB5/6
+[2026-03-30 15:32:19] L.: essa versão tem cara de ser win16 pela borda da janela
+[2026-03-30 15:32:44] L.: esse .ocx já é pelo menos do vb4
+[2026-03-30 15:32:57] L.: não é parte do runtime do vb mas era comum vir com ele
+[2026-03-30 15:50:11] Felipe "Juca" Sanches: eu baixei de algum site aleatório o arquivo e coloquei no C:\WINDOWS\SYSTEM
+[2026-03-30 15:50:54] Felipe "Juca" Sanches: depois ouvi dizer que tenho que usar um comando regsrv32 pra registrar o objeto, mas a minha instalação de W95 não tem esse programa
+[2026-03-30 15:51:09] Felipe "Juca" Sanches: Então vi instruções de como registrar na mão criando chaves no REGEDIT
+[2026-03-30 15:51:16] Felipe "Juca" Sanches: fiz tudo e mesmo assim ainda não funfou
+[2026-03-30 15:51:24] Felipe "Juca" Sanches: até rebootei e continua não funfando
+[2026-03-30 15:52:11] Pablo Vasques Bravo-Villalba: Depois que formata o teclado desliga sozinho? O texto fala para ligar e desligar (nessa ordem) a energia depois da formatação completa. Não deveria ser ao contrário? 😅
+[2026-03-30 15:54:14] L.: pode só botar o .ocx no diretório do programa que deve funcionar
+[2026-03-30 15:55:17] L.: pode ser que o .ocx não carregue por que depende de alguma DLL que não exista no sistema. windows 95 é velho, né.
+[2026-03-30 15:55:39] L.: eu tentaria uma instalação do 98
+[2026-03-30 16:14:24] Felipe "Juca" Sanches: kkkkkk
+[2026-03-30 16:14:44] Felipe "Juca" Sanches: ok, depois acho que vou tentar com o 98
+[2026-03-30 16:27:35] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37948.jpg
+[2026-03-30 16:27:35] Felipe "Juca" Sanches: A parte do firmware não tem tantos erros assim. Já a parte do software de Windows e o manual de usuário... Pelamordedelz!!! É um broken-english do caralho!
+[2026-03-30 16:48:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37949.jpg
+[2026-03-30 16:48:53] Felipe "Juca" Sanches: A empresa que fez era da Suíça, eu acho
+[2026-03-30 16:49:44] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37950.jpg
+[2026-03-30 16:49:44] Felipe "Juca" Sanches: Aqui o Windows 95 é mencionado explicitamente
+[2026-03-30 16:50:27] L.: https://bitbang.social/@mac84tv/116313232502499502 código fonte do AOL pra Mac! não ligo pro AOL mas é sempre massa quando acham código fonte de software inútil hoje em dia :D
+[2026-03-30 16:51:04] L.: é o win95 osr2?
+[2026-03-30 16:52:22] Pablo Vasques Bravo-Villalba: "FAT harvest-mistakes"
+[2026-03-30 16:54:03] L.: a versão em português ficou "erro de colheita de GORDO"
+[2026-03-30 17:30:58] Felipe "Juca" Sanches: tô aqui tentando entender o que era pra ser esse "harvest-mistake"
+[2026-03-30 17:31:22] Felipe "Juca" Sanches: tô achando que quiseram dizer algo como "allocation error" talvez?
+[2026-03-30 17:33:06] L.: provavelmente algo assim. É bem possível que o teclado grave vários arquivos pequenos e chegue no limite de quantidade de arquivos na fat
+[2026-03-30 17:35:02] Pablo Vasques Bravo-Villalba: Retrieve error?
+[2026-03-30 17:35:47] Pablo Vasques Bravo-Villalba: Isso parece tradução do chinês, não de algum idioma ocidental
+[2026-03-30 22:53:55] Tevo: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-03/37960.jpg
+[2026-03-30 22:53:55] Tevo: Meio sem relação, mas eu li esse paragrafo e me veio a tua mensagem na cabeça
+[2026-03-30 23:06:46] L.: Microsoft tem umas gambiarras tensas
+
+Quando tava no time do .net, me disseram que tinham vários produtos que eles não buildavam as DLLs, mas tipo pegavam as DLLs do CD de algum outro produto da MS

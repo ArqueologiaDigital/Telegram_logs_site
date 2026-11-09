@@ -1,0 +1,107 @@
+[2018-08-10 12:03:22] * Ana Cunha joined the group
+[2018-08-10 12:08:50] Felipe "Juca" Sanches: olá, Ana Cunha
+[2018-08-10 12:09:32] Felipe "Juca" Sanches: @anacunhaz seja bem-vinda ao grupo
+[2018-08-10 12:11:13] Felipe "Juca" Sanches: conta um pouco pra gente sobre seus interesses nesse tema e como você chegou aqui 😊
+[2018-08-10 12:21:17] Ana Cunha: Olá Felipe!
+[2018-08-10 12:23:34] Ana Cunha: Moro no Rio de Janeiro e sou produtora cultural. Na pesquisa para um projeto passei pela metareciclegem, cultura digital, gambiológia etc. a acabei chegando ao Garoa.
+[2018-08-10 12:24:57] Ana Cunha: Faço parte de um laboratório aqui no Rio pela Unirio, o Labogad (laboratório em preservação e gestão de acervos digitais) e estou iniciando uma pesquisa sobre o Choro (música)
+[2018-08-10 12:26:16] Ana Cunha: Na verdade sei pouco sobre esse grupo, chegou para mim pelo grupo [GaroaHC], mas curti muito otítulo ;)
+[2018-08-10 12:29:01] Ana Cunha: Se estiver ok para vcs ficar por aqui e entender melhor, agradeço a acolhida!
+[2018-08-10 12:32:40] Affonso Amendola: Beem vinda :)
+[2018-08-10 12:33:33] Ana Cunha: Obrigada!!!
+[2018-08-10 12:33:42] Ronaldo: Bem vinda
+[2018-08-10 12:33:49] Ronaldo: Aproveitando o gancho
+[2018-08-10 12:34:27] Ronaldo: Alguém conhece uma lista de procedimentos de segurança pra acessar disquetes antigos?
+[2018-08-10 12:34:30] Ana Cunha: 😊
+[2018-08-10 12:35:24] Ronaldo: Existe alguma coisa formal a respeito?
+[2018-08-10 12:35:58] Ronaldo: Eu imagino que pra fitas exista
+[2018-08-10 12:41:14] Affonso Amendola: Nunca achei uma formal
+[2018-08-10 12:41:14] Affonso Amendola: Mas ao longo do tempo eu acabei fazendo o meu proprio
+[2018-08-10 12:41:51] Affonso Amendola: O perigo mesmo é garantir que seu drive n vai destruir a sua midia
+[2018-08-10 12:42:23] Affonso Amendola: Tem mais relacionado a como guardar e tal
+[2018-08-10 12:42:29] Affonso Amendola: Longe de imãs
+[2018-08-10 12:42:55] Affonso Amendola: Fitas tem o problema de fungos
+[2018-08-10 12:43:04] Affonso Amendola: Que adoram o material das fitas magneticas
+[2018-08-10 13:11:31] Ronaldo: Parece que o substrato magnético das fitas antigas também é frágil e tende a descolar
+[2018-08-10 13:12:09] Ronaldo: Eu tenho a impressão que acontece algum tipo de crosstalk magnético com fitas de áudio antigas
+[2018-08-10 13:12:46] Ronaldo: Uma volta da fita transmite magnetismo pra volta adjacente, enquanto elas estão enroladas e sobrepostas.
+[2018-08-10 13:14:00] Ronaldo: Eu nunca pude verificar se isso acontece mesmo, mas eu já escutei cópias digitais de gravações com um "eco" estranho, bem baixo, no som.
+[2018-08-10 14:41:15] Affonso Amendola: Okay, tentei ctrl bola cheia e reset
+[2018-08-10 14:41:20] Affonso Amendola: No tk3000iie
+[2018-08-10 14:41:25] Affonso Amendola: Apareceu isso
+[2018-08-10 14:41:37] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/6957.jpg
+[2018-08-10 15:18:30] DQ: Vou tentar testar no meu hoje à noite
+[2018-08-10 15:50:34] Deleted Account: Gente, estou com acido nitrico aqui (no laboratorio e em segurança haha) para tentar fazer o decap de alguns componentes
+[2018-08-10 15:50:48] Deleted Account: Alguem ja fez esse processo antes e tem algum conselho?
+[2018-08-10 15:51:58] Deleted Account: Não é o acido nitrico fumegante vermelho... se eu nao me engano a unica diferença é a concentração, certo?
+[2018-08-10 15:54:52] Felipe "Juca" Sanches: faça acompanhada de alguém que já tenha tido treinamento profissional para lidar em segurança com esse tipo de material
+[2018-08-10 15:56:23] Deleted Account: sim!! estou aqui com um amigo no laboratório
+[2018-08-10 15:56:43] Deleted Account: ele já lidou com esses produtos
+[2018-08-10 15:56:54] Deleted Account: mas nunca para retirar cápsula de ci
+[2018-08-10 15:57:12] Deleted Account: e tem treinamento!!
+[2018-08-10 15:57:18] Deleted Account: :D
+[2018-08-10 17:19:28] Ronaldo: Eu ia dizer, mesmo já tendo experiência não é seguro fazer sozinha
+[2018-08-10 17:20:01] Ronaldo: Talvez fosse bom sacrificar uns CIs baratos pra testar
+[2018-08-10 17:20:23] Affonso Amendola: Cuidado com os gases, NOx é porreta
+[2018-08-10 17:21:06] Ronaldo: Isso em cima é um padrão pra mostrar as cores, abaixo ele tá mostrando que não tem nenhuma memória de expansão no computador, pelo que eu sei
+[2018-08-10 17:21:35] Ronaldo: O meu tem uma expansão de 512 KB
+[2018-08-10 17:23:25] Ronaldo: Já óxido nitroso...
+[2018-08-10 17:24:22] Affonso Amendola: Qualquer coisa com acido nitrico e metal solta no2 e no3, que nao sao legais de inalar
+[2018-08-10 17:24:57] Affonso Amendola: Eu acho
+[2018-08-10 17:24:58] Affonso Amendola: Tecnicamente eu sou tecnico em quimica
+[2018-08-10 17:25:09] Affonso Amendola: Mas n lembro muita coisa
+[2018-08-10 17:25:37] Affonso Amendola: Inalei muito nox no meu tcc, deve ter sido isso
+[2018-08-10 17:25:55] Ronaldo: Química é a minha pior matéria
+[2018-08-10 17:37:45] Ronaldo: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/6980.jpg
+[2018-08-10 17:38:35] Ronaldo: Isso é o que aparece no meu TK3000, com uma expansão de 512 KB
+[2018-08-10 18:24:42] Leonardo Roman: Os códigos hexa que indicam a qtd de ram. Eles sempre devem aparecer, mesmo sem expansão
+[2018-08-10 18:25:25] Leonardo Roman: Acho que o do Affonso tá travando no teste de ram
+[2018-08-10 18:26:19] Ronaldo: Será que não tem uma placa de expansão instalada, com problema?
+[2018-08-10 18:26:35] Ronaldo: (mal-encaixada, talvez)
+[2018-08-10 18:27:09] Leonardo Roman: Ou isso. Vou encaminhar lá pro grupo de Apple 2
+[2018-08-10 18:29:19] Ronaldo: Boa
+[2018-08-10 18:33:46] Ronaldo: Se for abrir o TK3000 cuidado pra não quebrar os grampos da tampa
+[2018-08-10 18:34:37] Ronaldo: A tampa - parte de cima do gabinete, atrás do teclado - abre deslizando pra trás, depois levantando.
+[2018-08-10 18:39:46] Leonardo Roman [forwarded]: segundo esse teste, só tem a RAM principal. Não tem nenhuma placa de expansao no slot auxiliar
+[2018-08-10 18:42:22] Deleted Account: sim sim, acabei nem fazendo
+[2018-08-10 18:42:33] Deleted Account: amanhã se der tempo passo lá de novo
+[2018-08-10 18:42:56] Deleted Account: 😂😂😂😂😂
+[2018-08-10 18:43:19] Ronaldo: O que eu falo de fazer isso sozinho é que é bom ter alguém pra ajudar em caso de acidente (sério)
+[2018-08-10 18:43:49] Ronaldo: Tipo, alguém pra ajudar a limpar, alguém que consiga enxergar... 😬
+[2018-08-10 18:44:04] Deleted Account: 😬😬😬😬😬
+[2018-08-10 18:44:19] Deleted Account: okay
+[2018-08-10 18:44:29] Ronaldo: Pela tua foto tu usa óculos, isso é bom, hahahaha
+[2018-08-10 18:44:58] Ronaldo: Não vai esquecer de proteger os olhos
+[2018-08-10 18:45:05] Ronaldo: Manda fotos aqui, se fizer
+[2018-08-10 18:45:31] Deleted Account: pode deixar :3
+[2018-08-10 18:46:51] Ronaldo: Lembro que eu vi uma página de uns caras que faziam isso "profissionalmente", digamos, engenharia reversa de CIs antigos. Eles publicavam os resultados.
+[2018-08-10 18:47:38] Ronaldo: Eles expunham os dies e faziam programas pra analisar as imagens deles, eu acho
+[2018-08-10 18:48:09] Deleted Account: Eu vi! Achei muito legal
+[2018-08-10 18:48:16] Ronaldo: Sim
+[2018-08-10 18:48:29] Ronaldo: Fiquei com vontade de mandar CIs pra eles, hahaha
+[2018-08-10 18:48:41] Deleted Account: usaram ia pra fazer a análise lógica por imagem
+[2018-08-10 18:48:46] Ronaldo: Sim
+[2018-08-10 18:49:45] Ronaldo: Acho que se o CI tem mais de 20 anos todas as patentes já expiraram.
+[2018-08-10 18:50:30] Deleted Account: Estava querendo ler mais a fundo sobre as legislações envolvendo patente de hardware
+[2018-08-10 18:50:49] Deleted Account: principalmente pra poder publicar as coisas sem preocupaçao
+[2018-08-10 18:50:53] Deleted Account: mas não sei por onde começar
+[2018-08-10 18:50:54] Ronaldo: Pois é, eu estava pensando nisso, agora
+[2018-08-10 18:51:37] Ronaldo: Em 20 anos, pelo que eu saiba, patentes sobre tecnologia expiram. Mas software, por exemplo, é travado com copyright, que é virtualmente eterno.
+[2018-08-10 18:52:36] Ronaldo: Não sei se a imagem de um plano de contatos de um CI não pode ser considerada como "arte" e estar sob copyright ao invés de patente.
+[2018-08-10 19:36:29] Gustavo Romero: @nutc4k3 Engenharia Reversa  de IC é assegurada por lei, basicamente para duas funções: educação/pesquisa e verificação de quebra de patentes. Não sei o numero da Lei de cabeça. Se não encontrar me avisa que tenho num pdf perdido por aí...
+[2018-08-10 19:39:29] Gustavo Romero: (Lei brasileira)
+[2018-08-10 21:01:28] Deleted Account: Obrigada Gustavo!
+[2018-08-10 21:01:46] Deleted Account: Pois é, tenho que ler mais sobre!!
+[2018-08-10 21:45:46] DQ: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7020.jpg
+[2018-08-10 21:45:46] DQ: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7021.jpg
+[2018-08-10 21:45:46] DQ: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7022.jpg
+[2018-08-10 21:46:53] DQ: A tecla MODE controla a conversão de ] em ç
+[2018-08-10 21:48:11] DQ: O coitado do meu TK3000 está com o teclado bem ruim, precisei insistir muito para algumas teclas funcionarem.
+[2018-08-10 21:49:17] DQ: Ele está com algumas placas de expansão, inclusive uma de 128k de RAM que eu usava com ramdrive.
+[2018-08-10 21:51:13] DQ: O cold reset é Control bola vazia reset
+[2018-08-10 21:51:44] DQ: Control reset é um warm reset
+[2018-08-10 22:01:03] Ronaldo: O teclado do TK3000 era pra ser bom, talvez dê pra consertar
+[2018-08-10 22:01:34] Ronaldo: Gostei do monitor
+[2018-08-10 22:06:36] DQ: O monitor não foi tão barato quanto eu gostaria, mas é bem versátil: http://dqsoft.blogspot.com/2017/06/display-lcd-7-polegadas-com-entradas.html?m=1
+[2018-08-10 22:07:12] DQ: Eu tenho um modelo com características semelhantes, mas com gabinete.
+[2018-08-10 22:08:57] DQ: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/7032.jpg

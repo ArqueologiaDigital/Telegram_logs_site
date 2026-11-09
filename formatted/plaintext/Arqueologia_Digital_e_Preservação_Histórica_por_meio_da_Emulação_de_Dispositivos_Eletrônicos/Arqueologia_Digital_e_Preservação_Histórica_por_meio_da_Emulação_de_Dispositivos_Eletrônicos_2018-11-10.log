@@ -1,0 +1,29 @@
+[2018-11-10 20:51:31] Felipe "Juca" Sanches: Ismael está por aqui?
+[2018-11-10 20:51:43] Felipe "Juca" Sanches: passei a madrugada beincando com esse projetinho
+[2018-11-10 20:52:11] Felipe "Juca" Sanches: adaptei o booterify para gerar uma ROM relocada no segmento 0x1000
+[2018-11-10 20:52:40] Felipe "Juca" Sanches: instalei essa ROM no segmento 0xE000
+[2018-11-10 20:53:18] Ismael Luceno: 👍
+[2018-11-10 20:53:30] Felipe "Juca" Sanches: fiz um patch no ponto de entrada do código da BIOS, em 0xF000:FFF0, para pular direto para o trecho de código da própria BIOS que inicializa a IVT
+[2018-11-10 20:53:47] Felipe "Juca" Sanches: pra eu não ter que inserir aqueles endereçcos das rotinas da BIOS manualmente
+[2018-11-10 20:54:07] Felipe "Juca" Sanches: e logo depois dessa rotina de inicialização da IVT fiz outro patch inserindo alí o meu loader
+[2018-11-10 20:54:42] Felipe "Juca" Sanches: meu loader faz uma cópia dos 64kbytes de 0xE000 para 0x1000 (por que o código precisa rodar a partir da RAM)
+[2018-11-10 20:56:12] Felipe "Juca" Sanches: e depois inicializa os principais registradores (DS, ES, CS, IP, SS e SP) e chama um RETF para pular para o ponto de entrada do jogo em 1723:0000
+[2018-11-10 20:56:36] Felipe "Juca" Sanches: esse code-segment 1723 foi determinado pelo cabeçalho do EXE e o booterify me informa isso
+[2018-11-10 20:56:55] Felipe "Juca" Sanches: testei no debugger do MAME e todas essas rotinas iniciais funcionam direitinho
+[2018-11-10 20:57:34] Felipe "Juca" Sanches: no endereço 1723:0000 vejo que a IVT está corretamente inicializada e o código lá é o início do código do jogo
+[2018-11-10 20:58:38] Felipe "Juca" Sanches: solto a emulação mas a tela fica preta e nos logs eu vejo apenas 1 chamada para sw interrupt 11h, 6 chamadas para int 10h e um aparente loop infinito de chamadas para a interrupção 1Ah
+[2018-11-10 21:02:37] Felipe "Juca" Sanches: será que tem mais alguma coisa fundamental que a BIOS faz além de auto-teste de RAM e que eu acabei pulando nesse meu patch?
+[2018-11-10 21:03:22] Felipe "Juca" Sanches: eu sei que eu nao estou ainda fornecendo implementações das rotinas do DOS, mas nos logs nem chegou a chamar elas ainda. Quebrou antes.
+[2018-11-10 21:05:50] Deleted Account: Tem como saber se a rotina chamou entry points não documentados?
+[2018-11-10 21:16:19] Felipe "Juca" Sanches: para algumas coisas eu to usando breakpoints
+[2018-11-10 21:16:36] Felipe "Juca" Sanches: dá tambem pra usar watch points em todo um range de enderecos
+[2018-11-10 21:16:50] Felipe "Juca" Sanches: mas tem que usar a criatividade pra achar algo usando essas ferramentas
+[2018-11-10 21:17:12] Felipe "Juca" Sanches: agora eu vou pro cinema ver o filme do queen. Volto a lidar com isso depois
+[2018-11-10 21:20:21] Deleted Account: imagino que as rotinas da BIOS devam ter alguns hooks para memória RAM. Essa área deve ser corretamente inicializada
+[2018-11-10 21:23:21] Felipe "Juca" Sanches: 1Ah = Serviços de Relógio em Tempo real - chamado por programas de software para comunicar-se com o RTC
+[2018-11-10 21:23:50] Felipe "Juca" Sanches: talvez o hardware do RTC precise ser inicializado durante o boot
+[2018-11-10 21:30:43] Deleted Account: outra coisa que eu iria chutar :) acesso a memória, devices ou rotinas não implementados/inicializados
+[2018-11-10 21:36:51] Felipe "Juca" Sanches: botei um breakpoint no endereço do ponto de entrada da int 1Ah e executei passo a passo a primeira vez que a int é chamada. Ela échamada com AH=00 que significa "Read RTC"
+[2018-11-10 21:37:24] Felipe "Juca" Sanches: rapidamente o código tropeça numa leitura de RAM que vem com o valor 0xCD, que é basicamente o que tem em RAM n"ao inicializada...
+[2018-11-10 21:37:47] Felipe "Juca" Sanches: acho que é aí que tá  o nó mesmo
+[2018-11-10 21:37:54] Felipe "Juca" Sanches: mais tarderetomo a investigação

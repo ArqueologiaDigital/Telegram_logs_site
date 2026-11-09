@@ -1,0 +1,72 @@
+[2021-08-02 17:16:03] Felipe "Juca" Sanches: passei o domingo inteiro (e fui dormir às 6 da manhã de hoje) escrevendo código assembly de TLCS900H pra fazer a inicialização do modo de vídeo texto-puro 320x200 com 40x25 caracteres no technics KN5000.
+
+Estudei o código fonte do dosbox, que tem uma re-implementacao em C das rotinas da int 10h da VGA BIOS. E fui adaptando pro assembly do TLCS900H.
+
+Antes de ir dormir resolvi tentar instalar e ver o que acontecia. Consegui uma tela preta kkkk
+
+Sem texto nenhum. :-P
+
+Mas dá pra ver que o teclado não travou, pois os LEDs do painel de controle ainda acendem e apagam se eu pressionar alguns botões.
+
+Tá faltando alguma coisa, ainda. Estou lendo o livro de VGA do Ferraro. Tenho cópia física aqui em mãos, mas se alguém quiser ver, tem no Internet Archive também:
+
+https://archive.org/details/programmersguide02edferr
+[2021-08-02 17:18:24] Felipe "Juca" Sanches: Quando eu era moleque, eu tinha vontade de implementar os modos de vídeo sem usar as rotinas da VGA BIOS. Queria fazer tudo na unha escrevendo os registradores da VGA, pra poder entender melhor como funciona.
+
+Mas era um capricho meu tentar essas coisas. Pois a vasta maioria dos exemplos de programaçào de VGA, mesmo em asm, em MSDOS, usam as rotinas da BIOS pra facilitar a vida.
+
+Acontece que agora no Technics KN5000 não tem VGA BIOS. Então tem que fazer na unha mesmo.
+[2021-08-02 17:19:15] Felipe "Juca" Sanches: o firmware oficial da Technics faz o setup do modo de video com escritas nos registradores. Mas pra modo texto, que é o que eu quero, eu estou tendo que fazer do zero.
+[2021-08-02 17:19:45] Felipe "Juca" Sanches: se der muito trabalho, acho que vou implementar renderizacao de texto no modo gráfico mesmo
+[2021-08-02 17:20:19] L.: Talvez seja mais fácil dado que até fonte já tem
+[2021-08-02 17:20:28] L.: E que já tem rotina de desenhar texto
+[2021-08-02 17:20:52] L.: E manipular botões e tal
+[2021-08-02 17:22:55] Felipe "Juca" Sanches: o objetivo aqui é duplo:
+
+1) me acostumar com os detalhes do hardware, me preparando pra escrever um driver de vídeo mais pra frente quando eu realmente for criar códigos novos pra rodar no teclado
+
+2) dar um jeito de descobrir o endereco absoluto do código que estou executando e printar o endereco em hex na tela. E com isso conseguir sacar qual é o recorte preciso do arquivo de update que corresponde ao conteúdo da flashrom. Pois nesse momento estou apenas rodando código com referencias de enderecamento relativo, pois não sei de verdade qual o instruction pointer.
+[2021-08-02 17:23:32] Felipe "Juca" Sanches: então eu pegaria o instruction pointer e daria um print na tela do valor em hex
+
+e assim poderei extrair a ROM com os offsets corretos
+[2021-08-02 17:24:00] Felipe "Juca" Sanches: eu forjei uns 3 bytes pra apontar pro meu ponto de entrada fake e poder carregar no debugger do MAME
+[2021-08-02 17:24:19] Felipe "Juca" Sanches: mas ainda não sei qual é o ponto de entrada de verdade do código
+[2021-08-02 17:25:51] Felipe "Juca" Sanches: então é isso: um misto de nerdice em programacao VGA com a necessidade de descobrir os endereços absolutos de execução das rotinas encontradas até agora
+[2021-08-02 17:26:48] Felipe "Juca" Sanches: sim, seria muito legal achar onde ficam as rotinas de desenhar texto. Entretanto eu tropecei primeiro por acaso nas rotinas de inicializacao da VGA, por isso tomei um rumo distinto
+[2021-08-02 17:49:52] L.: Tem noção de onde as coisas vão pra ROM depois de descomprimidas?
+[2021-08-02 17:50:09] Felipe "Juca" Sanches: é exatamente isso que eu quero descobrir
+[2021-08-02 17:51:22] Felipe "Juca" Sanches: se eu der print na tela do valor do instruction pointer, eu posso fazer a diferenca desse valor com o offset do arquivo de update e assim achar o offset onde está o byte zero da flash e usar essa info pra recortar o arquivo de ROM
+[2021-08-02 17:51:31] L.: Talvez dê pra chutar que vai tudo pro offset 0 e procurar onde começa o logo que você alterou e ver se não tem nada que referencie aquilo?
+[2021-08-02 17:52:19] Felipe "Juca" Sanches: o meu chute na verdade é que a flash fica na faixa E0000-FFFFF da memória
+[2021-08-02 17:53:07] L.: Uma coisa que dá pra tentar também é achar onde fica o endereço do framebuffer da VGA
+[2021-08-02 17:53:08] Felipe "Juca" Sanches: sei que a CPU lê o instuction pointer dos bytes em FFFF00, FFFF01, e FFFF02
+[2021-08-02 17:53:19] L.: Achar as rotinas que acessam isso e pegar as xref
+[2021-08-02 17:53:50] Felipe "Juca" Sanches: tenho forte intuição de que o vídeo fica em 0x1A0000 (em modo gráfico)
+[2021-08-02 17:54:08] Felipe "Juca" Sanches: cheguei a ver esse número em alguns trechos de disasm
+[2021-08-02 17:54:56] Felipe "Juca" Sanches: achar referencias cruzadas é um pouco complicado, eu acho. Mas é uma das coisas que quero tentar fazer
+[2021-08-02 17:57:35] L.: Radare2 faz isso com "aaaa"
+[2021-08-02 17:57:46] L.: Acho que o Ghidra também
+[2021-08-02 17:57:53] Felipe "Juca" Sanches: "aaaa" ?
+[2021-08-02 17:58:07] L.: radare2 tem comando tipo vim
+[2021-08-02 17:58:22] Felipe "Juca" Sanches: radare2 suporte arquitetura TOSHIBA TLCS900H ?
+[2021-08-02 17:58:41] L.: "a" é analyze, e os outros vão botando opção avançada por cima
+[2021-08-02 17:58:55] L.: É muito possível que sim, suporta um monte de coisa obscura
+[2021-08-02 17:59:12] Felipe "Juca" Sanches: ok, posso tentar isso então
+[2021-08-02 17:59:31] L.: Eu sei pouca coisa de radare mas gosto da ferramenta
+[2021-08-02 18:03:11] Felipe "Juca" Sanches: há anos que eu deixo pra depois estudar essas ferramentas
+[2021-08-02 18:03:36] Felipe "Juca" Sanches: talvez por que eu sou teimoso e acho gostoso quebrar a cabeça implementendo minhas próprias ferramentas
+[2021-08-02 19:21:01] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13980.jpg
+[2021-08-02 19:21:01] Erin Pinheiro 🐿: @fsanches
+[2021-08-02 19:21:11] Erin Pinheiro 🐿: página do manual do Famicom
+[2021-08-02 19:21:27] Felipe "Juca" Sanches: BARBARIDADE!!!! Que coisa linda!
+[2021-08-02 19:21:39] Erin Pinheiro 🐿: óbvio que o kanji todo morreu na tradução automática de raster pra vetor
+[2021-08-02 19:21:46] Erin Pinheiro 🐿: mas o desenho saiu bonitinho
+[2021-08-02 19:23:10] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13985.jpg
+[2021-08-02 19:23:10] Erin Pinheiro 🐿: a página original
+[2021-08-02 19:23:40] Erin Pinheiro 🐿: na verdade depois de já passar por um tratamento no photoshop pra acentuar os traços e fazer de formas preenchidas em traçados
+[2021-08-02 19:24:12] Erin Pinheiro 🐿: depois fiz line art trace no illustrator e passei no vpype, e devolvi a cor vermelha na mão (o vpype tira toda a cor)
+[2021-08-02 19:24:24] Erin Pinheiro 🐿: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/13988-plotterfamicom.svg
+[2021-08-02 19:24:24] Erin Pinheiro 🐿: svg final
+[2021-08-02 20:53:19] RicBit: Vixe usei muito esse livro aí
+[2021-08-02 23:57:00] Felipe "Juca" Sanches: mais uma vez eu fiz um grande malabarismo pra acabar descobrindo o "óbvio": fortes evidencias de que o conteúdo das 2 memórias flash são os primeiríssimos 2 MBytes do arquivo de update depois de descomprimido (como o arquivo descompresso tem 2,2MB, sobram uns 200 e poucos kb no final que não sei ainda o que é)
+[2021-08-02 23:58:53] Felipe "Juca" Sanches: eu não tinha tentado carregar esses primeiros 2MB no emulador ainda por uma razão bobinha: eu achei que o comecinho do arquivo tinha cara de cabeçalho e simplesmente presumi que a imagem da flash comecaria depois do cabecalho de tamanho desconhecido. E o fato do arquivo de update não ter exatamente 2MBytes também ajudou a me induzir a este erro

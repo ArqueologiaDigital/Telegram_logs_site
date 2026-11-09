@@ -1,0 +1,104 @@
+[2022-02-17 05:16:00] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/19138.jpg
+[2022-02-17 05:16:00] Felipe "Juca" Sanches: closed: LaserWriter video output doesn't work
+(mame/mamedev issue #8411)
+
+"@jrmuizel managed to get video output sort of working."
+
+https://github.com/mamedev/mame/issues/8411#issuecomment-903206590
+[2022-02-17 05:17:14] Felipe "Juca" Sanches: adoro ver a galera do MAME emulando impressoras ;-D
+[2022-02-17 09:08:32] Shideravan: Onde ele está dando a saída? Em tempo real em tela ou em um arquivo?
+[2022-02-17 09:10:56] Shideravan: Ahh pelo comentário na issue acho que é só na tela mesmo
+[2022-02-17 09:12:12] Shideravan: Tá aí uma forma de melhorar. Além de dar a saída em tela proporcionar uma forma de ter a saída preservada em um output em arquivo
+[2022-02-17 09:13:25] Shideravan: Penso que o formato aberto .cbz seria a melhor opção nesse caso, pois ele é aberto e literalmente só um zip com vários arquivos de imagem representando cada página
+[2022-02-17 09:15:41] Shideravan: Você gera um .png para cada página concluída e vai mantendo em uma pasta temporária, ao final da operação quando a impressora levanta o flag, você da um comando para zipar tudo e salvar como [nome_do_driver].cbz
+[2022-02-17 09:21:41] Shideravan: Como um arquivo impresso é um material não-volátil, eu acho que é interessante do ponto de vista de preservação cuidar para esse material impresso não ser perdido ao encerrar a seção com o driver
+[2022-02-17 09:22:37] Shideravan: Mas ao mesmo tempo é legal ter a saída em tela para você poder acompanhar a operação de impressão acontecendo
+[2022-02-17 09:23:43] Felipe "Juca" Sanches: Concordo. E é super divertido também ver ao vivo na tela!
+[2022-02-17 09:24:22] Shideravan: Sem dúvidas. E é uma representação do que acontece realmente com aquele driver
+[2022-02-17 09:24:29] Felipe "Juca" Sanches: Procure no YouTube por mame Epson actionprinter
+[2022-02-17 09:24:51] Shideravan: Impressoras matriciais mesmo, você vê linha a linha tudo ser impresso
+[2022-02-17 09:25:36] Shideravan: Da até para colocar uns samples do barulho que a impressora fizer na operação de impressão hahaha
+[2022-02-17 09:26:04] Felipe "Juca" Sanches: Tem um blog de um brasileiro (a URL acho que é arrozcru) que conta como foi feita a emulação da lx800/actionprinter 2000 no MAME
+[2022-02-17 09:26:50] Felipe "Juca" Sanches: É um amigo meu chamado Ramiro Polla
+[2022-02-17 09:30:11] Felipe "Juca" Sanches: No início a imagem tava renderizando meio torta. Aí ele descobriu que o firmware dava um deslocamento adicional no eixo x dependendo da direção de movimento do cabeçote para compensar a "frouxidão" natural da correia.
+
+Depois que ele adicionou uma "frouxidão virtual" no buffer de vídeo, a impressão passou a ficar perfeita no emulador
+[2022-02-17 09:31:49] Felipe "Juca" Sanches: Isso se resume em 1 palavra:
+
+GÊNIO! kkkk
+[2022-02-17 09:32:56] Shideravan: Que massa
+[2022-02-17 09:33:11] Shideravan: A gente tem que ficar atento
+[2022-02-17 09:33:29] Deleted Account: Caracaaa... Kkkkkk
+[2022-02-17 09:33:46] Shideravan: Porque as vezes alguns "pequenos defeitos" são by design hahaha
+[2022-02-17 09:34:12] Deleted Account: Mesma coisa nos sintetizadores da Roland. Eles colocam as batidas da bateria eletronica um pouquinho fora do compasso pra dar aquele ar mais natural de alguém tocando bateria.
+[2022-02-17 09:34:59] Deleted Account: Tem que inserir esses fatores aleatórios da vida real no software. Rsrs...
+[2022-02-17 09:35:34] Felipe "Juca" Sanches: MESS Paper simulator | techne gratia artis
+http://blog.arrozcru.org/?p=122
+[2022-02-17 09:41:21] Deleted Account: Mano... 100 palavras. Tem gente que realmente vai "beyond the call of duty" quando se trata de emulação.
+[2022-02-17 09:41:48] Deleted Account: E a maioria das pessoas pensa que emulação é jogar Resident Evil 2 no emulador.
+[2022-02-17 09:43:33] Shideravan: Não é. É jogar Pokémon também hahaha
+[2022-02-17 09:43:36] Shideravan: Zoeira
+[2022-02-17 09:45:03] Shideravan: Eu tava organizando um acervo para postar no Datassette esses dias para trás
+[2022-02-17 09:46:00] Shideravan: Existiram vários CD-ROM antigos, de enciclopédias virtuais como almanaque abril, a Microsoft encarta etc
+[2022-02-17 09:46:33] Shideravan: O problema é que esse conteúdo simplesmente não executa em computadores modernos
+[2022-02-17 09:47:35] Shideravan: Eu estava pensando em como seria difícil organizar quais cds funcionavam adequadamente ou não se não tivéssemos emuladores
+[2022-02-17 09:49:32] Shideravan: Preservar uma coisa direta ou indiretamente auxilia na preservação de outras
+[2022-02-17 09:51:16] Shideravan: Longe de casa, no hotel, eu pude pegar os arquivos e testar num Notebook que nem drive de cd tinha
+[2022-02-17 09:55:03] Shideravan: Até certos detalhes. Por exemplo, eu mencionei sobre emular o som gerado por esses dispositivos e a princípio pode parecer besteira
+[2022-02-17 09:55:33] Shideravan: Mas emular isso de forma acurada propícia você, por exemplo, poder simular isso daqui em ambiente virtual
+[2022-02-17 09:57:27] Shideravan: https://youtu.be/2NCviYMdV1I
+[2022-02-17 16:32:12] Felipe "Juca" Sanches: https://forums.bannister.org/ubbthreads.php?ubb=showflat&Number=119557#Post119557
+[2022-02-17 18:29:59] Ismael Luceno: é possível escrever direto no zip
+[2022-02-17 18:30:54] Shideravan: Aí ele gera um arquivo temporário do mesmo jeito hahaha
+[2022-02-17 18:31:21] Felipe "Juca" Sanches: Assista a "Cabine ASCII fotográfica no hackerspace de Liège, Bélgica" no YouTube
+https://youtu.be/cggAPthcv-c
+[2022-02-17 18:31:24] Shideravan: Acho que ambas as formas seriam válidas para resolver o problema
+[2022-02-17 18:31:36] Shideravan: Mas a questão é que é relativamente fácil de resolver
+[2022-02-17 18:31:57] Felipe "Juca" Sanches: Esse aqui é o Ramiro, meu amigo que emulou a impressora da EPSON no MAME
+[2022-02-17 18:32:00] Shideravan: Acho que no MAME atual, isso seria implementado como um plugin, correto @fsanches ?
+[2022-02-17 18:32:26] Felipe "Juca" Sanches: Não sei
+[2022-02-17 18:32:32] Shideravan: Mais um dev brasileiro no MAME olha só
+[2022-02-17 18:32:40] Felipe "Juca" Sanches: :-)
+[2022-02-17 18:33:03] Felipe "Juca" Sanches: Influência minha
+[2022-02-17 18:33:23] Shideravan: Excelente influência
+[2022-02-17 18:33:56] Felipe "Juca" Sanches: Fiquei mostrando um monte de coisas do MAME pra ele em um FISL muitos anos atrás. Aí ele fez uns experimentos, aprendeu um monte de coisas e emulou uma matricial kkkkk
+[2022-02-17 18:34:16] Shideravan: Que maneiro!
+[2022-02-17 18:34:51] Senhor Linguica: Graças ao sistema de processamento em cloud da UNICAMP um dev consegui corrigir os problemas do jogo Red Dead Redemption, no emulador de X360. Deixando ele totalmente jogável.
+[2022-02-17 18:34:52] Senhor Linguica: https://youtu.be/Cwm_z-TZllk
+[2022-02-17 18:35:26] Shideravan: Que show de bola! E ainda estão querendo cortar verba das universidades públicas, hein?
+[2022-02-17 18:35:47] Senhor Linguica: Pra vc ver
+[2022-02-17 18:35:49] Shideravan: Olha só, que orgulho que isso dá para a gente?
+[2022-02-17 18:40:31] Felipe "Juca" Sanches: Tô tentando fazer um "escambo digital" com um cara que conheci ontem. Não sei se é argentino, espanhol, sei lá. Só sei que fala espanhol. Ele faz uns desenhos maravilhosos com Inkscape, e publica tudo sob domínio público. E ele fez alguns desenhos replicando o painel frontal de equipamentos com displays de cristal líquido. Tô combinando dele fazer um desenho bonitão em SVG do PENSE BEM pra eu atualizar no simulador em javascript que fiz junto com Acidx na década passada. Em troca vou programar pro cara um simulador de timer de turnos para jogo de xadrez
+[2022-02-17 18:41:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/19197.jpg
+[2022-02-17 18:41:01] Felipe "Juca" Sanches [forwarded]: Calculadora científica realizada en Inkscape
+
+@inkscapeart
+[2022-02-17 18:41:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/19198.jpg
+[2022-02-17 18:41:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/19199.jpg
+[2022-02-17 18:41:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/19200.jpg
+[2022-02-17 18:41:42] Felipe "Juca" Sanches [forwarded]: Radio para autos realizado en Inkscape
+
+@inkscapeart
+[2022-02-17 18:42:22] L.: Caray
+[2022-02-17 18:42:45] L.: No máximo eu consigo fazer meme no Inkscape🙃
+[2022-02-17 18:43:19] Pablo Vasques Bravo-Villalba: Amazonante
+[2022-02-17 18:44:32] Felipe "Juca" Sanches: Isso me deixou curioso pra saber se tem driver de emulação dessa calculadora no MAME. Como a arte SVG está em domínio público poderíamos usá-la no emulador
+[2022-02-17 18:44:54] Felipe "Juca" Sanches: Mas ainda não verifiquei se já tem driver ou não
+[2022-02-17 18:46:43] Felipe "Juca" Sanches: De todo modo, pro Pense Bem já temos emulação do de 2017 no MAME e simulação/reimplementação em javascript no browser. Então se o cara fizer um SVG lindão, o resto é sucesso garantido
+[2022-02-17 19:04:45] Shideravan: Essa calculadora tem história comigo
+[2022-02-17 19:05:10] Shideravan: Formei engenheiro, veio um diploma para mim e outro para a Casio hahahaha
+[2022-02-17 19:11:17] Deleted Account: Que coisa linda. O cara consegue imprimir uma certa arte a um desenho flat. Muito legal.
+[2022-02-17 19:13:13] Deleted Account: Principalmente a interpretação dele do display de segmentos.
+[2022-02-17 19:16:26] Shideravan: Eu fui ver o perfil, eles têm várias artes feitas usando o inkscape por lá
+[2022-02-17 19:16:47] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/19212.jpg
+[2022-02-17 19:16:47] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/19213.jpg
+[2022-02-17 19:16:47] Shideravan [forwarded]: GAMEBOY Color Amarillo vectorizado en Inkscape
+
+@inkscapeart
+[2022-02-17 19:16:58] Deleted Account: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/19214.jpg
+[2022-02-17 19:16:58] Deleted Account: Gosto desde criança desse estilo "flat". Acho que influência dessas coleçoes comuns na década de 80 que tinham uma porção de perfis de aviões, tanques...
+[2022-02-17 19:17:50] Deleted Account: Sensacional.
+[2022-02-17 19:20:02] Shideravan: Se você pedir para ele mandar um áudio eu consigo identificar de onde ele é, estou ficando craque em identificar sotaques em espanhol hahahaha
+[2022-02-17 19:21:43] Shideravan: Mas o cara é bom, gostei bastante do trabalho dele
+[2022-02-17 19:23:02] Shideravan: Eu apoio você trazer ele para o projeto de artworks do MAME hahahaha
+[2022-02-17 20:19:55] Ismael Luceno: e eu faço a confirmação, e carimbo de certidão

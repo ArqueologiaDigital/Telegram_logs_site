@@ -1,0 +1,177 @@
+[2026-01-22 02:22:51] Felipe "Juca" Sanches: https://github.com/felipesanches/tlcs900asm
+[2026-01-22 02:23:14] Felipe "Juca" Sanches: Completamente vibe-coded. Não funciona.
+[2026-01-22 02:23:21] Felipe "Juca" Sanches: Mas continuo fazendo experimentos
+[2026-01-22 02:23:43] Felipe "Juca" Sanches: Ainda não decidi se esse papo de vibe-coding é uma merda ou se é uma revolução. Ainda me sinto dividido.
+[2026-01-22 02:24:44] Felipe "Juca" Sanches: Na verdade é "não funciona" (entre aspas). Por que na verdade funciona quase! Tá chegando perto, mas ainda não tá perfeito.
+[2026-01-22 04:58:24] Erin Pinheiro 🐿: pra mim o único vibe coding que vale a pena é codar enquanto usando um vibrador
+[2026-01-22 04:58:45] Erin Pinheiro 🐿: pra todos os outros usos, https://anthonymoser.github.io/writing/ai/haterdom/2025/08/26/i-am-an-ai-hater.html
+[2026-01-22 05:00:10] Erin Pinheiro 🐿: não confio em corrente de markov em esteroides pra gerar código. não existe lógica ali, só aproximação de resultado
+[2026-01-22 05:35:13] Pablo Vasques Bravo-Villalba: Supostamente o Linus Torvalds aprova para projetos pequenos. O que isso importa? Absolutamente nada. 🙃
+[2026-01-22 05:36:14] Pablo Vasques Bravo-Villalba: Será que às vezes não pode ser o que é preciso?
+
+PS: Sim, a água da pia batismal ferve quando ponho o dedo dentro
+[2026-01-22 05:36:59] Pablo Vasques Bravo-Villalba: Me parece um bom jeito de não conseguir resultados plenamente satisfatórios nas duas atividades 🙈
+[2026-01-22 05:38:53] Pablo Vasques Bravo-Villalba: Scam Altman 🤣
+[2026-01-22 09:01:02] Macabeus: depende de qual métrica você quer aplicar
+[2026-01-22 09:01:11] Macabeus: o “funciona” vai depender muito do que você busca
+[2026-01-22 09:01:26] Macabeus: mas, como regra geral, não precisamos de “perfeito”
+[2026-01-22 09:01:41] Macabeus: mas apenas de “bom o suficiente para atender tal métrica que queremos alcançar"
+[2026-01-22 09:02:32] Macabeus: e, nisso, algo estocástico pode resolver bem
+[2026-01-22 09:03:24] Macabeus: o mapa mental que costumo adotar é: AI para gerar código é parecido com compiladores
+[2026-01-22 09:03:52] Macabeus: um assembly feito à mão talvez seja melhor que feito por um compilador; tem casos de uso ainda para fazer um assembly artesanalment, tal como é o caso do ffmpeg
+[2026-01-22 09:04:15] Macabeus: porém, provavelmente você não é o ffmpeg, e não precisa do assembly perfeito
+[2026-01-22 09:04:31] Macabeus: logo, pode usar compiladores para produzir o resultado para o “bom o suficiente”
+[2026-01-22 09:04:52] Macabeus: no caso de LLM para código, seguindo esse raciocínio, é equivalente a um “compilador estocástico”; é uma ferramenta que pode ser útil, é bom conhecê-la
+[2026-01-22 09:06:58] Macabeus: já que estamos num grupo de preservação digital, esse é um caso que venho acompanhando e colaborando: https://blog.chrislewis.au/the-unexpected-effectiveness-of-one-shot-decompilation-with-claude/
+[2026-01-22 09:07:19] Macabeus: Descompilação é útil para preservação digital, e usar LLM para isso ajuda avançar nessa frente, tal como o post acima mostra os bons resultados
+[2026-01-22 09:08:32] Macabeus: esse é um caso que vem se mostrando bem útil, temos uma métrica clara do que queremos alcançar, e a aproximação de resultado é uma feature aqui
+[2026-01-22 09:09:05] Macabeus: aliás, “aproximação de resultado” é uma feature útil em mais casos do que somente descompilação btw
+[2026-01-22 11:57:52] Anne Isabelle: Isso me parece hydrogen bomb vs. coughing baby type of situation
+[2026-01-22 11:58:53] Anne Isabelle: I.e. você realmente precisa de uma Markov chain chapada de cocaina pra fazer decompilation? Eu não acredito que LLMs e assemblers são coisas mto parecidas
+[2026-01-22 12:00:32] Anne Isabelle: E tb acho que LLMs são um toque de merdas em termos de trust, I.e. tudo o que toca faz com que as pessoas desconfiem de todo o processo e que todos comecem a checar duplamente tudo
+[2026-01-22 13:01:42] Macabeus: você de fato não precisa, porém, acelera o resultado, e a medida que vai melhorando os toolings, o que antes era proibitivamente custoso passa a se tornar factível
+[2026-01-22 13:02:12] Macabeus: por exemplo: você não precisa de linguagens de alto nível para fazer um jogo, o roller coaster tycoon foi feito em assembly artesanal
+[2026-01-22 13:02:31] Macabeus: porém, linguagens de alto nível mais complexas viabilizam desenvolver Baldur’s Gate 3 num custo tolerável
+[2026-01-22 13:03:22] Macabeus: voltando ao caso de descompilação e preservação digital: as pessoas manualmente descompilaram zelda ocarina of time, manualmente, mas porque tinha um time de pessoas bem engajadas ao longo de 2 anos
+[2026-01-22 13:03:39] Macabeus: a pessoa do post acima está trbalhando sozinha para descompilar um outro jogo de N64, bem complexo, e está conseguindo
+[2026-01-22 13:04:08] Macabeus: não é um caso de "hydrogen bomb vs. coughing baby”, pois temos diferenças nas variáveis aqui, como de tempo, custo, complexidade
+[2026-01-22 13:05:20] Macabeus: no livro the mythical man month, publicado originalmente em 1975, o autor descreve como era a sensação dos programadores na época a respeito de usar linguagens de alto nível
+[2026-01-22 13:05:49] Macabeus: havia um nível de descrença em usar compiladors, diziam que eram lento de compilar, geravam um assembly ruim, que conseguiam fazer melhor manualmente
+[2026-01-22 13:06:49] Macabeus: porém, como podemos constatar hoje: a medida que os compiladores foram melhorando, e as linguagens de alto nível foram ganhando mais feature, os que eram céticos passaram a reavaliar o cenário, e eventualmente viram que podiam desconfiar cada vez menos, até ao ponto de não precisar checar duplamente tudo, e passaram a adotar no dia a dia
+[2026-01-22 13:08:16] Macabeus: É saudável checar, é saudável desconfiar. Porém, também é importante constantemente se atualizar conforme o cenário vai mudando
+[2026-01-22 13:08:38] Macabeus: os modelos e toolings de LLM que temos hoje em dia não são os mesmos que tínhamos quando o ChatGPT foi lançado
+[2026-01-22 13:08:48] Macabeus: assim como os compiladores que temos hoje não são os mesmos de 1975
+[2026-01-22 14:18:45] Erin Pinheiro 🐿: https://www.techspot.com/news/110983-ai-hype-meets-reality-majority-ceos-report-no.html
+[2026-01-22 14:19:29] Erin Pinheiro 🐿: pra mim GenAI, LLM é pirâmide igual Web 3.0, NFT, Bitcoin
+[2026-01-22 14:19:51] Erin Pinheiro 🐿: existe? existe
+alguém ganhou dinheiro com isso? alguém ganhou
+presta? hahaha
+[2026-01-22 14:22:17] Erin Pinheiro 🐿: eu acredito em show me the code. não existe UM uso de IA que funciona sem consertar o que gerou. e não vai existir, não adianta quantos anos eu ouvir "vai ficar melhor, só precisa treinar mais"
+[2026-01-22 14:23:18] Erin Pinheiro 🐿: IA vai quebrar e eu vou ter segurança de emprego em gari de software consertando a merda que fizeram por anos a fim
+[2026-01-22 14:27:01] Macabeus: acabei de mostrar um caso de uso...
+[2026-01-22 14:31:12] Macabeus: e o "sem consertar o que gerou” volta ao que já falei antes, ainda quando estava respondendo a mensagem do sanches: vai depender muito do que você busca
+[2026-01-22 14:49:13] Erin Pinheiro 🐿: você acha que eu estou errada e não vai me convencer 🤝 eu acho que você está errado e não vou te convencer
+[2026-01-22 14:49:41] Erin Pinheiro 🐿: vou morrer no orgulho de que nunca caí em usar IA (no sentido atual genAI/LLM do termo)
+[2026-01-22 15:02:46] Macabeus: O problema nao é estar errado, nem a intenção é te convencer de que eu estaria certo.
+
+Mas apenas que gostaria que tivesse bons argumentos para justificar qualquer ponto que seja
+[2026-01-22 15:03:02] Macabeus: Apenas buscar orgulho é um argumento pessimo, e motivação triste
+[2026-01-22 15:04:53] Erin Pinheiro 🐿: meu argumento é o mesmo desse post, e se não é "bom" o suficiente pra você, isso me afeta zero
+[2026-01-22 15:06:41] Macabeus: Estava respondendo a mensagem do sanches, e o argumento que falei foi para responder o que ele havia dito.
+
+Depois voce deu respondeu em cima das minhas mensagens, ignorando o que eu havia dito
+[2026-01-22 15:06:59] Macabeus: No minimo, isso é um comportamento estranho
+[2026-01-22 15:07:06] Erin Pinheiro 🐿: não respondi ninguém, falei no grupo
+[2026-01-22 15:07:15] Erin Pinheiro 🐿: Dei minha opinião
+[2026-01-22 15:07:28] Erin Pinheiro 🐿: você quem me respondeu querendo resposta de mim
+[2026-01-22 15:08:20] Macabeus: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36998.jpg
+[2026-01-22 15:08:20] Macabeus: Sim, por isso falei anteriormente respondendo exatamente essa parte
+[2026-01-22 15:08:48] Macabeus: Pessoa A: temos X
+Pessoa B: nao existe X
+Pessoa A: temos um exemplo de X...
+[2026-01-22 15:08:54] Macabeus: Foi somente isso
+[2026-01-22 15:08:59] Erin Pinheiro 🐿: caralho como você é chato
+[2026-01-22 15:09:01] Macabeus: Nao é bem questão de opinião
+[2026-01-22 15:12:05] Macabeus: btw o texto do post que voce mandou tem uma parte estranha, quando diz sobre Miyazaki, e remete ao que havia escrito
+[2026-01-22 15:12:11] Felipe "Juca" Sanches: Galerinha, relaxa
+[2026-01-22 15:12:23] Macabeus: A citacao do Miyazaki é de antes das AI modernas, e volta ao que disse: é importante constantemente reavaliar o cenario
+[2026-01-22 15:12:46] Felipe "Juca" Sanches: Vaca amarela cagou na panela
+[2026-01-22 15:12:54] Erin Pinheiro 🐿: https://wondermark.com/c/1062/
+[2026-01-22 15:13:03] Erin Pinheiro 🐿: eu como Juca pode deixar
+[2026-01-22 15:13:28] Macabeus: Eu to relaxado, gosto de falar sobre assunto =]
+[2026-01-22 15:13:57] Felipe "Juca" Sanches: Recomendo a todos darmos uma pausa
+[2026-01-22 16:21:16] Felipe "Juca" Sanches: Acabei de comprar ingressos pra 2 eventos que vão acontecer em Maio no UK:
+[2026-01-22 16:21:18] Felipe "Juca" Sanches: https://www.tickettailor.com/events/fusionretrobooks/2032360
+ZZAP! Live 2006
+
+Fri 15 May 2026 8:00 PM - Sat 16 May 2026 9:00 PM
+Village Hotel, CV4 9GZ
+[2026-01-22 16:22:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37016.jpg
+[2026-01-22 16:22:10] Felipe "Juca" Sanches: https://www.retrofest.uk/
+RetroFest UK - 2026
+
+STEAM - Museum of the Great Western Railway, Swindon
+Saturday May 30th - Sunday May 31st 2026
+10am to 5pm
+[2026-01-22 16:25:21] Felipe "Juca" Sanches: Bora lá, @mynameiserin ?
+[2026-01-22 16:26:45] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37018.jpg
+[2026-01-22 16:26:45] Erin Pinheiro 🐿: lol
+[2026-01-22 16:30:47] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37019.jpg
+[2026-01-22 16:30:47] Erin Pinheiro 🐿: lmao
+[2026-01-22 16:30:57] Erin Pinheiro 🐿: (não)
+[2026-01-22 16:30:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/37021.jpg
+[2026-01-22 16:30:57] Felipe "Juca" Sanches: pra mim vai ser parecido
+[2026-01-22 16:31:31] Erin Pinheiro 🐿: o retrofest talvez se eu mudar de ideia até maio
+[2026-01-22 16:31:38] Erin Pinheiro 🐿: o zzap certeza que não
+[2026-01-22 16:32:58] Macabeus: Por coincidência, eu estarei na Inglaterra no fim de maio
+[2026-01-22 16:33:27] Erin Pinheiro 🐿: onde eu realmente queria ir é aqui https://www.retrocollective.co.uk/
+[2026-01-22 16:33:44] Erin Pinheiro 🐿: mas também é uma lástima ir de trem
+[2026-01-22 16:33:57] Erin Pinheiro 🐿: pra ir pra qualquer lugar de onde eu estou é um parto
+[2026-01-22 16:49:13] Hilton Fernandes: Não esquecendo que costuma ser muito bom o assembly gerado pelos melhores compiladores. Para batê-los, o cabra tem que ser um assembleiro muito, muito bom.
+[2026-01-22 16:53:34] Hilton Fernandes: Penso nas LLM para geração de código como um estagiário muito bom mas muito inexperiente: pode ser que o código gerado até seja bacana, mas é um estagiário inexperiente e não vale a pena correr o risco usar o código sem revisão e/ou correção.
+[2026-01-22 16:56:04] Felipe "Juca" Sanches: É... mas estamos caminhando para os agentes de IA se tornarem multi-especialistas ultra-experiêntes, mas com memória-curta.
+
+Pequenos gênios com lapsos de memória recorrentes.
+[2026-01-22 16:57:11] Felipe "Juca" Sanches: O que mais tenho observado é como de tempo em tempo ocorre um estouro da janela de contexto e o bicho esquece tudo e começa a fazer cagada. Aí a gente tem que re-inserir informações que já havíamos fornecido antes.
+[2026-01-22 16:58:07] Felipe "Juca" Sanches: Mas enquanto a janela de contexto não enche, os resultados costumam ser excepcionais. Eu estou muito impressionado com o Claude Code.
+
+Absurdamente melhor do que todo o resto que eu já tinha visto antes.
+[2026-01-22 17:09:29] Hilton Fernandes: Não experimentei o Claude Code. Vou tentar um dia desses.
+
+Tive experiências mistas, às vezes boas às vezes ruins, com outras IA do mercado.
+[2026-01-22 17:11:48] Macabeus: Sim, e tem algumas ideias a respeito de como contornar isso.
+
+Tem esse texto do autor de Design Data-Intensive Applications sobre usar provas formais para balancear o risco de usar código escrito por LLM:
+https://martin.kleppmann.com/2025/12/08/ai-formal-verification.html
+[2026-01-22 17:12:48] Macabeus: E mesmo sem chegar nesse estagio de verificação formal, ainda vale usar LLM onde o risco seja baixo, como em código exploratório
+[2026-01-22 17:14:55] Macabeus: Uma forma de aproveitar isso é usar algo como o Ralph.
+
+Fazer uma lista de tarefas curtas, que precisam de pouco contexto, e assim que ela passar, cria um novo contexto pra nova tarefa.
+https://github.com/snarktank/ralph
+[2026-01-22 17:17:02] Felipe "Juca" Sanches: Eu não quero correr o risco de ter fomentado um grande off-topic aqui. Então queria lembrá-los que entrei nesse assunto pois estou experimentando fazer desenvolvimendo de coisas relacionadas a Arqueologia Digital usando o Claude Code. No momento já consegui fazer a correção de 1300 bytes da maincpu do KN5000 na reconstrução do seu código asm. Isso já é um resultado muito positivo.
+
+Além disso, também consegui instruir o Claude Code a gerar pra mim grande parte do código de um assembler substituto ao ASL, que suporte o instruction set completo do TLCS900 usado no KN5000 (o TMP94C241). Aparentemente falta pouco pra ficar 100% equivalente. Estou nessa fase final de "fermentação" do código hahaha.
+[2026-01-22 17:17:34] Felipe "Juca" Sanches: Como tenho as ROMs originais como critério objetivo de progresso, fica bem mais fácil de rejeitar cagadas da IA.
+[2026-01-22 17:19:10] Felipe "Juca" Sanches: Fiquei também bastante interessado no trabalho de um rapaz que o @macabeus entrevistou acho que ano passado no podcast da GambiConf. Um cara que faz bytematching recomp de games de N64. E ele mencionou que havia essa possibilidade de explorar o uso de IA pra acelerar os avanços. Mas na época acho que ainda não tinha avançado tanto nesse sentido.
+[2026-01-22 17:19:20] Macabeus: No meu caso, estou fazendo pesquisa de LLM para descompilação de retro games.
+
+Esse é um caso que imagino LLM ser util, pois tenho um critério bem claro do que quero alcançar 
+
+Se alguém tiver curiosidade: https://gambiconf.substack.com/p/development-journey-on-game-decompilation
+[2026-01-22 17:19:39] Macabeus: Sim, o Ethan!
+[2026-01-22 17:20:22] Macabeus: O Ethan é um que é bem cético em LLM para descompilação, a propósito 😄
+
+Mas ele está acompanhando bem o progresso e entusiasmado com as novidades
+[2026-01-22 21:02:12] Anne Isabelle: Okay, então use modelos gerados por data centers que poluem cidades inteiras pra descompilar seus joguinhos. Carpe diem.
+[2026-01-22 21:03:15] Anne Isabelle: Continue criando tecnologia sem nenhum senso do impacto social e político que elas causam
+[2026-01-22 21:03:54] Anne Isabelle: Continue achando super brilhante o Grok
+[2026-01-22 21:05:08] Anne Isabelle: Sabe de uma coisa, de que importa ser hacker, fazer eventos independentes e etc se a gente não se importa com os impactos de techs criadas por nós ou apoiadas por nós
+[2026-01-22 21:06:10] Anne Isabelle: Technology for the sake of technology nos trouxe pra esse fim de mundo que estamos vivendo, e a gente continua aplaudindo
+[2026-01-22 21:07:30] Anne Isabelle: Porque somos um bando de nerd que senta atrás de um computador e fica esperando ansiosamente for the next big thing e nao consegue minimamente criticar aquilo que a gente tá usando
+[2026-01-22 21:10:23] Macabeus: O impacto ambiental de data center é MUITO menor do que costumam falar.
+
+O ponto da agua, que muitas vezes mencionam, nem faz sentido, pois é ciclo fechado. A agua nao é destruída.
+
+Alem disso, tem efeito de segunda ordem.
+Se usar AI ajuda a avançar em tecnologias menos poluentes, logo, teve um saldo positivo, por exemplo.
+[2026-01-22 21:10:46] Macabeus: ... ninguém mencionou grok 😅
+[2026-01-22 21:11:11] Macabeus: O painel da GambiConf é exatamente por isso.
+
+Nao trago o painel pro evento à toa
+[2026-01-22 21:11:54] Anne Isabelle: O grok é só um exemplo de como a mesma tecnologia (LLM) que tá todo mundo vendendo tem sido usada pra coisas horríveis e sabemos que a forma como essas LLMs foram treinadas *vai trazer problemas*
+[2026-01-22 21:12:40] Anne Isabelle: Olha, se vc tá afim de estragar essa comunidade com seu amor por IA, eu prefiro só sair daqui
+[2026-01-22 21:12:48] Macabeus: Okay, e isso não invalida o caso de uso benefico da tecnologia
+[2026-01-22 21:12:51] Anne Isabelle: Tava mais divertido antes de trazerem IA pra cá
+[2026-01-22 21:13:31] Macabeus: ... você está levando como ataque pessoal uma conversa de uma tecnologia que tanto o Sanches como eu usam para fins de preservação digital
+[2026-01-22 21:13:35] Macabeus: Que é o tema do grupo
+[2026-01-22 21:13:35] Anne Isabelle: Fodase
+[2026-01-22 21:14:00] Macabeus: Porque voce está levando para o pessoal e sendo desnecessariamente agressiva?
+[2026-01-22 22:40:07] Erin Pinheiro 🐿: jesus cristo que pentelho
+[2026-01-22 22:41:35] Erin Pinheiro 🐿: torment nexus continua sendo tópico
+[2026-01-22 22:47:38] Macabeus: obrigado pelo construtivo feedback, vou considerar ele quando trouxer pontos que ajudem na discussão sobre preservação e AI que estava tendo
+[2026-01-22 22:47:52] Erin Pinheiro 🐿: de nada 💜
+[2026-01-22 23:31:11] Felipe "Juca" Sanches: É que não são "meus joguinhos".
+
+São "artefatos culturais que precisam ser preservados para a posteridade".
+[2026-01-22 23:44:36] Felipe "Juca" Sanches: moderei essa mensagem do @macabeus por que mensagens do tipo "se não gosta, saia desse grupo" não são aceitáveis.
+[2026-01-22 23:45:32] Felipe "Juca" Sanches: peço que todas e todos abaixem o tom, respirem e tentem re-estabelecer um diálogo civilizado

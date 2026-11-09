@@ -1,0 +1,40 @@
+[2024-01-25 04:51:28] Lord Spy: Eu quero acreditar na HotByte!
+[2024-01-25 04:54:45] Lord Spy: Eu tinha 6 anos quando lançaram o Mac... eu já era meio interessado em computadores, mas mais em vídeo games, na época.
+É muito provável que o lançamento do Mac tenha potencializado meu interesse em computadores. Para desespero dos meus pais! :P :D 
+Enfim... no final do ano seguinte ganhei um MSX!
+[2024-01-25 06:43:07] Pablo Vasques Bravo-Villalba: Eu só fui ter um MSX em 1987. 😅
+[2024-01-25 06:48:24] Pablo Vasques Bravo-Villalba: Sobre o VisiCorp Visi On, do qual até ontem eu nunca tinha ouvido falar, achei este vídeo promocional: https://youtu.be/kc4wFeVvKTI
+
+É interessante, mas claramente tem um visual mais primitivo que o sistema do Mac. E certamente é muito mais primitivo no quesito marketing, porque o Mac parecia algo que qualquer um poderia usar, enquanto o Visi On parece mais algo totalmente voltado para o escritório (o que é impressionante, realmente, ainda mais para 1983, mas um vídeo promocional com uma pessoa digitando "help" na tela do computador me pareceu meio patético. 😅
+[2024-01-25 09:12:39] Pedro de Medeiros 👾: De Visi On foi para Visi Off
+[2024-01-25 15:20:44] Guilherme Ranoya: Isso... ele era para escritório mesmo... a Visicorp foi uma das empresas de software capazes de fazer os computadores pessoais se transformarem em ferramentas de trabalho reais, e o foco era o mundo corporativo.
+
+Ele não era tosco não... não faço ideia de porque a maior parte dos vídeos que tinham online sobre ele foram sumindo. Apesar de ser realmente um sistema operacional (ele bootava do disquete e funcionava inteiramente em modo gráfico), ninguém nunca escreveu softwares para ele além da própria Visicorp, e esses softwares eram basicamente um relógio, uma calculadora, uma planilha, um processador de texto, uma agenda, e uma ferramenta para gerar gráficos estatísticos com os dados da planilha. Uma das coisas interessantes é que ele compartilhava os dados na memória entre os softwares, então você usava um software para processar a informação que estava no outro.
+
+Outro aspecto bem interessante é que ele fazia multitask (era meio lento, mas fazia). Os softwares rodavam ao mesmo tempo.
+
+Dizem que quando o Bill Gates viu a apresentação do VisiOn, ele deu uma surtada, e fez a MS ser inteira reestruturada para o desenvolvimento do Microsoft Interface Manager (que basicamente virou o Windows 1.0), porque percebeu que estavam bem atrás da concorrência. Mas acho que isso aconteceu antes dele conhecer o protótipo do MacOS. 
+
+Esse documentário aqui conta com muitos detalhes essa história do Windows: https://www.youtube.com/embed/vqt94b8bNVc?si=ymIXAERMZxGR9KCs
+(mas não menciona a influência do VisiOn)
+[2024-01-25 15:23:27] Guilherme Ranoya: Mas a verdade é que, no fundo, ele rodava muito mal... era muito lento e pesado para o hardware dos PCs do início de 1980. O ViewPoint (SO do Xerox Star) já era lento, e o hardware era muito mais parrudo.
+[2024-01-25 15:24:24] Guilherme Ranoya: Tem esse outro vídeo aqui:
+https://www.youtube.com/watch?v=o0EdSLvzvdk
+[2024-01-25 15:29:03] Guilherme Ranoya: Tem essa página aqui que detalha mais sobre o VisiOn, e tem, inclusive, os arquivos de instalação. Mas eu nunca consegui emular.
+
+http://toastytech.com/guis/vision.html
+
+Já vi um monte de gente tentar, e também não chegar a lugar nenhum...
+[2024-01-25 15:32:01] Guilherme Ranoya: E tem também esse vídeo que compara o ViewPoint (Xerox) com o Lisa OS (que é o protótipo do MacOS 1.0):
+
+https://www.youtube.com/watch?v=pBiWtJJN5zk
+[2024-01-25 15:47:46] Guilherme Ranoya: Mas acho que o detalhe mais importante entre essas primeiras experiências da computação com aspecto mais visual, é que o Xerox Star custava em torno de US$80.000,00 (juntando a interface com impressora em rede, e a própria impressora, chegava a US$100.000,00).
+
+O Apple Lisa estava planejado para ser lançado na faixa de US$10.000,00. Apesar de ter a "cara" dos Mac, e esse jeito de computação pessoal, a ideia era que se tratava de um computador corporativo, pois ninguém ia gastar isso em 1983 com um computador para ter em casa para a criançada jogar...
+
+O VisiOn era uma versão "pobre" de tudo isso, mas era um "feito" da computação: rodar algo razoavelmente próximo do que computadores muito mais caros, em um hardware de US$1800,00 (que na verdade era tecnologia já com 3 anos de idade), que só precisava de mais um mouse de US$280,00 para funcionar. Reparem que isso significava 25% a menos do preço do primeiro Mac, lançado a US$2500,00 um ano depois (um hardware bem mais atualizado).
+[2024-01-25 16:47:12] Leonardo Roman: Li que o VisiOn foi planejado pra ser fácil de portar para outras plataformas. Então os aplicativos rodavam em código de uma máquina virtual, e apenas um programa host era compilado para a máquina nativa. Mas nunca saiu para nada além de PC.
+[2024-01-25 18:39:39] Guilherme Ranoya: Isso... 10 anos antes da Sun Microsystems criar a VM do Java (e nos prover algo que rodava mal e era pesado para qualquer computador pela década de 90 inteira 😆)
+[2024-01-25 21:14:20] RicBit: eu nao mandei o source do pascal do wirth outro dia? ele compila para pcode, já era uma maquina virtual na decada de 70
+[2024-01-25 21:15:00] RicBit: na real o conceito de maquina virtual é anterior aos computadores, a demonstracao de que a maquina de turing é universal requer que ela emule a si mesma
+[2024-01-25 21:49:47] Deleted Account: Pascal é meio "mandela effect" né? Parecia vivíamos em um universo onde ela dominou o mercado e, de repente, sumiu. Era uma boa linguagem.

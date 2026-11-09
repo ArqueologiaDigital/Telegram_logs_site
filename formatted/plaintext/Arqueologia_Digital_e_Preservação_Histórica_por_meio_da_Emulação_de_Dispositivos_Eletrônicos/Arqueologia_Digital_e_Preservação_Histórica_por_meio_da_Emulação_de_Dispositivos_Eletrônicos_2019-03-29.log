@@ -1,0 +1,24 @@
+[2019-03-29 17:04:02] Felipe "Juca" Sanches: estou fazendo um disassembler de Z80 e tentando usar ele pra hackear o jogo GALAGA de MSX
+[2019-03-29 17:04:27] Felipe "Juca" Sanches: tá quase perfeito. Tem apenas alguns detalhes para "aparar as arestas"
+[2019-03-29 17:04:47] Felipe "Juca" Sanches: alguém aqui se interessa em me ajudar a debugar?
+[2019-03-29 17:05:16] Felipe "Juca" Sanches: to pensando em ir lá pro Garoa hoje e se alguém se interessar, posso mostrar em mais detalhes qual é a abordagem que estou usando
+[2019-03-29 17:05:38] Felipe "Juca" Sanches: o disassembler é esperto. Ele consegue discernin o que é código e o que é dado
+[2019-03-29 17:05:44] Felipe "Juca" Sanches: e é escrito em python
+[2019-03-29 17:06:10] Felipe "Juca" Sanches: e a parte esperta está isolada numa classe genérica que pode ser adaptada para qualquer CPU
+[2019-03-29 17:07:10] Felipe "Juca" Sanches: originalmente eu escrevi isso para fazer o disassembly do bytecode da máquina virtual do jogo Another World, mas alguns dias atrás iniciei a implementação de uma classe que especifica o instruction set do Z80 e alguns detalhes do hardware do MSX
+[2019-03-29 17:07:40] Felipe "Juca" Sanches: e vários meses atrás eu tinha também feito uma classe para disasm do i8048, que é o processador do Odyssey 2
+[2019-03-29 17:08:52] Felipe "Juca" Sanches: o resultado do disasm é um codigo fonte em assembly estruturadinho, com blocos de bytes declarados com db nas partes onde o disassembler não reconheceu código.
+[2019-03-29 17:09:18] Felipe "Juca" Sanches: eu montei esse resultado e a ROM resultante diverge da ROM original por alguns poucos bytes
+[2019-03-29 17:09:35] Felipe "Juca" Sanches: estou agora tentando desvendar onde foi que o disassembler comeu bola
+[2019-03-29 17:10:20] * Felipe "Juca" Sanches removed Deleted Account
+[2019-03-29 17:10:23] * Felipe "Juca" Sanches removed Deleted Account
+[2019-03-29 17:10:50] * Felipe "Juca" Sanches added kretcheu
+[2019-03-29 18:24:13] Felipe "Juca" Sanches: https://github.com/felipesanches/ExecTrace
+[2019-03-29 18:25:22] Rodrigo Tadeu: Poxa pena morar em sorocaba. Se não iria, mais para aprender
+[2019-03-29 18:25:24] Rodrigo Tadeu: Obrigado
+[2019-03-29 18:25:50] Felipe "Juca" Sanches: dá uma lida no código
+[2019-03-29 18:25:56] Felipe "Juca" Sanches: tentei deixar didático
+[2019-03-29 18:49:24] Rodrigo Tadeu: Pelo que vi ele varre as subrotinas e le os endereçamento montando a estrutura já do assembly. Bacana
+[2019-03-29 19:45:39] Felipe "Juca" Sanches: isso aí
+[2019-03-29 19:45:49] Felipe "Juca" Sanches: busca em profundidade
+[2019-03-29 19:45:54] Felipe "Juca" Sanches: mapeando todas possibilidades

@@ -1,0 +1,22 @@
+[2023-03-19 03:08:36] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=oyERJx51fgM
+[2023-03-19 03:11:42] Felipe "Juca" Sanches: O MAME tem um driver de emulação do Nokia 3310, mas eu não testei ainda pra ver em que estado está.
+[2023-03-19 04:02:02] Felipe "Juca" Sanches: Mas que coisa chata! Agora que meu teclado KN5000 está com o painel de botoes consertado, finalmente resolvi começar os esperimentos usando disquetes. E descobri que o drive de disquete está com problemas
+[2023-03-19 04:02:57] Felipe "Juca" Sanches: um disquete virgem que coloquei nele (retirado de uma caixinha aberta hoje mesmo - estava lacrada, new old stock), ficou todo riscado
+[2023-03-19 07:45:43] Felipe "Juca" Sanches: Eu aqui tentando entender o circuito relacionado a controle de disquetes no manual de serviço, e percebo que o esquemático contém erros de digitação nos nomes de alguns pinos do chip controlador de disco
+[2023-03-19 07:45:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26565.jpg
+[2023-03-19 07:46:18] Felipe "Juca" Sanches: olhando no datasheet, vejo os nomes corretos que esses pinos deveriam ter:
+[2023-03-19 07:46:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26567.jpg
+[2023-03-19 07:46:44] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26568.jpg
+[2023-03-19 17:23:54] Erin Pinheiro 🐿: abre, limpa bem as cabeças com cotonete e isopropílico
+[2023-03-19 17:25:17] Erin Pinheiro 🐿: já vi isso. é erro de scan. deixa eu achar a explicação disso
+[2023-03-19 17:25:57] Erin Pinheiro 🐿: https://www.dkriesel.com/en/blog/2013/0802_xerox-workcentres_are_switching_written_numbers_when_scanning
+[2023-03-19 17:28:01] Erin Pinheiro 🐿: os Rs na etiqueta dos pinos parecem quase idênticos, parece com esse problema
+[2023-03-19 17:44:37] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26573-wow-crazy.mp4
+[2023-03-19 18:03:31] Flávio Amieiro: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26574.jpg
+[2023-03-19 18:03:31] Flávio Amieiro: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26575.jpg
+[2023-03-19 18:03:32] Flávio Amieiro: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26576.jpg
+[2023-03-19 18:03:49] Flávio Amieiro: Vim na casa dos meus pais e achei algumas coisas das quais eu tava separado há muito tempo.
+[2023-03-19 18:04:03] Flávio Amieiro: Incluindo um Palm Vx e um jogo de gamão eletrônico
+[2023-03-19 18:04:15] Flávio Amieiro: Agora é tentar colocar eles pra funcionar de novo
+[2023-03-19 18:04:49] Flávio Amieiro: Ah, e meu Nintendo 64 tbm!
+[2023-03-19 23:26:57] Pedro de Medeiros 👾: https://retool.com/visual-basic

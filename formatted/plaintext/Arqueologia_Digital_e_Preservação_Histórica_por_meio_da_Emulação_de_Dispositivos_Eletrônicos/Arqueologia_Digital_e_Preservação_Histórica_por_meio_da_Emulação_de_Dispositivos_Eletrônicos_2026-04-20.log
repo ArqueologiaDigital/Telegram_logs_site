@@ -1,0 +1,123 @@
+[2026-04-20 00:12:05] L.: https://github.com/coremaze/ME2-Writeup
+[2026-04-20 00:25:04] Pedro de Medeiros 👾: https://www.youtube.com/watch?v=xIUkoUEMf_g
+[2026-04-20 04:34:54] Macabeus: basta ignorar quem não sabe ler disclaimer 🙈
+[2026-04-20 04:35:17] Macabeus: hm… posso falar sim sobre matching decompilation, tenho interesse em espalhar a palavra disso =]
+[2026-04-20 04:40:29] Felipe "Juca" Sanches: inclusive, vi que você acabou de lançar um software chamado Transmuter... Conta pra gente! (https://github.com/macabeus/transmuter)
+[2026-04-20 05:38:28] Shideravan: Tenho me perguntado ultimamente e a resposta é certamente mais complexa do que parece... Mas o quê realmente o número 64 no Nintendo 64 significa? 🤔
+[2026-04-20 05:40:28] Shideravan: Eu estava dando uma olhada na arquitetura do NEC VR4300 e ele não endereça efetivamente em 64 bit
+[2026-04-20 05:44:05] Shideravan: Mesmo usando arquitetura MIPSIII o endereçamento efetivo é bem mais limitado na prática
+[2026-04-20 08:35:45] Pablo Vasques Bravo-Villalba: Não endereça mas internamente é capaz de realizar cálculos em 64 bits. Aparentemente existe um custo considerável em desempenho e por isso de modo geral jogos fazem cálculos com precisão menor. Vi um vídeo do Kaze Emanuar que ele falava isso
+[2026-04-20 08:39:14] Pablo Vasques Bravo-Villalba: Mas "bitagem" em consoles clássicos é sempre uma coisa que tem mais a ver com marketing do que com a realidade da arquitetura. Por exemplo, o Master System tem um Z80 que é amplamente considerado um processador de 8 bits (apesar da ALU de 4 bits), mas tem um processador de vídeo com barramento de 16 bits. Já o PC Engine, chamado TurboGrafx16 nos EUA, tem uma CPU de 8 bits e um processadores de vídeo de 16 bits, e foi creditado como o início da era dos 16 bits, e aí? E o Mega Drive, com um 68000 (16 bits) e um Z80, poderia ser chamado de 24 bits? Não fizeram isso, mas o marketing da SNK não teve vergonha nenhuma em chamar o Neo Geo, que tem o mesmo par de processadores, de 24 bits. E por aí vai...
+[2026-04-20 08:54:20] L.: Nem x86 endereça 64 bit de memória!
+[2026-04-20 08:55:14] L.: O ponteiro pode ter 64 bit, mas na maioria das máquinas só os 48 menos significativos são usados. Em alguns processadores x86 (especialmente pra servidores) pode chegar a 53 bits
+[2026-04-20 08:59:13] Pablo Vasques Bravo-Villalba: Na Wikipedia fala que o R4200, processador no qual o VR4300 é baseado, tem um barramento de sistema de 64 bits, enquanto o outro tem um barramento simplificado de 32 bits para reduzir custos. Não faço muita ideia do que isso quer dizer no contexto da arquitetura MIPS.
+[2026-04-20 09:13:55] Shideravan: Os caras metiam na caruda 24 bits? Mas o Neo Geo só tinha 24 bits no processador de vídeo kkkkkkkkk
+[2026-04-20 09:14:15] Shideravan: Aliás, o Neo Geo é uma gambiarrazinha gostosa de ver
+[2026-04-20 09:16:38] Shideravan: Os arcades antigos não tinham problema de meter uma gambiarra para poder oferecer o ápice de gráficos e jogabilidade, afinal o importante é ser um hardware que gerasse uma experiência braba para na comparação quem tem consoles em casa se sentir motivado de querer colocar moedas/fichas no fliperama, afinal, quem ia comprar o hardware não tem problema de ser uma brincadeira cara desde que desse retorno
+[2026-04-20 09:16:45] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38308.jpg
+[2026-04-20 09:17:07] Shideravan: Comparado com os fliperamas da época, claro que era um hardware padronizado e bla bla bla
+[2026-04-20 09:17:30] Shideravan: Mas comparado com um console doméstico era um hardware bem parrudo, tanto que ficaram anos no ar
+[2026-04-20 09:18:07] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38311.jpg
+[2026-04-20 09:18:17] Shideravan: E agora tá aí de novo, né? Já que colecionador não tem medo de meter uma casa para brincar com um Neo Geo, tem mercado de gente sonhando de baciada para comprar um Neo Geo novo em 2026
+[2026-04-20 09:18:23] Pablo Vasques Bravo-Villalba: Tem muito mais mas vou parar por aqui
+[2026-04-20 09:19:41] Shideravan: Os caras do marketing meteram mesmo que ele tinha "330 megas de processamento"? Cara, isso é cara de pau demais
+[2026-04-20 09:19:53] Shideravan: 330 Mega é a capacidade de armazenamento do cartucho kkkkkkkkkkkkkkk
+[2026-04-20 09:20:06] Pablo Vasques Bravo-Villalba: "Capable of processing"
+[2026-04-20 09:20:21] Shideravan: Coloca isso aí na loja para ver se eu não meto um procon? kkkkkkkkkkkkkk
+[2026-04-20 09:20:50] Shideravan: Caramba que cara de pau
+[2026-04-20 09:20:52] Pablo Vasques Bravo-Villalba: Mas eu me lembro das revistas de videogame da época especularem que 24 bits era a soma dos 16 bits do 68000 com os 8 bits do Z80, mas parece que é realmente por conta dos processadores gráficos. Tem uma publicidade que fala em 24 bits of graphics power ou algo assim
+[2026-04-20 09:21:04] Shideravan: Descobri então porque tem gente em 2026 falando isso aqui, perai
+[2026-04-20 09:21:31] Pablo Vasques Bravo-Villalba: Só que eu acho isso doença. Ninguém fala que o Master System é um console de 16 bits por tem um processador gráfico de 16 bits
+[2026-04-20 09:21:35] L.: https://www.gamesthatwerent.com/2026/04/allo-allo-computer-fun/
+[2026-04-20 09:22:29] Shideravan: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38323-neogeo.mp4
+[2026-04-20 09:22:29] Shideravan: 2026 essa kkkkkkkkkk
+[2026-04-20 09:23:23] Pablo Vasques Bravo-Villalba: Faltam ícones de reação para expressar o mix de sensações que tive ao ouvir isso. Acho que fumar um charuto de maconha teria matado menos neurônios
+[2026-04-20 09:23:33] Shideravan: Aí o mole que a Tec Toy deu kkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+[2026-04-20 09:24:14] Shideravan: A TecToy podia falar que era 16 bit que eu não ia ter como meter o Procon kkkkkkkkkkkk
+[2026-04-20 09:24:29] Shideravan: Mas ai ela ia ter que dar cambalhota para vender Mega Drive depois kkkkkkkkkkkkkkkkkkk
+[2026-04-20 09:25:01] Shideravan: O Mega Drive que começou essa safadeza de vender videogame por bit, não foi?
+[2026-04-20 09:25:33] Shideravan: Acho que por isso que o Master é considerado de "8-bit" para parecer fraco frente ao Mega Drive com o 16-bit gigante na carcaça kkkkkkkkkkkk
+[2026-04-20 09:26:30] Pablo Vasques Bravo-Villalba: É, e ainda bem que ninguém quis comparar com o Intellivision que também tinha um processador de 16 bits 😜
+[2026-04-20 09:27:02] Shideravan: Console atual tá endereçando em 64-bit?
+[2026-04-20 09:27:31] Shideravan: Jaguar = PS5 Pro kkkkkkkkkkkkkkkkkkkkkkkkk
+[2026-04-20 09:27:34] Pablo Vasques Bravo-Villalba: Acho que, como a L. disse antes, ninguém endereça em 64 bits de verdade 😅
+[2026-04-20 09:28:56] Shideravan: Que vergonha, pleno 2026 e o hardware enfraqueceu desde 1993 kkkkkkkkkkkkkk
+[2026-04-20 09:32:15] Shideravan: Adoro a cara de pau desse clássico kkkkkkkkkkkkkkk
+
+https://www.youtube.com/watch?v=XDj3bGdb-Kw
+[2026-04-20 09:33:12] Shideravan: Marketing de videogame dos anos 90 era terra sem lei, todo mundo era leigo e eles não estavam nem aí kkkkkkkkkkkkk
+[2026-04-20 09:34:44] Shideravan: Hoje em dia um "Do the math" não ia rolar porque todo mundo "Do a Google" kkkkkkkkkk
+[2026-04-20 09:43:55] Pablo Vasques Bravo-Villalba: Complicado, aí mostram trechos dos jogos e as coisas 3D têm 5 frames por segundo
+[2026-04-20 09:44:25] Pablo Vasques Bravo-Villalba: Lembro que a primeira vez que vi F-Zero fiquei chocado foi com a fluidez do efeito. Tudo bem que não era realmente 3D, mas o ponto era ser fluido
+[2026-04-20 09:57:08] Shideravan: Se bem que ainda tem doido pagando internet para falar na internet que Neo Geo era 320 bit (era 330 errou kkkk)
+[2026-04-20 09:57:42] Shideravan: Se bem que nem uma propaganda gostosamente cara de pau dessa foi capaz de salvar o Jaguar kkkkkkkkkkkkkkkkkk
+[2026-04-20 09:58:28] Shideravan: Pois é, aí você pensa os jogos que a Atari usava para mostrar nas lojas o "64-bit": Cybermorph e Crescent Galaxy kkkkkkkkkkkkkkkk
+[2026-04-20 09:58:41] Shideravan: Nem para ser um Alien vs. Predator pelo menos kkkkkkkkkkkkkkkkkk
+[2026-04-20 09:59:54] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38344.jpg
+[2026-04-20 09:59:54] Shideravan: A pessoa olhava de um lado um Sonic 2 rodando, um F-Zero...
+Aí olhava do lado um console muito mais caro rodando isso aqui:
+[2026-04-20 10:03:09] Shideravan: Do the Math @mrparn 
+1993 você criança
+
+Olha de um lado um videogame de $175 rodando F-Zero
+Olha de outro um outro de $100 ou menos rodando Sonic 2
+
+Aí você olha para o console novo de $250 rodando Crescent Galaxy
+
+Já fez as contas? kkkkkkkkkkkkk
+[2026-04-20 10:07:53] Pablo Vasques Bravo-Villalba: Em 1993 eu não era mais criança... 😅
+[2026-04-20 10:11:02] Shideravan: Então aí você já tinha consciência para não cair no golpe kkkkkkkkkkkk
+[2026-04-20 10:11:18] Shideravan: Mas não tem marketing que salvasse o JAguar kkkkkkkkkkkk
+[2026-04-20 10:11:45] Pablo Vasques Bravo-Villalba: Eu não tinha era dinheiro 😅
+[2026-04-20 10:11:58] Pablo Vasques Bravo-Villalba: Verdade
+[2026-04-20 10:12:08] Shideravan: Então ia ter que juntar para comprar o Mega Drive baratinho kkkkkkkk
+[2026-04-20 10:12:10] Pablo Vasques Bravo-Villalba: Mas assim, meu sonho era ter um Super NES
+[2026-04-20 10:12:19] Pablo Vasques Bravo-Villalba: E obviamente eu não tinha condições de comprar
+[2026-04-20 10:12:22] Shideravan: Que em 1993 eles cortaram o preço absurdamente para conseguir competir com o SNES
+[2026-04-20 10:13:07] Pablo Vasques Bravo-Villalba: Fui comprar um Mega Drive japonês, não foi caro, fiquei feliz da vida. Acho que foi em 1992 que comprei
+[2026-04-20 10:13:21] Shideravan: Aqui no Brasil o Master System estava começando a reinar ainda kkkkkkkkk
+Porque até 1992 ainda era videogame "de rico" kkkkkkkkkk
+[2026-04-20 10:13:43] Shideravan: E em 1994 com o plano real, ai todo mundo queria saber de Super Nintendo kkkkkkkkkkkk
+[2026-04-20 10:13:47] Pablo Vasques Bravo-Villalba: Não lembro direito. Foi depois que saiu Sonic.
+[2026-04-20 10:14:11] Shideravan: Era bom quando existia concorrência real nos consoles
+[2026-04-20 10:14:26] Shideravan: Hoje em dia parece que é um cartel competindo quem ferra mais o consumidor kkkkkkkkkkkkk
+[2026-04-20 10:15:08] Shideravan: Um aumenta o preço padrão do jogo para R$ 350 o outro vai e lança a R$ 500 kkkkkkkkkkk
+[2026-04-20 10:16:20] Shideravan: Acho que é por isso que a galera comemora relançamento do Neo Geo, pelo menos você não gasta dinheiro numa decepção com 2 jogos bons, já tem pelo menos uma biblioteca consolidada
+[2026-04-20 10:18:16] Pablo Vasques Bravo-Villalba: Seria interessante se tivesse um jeito fácil de fazer homebrew
+[2026-04-20 10:18:32] Pablo Vasques Bravo-Villalba: Aí muito hobbista ia querer
+[2026-04-20 10:18:39] Pablo Vasques Bravo-Villalba: Acho 😅
+[2026-04-20 10:29:04] Pedro de Medeiros 👾: O TI-99/4A também é uma máquina de 16 bits.
+[2026-04-20 10:31:00] L.: Alguns x86 modernos são 512 bits né
+[2026-04-20 10:31:34] L.: (avx512 tem registrador de 512 bits pra fazer simd :P)
+[2026-04-20 10:34:14] Pedro de Medeiros 👾: A nova arquitetura ARMv9 SVE2 suporta até 2048 bits por operação.
+[2026-04-20 10:41:56] Pedro de Medeiros 👾: O leão de chácara tá funcionando.
+[2026-04-20 10:44:37] Pedro de Medeiros 👾: Pegou spammer na botija e quicou do grupo.
+[2026-04-20 11:28:14] Pablo Vasques Bravo-Villalba: Daqui a pouco vai ter arquitetura com mais bits em uma operação do que tinha no meu primeiro computador inteiro. 😅
+
+Tive um TK83 com 2kB de memória 👀
+[2026-04-20 13:03:49] Macabeus: Claro!
+
+O objetivo do Transmuter é gerar, programaticamente, diversas variações de um código para encontrar a versão que melhor dá match no assembly de uma função.
+
+Isso é útil em projetos de matching decompilation, quando você já tem um código em alto nível que está próximo do assembly alvo, mas ainda não está idêntico.
+
+O Transmuter é uma alternativa ao Permuter (https://github.com/simonlindholm/decomp-permuter), seguindo uma abordagem bem diferente e com algumas feature extras (suportar outras linguagens além de C, integração com coding agents como Claude Code, etapa de cleanup, etc)
+[2026-04-20 14:12:51] Shideravan: Eu queria entender mais sobre a arquitetura do Neo Geo. Por que ele sendo tão popular e tão bem emulado hoje em dia não tem uma cena homebrew tão forte? O máximo que vejo são uns hacks sem vergonha que eles espetam no MVS das rodoviárias e botecos pelo Brasil
+[2026-04-20 14:13:40] Shideravan: Será que é muito complexo para desenvolverem ferramentas de homebrew? Porque é um console/arcade que certamente haveria até interesse comercial nos homebrew
+[2026-04-20 14:16:08] Shideravan: Neo Geo inclusive é um sistema que se recusa a morrer kkkkkkkkkkkkk
+[2026-04-20 14:41:24] Pablo Vasques Bravo-Villalba: Acho que realmente é um misto. Tinha mais Mega Drive na casa das pessoas, e além disso parece que o SGDK é mais maduro e completo do que as possibilidades similares para outros consoles
+[2026-04-20 14:41:52] Pablo Vasques Bravo-Villalba: Isso porque a cena para o Mega Drive parece pelo menos uma ordem de magnitude mais ativa do que as outras ☝🏽
+[2026-04-20 14:48:12] RicBit: O mega drive é o videogame mais simples que você pode escrever em C de maneira competitiva.
+[2026-04-20 16:27:31] pitanga: Contei muito essa vantagem no bairro quando ganhei meu mega drive 😁
+[2026-04-20 16:48:36] Pablo Vasques Bravo-Villalba: Eu não tinha pensado nesse fator, mas faz sentido pra mim
+[2026-04-20 16:49:27] Pablo Vasques Bravo-Villalba: E pra reforçar o meu ponto, recentemente teve uma explosão de desenvolvimento para MSX, pelo menos no ocidente. No Japão é um pouco difícil de metrificar porque eles tendem a usar soluções deles próprios e não fazem muita questão de abrir para estrangeiros, mas enfim
+[2026-04-20 16:50:10] Pablo Vasques Bravo-Villalba: Isso com certeza aconteceu devido ao amadurecimento de coisas como o MSXgl, que é uma biblioteca para desenvolvimento em C, e o MSXBAS2ROM, compilador que oferece uma quantidade considerável de recursos adicionais poderosos
+[2026-04-20 17:57:41] RicBit: o 2600 explodiu quando fizeram o batari
+[2026-04-20 18:01:34] Shideravan: @rrsengbr42 metendo o "do the math" para cima da vizinhança kkkkkkkkkkk
+[2026-04-20 18:46:38] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38394.jpg
+[2026-04-20 18:46:38] RicBit: isso aqui é bug, 100% certeza
+[2026-04-20 18:47:26] RicBit: o codigo em BF9C é unreachable, e o jr c jumpa no meio do ld (hl)
+o correto deveria ser 38 03 em bf97
+[2026-04-20 18:47:51] RicBit: engraçado o assembler deles errar isso, nao entendo como o bug surgiu
+[2026-04-20 19:08:48] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38397.jpg
+[2026-04-20 19:08:48] RicBit: curiosamente, consertaram o bug no zanac 2

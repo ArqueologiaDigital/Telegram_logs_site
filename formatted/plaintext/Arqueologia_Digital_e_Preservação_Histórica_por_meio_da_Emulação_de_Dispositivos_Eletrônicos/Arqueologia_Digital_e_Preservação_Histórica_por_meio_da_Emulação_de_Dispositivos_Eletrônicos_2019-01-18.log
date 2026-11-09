@@ -1,0 +1,53 @@
+[2019-01-18 10:40:02] Ricardo Bánffy: Trago boas novas: https://www.jwz.org/blog/2019/01/u1fb41-lower-right-block-diagonal-upper-middle-left-to-upper-centre-is-a-game-changer/?fbclid=IwAR31eekTItlZwHivaJekolQEpV8qn299bZNwc-j-sv5c_tLbvZZdMyVzL34#comment-194955
+[2019-01-18 16:19:45] Affonso Amendola [forwarded]: Bom, denovo eu virei umas duas noites seguidas e fiz um jogo novo, MAIS UM PRA ACLAMADA SERIE Fofonso's Games pra gloriosos PCs com DOS e VGA.
+
+Infelizmente n é Wumpus 2, esse projeto ta no estado Duke Nukem Forever de desenvolvimento, ou seja, no minimo 12 anos seguido de desapontamento massivo.
+
+Lhes apresento: Fofonso's Atoms VGA
+
+https://github.com/affonsoamendola/atomsVGA
+[2019-01-18 16:19:45] Affonso Amendola [forwarded]: Tem um 7z com o jogo precompilado e possivelmente funcionando na pasta release, mas ainda é preciso de dosbox pra rodar ele, pq eu ainda n escrevi um codigozinho pra rodar usando dosbox sozinho
+[2019-01-18 16:19:45] Affonso Amendola [forwarded]: (E ta faltando o how to play, se viremse :P)
+[2019-01-18 16:19:45] Affonso Amendola [forwarded]: Mas até que ta bem legalzinho, é similar mas nem tanto a campo minado, wasd e j pra fazer as coisas
+[2019-01-18 16:20:17] Affonso Amendola: É um clone de um jogo de win311 chamaod atoms
+[2019-01-18 16:20:30] Affonso Amendola: Que eu achei aleatoriamente num disco de shareware
+[2019-01-18 16:25:46] Affonso Amendola: Ahhh, e como sempre o codigo é livre e disponivel no github
+[2019-01-18 17:59:08] Felipe "Juca" Sanches: https://arcadeblogger.com/2019/01/18/arcade-odyssey-the-last-arcade/
+[2019-01-18 17:59:22] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-01/9003.jpg
+[2019-01-18 17:59:22] Felipe "Juca" Sanches: https://arcadeblogger.com/2019/01/18/arcade-odyssey-the-last-arcade/
+[2019-01-18 22:42:07] Felipe "Juca" Sanches [forwarded]: eu to portando um código C do Affonso que só compila em Turbo C, pra tentar compilar ele no GCC
+[2019-01-18 22:42:07] Felipe "Juca" Sanches [forwarded]: GCC tem target pra 8086 faz um tempo já, dá pra fazer binário DOS modo real com ele
+[2019-01-18 22:42:07] Felipe "Juca" Sanches [forwarded]: legal
+[2019-01-18 22:42:07] Felipe "Juca" Sanches [forwarded]: como fica gerar o cabeçalho?
+[2019-01-18 22:42:07] Felipe "Juca" Sanches [forwarded]: Oxi, serio?
+[2019-01-18 22:42:07] Felipe "Juca" Sanches [forwarded]: Tava sofrendo pra fazer essa joça compilar
+[2019-01-18 22:42:07] Felipe "Juca" Sanches [forwarded]: É, é necessário pra bootloaders
+[2019-01-18 22:42:07] Felipe "Juca" Sanches [forwarded]: Hmm, quem diria
+[2019-01-18 22:42:07] Felipe "Juca" Sanches [forwarded]: BIOS roda tudo em modo real
+[2019-01-18 22:42:07] Felipe "Juca" Sanches [forwarded]: (EFI é diferente, mas BIOS de PC não vai sumir tão cedo)
+[2019-01-18 22:42:07] Felipe "Juca" Sanches [forwarded]: Não lembro como funfa isso. Só sei que tem -m16 e bootloaders usam :)
+[2019-01-18 22:42:07] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-01/9015.jpg
+[2019-01-18 22:42:07] Felipe "Juca" Sanches [forwarded]: usando -m16 me aparece esse erro aí...
+[2019-01-18 22:42:07] Felipe "Juca" Sanches [forwarded]: O -m16 pelo que vi aqui vai rodar em 16 bit, mas: precisa de 386 pra rodar, e precisa caber num segmento só (64k)
+[2019-01-18 22:42:07] Felipe "Juca" Sanches [forwarded]: Mas pra converter, remove os far pointer (deixa sem), tudo que apontar pra alguma região específica da ram joga num buffer teu, etc
+[2019-01-18 22:42:07] Felipe "Juca" Sanches [forwarded]: sim, isso eu já fiz
+[2019-01-18 22:42:44] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-01/9019.jpg
+[2019-01-18 22:42:44] Felipe "Juca" Sanches: Esse é o enrosco no momento...
+[2019-01-18 22:44:49] L.: Ah, assembly inline. É só vga né? Não vai conseguir usar direto, joga fora
+[2019-01-18 22:45:03] L.: Escreve num framebuffer e blita numa surface do sdl
+[2019-01-18 22:45:59] Felipe "Juca" Sanches: quero compilar o binário de MSDOS mesmo
+[2019-01-18 22:46:46] L.: Ah. Mas por que tá reclamando de rsi? Isso só tem em long mode
+[2019-01-18 22:47:01] Felipe "Juca" Sanches: acho que é bagunça do compilador
+[2019-01-18 22:47:09] L.: Certo
+[2019-01-18 22:47:15] Felipe "Juca" Sanches: eu não saquei direito ainda a sintaxe at&t
+[2019-01-18 22:47:20] Felipe "Juca" Sanches: posso estar fazendo bobagem
+[2019-01-18 22:47:41] Felipe "Juca" Sanches: mas aquele LES aí eu vou ter que fazer alguma coisa né?
+[2019-01-18 22:48:24] L.: Sim
+[2019-01-18 22:48:40] L.: Openwatcom é livre agora btw
+[2019-01-18 22:48:44] L.: Da época do dos
+[2019-01-18 22:48:49] L.: Tem o djgpp também
+[2019-01-18 22:48:58] L.: (port do gcc pra dos)
+[2019-01-18 22:49:38] L.: Talvez melhor usar um desses dois? A ginástica de gerar binário pra dos com GCC sem estar setupado certinho pra compilação cruzada é meio chata
+[2019-01-18 22:50:14] Felipe "Juca" Sanches: viagem de sexta à noite no Garoa. É provável que amanhã eu não queira mais olhar pra isso
+[2019-01-18 22:50:23] L.: Hehehe, pode crer
+[2019-01-18 22:50:55] L.: Sinto falta de ter hackerspace assim pra fazer projeto inútil :(

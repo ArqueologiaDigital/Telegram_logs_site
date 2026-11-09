@@ -1,0 +1,18 @@
+[2025-08-22 02:13:07] L.: UNIX: A History and a Memoir by Brian Kernigthan
+
+https://www.youtube.com/watch?v=WEb_YL1K1Qg
+[2025-08-22 02:18:30] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/14049#issuecomment-3212409440
+[2025-08-22 02:19:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-08/35357.jpg
+[2025-08-22 02:19:42] Felipe "Juca" Sanches: Resultado final (agora apenas aguardando o code-review e merge...)
+[2025-08-22 10:10:06] Hugo (Agaelebê): Boa, pq vc não colocou o logo da Ensoniq ali do alto?
+[2025-08-22 11:46:52] Felipe "Juca" Sanches: Por que parece ser inviável de desenhar em um SVG pequeno e legível
+[2025-08-22 12:10:39] Hugo (Agaelebê): ah tá, entendi
+[2025-08-22 12:28:41] Felipe "Juca" Sanches: se bobear ainda vou tentar e ver o que acontece
+[2025-08-22 23:23:32] Pablo Vasques Bravo-Villalba: Nunca tinha ouvido falar nesse treco. Tudo bem, é uma história mais de software do que de hardware, mas achei interessante: https://youtu.be/pWZBQMRmW7k
+[2025-08-22 23:44:32] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-08/35363.jpg
+[2025-08-22 23:44:32] Felipe "Juca" Sanches: Não me aguentei e tentei.
+[2025-08-22 23:45:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-08/35364.jpg
+[2025-08-22 23:45:17] Felipe "Juca" Sanches: Deixei o código bem compacto usando a tag use do SVG.
+[2025-08-22 23:45:43] Felipe "Juca" Sanches: Mas o renderizador de SVG usado pelo MAME não suporta essa feature...
+[2025-08-22 23:46:27] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-08/35366.jpg
+[2025-08-22 23:46:27] Felipe "Juca" Sanches: Então modifiquei o código e ficou um pouquinho maior, mas acho que ainda no limite do aceitável...

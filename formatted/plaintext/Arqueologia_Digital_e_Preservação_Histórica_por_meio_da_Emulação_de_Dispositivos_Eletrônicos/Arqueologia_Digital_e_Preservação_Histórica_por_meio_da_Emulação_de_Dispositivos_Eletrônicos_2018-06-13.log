@@ -1,0 +1,201 @@
+[2018-06-13 12:27:01] Affonso Amendola: Ahhh, queria ter visto um desses funcionando, o que tem aqui ta morto (I think)
+[2018-06-13 12:27:09] Affonso Amendola: Tem que dar uma olhada direito e tentar consertar
+[2018-06-13 12:27:13] Affonso Amendola: Projeto pro futuro
+[2018-06-13 12:29:01] Affonso Amendola: A imagem de hd que eu tirei do XT tava cagada, eu fiz uma besteira na configuração da rotina de envio de dados pela serial e ele comeu o primeiro bit de tudo, agora eu consertei, desativando o bit de paridade (O bit de paridade tava ligado, e tava usando o bit 1 pra isso, o que comia 1 bit de cada byte, pq ele estava configurado para mandar 8 bits de dados)
+[2018-06-13 12:29:14] Affonso Amendola: Consertei e tirei uma imagem nova
+[2018-06-13 12:29:25] Affonso Amendola: Que ainda n boota no emulador de xt do mame
+[2018-06-13 12:29:32] Ronaldo: O que é aquele aparelho embaixo da cópia da Popular Electronics?
+[2018-06-13 12:29:37] Affonso Amendola: Entao é né, no idea whats going on
+[2018-06-13 12:30:37] DQ: Um Cosmac ELF
+[2018-06-13 12:31:05] Ronaldo: A geometria da imagem tá configurada corretamente? Imagino que isso seja necessário...
+[2018-06-13 12:32:24] Affonso Amendola: Sim, eu usei o CHDMAN pra criar a imagem que o mame le (queria que ele conseguisse ler imagens direto mas n sei se é possivel)
+[2018-06-13 12:32:33] Affonso Amendola: E setei la CHS como 306,4,17
+[2018-06-13 12:32:54] Affonso Amendola: Que tenho quase certeza ser a geometria certa
+[2018-06-13 12:33:40] Affonso Amendola: Mas agora ja que n funcionou eu vo dar uma pesquisada melhor
+[2018-06-13 12:34:28] Ronaldo: Não dá pra dar boot com um disquete no MAME e analisar a imagem montada?
+[2018-06-13 12:34:53] Ronaldo: Tentar ler arquivos, e tal
+[2018-06-13 12:35:01] Affonso Amendola: Good idea, ele chega a montar a imagem, talvez consiga ler algo
+[2018-06-13 12:35:13] Affonso Amendola: Vo ver isso, 1 min
+[2018-06-13 12:48:59] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5186.jpg
+[2018-06-13 12:49:15] Affonso Amendola: Ler leu :P
+[2018-06-13 12:49:46] Ronaldo: Hahahaha
+[2018-06-13 12:49:59] Ronaldo: Algo errado não está certo
+[2018-06-13 12:51:28] Affonso Amendola: Precisamente
+[2018-06-13 12:51:32] Ronaldo: Tem que pegar um leitor setorizado e ver o que está aparecendo e o que deveria aparecer no primeiro setor do disco
+[2018-06-13 12:51:39] Affonso Amendola: Entao
+[2018-06-13 12:51:47] Affonso Amendola: Eu abri ele num hex editor aí
+[2018-06-13 12:52:18] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5194.jpg
+[2018-06-13 12:52:41] Ronaldo: Mas ver do ponto de vista do MAME, ver o que o MAME está enxergando e tentar descobrir o motivo
+[2018-06-13 12:52:59] Affonso Amendola: Tem esses B66D que eu nao entendi
+[2018-06-13 12:53:12] Affonso Amendola: Mas o texto ascii guardado em lugares aleatorios no disco ta legivel
+[2018-06-13 12:53:22] Affonso Amendola: Entao teoricamente o a imagem ta boazinha
+[2018-06-13 12:53:35] Affonso Amendola: Certo?
+[2018-06-13 12:53:56] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5200.jpg
+[2018-06-13 12:54:19] Ronaldo: Será que deveria ser FF? Existe a possibilidade do bitstream ter tido bits extras inseridos em pontos aleatórios e ter se deslocado pra direita ou esquerda?
+[2018-06-13 12:54:36] Affonso Amendola: Eu vo upar essa versao pro archive pra ser acessivel pra todo mundo
+[2018-06-13 12:55:45] Ronaldo: O texto pode estar correto nas partes onde o bitstream se realinha com os bytes
+[2018-06-13 12:55:58] Ronaldo: Não sei se me faço entender...
+[2018-06-13 12:56:25] Ronaldo: Bits extras ou bits faltando
+[2018-06-13 12:59:08] Affonso Amendola: Bom, ai possivelmente teria erros nessa linha enorme de b66d ai nao?
+[2018-06-13 12:59:38] Affonso Amendola: Tipo, no meio da sequencia comecaria otra sequencia do mesmo estilo so que com valores shiftados
+[2018-06-13 12:59:41] Affonso Amendola: E isso n acontece
+[2018-06-13 13:00:09] Ronaldo: Talvez. E se b66d for ff00 deslocado um bit pra esquerda ou direita?
+[2018-06-13 13:01:37] Affonso Amendola: Nao e, b66d e um palindromo
+[2018-06-13 13:01:44] Affonso Amendola: 10110110 01101101
+[2018-06-13 13:02:20] Affonso Amendola: Shiftado fica estranho
+[2018-06-13 13:02:33] Ronaldo: Pode ser um resto da formatação física do disco, então
+[2018-06-13 13:03:40] Ronaldo: Não é viável dar boot no computador original usando um disquete pra dumpar o setor de boot?
+[2018-06-13 13:04:33] Affonso Amendola: Dumpar so o setor de boot pra um disquete pra ver se bate com a imagem?
+[2018-06-13 13:04:37] Ronaldo: Ou até pra usar um programa pra transmitir o disco pela porta serial do computador, setor a setor...
+[2018-06-13 13:04:40] Ronaldo: Sim
+[2018-06-13 13:04:55] Affonso Amendola: Entao, foi exatamente isso que eu fiz
+[2018-06-13 13:04:59] Affonso Amendola: :P
+[2018-06-13 13:05:02] Ronaldo: Hmm
+[2018-06-13 13:05:24] Affonso Amendola: Essa imagem veio de um leitor/transmissor de hd por porta serial
+[2018-06-13 13:05:28] Ronaldo: Pensei que vocês estivessem lendo o disco "na unha"
+[2018-06-13 13:05:44] Affonso Amendola: Como assim?
+[2018-06-13 13:07:19] Ronaldo: Controlando o HD diretamente, com um microcontrolador
+[2018-06-13 13:08:57] Ronaldo: Eu sugeriria dar boot com um disquete, dumpar pra um arquivo no disco o setor de boot (deve ter algo como msdos.sys e command.com legível no meio), e mexer no programa de transmissão até isso ficar igual.
+[2018-06-13 13:10:57] Ronaldo: Aquilo ali no dump não me parece um setor de boot...
+[2018-06-13 13:12:11] Ronaldo: Não precisa nem desassemblar pra ver que não tem o nome desses arquivos (ou os equivalentes) ali no meio...
+[2018-06-13 13:12:45] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5228.jpg
+[2018-06-13 13:13:03] Ronaldo: Ahhh
+[2018-06-13 13:13:09] Ronaldo: 😬
+[2018-06-13 13:13:12] Ronaldo: Tem
+[2018-06-13 13:13:13] Affonso Amendola: http://starman.vertcomp.com/asm/mbr/STDMBR.htm
+[2018-06-13 13:13:30] Affonso Amendola: Isso ta no mesmo arquivo
+[2018-06-13 13:13:35] Affonso Amendola: So que mais la embaixo
+[2018-06-13 13:14:52] Ronaldo: Existe alguma possibilidade de alguma coisa estúpida, tipo os setores estarem numerados ao contrário, algo assim?
+[2018-06-13 13:15:26] Affonso Amendola: Talvez
+[2018-06-13 13:15:52] Ronaldo: Esse computador do MAME tem uma interface de bios? A geometria está aparecendo corretamente nela?
+[2018-06-13 13:15:53] Affonso Amendola: Tipo a ordem de guardar informacao ficou meio confuso pra mim
+[2018-06-13 13:16:06] Affonso Amendola: Nao, antigo demais pra isso
+[2018-06-13 13:16:42] Affonso Amendola: Eu tirei a informacao na ordem de Setor numa track num cabecote sabe
+[2018-06-13 13:16:44] Affonso Amendola: E foi enviando
+[2018-06-13 13:17:02] Ronaldo: Dá pra montar a imagem num computador emulado mais novo, tipo um 486, e verificar a geometria no bios?
+[2018-06-13 13:17:03] Affonso Amendola: Quando estorava o setor, incrementava a track, e resetava o setor pra 1
+[2018-06-13 13:17:13] Affonso Amendola: Possivelmente
+[2018-06-13 13:17:17] Affonso Amendola: Teoricamente e compativel
+[2018-06-13 13:17:29] Affonso Amendola: E quando estorava a track, incrementava o cabecote
+[2018-06-13 13:17:36] Affonso Amendola: E o que faz mais sentido pra mim
+[2018-06-13 13:17:40] Affonso Amendola: Mas talvez seja ao contrario
+[2018-06-13 13:17:54] Affonso Amendola: Estora o setor, aumenta o cabecote, estora o cabecote aumenta a track
+[2018-06-13 13:18:06] Affonso Amendola: Isso daria uma ordem COMPLETAMENTE diferente nas coisas
+[2018-06-13 13:18:08] Ronaldo: Teria que ver, o HD todo pode estar ao contrário
+[2018-06-13 13:25:59] Affonso Amendola: Tentando num emulador de 486 ele deu hard disk controller failure
+[2018-06-13 13:26:09] Affonso Amendola: Eu n sei se e algo da imagem ou da emulacao
+[2018-06-13 13:26:31] Affonso Amendola: Acredito ser de configuracao de emulacao, pq nem formatar o disco pela bios eu consegui
+[2018-06-13 13:26:54] Affonso Amendola: E teoricamente deveria ser possivel com qualquer imagem do tamanho certo
+[2018-06-13 13:27:04] DQ: Você tem o DEBUG no Nexus?
+[2018-06-13 13:27:15] Affonso Amendola: Checando
+[2018-06-13 13:27:27] Affonso Amendola: ACREDITO que sim
+[2018-06-13 13:27:29] Affonso Amendola: Mas 2 segundos
+[2018-06-13 13:28:14] Affonso Amendola: Sim, tem o debug.com
+[2018-06-13 13:28:36] Ronaldo: Bem, podem ser os setores certos na ordem errada...
+[2018-06-13 13:29:56] DQ: Vamos ver se eu ainda lembro... Entre no debug e digite "L 100 2 0 1" e "D 100"
+[2018-06-13 13:31:03] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5263.jpg
+[2018-06-13 13:31:26] Ronaldo: Olha só
+[2018-06-13 13:31:36] Ronaldo: O setor de boot
+[2018-06-13 13:31:50] Ronaldo: Procura essa string na imagem, xxdos
+[2018-06-13 13:32:04] Ronaldo: Isso deve mostrar onde o setor de boot foi parar
+[2018-06-13 13:32:17] DQ: Este aí é o setor de boot do DOS. Mas no início da imagem deve estar o MBR. Deixa eu pensar mais um pouco...
+[2018-06-13 13:32:40] Affonso Amendola: Ta la na imagem que eu tirei, bem la no meio mas ta la
+[2018-06-13 13:32:49] Affonso Amendola: Esse setor inteiro ta bonitinho la
+[2018-06-13 13:33:29] Ronaldo: Pelo pouco que eu entendo de HDs esse deveria ser o setor zero
+[2018-06-13 13:34:16] DQ: Eu sabia estas coisas de cor, mas faz muito tempo... Digite "A 100" e entre com este programinha:
+[2018-06-13 13:34:39] DQ: MOV AX,0201
+[2018-06-13 13:34:55] DQ: MOV BX,200
+[2018-06-13 13:35:12] DQ: MOV CX,1
+[2018-06-13 13:35:17] DQ: MOV DX,80
+[2018-06-13 13:35:39] DQ: INT 13
+[2018-06-13 13:35:42] DQ: INT 3
+[2018-06-13 13:36:01] DQ: Isto deve ler o primeiro setor para o endereço 200
+[2018-06-13 13:36:25] DQ: G100 executa, deve parar no INT 3
+[2018-06-13 13:36:34] DQ: D200 vai mostrar o primeiro setor do disco.
+[2018-06-13 13:37:07] Ronaldo: Eu sou professor de inglês, tenho que dar aula, agora
+[2018-06-13 13:38:28] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5283.jpg
+[2018-06-13 13:39:55] Ronaldo: Aquele "non-system disk"
+[2018-06-13 13:40:01] DQ: Deu algo extranho, AX deveria voltar com 0001... Let me check my notes...
+[2018-06-13 13:44:18] Affonso Amendola: https://en.wikipedia.org/wiki/INT_13H
+[2018-06-13 13:44:28] DQ: Achei o erro: é G=100
+[2018-06-13 13:44:32] Affonso Amendola: Achei que daria certo
+[2018-06-13 13:44:34] Affonso Amendola: Beleza
+[2018-06-13 13:44:49] DQ: G 100 executa com um breakpoint em 100
+[2018-06-13 13:45:15] DQ: É daí mesmo que eu peguei os parâmetros!
+[2018-06-13 13:45:27] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5292.jpg
+[2018-06-13 13:45:58] DQ: Agora sim, veja se bate com a sua imagem.
+[2018-06-13 13:46:57] DQ: Obs: documentação do DEBUG: https://msdn.microsoft.com/en-us/library/cc722863.aspx
+[2018-06-13 13:47:35] DQ: Pelo menos os primeiros bytes estão batendo. Experimente um "U 200" para ver o código do bootloader
+[2018-06-13 13:48:38] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5296.jpg
+[2018-06-13 13:48:40] Affonso Amendola: Perfeito
+[2018-06-13 13:49:26] DQ: A tabela de partição deve estar logo depois daquele JMP.
+[2018-06-13 13:53:58] Affonso Amendola: Ele pula pra 02AF
+[2018-06-13 13:54:31] Affonso Amendola: So que no endereco 02AF da imagem n tem nada
+[2018-06-13 13:54:34] Affonso Amendola: Dem esse B66D
+[2018-06-13 13:54:59] DQ: Desculpa, falei besteira. A tabela de partição fica no final do setor.
+[2018-06-13 13:55:30] Affonso Amendola: No final do primeiro setor?
+[2018-06-13 13:56:14] DQ: Isso, pelo menos é o que diz este livro aqui: https://drive.google.com/file/d/0BxAzQY17Vad0bWFkTmItbk51MHc/view?usp=sharing
+[2018-06-13 13:56:56] DQ: Dê uma olhada no resto do setor que foi lido pelo INT 13 (D 280)
+[2018-06-13 13:59:27] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5306.jpg
+[2018-06-13 14:00:01] Affonso Amendola: Tbem bate com a imagem
+[2018-06-13 14:00:51] DQ: Desculpa, tem um detalhe importante: aquele JMP é relativo. Ou seja, aponta para 02AF porque está no endereço 200. Na sua imagem, que começa em 0000, a continuação do código deve estar em 00AF.
+[2018-06-13 14:01:15] Affonso Amendola: Ahhh, eu imaginei que seria algo assim
+[2018-06-13 14:01:57] DQ: O setor deve ter 512 bytes e o boot deve ocupar só um setor. Aqueles B6 6D é lixo da formatação.
+[2018-06-13 14:03:19] Affonso Amendola: Bom, o jump e o lugar para o qual se esta jumpando está na imagem
+[2018-06-13 14:03:35] Affonso Amendola: E o hex bate pra tudo
+[2018-06-13 14:03:49] Affonso Amendola: Agora pq o emulador n funciona
+[2018-06-13 14:04:52] DQ: Pelo menos parece que imagem foi gerada direito. Um possível problema a menos.
+[2018-06-13 14:07:07] DQ: Uma dúvida: como você leu o disco para gerar a imagem? Você incrementou setor, cilindro e cabeça?
+[2018-06-13 14:08:01] Affonso Amendola: Setor, depois cilindro, depois cabeca
+[2018-06-13 14:08:35] DQ: É esta a convenção do emulador no MAME?
+[2018-06-13 14:08:49] Affonso Amendola: I have no idea
+[2018-06-13 14:09:33] Affonso Amendola: Essa é uma das coisas que me deixou confuso
+[2018-06-13 14:10:08] Affonso Amendola: Achei que tinha uma convençao  setor antes de cilindro antes de cabeca
+[2018-06-13 14:10:29] DQ: Será que não tem como emulador logar os setores que está lendo? Isto ajudaria a descobrir onde está parando.
+[2018-06-13 14:10:39] Affonso Amendola: Faz mais sentido mas em todo lugar ta escrito CHS
+[2018-06-13 14:11:21] Affonso Amendola: Hmmm, a interface de debug do mame talvez ajude
+[2018-06-13 14:11:31] Affonso Amendola: Da pra ver a memoria dele
+[2018-06-13 14:11:37] Affonso Amendola: Verei isso, 2 segundos
+[2018-06-13 14:15:19] DQ: No DOS a convenção é CHS, incrementa primeiro o setor, depois a cabeça e por último o cilindro. Sei lá, acho que isto minimiza a movimentação da cabeça entre as trilhas, o que é lento.
+[2018-06-13 14:16:42] DQ: Taí uma diversão: fazer um programa que lê a sua imagem e gera uma nova mudando a ordem dos setores. Depois é só testar esta nova imagem.
+[2018-06-13 14:17:23] Affonso Amendola: Entao a imagem ta cagada
+[2018-06-13 14:17:46] Affonso Amendola: Eu acredito que o mame so coloque a imagem pro emulador ler
+[2018-06-13 14:17:48] DQ: Possivelmente. Mas pode ser que no MAME seja diferente.
+[2018-06-13 14:18:10] Affonso Amendola: Mas vo fazer isso e testar
+[2018-06-13 14:18:14] Affonso Amendola: Veremos
+[2018-06-13 14:18:35] DQ: Boa sorte, depois conta o resultado.
+[2018-06-13 14:54:55] Felipe "Juca" Sanches: hahaha
+[2018-06-13 14:58:31] Affonso Amendola: And there we motherfucking go
+[2018-06-13 14:59:07] Felipe "Juca" Sanches: subiu a imagem pro archive.org ?
+[2018-06-13 14:59:29] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5337.jpg
+[2018-06-13 14:59:37] Affonso Amendola: Rodando no mame
+[2018-06-13 14:59:44] Affonso Amendola: Bootou no dos 3.3 que tava no nexus
+[2018-06-13 14:59:55] Felipe "Juca" Sanches: uia
+[2018-06-13 14:59:55] Affonso Amendola: Sucesso total
+[2018-06-13 14:59:58] Felipe "Juca" Sanches: hahahaha
+[2018-06-13 15:00:01] Felipe "Juca" Sanches: maravilha!!!
+[2018-06-13 15:00:13] Felipe "Juca" Sanches: Hora de postar no Fiozera talvez?
+[2018-06-13 15:00:14] Affonso Amendola: Era aquilo memo, ordem errada de CHS
+[2018-06-13 15:00:25] Affonso Amendola: Hora de fazer a minha lista de estelar :P
+[2018-06-13 15:00:33] Felipe "Juca" Sanches: hahaha
+[2018-06-13 15:00:33] Felipe "Juca" Sanches: ok
+[2018-06-13 15:00:55] Affonso Amendola: Mais tarde eu posto um update la
+[2018-06-13 15:00:56] Felipe "Juca" Sanches: depois eu acho que posso usar essa imagem aí pra investigar aquelas diferenças de emulação
+[2018-06-13 15:01:01] Affonso Amendola: Sim
+[2018-06-13 15:01:08] Affonso Amendola: Vo upar a versao final pro archive
+[2018-06-13 15:01:19] Felipe "Juca" Sanches: rodando no MAME aquele programa que diz que só roda no Nexus
+[2018-06-13 15:01:26] Affonso Amendola: Boa
+[2018-06-13 15:02:11] Felipe "Juca" Sanches: parabéns, Affonso, esse é um belo resultado. Já fazia um bom tempo que você tava correndo atrás dessa!
+[2018-06-13 15:02:30] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5356-sticker.webp
+[2018-06-13 15:02:47] Affonso Amendola: Foi daorao, mas tenho que correr pro IAG
+[2018-06-13 15:02:54] Affonso Amendola: Flws galera, success
+[2018-06-13 15:03:24] Affonso Amendola: Vo upar o chd e o img
+[2018-06-13 15:03:40] Affonso Amendola: ja que n tem compressao é efetivamente a mesma imagem com um header do MAME
+[2018-06-13 15:05:02] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5361-sticker.webp
+[2018-06-13 15:06:32] Affonso Amendola: Meu link do archive sumiu por algum motivo, mais tarde eu vejo isso
+[2018-06-13 15:06:35] Affonso Amendola: Por enquanto
+[2018-06-13 15:06:44] Felipe "Juca" Sanches: ok
+[2018-06-13 15:06:48] Affonso Amendola: Divirtam-se
+[2018-06-13 15:06:57] Affonso Amendola: document: (not yet published)
+[2018-06-13 15:07:17] Affonso Amendola: document: (not yet published)
+[2018-06-13 15:27:04] Ronaldo: Aeee, foi o que eu disse

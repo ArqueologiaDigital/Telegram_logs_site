@@ -1,0 +1,13 @@
+[2022-05-09 22:09:24] * João Carlos joined the group
+[2022-05-09 22:10:25] Felipe "Juca" Sanches: João participou hoje da minha live sobre a VM do Another World no Garoa:
+[2022-05-09 22:10:42] Felipe "Juca" Sanches [forwarded]: https://www.youtube.com/watch?v=6vGGGDYRuJA
+[2022-05-09 22:11:36] João Carlos: Boa noite galera, vou guardar uma apresentação direita minha para outro dia, só marcando presença aqui
+[2022-05-09 22:12:16] L.: Tem código auto-modificavel no jogo?
+[2022-05-09 22:12:27] Felipe "Juca" Sanches: Não tem.
+[2022-05-09 22:12:54] L.: Seria interessante gerar Python a partir do código então
+[2022-05-09 22:13:25] Felipe "Juca" Sanches: Uia!
+[2022-05-09 22:13:55] Felipe "Juca" Sanches: Falaram na live hoje sobre gerar C
+[2022-05-09 22:15:40] Felipe "Juca" Sanches: Como a multitarefa é cooperativa, talvez as instruções de break possam ser implementadas com yield
+[2022-05-09 22:17:14] Felipe "Juca" Sanches: Caraca, essa é uma ideia muito divertida!
+[2022-05-09 22:19:27] L.: Eu fiz isso com um FORTH que implementei em Python na faculdade
+[2022-05-09 22:19:46] L.: Ou até mesmo função async

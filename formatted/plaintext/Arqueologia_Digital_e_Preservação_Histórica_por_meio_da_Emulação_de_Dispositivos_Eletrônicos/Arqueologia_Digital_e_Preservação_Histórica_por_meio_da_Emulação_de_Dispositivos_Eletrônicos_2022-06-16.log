@@ -1,0 +1,5 @@
+[2022-06-16 10:57:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21669.jpg
+[2022-06-16 12:36:54] Pedro de Medeiros 👾: Agora você pode acompanhar a compilação do PR: https://github.com/ArqueologiaDigital/Mines/pull/72
+[2022-06-16 12:47:28] Pedro de Medeiros 👾: Aparentemente o -lm do Debian não tem a função round.
+[2022-06-16 12:47:46] Pedro de Medeiros 👾: Resolvo isso a noite, porque agora vou sair.
+[2022-06-16 14:09:18] Felipe "Juca" Sanches: pretendo modificar as regras de build para gerar todas as ROMs necessárias sem fazer patches nas ROMs proprietárias

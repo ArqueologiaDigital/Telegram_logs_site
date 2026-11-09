@@ -1,0 +1,12 @@
+[2022-02-19 02:28:27] Felipe "Juca" Sanches [forwarded]: hi there!
+[2022-02-19 02:28:27] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/19225-chess-timer.zip
+[2022-02-19 02:28:27] Felipe "Juca" Sanches [forwarded]: Descomprima esto y cargue el archivo SVG en un navegador web como Firefox.
+
+Es un ejemplo muy simple y mínimo. No servirá de mucho. Pero creo que disfrutarás viendo los primeros pasos...
+
+Luego eche un vistazo al archivo js si tiene curiosidad por ver cómo se hace.
+[2022-02-19 02:28:27] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-02/19226-chess-timer-2022-feb-19.zip
+[2022-02-19 02:28:27] Felipe "Juca" Sanches [forwarded]: OK, aquí está la cosa completa. Estaré encantado de hacer ajustes, en caso de que haya implementado algo incorrectamente.
+[2022-02-19 02:28:27] Felipe "Juca" Sanches [forwarded]: Para usarlo, puede hacer clic en los botones de los jugadores para alternar los temporizadores de cuenta regresiva, así como en el botón rojo central para restablecer los temporizadores.
+[2022-02-19 02:28:27] Felipe "Juca" Sanches [forwarded]: ¿el temporizador hace un sonido? Si es así, entonces yo podría agregar algunos sonidos si es necesario.
+[2022-02-19 02:28:27] Felipe "Juca" Sanches [forwarded]: beep beep?

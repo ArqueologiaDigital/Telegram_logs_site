@@ -1,0 +1,20 @@
+[2019-08-07 09:49:31] Felipe "Juca" Sanches [forwarded]: mês passado eu comprei uma placa JAMMA do jogo Ms Pac-Man de 1981, da MIDWAY. Ao ligar a placa, o jogo rolou numa boa com som e vídeo bons exceto por um pouco de instabilidade no sincronismo vertical
+[2019-08-07 09:49:31] Felipe "Juca" Sanches [forwarded]: reparei que a imagem da tela balançava mais quando a placa emitia sons. E a imagem ficava mais estável quando o jogo estava em silencio. Claramente havia alguma interferencia vindo do circuito de áudio
+[2019-08-07 09:49:31] Felipe "Juca" Sanches [forwarded]: ontem fui ao Garoa abrir o espaço para a atividade de FreeCAD com o @yorikvanhavre e depois de fazer a introdução sobre o Garoa para os novos visitantes, fui lá pro lab de eletronica inspecionar a placa de arcade
+[2019-08-07 09:49:31] Felipe "Juca" Sanches [forwarded]: os capacitores do circuito de áudio já estavam obviamente ressecados (dado que provavelmente são mais velhos do que eu!)
+[2019-08-07 09:49:31] Felipe "Juca" Sanches [forwarded]: dessoldei todos os cinco capacitores e soldei no lugar capacitores novos de mesmo valor (16 volts, 100 micro-Farads)
+[2019-08-07 09:49:31] Felipe "Juca" Sanches [forwarded]: trouxe a placa pra casa, liguei e abri um belo sorriso 😃 Está consertada!
+[2019-08-07 09:49:31] Felipe "Juca" Sanches: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-08/9966.mp4
+[2019-08-07 10:36:48] Lord Spy: Cool!!!
+Eu ainda tenho que conhecer o Garoa...
+[2019-08-07 12:49:21] FTMaciel: Eu tô com uma caixa com umas 3 placas jamma do Mortal Kombat 1. E a preguiça de mexer?
+[2019-08-07 13:05:46] Felipe "Juca" Sanches [forwarded]: consertei as cores
+[2019-08-07 13:05:46] Felipe "Juca" Sanches [forwarded]: não tinha nada a ver com aquela bolota de solda
+[2019-08-07 13:05:46] Felipe "Juca" Sanches [forwarded]: mas eu tive que fazer a minha própria gambiarra feia pra inverter os sinais...
+[2019-08-07 13:05:46] Felipe "Juca" Sanches [forwarded]: cortei duas trilhas, raspei a resina pra expor o cobre das duas e soldei uns pedacinhos de terminal de componente pra fazer a troca dos sinais. É feio, mas funciona.
+[2019-08-07 13:05:46] Felipe "Juca" Sanches: video: (not yet published)
+[2019-08-07 13:05:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-08/9974.jpg
+[2019-08-07 13:05:46] Felipe "Juca" Sanches [forwarded]: "É feio, mas funciona!"
+[2019-08-07 13:06:22] Felipe "Juca" Sanches: eu tenho uma JAMMA de mortal kombat aqui também. Meio bichada... se bobear é só trocar capacitores também...
+[2019-08-07 19:27:19] FTMaciel: Essas minhas também acho que é besteira. Tem som e imagem zuada.
+[2019-08-07 19:27:24] FTMaciel: Todas

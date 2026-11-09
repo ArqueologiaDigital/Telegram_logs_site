@@ -1,0 +1,13 @@
+[2019-09-24 17:59:06] L.: http://www.bbc.com/future/story/20190919-the-maze-puzzle-hidden-within-an-early-video-game
+[2019-09-24 18:42:12] FTMaciel: Aquele jogo X-Man do Atari também era um jogo de labirinto onde nunca tinha um labirinto igual e nunca surgia um labirinto sem saída
+[2019-09-24 18:43:24] L.: O algoritmo de geração de labirinto daquele jogo foi bem debugado. Tiraram todos os paus durante os testes
+[2019-09-24 18:49:54] Felipe "Juca" Sanches: Temos o algoritmo misterioso dos gabaritos dos livros do pense bem...
+[2019-09-24 18:50:03] Felipe "Juca" Sanches: Que ainda falta desvendar
+[2019-09-24 19:53:21] L.: Verdade. Mas a preguiça, ó
+[2019-09-24 19:53:59] L.: Você chegou a fazer um emulador pra versão atmega do pense bem?
+[2019-09-24 19:54:05] L.: Ajudaria a achar a rotina
+[2019-09-24 19:54:16] L.: Considerando que o dump seja bom claro
+[2019-09-24 20:54:52] Leonardo Roman: Uma técnica seria responder os livros e achar o padrão.
+[2019-09-24 21:24:13] L.: Não precisa, rola usar o próprio pense bem
+[2019-09-24 21:24:37] L.: A gente já anotou a resposta de vários livros e tem uma boa noção mas ainda não acertou 100%
+[2019-09-24 21:25:49] L.: (Reimplementei o Pense Bem em JavaScript+svg junto com o @fsanches: http://labs.hardinfo.org/pb)

@@ -1,0 +1,42 @@
+[2026-09-02 00:00:52] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40366.jpg
+[2026-09-02 00:00:52] RicBit: agora namagiri faz live analysis, aqui ela deduziu que bh=0 entao sugeriu transformar mov bx,12 em mov bl,12.
+[2026-09-02 00:02:27] Felipe "Juca" Sanches: sim, a emulação dos teclados da Technics estão me tomando alguns meses pra fazer, mesmo com ajuda do Claude
+[2026-09-02 00:04:30] RicBit: pois é, para mim ele é muito bom pra trabalho braçal, mas otimização combinatória não tem muito o que fazer.
+[2026-09-02 11:37:22] Felipe "Juca" Sanches: OLHA A TRETA!!! 
+
+https://github.com/mamedev/mame/pull/16037
+[2026-09-02 13:03:02] Shideravan: @fsanches sabe se o MAME já dá suporte a algum sistema que use VHS, como o Action Max ou alguma coisa assim?
+[2026-09-02 13:06:54] Shideravan: Ia ser interessante emular alguns videos-cassetes, ou mesmo sistemas como Action Max, Hasbro Control-Vision, View-Master Interactive Vision, Bandai Terebikko, Tomy Video Challenger...
+[2026-09-02 13:07:40] Shideravan: E é especialmente preocupante, porque fitas VHS vão desmagnetizando com o tempo e ter esse tipo de sistema ajuda a pelo menos definir qual formato terão os dumps
+[2026-09-02 13:09:04] Shideravan: Eu lembro de uma época que rolou esse tipo de discussão para fitas K7 para computadores antigos, mas eu fico surpreso como o pessoal do MAME parece ignorar que VHS também é uma mídia complicada
+[2026-09-02 13:28:15] Felipe "Juca" Sanches: Tem um outro projeto chamado Project Doomsday, que tem como objetivo fazer dump de laserdiscs no nível mais raw possível e emular o mecanismo de decodificação.
+
+Esse mesmo projeto tem um canal no discord onde as pessoas tem colaborado em decodificação similar para outras mídias também.
+[2026-09-02 13:29:18] Felipe "Juca" Sanches: Eu contribuí muitos anos atrás esqueletos de drivers para gravadores/players BETACAM-SP da SONY. Mas meus drivers não fazem nada dessa parte de decodificação de sinal.
+[2026-09-02 13:30:14] Felipe "Juca" Sanches: em teoria deveria dar pra usar os sinais de controle de motores e leitura de sensores e fazer toda a emulação da parte eletromecanica de controle do cabeçote, pois tá tudo no código das ROMs que eu dumpei e cataloguei no driver
+[2026-09-02 13:30:19] Felipe "Juca" Sanches: mas nunca fiz esse corre
+[2026-09-02 15:39:13] L.: Mario pro Master!
+
+https://m.youtube.com/watch?v=HRrioabZZwM&pp=0gcJCYsCo7VqN5tD
+[2026-09-02 17:36:15] FTMaciel: https://www.sega-brasil.com.br/forum/viewtopic.php?t=7560&start=30
+[2026-09-02 17:49:55] FTMaciel: Legal foi fazer o emulador usar o modem do computador pra conectar
+[2026-09-02 19:16:45] Felipe "Juca" Sanches: Fofoca de bastidores: Hoje, depois dessa treta, o giuliozausa foi convidado pelo ctr001 e entrou no Discord server do MAME
+[2026-09-02 19:19:37] L.: https://images.gatesnotes.com/12514eb8-7b51-008e-41a9-512542cf683b/34d561c8-cf5c-4e69-af47-3782ea11482e/Original-Microsoft-Source-Code.pdf
+
+Código do Basic original da MS pro Altair!
+[2026-09-02 19:42:08] RicBit: nao sei se recomendei, mas a biografia nova do bill gates é bem legal, tem varios capitulos sobre o basic do altair
+[2026-09-02 20:12:28] L.: Esse PDF ali inclusive tinha impressão em formulário continuo num predio da MS
+[2026-09-02 20:12:48] L.: Não sei se era da época ou era "grilado" pra parecer
+[2026-09-02 20:40:14] RicBit: eu vi akira no cinema segunda feira, achei engraçado que o cientista tem display holografico, mas a impressao ée em formulario continuo, tinha ate os furinhos na lateral.
+[2026-09-02 20:43:08] L.: heh
+[2026-09-02 20:43:35] L.: não sabia que tinha voltado aos cinemas
+[2026-09-02 20:43:52] L.: talvez até vá essa semana ver a versão sem cortes da band :P
+[2026-09-02 20:58:17] RicBit: vai sim, é diferente olhar com olhos de hoje
+[2026-09-02 20:58:21] RicBit: pelo menos pra mim foi
+[2026-09-02 20:58:43] RicBit: eu lembrava que nenhum anime tinha vermelhos tao intensos quanto o akira, não sabia qual o truque
+[2026-09-02 20:58:47] RicBit: agora eu olhei e sei
+[2026-09-02 20:58:56] RicBit: os vermelhos na verdade são rosas
+[2026-09-02 20:59:09] RicBit: e no contraste o rosa lê como vermelho
+[2026-09-02 22:23:49] RicBit: eu fiz tanta mudança no emu de gameboy que ia ser dificil portar de volta as melhorias pro emu de msx.
+[2026-09-02 22:24:21] RicBit: ai eu pensei melhor, pra que eu vou fazer isso, deixa que a ai do gameboy e ai do msx se virem
+[2026-09-02 22:24:42] RicBit: estou só assistindo as duas trocando fofoca, uma ta achando bug no codigo da outra

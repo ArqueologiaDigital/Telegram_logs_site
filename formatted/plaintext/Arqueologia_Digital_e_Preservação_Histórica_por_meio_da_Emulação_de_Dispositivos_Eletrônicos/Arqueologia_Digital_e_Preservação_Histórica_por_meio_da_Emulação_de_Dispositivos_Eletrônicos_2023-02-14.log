@@ -1,0 +1,21 @@
+[2023-02-14 08:01:32] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25902.jpg
+[2023-02-14 08:01:32] Felipe "Juca" Sanches: https://fabiensanglard.net/another_world_polygons/
+[2023-02-14 08:17:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25903.jpg
+[2023-02-14 08:17:42] Felipe "Juca" Sanches: https://fabiensanglard.net/another_world_polygons_atariST/index.html
+[2023-02-14 08:17:52] Felipe "Juca" Sanches: Eu não concordo com essa explicação.
+[2023-02-14 08:18:07] Felipe "Juca" Sanches: Mas também não sei qual é a explicação correta.
+[2023-02-14 08:19:03] Felipe "Juca" Sanches: Meu motivo para não concordar é que tenho a impressão de que todos os polígonos desse inseto ainda estão inclusos nos assets do release de MSDOS
+[2023-02-14 08:19:28] Felipe "Juca" Sanches: e até o código tá lá no bytecode de MSDOS, só que dormente, nunca chamado.
+[2023-02-14 08:20:15] Felipe "Juca" Sanches: acho que a remoção foi decisão artistica do produtor, e não uma demanda por economia de espaço em disco
+[2023-02-14 08:22:47] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25909.jpg
+[2023-02-14 08:23:10] Felipe "Juca" Sanches: Tem até uns desenhos que acho que nunca foram usados em nenhum release (nem no original de Amiga, eu acho)
+[2023-02-14 08:23:28] Felipe "Juca" Sanches: Como essas imagens do inseto virando de ponta cabeça
+[2023-02-14 08:23:39] Felipe "Juca" Sanches: ou batendo as asas (supostamente voando)
+[2023-02-14 08:24:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25913.jpg
+[2023-02-14 08:26:54] Felipe "Juca" Sanches: fuçando no bytecode e re-montando o código com algumas modificações, eu consegui reincluir o besouro na versão de MSDOS, mas ele apareceu andando numa posição estranha na tela (caminhando lá no topo, em vez de andar no chão).
+
+E depois ainda apareceu fazendo um voo razante cruzando a tela. E o jogo travou logo depois que o besouro encostou no Lester. Creio que essa era pra ser uma outra forma do Lester morrer. Mas não deve ter ficado pronto a tempo e foi removido. Ou talvez julgaram que não fosse uma boa idéia.
+[2023-02-14 09:37:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25915.jpg
+[2023-02-14 09:37:17] Felipe "Juca" Sanches: O release de Atari ST foi feito em 2 disquetes. Só que 2 dos arquivos do disco 1 são também inclusos no disco 2. Acho que são dados necessários ao longo do jogo todo, talvez; Então precisam estar disponíveis no disco que estiver no drive.
+[2023-02-14 22:35:24] Flávio Amieiro: https://www.youtube.com/watch?v=Faqy23HcPiQ
+[2023-02-14 22:35:55] Flávio Amieiro: Achei que essa série (que por enquanto tem só dois videos) podia interessar algumas pessoas aqui

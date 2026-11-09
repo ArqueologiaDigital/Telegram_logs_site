@@ -1,0 +1,49 @@
+[2022-11-09 13:57:07] L.: https://twitter.com/mistydemeo/status/1590024495334846464?t=2HTObh21Ceg9WbZXR-wfZQ&s=35
+[2022-11-09 14:09:56] Anne Isabelle: Que fodaaaa
+[2022-11-09 14:10:07] Anne Isabelle: Quero instalar o Mac OS 9 no meu iBook
+[2022-11-09 14:10:19] Anne Isabelle: Mas o cara que me vendeu o teclado sumiu 😭
+[2022-11-09 15:17:34] Gunter: pra animar o trampo
+https://www.youtube.com/watch?v=GVV06jTYjeY
+[2022-11-09 15:20:07] Anne Isabelle: Me lembra Atari Teenage Riot
+[2022-11-09 15:26:14] Gunter: https://www.youtube.com/watch?v=i8JBUktSxvQ
+[2022-11-09 15:26:32] Anne Isabelle: Esse mesmo
+[2022-11-09 15:30:11] Gunter: O The Prodigy toca no fundo quando Neo pergunta para a Trinity o que é a Matrix, a música é Minfields no fundo. A letra da música dialoga com a ideia de Matrix
+https://youtu.be/9N3pBeWGwf4?t=82
+[2022-11-09 15:33:11] Gunter: Lembra demais mesmo haha
+[2022-11-09 16:28:10] Anne Isabelle: Uuuuuu
+[2022-11-09 18:21:57] L.: Encontrei uns arquivos especiais aqui :)
+
+                I - INTRODUCAO
+
+        Este boletim procura tornar claro o ambiente de desenvolvimento
+usado na geracao da Eprom Mac512/Uniton 1024.
+         Nao basta termos todo o fonte da Rom,Assembla-los e depois Linka-los.
+E' preciso pensarmos num meio que alem de agilizar todo o processo de desenvolvimento,
+nos ajude a debuggarmos a Rom.
+        O sistema de desenvolvimento adotado e' o MDS (Macintosh 68000
+Development System).
+[2022-11-09 18:22:58] L.: ;==============================================================================
+;----------------------- ROM VERSAO 3.01 ------------------------
+;--------------------------------------------------------------------------
+
+* Flags de controle de instalacao das novas rotinas:
+;       1: habilitam rotinas originais
+;       0: habilitam rotinas novas
+
+;OBS: o arquivo DtaFrk2 tem flags semelhantes para habilitacao dos patches
+;     referentes as rotinas originais. NAO ESQUECER DE MANTE-LOS IGUAIS
+;     A ESTES !!!!! Lembrar tambem de por/tirar o .Rel novo do ROM301.link
+[2022-11-09 18:23:05] L.: Pena que não tem tudo :(
+[2022-11-09 18:25:27] L.: ;/* - cNewHandle ------------------------------------------ aldof 1006 --
+;  
+;       Versao C do trap _NewHandle. Ao contrario do que ocorre no Mac
+; da Apple, no nosso ocorrera sysError 25 (dsMemFulErr) caso nao haja
+; espaco para o handle pedido (o Macintosh fica doidao e nao acusa nada)
+;
+;*/
+[2022-11-09 18:27:46] Erin Pinheiro 🐿: então era verídico que a unitron estava mesmo fazendo uma rom deles do zero e a rom copiada era só pra fins de desenvolvimento?
+[2022-11-09 18:30:34] L.: Ah, o código que tem aqui tem aquele cheirão de código desassemblado
+[2022-11-09 18:31:22] L.: Em teoria eles tavam fazendo isso em C e eu não tenho nada nos discos que tenho aqui. Tenho uns .asm mas tem muita coisa tipo procedimento chamado proc<num>, sem comentário nenhum, cheio de valor hardcoded.
+[2022-11-09 18:31:49] L.: Mas tem uns comentários fazendo referência à coisas que eles tavam melhorando no sistema ou fazendo diferente.
+[2022-11-09 18:46:18] L.: https://dougallj.wordpress.com/2022/11/09/why-is-rosetta-2-fast/
+[2022-11-09 18:55:57] L.: https://blog.adafruit.com/2022/11/09/neko-cat-history-of-a-software-pet-vintagecomputing-art/

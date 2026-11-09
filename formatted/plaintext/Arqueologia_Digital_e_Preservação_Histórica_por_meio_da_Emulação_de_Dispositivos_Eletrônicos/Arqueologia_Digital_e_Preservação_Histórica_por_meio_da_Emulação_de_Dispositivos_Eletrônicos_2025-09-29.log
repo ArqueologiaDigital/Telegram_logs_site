@@ -1,0 +1,15 @@
+[2025-09-29 00:53:05] L.: https://nanochess.org/ecs_basic.html
+[2025-09-29 16:24:09] Pedro de Medeiros 👾: https://pikuma.com/blog/how-to-make-ps1-graphics
+[2025-09-29 18:52:34] L.: Caray portaram o System 7 do Mac clássico pra x86 sem acesso ao fonte https://github.com/Kelsidavis/System7
+[2025-09-29 20:19:40] Pedro de Medeiros 👾: Uma reimplementação?
+[2025-09-29 20:20:53] L.: Descompilaram e alteraram o código até conseguir compilar de novo
+[2025-09-29 20:22:41] L.: Aí botaram suporte à PC
+[2025-09-29 20:22:51] L.: Doideira pura lol
+[2025-09-29 20:23:39] Pedro de Medeiros 👾: Achei engraçado que eles já fizeram coisas bem avançada, mas não fizeram: 
+☑️ Dropdown menu implementation
+☑️ Window dragging and resizing
+[2025-09-29 20:24:29] Pedro de Medeiros 👾: ☑️ Dialog boxes
+[2025-09-29 20:26:17] L.: Eu tinha implementado isso tudo do zero no MacacOS, o SO que eu tava fazendo antes de entrar na faculdade
+[2025-09-29 20:26:36] L.: Inclusive tinha cara de System 7
+[2025-09-29 20:26:41] L.: Ou 6
+[2025-09-29 20:30:18] L.: Era mais simples que uma implementação de verdade. É surpreendente chato fazer submenu dentro de menu pulldown

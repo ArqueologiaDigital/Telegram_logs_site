@@ -1,0 +1,70 @@
+[2021-09-29 09:56:09] Augusto Almeida: ADM
+[2021-09-29 10:07:04] Eduardo Loos: https://www.acibblumenau.com.br/noticias/blumenau-sera-sede-do-maior-acervo-de-itens-da-apple-no-brasil/1356/
+[2021-09-29 13:19:11] Felipe "Juca" Sanches [forwarded]: É nóis fazendo clone de winamp https://github.com/SerenityOS/serenity/pull/10251 😅
+[2021-09-29 15:32:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15677.jpg
+[2021-09-29 15:32:18] Felipe "Juca" Sanches: nerd-sniped...
+[2021-09-29 15:44:45] Augusto Almeida: Isso me lembra quando eu compilava as coisas no linux
+[2021-09-29 16:55:58] Felipe "Juca" Sanches: já terminou de compilar o toolchain e agora tá em 50% do build do sistema operacional em si (kernel + userspace)
+[2021-09-29 16:56:43] Felipe "Juca" Sanches: pensando em voz alta... será que esse SerenityOS não poderia ser um bom candidato para ser o ponto de partida para um sistema livre pro Technics KN5000?
+[2021-09-29 16:57:48] Felipe "Juca" Sanches: digo isso só por que me parece um sistema relativamente completo e com um codebase  bem menor que outras opções
+[2021-09-29 16:58:07] Felipe "Juca" Sanches: mas ainda conheço muito pouco para poder avaliar
+[2021-09-29 16:58:15] Felipe "Juca" Sanches: posso estar viajando na maionese
+[2021-09-29 18:31:54] Augusto Almeida: Daqui a pouco seu teclado tá fazendo café
+[2021-09-29 18:34:58] FTMaciel: Vai rodar doom?
+[2021-09-29 18:36:40] Felipe "Juca" Sanches: SerenityOS tem a VM de Another World do Fabien Sanglard 😉
+[2021-09-29 19:05:18] Shideravan: E MAME, vai rodar?
+[2021-09-29 19:05:32] Felipe "Juca" Sanches: rodar o que?!
+[2021-09-29 19:06:11] Felipe "Juca" Sanches: ah!
+[2021-09-29 19:06:14] Felipe "Juca" Sanches: entendi
+[2021-09-29 19:06:25] Felipe "Juca" Sanches: se o teclado vai rodar MAME? kkkkk
+[2021-09-29 19:06:27] Felipe "Juca" Sanches: duvido
+[2021-09-29 19:06:35] Shideravan: O mais importante em um driver no MAME é fazer MAMEception
+[2021-09-29 19:06:35] Felipe "Juca" Sanches: mas pra algum caso simples talvez role
+[2021-09-29 19:07:38] Shideravan: Como vai ter driver dele no MAME, no futuro quem sabe a gente não veja pac-man rodando no driver do KN5000 hahahaha
+[2021-09-29 19:07:58] Felipe "Juca" Sanches: affff
+[2021-09-29 19:08:02] Shideravan: hahahahaha
+[2021-09-29 19:08:04] Felipe "Juca" Sanches: mas sim, é bem possível
+[2021-09-29 19:08:40] Shideravan: Rodando a 2% da velocidade em um PC médio, mas só pelo hu3
+[2021-09-29 19:09:35] Shideravan: Geralmente para fazer mameception se usam builds bem antigas do MAME
+[2021-09-29 19:09:52] Shideravan: Aquelas dos anos 90 ainda que rodavam até em torradeira hahaha
+[2021-09-29 19:10:02] Felipe "Juca" Sanches: isso!
+[2021-09-29 19:10:41] Felipe "Juca" Sanches: aliás... eu morro de vontade de emular uma máquina de café (dessas que tem display de led pra selecionar o nível de açúcar no capuccino, etc...)
+[2021-09-29 19:11:37] Shideravan: Essas chiques de cafeteria?
+[2021-09-29 19:11:53] Shideravan: Isso é muito bom
+[2021-09-29 19:12:05] Felipe "Juca" Sanches: tinha uma época em que eu dava aula em uma escola de ensino médio e eu ficava me coçando de vontade de arranjar um momento propício para abrir a máquina de café da sala dos professores e fazer o dump da EPROM na miúda enquanto eu estivesse sozinho na sala
+
+mas o medo de ser demitido era mais forte :-P
+[2021-09-29 19:12:21] Shideravan: O MAME vai ganhar um novo significado para mim o dia que estiver fazendo o meu café hahahaha
+[2021-09-29 19:13:04] Felipe "Juca" Sanches: já cheguei até a procurar no mercado livre pra ver se tem alguma dessas cafeteiras que eu possa comprar por um preço razoável só para tornar real o meme
+[2021-09-29 19:13:26] Shideravan: O bom é que você pode pegar uma quebrada baratinho
+[2021-09-29 19:14:36] Shideravan: Aliás... Você que mora em Sampa já vi cada coisa bizarra na Sta. Efigênia. Não duvido que você cavucando numas galerias ali você não encontre isso hahaha
+[2021-09-29 19:17:43] Felipe "Juca" Sanches: Aliás... seria divertido fazer um catálogo de modelos de máquinas de café, no mesmo estilo do MAME, com metadados de fabricante, ano de lançamento, características, etc...
+
+A maioria delas não tem firmware, entõa não seria um projeto de emulacao. Seria mais um mapeamento mesmo.
+
+Mas nos casos em que tenha firmware seria divertido tentar emular ao menos algumas.
+[2021-09-29 19:17:52] Felipe "Juca" Sanches: Idem para fornos micro-ondas.
+[2021-09-29 19:18:04] Felipe "Juca" Sanches: Que é a outra piada ainda não tornada realidade no MAME.
+[2021-09-29 19:18:35] Shideravan: Olha, mesmo se não tiver firmware hoje em dia existem formas de documentar essas coisas no MAME
+[2021-09-29 19:18:40] Shideravan: Ao menos os circuitos TTL
+[2021-09-29 19:18:46] Felipe "Juca" Sanches: kkkk
+[2021-09-29 19:19:10] Felipe "Juca" Sanches: parece alinhado com esse projeto aqui:
+
+https://github.com/mamedev/mame/issues/388
+[2021-09-29 19:19:27] Shideravan: Bastante! hahahaha
+[2021-09-29 19:20:48] Shideravan: Precisamos de uma boa simulação de líquidos para representar apropriadamente a crema hahahaha
+[2021-09-29 19:22:25] Shideravan: Olha isso daqui: https://www.youtube.com/watch?v=i4KWiq3guRU
+[2021-09-29 19:23:56] Felipe "Juca" Sanches: eu tenho uns 2 ou 3 skelethon drivers de impressoras 3D no MAME. Mas pra seguir adiante precisaria da modelagem 3D e da simulação de temperatura do bico e da base assim como simulacao da extrucao plástica
+[2021-09-29 19:24:26] Felipe "Juca" Sanches: contribui skeleton drivers para "Metamaquina 2" e "Makerbot Replicator 2"
+[2021-09-29 19:24:41] Felipe "Juca" Sanches: e talvez uma terceira impressora 3d também, mas não tenho certeza
+[2021-09-29 19:25:20] Felipe "Juca" Sanches: e estou com um scanner 3d da Makerbot aqui aguardando para fazer o dump do firmware também
+[2021-09-29 19:28:12] Shideravan: Bacana, hein?
+[2021-09-29 19:28:32] Shideravan: Realmente, tem coisas que fazem com que as 3D artworks sejam uma necessidade, não tem jeito
+[2021-09-29 21:18:39] L.: O negócio é x86 apenas por enquanto. Tem x64 agora, e acho que tão começando porte pra ARM agora. Não sei se é o melhor candidato a um porte.
+
+Mesmo se fosse, teria que ver várias coisas, tipo a CPU do teclado tem MMU?
+[2021-09-29 21:19:30] L.: O SO é bem feito. Gosto que não tem código 3rd party, é tudo feito pela mesma galera seguindo o mesmo estilo. Então é fácil olhar debaixo do pano
+[2021-09-29 21:19:46] L.: Tem bastante canto vivo ainda, claro, mas é SO de hobby né
+[2021-09-29 21:24:02] Felipe "Juca" Sanches: 😉
+[2021-09-29 21:24:19] Felipe "Juca" Sanches: É... talvez seja melhor eu fazer tudo do zero
+[2021-09-29 21:24:36] Felipe "Juca" Sanches: mas é muito cedo ainda pra pensar nisso

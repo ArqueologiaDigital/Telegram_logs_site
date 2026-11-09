@@ -1,0 +1,17 @@
+[2026-01-17 00:26:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36904.jpg
+[2026-01-17 00:26:21] Felipe "Juca" Sanches: Estou experimentando usar o Claude Code pra continuar progredindo na meta de byte-matching do disasm e rebuild das ROMs do KN5000. Aparentemente ele acabou de conseguir consertar 201 bytes. Ainda preciso verificar se é roubadinha, ou se é progresso real.
+[2026-01-17 00:50:27] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36905.jpg
+[2026-01-17 00:50:27] Felipe "Juca" Sanches: Os recursos da janela de 5 horas se esgotaram em menos de 2 horas de sessão... kkkk
+[2026-01-17 00:52:17] Felipe "Juca" Sanches: Essa tarefa consome muitos recursos. Foram corrigidos "apenas" 303 bytes em duas horas de trabalho do Claude Code. (De uma imagem ROM de 2 megabytes que já estava com 99,94% de byte-matching quando eu pedi pro Claude tentar melhorar os scores, então não foi uma tarefa trivial.)
+[2026-01-17 00:53:40] Felipe "Juca" Sanches: No momento ainda não estou convencido de que é uma boa estratégia. Mas também acho bacana ter tido algum progresso automatizado, mesmo que de forma meio lenta.
+[2026-01-17 01:26:45] Felipe "Juca" Sanches: Fiz as contas aqui. Plano PRO custa 1100 reais por ano. Essa sessão gastou 13% da minha cota semanal. São 52 semanas em um ano. Então... (13%)/52 * 1100 = R$ 2,75
+303 bytes corrigidos por 2 reais e 75 centavos.
+Ou pouco mais de 1 centavo por byte :-P
+[2026-01-17 01:28:00] Felipe "Juca" Sanches: imagino que o ritmo de avanço não seja constante. E até tenha sido mais lento nessa tarefa, por já estar próximo de 100%. Mas tudo isso é especulação.
+[2026-01-17 01:30:24] Felipe "Juca" Sanches: Se não for possível ter um ritmo melhor, não vale a pena. Pois nesse ritmo, fazer o disasm completo duma ROM de 2Mbytes custaria ridículos 20 mil reais!
+Estou no meu primeiro dia de experimentos. Acho que deve ter muitos caminhos possíveis pra se otimizar melhor esse processo e reduzir a taxa de consumo de tokens.
+[2026-01-17 01:31:12] Felipe "Juca" Sanches: Mas uma coisa eu tenho certeza! Escovar bits e fazer o disasm manualmente é bem mais divertido que operar uma sessão de Claude Code.
+[2026-01-17 01:31:45] Felipe "Juca" Sanches: Sinto como se eu estivesse roubando nas regras do jogo
+[2026-01-17 14:21:32] Felipe "Juca" Sanches: 3 sessões do Claude Code reduziram de 1310 bytes errados para 177 bytes errados. Ainda não revisei se o que ele está fazendo é correto. Mas, acompanhando o histórico das sessões, muita coisa parece fazer muito sentido!
+[2026-01-17 14:22:05] Felipe "Juca" Sanches: Assim que ele chegar em 100% vou fazer uma mega revisão do código
+[2026-01-17 20:17:01] L.: https://www.abortretry.fail/p/the-olivetti-company

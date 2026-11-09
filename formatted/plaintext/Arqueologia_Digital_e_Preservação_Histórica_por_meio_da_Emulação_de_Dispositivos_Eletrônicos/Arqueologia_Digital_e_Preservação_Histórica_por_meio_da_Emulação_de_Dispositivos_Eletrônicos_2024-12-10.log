@@ -1,0 +1,17 @@
+[2024-12-10 03:23:00] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-12/33500.jpg
+[2024-12-10 03:23:00] Felipe "Juca" Sanches: Hoje o emulador de KN5000 avançou mais um passo na sequência de boot 😉
+
+Enquanto não tem HLE dos MCUs, vamos de patch com o valor 0x66 no offset 0x1B7848 da program rom pra enganar o self-test dos LEDs e botões do painel de controle. Com isso, some a mensagem de erro de comunicação entre CPUs (que na verdade era entre a maincpu e os CPanel MCUs)
+[2024-12-10 03:26:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-12/33501.jpg
+[2024-12-10 03:26:54] Felipe "Juca" Sanches: Aqui alguns trechos de disasm  relacionados a essa descoberta. O  valor 0x66 do patch transforma um  "JR NZ" em "JR Z"...
+[2024-12-10 03:26:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-12/33502.jpg
+[2024-12-10 20:30:29] Felipe "Juca" Sanches [forwarded]: Tá ficando bonito isso...
+
+Patches da program ROM usados nesses screenshots:
+EF3393 = 0E - Um RET para terminar mais rápido a carga (sem sucesso) de payload para a subCPU.
+FB7863 = E0 - Para mostrar a tela de seleção de demonstrações musicais.
+FB786B = D7, FA, 05, 0E - Para não mostrar o erro de comm. com cpanel MCUs.
+[2024-12-10 20:30:29] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-12/33504.jpg
+[2024-12-10 20:30:29] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-12/33505.jpg
+[2024-12-10 20:31:56] Felipe "Juca" Sanches: Estou acessando essas telas por meio de patches na ROM. Mas o objetivo é, com isso, entender melhor os mecanismos envolvidos no processo de boot e, consequentemente, modificar o emulador para não serem mais necessários esses hacks de ROM
+[2024-12-10 21:11:31] Pablo Vasques Bravo-Villalba: Muito bom, Juca!

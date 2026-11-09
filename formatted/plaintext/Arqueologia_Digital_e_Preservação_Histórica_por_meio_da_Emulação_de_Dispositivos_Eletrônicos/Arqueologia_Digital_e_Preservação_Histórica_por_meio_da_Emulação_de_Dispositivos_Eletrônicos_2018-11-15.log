@@ -1,0 +1,33 @@
+[2018-11-15 10:15:12] Felipe "Juca" Sanches [forwarded]: Juca, blz? Aqui é o Silas do wikilab. Cara, estou com um problema e queria saber se vc pode me indicar alguem para me ajudar. Adquiri uma workstation SGI Fuel (processador MIPS) que nao esta ligando. Estava certo que o problema seria a fonte, mas testando ela separadamente, aparentemente esta ok. Como sei praticamente nada de eletronica, preciso que um cara (ou uma mina) bao depure o problema pra mim e ver se conseguimos ligar a maquina! Estaria disposto a pagar para a pessoa.
+[2018-11-15 10:15:12] Felipe "Juca" Sanches [forwarded]: Talvez o Affonso Amendola
+[2018-11-15 10:15:49] Felipe "Juca" Sanches: Affonso, veja aí se te interessa entrar nessa investigação 😊
+[2018-11-15 10:17:10] Silas: Opa valeu
+[2018-11-15 10:17:21] Silas: Aceito ajuda galeraaaa
+[2018-11-15 10:17:47] Silas: A maquina eh essa aqui: http://gentiane.org/~miod/machineroom/machines/sgi/fuel/index.html
+[2018-11-15 10:30:34] Silas: Eh a ultima workstation da arquitetura MIPS q a SGI fabricou, antes de migrar pra Itanium e x86
+[2018-11-15 10:46:37] Deleted Account: Mesmo testando a fonte separadamente ainda pode ser a fonte 😛
+Pode ser que ela não esteja aguentando a carga. Nesse caso ao testar separadamente, vai parecer normal, mas ao ligar em uma carga que puxa bastante (o computador), a tensão cai
+[2018-11-15 10:47:18] Deleted Account: Se for muito velho, o ideal é já trocar os eletrolíticos da fonte
+[2018-11-15 10:59:09] Silas: Ahhh, lembrei q ao ligar uma lampada de X watts ela acendia de boas, mas ao ligar uma fonte de 3X watts a fonte desarmava. O cara q testou pra mim disse q podia ser q estivesse desbalanceado
+[2018-11-15 11:00:00] Deleted Account: eletrolitico tem vida útil de 5 anos. E é barato, a primeira coisa é trocar todos os velhos
+[2018-11-15 11:00:58] Deleted Account: ou botar uma fonte nova de vez, se for possível
+[2018-11-15 11:42:51] Silas: O.problema eh q eh uma fonte especifica da SGI
+[2018-11-15 11:43:07] Silas: Ate da pra adaptar uma ATX pra ela, mas eh uma.gambiarra
+[2018-11-15 11:43:20] Silas: Essa maquina eh famosa por dar problemas nas fontes
+[2018-11-15 11:49:11] Silas: http://wiki.irix.cc/Fuel_PSU_repair
+[2018-11-15 13:13:07] Affonso Amendola: Muito maneiro, eu mexi um poco com uma O2 e uma Indigo da SGI
+[2018-11-15 13:13:34] Affonso Amendola: Pelo menos pra ter certeza que o resto ta funfando deboas
+[2018-11-15 15:36:06] Ronaldo: Eu tenho uma Indy e uma O2. Aliás, nós temos um dos menores grupos de Telegram, um grupo brasileiro de SGI, hahahaha
+[2018-11-15 15:47:52] Felipe "Juca" Sanches: hahahaha
+[2018-11-15 16:05:44] Ismael Luceno: @fsanches se tens outra oportunidade de vir para Europa eu acho que poderíamos fazer uma coisa bastante interessante. Estou trabalhando com hardware que poderia ser interessante emular.
+[2018-11-15 16:06:10] Ismael Luceno: Não dá para fazer agora...
+[2018-11-15 16:06:36] Felipe "Juca" Sanches: 😊
+[2018-11-15 16:06:59] Felipe "Juca" Sanches: eu não sabia que agora você estava morando na Europa
+[2018-11-15 16:10:12] Ismael Luceno: Estou morando em Barcelona
+[2018-11-15 16:10:36] Ismael Luceno: Faz só alguns dias ;)
+[2018-11-15 16:11:43] Felipe "Juca" Sanches: 😊
+[2018-11-15 16:11:59] Felipe "Juca" Sanches: eu estive em Barcelona faz 2 meses
+[2018-11-15 16:14:27] Ismael Luceno: @fsanches sabe se alguém está trabalhando na melhora da velocidade de emulação do mame?
+[2018-11-15 16:15:39] Ismael Luceno: Eu acho que se alguém estar trabalhando em reescrever nessa área eu posso usar isso numa ideia (e se não vou ter que implementar algo eu mesmo).
+[2018-11-15 16:17:34] Ismael Luceno: Tenho alguns cores onde a emulação e tão lenta que não dá para fazer nada...
+[2018-11-15 16:29:29] Felipe "Juca" Sanches: não sei dizer. Mas lembro de ter visto algo sobre re-compilação dinâmica de código para alguns devices emulados (algumas CPUs). Acho que é algo parecido com JIT que deve ser feito. Mas realmente não sei se é isso mesmo, e nem quem são as pessoas envolvidas. Teria que dar uma olhadinha nos logs de commits...

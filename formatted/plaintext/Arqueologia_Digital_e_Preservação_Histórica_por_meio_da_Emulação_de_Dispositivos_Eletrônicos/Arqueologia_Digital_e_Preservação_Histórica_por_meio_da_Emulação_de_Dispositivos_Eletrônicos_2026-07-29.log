@@ -1,0 +1,16 @@
+[2026-07-29 00:54:09] RicBit: release de bug fix do sisne -> https://github.com/ricbit/sisne
+[2026-07-29 00:54:43] RicBit: consertei tipos errados, anotei os dados, tirei gotos, enfim a faxina.
+[2026-07-29 07:35:29] L.: https://www.datagubbe.se/scenegui/
+[2026-07-29 13:58:47] RicBit: agora que o sisne.sis está pronto pensei em abrir o command.com, na minha cabeça ele seria 100% C
+[2026-07-29 13:58:48] RicBit: mas nope
+[2026-07-29 13:58:48] RicBit: é asm ou pascal, não tem nada de C
+[2026-07-29 13:58:49] RicBit: suponho que eles reusaram o command.com em pascal do sisne1 no sisne2
+[2026-07-29 14:09:37] RicBit: nao parece pascal, e esse tem data, o command.com foi feito em 1990. é posterior ao kernel então. só se foi outro compilador, mas mesmo assim parece estranho
+[2026-07-29 14:42:55] RicBit: acho que o command.com é hand written assembly mesmo
+[2026-07-29 18:17:28] RicBit: o command.com do sisne tem o comando PAU , que serve para dar pausa.
+[2026-07-29 20:32:24] L.: muito bom
+[2026-07-29 20:32:46] L.: isso me lembra uma secadora de roupas que eu tive. sem querer eu encostei num dos botões do painel e apareceu PAU na tela
+[2026-07-29 20:32:52] L.: fiquei rindo uns 5 minutos
+[2026-07-29 20:33:01] L.: infelizmente era apenas pause mesmo
+[2026-07-29 20:41:05] Leonardo Roman: Agora fiquei imaginando uma secadora mostrando a mensagem TILT ao esbarrar nela.
+[2026-07-29 22:32:59] Flávio Amieiro: https://spritesmods.com/?art=vapourdeck

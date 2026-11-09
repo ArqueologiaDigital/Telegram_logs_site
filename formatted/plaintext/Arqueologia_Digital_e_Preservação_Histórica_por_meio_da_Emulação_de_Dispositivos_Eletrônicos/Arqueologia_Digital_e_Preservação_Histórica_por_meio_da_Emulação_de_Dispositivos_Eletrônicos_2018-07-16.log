@@ -1,0 +1,33 @@
+[2018-07-16 01:14:02] Felipe "Juca" Sanches: Affonso https://github.com/felipesanches/mame/commits/grantrak10
+[2018-07-16 01:14:46] Felipe "Juca" Sanches: Nesse branch do meu fork do repo do MAME, eu to fazendo a transcrição dos esquemáticos do jogo Gran Trak 10  para o sistema de netlist do MAME
+[2018-07-16 01:16:00] Felipe "Juca" Sanches: Tá longe ainda de funcionar, mas eu já transcrevi boa parte do circuito de geração de vídeo e é isso o que aparece na tela do emulador no momento:
+[2018-07-16 01:16:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6164.jpg
+[2018-07-16 01:46:29] Affonso Amendola: Nice
+[2018-07-16 01:47:01] Affonso Amendola: Algum breaktrough relacionado ao interlacing dele?
+[2018-07-16 08:22:39] Felipe "Juca" Sanches: tinha um sinal de VSYNC sendo gerado errado por que eu tinha comido bola na transcrição do circuito desse flip-flop
+[2018-07-16 08:23:03] Felipe "Juca" Sanches: depois que consertei isso parou de aparecer aquela linha vermelha no topo (sinal de vídeo fora da área de video ativo)
+[2018-07-16 08:23:08] Felipe "Juca" Sanches: mas fora isso mudou pouca coisa
+[2018-07-16 10:31:34] Deleted Account: emular no Qucs não ajudaria a entender?
+[2018-07-16 10:41:43] Felipe "Juca" Sanches: Nao sei o que é Qucs
+[2018-07-16 10:42:12] Deleted Account: http://qucs.sourceforge.net/
+[2018-07-16 10:42:12] Felipe "Juca" Sanches: Mas estou emulando no MAME
+[2018-07-16 10:42:51] Felipe "Juca" Sanches: E isso está me ajudando a compreender gradualmente o funcionamento do circuito
+[2018-07-16 10:42:53] Deleted Account: Pelo que entendi, o MAME não tem saída visual da emulação? O Qucs tem
+[2018-07-16 10:43:57] Felipe "Juca" Sanches: Essa é a saída visual no momento
+[2018-07-16 10:45:09] Felipe "Juca" Sanches: Me parece trabalho dobrado inserir o circuito em 2 programas distintos
+[2018-07-16 10:46:37] Felipe "Juca" Sanches: Se realmente houver vantagem em alguma feature do Qucs, seria necessario algum conversor automatico a partir da sintaxe de netlist do mame
+[2018-07-16 10:46:43] Felipe "Juca" Sanches: Ou vice-versa
+[2018-07-16 10:47:40] Felipe "Juca" Sanches: Caso contrario, provavelmente o custo do trabalho dobrado faz os beneficios serem menos interessantes
+[2018-07-16 10:48:06] Deleted Account: O Qucs mostra os sinais entrando e saindo dos componentes, parecido com a simulação do Proteus. Assim como permite montar o circuito visualmente.  É só pra olhar :)
+[2018-07-16 10:48:26] Felipe "Juca" Sanches: Pois é
+[2018-07-16 10:48:39] Felipe "Juca" Sanches: Foi o que imaginei mesmo...
+[2018-07-16 10:48:46] Felipe "Juca" Sanches: Parece interessante
+[2018-07-16 10:50:30] Felipe "Juca" Sanches: Mas no momento pode acabar sendo tambem uma distração um tanto onerosa. Gastei o domingo inteiro (literalmenre! Nem sequer almocei) trabalhando na transcrição do esquemático no MAME
+[2018-07-16 10:51:22] Felipe "Juca" Sanches: E ainda falta um monte de coisa
+[2018-07-16 10:52:18] Felipe "Juca" Sanches: O service manual da Atari tem sido muito útil pra me ajudar a entender o circuito
+[2018-07-16 12:09:13] Deleted Account: Achei o service manual do Gran Trak nesta página 
+https://edfries.wordpress.com/2017/06/14/fixing-gran-trak-10/
+[2018-07-16 12:09:59] Felipe "Juca" Sanches: Sim, esse mesmo!
+[2018-07-16 12:10:32] Felipe "Juca" Sanches: É sensacional!
+[2018-07-16 12:11:36] Deleted Account: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6191-file_2018-07-16_12-11-17.pdf
+[2018-07-16 12:11:36] Deleted Account: Gran Trak 10 - Service Manual

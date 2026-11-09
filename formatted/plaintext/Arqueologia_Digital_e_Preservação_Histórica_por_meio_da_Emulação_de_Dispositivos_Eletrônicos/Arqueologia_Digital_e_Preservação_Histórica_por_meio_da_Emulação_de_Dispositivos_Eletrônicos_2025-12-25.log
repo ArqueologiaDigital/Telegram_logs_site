@@ -1,0 +1,26 @@
+[2025-12-25 03:20:15] Felipe "Juca" Sanches: Terminei de alinhar o código (inserindo bytes zero nas instruções que têm comprimento diferente de encoding entre os dois instruction sets - o da maincpu do KN5000 e o do disassembler que suporta um modelo similar, mas não idêntico)
+[2025-12-25 03:20:38] Felipe "Juca" Sanches: Com isso alcancei 98,53% de byte-matching.
+[2025-12-25 03:20:39] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/kn5000-roms-disasm/commit/21ab6ae12f4c8dd9a80ed3b302c976a2a6d543dd
+[2025-12-25 03:21:26] Felipe "Juca" Sanches: Agora vem a parte mais complicada... que é implementar o suporte a essas instruções diferentes no assembler
+[2025-12-25 03:21:50] Felipe "Juca" Sanches: Aqui está uma comparação da ROM original e a ROM remontada:
+[2025-12-25 03:21:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36716.jpg
+[2025-12-25 03:22:29] Felipe "Juca" Sanches: Na barra lateral, à direita, dá pra ver as manchas azuis indicando onde se concentram as diferenças.
+[2025-12-25 03:22:54] Felipe "Juca" Sanches: tem um pouquinho no inicio do arquivo (que é cagada antiga minha que ainda não consertei)
+[2025-12-25 03:23:11] Felipe "Juca" Sanches: Mas o que tem pra valer mesmo de diferenças é nos últimos 30% da ROM
+[2025-12-25 03:25:03] Felipe "Juca" Sanches: Presumo que o motivo disso seja por conta das instruções que passam 3 bytes de endereçamento que não existem na CPU atualmente suportada pelo disassembler. E essa parte do código nos últimos 30% da ROM alcança essa faixa de endereço e portanto faz uso das instruções não suportadas.
+[2025-12-25 03:25:35] Felipe "Juca" Sanches: Se bobear, esse será o maior volume de correções.
+[2025-12-25 03:26:18] Felipe "Juca" Sanches: Mas sei que tem outras instruções com encoding errado também, mas que possuem o mesmo numero de bytes em ambas CPUs. Então acho que não vai ser trivial chegar em 100%.
+[2025-12-25 03:26:42] Felipe "Juca" Sanches: Um passo de cada vez. Estou feliz que hoje alcancei essa meta intermediária.
+[2025-12-25 19:17:08] Felipe "Juca" Sanches: Descobri que o assembler suporta uma sintaxe para indicar que o operando é de 24 bits fazendo assim: CP (0FFE3h:24), 00ah
+[2025-12-25 19:17:30] Felipe "Juca" Sanches: E aí o encoding da instrução resultante é correto
+[2025-12-25 19:17:55] Felipe "Juca" Sanches: Então vou continuar mais um pouco avançando no byte-matching fazendo uso dessa sintaxe.
+[2025-12-25 19:18:15] Felipe "Juca" Sanches: No momento, 98.56% :-)
+[2025-12-25 22:35:02] Felipe "Juca" Sanches: https://youtu.be/drdrkxFvsL8?si=
+[2025-12-25 22:35:44] Felipe "Juca" Sanches: Só pra constar... estou em 98.68% agora.
+[2025-12-25 23:06:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36731.jpg
+[2025-12-25 23:06:31] Felipe "Juca" Sanches: Uma forma alternativa de contar:
+
+Ainda existem 3331 linhas contendo o comentário
+"TODO: Fix ASL"
+
+(De um total de 474 mil linhas do arquivo .asm)

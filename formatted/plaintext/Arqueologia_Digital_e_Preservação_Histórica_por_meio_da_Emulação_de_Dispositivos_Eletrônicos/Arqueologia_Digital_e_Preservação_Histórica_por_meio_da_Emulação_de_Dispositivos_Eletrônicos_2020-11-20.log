@@ -1,0 +1,9 @@
+[2020-11-20 04:25:08] Felipe "Juca" Sanches [forwarded]: Hoje desenhei o símbolo do NSC800D, o processador do I7000, que não tinha ainda na biblioteca de símbolos do KICAD. É pouca coisa, mas é algo. Cumprindo minha meta de todo dia fazer um pouquinho...
+[2020-11-20 04:25:08] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-11/11638-Captura%20de%20Tela%202020-11-20%20%C3%A0s%2004.23.40.png
+[2020-11-20 22:31:57] L.: Não conhecia essa CPU! "A little-known CPU.
+
+Basically a Z80 in 8085 clothing. Has half-interrupts like the 8085, but no RIM/SIM support--and the NMI trap interrupt address was 0066H like the Z80 instead of 0024H as in the 8085. I/O port BBH when used with the register-indirect I/O instructions performs some internal configuration settings.
+
+This chip enjoyed brief popularity as an addition to the Godbout/Compupro 85/88 CPU board. With relatively simple changes, it was possible to get Z80 opcode support on that board.
+
+This is a CMOS chip with low-power "sleep" mode.". https://www.cpu-world.com/CPUs/NSC800/National%20Semiconductor-NSC800D%20-%20NSC800D-3.html

@@ -1,0 +1,43 @@
+[2021-10-19 00:13:03] Felipe "Juca" Sanches: https://www.outerspace.com.br/pioneiro-da-pixel-art-na-namco-hiroshi-ono-morre-aos-64-anos/
+[2021-10-19 06:05:51] RicBit: so sad :(
+[2021-10-19 06:50:38] Pablo Vasques Bravo-Villalba: 😢
+[2021-10-19 10:29:40] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16809.jpg
+[2021-10-19 10:29:41] Shideravan: Galera, sabem se esses leitores/gravadores de EEPROM baratinhos são bons?
+[2021-10-19 10:30:25] Shideravan: Esse aí da foto da para achar por 30 conto ou até menos se esperar vir da China
+[2021-10-19 10:32:37] Felipe "Juca" Sanches: Não conheço. Tem um link para eu ver mais detalhes?
+[2021-10-19 10:32:45] Felipe "Juca" Sanches: Como se chama?
+[2021-10-19 10:34:12] Felipe "Juca" Sanches: Minha primeira observação é que tem muito poucos pinos nesse soquete zif
+[2021-10-19 10:34:34] Felipe "Juca" Sanches: Ou seja, isso já limita bastante a utilidade
+[2021-10-19 10:37:46] Ismael Luceno: além da limitada compatibilidade pelo número de pinos, geralmente esses tem problemas com a voltagem para gravar, mas se só vai usar para memoria flash acho que não deveria ter problemas
+[2021-10-19 10:38:30] Ismael Luceno: geralmente eles suportam até 5V, as vezes só 5V
+[2021-10-19 10:41:31] Ismael Luceno: em qualquer caso, há muitas flash roms compatíveis pino por pino com eeproms, então as vezes pode simplesmente trocar elas no caso que precisar... a cypress semi fabrica
+[2021-10-19 11:35:34] Leonardo Roman: Dos "baratos", um dos melhores é o TL866 ii plus. Sai por R$250 sem os adaptadores: https://pt.aliexpress.com/item/4000206581071.html
+[2021-10-19 11:37:26] Ismael Luceno: sim, o tl866 é a melhor opção custo-benefício, tem muitos clones, e até algum intento de firmware livre
+[2021-10-19 11:38:18] Ismael Luceno: https://github.com/ProgHQ/open-tl866
+[2021-10-19 11:39:59] Ismael Luceno: como a autoelectric é uma empresa chinesa, eu acho que da para descompilar o firmware original mesmo
+[2021-10-19 11:41:16] Ismael Luceno: eu peguei o tl866+ numa oferta por apenas ~ 256,50 BRL se não me lembro errado
+[2021-10-19 11:42:38] Felipe "Juca" Sanches: eu já comprei esse aparelho algumas vezes. Depois de um tempo, com bastante uso, acaba pifando. Se me lembro bem, das 3 vezes que comprei paguei um valor médio de cerca de uns 400 reais cada.
+[2021-10-19 11:43:33] Ismael Luceno: sim, na santa efigenia eu acho comprei uma vez por 400 com accesorios...
+[2021-10-19 11:43:39] Felipe "Juca" Sanches: isso mesmo
+[2021-10-19 11:43:42] Felipe "Juca" Sanches: com acessórios
+[2021-10-19 11:43:55] Ismael Luceno: mas agora comprei na aliexpress
+[2021-10-19 11:44:13] Felipe "Juca" Sanches: uso muito pouco os adaptadores. Mas já foram úteis em algumas situacoes, sim
+[2021-10-19 11:45:03] Ismael Luceno: claro, mas na aliexpress ele está com acessorios a muito menos
+[2021-10-19 11:45:32] Felipe "Juca" Sanches: bom saber! Se esse que eu tenho aqui pifar, vou considerar comprar outro pela aliexpress então
+[2021-10-19 11:47:36] Ismael Luceno: o problema é que você nunca sabe se vai passar direto ou vai ficar na alfândega, se ele não chega direto então vai ficar o mesmo preço de comprar na santa efigenia :/
+[2021-10-19 11:48:31] Ismael Luceno: na verdade quando estava no brasil tuve sorte e chegou todo direto, então não sei como é o processo
+[2021-10-19 11:48:48] Ismael Luceno: mas comprei pouca coisa
+[2021-10-19 11:50:03] Ismael Luceno: https://es.aliexpress.com/item/32704564263.html
+[2021-10-19 11:50:48] Ismael Luceno: eu comprei esse aí, mas estava mais barato
+[2021-10-19 11:53:54] Ismael Luceno: opa, olha aqui! https://es.aliexpress.com/item/1005002340884628.html
+[2021-10-19 11:54:47] Ismael Luceno: ah, são só adatadores XD
+[2021-10-19 11:59:48] Ismael Luceno: @fsanches o key.UP ta com problemas no CodeMode :/, não consigo concertar corretamente, acho que o problema é no context.prev_line_len
+[2021-10-19 12:09:52] Felipe "Juca" Sanches: é, eu vi que tava com problema mas não consegui arrumar também
+[2021-10-19 12:29:49] Ismael Luceno: o pgup/pgdn no hexmode tá funcionando +/-, mas precisa fazer ele se comportar como no programa original
+[2021-10-19 12:59:13] Felipe "Juca" Sanches: Manda o pull request ;-)
+[2021-10-19 12:59:58] Ismael Luceno: ja tem o PR
+[2021-10-19 13:00:47] Felipe "Juca" Sanches: Ah ok, não vi meu email ainda
+[2021-10-19 13:01:42] Ismael Luceno: puxa, este ano não vou pegar a camiseta gratis da hacktoberfest :(, antes era muito simples :/
+[2021-10-19 22:48:31] Eduardo Loos: Nossa, que honra em termos uma grande atriz no grupo
+[2021-10-19 22:48:36] Eduardo Loos: 😂😂😂😂😂
+[2021-10-19 22:50:53] Felipe "Juca" Sanches: uma curiosidade: uns 10 anos atrás eu colaborei em um projeto de software livre com uma especialista em acessibilidade da Mozilla chamada Silvia Pfeiffer.

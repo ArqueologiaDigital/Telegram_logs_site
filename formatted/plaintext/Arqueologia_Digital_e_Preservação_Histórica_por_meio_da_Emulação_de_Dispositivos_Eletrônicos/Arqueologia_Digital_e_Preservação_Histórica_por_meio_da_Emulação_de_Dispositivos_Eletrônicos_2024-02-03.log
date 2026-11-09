@@ -1,0 +1,14 @@
+[2024-02-03 02:34:19] Felipe "Juca" Sanches: https://twitter.com/nukeykt/status/1752965047179981212
+[2024-02-03 12:13:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29154.jpg
+[2024-02-03 12:13:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29155.jpg
+[2024-02-03 12:15:04] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29156.jpg
+[2024-02-03 12:15:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29157.jpg
+[2024-02-03 12:15:47] Felipe "Juca" Sanches: vou fazer alguns experimentos tentando perverter o SysEx Bulk dump pra fazer dump de ROM via MIDI 😉
+[2024-02-03 12:23:49] Felipe "Juca" Sanches: 'https://ctrlr.org/generic-sysex-dump-editor/
+[2024-02-03 12:24:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-02/29160.jpg
+[2024-02-03 12:25:49] Felipe "Juca" Sanches: Pretendo enfiar valores não-convencionais na memória na tentativa de fazer algum trecho dos dados enviados ser executado
+[2024-02-03 12:26:18] Felipe "Juca" Sanches: talvez começar com dados aleatórios pra ver se alguma coisa faz o sistema travar
+[2024-02-03 12:26:28] Felipe "Juca" Sanches: e a partir daí ir afunilando a busca
+[2024-02-03 12:27:28] Felipe "Juca" Sanches: eu nunca fiz esse tipo de coisa, então estou ainda tateando aos poucos, explorando possibilidades
+[2024-02-03 12:27:36] Felipe "Juca" Sanches: aceito sugestões
+[2024-02-03 12:30:30] Felipe "Juca" Sanches: https://github.com/RomanKubiak/ctrlr

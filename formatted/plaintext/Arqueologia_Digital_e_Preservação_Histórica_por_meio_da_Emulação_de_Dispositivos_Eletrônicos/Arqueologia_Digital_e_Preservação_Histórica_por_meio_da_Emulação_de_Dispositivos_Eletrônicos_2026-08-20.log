@@ -1,0 +1,14 @@
+[2026-08-20 13:13:16] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40198.jpg
+[2026-08-20 13:13:16] Felipe "Juca" Sanches: https://python-3-for-scientists.readthedocs.io/en/latest/python3_features.html
+[2026-08-20 19:03:47] Robson França: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40199-mp4.mp4
+[2026-08-20 19:05:33] Robson França: Tem uma linguagem chamada APL que é totalmente baseada em símbolos. Acho que nela não tem muita escolha
+[2026-08-20 20:09:49] RicBit: APL é delícia demais. Povo também usa uiua que é parecido. Pra golf é o melhor que tem.
+[2026-08-20 20:58:03] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40202-minimsx.zip
+[2026-08-20 20:58:03] RicBit: namagiri nos propiciou o bit de display enable, na real não sei como eu tinha esquecido dele, normalmente é a primeira coisa que a gente coloca. ainda 4kb.
+[2026-08-20 20:58:22] RicBit: e eu acho que ele roda todos os jogos. daqui pra frente vou ter que usar demos para testar.
+[2026-08-20 21:06:44] L.: seria legal se pudesse fazer tipo
+
+copy /b msx.com + jogo.rom  jogo.com
+
+(claro que não funcionaria jogo megarom por que precisa caber num segmento só mas pra joguinho menor...)
+[2026-08-20 21:07:39] RicBit: se fizesse isso eu iria ganhar uns 10 bytes, nao precisaria do codigo de ler a rom do disco

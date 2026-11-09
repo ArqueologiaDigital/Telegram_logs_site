@@ -1,0 +1,45 @@
+[2026-07-07 12:46:34] Felipe "Juca" Sanches: Acabei de achar algo chocante: 
+https://frequick.mystrikingly.com/blog/format-software-technics-kn7000
+[2026-07-07 12:48:08] Felipe "Juca" Sanches: RicBit
+[2026-07-07 12:48:48] L.: Esse site é esquisito demais hein
+[2026-07-07 12:49:05] Felipe "Juca" Sanches: kkkk
+[2026-07-07 12:49:14] RicBit: blog gerado por AI ?
+[2026-07-07 12:49:19] L.: Certeza
+[2026-07-07 12:49:41] Felipe "Juca" Sanches: pois é... de uns 2 anos atrás. Fazendo uma paráfrase de algo que aconteceu com a gente
+[2026-07-07 12:50:03] Felipe "Juca" Sanches: Eu queria hackear o KN5000 e você descobriu que era "algo parecido com LZW"
+[2026-07-07 12:51:22] RicBit: nao tem muito pra onde fugir, compressao sem perdas quase sempre é rle, huffman, ou lz
+[2026-07-07 12:51:58] RicBit: tem uma outra legal que é a compressão aritmetica, mas ninguem usa porque ficou uns 20 anos escondida atras de uma patente.
+[2026-07-07 12:52:07] L.: https://en.wikipedia.org/wiki/Arithmetic_coding
+[2026-07-07 12:52:10] RicBit: agora expirou, mas ninguem usa
+[2026-07-07 12:52:24] L.: é, ia falar dela agora hehe
+[2026-07-07 12:52:40] L.: povo usa sim, mas na demoscene
+[2026-07-07 12:52:53] L.: o ryg tem vários blogs sobre inclusive
+[2026-07-07 12:53:30] RicBit: ah bom saber
+[2026-07-07 12:53:48] L.: zstd usa ac inclusive
+[2026-07-07 12:54:04] RicBit: eu estou retraduzindo o shalom, vou usar alguma compressao para voltar o jogo para 256kb
+[2026-07-07 12:54:24] RicBit: mas vai ser huffman global, é o unico que nao precisa de estado
+[2026-07-07 12:54:38] Felipe "Juca" Sanches: tá fazendo 5 anos...
+[2026-07-07 12:55:38] RicBit: inclusive eu estou tendo pesadelos com a retradução, descobri que eu errei de um jeito que propagou
+[2026-07-07 12:56:00] L.: huffman fica facinho decodificar se expandir a árvore pra conseguir percorrer a árvore de forma paralela
+[2026-07-07 12:56:32] RicBit: huffman sozinho nao vai dar conta de espremer o texto inteiro. vou fazer huffman global ao inves de local
+[2026-07-07 12:56:49] RicBit: tipo huffman de ngrams ao inves de huffman de chars
+[2026-07-07 12:57:07] RicBit: é bem mais dificil para encodar, para decodar é trivial e sem estado
+[2026-07-07 12:57:27] RicBit: encodar huffman global é np-hard eu acho
+[2026-07-07 12:57:36] Felipe "Juca" Sanches: O divertido é que 5 anos depois de eu ter dado esse avanço significativo para emular o KN5000, começo a pesquisar o KN7000 e descubro esse blog-post gerado por IA que mistura as duas histórias e inverte os papéis das pessoas envolvidas.  (e usa uma foto de um KN6000 para ilustrar o artigo)
+[2026-07-07 14:33:06] Pablo Vasques Bravo-Villalba: Que coisa
+[2026-07-07 14:36:50] Pedro de Medeiros 👾: que bizarro. Alguém que ficou escutando o grupo e pediu pra IA fazer um resumo de um trecho específico de uma conversa?
+[2026-07-07 14:37:13] Felipe "Juca" Sanches: pois é... algum desses bots provavelmente
+[2026-07-07 14:38:01] Pedro de Medeiros 👾: Então eles devem ficar garimpando grupos de mensageiro e gerando posts aleatórios de qualidade duvidosa.
+[2026-07-07 17:39:52] L.: https://hackaday.com/2026/07/07/sb-mini-ii-is-a-homebrew-apple-ii-clone/
+
+Apple 2 feito em casa!
+[2026-07-07 18:54:01] Macabeus: Publiquei um novo capítulo na minha pesquisa com matching decompilation!
+
+Fiz um benchmark comparando Fable 5 vs. Sonnet 4.6 em 55 funções de 2 retro games (Sonic Advance 3 + Animal Forest).
+Fable venceu em algunas funções difíceis, e estabilizou outras que Sonnet 4.6 falhava, mas ao custo de ~4x mais caro.
+
+Report completo:
+https://gambiconf.substack.com/p/fable-5-does-the-smartest-llm-decompile
+[2026-07-07 18:54:31] Macabeus: Site com todos os gráficos e análises:
+https://macabeus.github.io/mizuchi-benchmark-reports/fable-5/
+[2026-07-07 23:55:05] Shideravan: Alguém deveria usar o Fable para decompilar o jogo Fable. Nem que seja pelo hu3

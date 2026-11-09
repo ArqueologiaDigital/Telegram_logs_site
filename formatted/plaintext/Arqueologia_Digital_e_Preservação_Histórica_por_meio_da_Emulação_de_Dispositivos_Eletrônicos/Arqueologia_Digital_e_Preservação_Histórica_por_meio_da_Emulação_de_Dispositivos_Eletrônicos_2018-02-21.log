@@ -1,0 +1,58 @@
+[2018-02-21 14:39:00] Nathysautchuk: https://youtu.be/ESuKNq6URm0
+[2018-02-21 19:54:28] Affonso Amendola: Eai galera, então, Solution 16
+[2018-02-21 19:54:56] Affonso Amendola: O grande sebastião doou o solution dele pro museu (Thanks man!)
+[2018-02-21 19:55:06] Affonso Amendola: Problema, ele nao boota
+[2018-02-21 19:55:24] Affonso Amendola: Ele tenta, mas nao consegue
+[2018-02-21 19:55:33] Affonso Amendola: Da essa mensagem aqui
+[2018-02-21 19:55:56] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-02/4106.jpg
+[2018-02-21 19:56:25] Affonso Amendola: Como da pra ver do visual dele, eu abri o bixo ja pra dar uma limpada nos cabeçotes dos drives
+[2018-02-21 19:56:53] Affonso Amendola: Mas n deu muito certo
+[2018-02-21 19:59:43] Affonso Amendola: Eu tentei os dois drives já,  (trocando os jumpers como apropriado, se vc tenta com a configuraçao de jumper errada ele nem tenta ler)
+[2018-02-21 20:00:05] Affonso Amendola: Um deles da essa mensagem aí de indexaçao, e o outro da essa aqui, de track not found
+[2018-02-21 20:01:26] Affonso Amendola: O outro da varios estalos e da essa mensagem
+[2018-02-21 20:01:37] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-02/4112.jpg
+[2018-02-21 20:01:57] Affonso Amendola: Ideias, sugestões?
+[2018-02-21 20:02:48] Felipe "Juca" Sanches: Não sei...
+[2018-02-21 20:03:09] Felipe "Juca" Sanches: mas isso me lembra de uma questão. Já temos um ROM dump desse solution16 ?
+[2018-02-21 20:03:18] Affonso Amendola: Acredito que nao
+[2018-02-21 20:03:39] Affonso Amendola: Mas é uma boa ideia dumpar antes de continuar mechendo
+[2018-02-21 20:03:43] Affonso Amendola: Amanha eu dumpo
+[2018-02-21 20:03:49] Affonso Amendola: Hoje ja to vazando
+[2018-02-21 20:04:25] Affonso Amendola: So n sei como eu vou tirar a placa dele sem o crt dele me assassinar
+[2018-02-21 20:04:37] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-02/4121.jpg
+[2018-02-21 20:04:57] Affonso Amendola: Parece estar num container a parte
+[2018-02-21 20:05:12] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-02/4123.jpg
+[2018-02-21 20:06:25] Felipe "Juca" Sanches: :-)
+[2018-02-21 20:06:27] Felipe "Juca" Sanches: boa sorte
+[2018-02-21 20:06:39] Felipe "Juca" Sanches: eu quero ir visitar de novo aí em breve
+[2018-02-21 20:06:53] Felipe "Juca" Sanches: mas eu vou viajar pra Brasília na semana que vem
+[2018-02-21 20:07:01] Felipe "Juca" Sanches: talvez na outra semana eu consiga ir
+[2018-02-21 20:07:23] Affonso Amendola: Chega aí cara, semana que vem comecam as minhas aulas
+[2018-02-21 20:07:30] Affonso Amendola: Ai eu vou diminuir o horario aqui
+[2018-02-21 20:07:42] Affonso Amendola: N vai dar pra brincar tantl
+[2018-02-21 20:09:09] Felipe "Juca" Sanches: hahaha
+[2018-02-21 20:09:10] Felipe "Juca" Sanches: ok
+[2018-02-21 20:09:35] Felipe "Juca" Sanches: mas nos próximos dias até dia 28 realmente não dá
+[2018-02-21 20:09:40] Felipe "Juca" Sanches: quem sabe dia 29...
+[2018-02-21 20:09:51] Felipe "Juca" Sanches: oops!
+[2018-02-21 20:09:57] Felipe "Juca" Sanches: :-)
+[2018-02-21 20:10:07] Felipe "Juca" Sanches: dia primeiro...
+[2018-02-21 22:28:20] Leonardo Roman: As ROMs já tem dump: https://datassette.org/softwares/ibm-pc/prologica-solution-16-rom-bios
+[2018-02-21 22:28:30] Leonardo Roman: Mas tirem as de vcs também pra comparar.
+[2018-02-21 22:28:44] Felipe "Juca" Sanches: legal!
+[2018-02-21 22:28:51] Leonardo Roman: Agora se tiverem o SO-16 aí sim vai ser um achado. Ninguém tem esse sistema
+[2018-02-21 22:29:01] Felipe "Juca" Sanches: uia
+[2018-02-21 22:29:05] Felipe "Juca" Sanches: acho que nao tem nao
+[2018-02-21 22:29:11] Felipe "Juca" Sanches: veio do tião
+[2018-02-21 22:29:15] Felipe "Juca" Sanches: teria que perguntar pra ele
+[2018-02-21 22:29:26] Felipe "Juca" Sanches: aliás... tem um disquete lá que veio junto
+[2018-02-21 22:30:21] Felipe "Juca" Sanches: Affonso, veja lá se está escrito "SO-16"  no disquete... "Vai que", né?!
+[2018-02-21 22:32:13] Leonardo Roman: :)
+[2018-02-21 22:33:53] Affonso Amendola: Hmmmm
+[2018-02-21 22:33:57] Affonso Amendola: Vo ver amanhã
+[2018-02-21 22:34:00] Affonso Amendola: Ta la no museu
+[2018-02-21 22:34:29] Affonso Amendola: Eu to usando o meu disco de ibm pc-dos 3.3 pra tentar bootar
+[2018-02-21 22:34:42] Affonso Amendola: Entao aquele disco ta seguro
+[2018-02-21 22:35:01] Felipe "Juca" Sanches: alright!
+[2018-02-21 22:35:10] Affonso Amendola: EU to meio que assumindo que é compativel
+[2018-02-21 22:35:11] Felipe "Juca" Sanches: mas eu acho que aquel disco deve ser o SISNE

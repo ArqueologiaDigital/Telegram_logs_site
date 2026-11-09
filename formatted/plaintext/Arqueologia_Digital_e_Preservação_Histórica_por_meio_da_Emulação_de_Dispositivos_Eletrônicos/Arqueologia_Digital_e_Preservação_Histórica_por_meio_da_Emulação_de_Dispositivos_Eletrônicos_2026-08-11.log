@@ -1,0 +1,23 @@
+[2026-08-11 05:02:39] Felipe "Juca" Sanches: que tal publicar o código fonte disso no github?
+[2026-08-11 10:07:45] Felipe "Juca" Sanches: merged! https://github.com/mamedev/mame/pull/15350
+
+Parabéns, @figur8!
+[2026-08-11 12:33:06] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/15878
+[2026-08-11 16:30:41] RicBit: eu estou achando legal o minimsx como medida de entropia
+[2026-08-11 16:31:16] RicBit: in a way, você consegue descrever o msx inteiro em 4kb. é pouquinho.
+[2026-08-11 16:57:22] L.: "msx em uma página"
+[2026-08-11 18:12:34] RicBit: cabe em um qrcode
+[2026-08-11 21:42:35] L.: dá pra hospedar em https://smolsite.zip
+[2026-08-11 22:44:53] RicBit: uia dá mesmo
+[2026-08-11 22:45:14] RicBit: consegui colocar megarom, estou tentando encaixar um scc agora
+[2026-08-11 22:46:32] RicBit: alias
+[2026-08-11 22:46:49] RicBit: ele é 8086 puro, nao usa nada a mais que isso, entao em principio
+[2026-08-11 22:46:53] RicBit: deve rodar no sisne haha
+[2026-08-11 22:52:46] Ismael Carvalho: pior que essa notícia me deixou bem feliz hoje \o/
+[2026-08-11 22:53:58] Ismael Carvalho: tenho tirado tempo pra estudar mais sobre C e emuladores no geral, espero conseguir abrir outro PR esse ano
+[2026-08-11 23:16:14] Felipe "Juca" Sanches: Bora!
+[2026-08-11 23:16:32] Felipe "Juca" Sanches: To aqui pra te ajudar
+[2026-08-11 23:17:24] Felipe "Juca" Sanches: Acho ridículo ter demorado tanto esse PR
+[2026-08-11 23:42:16] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40005-minimsx.zip
+[2026-08-11 23:42:16] RicBit: rolou, megarom e scc, ainda 4kb.
+[2026-08-11 23:55:17] Felipe "Juca" Sanches: vai chegar um momento em que vai ter que tocar xou da xuxa de trás pra frente

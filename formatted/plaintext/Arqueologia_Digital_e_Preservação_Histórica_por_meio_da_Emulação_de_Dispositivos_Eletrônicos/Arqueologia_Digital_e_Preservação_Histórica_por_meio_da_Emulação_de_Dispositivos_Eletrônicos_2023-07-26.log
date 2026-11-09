@@ -1,0 +1,26 @@
+[2023-07-26 10:47:15] RicBit: Really? PSG e SCC deveriam ser 100% accurate. Você consegue descrever o que tem de diferente?
+[2023-07-26 10:50:21] Pablo Vasques Bravo-Villalba: Difícil, mas a impressão que me dá é que o som dos emuladores é muito "macio", parece que falta alguma coisa. Não descarto a possibilidade disso ser relacionado a diferenças do hardware de som, mas sei que em FPGA há problemas.
+[2023-07-26 10:50:53] Pablo Vasques Bravo-Villalba: Mas é como falei, meu ouvido não é dos melhores
+[2023-07-26 10:51:00] Pablo Vasques Bravo-Villalba: E estou ficando cada vez mais velho
+[2023-07-26 10:52:57] Pablo Vasques Bravo-Villalba: E posso estar equivocado, mas se não me engano os atuais emuladores de SCC por software não foram feitos baseados em um modelo do hardware real. Isso não poderia implicar em alguma diferença no resultado final? Por exemplo, na maneira como o SCC gera ruído?
+[2023-07-26 11:01:07] RicBit: SCC não gera ruído! Quer dizer, o único ruído que tem é o ruído de quantização.
+[2023-07-26 11:03:22] RicBit: Eu acho que deve ser o mesmo problema do sinal de video, nunca vai ser igual porque cada scc tem um som diferente (o sinal entra analógico pelo sound in e passa pelo amplificador da placa, então o que você ouve é uma combinação de som original + r2r do cartucho + ruído induzido no soundin + amplificação + filtros).
+[2023-07-26 11:03:51] RicBit: Emulador normalmente tem o som digital direto na saída e pronto, todo o resto é ignorado.
+[2023-07-26 11:04:05] RicBit: Mas um fpga deveria ser idêntico.
+[2023-07-26 11:04:45] Pablo Vasques Bravo-Villalba: Pois, então retiro o que disse, a emulação por software está perfeita e não há o que aprimorar. Que bom ❤️
+[2023-07-26 11:05:23] RicBit: você pode colocar os filtros por software se quiser deixar mais fiel.
+[2023-07-26 11:05:50] Pablo Vasques Bravo-Villalba: Acho que há diferenças justamente porque as pessoas não sabiam exatamente como o SCC funciona por dentro, todas as informações foram obtidas por reversa. Por exemplo, vi que o OCM tem algum bug que gera cliques em algumas músicas. Não vi se outras implementações de FPGA têm o mesmo bug
+[2023-07-26 11:06:49] RicBit: A parte dificil é o ruido induzido no soundin, isso é THE ONE THING que ninguém emula.
+[2023-07-26 11:07:15] Pablo Vasques Bravo-Villalba: Eu não faço questão, pra ser sincero 😅
+[2023-07-26 11:07:36] RicBit: é o que causa o "barulhinho de inicialização" no boot. para emular tem que recriar o bus e o layout do placa.
+[2023-07-26 11:09:23] RicBit: clique é falta de filtro. quando você desliga uma nota, se ela está no topo e não tem decay, o sinal vai de alto para zero. isso é um clique, igual ao clique do teclado. normalmente é inaudivel porque o filtro come.
+[2023-07-26 11:10:08] RicBit: mas estranho um fpga ter clique se está saindo de um cartucho, porque o soundin entra no filtro da placa. vou chutar que o clique só acontece em one-chip msx, não em fpga colocada em cartucho.
+[2023-07-26 11:10:12] Pablo Vasques Bravo-Villalba: Não me pareceu ser isso não
+[2023-07-26 11:10:20] RicBit: aí é o cara que fez a placa do one chip que nao filtrou direito
+[2023-07-26 11:11:15] RicBit: isso eu nao tenho como testar aqui porque scc é o unico cartucho que eu nao tenho haha
+[2023-07-26 11:11:23] RicBit: eu tenho o fm e o msx audio originais só
+[2023-07-26 11:13:21] Pablo Vasques Bravo-Villalba: Então, acho que não vale a pena queimar muito a mufa com esse assunto. O que me lembro é que: aconteceu tocando arquivo VGM, não aconteceu jogando o próprio jogo e ouvindo a mesma música no jogo. O que não lembro: que músicas e jogos eram. Mas era jogo da Konami. Não sei descrever melhor que um clique, mas eu sei como soa um clique de 1 pra 0 e não era esse som
+[2023-07-26 17:01:57] L.: Da linha de coisas que me fariam pirar em 1994: https://liliputing.com/hand-386-is-a-different-kind-of-gaming-handheld-qwerty-keyboard-and-ms-dos-compatible/
+
+"The little computer has a VGA display, a thumb keyboard, and a 40 MHz Intel 386sx-compatible processor that supports MS-DOS, Windows 3.x or Windows 95."
+[2023-07-26 17:03:37] L.: Aparentemente dá pra ligar placa ISA! https://yeokhengmeng.com/2023/06/teardown-and-review-of-hand386/

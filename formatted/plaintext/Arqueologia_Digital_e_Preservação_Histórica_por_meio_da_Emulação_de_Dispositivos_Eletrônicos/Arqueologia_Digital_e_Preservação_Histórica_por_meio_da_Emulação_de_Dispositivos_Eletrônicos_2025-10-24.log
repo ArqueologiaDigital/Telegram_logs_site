@@ -1,0 +1,13 @@
+[2025-10-24 04:01:58] L.: lft postou outro vídeo fodadimais https://www.youtube.com/watch?v=S-2adBkW7Xo
+[2025-10-24 10:45:38] Felipe "Juca" Sanches: Muito bom! Me enxerguei nele nesse vídeo. Uso do Inkscape pra desenhar o painel frontal do Patinho Feio. Um microcontrolador do lado de trás do painel...
+[2025-10-24 10:50:24] Felipe "Juca" Sanches: próximo passo é botar um leitor de algum tipo de mídia nesse atmega88
+[2025-10-24 10:50:52] Felipe "Juca" Sanches: qual seria um bom candidato de mídia moderna que daria pra fazer um loader com a menor quantidade de bytes?
+[2025-10-24 10:51:56] Felipe "Juca" Sanches: eu tava esperando ele fazer na mão o bootstrap inteiro da demo dele (CRAFT)
+[2025-10-24 10:52:39] Felipe "Juca" Sanches: to pensando se não seria possível fazer a leitura de um setor de boot de algo como talvez um sdcard
+[2025-10-24 10:53:10] Felipe "Juca" Sanches: e aí esse setor leria um código maior com uma implementação de FAT
+[2025-10-24 10:53:22] Felipe "Juca" Sanches: e depois leria de fato o código da demo a ser rodado
+[2025-10-24 10:53:26] Felipe "Juca" Sanches: ou algo parecido com isso
+[2025-10-24 10:54:42] Felipe "Juca" Sanches: O que ele falou sobre a carga de micro-pré-loader por painel frontal ser algo "cerimonial" é algo que eu já tinha pensado e acho que até comentado com algumas pessoas. Foi uma reflexão que me surgiu naturalmente enquanto eu pesquisava sobre o Patinho Feio.
+[2025-10-24 13:37:05] L.: https://stonetools.ghost.io/visicalc-apple2/
+[2025-10-24 14:52:48] Ismael Carvalho: perdão eu não entendi essa frase, provavelmente por não conhecer nada sobre o patinho feio
+[2025-10-24 19:43:59] Felipe "Juca" Sanches: O método de entrada de programas no Patinho Feio é muito parecido. E hoje em dia só fazemos ele como forma de ritual. Um tipo de "cerimônia". Pois hoje em dia temos computadores com soluções muito mais práticas para o boot. Mas, ainda assim, como entusiastas, algumas pessoas gostam de replicar o procedimento complicado, como eu uma "encenação de época" tecnológica.

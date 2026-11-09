@@ -1,0 +1,42 @@
+[2021-04-29 00:01:34] Aylons Hazzud: GitHub - aylons/spectrum-poster: Spectrum poster, updated and adapted for Brazilian spectrum allocation
+https://github.com/aylons/spectrum-poster
+[2021-04-29 00:01:59] Aylons Hazzud: A única coisa que eu fiz foi todo. Eu devia ir tomar no cu mesmo
+[2021-04-29 00:57:19] Felipe "Juca" Sanches: Não seja tão duro consigo mesmo! Se você tiver vontade, pode considerar implementar alguns desses TODOs no seu tempo livre
+[2021-04-29 01:06:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-04/13036.jpg
+[2021-04-29 01:06:51] Felipe "Juca" Sanches: Dei uma pausa pra descansar e agora voltei.
+[2021-04-29 01:56:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-04/13037.jpg
+[2021-04-29 01:56:51] Felipe "Juca" Sanches: Missão cumprida!
+[2021-04-29 01:58:16] Felipe "Juca" Sanches: Segue o SVG a quem possa interessar. Considerem meu trabalho de vetorização (essa versão em SVG) como domínio público, por favor. Já o trademark obviamente é da Apple.
+[2021-04-29 01:58:35] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-04/13039-pascal3d.svg
+[2021-04-29 06:36:13] Ismael Luceno: :O
+[2021-04-29 09:59:16] Leonardo Roman: Aquele svg do logo que coloquei ali em cima está com as cores mais certas.
+[2021-04-29 10:07:02] Felipe "Juca" Sanches: eu acabei fazendo com as cores do papel, pra manter a estética da imagem de referencia.
+
+depoispretendo experimentar com as imagens mais "puras" pra ver como fica. Não me esqueci disso, não. Apenas usei as cores que estavam disponíveis já no meu arquivo de referencia
+[2021-04-29 12:04:58] L.: Animal!
+[2021-04-29 16:15:36] Felipe "Juca" Sanches: e aí? Alguma idéia para próximos passos?
+[2021-04-29 16:16:00] Felipe "Juca" Sanches: to achando divertido programar o gerador dos gráficos, mas comecei a perceber um monte de dificuldades pra fazer funcionar
+[2021-04-29 16:16:12] Felipe "Juca" Sanches: tem muitos casos especiais para serem tratados
+[2021-04-29 16:17:01] Felipe "Juca" Sanches: e pra fazer o 3D corretamente, tem uma ordem certa pra desenhar os elementos do gráfico, pois tem sobreposićões, então os que ficam por baixo tem que ser desenhados primeiro
+[2021-04-29 16:17:27] Felipe "Juca" Sanches: então em geral teria que inverter a ordem da iteracao do renderizador, pra desenhar do direita para a esquerda
+[2021-04-29 16:17:39] Felipe "Juca" Sanches: entretanto tem alguns loops que são impossíveis
+[2021-04-29 16:18:40] Felipe "Juca" Sanches: por "impossível" me refiro à necessidade de redesenhar um item pra fechar o loop. Sem essa repeticao no renderizador, seria impossivel
+[2021-04-29 16:18:49] Felipe "Juca" Sanches: aí a coisa tá ficando meio cabeluda
+[2021-04-29 16:19:03] Felipe "Juca" Sanches: e comecei a ponderar fazer o SVG na mão mesmo do gráfico inteiro
+[2021-04-29 16:24:57] L.: Acho que talvez o esquema "3D" seja melhor ser feito no inkscape e fazer o diagrama sem ele, só as formas básicas
+[2021-04-29 16:36:28] L.: E aí usr algo tipo esse tutorial https://fontbundles.net/blog/ask-a-font-creator-creating-a-3-d-effect-in-inkscape
+[2021-04-29 16:36:32] L.: (Com interpolate e tal)
+[2021-04-29 17:21:53] Felipe "Juca" Sanches: é... pode ser uma boa
+[2021-04-29 17:34:16] Felipe "Juca" Sanches: por mais que seja divertido (e provavelmente útil para usos futuros) automatizar a partir de uma DSL. Eu estou por enquanto jogando a toalha. Comecei a experimentar com a idéia de fazer todo o desenho manualmente e estou achando que vou encarar...
+[2021-04-29 17:34:35] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-04/13058.jpg
+[2021-04-29 17:42:13] L.: Vish.
+[2021-04-29 17:42:28] L.: Eu não tenho mais esse pique
+[2021-04-29 18:13:55] Felipe "Juca" Sanches: kkkk
+[2021-04-29 18:13:56] L.: Imagino que boa parte dos símbolos terminais vão ser copy/paste
+[2021-04-29 18:14:03] Felipe "Juca" Sanches: sim
+[2021-04-29 18:14:50] L.: Quero depois fazer um poster disso pra coisa mais moderna, no mesmo estilo. Tipo JSON, ou até mesmo Python.
+[2021-04-29 18:14:59] Felipe "Juca" Sanches: obrigado por estragar as minhas férias! kkkkk
+[2021-04-29 18:15:05] L.: "estragar"
+[2021-04-29 18:16:28] Felipe "Juca" Sanches: penso que se eu desenhar tudo na mão, depois poderia usar pedacinhos do SVG pra implementar algo automatizado que só "copia-e-cola" esses pedacinhos nos lugares certos (ao invés de desenhar as curvas todas com código também)
+[2021-04-29 18:17:20] Felipe "Juca" Sanches: aí se bobear pode até ser SVG+javascript mesmo, com um método que parseia a DSL
+[2021-04-29 18:17:26] Felipe "Juca" Sanches: e manipula o DOM

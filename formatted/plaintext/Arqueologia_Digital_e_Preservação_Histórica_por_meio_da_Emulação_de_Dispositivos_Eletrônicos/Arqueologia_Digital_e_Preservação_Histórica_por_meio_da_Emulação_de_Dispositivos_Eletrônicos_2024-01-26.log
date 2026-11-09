@@ -1,0 +1,13 @@
+[2024-01-26 10:50:06] Pablo Vasques Bravo-Villalba: https://www.msx.org/forum/msx-talk/general-discussion/v9958-decapped
+[2024-01-26 12:18:27] Lord Spy: Talvez por ter sido a linguagem preferida para os semestres/anos iniciais dos cursos de computação por um período bastante considerável, essa impressão tenha pegado. O surgimento do Delphi, como uma das primeiras plataformas visuais de desenvolvimento comercial (e de fácil acesso... pq era em Pascal), também tenha auxiliado nessa impressão.
+[2024-01-26 12:52:32] Deleted Account: Acho que foi isso mesmo. Eu peguei Pascal no curso técnico e na faculdade. E na época foi a era de ouro da borland com o Turbo Pascal. Nossa aquela IDE era super produtiva. A sensação era a de que dava pra fazer tudo naquela tela azul, tinha documentação embutida na IDE, um depurador passo a passo, sem falar na documentação excelente. acho que até hoje eu sinto falta do Turbo Pascal.
+[2024-01-26 15:19:56] Guilherme Ranoya: A versão 1.0 do Turbo Pascal não tinha nada... Acho que foi da 3 em diante que ficou bom. Nunca usei o da Microsoft (acho que Quick Pascal), mas dizem que era bom também.
+
+O Pascal era uma linguagem muito boa para aplicação científica, assim como o Python é hoje. Todos os cursos universitários ensinavam Pascal por causa disso. Era mais fácil que C, e tinha mais aplicação.
+[2024-01-26 22:21:14] Deleted Account: Como na época o MSDOS não tinha multitarefa (tinha os TSR mas não era algo mto sofisticado) a borland deixou o Turbo Pascal super integrado pro usuário não precisar de jeito nenhum sair do ambiente de desenvolvimento. Então você criava o projeto, compilava, depurava, podia ate integrar com outros produtos como o turbo profiler pra otimizar o código, rodava o programa, gerava a versão para o modelo de memória desejado. Era uma maravilha. Tudo sem sair do aplicativo.
+
+Até hoje nada chega perto. Tem o tmux, vim, emacs, etc. Mas tudo exige que vc saia pra "passear" em outras ferramentas. Não tem nada tão integrado quando o Turbo Pascal.
+
+Sobre linguagem de aprendizado vou contar uma anedota: eu tinha um amigo de faculdade que era hiper inteligente. Ele pegou um livro de python em Inglês da oreilly (isso em 2001 acho) e veio me falar: "acho que será a próxima linguagem de aprendizado". E eu respondi: "Ah, mano. Fala sério. Tu tá zoando. Que linguagem sem graça, tem que indentar. Que isso? cobol?". Hehehehe... Acho que ele estava certo. Kkkkk
+[2024-01-26 22:38:44] RicBit: no unix é tudo separado por design, one tool == one job
+[2024-01-26 22:38:58] RicBit: mas meu pai usava muito sidekick com clipper no dos

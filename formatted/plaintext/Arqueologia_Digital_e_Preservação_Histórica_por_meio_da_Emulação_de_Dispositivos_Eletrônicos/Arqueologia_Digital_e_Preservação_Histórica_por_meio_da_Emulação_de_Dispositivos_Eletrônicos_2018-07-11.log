@@ -1,0 +1,19 @@
+[2018-07-11 12:44:54] Affonso Amendola: Entao daria pra usar um fpga pra simular a cpu do bagulho? E fazer ela rodar mais rapido?
+[2018-07-11 12:45:27] Affonso Amendola: Teria como fazer um tipo de placa pci só com um fpga, feito pra ser usado com o mame?
+[2018-07-11 12:49:35] Gustavo Romero: Opa se teria
+[2018-07-11 12:50:01] Gustavo Romero: Aliás, tem uma placa PCI dessa no Garoa
+[2018-07-11 12:50:11] Gustavo Romero: (Não testei porém)
+[2018-07-11 12:55:56] Gustavo Romero: O problema é que o toolchain é proprietário... aí zica demais...
+[2018-07-11 14:05:19] Gustavo Romero: Claro que podemos fazer uma PCB PCI com o iCE40, mas aí voltamos a reunião anterior: temos uma maquina de fazer PCBs pra isso? :)
+[2018-07-11 14:10:41] Gustavo Romero: Affonso Há muito tempo eu fiz uma PCB como a que você comentou, mas para barramento ISA, com um CPLD da Altera: https://www.flickr.com/photos/plasticlogics/6327993356/
+[2018-07-11 14:11:44] Silas: Sun blade por 250: https://produto.mercadolivre.com.br/MLB-705007296-sun-blade-1500-silver-hd-120gb-processador-34-ghz-_JM
+[2018-07-11 15:14:49] Gustavo Romero: A que possa interessar: https://eventocccp.blogspot.com/p/blog-page.html
+[2018-07-11 15:50:28] Felipe "Juca" Sanches: mas o icestick já me parece bem prático pra esse propósito:
+[2018-07-11 15:50:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6040.jpg
+[2018-07-11 15:51:33] Felipe "Juca" Sanches: eu comprei um desses, importado, e acabei de receber final de semana passado
+[2018-07-11 15:52:16] Felipe "Juca" Sanches: foi por isso que eu comecei a trabalhar na implementação duma biblioteca em C pra software conversar com hardware instanciado na FPGA do icestick
+[2018-07-11 15:52:24] Felipe "Juca" Sanches: https://github.com/felipesanches/libstickbridge
+[2018-07-11 15:53:47] Felipe "Juca" Sanches: software no laptop (possivelmente o próprio MAME) usando a imnha biblioteca libstickbridge poderia enviar comandos e receber dados de um pedaço de circuito carregado na FPGA.
+[2018-07-11 15:54:28] Felipe "Juca" Sanches: o canal de comunicação seria uma "ponte" usando o protocolo SPI, por meio da porta USB
+[2018-07-11 15:56:07] Felipe "Juca" Sanches: segundo consta no datasheet do chip FT2232H (que é o chip que faz a "ponte") dá pra usar também outros protocolos como i2c e jtag
+[2018-07-11 15:56:39] Felipe "Juca" Sanches: mas acho que SPI é o mais prático pra falar com nosso próprio hardware modelado em verilog

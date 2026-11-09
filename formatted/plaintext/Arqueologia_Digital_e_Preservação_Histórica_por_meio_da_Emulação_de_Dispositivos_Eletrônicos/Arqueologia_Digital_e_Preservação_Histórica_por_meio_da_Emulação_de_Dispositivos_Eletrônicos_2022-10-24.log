@@ -1,0 +1,90 @@
+[2022-10-24 16:36:19] L.: https://github.com/Gekkio/gb-research/tree/main/sm83-cpu-core
+[2022-10-24 16:37:57] Shelton Ribeiro: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-10/24263-CDZ%20-%20O%20retorno%20de%20Fenix%20v1.1.0P%20%28FINAL%2005-10-2022%29.gbc
+[2022-10-24 16:38:47] Shelton Ribeiro: Boa tarde a todos? Trago a rom do game Cavaleiros do Zodíaco o retorno de Fênix para Game Boy totalmente em português. O game foi finalizado a poucos dias, feito por um programar do México 🇲🇽
+[2022-10-24 16:39:13] Shelton Ribeiro: É traduzido por um fã brasileiro l
+[2022-10-24 16:43:10] Felipe "Juca" Sanches: É um jogo novo, homebrew, inédito? Ou é um jogo antigo traduzido pro português por meio de patches binários?
+[2022-10-24 17:03:50] Shelton Ribeiro: Jogo novo, feito do zero, canônico, seguindo o enredo do mangá/ anime
+[2022-10-24 17:04:31] Shelton Ribeiro: Homebrew mestre, isso mesmo. 👏🏼
+[2022-10-24 17:04:52] Felipe "Juca" Sanches: Você acha razoável pedir aos desenvolvedores que publiquem o jogo num repo git com uma licença de software livre?
+[2022-10-24 17:05:39] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-10/24271.jpg
+[2022-10-24 17:05:39] Shideravan: Funciona direitinho no ares
+[2022-10-24 17:05:50] Shideravan: E estou bem impressionado
+[2022-10-24 17:06:01] Shideravan: Muito bem feitinho, principalmente a trilha sonora
+[2022-10-24 17:07:02] Shideravan: Seria bem bacana se rolar
+[2022-10-24 17:07:14] Shelton Ribeiro: Sim, mestre. Vou ver se entro em contato com o pessoal do desenvolvimento pra ver a possibilidade.
+[2022-10-24 17:07:22] Shideravan: Técnicamente muito bem feito esse jogo, pode ser inspiração para novos homebrews
+[2022-10-24 17:07:45] Shideravan: Esse jogo roda no GBC original?
+[2022-10-24 17:07:45] Felipe "Juca" Sanches: A minha opinião pessoal é de que, hoje em dia, em prol de uma comunidade mais fortalecida, qualquer projeto novo de retro-comṕutação deveria ser publicado como software livre, com o objetivo de maximizar o conhecimento (ainda muito escasso na nossa geração atual) sobre como se faz /(como se fazia) desenvolvimento para essas plataformas antigas/históricas.
+[2022-10-24 17:07:56] Shelton Ribeiro: Inclusive ele planeja a continuação com as 12 casas
+[2022-10-24 17:08:54] Shelton Ribeiro: Roda sim e em emuladores também
+[2022-10-24 17:09:02] Shideravan: Excelente!
+[2022-10-24 17:09:16] Shideravan: Nível dos melhores jogos de GBC, como Shantae
+[2022-10-24 17:09:29] Shideravan: Eu realmente curti muito a trilha sonora, viu?
+[2022-10-24 17:09:47] Shideravan: Parece estar rodando até num hardware superior
+[2022-10-24 17:09:47] Shelton Ribeiro: Sim, também me impressionou bastante o game
+[2022-10-24 17:09:56] Felipe "Juca" Sanches: acho justo comercializar essas novas criações,  por exemplo com campanhas de crowdfunding e cartuchos físicos. Mas não acho justo essa busca por monetização resultar em mais sw proprietário para essas plataformas. Me parece um tiro no pé ficar preso a essa lógica de sw secreto
+[2022-10-24 17:10:42] Felipe "Juca" Sanches: fazer como sw livre deveria ser motivo de orgulho por quem valoriza o legado histórico dessas plataformas
+[2022-10-24 17:11:18] Shelton Ribeiro: Ele distribuiu o game gratuitamente. A turma até quis fazer um funding mas ele não aceitou, a rom foi liberada assim que concluída.
+[2022-10-24 17:11:48] Shelton Ribeiro: Tipo o Neto 😅
+[2022-10-24 17:12:19] Shelton Ribeiro: A turma quis dar uma grana mas ele não aceitou.
+[2022-10-24 17:12:58] Shelton Ribeiro: Mas acho que ele libera o software, vou ver com ele.
+[2022-10-24 17:14:24] Shideravan: Ele não roda no gameboy classico e pocket
+[2022-10-24 17:14:35] Shideravan: Mas tem uma tela bem feitinha para informar isso hahahaha
+[2022-10-24 17:14:37] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-10/24294.jpg
+[2022-10-24 17:16:08] Felipe "Juca" Sanches: pois é... me parece bem claro que é mais um caso de programador brilhante, porém não ciente da causa do sofware livre. Provavelmente nem sabe do que se trata. Acho que vale a pena uma conversa amigável para explicar qual é o valor histórico de se  publicar o código-fonte sob uma licença livre.
+[2022-10-24 17:17:32] Felipe "Juca" Sanches: se bobear, algum nerd conseguiria retirar essa limitação se o código-fonte estivesse publicado sob licença livre
+[2022-10-24 17:18:23] Shideravan: Me parece proposital
+[2022-10-24 17:18:40] Shideravan: O DMG possui uma série de limitações que quebraria a experiência desse jogo
+[2022-10-24 17:19:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-10/24299.jpg
+[2022-10-24 17:19:52] Felipe "Juca" Sanches: eu consertaria esse kerning cagado entre os glifos V e A...
+[2022-10-24 17:20:12] Shideravan: Cagado é o ponto final depois de color kkkkkkkk
+[2022-10-24 17:20:37] Shideravan: E dizer "nao e compativel com o gameboy" (sic) é errado
+[2022-10-24 17:21:06] Shideravan: Ele é compativel com o Game Boy color e advance, só não é compatível com os modelos baseados no modelo clássico (DMG)
+[2022-10-24 17:23:17] Shideravan: Se o jogo foi concebido para o CGB (Color), bem provável que ele faça uso do clock dobrado do console, dos 32 KiB de ram (o original tem 8 KiB) e 16 KiB de VRAM (o original tem 8 KiB)
+[2022-10-24 17:23:30] Shideravan: Provavelmente a trilha sonora avançada, faça uso desse clock também
+[2022-10-24 17:25:01] Shelton Ribeiro: Achei que rodasse, uma pena. Será que roda no Super Gameboy? Talvez não né?
+[2022-10-24 17:26:33] Shideravan: Aparentemente não, mas se deram ao trabalho de criar uma border personalizada hahahaha
+[2022-10-24 17:26:34] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-10/24307.jpg
+[2022-10-24 17:26:55] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-10/24308.jpg
+[2022-10-24 17:26:55] Felipe "Juca" Sanches: aqui um mockup tosco de como seria minha correção
+[2022-10-24 17:28:40] Shideravan: Depois vou dar uma olhada se funciona no Super game Boy 2
+[2022-10-24 17:29:30] Felipe "Juca" Sanches: "PA" em "COMPATIVEL" também tá com kerning ligeiramente cagado, mas não é tão grave....
+[2022-10-24 17:32:25] Shideravan: Bem
+[2022-10-24 17:32:46] Pablo Vasques Bravo-Villalba: Achei estranho a única palavra acentuada ser "experiência" e o E tem o tamanho totalmente zoado 😅
+[2022-10-24 17:32:46] Shideravan: Nem no ares, nem no mGBA está funcionando no modo Super Game Boy 2, o que é estranho
+[2022-10-24 17:33:16] Shideravan: Eu estou vendo mais problemas na tradução do que no jogo em sí hahahaha
+[2022-10-24 17:33:48] Shideravan: Mas isso de não rodar no Super Game Boy 2, ainda mais tendo até a border feita, eu achei curioso
+[2022-10-24 17:33:57] Shideravan: Tem página dos caras Shelton ?
+[2022-10-24 17:34:02] Shideravan: Dos mexicanos
+[2022-10-24 17:34:15] Shideravan: Também quero testar mais a rom original
+[2022-10-24 17:34:35] Shelton Ribeiro: Eu vou ver aqui se tem, baixei despretensiosamente de um vídeo do YouTube
+[2022-10-24 17:34:41] Shideravan: Ahhh sim
+[2022-10-24 17:34:47] Felipe "Juca" Sanches: kkkk, verdade!
+[2022-10-24 17:34:58] Shelton Ribeiro: Essas buscas aleatórias da vida lkkkk
+[2022-10-24 17:35:09] Shelton Ribeiro: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-10/24323.jpg
+[2022-10-24 17:35:10] Shideravan: Mas eu gostei bastante do jogo
+[2022-10-24 17:35:13] Pablo Vasques Bravo-Villalba: Pô, fiquei curioso com a música
+[2022-10-24 17:35:31] Shelton Ribeiro: Falado nisso, eu peguei esse gba piratinha aí estou esperando ele chegar
+[2022-10-24 17:35:34] Pablo Vasques Bravo-Villalba: O sistema de som do GB é bem legal
+[2022-10-24 17:35:37] Felipe "Juca" Sanches: dos caras ou das minas
+[2022-10-24 17:35:52] Shelton Ribeiro: https://m.pt.aliexpress.com/item/1005004027446345.html?srcSns=sns_Copy&spreadType=socialShare&bizType=ProductDetail&social_params=20673184120&aff_fcid=274865755a464e40be4784fd4652acb8-1666643578579-08495-_mNbCuVm&tt=MG&aff_fsk=_mNbCuVm&aff_platform=default&sk=_mNbCuVm&aff_trace_key=274865755a464e40be4784fd4652acb8-1666643578579-08495-_mNbCuVm&shareId=20673184120&businessType=ProductDetail&platform=AE&terminal_id=e465ddbf252944a582e33d21414e556a&afSmartRedirect=y
+
+Ao que consta ele não roda Roms de GBC,
+[2022-10-24 17:35:56] Felipe "Juca" Sanches: chicanos e/ou chicanas 😉
+[2022-10-24 17:36:22] Shideravan: eu chamo minhas amigas de "caras" também, para mim é uma palavra sem gênero hahahaha
+[2022-10-24 17:36:25] Shelton Ribeiro: Emula alguns de Snes NES e Mega, mas não roda Game Boy de forma alguma
+[2022-10-24 17:36:46] Felipe "Juca" Sanches: perfeitamente! Pra você 😉
+[2022-10-24 17:37:28] Shideravan: Bizarro, ao menos é barato hahahaha
+[2022-10-24 17:37:39] Shelton Ribeiro: https://m.pt.aliexpress.com/item/1005004027446345.html?srcSns=sns_Copy&spreadType=socialShare&bizType=ProductDetail&social_params=20673184120&aff_fcid=274865755a464e40be4784fd4652acb8-1666643578579-08495-_mNbCuVm&tt=MG&aff_fsk=_mNbCuVm&aff_platform=default&sk=_mNbCuVm&aff_trace_key=274865755a464e40be4784fd4652acb8-1666643578579-08495-_mNbCuVm&shareId=20673184120&businessType=ProductDetail&platform=AE&terminal_id=e465ddbf252944a582e33d21414e556a&afSmartRedirect=y
+
+Existe a possibilidade de fazer esse portátil rodar Game Boy? 
+
+Se alguém quiser tentar eu posso comprar um a mais e doar pra empreitada ☺️
+[2022-10-24 17:45:28] Shelton Ribeiro: Se ele rodasse Game Boy, era perfeito 👏🏼👏🏼
+[2022-10-24 17:45:38] Shelton Ribeiro: https://zeichigames.itch.io/saint-seiya-el-regreso-del-fnix-gbc
+[2022-10-24 17:45:56] Shelton Ribeiro: O site do projeto,
+[2022-10-24 17:49:24] Shelton Ribeiro: https://zeichigames.itch.io/saint-seiya-el-regreso-del-fnix-gbc
+
+Link do vídeo, tem as redes sociais deles, acho que dá pra trocar uma ideia legal com eles, numa boa e acho que eles liberam o código de boas.
+[2022-10-24 17:53:53] Shelton Ribeiro: Espero ter ajudado um pouco 😅
+[2022-10-24 18:48:01] Pablo Vasques Bravo-Villalba: Bom, a música dá a impressão de ter sido feita por várias pessoas. Não usa nenhum recurso especial, nada que diferencia o Gameboy. A música das cutscenes achei bem legal

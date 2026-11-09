@@ -1,0 +1,60 @@
+[2018-04-11 07:26:16] DQ: Se você quiser rodar um Zork que é praticamente o original, no GOG.com tem o Zotk Anthology, com o ZORK1.COM e o ZORK1.DAT. A versão do GOG vem com o DOSBOX configurado para rodar em PCs modernos, mas você deve conseguir rodar direto o ZORK1.COM no Nexus (ou outro PC XT).
+[2018-04-11 07:27:22] DQ: Se você quiser uma outra experiência antiga, devo ter em algum lugar os fontes do adventure original e um executável DOS. Obs: para ser mais preciso, uma reescrita em C do adventure original que era em Fortran.
+[2018-04-11 07:29:06] DQ: Eu tenho alguns jogos antigos *originais*. Não sei se você lembra, mas levei o disco do Hitchhacker's Guide mas não conseguimos ler no Nexus. Eu tenho backup dos arquivos em algum lugar.
+[2018-04-11 07:40:13] DQ: Neste post antigo do meu blog (http://dqsoft.blogspot.com.br/2006/11/adventure-parte-i.html) tem um link para baixar o Zork I, II e III do site http://www.infocom-if.org. Não tenho certeza da situação legal destes dowloads, os jogos foram disponibilizados gratuitamente pela Activision por um certo período no passado, não sei se podem ser redistribuidos como este site está fazendo.
+[2018-04-11 09:25:58] Affonso Amendola: Só zork1.com e zork1.dat funciona, mas tem uns artefatos no texto
+[2018-04-11 09:26:11] Affonso Amendola: Eu tiro uma foto quando chegar la no museu hoje
+[2018-04-11 09:27:22] Affonso Amendola: Isso seria bem maneiro
+[2018-04-11 09:28:01] Affonso Amendola: Entao, eu dei uma BOA limpada no cabeçote do leitor do nexus, e agora ele ta lendo os discos BEM mais facilmente
+[2018-04-11 09:28:17] Affonso Amendola: Tinha parado completamente de ler esses dias
+[2018-04-11 09:28:56] Affonso Amendola: Entao talvez valha a pena tentar esses discos originais mesmo denovo
+[2018-04-11 09:29:34] Affonso Amendola: Uma das versoes que eu tentei foi essa oficial da infocom aí, e ainda fica cagadinho
+[2018-04-11 13:04:30] Affonso Amendola: Aqui, os artefatos mencionados
+[2018-04-11 13:06:53] Affonso Amendola: 1 sec, n foi
+[2018-04-11 13:07:25] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-04/4366.jpg
+[2018-04-11 13:23:11] Leonardo Roman: Isso tá parecendo códigos ANSI não suportados.
+[2018-04-11 13:24:00] DQ: Exato. Precisa carregar o ansi.sys
+[2018-04-11 13:27:00] DQ: Estou instalando aqui a versão do gog para dar uma conferida
+[2018-04-11 13:38:13] DQ: Curioso, aqui rodou legal sem ANSI.SYS. Usei o _ZORK1.COM do GOG, ZORK1.DAT precisa estar em um diretório DATA. Rodei com um DOXBOX configurado para CGA.
+[2018-04-11 13:38:33] DQ: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-04/4371.jpg
+[2018-04-11 13:40:04] Affonso Amendola: Hmm, eu vou baixar a versao do gog aqui e ver o que acontece
+[2018-04-11 13:40:14] Affonso Amendola: Acho que a do gog eu n testei
+[2018-04-11 13:40:20] DQ: Estou testando a versão do www.infocom-if.org
+[2018-04-11 13:40:20] Affonso Amendola: Vai que eles fizeram alguma magica
+[2018-04-11 13:40:32] Affonso Amendola: Essa ta la
+[2018-04-11 13:42:56] DQ: Rodou ok executando direto o _zork1.com
+[2018-04-11 13:43:44] DQ: Também rodando o zork.bat, que carrega o driver ANSI...
+[2018-04-11 13:45:42] DQ: Você experimentou rodar direto o _zork1.com? O NNANSI fala que é para VGA.
+[2018-04-11 13:47:27] DQ: O _ZORK1.COM do gog é igual ao do infocom-if
+[2018-04-11 14:08:41] Affonso Amendola: Rodando direto o _zork1.com da o mesmo resultado, o jogo abre mas com os codigos ansi
+[2018-04-11 14:08:54] Affonso Amendola: A versao do jogo que veio com o nnansi n abre
+[2018-04-11 22:13:04] Affonso Amendola: E eu comecei a escrever um programinha pra tentar imagear aquele hd
+[2018-04-11 22:14:09] Affonso Amendola: A ideia é tentar enviar o conteudo via serial pra um otro pc que ta rodando um otro programinha que receberia e colocaria em um arquivo
+[2018-04-11 22:15:05] Affonso Amendola: Eu baixei o borland C, pq eu manjo um poquinho de c, e eu fiz umas tentativas usando algumas coisas que tinham no bios.h do borland
+[2018-04-11 22:16:07] Affonso Amendola: E eu to usando o emulador de xt do mame pra testar o programinha
+[2018-04-11 22:16:52] Affonso Amendola: Alguem ja fez algo parecido e pode dar um help?
+[2018-04-11 22:17:39] Felipe "Juca" Sanches: pô! Isso é algo bem legal, hein!
+[2018-04-11 22:17:55] Felipe "Juca" Sanches: Sobre seu código num repositório git
+[2018-04-11 22:18:03] Felipe "Juca" Sanches: e eu reviso e dou uns palpites
+[2018-04-11 22:19:12] Affonso Amendola: Eu to escrevendo ele direto no borland, pq tipo, pra transferir o codigo pra dentro do emulador do mame ta meio chato
+[2018-04-11 22:19:40] Affonso Amendola: Tem como montar um .img direto no linux? Nunca tentei
+[2018-04-11 22:19:58] Affonso Amendola: Ou um .chd do mame?
+[2018-04-11 22:19:59] Felipe "Juca" Sanches: não sei
+[2018-04-11 22:20:03] Felipe "Juca" Sanches: acho qeu sim
+[2018-04-11 22:20:20] Affonso Amendola: Pq isso facilitaria muito escrever esse codigo
+[2018-04-11 22:20:34] Affonso Amendola: Pq no momento eu to escrevendo ele dentro do proprio emulador
+[2018-04-11 22:20:46] Felipe "Juca" Sanches: vc poderia usar o dosbox pra essa etapa talvez?
+[2018-04-11 22:20:59] Affonso Amendola: É o que eu tava fazendo
+[2018-04-11 22:21:11] Felipe "Juca" Sanches: o dosbox monta um diretorio local como c:
+[2018-04-11 22:21:37] Affonso Amendola: Usava o dosbox como meio termo
+[2018-04-11 22:21:40] Felipe "Juca" Sanches: aí dá pra editar por fora do emulador, e depois bootar o dosbox e usar o arquivo lá dentro
+[2018-04-11 22:22:24] Felipe "Juca" Sanches: talvez dê pra fazer algo com img e chd montando via /dev/loop
+[2018-04-11 22:22:30] Felipe "Juca" Sanches: mas não sei...
+[2018-04-11 22:22:36] Felipe "Juca" Sanches: teria que dar uma pesquisada
+[2018-04-11 22:23:04] Affonso Amendola: Isso facilitaria BASTANTE
+[2018-04-11 22:23:05] Affonso Amendola: Mas okay
+[2018-04-11 22:23:21] Affonso Amendola: Como ta n ta horrivel
+[2018-04-11 22:23:46] Affonso Amendola: Eu subo uma versao pro git
+[2018-04-11 22:23:51] Affonso Amendola: E te aviso
+[2018-04-11 22:36:20] Felipe "Juca" Sanches: :-)
+[2018-04-11 22:50:11] Felipe "Juca" Sanches: http://flashparty.dx.am/index.php?lang=en

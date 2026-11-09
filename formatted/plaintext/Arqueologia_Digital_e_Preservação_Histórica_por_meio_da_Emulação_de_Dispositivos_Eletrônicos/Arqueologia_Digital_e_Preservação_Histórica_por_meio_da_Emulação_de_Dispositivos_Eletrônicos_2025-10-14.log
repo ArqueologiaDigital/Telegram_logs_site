@@ -1,0 +1,51 @@
+[2025-10-14 20:42:01] Ismael Carvalho: @fsanches esse vídeo do wacky gator é muito maneiro man
+[2025-10-14 20:42:22] Ismael Carvalho: Também não entendi a grosseria do cara, enfim só é triste
+[2025-10-14 20:45:44] Ismael Carvalho: Pegando o gancho disso, essa semana eu vi o metalnes e fiquei com dúvida se no mame tem algo parecido com isso
+[2025-10-14 20:46:16] Ismael Carvalho: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35781.jpg
+[2025-10-14 21:17:17] Erin Pinheiro 🐿: o legal do metalnes é que foi feito pelo mesmo cara do nesticle
+[2025-10-14 21:33:06] L.: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35783-animation.gif.mp4
+[2025-10-14 22:18:58] Pedro de Medeiros 👾: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35784-david-bowie-labyrinth.mp4
+[2025-10-14 22:25:46] Pablo Vasques Bravo-Villalba: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35785-tongue-out-stick.mp4
+[2025-10-14 22:38:44] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35786-stern-pinball-stern.mp4
+[2025-10-14 22:39:35] Felipe "Juca" Sanches: Tive uma idéia! Fazer um layout pro MAME de alguma máquina de pinball!
+[2025-10-14 22:39:48] Felipe "Juca" Sanches: Sei que tem várias emuladas já, mas mostram só o DMD
+[2025-10-14 22:39:55] Felipe "Juca" Sanches: (dot matrix display)
+[2025-10-14 22:40:31] Felipe "Juca" Sanches: no início o layout pode ser meramente clicável (clica-se com o mouse nos sensores do playfield)
+[2025-10-14 22:41:05] Felipe "Juca" Sanches: mas depois dá pra usar lua scripting pra implementar simulação física das bolas se movendo pelo playfield e encostando nos sensores para ativá-los
+[2025-10-14 22:42:18] Felipe "Juca" Sanches: Para a arte, pode-se utilizar os desenhos dos manuais
+[2025-10-14 22:43:12] Felipe "Juca" Sanches: Sei que a Medieval Madness (da Williams), por exemplo, já está emulada no MAME. E tem um manual muito bom!
+https://www.arcade-museum.com/manuals-pinball/M/Medieval_Madness_1_OPS.pdf
+[2025-10-14 22:44:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35794.jpg
+[2025-10-14 22:46:34] Felipe "Juca" Sanches: Quem se interessa em fazer uma sessão de mentoria pra eu ajudar mostrando o caminho das pedras?
+[2025-10-14 22:50:01] Felipe "Juca" Sanches: Por exemplo... Nesse caso, como a arte seria um SVG um pouco mais complexo. E também por conta de questões de direitos autorais, acho que um layout assim precisaria ser feito com a arte declarada como uma "ROM".
+[2025-10-14 22:50:17] Felipe "Juca" Sanches: Existem casos assim com os LCD handhelds.
+[2025-10-14 22:51:32] Felipe "Juca" Sanches: onde a arte dos ícones monocromáticos dos displays de cristal líquido são salvas em SVG, mas declaradas como parte do rom-set. Ou seja, não ficam no código fonte do MAME como no caso dos arquivos de layoute (em formato .lay no diretório src/mame/layouts).
+[2025-10-14 22:52:02] Felipe "Juca" Sanches: Mas são declaradas por meio de um checksum da mesma forma que acontece com os arquivos de ROM do conteúdo dos chips.
+[2025-10-14 22:55:47] Ismael Carvalho: Eu tô querendo aprender, no handheld que a gente tá olhando tem bastante coisa pronta, mas tenho zero noção de trabalhar com SVG no geral
+[2025-10-14 22:56:14] Ismael Carvalho: seria maneiro pra quando eu for tentar fazer as minhas tentativas solo
+[2025-10-14 22:59:36] Ismael Carvalho: O mame tem simulação física?
+[2025-10-14 23:00:22] Felipe "Juca" Sanches: Vetorização é uma tarefa mais pro pessoal da área do design. Eu tenho um pé de cada lado, pois sempre gostei de desenhar, e muito tempo atrás me envolvi com o desenvolvimento do Inkscape, então ganhei bastante experiência em vetorização.
+Mas pra quem estiver os os pés mais fortemente firmados na programação (presumo que seja seu caso, corrija-me se eu estiver equivocado), acho que seria o caso de trabalhar com vetores que já estejam prontos, como por exemplo no caso desses handhelds que você tá portando daquele emulador escrito em python
+[2025-10-14 23:00:52] Felipe "Juca" Sanches: ainda não, mas acho que podemos fazer um placeholder meia-boca em lua
+[2025-10-14 23:01:05] Felipe "Juca" Sanches: só pra esquentar o meio-de-campo
+[2025-10-14 23:01:47] Felipe "Juca" Sanches: existe uma estratégia que acho boa que é de fazer algo meia boca só pra motivar as outras pessoas a se mobilizares para fazer a implementação decente
+[2025-10-14 23:02:03] Felipe "Juca" Sanches: pra sair da teoria e ir para a prática
+[2025-10-14 23:02:26] Felipe "Juca" Sanches: meio que uma variante de nerd-sniping...
+[2025-10-14 23:03:34] Felipe "Juca" Sanches: https://xkcd.com/356/
+[2025-10-14 23:04:44] Ismael Carvalho: Sim sim, eu tenho mais proximidade com programação eu desenhava bastante e usei bastante vetorização com krita pra desenhar com o mouse enquanto eu não tinha uma mesa digitalizadora
+[2025-10-14 23:05:53] Ismael Carvalho: gosto dessa abordagem também, tô acostumado a fazer umas provas de conceitos bem mais ou menos só pra animar o pessoal também XD
+[2025-10-14 23:07:30] Ismael Carvalho: tudo o que tô podendo ter a oportunidade de ver como é feito eu tô dando uma olhada, pena que tô meio travado pela falta de tempo em estudar mais a arquitetura do mame
+[2025-10-14 23:07:37] Ismael Carvalho: mas é impressionante a quantidade de coisas que tem lá
+[2025-10-14 23:10:28] Felipe "Juca" Sanches: É divertido ir acompanhando o log de commits no github e quando aparece alguma coisa que chama a atenção eu adiciono ao meu script de build do MAME e baixo as ROMs pra testar
+[2025-10-14 23:11:03] Felipe "Juca" Sanches: outro dia apareceu um maluco com um dump de firmware de injeção eletrônica de carro kkkkk
+[2025-10-14 23:11:44] Felipe "Juca" Sanches: Eu ainda sonho em algum dia emular um forno de microondas!
+[2025-10-14 23:11:50] Felipe "Juca" Sanches: Just for the Lulz
+[2025-10-14 23:13:50] Ismael Carvalho: Eu tô guardando informação sobre o relógio Aqua aq-37
+[2025-10-14 23:14:09] Ismael Carvalho: Agr que me desbloqueou o fato de que da pra emular física também
+[2025-10-14 23:14:32] Ismael Carvalho: Vou ver mais coisas que eu posso abrir e entender como poderia emular no futuro
+[2025-10-14 23:24:07] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35821.jpg
+[2025-10-14 23:24:07] Felipe "Juca" Sanches: Pronto, fodeu!
+[2025-10-14 23:25:51] Felipe "Juca" Sanches: Acho que essa foi a minha mensagem de "fuck you"
+[2025-10-14 23:26:36] Felipe "Juca" Sanches: Perdi a diplomacia...
+[2025-10-14 23:28:16] Ismael Carvalho: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35824.jpg
+[2025-10-14 23:59:59] Pedro de Medeiros 👾: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/35825.jpg

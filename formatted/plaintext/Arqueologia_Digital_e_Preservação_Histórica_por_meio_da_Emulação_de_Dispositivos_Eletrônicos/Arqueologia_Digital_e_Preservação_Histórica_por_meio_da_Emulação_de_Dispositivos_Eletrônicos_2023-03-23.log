@@ -1,0 +1,11 @@
+[2023-03-23 07:07:11] Ismael Luceno: por conta da retrocompatibilidade, também tem varios chips PCIe -> ISA e adaptadores ja disponiveis no mercado
+[2023-03-23 07:11:23] Ismael Luceno: por exemplo as placas da costronic: https://costronic.com.tw/
+[2023-03-23 07:19:13] Ismael Luceno: * PCI para ISA: IT8888G-L PCI to ISA Bridge Chip
+[2023-03-23 07:20:56] Ismael Luceno: * PCIe SuperIO (LB/SPI/USB/ISA/etc.): ASIX AX99100
+[2023-03-23 07:21:43] Ismael Luceno: * PCIe para PCI: IT8892E
+[2023-03-23 07:21:46] Ismael Luceno: etc. etc.
+[2023-03-23 07:22:02] Ismael Luceno: tem um montante de chipes no mercado
+[2023-03-23 07:22:08] Ismael Luceno: esses encontre aqui no meu "lab"
+[2023-03-23 07:24:16] Ismael Luceno: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26601.jpg
+[2023-03-23 07:24:16] Ismael Luceno: tem algumas paquinhas para dev como essas aqui
+[2023-03-23 07:25:34] Ismael Luceno: pode conectar elas também para un backbone com conetores ISA estandar

@@ -1,0 +1,28 @@
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: https://twitter.com/travisgoodspeed/status/1709619537962791421?t=FbxK7Flvn1pOrJCOFQU2Ww&s=19
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: Sabe ler isso?
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: Eu sei que o chip tem 2k bytes de ROM
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: A ROM B tem 6 columns de 20 bits, o que é bem fora do conventional, então aposto que seja para o microcódigo, e a ROM A deve ser o código executável
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: A ROM A tem 8 colunas de 32 bits cada. E 33 linhas.
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: 32 bits = 4 bytes
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: E a trigésima terceira linha seria para bits de paridade talvez
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: Entretanto, deveria ser 2K
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: Então olhei com mais calma e notei que o que eu estava chamando de linha na verdade parece ser um par de linhas.
+[2023-10-05 09:27:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28290.jpg
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: Tem os pontinhos no meio. E tem trilhas indo pra cima ou pra baixo. Ou nenhuma trilha.
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: Eu acho que cada pontinho corresponde a 2 bits. A presença ou ausência de trilha pra cima corresponde a um zero ou um. E a presença ou ausência de trilha para baixo é um segundo bit.
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: Com essa interpretação, dá exatamente 2Kbytes com 1 bit de paridade para cada 32 bits de dados.
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: Aí nos resta o desafio de como desembaralhar os bits
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: Pra descobrir como estão distribuídos nessa mask ROM os endereços de memória.
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: E também quais são os bits mais significativos e menos significativos.
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: Conhecendo os opcodes e o layout de memória típicos, dá pra tentar ir desvendando
+[2023-10-05 09:27:59] Felipe "Juca" Sanches [forwarded]: Ou seja... estudar datasheet do Zilog Z8...
+[2023-10-05 12:46:41] Alexandre Villares: https://openpreservation.org/events/the-87-missing-report-and-digital-preservation-advocacy/?q=9186
+[2023-10-05 15:14:40] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28300.jpg
+[2023-10-05 15:14:40] RicBit: fiz um metodo novo estocastico, achei que ele espalha melhor que o floys, mas tá puxando muito pro preto
+[2023-10-05 16:39:54] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28301.jpg
+[2023-10-05 16:39:54] RicBit: se eu aumentar a janela do estocastico, ele aproxima sem misturar muitas cores. acho que finalmente achei um ponto bom para usar de base para screen 2
+[2023-10-05 16:42:18] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28302.jpg
+[2023-10-05 16:51:57] RicBit: o baguio é loco, funciona mesmo
+[2023-10-05 20:55:20] Robson França: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-10/28304-AnimatedSticker.tgs
+[2023-10-05 22:37:40] Shideravan: Alguém fez um emulador de Super Nintendo para Nintendo 64 e levando em conta a arquitetura do console, não tem como não ficar impressionado
+https://www.youtube.com/watch?v=bc104Ln--kc

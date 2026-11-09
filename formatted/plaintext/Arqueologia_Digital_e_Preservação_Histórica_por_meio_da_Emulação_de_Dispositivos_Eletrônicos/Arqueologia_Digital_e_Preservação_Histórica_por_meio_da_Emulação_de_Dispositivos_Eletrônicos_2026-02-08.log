@@ -1,0 +1,19 @@
+[2026-02-08 13:44:52] Felipe "Juca" Sanches: Eu comecei a fazer um trabalho similar de tentar catalogar todas versoes do bytecode de todos ports do another world
+[2026-02-08 13:45:26] Felipe "Juca" Sanches: Gosto da abordagem que o MAME tem de vincular metadados ao checksum das ROMs
+[2026-02-08 13:51:33] RicBit: é, o meu disasm só prossegue se o md5 da rom bater
+[2026-02-08 14:04:30] Felipe "Juca" Sanches: Perfeito!
+[2026-02-08 15:28:25] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37395.jpg
+[2026-02-08 15:28:25] RicBit: ê festa
+[2026-02-08 16:26:10] RicBit: a versao europeia tem protecao anti pirataria, a japonesa nao tem :D
+[2026-02-08 16:28:06] L.: como é? tenta escrever num endereço de rom e lê de novo pra ver se mudou?
+[2026-02-08 16:57:31] RicBit: isso, ele escreve um jp 0 por cima do main loop
+[2026-02-08 21:16:45] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37399.jpg
+[2026-02-08 21:16:45] RicBit: conclusao
+a minha rom base (v0) é a original
+jp104 é hack da v0 para consertar o typo keyboabd
+a0 é hack da v0 para começar o jogo sem teclado
+9196 é fork oficial da v0 usando a bios
+eu106 é fork oficial da eu106 com codigo anti-pirataria
+a2 é hack da eu106 matando o codigo anti-pirataria
+[2026-02-08 21:18:18] RicBit: se fosse para escolher minha preferida é 9196
+[2026-02-08 21:58:25] RicBit: tinha mais uma, 116, mas essa é só a europeia com um jeito diferente de matar a protecao anti copia

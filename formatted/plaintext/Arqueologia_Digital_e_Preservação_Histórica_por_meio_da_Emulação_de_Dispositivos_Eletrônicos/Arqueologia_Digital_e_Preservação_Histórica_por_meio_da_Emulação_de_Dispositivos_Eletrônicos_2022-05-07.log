@@ -1,0 +1,5 @@
+[2022-05-07 00:02:36] Shideravan: Alguém poderia usar para fazer um Croc sem os controles de tanque
+[2022-05-07 00:03:02] Shideravan: Odeio jogabilidade de tanque, principalmente para jogos de plataforma
+[2022-05-07 00:03:24] Shideravan: Foi um desperdício, Croc parece ser um jogo bacana, tirando a jogabilidade
+[2022-05-07 04:09:35] Erin Pinheiro 🐿: não é necessário ter a fonte do _renderer_ (que não tem nada a ver com a jogabilidade) pra fazer isso: https://croc.epiclper.com/
+[2022-05-07 04:10:33] Erin Pinheiro 🐿: mas: o renderer ser aberto pode abrir as portas pra outras fontes que dependiam dele serem abertas (por exemplo 3d movie maker da microsoft, já que essas fontes dependem que a licensa do renderer permita a abertura das fontes dependentes)

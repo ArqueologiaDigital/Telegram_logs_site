@@ -1,0 +1,34 @@
+[2021-11-25 00:00:36] Felipe "Juca" Sanches: Tô pensando em fazer ele só parar de tocar o despertador se você responder corretamente uma pergunta besta de aritmética
+[2021-11-25 00:00:42] Felipe "Juca" Sanches: pra provar que está acordado
+[2021-11-25 10:15:19] P. M: tortura
+[2021-11-25 10:15:21] P. M: séloko
+[2021-11-25 10:15:44] Leonardo Roman: Shut up and take my money. Hahaha. Ficou um ótimo relógio nerd. E ainda poderia funcionar como Pense Bem!
+[2021-11-25 10:25:02] Pablo Vasques Bravo-Villalba: Legal isso
+[2021-11-25 11:40:11] Pedro de Medeiros 👾: Nunca tinha reparado que o Pense Bem tinha uma "entrada" de disquete. 😝
+[2021-11-25 16:06:53] L.: O esquema que eu fiz no meu relógio com tubo de nixie foi tirar o MSP420 que tinha RTC e bateria mas desregulava rápido (perdia tipo 1 minuto por semana) foi botar um ESP8266 no lugar com NTP e sincronizar 1x/dia. :P
+[2021-11-25 16:07:02] L.: Legal que eu consegui fazer o firmware todo em Lua!
+[2021-11-25 16:09:30] L.: O negócio até descobre se tá em horário de verão/inverno sozinho https://twitter.com/lafp/status/1294755637172174848
+[2021-11-25 16:35:11] Pablo Vasques Bravo-Villalba: Nem tenho palavras para descrever como isso é lindo. 😍 Adoro tubos de nixie
+[2021-11-25 16:39:57] L.: Gosto demais também
+[2021-11-25 16:40:17] L.: Eu quero fazer outro relógio uma hora com tubo diferente
+[2021-11-25 16:40:30] L.: E com base de madeira+latão. Dá um charme
+[2021-11-25 16:42:51] Pablo Vasques Bravo-Villalba: Um charme extra, quer dizer. 😉 Uma coisa meio steampunk, talvez? Acho que não é o termo certo. Mas dar uma certa atmosfera que o acrílico transparente, por mais que também seja bonito (PCB porn), não tem como dar.
+[2021-11-25 16:43:14] L.: Sim, sim, um charme extra
+[2021-11-25 16:43:47] L.: Mas dessa vez eu acho que vou tentar fazer com VFD azul
+[2021-11-25 16:43:56] L.: Tem uns em tubo também!
+[2021-11-25 16:44:32] Pablo Vasques Bravo-Villalba: VFD também é muito legal. Assim como nixie, tem uma textura e uma personalidade próprias
+[2021-11-25 16:44:48] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-11/17989.jpg
+[2021-11-25 16:44:48] L.: Olha esses soviéticos
+[2021-11-25 16:45:29] Pablo Vasques Bravo-Villalba: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-11/17990-sticker.webp
+[2021-11-25 16:45:40] Pablo Vasques Bravo-Villalba: Sensacional
+[2021-11-25 17:09:09] FTMaciel: Gostava das calculadoras de mão com vfd
+[2021-11-25 17:33:59] Felipe "Juca" Sanches: sou apaixonado por VFDs
+[2021-11-25 17:34:32] Felipe "Juca" Sanches: tenho alguns aqui de sucata que eu adoraria ligar, mas nao tenho ideia de como montar um circuito para controle dessas coisas
+[2021-11-25 18:17:17] L.: Dá pra usar de válvula pra fazer amplificador também 😂
+[2021-11-25 18:18:50] P. M: que bonito, parabpens, mano!
+[2021-11-25 18:19:01] L.: *mana
+[2021-11-25 18:19:04] P. M: opa
+[2021-11-25 18:19:06] P. M: perdones
+[2021-11-25 18:19:18] P. M: Ficou fera memo
+[2021-11-25 18:19:29] L.: O kit vende(ia) no Tindie até um tempo atrás. Não é projeto meu!
+[2021-11-25 18:35:59] FTMaciel: Eu vi isso. Muito legal

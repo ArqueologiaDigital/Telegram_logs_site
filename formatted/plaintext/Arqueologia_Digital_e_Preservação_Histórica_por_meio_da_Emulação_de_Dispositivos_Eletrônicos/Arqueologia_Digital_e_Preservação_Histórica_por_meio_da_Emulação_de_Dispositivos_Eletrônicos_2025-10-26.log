@@ -1,0 +1,18 @@
+[2025-10-26 15:55:32] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/14420
+[2025-10-26 15:56:07] Felipe "Juca" Sanches: @mrparn e @pvm_NoCryptoScams, aqui está o código que estávamos conversando a respeito no almoço de hoje.
+[2025-10-26 17:26:20] Felipe "Juca" Sanches: Na semana do 05/DEZ estarei em Brasília novamente.
+[2025-10-26 21:02:03] L.: https://tinkerdifferent.com/threads/apple-network-server-macos-based-roms-found.4756/
+[2025-10-26 21:28:04] Pablo Vasques Bravo-Villalba: @fsanches Isso aqui que eu e o Pedro tínhamos mencionado mais cedo: https://hackaday.io/project/190345-isetta-ttl-computer
+[2025-10-26 21:34:29] L.: caray!
+[2025-10-26 21:34:50] L.: não sabia que tinha symbos pra nada além de z80
+[2025-10-26 21:35:16] L.: ahhh, o negócio roda código z80 também
+[2025-10-26 21:35:20] L.: que doideira
+[2025-10-26 21:35:29] Pablo Vasques Bravo-Villalba: E não tem 😁
+[2025-10-26 21:36:15] L.: vibe daqueles msx árabes que rodavam jogo de megadrive
+[2025-10-26 21:36:31] Pablo Vasques Bravo-Villalba: Eu estava pensando aqui como seria com a diferença entre a quantidade de registradores do 6502 e do Z80. A resposta é óbvia, quase todos os registradores estão em uma área de memória separada, específica para essa finalidade
+[2025-10-26 21:36:59] Pablo Vasques Bravo-Villalba: Os processadores são implementados em microcódigo
+[2025-10-26 21:37:14] Pablo Vasques Bravo-Villalba: Diz que tem espaço para incluir mais ISAs
+[2025-10-26 21:38:19] L.: não vi como funciona mas deve ter algum frontend que converte as instruções em opcode, mais ou menos como no x86
+[2025-10-26 21:39:01] L.: flashbacks aqui de quando tava na intel trabalhando num negócio que tocava essa parte aí hehe
+[2025-10-26 21:39:07] Pablo Vasques Bravo-Villalba: Doido
+[2025-10-26 23:36:22] L.: https://www.youtube.com/watch?v=Oq4ee6V3TiA

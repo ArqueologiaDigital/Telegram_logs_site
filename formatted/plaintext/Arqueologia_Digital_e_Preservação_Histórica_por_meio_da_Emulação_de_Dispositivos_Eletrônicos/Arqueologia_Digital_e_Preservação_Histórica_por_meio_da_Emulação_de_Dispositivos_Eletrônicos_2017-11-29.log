@@ -1,0 +1,24 @@
+[2017-11-29 00:55:01] Felipe "Juca" Sanches: https://github.com/mamedev/mame/releases/tag/mame0192
+[2017-11-29 00:57:17] Felipe "Juca" Sanches: https://www.reddit.com/r/MAME/comments/7g9s77/mame_0192/
+[2017-11-29 00:59:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/2011.jpg
+[2017-11-29 01:00:25] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/2012.jpg
+[2017-11-29 01:04:03] Werner: Não sabia q vc tinha feito o Codimex tbm
+[2017-11-29 01:04:45] Werner: Nossa, esse cara (Robbbert) emula coisa bagarai
+[2017-11-29 01:04:52] Werner: Até PS2
+[2017-11-29 01:05:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/2016.jpg
+[2017-11-29 01:06:03] Werner: Gran Trak 10/Trak 10/Formula K (older) [TTL] [Ed Fries, Tim Giddens, Andy Welburn]
+[2017-11-29 01:06:10] Felipe "Juca" Sanches: :-)
+[2017-11-29 01:06:54] Felipe "Juca" Sanches: achei estranho não constarem os Sagitta nessa lista aí
+[2017-11-29 01:07:27] Felipe "Juca" Sanches: será que fizemos no 0.191 ? Acho que não. Acho que é mais recente. Vai ver o Cuavas esqueceu de botar nos release notes
+[2017-11-29 01:07:43] Felipe "Juca" Sanches: to indo dormir, té mais
+[2017-11-29 01:07:58] Werner: Nem o Zezinho
+[2017-11-29 01:08:03] Werner: Nem PF
+[2017-11-29 01:10:18] Felipe "Juca" Sanches: verdade
+[2017-11-29 08:10:11] Felipe "Juca" Sanches: É por que o Zezinho e os Sagitta ainda estão em pull requests pendentes.
+[2017-11-29 08:11:37] Felipe "Juca" Sanches: E o Lepus 200 eu nem sequer submeti ainda pois mal comecei a emular (apenas rascunhei um inicio de driver aquele dia na USP)
+[2017-11-29 08:12:20] Felipe "Juca" Sanches: Nao teve nenhum aprimoramento no driver do Patinho Feio nesse mês.
+[2017-11-29 08:13:59] Felipe "Juca" Sanches: Sim! Só que esse aí tá marcado como  "non-working" por enquanto.
+[2017-11-29 08:14:38] Felipe "Juca" Sanches: Circuito TTL é complicado de simular.
+[2017-11-29 08:24:52] DQ: Falando no Lepus 200, o disassembly continua andando (mas devagar). O que eu achava que era o click do teclado agora me parece ser o LED do caps lock...
+[2017-11-29 08:50:55] Felipe "Juca" Sanches: :-)
+[2017-11-29 14:41:25] Werner: DQ vc é o cara!

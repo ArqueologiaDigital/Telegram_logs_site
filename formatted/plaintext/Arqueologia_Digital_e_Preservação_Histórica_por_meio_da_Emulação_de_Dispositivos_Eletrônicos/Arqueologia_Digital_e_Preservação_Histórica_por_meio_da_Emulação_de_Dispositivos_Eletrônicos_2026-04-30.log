@@ -1,0 +1,49 @@
+[2026-04-30 02:04:26] RicBit: descobri que o antartic tem 5 versoes originais
+[2026-04-30 02:04:31] RicBit: então falta achar 2
+[2026-04-30 02:47:45] RicBit: wat
+[2026-04-30 02:48:00] RicBit: uma das versoes oficiais é a argentina
+[2026-04-30 02:48:09] RicBit: que coisa
+[2026-04-30 02:48:12] RicBit: falta 1 entao
+[2026-04-30 02:59:04] RicBit: coisa louca, eu acho que a versao argentina veio antes da europeia
+[2026-04-30 06:11:57] Felipe "Juca" Sanches: de onde vem essa informação?
+[2026-04-30 09:02:25] Felipe "Juca" Sanches: Finalmente alguém mencionou o besouro da primeira fase do Another World! https://www.youtube.com/watch?v=0a5E5M5QWOc
+[2026-04-30 09:56:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38541.jpg
+[2026-04-30 09:56:49] Felipe "Juca" Sanches: E aqui está o que o Claude concluiu por meio de análise do bytecode quando perguntei: "Does the beetle fly?"
+[2026-04-30 10:40:55] RicBit: eu abri o game master e dentro tem 5 checksums referentes ao antarctic adventure
+[2026-04-30 10:58:06] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38545.jpg
+[2026-04-30 10:58:06] RicBit: tem 3 variantes do JP e 2 do EU. A segunda do EU é a argentina, a 3 do JP eu não sei.
+[2026-04-30 10:59:13] RicBit: vou baixar o ftp inteiro e fazer o brute force
+[2026-04-30 11:31:01] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38547.jpg
+[2026-04-30 11:31:01] RicBit: yup tem uma rom perdida que ninguem dumpou
+[2026-04-30 12:50:14] Pablo Vasques Bravo-Villalba: Essa 6166? Poderia ser uma versão interna da Konami, usada para testes
+[2026-04-30 13:10:34] RicBit: pode ser demo de loja, ou alguma versao em cassette, no idea
+[2026-04-30 13:10:45] RicBit: o grande tabelão de roms perdidas -> https://gist.github.com/ricbit/ce2112ac6bb628031229e337249bbdb1
+[2026-04-30 13:10:49] RicBit: tem um monte faltando
+[2026-04-30 14:31:11] Felipe "Juca" Sanches: Fiz um patch no bytecode do another world para re-ativar o comportamento do besouro. Agora dá pra interagir com ele. Ele capota quando leva um chute. Depois ele se revira, bate as asas, sai voando devagarinho e depois dá um vôo rasante e mata o Lester.
+
+Infelizmente a VM trava logo em seguida.
+
+https://www.youtube.com/watch?v=axL7sMXXV8Q
+[2026-04-30 16:15:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38553.jpg
+[2026-04-30 17:38:50] Hugo (Agaelebê): É aqui que vc baixa? https://download.file-hunter.com/
+[2026-04-30 18:36:18] RicBit: foi dai sim
+[2026-04-30 18:39:26] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38556.jpg
+[2026-04-30 18:39:26] Felipe "Juca" Sanches: Tropecei nesse gráfico poligonal não utilizado e acho que tem cara de monstro. Será que isso é um rascunho do besouro na cutscene imcompleta do ataque ? (A paleta de cores tá errada, vou tentar consertar isso pra ver se melhora o aspecto visual)
+[2026-04-30 18:43:15] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38557.jpg
+[2026-04-30 18:43:15] Felipe "Juca" Sanches: talvez, né?
+[2026-04-30 18:51:37] RicBit: no antartic tem um sprite não usado
+[2026-04-30 18:53:01] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38559.jpg
+[2026-04-30 18:53:01] RicBit: O 212 eu não sei o que é
+[2026-04-30 18:56:46] RicBit: puts acho que eu descobri o que é
+[2026-04-30 18:58:12] RicBit: acho que é debug aid
+[2026-04-30 18:58:32] RicBit: ele é carregado nos slots e trocado depois por outros sprites
+[2026-04-30 18:58:51] RicBit: se a rotina estiver com pau vai aparecer a explosao amarela na tela para avisar onde está o sprite quebrado
+[2026-04-30 18:59:16] RicBit: dado que tá cheio de debug aid no jogo, faz sentido
+[2026-04-30 19:12:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38566.jpg
+[2026-04-30 19:12:52] Felipe "Juca" Sanches: completamente especulativo, mas isso aqui é uma montagem que eu acabei de fazer usando polígonos não utilizados que sobraram nos game assets
+[2026-04-30 19:14:00] Felipe "Juca" Sanches: Eu rotacionei e posicionei "a gosto" pra tentar montar o quebra-cabeça de algo parecido com um besouro voando. Mas não editei nenhuma das formas dos polígonos em si.
+[2026-04-30 20:24:33] Guilherme Ranoya: Pra quem gosta muito das músicas com os timbres de uma Roland MT-32, já dá para ter um aparelho de som com diskette. 😂
+
+https://bsky.app/profile/dosnostalgic.bsky.social/post/3mkpsq4vvhs27
+
+Tô zombando, mas eu tinha uma (na verdade uma LAPC-1) e meus amigos choravam quando ouviam a diferença para as SoundBlasters.... pior é que eu ligava o computador em um amplificador de verdade com um par de caixas de som de 1 metro de altura. Aí ficava difícil pras caixinhas de som padrão dos computadores no começo da década de 1990.

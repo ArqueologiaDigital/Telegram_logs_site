@@ -1,0 +1,176 @@
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Ooooo Juca, tenho uma duvida sobre seu emulador do patinho
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Vc colocou a declaração da decwriter e da teletype direto no .cpp do driver, isso significa que os dispositivos de IO que tão la (Que são só esses dois no momento?), tão hardcoded la, e por isso n da pra fazer aquela parada que da em outros emuladores de tirar coisas de slots e colocar outras coisas no lugar, tipo usar o patinho sem nada, ou colocar uma teletype, ou um leitor de cartão perfurado (Ou um sintetizador musical daorão)? Pelo menos não sem mecher no código manualmente e trocar os periféricos?
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Sei la, to tentando aprender a escrever coisa pro MAME ainda 😅
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: é verdade
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: bora arrumar ?
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Hell yeah
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Faz sentido o que eu falei?
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: 100% !!!
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: É algo que eu sei que eu deveria ter feito, mas ainda não fiz
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: e não sei exatamente como faz
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: teria que dar uma investigada na forma como o MAME implementa esses mecanismos de slots
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: e criar um sistema de slots com as características das interfaces de I/O do Pato
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Tbem nâo
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Mas eu dei uma olhadinha em outros arquivos
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: mas tá cheio de código de outros sistemas pra gente ler e tentar imitar
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Especificamente na implementação da porta RS232 e do IO do hp80
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: e tem também o IRC #mamedev
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: pra perguntar pros outros devs
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Oh, verdade né
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: #mame-dev em irc.freenode.net
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Olhando esses dois, o que parece funcionar é escrever um slot device com as características da bus
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: e melhor ainda... tem o issue tracker do MAME no github para manter registrado o histórico da conversa
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Perfeito! Acho que é esse o caminho mesmo. Bora tentar ?
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: O q, colocar uma issue nova no /mamedev/mame com um Adding IO Slot System to Patinho Feio", ou algo do tipo?
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: talvez
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Ou forkar um mame pra fazer especificamente isso/
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: ?
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: também!
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: o mais importante é arregaçar as mangas e começar a tentar. Ou seja, forkar e esboçar código é o passo zero.
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: mas quando enroscar em algo, acho justo abrir uma issue descrevendo os objetivos, as tentativas feitas e as duvidas que surgiram
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Beleza, faz isso no arqueologia digital n?
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: pode ser!
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: haha
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: legal!
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Beleza, vamo fazer essa parada aí
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: então façamos assim: faz lá um fork do mamedev/mame em ArqueologiaDigital/mame
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: aí a gente mantém o master do ArqDig em sync com o do mamedev, ou seja, é proibido commitar direto no nosso master
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: criamos um branch patinhofeio onde iremos ter o "nosso master customizado com coisas do patinhofeio"
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Faz uma branch pato?
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Okay
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: patinhofeio
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: e aí podemos usar esse branch patinhofeio pra mandar pull requestspro mamedev quando acharmos que tá pronto
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: mas entre nós podemos ter um workflow interno
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: por exemplo podemos comitar em nossos forks pessoais do ArqDig e mandar pull request pro ArqDig, assim a gente faz code-review entre nós
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: por exemplo, hoje em dia eu tenho um felipesanches/mame
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: e posso continuar trabalhando nele e enviando PR pro ArqDig
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: faz sentido?
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Pera, n entendi
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Lembra que eu começei a usar git a poquissimo tempo
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: a outra forma, supostamente mais simples, seria comitar direto no ArqDig, mas aí rola um risco de avacalhar
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: peraí que eu vou desenhar (literalmente)
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Ahh, mas mesmo se cagar as coisas tem como voltar pra um commit anterior n tem?
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: 😀😀😀😀😀😀, boa
+[2018-05-07 00:05:09] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4581.jpg
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Ahhhh
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Entendi
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: no caso patinhofeio "+nome da feature" é o que chamamos de feature-branches
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: ou seja, branches criados pontualmente só pra implementar algo bem específico
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: eu tenho o costume de usar como nome para feature branches o próprio número da issue que esteja tentando corrigir
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: por exemplo, no projeto fontbakery eu sempre crio branches com nomes do tipo "issue_1587"
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Isso n fica meio pouco descritivo?
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: nao tem problema
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: E forks n tem issue tracker especifico?
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: na mensagem de commit eu incluo "(issue #1587)" e isso faz o github automaticamente adicionar  referências cruzadas entre a página da issue e a mensagem de commit no histórico do repositório
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Ahhh, genial
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: acho que vc tem razão de que isso provavelmente geraconfusão
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: pois eu sempre uso a numeração das issues do repo upstream (o repo de onde forkei)
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: se o nosso repo também tem issues, isso pode acabar bagunçando
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: (o lance das referencias em mensagens de commit)
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Ahh, o que eu tava perguntando é se tem, pq parece n ter
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: Tipo https://github.com/ArqueologiaDigital/mame
+[2018-05-07 00:05:09] Felipe "Juca" Sanches [forwarded]: mas o nome dos feature-branches é totalmente livre
+[2018-05-07 00:05:10] Felipe "Juca" Sanches [forwarded]: dá pra usar o nome que vc achar melhor na hora
+[2018-05-07 00:05:10] Felipe "Juca" Sanches [forwarded]: eu só evito usar o mesmo nome do branch de onde forkei
+[2018-05-07 00:05:10] Felipe "Juca" Sanches [forwarded]: por exemplo, se eu começar a trabalhar em melhorias para o arqueologiadigital/mame (branch "patinhofeio") eu faria meus commits no felipesanches/mame (branch "patinhofeio-slots-io")
+[2018-05-07 00:05:10] Felipe "Juca" Sanches [forwarded]: se vc for o primeiro a fazer algum  esboço de código para slots de IO vc podefazer isso e mandar um Pull Request pro arqdig/mame e aí eu reviso, dou palpites, etc
+[2018-05-07 00:05:10] Felipe "Juca" Sanches [forwarded]: e quando eu achar que tá OK, eu faço o merge do seu "patinho-slots-io" para o "patinhofeio" do arqdig
+[2018-05-07 00:05:10] Felipe "Juca" Sanches [forwarded]: é uma certa burocracia, mas é útil para usarmos o sistema de code-review do github entre nós sem ficamos perturbando o pessoal do próprio MAME upstream
+[2018-05-07 00:05:10] Felipe "Juca" Sanches [forwarded]: E aí quando vc achar quiser ce manda um pull request pro arqdig tbem e junta o seu codigo ao que ta la?
+[2018-05-07 00:05:10] Felipe "Juca" Sanches [forwarded]: E no fim de tudo a gente manda o do arqdig pro mame?
+[2018-05-07 00:05:10] Felipe "Juca" Sanches [forwarded]: ei! Acabei de perceber que estamos conversando em PVT. Esse tema é super útil para o grupo. Vou mandar agora todas essas nossas mensagens pra lá e continuamos a conversa em público OK?
+[2018-05-07 00:05:10] Felipe "Juca" Sanches [forwarded]: isso!!
+[2018-05-07 00:05:10] Felipe "Juca" Sanches [forwarded]: OH, verdade, sempre esqueço disso
+[2018-05-07 00:05:10] Felipe "Juca" Sanches [forwarded]: manda la]
+[2018-05-07 00:05:10] Felipe "Juca" Sanches [forwarded]: beleza
+[2018-05-07 00:06:51] Felipe "Juca" Sanches: Atenção, pessoal! Começou nessa mensagem aqui acima uma conversa em PVT, mas eu e o Affonso achamos melhor encaminhá-la pra cá pra vocês poderem participar também! Happy Hacking!
+[2018-05-07 00:08:54] Affonso Amendola: Bom, o fork do mame ta la no repo do arqueologiadigital
+[2018-05-07 00:09:09] Affonso Amendola: https://github.com/ArqueologiaDigital/mame/tree/patinhofeio
+[2018-05-07 00:10:27] Affonso Amendola: Vo esboçar uns bagulho aqui, olhando pra como os io Slots do hp80_io, rs232 e do centronics foram feitos
+[2018-05-07 00:10:45] Felipe "Juca" Sanches: legal
+[2018-05-07 00:11:15] Felipe "Juca" Sanches: faz algum rascunho inicial aí e abre um pull request com suas primeiras tentativas e daí em diante a gente vai fazendo o bate-bola
+[2018-05-07 00:12:09] Felipe "Juca" Sanches: sem pressa, é claro
+[2018-05-07 00:13:40] Affonso Amendola: Claro
+[2018-05-07 00:13:46] Felipe "Juca" Sanches: tem uma outra dica de uso do git que é o lance dos remotes
+[2018-05-07 00:13:59] Felipe "Juca" Sanches: um remote é uma referência a outro repositório
+[2018-05-07 00:14:27] Affonso Amendola: Como assim?
+[2018-05-07 00:15:22] Felipe "Juca" Sanches: quando você faz "git clone" de um repo do github, por exemplo, o git cria automaticamente na configuração do seu repositório local um remote chamado "origin" apontando pro repo que vc clonou
+[2018-05-07 00:16:15] Felipe "Juca" Sanches: vc pode listar quais remotes estão configurados usando o comando git remote -v
+[2018-05-07 00:16:25] Felipe "Juca" Sanches: olha o output do meu:
+[2018-05-07 00:16:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4627.jpg
+[2018-05-07 00:17:32] Affonso Amendola: O meu ta só os dois origins
+[2018-05-07 00:17:50] Felipe "Juca" Sanches: eu vou adicionar mais um remote aqui pra apontar pro repo do arqdig agora, vou te mostrar aqui como faz
+[2018-05-07 00:17:59] Felipe "Juca" Sanches: peraí
+[2018-05-07 00:18:05] Affonso Amendola: Okay
+[2018-05-07 00:19:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4632.jpg
+[2018-05-07 00:19:41] Affonso Amendola: Oooookay, e fazer isso possibilita fazer o que?
+[2018-05-07 00:19:53] Felipe "Juca" Sanches: já vou mostrar...
+[2018-05-07 00:19:57] Felipe "Juca" Sanches: só um segundo
+[2018-05-07 00:21:07] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4636.jpg
+[2018-05-07 00:22:33] Felipe "Juca" Sanches: o comando git fetch <nome-do-remote> faz o download de tudo o que tem de novidade no remote especificado e que ainda não está disponível no seu repo local.
+[2018-05-07 00:22:48] Felipe "Juca" Sanches: apenas faz o download, mas não aplica
+[2018-05-07 00:23:31] Felipe "Juca" Sanches: ou seja, apenas transfere os dados pela rede de um repo remoto pro seu repo local mas sem alterar o entado de nenhum dos seus branches
+[2018-05-07 00:24:42] Felipe "Juca" Sanches: como eu já tinha meu repo forkado do mamedev e eu tinha sincronizado ele ontem, significa que o repo novo que vc acabou decriar no ArqueologiaDigital provavelmente contém commits novos que a galera do MAME fez de ontem pra hoje
+[2018-05-07 00:25:26] Felipe "Juca" Sanches: isso é algo que veio agora pela rede pra mim por meio do remote arqdig quando dei esse comando git fetch arqdig
+[2018-05-07 00:25:53] Felipe "Juca" Sanches: vamos agora comparar o que tem no meu master e o que tem no master do arqdig:
+[2018-05-07 00:27:56] Felipe "Juca" Sanches: git log (implicitamente isso equivale a git log master referindo seao branch "master" do meu repo local) me mostra esse commit de ontem:
+[2018-05-07 00:28:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4644.jpg
+[2018-05-07 00:29:04] Felipe "Juca" Sanches: já o comando git log arqdig/master me mostra esse outro commit, bem mais recente:
+[2018-05-07 00:29:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4646.jpg
+[2018-05-07 00:30:10] Felipe "Juca" Sanches: pra atualizar o meu master local com o master do arqdig eu posso usar o comando git rebase arqdig/master:
+[2018-05-07 00:31:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4648.jpg
+[2018-05-07 00:31:11] Affonso Amendola: E aí todas essas alterações que ce n tinha pegado vao pra sua master local
+[2018-05-07 00:31:14] Affonso Amendola: Saquei
+[2018-05-07 00:31:21] Felipe "Juca" Sanches: isso
+[2018-05-07 00:33:09] Felipe "Juca" Sanches: o rebase na verdade faz uma coisa extra, que aqui nao aconteceu, mas que poderia acontecer em outros casos. A idéia do rebase é permitir que você temporariamente retire do seu branch atual qualquer commit novo que vc tenha feito localmente, depois aplique os commits do remote e, em seguida, re-aplique seus commits (cruzando os dedos pra não dar conflitos)
+[2018-05-07 00:34:15] Felipe "Juca" Sanches: É daí que vem o nome "rebase". Por que ele re-anexa os commits do seu branch atual no final do histórico do branch de um remote que vc especificar
+[2018-05-07 00:34:26] Felipe "Juca" Sanches: pra evitar o uso de "commits de merge"
+[2018-05-07 00:34:39] Felipe "Juca" Sanches: que poluem o histórico
+[2018-05-07 00:35:50] Felipe "Juca" Sanches: a gente só faz rebase em coisas que a gente não tornou pũblico ainda, pois rebase é basicamente re-escrever a história do repo, adulterando a ordem dos commits para parecer que os seus foram feitos todos por último
+[2018-05-07 00:36:59] Felipe "Juca" Sanches: reordenar coisas num repo publico pode confundir os repositórios de outros programadores
+[2018-05-07 00:38:14] Felipe "Juca" Sanches: talvez eu tenha explicado rápido demais. Avisa aí se precisar esclarecer algo
+[2018-05-07 00:38:34] Affonso Amendola: Faz sentido
+[2018-05-07 00:38:37] Affonso Amendola: Thanks
+[2018-05-07 00:39:04] Felipe "Juca" Sanches: para o seu rascunho de slots de i/o pro patinho feio vc precisaria agora fazer o seguinte:
+[2018-05-07 00:39:42] Affonso Amendola: Eu ia te perguntar como upar as diferenças pro arqdig
+[2018-05-07 00:42:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-05/4663.jpg
+[2018-05-07 00:43:55] Felipe "Juca" Sanches: "origin" no caso é o seu repo pessoal no github
+[2018-05-07 00:47:19] Felipe "Juca" Sanches: depois que vc abre um pull request, qualquer novo commit que você adicionar no seu branch local irá aparecer automaticamente na página do pull request assim que você executar novamente um git push origin/patinho-io-slots
+[2018-05-07 00:48:05] Felipe "Juca" Sanches: assim dá pra ir aprimorando o código em função dos feedbacks que você receber a partir dos comentários que outros usuários fizerem na página do pull request
+[2018-05-07 00:48:23] Felipe "Juca" Sanches: e todo mundo pode ver as alterações na ordem em que elas vão sendo tornadas públicas
+[2018-05-07 00:49:32] Felipe "Juca" Sanches: como nós dois somos admins do ArqueologiaDigital, nós poderíamos, em teoria(ena práticatambém!), fazer commits direto lá, e também fazer merge dos nossos próprios pull requests
+[2018-05-07 00:50:33] Felipe "Juca" Sanches: mas como nesse caso eu estou te dando mentoria, faz sentido você abdicar de fazer merge do pull request e esperar que eu faça o code-review e tome a decisao de dar o merge quando estiver bom o suficiente
+[2018-05-07 00:51:04] Felipe "Juca" Sanches: acho que esse pode ser um sisteminha legal para colaborar
+[2018-05-07 00:51:08] Affonso Amendola: Sure
+[2018-05-07 00:51:31] Felipe "Juca" Sanches: bom... vou dormir agora. Té mais e Happy Hacking! :-D
+[2018-05-07 00:51:46] Affonso Amendola: Beleza :), té mais
+[2018-05-07 00:51:55] Affonso Amendola: Eu vo brincar aqui um poco e ver o que eu consigo fazer
+[2018-05-07 00:52:01] Felipe "Juca" Sanches: legal
+[2018-05-07 00:52:48] Felipe "Juca" Sanches: Pra quem chegar atrasado, essa aqui foi uma conversa bem legal que começou lá em cima, ó! :-D
+[2018-05-07 01:22:39] Affonso Amendola: Eu escrevi aqui um rascunho bem preliminar, que é efetivamente uma cópia descarada do código feito pra emular a porta paralela centronics
+[2018-05-07 01:22:52] Affonso Amendola: Já que a porta paralela é a mais simples, achei que seria um bom começo
+[2018-05-07 01:23:03] Affonso Amendola: Pelo menos pra pegar as ideias de devices e dos macros que são usados
+[2018-05-07 01:23:12] Affonso Amendola: Depois da pra transformar isso em qualquer coisa
+[2018-05-07 01:23:35] Affonso Amendola: Tem muita coisa pra entender ainda
+[2018-05-07 01:25:17] Felipe "Juca" Sanches: maravilha!
+[2018-05-07 01:25:51] Felipe "Juca" Sanches: comita como "work in progress" e abre la um pull request
+[2018-05-07 01:26:36] Felipe "Juca" Sanches: não se preocupe muito com a qualidade do código ou com as mensagens de log
+[2018-05-07 01:27:03] Felipe "Juca" Sanches: podemos depois juntar tudo num commit só omitindo os erros e botando uma mensagem de log boa pro upstream
+[2018-05-07 01:27:14] Felipe "Juca" Sanches: por enquanto estamos no nosso "safe space"
+[2018-05-07 01:27:26] Felipe "Juca" Sanches: e podemos fazer os commits sem tanto rigor
+[2018-05-07 01:27:40] Felipe "Juca" Sanches: dá pra re-escrever a história antes de submeter pro mamedev
+[2018-05-07 01:28:37] Felipe "Juca" Sanches: mas é claro que não custa nada escrever mensagens de log boas já agora (mesmo que a gente saiba que elas podem não ser as definitivas)
+[2018-05-07 01:36:45] Affonso Amendola: Ta la
+[2018-05-07 01:37:00] Affonso Amendola: Veja se deu certo, eu vo dormir, pq tem aula amanha 😅
+[2018-05-07 01:37:23] Felipe "Juca" Sanches: ok
+[2018-05-07 01:37:27] Felipe "Juca" Sanches: só uma coisa...
+[2018-05-07 01:37:38] Felipe "Juca" Sanches: me bora de colaborador nesse repo também
+[2018-05-07 01:37:52] Felipe "Juca" Sanches: pra eu poder renomear pull requests
+[2018-05-07 01:37:54] Felipe "Juca" Sanches: e dar merge
+[2018-05-07 01:37:55] Felipe "Juca" Sanches: etc
+[2018-05-07 01:38:27] Felipe "Juca" Sanches: ah nao! Talvez eu já esteja lá. Acabei de ver que não to logado
+[2018-05-07 01:38:32] Felipe "Juca" Sanches: vou logar pra ver se rola
+[2018-05-07 01:40:16] Felipe "Juca" Sanches: consegui
+[2018-05-07 01:40:31] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/mame/pull/1
+[2018-05-07 10:57:52] Eduardo Loos: Grupo para usuários de MIST/MISTICA FPGA:
+[2018-05-07 10:57:55] Eduardo Loos: https://t.me/joinchat/CMP6YFKT1S8tSebvUqpF-A

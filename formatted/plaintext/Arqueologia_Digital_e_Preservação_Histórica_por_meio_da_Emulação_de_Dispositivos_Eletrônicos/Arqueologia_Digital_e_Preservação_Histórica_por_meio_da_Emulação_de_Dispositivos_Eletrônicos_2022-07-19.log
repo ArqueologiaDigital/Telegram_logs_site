@@ -1,0 +1,43 @@
+[2022-07-19 14:58:16] L.: https://youtu.be/0JSB5lK9SYs
+[2022-07-19 14:58:33] L.: @fsanches ☝️
+[2022-07-19 15:54:35] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=g2hr8CgU3uM
+[2022-07-19 15:56:56] Felipe "Juca" Sanches: https://spritesmods.com/?art=pbftable
+[2022-07-19 17:02:58] Pedro de Medeiros 👾: Várias fontes de computadores retrô https://robhagemans.github.io/monobit/
+[2022-07-19 19:11:18] Pablo Vasques Bravo-Villalba: Muito maneiro isso. Acho que mesmo sendo miniatura traz um pouco da fisicalidade de jogar numa máquina real
+[2022-07-19 19:11:32] Felipe "Juca" Sanches: Mandei essa mensagem pra ele:
+
+I'm the person who leaked the pinball fantasies source that you used on your hack (but please do not mention it publicly! LOL).
+
+I have also implemented (16 years ago...) a very similar hack to display the entire playfield:
+www.vogons.org/viewtopic.php?f=41&t=12424
+
+You will also find it amusing to see this album of photos of my unfinished project of building a real-size replica of the Party Land running a patched DOSBOX:
+www.flickr.com/photos/felipesanches/albums/72157594271342944
+
+And these videos of it partially working:
+* www.youtube.com/watch?v=CGpTfb8HUCY
+* www.youtube.com/watch?v=mlUbG-nseSY
+(note: there are more videos of this project on my old youtube channel simply called "Felipe Sanches" as well as videos of other similar projects in my newer one called "Happy Hacking Video Blog")
+
+And, finally, these two blog posts by a guy in Sweden who attempted to replicate my project and developed it even further since he had access to better tools:
+* cyb.se/pinball-fantasies/
+* cyb.se/pinball-fantasies-update-2015-07-04/ 
+
+I'm extremely happy to see what you did!
+
+Happy hacking!
+Felipe "Juca" Sanches
+
+youtube.com/c/happyHackingVideoBlog
+[2022-07-19 19:13:06] Pablo Vasques Bravo-Villalba: Eu fiquei confuso aqui entre o vídeo compartilhado antes e a postagem de blog que veio depois. Achei que estava respondendo à mensagem errada. No fim das contas valia para as duas 😅
+[2022-07-19 21:19:27] Hugo (Agaelebê): https://www.youtube.com/watch?v=9pe157yBa00
+[2022-07-19 22:08:18] Felipe "Juca" Sanches: o cara tentou re-montar o pinball fantasies e não conseguiu, olha só:
+
+https://github.com/Spritetm/pbf-table/blob/master/original_pbf_src/Makefile
+[2022-07-19 22:08:37] Felipe "Juca" Sanches: acho que esse seria um desafio divertido
+[2022-07-19 22:08:44] Felipe "Juca" Sanches: eu já tinha tentado alguns anos atrás
+[2022-07-19 22:09:31] Felipe "Juca" Sanches: pra fazer dar certo seria necessário extrair os assets de um release
+[2022-07-19 23:22:05] L.: Tem mais coisa faltando. A parte de música/mod player não tá lá (ou não achei)
+[2022-07-19 23:22:26] L.: E tem uns "include c:\blabla\blabla\bla.asm"
+[2022-07-19 23:32:31] Felipe "Juca" Sanches: Então... Um dos desafios é transplantar tudo que falta a partir dos binarios
+[2022-07-19 23:32:59] Felipe "Juca" Sanches: Ou fornecer implementações alternativas para o que falta

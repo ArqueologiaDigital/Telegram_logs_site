@@ -1,0 +1,13 @@
+[2025-08-19 04:04:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-08/35345.jpg
+[2025-08-19 04:04:52] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/14049#issuecomment-3199466912
+[2025-08-19 07:33:35] Pablo Vasques Bravo-Villalba: Massa demais
+[2025-08-19 15:17:55] Felipe "Juca" Sanches: É interessante que um dos principais motivos de não estar funcionando na implementação anterior ao meu bugfix era que uma função recebia int data e eu troquei para uint8_t data. Com isso o opcode de sublinhar texto na tela (valor 0xFA) não era interpretado corretamente, e seu bloco de código nunca era executado e ficava sem sublinhado.
+[2025-08-19 15:18:34] Felipe "Juca" Sanches: mas tinha também mais uns outros 2 erros de lógica
+[2025-08-19 15:19:34] Felipe "Juca" Sanches: Pra limitar o tamanho do sublinhado o código tava usando o número de linhas do display, mas o correto é limitar na horizontal, ou seja, no número de colunas.
+[2025-08-19 15:19:57] Felipe "Juca" Sanches: E com isso aparecia uns sublinhadões bem maiores do que o esperado.
+[2025-08-19 15:21:44] Felipe "Juca" Sanches: E também o código de atualização da tela não apagava os segmentos de sublinhar. Apenas desenhava. Então ia sujando a tela toda de sublinhados. Refiz esse bloco de código pra, quando executado o opcode de sublinhar, varrer uma vez a tela inteira determinando quais segmentos de sublinhado devem ficar acesos e quais apagados.
+[2025-08-19 15:23:46] Felipe "Juca" Sanches: Por fim, tem ainda uma glitch visual que acho que é bug, mas ainda não corrigi. Preciso ver vídeos no youtube pra tentar identificar se é o comportamento normal, ou se é bug de emulação:
+
+A tela "pisca" toda vez que o usuário pressiona um botão.
+
+Acho que devem ter metido um clear_screen tosco lá pra contornar a bagunça dos sublinhados sujando a tela. Vou tentar achar onde tá isso (se for esse mesmo o caso) e tentar arrumar.

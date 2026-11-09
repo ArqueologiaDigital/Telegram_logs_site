@@ -1,0 +1,45 @@
+[2023-01-27 07:06:41] Pablo Vasques Bravo-Villalba: Não sou engenheiro mas sei o que é 🥰
+[2023-01-27 08:22:23] Pedro de Medeiros 👾: pãoprancha
+[2023-01-27 09:47:10] Erin Pinheiro 🐿: existem 3 painéis diferentes pra esse modelo de ibook e cada um tem um pinout diferente, eu sei porque achei que eram todos iguais e quase queimei um ra ra ra
+[2023-01-27 10:18:39] Erin Pinheiro 🐿: e voltando na discussão de laptop antigo, meu X61t ainda é meu tablet pra arte principal
+[2023-01-27 10:18:57] Erin Pinheiro 🐿: 2008, core 2 duo, acabei de comprar uma bateria nova pra ele que dura 3 horas
+[2023-01-27 10:20:09] Erin Pinheiro 🐿: meu substituto de desktop é um T440p com GT730M que ganhei a preço de envio dos Estados Unidos de alguém que estava jogando fora rs
+[2023-01-27 12:20:48] Ismael Luceno: CDs de boa qualidade duram várias décadas, eu tenho alguns fa mais de 20 anos que ainda estão funcionais
+[2023-01-27 12:32:36] Ismael Luceno: mas eu conheço casos reais, por exemplo, uma coleção valorizada em ~1M €, o cara morreu e a mãe dele vendeu por lotes a preço de lixo, até que alguém disse a ela o valor dos itens, alguns eram exemplares únicos na embalagem original fechada
+[2023-01-27 14:48:40] Augusto Almeida: Linus sendo o Linus https://youtu.be/xyQlmsD7PAg
+[2023-01-27 15:18:09] Felipe "Juca" Sanches: Simplesmente BRILHANTE! (como de costume)
+[2023-01-27 15:18:44] Felipe "Juca" Sanches: Pra quem não conhece, Lunatico é uma das minha demos prediletas:
+[2023-01-27 15:18:45] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=XcAUlEkU05A
+[2023-01-27 22:53:26] Felipe "Juca" Sanches: Estou iterativamente melhorando os resultados de disassembly do firmware do teclado musical KN5000 usando meu disassembler espertinho.
+
+Tem uma parte que ainda precisa ser feita manualmente que é a documentação das muitas jump-tables usadas no firmware
+[2023-01-27 22:54:20] Felipe "Juca" Sanches: aqui um exemplo de jump-table:
+[2023-01-27 22:54:25] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25555.jpg
+[2023-01-27 22:55:18] Felipe "Juca" Sanches: A instrução JP T XIX é um jump incondicional para o endereço armazenado no registrador XIX.
+
+É incondicional pois a flag de condição é T (True), ou seja, sempre verdadeira
+[2023-01-27 22:56:46] Felipe "Juca" Sanches: o registrador XIX tem o valor 0xFCB6F9 (que é o endereço base da jump table) somado ao registrador L multiplicado por 4 (SLL 0x02 é um "shift-left" de 2 bits, que equivale a multiplicar por 4)
+
+Ou seja, o registrador L indexa um vetor de números de 32 bits (4 bytes). Cada um desses números é um ponteiro para uma rotina a ser executada em algum momento
+[2023-01-27 22:58:09] Felipe "Juca" Sanches: veja que o registrador L é lido de uma variável na RAM (no endereço 0x91B5) e é feito um AND com o valor 0x03, para limitar o valor máximo permitido para o índice da tabela. Isso nos diz que é uma tabela de 4 ponteiros (índices de 0 a 3)
+[2023-01-27 22:59:02] Felipe "Juca" Sanches: E alí embaixo podemos ver na LABEL_FCB6F9 os bytes
+db 0x09, 0xB7, 0xFC, 0x00, 0x19, 0xB7, 0xFC, 0x00
+db 0x29, 0xB7, 0xFC, 0x00, 0x39, 0xB7, 0xFC, 0x00
+[2023-01-27 23:00:35] Felipe "Juca" Sanches: Que correspondem aos 4 ponteiros da tabela:
+
+* 0x00FCB709
+* 0x00FCB719
+* 0x00FCB729
+* 0x00FCB739
+[2023-01-27 23:03:06] Felipe "Juca" Sanches: Como esses 4 endereços estão depois de LABEL_FCB6F9 e antes de LABEL_FCB771, então significa que essas 4 rotinas são pequenininhas e estão aí nesse bloco de bytes mesmo. Só que meu disassembler não tinha desmontado elas ainda, pois ele não sabia da existência delas e achou que era só um bloco de dados.
+[2023-01-27 23:03:58] Felipe "Juca" Sanches: Então eu declaro isso no meu script python (que usa o meu disassembler espertinho), para ele saber que tem que levar em consideração os entry_points adicionais declarados nessa jump table aí
+[2023-01-27 23:05:08] Felipe "Juca" Sanches: read_jump_table(base_addr=0xFCB6F9, num_entries=4)
+[2023-01-27 23:12:37] Felipe "Juca" Sanches: E aqui está o resultado depois de rodar o disassembler novamente, mas com a nova jump table devidamente documentada:
+[2023-01-27 23:12:43] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25565.jpg
+[2023-01-27 23:14:17] Felipe "Juca" Sanches: Vejam que de dados só sobraram os bytes da tabela mesmo. Todo o resto eram as 4 rotinas, e algumas subrotinas que só elas usam. O último byte antes de LABEL_FCB771 era uma instrução RET. Perfeito! 😊
+[2023-01-27 23:19:27] Felipe "Juca" Sanches: Pretendo depois fazer o disassembler usar esses metadados de documentação das jump-tables para declará-las bonitinho no código ASM resultante. Pra não ficarem esses bytes soltos aí.
+
+Dado que sabemos que é uma jump table, meu disassembler poderia muito bem representar assim:
+[2023-01-27 23:19:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-01/25568.jpg
+[2023-01-27 23:19:42] Felipe "Juca" Sanches: mas fica pra depois implementar essa feature
+[2023-01-27 23:45:40] Felipe "Juca" Sanches: Caraca... acabei de tropeçar numa jump table de 192 ponteiros!

@@ -1,0 +1,79 @@
+[2025-10-21 09:39:47] Felipe "Juca" Sanches: Ou seja, tem os 8 bit do barramento de dados, 14 bits do barramento de endereços, alimentação elétrica, sinal de enable e uns sinais vindos de um multiplexador (que presumo ser para definir o endereço de mapeamento em memória do cartucho, alimentand o chip-select de suas memórias externas, que podem ser tanto RAM quanto ROM)
+[2025-10-21 09:40:08] Felipe "Juca" Sanches: tem também um sinal de IRQ, o que é bem curioso...
+[2025-10-21 09:40:27] Felipe "Juca" Sanches: Suspeito que seja possível rodar código a partir desse cartucho
+[2025-10-21 09:40:44] Felipe "Juca" Sanches: para customizar o comportamento de alguma coisa nos "slides"
+[2025-10-21 09:40:53] Felipe "Juca" Sanches: não sei...
+[2025-10-21 09:41:31] Felipe "Juca" Sanches: Quando eu criei um cartucho com o cabeçalho OBJECT, o emulador ficou doidão. Com cara de ter executado código-lixo
+[2025-10-21 09:41:55] Felipe "Juca" Sanches: Se for isso mesmo, abre possibilidades muito interessantes de hackeragem
+[2025-10-21 11:24:43] Felipe "Juca" Sanches: @lrrosa tá conseguindo diagnosticar o motivo do seu vet3000 não estar funcionando?
+[2025-10-21 12:39:01] Leonardo Roman: É a fonte. O fusível estava aberto e ainda tem algo impedindo o 7805 de funcionar. Ele tá soltando quase a mesma tensão de entrada. Já troquei por um novo mas tá igual. Continuo verificando.
+[2025-10-21 12:51:56] L.: capacitor zoado?
+[2025-10-21 13:20:54] Leonardo Roman: Troquei alguns. Acho que vou substituir todos. Também tem alguns diodos que medem aberto no circuito. Vou tirar um terminal e medir de novo.
+[2025-10-21 13:26:32] L.: https://github.com/pleumann/pasta80
+
+compilador pascal cruzado pra z80 compatível com tp3
+[2025-10-21 13:27:23] L.: eu quase fiz um desses um tempo atrás por que o tp3 dos holandeses não era aberto e era pra DOS
+
+ainda bem que rolou preguiça, aí alguém fez 😆
+[2025-10-21 13:28:34] L.: o esquema de overlay é interessante e talvez role adaptar pra mapper/megaram
+[2025-10-21 13:56:56] Pedro de Medeiros 👾: https://youtu.be/S9E1c9hwXX0
+[2025-10-21 13:59:17] Pedro de Medeiros 👾: Esse permite assembly ou só inline de código de máquina como o Tp3?
+[2025-10-21 14:00:54] L.: Não vi!
+[2025-10-21 14:01:42] L.: https://github.com/pleumann/pasta80/blob/master/pasta.pas#L5439
+
+Meio que um misto
+[2025-10-21 14:02:06] L.: Tem que jogar os opcodes no braço mas rola colocar identificadores
+[2025-10-21 14:03:33] L.: https://github.com/pleumann/pasta80/blob/master/rtl/cpm.pas#L58 por exemplo aqui
+[2025-10-21 14:14:49] Pedro de Medeiros 👾: Acho que o Tp3 normal também permite.
+[2025-10-21 14:57:28] L.: Falando em MS-DOS, falei aqui que peguei um daqueles notebooks 386 novos que tem no Aliexpress?
+[2025-10-21 15:05:52] Felipe "Juca" Sanches: Mais uma thread onde o Cuavas demonstra ser um otário: https://github.com/mamedev/mame/issues/14377
+[2025-10-21 15:32:46] Pedro de Medeiros 👾: Quanto de diferença estamos falando em relação a build do clang-x64 e a build gcc-x64?
+[2025-10-21 15:33:08] Felipe "Juca" Sanches: não sei
+[2025-10-21 15:33:23] Felipe "Juca" Sanches: só sei que tem build dando timeout depois de 6 horas
+[2025-10-21 15:35:57] Pedro de Medeiros 👾: Achei engraçado eles reclamarem inicialmente de você não ver as regras de CI como se eles soubessem do porquê das coisas serem como são e depois se tocarem de que eles na verdade não sabem porque isso acontece
+[2025-10-21 15:37:59] Pedro de Medeiros 👾: 🥴
+[2025-10-21 15:50:52] Pedro de Medeiros 👾: 30m de clang-x64 e 2h30 de gcc-x64
+[2025-10-21 15:52:41] Felipe "Juca" Sanches: o nome disso é arrogância
+[2025-10-21 15:58:48] Pedro de Medeiros 👾: Esse build que você mostrou parece bem fora da curva porque os outros exemplos de build que eu vi, o gcc-x64 parece ser o mais demorado na média. E o clang-x64 é sempre o mais consistente, sempre na faixa dos 30 minutos
+[2025-10-21 16:05:09] Pedro de Medeiros 👾: O pessoal do OpenMSX é bem mais equilibrado que isso.
+[2025-10-21 16:07:25] Pedro de Medeiros 👾: Esses daí parece não quererem gente de fora da panelinha se metendo. Eu, hein.
+[2025-10-21 17:48:45] Felipe "Juca" Sanches: Gosto muito do projeto, mas tenho nojo do mantenedor.
+[2025-10-21 17:50:00] Felipe "Juca" Sanches: Mas o Olivier Galibert costuma ser gente fina. Nessa thread aí ele deu uma pisada na bola. Mas em geral gosto bastante dele.
+[2025-10-21 17:58:46] Pablo Vasques Bravo-Villalba: Que ridículo esse sujeito
+[2025-10-21 18:24:53] Pedro de Medeiros 👾: Eu acho que o cara dizer simplesmente que "cavalo dado não se olha os dentes" não é uma resposta satisfatória quando você quer tentar extrair o máximo dos serviços que são oferecidos de graça. Aliás, eu acho que deveria ser o contrário: se há algum tipo de "consideração" ao github por permitir usar suas ferramentas de CI de graça, sua tarefa deveria ser tirar o máximo proveito disso procurando e eliminando gargalos.
+[2025-10-21 18:33:19] Pedro de Medeiros 👾: Olha o que já ajudaria: taca um fail-fast: true no script de build do windows workflow.
+jobs:
+  build-windows:
+    strategy:
+      **fail-fast: true**
+      matrix:
+        compiler: [gcc-x64, clang-x64, clang-arm64]
+[2025-10-21 18:38:12] Pedro de Medeiros 👾: Assim, no primeiro erro de compilação, aborta tudo.
+[2025-10-21 20:41:27] Erin Pinheiro 🐿: "it would be better if you didn't think we were stupid" [...] "we're not sure why" QED
+[2025-10-21 20:42:17] Erin Pinheiro 🐿: cheguei tarde lol
+[2025-10-21 21:06:23] Ismael Carvalho: Isso aqui costuma ser uma boa prática no geral
+[2025-10-21 21:08:28] Ismael Carvalho: Do jeito que responderam pareceu um ponto sensível, provavelmente  alguma outra galera aperta a mente sobre o assunto de forma não tão produtiva
+[2025-10-21 21:11:45] Ismael Carvalho: Se organizar direitinho deve ter como organizar por nível de validação, só o que impacta primeiro depois em outro nível o todo pra de fato permitir a entrada nas brancas mais seguras
+[2025-10-21 21:18:10] Pedro de Medeiros 👾: É prova por contradição:
+P = "Somos estúpidos"
+Q = "Sabemos o porquê de X acontecer"
+
+(1) 1a assunção: ¬P
+(2) 2a assunção: ¬Q
+(3) Mas é implícito que: ¬P -> Q
+(4) modus ponens de (3): Q
+(5) Mas temos (2) e (4) em contradição: Q ^ ¬Q
+(6) 1a assunção invalidada: ¬¬P
+(7) P é verdadeiro por contradição: "somos estúpidos"
+(8) QED 😝
+[2025-10-21 21:18:26] Erin Pinheiro 🐿: LOL
+[2025-10-21 21:45:10] Felipe "Juca" Sanches: Não entendi quase nada. Acho que sou estúpido!
+[2025-10-21 21:45:58] Felipe "Juca" Sanches: Mas tenho a certeza que eu entenderia tudo se eu parasse pra estudar isso com calma. Então não devo ser tão estúpido assim...
+[2025-10-21 21:47:35] Felipe "Juca" Sanches: Mas agora falando sério... Acho que talvez eu tenha errado a escolha de palavras no título da issue. Posso ter me expressado com um tom que tenha induzido essa reação visceral que tiveram.
+[2025-10-21 21:48:52] Felipe "Juca" Sanches: Foi uma pergunta retórica que podem ter sentido como uma forma de deboche ou provocação.
+[2025-10-21 21:49:05] Pedro de Medeiros 👾: Eu me senti estúpido quando eu olhei isso pela primeira vez... e até muitas vezes depois.
+[2025-10-21 21:53:19] Pedro de Medeiros 👾: Eu não receberia esse tipo de reação se eu fizesse um PR com esse mesmo texto no OpenMSX. Já recebi respostinha de contrariado porque eu escrevi um PR com um texto que a pessoa não achou descritivo o suficiente do problema, mas isso foi algo mais técnico.
+[2025-10-21 21:56:53] Pedro de Medeiros 👾: Além do mais você abre uma PR pra fazer algo e às vezes o seu entendimento sobre o problema melhora enquanto você modifica a própria solução, e a solução acabou sendo aceita, portanto...
+[2025-10-21 22:35:12] Pablo Vasques Bravo-Villalba: De forma alguma. O título não tem por que ser achado ofensivo, e mesmo se fosse, as suas mensagens seguintes deixam bem claro que você não está simplesmente se queixando de problemas, está procurando oferecer soluções e discutir causas
+[2025-10-21 22:37:57] Pablo Vasques Bravo-Villalba: Talvez o que o Galibert falou tenha deixado o Cuavas mais propenso a aloprar, mas aí acho que é culpa do Galibert. Se você fala pra outra pessoa que o outro pensa que você é idiota é porque não quer conversar
+[2025-10-21 22:42:32] Felipe "Juca" Sanches: é, também achei zoado

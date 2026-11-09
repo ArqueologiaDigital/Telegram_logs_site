@@ -1,0 +1,30 @@
+[2026-05-28 15:26:55] RicBit: fui ver como é o rally-x arcade no mame e *gasp*
+[2026-05-28 15:27:01] RicBit: o mame nao emula o rally-x
+[2026-05-28 15:27:14] RicBit: ele usa sound samples ao inves de emular o som analogico
+[2026-05-28 15:30:43] RicBit: no esquematico nem tem nada analogico, é digital discreto com ttl
+[2026-05-28 15:30:52] RicBit: deve ser um lfsr e um contador
+[2026-05-28 15:31:00] RicBit: tipo o ay-3 -8912 só que discreto
+[2026-05-28 15:44:05] RicBit: ah nao, é quase tudo digital, só o som do BANG que é analogico
+[2026-05-28 15:44:47] Pablo Vasques Bravo-Villalba: Ele usa o WSG de três canais de som para tudo menos a explosão
+[2026-05-28 15:44:52] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/39015.jpg
+[2026-05-28 15:44:52] RicBit: mas é bem simplinho. acho legal que tem o BANG IN
+[2026-05-28 15:52:34] RicBit: o 4006 é um lfsr discreto, o 741 é um diferenciador e o 3730 é amp de saida
+[2026-05-28 15:52:42] RicBit: isso vai fazer som de bang mesmo
+[2026-05-28 15:59:19] Felipe "Juca" Sanches: Netlist. Bora fazer?
+[2026-05-28 15:59:42] Felipe "Juca" Sanches: https://www.mamedev.org/?p=564
+MAME 0.288 released!
+[2026-05-28 16:00:27] Felipe "Juca" Sanches: Esse é o primeiro release com o KN5000 interativo. Ainda. Não faz som nenhum, entretanto...
+[2026-05-28 16:00:49] Felipe "Juca" Sanches: Quem quer me ajudar a emular os chips de som?
+[2026-05-28 16:02:09] RicBit: ja fiz o netlist, só preciso achar um simulador
+[2026-05-28 16:05:20] Felipe "Juca" Sanches: O que eu quis dizer é que o MAME tem um subsistema de simulação de netlist integrado ao resto da API de emulação. Dá pra fazer emulador misto. Ideal pra isso aí mesmo
+[2026-05-28 16:05:43] RicBit: aah legal
+mas vou simular antes para testar
+[2026-05-28 16:06:03] Felipe "Juca" Sanches: Procure por exemplos de drivers do MAME que usem "netlist"
+[2026-05-28 16:06:10] Felipe "Juca" Sanches: Dá um grep
+[2026-05-28 20:55:32] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/39027.jpg
+[2026-05-28 20:55:32] RicBit: GROG NÃO ENTENDE DOBRAR FREQUÊNCIA, ENTÃO GROG LISTOU TODAS AS NOTAS. UGA
+[2026-05-28 21:06:27] Pablo Vasques Bravo-Villalba: De onde é isso, fi?
+[2026-05-28 21:08:54] Pablo Vasques Bravo-Villalba: Parece o oposto do método que a Konami usou no Antarctic Adventure
+[2026-05-28 21:49:01] RicBit: rally x
+[2026-05-28 21:51:14] RicBit: graças ao grog, o rally x é mais afinado que os jogos da konami
+[2026-05-28 22:10:05] Pablo Vasques Bravo-Villalba: Parece que o WSG tem mais bits para definir frequência também

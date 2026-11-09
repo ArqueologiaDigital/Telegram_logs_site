@@ -1,0 +1,4 @@
+[2023-05-26 06:45:36] Ismael Luceno: "Nintendo have put safeguards in place where if a console tries to connect to a Nintendo server with a corrupted bootloader, or an unauthorised copy of a game is loaded, the device will be bricked. It can only be restored if a NAND backup was prepared beforehand. However the console will be fingerprinted by Nintendo and will never be able to access a Nintendo server again, blocking access to the eShop, online play, amongst other features." <--- da Wikipedia...  pareceria que não há efuses nesse caso...
+[2023-05-26 06:45:44] Ismael Luceno: (pro Nintendo Switch)
+[2023-05-26 09:32:25] Flávio Amieiro: https://github.com/Kneesnap/onstream-data-recovery/blob/main/info/INTRO.MD
+[2023-05-26 09:33:40] Flávio Amieiro: Esse foi o processo pra recuperar o que a pessoa acha que era o único backup do código do Frogger 2 (que tava em fita)

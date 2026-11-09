@@ -1,0 +1,32 @@
+[2020-12-18 14:11:27] Ricardo Bánffy: Alguém já viu um substituto de CRT que seja plug-and-play em vez de ter uma entrada VGA? Eu comprei um terminal Minitel da Alcatel, mas foi trazido pra cá num trator.
+[2020-12-18 14:40:25] Erin Pinheiro 🐿: não entendi, o CRT quebrou e vc quer trocar por um LCD?
+[2020-12-18 14:40:48] Erin Pinheiro 🐿: imagino que um multisync que suporte 15khz se der pra puxar sinais RGB da placa lógica...
+[2020-12-18 18:25:30] Ricardo Bánffy: É.. alguém podia fazer um adaptador que, de um lado entre sinais de CRT (com tensões e frequências de CRT) e do outro saia um VGA (ou DSI)
+[2020-12-18 18:25:54] Ricardo Bánffy: Eu não quero destruir um terminal Minitel pra salvar outro.
+[2020-12-18 18:33:13] Erin Pinheiro 🐿: como eu falei, o sinal CRT tem que estar saindo de algum sinal lógico.. se der pra pegar intensidade RGB, VSync e HSync acho que rola jogar num monitor multisync, ou PVM
+[2020-12-18 18:33:28] Erin Pinheiro 🐿: esse é meu chute sem conhecer muito o hardware
+[2020-12-18 18:36:02] L.: Aliás, falando em CRT... O CRT do meu terminal de polícia parou de funcionar. O computador funciona normal (eu acho, pelos beeps do POST) mas o monitor não liga mais. Nem o zunido de sincronismo eu ouço mais
+[2020-12-18 18:36:35] L.: Abri pra dar uma olhada e não vi nada obviamente zoado. Alguém aqui tem ideia do que poderia ser? Deve ter zoado na mudança
+[2020-12-18 18:39:57] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-12/11850.jpg
+[2020-12-18 18:39:57] L.: Esse terminal aqui. Ideia era usar no pidp11
+[2020-12-18 18:59:36] FTMaciel: Difícil sem abrir e olhar. Pode ser só uma solda fria, um conector mal encaixado
+[2020-12-18 19:00:03] FTMaciel: Mora em bsb?
+[2020-12-18 19:04:33] Ricardo Bánffy: Ah sim. No meu caso tem até uma porta SCART de onde eu posso traçar o sinal lógico. Eu estava curioso com o "caso genérico" de reviver CRTs usando outra tecnologia.
+[2020-12-18 19:08:10] Erin Pinheiro 🐿: justo, justíssimo. é que pelo meu entendimento de como o raster do CRT é feito, não é nada diferente do método dos sinais RGB presentes por exemplo em SCART, pelo menos na entrada antes de serem amplificados pra atuar os defletores e o aquecedor que emite elétrons
+[2020-12-18 19:09:03] Erin Pinheiro 🐿: por isso imaginei, vai um pouco anterior ao circuito que pilota o CRT, e pega os sinais em nível lógico, que vai dar pra adaptar pra um display mais moderno
+[2020-12-18 19:09:33] Erin Pinheiro 🐿: no caso de monitor monocromático é só fazer um split do sinal de intensidade do raster e replicar pra R, G e B
+[2020-12-18 19:10:05] Erin Pinheiro 🐿: mas pode ser que meu entendimento seja raso e não seja sempre bem assim, claro. não ignoro essa possibilidade
+[2020-12-18 19:12:59] Erin Pinheiro 🐿: onde tu arrumou esse tem mais por acaso? 👀
+[2020-12-18 19:13:16] L.: Peguei no eBay uns anos atrás
+[2020-12-18 19:13:38] Erin Pinheiro 🐿: putz... um olho e um rim na importação imagino
+[2020-12-18 19:13:38] L.: Moro em Seattle
+[2020-12-18 19:13:42] Erin Pinheiro 🐿: ah haha
+[2020-12-18 19:13:45] Erin Pinheiro 🐿: aí explica
+[2020-12-18 19:14:20] L.: Não quero nem imaginar o preço do frete+impostos disso
+[2020-12-18 19:16:44] L.: Pensei que fosse conector solto mas desmontando e montando devia ter arrumado. Vou ver solda fria uma hora mas é um troço chato de abrir
+[2020-12-18 19:18:59] Ricardo Bánffy: Nisso me mudar pra Irlanda foi uma puta bola fora.
+[2020-12-18 19:30:53] L.: Como é importar coisas aí?
+[2020-12-18 19:31:21] L.: Aqui é muito sossegado. Coisa da China chega em uma ou duas semanas. Em casa.
+[2020-12-18 19:43:17] Ricardo Bánffy: Aqui reciclaram todos os computadores interessantes.
+[2020-12-18 21:20:06] L.: Ah, que merda :(
+[2020-12-18 22:10:59] Ricardo Bánffy: O ambientalismo atrapalha demais

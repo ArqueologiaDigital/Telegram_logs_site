@@ -1,0 +1,1 @@
+[2025-05-02 08:47:28] Ramiro Polla: Não cheguei a olhar a PR em si, mas já dá pra fazer source level debugging no mame usando o gdbstub e gdb (ou vscode). Inclusive vi um post de uma pessoa fazendo com z80 mesmo. A maior parte da funcionalidade pesada (tipo ler os simbolos do elf, fazer o callgraph, stack trace, etc...) fica a cargo frontend.

@@ -1,0 +1,39 @@
+[2025-06-30 00:45:45] L.: https://newerteam.com/hol/ esse mod de zelda ocarina of time transforma o jogo num ace attorney hahaha
+[2025-06-30 09:54:25] Pablo Vasques Bravo-Villalba: O primeiro vídeo é bem interessante também. https://youtu.be/lN8r4LRcOXc
+[2025-06-30 10:51:30] Pedro de Medeiros 👾: Aí ele termina com cliffhanger sobre um possível novo produto com a marca Commodore 🙈
+[2025-06-30 15:44:53] Guilherme Ranoya: https://itizso.itch.io/retrofab
+Imagino que vocês conheçam.... só descobri isso hoje.
+[2025-06-30 16:48:18] Shideravan: @fsanches tenho a sensação lendo os PR do mame que o projeto precisa urgentemente de mais gente que possa revisar as PR e possa mergir
+[2025-06-30 16:49:15] Shideravan: Ia acelerar muito as coisas por lá, do jeito que está indo está muito frustrante colaborar com o projeto e não ter resposta nenhuma
+[2025-06-30 16:50:00] Felipe "Juca" Sanches: Tem PR seu lá esperando na fila? Ou você está ficando agoniado de ver os PRs dos outros?
+[2025-06-30 16:50:05] Shideravan: Tem gente empolgada para fazer coisa boa, mas é frustrante a pessoa se dedicar e não ter nem resposta
+[2025-06-30 16:50:37] Shideravan: Eu tô agoniado com PR dos outros antes de começar a bater cabeça para fazer o meu
+[2025-06-30 16:50:49] Shideravan: Eu queria implantar aquela parada que te falei
+[2025-06-30 16:50:53] Felipe "Juca" Sanches: o que você tem vontade de mandar?
+[2025-06-30 16:52:09] Shideravan: Suporte a borderless Fullscreen
+[2025-06-30 16:53:22] Shideravan: Eu tinha que pesquisar como implantar e fazer isso da melhor forma, tudo isso demanda tempo que eu iria alocar para fazer
+[2025-06-30 16:54:02] Shideravan: Mas como eu vou alocar tempo sabendo que vou ter dor de cabeça com isso na fila de espera depois? Kkkkk
+[2025-06-30 16:54:39] Shideravan: Imagina quantas pessoas não ficam nessa situação?
+[2025-06-30 16:55:48] Shideravan: Tem muita coisa interessante aguardando na fila de pr que possivelmente nunca vão receber sequer um feedback
+[2025-06-30 16:59:16] Felipe "Juca" Sanches: Recomendo escrever uma descrição detalhada do problema e postar aqui: https://github.com/orgs/mamedev/discussions
+[2025-06-30 17:08:42] Shideravan: Olha só, você tá interessado em ajudar a montar o netlist para o Magnavox odyssey?
+[2025-06-30 17:09:01] Felipe "Juca" Sanches: sim
+[2025-06-30 17:09:14] Shideravan: Já chegou a ver como faria uma implantação para o Telejogo @fsanches ?
+[2025-06-30 17:09:24] Felipe "Juca" Sanches: ainda não
+[2025-06-30 17:10:06] Shideravan: Eu investiria o tempo no Telejogo, é menos chance de um gringo pegar para fazer
+[2025-06-30 17:10:27] Shideravan: Tem um lá no garoa, não tem?
+[2025-06-30 17:11:50] Shideravan: Você já está manjando como uma implementação do netlist funciona? Desde que criaram pouca gente infelizmente tem se arriscado
+[2025-06-30 17:13:00] Shideravan: Ou você tá querendo começar com o Odyssey justamente para fazer com alguém que já esteja mais acostumado e aprender para implantar outras coisas?
+[2025-06-30 17:13:45] Felipe "Juca" Sanches: Eu já comecei. Comecei com o GranTrak10 da Atari
+[2025-06-30 17:13:47] Felipe "Juca" Sanches: https://www.arcade-museum.com/manuals-videogames/G/GranTrak10.pdf
+[2025-06-30 17:14:11] Shideravan: Brabo demais!
+[2025-06-30 17:14:25] Felipe "Juca" Sanches: https://github.com/mamedev/mame/blob/master/src/mame/atari/nl_gtrak10.cpp
+[2025-06-30 17:14:42] Shideravan: Eu não tenho a mínima ideia de como funcionam os netlists
+[2025-06-30 17:15:29] Felipe "Juca" Sanches: Em 2018: https://github.com/mamedev/mame/pull/3795
+[2025-06-30 17:16:23] Shideravan: A última vez que eu peguei para dar uma olhada tinham pouquíssimos sistemas usando isso no mame
+[2025-06-30 17:16:56] Shideravan: Não sei se a galera desanima por que a simulação é muito lenta e o desempenho muito baixo
+[2025-06-30 17:17:14] Shideravan: Ou se é só porque é complicado mesmo
+[2025-06-30 17:17:40] Shideravan: Ou se o interesse pelos sistemas que usariam é baixo (o que eu duvido)
+[2025-06-30 17:19:51] Shideravan: Olha só, pareceu uma experiência boa
+[2025-06-30 18:38:22] Shideravan: Acho que agora tá um momento ruim para eu criar pr porque eles estão implantando o novo sistema de som, né?
+[2025-06-30 18:38:41] Shideravan: Mês passado nem teve release e nesse está atrasado para caramba

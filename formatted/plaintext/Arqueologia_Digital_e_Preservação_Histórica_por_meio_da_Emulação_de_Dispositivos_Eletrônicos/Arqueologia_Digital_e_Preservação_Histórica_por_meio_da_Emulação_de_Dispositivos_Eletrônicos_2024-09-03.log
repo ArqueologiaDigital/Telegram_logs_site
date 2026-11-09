@@ -1,0 +1,16 @@
+[2024-09-03 15:21:12] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/12725
+[2024-09-03 15:22:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/32945.jpg
+[2024-09-03 21:24:14] Felipe "Juca" Sanches: MERGED! - sem estresse dessa vez 😉
+[2024-09-03 23:01:16] Felipe "Juca" Sanches: tá muito divertido usar esse driver agora que tem essa "skin" que eu fiz
+[2024-09-03 23:02:08] Felipe "Juca" Sanches: Da interface de usuário tá quase 100%. A única coisa  que não funciona ainda é esse dial, que é um rotary encoder
+[2024-09-03 23:02:23] Felipe "Juca" Sanches: agora, a treta está mesmo é na emulação do chip de som
+[2024-09-03 23:02:28] Felipe "Juca" Sanches: isso ainda tá incompleto
+[2024-09-03 23:02:46] Felipe "Juca" Sanches: eu não consegui fazer som nenhum desse driver.
+[2024-09-03 23:03:26] Felipe "Juca" Sanches: Li algumas partes do código-fonte dele e vi que tem já bastante coisa documentada, mas tem uns outros trechos que nitidamente ainda estão passando por pesquisa
+[2024-09-03 23:04:27] Felipe "Juca" Sanches: um exemplo: tentei fazer todar a música da demo interna do produto. Mas o sistema congela. Na verdade ainda dá pra ver uma animaçãozinha no LCD, mas nunca sai da tela de "aguarde..."
+[2024-09-03 23:05:21] Felipe "Juca" Sanches: aí fui ver no código e, de fato, está em um loop esperando um bit ligar, mas chequei no código do driver e esse bit não tá ligado em nada no driver ainda
+[2024-09-03 23:06:11] Felipe "Juca" Sanches: e do lado disso tem uma função com um if (0) { ... e umas logerror_message(); }
+[2024-09-03 23:07:19] Felipe "Juca" Sanches: a música demo que eu queria ver era essa aqui:
+[2024-09-03 23:07:20] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=kRZ62DVlBMY
+[2024-09-03 23:52:21] Felipe "Juca" Sanches: Acabei de aprender hoje pra que serve a engine de Lua embutida no MAME: https://www.youtube.com/watch?v=ySY8EN0sE6I
+[2024-09-03 23:59:30] Felipe "Juca" Sanches: https://youtube.com/shorts/brNRRc8fjZE?si=BI4xyGA_g3prPUCo

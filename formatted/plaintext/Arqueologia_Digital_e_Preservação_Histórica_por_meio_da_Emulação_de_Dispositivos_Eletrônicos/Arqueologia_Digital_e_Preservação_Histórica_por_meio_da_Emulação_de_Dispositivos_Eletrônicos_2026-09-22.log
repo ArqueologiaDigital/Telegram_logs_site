@@ -1,0 +1,23 @@
+[2026-09-22 16:48:49] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40695-minigb.zip
+[2026-09-22 16:48:49] RicBit: mapper bizarros: berlitz japones, berlitz alemão, wisdom tree (jogos da biblia, achei o exodus legal, é tipo boulderdash de deus). ainda 4kb.
+[2026-09-22 16:50:27] Shideravan: Os jogos da Wisdom Tree são famosos por terem mappers bizarros, não só no GB, mas também no NES e SNES
+[2026-09-22 16:51:13] Shideravan: Os jogos mais lixos possíveis, parece que foram feitos só para serem pedras no sapato de emuladores kkkkkkkkkkkk
+[2026-09-22 16:55:00] Shideravan: Não é pouca coisa rodar o Exodus não, porque nem o Mesen suporta ele
+[2026-09-22 16:55:51] RicBit: o sameboy tambem nao
+[2026-09-22 16:56:12] RicBit: eu tambem baixei 100% das demos de gb no pouet, ele roda 100% delas
+[2026-09-22 16:57:39] RicBit: e eu nem achei os jogos da biblia lixo nao, achei legais.
+[2026-09-22 17:01:28] RicBit: cheguei em 100% de novo, hora de caçar mais romset pra abaixar esse numero
+[2026-09-22 17:01:47] RicBit: sempre tem alguma rom obscura em algum buraco que nao roda
+[2026-09-22 17:03:37] Shideravan: O mGBA roda
+[2026-09-22 17:03:56] Shideravan: Mas nem o MAME eu sei se roda
+[2026-09-22 17:04:46] RicBit: coloca la no mame entao, é facil
+[2026-09-22 17:05:40] Shideravan: Eu não tenho o romset do mame aqui para testar. Acho que a ultima vez que eu testei não tinha o mapper implementado ainda, mas isso fazem anos
+[2026-09-22 17:06:28] RicBit: precisa de romset? imagino que só a bios e a rom sejam suficientes
+[2026-09-22 17:07:34] Shideravan: Sim, mas preguiça de baixar as coisas uma por uma só para testar isso kkkkkkk
+[2026-09-22 17:08:16] Shideravan: Fora que eu vou ver que o mapper não está implementado e corro o risco do inseto de implementar o mapper me picar e eu ficar lá brigando por PR kkkkkkkkkkkkkk
+[2026-09-22 17:10:33] RicBit: tem no mame sim -> https://github.com/mamedev/mame/blob/4263a71e64377db11392c458b580c5ae83556bc7/src/devices/bus/gameboy/rom.cpp#L260
+[2026-09-22 17:12:06] Shideravan: Eu falei que ele roda no mGBA, mas estou vendo aqui, ele tá cheio de problemas
+[2026-09-22 17:17:05] Shideravan: O jogo roda extremamente lento
+[2026-09-22 23:45:56] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40714.jpg
+[2026-09-22 23:45:56] RicBit: coloquei forward chaining na namagiri. ela descobriu que pode trocar cbw que é 98, por sbb ax,00100h enc(agen), que é 81d80001. lol. não dá pra saber qual é melhor, pode ser que 4 bytes em raw seja menos que 1 byte packed.
+[2026-09-22 23:50:35] RicBit: ainda mais agora que trabalhamos com milibits

@@ -1,0 +1,31 @@
+[2024-05-23 08:24:57] Hugo (Agaelebê): A Floppy Disk MIDI Boombox: The Yamaha MDP-10
+https://nicole.express/2024/elementary-midi-watson.html
+[2024-05-23 10:30:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/32030.jpg
+[2024-05-23 10:30:24] Felipe "Juca" Sanches: IRQ4 é chamada pelo Timer #0
+[2024-05-23 10:32:04] Felipe "Juca" Sanches: Depois de consertar alguns bits errados, agora o começo do código na verdade seta o timer #0 desse jeito:
+
+01d: 5c 0c     LD   R5, #0Ch   ; LD   PRE0, #0Ch  ; Timer 0 Prescaler
+01f: 4c 20     LD   R4, #20h   ; LD   T0, #20h    ; Timer/Counter 0
+021: 1c 03     LD   R1, #03h   ; LD   TMR, #03h   ; Timer Mode
+[2024-05-23 10:46:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/32032.jpg
+[2024-05-23 10:46:59] Felipe "Juca" Sanches: O registrador PRE0 recebe o valor #0Ch, que, conforme esse diagrama significa que a contagem é de 0 a 3 (0x0C » 2 = 0x03) e o bit D0 é zero, indicando "single pass", o que é muito estranho, dado que eu esperava que essa interrupção fosse recorrente.
+[2024-05-23 10:48:03] Felipe "Juca" Sanches: Talvez seja um bit lido errado e a instrução correta na verdade escreve #0Dh?
+[2024-05-23 10:48:29] Felipe "Juca" Sanches: busquei no resto do código mas não achei nenhuma outra instrução que reconfigure o timer
+[2024-05-23 10:50:51] Robson França: Boa pergunta.  Vou comparar com os vídeos que fiz a partir do console
+[2024-05-23 11:16:21] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/32036.jpg
+[2024-05-23 11:23:00] Pedro de Medeiros 👾: https://gitlab.com/tkchia/GW-BASIC
+[2024-05-23 11:24:40] L.: Esse cara foi um dos únicos que arrumaram o gwbasic depois que droparam o fonte!
+[2024-05-23 11:29:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/32039.jpg
+[2024-05-23 11:29:58] Felipe "Juca" Sanches: ah! E a rotina IRQ4 faz isso logo antes do IRET 😉
+[2024-05-23 11:30:03] Felipe "Juca" Sanches: Então tá tudo certo 😉
+[2024-05-23 13:36:05] Felipe "Juca" Sanches [forwarded]: participo de um grupo de computadores antigos, e este projeto foi postado lá: https://hackaday.io/project/195954-the-homebrew-handwired-z80-computer-h2z80
+[2024-05-23 15:41:45] Lord Spy: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/32042.jpg
+[2024-05-23 15:41:45] Lord Spy: Não sei bem como reagir a essa notícia...
+[2024-05-23 15:53:41] Shideravan: É simbólico como o capitalismo sempre caminha para o monopólio kkkkkkkkk
+[2024-05-23 16:51:09] Erin Pinheiro 🐿: do jeito que o Tommy Tallarico afundou o nome intellivision e a atual Atari está até bem atenta a preservação histórica dos jogos (veja Atari 50, 2600+), eu tô bem feliz com essa notícia
+[2024-05-23 16:51:57] Anne Isabelle: His mom must be very proud
+[2024-05-23 16:52:30] Anne Isabelle: Tenho uma amiga q trampou num jogo novo da Atari
+[2024-05-23 16:52:35] Anne Isabelle: Pixel ripped
+[2024-05-23 16:52:51] Erin Pinheiro 🐿: vi na steam, pareceu bacana
+[2024-05-23 16:52:55] Anne Isabelle: Siiii
+[2024-05-23 16:58:10] L.: parece meu msx feito com macarrão. nunca terminei aheuahuehaeuh

@@ -1,0 +1,25 @@
+[2024-04-21 00:38:44] RicBit: z80 funciona sozinho, pluga a ram e nem precisa de adicional de refresh
+[2024-04-21 00:43:47] L.: o z80 é melhor por um único motivo: tem um apelido carinhoso de Zé
+[2024-04-21 01:31:28] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-04/31015.jpg
+[2024-04-21 01:31:28] L.: papel de parede z80 pra comemorar o fim da produção
+[2024-04-21 06:13:33] Luciano Ramalho: Meu pai trabalhava na SEMP que fabricava rádios e TVs em São Paulo (hoje trazem tudo pronto da China). No último estágio da linha de montagem um funcionário dava porradas com um martelo de borracha no gabinete da TV com ela ligada. Era o QA. Se ela aguentasse as porradas, podia ser embalada.
+[2024-04-21 06:18:01] Luciano Ramalho: O Etienne Delacroix na Poli tinha uma demo legal onde ligava uns leds nos pinos de endereçamento, um botão no pino do clock e uns resistores nos pinos de memória daí cada clicada no botão incrementava o program counter e a gente via a contagem nos LEDs
+[2024-04-21 06:19:26] Luciano Ramalho: Zero RAM. Ou melhor, 1 byte de “RAM” com o valor zero que é NOP.
+[2024-04-21 06:19:54] Luciano Ramalho: Eu gostaria de repetir isso no Garoa um dia
+[2024-04-21 10:10:10] Anne Isabelle: Foi daí que veio o termo “marretar” que a gente usa em backend?  😝
+[2024-04-21 10:18:56] Eduardo Loos: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-04/31021.jpg
+[2024-04-21 10:55:40] Anne Isabelle: https://produto.mercadolivre.com.br/MLB-4615764186-pcb-bluescsi-v11-_JM
+[2024-04-21 12:08:33] Guilherme Ranoya: Se for esse o critério, então o C64 é o melhor de todos... você não precisa nem de memória, nem do processador!!! basta ter o disk drive! 😆
+
+https://www.youtube.com/watch?v=zprSxCMlECA
+[2024-04-21 17:18:19] RicBit: É um jeito eficiente de testar solda fria!
+[2024-04-21 17:32:21] L.: a linha premium era testada no sistema SEM Porrada
+[2024-04-21 19:27:46] L.: https://github.com/rejunity/z80-open-silicon
+[2024-04-21 20:05:11] Lord Spy: Mas... é compatível, não é o item!... :D
+[2024-04-21 22:34:17] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-04/31028.jpg
+[2024-04-21 22:34:17] RicBit: Hoje eu fui ao zoológico e foi curiosamente on topic, estava cheio de emu.
+[2024-04-21 22:36:01] Shideravan: Ba dum tss
+[2024-04-21 22:43:43] L.: juca passou semana passada em frente e pegou todas as ROMs e fez esses emus aí
+[2024-04-21 22:51:18] Pedro de Medeiros 👾: Acho que esse não tem no MAME.
+[2024-04-21 23:05:50] Pablo Vasques Bravo-Villalba: Se grasna como um pato... 😝
+[2024-04-21 23:06:49] Pablo Vasques Bravo-Villalba: Por isso que eu não acho as do SC-55, estão com o Juca 🙅🏽‍♂

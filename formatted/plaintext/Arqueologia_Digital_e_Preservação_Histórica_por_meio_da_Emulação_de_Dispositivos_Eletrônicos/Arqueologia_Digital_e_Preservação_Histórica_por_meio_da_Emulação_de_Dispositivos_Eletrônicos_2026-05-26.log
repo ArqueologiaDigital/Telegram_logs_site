@@ -1,0 +1,55 @@
+[2026-05-26 13:59:53] Ismael Carvalho: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-05/38934-Peek%202026-05-26%2013-58.mp4
+[2026-05-26 13:59:53] Ismael Carvalho: Tive avanço no E88, primeira vez que mexi em como funciona o uso do svg, mas não ficou muito certo não XD
+[2026-05-26 14:00:04] Ismael Carvalho: mais tarde eu tento corrigir
+[2026-05-26 15:50:33] Pedro de Medeiros 👾: H.I.?
+[2026-05-26 15:55:14] Felipe "Juca" Sanches: Human Intelligence
+[2026-05-26 17:02:52] RicBit: meu sistema faz x86 agora, aqui o boot do sisne:
+https://gist.github.com/ricbit/7aa155e742544348d76ee9ff18d9ff40
+[2026-05-26 17:04:22] RicBit: deu trabalho, mais do que eu esperava, porque o x86 tem opcodes ambiguos. mov ax, bx pode ser montado de duas maneiras diferentes, e o assembler escolhe uma qualquer. no meu caso tive que futucar um assembler para permitir escolher o encoding.
+[2026-05-26 17:56:25] Pablo Vasques Bravo-Villalba: Como pode ser montado de duas maneiras diferentes?
+[2026-05-26 18:08:12] RicBit: x86 é bizarro
+[2026-05-26 18:08:45] RicBit: voce pode fazer mov ax,[ptr] e mov [ptr],ax ; é o mesmo opcode mas com a ordem trocada
+[2026-05-26 18:08:59] RicBit: só que isso tambem funciona com mov reg,reg
+[2026-05-26 18:09:27] RicBit: então voce tem uma maneira que é mov from src to dst, e outra que é mov to dst from src, é a mesma coisa mas são dois encodings
+[2026-05-26 18:10:07] RicBit: aqui o init do sisne, é o codigo que segue o boot e lê o sisne.sis:
+https://gist.github.com/ricbit/2c979dda294a3bc76a7c1893ae357570
+[2026-05-26 18:14:36] Pablo Vasques Bravo-Villalba: Peraí, mov ax, bx pode ser tanto copiar o conteúdo do registrador BX no registrador AX como vice-versa? Como é possível fazer qualquer coisa com esse tipo de ambiguidade?
+[2026-05-26 18:23:25] Alexandre Villares: https://universeodon.com/@markmoxon/116635975154705493
+[2026-05-26 18:23:31] RicBit: mov ax, bx pode ser copiar bx no ax, ou copiar para o ax o bx, troca a ordem mas é a mesma semantica
+[2026-05-26 18:24:44] RicBit: tipo ax->bx e bx<-ax é a mesma coisa
+[2026-05-26 18:27:15] Pablo Vasques Bravo-Villalba: Então eu não compreendo como pode ser ambíguo. Não parece ter ambiguidade nenhuma, são só duas formas diferentes de descrever exatamente a mesma coisa. Você disse que mov ax, bx pode ser montado de duas maneiras diferentes, mas não consigo enxergar isso.
+
+Vejo a seguinte sintaxe: mov ax, bx
+Sei que ela tem um opcode XX, que significa, basicamente, que depois da execução os dois registradores vão conter o mesmo valor, e esse valor é o que estava originalmente dentro de bx.
+
+Se o mnemônico não muda, a sintaxe não muda e o opcode não muda, onde está a ambiguidade?
+[2026-05-26 18:27:34] Pablo Vasques Bravo-Villalba: Não estou querendo refutar. Estou querendo entender a sua afirmação
+[2026-05-26 18:27:35] RicBit: o opcode muda!
+[2026-05-26 18:28:21] Pablo Vasques Bravo-Villalba: Então me dá um exemplo prático, por favor. Que opcodes diferentes podem ser representados por "mov ax, bx"?
+[2026-05-26 18:29:20] RicBit: mov dx,ax pode ser 8B D0, ou mov dx,ax pode ser 89 C2. os dois funcionam
+[2026-05-26 18:29:55] RicBit: no z80 o equivalente são os 8 nops que ele tem
+[2026-05-26 18:30:37] RicBit: todo mundo usa 00 pra nop, mas 7F tambem é nop
+[2026-05-26 18:32:46] Tevo: Em outras palavras, MOV tem opcodes usando o R/M tanto como fonte quanto como destino, e R/M pode especificar um registrador: https://www.scs.stanford.edu/05au-cs240c/lab/i386/MOV.htm
+[2026-05-26 18:33:10] Tevo: (não que eu tenha muita familiaridade com x86 - eu acabei de descobrir isso também)
+[2026-05-26 18:33:24] RicBit: sim eu coloquei no meu um modificador modrm para mudar o encoding
+[2026-05-26 18:36:49] RicBit: sub dx, 20 tambem tem duas formas
+[2026-05-26 18:47:35] Pedro de Medeiros 👾: Z80 tem também, mesmo que um deles seja não documentado oficialmente. Por exemplo: "LD HL, (word)" tem duas codificações possíveis: 2A + word ou ED + 6B + word.
+[2026-05-26 18:49:01] L.: X86 também tem um quintilhão de NOPs
+[2026-05-26 18:54:48] Pablo Vasques Bravo-Villalba: Tá, acho que entendi o problema, não vou mais amolar vocês com isso 😅
+[2026-05-26 18:54:56] Pablo Vasques Bravo-Villalba: Obrigado pela paciência de todos
+[2026-05-26 19:39:09] RicBit: sisne.sis eu nao sei se compensa abrir, ele claramente foi feito em alguma linguagem de alto nivel
+[2026-05-26 19:39:12] RicBit: provavelmente pascal
+[2026-05-26 19:47:02] RicBit: mas é 100% diferente do msdos.sys, o msdos foi escrito em assembly mesmo
+[2026-05-26 19:47:22] RicBit: o sisne.sis é muuuito maior, cheio de overhead
+[2026-05-26 19:54:16] Felipe "Juca" Sanches: "Faz algo com o primeiro e o segundo" = operação X
+
+se primeiro e segundo são iguais, tem duas formas de dizer a mesma coisa:
+
+Um encoding é: "Faz algo com A e B"
+Outro encoding é: "Faz algo com B e A"
+[2026-05-26 19:54:53] Felipe "Juca" Sanches: quando A e B são iguais, os dois encoding são diferentes porém equivalentes
+[2026-05-26 22:08:25] Macabeus: @fsanches ia te mostrar isso, e acabei esquecendo
+
+https://www.linkedin.com/posts/cumbucaip_openfinance-telebradesco-cumbuca-activity-7445100166061195264--nqd?utm_source=share&utm_medium=member_desktop&rcm=ACoAABtc23wB4I4MoG2PZlfU5YQqquSCWc8m7hQ
+[2026-05-26 22:09:20] Macabeus: o Nic, que trabalha na Cumbuca, vem mexendo com isso vai um bom tempo
+[2026-05-26 22:09:25] Macabeus: vale você dar uma olhada

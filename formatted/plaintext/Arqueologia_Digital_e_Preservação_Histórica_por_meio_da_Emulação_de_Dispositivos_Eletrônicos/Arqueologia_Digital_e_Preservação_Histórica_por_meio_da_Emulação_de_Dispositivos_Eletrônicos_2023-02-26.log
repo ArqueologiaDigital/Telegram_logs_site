@@ -1,0 +1,68 @@
+[2023-02-26 00:52:26] Felipe "Juca" Sanches: Eu tinha acesso a duas versões do firmware do KN5000 (versão 9 e versão 10).
+O site que fornece os downloads desses discos de update de firmware estava com links quebrados para as versões 6, 7 e 8
+[2023-02-26 00:52:37] Felipe "Juca" Sanches: o site é de uns 20 anos atrás!
+[2023-02-26 00:52:59] Felipe "Juca" Sanches: mandei email pro dono do site (um finlandês) e ele me respondeu em questão de uma horinha ontem
+[2023-02-26 00:53:11] Felipe "Juca" Sanches: hoje ele me mandou um ZIP com tudo que ele tem do KN5000
+[2023-02-26 00:53:30] Felipe "Juca" Sanches: e lá estavam os discos de update das versões 7 e 8 do firmware. (mas não da versão 6)
+[2023-02-26 00:53:45] Felipe "Juca" Sanches: montei as imagens de disco e extraí os arquivos
+[2023-02-26 00:53:48] Felipe "Juca" Sanches: cá estão:
+[2023-02-26 00:53:55] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/26239.jpg
+[2023-02-26 01:01:26] Felipe "Juca" Sanches: // version 6 - no dump yet
+// version 7, Jun. 26th, 1998
+// version 8, Nov. 13th, 1998
+// version 9, Jan. 26th, 1999
+// version 10, Aug. 2nd, 1999
+[2023-02-26 01:02:08] Felipe "Juca" Sanches: o legal de pegar as versões mais velhas é poder comparar os binários pra ver onde fizeram alterações
+[2023-02-26 01:02:24] Felipe "Juca" Sanches: e também pegar bugs velhos pra tentar exploitar
+[2023-02-26 01:03:03] Felipe "Juca" Sanches: (pois ainda busco uma forma de rodar código arbitrário sem ter que ficar gravando disquetes inteiros com updates do sistema operacional inteiro)
+[2023-02-26 01:03:51] Felipe "Juca" Sanches: e também uma forma de fazer um dump do firmware a partir de uma versão não modificada do firmware 😉
+[2023-02-26 01:04:09] Felipe "Juca" Sanches: pois o meu descompressor LZSS ainda tá com alguma cagadinha
+[2023-02-26 02:42:20] Erin Pinheiro 🐿: F06 F04 F06 F04 ...
+[2023-02-26 03:18:17] L.: Consegui baixar uns zips do webarchive mas não tinha a v6 lá (arquivou um 404 lol)
+[2023-02-26 09:22:02] Felipe "Juca" Sanches: pois é... to tentando achar o v6 ainda também
+[2023-02-26 09:22:36] Felipe "Juca" Sanches: no archive tem v6 v7 e v8 arquivado incorretamente (como arquivos .EXE cujo conteúdo na verdade é HTML de página 404)
+[2023-02-26 09:23:19] Felipe "Juca" Sanches: até no pacotão de aquivos que o cara me passou nesse final de semana também vieram esses 404, mas ele por conta disso me mandou os arquivos certos das versões 7 e 8 num ZIP separado
+[2023-02-26 09:23:33] Felipe "Juca" Sanches: só que não fez isso com a v6. Vou perguntar pra ele se ele ainda tem
+[2023-02-26 09:38:40] Felipe "Juca" Sanches: mandei email pra ele agora pedindo pra ele checar isso, vamos ver no que dá...
+[2023-02-26 09:40:38] Felipe "Juca" Sanches: depois preciso juntar tudo num único pacotão pra subir no internet archive e facilitar a vida de quem estiver buscando esses arquivos
+[2023-02-26 09:51:10] Pablo Vasques Bravo-Villalba: Fiquei super entretido com este vídeo.
+https://youtu.be/PkPSDOjhxwM
+[2023-02-26 10:13:25] Felipe "Juca" Sanches: https://github.com/felipesanches/lcd-displays-in-svg
+[2023-02-26 10:13:43] Pablo Vasques Bravo-Villalba: Hoje tem música de Ys! Precisa falar mais alguma coisa? 😉
+https://on.soundcloud.com/j8umh
+[2023-02-26 10:13:56] Felipe "Juca" Sanches: e, em particular esse aqui:
+https://felipesanches.github.io/lcd-displays-in-svg/car-radio/car-radio.svg
+[2023-02-26 10:15:27] Pablo Vasques Bravo-Villalba: Legal demais! Já tinha visto o Pense Bem, mas os outros estão ótimos!
+[2023-02-26 10:15:43] Pablo Vasques Bravo-Villalba: Muito, muito bom
+[2023-02-26 10:16:03] Felipe "Juca" Sanches: eu tenho um fascínio pela estética dessas coisas
+[2023-02-26 10:19:25] Pablo Vasques Bravo-Villalba: Eu também, especialmente pelos VFDs. Apesar de existirem imitações, e algumas até bem convincentes, acho que os originais têm uma espécie de textura que eu acho difícil descrever. Talvez haja uma percepção subliminar da taxa de atualização. Talvez seja essa cor específica, meio turquesa, que traz junto memórias afetivas.
+[2023-02-26 10:23:02] Felipe "Juca" Sanches: eu tinha um projeto (um dos que nunca sairam da minha cabeça) de montar uma pequena coleção de displays e respectivos circuitos de controle e drivers (de software para controlá-los) formando um mosaico de displays pendurados na parede. E então fazer eles todos juntos mostrarem imagens como se fossem uma unica tela, com "pixels não-retangulares".
+[2023-02-26 10:23:26] Felipe "Juca" Sanches: meio que uma instalação artística
+[2023-02-26 10:23:37] Felipe "Juca" Sanches: mas com uma bagagem técnica muito grande para ser executada
+[2023-02-26 10:24:06] Pablo Vasques Bravo-Villalba: Seria incrível, mas o trabalho escala junto com a variedade de displays, né?
+[2023-02-26 10:24:34] Felipe "Juca" Sanches: é... seria meio que um "MAME dos VFDs" categorizar e documentar todos os displays encontrados
+[2023-02-26 12:59:39] RicBit: Normalmente os Trackers dessa época tem x bits a mais durante a mixagem para suportar a soma dos canais e controle de volume sem perder resolução.
+[2023-02-26 13:00:48] RicBit: Se não tem controle de volume, nem precisava ser tanto bit a mais assim, só 2 resolveriam né
+[2023-02-26 13:03:57] Robson França: Os bits a mais são para o incremento do endereço.  Para os samples foram usados valores divididos por 4
+[2023-02-26 13:11:39] Robson França: Por exemplo, para chegar a uma frequência de 440 Hz, o incremento no endereço é de 18,375. Então o valor de incremento é 0x1260
+[2023-02-26 13:30:20] RicBit: Ah na frequência
+[2023-02-26 13:30:31] RicBit: Isso chama DDA
+[2023-02-26 13:30:40] RicBit: Eu usava nos emuladores
+[2023-02-26 13:32:07] RicBit: Aqui eles falam de gráficos mas é o mesmo algoritmo em som
+[2023-02-26 13:32:09] RicBit: https://en.m.wikipedia.org/wiki/Digital_differential_analyzer_(graphics_algorithm)
+[2023-02-26 14:42:41] Robson França: Isso mesmo
+[2023-02-26 14:59:27] L.: https://calcul8rs.com/
+[2023-02-26 15:01:14] Elson (McGuyver) ☠️ [forwarded]: Galera, boa tarde!
+Postaram em outro grupo, no WhatsApp, e resolvi compartilhar aqui. 
+
+Torrent disponivel com 4 GB de documentos da Itautec... tem muita coisa dos computadores I-7000, IS30 Plus, IS286...
+[2023-02-26 15:01:14] Elson (McGuyver) ☠️: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/26279-documentos_itautec.torrent
+[2023-02-26 15:01:41] Elson (McGuyver) ☠️: Pode interessar também para o @fsanches … 😉
+[2023-02-26 16:02:01] Felipe "Juca" Sanches: sim, to baixando agora
+[2023-02-26 16:19:06] Felipe "Juca" Sanches: @Elson_Sartori, muito obrigado pelo aviso. Você não tem idéia de como isso me deixou feliz!
+[2023-02-26 16:19:28] Felipe "Juca" Sanches: Agora é necessário checar se o esquemático do I7000 tá aí no meio mesmo
+[2023-02-26 16:19:46] Felipe "Juca" Sanches: o I7000 que usa um Z80, não o I7000 clone de PC-XT
+[2023-02-26 16:20:03] Felipe "Juca" Sanches: pois fizeram a merda de dar o mesmo nome pra 2 computadores completamente distintos!
+[2023-02-26 16:20:39] Elson (McGuyver) ☠️: Caraca… Essa eu não sabia! 🤦🏽‍♂️
+[2023-02-26 18:04:35] Felipe "Juca" Sanches: https://archive.org/details/technics-kn5000-system-update-disks
+[2023-02-26 20:49:37] Pablo Vasques Bravo-Villalba: https://nicole.express/2023/yes-popeye-the-sailor-man.html?s=35

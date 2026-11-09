@@ -1,0 +1,20 @@
+[2020-05-21 20:35:27] L.: Lançamos o fonte do GW-BASIC sob MIT!
+[2020-05-21 20:35:47] L.: https://github.com/microsoft/gw-basic
+[2020-05-21 20:53:33] L.: Quem vai ser a primeira pessoa a portar isso de volta pro Z80 e rodar no MSX?😅
+[2020-05-21 20:54:04] Felipe "Juca" Sanches: por que "de volta" ?
+[2020-05-21 20:55:08] L.: Essa versão é de 8086 mas foi convertida mecanicamente na época do 8080
+[2020-05-21 20:55:22] L.: (que o z80 é compatível a nível de instrução)
+[2020-05-21 20:55:37] L.: Então deve ser possível converter isso de volta
+[2020-05-21 20:56:07] Felipe "Juca" Sanches: mas certamente teve alteracao manual no codigo depois da conversao automatica
+[2020-05-21 21:02:34] L.: https://devblogs.microsoft.com/commandline/microsoft-open-sources-gw-basic/
+[2020-05-21 21:02:54] L.: Provavelmente não. Vou dar uma olhada nisso depois com mais calma
+[2020-05-21 21:47:58] Ismael Luceno: :o
+[2020-05-21 21:50:41] L.: Pensando em fazer conversor disso pra Z80
+[2020-05-21 21:50:57] L.: Final de semana tá aí...
+[2020-05-21 21:51:04] Ismael Luceno: se eu não me lembro errado a IBM tinha uma ferramenta bastante boa e era muito simples
+[2020-05-21 21:51:39] Ismael Luceno: no gwbasic pode funcionar porque acho que deve ser threaded
+[2020-05-21 21:54:14] Ismael Luceno: o a86 que era freeware tinha xlt86
+[2020-05-21 21:54:46] Ismael Luceno: eu usava esse pois consegui ele num diskette de uma revista
+[2020-05-21 22:01:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-05/11040.jpg
+[2020-05-21 22:01:58] Felipe "Juca" Sanches [forwarded]: A Book about the demos scene. Campaign should start on june
+[2020-05-21 22:17:40] L.: Noyce

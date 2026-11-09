@@ -1,0 +1,29 @@
+[2026-10-15 00:59:21] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41573.jpg
+[2026-10-15 00:59:21] RicBit: aos poucos vai
+[2026-10-15 02:23:51] Shideravan: @fsanches você tem sentido uma mudança nas políticas de AI disclosure no MAME?
+[2026-10-15 02:24:45] Shideravan: Antes eles exigiam que até os comentários numa discussão de PR teriam que ter AI Disclosure para informar que foi usada IA para traduzir os textos
+[2026-10-15 02:25:20] Shideravan: Agora eles estão pedindo para colocar AI Disclosure só no header da PR
+[2026-10-15 02:26:17] Shideravan: Os dinossauros do MAME ainda devem estar se adaptando a esse mundo com IA hahaha
+[2026-10-15 02:36:01] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/16220#issuecomment-6112120267
+[2026-10-15 02:36:17] Felipe "Juca" Sanches: o rb fala disso aqui
+[2026-10-15 14:00:20] Felipe "Juca" Sanches: https://github.com/Xalior/pi-mame/releases/tag/vPoC4
+[2026-10-15 22:15:27] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41581.jpg
+[2026-10-15 22:15:27] RicBit: as it turns out, o skill de pintar miniatura transfere para pintar pixelart. consegui 3 na mesma palette.
+[2026-10-15 22:17:03] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41582.jpg
+[2026-10-15 22:17:03] RicBit: o original
+[2026-10-15 22:36:11] Jecel Assumpcao Jr: as cores fizeram uma diferença enorma na "old lady 54" pois na versão preto e branco o cabelo dela era preto
+[2026-10-15 23:04:31] meleu: mano, como cheguei a pouco tempo mo grupo não tenho contexto do que são essas pixel arts, mas gostaria de demonstrar minha admiração.
+ta lindo demais!
+[2026-10-15 23:14:29] Pedro de Medeiros 👾: São gráficos refeitos do jogo Death Wish 3 para MSX2 https://www.youtube.com/watch?v=KR4jZx1dDkg
+[2026-10-15 23:16:47] Pedro de Medeiros 👾: Correção: para V9990
+[2026-10-15 23:19:20] RicBit: Parte ruim é que eu sou lerdo, levo uns 15 min pra fazer um desses. Só de personagem são uns 150 frames, iria levar forever.
+[2026-10-15 23:20:02] RicBit: Mas LLM não sabe pintar, e diffusion model alucina loucamente com pixelart.
+[2026-10-15 23:21:22] RicBit: Resolvi fazer como nas cavernas e treinei uma rede neural pra fazer os frames seguintes. Não fica 100% mas fica uns 60%, o resto eu mato na mão
+[2026-10-15 23:21:46] Pedro de Medeiros 👾: Vai manter o colete a prova de balas pixel-precise?
+[2026-10-15 23:22:50] RicBit: Tem que ser pixel precise, pra saber se o tiro pegou no jogador ele checa a posição no bitmap do colete.
+[2026-10-15 23:23:11] RicBit: Os furos na tela são reais.
+[2026-10-15 23:43:32] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41593.jpg
+[2026-10-15 23:43:32] RicBit: versão neural net, não fica perfeito mas tá de boa consertar o resto na mão.
+[2026-10-15 23:46:24] RicBit: de frente ele se perdeu completo, nao tinha exemplo\
+[2026-10-15 23:51:54] Felipe "Juca" Sanches: Muito bacana isso!
+[2026-10-15 23:52:20] Felipe "Juca" Sanches: Tô curtindo acompanhar a evolução

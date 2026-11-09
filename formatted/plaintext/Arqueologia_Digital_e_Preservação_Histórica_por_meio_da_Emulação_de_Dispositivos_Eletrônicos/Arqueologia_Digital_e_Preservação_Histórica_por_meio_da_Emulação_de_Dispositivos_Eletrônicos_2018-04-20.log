@@ -1,0 +1,6 @@
+[2018-04-20 16:01:59] Affonso Amendola: Hey guys, perguntas pra quem manja de MAME, eu escrevi aqui uma tentativa de mandar os dados pela porta serial, e eu preciso testar isso em um emulador antes de ir pro pc de verdade, pq puta medo de apagar tudo sem querer, rodar o codigo dentro do emulador de XT do mame funciona legal, ele retorna certinho o conteudo de cada setor do hd virtual, mas a parte de mandar pra serial eu to apanhando
+[2018-04-20 16:05:14] Affonso Amendola: Eu configurei o emulador de xt do mame pra rodar com um terminal serial conectado a primeira porta serial, e o meu codigo manda os dados do setor lido DIRETO pra essa porta, se tudo tivesse configurado certinho, os dados apareceriam nesse terminal ai não? Talvez apareceria tudo cagado, pq ele mandaria uns caracteres de controle e ferraria com algumas coisa, mas deveria aparecer alguma coisa la, ou to entendendo errado com um terminal serial funciona?
+[2018-04-20 17:44:30] Affonso Amendola: Haaaa, consegui, kinda, n entendi a existencia dos espaços
+[2018-04-20 17:44:42] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-04/4455.jpg
+[2018-04-20 17:44:53] Affonso Amendola: Enviando um setor do disco emulado para o terminal
+[2018-04-20 17:45:02] Affonso Amendola: Em tese no nexus seria igual

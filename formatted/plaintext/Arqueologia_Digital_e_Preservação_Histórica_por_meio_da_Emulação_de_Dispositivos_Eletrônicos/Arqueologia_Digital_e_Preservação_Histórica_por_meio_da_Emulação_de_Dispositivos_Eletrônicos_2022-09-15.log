@@ -1,0 +1,33 @@
+[2022-09-15 00:57:04] Felipe "Juca" Sanches: Ao vivo, não sei dizer
+[2022-09-15 00:57:24] Felipe "Juca" Sanches: Mas me disseram que vai ser gravado
+[2022-09-15 00:57:59] Felipe "Juca" Sanches: Então deve ir pro canal de YouTube da Escola Politécnica
+[2022-09-15 11:24:58] Dario Junior: Ah show de bola
+[2022-09-15 12:52:23] Sebastiao Barretto: Qual você considera que foi o primeiro, aquele do ITA?
+[2022-09-15 14:03:40] Hugo (Agaelebê): Isso, o Zezinho. O pato feio foi O primeiro 8 bits. Zezinho era 4 bits pelo que O Juca me falou.
+[2022-09-15 16:14:19] Felipe "Juca" Sanches: e tem também um tal de "Lourinha do IME" que eu nunca vi nada de informação além do nome apenas. Não tenho idéia de quando foi feito, por quem, e em qual contexto.
+[2022-09-15 16:14:50] Felipe "Juca" Sanches: suspeito que seja o IME do Rio de Janeiro (o Instituto Militar de Engenharia) e não o da USP (Instituto de Matemática e Estatística)
+[2022-09-15 16:37:46] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23833.jpg
+[2022-09-15 16:37:46] Augusto Almeida: Mim dessolda BGA (vi no Facebook)
+[2022-09-15 16:38:03] Augusto Almeida: Mas se funciona, então tá valendo
+[2022-09-15 16:39:15] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23835.jpg
+[2022-09-15 16:39:15] Augusto Almeida: Circuito bem simples pra obter RGB de um Master, ou de qualquer outro aparelho com o mesmo CI
+[2022-09-15 16:39:15] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23836.jpg
+[2022-09-15 16:39:15] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23837.jpg
+[2022-09-15 16:39:15] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23838.jpg
+[2022-09-15 16:39:15] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23839.jpg
+[2022-09-15 16:39:15] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23840.jpg
+[2022-09-15 16:39:15] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23841.jpg
+[2022-09-15 16:39:15] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23842.jpg
+[2022-09-15 16:39:15] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23843.jpg
+[2022-09-15 16:39:15] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23844.jpg
+[2022-09-15 16:39:16] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23845.jpg
+[2022-09-15 16:39:28] Augusto Almeida: Sony CXA-1145
+[2022-09-15 16:39:45] Augusto Almeida: Figurinha até bem conhecida
+[2022-09-15 16:40:04] Augusto Almeida: Acho que é usado também numas placas analógicas de MSX
+[2022-09-15 16:41:06] Erin Pinheiro 🐿: o master original americano tem esse CI, mas o master I/II brasileiro substituiu por um outro acho que motorola, que usa 9v ao invés do resto do circuito 5v (e por isso a fonte do master brasileiro é um bicho estranho)
+[2022-09-15 16:41:25] Erin Pinheiro 🐿: pro master brasileiro eu usei um opamp de vídeo puxando rgb direto do vdp
+[2022-09-15 16:41:31] Augusto Almeida: Vish
+[2022-09-15 16:41:44] Augusto Almeida: Boa 👏👏👏👏👏
+[2022-09-15 16:42:58] L.: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23853-animation.gif.mp4
+[2022-09-15 18:22:52] Augusto Almeida [forwarded]: Pros eletronicomaniacos, testador de diversas coisas, usando arduíno
+[2022-09-15 18:22:52] Augusto Almeida [forwarded]: https://create.arduino.cc/projecthub/plouc68000/ardutester-v1-13-the-arduino-uno-transistor-tester-dbafb4

@@ -1,0 +1,85 @@
+[2022-06-23 00:23:38] Pedro de Medeiros 👾: Eu tive um problema assim quando estava fazendo besteira com o gerador de números aleatórios que afetava só o SDCC 4.2.0.
+[2022-06-23 00:30:49] L.: Vou brincar com isso depois, então.
+[2022-06-23 03:29:24] Toy [forwarded]: https://youtu.be/4qqnHtH1RAs
+[2022-06-23 10:11:58] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/114
+[2022-06-23 10:25:47] Felipe "Juca" Sanches: Se a função se chama check_endgame, deveria retornar um boolean.
+
+Mas na verdade ela retorna um novo game state.
+
+Troque o nome, ou mude a implementação.
+[2022-06-23 10:58:06] Felipe "Juca" Sanches: The Ghidra Book: The Definitive Guide : Eagle, Chris, Nance, Kara: Livros — Amazon Brasil
+https://www.amazon.com.br/Ghidra-Book-Definitive-Guide/dp/1718501021
+[2022-06-23 11:25:58] Pedro de Medeiros 👾: Um livro de kindle por R$300 é ridículo.
+[2022-06-23 12:42:49] Felipe "Juca" Sanches: Também acho
+[2022-06-23 12:43:22] Felipe "Juca" Sanches: Mas tô pensando em comprar o livro físico, que tá mais ou menos o mesmo preço
+[2022-06-23 12:54:22] Pedro de Medeiros 👾: Tá arrumado. Só que tem algum bug em main impedindo de testar isso direito em todas as plataformas.
+[2022-06-23 12:54:48] Felipe "Juca" Sanches: Retire o status de draft quando quiser que eu faça o merge
+[2022-06-23 13:06:26] Pedro de Medeiros 👾: Tá pronto
+[2022-06-23 13:12:27] L.: No Starch Press tá sempre com cupom
+[2022-06-23 13:12:39] L.: As vezes 20-50%
+[2022-06-23 13:17:30] Felipe "Juca" Sanches: onde consigo isso?
+[2022-06-23 13:22:03] L.: Eles sempre postam cupom próximo de algum feriado aqui. 4 de Julho tá chegando, se pá vai ter algo: https://twitter.com/nostarch
+[2022-06-23 13:23:00] L.: Tipo https://twitter.com/search?q=from%3A%40nostarch%20coupon&src=typed_query&f=live
+[2022-06-23 13:45:22] L.: Arrumei! O problema era na random_number(). Mudei pra usar uma versão 16-bit do algoritmo do Lemire pra número num range e tá funcionando massa agora :)
+[2022-06-23 13:45:53] Felipe "Juca" Sanches: Fiz o merge, mas não rodei aqui ainda pra ver como ficou. Apenas lendo o patch, me parece que ainda não há, nem mesmo na versão msx2, indicação visão de vitória mais explica como uma mensagem na tela, ou algo parecido, né?
+[2022-06-23 13:46:14] Pedro de Medeiros 👾: A gente precisa de tiles pra isso.
+[2022-06-23 13:46:30] Pedro de Medeiros 👾: O que ele faz é: não renderiza a explosão e o cursor some. É assim que você sabe que ganhou.
+[2022-06-23 13:47:16] L.: Tem que tocar o FIMJOGO.WAV que vinha no Klik&Play versão em Português (de Portugal)
+[2022-06-23 13:47:30] L.: Ao invés de falarem "Game Over", tem uma voz tosca bagaray que fala "Fim Jogo"
+[2022-06-23 13:48:10] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22095-excited-hockey.mp4
+[2022-06-23 13:50:40] L.: Cedo demais pra falar, LOL. Ainda tá acontecendo. Seria massa implementar negócio de debug na versão MS-DOS usando algo tipo console serial, sei lá
+[2022-06-23 13:51:37] Felipe "Juca" Sanches: Estou entrando na minha aula de piano agora
+[2022-06-23 13:51:41] L.: (Tipo, tá melhor, mas ainda assim às vezes o campo tem tipo 28 minas)
+[2022-06-23 13:51:48] Felipe "Juca" Sanches: Volto daqui uma horinha
+[2022-06-23 13:52:04] L.: Eu vou dar uma pausa nesse projeto e fazer uns negócios aqui em casa também
+[2022-06-23 13:52:47] L.: Ah, não, tá certo! O número de bombas é aleatório entre 10 e 30
+[2022-06-23 14:35:44] Pedro de Medeiros 👾: Me esqueci de cobrir este caso: https://github.com/ArqueologiaDigital/Mines/pull/0116
+[2022-06-23 14:35:51] Pedro de Medeiros 👾: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22103-sticker.webp
+[2022-06-23 14:58:16] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22104.jpg
+[2022-06-23 14:58:16] L.: Modo de debug no port MS-DOS :D
+[2022-06-23 15:53:53] L.: Isso é legal: https://github.com/mborgerson/gdbstub
+Implementação do protocolo do gdbserver, que dá pra fazer via serial também. Aí dá pra botar debugging em qualquer port que tenha serial, e usar gdb :)
+[2022-06-23 15:54:46] Pedro de Medeiros 👾: eita
+[2022-06-23 15:57:56] L.: Precisa fazer umas coisas que são dependente de plataforma (tipo pegar valor de registradores), mas tá bem separadinho nesse código aí
+[2022-06-23 16:07:05] Felipe "Juca" Sanches: Vocês acham que rola fácil escrever um segundo jogo que use esse codebase e que automaticamente já funcione em todos os ports existentes? Como seria a organização do código pra viabilizar algo assim? E qual jogo seria um bom candidato para esse experimento?
+[2022-06-23 16:07:39] L.: Snake seria fácil de fazer e também é tile based
+[2022-06-23 16:07:51] L.: Pipe dreams é outro jogo massa
+[2022-06-23 16:08:00] Felipe "Juca" Sanches: Ou preferem continuar expandindo exaustivamente o conjunto de ports?
+[2022-06-23 16:08:21] L.: Eu tô só brincando até encher o saco na verdade. Não quero ficar nisso por muito mais tempo, não :)
+[2022-06-23 16:08:27] Pedro de Medeiros 👾: Se um mesmo processador (Z80 por exemplo) puder usar um código comum, ficaria bem legal.
+[2022-06-23 16:08:31] L.: Eu tô de licença médica e nem devia estar programando lol
+[2022-06-23 16:09:36] Felipe "Juca" Sanches: E eu estou programando isso como escapismo, pra não pensar nos problemas mais sérios da vida kkkk ;-P
+[2022-06-23 16:10:50] Felipe "Juca" Sanches: O port pra GunSmoke saiu de um codebase mais antigo que era justamente um snake
+[2022-06-23 16:11:32] Felipe "Juca" Sanches: Mas com o desenho do pixotosco do Tony de Marco
+[2022-06-23 16:13:01] Felipe "Juca" Sanches: Assista a "Jogo do Pixotosco rodando no MAME (25/maio/2014)" no YouTube
+https://youtu.be/jGZchmwxTrA
+[2022-06-23 16:13:09] Pedro de Medeiros 👾: Eu acho que a gente pode terminar o jogo antes colocando todas as features que faltam.
+[2022-06-23 16:14:24] Pedro de Medeiros 👾: O problema de gerar um monte de ports agora é que eles vão ficar meio incompletos no meio do caminho a medida que as features básicas do jogo são consolidadas.
+[2022-06-23 16:15:07] Felipe "Juca" Sanches: Sim, tem razão
+[2022-06-23 16:15:14] Pedro de Medeiros 👾: E isso obriga a gente a colocar um monte de macro no código base pra compensar os ports que estão com implementações incompletas.
+[2022-06-23 16:15:56] Felipe "Juca" Sanches: É um processo de ir tateando até encontrar a api que faz sentido
+[2022-06-23 16:16:26] Felipe "Juca" Sanches: Concordo que uma boa meta é ter todas as features do jogo original
+[2022-06-23 16:18:15] Felipe "Juca" Sanches: Antes de qualquer tentativa de fazer outro jogo
+[2022-06-23 16:20:06] Felipe "Juca" Sanches: Eu fiz o comentário mais por conta de uma reflexão rápida de como seria divertida a possibilidade de um jogo novo já de imediato ser suportado em um grande número de plataformas
+[2022-06-23 16:20:45] Pedro de Medeiros 👾: Você tem algo já relativamente pronto que seria só plugar no que já existe?
+[2022-06-23 16:21:59] Felipe "Juca" Sanches: Talvez o snake com pixotosco
+[2022-06-23 16:22:23] Felipe "Juca" Sanches: Mas vocês tem razão. Melhor não perder o foco
+[2022-06-23 16:25:05] Pedro de Medeiros 👾: Ainda tem coisas faltando pra transformar cada plataforma em uma engine completa. Sem falar de música e sfx. Por exemplo: código sincronizado com timer, que faz coisas em intervalos regulares. Isso é pré-requisito pra música e sfx por exemplo.
+[2022-06-23 16:25:43] Felipe "Juca" Sanches: Perfeito
+[2022-06-23 16:26:17] Pedro de Medeiros 👾: E pra processar entrada no gunsmoke de forma decente também.
+[2022-06-23 16:28:51] L.: Quero botar música e uns diálogos de início de jogo/fim de jogo ainda
+[2022-06-23 16:29:10] L.: Início de jogo pra escolher nível de dificuldade, ver créditos, etc
+[2022-06-23 16:29:36] Felipe "Juca" Sanches: Isso é muito legal
+[2022-06-23 16:29:57] L.: Fazer uma rotininha tosca que desenha janela modal
+[2022-06-23 16:30:10] Pedro de Medeiros 👾: eita... depois fazer uns RPGs com isso.
+[2022-06-23 16:30:24] Felipe "Juca" Sanches: Fodeu kkkk
+[2022-06-23 16:30:45] Pedro de Medeiros 👾: GUI completa kkkkk
+[2022-06-23 16:31:01] L.: LOL
+[2022-06-23 16:31:07] Felipe "Juca" Sanches: TileTK
+[2022-06-23 16:31:19] Pedro de Medeiros 👾: tem nome já
+[2022-06-23 16:31:59] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/22144-ron-burgundy-escalated-quickly.mp4
+[2022-06-23 16:33:30] L.: Pensando em fazer tipo o zsnes, que pausa o jogo e bota uma paleta azulada por baixo enquanto a UI tá ativa
+[2022-06-23 16:33:41] L.: Nada tenso, só texto num retângulo na tela
+[2022-06-23 16:36:54] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/118
+[2022-06-23 18:51:59] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/119
+[2022-06-23 23:46:44] Pedro de Medeiros 👾: Pelo que eu vi, o código de interface com gdb usa #pragmas do GNU assembler que o SDCC não suporta.

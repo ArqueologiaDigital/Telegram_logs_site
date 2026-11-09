@@ -1,0 +1,57 @@
+[2018-01-12 18:56:39] Felipe "Juca" Sanches [forwarded]: Tenho uma coisa legal pra mostrar
+[2018-01-12 18:56:39] Felipe "Juca" Sanches [forwarded]: N sei se ja te falarm
+[2018-01-12 18:56:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2918.jpg
+[2018-01-12 18:56:39] Felipe "Juca" Sanches [forwarded]: Cheguei hoje e tava em cima da minha mesa
+[2018-01-12 18:56:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2920.jpg
+[2018-01-12 18:56:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2921.jpg
+[2018-01-12 18:56:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2922.jpg
+[2018-01-12 18:56:39] Felipe "Juca" Sanches [forwarded]: Teletype, mais um lepus 200, e mais um otro term da scopus
+[2018-01-12 18:56:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2924.jpg
+[2018-01-12 18:56:39] Felipe "Juca" Sanches [forwarded]: E um analisador de logica
+[2018-01-12 18:56:39] Felipe "Juca" Sanches [forwarded]: UAU!!!!
+[2018-01-12 18:58:23] Felipe "Juca" Sanches: Preciso botar essa teletype pra funcionar!!!! Talvez usar ela para ler fitas perfuradas do Patinho Feio. Ou talvez interfacear a réplica do painel frontal do Patinho Feio nela para auxiliar na emulação. Fazer algo híbrido onde o computador é emulado mas o periférico é real.
+[2018-01-12 18:59:40] Felipe "Juca" Sanches: E eu pretendo fazer o dump das ROMs desse lepus 200 pra ver se é uma versão diferente do firmware, ou confirmar que é igual às ROMs do outro que a gente já fez o dump.
+[2018-01-12 19:00:54] Affonso Amendola: Fazer esse teletype rodar vai ser maneiro
+[2018-01-12 19:01:16] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2930.jpg
+[2018-01-12 19:01:42] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2931.jpg
+[2018-01-12 19:02:11] Felipe "Juca" Sanches: E esse é o teclado com protocolo proprietário via interface serial ?
+[2018-01-12 19:02:31] Affonso Amendola: Acredito que sim
+[2018-01-12 19:02:36] Affonso Amendola: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2934-IMG_20180112_190149_802.jpg
+[2018-01-12 19:03:06] Affonso Amendola: Tem um 7 colado nele, e tem um 7 colado no gabinete
+[2018-01-12 19:03:15] Affonso Amendola: Imagino que eles sejam de um conjunto
+[2018-01-12 19:03:26] Affonso Amendola: (O monitor tem um 6)
+[2018-01-12 19:04:08] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2938.jpg
+[2018-01-12 19:04:20] Felipe "Juca" Sanches: Veja que tem uma etiqueta meio rasgada escrito "L.S.D." que é o Laboratório de Sistemas Digitais da Poli. Acho que tem uma boa chance dessa teletype ter sido usada no próprio Patinho Feio naquela época. Ou talvez no HP2116B ou no IBM1130, que eram os computadores que tinha na Poli.
+[2018-01-12 19:04:36] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2940.jpg
+[2018-01-12 19:06:04] Affonso Amendola: Etcha, sai melhor na foto do que na vida real
+[2018-01-12 19:06:36] Affonso Amendola: Ta aí, vo deixar ele quieto, quando ce vier pra a gente da uma olhada
+[2018-01-12 19:23:30] DQ: No meu tempo tinha uma teletype no laboratório de eletrônica
+[2018-01-12 19:55:44] DQ: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-01/2944.jpg
+[2018-01-12 20:24:47] Affonso Amendola: Eita, que legal, parece ser um modelo bem parecido
+[2018-01-12 20:50:39] Felipe "Juca" Sanches [forwarded]: Quando ce terminar de dumpar tudo, traz a placa pra gente dar uma olhada no que nem naquele hd
+[2018-01-12 20:50:40] Felipe "Juca" Sanches [forwarded]: E tem um otro hd com a mesma pinagem
+[2018-01-12 20:50:40] Felipe "Juca" Sanches [forwarded]: Se a gente conseguir fazer aquele pc rodar, talvez de pra ler os dois
+[2018-01-12 20:50:40] Felipe "Juca" Sanches [forwarded]: Você acha que esse teclado Scopus é o que tem interface serial como o DQ falou?
+[2018-01-12 20:50:40] Felipe "Juca" Sanches [forwarded]: esse aqui
+[2018-01-12 20:50:40] Felipe "Juca" Sanches [forwarded]: Tenho certeza
+[2018-01-12 20:50:40] Felipe "Juca" Sanches [forwarded]: Digo, quase certeza
+[2018-01-12 20:50:40] Felipe "Juca" Sanches [forwarded]: Tem um 7 colado nele e no gabinete
+[2018-01-12 20:50:40] Felipe "Juca" Sanches [forwarded]: Imagino que eles façam parte de um conjunto, junto com um monitor 7 tbem
+[2018-01-12 20:50:40] Felipe "Juca" Sanches [forwarded]: Legal! Semana que vem eu levo aí a placa então. Suponho que deve ter uma CPU com ROM + UART dentro do teclado também pra poder implementar a comunicação serial correto, DQ ?
+[2018-01-12 20:50:40] Felipe "Juca" Sanches [forwarded]: A gente da uma olhada
+[2018-01-12 20:51:03] Felipe "Juca" Sanches [forwarded]: Eu n abri ainda
+[2018-01-12 20:51:41] Felipe "Juca" Sanches [forwarded]: Tem tudo pra estar cetto
+[2018-01-12 20:53:18] Affonso Amendola: O formato dele parece muito com os do pc/xt
+[2018-01-12 20:53:27] Affonso Amendola: Com as teclas de funcao do lado
+[2018-01-12 20:53:39] Affonso Amendola: Entao a epoca pelo menos parece bater
+[2018-01-12 20:54:08] Affonso Amendola: Mas pra ter certeza, a gente abre e ve o interior
+[2018-01-12 21:01:19] Affonso Amendola: Ahh, e chegaram mais duas caixinhas de disquete 8", tem umas coisas legais la, esqueci de tirar foto, segunda eu tiro
+[2018-01-12 21:10:07] Felipe "Juca" Sanches: eba!
+[2018-01-12 21:11:24] Affonso Amendola: Mas a gente precisa achar um computador pra ligar aquele drive de 8" pra ler esses discos
+[2018-01-12 21:11:40] Affonso Amendola: Ce acha que o nexus serviria pra isso?
+[2018-01-12 21:12:19] Felipe "Juca" Sanches: difícil por que não temos uma forma de se comunicar com o mundo externo
+[2018-01-12 21:12:33] Felipe "Juca" Sanches: mas podemos pensar melhor nisso, tentar achar um caminho
+[2018-01-12 21:13:52] Affonso Amendola: Sure, primeiro, vamos ver o teclado
+[2018-01-12 21:34:42] DQ: Tem um microcontrolador parente do 8251.
+[2018-01-12 21:35:02] DQ: Não lembro dos detalhes.
+[2018-01-12 21:38:22] Felipe "Juca" Sanches: legal

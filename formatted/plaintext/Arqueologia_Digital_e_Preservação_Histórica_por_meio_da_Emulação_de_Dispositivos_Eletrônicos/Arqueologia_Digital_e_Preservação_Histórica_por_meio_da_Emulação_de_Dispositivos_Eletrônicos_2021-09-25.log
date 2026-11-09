@@ -1,0 +1,71 @@
+[2021-09-25 03:50:40] Flávio Amieiro: 👍
+[2021-09-25 03:51:00] Flávio Amieiro: Essa série de palestras é bem boa. Tem sobre vários computadores interessantes
+[2021-09-25 03:54:47] Felipe "Juca" Sanches: bom dia, @flavioamieiro 😉
+[2021-09-25 03:56:01] Felipe "Juca" Sanches: como vai o sabadão aí?
+[2021-09-25 03:56:16] Flávio Amieiro: Bom dia! Hahahah
+[2021-09-25 03:56:23] Felipe "Juca" Sanches: estou aqui ainda nos embalos da noite de sexta
+[2021-09-25 03:56:28] Flávio Amieiro: Começando cedo demais 😔
+[2021-09-25 03:56:43] Flávio Amieiro: Aliás, ontem peguei o c64 finalmente pra dar uma olhada rápida
+[2021-09-25 03:56:51] Flávio Amieiro: Duas coisas me chamaram atenção:
+[2021-09-25 03:57:45] Flávio Amieiro: 9V AC entra na moral pela fonte, o regulador de tensão gera os 12V que são derivados dele de boas, mas na porta de usuário eu medi 4.5V AC. Isso é estranho...
+[2021-09-25 03:58:36] Flávio Amieiro: Mas o que eu acho que pode ser o problema é que o pino de reset do 6510 tá em 1.6V. Quase certeza que ele tá lendo isso como low e tá em reset permanente
+[2021-09-25 03:59:25] Flávio Amieiro: Só que eu não tive tempo direito, aí não consegui seguir o sinal de reset pra ver onde ele falha. Só consegui ver que na origem dele (o 556 que gera o pulso de reset) parece tá tudo certo. Tem alguma coisa no caminho puxando essa linha pra baixo
+[2021-09-25 03:59:29] Felipe "Juca" Sanches: essa PCB tem capacitores que você talvez possa trocar?
+[2021-09-25 04:00:23] Flávio Amieiro: Então, antes de tudo eu dei uma olhada nela e aparentemente tá tudo certo. Não vi nada obvi
+amente errado. Claro que dá pra trocar todos os capacitores, mas eu não sei se eu faria isso na placa toda só por fazer. Se eu conseguir achar o culpado, troco ele de boa
+[2021-09-25 04:00:33] Flávio Amieiro: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/15585.jpg
+[2021-09-25 04:00:46] Flávio Amieiro: Tirei só essa foto meio ruim, mas a PCB tá muito inteira!
+[2021-09-25 04:00:50] Felipe "Juca" Sanches: é...
+[2021-09-25 04:01:06] Felipe "Juca" Sanches: é que recap é um procedimento tão comum pra solucionar problemas
+[2021-09-25 04:01:08] Flávio Amieiro: E tá tudo em socket já!
+[2021-09-25 04:01:32] Flávio Amieiro: Tô ligado. Se eu não conseguir descobrir o que é eu parto pra isso mesmo. Talvez seja uma boa ideia de qualquer jeito...
+[2021-09-25 04:01:48] Felipe "Juca" Sanches: mas eu acho um sado de fazer... é demorado e pode não dar em nada
+[2021-09-25 04:01:55] Flávio Amieiro: Mas queria diagnosticar o problema de qualquer jeito. É só uma questão de sentar e seguir o sinal por enquanto
+[2021-09-25 04:02:15] Flávio Amieiro: Seria ótimo ter um osciloscópio decente 😅
+[2021-09-25 04:02:25] Flávio Amieiro: Exatamente
+[2021-09-25 04:03:02] Felipe "Juca" Sanches: por intuicao eu iria direto trocar aqueles tres grandoes da direita (estou presumindo que sejam capacitores eletroliticos)
+[2021-09-25 04:03:16] Flávio Amieiro: São sim. 470nF
+[2021-09-25 04:03:34] Felipe "Juca" Sanches: têm cara de serem problematicos
+[2021-09-25 04:03:39] Flávio Amieiro: Eu posso medir todos eles tbm. Mas acho que medir capacitor no circuito não dá muito certo...
+[2021-09-25 04:03:57] Felipe "Juca" Sanches: eu não sei, mas sempre tive essa mesma dúvida
+[2021-09-25 04:04:48] Flávio Amieiro: Talvez sejam, mas pela posição eu chutaria que eles são de bulk decoupling pros reguladores de tensão que tão naquela região ali. Se for o caso, acho que tá tudo bem, pq as tensões no resto da placa tão bem boas. Tá tudo 5V/12V certinho. Melhor do que vi por aí em vídeos da galera
+[2021-09-25 04:04:56] Flávio Amieiro: (galera considera 4.8 normal)
+[2021-09-25 04:05:39] Felipe "Juca" Sanches: na verdade, medir qualquer coisa direto no circuito me traz essa dúvida, pois fico pensando que todo o resto do equipamento pode ser visto como uma impedancia alí atrapalhando a medida
+[2021-09-25 04:06:16] Flávio Amieiro: Acho que pra maioria das coisas que você mede em série, medir no circuito pode ser um problema
+[2021-09-25 04:06:29] Flávio Amieiro: Mas pra tensão, por exemplo, que você mede em paralelo, acho que não faz diferença nenhuma
+[2021-09-25 04:06:51] Flávio Amieiro: Pq a impedância do teu multímetro/osciloscópio é basicamente infinita em comparação
+[2021-09-25 04:07:03] Flávio Amieiro: Mas eu posso tá falando alguma merda gigante... Hhahaha
+[2021-09-25 04:07:44] Felipe "Juca" Sanches: é... tensao faz sentido medir sem problemas pois, por definicao, é ddp (diferenca de potencial), então basta ter os 2 pontos de referencia para uma boa leitura
+[2021-09-25 04:07:56] Flávio Amieiro: É, isso
+[2021-09-25 04:08:20] Felipe "Juca" Sanches: e as pontas de prova nao alteram os potenciais elétricos
+[2021-09-25 04:09:06] Flávio Amieiro: Mas pra medir resistência, por exemplo, a gente coloca uma diferença de potencial ali, né?
+[2021-09-25 04:09:08] Felipe "Juca" Sanches: mas medir impedancias (resistencias, indutancias) acho que complica pois todo o resto do circuito tem uma impedancia equivalente em paralelo com a impedancia do elemento sendo medido
+[2021-09-25 04:09:17] Flávio Amieiro: Eu tbm acho que isso pode ser problemático
+[2021-09-25 04:09:40] Flávio Amieiro: Sim, imagino que isso afete a medição sim
+[2021-09-25 04:10:43] Felipe "Juca" Sanches: um problema similar é a leitura de ROMs com clipes. Pois sempre tenho o receio de que a alimentacao elétrica fornecida ao chip por meio do clip pode também ativar outros chips da PCB que podem talvez interferir no barramento
+[2021-09-25 04:10:50] Flávio Amieiro: Mas tbm imagino que pra certos casos isso faça pouca diferença. Tipo, se tu tá medindo a resistência de um resistor e tem todo um circuito enorme em paralelo, a diferença que isso vai fazer na sua medição deve tá na margem de erro.
+Mas pra outros casos imagino que isso afete mais a medida
+[2021-09-25 04:11:18] Flávio Amieiro: Faz sentido
+[2021-09-25 04:11:19] Felipe "Juca" Sanches: sim, mas como saber qual caso é qual?
+[2021-09-25 04:11:32] Flávio Amieiro: Queria saber tbm. Hahahaha
+[2021-09-25 04:12:50] Flávio Amieiro: Aposto que tem muita gente aqui que sabe melhor que eu 👀
+[2021-09-25 04:13:12] Felipe "Juca" Sanches: veremos 😉
+[2021-09-25 04:14:09] Felipe "Juca" Sanches: olha, eu to muito feliz com esse grupo. Senti que nesse último mês pegamos um ritmo bom por aqui. Algumas pessoas novas e muita gente trazendo assuntos legais!
+[2021-09-25 04:14:24] Flávio Amieiro: Sim!
+[2021-09-25 04:14:47] Felipe "Juca" Sanches: Até o RicBit apareceu por aqui 😃
+[2021-09-25 04:15:42] Flávio Amieiro: !!
+[2021-09-25 04:16:24] Flávio Amieiro: Bem, eu preciso me adiantar aqui. Quando tiver mais notícias do conserto eu aviso aqui
+[2021-09-25 04:16:35] Felipe "Juca" Sanches: maravilha!
+[2021-09-25 04:27:35] Felipe "Juca" Sanches: essa imagem aqui acabou de me salvar, pois eu não me lembrava de cabeça o comando certo pra fazer disasm com binutils
+[2021-09-25 04:28:47] Felipe "Juca" Sanches: e como essa semana tive uma pane no HD do notebook e tive que instalar um HD novo e copiar pra ele um backup dos meus arquivos, teve umas 3 semanas de trabalho que foram perdidas
+[2021-09-25 04:29:10] Felipe "Juca" Sanches: a parte importante que é o código não foi perdida, pois tá tudo em git público
+[2021-09-25 04:29:37] Felipe "Juca" Sanches: mas meu histórico do shell voltou 3 semanas no tempo e eu não lembrava como invocar o binutils
+[2021-09-25 04:29:57] Felipe "Juca" Sanches: isso me faz lembrar que preciso documentar melhor as coisas que faço
+[2021-09-25 04:30:21] Felipe "Juca" Sanches: e este grupo aqui tem me ajudado, por exemplo com essa imagem aí que tinha a resposta para a minha dúvida
+[2021-09-25 04:31:13] Felipe "Juca" Sanches: Só que esse grupo não é amplamente acessível ao público geral. Então ainda acho que eu deveria melhorar um pouquinho a forma como eu documento essas coisas
+[2021-09-25 11:07:12] Deleted Account: Pessoal, bom dia. Mais uma pergunta: é seguro usar a fonte original do C64 para testar o computador? Ou o mais indicado é nem ligar ele na fonte?
+
+Estou para fazer negócio em um desses mas tenho receito de "fritar" os chips devido aos problemas na fonte de baixa qualidade da commodore.
+[2021-09-25 11:08:25] Deleted Account: Um SID novo é mais de 50 dólares. 😳 Não quero correr o risco de fritar nada. 😂
+[2021-09-25 12:44:27] Leonardo Roman: O bom é tentar medir a fonte em aberto mesmo. Se estou lembrado, o problema dessas do C64 é a linha de 5v que aumenta a tensão por algum problema nos componentes.
+[2021-09-25 12:45:37] Deleted Account: Ah menos mal. Então vou medir no multímetro mesmo e se tiver muito fora dos 5v evito usar a fonte.

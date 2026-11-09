@@ -1,0 +1,21 @@
+[2025-07-02 03:00:20] Felipe "Juca" Sanches: Acabou de ser feito um release do MAME.
+[2025-07-02 03:01:33] Felipe "Juca" Sanches: E esse release inclui essa melhoria que fiz no layout do Wacky Gator
+[2025-07-02 18:10:48] Shideravan: Atrasou tanto que o release de maio só saiu em julho kkkkkkkkkkkkk
+[2025-07-02 18:11:08] Felipe "Juca" Sanches: ressincronizou então ;-)
+[2025-07-02 18:11:41] Shideravan: Depende, esse mÊs sai outro release na última quarta feira do mês ou só no mês que vem? kkkkkkkkkkkkkkk
+[2025-07-02 18:11:58] Felipe "Juca" Sanches: sei lá
+[2025-07-02 18:12:01] Felipe "Juca" Sanches: pouco importa
+[2025-07-02 18:12:10] Felipe "Juca" Sanches: o importante é continuar desenvolvendo
+[2025-07-02 18:12:14] Shideravan: Mas eu gostei das melhorias
+[2025-07-02 18:12:29] Shideravan: Agora finalmente o MAME tem suporte a input por microfone
+[2025-07-02 18:12:42] Felipe "Juca" Sanches: pois é, eu vi
+[2025-07-02 18:12:49] Shideravan: Menor latência de som
+[2025-07-02 18:12:55] Felipe "Juca" Sanches: me pergunto se já existe algo similar para webcam
+[2025-07-02 18:13:07] Felipe "Juca" Sanches: pois tem jogos de arcade que fotografam o jogador
+[2025-07-02 18:13:39] Shideravan: Suporte a WASAPI ePipeWire é muito bom, porque era ruim jogar jogos de ritmo no MAME porque o som não era um bom parâmetro para sincronização de input
+[2025-07-02 18:15:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-07/35155.jpg
+[2025-07-02 18:15:11] Felipe "Juca" Sanches [forwarded]: Dedicatória de um livro de eletrônica de 1978 (PDF disponível em: https://garoa.net.br/wiki/How_to_Design_and_Build_Your_Own_Custom_TV_Games)
+[2025-07-02 18:15:12] Shideravan: Depende, para quem não anda contribuindo há um bom tempo e vai depender de ficar na fila para ter uma PR avaliada, é importante o pessoal sair dessa fase, desatolar a fila e voltar ao fluxo normal
+[2025-07-02 18:15:38] Shideravan: Sempre há o risco de ter PR no limbo no MAME e quando derem um feedback precisar refatorar tudo
+[2025-07-02 18:17:02] Shideravan: Triste que quase 50 anos depois ainda é uma área predominantemente de homens e que mulheres ainda sofrem muita resistÊncia
+[2025-07-02 18:18:41] Shideravan: Cada turma do curso de engenharia eletrônica na unifei, é uma média de 2 mulheres para 48 homens

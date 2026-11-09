@@ -1,0 +1,25 @@
+[2022-09-13 02:14:53] Felipe "Juca" Sanches: O chip de modem do MEGANET da Tectoy é um RC224ATF da Rockwell
+[2022-09-13 02:16:35] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23799.jpg
+[2022-09-13 02:16:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23800.jpg
+[2022-09-13 02:20:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23801.jpg
+[2022-09-13 02:20:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23802.jpg
+[2022-09-13 02:21:06] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23803.jpg
+[2022-09-13 07:57:14] FTMaciel: Já fizeram dump dessas roms?
+[2022-09-13 09:34:08] Robson França: Sempre que eu vejo Rockwell eu lembro disto aqui :
+[2022-09-13 09:37:04] Robson França: https://youtu.be/7YvAYIJSSZY
+[2022-09-13 09:37:37] Robson França: Bom dia!
+[2022-09-13 12:14:38] Felipe "Juca" Sanches: Eu não fiz. Acho que tem já em algum lugar online, mas ainda não verifiquei
+[2022-09-13 12:14:56] Felipe "Juca" Sanches: Se for necessário, darei um jeito de fazer o dump
+[2022-09-13 12:15:17] Felipe "Juca" Sanches: Mas eu não queria dessoldar os chips
+[2022-09-13 12:19:46] Felipe "Juca" Sanches: Talvez fosse melhor projetar uma placa com soquete de cartucho, microcontrolador e porta serial USB para a leitura do conteúdo.
+[2022-09-13 13:20:54] Leonardo Roman: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23812-MegaNet%20%28Brazil%29%20%28Program%29.zip
+[2022-09-13 13:20:54] Leonardo Roman: A ROM existe, mas duvido que esse modem esteja emulado.
+[2022-09-13 13:34:29] Felipe "Juca" Sanches: Mes passado eu comprei um modem dialup usb com a intenção de interfacear com esse cartucho ligado num megadrive real e tentar no meu laptop gerar respostas razoáveis para fazer o megadrive achar que está falando com o servidor original da tectoy
+[2022-09-13 13:38:52] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23814.jpg
+[2022-09-13 13:38:52] Augusto Almeida [forwarded]: Foto de augusto ifrj
+[2022-09-13 13:48:54] Dario Junior: FASE ZERO DA MARATONA DE PROGRAMAÇÃO DA SBC - beecrowd
+https://www.beecrowd.com.br/judge/pt/contests/view/683
+[2022-09-13 13:49:03] Dario Junior: Pode ser q interesse alguem
+[2022-09-13 18:09:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23817.jpg
+[2022-09-13 18:20:49] Augusto Almeida: Ugly Duck
+[2022-09-13 20:48:24] * Anne Isabelle added Ais

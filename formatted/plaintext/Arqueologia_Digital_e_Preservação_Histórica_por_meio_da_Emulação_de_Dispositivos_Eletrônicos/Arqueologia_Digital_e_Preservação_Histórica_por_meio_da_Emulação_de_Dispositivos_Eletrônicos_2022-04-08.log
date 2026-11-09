@@ -1,0 +1,10 @@
+[2022-04-08 01:27:06] Shideravan: O pior nem é portar, mas estar com um aspecto tão bom
+[2022-04-08 01:27:33] Shideravan: Não me lembrava do spectrum suportar tantas cores simultâneas 😳
+[2022-04-08 01:27:45] Shideravan: Tranquilo!!!
+[2022-04-08 10:13:25] Pablo Vasques Bravo-Villalba: O Spectrum suporta todas as 15 cores simultâneas, mas no máximo duas por bloco de 8x8 pixels. O problema é mesmo a densidade local de cores. No MSX1 daria até para fazer com gráficos mais bonitos, mas provavelmente ficaria super lerdo quando tivesse que mover vários objetos ao mesmo tempo. No MSX2 daria pra fazer bem mais bonito, mas muito provavelmente o command engine do V9938 acabaria deixando tudo lento quando tivesse que animar muita coisa na tela. Acho que sprites estariam fora de questão, já que são apenas 32 simultâneos na tela e 8 por linha (4 no MSX1).
+[2022-04-08 10:41:22] Leonardo Roman: Jogos mais parados no Spectrum, como esse de turnos, são ótimos pra usar a engine Nirvana, que permite mais cores simultâneas por bloco de 8x8. É aquela técnica de ficar alternando cores rapidamente antes que os olhos percebam.
+[2022-04-08 13:46:05] Shideravan: Que da hora!
+[2022-04-08 14:15:04] Pablo Vasques Bravo-Villalba: A técnica não é bem essa, as cores são alternadas a cada duas linhas na tela para permitir uma densidade local de cores maior. Essa técnica de alternar as cores rapidamente o povo chama de Gigascreen ou Doublescreen (ou variações disso), e com isso dá pra obter até 127 cores, embora a tela pisque visivelmente (mas dá pra atenuar esse efeito em emuladores).
+[2022-04-08 15:20:18] Pablo Vasques Bravo-Villalba: Que maluquice essa história
+https://www.polygon.com/23015420/ms-pac-man-pac-land-bandai-namco-atgames-lawsuit
+[2022-04-08 20:45:17] L.: https://twitter.com/TychoTithonus/status/1512537009788575744?t=2UkJVzURfugNmGXcLwEJmw&s=09

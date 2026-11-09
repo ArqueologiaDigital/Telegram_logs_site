@@ -1,0 +1,76 @@
+[2026-02-15 12:26:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37493.jpg
+[2026-02-15 12:26:52] Felipe "Juca" Sanches: Estamos vivendo no futuro!
+[2026-02-15 12:26:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37494.jpg
+[2026-02-15 12:36:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37495.jpg
+[2026-02-15 12:36:51] Felipe "Juca" Sanches: E em 8 minutinhos ele limpou o código para reduzir as chances do Cuavas cagar na minha cabeça.
+[2026-02-15 12:37:49] Felipe "Juca" Sanches: Agora é a MINHA vez de revisar o código, pois preciso me sentir 100% seguro de apresentá-lo e defendê-lo quando for aberto um pull request de fato.
+[2026-02-15 12:38:57] Felipe "Juca" Sanches: Mas a boa notícia é que agora o painel de controle funciona e consigo navegar nos menus e submenus do KN5000 no MAME. Virou um driver interativo. A única coisa que ainda não funciona é o som, mas já tenho uma outra instância do Claude trabalhando na investigação dessa parte desde ontem.
+[2026-02-15 12:53:19] L.: Pergunta no código do pense bem z8 se acha um gerador de número pseudo aleatório que a semente possa ser alterada
+[2026-02-15 13:09:47] Felipe "Juca" Sanches: Tenho essa idéia na cabeça há alguns dias já. Mas ainda não parei para abrir uma terceira instância paralela do Claude Code pra investigar isso. Farei em breve.
+[2026-02-15 13:10:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37500.jpg
+[2026-02-15 13:10:34] Felipe "Juca" Sanches: Sinto que não sou mais exatamente um programador. Virei uma espécie de "gerente de bots".
+[2026-02-15 13:45:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37501.jpg
+[2026-02-15 13:45:31] Felipe "Juca" Sanches: Isso tudo é tão interessante! :-D
+[2026-02-15 13:56:43] Hugo (Agaelebê): Não acabou com seus creditos ainda?
+[2026-02-15 13:58:10] Hugo (Agaelebê): Vc pode ser um arquiteto agora :D Agora vai passar muito mais tempo revisando do que escrevendo código.
+[2026-02-15 13:58:58] Felipe "Juca" Sanches: Ao longo da semana passada só tive um caso de sessão interrompida por chegar no limite de uso. O resto foi com folga. Mas, ao mesmo tempo, ontem cerca de 1 hora e meia antes de chegar ao final da janela semanal, usei até o último token disponível. Então na prática eu não estou tendo meu trabalho bloqueado por limites de uso, mas também não estou deixando de usar tudo o que tenho direito no plano contratado.
+[2026-02-15 14:53:19] Robson França: Legendary Sega Engineer Behind Genesis Dies At The Age Of 77
+https://kotaku.com/sega-genesis-hideki-sato-dies-dreamcast-2000668977
+[2026-02-15 18:35:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37506.jpg
+[2026-02-15 18:35:19] Felipe "Juca" Sanches: sucesso ;-)
+[2026-02-15 18:58:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37507.jpg
+[2026-02-15 18:58:30] Felipe "Juca" Sanches: É uma quantidade enorme de bugs sutis. E o Claude está conseguindo matar todas as charadas de forma assustadoramente brilhante!
+[2026-02-15 19:03:36] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37508.jpg
+[2026-02-15 19:03:36] Felipe "Juca" Sanches: "Sound Name Error" resolvido!
+[2026-02-15 19:08:59] RicBit: voce conectou o debugger nele ou está tudo estatico?
+[2026-02-15 19:32:58] Felipe "Juca" Sanches: o claude me dá arquivos novos de código fonte por meio de um diretório compartilhado entre a VM e o meu sistema operacional hospedeiro. Eu tenho um script que copia os arquivos para minha árvore do MAME, compila o MAME e roda com logging habilitado e salvando o arquivo de log no diretório compartilhado. Dou meu relato por escrito pro Claude dizendo o que vi e o que gostei e o que não gostei de cada teste. E ele lê o log e faz novas alterações no código. E ele também atualiza com commit e push toda a documentação no site público
+[2026-02-15 19:33:09] Felipe "Juca" Sanches: Não estou interfaceando com debugger nesse momento
+[2026-02-15 19:33:40] Felipe "Juca" Sanches: eu so o gerente de bots. "human in the loop"
+[2026-02-15 19:34:03] Felipe "Juca" Sanches: daria pra automatizar por completo, mas aí perderia a graça do hobby
+[2026-02-15 19:34:10] Felipe "Juca" Sanches: viraria mágica pura
+[2026-02-15 19:34:37] RicBit: imprimir logs é quase equivalente a rodar um debugger
+[2026-02-15 19:35:03] Felipe "Juca" Sanches: eu quero poder observar meu "tamagotchi" ;-D
+[2026-02-15 19:35:59] RicBit: no meu caso eu mando ele gerar scripts tcl pro openmsx, então eu posso pedir coisas do tipo "roda até alguem ler o addr X, aí volta o stack e me fala qual rotina usou esse dado"
+para mapear data/code e descobrir quem usa quem está o bicho
+[2026-02-15 19:37:17] Felipe "Juca" Sanches: Nesse momento o Claude está investigando os dados de inicialização dos chips DSP pra tentar extrair algum insight sobre a arquitetura do DSP, pois não é documentado oficialmente mas suspeito que seja similar a algum outro já publicamente conhecido
+[2026-02-15 19:37:36] RicBit: pra mim a ai está equivalente a um estagiario burro que não cansa, então é só tratar como estagiario burro que fica redondo.
+[2026-02-15 19:38:11] Felipe "Juca" Sanches: Pra mim está sendo um especialista mais esperto que eu. E tô achando o máximo.
+[2026-02-15 19:38:21] Felipe "Juca" Sanches: Agora ele tá lendo umas patentes hahaha
+[2026-02-15 19:39:40] RicBit: tipo "achou um pedaco de data? cool. documenta em forma de codigo para verificar que os dados estao mesmo no formato deduzido". aí a documentacao vira unit test, e mesmo o estagiario mais burro vai rodar o unit test e perceber que quebrou
+[2026-02-15 19:40:01] RicBit: uma descricao fica assim:
+FORMAT_VRAM_STREAM: stream ; Multi-block VRAM Data Stream
+  - Format: block [ vdp_addr data... ]
+  - FEh starts a new block (addr + data).
+  - FFh terminates the stream.
+  match *: start: true, desc: "VRAM_NAME_TABLE {expr_hex:((({1} << 8) | {0}) - 0x3800) >> 5}, {expr_hex:((({1} << 8) | {0}) - 0x3800) & 0x1F}"
+  match FE: desc: "db      0FEh", control: reset
+  match FF: desc: "db      0FFh"
+  match *: desc: "dh_cond {0}"
+[2026-02-15 19:40:13] RicBit: tem uma microlinguagem de descricao de formatos
+[2026-02-15 19:40:22] RicBit: sim, meu disassebler virou um compilador
+[2026-02-15 19:40:49] RicBit: outra vantagem é que gasta menos agua
+[2026-02-15 19:41:02] RicBit: nao tem como ele ficar alucinando porque o teste segura ele no chao
+[2026-02-15 19:42:20] Felipe "Juca" Sanches: olha... nesses últimos 2 meses eu ainda não vi o Claude Code alucinar
+[2026-02-15 19:42:50] Felipe "Juca" Sanches: o bicho é muito esperto, mas também muito bem comportado. Trabalha bem dentro das condições estabelecidas
+[2026-02-15 19:43:09] RicBit: comigo é direto lol
+[2026-02-15 19:43:33] Felipe "Juca" Sanches: comecei usando o Opus 4.5 e semana passada lançaram o Opus 4.6 que é o que estou usando no momento.
+[2026-02-15 19:43:35] RicBit: ele deduz direitinho o codigo que está perto do hardware. mas conforme vai subindo a abstração ele vai se perdendo
+[2026-02-15 19:44:29] RicBit: teve uma vez que ele estava documentando os sprites do HUD.
+[2026-02-15 19:44:32] Felipe "Juca" Sanches: Mano! O Claude entende a arquitetura de software inteira, umas coisas muito complexas e abstratas ele tá pegando com facilidade
+[2026-02-15 19:44:42] RicBit: e eu : nao tem sprite no hud. ele : tem sim
+[2026-02-15 19:45:18] RicBit: acabou que ele achava que o hud era um terço inteiro do topo da tela. mas na verdade são duas linhas, o resto é céu. o que ele achava que era sprite do hud eram as nuvens
+[2026-02-15 19:45:26] Felipe "Juca" Sanches: Ele olha pra screenshot e responde imediatamente descrevendo com perfeição o que aconteceu numa sessão de testes
+[2026-02-15 19:45:40] Felipe "Juca" Sanches: é muito foda
+[2026-02-15 19:46:05] Felipe "Juca" Sanches: eu chego a ficar assustado
+[2026-02-15 19:46:41] RicBit: eu nao assusto porque é single person pair programming, eu já falava disso 15 anos atras haha
+[2026-02-15 19:47:37] RicBit: https://www.ricbit.com/2010/02/single-person-pair-programming.html
+[2026-02-15 20:59:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37542.jpg
+[2026-02-15 20:59:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37543.jpg
+[2026-02-15 21:00:39] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37544.jpg
+[2026-02-15 21:48:54] Felipe "Juca" Sanches: Eu tive muitos avanços no MAME essa semana. Como estamos entrando na segunda-feira e precisarei focar no trabalho profissional, vou fechar a noite pedindo pro Claude me ajudar a fazer um planejamento para uma sequência de pull requests pequenos que eu possa enviar ao MAME e ter mais chance de serem aceitos um-a-um ao invés de enviar um PR gigante com um monte de coisa de uma vez só e ter uma superfície de ataque muito grande para os code-reviewers chatos
+[2026-02-15 22:58:50] Felipe "Juca" Sanches: http://arqueologiadigital.org/KN5000-docs/mame-pull-requests/
+[2026-02-15 23:05:07] RicBit: Drivers using TLCS-900/H variants that should be regression-tested:
+
+ngp (Neo Geo Pocket — TMP95C061)
+zorba (Zorba portable — TMP95C063)
+[2026-02-15 23:05:16] RicBit: eu nem sabia que o mame emulava cueca

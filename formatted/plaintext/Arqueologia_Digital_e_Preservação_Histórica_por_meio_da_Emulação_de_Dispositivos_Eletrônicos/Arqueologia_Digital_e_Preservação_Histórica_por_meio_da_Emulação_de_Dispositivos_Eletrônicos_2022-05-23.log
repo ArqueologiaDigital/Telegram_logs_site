@@ -1,0 +1,70 @@
+[2022-05-23 00:20:23] Pedro de Medeiros 👾: Quem tá ganhando nessa pesquisa? É que não vou votar nesses pra ver resultado porque eu prefiro o PC Engine.
+[2022-05-23 01:34:04] Pedro de Medeiros 👾: https://twitter.com/PulpLibrarian/status/1523758968803258369
+[2022-05-23 06:58:41] Felipe "Juca" Sanches: Por enquanto estão empatados MSX / C64 / SNES com 3 votos cada
+[2022-05-23 08:31:17] Ricardo Bánffy: Vontade de fazer um "Trinitron" gigante com um desses... https://www.panelook.com/VLT550-OLED-CUV-55inch-FHD-OLED-Curved-panel-LCD-Display-Flexibility-Splicing-screen-high-contrast-Aadroid-solution-detail_97827.html
+[2022-05-23 11:05:09] Alexandre Villares: https://twitter.com/AlanZucconi/status/1528680547907735552?t=YHSstEa5Pbw3JTMCTjoNuw&s=19
+[2022-05-23 11:24:37] Ismael Luceno: +1. PC Engine!
+[2022-05-23 11:25:54] Ismael Luceno: o PC Engine GT ainda se consegue no ebay!!!
+[2022-05-23 11:27:40] Pablo Vasques Bravo-Villalba: Deve ser uma pequena fortuna, não? É possível fazer um mod RGB nele?
+[2022-05-23 11:28:11] Ismael Luceno: sim, 500+ USD
+[2022-05-23 11:30:07] Ismael Luceno: o GT é portável
+[2022-05-23 15:33:46] Felipe "Juca" Sanches: E agora empataram com MSDOS também. Alguém precisa dar um voto de desempate hehehe
+[2022-05-23 16:02:10] Pedro de Medeiros 👾: E o PC Engine também, não?
+[2022-05-23 16:33:17] Felipe "Juca" Sanches: sim
+[2022-05-23 16:34:55] Felipe "Juca" Sanches: Isso demonstra que somos um grupo pequeno, a ponto de não ter gente suficiente pra evitar esses empates. E também que somos um tanto diversos em nossos interesses. Um bando de nerd eclético. Não conseguimos nem concordar em uma plataforma alvo... kkkk
+[2022-05-23 16:39:45] Pedro de Medeiros 👾: Em comum só o amor pelo retrô.
+[2022-05-23 16:40:11] Felipe "Juca" Sanches: Vai ferrar quando a gente for fazer uma enquete sobre qual tipo de jogo implementar hahaha
+[2022-05-23 16:40:42] Felipe "Juca" Sanches: eu acho que deveria ser uma coisa absurdamente simples, tipo um campo-minado, só pra termos o prazer de dizer que conseguimos implementar
+[2022-05-23 16:41:01] Felipe "Juca" Sanches: e mais pra frente a gente faz coisas mais ousadas se houver empolgação para continuar com outros projetinhos
+[2022-05-23 16:41:50] Pedro de Medeiros 👾: Justo. E talvez depois algum jogo mais real time.
+[2022-05-23 16:42:33] Felipe "Juca" Sanches: olha... se bobear, daria até mesmo pra ser um campo-minado multi-plataforma hahaha
+[2022-05-23 16:42:39] Felipe "Juca" Sanches: para essas 4 que tão empatadas
+[2022-05-23 16:43:38] Felipe "Juca" Sanches: então o único desafio seria mesmo separar lógica do jogo de "drivers" para cada build de plataformas específicas
+[2022-05-23 16:44:05] Felipe "Juca" Sanches: criar uma camadinha de abstração, uma fachada
+[2022-05-23 16:44:19] Pedro de Medeiros 👾: Se todas as plataformas tiverem C disponível, pode ser.
+[2022-05-23 16:44:49] Felipe "Juca" Sanches: é... esse me parece ser o objetivo dada a conversa recente sobre a busca por compiladores livres de C
+[2022-05-23 16:49:04] Pablo Vasques Bravo-Villalba: Eu argumentaria que plataformas de 16 ou 32 bits seriam menos interessantes a priori. São sistemas mais complexos e para as pessoas mais iniciantes (como eu)
+[2022-05-23 16:49:18] Pablo Vasques Bravo-Villalba: Não terminei a frase
+[2022-05-23 16:49:43] Pablo Vasques Bravo-Villalba: Para as pessoas mais iniciantes teria uma curva de aprendizado maior
+[2022-05-23 16:50:42] Felipe "Juca" Sanches: por outro lado, a farra é justamente fazer algo simples (um campo minado) como forma de aprender essas coisas mais complexas (detalhes do hardware, etc).
+[2022-05-23 16:55:40] Pedro de Medeiros 👾: uma engine de jogo por turno permite vários jogos simples, de campo minado a picross e 2048...
+[2022-05-23 16:58:11] Pablo Vasques Bravo-Villalba: Então. Videogame é uma coisa, plataforma altamente padronizada. Já computador é o oposto, é uma grande gama de configurações possíveis, muitas coisas que é difícil prever, como memória disponível, tipo de hardware de vídeo e por aí vai, e na minha humilde opinião complicam. Eu especificamente não gosto de PC por causa disso.
+[2022-05-23 16:58:16] Pablo Vasques Bravo-Villalba: Estou tentando ser conciso
+[2022-05-23 16:59:01] Pablo Vasques Bravo-Villalba: E particularmente eu realmente não gosto de PC com CGA ou EGA. Acho muito ruim 😝
+[2022-05-23 16:59:24] Pablo Vasques Bravo-Villalba: Mas claro que essa é só minha opinião sobre a plataforma. Nada contra quem curte 😉
+[2022-05-23 16:59:24] Felipe "Juca" Sanches: mas jogo pra MSDOS é relativamente simples. Limita-se a VGA com beeps no buzzer e pronto.
+[2022-05-23 16:59:59] Felipe "Juca" Sanches: pra coisas mais avançadas como tocar música começa a complicar
+[2022-05-23 17:00:23] Pablo Vasques Bravo-Villalba: Ninguém liga pro som 😭
+[2022-05-23 17:00:30] Felipe "Juca" Sanches: kkkkk
+[2022-05-23 17:00:32] Felipe "Juca" Sanches: eu ligo
+[2022-05-23 17:00:48] Felipe "Juca" Sanches: mas num exercício como esse acho que é bem secundário
+[2022-05-23 17:01:05] Pablo Vasques Bravo-Villalba: 😬
+[2022-05-23 17:01:46] Pedro de Medeiros 👾: O MSDOS sozinho vai precisar de uma enquete nova só pra fixar em uma configuração 😜
+[2022-05-23 17:05:11] Ismael Luceno: eu acho que poderiamos fazer um projeto multi-plataforma
+[2022-05-23 17:07:21] Ismael Luceno: Eu vejo viável uma graphic novel mesmo
+[2022-05-23 17:08:03] Ismael Luceno: poderia ser MSX, MSDOS e NES
+[2022-05-23 17:13:35] Felipe "Juca" Sanches: conta mais!
+[2022-05-23 17:13:55] Felipe "Juca" Sanches: mas eu gostaria de fazer um campo-minado antes de qualquer outra coisa, só pra esquentar os dedos
+[2022-05-23 17:14:55] Ismael Luceno: o principal problema dos games é encontrar artistas pros gráficos :P
+[2022-05-23 17:14:58] Pedro de Medeiros 👾: Visual novel dá muito trabalho. Exige dedicação de artista gráfico que nem sei se temos aqui entre nós. Os jogos ficam grandes porque tem muito asset.
+[2022-05-23 17:16:01] Erin Pinheiro 🐿: não é difícil achar artista não... o difícil é dev pagar artista
+[2022-05-23 17:16:36] Ismael Luceno: isso! XD
+[2022-05-23 17:16:57] Ismael Luceno: Eu posso intentar, mas não sou muito bom não :(
+[2022-05-23 17:17:22] Felipe "Juca" Sanches: pois é... eu vejo essa brincadeira aqui mais como um exercício de codificação, do que a intenção de fazer um grande jogo complexo e cheio de assets gráficos
+[2022-05-23 17:17:27] Ismael Luceno: na verdad, pode ser feito de jeito incremental
+[2022-05-23 17:17:45] Ismael Luceno: hmmm
+[2022-05-23 17:18:29] Felipe "Juca" Sanches: se a gente não conseguir fazer nem algo simples, com certeza nunca faremos algo complexo. Por isso que sugiro fazer algo quase que trivial primeiro
+[2022-05-23 17:52:19] Flávio Amieiro: Eu acho essa uma abordagem boa também. É bem comum projetos ficarem pela metade, e é bem frustrante.
+[2022-05-23 17:52:42] Flávio Amieiro: Ter um objetivo simples diminui a chance disso e dá mais gás pra fazer outro se funcionar
+[2022-05-23 17:53:19] Flávio Amieiro: (digo isso sabendo que não tem problema se não der pra continuar, mas é melhor botar um objetivo simples pra aumentar as chances)
+[2022-05-23 17:53:20] Pedro de Medeiros 👾: Podemos começar com um campo minado que é turn based simples e depois partir pra um jogo com processamento de entrada mais complexo por exigir mais precisão, mas ainda simples, tipo um lunar lander.
+[2022-05-23 17:56:16] Pedro de Medeiros 👾: Se um lunar lander não for tedioso demais... 😅
+[2022-05-23 17:57:34] Pablo Vasques Bravo-Villalba: Campo minado lander
+[2022-05-23 17:57:40] Pablo Vasques Bravo-Villalba: 😝
+[2022-05-23 18:02:01] Pedro de Medeiros 👾: O bom é que o Lunar Lander pode virar um jogo mais completo incrementalmente, como um Gravity Crash da vida.
+[2022-05-23 18:11:13] Felipe "Juca" Sanches: se eu for fazer um lunar lander será com asset gráfico do Falcon 9 ou da StarShip kkkk
+[2022-05-23 18:13:03] Pedro de Medeiros 👾: Go for it!
+[2022-05-23 18:14:10] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=QpAidikwXsU
+[2022-05-23 18:15:24] Felipe "Juca" Sanches: Se o foguete estiver pousado e você pressionar a tecla ESC (ou seja lá qual for o botão pra sair do jogo) ele faz essa animação da explosão aí
+[2022-05-23 18:46:55] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=X8_NqsrnH70
+[2022-05-23 18:47:06] Felipe "Juca" Sanches: tá em alemão, mas tem legendas em inglês

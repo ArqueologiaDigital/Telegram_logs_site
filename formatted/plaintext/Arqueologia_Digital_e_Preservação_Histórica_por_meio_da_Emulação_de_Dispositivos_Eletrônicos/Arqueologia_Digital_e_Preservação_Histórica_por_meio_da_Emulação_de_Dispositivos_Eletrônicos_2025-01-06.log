@@ -1,0 +1,25 @@
+[2025-01-06 11:23:58] Felipe "Juca" Sanches [forwarded]: https://youtu.be/cWHE560vCpI?si=rY3ftFJZBh8DLCQf
+[2025-01-06 11:23:58] Felipe "Juca" Sanches [forwarded]: @fsanches vc ja viu esse Mega Drive que possui jogos como The Sims, Fifa, Need For Speed com emulador Java (desses de celular dos anos 2000) seria possível extrair esses jogos pra um Mega original ou ter a rom???
+[2025-01-06 11:23:58] Felipe "Juca" Sanches [forwarded]: Não lembro se já fiz essa pergunta aqui no grupo, mas acho interessante pq são jogos (mesmo sendo de qualidade suspeita), ficaram exclusivas pra esse Mega
+[2025-01-06 11:58:53] Erin Pinheiro 🐿: esses jogos são J2ME, não usam o emulador de mega
+[2025-01-06 11:59:18] Erin Pinheiro 🐿: São os mesmos que tinham disponíveis pra celular na época, a TecToy só adaptou pra TV e controle
+[2025-01-06 11:59:59] Erin Pinheiro 🐿: foi artimanha deles pra dizer que tinha jogo novo no mega drive
+[2025-01-06 12:01:36] Erin Pinheiro 🐿: o mega drive não tem de longe o processamento pra fazer os gráficos do NFS, por mais rudimentar que são
+[2025-01-06 12:03:42] Erin Pinheiro 🐿: https://nfs.fandom.com/wiki/Need_for_Speed:_ProStreet_(J2ME)
+[2025-01-06 12:05:03] Pablo Vasques Bravo-Villalba: O que tem realmente dentro desse Mega? Ele usa um emulador, então não tem o GOAC?
+[2025-01-06 12:05:36] Erin Pinheiro 🐿: isso
+[2025-01-06 12:05:49] Erin Pinheiro 🐿: é um celular j2me sem o celular
+[2025-01-06 12:05:52] Pablo Vasques Bravo-Villalba: Que tipo de SoC ele usa?
+[2025-01-06 12:06:16] Erin Pinheiro 🐿: deve ser um qualcomm qualquer, isso foi logo antes da parceria deles do zeebo
+[2025-01-06 12:06:28] Pablo Vasques Bravo-Villalba: Qualquercomm 😝
+[2025-01-06 12:07:18] Erin Pinheiro 🐿: se pá essa caixa roda BREW que é a plataforma Java falida da qualcomm que roda também o zeebo
+[2025-01-06 12:08:54] Erin Pinheiro 🐿: e, é, a parte mega drive disso aí é só um emulador j2me que provavelmente também rodaria num celular
+[2025-01-06 19:12:51] Felipe "Juca" Sanches: Tô preparando um layout (representação gráfica + mapa de LEDs, LCD e botões) para o driver do Roland D-70 que um rapaz italiano começou a fazer como contribuição inicial dele pro MAME.
+[2025-01-06 19:13:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-01/33768.jpg
+[2025-01-06 19:13:30] Felipe "Juca" Sanches: Essa é a cara do layout. Não tá pronto ainda, mas já dá pra ter uma idéia de como vai ficar.
+[2025-01-06 20:14:22] Guilherme Ranoya: Eu tive um D-70!!!... caiu uma lágrima aqui de ver o layout.
+[2025-01-06 20:15:13] Guilherme Ranoya: cheguei a ouvir o barulho dos botões físicos quando eram pressionados.
+[2025-01-06 20:20:53] Felipe "Juca" Sanches: esse aqui é o rapaz italiano que está fazendo o driver: https://media.ccc.de/v/38c3-proprietary-silicon-ics-and-dubious-marketing-claims-let-s-fight-those-with-a-microscope#t=292
+[2025-01-06 21:24:36] Felipe "Juca" Sanches: Então você vai chorar aos berros vendo esse vídeo:
+
+https://youtu.be/4U_nV7OjWuM?si=Qnzw4ERwQuEDilSb

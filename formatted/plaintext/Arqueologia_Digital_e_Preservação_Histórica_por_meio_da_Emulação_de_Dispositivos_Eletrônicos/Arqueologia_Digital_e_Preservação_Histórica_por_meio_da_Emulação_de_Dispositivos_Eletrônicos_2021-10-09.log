@@ -1,0 +1,50 @@
+[2021-10-09 00:43:34] Felipe "Juca" Sanches: https://github.com/felipesanches/HexItch
+[2021-10-09 09:27:31] Felipe "Juca" Sanches [forwarded]: Será verdade?
+[2021-10-09 09:27:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16387.jpg
+[2021-10-09 10:03:32] Pablo Vasques Bravo-Villalba: Toda pinta de não ser. "U passado"? Além disso o "2" não combina com a tipografia do logo, e é diferente no logo e na traseira do celular. Por fim a foto do controle parece ser a mesma que você encontra por aí na Internet. Desconfio que o celular seja a mesma coisa, mas esse eu não cheguei a procurar
+[2021-10-09 10:06:08] Pablo Vasques Bravo-Villalba: Ah, a foto é do celular TecToy On 128GB com um tratamento para ficar um pouco diferente
+[2021-10-09 10:06:09] Felipe "Juca" Sanches: "U passado é agora!" é o slogan do "UCOLECIONADOR", um youtuber brasileiro fanático pelas coisas da SEGA e da TecToy.
+
+Será que ele fez parceria como garoto propaganda?
+[2021-10-09 10:07:19] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=gMNgURJKhRI
+[2021-10-09 12:18:57] Hugo (Agaelebê): https://www.youtube.com/watch?v=hOL2mmSbzdo
+[2021-10-09 12:52:25] Deleted Account: Tá no github teu editor?
+[2021-10-09 12:53:16] Deleted Account: Putz eu tenho muita saudades do Turbo C da Borland. Acho que era o editor mais produtivo que usei. Tinha o Turbo Profiler embutido que era absolutamente perfeito.
+[2021-10-09 12:53:45] Felipe "Juca" Sanches: https://github.com/felipesanches/HexItch
+[2021-10-09 12:53:53] Deleted Account: Adoro também esses editores estilo msdos com aqueles típicos caracteres extendidos ascii.
+[2021-10-09 12:54:07] Deleted Account: Aliás tem o conjunto de caracteres extendidos dos no linux?
+[2021-10-09 12:54:13] Deleted Account: Opa. Show.
+[2021-10-09 12:54:54] Deleted Account: Uma pena que a borland nunca abriu o código do turbo c e turbo pascal...
+[2021-10-09 12:55:26] Felipe "Juca" Sanches: vou continuar o desenvolvimento em uma segunda live daqui a pouco às 14h
+[2021-10-09 13:54:58] Felipe "Juca" Sanches: daqui a pouquinho começa:
+
+https://www.youtube.com/watch?v=-hVhqhCaNIA
+[2021-10-09 13:55:10] Felipe "Juca" Sanches: Pra participar ao vivo: https://streamyard.com/vu9s44kpzj
+[2021-10-09 14:26:34] RicBit: Tem no Unicode, colocaram até os caracteres especiais do spectrum e do msx.
+[2021-10-09 14:32:35] L.: https://github.com/lpereira/vga2ansi
+[2021-10-09 14:49:49] RicBit: Tem um editor de ascii art escondido dentro do source do brmsx, eu escrevi para criar as telas de debug.
+[2021-10-09 14:52:01] RicBit: Hum não está no repositório, vou caçar o original e colocar.
+[2021-10-09 14:53:00] RicBit: Ah está no oldies https://github.com/ricbit/Oldies/tree/master/1996-06-asciieditor
+[2021-10-09 15:28:29] Deleted Account: Opa. Sensacional! Eu adoro os caracteres ascii extendidos no DOS. Vou pesquisar aqui. Já achei a sequencia em 0x2500 para montar janelas.
+[2021-10-09 16:11:54] Ismael Luceno: eu tenho saudade do desenvolvimento no DOS, o software daquela época era muito creativo
+[2021-10-09 16:25:46] Deleted Account: Eu tenho mta saudades dessa época. Acessar direto a memória de vídeo no modo 13h. Sem essas coisas de proteção de memória.
+[2021-10-09 16:28:04] Deleted Account: Aqueles livros do Norton com com calça a apertada na capa ensinando as interrupções da BIOS e do DOS. 😂
+[2021-10-09 16:30:05] Deleted Account: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-10/16412.jpg
+[2021-10-09 16:30:08] Deleted Account: 😂😂😂😂
+[2021-10-09 16:32:39] Ismael Luceno: sim, eu cheguei a escribir muito código de gráficos em aquela época, mais o HDD estragou e não consegui resgatar nada 😭
+[2021-10-09 16:35:05] Ismael Luceno: tinha um engine muito primitivo que permitia usar cores de 18 bits no modo 0x13, mudando a paleta no hsync
+[2021-10-09 16:35:41] Deleted Account: Caramba. 18 bits? Isso dava muitas cores.
+[2021-10-09 16:36:33] Deleted Account: Eu lembro vagamente do que o pessoal chamava de modo x. Que tinha maior resolução mas era bem dificil de codificar.
+[2021-10-09 16:38:58] Ismael Luceno: com 200 linhas ele funcionaba decentemente no meu 486 de 66 MHz, mas eu desenvolvi para aventuras gráficas então era suficiente, não dava para fazer muito mais porque ele precisava de double buffer na RAM
+[2021-10-09 16:41:24] Ismael Luceno: para gerar gráficos em tempo real não dava, eu não sabia tanto, pense que isso fazia um parsing de um framebuffer e criava a mudança de paleta mais a saida pro buffer na vram
+[2021-10-09 16:42:02] Deleted Account: Eu lembro que com muito sufoco fiz uma engine 3d wireframe muito tosca. 
+
+Quase deixei meu professor de matemática maluco na época pq não sabia como fazer translação em 3d e ficava enchendo o saco dele. Ficou um lixo até pq não manjava de matrizes.
+
+Isso era 1998 eu acho. Lembro que chamei minha namorada na época pra mostrar essa engine e ela me olhou com cara de preocupada tipo: "ih, ficou maluco". Kkkkkk...
+[2021-10-09 16:42:17] Ismael Luceno: mas era muito melhor de que 256 cores ne 😁
+[2021-10-09 16:44:04] Ismael Luceno: 😂
+[2021-10-09 16:47:59] Ismael Luceno: eu tentei ler disso mas tinha muita coisa que aprender ainda de matemática
+[2021-10-09 16:52:03] Ismael Luceno: eu estava ainda na escola primária, apenas sabia nada, mas peguei uns livros do meu pai sobre turbo pascal que tinha muitos exemplos da parte de como implementar os algoritmos, e ficava o dia inteiro indo desse livro para os livros de matemática
+[2021-10-09 16:57:42] Ismael Luceno: mas não consegui que ninguém me explicara os conceitos mais complexos, a minha mãe não aprobaba tampouco, ela queria um filho que jugara ao futebol, e não consegui estudar muito mais disso, nunca cheguei ver matrizes, até o ensino médio
+[2021-10-09 21:22:26] * Deleted Account joined the group

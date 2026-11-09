@@ -1,0 +1,23 @@
+[2022-02-28 13:29:39] Erin Pinheiro 🐿: https://github.com/Lana-chan/palmdle saiu 0.1
+[2022-02-28 16:50:03] Felipe "Juca" Sanches: Acidx: https://felipesanches.github.io/lcd-displays-in-svg/pense-bem/pense-bem.svg
+[2022-02-28 16:50:37] L.: Animal!
+[2022-02-28 16:53:32] L.: Os segmentos têm o mesmo id que os do simulador em JS?
+[2022-02-28 17:06:07] Felipe "Juca" Sanches: Sim
+[2022-02-28 17:06:30] Felipe "Juca" Sanches: O desenho dele ficou bem legal, mas tá um pouco torto
+[2022-02-28 17:06:59] Felipe "Juca" Sanches: Talvez eu faça alguns ajustes finos no grid do teclado
+[2022-02-28 17:08:02] Felipe "Juca" Sanches: Arrumei também o agoritmo de cálculo das respostas que tava todo cheio de erros de programação, pois eu não sou fluente em javascript
+[2022-02-28 17:08:30] Felipe "Juca" Sanches: Se bobear ainda tá bugado. Preciso revisar e depois fazer o backport lá pro repo original
+[2022-02-28 17:10:56] Felipe "Juca" Sanches: No browser do celular o áudio tá bem ruim
+[2022-02-28 17:12:00] Felipe "Juca" Sanches: No Firefox no laptop (num Debian) o áudio tá ok (mas não tá lindo/perfeito). Pelo menos dá pra jogar.
+[2022-02-28 17:12:36] Felipe "Juca" Sanches: Talvez hoje em dia exista alguma API melhor pra gerar tons num browser...
+[2022-02-28 17:12:57] Felipe "Juca" Sanches: E que funcione bem em mobile também
+[2022-02-28 17:15:04] Felipe "Juca" Sanches: Também achei meio ruim a qualidade do render de SVG. Tô vendo um monte de serrilhado nas bordas. Deveria renderizar com antialiasing...
+[2022-02-28 17:30:42] L.: Eu lembro que tinha uns paus no áudio e tinha workaround se tivesse "Linux" no user agent
+[2022-02-28 17:31:07] L.: A API de áudio deve ter melhorado bem de 10+ anos pra cá. Talvez nem precise mais fazer WAV no braço mais😂
+[2022-02-28 17:31:47] L.: Eu comecei a arrumar mas tava numa época de correria aqui e deixei de lado e nunca mais peguei pra terminar 😅
+[2022-02-28 17:33:01] Felipe "Juca" Sanches: Bom... O grosso eu fiz. Só preciso validar com uns livros de verdade (talvez implementar um pouco de TDD) pra garantir que tá ok
+[2022-02-28 17:33:42] L.: Quer acesso à escrita no repositório?
+[2022-02-28 17:34:31] L.: Eu nunca vou lembrar senha do GitHub e sempre tenho que resetar quando olho essas coisas lol
+[2022-02-28 17:35:21] L.: Ficou legal!
+[2022-02-28 17:36:41] Felipe "Juca" Sanches: Eu preferiria migrar o repo para alguma org. Possivelmente o mais adequado seria migrar para a org ArqueologiaDigital ;-)
+[2022-02-28 17:36:53] L.: Pode ser

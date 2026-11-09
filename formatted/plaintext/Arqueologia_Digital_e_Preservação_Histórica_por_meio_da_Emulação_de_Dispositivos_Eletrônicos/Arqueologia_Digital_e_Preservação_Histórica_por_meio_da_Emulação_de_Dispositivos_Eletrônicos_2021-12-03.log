@@ -1,0 +1,32 @@
+[2021-12-03 03:21:19] Felipe "Juca" Sanches: Isso não parece certo!
+
+Deve rodar mais lentamente.
+[2021-12-03 03:21:59] Felipe "Juca" Sanches: Eu tive dificuldade em rodar o hello world do Patinho Feio emulado num Arduino
+[2021-12-03 08:44:26] Pablo Vasques Bravo-Villalba: Roda bem mais lentamente. Tem um monte de limitações: pouquíssima RAM, não produz vídeo colorido, não tem som, é lento que dói... Mas funciona!
+[2021-12-03 09:47:08] Augusto Almeida: Roda lento e capado, mas foi um exercício mais acadêmico do que de precisão
+[2021-12-03 09:49:51] Augusto Almeida: Não é colorido
+[2021-12-03 09:50:27] Augusto Almeida: Não há naturalmente o suporte a som (só ele já ocuparia toda a capacidade de processamento)
+[2021-12-03 09:50:33] Augusto Almeida: Lento
+[2021-12-03 09:50:40] Augusto Almeida: Mas roda o Basic
+[2021-12-03 10:54:12] Deleted Account: Só a temporização pro NTSC deve ocupar 90% da capacidade de processamento.
+[2021-12-03 11:33:03] Felipe "Juca" Sanches: Exatamente! Esse bitbang aí deve comer a CPU toda
+[2021-12-03 11:35:30] Flávio Amieiro: É nisso que o RP2040 brilha
+[2021-12-03 11:35:56] Deleted Account: Sim. Aqueles PIO do RP2040 deve fazer isso com um pé nas costas.
+[2021-12-03 11:36:01] Flávio Amieiro: Usa um bloco de pio pra fazer o bit banging e deixa o processador pra aplicação
+[2021-12-03 11:36:10] Flávio Amieiro: Exatamente
+[2021-12-03 11:36:38] Deleted Account: Eu até acho que estão demorando pra "abraçar" o RPico. O bichinho é muito versátil.
+[2021-12-03 11:37:22] Flávio Amieiro: Eu amo
+[2021-12-03 11:37:23] Flávio Amieiro: Hahahah
+[2021-12-03 11:37:49] Flávio Amieiro: Meus últimos designs são todos com ele. Só uso esp32 quando precisa de bluetooth ou wifi
+[2021-12-03 11:38:01] Flávio Amieiro: E ainda assim as vezes vale a pena colocar um pico do lado
+[2021-12-03 11:38:35] Flávio Amieiro: E ainda tem a vantagem de ser um dos poucos microcontroladores que ainda dá pra comprar
+[2021-12-03 11:51:33] Deleted Account: Kkkk... Sim. O pico é fantástico e aqui no Brasil o custo benefício dele é ótimo. Ainda dá pra debugar o código usando outro pico.
+[2021-12-03 11:51:39] Deleted Account: Sem falar na documentação excelente.
+[2021-12-03 11:52:45] Flávio Amieiro: Nossa. Primeira vez que abri o datasheet quase chorei. Hahahahah
+[2021-12-03 11:52:47] Deleted Account: Tem algumas críticas de que tem poucos ADCs. Mas dá 0ra contornar isso.
+[2021-12-03 11:52:48] Flávio Amieiro: É lindo
+[2021-12-03 11:53:05] Flávio Amieiro: É verdade
+[2021-12-03 11:54:00] Flávio Amieiro: Eu tô curioso pra ver o que mais eles vão fazer
+[2021-12-03 11:54:23] Flávio Amieiro: Eles lançaram o SoC do raspberry pi que eu ainda não olhei, mas parece bem legal
+[2021-12-03 22:10:50] L.: ESP8266 e ESP32 tem I2S com DMA. Tem uns frameworks pra gerar NTSC faz tempo
+[2021-12-03 22:11:11] L.: Mas Xtensa é de doer😂

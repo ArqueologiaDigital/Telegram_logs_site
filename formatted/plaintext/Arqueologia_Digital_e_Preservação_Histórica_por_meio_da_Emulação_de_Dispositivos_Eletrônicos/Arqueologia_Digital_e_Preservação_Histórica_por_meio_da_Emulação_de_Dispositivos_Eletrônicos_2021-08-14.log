@@ -1,0 +1,18 @@
+[2021-08-14 00:12:16] Felipe "Juca" Sanches: eu cheguei a escrever essa semana uma pequena classe em python pra gerar algumas rotinas curtas em código objeto de TLCS900 pra injetar patches binários na imagem de update
+[2021-08-14 00:12:39] Felipe "Juca" Sanches: pra coisa pequena funciona muito bem
+[2021-08-14 01:00:32] RicBit: Eu descobri hoje o libcpu, usa o backend do llvm então deve ser bom
+[2021-08-14 01:00:49] Felipe "Juca" Sanches: eu achei interessante
+[2021-08-14 01:00:53] Felipe "Juca" Sanches: mas parece meio abandonado
+[2021-08-14 01:01:01] Felipe "Juca" Sanches: o wiki tá fora do ar
+[2021-08-14 01:01:19] Felipe "Juca" Sanches: não parece ter nenhuma documentação além do código fonte em si
+[2021-08-14 01:10:01] Felipe "Juca" Sanches: o projeto libcpu foi anunciado ao público em 2009 durante o Chaos Communication Congress, mas tudo o que temos é um vídeo de uma breve apresentação de uns 3 minutos só, então é meio vago
+
+https://www.pagetable.com/?p=317
+[2021-08-14 01:11:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14198.jpg
+[2021-08-14 01:11:30] Felipe "Juca" Sanches: e parece que já faz uns 11 anos que o site tá fora do ar
+[2021-08-14 01:12:05] Felipe "Juca" Sanches: E também não achei nenhum snapshot bom do site/wiki no Way Back Machine do Internet Archive
+[2021-08-14 01:12:19] Felipe "Juca" Sanches: tem cara de vapourware
+[2021-08-14 01:13:33] Felipe "Juca" Sanches: Ah! E o código não compila pra mim.
+
+https://github.com/libcpu/libcpu/issues/9
+[2021-08-14 04:43:33] Flávio Amieiro: Hahahhahahahaha

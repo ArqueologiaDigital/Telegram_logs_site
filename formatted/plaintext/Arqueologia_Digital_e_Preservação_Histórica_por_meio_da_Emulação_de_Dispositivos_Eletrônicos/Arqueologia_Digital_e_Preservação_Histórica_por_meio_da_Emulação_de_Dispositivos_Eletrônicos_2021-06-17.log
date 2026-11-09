@@ -1,0 +1,13 @@
+[2021-06-17 10:09:09] Leonardo Roman: Dá uma raspada na marcação das eproms com estilete pra ver se são originais😄 Acontece.
+[2021-06-17 10:14:16] Leonardo Roman: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-06/13502-IMG_20210617_101129033_BURST000_COVER.jpg
+[2021-06-17 10:14:16] Leonardo Roman: "AM27C400"
+[2021-06-17 11:16:29] Erin Pinheiro 🐿: não é AM27C400, é MX27C4000
+[2021-06-17 11:16:42] Erin Pinheiro 🐿: três zeros, 512k x 8
+[2021-06-17 11:16:51] Erin Pinheiro 🐿: DIP32
+[2021-06-17 11:17:56] Erin Pinheiro 🐿: falsa ou não, tanto as PROMs conseguem ser lidas quanto as EEPROMs 39SF040 conseguem ser gravadas e lidas novamente e verificam ok
+[2021-06-17 11:18:35] Erin Pinheiro 🐿: a MX27C4000 não é apagável
+[2021-06-17 19:46:58] Erin Pinheiro 🐿: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-06/13508.jpg
+[2021-06-17 19:46:58] Erin Pinheiro 🐿: era osmar
+[2021-06-17 19:47:23] Erin Pinheiro 🐿: antes de conseguir finalmente fazer bootar caiu em exception dump umas 3 vezes
+[2021-06-17 19:48:01] Erin Pinheiro 🐿: fucei com os soquetes e o slot o suficiente e... logo da sega!
+[2021-06-17 19:51:19] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-06/13511-mp4.mp4

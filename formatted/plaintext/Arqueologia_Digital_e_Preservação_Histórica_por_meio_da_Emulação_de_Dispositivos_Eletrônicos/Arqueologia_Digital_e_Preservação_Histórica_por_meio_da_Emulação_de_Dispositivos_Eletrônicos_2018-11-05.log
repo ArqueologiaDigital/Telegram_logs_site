@@ -1,0 +1,21 @@
+[2018-11-05 11:07:19] Felipe "Juca" Sanches: Dado um jogo antigo qualquer de PC. Que técnicas poderíamos usar para detectar o "hardware footprint mínimo"? Ou seja, qual subset do hardware dum PC é realmente necessário para a sua execução?
+[2018-11-05 11:07:34] Felipe "Juca" Sanches: Há alguns meses eu tenho tido o mesmo tipo de pensamento de tempos em tempos.
+[2018-11-05 11:08:42] Felipe "Juca" Sanches: é uma "idéia inútil" de montar uma PCB mínima só com o hardware necessário pra algum jogo específico e enfiando o software direto em EPROMs e substituindo a BIOS genérica por um bootloader mínimo e talvez alguns patches no próprio jogo
+[2018-11-05 11:09:03] Felipe "Juca" Sanches: é o tipo de coisa que não tem muito valor prático além do exercício intelectual
+[2018-11-05 11:10:13] Felipe "Juca" Sanches: por exemplo... como seria uma adaptação de Alley Cat para "arcade" reutilizando o binário original (com ou sem patches) e fabricando uma PCB minimalista?
+[2018-11-05 11:13:29] Ronaldo: Olha, acho que nem os programadores sabem responder isso de maneira categórica, pelo menos nos jogos mais modernos.
+[2018-11-05 11:13:57] Felipe "Juca" Sanches: é... nos modernos realmente complica
+[2018-11-05 11:14:16] Felipe "Juca" Sanches: mas eu ficaria feliz em explorar essas possibilidades nos retrôs
+[2018-11-05 11:14:43] Ronaldo: Lembro de ter ficado muito frustrado por não conseguir rodar Quake quando eu tinha um 486
+[2018-11-05 11:14:48] Felipe "Juca" Sanches: pensei em talvez customizar o MAME para fazer log em runtime de quais devices foram re-configurados durante a execução do jogo
+[2018-11-05 11:15:47] Felipe "Juca" Sanches: os óbvios são a própria CPU e o chip de vídeo (placa VGA ou CGA)
+[2018-11-05 11:16:08] Felipe "Juca" Sanches: muito provavelmente o chip de timer também é usado
+[2018-11-05 11:16:22] Deleted Account: você está dizendo em retirar os chipsets tipo ponte sul, ponte norte e tal?
+[2018-11-05 11:16:41] Felipe "Juca" Sanches: tirar disco rígido
+[2018-11-05 11:16:58] Felipe "Juca" Sanches: tirar tudo que não seja estritamente necessário
+[2018-11-05 11:18:05] Felipe "Juca" Sanches: por exemplo... pinball fantasies. Daria até pra tirar a placa VGA e botar no lugar algo muito mais simples se a idéia fosse transformar numa placa controladora praquele meu projeto antigo de fazer uma mesa de pinball de verdade
+[2018-11-05 11:18:10] Felipe "Juca" Sanches: ooops... falei demais!
+[2018-11-05 11:18:10] Felipe "Juca" Sanches: haha
+[2018-11-05 11:18:46] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-11/8034-sticker.webp
+[2018-11-05 13:53:12] Deleted Account: E se fizer a prototipagem disso tudo em uma FPGA? Da pra configurar o hardware minimalista lá, testar se funciona e depois criar a placa real
+[2018-11-05 13:56:03] Felipe "Juca" Sanches: ;-)

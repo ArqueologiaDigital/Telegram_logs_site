@@ -1,0 +1,113 @@
+[2026-07-22 10:50:27] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39658.jpg
+[2026-07-22 10:50:27] L.: @fsanches
+[2026-07-22 10:51:14] Felipe "Juca" Sanches: Fico muito feliz em ver isso!
+[2026-07-22 11:59:35] Felipe "Juca" Sanches: Brilhante!
+
+Verified: the ROM holds a little-endian IEEE double 7.123792865e-05 at 0x012F57, and π/44100 = 7.123792865282977e-05 — agreement to ten significant figures. Someone typed π/44100 into a calculator in 1996. That's an independent second confirmation of the sample rate, and a far more specific one, since π/fs only makes sense as a bilinear-transform prewarp.
+[2026-07-22 12:00:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39661.jpg
+[2026-07-22 12:03:18] Felipe "Juca" Sanches: O Claude tá fazendo engenharia reversa do instruction set de um chip DSP não documentado, que é usado na placa de som do Technics KN5000
+[2026-07-22 12:04:20] Felipe "Juca" Sanches: E o ponto de partida foi um diagrama de blocos encontrado num service manual de um outro aparelho que usa o mesmo chip
+[2026-07-22 12:05:06] Felipe "Juca" Sanches: com isso o Claude implementou uma device classe com a host-interface e depois extraiu da ROM da subcpu do KN5000 as tabelas de código executável e parâmetros que são carregados no DSP
+[2026-07-22 12:05:36] Felipe "Juca" Sanches: e depois começou a fazer análises estatísticas pra tentar entender quais bits codificam cada parte de cada instrução
+[2026-07-22 12:06:18] Felipe "Juca" Sanches: e depois comparou os pequenos programas de efeitos com umas tabelas de strings da ROM da subcpu e com isso conseguiu descobrir quais são algoritmos de reverb, quais são chorus, flanger, wah-wah, etc..
+[2026-07-22 12:06:52] Felipe "Juca" Sanches: e com esse insight, começou a comparar a estrutura dos programinhas com o que se esperaria ver em algorítmos clássicos de DSP para implementação desses efeitos
+[2026-07-22 12:07:19] Felipe "Juca" Sanches: e com isso tá conseguindo aos poucos montar um mapa do que cada instrução faz e quais são os opcodes e operandos, etc...
+[2026-07-22 12:07:30] Felipe "Juca" Sanches: escovando bit pesadamente!
+[2026-07-22 12:07:44] Pablo Vasques Bravo-Villalba: Isso parece magia negra pra mim
+[2026-07-22 12:07:45] Felipe "Juca" Sanches: (sob minha supervisão)
+[2026-07-22 12:40:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39672.jpg
+[2026-07-22 12:41:06] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39673.jpg
+[2026-07-22 12:43:35] Felipe "Juca" Sanches: Eu entendo talvez um terço do que ele diz. Mas as linhas de raciocínio fazem muito sentido, e os resultados vão aos poucos saindo. Então errado não deve estar! kkkk
+[2026-07-22 12:44:41] Felipe "Juca" Sanches: Sinto que estou aos poucos começando a ver com os meus próprios olhos alguns sinais daquilo que falam por aí das máquinas mais inteligentes que humanos...
+[2026-07-22 12:45:10] Felipe "Juca" Sanches: (hoje eu matei uma aranha no meu banheiro)
+[2026-07-22 12:48:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39677.jpg
+[2026-07-22 13:00:19] Felipe "Juca" Sanches: É muito interessante ver ele criando scripts python pra auxiliar nas tarefas
+[2026-07-22 13:00:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39679.jpg
+[2026-07-22 13:06:47] RicBit: eu entendo o que ele está dizendo. o dsp esta implementando um filtro fir, e ele sabe quais os coeficientes do filtro, então daí tem como deduzir os opcodes do dsp.
+[2026-07-22 13:07:30] Felipe "Juca" Sanches: Isso está contido na parte que eu entendo kkkk
+[2026-07-22 13:09:33] RicBit: então não tem segredo, ele assumiu que o filtro é um butterworth, ganho 1/sqrt(2), os coeficientes precisam ser 1,2,1, aí é só achar como eles estão encodados.
+[2026-07-22 13:09:53] RicBit: eu fiz muito disso quando era pivete, mas não sei se ainda tenho meus códigos de dsp
+[2026-07-22 13:12:36] RicBit: está no mesmo hd pifado que o meu minesweeper para 8051 e o fonte completo do dona barata
+[2026-07-22 13:20:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39685.jpg
+[2026-07-22 13:20:33] Felipe "Juca" Sanches: Começando a ganhar escala. Tá aí o retorno do investimento...
+[2026-07-22 13:24:26] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39686.jpg
+[2026-07-22 13:24:26] Felipe "Juca" Sanches: Coisa linda!
+[2026-07-22 13:30:09] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39687.jpg
+[2026-07-22 13:30:09] Felipe "Juca" Sanches: Mas ainda precisa comer mais feijão...
+[2026-07-22 13:30:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39688.jpg
+[2026-07-22 13:50:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39689.jpg
+[2026-07-22 13:50:49] Felipe "Juca" Sanches: agora tá rolando uma varredura por websites e patentes japonesas...
+[2026-07-22 13:59:51] L.: Não é só eu que guardo um HD pifado então?
+[2026-07-22 14:00:10] Felipe "Juca" Sanches: eu também guardo...
+[2026-07-22 14:00:26] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39692.jpg
+[2026-07-22 14:00:26] Felipe "Juca" Sanches: Resultados da busca por datasheets...
+[2026-07-22 14:20:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39693.jpg
+[2026-07-22 14:20:12] Felipe "Juca" Sanches: Muito legal!
+[2026-07-22 14:28:41] RicBit: os dados estão lá, quem morreu foi só a controladora. eventualmente vai ser fácil de ler os dados com alguma tecnologia nova
+[2026-07-22 14:28:54] RicBit: se estão lendo até papiro queimado de pompéia né
+[2026-07-22 14:28:59] L.: ahan
+[2026-07-22 14:29:13] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39697.jpg
+[2026-07-22 14:29:13] RicBit: aproveitando, coloquei unions. antes:
+[2026-07-22 14:29:22] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39698.jpg
+[2026-07-22 14:29:22] RicBit: depois
+[2026-07-22 14:32:41] RicBit: eu fiz parecido tentando achar a musica do ligue-se ao expert. o burd me disse que a musica tinha sido copiado da uma revista, então eu mandei ele baixar todas as revistas até 1986, passar ocr em tudo que tenha o comando PLAY e checar com o ligue-se. infelizmente não achou nada, ou a revista não foi escaneada ainda, ou não é japonesa.
+[2026-07-22 14:45:50] L.: pode até ser que não seja de MSX também, né?
+[2026-07-22 14:47:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39701.jpg
+[2026-07-22 14:47:57] Felipe "Juca" Sanches: Agora tá abrindo um arquivo .iso de documentação do computador japonês PC9801-73 e tentando decodificar um formato de compressão desconhecido pra ver se acha algum datasheet do DSP lá dentro...
+[2026-07-22 14:48:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39702.jpg
+[2026-07-22 14:50:37] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39703.jpg
+[2026-07-22 14:50:37] Felipe "Juca" Sanches: queimando minha cota semanal...
+[2026-07-22 14:51:28] Felipe "Juca" Sanches: quando bater no 100% é hora de ir para a praça fazer crochê
+[2026-07-22 15:05:32] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39705.jpg
+[2026-07-22 15:05:32] Felipe "Juca" Sanches: hahaha! Hackeou a parada, decodificou o arquivo e extraiu a documentação. Não tem datasheet, mas tem outras informações que parecem ser coisa boa...
+[2026-07-22 15:42:35] RicBit: hum, pode ser, eu procurei só msx
+[2026-07-22 15:48:32] Pablo Vasques Bravo-Villalba: Tentou a Popcom? Lá tinha listagens para vários computadores, incluindo MSX
+[2026-07-22 16:27:44] RicBit: eu procurei todas as revistas japonesas que tinham no archive
+[2026-07-22 16:27:51] RicBit: deixa pegar a lista aqui
+[2026-07-22 16:30:22] RicBit: nao usou nenhuma popcom, aqui a lista -> https://gist.github.com/ricbit/ea69ef5d184f20f02fa6842b07245cfa
+[2026-07-22 16:30:36] RicBit: tinha popcom em 1986? eu coloquei como hard limit 12-1986
+[2026-07-22 16:31:05] Pablo Vasques Bravo-Villalba: Sobre a possibilidade de usar a música de outros computadores, o Fujitsu FM-7 e o Sharp X1 usavam o mesmo PSG do MSX. Só não sei se a sintaxe da MML do BASIC deles era a mesma
+[2026-07-22 16:31:31] Pablo Vasques Bravo-Villalba: Isso eu não sei, mas já vi música para MSX sem FM que veio de lá.
+[2026-07-22 16:32:30] Pablo Vasques Bravo-Villalba: No archive.org tem Popcom pelo menos desde 1983
+[2026-07-22 16:32:41] RicBit: a busca foi por "basic listings", então deve ter pego outros basics.
+[2026-07-22 16:32:50] RicBit: hum vou deixar procurando popcom então
+[2026-07-22 16:32:57] RicBit: ligo à noite antes de dormir
+[2026-07-22 17:10:48] Leonardo Roman: Pode tentar fazer o caminho inverso. Existe alguma IA que pegue a música e tente descobrir a fonte?
+[2026-07-22 17:52:30] Felipe "Juca" Sanches: acho que a música em si, extraída do jogo, não tem informação suficiente para guiar uma busca
+[2026-07-22 18:27:24] RicBit: a musica a gente tem, é só pegar no basic as notas do play. eu usei ela na etapa final para comparar as melodias, nenhum match
+[2026-07-22 18:28:52] Felipe "Juca" Sanches: 18.3% do instruction set desvendado!
+
+Agora temos um esboço de disassembler e de code de emulação do DSP no MAME, incluindo a interface com a CPU (host interface).
+
+Falta "só" desvendar os 80 e tantos porcento do resto das instruções...
+[2026-07-22 18:29:13] RicBit: nao é um dsp conhecido ?
+[2026-07-22 18:29:40] Felipe "Juca" Sanches: Eu tenho esperança de chegar em algum momento num tipping point onde tudo se resolve de uma vez igual final de jogo de paciência.
+[2026-07-22 18:29:41] RicBit: tipo com 18% nao dá para procurar um datasheet que combine ?
+[2026-07-22 18:29:53] Felipe "Juca" Sanches: o datasheet não foi encontrado
+[2026-07-22 18:30:17] RicBit: nao tem como abrir o teclado e olhar qual é o dsp ?
+[2026-07-22 18:30:19] Felipe "Juca" Sanches: É um chip da NEC que foi vendido direto para a Panasonic e para a Pioneer sem passar pelo mercado aberto
+[2026-07-22 18:30:59] Felipe "Juca" Sanches: É um NEC uPD6383GF
+[2026-07-22 18:32:33] Felipe "Juca" Sanches: Tem um outro DSP da NEC que tá emulado no MAME, mas é suficientemente diferente para não ser muito útil como comparativo
+[2026-07-22 18:36:00] RicBit: hum então não tem jeito, é só no reverse mesmo
+[2026-07-22 18:38:50] Felipe "Juca" Sanches: mas tá sendo divertido. É a primeira vez que estudo DSPs. E é também a primeira vez que faço levantamento de instruction set na marra por meio de reversa.
+[2026-07-22 18:39:27] Felipe "Juca" Sanches: sinto que virei gente-grande
+[2026-07-22 18:43:23] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39736.jpg
+[2026-07-22 18:43:23] Felipe "Juca" Sanches: POWER UP!
+[2026-07-22 18:45:38] RicBit: eu tive aula de dsp com guido, tive que implementar uma borboleta em asm de dsp, delicia
+[2026-07-22 18:47:01] Felipe "Juca" Sanches: Eu li um dos primeiros códigos ASM escritos pelo Guido. É um lixo! (driver do Patinho Feio pra tocar música no synth do Guido)
+
+É completamente ilegível!
+[2026-07-22 18:47:11] Felipe "Juca" Sanches: Uma macarronada!
+[2026-07-22 18:47:49] Felipe "Juca" Sanches: mas tudo bem... era 1975...
+[2026-07-22 20:11:59] RicBit: nem devia ter assembler se bobear
+[2026-07-22 20:30:39] Felipe "Juca" Sanches: tinha sim. Eu tenho o manual.
+[2026-07-22 20:30:49] Felipe "Juca" Sanches: Aliás... tinha mais de um
+[2026-07-22 20:31:15] Felipe "Juca" Sanches: Tinha um assembler nativo que rodava no próprio pato. E tinha um cross-assembler que rodava num IBM-1130
+[2026-07-22 20:45:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39745.jpg
+[2026-07-22 21:29:14] Felipe "Juca" Sanches: HAHA!
+[2026-07-22 21:29:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39747.jpg
+[2026-07-22 21:31:27] Felipe "Juca" Sanches: O bicho rodou o emulador e saiu pressionando botoes pra navegar em todos os menus de configuração de efeitos e ao mesmo tempo foi lendo o conteúdo da RAM pra saber as strings que estavam aparecendo na tela e foi também fazendo dump das escritas que a cpu faz pro chip DSP. E com isso conseguiu correlacionar os nomes dos efeitos e dos parâmetros com os endereços da memória interna de parâmetros do DSP
+[2026-07-22 21:31:46] Felipe "Juca" Sanches: o que ajuda imensamente na análise semântica dos algoritmos do DSP
+[2026-07-22 21:32:01] Felipe "Juca" Sanches: o que por sua vez ajuda a entender o que cada instrução do assembly do DSP faz
+[2026-07-22 21:56:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39751.jpg
+[2026-07-22 21:56:13] Felipe "Juca" Sanches: Ele insiste em parar. E eu continuo dando novas abordagens pra ele trabalhar...

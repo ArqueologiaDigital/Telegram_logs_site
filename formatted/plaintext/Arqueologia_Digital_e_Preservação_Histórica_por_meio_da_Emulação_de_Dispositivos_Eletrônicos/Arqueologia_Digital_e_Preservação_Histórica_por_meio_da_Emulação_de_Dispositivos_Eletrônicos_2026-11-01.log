@@ -1,0 +1,5 @@
+[2026-11-01 00:29:32] RicBit: eu acho que consegui consertar usando basic
+[2026-11-01 00:29:51] RicBit: mandei um 10 print i; : i=i+1 : goto 10
+[2026-11-01 00:30:49] RicBit: deixei rodando por uma hora, acho que deu tempo dos dieletricos irem para o lugar certo, agora o flash cart 2mb funcionou. a ide do carchano não foi mas ela nunca gostou muito do turbor mesmo.
+[2026-11-01 00:31:12] RicBit: preciso lembrar onde eu guardei minha gr8net, se ela funcionar tá feito.
+[2026-11-01 00:40:23] RicBit: talvez o cartucho de v9990 tenha funcionado? ele não tem rom então é dificil dizer. mas eu mandei um ?inp(&h66) e ele não retornou 255, então a porta está no bus.

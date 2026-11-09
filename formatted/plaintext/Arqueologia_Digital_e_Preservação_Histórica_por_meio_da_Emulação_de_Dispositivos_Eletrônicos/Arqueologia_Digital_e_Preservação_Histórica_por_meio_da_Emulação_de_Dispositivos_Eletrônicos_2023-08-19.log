@@ -1,0 +1,19 @@
+[2023-08-19 05:15:45] Felipe "Juca" Sanches: Tem até um Itautec I-7000 aí!
+[2023-08-19 11:39:33] Shideravan: Não sei se vocês ainda ligam para a emulação de Zeebo, mas eu fiquei feliz de ver hoje de manhã que o tuxality conseguiu fazer ficar jogável o jogo mais procurado da plataforma - seu Double Dragon exclusivo
+https://www.youtube.com/watch?v=ZCajilag4lE
+[2023-08-19 11:40:50] Shideravan: Ainda sem som e com um monte de coisa para implementar. Mas caramba, é muito legal de já ver resultados concretos com jogos comerciais, em especial esse aí que está preso na plataforma
+[2023-08-19 13:22:43] Shideravan: Tomara que o autor publique todo esse código, eu gostaria muito de dar uma olhada e ver se tem algo que eu conseguisse ajudar
+[2023-08-19 13:24:58] Shideravan: Só uma pena que ele usa HLE, não me parece o melhor em termos de preservação ou manutenção futura do projeto. Mas ainda assim, para a gente que não tem nada eu fico empolgado hahaha
+[2023-08-19 16:38:02] L.: Ah, HLE é melhor que nada
+[2023-08-19 16:38:29] L.: Emulação de N64 só alavancou depois do UltraHLE
+[2023-08-19 16:38:48] L.: Antes disso só tinham uns emuladores que malemal rodavam umas demos toscas
+[2023-08-19 16:39:11] L.: Hoje tem LLE de N64 e tal, mas não teria não fosse o uhle
+[2023-08-19 17:24:45] RicBit: HLE é bom, serve como documentação.
+[2023-08-19 17:36:47] Shideravan: É verdade, concordo com vocês
+[2023-08-19 17:36:56] Shideravan: Tem que começar de algum lugar também, né? hahahaha
+[2023-08-19 17:37:23] Shideravan: E me empolga porque vai ter mais gente estudando e documentando a plataforma, o que sempre é muito importante para preservação
+[2023-08-19 19:00:31] L.: Pois é, principalmente pra esse tipo de coisa que não tem nada sem NDA
+[2023-08-19 19:01:03] L.: Ter qualquer coisa já é um avanço incrível. Dá sempre pra abaixar o nível depois que entender como funcionam as coisas
+[2023-08-19 19:01:25] Shideravan: É verdade
+[2023-08-19 19:04:16] Shideravan: Nossa, pior que o chipset é de um período de transição da qualcomm
+[2023-08-19 19:09:59] Shideravan: Talvez se a gente fosse olhar por um lado legal, deve ser um rolo

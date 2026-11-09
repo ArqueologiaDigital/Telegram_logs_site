@@ -1,0 +1,218 @@
+[2021-01-21 01:00:21] L.: Putz, imagino que tenha sido alguém com pense bem original testando questão por questão
+[2021-01-21 01:01:00] L.: Bom, agora que dá pra extrair toda a sequência, rola tentar achar os parâmetros do lfsr?
+[2021-01-21 01:01:51] Felipe "Juca" Sanches: rola
+[2021-01-21 01:01:54] Felipe "Juca" Sanches: to tentando
+[2021-01-21 01:03:51] Felipe "Juca" Sanches: eu tinha 2 motivos pra não fazer disasm do firmware do PB2017: (1) receio de configurar infracao de direito autoral e (2) descobrir o algoritmo na unha é mais legal que copiar
+
+mas agora eu tropecei em evidencias de que o firmware de 2017 não usa nenhum "fórmula" espertinha, então realmente só nos resta inferir o algoritmo original na marra mesmo
+[2021-01-21 01:04:12] Felipe "Juca" Sanches: o legal disso é que mostra que a TecToy não tem acesso ao código fonte original
+[2021-01-21 01:04:16] Felipe "Juca" Sanches: (provavelmente não tem)
+[2021-01-21 01:04:43] Felipe "Juca" Sanches: por que a solućão hardcoded é a solucao burra
+[2021-01-21 01:05:23] Felipe "Juca" Sanches: é a solucão "estagiário, passe quantas horas for necessário pressionando teclas no brinquedo original e transcrevendo absolutamente todas as respostas"
+[2021-01-21 01:05:51] Felipe "Juca" Sanches: para os 100 livros dos quais só uns 15 realmente existem
+[2021-01-21 01:06:31] Felipe "Juca" Sanches: o acervo de livros do pense bem tem uns 70 ou 80 titulos. Mas um monte reusa o mesm ocódigo numérico pra identificar o livro
+[2021-01-21 01:06:50] Felipe "Juca" Sanches: eu nunca vi códigos numéricos pra cima de 20, por exemplo
+[2021-01-21 01:07:12] Felipe "Juca" Sanches: os maiores que me lembro agora de cabeća são 15... talvez 16
+[2021-01-21 01:07:56] L.: Sim, deve ter dado trampo anotar todas as respostas
+[2021-01-21 01:08:21] Felipe "Juca" Sanches: o livro da "Familia Dinossauro" usa código 18
+[2021-01-21 01:09:13] Felipe "Juca" Sanches: sei que existem livros do Smart Start que vão até 19, apesar das atividades programadas que a tectoy traduziu e publicou no brasil terem sido só até o número 13
+[2021-01-21 01:09:38] Felipe "Juca" Sanches: então é isso. O maior número de livro conhecido (por mim) é 19
+[2021-01-21 01:10:22] Felipe "Juca" Sanches: mas se eu fosse o engenheiro responsavel pelo projeto eu não aceitaria que o produto fosse lancado sem replicar perfeitamente os 100 gabaritos
+[2021-01-21 01:10:56] Felipe "Juca" Sanches: mesmo se eu soubesse que nunca foram lancados livros com o resto dos códigos numéricos
+[2021-01-21 01:12:01] Felipe "Juca" Sanches: nota: eu comprei já a maioria desses números que só tem em versão gringa. mês que vem deve chegar aqui em casa pra eu folhear (e escanear, claro!)
+[2021-01-21 01:13:07] Felipe "Juca" Sanches: na verdade comprei todos já que não tiveram publicacao no brasil. Dos gringos só não comprei os números 4 e 5 (mas o conteúdo deles é identico aos 4 e 5 brasileiros - supostamente)
+[2021-01-21 01:13:36] L.: Não sei quais tenho no Brasil
+[2021-01-21 01:14:12] Felipe "Juca" Sanches: tem 5 que quero comprar pra completar minha colećão. Dos quais 2 são um pouco mais importantes pois não estão no datassette ainda
+[2021-01-21 01:15:34] L.: Eu vou supor que esse rng aí trabalhe com estado de 8 bits, e avance o estado toda vez que pega as 4 questões do byte
+[2021-01-21 01:15:56] Felipe "Juca" Sanches: é... é uma sugestão razoável
+[2021-01-21 01:16:09] Felipe "Juca" Sanches: mas poderia facilmente ser 16 ou 32 (ou até 24 talvez...)
+[2021-01-21 01:16:23] L.: Idealmente eu olharia as instruções do z8 mas eu duvido que tenha barrel shifter
+[2021-01-21 01:16:24] Felipe "Juca" Sanches: mas concordo que 8 é mais provavel
+[2021-01-21 01:16:47] L.: Então dificilmente vai fazer muito shift
+[2021-01-21 01:17:20] L.: Vou brincar aqui
+[2021-01-21 01:20:54] Felipe "Juca" Sanches: sabe uma coisa que seria engracada?
+
+se os dados originais fossem mesmo hardcoded e descobrissemos que os bits formam um bitmap branco e preto com o logo da VTECH
+[2021-01-21 01:21:06] L.: LOL
+[2021-01-21 01:21:14] L.: com o tamanho da rom da vtech eu duvido
+[2021-01-21 01:21:22] L.: er. tamanho da rom do z8
+[2021-01-21 01:21:42] Felipe "Juca" Sanches: 2k ROM
+100 livros, 150 questoes, 2 bits por resposta = 375 bytes = 18% da ROM
+[2021-01-21 01:22:05] Felipe "Juca" Sanches: 18% é bastante. Mas sei lá. Impossivel não é
+[2021-01-21 01:22:20] L.: De fato
+[2021-01-21 01:29:32] L.: Plotei as respostas aqui e me parece ser bem distribuídas
+[2021-01-21 01:31:06] L.: Hm...  (14 * 8) % 256 = 112, que é o próxima tupla de 4 respostas. Mas não funciona com a próxima (229)
+[2021-01-21 01:31:29] Felipe "Juca" Sanches: manda um print aí
+[2021-01-21 01:32:13] L.: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/11965-Screenshot%20from%202021-01-20%2020-32-03.png
+[2021-01-21 01:34:01] Felipe "Juca" Sanches: se vc estiver usando dados do arquivo SAMPLES, tem atualizacoes hoje no meu repo aqui:
+
+github.com/felipesanches/Pense-Bem
+[2021-01-21 01:34:19] Felipe "Juca" Sanches: em sync com o seu, mais alguns commits meus de hoje
+[2021-01-21 01:35:02] Felipe "Juca" Sanches: não que eu realmente precisace avisar que o meu tá em sync com o seu, dado que nossos últimos commits foram uns 9 anos atrás hahaha
+[2021-01-21 01:35:34] Felipe "Juca" Sanches: PenseBem-SVG-javascript já vai logo logo ser considerado retrocomputing kkkk
+[2021-01-21 01:38:53] Felipe "Juca" Sanches: com base nessa lista de valores aqui, concluo que (se for LFSR) não pode ser de 8 bits. Pois uma vez que se chegue no estado 0x22, o estado seguinte deveria ser sempre o mesmo: 0x9c, como na primeira ocorrencia. Mas tem um outro 0x22 nessa sequencia precedendo um 0x9f
+[2021-01-21 01:51:05] L.: Nessa sequencia do 3o livro, bytes 13/14 e 26/27 são repetidos
+[2021-01-21 01:52:06] L.: Coincidência que esses pares tão separados de 13/14?
+[2021-01-21 01:56:14] Felipe "Juca" Sanches: pois é... se fosse um LFSR de 8 bits, eu esperaria que a sequencia virasse uma constante a partir da primeira ocorrencia de uma repeticao
+[2021-01-21 01:56:32] Felipe "Juca" Sanches: entraria num loop infinito com um estado apontando para ele mesmo
+[2021-01-21 02:40:10] L.: Fiz um LFSR de 16-bit aqui e fiz força bruta no espaço todo, testando todos os tap bits... achei 14 sequencias que dão match nos 2 primeiros bytes, mas nenhuma que dão nos 3 primeiros
+[2021-01-21 02:41:23] L.: Código aqui https://gist.github.com/lpereira/69038740f0f0b18483edefb9c6885a33
+[2021-01-21 02:53:55] L.: Então provavelmente não tem 16-bit. Vamos tentar 24.
+[2021-01-21 03:05:07] L.: Devia ter feito brute-force paralelo lol
+[2021-01-21 03:05:40] L.: Achei algumas sementes/tap candidatas (primeiros 3 numeros de 8-bit da sequencia dao match)
+[2021-01-21 03:12:57] L.: OK, terminou de procurar no espaço inteiro de 24-bit. Os candidatos (match nos 3 primeiros numeros da sequencia que voce colou ali) sao: candidate: tap= 0 seed= 8997015
+candidate: tap= 1 seed= 912604 
+candidate: tap= 2 seed= 3129081 
+candidate: tap= 3 seed= 12490731
+candidate: tap= 4 seed= 1966946
+candidate: tap= 5 seed= 9849126
+candidate: tap= 6 seed= 420868  
+candidate: tap= 7 seed= 10190485
+candidate: tap= 8 seed= 14743517
+candidate: tap= 9 seed= 13644665
+candidate: tap= 10 seed= 2822443
+candidate: tap= 11 seed= 937986
+candidate: tap= 12 seed= 704662
+candidate: tap= 13 seed= 852188
+candidate: tap= 14 seed= 754425 
+candidate: tap= 15 seed= 9804779
+candidate: tap= 16 seed= 5145058
+candidate: tap= 17 seed= 272742 
+candidate: tap= 18 seed= 3275876
+candidate: tap= 19 seed= 2280373
+candidate: tap= 20 seed= 4773005 
+candidate: tap= 21 seed= 11134305
+candidate: tap= 22 seed= 16396195
+[2021-01-21 03:18:30] Felipe "Juca" Sanches: o que significam "candidatos"?
+[2021-01-21 03:18:45] Felipe "Juca" Sanches: são os pontos de partida para testes brute-force?
+[2021-01-21 03:19:08] L.: Isso
+[2021-01-21 03:19:11] Felipe "Juca" Sanches: ou são os que já foram testados e deram bom resultado (para alguma métrica de bom resultado)?
+[2021-01-21 03:19:24] L.: Testei todos eles e nenhum deu match no 4o byte, só dão até o 3o byte
+[2021-01-21 03:19:34] Felipe "Juca" Sanches: ah, entendi
+[2021-01-21 03:19:50] Felipe "Juca" Sanches: então 24 bits tmb não é né?
+[2021-01-21 03:19:59] L.: Pode ser que seja outra coisa além de LFSR
+[2021-01-21 03:20:03] Felipe "Juca" Sanches: claro
+[2021-01-21 03:20:09] Felipe "Juca" Sanches: mas é que LFSR é tão obvio...
+[2021-01-21 03:20:14] Felipe "Juca" Sanches: por ser simples de implementar
+[2021-01-21 03:20:22] Felipe "Juca" Sanches: com CPU dos anos 80
+[2021-01-21 03:20:30] L.: Sim, mas pode ter outras coisas faceis, tipo aquela variante que usa carry ne
+[2021-01-21 03:20:40] L.: Também fácil de implementar nessas CPUs velhas
+[2021-01-21 03:21:06] Felipe "Juca" Sanches: vai pelo menos tentar varrer o espaco de 32 bits com seu setup aí de brute-force?
+[2021-01-21 03:21:13] L.: lol, nem fodendo
+[2021-01-21 03:21:17] Felipe "Juca" Sanches: kkkk
+[2021-01-21 03:21:56] L.: ate rola mas aí teria que partir pra fazer em algo melhor que python e particionar em multiplas threads
+[2021-01-21 03:21:58] Felipe "Juca" Sanches: cresce TÃO exponencialmente assim, é?
+[2021-01-21 03:22:06] L.: e a preguiça é grande
+[2021-01-21 03:22:40] L.: cada bit duplica o tempo né? eu botei uma heuristica que pára de testar um tap se acha uma semente que dá match
+[2021-01-21 03:22:52] L.: então na prática é menos que isso mas é bem próximo
+[2021-01-21 03:24:11] L.: tenho 8 cores aqui entao em teoria daria pra fazer em 1/3 do tempo +-, talvez melhor considerando algo feito com codigo nativo
+[2021-01-21 03:24:23] L.: mas aí só outro dia lol
+[2021-01-21 03:32:10] L.: Uma coisa a tentar: os 3 primeiros bytes dão match em todas essas sequencias. Essa sequencia aí é do 3o livro. Tentar depois com o 4o livro e ver se os 4 primeiros dão match.
+[2021-01-21 03:32:50] L.: (Pode ser que a cada NumeroDoLivro bytes, role um reseed?)
+[2021-01-21 03:33:08] L.: Dá pra testar essa hipótese também
+[2021-01-21 03:37:04] L.: Nope
+[2021-01-21 03:47:19] Felipe "Juca" Sanches: esse lfsr que vc tá fazendo brute force usa um único XOR. Existe a possibilidade de ser uma funcao booleana com mais inputs (multiplos taps)
+[2021-01-21 03:48:01] Felipe "Juca" Sanches: tipo isso aqui:
+[2021-01-21 03:48:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12011.jpg
+[2021-01-21 03:54:00] L.: Pode crer
+[2021-01-21 03:55:16] L.: Bom, eu vou dormir por que tô caindo de sono aqui
+[2021-01-21 03:55:25] L.: Mas se quiser pegar o código e testar com 2 XORs, etc...
+[2021-01-21 03:57:06] Felipe "Juca" Sanches: testei
+[2021-01-21 03:57:12] Felipe "Juca" Sanches: com 2 não deu nada também
+[2021-01-21 03:57:45] Felipe "Juca" Sanches: 2 XORs e 16 bits só deu um monte de match de 2 bytes, mas nunca um terceiro
+[2021-01-21 03:58:05] Felipe "Juca" Sanches: vou tentar com 3 só de farra
+[2021-01-21 04:18:51] Felipe "Juca" Sanches: nada feito... nem com 3 nem com 4
+[2021-01-21 04:18:58] Felipe "Juca" Sanches: (ou eu to fazendo bobagem)
+[2021-01-21 04:19:11] Felipe "Juca" Sanches: talvez não seja 16bits
+[2021-01-21 04:19:41] Felipe "Juca" Sanches: poderia inclusive ser uma quantidade de bits diferente de múltiplos de 8
+[2021-01-21 04:21:07] L.: Sim
+[2021-01-21 04:22:02] Felipe "Juca" Sanches: por exemplo... cada sessao tem 30 respostas, o que corresponde a 60 bits. Daria pra usar um LFSR de 5 bits numa sequencia de 12 estados. Ou 15 bits para uma sequencia de 4 estados (por sessao)
+[2021-01-21 04:22:08] Felipe "Juca" Sanches: tem muitas opcoes...
+[2021-01-21 04:22:55] L.: Faz sentido
+[2021-01-21 04:24:44] Felipe "Juca" Sanches: seria útil se algum matemático doido já tivesse escrito um paper sobre caracteristicas de sequencias geradas por LFSRs...
+[2021-01-21 04:26:58] Felipe "Juca" Sanches: algum RicBit da vida...
+[2021-01-21 04:28:42] Felipe "Juca" Sanches: "Se for lfsr é só medir a saída e interpolar o polinômio" —RicBit
+
+Interpola aí pra gente, então, por favor...
+
+[14, 112, 229, 191, 220, 71, 34, 156, 71, 34, 159, 238, 252, 129, 129, 53, 110, 252, 128, 211, 95, 164, 211, 94, 164, 211, 113, 113, 198, 190, 188, 45, 125, 114, 87, 31, 238]
+[2021-01-21 14:30:05] L.: Vou dizer que essa tabela de respostas do pense bem original pode nem ser tabela de respostas, pode ser código mesmo! Rola botar essa tabela em disassembler de Z8 pra ter ideia?
+[2021-01-21 14:30:45] L.: Pode ser código tipo "não rela nessa rotina nem que a vaca tussa", e outra rotina só lê oa bytes das instruções como se fosse a tabela de respostas
+[2021-01-21 14:32:10] L.: Aí é até mais fácil que LFSR😂
+[2021-01-21 14:33:20] Felipe "Juca" Sanches: essa tabela não é código. Tenho 100% de certeza
+[2021-01-21 14:33:35] Felipe "Juca" Sanches: vou te contar como encontrei ela
+[2021-01-21 14:35:18] Felipe "Juca" Sanches: eu peguei o código python da década passada que tentava decodificar as respostas e vi que ele tem algumas sequencias hardcoded. Peguei uma delas e converti para a representacao de 2 bits por resposta e, então anotei os valores hex resultantes. Abri o firmware do pensebem2017 num hexeditor e procurei por aquela sequencia de bytes
+[2021-01-21 14:35:27] Felipe "Juca" Sanches: achei algumas sequencias parecidas
+[2021-01-21 14:35:36] L.: Hahahah
+[2021-01-21 14:36:03] Felipe "Juca" Sanches: aí eu rasurei com FF FF FF e carreguei o firmware adulterado no MAME
+[2021-01-21 14:36:21] Felipe "Juca" Sanches: e as respostas do livro 3 passaram a ser D em todas as primeiras 12 perguntas
+[2021-01-21 14:36:54] L.: Tá, mas essa codificação aí é codigo Z8?
+[2021-01-21 14:37:26] Felipe "Juca" Sanches: aí eu continuei lendo os bytes do firmware que vinham depois desses 3 primeiros bytes e fui mentalmente lendo de 2 em 2 bits pra saber qual a resposta certa, e no emulador foi batendo perfeitamente
+[2021-01-21 14:37:32] L.: Sei que tava no firmware AVR, mas e se no original não tinha essa tabela, e era só lendo bytes duma rotina?
+[2021-01-21 14:37:46] Felipe "Juca" Sanches: e com isso tirei nota 100% no livro 3 (lendo o gabarito direto da ROM)
+[2021-01-21 14:38:33] Felipe "Juca" Sanches: essa codificacao não são opcodes de Z8. São números binarios de 2 bits representando cada uma das respostas do livro 3
+[2021-01-21 14:38:47] L.: Eu sei, Juca!
+[2021-01-21 14:39:16] L.: Isso eu entendi. Mas e se não for só uma tabela de respostas e for também uma rotina do firmware original do Z8?
+[2021-01-21 14:39:44] Felipe "Juca" Sanches: pode ser que o firmware original do Z8 usasse essa tabela de respostas hardcoded mesmo. Mas aí ia precisar de 375 bytes pra isso, o que corresponde a 18% dos 2kbytes de maskrom do Z8. Até rola, não é impossível. Mas suspeito que tenham feito algo mais esperto.
+[2021-01-21 14:40:06] Felipe "Juca" Sanches: caralho! Que incrível essa teoria!!!
+[2021-01-21 14:40:10] L.: Digo, se o código original não fosse um PRNG mas sim uma rotina que lesse bytes de outra rotina
+[2021-01-21 14:40:13] Felipe "Juca" Sanches: isso seria muito divertido!
+[2021-01-21 14:40:32] L.: Salva muito espaço na ROM😂
+[2021-01-21 14:40:43] Felipe "Juca" Sanches: seria uma forma super esperta deles fazerem economia de dados da ROM
+[2021-01-21 14:40:50] L.: Exato
+[2021-01-21 14:41:02] Felipe "Juca" Sanches: que legal
+[2021-01-21 14:41:04] Felipe "Juca" Sanches: bora tentar
+[2021-01-21 14:41:51] Felipe "Juca" Sanches: precisamos então encontrar qual o enderećo do primeiro byte desse bloco de dados
+[2021-01-21 14:42:09] Felipe "Juca" Sanches: sei que no enderećo 0x149 comeca o livro 3
+[2021-01-21 14:42:20] Felipe "Juca" Sanches: suposramente o 1 e o 2 vem logo antes dele
+[2021-01-21 14:42:30] Flávio Amieiro: Olha. Fiquei curioso agora tbm
+[2021-01-21 14:42:38] Flávio Amieiro: Isso faz bastante sentido!
+[2021-01-21 14:43:25] Felipe "Juca" Sanches: são 150 respostas por livro, ou seja 150 * 2 bits = 300 bits = 300/8 = 75 bytes a cada 2 livros
+[2021-01-21 14:44:15] L.: Pode inclusive ser a mesma tabela pra todos
+[2021-01-21 14:44:23] L.: Só começando de um ponto diferente
+[2021-01-21 14:44:32] L.: Fazendo wrap no índice
+[2021-01-21 14:44:33] Felipe "Juca" Sanches: 0x149 - 75 = 0x149 - 0x4b = 0xFE
+[2021-01-21 14:44:44] Erin Pinheiro 🐿: alguém fez uma análise da frequência de respostas por livro? quantas alternativas A, qtas B etc
+[2021-01-21 14:45:08] Felipe "Juca" Sanches: tipo isso, Erin?
+[2021-01-21 14:45:32] Felipe "Juca" Sanches: esse gráfico é só de um dos livros, entretanto
+[2021-01-21 14:45:48] Erin Pinheiro 🐿: isso me parece uma lista das respostas, não um gráfico de frequência delas
+[2021-01-21 14:45:50] Felipe "Juca" Sanches: verdade! Pode mesmo
+[2021-01-21 14:45:52] Erin Pinheiro 🐿: dá um count em cada letra
+[2021-01-21 14:45:59] Erin Pinheiro 🐿: pega de vários livros e cruza
+[2021-01-21 14:46:19] L.: É, extraindo a tabela dá pra fazer várias análises!
+[2021-01-21 14:46:22] Erin Pinheiro 🐿: vê se não cai na possibilidade de ser o mesmo "leque" de respostas só embaralhado pra cada livro
+[2021-01-21 14:46:27] Felipe "Juca" Sanches: ah sim... eu quis dizer que é uma representaṕcão que dá uma sensaćão geral de mais ou menos quão bem distribuidas as respostas estão
+[2021-01-21 14:47:18] Erin Pinheiro 🐿: eu acho que a esperança de um LFSR é esperar muito da tectoy, mas se bem que a VTech era um pouco mais esperta
+[2021-01-21 14:48:37] Felipe "Juca" Sanches: de todo modo, já seria um bom primeiro passo tentar fazer um disasm de Z8 nesse bloco de uns 37 bytes do gabarito do livro 3 e ver se sai alguma coisa que faća sentido
+[2021-01-21 14:49:58] Felipe "Juca" Sanches: e tentar com uma meia dúzia de offsets diferentes também, pra tentar acertar às cegas o primeiro byte correspondente a um opcode (ou seja, evitar a interpretacao erronea de operando de instrucao como se fosse opcode)
+[2021-01-21 14:59:47] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12082.jpg
+[2021-01-21 15:00:36] Felipe "Juca" Sanches: como ele tem esses IRQ vectors, vou botar um cabecalho de 12 bytes 0x00 pra gente maximizar a quantidade de bytes decodificados como código de z8
+[2021-01-21 15:00:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12084.jpg
+[2021-01-21 15:01:23] L.: BTW sem querer me mandaram hoje esse vídeo, explicando um outro RNG usado no Zelda do GameCube: https://www.youtube.com/watch?v=1hs451PfFzQ
+[2021-01-21 15:02:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12086.jpg
+[2021-01-21 15:03:14] Felipe "Juca" Sanches: offset 0
+[2021-01-21 15:04:07] Felipe "Juca" Sanches: offset 1 seria igual pois o byte 0E corresponde a uma instrucao de um único byte (INC R0)
+[2021-01-21 15:05:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12089.jpg
+[2021-01-21 15:05:40] Felipe "Juca" Sanches: offset 2
+[2021-01-21 15:06:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12090.jpg
+[2021-01-21 15:06:51] Felipe "Juca" Sanches: offset 3
+[2021-01-21 15:08:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12091.jpg
+[2021-01-21 15:08:40] Felipe "Juca" Sanches: offset 4
+[2021-01-21 15:09:29] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12092.jpg
+[2021-01-21 15:09:29] Felipe "Juca" Sanches: offset 5
+[2021-01-21 15:10:13] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12093.jpg
+[2021-01-21 15:10:13] Felipe "Juca" Sanches: offset 6
+[2021-01-21 15:10:37] Felipe "Juca" Sanches: é... acho que já basta. Na minha opinião não tem cara de código de Z8. Seria lindo se fosse. Mas acho que não é.
+[2021-01-21 15:11:03] Felipe "Juca" Sanches: fica aí a dica para o unidasm, o disassembler universal fornecido pelo MAME
+[2021-01-21 15:21:39] L.: é, de fato.
+[2021-01-21 15:21:57] L.: vou dizer que vou ficar bem desanimado se for uma tabela fixa e só embaralham o índice lol
+[2021-01-21 15:22:04] Felipe "Juca" Sanches: kkkk
+[2021-01-21 15:23:10] L.: na faculdade, nas aulas de introducao à programação, a professora forneceu um executável pra comparar um exercício. era um jogo da velha. e o computador jogava sozinho! achei demais aquilo e fiquei imaginando como ela fez.
+[2021-01-21 15:23:35] L.: aí desassemblei e vi que tinha meia dúzia de jogo pronto e descobria a jogada olhando uma tabela.
+[2021-01-21 15:23:54] L.: a professora ficou me olhando com uma cara de "ma como você sabe que caralhos é um disassembler?" lol
+[2021-01-21 15:24:41] Felipe "Juca" Sanches: quando eu era um pirralho eu implementei um jogo da velha em .BAT
+
+Com todas as possibilidades!!!! kkkkk
+[2021-01-21 15:25:08] L.: o que eu fiz em assembly pra aula de assembly era toscao. o computador jogava na primeira posicao vazia que encontrava.
+[2021-01-21 15:25:26] L.: o professor falou que ia dar ponto extra se o computador jogasse sozinho, e eu fui o unico que fez. nao disse que precisava jogar bem lol
+[2021-01-21 15:25:41] Felipe "Juca" Sanches: boa!

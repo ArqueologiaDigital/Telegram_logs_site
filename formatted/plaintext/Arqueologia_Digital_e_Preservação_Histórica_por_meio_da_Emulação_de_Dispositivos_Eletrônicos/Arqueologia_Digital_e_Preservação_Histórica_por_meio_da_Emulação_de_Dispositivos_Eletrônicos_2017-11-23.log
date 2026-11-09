@@ -1,0 +1,22 @@
+[2017-11-23 12:59:59] DQ: Alguém tem à mão uma foto do teclado do Lepus (eu devo ter na câmera, mas ela está em casa)
+[2017-11-23 13:17:03] Werner: Eu não tirei nenhuma foto lá no laSSu. Foram mais vc e o Fernando.
+[2017-11-23 13:17:44] Werner: As fotos q o Fernando nos enviou estão no site arqueologiadigital.org (no slideshow). Mas acho q não servem.
+[2017-11-23 13:31:47] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-11/1964.jpg
+[2017-11-23 13:35:38] Guilherme Kenzo: Confirmado a conversa de hoje?
+[2017-11-23 13:39:21] Werner: Acredito estar confirmado já. @fsanches eu tbm estarei lá.
+[2017-11-23 13:45:13] Guilherme Kenzo: Blz =)
+[2017-11-23 13:48:05] Felipe "Juca" Sanches: sim, confirmado!
+[2017-11-23 14:03:16] DQ: Obrigado, mas nesta fica difícil ver as legendas nas teclas. Hoje a noite vou ver se tenho alguma melhor.
+[2017-11-23 14:06:04] DQ: As teclas são lidas através dos endereços E002 a E00B. Cada endereço lê uma linha da matriz do teclado, que pode ter até 8 teclas (cada uma corresponde a um bit do valor lido). As teclas pressionadas vem com o bit 1.
+[2017-11-23 14:07:02] DQ: Devido à simplicidade do hardware e à falta de Ram, o software suporte apenas uma tecla pressionada por vez (fora shift e control).
+[2017-11-23 15:04:55] Werner: então o teclado do Lepus não é polifônico? (Desculpe, não podia deixar escapar essa 🤓)
+[2017-11-23 15:05:51] Werner: Como será q Shift e Ctrl funcionam? Seria como se talvez setassem um flag ou algo parecido?
+[2017-11-23 15:06:09] Werner: talvez um valor em um dos registradores para sinalizar?
+[2017-11-23 17:15:21] DQ: De forma simplificada, o shift e control selecionam a tabela que é usada para converte linha e coluna em caracter. As tabelas estão em 0x41D (normal), 0x46D (shift) e 0x4BD (control). Em 0x415 tem uma tabela para selecionar a tabela para as quatro combinações de estado de shift e control, no caso o control prevalece sobre o shift.
+[2017-11-23 17:16:28] DQ: Teclas marcadas com 0xEF na tabela não geram código. Isto corresponde a posições vazias da matriz de teclado, combinações ignoradas e às próprias teclas modificadoras.
+[2017-11-23 17:18:09] DQ: Uma curiosidade: no endereço 0xE000 temos uma porta de leitura e uma porta de saída. Lendo 0xE000 é lida uma dip swith (que contém o baud e outras opções). A escrita controla várias coisas.
+[2017-11-23 17:19:48] DQ: Os quatro bits menos significativos controlam a geração de baudrate (com a mesma codificação usada na dip switch, o que simplifica um pouco). O bit 4 controla o buzzer. Estou quase certo que o bit 5 é chaveado a cada tecla detectada e portanto seria um click de teclado.
+[2017-11-23 17:20:56] DQ: Ainda tem um tanto do código e algumas variáveis que eu ainda não decifrei.
+[2017-11-23 19:39:22] Guilherme Kenzo: Pessoal, talvez eu atrase uns 5-10m
+[2017-11-23 19:39:57] Werner: Eu idem
+[2017-11-23 19:45:14] Werner: Preso no congestionamento. R. Hungria

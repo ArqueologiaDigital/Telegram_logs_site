@@ -1,0 +1,6 @@
+[2020-08-10 12:12:28] Aylons Hazzud: @fsanches
+[2020-08-10 13:27:33] L.: Pode ser legal! Nessa quarta, dia 12, chat sobre recriar computadores clássicos: https://hackaday.com/2020/08/10/recreating-retrocomputers-hack-chat/
+[2020-08-10 18:53:16] L.: Mais ou menos off-topic: https://twitter.com/wilkieii/status/1292710627270701056
+
+Escreveram um emulador de 286 em JS e tão interceptando chamadas Win16 e meio que implementando um Wine em JS pro browser.
+[2020-08-10 20:30:49] L.: Aliás, não é bem isso, tá rodando o Windows mesmo, interceptando chamadas que o kernel faz pro driver e implementando o dispositivo em JS

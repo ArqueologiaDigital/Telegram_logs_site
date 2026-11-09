@@ -1,0 +1,9 @@
+[2021-08-30 02:24:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14396.jpg
+[2021-08-30 02:24:02] Felipe "Juca" Sanches: Faz uma semana que me enrosquei em uma tendencia a procrastinar. Mas agora, madrugada de domingo para segunda, finalmente engatei novamente no progresso neste projeto! E finalmente comecei a conseguir ter um comecinho de bons resultados no disasm de TLCS900 com o objdump.
+
+Do lado esquerto, objdump; e do lado direito, disasm no MAME.
+
+(E, como sempre, commits sendo publicados aqui: https://github.com/felipesanches/binutils-tlcs900/commits/tlcs900_port)
+[2021-08-30 02:27:10] Felipe "Juca" Sanches: Nao estou me preocupando em printar os nomes dos SFRs. Talvez mais pra frente eu ajuste isso, mas por enquanto o disasm do binutils (via objdump) vai ser so com os enderecos numericos mesmo.
+
+Quero fazer o minimo necessario no disassembler pra em seguida ja' seguir para o assembler, que e'  mais importante.

@@ -1,0 +1,107 @@
+[2024-09-19 00:46:21] Felipe "Juca" Sanches: Já ouvi falar, mas não conheço em detalhes
+[2024-09-19 15:23:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/33005.jpg
+[2024-09-19 15:23:24] Felipe "Juca" Sanches: Instalando HD-TechManager5000 no Wine
+[2024-09-19 15:24:37] Felipe "Juca" Sanches: com o simples objetivo de descompprimir os arquivos do instalador e, com isso, tentar ver se acho evidencias de como funciona o protocolo de comunicação via porta paralela (futricando os arquivos do programa, que é escrito em Visual Basic)
+[2024-09-19 15:26:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/33007.jpg
+[2024-09-19 15:26:29] Felipe "Juca" Sanches: ppkn50.dll parece ser nosso alvo aqui
+[2024-09-19 15:26:44] Felipe "Juca" Sanches: ppkn50 => parallel port kn5000
+[2024-09-19 15:26:53] Pablo Vasques Bravo-Villalba: Sempre é bom explicar
+[2024-09-19 15:29:51] Felipe "Juca" Sanches: executando um comando strings no ppkn50.dll pra ver se tem algo mais óbvio como ponto de partida...
+[2024-09-19 15:30:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/33012.jpg
+[2024-09-19 15:30:17] Felipe "Juca" Sanches: Olha aí alguns símbolos de funções interessantes...
+[2024-09-19 15:43:06] Felipe "Juca" Sanches: acabei de aprender um comando novo!
+
+winedump -j export ppkn50.dll
+[2024-09-19 15:43:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-09/33014.jpg
+[2024-09-19 15:44:20] Felipe "Juca" Sanches: isso me dá os endereços de cada uma dessas rotinas
+[2024-09-19 15:45:10] Felipe "Juca" Sanches: Tem uma chamada "PP50TestTheKNPP" 😉
+[2024-09-19 15:49:30] Pedro de Medeiros 👾: Amém para os programadores que desconhecem o comando strip (ou equivalente no windows).
+[2024-09-19 15:54:36] L.: dependendo da versão do vb (vê qual vbrunXXX.dll tem), é descompilavel razoavelmente fácil
+[2024-09-19 15:54:59] L.: 98 deve ser tipo vb4
+[2024-09-19 15:55:22] L.: Se não me engano já compilava pra x86 e não usava p-code
+[2024-09-19 15:55:32] L.: Aí qualquer descompilador ajuda
+[2024-09-19 15:55:58] L.: E como é DLL, tem pelo menos esses símbolos de entrada aí, o que facilita horrores :P
+[2024-09-19 15:59:30] Felipe "Juca" Sanches: 1000288c:       90                      nop
+1000288d:       90                      nop
+1000288e:       90                      nop
+1000288f:       90                      nop
+10002890:       8b 44 24 04             mov    0x4(%esp),%eax
+10002894:       56                      push   %esi
+10002895:       6a 01                   push   $0x1
+10002897:       50                      push   %eax
+10002898:       e8 73 ff ff ff          call   0x10002810
+1000289d:       8b f0                   mov    %eax,%esi
+1000289f:       83 c4 08                add    $0x8,%esp
+100028a2:       85 f6                   test   %esi,%esi
+100028a4:       75 7a                   jne    0x10002920
+100028a6:       66 8b 0d be 20 01 10    mov    0x100120be,%cx
+100028ad:       51                      push   %ecx
+100028ae:       e8 ad ed ff ff          call   0x10001660
+100028b3:       83 c4 04                add    $0x4,%esp
+100028b6:       85 c0                   test   %eax,%eax
+100028b8:       75 07                   jne    0x100028c1
+100028ba:       be fd ff ff ff          mov    $0xfffffffd,%esi
+100028bf:       eb 3c                   jmp    0x100028fd
+100028c1:       8b 74 24 0c             mov    0xc(%esp),%esi
+100028c5:       68 00 01 00 00          push   $0x100
+100028ca:       56                      push   %esi
+100028cb:       e8 e0 f8 ff ff          call   0x100021b0
+100028d0:       66 8b 15 be 20 01 10    mov    0x100120be,%dx
+100028d7:       83 c4 08                add    $0x8,%esp
+100028da:       56                      push   %esi
+100028db:       52                      push   %edx
+100028dc:       e8 ff ed ff ff          call   0x100016e0
+100028e1:       83 c4 08                add    $0x8,%esp
+100028e4:       85 c0                   test   %eax,%eax
+100028e6:       74 07                   je     0x100028ef
+100028e8:       be fc ff ff ff          mov    $0xfffffffc,%esi
+100028ed:       eb 0e                   jmp    0x100028fd
+100028ef:       8a 86 ff 00 00 00       mov    0xff(%esi),%al
+100028f5:       f6 d8                   neg    %al
+100028f7:       1b c0                   sbb    %eax,%eax
+100028f9:       24 fb                   and    $0xfb,%al
+100028fb:       8b f0                   mov    %eax,%esi
+100028fd:       66 8b 0d be 20 01 10    mov    0x100120be,%cx
+10002904:       51                      push   %ecx
+10002905:       e8 b6 e8 ff ff          call   0x100011c0
+1000290a:       83 c4 04                add    $0x4,%esp
+1000290d:       e8 de fe ff ff          call   0x100027f0
+10002912:       a0 bc 20 01 10          mov    0x100120bc,%al
+10002917:       3c 01                   cmp    $0x1,%al
+10002919:       b8 f6 ff ff ff          mov    $0xfffffff6,%eax
+1000291e:       74 02                   je     0x10002922
+10002920:       8b c6                   mov    %esi,%eax
+10002922:       5e                      pop    %esi
+10002923:       c2 08 00                ret    $0x8
+10002926:       90                      nop
+10002927:       90                      nop
+10002928:       90                      nop
+10002929:       90                      nop
+1000292a:       90                      nop
+1000292b:       90                      nop
+1000292c:       90                      nop
+1000292d:       90                      nop
+1000292e:       90                      nop
+1000292f:       90                      nop
+10002930:       8b 44 24 04             mov    0x4(%esp),%eax
+10002934:       56                      push   %esi
+10002935:       6a 02                   push   $0x2
+10002937:       50                      push   %eax
+[2024-09-19 16:00:08] Felipe "Juca" Sanches: objdump --disassemble-all ppkn50.dll|less
+
+Me dá o disasm de tudo, mas por algum motivo não usa os símbolos
+[2024-09-19 16:01:29] Felipe "Juca" Sanches: mas eu sei que isso aqui é a rotina PP50TestTheKNPP que fica no endereço 0x2890
+[2024-09-19 16:02:27] L.: Melhor bombar o ghidra
+[2024-09-19 16:02:42] L.: Aí já acha todas as refs, pega símbolo
+[2024-09-19 18:01:19] Felipe "Juca" Sanches: ok... vou ter que estudar isso aqui 😉
+
+https://web.archive.org/web/20170815071335/http://retired.beyondlogic.org/spp/parallel.htm
+[2024-09-19 22:24:40] Felipe "Juca" Sanches: É uma sensação muito curiosa essa de desvendar como essas coisas funcionam.
+
+Estou aqui refletindo que faz mais de 25 anos que alguém inventou um cabo de porta paralela fora do padrão. A placa é rara, mas eu tenho uma (e não conheço ninguém mais que tenha uma placa dessas, e não acho pra comprar outra dessas em lugar nenhum). O cabo eu não tenho, e nem acho pra comprar, e não sei dizer como é o cabo (não achei nenhuma documentação).
+
+Mas eu tenho o software das duas pontas: de um lado o firmware da placa e do outro o programa de Windows. Levantando o esquemático a partir da placa que tenho em mãos, sei qual é a cara do cabo do lado de cá, já mapeei todos os sinais da PPI nos pinos do conector DB-15 (macho no cabo). E inspecionando o disasm da DLL (e também o firmware da placa) estou aos pouquinhos entendendo qual é a cara da outra ponta do cabo.
+
+É incrível que a única coisa que eu não tenho é um amontoado de fios de um cabo peculiar, e que com o resto provavelmente vou conseguir documentar como esse cabo é. Sem nunca pegar ele nas mãos. É, DE FATO arqueologia digital!
+[2024-09-19 22:34:09] RicBit: só é arqueologia de verdade se um europeu roubar e levar para um museu
+[2024-09-19 23:12:15] Felipe "Juca" Sanches: 🤣

@@ -1,0 +1,7 @@
+[2022-09-20 00:46:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-09/23893.jpg
+[2022-09-20 18:05:42] * Deleted Account joined the group
+[2022-09-20 21:33:12] Dario Junior: Top
+[2022-09-20 21:33:34] Dario Junior: Fez as placas...nao eh mais arduino
+[2022-09-20 22:07:17] Felipe "Juca" Sanches: Agora usa um Raspberry Pi Pico, para ter mais performance e conseguir rodar o código original na velocidade correta, mesmo tendo um peso computacional extra da camada de emulação
+[2022-09-20 22:07:58] Felipe "Juca" Sanches: O Arduino não dava conta. Pelo menos não sem ter que apelar para otimizações no código que certamente o deixariam menos legível.
+[2022-09-20 22:36:43] L.: Atmega328 já tá virando coisa de arqueologia mesmo 😂

@@ -1,0 +1,21 @@
+[2025-02-05 03:43:42] L.: https://biosrhythm.com/?p=2956
+[2025-02-05 08:55:09] Pedro de Medeiros 👾: Alguém conhece alguma ferramenta de manipular arquivo IHX que permite fazer inserção de código em um arquivo já existente?
+[2025-02-05 09:00:02] Pedro de Medeiros 👾: Pegar um arquivo ROM e jogar dentro do IHX
+[2025-02-05 12:45:09] L.: Não sei se tem mas se tiver um hex2bin e um bin2hex rola fazer isso usando dd e shell script
+[2025-02-05 12:55:15] Pedro de Medeiros 👾: Eu pedi pro deepseek fazer pra mim. Vou testar hoje mais tarde.
+[2025-02-05 16:04:03] L.: https://nanochess.org/pascal.html
+[2025-02-05 16:29:07] Hugo (Agaelebê): Poderia chamar o projeto de 'Pinball Fantasies Forever' :)
+[2025-02-05 17:37:14] Felipe "Juca" Sanches: É apenas um projeto recorrente. De tempos em tempos eu o revisito.
+[2025-02-05 18:48:15] Felipe "Juca" Sanches: A realidade mais profunda é que é apenas mais um de inúmeros projetos recorrentes.
+
+Eu poderia talvez escrever um backend de geração de código da VM do Another World e compilar o Pinball Fantasies em Rust pra rodar na VM portada pro teclado musical KN5000 emulado no MAME 😉
+[2025-02-05 18:50:19] Felipe "Juca" Sanches: Ah! Me esqueci de botar o Patinho Feio nisso também...
+[2025-02-05 18:56:13] L.: Fazer compilador de Rust que gere código pro Patinho Feio pra rodar o Pinball Fantasies no emulador de PF escrito pra VM do Another World que tá rodando no KN5000 emulado pelo MAME
+[2025-02-05 18:57:19] Felipe "Juca" Sanches: É. Tipo isso! kkk
+[2025-02-05 18:58:06] Felipe "Juca" Sanches: " VM do Another World que tá rodando no KN5000 emulado pelo MAME" já é quase-quase-quase realidade
+[2025-02-05 23:26:25] Shideravan: Vocês sentiram melhorias de performance na última versão do mame?
+[2025-02-05 23:27:12] Shideravan: Significativas no caso
+[2025-02-05 23:32:32] Felipe "Juca" Sanches: Ironicamente, não sou um usuário frequente do MAME, exceto pelos meus próprios drivers
+[2025-02-05 23:37:17] Shideravan: Você é mais usuário das tretas do time do mame do que do software em si? Kkkkk
+[2025-02-05 23:39:06] Shideravan: Mas parece que houveram recentemente algumas mudanças estruturais, subretudo nesse último release, segundo consta no whatsnew. Eu ando um pouco por fora do que vem rolado no projeto ultimamente...
+[2025-02-05 23:43:59] Shideravan: Em que ponto isso é realidade? Como pode a VM do another world rodar em um teclado de alguma forma? Ele toca a trilha sonora?

@@ -1,0 +1,38 @@
+[2020-03-05 13:18:35] Ricardo Bánffy: Olha esse thread - e a fonte do chargen do PC portátil da Cordata https://twitter.com/Foone/status/1235335208771170305?s=20
+[2020-03-05 13:45:19] * Lenin joined the group
+[2020-03-05 13:50:41] Felipe "Juca" Sanches: apaixonei nos descenders dos glifos 3, 5 e 9!
+
+https://twitter.com/Foone/status/1235458461527207938/photo/1
+[2020-03-05 13:50:53] Felipe "Juca" Sanches: e o ascender do 6 também, é claro!
+[2020-03-05 13:52:26] Felipe "Juca" Sanches: o cara que ajudou a decodificar a ROM de gerador de caracteres é desenvolvedor do MAME, então acho que eu não preciso me mexer... já está em boas mãos
+[2020-03-05 13:52:56] Ricardo Bánffy: 😊
+[2020-03-05 13:52:58] Felipe "Juca" Sanches: (ou isso é mais um caso de bystander effect)
+[2020-03-05 13:53:12] Ricardo Bánffy: Eu procurei as ROMs desse pra ver se conseguia a fonte em bitmap.
+[2020-03-05 13:53:47] Felipe "Juca" Sanches: vc viu isso aqui?
+[2020-03-05 13:54:09] Felipe "Juca" Sanches: .
+[2020-03-05 13:55:43] Felipe "Juca" Sanches: https://twitter.com/Foone/status/1235379476353011718
+[2020-03-05 13:58:56] Felipe "Juca" Sanches: seria interessante um programa capaz de ler ROMs do MAME e gerar fontes OpenType automaticamente
+[2020-03-05 13:59:45] Felipe "Juca" Sanches: provavelmente precisaria de metadados pra auxiliar no processo de decodificaćão
+[2020-03-05 14:00:54] Ricardo Bánffy: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-03/10684.jpg
+[2020-03-05 14:00:54] Ricardo Bánffy: Na ROM que você apontou eu achei uma fonte CGA
+[2020-03-05 14:01:50] Felipe "Juca" Sanches: caraca
+[2020-03-05 14:01:54] Felipe "Juca" Sanches: é o mesmo computador
+[2020-03-05 14:02:02] Ricardo Bánffy: Essa fonte ainda não parece estar em nenhum lugar
+[2020-03-05 14:02:28] Ricardo Bánffy: Ele foi vendido em duas revisões. A primeira tinha essa fonte incrível. A segunda tinha uma MDA.
+[2020-03-05 14:02:33] Felipe "Juca" Sanches: agora que percebi que a ROM que vc procurava algum tempo atrás é do mesmo computador dessa thread no twitter
+[2020-03-05 14:02:36] Ricardo Bánffy: Devem ter feito um com CGA
+[2020-03-05 14:02:46] Ricardo Bánffy: Eu ando caçando essa fonte faz tempo
+[2020-03-05 14:03:04] Felipe "Juca" Sanches: mas o cara botou no internet archive o dump que ele fez nessa thread
+[2020-03-05 14:03:10] Felipe "Juca" Sanches: https://archive.org/download/coronadatasystemsppc400firmwares/
+[2020-03-05 14:03:19] Ricardo Bánffy: Eu vi. Preciso baixar
+[2020-03-05 14:12:02] Ricardo Bánffy: Que magia negra o pessoal fez pra colocar essa fonte nas ROMs eu não sei.
+[2020-03-05 14:13:25] Felipe "Juca" Sanches: https://twitter.com/Lord_Nightmare/status/1235456070757347328
+[2020-03-05 15:41:07] Ricardo Bánffy: A HP fazia isso naqueles terminais widescreen deles. Isso, inverter a ordem dos bits e deixar um bit pra shiftar tudo meio pixel pro lado.
+[2020-03-05 16:25:32] Felipe "Juca" Sanches: eu não vi esse "meio-pixel" na descrićão do Lord Nighmare...
+[2020-03-05 16:25:55] Ricardo Bánffy: Meio pixel é coisa da HP e da DEC
+[2020-03-05 16:27:03] Felipe "Juca" Sanches: se eu entendi bem a descricao do Lord Nightmare, essa fonte tem o dobro da resolucao no eixo y e os dados estao entrelacados entre as duas ROMs
+[2020-03-05 16:27:25] Ricardo Bánffy: Sim.
+[2020-03-05 16:27:30] Felipe "Juca" Sanches: provavelmente por que as duas ROMs juntas são vistas como se fossem uma única ROM de 16 bits
+[2020-03-05 16:27:34] Felipe "Juca" Sanches: 1 bpp
+[2020-03-05 16:27:37] Ricardo Bánffy: Eles não usam o truque do meio pixel.
+[2020-03-05 16:28:25] Ricardo Bánffy: Não precisaria - os pixels são mandados byte a byte. Esse método intercala linhas, não colunas

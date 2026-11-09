@@ -1,0 +1,58 @@
+[2022-10-21 10:42:52] Pedro de Medeiros 👾: Following the paper Entombed: An archaeological examination of an Atari 2600 game I implemented a version of the maze generator from Atari 2600's Entombed on the MSX1. Music is not looping here, but that is already fixed in my code. https://youtu.be/8fKviund8Jg
+[2022-10-21 14:01:40] RicBit: Hum pensei num jeito de fazer um negócio parecido com dlss para 2d
+[2022-10-21 17:04:56] Anne Isabelle: Faz tempo que a gente não mexe no minesweeper
+[2022-10-21 17:05:06] Anne Isabelle: Deu uma certa preguiça de mexer com o PlayStation hahah
+[2022-10-21 17:28:08] Shideravan: Como?
+[2022-10-21 18:45:41] RicBit: usando uma variação de optical flow
+[2022-10-21 18:45:48] RicBit: acho que vou implementar para ver como fica
+[2022-10-21 19:05:41] Felipe "Juca" Sanches: pensei nisso 2 dias atrás!
+[2022-10-21 19:05:57] Anne Isabelle: É complicado, eu demorei umas duas semanas pra fazer o grid no PlayStation hahah
+[2022-10-21 19:06:09] Felipe "Juca" Sanches: bora retomar
+[2022-10-21 19:06:15] Anne Isabelle: Agora tô trabalhando em outro lugar e tá sendo dificil de achar tempo
+[2022-10-21 19:06:16] Felipe "Juca" Sanches: eu posso tentar ajudar
+[2022-10-21 19:06:29] Anne Isabelle: Pode ser! A gente pode marcar um domingo
+[2022-10-21 19:06:34] Felipe "Juca" Sanches: se você me explicar o que já rolou e onde enroscou, talvez eu consiga ajudar
+[2022-10-21 19:07:00] Felipe "Juca" Sanches: eu não tenho um psx aqui
+[2022-10-21 19:07:09] Felipe "Juca" Sanches: aliás... não tenho nada aqui nesse exato momento
+[2022-10-21 19:07:20] Anne Isabelle: Ah, eu tenho, e tem o makefile pra subir o emu
+[2022-10-21 19:07:28] Felipe "Juca" Sanches: minto! Tenho um cartucho de MEGANET
+[2022-10-21 19:07:35] Anne Isabelle: KAJSKAJAJA
+[2022-10-21 19:07:38] Felipe "Juca" Sanches: mas não tenho um console de genesis
+[2022-10-21 19:08:18] Felipe "Juca" Sanches: e tenho um nintendo switch só pra jogar (sem chance de fazer root no meu único console)
+[2022-10-21 19:08:34] Anne Isabelle: Agora eu tenho tb dois iBooks tb (thx @mynameiserin)
+[2022-10-21 19:08:46] Anne Isabelle: Pensando em instalar o OS 9
+[2022-10-21 19:08:57] Felipe "Juca" Sanches: pensei em comprar um vectrex aqui. Mas.... muito caro
+[2022-10-21 19:09:21] Felipe "Juca" Sanches: até monitor de tubo velho é caro aqui
+[2022-10-21 19:09:30] Anne Isabelle: Siiim
+[2022-10-21 19:10:11] Felipe "Juca" Sanches: 1 monitor crt vga = 40 libras = 240 reais
+[2022-10-21 19:10:19] Anne Isabelle: Caro demais
+[2022-10-21 19:10:40] Anne Isabelle: Verdade! Tu já se mudou pra Londres?
+[2022-10-21 19:45:17] L.: CRT aqui vale ouro também
+[2022-10-21 19:45:37] L.: Aqueles PVM da Sony é $$$$
+[2022-10-21 20:07:46] Anne Isabelle: Quando me mudei pra uma casa mto mto pequena, minha família aposentou as crts
+[2022-10-21 20:08:12] Anne Isabelle: A gente tinha um tv da sharp que meus pais financiaram no banco safra e pagaram até a sharp falir kkkkk
+[2022-10-21 20:31:25] L.: https://youtu.be/EBCYvoC4muc
+[2022-10-21 20:35:14] Anne Isabelle: Que fodaaaa
+[2022-10-21 21:37:15] Shideravan: Eu fiz. Hu3
+[2022-10-21 22:15:59] Anne Isabelle: Nao rootei o meu switch até agora, prefiro pagar 300 reais num jogo 🫠 (por isso que eu só tenho 5 jogos)
+[2022-10-21 23:26:43] Shideravan: Eu rooteei principalmente para rodar outras coisas nele
+[2022-10-21 23:26:48] Shideravan: Como PSP mesmo
+[2022-10-21 23:26:52] Shideravan: Sega Saturn
+[2022-10-21 23:26:58] Shideravan: Consoles antigos
+[2022-10-21 23:27:10] Shideravan: Switch é uma das melhores plataformas para emulação
+[2022-10-21 23:29:12] Shideravan: Mas claro que eu acabo rodando backups de jogos para testar, para um dia quando tivermos um governo de verdade e dólar contido, eu poder adquirir jogos fantásticos para a plataforma
+[2022-10-21 23:29:24] Shideravan: Muitos jogos eu acabo rodando no Yuzu
+[2022-10-21 23:30:18] Shideravan: Por exemplo, Pokémon Legends Arceus tem um framerate sofrível no console, mas no PC dá para rodar a 60 FPS, aumentar a draw distance, etc
+[2022-10-21 23:31:04] Shideravan: Também tem algumas coisas bem interessantes que dá para fazer no console rooteado, como colocar traduções, cheats, fazer overclock, portar jogos de PC para ele, etc
+[2022-10-21 23:32:40] Shideravan: Outra coisa é com relação a saves
+[2022-10-21 23:32:51] Shideravan: Tem jogo que eu jogo no PC e no Switch com o mesmo save
+[2022-10-21 23:33:12] Shideravan: Por exemplo, Stardew Valley é um jogo que eu faço muito isso
+[2022-10-21 23:34:03] Shideravan: Existe uma aplicação chamada Checkpoint, que você consegue descriptografar os saves e dá para tirar do console e jogar no PC e vice-versa, com bastante facilidade
+[2022-10-21 23:34:39] Shideravan: Aí eu consigo jogar na cama, antes de dormir, um jogo que eu jogo no PC, por exemplo
+[2022-10-21 23:34:43] Shideravan: São muitas vantagens
+[2022-10-21 23:35:30] Shideravan: Eu valorizo muito essa liberdade
+[2022-10-21 23:38:20] Shideravan: 5 jogos não é pouco não. Conheço gente que tem menos que isso.
+[2022-10-21 23:39:42] Shideravan: Eu tenho um amigo que comprou Switch unicamente para jogar Zelda BotW. E super valeu a pena para ele, porque ele ama o jogo
+[2022-10-21 23:57:39] Erin Pinheiro 🐿: quando eu me mudar do brasil vou ter que vender o meu... 👀
+[2022-10-21 23:57:57] Erin Pinheiro 🐿: ainda sem planos concretos mas quase certeza que vai pra alguém aqui haha
+[2022-10-21 23:59:05] Erin Pinheiro 🐿: é um 14L2U, um dos últimos da linha de tubo, e era equipamento médico não de TV, então tem pouquíssimas horas... dei muita sorte achando na sta ifigênia (na verdade um amigo meu achou e me chamou...)

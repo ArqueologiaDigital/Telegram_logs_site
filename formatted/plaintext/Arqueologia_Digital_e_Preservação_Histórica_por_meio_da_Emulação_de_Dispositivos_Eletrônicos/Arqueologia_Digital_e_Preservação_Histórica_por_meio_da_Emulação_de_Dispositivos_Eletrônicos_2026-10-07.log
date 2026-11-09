@@ -1,0 +1,77 @@
+[2026-10-07 08:46:11] L.: https://github.com/pedrocatalao/pinball-fantasies-encore
+[2026-10-07 09:32:23] Guilherme Ranoya: https://www.youtube.com/watch?v=9ZODLRPkNJs
+[2026-10-07 14:24:13] Felipe "Juca" Sanches: já fizeram em Rust também uns 3 anos atrás... https://github.com/wanda-phi/pfr
+[2026-10-07 14:24:33] L.: https://m.youtube.com/watch?v=9ranfp_vz30&pp=0gcJCY8Co7VqN5tD
+[2026-10-07 14:24:59] L.: Esse novo aí tem gráficos feitos do zero!
+[2026-10-07 19:18:26] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41169.jpg
+[2026-10-07 19:18:26] Felipe "Juca" Sanches: a-ha!
+[2026-10-07 19:22:47] Felipe "Juca" Sanches: Um programa que eu escrevi uns 23 anos atrás... https://github.com/felipesanches/pfantedit
+
+Talvez fosse o caso de ressucitar e modernizar usando IAs...
+[2026-10-07 19:24:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41171.jpg
+[2026-10-07 19:24:42] Felipe "Juca" Sanches: Sim, ficou muito legal mesmo!
+[2026-10-07 19:25:18] Felipe "Juca" Sanches: Modernizou sem ficar forçado. Sem destoar da estética original
+[2026-10-07 19:37:51] Felipe "Juca" Sanches: Essas coisas todas (recomps via IA) vão ou causar um turbilhão de processos por infração de direitos autorais, ou completamente destruir a legislação de copyright
+[2026-10-07 19:40:33] Shideravan: Não sei o que vão fazer, mas acho que vai ser difícil conseguirem derrubar tudo
+[2026-10-07 19:41:14] Shideravan: O que começa a dar dor de cabeça e ligar o sinal de alerta em grandes empresas de jogos está sendo recompilarem jogos novos, de PS5 por exemplo
+[2026-10-07 19:41:39] Shideravan: Queria que a galera pisasse um pouco no freio para esses jogos que ainda são vendidos para não zoar o rolê
+[2026-10-07 19:41:54] Shideravan: https://soulsgamer.com.br/noticias/marvel-s-wolverine-roda-a-60-fps-em-4k-numa-rtx-5060-sem-emulador-mas-ha-um-detalhe-importante
+[2026-10-07 19:42:05] Shideravan: Esse jogo nem bom é...
+[2026-10-07 19:45:57] Felipe "Juca" Sanches: Eu fico assustado vendo esses recomps de jogos super modernos. Me faz acreditar que estou fazendo algo muito errado nos meus esforços de disasm dos teclados e synths da Technics. Pois tenho usado tudo o que me sobra de tokens semanalmente no plano máximo do Claude, e mesmo assim ainda parece que está longe de eu chegar num código completo
+[2026-10-07 19:46:40] Felipe "Juca" Sanches: será que esses recomps de jogos modernos são feitos por times de dezenas de usuários de harnesses de AI juntando os tokens de todas as contas num único esforço?
+[2026-10-07 19:49:06] Shideravan: Nesse do Wolverine, pelo que entendi é uma pessoa só, esse usuário do Reddit Clean-Market5761
+[2026-10-07 19:49:14] Shideravan: https://www.reddit.com/r/Wolverine/comments/1wxkjnr/wolverine_pc_port_update_start_screens_work_now/
+[2026-10-07 19:49:34] Shideravan: Realmente estou assustado com o que muito dev tem conseguido fazer
+[2026-10-07 19:51:05] Shideravan: Temos que aprender o workflow dessa galera
+[2026-10-07 20:26:05] RicBit: baleias existem né
+[2026-10-07 20:34:04] RicBit: RC, compat x no intro dmg:
+https://gist.github.com/ricbit/675c595ad996875a672922449e3506cd
+[2026-10-07 20:34:38] RicBit: RC, compat x no intro gbc:
+https://gist.github.com/ricbit/82bfadf4bbfac559ad67435d814a5a72
+[2026-10-07 20:34:58] RicBit: tá bom eu acho, o resto eu não ligo muito
+[2026-10-07 20:35:00] Shideravan: Aeeee é disso que eu to falando
+[2026-10-07 20:35:32] RicBit: tipo tem uma rom de dmg que é pra calibrar o motor de uma scooter, mas eu não tenho como colocar emulador de scooter em 4kb.
+[2026-10-07 20:36:20] Shideravan: Isso é "extra hardware". Foge do escopo do projeto
+[2026-10-07 20:38:28] Shideravan: Nem sei se alguém já deu suporte a ela em algum lugar. Chegou a ver em funconamento? É isso daqui
+
+https://www.youtube.com/watch?v=cYt-Az_1tRU
+[2026-10-07 20:39:17] RicBit: e a rom tá marcada como [b] anyway
+[2026-10-07 20:39:28] Felipe "Juca" Sanches: MERGED!
+
+https://github.com/mamedev/mame/pull/16250
+[2026-10-07 20:39:48] Shideravan: Sim, nem sei se existe dump adequado dela
+[2026-10-07 20:41:28] Shideravan: Tem vários desses casos de "não jogo" de GB que são umas paradas bem estranhas
+[2026-10-07 20:41:46] Shideravan: Nos anos 90, o DMG já foi um dos dispositivos com LCD mais baratos existentes e amplamente difundido. Tem até equipamento de radar de pesca que usava a tela do Game Boy como display
+[2026-10-07 20:42:13] Shideravan: Várias empresas aproveitavam o Game Boy como interface para mostrar coisas para aproveitar o marketshare
+[2026-10-07 20:42:58] Shideravan: Tinha até uma máquina de costura eletrônica que usava o game boy como display
+[2026-10-07 20:53:18] Shideravan: Sem hardware extra, só esse Rockman 8 bootleg de Taiwan que o minigb não dá suporte?
+[2026-10-07 20:53:57] Shideravan: Nem o mGBA dá suporte a ele, o único emulador que eu conheço que dá suporte ao mapper dele é um meio obscuro chamado hhugboy
+[2026-10-07 20:53:59] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41203.jpg
+[2026-10-07 20:55:00] Shideravan: https://github.com/tzlion/hhugboy
+[2026-10-07 21:02:36] Shideravan: Talvez o MAME dê suporte a ele também, mas não me recordo agora
+[2026-10-07 21:08:53] Felipe "Juca" Sanches: viu isso aqui, @Shideravan ?
+[2026-10-07 21:09:47] Felipe "Juca" Sanches: daqui a pouco aparece o Cuavas perguntando "why was this merged?!"
+[2026-10-07 21:31:03] Shideravan: Aeeee
+[2026-10-07 21:31:29] Shideravan: 300 PRs paradas
+[2026-10-07 21:43:32] RicBit: achei que essa rom era bad, vou olhar
+[2026-10-07 21:45:46] RicBit: eu acho que esse jogos marcados como Taiwan são encriptados, se for isso então não cabe, estou com 2 bytes sobrando só.
+[2026-10-07 21:46:58] Shideravan: Não é não
+[2026-10-07 21:47:10] Shideravan: Só o mapper que é bizarro mesmo
+[2026-10-07 21:47:14] RicBit: tem os zelda beta também, eles estão com o mapper errado no header. o original rodava em devcart então pra eles tanto faz o header.
+[2026-10-07 22:06:22] Felipe "Juca" Sanches: Ultimate targets pra emular no MAME:
+
+https://www.youtube.com/watch?v=drrUvxtT6lU
+[2026-10-07 22:54:44] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41216.jpg
+[2026-10-07 22:54:44] RicBit: isso é uma bunda ?
+[2026-10-07 22:55:12] RicBit: eu consigo fazer rodar o rockman8 mas preciso de 60 bytes pra isso
+[2026-10-07 23:06:57] L.: btw tem um truque sujo que o 8086tiny usa pra ser pequeno: tabelas usadas pra decodificar instruções do 8086 estão dentro da bios que o cara fez pro emulador
+[2026-10-07 23:08:22] L.: aí o emulador conseguiu ser bem pequeno também
+[2026-10-07 23:08:38] L.: no caso do minigb não ajuda muito mas
+[2026-10-07 23:31:40] Felipe "Juca" Sanches: talvez sequencias de bytes que sabemos que existem na BIOS proprietária possam servir de semente para o descompressor
+[2026-10-07 23:37:13] RicBit: eu tentei usar a bios.rom para aquecer o compressor, mas não funcionou
+[2026-10-07 23:37:46] RicBit: como eu quero usar a bios original não tem muito que eu possa aproveitar lá
+[2026-10-07 23:38:33] RicBit: abaixei pra 51
+[2026-10-07 23:38:57] RicBit: puts talvez dê mas vai dar um trabalho do cão
+[2026-10-07 23:39:38] RicBit: 50 é muita coisa nesse estágio. 8 foi sofrido
+[2026-10-07 23:40:14] RicBit: teria que achar mais um grau de liberdade na namagiri e eu não sei mais de onde tirar haha
+[2026-10-07 23:42:50] RicBit: os genes atuais -> https://gist.github.com/ricbit/fa69d3b2a5f1d7d2aebd4130383756e2

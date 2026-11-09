@@ -1,0 +1,22 @@
+[2022-10-11 12:33:32] L.: https://www.youtube.com/watch?v=6m7vDhscGzU
+[2022-10-11 12:35:17] L.: O sintetizador não é polifônico, mas se o software quiser fazer polifonia, dá pra fazer gambiarra e tocar a nota com a frequência mais próxima da média das outras duas notas, não?
+[2022-10-11 12:35:39] L.: Não vai ser polifonia e vai soar estranho, mas... :P
+[2022-10-11 12:55:13] RicBit: Não funciona, nem vai ser reconhecível. O que funciona é tocar as duas em sequência com metade do período, ou alternar se quiser mais resolução.
+[2022-10-11 12:56:42] RicBit: Nesse caso a envoltória vai pro saco, tem que modular na mão.
+[2022-10-11 13:42:49] Pablo Vasques Bravo-Villalba: Infelizmente não funciona assim, a média entre duas notas seria uma nota intermediária às duas. E como a relação entre a frequência das notas é logarítmica, mais provavelmente você simplesmente obteria uma tonalidade dissonante
+[2022-10-11 13:45:57] Pedro de Medeiros 👾: Não é pra isso que serve a técnica dos arpeggio bem rápidos nos computadores antigos onde faltam os canais de som?
+[2022-10-11 13:47:31] Pedro de Medeiros 👾: Tão popularizado pelo C64 com o SID.
+[2022-10-11 13:47:36] Pablo Vasques Bravo-Villalba: Sim, você alterna as notas rapidamente, geralmente na frequência do vídeo. Dá um pouco a ilusão de um acorde sendo tocado em um único canal de som
+[2022-10-11 13:48:02] Pablo Vasques Bravo-Villalba: E também comum nas plataformas que usam o AY
+[2022-10-11 18:27:54] RicBit: Eu acho que não é ilusão, é o próprio acorde somado com ruído. Preciso fazer a conta para conferir.
+[2022-10-11 18:28:06] RicBit: Eu implementei isso em pascal em 1993 eu acho.
+[2022-10-11 18:29:02] RicBit: O source sumiu, mas eu tenho um .com binário de dos ainda para testar haha.
+[2022-10-11 18:31:52] Pablo Vasques Bravo-Villalba: Isso para mim não faz muito sentido, já que as notas discretas continuam existindo. A forma de onda final é diferente da de um acorde real. 🤔
+[2022-10-11 18:32:20] RicBit: Deixa eu fazer a conta aqui peraí
+[2022-10-11 18:32:39] RicBit: Vai dar tipo uma modulação am no final
+[2022-10-11 18:44:52] Pablo Vasques Bravo-Villalba: Pelo que percebi aqui é impossível evitar introduzir ruído na frequência da alternância de notas. Fiz a experiência de aumentar a frequência da alternância e o ruído ficou bem mais perceptível. A 440Hz deu um efeito tipo phasing bonito, já que o PSG não consegue produzir essa frequência exata
+[2022-10-11 18:45:34] RicBit: Sim, o sinc espalha a potencia em volta do dirac, ai vira tudo ruido.
+[2022-10-11 19:00:22] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-10/24047.jpg
+[2022-10-11 19:00:22] RicBit: Saca só, alternar as frequências espalha o sinal. É o mesmo acorde, mas com ruído em volta.
+[2022-10-11 19:03:46] RicBit: Sem alternar as notas seriam só os dois picos, e bem mais estreitos.
+[2022-10-11 19:06:39] RicBit: Isso que você tinha sugerido seria um único pico no meio dos dois, aí não é o original com ruído, é outra coisa diferente mesmo.

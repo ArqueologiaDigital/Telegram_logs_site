@@ -1,0 +1,81 @@
+[2023-03-15 06:14:54] Shideravan: Ahhh sim, nesse caso deixa quieto hahaha
+[2023-03-15 06:16:21] Shideravan: Mas eu estava vendo e estava achando interessante que esses simuladores de pinball mais novos, todos estão incluindo um "modo cabinet" que permitem isso aí, você ligar DMD, etc
+[2023-03-15 06:16:47] Shideravan: Eu não achava que existia um público tão forte para isso
+[2023-03-15 06:17:47] Shideravan: Eu nem sabia que esses DMD eram padronizados
+[2023-03-15 11:50:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26465.jpg
+[2023-03-15 11:50:26] Felipe "Juca" Sanches: Removi a placa danificada da metade da direita do meu teclado KN5000
+[2023-03-15 11:50:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26467.jpg
+[2023-03-15 11:51:30] Felipe "Juca" Sanches: Essas são as duas placas: em cima a danificada, e embaixo a nova que comprei no ebay e chegou hoje
+[2023-03-15 11:52:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26469.jpg
+[2023-03-15 11:52:37] Felipe "Juca" Sanches: aqui dá pra ver mais em detalhes a placa danificada
+[2023-03-15 11:53:37] Felipe "Juca" Sanches: achei curioso que o código nos chips é diferente
+[2023-03-15 11:55:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26472.jpg
+[2023-03-15 11:55:33] Felipe "Juca" Sanches: aqui, os botões do painel e os parafusos de afixação da placa
+[2023-03-15 11:56:04] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26474.jpg
+[2023-03-15 11:56:18] Felipe "Juca" Sanches: e aqui o teclado aberto logo antes de eu instalar a placa nova
+[2023-03-15 11:56:35] Felipe "Juca" Sanches: Agora tá com a placa nova e funcionando perfeitamente!
+[2023-03-15 11:57:10] Felipe "Juca" Sanches: achei que agora seria a hora de partir para os dumps de firmware. Entretanto...
+[2023-03-15 11:57:21] Felipe "Juca" Sanches: Vi num email antigo as instruções de como determinar qual é a versão do firmware instalado:
+[2023-03-15 11:57:27] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26479.jpg
+[2023-03-15 11:57:40] Felipe "Juca" Sanches: Fiz o procedimento aqui e essa é a tela:
+[2023-03-15 11:57:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26481.jpg
+[2023-03-15 11:58:13] Felipe "Juca" Sanches: eu já tenho os dumps das versões de 5 a 10
+[2023-03-15 11:59:20] Felipe "Juca" Sanches: segundo as instruções do email antigo esses são os números do campo "main program" que correspondem às versoes conhecidas do firmware:
+- versão 5: 1312
+- versão 6: 1330
+- versão 7: 1344
+[2023-03-15 12:00:21] Felipe "Juca" Sanches: esses números aparentemente são crescentes, e no meu aparelho aqui tá aparecendo um valor 1284, então eu devo ter aqui instalado nessa unidade uma versão mais antiga do firmware que ainda não tenho dump
+[2023-03-15 12:00:39] Felipe "Juca" Sanches: e isso me proibe de instalar um novo firmware por cima antes de conseguir fazer o dump
+[2023-03-15 12:01:18] Felipe "Juca" Sanches: o que é um desafio, pois não sei ainda como fazer dump sem modificar a rom principal no meio do processo
+[2023-03-15 12:04:40] Felipe "Juca" Sanches: É interessante também ver que o "sub program" tem número de versão.
+Isso fortalece minha teoria de que existe mecanismo de update do firmware da subcpu (apesar dela só tem uma mask rom e um bocadinho de RAM).
+
+Então acho que a CPU principal sempre faz o upload de firmware da sub-CPU a todo boot, pra armazenar o firmware na RAM da sub-CPU
+[2023-03-15 12:06:27] Felipe "Juca" Sanches: Acho que vou instalar agora a placa de HD pra ver como se comporta
+[2023-03-15 12:07:09] Felipe "Juca" Sanches: Tenho esperança dela ser minha saída para fazer dump da ROM principal
+[2023-03-15 12:10:28] Felipe "Juca" Sanches: opa! peraí! Tem um outro procedimento pra checar a versão do firmware!
+[2023-03-15 12:10:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26491.jpg
+[2023-03-15 12:10:42] Felipe "Juca" Sanches: vou tentar aqui e já conto
+[2023-03-15 12:15:55] Felipe "Juca" Sanches: É a versão 4 que tenho instalada nessa unidade aqui!
+[2023-03-15 12:16:26] Felipe "Juca" Sanches: Então agora sabemos que "Main Program: 1284" corresponde à versão 4
+[2023-03-15 12:18:14] Felipe "Juca" Sanches: acho que essa numeração aí (1284, 1322, 1330, 1344) deve ser o versionamento interno de desenvolvimento. Talvez o número de builds no controle de versão (se é que usavam controle de versão naquela época) ou algo parecido
+[2023-03-15 12:37:00] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26496.jpg
+[2023-03-15 12:37:40] Felipe "Juca" Sanches: Essa é a placa principal, e do lado dela o compartimento onde pode ser instalada uma placa de extensão (no caso, irei instalar a placa de disco rígido)
+[2023-03-15 12:38:12] Felipe "Juca" Sanches: a etiqueta que se vê nessa foto indica também versão 4 para o firmware da CPU principal. Ou seja, essa unidade veio de fábrica com a versão 4.
+[2023-03-15 12:39:16] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26499.jpg
+[2023-03-15 12:39:41] Felipe "Juca" Sanches: a etiqueta diz "IC4,6: versão 4"
+[2023-03-15 12:39:48] Felipe "Juca" Sanches: video: (not yet published)
+[2023-03-15 12:39:52] Felipe "Juca" Sanches: IC4 e IC6 são as duas flash roms da CPU principal
+[2023-03-15 12:40:08] Felipe "Juca" Sanches: Esse é o vídeo do pricedimento de checar versão
+[2023-03-15 12:41:25] Felipe "Juca" Sanches: A etiqueta também dá a versão das flash ROMs IC1 e IC3 (chamadas de "table data"): versão 1 nesse caso
+[2023-03-15 12:45:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26505.jpg
+[2023-03-15 12:45:20] Felipe "Juca" Sanches: Placa de disco rígido instalada. Bora ligar pra ver se explode.
+[2023-03-15 12:56:57] Felipe "Juca" Sanches: video: (not yet published)
+[2023-03-15 12:57:50] Felipe "Juca" Sanches: Sucesso!
+[2023-03-15 12:59:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26509.jpg
+[2023-03-15 12:59:23] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26510.jpg
+[2023-03-15 13:07:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26511.jpg
+[2023-03-15 13:08:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26512.jpg
+[2023-03-15 13:08:51] Felipe "Juca" Sanches: com a placa de disco rígido, as versões continuam as mesmas, mas curiosamente, muda a cor desse bichinho que aparece nesse ícone
+[2023-03-15 13:09:04] Felipe "Juca" Sanches: antes ele era verde
+[2023-03-15 13:09:37] Felipe "Juca" Sanches: mas acho que seja só efeito colateral da troca da paleta de cores por conta do splash screen inicial da placa controladora de disco rígido
+[2023-03-15 13:10:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26516.jpg
+[2023-03-15 13:10:57] Felipe "Juca" Sanches: Essa é a splash screen
+[2023-03-15 13:12:35] Felipe "Juca" Sanches: Cacete!
+
+A versão do firmware da placa controladora é 2.06i que TAMBÉM é uma versão que ainda não tenho dumps
+[2023-03-15 13:13:19] Felipe "Juca" Sanches: eu só tenho essas versões por enquanto:
+
+* v1.10i - July 6th, 1998
+* v1.15i - October 13th, 1998
+* v2.01i - January 15th, 1999
+[2023-03-15 13:14:06] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26520.jpg
+[2023-03-15 13:15:08] Felipe "Juca" Sanches: Cacete... não posso reprogramar a ROM do HD pelo simples motivo que também preciso fazer o dump dela
+[2023-03-15 13:15:35] Felipe "Juca" Sanches: acho que uma saída seria eu projetar minha própria placa de extensão contendo apenas uma ROM e o conector
+[2023-03-15 15:29:07] Felipe "Juca" Sanches: Se alguém se empolgar em um projetinho, acho que seria muito bom criar um substituto para o binxelview que seja simples de compilar e rodar no GNU/Linux
+[2023-03-15 15:30:12] Felipe "Juca" Sanches: Ano passado eu tinha conseguido compilar (ou será que eu tava usando um binário pre-compilado? Não tenho certeza)
+
+Mas agora não consigo mais, sei lá por que. Dor de cabeça demais. Dá vontade de implementar logo um substituto em python
+[2023-03-15 15:35:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-03/26525.jpg
+[2023-03-15 16:37:16] Felipe "Juca" Sanches: tem uma placa-mãe por 85 libras no ebay. Se o custo de fabricar uma placa de extensão com ROM for maior (ou próximo desse valor) vale mais a pena comprar uma segunda placa mãe para poder sobrescrever o firmware sem destruir a versão 4 que está no meu teclado
+[2023-03-15 16:37:41] Felipe "Juca" Sanches: (a não ser que ao comprar a placa, apareça uma ROM com firmware das versoes 1, 2 ou 3, aí fodeu hahaha)

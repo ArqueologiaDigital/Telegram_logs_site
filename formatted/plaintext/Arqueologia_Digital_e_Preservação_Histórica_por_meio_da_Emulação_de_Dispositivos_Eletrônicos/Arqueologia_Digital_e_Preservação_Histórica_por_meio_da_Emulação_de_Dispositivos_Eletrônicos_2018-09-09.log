@@ -1,0 +1,5 @@
+[2018-09-09 10:01:52] DQ: O primeiro computador que eu comprei foi um TK82C, que atualmente está num caixa de Apple ][ com um teclado mecânico adaptado bem porcamente. Eu tenho um segundo que eu comprei como backup quando comecei a mexer no hardware. Entre os meus vários projetos em eterno andamento está uma expansão de 16K para este segundo TK. Também está nos planos a adaptação de um RC2014 para ZX81 (https://groups.google.com/forum/#!topic/rc2014-z80/t-ZdcVqQM2U).
+[2018-09-09 10:02:28] DQ: Talvez deja OT, mas este projeto me surpreendeu: https://create.arduino.cc/projecthub/FoxyLab/arduino-nano-as-cp-m-compatible-computer-c09d4e
+[2018-09-09 10:07:36] DQ: Achei um exagero ele usar um STM8S103F3P6, eu usaria um ATtinyx4.
+[2018-09-09 10:13:26] Ronaldo: Talvez seja por causa da geração de vídeo, eu não olhei os detalhes
+[2018-09-09 11:22:26] DQ: É só para converter de teclado PS/2 para serial.

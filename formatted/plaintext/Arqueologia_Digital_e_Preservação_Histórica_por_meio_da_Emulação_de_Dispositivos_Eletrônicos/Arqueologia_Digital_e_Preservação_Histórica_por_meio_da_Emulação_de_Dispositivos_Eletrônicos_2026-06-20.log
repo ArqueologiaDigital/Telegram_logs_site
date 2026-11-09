@@ -1,0 +1,15 @@
+[2026-06-20 20:03:42] RicBit: @mrparn ajuda dos universitários
+[2026-06-20 20:04:35] RicBit: to abrindo o codigo de musica da compile, é meio insano, eles não tem 3 versões da mesma música, é uma unica versão e em real time ele adapta para psg, msx music e msx audio
+[2026-06-20 20:04:55] RicBit: mas em alguns jogos eles tem uma segunda tabela que eu não entendo
+[2026-06-20 20:05:15] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39328.jpg
+[2026-06-20 20:05:15] RicBit: essa é a cromatica, blz
+[2026-06-20 20:05:59] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39329.jpg
+[2026-06-20 20:05:59] RicBit: mas e essa? é insana, passa o O1, o O0 e vai até O-6
+[2026-06-20 23:15:30] Pablo Vasques Bravo-Villalba: Pode estar sendo usada pela percussão?
+[2026-06-20 23:17:34] RicBit: nao sei, vou dumpar pra ver
+[2026-06-20 23:17:52] RicBit: eu extrai todos os presets de msx audio do disk station e fiz uma romzinha
+[2026-06-20 23:19:31] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-06/39333-patch_audition.rom
+[2026-06-20 23:19:31] RicBit: pianinho
+[2026-06-20 23:19:58] RicBit: ele faz uns clicks estranhos, nao testei no hardware ainda pra ver se é coisa do emulador
+[2026-06-20 23:20:44] RicBit: espera acho que o click é o keyclick
+[2026-06-20 23:20:47] RicBit: duh

@@ -1,0 +1,108 @@
+[2022-04-13 00:29:53] L.: Tem gente que bota joguinho dentro do Mario World e usa sprite do próprio jogo. Fica legal! Claro que são jogos de estilos diferentes mas tenho certeza de que existam polígonos reusaveis pra algum demo
+[2022-04-13 00:30:09] Felipe "Juca" Sanches: sim, com certeza
+[2022-04-13 00:30:20] Felipe "Juca" Sanches: fazer um tetris com os símbolos da code-wheel ficaria bem legal
+[2022-04-13 00:30:37] Felipe "Juca" Sanches: .
+[2022-04-13 00:31:26] Felipe "Juca" Sanches: E quando fecha uma linha, faz algum efeito sonoro bem característico do jogo
+[2022-04-13 00:32:19] Felipe "Juca" Sanches: ah! Já sei! Quando faz tetris (quando mata uma linha) toca o audio do alienígena falando "MATSUBA!"
+[2022-04-13 00:32:38] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=Ay2-Qx5kdNg
+[2022-04-13 00:34:48] Felipe "Juca" Sanches: acredito que o VMTools já tá maduro o suficiente pra ter tudo o que seria necessário para implementar um TETRIS assim
+[2022-04-13 00:35:23] Felipe "Juca" Sanches: É só escrever o assembly do tetris e compilar com o assembler disponível no AWVMTools
+[2022-04-13 00:35:50] L.: Faz um jogo fofinho e chama de awwww
+[2022-04-13 00:35:58] Felipe "Juca" Sanches: as coisas que os VMTools ainda não tem seriam para desenvolver gráficos customizados (ainda não tenho um encoder de polígonos)
+[2022-04-13 00:36:11] Felipe "Juca" Sanches: nem encoder de audio
+[2022-04-13 00:36:31] Felipe "Juca" Sanches: nem encoder de paletas de cores ou de strings de texto
+[2022-04-13 00:36:56] Felipe "Juca" Sanches: mas pra reutilizar os assets, não precisa de nenhum desses encoders. Basta usar o assembler que já tá 100% funcional
+[2022-04-13 00:37:23] Felipe "Juca" Sanches: kkkk, muito bom!
+[2022-04-13 00:42:13] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19540.jpg
+[2022-04-13 00:42:13] L.: Sei lá 😅
+[2022-04-13 00:42:33] Felipe "Juca" Sanches: kkkk
+[2022-04-13 00:42:51] Felipe "Juca" Sanches: precisaria ver quais símbolos já existentes no jogo podem ser usados pra desenhar essa carinha aí
+[2022-04-13 00:43:19] Felipe "Juca" Sanches: dá pra dar zoom a vontade em cada asset gráfico pra fazer ficar do tamanho ideal pra montar o desenho
+[2022-04-13 00:45:09] Felipe "Juca" Sanches: dá pra fazer o alien-matsuba ficar dando tapinhas na fera
+[2022-04-13 00:46:10] L.: E o cara sentar e abrir uma cerveja pra ficar olhando
+[2022-04-13 00:46:29] Felipe "Juca" Sanches: kkkk 😂
+[2022-04-13 00:48:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19547.jpg
+[2022-04-13 00:48:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19548.jpg
+[2022-04-13 00:50:59] Felipe "Juca" Sanches: Que da hora isso! Agora que paramos pra pensar sobre essas coisas, percebi como pode ser divertido fazer essas zoeiras
+[2022-04-13 00:51:16] Felipe "Juca" Sanches: "because we can!"
+[2022-04-13 00:52:03] Felipe "Juca" Sanches: bem no estilo do doidão lá... tom7
+[2022-04-13 01:27:55] Felipe "Juca" Sanches: Outra loucura: alguém portar a VM do Another World para rodar no Vectrex.
+
+https://pt.wikipedia.org/wiki/Vectrex
+[2022-04-13 01:29:49] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19553.jpg
+[2022-04-13 01:29:50] Felipe "Juca" Sanches: mas nem sei se é algo viável...
+[2022-04-13 01:30:34] Felipe "Juca" Sanches: acho que o maior gargalo provavelmente seria o tamanho total dos assets
+[2022-04-13 01:30:43] Erin Pinheiro 🐿: acho que daria com um uC no cartucho
+[2022-04-13 01:30:44] Felipe "Juca" Sanches: execução da VM é sossegado, eu acho
+[2022-04-13 01:31:20] Erin Pinheiro 🐿: já vi cartuchos pra vectrex que fazem dele quase "bobo" e as linhas são todas calculadas no cartucho
+[2022-04-13 01:32:03] Felipe "Juca" Sanches: ah, sim... isso me parece que viabilizaria fazer qualquer coisa. Mas pondero se com uma ROM "comum" (sem hardware extra) seria viável
+[2022-04-13 01:32:24] Felipe "Juca" Sanches: eu não acho que tenha grande custo computacional rodar o bytecode da VM. É coisa extremamente simples
+[2022-04-13 01:32:38] Erin Pinheiro 🐿: minha dúvida é o tamanho da RAM
+[2022-04-13 01:32:53] Felipe "Juca" Sanches: é... pode ser que tropece nesse tipo de limite
+[2022-04-13 01:33:24] Felipe "Juca" Sanches: preciso fazer uma conta de padaria aqui pra saber qual o tamanho, em bytes, do estado da VM
+[2022-04-13 01:33:55] Felipe "Juca" Sanches: são 64 threads executadas cooperativamente (só uma roda por vez, e a própria thread decide quando passar a bola para a próxima)
+[2022-04-13 01:34:14] Felipe "Juca" Sanches: então é basicamente um array de 64 program counters
+[2022-04-13 01:34:33] Felipe "Juca" Sanches: tem umas flags pra cada thread também pra saber se ela está inativa, ou se está pausada
+[2022-04-13 01:35:02] Felipe "Juca" Sanches: além disso, é só uma máquina de estados típica de interpretação de opcodes
+[2022-04-13 01:35:18] Felipe "Juca" Sanches: pega opcode, le operandos opcionais e executa a instrucao
+[2022-04-13 01:35:58] Felipe "Juca" Sanches: as instrucoes são coisas bem simples, tipo soma, subtracao, movimentação de valores em RAM, comparacao de valores e jumps condicionais
+[2022-04-13 01:36:21] Felipe "Juca" Sanches: e algumas instrucoes dedicadas pra tocar audio ou desenhar os polígonos
+[2022-04-13 01:36:44] Felipe "Juca" Sanches: tem 256 palavras de 16 bits de "RAM da VM"
+[2022-04-13 01:36:53] Felipe "Juca" Sanches: o que é bem pouca RAM
+[2022-04-13 01:37:05] Felipe "Juca" Sanches: o vectrex deve ter muito mais que isso
+[2022-04-13 01:37:20] Felipe "Juca" Sanches: dá pra jogar fora todos assets de paletas de cores, pois é irrelevante
+[2022-04-13 01:38:03] Felipe "Juca" Sanches: playback de sons também seria bem limitado, então a maioria dos assets de samples de audio iriam pro lixo tambem, eu acho
+[2022-04-13 01:38:12] RicBit: O Atari tem menos que isso de ram e é da mesma época.
+[2022-04-13 01:38:27] Felipe "Juca" Sanches: é... preciso checar as specs
+[2022-04-13 01:38:47] Felipe "Juca" Sanches: mas enfim... não pretendo fazer esse hack. Estou só fazendo brainstorming em "voz" alta
+[2022-04-13 01:39:14] Felipe "Juca" Sanches: bom saber que voê lê nosso grupo, RicBit
+[2022-04-13 01:39:19] Felipe "Juca" Sanches: kkkkk
+[2022-04-13 01:44:36] RicBit: Nesse exato momento eu estou acordado por causa do pos cirurgia haha
+[2022-04-13 01:44:48] RicBit: Tirei a vesícula hoje à tarde
+[2022-04-13 01:45:45] Felipe "Juca" Sanches: Opa! Acabou de evidenciar então sua momentânea vulnerabilidade para ser nerd-snipped!
+[2022-04-13 01:46:15] Felipe "Juca" Sanches: Espero que se recupere bem da cirurgia 😉
+[2022-04-13 01:47:05] Felipe "Juca" Sanches: Que tal portar o TetriNet para a VM do Another World? ;-D
+[2022-04-13 01:48:25] RicBit: Eu tô na fase de pick your battles, tentando diminuir o número de projetos haha.
+[2022-04-13 01:48:38] RicBit: Fazendo um expertinho agora
+[2022-04-13 01:48:49] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19588-sticker.webp
+[2022-04-13 01:48:53] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19589.jpg
+[2022-04-13 01:49:32] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19590-mind-blown.mp4
+[2022-04-13 01:50:20] Felipe "Juca" Sanches: você é um cara "expertinho", muito acima da média! kkkk
+[2022-04-13 01:51:48] RicBit: Nah, ainda nem descobri como fazer o teclado. Comprei umas teclas aqui mas são muito grandes.
+[2022-04-13 01:52:08] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-04/19593.jpg
+[2022-04-13 01:52:24] RicBit: Com esses botões não vai ficar na escala
+[2022-04-13 01:52:28] Felipe "Juca" Sanches: desistiu de impressão SLA e tem usado FDM para essas miniaturas?
+[2022-04-13 01:52:41] RicBit: Vou ter que comprar uns botões smd
+[2022-04-13 01:52:56] Felipe "Juca" Sanches: ou reimprimir um pouquinho maior
+[2022-04-13 01:53:09] RicBit: Para testar escala a fdm é mais jogo. Quando o design estiver fechado eu faço na resina.
+[2022-04-13 01:53:38] Felipe "Juca" Sanches: mas aí mudaria a escala do display LCD também...
+[2022-04-13 01:54:30] RicBit: Sim, vai ficar um expert médio só invés de expertinho. Mas acho que vou montar o teclado grande mesmo assim, aí pelo menos eu tenho como testar a interface elétrica.
+[2022-04-13 01:54:49] Felipe "Juca" Sanches: é... manda ver
+[2022-04-13 01:55:10] Felipe "Juca" Sanches: o importante é primeiro funcionar. E depois dá pra fazer novos protótipos pra ajustar a escala
+[2022-04-13 01:55:50] RicBit: O jeito mais fácil é com um 74145 que é o circuito original haha. Como efeito colateral ele vai ter a mesma matriz, então as combinações de teclado que não funcionam juntas vão ser exatamente as mesmas do teclado original.
+[2022-04-13 01:56:16] RicBit: E se soldar um conector grande da para ligar no expert original haha.
+[2022-04-13 01:57:11] Felipe "Juca" Sanches: quando estiver à vontade para tornar público esse seu projetinho, considere postar um comentário com fotos (ou me autorize a fazê-lo) nessa thread do Fórum Fiozeira:
+
+https://forum.fiozera.com.br/t/replicas-funcionais-de-arcades-eletro-mecanicos-com-mame-e-rpi/25
+
+Sei que não é eletro-mecânico, e imagino que o emu não seja o MAME, mas ainda assim é correlato
+[2022-04-13 01:58:21] Felipe "Juca" Sanches: haha, demais!
+[2022-04-13 01:58:38] RicBit: O atual está rodando no Jetson nano, mas o final quero rodar no rpi pico, aí não tem como ser mame, tem que ser custom.
+[2022-04-13 01:58:53] Felipe "Juca" Sanches: sim, claro
+[2022-04-13 01:58:57] RicBit: O pico é 2x 233mhz só
+[2022-04-13 01:59:12] Felipe "Juca" Sanches: mencionei a thread mais pela questão de ser miniaturas funcionais de retro-trecos emulados
+[2022-04-13 01:59:55] Felipe "Juca" Sanches: que é meio que todo um macro-tema de hacks retrô 😉
+[2022-04-13 02:00:24] RicBit: Daria para fazer fpga mas nessa escala tem um problema, a única vantagem do fpga seria usar os cartuchos reais, mas eles não vão encaixar haha
+[2022-04-13 02:07:43] RicBit: Ah se quiser postar as fotos tá de boa.
+[2022-04-13 02:08:19] Felipe "Juca" Sanches: mas aí você imprime cartuchinhos com circuitos de memória i2c em chip smd
+[2022-04-13 02:09:21] RicBit: Aí não compensa, o lcd tem leitor de SD, cabem todos os softs de msx nele.
+[2022-04-13 02:10:11] Felipe "Juca" Sanches: faz os cartuchinhos-fake guardarem somente um id numérico das ROMs a serem carregadas
+[2022-04-13 02:10:49] Felipe "Juca" Sanches: parecido com os cartuchos do Odyssey-1, que só chaveavam os jogos já existentes no console
+[2022-04-13 02:10:54] RicBit: Nem precisa de ROM pra isso, só ligar os fios no vcc haha
+[2022-04-13 02:11:30] Felipe "Juca" Sanches: as ROMs ficariam na própria memória do rpi. Os cartuchos apenas indicariam qual jogo rodar
+[2022-04-13 02:12:37] Felipe "Juca" Sanches: sim! Só um padrão de GND ou VCC em alguns pinos já daria pra codificar IDs para uma pequena coleção de jogos escolhidos por você
+[2022-04-13 02:13:59] Felipe "Juca" Sanches: eu tinha pensado em fazer algo similar, mas usando SD-cards, para mimetizar as fitas perfuradas do patinho feio
+[2022-04-13 02:14:10] Felipe "Juca" Sanches: o conteúdo do SD card seria o conteúdo da fita
+[2022-04-13 02:14:26] Felipe "Juca" Sanches: baita desperdício. Mas é barato. E fácil de implementar / interfacear
+[2022-04-13 06:28:42] Ismael Luceno: @fsanches eu acho que faria sentido ter uma segunda VM para a geração dos assets
+[2022-04-13 06:36:12] Ismael Luceno: a VM principal  poderia-se comunicar com a segunda VM mediante um par de SFRs e ficaria uma extensão bem minimalista e do outro lado poderia fazer qualquer coisa

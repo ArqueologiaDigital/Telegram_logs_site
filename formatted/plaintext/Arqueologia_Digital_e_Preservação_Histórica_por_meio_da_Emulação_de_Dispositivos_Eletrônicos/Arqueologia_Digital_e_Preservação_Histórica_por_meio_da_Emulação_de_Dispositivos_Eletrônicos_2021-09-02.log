@@ -1,0 +1,22 @@
+[2021-09-02 12:24:34] L.: https://en.wikipedia.org/wiki/Venix
+[2021-09-02 12:33:27] kretcheu: Mais notícias!!!
+[2021-09-02 12:36:39] Felipe "Juca" Sanches: com certeza!
+[2021-09-02 12:37:09] Felipe "Juca" Sanches: fiz alguns commits implementando o disassembly de mais várias instruções da CPU
+[2021-09-02 12:37:29] Felipe "Juca" Sanches: mas ainda falta bastante coisa pra terminar a implementação do assembler
+[2021-09-02 12:38:03] Felipe "Juca" Sanches: estou insatisfeito com a forma como estou implementando isso, pois tem uma grande quantidade de código repetido
+[2021-09-02 12:38:20] Felipe "Juca" Sanches: mas minha maior preocupacao agora é fazer funcionar, mesmo que o código seja feio
+[2021-09-02 12:38:28] Felipe "Juca" Sanches: depois posso refatorar à vontade
+[2021-09-02 15:46:33] L.: https://www.cpushack.com/2021/09/01/necs-forgotten-fpus/
+[2021-09-02 16:22:41] L.: Simulação a nível de circuito do Pong: https://www.falstad.com/pong/vonly.html
+[2021-09-02 16:24:45] L.: Esse negócio do Pong é *bem* legal! Mostra vários subcircuitos funcionando em tempo real.
+[2021-09-02 17:40:24] Felipe "Juca" Sanches: MUITO LEGAL!!!!
+[2021-09-02 17:40:55] Felipe "Juca" Sanches: Em teoria o MAME tem tudo pra fazer isso aí também. Só precisaria alguém transcrever o netlist e fornecer um SVG com os nomes dos sinais
+[2021-09-02 17:41:21] Felipe "Juca" Sanches: o framework de simulacao de circuitos discretos já tá lá inteirão pra fazer esse tipo de coisa
+[2021-09-02 17:41:45] Felipe "Juca" Sanches: usei isso pra fazer grande parte da descricao do GranTrak10 da Atari
+[2021-09-02 17:42:07] Felipe "Juca" Sanches: arcade discreto (sem CPU) de 1975, se me lembro bem
+[2021-09-02 17:42:40] Flávio Amieiro: Nossa, isso é demais!
+[2021-09-02 17:43:32] Felipe "Juca" Sanches: https://github.com/mamedev/mame/blob/ee1e4f9683a4953cb9d88f9256017fcbc38e3144/src/mame/drivers/atarittl.cpp
+[2021-09-02 17:45:34] Felipe "Juca" Sanches: mais especificamente a netlist do GranTrak10 que eu fiz tá aqui: https://github.com/mamedev/mame/blob/ee1e4f9683a4953cb9d88f9256017fcbc38e3144/src/mame/machine/nl_gtrak10.cpp
+[2021-09-02 17:46:25] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-09/14419.jpg
+[2021-09-02 17:46:25] Felipe "Juca" Sanches: Esse tipo de coisa aqui... com MUITA paciência, rola fazer 😊
+[2021-09-02 19:24:56] L.: Tem um negócio similar pro Game Boy também https://github.com/aappleby/MetroBoy

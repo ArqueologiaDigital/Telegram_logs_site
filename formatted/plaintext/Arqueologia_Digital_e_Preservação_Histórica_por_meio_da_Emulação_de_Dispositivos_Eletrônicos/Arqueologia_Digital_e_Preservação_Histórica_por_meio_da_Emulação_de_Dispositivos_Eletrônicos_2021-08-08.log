@@ -1,0 +1,17 @@
+[2021-08-08 21:05:49] Felipe "Juca" Sanches: Eu tenho falado pouco por aqui sobre o projeto de estudo do teclado KN5000 por que me afundei na escrita de um driver de emulação pra ele no MAME e isso é sempre um processo bem lento.
+
+Ontem e hoje trabalhei no aprimoramento da emulação da CPU TMP94C241, que é a variante de TLCS900 que é usada no teclado.
+
+Originalmente o MAME tinha apenas suporte a algumas outras CPUs dessa família e quando eu abria o debugger eu via alguns acessos a SFRs (special function registers) apenas com o endereço mas sem o nome dos registradores. E outros SFRs estavam com o nome incorreto.  A razão para isso é que o conjunto específico de SFRs disponíveis, assim como o seu mapeamento em endereços no início da memória, varia para cada uma das variantes, pois correspondem às funcionalidades que cada variante implementa.
+
+E o MAME usava uma tabela única de nomes de SFRs pra todas variantes. Inicialmente eu simplesmente deixei a tabela original comentada e troquei por uma tabela correta para o modelo que me interessa. Mas isso jamais seria aceito num pull request. Então estou agora terminando de fazer o trabalho braçal de transcrever as tabelas de SFRs de todos os 4 datasheets das variantes de TLCS900 que o MAME suporta, para que fique correto em todos os modelos.
+[2021-08-08 21:11:41] Felipe "Juca" Sanches: Os variantes de TLCS900 suportados no momento atualmente são:
+* TMP94C241 - usado no teclado Technics KN5000
+* TMP95C061 - usado no teclado Technics KN1500
+* TMP95C063 - usado no jogo de arcade Operation Tiger da TAITO (https://www.youtube.com/watch?v=qnkhuAJmPyw)
+* TMP96C141 - usado no piano digital Kawai KSP10
+[2021-08-08 23:41:45] Alexandre Villares: Acho que isso vai interessar ao Juca e a @mynameiserin ... A mono-spaced font family derived from character stroke coordinates from the Commodore 1520 plotter ROM.  https://github.com/scruss/FifteenTwenty
+[2021-08-08 23:42:21] Erin Pinheiro 🐿: 👀
+[2021-08-08 23:55:56] Felipe "Juca" Sanches: Muito legal!
+[2021-08-08 23:56:17] Felipe "Juca" Sanches: Especialmente essa parte aqui onde é documentado o processo de extração do firmware da plotter Commodore 1520:
+https://e4aws.silverdr.com/hacks/6500_1/

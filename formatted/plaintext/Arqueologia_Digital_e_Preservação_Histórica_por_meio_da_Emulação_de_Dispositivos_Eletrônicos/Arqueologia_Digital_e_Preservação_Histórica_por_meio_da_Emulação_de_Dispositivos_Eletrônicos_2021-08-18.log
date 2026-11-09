@@ -1,0 +1,29 @@
+[2021-08-18 01:26:37] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14232.jpg
+[2021-08-18 01:26:37] Felipe "Juca" Sanches: ok... tá começando a funcionar o disassembler 😉
+[2021-08-18 01:30:37] Felipe "Juca" Sanches: só tenho mais trocentas instruções pra implementar a formatação do disasm... mas agora é só questão de paciência e atenção
+[2021-08-18 01:32:59] Felipe "Juca" Sanches: Na verdade eu não ganho nada em termos de engenharia reversa do kn5000 escrevendo esse disassembler no binutils. Só to fazendo isso por que faz parte do trabalho de portar pra uma arquitetura nova.
+
+A parte legal mesmo vai ser depois disso, quando eu partir para a implementação do assembler, pois aí poderei usá-lo pra desenvolver software (sem ter que ficar fazendo patch binário mentalmente :-P)
+[2021-08-18 01:34:30] Felipe "Juca" Sanches: e depois, é claro, vamos estourar champagne se eu conseguir portar o GCC 😊
+[2021-08-18 01:35:01] Felipe "Juca" Sanches: mas uma coisa por vez... foco no disasm, Juca!
+[2021-08-18 01:35:23] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14237-AnimatedSticker.tgs
+[2021-08-18 04:31:49] Deleted Account: Você tá implementando o disassembly no próprio binutils?
+[2021-08-18 04:47:12] Deleted Account: É usado neste neo geo pocket tmb. Nem conhecia esse video game.
+[2021-08-18 04:49:39] Felipe "Juca" Sanches: sim, o binutils faz vários coisas. Uma das ferramentas do binutils chamada objdump tem uma flag -D para fazer disassembly.
+[2021-08-18 04:50:05] Felipe "Juca" Sanches: então é essa parte do binutils que estou implementando agora para a arquitetura tlcs900
+[2021-08-18 04:50:48] Felipe "Juca" Sanches: em seguida vou ter que implementar a parte de geração de binário do GNU Assembler (que é o exato oposto do que estou fazendo agora)
+[2021-08-18 04:52:31] Felipe "Juca" Sanches: Tendo essa parte de assembly feita, dá pra seguir adiante para o resto do toolchain. O resto depende disso, pois o GCC, por exemplo, gera assembly que precisa ser montado.
+[2021-08-18 04:53:23] Felipe "Juca" Sanches: Ah! Tem o linker também que precisa ver como faz... nem parei pra ver isso ainda.
+[2021-08-18 06:43:00] Ismael Luceno: pensou ja em usar sdcc?
+[2021-08-18 09:50:29] Felipe "Juca" Sanches: sim, pensei. Mas que eu saiba o sdcc não suporta essa arquitetura ainda
+[2021-08-18 09:51:40] Leonardo Roman: Pelo que vi, o sdcc tem suporte pro tlcs90, que seria uma versão 8 bits do tlcs900.
+[2021-08-18 09:51:49] Felipe "Juca" Sanches: e não sei qual é o critério para o sdcc. Essa é uma CPU de 32bits! Será que ainda qualifica-se como "small device"?
+[2021-08-18 11:21:01] Ismael Luceno: acho que sim...
+[2021-08-18 21:13:48] Felipe "Juca" Sanches: a quem possa interessar, meu port do binutils para arquitetura TLCS900 está sendo feito aqui:
+
+https://github.com/felipesanches/binutils-tlcs900
+[2021-08-18 21:15:15] Felipe "Juca" Sanches: os primeiros commits são "lixo" mesmo. Completamente incorretos, mas pelo menos fornecendo a massagem inicial ao código com o boilerplate pra se adicionar uma nova arquitetura.
+
+Estou revisando tudo e consertando gradativamente as "cagadas" 😉
+[2021-08-18 21:16:29] Felipe "Juca" Sanches: esse é o meu jeitão de fazer as coisas :-P
+[2021-08-18 21:17:14] Felipe "Juca" Sanches: como um colega meu do trampo costuma dizer: "desenvolvimento copy-pasta"

@@ -1,0 +1,10 @@
+[2019-06-29 00:30:59] Felipe "Juca" Sanches: hoje eu e Gustavo instalamos o resto dos chips de RAM totalizando 256K no IBM 5150. Também ligamos nele um teclado de XT. Mas ainda não bootamos nada de diferente... Ficamos apenas estudando o código fonte da BIOS
+[2019-06-29 10:40:46] Felipe "Juca" Sanches: estou hoje tentando bootar alleycat a partir de um disquete no IBM 5150
+[2019-06-29 10:41:37] Felipe "Juca" Sanches: arranjei uma placa ISA 16bits controladora de HDD/FDD, gameport e serial
+[2019-06-29 10:42:16] Felipe "Juca" Sanches: nao sei se ela não funciona por ser ISA 16bits, mas o drive de disquete de 3 1/2 pisca o LED quando a BIOS tenta bootar
+[2019-06-29 10:42:49] Felipe "Juca" Sanches: também nao sei se o 5150 consegue trabalhar com discos de 3 1/2"
+[2019-06-29 10:43:17] Felipe "Juca" Sanches: e se precisam estar formatados em 360k ou se conseguiria bootar a partir de um disquete de 1.44Mb
+[2019-06-29 10:45:43] Felipe "Juca" Sanches: o disco de 1.44M que eu fiz boota no meu notebook atual
+[2019-06-29 14:52:41] Erin Pinheiro 🐿: checou se o cabo n tá invertido?
+[2019-06-29 14:55:48] Erin Pinheiro 🐿: o resto tbm talvez mas aí não sei.. sei que a luz piscar assim é sinal de cabo floppy invertido
+[2019-06-29 15:32:57] FTMaciel: Não consegue. Teria que fazer bootar uma bios de controladora de disquete pra suportar 1.44. O Sergey kiselev fez uma. Tá lá no site dele. Eu fiz o is30 bootar 1.44 usando essa bios

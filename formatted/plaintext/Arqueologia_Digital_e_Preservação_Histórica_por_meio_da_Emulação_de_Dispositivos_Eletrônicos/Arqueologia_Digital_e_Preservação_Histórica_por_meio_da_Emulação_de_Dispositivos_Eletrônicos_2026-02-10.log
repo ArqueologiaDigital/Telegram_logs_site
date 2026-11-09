@@ -1,0 +1,23 @@
+[2026-02-10 11:18:13] Felipe "Juca" Sanches: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37448-freeprince_scroll.ogg
+[2026-02-10 11:18:13] Felipe "Juca" Sanches: achei hoje um vídeo de um hack que eu fiz com Prince of Persia muitos anos atrás (o timestamp do arquivo é de 02/DEZ/2009)
+[2026-02-10 15:22:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37449.jpg
+[2026-02-10 15:22:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37450.jpg
+[2026-02-10 15:22:52] Felipe "Juca" Sanches: Com ajuda do Cláudio, agora tá rodando a animação da intro de Another World no KN5000 no MAME. Tem ainda alguns pequenos glitches e chega uma hora que trava. Mas vai bem grande parte da animação.
+[2026-02-10 15:22:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37451.jpg
+[2026-02-10 18:24:32] Toy: Irado @fsanches
+[2026-02-10 18:30:37] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37453.jpg
+[2026-02-10 18:30:37] Felipe "Juca" Sanches: olha que bacana isso
+[2026-02-10 23:05:36] Felipe "Juca" Sanches: bom... a demo tá rodand o inteira sem nenhum glitch agora.
+
+Quem quiser ver o código, publiquei aqui:
+https://github.com/felipesanches/kn5000-anotherworld/
+[2026-02-10 23:07:06] Felipe "Juca" Sanches: Coisas que faltam:
+
+-> input (pois ainda não sabemos exatamente como se programa a leitura de botões do KN5000)
+-> som (pois ainda não entendemos o hardware de som do KN5000)
+-> carregar assets das outras fases (eu não tinha carregado por que ainda não funcionava. E também por que ainda não tem como interagir)
+[2026-02-10 23:08:29] Felipe "Juca" Sanches: Eu também não tinha carregado os demais assets por que não tinha espaço suficiente na Flash ROM da placa de extensão HDAE5000. Mas essa versão agora suporta os dois modos de carregar o jogo. E se rodar direto do boot, temos 2MB de Flash da Program ROM pra usar. Então cabe.
+[2026-02-10 23:08:55] Felipe "Juca" Sanches: rodando da HDAE5000 a principio não cabe, a não ser que eu escreva um driver de filesystem pra usar o HD
+[2026-02-10 23:09:22] Felipe "Juca" Sanches: pode ser um passo divertido esse ;-)
+[2026-02-10 23:09:48] Felipe "Juca" Sanches: carregar coisas do HD poderia abrir um potencial enorme
+[2026-02-10 23:11:07] Felipe "Juca" Sanches: principalmente poder manter o teclado com o firmware original funcionando como teclado e só carregar coisas homebrew se for feito o pressionamento de algum botão específico (ou entrar num submenu de um "loader")

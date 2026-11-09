@@ -1,0 +1,26 @@
+[2026-02-16 07:23:24] Pablo Vasques Bravo-Villalba: Só a cueca portátil
+[2026-02-16 08:27:08] L.: https://github.com/s-macke/starflight-reverse
+[2026-02-16 08:41:55] Pablo Vasques Bravo-Villalba: Joguei esse no Mega Drive, achava super interessante!
+[2026-02-16 09:14:51] Pedro de Medeiros 👾: Esse eu joguei no PC mesmo
+[2026-02-16 09:22:03] Pablo Vasques Bravo-Villalba: Acho que se tivesse jogado no PC teria ido mais longe, já que teria tido mais tempo para explorar o jogo
+[2026-02-16 09:22:18] Pablo Vasques Bravo-Villalba: Ou teria ido menos longe porque não teria o manual para entender como o jogo funcionava 😅
+[2026-02-16 10:37:35] Pedro de Medeiros 👾: Eu pirateei esse do vizinho e ele até me arrumou o manual em xerox
+[2026-02-16 17:24:15] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37559.jpg
+[2026-02-16 17:24:15] Felipe "Juca" Sanches: Tô pedindo pro Claude implementar um esqueleto de driver dos chips de DSP que "fazem de conta" que estão processando áudio, mas apenas nos dizem nos logs o que fariam, como uma forma de boilerplate para a implementação de fato. E também como forma de exercitar a engenharia reversa dos chips.
+[2026-02-16 17:26:08] Felipe "Juca" Sanches: Esse rolê tá me colocando em situações divertidas. Eu nunca imaginei que algum dia eu literalmente pediria a um computador pra fazer uma coisa desse tipo
+[2026-02-16 18:07:49] RicBit: Você não está pedindo para um computador, está pedindo para dez mil pequenos computadores que moram na placa de vídeo do servidor.
+[2026-02-16 20:05:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37562.jpg
+[2026-02-16 20:06:06] RicBit: o carmack tava propondo outro dia um cloud que nao mora em nenhum computador
+[2026-02-16 20:06:10] RicBit: ideia boa inclusive
+[2026-02-16 21:40:31] L.: eu tô pra implementar isso faz anos
+[2026-02-16 21:41:06] L.: uma linguagem flow-based que tem p2p embutido
+[2026-02-16 21:42:13] L.: cada nó é capaz de rodar uma computação qualquer e passar resultado pra frente
+
+(a ideia era usar wasm pra isso; na faculdade eu fiz protótipo usando javascript e http, mas não tinha nem emscripten na época aí era meio chato)
+[2026-02-16 21:47:24] Alexandre Villares: https://oldbytes.space/@blakespot/116081254908027544
+[2026-02-16 21:49:21] Alexandre Villares: Então, Erin, na home page não tem os links para todas a atividades... O site tem um esquema de busca e eles tiram do ar as urls das coisas passadas,  aí fica difícil de pesquisar.
+[2026-02-16 21:51:16] Alexandre Villares: Mas esse link que você passou talvez ajude viu... Vou dar uma olhada também numa API deles que eu tinha visto uma vez...
+[2026-02-16 22:27:22] RicBit: nao, a ideia do carmack é mais legal
+[2026-02-16 22:28:19] RicBit: tá ligado delay-line memory? ele propos colocar um fibra optica que dá a volta no mundo, transmitindo sempre o mesmo dado. quando você precisar usar, espera o dado passar pela sua regiao.
+[2026-02-16 22:29:26] RicBit: ideia ruim para ram, mas pra uso sequencial funciona. e as gpus estão lendo os coeficientes da matriz sequencialmente né? se todo mundo estiver usando o mesmo modelo, você deixa ele girando no globo, e ai você não precisa armazenar o modelo, só usa os coefs quando eles passarem
+[2026-02-16 22:30:03] RicBit: ai sua gpu vai ter "memoria infinita", com latencia alta mas who cares? throughput de fibra optica é monstro

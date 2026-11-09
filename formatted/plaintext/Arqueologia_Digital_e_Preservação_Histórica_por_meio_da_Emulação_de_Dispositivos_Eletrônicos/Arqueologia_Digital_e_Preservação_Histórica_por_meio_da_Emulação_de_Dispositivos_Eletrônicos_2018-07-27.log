@@ -1,0 +1,58 @@
+[2018-07-27 01:20:20] * Felipe "Juca" Sanches added Anchises
+[2018-07-27 02:42:55] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/3795
+[2018-07-27 14:46:33] Luciana Marques: Oi gente, esqueci que hoje era meu rodízio
+[2018-07-27 14:46:41] Luciana Marques: Então devo me atrasar
+[2018-07-27 14:46:47] Luciana Marques: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6611-sticker.webp
+[2018-07-27 15:36:43] Felipe "Juca" Sanches: não tem problema
+[2018-07-27 15:36:49] Felipe "Juca" Sanches: estaremos por lá até bem tarde
+[2018-07-27 15:38:27] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6615.jpg
+[2018-07-27 15:38:27] Felipe "Juca" Sanches: https://garoa.net.br/wiki/Retroprogramação
+[2018-07-27 15:39:02] Luciana Marques: Que lindo!
+[2018-07-27 15:39:13] Luciana Marques: Vai virar meu plano de fundo
+[2018-07-27 15:49:18] Felipe "Juca" Sanches: 😊
+[2018-07-27 16:16:59] Affonso Amendola: Heyy, eu conheco esse jogo :D
+[2018-07-27 16:17:12] Felipe "Juca" Sanches: sabe nada...
+[2018-07-27 16:17:13] Felipe "Juca" Sanches: ahahhaah
+[2018-07-27 16:17:28] Felipe "Juca" Sanches: hoje é seu dia, Fofonso!
+[2018-07-27 16:18:18] Affonso Amendola: :)
+[2018-07-27 16:42:35] Rodrigo Tadeu: Queria muito ir. Morar longe é um saco
+[2018-07-27 16:42:51] Rodrigo Tadeu: Quero desenvolver um jogo de mega. Tenho 3 ideias já
+[2018-07-27 16:43:42] Felipe "Juca" Sanches: sendo 100% software livre eu posso colaborar (mas não tô prometendo nada)
+[2018-07-27 16:55:01] Felipe "Juca" Sanches: ei, Affonso, a performance da sua versão pra MSDOS tá bem ruim depois dessa ultima atualização
+[2018-07-27 16:55:06] Felipe "Juca" Sanches: ficou lerdão
+[2018-07-27 16:55:26] Felipe "Juca" Sanches: tem que dar uma revisada nas rotinas gráficas pra ver o que é que tá tomando tanto tempo
+[2018-07-27 16:57:38] Affonso Amendola: Ciente
+[2018-07-27 16:57:56] Affonso Amendola: Acho que eu sei onde é a cahada
+[2018-07-27 16:58:11] Affonso Amendola: Eu pretendo continuar a escrever outros jogos pra dos
+[2018-07-27 16:58:24] Affonso Amendola: E a ideia agora é fazer alguma coisa em 3d
+[2018-07-27 16:58:43] Affonso Amendola: Pra isso eu vobprecisar de performance, entao eu vo consertar as rotinas
+[2018-07-27 16:58:58] Felipe "Juca" Sanches: faz um port 3d do wumpus hahaha
+[2018-07-27 16:59:06] Affonso Amendola: :)
+[2018-07-27 16:59:20] Affonso Amendola: Nah, esse vai ser o wumpus 3
+[2018-07-27 16:59:21] Felipe "Juca" Sanches: com fog nas áreas não exploradas
+[2018-07-27 16:59:26] Affonso Amendola: Í da pra chamar de wumpus 3d
+[2018-07-27 16:59:31] Felipe "Juca" Sanches: tipo o battle chess
+[2018-07-27 17:00:12] Affonso Amendola: Tem um jogo do moraff que é um dungeon crawler, com varias cameras na tela ao mesmo tempo
+[2018-07-27 17:00:36] Affonso Amendola: Fazer algo assim pra uma versao 3d do wumpus
+[2018-07-27 19:26:14] Affonso Amendola: Atrasadao, mas chegando
+[2018-07-27 19:26:36] Affonso Amendola: No evento de retroprogramaçao de hoje
+[2018-07-27 19:30:43] Luciana Marques: Uhul
+[2018-07-27 19:30:47] Luciana Marques: Eu to saindo de casa
+[2018-07-27 19:30:53] Luciana Marques: Acho que chego em 40min
+[2018-07-27 19:30:57] Luciana Marques: Mas preciso rangar
+[2018-07-27 19:31:37] Luciana Marques: Não me esperem para começar
+[2018-07-27 19:39:44] Luciana Marques: Pessoal, não vou mais conseguir ir
+[2018-07-27 19:39:47] Luciana Marques: Desculpem
+[2018-07-27 19:40:31] Luciana Marques: Eu confundi o horário do Django Girls e vai começar amanhã de manhã então vou ficar em casa
+[2018-07-27 19:40:40] Luciana Marques: Eu moro longe 😔
+[2018-07-27 19:57:46] Rodrigo Tadeu: @fsanches  achei um bug  no http://labs.hardinfo.org/pb/
+[2018-07-27 19:57:51] Rodrigo Tadeu: Livro 10
+[2018-07-27 19:57:54] Rodrigo Tadeu: pergunta 16
+[2018-07-27 19:58:04] Rodrigo Tadeu: http://files.datassette.org/livros/pense_bem_10.pdf
+[2018-07-27 19:58:28] Rodrigo Tadeu: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6658.jpg
+[2018-07-27 19:58:31] Rodrigo Tadeu: Da vermelho uhauhauhaha
+[2018-07-27 19:58:41] Rodrigo Tadeu: nao sei se no livro tb da erro
+[2018-07-27 19:59:09] Rodrigo Tadeu: Na verdade acho que a partir da 16 deu zica
+[2018-07-27 20:04:30] DQ: @SandroFriedland testa aí no de verdade
+[2018-07-27 20:22:59] Rodrigo Tadeu: eu to sem aqui, mas e interessante ter dado esse erro
+[2018-07-27 23:09:53] Leonardo Roman: Quer ver erro, escolha o programa 6 de qualquer livro. Esse programa pega 6 perguntas aleatórias do livro. O simulador erra todas as respostas :)

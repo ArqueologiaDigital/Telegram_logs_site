@@ -1,0 +1,30 @@
+[2026-09-14 01:04:09] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40511-minigb.zip
+[2026-09-14 01:04:09] RicBit: 98,18%, ainda 4kb
+[2026-09-14 01:04:32] RicBit: essa foi tensa, eu tive que colocar pixel perfect raster effect
+[2026-09-14 01:04:45] RicBit: tipo pra raster split na vertical
+[2026-09-14 01:09:29] RicBit: pra conseguir eu tive que mexer nos registros do vga, mudei umas constantes para simplificar minhas contas.
+[2026-09-14 01:09:55] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40515.jpg
+[2026-09-14 01:09:55] RicBit: aí eu achei legal que o dosbox entendeu minhas mudanças e mudou o tamanho da janela
+[2026-09-14 01:11:29] RicBit: (modo 13h com stride de 256 e area ativa 160)
+[2026-09-14 01:11:51] RicBit: eu nao sei se vai esticar a tela toda num vga de verdade, curioso
+[2026-09-14 01:11:57] RicBit: se esticar dá pra corrigir
+[2026-09-14 06:46:53] Shideravan: Não sei se entendi, isso aí você colocou para simplificar o sistema de display para economizar espaço?
+[2026-09-14 06:49:02] Shideravan: Nessas horas da vontade de ter um PC antigo com DOS nativo só para fazer esses testes
+[2026-09-14 08:01:00] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40521.jpg
+[2026-09-14 08:01:00] Felipe "Juca" Sanches: "quem sabe no futuro rola da comunidade utilizar até técnicas de fotogrametria para extrair modelos 3D bastante fidedignos" 
+
+Olha só qual foi o ponto de partida mais de 10 anos atrás quando comecei a pesquisar sobre o Patinho Feio...
+[2026-09-14 09:19:26] RicBit: é, antigamente para achar a linha 40 eu precisava fazer 40*320, agora eu faco 40*256 que nem é uma multiplicacao, eu só carrego o 40 no bh ao inves do bl. (stride 256)
+[2026-09-14 09:20:45] RicBit: a parte do area ativa 160 é que eu não faço crop dos sprites na ponta. se o sprite sair da tela, ele continua sendo blitado no buffer. eu tinha que mascarar esses sprites antes, agora não precisa porque o vga nem desenha aquelas colunas.
+[2026-09-14 12:09:18] Guilherme Ranoya: @fsanches , você já viu essa ferramenta aqui?
+
+https://www.youtube.com/watch?v=6dralHkCUXc
+
+Transforma sintetizadores emulados via MAME em VSTs para serem usadas nas ferramentas de produção musical atuais.
+
+Talvez não seja tão performático quando rodar VSTs desenvolvidas pelas próprias empresas de seus sintetizadores antigos, mas à título de preservação de software, me parece muito mais seguro (quem me garante que a Korg vai continuar atualizando um software atual de um D-50 daqui há 20 anos para continuar rodando no Windows 35?)
+[2026-09-14 19:47:41] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40525.jpg
+[2026-09-14 19:47:41] Felipe "Juca" Sanches: Tem código meu rodando nesse vídeo! Esse layout do Ensoniq ESQ-1 fui eu que fiz 100%
+[2026-09-14 22:41:14] RicBit: como abusar do hardware dia 2
+aumentei o sample rate do som de 22kHz para 26.214kHz.
+ai o dividendo na hora de calcular o pitch muda de 5E634h para 50000h que, tipo, é mais facil

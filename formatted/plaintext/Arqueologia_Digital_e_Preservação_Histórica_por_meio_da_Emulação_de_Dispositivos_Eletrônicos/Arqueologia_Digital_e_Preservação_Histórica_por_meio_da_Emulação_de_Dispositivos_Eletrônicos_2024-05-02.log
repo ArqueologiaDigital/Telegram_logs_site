@@ -1,0 +1,131 @@
+[2024-05-02 00:44:33] RicBit: Hoje eu estava com o dia livre, aí eu fiz um emulador de msx que traduz sozinho de japones para portugues e coloca a legenda. Não é perfeito mas funciona haha
+
+https://www.youtube.com/watch?v=qKXhXviByLg
+[2024-05-02 00:51:51] Felipe "Juca" Sanches: consegue fazer patch na VRAM pra substituir os caracteres de modo a ter o texto em inglês com o mesmo visual original do jogo?
+[2024-05-02 00:52:14] Felipe "Juca" Sanches: live-patching feito pelo próprio emulador
+[2024-05-02 00:52:18] Felipe "Juca" Sanches: em runtime
+[2024-05-02 00:52:23] RicBit: nao abusa haha
+[2024-05-02 00:52:30] RicBit: é só legenda por enquanto
+[2024-05-02 00:52:59] Felipe "Juca" Sanches: estou apenas especulando sobre possibilidades. Pra entender o que é possível e o que não é
+[2024-05-02 00:53:26] RicBit: bom possivel tudo é, mas isso ainda está longe
+[2024-05-02 00:53:58] Felipe "Juca" Sanches: acho que o que dificulta é se a fonte bitmap do jogo não tiver os glifos A-Z
+[2024-05-02 00:54:41] Felipe "Juca" Sanches: e também se as frases ficarem muito mais longas que o texto original japonês (que acho que deve acontecer bastante)
+[2024-05-02 00:54:42] RicBit: a maioria de msx2 nao tem, inclusive nem tem todos os kanas haha. em geral são só os kanas que vao ser usados nas frases
+[2024-05-02 00:54:57] RicBit: mas ninguem te impede de criar uma fonte nova a partir da existente
+[2024-05-02 00:55:52] Felipe "Juca" Sanches: seu emulador precisa de rotinas específicas para cada ROM? Ou tem algum aspecto mais genérico na implementação?
+[2024-05-02 00:56:13] RicBit: nao, é generico, em principio funciona com qualquer soft
+[2024-05-02 00:56:26] RicBit: coloquei uns de msx1 com fonte 8x8 e ele conseguiu
+[2024-05-02 00:56:39] RicBit: eu nao consigo ler 8x8 nem com dicionario do lado haha
+[2024-05-02 00:57:20] Felipe "Juca" Sanches: mas ele reconhece os caracteres por meio de reconhecimento de imagem? Ou você trabalha a partir do encoding do texto?
+[2024-05-02 00:57:39] RicBit: é um ocr esperto da tela
+[2024-05-02 00:57:43] Felipe "Juca" Sanches: da hora
+[2024-05-02 00:58:00] Felipe "Juca" Sanches: e para a tradução isso aí tá fazendo uso de alguma API de IA?
+[2024-05-02 00:58:08] Felipe "Juca" Sanches: ou google translate?
+[2024-05-02 00:58:32] RicBit: é a api do google translate, a mesma que é usada nas legendas do youtube
+[2024-05-02 01:01:09] Felipe "Juca" Sanches: Semana passada fui com a minha esposa no karaokê Tokyo, pois era aniversário de uma amiga nossa lá.
+
+E quando mostrei as decorações com coisas escritas em katakana, minha esposa achou que eu estava de gozação, mas eu tava falando sério. Ela não acreditou!
+[2024-05-02 01:02:31] RicBit: se souber katakana já não morre de fome
+[2024-05-02 01:02:38] RicBit: tem bastante kana nos menus
+[2024-05-02 01:03:20] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31184.jpg
+[2024-05-02 01:03:20] Felipe "Juca" Sanches: Aí, chegando em casa, eu desenhei no Inkscape um diagrama pra demonstrar que eu tava falando sério. Posso ter errado alguma coisa, mas fiz de cabeça e acho que tá bem ok...
+[2024-05-02 01:03:51] RicBit: SANTORI
+[2024-05-02 01:04:40] Felipe "Juca" Sanches: só o kanji que eu não soube de primeira, mas depois saquei que era "time" (no sentido de "era", "tempo de"). Pois o slongan do comercial de whisky no filme era justamente "Suntori time!", se não me falha a memória.
+[2024-05-02 01:04:40] RicBit: o kanji é ji?
+[2024-05-02 01:04:53] RicBit: jiten?
+[2024-05-02 01:05:38] Felipe "Juca" Sanches: jidai
+[2024-05-02 01:06:03] Felipe "Juca" Sanches: 時代
+[2024-05-02 01:07:48] RicBit: dai! só lembrei o ji mesmo
+[2024-05-02 01:08:47] Felipe "Juca" Sanches: é... eu escrevi "sun" em vez de "san", por viés meu dos sons do inglês
+[2024-05-02 01:09:12] Felipe "Juca" Sanches: e também por que acho que a marca de whisky é escrita "Suntory"
+[2024-05-02 01:09:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-05/31195.jpg
+[2024-05-02 01:09:58] RicBit: no kana eles sempre usam a pronuncia real
+[2024-05-02 01:10:11] Felipe "Juca" Sanches: aliás... você conhece o filme que tem essa cena?
+[2024-05-02 01:10:16] RicBit: mas é a pronuncia real do jeito deles, então tem que ficar esperto haha
+[2024-05-02 01:10:27] RicBit: sim lost in translation
+[2024-05-02 01:10:50] RicBit: eu vi o predio do filme lá do alto da torre de tokyo
+[2024-05-02 01:11:48] Felipe "Juca" Sanches: ro-su-to  i-n  to-ran-su-rê-shi-yo-n 😉
+[2024-05-02 01:14:35] RicBit: tem joguinho de msx1 que é inteiro em katakana, voce iria conseguir ler
+[2024-05-02 01:14:54] RicBit: dragon quest?
+[2024-05-02 01:15:34] RicBit: nao, dragon quest é hiragana
+[2024-05-02 01:15:41] RicBit: deixa ver se lembro
+[2024-05-02 01:15:41] Felipe "Juca" Sanches: o doido é que eu só costumo conseguir ler quando há dicas no contexto que me permitem chutar mais ou menos que tipo de palavra deve estar escrita. Aí vai voltando a memória sobre os sons de cada caractere.
+[2024-05-02 01:15:50] Felipe "Juca" Sanches: completamente fora de contexto fica difícil ainda pra mim
+[2024-05-02 01:16:15] RicBit: é assim mesmo, o contexto ajuda muito
+[2024-05-02 01:16:23] RicBit: por isso que o meu emulador se perde haha
+[2024-05-02 01:16:35] RicBit: ele nao mantem contexto de uma tela para outra ainda
+[2024-05-02 01:17:18] RicBit: ai as vezes ele coloca latok, as vezes ratok, ratoku
+[2024-05-02 01:18:55] Felipe "Juca" Sanches: mas acho que você poderia fazer google_translate(str1 + "|" + str2 + "|" + str3).split("|")[1]
+[2024-05-02 01:19:09] RicBit: se fosse pos processamento sim
+[2024-05-02 01:19:13] RicBit: mas é real time né
+[2024-05-02 01:19:42] RicBit: eu estava pensando em fazer emulador nao-causal
+[2024-05-02 01:19:44] Felipe "Juca" Sanches: ah, então usar só a string da tela anterior, pois não tem acesso à string futura
+[2024-05-02 01:19:51] RicBit: vai torrar a cpu mas resolve
+[2024-05-02 01:20:08] Felipe "Juca" Sanches: ou as N strings de telas anteriores
+[2024-05-02 01:20:15] Felipe "Juca" Sanches: pra dar contexto ao tradutor
+[2024-05-02 01:20:50] Felipe "Juca" Sanches: ...e, no fim, mostrar o .split("|")[-1]
+[2024-05-02 01:21:13] RicBit: se for nao causal eu uso a tela da frente antes dela chegar
+[2024-05-02 01:21:36] RicBit: tipo deixa o emulador rodando em vazio no fast e depois volta no tempo para atualizar
+[2024-05-02 01:21:38] Felipe "Juca" Sanches: sim, mas aí parece ser um problemão que eu nem sei se entendo como funciona
+[2024-05-02 01:22:06] Felipe "Juca" Sanches: ah, seria implementar execução especulativa no emulador?
+[2024-05-02 01:22:11] RicBit: isso
+[2024-05-02 01:22:15] Felipe "Juca" Sanches: perfeito!
+[2024-05-02 01:22:26] RicBit: para cada frame real voce emula uns 300 frames adiantado
+[2024-05-02 01:22:41] RicBit: msx é rapido de emular anyway, só torra a cpu
+[2024-05-02 01:24:42] Felipe "Juca" Sanches: acho que uma implementação possível seria similar a gerenciar um monte de estruturas de dados de save-states até o momento de fazer o commit
+[2024-05-02 01:24:53] Felipe "Juca" Sanches: de uma delas
+[2024-05-02 01:25:06] RicBit: sim, isso mesmo
+[2024-05-02 01:25:27] RicBit: ai voce usa uma rede neural para crescer a arvore na direção mais provavel
+[2024-05-02 01:26:08] RicBit: zero utilidade mas é divertido
+[2024-05-02 01:26:19] RicBit: tipo todos os jogos bons já foram traduzidos manualmente
+[2024-05-02 01:26:26] RicBit: serve só para jogar jogo ruim haha
+[2024-05-02 01:26:44] Felipe "Juca" Sanches: "because we can!"
+[2024-05-02 01:27:07] RicBit: eu rodei aqui uma revista digital da epoca, nao sabia o que era a montanha de texto
+[2024-05-02 01:27:14] RicBit: é review de hardware
+[2024-05-02 01:27:38] Felipe "Juca" Sanches: É inútil igual jogar Another World num emulador de teclado musical Technics KN5000
+[2024-05-02 01:27:38] RicBit: "esse modelo da panasonic tem uma novidade ultra moderna: s-video!"
+[2024-05-02 01:27:41] RicBit: lol
+[2024-05-02 01:27:46] RicBit: vou capturar aqui
+[2024-05-02 01:38:23] RicBit: review https://www.youtube.com/watch?v=71EHhXZSk5Q
+[2024-05-02 01:40:46] RicBit: eita esqueci de dormir
+[2024-05-02 01:40:54] RicBit: até mais!
+[2024-05-02 16:06:30] RicBit: Undeadline ficou bom, exceto pelo título haha https://youtu.be/UCv2tg33rAQ?si=MYBW5NMba8788_pz
+[2024-05-02 16:07:15] L.: ideia de usar tradutor automático em emulação não é nova mas é muito legal!
+[2024-05-02 16:10:04] L.: eu vi essa palestra em 2017 sobre: https://www.youtube.com/watch?v=IehTxEogaOQ
+[2024-05-02 16:12:25] L.: SUBLINHO ficou engraçado
+[2024-05-02 16:56:58] RicBit: FRAY virou BRIGA lol
+[2024-05-02 16:59:12] RicBit: o problema do tradutor automatico é a falta de contexto
+[2024-05-02 16:59:20] RicBit: acho que eu pensei num jeito de deixar mais barato
+[2024-05-02 16:59:50] RicBit: eu posso traduzir aos picados e depois juntar tudo com LLM, aí a AI que se vire para consertar
+[2024-05-02 17:00:48] RicBit: na abertura da fray ele nao consegue usar o pronome certo, no japones é gender-neutral entao só pelo texto é dificil mesmo
+[2024-05-02 17:01:07] RicBit: mas eu tenho 8 cores na cpu, posso mandar a tela para a ai e fazer ele descobrir mais contexto na imagem
+[2024-05-02 17:01:31] Pablo Vasques Bravo-Villalba: 8 cores? Que nem ZX Spectrum? 🤪
+[2024-05-02 17:01:43] RicBit: isso
+[2024-05-02 17:01:46] RicBit: 8 cores e bright
+[2024-05-02 17:22:56] L.: dependendo do caso deve dar pra dar um empurrão pro ocr
+
+por exemplo se souber que tá usando a kanji rom
+[2024-05-02 17:38:40] RicBit: Quase nenhum jogo usa kanjirom, só os aplicativos mesmo
+[2024-05-02 17:40:49] L.: hm, jogos usam algum tipo de encoding tipo shiftjis?
+[2024-05-02 17:41:17] L.: se pudesse patchear rotina que desenha texto pra pegar a string...
+[2024-05-02 18:54:26] RicBit: em geral é tudo bitmap mesmo haha
+[2024-05-02 18:54:36] RicBit: um ou outro usa shiftjis por dentro
+[2024-05-02 18:55:17] RicBit: nossa coloquei o texto na LLM e ficou outro nivel, mas a latencia é absurda
+[2024-05-02 20:00:11] RicBit: hum zero ideia de como fazer cache da resposta da LLM. Guardar o contexto inteiro parece ruim.
+[2024-05-02 20:00:33] RicBit: vou fazer um teste sem cache mesmo
+[2024-05-02 21:41:57] Pedro de Medeiros 👾: https://www.theregister.com/2024/05/02/rool_530_is_here/
+[2024-05-02 23:08:16] RicBit: ah chegou a conta
+[2024-05-02 23:08:43] RicBit: somando todas as chamadas de api que fiz até agora deu R$ 3.00 (três reais)
+[2024-05-02 23:09:22] RicBit: se fosse 50 usuarios usando todo dia daria 3 * 50 * 30 = 4500 reais
+[2024-05-02 23:09:50] RicBit: tem que otimizar muito antes de ficar viavel para uso de alguém além de mim haha
+[2024-05-02 23:44:28] RicBit: quantos jeitos diferentes tem de aparecer texto no msx ?
+[2024-05-02 23:44:59] RicBit: eu lembro de texto que aparece do nada, texto que faz fade in, texto que aparece letra por letra e texto que aparece com scroll
+[2024-05-02 23:45:11] RicBit: tem outro que nao estou lembrando?
+[2024-05-02 23:45:39] RicBit: e eu estava pensando no encoding
+[2024-05-02 23:45:59] RicBit: se o texto for bitmap nao tem o que fazer, isso é comum em abertura
+[2024-05-02 23:46:19] RicBit: mas se for rpg ou algo como muito texto, então o texto está na memoria com algum encoding, normalmente custom
+[2024-05-02 23:46:40] RicBit: mas depois do primeiro ocr, eu posso andar a memoria inteira fazendo match e deduzir o encoding
+[2024-05-02 23:46:58] RicBit: se nao estiver comprimido é facil achar
+[2024-05-02 23:47:14] RicBit: se estiver comprimido tem que ficar monitorando o acumulador e ver os dados passando
+[2024-05-02 23:47:29] RicBit: ou olhar na ram
+[2024-05-02 23:47:43] RicBit: no shalom está comprimido na rom, mas descomprime para a ram

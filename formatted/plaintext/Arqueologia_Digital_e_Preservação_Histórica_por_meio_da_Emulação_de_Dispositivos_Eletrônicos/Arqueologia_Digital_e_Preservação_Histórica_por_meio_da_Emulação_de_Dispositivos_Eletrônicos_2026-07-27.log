@@ -1,0 +1,8 @@
+[2026-07-27 20:53:55] L.: Que doido, o "NT" do Windows não era originalmente de "New Technology", mas sim de "N-Ten", um simulador do i960 da Intel que a MS tava usando pra esse SO novo! https://www.osnews.com/story/145617/windows-nt-got-its-name-from-one-of-intels-failed-x86-replacements/
+[2026-07-27 22:41:16] FTMaciel: https://youtu.be/Ml80G3FEtwg?is=2uVW-QOKRLPD67tm
+
+Funfou
+[2026-07-27 22:56:02] RicBit: sisne está com 56.8% de codigo compilado -> https://github.com/ricbit/sisne
+[2026-07-27 22:56:31] RicBit: eu acho que o maximo é uns 60%, de olho parece que 40% é hand written asm mesmo.
+[2026-07-27 22:57:53] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39796.jpg
+[2026-07-27 22:57:53] RicBit: pintei C de vermelho e asm de azul, parece que no fim vão ficar duas faixas vermelhas continuas

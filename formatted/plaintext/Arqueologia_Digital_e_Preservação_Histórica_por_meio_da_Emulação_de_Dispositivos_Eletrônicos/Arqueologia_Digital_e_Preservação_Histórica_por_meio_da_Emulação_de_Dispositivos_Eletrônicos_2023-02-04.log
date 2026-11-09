@@ -1,0 +1,29 @@
+[2023-02-04 02:10:23] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25707.jpg
+[2023-02-04 02:10:42] Felipe "Juca" Sanches: Chegou 😉
+[2023-02-04 02:26:50] Felipe "Juca" Sanches: separei  o código de estudo do firmware do KN5000 do código genérico de disassembly da CPU TOSHIBA TLCS900H
+[2023-02-04 02:26:52] Felipe "Juca" Sanches: https://github.com/felipesanches/TLCS900_ExecTrace/blob/main/kn5000-disasm.py
+[2023-02-04 02:27:36] Felipe "Juca" Sanches: Um dos próximos passos é detectar se é cartucho de NeoGeo Pocket Color e interpretar o cabeçalho. Caso contrário ler o vetor de interrupção normal do TLCS900H
+[2023-02-04 02:36:58] Felipe "Juca" Sanches: Fiz também hoje um mockup de como seria a renderização do Another World no Neo Geo Pocket Color. Como os gráficos são vetoriais, dá pra redimensionar. Testei com a resolução de 160x152 pixels do NGPC e ficou meio cagado, mas acho que dá pra fazer uns ajustes no renderizador e melhorar um pouco.
+[2023-02-04 02:37:28] Felipe "Juca" Sanches: Seguem alguns screenshots do MAME rodando Another World em 160x152
+[2023-02-04 02:37:37] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25714.jpg
+[2023-02-04 02:37:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25715.jpg
+[2023-02-04 02:37:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25716.jpg
+[2023-02-04 02:37:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25717.jpg
+[2023-02-04 02:38:03] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25718.jpg
+[2023-02-04 02:38:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25719.jpg
+[2023-02-04 02:38:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25720.jpg
+[2023-02-04 02:38:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25721.jpg
+[2023-02-04 02:39:47] Felipe "Juca" Sanches: suspeito que esses erros de render dos polígonos seja semelhante ao problema que se resolve com hinting em fontes true type
+[2023-02-04 02:41:28] Felipe "Juca" Sanches: E o texto ficou pouco legível (e com linhas se atropelando) por conta de ter sido feito scaling de uma fonte bitmap. O ideal seria desenhar uma fonte bitmap dedicada para a resolução do neo geo pocket
+[2023-02-04 02:45:13] Felipe "Juca" Sanches: Um porém... cartucho de NeoGeo Pocket Color só cabem 2 Mbytes. Não deve ser suficiente para enfiar o jogo inteiro.
+[2023-02-04 02:50:31] Felipe "Juca" Sanches: Opa! Na verdade acho que cabe sim! Se eu usar o esquema de compressão igual ao dos releases de Amiga e de MSDOS:
+[2023-02-04 02:50:36] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25726.jpg
+[2023-02-04 02:52:53] Felipe "Juca" Sanches: mas teria que ver quanto de memória RAM tem disponível, pois ao menos uma parte desses assets (referentes ao trecho do jogo que estiver sendo jogado) precisam ser descomprimidos em RAM
+[2023-02-04 02:53:14] Felipe "Juca" Sanches: e precisa também ter espaço suficiente para 4 buffers de vídeo, não sei se tem. Precisaria checar isso
+[2023-02-04 02:53:49] Felipe "Juca" Sanches: ah! E claro, o maior desafio: programar a VM em assembly? :-P
+[2023-02-04 02:54:07] Felipe "Juca" Sanches: pois não tenho nenhum compilador C ainda para essa CPU
+[2023-02-04 02:54:26] Felipe "Juca" Sanches: tem um compilador proprietário da toshiba, mas não consegui usar direito
+[2023-02-04 03:08:01] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25732.jpg
+[2023-02-04 03:08:01] Felipe "Juca" Sanches: Olha que bacana o bilhetinho que veio junto com o neo geo pocket color que comprei no ebay
+[2023-02-04 10:50:06] Erin Pinheiro 🐿: recebi um parecido escrito em kana quando comprei um psp do Japão
+[2023-02-04 12:04:52] Anne Isabelle: Off topic: estou brincando com um minimoog virtual e gravei umas musiquinhas https://annessauro.bandcamp.com/album/annessauro-dreams-of-electric-sheep

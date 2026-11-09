@@ -1,0 +1,47 @@
+[2026-01-12 00:07:11] Felipe "Juca" Sanches: Terminei o escaneamento de um dos anexos (o maior).
+[2026-01-12 00:07:46] Felipe "Juca" Sanches: E a partir dos scans, com ajuda de um sistema de OCR, transcrevi o código fonte de uma das rotinas: https://github.com/ArqueologiaDigital/Anexos_Cross-Montador_MariaAliceFerreira_1973/blob/main/src/wzess.f
+[2026-01-12 01:49:04] Felipe "Juca" Sanches: Mas é usada a sintaxe antiga do Fortran, conhecida como "Fixed Form". E, em teoria, o gfortran (gcc) deveria entender essa sintaxe (por meio do uso de -ffixed-form e talvez também de -std=legacy). Mas não tá funcionando, sei lá por que.
+Então estou agora compilando o SIMH pra tentar rodar o compilador de fortran da IBM num emulador do ibm-1130.
+[2026-01-12 01:49:45] Felipe "Juca" Sanches: Amanhã devo começar a escanear o segundo anexo
+[2026-01-12 08:19:48] Pablo Vasques Bravo-Villalba: Será que não tem erros de interpretação? Logo no começo vi um lugar onde está escrito "ERR0" e outro onde está escrito "SEGUINGO". Tudo bem que estão dentro de comentários, mas pode ter outros erros mais difíceis de notar à primeira vista
+[2026-01-12 09:50:52] Hugo (Agaelebê): ITAPTC typo (line 144) - will crash
+LOPTG typo (line 291) - undefined variable
+1BCO in EQUIVALENCE - syntax error
+GO T0 typo - syntax error
+Missing label 855 - compilation error
+[2026-01-12 12:12:43] Felipe "Juca" Sanches: Concordo que deve ter alguns erros desse tipo ainda. Mas quando tentei compilar usando o gfortran, ele deu erro logo na primeira linha, que revisei bem e é sintaxe perfeitamente válida (para o que se usava nos cartões perfurados do ibm1130 nos anos 70...)
+[2026-01-12 12:14:09] Felipe "Juca" Sanches: Isso é uma resposta gerada por IA?
+
+Ou você tentou compilar também e coletou essas mensagens de erro?
+[2026-01-12 13:03:15] Hugo (Agaelebê): Eu pedi apenas para pesquisar por typos pois expliquei que era código de OCR. não queria a analise completa do programa.. Aí achei até que faz sentido.
+[2026-01-12 13:13:42] Felipe "Juca" Sanches: Sim, faz. Mas prefiro que seja sempre mencionado.
+[2026-01-12 13:15:07] Felipe "Juca" Sanches: Ontem saiu um vídeo de merda no youtube falando sobre o Patinho Feio, com roteiro gerado por IA.
+
+Fala umas barbaridades. Dá a entender que o Zuffo-pai coordenou o projeto, o que é uma mentira absurda!
+
+https://www.youtube.com/watch?v=QDLfCBhohgo
+[2026-01-12 13:15:41] Felipe "Juca" Sanches: Tenho medo da IA atrapalhar o registro histórico.
+[2026-01-12 14:55:52] Anne Isabelle: Fico mto triste quando alguém se mete a fazer conteúdo sem pesquisar. Pesquisar é sempre tão gratificante, não entendo pq usar IA pra coisas assim, só pra gerar views
+[2026-01-12 17:13:59] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36872.jpg
+[2026-01-12 17:13:59] Felipe "Juca" Sanches: Bom... fiz minha parte. Vamos agora ver qual é o nivel de honestidade (ou de canalhice) do dono do canal...
+[2026-01-12 17:20:26] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36874.jpg
+[2026-01-12 17:20:26] Felipe "Juca" Sanches: É um canal novo, com apenas 2 vídeos, e criado 3 dias atrás (em 9/JAN/2026). Então ainda dá tempo de aprender a fazer as coisas direito. Talvez tenha abertura para crítica construtiva.
+Entretanto, tenho pouca esperança...
+[2026-01-12 17:20:26] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36875.jpg
+[2026-01-12 17:28:09] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36876.jpg
+[2026-01-12 17:28:09] Felipe "Juca" Sanches [forwarded]: Reportei como "spreading misinformation".
+[2026-01-12 17:28:09] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36877.jpg
+[2026-01-12 17:52:08] Felipe "Juca" Sanches: Façam comentários lá a respeito disso, por favor. E se puderem denunciar o vídeo também, pode ajudar a dar volume e ter alguma consequência.
+[2026-01-12 18:00:39] Hugo (Agaelebê): Esses videos gerados com ia não precisa ter alguma coisa avisando disso?
+[2026-01-12 18:00:58] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-01/36880.jpg
+[2026-01-12 18:01:05] Pablo Vasques Bravo-Villalba: Tem que expandir a descrição para ver o aviso
+[2026-01-12 18:03:41] Pablo Vasques Bravo-Villalba: Não vi seu comentário lá. Aliás, o Zuffo não foi quem fez o primeiro CI brasileiro lá na Poli?
+[2026-01-12 18:04:58] Hugo (Agaelebê): ah!
+[2026-01-12 18:05:47] Felipe "Juca" Sanches: O Zuffo que é citado nesse vídeo é o pai. Tem também o filho, que é quem está envolvido com aquele projeto Caninos Loucos do MadDog, que é uma outra questão problemática de misinformation...
+[2026-01-12 18:06:10] Felipe "Juca" Sanches: Mas, sim, o Zuffo-pai sempre esteve envolvido com micro-eletrônica.
+[2026-01-12 18:06:14] Pablo Vasques Bravo-Villalba: Não tenho ideia do que seja isso
+[2026-01-12 18:06:38] Felipe "Juca" Sanches: vixe... o Caninos Loucos é uma treta antiga e ainda não resolvida!
+[2026-01-12 18:06:52] Felipe "Juca" Sanches: https://web.archive.org/web/20201120115823/https://github.com/caninos-loucos/CaninosSDK/issues/1
+[2026-01-12 18:20:35] L.: https://bsky.app/profile/mierau.me/post/3mbrq5eibgk2v
+[2026-01-12 18:21:08] Anne Isabelle: MDS QUERO BAIXAR AGORA
+[2026-01-12 23:04:22] Felipe "Juca" Sanches: Já determinados que é um canalha. As duas mensagens sobre o tema foram silenciosamente silenciadas.

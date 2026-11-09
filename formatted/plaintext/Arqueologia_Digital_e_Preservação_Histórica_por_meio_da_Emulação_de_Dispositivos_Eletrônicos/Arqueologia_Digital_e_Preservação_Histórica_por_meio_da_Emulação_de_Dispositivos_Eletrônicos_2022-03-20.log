@@ -1,0 +1,19 @@
+[2022-03-20 07:34:54] Felipe "Juca" Sanches: Pessoal, finalmente sentei por algumas horas para debugar o código do repositório Another World VM Tools
+[2022-03-20 07:35:13] Felipe "Juca" Sanches: https://github.com/felipesanches/AnotherWorld_VMTools
+[2022-03-20 07:35:46] Felipe "Juca" Sanches: Antes tava quebrado. Mas acho que agora tá 100% funcionando para gerar um disasm do bytecode do release de MSDOS.
+[2022-03-20 07:36:10] Felipe "Juca" Sanches: @toymak3r, acho que você vai curtir isso
+[2022-03-20 08:13:16] Felipe "Juca" Sanches: agora estou revisando o código da VM no MAME, pois parece que o último commit que larguei 5 anos atrás naquele branch também está quebrado :-P
+[2022-03-20 08:13:43] Felipe "Juca" Sanches: talvez por que tentei fazer um rebase algum tempo atrás pra atualizar o codebase do MAME e a API interna mudou, ou algo do tipo
+[2022-03-20 08:14:18] Felipe "Juca" Sanches: to massageando código agora aqui, pra deixar tudo num ponto bom pra qualquer nerd que tiver interesse no projeto poder dar continuidade
+[2022-03-20 08:14:52] Felipe "Juca" Sanches: é muito chato largar coisas quebradas, e eu já estava há anos me sentindo envergonhado por isso. Hoje chegou o dia de arrumar a casa 😉
+[2022-03-20 10:14:12] Felipe "Juca" Sanches: um problema adicional é que códigos bons quebram com o passar do tempo por conta da atualização de versão dos compiladores
+[2022-03-20 10:15:01] Felipe "Juca" Sanches: coisas que eram válidas antigamente passam a não compilar mais por que o gcc adiciona novas regras. Se eu largar o código sem updates terei que ficar usando compilador velho
+[2022-03-20 11:46:08] Pedro de Medeiros 👾: Mudanças em compiladores não tem maior tendência a serem aditivas ao invés de destrutivas?
+[2022-03-20 11:46:48] Pedro de Medeiros 👾: Tipo o C++17 aceitar tudo que era permitido no C++14 e este por sua vez do C++11?
+[2022-03-20 14:09:44] Felipe "Juca" Sanches: Pois é. Também acho
+[2022-03-20 14:10:18] Felipe "Juca" Sanches: Mas não sei exatamente o que aconteceu que o código não tava no ponto
+[2022-03-20 14:10:44] Felipe "Juca" Sanches: Aí da tô massageando aqui, mas agora acho que falta pouco
+[2022-03-20 14:11:22] Felipe "Juca" Sanches: Dei uma pausa pois assisti a fórmula 1. Agora vou almoçar e acho que durante a tarde devo retomar isso
+[2022-03-20 22:40:44] L.: https://twitter.com/ErisCeleste/status/1505684829236613130?t=gLHAFCw1qjlw0KsPrE3Fsw&s=09
+[2022-03-20 22:40:54] L.: https://twitter.com/ErisCeleste/status/1505714684271513600?t=T2hXLEHTyqOdgoGniXQx_g&s=09
+[2022-03-20 22:41:50] L.: (Zed é uma linguagem prima do C que evoluiu direto do B lá no Canadá e todo mundo pensava que tinha se perdido. Várias coisas legais que não tem até hoje no C!)

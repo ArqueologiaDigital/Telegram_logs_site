@@ -1,0 +1,51 @@
+[2021-08-23 00:07:01] Felipe "Juca" Sanches: A-HÁ!
+[2021-08-23 00:07:37] Felipe "Juca" Sanches: Manual do compilador C proprietário da TOSHIBA para a família TLCS900 tem um trecho que fala sobre símbolos especiais para se referir aos control registers:
+[2021-08-23 00:07:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14362.jpg
+[2021-08-23 00:07:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14363.jpg
+[2021-08-23 00:08:05] Felipe "Juca" Sanches: E isso me trouxe uma luz 😊
+[2021-08-23 00:10:15] Felipe "Juca" Sanches: o disassembler do MAME foi feito para a linha TLCS900, e o teclado musial usa um TLCS900/H2
+
+A diferença dá pra ver da tabela do TLCS900/H1: ele tem um número maior de canais de microDMA e por causa disso os endereços dos registradores de controle são diferentes
+[2021-08-23 00:10:36] Felipe "Juca" Sanches: agora vai!
+[2021-08-23 00:10:51] Felipe "Juca" Sanches: com isso concluo que meu patch tava errado :-P. Mas vou consertar agora mesmo.
+[2021-08-23 00:11:08] Felipe "Juca" Sanches: esse patch aqui.
+[2021-08-23 00:11:32] Felipe "Juca" Sanches: essa explicacao toda aqui tá errada.
+[2021-08-23 00:11:44] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14370-AnimatedSticker.tgs
+[2021-08-23 00:35:18] kretcheu: Adoro acompanhar essas idas e vindas, certezas e incertezas. 
+
+Alegrias e decepções, depois alegria de novo!
+[2021-08-23 00:35:43] Felipe "Juca" Sanches: yep!
+[2021-08-23 00:35:59] Felipe "Juca" Sanches: É isso aí! Essa é a graça da brincadeira toda.
+[2021-08-23 02:29:15] Felipe "Juca" Sanches: escrevi um código C usando as palavras-chaves especiais para acessar os registradores, compilei com o compilador proprietário da TOSHIBA e inspecionei o binário gerado para descobrir quais são os valores de cada um desses regs
+[2021-08-23 02:29:32] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14375.jpg
+[2021-08-23 02:30:00] Felipe "Juca" Sanches: agora já sei os valores deles, dá pra finalmente consertar a implementacao do disasm disso no MAME
+[2021-08-23 02:31:52] Felipe "Juca" Sanches: Como sempre diz o Alexandre Oliva: "O único uso legítimo de um software proprietário é no desenvolvimento de seu substituto livre!"
+[2021-08-23 02:35:44] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14378.jpg
+[2021-08-23 02:35:44] Felipe "Juca" Sanches: Pronto. Corrigido 😊
+[2021-08-23 02:39:25] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14379.jpg
+[2021-08-23 02:39:25] Felipe "Juca" Sanches: E aqui a rotina de tratamento da interrupção zero, agora com o disasm sem bug. Já posso retomar o trabalho de interpretação do significado dessa rotina pra tentar entender o protocolo de comunicação entre as duas CPUs.
+[2021-08-23 02:42:07] Felipe "Juca" Sanches: e parece fazer algum sentido. As instrucoes que não estavam sendo disassembladas corretamente são onde o programa define o endereço de destino de uma transferencia de dados DMA (o valor 0x060e escrito em DMAD0) e também o contador de quantas escritas a DMA deve fazer (o valor 6 escrito em DMAC0).
+[2021-08-23 02:45:30] Felipe "Juca" Sanches: acho estranho esse código setar o destino (DMAD0 =  "DMA Destination address - Channel #0") mas não setar a origem (DMAS0 = "DMA Source address - Channel #0")
+
+Talvez o endereço de origem seja fixo (e igual a 0x140000, quem sabe?!) e setado uma vez só em alguma rotina de inicialização
+[2021-08-23 03:20:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-08/14382.jpg
+[2021-08-23 03:20:30] Felipe "Juca" Sanches: oooohhhh baby! Yeah!
+
+Essa rotina que começa em 0xEF329E parece fazer um setup inicial para as transferencias microDMA entre as CPUS.
+
+* Canal #0 para receber dados da SUBCPU
+* Canal #2 para mandar dados para a SUBCPU!
+[2021-08-23 06:27:19] Felipe "Juca" Sanches: Passei as últimas 3 horas mapeando todas as rotinas que fazem qualquer tipo de manipulação do endereço 0x00140000 usado no mecanismo de comunicacao inter-CPUs. Tenho uma listinha aqui de rotinas a investigar nos próximos dias. Mas agora chegou a hora de capotar na cama 😉
+
+Happy Hacking!
+[2021-08-23 09:21:23] kretcheu: Achei que a frase fosse do RMS.
+[2021-08-23 09:23:47] kretcheu: Dormindo cedo heim, o padeiro já está acordado!
+[2021-08-23 19:03:42] Felipe "Juca" Sanches: Estou começando a pensar em substituir código original da Technics por implementações minhas em C, gradativamente.
+
+Uma das primeiras coisas que eu gostaria de fazer é implementar um driver de disquete.
+
+E depois usá-lo para carregar executáveis. Assim não precisarei mais ficar regravando o sistema inteiro o tempo todo para fazer testes.
+[2021-08-23 19:04:19] Felipe "Juca" Sanches: E pretendo temporariamente usar o compilador proprietário da TOSHIBA, enquanto não sai meu port do GCC
+[2021-08-23 19:04:40] Felipe "Juca" Sanches: vou trocando um pedacinho por vez... até ter um sistema inteiro livre
+[2021-08-23 19:05:25] Felipe "Juca" Sanches: mas preciso me policiar pra esse "temporariamente" não virar "pra sempre", é claro!
+[2021-08-23 19:05:53] Felipe "Juca" Sanches: por isso continuo avançando no port do binutils (que é pre-requisito pra portar o GCC)

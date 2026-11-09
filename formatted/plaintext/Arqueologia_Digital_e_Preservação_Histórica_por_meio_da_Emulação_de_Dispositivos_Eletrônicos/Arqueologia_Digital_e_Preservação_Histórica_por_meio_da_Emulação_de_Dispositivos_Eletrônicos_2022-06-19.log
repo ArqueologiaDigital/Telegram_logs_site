@@ -1,0 +1,67 @@
+[2022-06-19 00:11:58] L.: https://twitter.com/mwichary/status/1537628666137415682?t=PZKTsR2DfgFYkAlW68TErA&s=09
+[2022-06-19 05:47:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21737.jpg
+[2022-06-19 05:47:54] Felipe "Juca" Sanches: tem algumas coisas ainda zoadas, mas aqui está o estado atual do meu inicio de port pra MSDOS
+[2022-06-19 05:48:15] Felipe "Juca" Sanches: falta carregar a paleta de cores
+[2022-06-19 05:48:23] Felipe "Juca" Sanches: e falta consertar a resolucao da tela
+[2022-06-19 08:40:02] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/pull/75
+[2022-06-19 08:40:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21741.jpg
+[2022-06-19 08:46:26] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21742.jpg
+[2022-06-19 08:46:26] Felipe "Juca" Sanches: Rodando no meu 386
+[2022-06-19 09:23:21] Pablo Vasques Bravo-Villalba: Puxa, que legal
+[2022-06-19 09:49:14] Felipe "Juca" Sanches: a rotina de desenhar a tela tá bem lenta, pois estou usando uma chamada de plotar pixel da VGA BIOS
+[2022-06-19 09:49:36] Pablo Vasques Bravo-Villalba: Eita
+[2022-06-19 09:49:37] Felipe "Juca" Sanches: escrever direto na RAM da VGA não tava dando certo, não entendi por que
+[2022-06-19 09:50:00] Felipe "Juca" Sanches: tive dificuldade de fazer funcionar, então apelei para a solução lenta
+[2022-06-19 09:50:07] Felipe "Juca" Sanches: depois alguém pode tentar melhorar isso
+[2022-06-19 09:50:17] Pablo Vasques Bravo-Villalba: Faz sentido
+[2022-06-19 10:02:42] Felipe "Juca" Sanches: @pvm1337, to tentando (com um pouco de dificuldade) fazer o port MSDOS compilar na GitHub Action também:
+https://github.com/ArqueologiaDigital/Mines/pull/76
+[2022-06-19 10:19:06] Felipe "Juca" Sanches: Abri uma issue sobre isso no repo do port do gcc:
+
+https://github.com/tkchia/build-ia16/issues/21
+[2022-06-19 13:42:13] Pablo Vasques Bravo-Villalba: https://youtu.be/sclZDCjUVvI
+[2022-06-19 13:55:20] Pedro de Medeiros 👾: Falando nisso, quando eu crio uma imagem usando o PPA que você incluiu no action, ele não instala nenhum conio.h
+[2022-06-19 13:56:57] Felipe "Juca" Sanches: você viu a resposta to mantenedor do port do gcc, o usuário tkchia?
+[2022-06-19 13:58:42] Pedro de Medeiros 👾: Não tinha visto. Mas visitando o PPA do autor eu vi pra quais releases o pacote foi criado.
+[2022-06-19 14:00:22] Pedro de Medeiros 👾: Mas pra automatizar o processo usando outra versão do Ubuntu, estou com esse problema agora (do conio.h faltando).
+[2022-06-19 14:01:03] Pedro de Medeiros 👾: Eu estou gerando o pacote do jeito que você fez no README.md e vendo se consigo gerar um container a partir daí.
+[2022-06-19 14:06:04] Pedro de Medeiros 👾: Problema que esse procedimento que você descreve tá leeeeeento aqui. Colocar tudo já configurado num container vai acelerar o processo.
+[2022-06-19 14:53:35] L.: Eu lembro do ricbit fazendo um programa pra desenhar esses gráficos no MSX em alguma MSX Jaú
+[2022-06-19 15:12:47] Pablo Vasques Bravo-Villalba: Não vi isso, infelizmente. Se bem que na época talvez eu não tivesse apreciado tanto
+[2022-06-19 15:36:23] RicBit: https://sites.google.com/site/ricbitmsx/development/agi-interpreter?authuser=0
+[2022-06-19 16:16:45] Pablo Vasques Bravo-Villalba: Let's Code MS DOS 0x13: VGA Mode X Fast(er) Blitting
+https://youtu.be/8e3ocjtWKac
+[2022-06-19 16:17:08] Pablo Vasques Bravo-Villalba: @fsanches Será que isso é útil? ☝️🏽
+[2022-06-19 16:40:59] Felipe "Juca" Sanches: talvez
+[2022-06-19 16:41:20] Felipe "Juca" Sanches: cheguei até a ver esse video listado numa busca minha ontem, mas não cheguei a assistir ainda, não
+[2022-06-19 18:01:01] Pablo Vasques Bravo-Villalba: Bom, preparei aqui alguns protótipos para ajudar a vender a ideia de metatiles de 16x16 pixels. Com isso a gente faz um uso melhor do espaço da tela (não gasta tanto espaço com bordas) e possibilita ter tiles mais detalhados.
+[2022-06-19 18:01:35] Pablo Vasques Bravo-Villalba: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21767-classic-prototype.gif.mp4
+[2022-06-19 18:02:20] Pablo Vasques Bravo-Villalba: O primeiro é um estilo "clássico", para MSX2 e qualquer outro sistema que tenha pelo menos 15 cores disponíveis e não tenha restrição local de atributos
+[2022-06-19 18:03:11] Pablo Vasques Bravo-Villalba: Ele tenta reproduzir o aspecto do Minesweeper no Windows 3.1 (e com isso deu pra identificar a necessidade de um tile representando "erro", ou seja, local que você sinalizou com bandeira mas não tinha mina)
+[2022-06-19 18:04:03] Pablo Vasques Bravo-Villalba: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21770-abstract-prototype.gif.mp4
+[2022-06-19 18:04:05] Pablo Vasques Bravo-Villalba: O segundo é um estilo "abstrato", para MSX1, usando as cores e restrições do VDP TMS9918 e compatíveis
+[2022-06-19 18:05:20] Pablo Vasques Bravo-Villalba: Esse segundo eu pretendo usar como base também para o MSX2, só que com cores diferentes e mais vivas, mais fáceis de distinguir.
+[2022-06-19 18:07:47] Pablo Vasques Bravo-Villalba: No estilo "clássico" tem uma simulação de cursor estilo ponteiro de mouse. Ele usa dois sprites de 16x16 superpostos. No estilo "abstrato" tem uma simulação de cursor animado estilo crosshair, para teclado e controle. O cursor é feito de dois sprites de 16x16 superpostos e cada quadro de animação dura meio segundo (na prática, usa 3 padrões de sprite)
+[2022-06-19 18:08:57] Pablo Vasques Bravo-Villalba: Para ambos eu desenhei todo o tileset, incluindo variação de tiles já prevendo também o highlight, se preferirem usar como opção em vez do sprite (ou se não tiver sprite no sistema destino)
+[2022-06-19 18:10:39] Pablo Vasques Bravo-Villalba: Mas quem gostou do estilo "jardim" que eu tinha feito antes para o formato de tiles 8x8 não precisa ficar triste, porque pretendo redesenhar os tiles desse estilo para 16x16 pixels, e tenho certeza que vai ficar ainda melhor. Só não fiz ainda porque sou um preguiçoso procrastinador 😅
+[2022-06-19 18:16:18] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21776.jpg
+[2022-06-19 18:16:18] Pablo Vasques Bravo-Villalba: Aqui os tilesets, por enquanto
+[2022-06-19 18:16:18] Pablo Vasques Bravo-Villalba: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21777.jpg
+[2022-06-19 18:29:28] L.: Ficou legal!
+[2022-06-19 18:29:48] Leonardo Roman: Talvez seja possível pensar em fases com tilesets diferentes e com cada vez mais minas.
+[2022-06-19 18:31:05] Pablo Vasques Bravo-Villalba: Brigadim! 😉👍🏽
+[2022-06-19 19:19:26] Felipe "Juca" Sanches: Isso ficou muito-muito-muito-legal!!! 😃
+[2022-06-19 19:20:22] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21782-sticker.webp
+[2022-06-19 19:22:28] Felipe "Juca" Sanches: tendo múltiplos tile-sets podemos pensar na possibilidade de trabalhar com "temas". Permitindo escolher o que se achar mais legal.
+[2022-06-19 19:23:01] Felipe "Juca" Sanches: Ou então essa idéia do @lrrosa de ter fases com tile-sets diferentes. Achei divertido pensar nisso
+[2022-06-19 19:25:46] Pedro de Medeiros 👾: Mas pra ter fases tem que pensar em algum tipo de progressão. IMHO, algo mais bacana que só colocar mais mina.
+[2022-06-19 19:26:58] Felipe "Juca" Sanches: é... pq campo minado é um jogo repetitivo. Então não sei se teria muita graça jogar mais do que um único campo grande
+[2022-06-19 19:28:09] Felipe "Juca" Sanches: se o campo não fosse um retangulo perfeito, poderia ser interessante. Ter uma paisagem ao redor do terreno irregular
+[2022-06-19 19:28:20] Felipe "Juca" Sanches: seria uma variação meramente estética
+[2022-06-19 19:29:05] Felipe "Juca" Sanches: teve uma vez que eu programei um campo minado hexagonal em javascript
+[2022-06-19 19:29:57] Felipe "Juca" Sanches: https://code.google.com/archive/p/hexamines/
+[2022-06-19 19:36:45] L.: https://nicole.express/2022/let-me-show-you-the-sound-of-my-master.html
+[2022-06-19 19:38:38] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21792.jpg
+[2022-06-19 19:40:41] Felipe "Juca" Sanches: "teve uma vez" == "15 anos atrás"
+[2022-06-19 19:41:03] Felipe "Juca" Sanches: já dá pra chamar de retrô kkkk
+[2022-06-19 20:06:18] Leonardo Roman: Talvez começar com campos menores que vão aumentando a cada fase. E colocar uns power ups aleatórios, como invencibilidade temporária.

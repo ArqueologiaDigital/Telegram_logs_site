@@ -1,0 +1,155 @@
+[2026-10-12 00:02:08] Shideravan: O objetivo é buscar um port 1:1?
+[2026-10-12 00:06:44] Shideravan: É muito legal, mas por outro lado, gostaria muito de ver um pouco alguns recursos do hardware do Neo Geo que possibilitaria alguns efeito interessantes que o System 16 não permitia, como efeitos de scaling mais avançados, etc
+[2026-10-12 00:16:14] Marcelo: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41363.jpg
+[2026-10-12 00:17:37] Marcelo: Impressionante como a ia teve a coragem de baixar, comparar e fazer uma imagem pra mim testar
+[2026-10-12 00:19:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41365.jpg
+[2026-10-12 00:19:48] Felipe "Juca" Sanches: Marcelo, peço que evite apagar suas próprias mensagens. Aqui a gente costuma apagar apenas spammers
+[2026-10-12 00:20:32] Felipe "Juca" Sanches: uma vez dito, está dito ;-)
+[2026-10-12 00:21:34] Shideravan: Perai, Rockman 8 tem contexto
+[2026-10-12 00:23:00] Shideravan: Rockman 8 é espremer o que já tá no limite do "espremimento" para completar o suporte ao fullset do GameBoy e atingir o objetivo final do emulador que roda tudo com 4kb
+[2026-10-12 00:23:22] Shideravan: kkkkkkkkkkk
+[2026-10-12 00:23:55] Felipe "Juca" Sanches: próximo desafio: 2kb
+[2026-10-12 00:24:46] Felipe "Juca" Sanches: cara... 4kb é o tamanho da memória do Patinho Feio...
+[2026-10-12 00:25:54] Shideravan: Ia ser legal ele ir para o desafio de fazer isso com outros hardwares, eu queria muito ver ele fazendo isso no Famicom com aquela imensidão de mappers hahaha
+[2026-10-12 00:26:00] Felipe "Juca" Sanches: ou em outras palavras... ao inves de definir um proximo desafio, talvez seja o caso de comecar a computar scores abaixo de 4k, pra tentar achar o limite
+[2026-10-12 00:26:50] Felipe "Juca" Sanches: começando com 4096 bytes, quanto mais dá pra tirar?
+[2026-10-12 00:27:16] Shideravan: Eu já acho que ele não devia colocar uma meta. Deixa a meta aberta e quando atingir a meta, dobra a meta
+[2026-10-12 00:27:23] Felipe "Juca" Sanches: parece o desafio do Mines...
+[2026-10-12 00:27:38] RicBit: o galaga novo está em 32kb, daria pra fazer em 16kb  mas nem vale a pena haha
+[2026-10-12 00:27:58] Felipe "Juca" Sanches: vale mais a pena bolar um gameplay para 3 naves
+[2026-10-12 00:28:23] RicBit: 3 naves fica no limite
+[2026-10-12 00:28:26] Shideravan: 4kb para o gameboy que é um hardware relativamente simples se mostrou o limite do limite
+[2026-10-12 00:28:58] RicBit: master system seria muito mais facil que gameboy
+[2026-10-12 00:29:04] Shideravan: Eu já aceitaria limites um pouco maiores, porém em consoles mais complexos
+[2026-10-12 00:29:13] RicBit: por isso que fiz gameboy, master system nao ia ter graça
+[2026-10-12 00:29:17] Felipe "Juca" Sanches: elabore
+[2026-10-12 00:29:24] Shideravan: Bom ponto
+[2026-10-12 00:30:36] RicBit: o port pra v9990 nao tem tile, é tudo sprite, muito mais facil. mas tem o limite de 16 sprites por linha. se tiver dez inimigos parados na mesma linha, mais dois inimigos em diving, mais dois tiros de cada lado = limite
+[2026-10-12 00:30:52] RicBit: com tres naves sao tres tiros, passa um do limite
+[2026-10-12 00:31:14] RicBit: ai teria que fazer multiplexing, eu nem fiz porque com duas naves cabe certinho
+[2026-10-12 00:31:17] Shideravan: Mas é que Master System tem uma biblioteca mais modesta e que não teve espaço de explorar o potencial do hardware ou com cartuchos muitobizarros
+[2026-10-12 00:32:01] Shideravan: Eu queria ver um desafio com um console que tem vários cartuchos que expandiam a capacidade, como no caso do SNES
+[2026-10-12 00:32:35] RicBit: snes sao duas cpus, nao tem como
+[2026-10-12 00:32:40] Shideravan: Mas provavelmente você iria ter que setar um tamanho maior para dar espaço para brincar
+[2026-10-12 00:33:05] RicBit: nes daria em 4kb, talvez eu faca um dia se ninguem fizer antes
+[2026-10-12 00:33:09] Felipe "Juca" Sanches: tiros out of sync. A Nave do meio atira primeiro, as duas outras atiram um pouco depois
+[2026-10-12 00:33:30] RicBit: é, out of sync funciona
+[2026-10-12 00:33:43] Shideravan: Dando suporte aquele monte de mapper estranho? Eu queria muito ver isso
+[2026-10-12 00:33:58] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41398-interesting-excellent.mp4
+[2026-10-12 00:34:06] RicBit: na real o que eu quero fazer quando tiver paciencia é fazer as naves do galaga entrar direito na tela
+[2026-10-12 00:34:31] RicBit: quando elas entram por baixo ou por cima, a entrada é suave, um pixel por vez
+[2026-10-12 00:34:45] RicBit: pelas laterais a nave do nada aparece no x=10
+[2026-10-12 00:35:05] RicBit: o certo seria comecar no x=-15 e ir aos poucos
+[2026-10-12 00:35:06] Felipe "Juca" Sanches: e depois desse dia ele nunca mais conseguiu dormir
+[2026-10-12 00:35:28] RicBit: eu nao coloquei porque teria que ajustar o tempo do challeging stage
+[2026-10-12 00:35:34] RicBit: locar uns milisegundos a mais
+[2026-10-12 00:35:42] Shideravan: @fsanches tem dias que eu fico numa coceira para desenvolver drivers no MAME vibecodando... Pena que é um péssimo momento para isso kkkkkkkkk
+[2026-10-12 00:35:59] Felipe "Juca" Sanches: e um ótimo momento para isso
+[2026-10-12 00:36:34] Shideravan: Vou passar mais tempo discutindo PR do que me divertindo desenvolvendo kkkkkkkkk
+[2026-10-12 00:36:45] Felipe "Juca" Sanches: nao é verdade
+[2026-10-12 00:36:52] Shideravan: Será?
+[2026-10-12 00:36:59] Felipe "Juca" Sanches: os meus PRs tem entrado rapido
+[2026-10-12 00:37:08] Felipe "Juca" Sanches: galera ta aos poucos se adaptando
+[2026-10-12 00:37:16] Shideravan: Mas você já é respeitado lá hahaha
+[2026-10-12 00:37:28] Felipe "Juca" Sanches: praticamente todos meus PRs entram via merge do rb, alias...
+[2026-10-12 00:37:43] Shideravan: Exato! Eu to pensando se não é melhor se arrumarem de como vão lidar com IA daqui para frente
+[2026-10-12 00:38:14] Felipe "Juca" Sanches: rb nao é ricbit, nesse caso. É rb6502 :-)
+[2026-10-12 00:38:53] Felipe "Juca" Sanches: R. Belmont  https://github.com/rb6502
+[2026-10-12 00:38:55] Shideravan: Falando no arbee, aquele esquema de pre-review que ele postou, está sendo sucesso?
+[2026-10-12 00:39:09] Shideravan: Eu chamo ele de arbee
+[2026-10-12 00:39:11] Felipe "Juca" Sanches: pra mim 100%
+[2026-10-12 00:39:27] Felipe "Juca" Sanches: sim, arbee... rb...
+[2026-10-12 00:39:31] Shideravan: isso
+[2026-10-12 00:39:50] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41423.jpg
+[2026-10-12 00:39:50] RicBit: teria que estender esses graficos pro negativo
+[2026-10-12 00:39:52] Shideravan: RB é Ricardo Bittencourt kkkkkkkkk
+[2026-10-12 00:41:31] Shideravan: To com vontade de dar suporte a uns brick games lá no MAME
+[2026-10-12 00:41:39] Felipe "Juca" Sanches: minha prática recorrente agora é esse prompt:
+
+/goal Run /mame-review iteratively fixing anything it reports until a review comes up clean
+[2026-10-12 00:41:57] Shideravan: Acho que seria um ótimo projeto para brincar com IA
+[2026-10-12 00:42:26] Shideravan: Depois queria ver seu workflow
+[2026-10-12 00:42:44] Felipe "Juca" Sanches: manda ver. Eu te darei endosso em público
+[2026-10-12 00:43:06] Shideravan: Eu passo pelo crivo do grupo aqui primeiro antes de mandar lá
+[2026-10-12 00:43:16] Felipe "Juca" Sanches: vc já tem visto aqui no grupo, pois eu sou tagarela. Mas posso mostrar mais, com certeza
+[2026-10-12 00:43:31] Shideravan: Vai ser um material legal para a gente ir discutindo
+[2026-10-12 00:47:01] Shideravan: Eu já tenho até um ponto de partida, que são os hardwares que são suportados no BrickEmuPy, já que o desenvolvedor fez vários decapping e temos uma documentação interessante para dar início nos trabalhos
+[2026-10-12 00:49:47] Felipe "Juca" Sanches: tinha gente aqui trabalhando nisso um tempo atrás
+[2026-10-12 00:49:58] Felipe "Juca" Sanches: @figur8
+[2026-10-12 00:50:12] Shideravan: Sim, a gente até falava de trabalharmos juntos nisso
+[2026-10-12 00:50:37] Shideravan: Fora que brick games além de terem um apelo emocional comigo (foram os primeiros jogos que eu tive acesso, assim como muitos brasileiros) e no geral são bem baratos e disponíveis
+[2026-10-12 00:50:53] Felipe "Juca" Sanches: @figur8, topa juntar forças com o @Shideravan? Isso vai ser muito legal
+[2026-10-12 00:51:22] Felipe "Juca" Sanches: veredade
+[2026-10-12 00:51:37] Felipe "Juca" Sanches: meu primeiro minigame deve ter sido o paperboy da tiger
+[2026-10-12 00:51:54] Shideravan: Outra coisa é que existem infinitos brick games e hardwares similares... Mas que compartilham estrutura em comum
+[2026-10-12 00:52:30] Felipe "Juca" Sanches: é um vasto universo... como os synths :-)
+[2026-10-12 00:52:32] Shideravan: Eu não sei se pessoal de outros países tem o mesmo interesse e apelo emocional que nós temos com esses aparelhos
+[2026-10-12 00:53:01] Shideravan: Então acaba sendo um material legal para a getne trabalhar que não vai ter muita gente com o mesmo empenho de preservar
+[2026-10-12 00:53:12] Felipe "Juca" Sanches: tetris paraguai é igual cachorro caramelo
+[2026-10-12 00:54:17] Shideravan: E a gente não fica com tanto medo de fazer engenharia reversa e botar fogo, que em geral são hardwares baratos. Dá para a gente conseguir alguns em sucata
+[2026-10-12 00:55:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41447.jpg
+[2026-10-12 00:55:24] Felipe "Juca" Sanches: memórias afetivas
+[2026-10-12 00:55:41] Shideravan: Meu primeiro videogame foi um desses, de futebol hahaha
+[2026-10-12 00:56:38] Shideravan: Esse car racing também era clássico
+[2026-10-12 00:56:38] Felipe "Juca" Sanches: vc já viu meu jogo de minigame em SVG+js com o Tux e o logo do MSN?
+[2026-10-12 00:57:16] Shideravan: Tinha um amigo meu que tinha uma locadora e que buscava lotes de cartuchos de super nintendo no paraguai. Os caras literalmente davam esses minigames de brinde para ele e ele me dava de presente
+[2026-10-12 00:57:56] Shideravan: Esses minigames eram troco de bala no paraguai nos anos 90 kkkkkkkkkkk
+[2026-10-12 00:58:52] Shideravan: Ainda não
+[2026-10-12 00:59:14] Shideravan: E bicho, para uma criança nos anos 90, isso era ouro
+[2026-10-12 01:00:32] Shideravan: Eu sempre fico pensando na galera que compra Playstation 5 hoje em dia custando 2 rins e meio e o videogame as vezes fica meio encostado. Enquanto esses minigames baratinhos geravam diversão infinita nas mãos de uma criança hahaha
+[2026-10-12 01:03:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41456.jpg
+[2026-10-12 01:03:53] Felipe "Juca" Sanches: kkkkk!!! E aí? Trago ele aqui pro grupo?
+[2026-10-12 01:05:18] Shideravan: De que ano é isso? kkkk
+[2026-10-12 01:05:32] Felipe "Juca" Sanches: 2026, alguns segundos atrás
+[2026-10-12 01:12:11] RicBit: a minha memoria afetiva com o galaga é que eu sempre ficava em ultimo nas jogatinas, até que meu pai teve a ideia de me emprestar os oculos dele. Aí eu fiquei em primeiro, chocado, "o mundo pra vocês é nitido assim?!?!"
+[2026-10-12 01:23:03] Felipe "Juca" Sanches: "vocês todos são tão ruins assim?!?!"
+[2026-10-12 01:47:24] Felipe "Juca" Sanches: https://felipesanches.googlecode.com/svn/trunk/SVG/minigames/TuxVsMSNbug/minigame.svg
+[2026-10-12 01:49:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41462.jpg
+[2026-10-12 01:49:43] Felipe "Juca" Sanches: se bobear esse foi meu primeiro "layout" ;-)
+[2026-10-12 02:05:29] Felipe "Juca" Sanches: https://web.archive.org/web/20150124045653/https://felipesanches.googlecode.com/svn/trunk/SVG/minigames/TuxVsMSNbug/minigame.svg
+[2026-10-12 02:05:42] Felipe "Juca" Sanches: o link original nao funciona mais
+[2026-10-12 02:08:27] Felipe "Juca" Sanches: video: (not yet published)
+[2026-10-12 09:35:54] Pablo Vasques Bravo-Villalba: Queria saber de quem foi a iniciativa. Achei que você não gostasse de hardware MSX não-padrão
+[2026-10-12 09:39:14] Pablo Vasques Bravo-Villalba: Sei lá, não lembro
+[2026-10-12 09:42:48] Pablo Vasques Bravo-Villalba: Você consideraria outras melhorias? Como estrelas coloridas ou som do WSG no SCC?
+[2026-10-12 11:19:24] Ismael Carvalho: Me perdi no fio, mas gosto do dos brick games e já fiz uma prova de conceito usando IA com ele mas não tive tempo pra me jogar de cabeça ainda e gosto do @Shideravan então seja lá o que for vamo nessa xD
+[2026-10-12 11:22:13] Ismael Carvalho: Eu não manjo da parte do decaping mas o código do azya é bem acessível, até onde consegui brincar com a IA o resultado foi bem satisfatório e com as evoluções atuais deve dar pra fazer umas bruxarias maneiras dado a forma como o azya tem documentado os avanços dele
+[2026-10-12 11:24:20] Ismael Carvalho: Eu tô junto com o @fsanches nessa, acho que o pessoal lá até onde vi implica mais com não saber as implicações do que se está fazendo
+[2026-10-12 11:25:27] Ismael Carvalho: Minha experiência é pouca no mame mas as vezes que apanhei foi mais por não saber muito do codestyle do pessoal ou não entender muito bem algum conceito e a forma de como representar direito
+[2026-10-12 11:25:36] Ismael Carvalho: Ono não é seu caso eu acho que seria tranquilo
+[2026-10-12 11:25:42] Ismael Carvalho: Como*
+[2026-10-12 11:27:49] Ismael Carvalho: Fora que os trabalhos que tenho visto aqui me deixou mais mente aberta pra uso mais fortemente técnico da IA principalmente os trampos do macabeus, daí no que eu puder ajudar tamo aí
+[2026-10-12 12:08:51] Shideravan: Eu também. Por isso eu fiquei com vontade de fazer esse projeto. 
+É um jeito de abrir mais a minha cabeça com a tecnologia e treinar a usar mais as ferramentas
+[2026-10-12 12:09:42] Shideravan: Eu achei bem impressionante o trabalho da galera aqui no grupo
+[2026-10-12 12:09:45] Marcelo: Mas é bom, por isso tenho Gemini pro
+[2026-10-12 12:10:21] Shideravan: O Gemini pro eu tenho também, mas é que meu plano de celular fornece de "brinde"
+[2026-10-12 12:12:16] Shideravan: Mas o Gemini serve para codar?
+
+Os projetos que eu acompanho é sempre GPL-6 Astra, GLM-5.x, Opus 5.5 e Fable
+[2026-10-12 12:13:20] Shideravan: Acho que o Gemini 4 vai melhorar muito na parte de códigos, mas será que o Gemini 3.1 vai servir para a gente?
+[2026-10-12 12:13:36] Shideravan: Se servir é até mais fácil
+[2026-10-12 12:16:03] Marcelo: Como diria as crianças, se tá no jogo é pra usar
+[2026-10-12 12:16:15] Marcelo [forwarded]: https://www.reddit.com/r/androidroot/comments/1w9hz2n/claude_just_rooted_my_tv_which_ive_been_chasing/
+[2026-10-12 13:37:28] RicBit: v9990 é gray area, para mim algumas coisas parecem ok, outras não. recolorir jogo antigo parece ok.
+[2026-10-12 13:38:57] RicBit: eu estava meio incomodado com as estrelas mesmo. em principio não tem motivo pra ser tudo vermelho, daria pra mudar sim. eu nem vi como é o som original, vou dar uma olhada.
+[2026-10-12 13:49:10] Pablo Vasques Bravo-Villalba: Se não me engano é uma das versões mais simples do WSG, com apenas 3 canais de som. Deve ser relativamente trivial adaptar para SCC
+[2026-10-12 14:28:10] RicBit: Tem que achar os samples, eu ainda não abri o código do galaga arcade
+[2026-10-12 15:29:51] RicBit: achando os samples deve ser quase 1:1 , mas aí provavelmente nao vai caber em 32kb haha
+[2026-10-12 15:34:32] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41504.jpg
+[2026-10-12 15:34:32] RicBit: death wish 3 9990, nao borra mais.
+[2026-10-12 15:44:53] Jecel Assumpcao Jr: este era o limite original, mas com as instruções indexadas o software poderia endereçar 64KB. Não me lembro se o hardware foi expandido mas tenho a impressão de ter visto algo sobre 16KB
+[2026-10-12 15:45:51] Felipe "Juca" Sanches: haha, a gente joga verde e as pessoas certas aparecem! ;-)
+[2026-10-12 16:26:53] Ismael Carvalho: cara é o que tive mais contato até o momento, tendo uma organização em volta dele funciona legal, pelo menos em ambientes mais conhecidos em engenharia reversa eu não sei tatnto
+[2026-10-12 16:27:09] Ismael Carvalho: por que não tive tanto tempo pra experimentar mais criativamente ainda
+[2026-10-12 16:37:27] Ismael Carvalho: eu uso o 3.7 aqui mas esses menores dá pra começar tranquilo
+[2026-10-12 16:37:51] Ismael Carvalho: tipo pra iniciar qualquer um meio que serve a medida que tú for tendo necessidade vai pra "drogas mais pesadas" XD
+[2026-10-12 17:31:11] Felipe "Juca" Sanches: conseguiu jogar, @Shideravan ?
+[2026-10-12 21:38:08] Guilherme Ranoya: https://www.youtube.com/watch?v=ZCxymG-RcNk
+[2026-10-12 21:40:58] Shideravan: Consegui! Achei massa a provocação com a microsoft hahaha
+[2026-10-12 21:41:21] Shideravan: Curiosidade: o Linux continua mais forte do que nunca e o MSN já era kkkkkkkkkkkkkk
+[2026-10-12 21:42:24] Felipe "Juca" Sanches: na época eu cheguei a mandar um email para a loja ThinkGeek pra saber se eles não teriam interesse em comercializar um minigame com esse design, caso eu o fabricasse de verdade
+[2026-10-12 21:42:42] Shideravan: Você lembra por que decidiu fazer um design baseado nos minigames da Tiger em específico?
+[2026-10-12 21:42:58] Felipe "Juca" Sanches: memória afetiva
+[2026-10-12 22:43:44] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41518.jpg
+[2026-10-12 22:43:44] RicBit: ainda nao está bom, mas vai ficar

@@ -1,0 +1,5 @@
+[2025-07-14 17:32:03] RicBit: aprendi o algoritmo berlekamp massey hoje
+[2025-07-14 17:32:05] RicBit: https://en.wikipedia.org/wiki/Berlekamp%E2%80%93Massey_algorithm
+[2025-07-14 17:32:26] RicBit: dado uma sequencia de numeros ele acha a menor recorrencia que gera a sequencia
+[2025-07-14 17:32:45] RicBit: entao em tese dá para pegar uma sequencia binaria e achar o lfsr que gerou a sequencia
+[2025-07-14 17:32:54] RicBit: e ai voce quebra o pense bem

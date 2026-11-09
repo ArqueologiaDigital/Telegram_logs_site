@@ -1,0 +1,52 @@
+[2024-02-09 01:31:33] L.: https://colourclash.co.uk/spectrum-analyser/
+[2024-02-09 01:31:50] L.: Spectrum Analyser is a tool that is designed to help reverse engineer ZX Spectrum games & programs.
+It is a combination of an emulator, debugger & interactive disassembler. Programs are loaded and run in the emulator and their state can be inspected using the tools provided.
+[2024-02-09 03:15:28] Felipe "Juca" Sanches: Isso é muito legal! E tem features que eu gostaria de algum dia adicionar ao meu projeto ExecTrace.
+
+Aliás... foi muito interessante ler a descrição desse SpectrumAnalyser e identificar diversas features que tenho em mente para meu projeto.  
+
+Fiquei sentindo como se esse autor fosse eu mesmo, pois as idéias batem demais!
+[2024-02-09 03:17:26] Felipe "Juca" Sanches: Incrivelmente, menos de 24h atrás eu tinha imaginado integrar o ExecTrace ao debugger do MAME pra fazer esse tipo de reversing dinâmico... é chocante a sincronicidade disso!
+[2024-02-09 12:36:13] RicBit: eu acho legal a ideia mas é antiga, o openmsx tem tudo isso aí faz uns 15 anos :D
+[2024-02-09 12:51:39] RicBit: teve uma vez que eu encanei que queria otimizar um programa em msx basic
+[2024-02-09 12:52:10] RicBit: o unico jeito que eu consegui de fazer isso objetivamente foi instrumentando o emulador
+[2024-02-09 12:52:33] RicBit: fiz um script que mede quanto tempo ele gasta em cada instrucao do basic, aí ficou facil de otimizar
+[2024-02-09 12:52:57] RicBit: depois que o emulador esta instrumentado ele vira turing complete, voce pode faezr qualquer coisa
+[2024-02-09 12:53:19] RicBit: eu nunca teria escolhido tcl mas é o que tinha então foi tcl mesmo haha
+[2024-02-09 12:58:54] RicBit: ficava assim
+
+2 f41f 13.701395                                                                                             
+1 8000          
+RUN             
+2 8005 13.703066
+1 8009          
+DEFINTA-Z       
+2 800a 13.703661
+1 800c          
+INPUTR          
+2 800d 13.719626
+2 8013 13.721005
+IFR<=120THEN     
+2 8014 13.721176
+THENGOSUB       
+1 806a          
+GOSUB2            
+2 806f 13.726831                                      
+2 8074 13.728154
+IFR<56THEN
+2 8075 13.728325
+THENRESTORE
+1 8079
+RESTORE3
+2 807a 13.728945
+1 8018
+RETURN
+2 8019 13.729294
+1 801f
+FORI=0TOR
+2 8020 13.731665
+1 8022
+READC
+2 8023 13.733938
+1 801f
+[2024-02-09 12:59:21] RicBit: 1~2ms por instrucao mais ou menos

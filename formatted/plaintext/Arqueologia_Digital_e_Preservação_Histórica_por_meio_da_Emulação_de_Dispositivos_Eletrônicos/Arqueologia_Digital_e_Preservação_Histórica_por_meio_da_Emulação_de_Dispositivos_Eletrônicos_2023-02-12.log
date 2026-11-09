@@ -1,0 +1,37 @@
+[2023-02-12 11:46:59] Pablo Vasques Bravo-Villalba: Maneiro demais!
+[2023-02-12 12:14:33] Anne Isabelle: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25870.jpg
+[2023-02-12 12:14:33] Anne Isabelle: O chatgpt não sabe que o minimoog não tem frequência no oscillator 1 lol
+[2023-02-12 12:14:51] Anne Isabelle: (Controle de frequência)
+[2023-02-12 12:15:07] Anne Isabelle: Ou eu não sei usar um minimoog
+[2023-02-12 13:56:28] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25873.jpg
+[2023-02-12 14:01:33] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25874.jpg
+[2023-02-12 14:03:12] Anne Isabelle: Chatgpt being weird
+[2023-02-12 14:03:19] Shideravan: kkkkkkkkkkkk
+[2023-02-12 14:03:47] Shideravan: Ontem eu fiz isso aqui com ele
+[2023-02-12 14:04:07] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25878.jpg
+[2023-02-12 14:04:27] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25879.jpg
+[2023-02-12 14:04:40] Shideravan: Ele se empolgou e violou os próprios códigos de conduta kkkkkkkkkkk
+[2023-02-12 14:08:27] Anne Isabelle: Hah kajsjsjsjs
+[2023-02-12 14:12:12] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25882.jpg
+[2023-02-12 14:27:49] Shideravan: (O ChatGPT é alimentado com informações até 2021, por isso ele acha que está nesse ano ainda)
+[2023-02-12 14:27:51] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25884.jpg
+[2023-02-12 14:49:52] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25885.jpg
+[2023-02-12 21:56:09] Felipe "Juca" Sanches: O jogo Another World, de 1991, criado pelo artista e programador francês Eric Chahi, é um grande clássico e, na opinião de muita gente, uma obra de arte revolucionária na história dos jogos de computador. Assim como as obras de arte convencionais, acredito que a arte digital também merece a atenção e o estudo aprofundado e minucioso de suas origens e seu processo de desenvolvimento. Eu ainda não tenho certeza do conteúdo exato, pois estou ativamente trabalhando nesse projeto e provavelmente terei mais novidades fresquinhas na data da apresentação. Mas ao longo da última década me dediquei esporadicamente ao estudo da máquina virtual do Another World e na implementação de um conjunto de ferramentas para análise, assembly e disassembly de bytecode, decodificação de assets gráficos vetoriais, decompressão e recompressão de assets, etc. Gostaria de mostrar nessa atividade os avanços já conquistados e as possibilidades de desenvolvimento futuro desse trabalho de Arqueologia Digital.
+[2023-02-12 21:56:44] Felipe "Juca" Sanches: Esse é o meu "pitch" para dar uma palestra sobre a VM do Another World na conferência TOSCONF organizada pelo LHC, o Hackerspace de Campinas
+[2023-02-12 21:56:58] Felipe "Juca" Sanches: https://tosconf.lhc.net.br/#chamada-de-trabalhos
+[2023-02-12 23:25:23] Felipe "Juca" Sanches: @mrparn, eu tenho momentos de desânimo às vezes, como aconteceu essa semana (pra quem não viu, tá no log das mensagens do grupo). Mas eu tenho infinitamente mais momentos de empolgação 😉
+[2023-02-12 23:26:19] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25890.jpg
+[2023-02-12 23:26:19] Felipe "Juca" Sanches: Meu desktop nesse exato momento.
+[2023-02-12 23:33:28] Pablo Vasques Bravo-Villalba: É bom saber isso. Eu acho que você tem uma energia inspiradora. 😊 Pessoalmente, sou mestre em iniciar projetos que acabo não terminando nunca, em parte porque não sou lá muito organizado, nem persistente. Mas acho que no fim das contas seria pior não ter projetos, nem iniciativas. Estou bastante animado com a evolução do Furnace Tracker, que vem se tornando minha ferramenta dos sonhos para fazer música para plataformas antigas, em especial o MSX. 😁
+
+E por falar em Another World, o Pedro está atualmente tocando vários projetos no MSX, e a gente já conversou também sobre o que seria necessário para levar o jogo para o MSX. Não sei se seria possível, mas quero crer que sim.
+[2023-02-12 23:37:15] Felipe "Juca" Sanches: (1) Vá pegar (com o @agaelebe) os synths que deixei pra você usufruir, emprestado, enquanto estou aqui em Londres.
+(2) Another World no MSX... Não sei... Me preocupa capacidade de processamento. E também a necessidade de 4 buffers de vídeo 320x200 (16 cores paletado).
+[2023-02-12 23:37:59] Felipe "Juca" Sanches: a resolução não precisa ser exatamente 320x200, já que é vetorial, então em teoria dá pra adaptar pra outras resoluções
+[2023-02-12 23:41:07] Pablo Vasques Bravo-Villalba: (1) Tenho que te colocar a par dos encontros e desencontros relacionados com isso, mas faço em pvt assim que tiver um momento um pouco mais tranquilo 😅
+(2) Uma saída seria apelar e usar V9990. Ele tem um blitter rápido e vários outros modos que podem ser úteis, além de VRAM a dar com pau
+[2023-02-12 23:41:21] RicBit: eu ia falar de v9990 tambem
+[2023-02-12 23:41:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-02/25898.jpg
+[2023-02-12 23:41:50] Felipe "Juca" Sanches: Terminei de mapear agora os pré-requisitos de run-time de cada um dos bancos de código do bytecode do release de MSDOS. A VM tem certas irregularidades em função de mecanismos de bloqueio contra cópias (eu acho).
+[2023-02-12 23:41:58] RicBit: a parte mais legal de v9990+turbor é rodar emulador de game boy haha
+[2023-02-12 23:42:05] RicBit: roda contra 3 razoavelmente bem

@@ -1,0 +1,30 @@
+[2023-02-08 07:37:31] Felipe "Juca" Sanches: kkkkk
+
+Saiu em 1997 mas o screenshot é de 2007 :-P
+[2023-02-08 07:38:44] Felipe "Juca" Sanches: pode esquecer isso. O chip de vídeo do neo geo pocket color não tem framebuffer. É gráfico tile-based. Sem chance de renderizar vetor nisso aí....
+[2023-02-08 09:05:45] Augusto Almeida: Sim e um dos jogos suportados era o pengo, acho que cheguei a usar a primeira versão do mame, aliás existiam vários emuladores nessa época, em particular lembro de um tal JFF (Just For Fun)
+[2023-02-08 09:16:29] RicBit: Ué eu já fiz engine 3d no msx que é tile based
+[2023-02-08 09:18:52] Felipe "Juca" Sanches: Pronto. Nerd-snipped!
+É só falar que algo é impossível... kkkk
+[2023-02-08 09:28:26] Pablo Vasques Bravo-Villalba: Eu imagino que seja meio chatinho, mas em princípio, se houver RAM de vídeo suficiente para dedicar um tile diferente por posição na tela, pode ser possível. São 380 tiles na tela? Talvez se quiser manter o aspect ratio você usasse somente 240 tiles (resolução 160x120 pixels). Se for possível endereçar mais de 240 tiles você pode até ter double buffering
+[2023-02-08 09:42:52] Felipe "Juca" Sanches: pois é... a VM requer quad-buffering
+[2023-02-08 09:43:11] Felipe "Juca" Sanches: aí acho que é treta demais
+[2023-02-08 09:43:19] Pablo Vasques Bravo-Villalba: 960 tiles... Dá?
+[2023-02-08 09:43:32] Felipe "Juca" Sanches: não sei...
+[2023-02-08 09:43:43] Pablo Vasques Bravo-Villalba: Xi
+[2023-02-08 10:47:01] Pedro de Medeiros 👾: Elite no MSX é vetorial e tile-based.
+[2023-02-08 12:44:03] L.: Outro dia eu tava pensando num ray casting pra MSX usando tiles também
+[2023-02-08 12:56:21] Anne Isabelle: Off topic:
+
+https://youtu.be/_zjvv7n3mGQ
+(Ta num espanhol meio difícil de entender, mas tô amando esse vídeo)
+[2023-02-08 16:07:34] Shideravan: Não tem janela até hoje kkkk
+[2023-02-08 16:07:47] Shideravan: Só com frontend de terceiros
+[2023-02-08 16:09:00] Shideravan: Apesar que de uns anos para cá ao menos fizeram interface gráfica no mame base hahaha
+Mas para mim o mame eternamente é um emulador independente de frontend hahaha
+[2023-02-08 16:09:20] Shideravan: Assim como o mednafen
+[2023-02-08 20:46:27] Felipe "Juca" Sanches: o debugger do MAME tem janelas. É feito com libQt.
+[2023-02-08 21:40:55] Shideravan: Ahhh é verdade
+[2023-02-08 21:41:16] Shideravan: Mas isso é recente também
+[2023-02-08 21:41:57] Shideravan: (recente do ponto de vista do projeto, em que 10 anos são "ontem" hahaha)
+[2023-02-08 22:32:49] Pedro de Medeiros 👾: É só Qt que se chama. 😁

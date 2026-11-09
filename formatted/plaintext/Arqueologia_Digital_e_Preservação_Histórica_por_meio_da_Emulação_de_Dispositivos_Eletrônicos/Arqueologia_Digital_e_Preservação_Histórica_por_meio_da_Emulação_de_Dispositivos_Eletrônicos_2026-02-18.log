@@ -1,0 +1,33 @@
+[2026-02-18 04:42:29] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37582.jpg
+[2026-02-18 04:42:29] Felipe "Juca" Sanches: Vai nascer um backend TLCS900 pro LLVM...
+[2026-02-18 04:43:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37583.jpg
+[2026-02-18 04:53:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37584.jpg
+[2026-02-18 04:53:52] Felipe "Juca" Sanches: Isso tá ficando ridículo!
+[2026-02-18 10:18:00] Pablo Vasques Bravo-Villalba: Só uma curiosidade, pessoal... Quantas mensagens de spam vocês estão pegando, mais ou menos, por dia? Ultimamente parece ter aumentado o volume aqui neste canal
+[2026-02-18 11:46:31] L.: Pessoalmente, nenhuma. No canal tem de fato bastante
+[2026-02-18 12:45:07] Pedro de Medeiros 👾: Não é pra isso que usam blockchain ledger atualmente?
+[2026-02-18 17:33:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37591.jpg
+[2026-02-18 17:33:28] Felipe "Juca" Sanches: Está sendo educativo pra mim
+[2026-02-18 18:02:11] L.: Equivalente ao setcc do x86 https://www.felixcloutier.com/x86/setcc
+[2026-02-18 19:01:54] Felipe "Juca" Sanches: 2 anos atrás: "assemblei na mão pois ainda não tenho um bom assembler para essa CPU"
+
+E hoje tenho um compilador C (backend do LLVM feito em um único dia de vibe-coding)
+[2026-02-18 21:37:00] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37594.jpg
+[2026-02-18 21:37:00] Felipe "Juca" Sanches: Começando mais uma side-quest nessa semana!
+[2026-02-18 21:38:03] Felipe "Juca" Sanches: Engraçado que, por desatenção, eu acabei largando um "add" a mais na frase, e o bicho ignora, e entende do mesmo jeito.
+[2026-02-18 21:47:14] L.: lmao, "entender a arquitetura do llvm"
+[2026-02-18 21:49:48] Felipe "Juca" Sanches: É praticamente um mágico da lâmpada. Só que meus desejos não se limitam a 3.
+[2026-02-18 21:51:43] Felipe "Juca" Sanches: Eu vejo dois futuros possíveis: (A) Isso ser realmente tudo o que promete ou (B) Daqui uns meses eu quebrar a cara descobrindo que é tudo um truque de mágica e que o código gerado fica cheio de bugs sutis impossíveis de debugar.
+[2026-02-18 21:52:11] Felipe "Juca" Sanches: Mas por enquanto eu ainda estou na fase do deslumbramento
+[2026-02-18 22:07:12] Felipe "Juca" Sanches: O legal é que o port do Mines, por ser pequeno e caber na ROM da placa hdae5000, vai servir de primeiro exemplo de execução de software homebrew junto com o firmware original do sistema
+[2026-02-18 22:07:57] Felipe "Juca" Sanches: E também vai servir para testar o compilador C
+[2026-02-18 22:08:42] Felipe "Juca" Sanches: E depois acho que também vai servir para prototipar um loader a partir do disco-rígido (depois que eu implementar uma pequena biblioteca de sistema de arquivos, provavelmente FAT)
+[2026-02-18 22:09:26] Felipe "Juca" Sanches: E adicionar um mecanismo de upload de binários pro disco via porta serial (aquela porta traseira, chamada "computer interface")
+[2026-02-18 22:10:24] Felipe "Juca" Sanches: Aí, com o HD funcionando, poderei adaptar o another world para carregar resources comprimidos sob demanda, do HD. E assim poderá caber na HDAE5000 também
+[2026-02-18 22:10:40] Felipe "Juca" Sanches: As peças do quebra-cabeça vão aos poucos se encaixando
+[2026-02-18 22:13:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-02/37606.jpg
+[2026-02-18 22:13:34] Felipe "Juca" Sanches: Enquanto eu tô aqui tagarelando o bicho já escreveu uma implementação inicial e começou a encontrar limitações do compilador. ;-D
+[2026-02-18 22:32:23] Macabeus: estou desenvolvendo o Mizuchi (https://github.com/macabeus/mizuchi) bastante com Claude Code, e o que venho fazendo para evitar cair no cenário (B) é: revisar 90%+ das linhas que a LLM escreve, e buscar ter uma boa cobertura de testes que testam o cenário real
+[2026-02-18 22:33:07] Macabeus: por default, o Claude Code ia pelo caminho mais fácil, de testar em cima de mocks, mas se eu deixar ele escrever mocks, vai acabar testando o mock e nunca o cenário real
+[2026-02-18 22:33:27] Macabeus: aí eu falo de forma explícita para escreva no file system, chamar o gcc, etc
+[2026-02-18 22:33:29] Felipe "Juca" Sanches: é, eu estou usando testes também

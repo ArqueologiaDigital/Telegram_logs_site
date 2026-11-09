@@ -1,0 +1,130 @@
+[2024-03-16 04:04:29] Felipe "Juca" Sanches: Inkscape!!! 😱😱😱😱
+[2024-03-16 08:31:35] Pablo Vasques Bravo-Villalba: Uma das razões de demorar tanto é que essa pessoa lida com vários chips ao mesmo tempo. E o V9958 não está particularmente alto na lista de prioridades. 😬
+[2024-03-16 09:47:18] Giga: O Scopus Sagita lhe aguarda. Não sabia que você estava no Brasil
+[2024-03-16 10:13:05] Felipe "Juca" Sanches: onde está isso?
+[2024-03-16 12:41:11] Giga: Está com o meu amigo ainda. Só peguei o TVA 80 e alguns itens, disquetes, discos rígidos de mainframe
+[2024-03-16 12:42:00] Lucas Alberto: Disco rígido de mainframe ???
+[2024-03-16 12:50:57] Giga: Simm
+[2024-03-16 12:51:03] Giga: Ele tem muitos lá
+[2024-03-16 12:55:00] Giga: Alguns ainda dentro da case
+[2024-03-16 12:55:22] Giga: Fitas de mainframe a pilhas, até os gabinete de IBM ele tem
+[2024-03-16 12:55:55] Giga: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30409.jpg
+[2024-03-16 12:55:55] Giga: Ele tem 2 desse lá
+[2024-03-16 12:56:07] Giga: Um no estado de novo
+[2024-03-16 13:08:05] L.: Fazer um cosplay de st ignucius? 😅
+[2024-03-16 13:34:00] Giga: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30412.jpg
+[2024-03-16 13:34:00] Giga: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30413.jpg
+[2024-03-16 13:34:00] Giga: Os discos 😁👍🏼
+[2024-03-16 13:38:23] Lucas Alberto: Wowwww
+[2024-03-16 13:38:47] Lucas Alberto: É só um terminal ? Ou ele faz mais coisas?
+[2024-03-16 14:24:36] Lucas Alberto: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30416.mp4
+[2024-03-16 14:24:36] Lucas Alberto: ❤️ tô feliz
+[2024-03-16 14:27:25] L.: Isso me lembrou de uma história do Carchano
+
+Ele que inventou aquele negócio que toca música no caminhão de gás. Antes era na buzina, pra quem lembra.
+
+O circuito era um Z80 só com ROM, sem RAM! Todo o código era em linha reta, sem usar pilha ou chamar rotinas. Aí o Z80 ia de cabo a rabo e pulava pro começo.
+[2024-03-16 14:28:41] Lucas Alberto: KKKKKK oq deveria ter de código repetido
+[2024-03-16 14:29:12] L.: Dá pra fazer rotina mas aí faria com jump sacrificando um registrador né
+[2024-03-16 14:29:33] L.: Mas aí não pode ter rotina aninhada senão no final nem tem mais registrador pra trabalhar 😅
+[2024-03-16 14:37:58] Giga: Este é só terminal, creio eu
+[2024-03-16 14:45:20] Lucas Alberto: Já dá pra fazer uns negócios legais
+[2024-03-16 14:52:54] Giga: Queria um desse para usar nos meus projetos hehehe
+[2024-03-16 14:53:15] Giga: Tenho fé, que um dia meu Mini Computador vai sair do papel 🙏🏼
+[2024-03-16 14:53:21] Lucas Alberto: Ele não vende ?
+[2024-03-16 14:54:00] Giga: Está tudo a venda por lá 😆
+[2024-03-16 14:54:13] Lucas Alberto: Ksksksk é muito caro ?
+[2024-03-16 14:54:19] Giga: O problema é o dinheiro, nada barato
+[2024-03-16 14:54:49] Giga: Esse ele nem quis me falar o valor. Sabe que não tenho o money kkkkkkk
+[2024-03-16 14:55:48] Giga: Eii, como vai o projeto com Z80?
+[2024-03-16 14:56:36] Lucas Alberto: Cara, vai até bem, infelizmente a EEPROM que eu comprei veio com problema 🤡 aí vou ter q comprar outra
+[2024-03-16 14:56:45] Lucas Alberto: O z80 pelo menos tá bom
+[2024-03-16 14:57:54] Giga: Eu também estou enrolado com EPROMs rsrsrs mas logo será sucesso
+[2024-03-16 14:58:07] Giga: Ainda bem 🙏🏼
+[2024-03-16 14:59:07] Giga: O meu projeto só tem a RAM por enquanto. Carrego o programa pelas chaves, e depois indico o endereço inicial para o Z80
+[2024-03-16 15:04:05] Lucas Alberto: Usa oq como loader da ram ?
+[2024-03-16 15:07:39] Giga: Eu faço o BUSREQ no Z80, ele libera o sinal em BUSAK, este sinal libera a saída Tri-State, dos registradores de dados e endereços, acessando diretamente o barramento inteiro, para modificar qualquer endereço, diretamente pelo painel.
+[2024-03-16 15:08:27] Giga: Mas queria mudar isso tudo. Para não precisar parar o Z80. Mas aí preciso da EPROM, para escrever um programa monitor
+[2024-03-16 15:08:28] Lucas Alberto: Mas tu tem q colocar bit a bit ?
+[2024-03-16 15:08:46] Lucas Alberto: Todo o programa ?
+[2024-03-16 15:09:41] Giga: Bit a bit, inclusive os endereços. Eu ainda não fiz um circuito para Depst. Next
+[2024-03-16 15:10:07] Lucas Alberto: Porra, que trabalho!
+[2024-03-16 15:10:33] Giga: Mas acho que vou reformular tudo, por isso parei o projeto. Vou comprar um apagador de EPROMs e fazer um programa monitor
+[2024-03-16 15:10:34] Lucas Alberto: Pq não usa um arduíno como loader ? Aí ele pega e joga na RAM
+[2024-03-16 15:11:08] Lucas Alberto: Tô pra fazer esse apagador também, vi no mercado livre a lâmpada pra fazer... Tava 25 reais
+[2024-03-16 15:11:14] Giga: Eu estou buscando não usar itens atuais
+[2024-03-16 15:11:16] Lucas Alberto: Tô com 3 EPROM aqui
+[2024-03-16 15:11:33] Lucas Alberto: É só um atalho XD
+[2024-03-16 15:12:05] Giga: Eu vi alguns projetos, achei interessante 😁
+[2024-03-16 15:12:38] Lucas Alberto: Acho válido usar tecnologias atuais para debugar ou como ferramenta.
+
+Mas no fim ele tem q funcionar solo.
+Até pq antigamente eles usavam os IBM como ferramenta de dev/debug
+[2024-03-16 15:12:47] Giga: Todas que tenho aqui estão gravadas rsrs assim que eu conseguir o apagador, vou descobrir se prestam rsrs
+[2024-03-16 15:13:16] Giga: Eu vou tentar criar um drive de cartão ou fita perfurada
+[2024-03-16 15:13:31] Giga: Assim já poderia diminuir o trabalho kkkkkk
+[2024-03-16 15:14:11] Lucas Alberto: KKKK eu ainda quero fazer um controlador pra disquete, pra conseguir ligar nos projetos de 8 bits
+[2024-03-16 15:14:19] Giga: Isso é verdade. Eu consegui executar bastante coisa nele, carregando tudo manualmente
+[2024-03-16 15:14:48] Lucas Alberto: De manhã tava vendo isso, tem uns Chips da west digital que já fazem um bom atalho
+[2024-03-16 15:14:53] Giga: Escrevo, vou na tabela de opcode, e vou compilando e carregando manualmente
+[2024-03-16 15:15:15] Giga: Usa o CI do CP500 M80C
+[2024-03-16 15:15:26] Giga: É um CI controlador
+[2024-03-16 15:15:43] Giga: Esqueci o nome dele
+[2024-03-16 15:15:45] Lucas Alberto: Tem literalmente um altair 8800 🤣
+[2024-03-16 15:16:10] Giga: Isso, esse aí que o M80C, usa
+[2024-03-16 15:16:28] Giga: Sim Hahaha
+[2024-03-16 15:17:09] Lucas Alberto: Próximo passo
+[2024-03-16 15:17:44] Lucas Alberto: A ideia do meu Pc é meio que tentar escrever uma BIOS, e depois tentar fazer dar boot pelo disquete.
+[2024-03-16 15:18:26] Giga: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30466.jpg
+[2024-03-16 15:18:26] Giga: Este será o gabinete da próxima empreitada 😆
+[2024-03-16 15:18:45] Lucas Alberto: Nuuuu, que enorme
+[2024-03-16 15:18:53] Lucas Alberto: Quase o patinho feio
+[2024-03-16 15:18:57] Lucas Alberto: 🤣
+[2024-03-16 15:19:00] Giga: Que massa! Ideia show demais!!!
+[2024-03-16 15:19:19] Giga: Foi a inspiração
+[2024-03-16 15:19:27] Giga: Cores da IBM
+[2024-03-16 15:20:05] Giga: Essa placa branca na frente, será o console com as chaves e leds
+[2024-03-16 15:20:17] Lucas Alberto: Ainda está na minha meta tentar montar o patinho feio, mas ainda estou estudando.
+[2024-03-16 15:20:21] Giga: Irmão, gostei disso aqui
+[2024-03-16 15:20:23] Lucas Alberto: Brabo
+[2024-03-16 15:20:51] Giga: O Juca é mestre na arquitetura dele
+[2024-03-16 15:21:14] Giga: Sobre a esse com BIOS, você usará um Z80 também?
+[2024-03-16 15:21:19] Lucas Alberto: É meio que a premissa das máquinas "atuais".
+[2024-03-16 15:21:30] Giga: Simm
+[2024-03-16 15:21:41] Giga: Mas havia antigos assim também
+[2024-03-16 15:21:56] Giga: Um mini computador da Edisa, funcionava assim
+[2024-03-16 15:22:10] Giga: Ele tinha dois drives de 8”
+[2024-03-16 15:22:20] Giga: 1 era para o sistema
+[2024-03-16 15:22:27] Lucas Alberto: Sim, mas não vai ser 100% compatível, por ser se 8 bits, mas depois quero tentar com um 8086
+[2024-03-16 15:22:33] Lucas Alberto: Que é de 16 bits
+[2024-03-16 15:23:28] Lucas Alberto: Compatível que eu digo, no sentido da BIOS de um 386, 486...
+[2024-03-16 15:23:52] Giga: O problema destes Intel é o CI para geração de clock
+[2024-03-16 15:24:00] Giga: São raríssimos
+[2024-03-16 15:24:34] Giga: Eu tenho uns 8080 aqui, mas sem o gerador de clock, não consigo fazer proveito deles
+[2024-03-16 15:24:54] Giga: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-03/30491.jpg
+[2024-03-16 15:24:54] Giga: Este é o Edisa que falei
+[2024-03-16 15:25:02] Lucas Alberto: Eita, essa eu não sabia, como funciona esse sistema de clock ?
+[2024-03-16 15:25:26] Giga: Ahh sim, sensacional. Projeto profissa 😁
+[2024-03-16 15:25:30] Lucas Alberto: Parece bem underground... Não conhecia, vou procurar ver
+[2024-03-16 15:26:23] Giga: É um circuito integrado que tem algumas funções de gerar o clock e sincronizar alguns sinais de entrada e saída para essa linha 80xx
+[2024-03-16 15:26:44] Giga: O 8085 é uma exceção, se não me engano
+[2024-03-16 15:27:12] Giga: Eu acho demais estas máquinas. Os mini computadores ❤️
+[2024-03-16 15:28:18] Giga: @fsanches conhece o paradeiro do HP 2116, que a USP tinha?
+[2024-03-16 15:28:53] Lucas Alberto: O Ci não funciona sem ele ? Tipo montando um circuito lógico pra fazer esse papel
+[2024-03-16 15:29:05] Felipe "Juca" Sanches: Eu to gravando um podcast agora, pro Retrópolis, sobre o jogo Another World.
+
+Guando eu acabar a gravação eu volto aqui pra conversar com vocês.
+[2024-03-16 15:29:36] Lucas Alberto: AHHHHH ❤️ retrocomputaria
+[2024-03-16 15:29:42] Lucas Alberto: Adoro eles
+[2024-03-16 15:32:02] Giga: Eu fui tentar ter detalhes exatos sobre o que compões este CI, mas o melhor é o que vem no datasheet da Intel, que resumiu alguns diagramas elétricos em blocos… então ficou tudo muito vago para minha compreensão
+[2024-03-16 15:41:39] Lucas Alberto: https://retrocomputing.stackexchange.com/questions/5611/do-i-have-to-use-an-8284-chip-with-the-8088
+[2024-03-16 15:41:49] Lucas Alberto: Estala lendo sobre isso
+[2024-03-16 15:42:10] Lucas Alberto: Pelo jeito, o 8284 só é necessário se você quer usar ele no talo
+[2024-03-16 15:42:26] Lucas Alberto: Para velocidades mais lentas, você pode usar um clock comum
+[2024-03-16 15:42:36] Lucas Alberto: Só respeitar os tempos de subida e descida
+[2024-03-16 17:04:03] Giga: Caramba, bom saber disto. Mas e aí, como faz para alimentar o ø1 e ø2 com um sinal? Só é possível usar cristal de quartzo?
+[2024-03-16 17:09:34] Lucas Alberto: Acho que depende da versão, tem q ver no datasheet.
+[2024-03-16 17:10:10] Lucas Alberto: Tem algumas versões desse processador que suportam clocks variados e até mesmo pausa na execução
+[2024-03-16 17:10:32] Lucas Alberto: Os primeiros não suportam, mas os mais "modernos" suportam
+[2024-03-16 17:28:57] L.: https://hackaday.com/2024/03/16/a-nine-year-olds-z80-drawing-program/
+[2024-03-16 18:42:54] Lucas Alberto: https://produto.mercadolivre.com.br/MLB-2990798285-p8284a-8284-ep8284a-dip-18-intel-unidade-_JM olha oq achei

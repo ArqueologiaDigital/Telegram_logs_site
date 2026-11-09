@@ -1,0 +1,38 @@
+[2023-05-28 02:08:59] Shideravan: O backup da nand é associada com o número de burned fuses
+[2023-05-28 02:28:12] Shideravan: https://switchbrew.org/w/index.php?title=Fuses#Anti-downgrade
+[2023-05-28 02:31:44] Shideravan: Aparentemente, um dos payloaders que você pode usar no Switch permite que você pule a verificação de efuses e instale uma versão anterior de backup da nand para que você possa em seguida atualizar o sistema para um update superior ao do backup
+[2023-05-28 09:28:55] Ismael Luceno: Mas aí estamos falando do firmware na flash, o problema seria se o firmware da ROM do CPU usa os efuses
+[2023-05-28 13:50:11] Shideravan: Os efuses são microbjetos que são "queimados" na CPU
+[2023-05-28 13:50:25] Shideravan: Não tem volta não
+[2023-05-28 13:50:54] Shideravan: Se o firmware da NAND não bater com a quantidade de fuses, o sistema brica sim
+[2023-05-28 13:51:19] Shideravan: A questão é que no caso do switch houve um trabalho de engenharia reversa que virou o sistema de cabo a rabo
+[2023-05-28 13:52:01] Shideravan: Mas se você instalar a NAND diretamente, sem respeitar o processo, o Switch vira um peso de papel rs
+[2023-05-28 13:53:55] Shideravan: O segredo é manter sempre o sistema com o mínimo de efuse queimado sempre
+[2023-05-28 13:54:10] Shideravan: O meu tem a mesma quantidade que vieram queimados de fábrica
+[2023-05-28 13:55:14] Shideravan: Acho que são 7 fuses que já vieram queimados. A atualização atual por exemplo, tem 18 fuses queimados
+[2023-05-28 13:55:38] Shideravan: Se você usa um homebrew para instalar, você não queima efuse
+[2023-05-28 13:56:13] Shideravan: Eu se quiser fazer meu Switch ficar sem nenhum traço que foi "desbloqueado" eu posso
+[2023-05-28 13:56:49] Shideravan: Inclusive, tem gente que faz isso, de ficar indo e voltando do desbloqueio, para jogar online mais facilmente nos servidores oficiais da nintendo
+[2023-05-28 14:13:15] Pedro de Medeiros 👾: https://tedium.co/2023/05/27/sgi-irix-revival-efforts/
+[2023-05-28 14:46:35] Ismael Luceno: Mas se o bloqueio é implementado na NAND, não é tão sério pois você sempre pode escrever na NAND diretamente, se o bloqueio está implementado numa ROM de boot do CPU fica muito más difícil (ou impossível) desbloquear...
+[2023-05-28 14:49:12] Shideravan: Deixa eu voltar
+[2023-05-28 14:49:21] Shideravan: Ele está implementado na CPU
+[2023-05-28 14:49:51] Shideravan: Só que para questões internas, o chip tegra PRECISA ter um modo de segurança
+[2023-05-28 14:49:58] Shideravan: Um processo que é guardado as 8 chaves
+[2023-05-28 14:50:09] Shideravan: No caso, esse processo foi descoberto
+[2023-05-28 14:50:38] Shideravan: Com o modo de segurança, você pode fazer quase tudo no Switch
+[2023-05-28 14:50:56] Shideravan: O problema é que efuse é uma coisa física, isso não tem o que fazer. Queimou queimou, já era
+[2023-05-28 14:51:22] Shideravan: Você não vai conseguir voltar o sistema para uma versão anterior, depois de ter feito update
+[2023-05-28 14:51:48] Shideravan: O fato de usar emunand, aí é outra história. A emunand não é carregada da NAND do sistema
+[2023-05-28 14:52:24] Shideravan: E os payloads, que rodam em modo de segurança, eles podem simplesmente poder "skipar" a verficação de efuses
+[2023-05-28 14:53:51] Shideravan: Mas se eu por exemplo, pego um switch, ligo e carrego ele em modo normal, atualizo ele pelo sistema, depois eu tento injetar um backup da NAND que foi feito em outro console ou no mesmo console com contagem de fuse menor do que de quando o backup da nand foi feito, ele vira um tijolo
+[2023-05-28 14:54:02] Shideravan: Isso no sistema mesmo
+[2023-05-28 14:54:36] Shideravan: O meu sistema está praticamente do mesmo jeito desde 2018 quando eu comprei ele, já que eu comprei com a intenção de usar homebrew mesmo
+[2023-05-28 14:54:58] Shideravan: Mas eu não carrego o sistema pelo sistema que está na NAND. Eu carrego via emunand
+[2023-05-28 14:55:11] Shideravan: Emunand mesmo é super fácil de lidar
+[2023-05-28 14:56:10] Shideravan: Se eu pego uma emunand hoje, faço o backup, que é basicamente copiar os 32 GB de arquivos da emunand para outro HD  (quando ele não tem nada instalado), faço outra, tiro, copio de volta, faço o diabo... Tudo funciona normalmente
+[2023-05-28 14:56:30] Shideravan: O Switch em sí, não registra internamente nada disso que você faz se você souber o que está fazendo
+[2023-05-28 14:57:07] Shideravan: A questão é que tem gente que não sabe e volta e meia você vê switch bricado (ou semi-bricado) a venda baratinho no ebay para quem tiver intenção de comprar para usar as peças rs
+[2023-05-28 14:57:30] Shideravan: O semi-bricado dá para restaurar. Meio chatinho mas dá e nem todo mundo sabe disso hahahaha
+[2023-05-28 15:00:40] Shideravan: Agora quando brica mesmo e tem um sistema gravado na NAND incompatível com o número de efuses, senta e chora
+[2023-05-28 15:02:16] Shideravan: Eu não sou muito bom para explicar, não sei se está claro o que eu estou falando rs

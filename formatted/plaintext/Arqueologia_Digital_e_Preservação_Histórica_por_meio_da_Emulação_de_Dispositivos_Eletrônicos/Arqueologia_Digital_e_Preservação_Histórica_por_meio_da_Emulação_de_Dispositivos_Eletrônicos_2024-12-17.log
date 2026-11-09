@@ -1,0 +1,103 @@
+[2024-12-17 02:14:34] Shideravan: Parabéns Juca! 🎂
+[2024-12-17 10:42:49] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-12/33559-sticker.webp
+[2024-12-17 17:11:48] Shideravan: Galera, eu queria comentar uma coisa, mas que precisa de uma leve introdução
+[2024-12-17 17:12:59] Shideravan: Eu ODEIO música de Pokémon, eu acho os jogos legais, mas eu vejo, em qualquer época alguém comentando algo do tipo "o jogo é mais ou menos, o que salva é a trilha sonora". Que trilha sonora, amigo? Pokémon sempre sofreu de trilhas ruins muitas vezes usando muito mal os recursos do hardware da época deles
+[2024-12-17 17:13:21] Shideravan: Mas eu fui analisar uma música aqui, e é uma excessão
+[2024-12-17 17:13:28] Shideravan: https://www.youtube.com/watch?v=JvKoBnv96PM
+[2024-12-17 17:15:27] Shideravan: Pensar que isso trabalha tão bem com 2 canais de 8-bit PCM
+
+Ele começa com a melodia e percursão, para tirar na hora certa a percursão e trabalhar com o arranjo
+[2024-12-17 17:16:43] Shideravan: Vocês que trabalham com emulação inclusive de instrumentos musicais antigos vocês têm essa sensação que eu tenho, que as trilhas são muito ou 8 ou 80 também de acordo com as limitações do hardware?
+[2024-12-17 17:17:06] Shideravan: Porque tem muita trilha do game boy que é simplesmente irritante
+[2024-12-17 17:18:11] Shideravan: E tem outras como essa aí, que eu pego e falo: "caramba, como trabalha bem com a limitação, isso é genial"
+[2024-12-17 17:22:30] Pablo Vasques Bravo-Villalba: Opa, Shideravan, tudo bem? Essa é justamente a minha praia. Eu nunca me liguei muito em Pokémon, e também nunca prestei muita atenção na música pra ser sincero. Não chego a odiar, mas não é algo que realmente me envolveu
+[2024-12-17 17:22:58] Pablo Vasques Bravo-Villalba: Essa música é basicamente um clássico, eu diria. E esse arranjo do Game Boy inclusive usa os recursos do hardware de maneira incomum para um jogo japonês
+[2024-12-17 17:23:52] Pablo Vasques Bravo-Villalba: Por que essa ressalva de "jogo japonês"? Porque tipicamente os desenvolvedores japoneses costumam usar o hardware de som de maneira mais baunilha, digamos assim. Já os europeus gostam de tentar extrair uma sonoridade um pouco mais sofisticada. Você vê isso também em jogos de Master System, por exemplo
+[2024-12-17 17:24:49] Pablo Vasques Bravo-Villalba: Só uma observaçãozinha aqui, o Game Boy não tem canais de som PCM. São dois canais de onda de pulso ("onda quadrada"), um canal de ruído e um canal wavetable
+[2024-12-17 17:26:24] Pablo Vasques Bravo-Villalba: É um setup limitado, ainda mais considerando que as músicas muitas vezes são feitas especificamente para o falante do próprio Game Boy, que tem uma faixa dinâmica bem restrita, eliminando os graves. Então o músico fica com um dilema: coloco uma linha de baixo mais aguda, e deixo tudo um pouco mais "estridente", ou corro o risco da linha de baixo ficar inaudível se o jogador não colocar fone de ouvido
+[2024-12-17 17:28:17] Pablo Vasques Bravo-Villalba: Então esse lance de ser 8 ou 80 vai muito por aí, às vezes as próprias ferramentas disponibilizadas para os músicos e desenvolvedores são muito limitadas, ou é difícil extrair todo o poder que elas oferecem. Vejo isso demais em Master System, tanto jogo da própria Sega com som fuleiro... E no Mega Drive, com o driver GEMS que é superpoderoso, mas 98% dos jogos usavam somente os instrumentos default dele que são horrendos?
+[2024-12-17 17:28:25] Shideravan: É um dilema mesmo. Porque quando vai ficar irritante fica mesmo kkkkkkkkkkkk
+[2024-12-17 17:30:03] Pablo Vasques Bravo-Villalba: Este é um exemplo de uma trilha sonora excelente, que na minha humilde opinião usa bem os recursos do hardware: https://vgmrips.net/packs/pack/spirou-nintendo-game-boy
+
+É composta pelo Alberto José González, cujas trilhas têm uma sonoridade bem particular (mesmo variando de plataforma para plataforma)
+[2024-12-17 17:32:57] Shideravan: Nossa, trabalha muito bem mesmo, inclusive você vê muita "audácia" em algumas trilhas como Title Screen e Toy Factory, que abusa de notas mais altas
+[2024-12-17 17:33:42] Shideravan: Eu se tivesse que trabalhar com essas limitações, ficaria na zona de conforto de evitar notas altas em sequencia como na Toy Factory
+[2024-12-17 17:33:53] Pablo Vasques Bravo-Villalba: Aqui tem um exemplo de alguma limitação do Game Boy que o músico simplesmente ignorou. Nesta trilha as músicas são boas, mas principalmente no solo você escuta um som rascante bem irritante. Deve ter jeito de contornar isso, já que não são todas as trilhas que têm esse problema, mas é ruim demais de ouvir: https://vgmrips.net/packs/pack/sagaia
+[2024-12-17 17:35:47] Shideravan: Esse é um ponto muito importante, porque tem trilhas que não são ruins, mas simplesmente não funcionam em chiptune
+[2024-12-17 17:36:33] Pablo Vasques Bravo-Villalba: Bom, a trilha do Sagaia é originalmente chiptune de qualquer forma, então o problema está no próprio Game Boy.
+[2024-12-17 17:36:42] Shideravan: Você vai ver alguém executando a música em um "instrumento de verdade" e ela soa maravilhosa
+[2024-12-17 17:37:03] Shideravan: O original é de arcade?
+[2024-12-17 17:37:08] Shideravan: Deixa eu ver como era aqui
+[2024-12-17 17:37:26] Shideravan: Tem ela no jeito?
+[2024-12-17 17:37:35] Pablo Vasques Bravo-Villalba: Sim, só um segundo
+[2024-12-17 17:37:40] Shideravan: Eles simplesmente tentaram portar 1:1?
+[2024-12-17 17:38:01] Pablo Vasques Bravo-Villalba: Sim. A original é esta: https://youtu.be/a_GP2FBiK2o
+[2024-12-17 17:38:34] Shideravan: Até já vi o recurso que eles estão usando
+[2024-12-17 17:38:43] Pablo Vasques Bravo-Villalba: Aí é FM puro
+[2024-12-17 17:38:46] Shideravan: Usar notas altas para chamar a atenção no arcade
+[2024-12-17 17:39:06] Shideravan: Era um problema muito sério nessa época
+[2024-12-17 17:39:25] Shideravan: E tem muito arcade antigo com som desnecessariamente estridente por causa disso kkkkkkkkk
+[2024-12-17 17:39:34] Shideravan: Não é o caso, essa música tá maravilhosa
+[2024-12-17 17:40:21] Pablo Vasques Bravo-Villalba: Eu fiz um arranjo dessa música para Nintendinho, usando o chip de som VRC6 da Konami: https://soundcloud.com/mrparn/darius-captain-neo-vrcvi-version
+
+Essa versão tem os 5 canais de som do 2A03, mais os 3 do VRC6
+[2024-12-17 17:40:50] Pablo Vasques Bravo-Villalba: Tem muita gente que é fã do som da Capcom dessa época, eu pessoalmente não curto tanto 😅
+[2024-12-17 17:41:49] Pablo Vasques Bravo-Villalba: Outra que o cara mandou muito bem no Game Boy foi esta: https://vgmrips.net/packs/pack/robocop-nintendo-game-boy
+[2024-12-17 17:44:01] Pablo Vasques Bravo-Villalba: Uma coisa interessante aqui: este jogo é uma espécie de precursor do Star Fox (sim! gráficos poligonais 3D no Game Boy!), mas a música foi feita por um compositor japonês. Em termos de recursos de hardware, acho que não tem nada de especial, mas adoro a composição: https://youtu.be/pTzPj_RcIy4
+[2024-12-17 17:46:27] Pablo Vasques Bravo-Villalba: Aí um gênio das chiptunes, o VinylCheese, fez esta versão para Nintendinho com o chip N163 da Namco: https://youtu.be/Qx-ogfjejwA
+[2024-12-17 17:48:21] Shideravan: Simplesmente incrível!
+[2024-12-17 17:48:48] Pablo Vasques Bravo-Villalba: Esse tipo de coisa me faz ter vontade de fechar a lojinha e não fazer música nunca mais 😅😅
+[2024-12-17 17:49:15] Shideravan: Ou pelo contrário, inspirar ainda mais hahahaaha
+[2024-12-17 17:49:33] Shideravan: Tem gente que é genial demais para trabalhar com limitações
+[2024-12-17 17:49:40] Pablo Vasques Bravo-Villalba: Então, eu acho que não consigo chegar nesse ponto. Mas não vou desistir não. 😁
+[2024-12-17 17:50:05] Pablo Vasques Bravo-Villalba: Penso que as limitações é que inspiram essas pessoas a ir além. Empurrar o envelope
+[2024-12-17 17:50:15] Pablo Vasques Bravo-Villalba: Eu, pessoalmente, acho as limitações inspiradoras
+[2024-12-17 17:50:42] Shideravan: Acho que esse tem sido um dos problemas da "crise criativa" da maior parte dos games atuais
+[2024-12-17 17:51:13] Pablo Vasques Bravo-Villalba: As trilhas sonoras (não todas, claro) hoje parecem trilha de TV, de filme... Para mim perdeu um pouco a graça
+[2024-12-17 17:51:35] Pablo Vasques Bravo-Villalba: Claro que tem exceções extremamente honrosas, especialmente na cena indie
+[2024-12-17 17:52:00] Shideravan: O que não é necessariamente ruim, mas o problema é que isso tem gerado muita preguiça e não é só com trilha sonora
+[2024-12-17 17:52:13] Shideravan: Acho que também um pouco é como o próprio mercado tem funcionado
+[2024-12-17 17:52:19] Pablo Vasques Bravo-Villalba: "Tenho um jogo. Quero uma trilha sonora. Contrato um músico."
+[2024-12-17 17:52:48] Shideravan: Os artistas precisam produzir numa expectativa muito fechadinha
+[2024-12-17 17:52:54] Shideravan: Um contrato muito específico
+[2024-12-17 17:53:22] Pablo Vasques Bravo-Villalba: Claro que ainda tem gente que quer combinar a visão criativa do jogo com a da música. E tem músicos que naturalmente vão por esse caminho. Mas, por exemplo, os Castlevanias 3D da Mercury Steam têm uma música orquestral que não é ruim, mas é simplesmente... Esquecível. E Castlevania com música esquecível não deveria ser chamado de Castlevania
+[2024-12-17 17:53:26] Shideravan: Acionista quer vender jogo, não está interessado se aquilo é uma obra artística
+[2024-12-17 17:54:00] Shideravan: Poxa e falar de castlevania é polêmico kkkkkk
+[2024-12-17 17:54:14] Shideravan: Algumas das minhas trilhas favoritas de games são de Castle
+[2024-12-17 17:54:26] Pablo Vasques Bravo-Villalba: Eu participei de uma conversa online com os compositores que trabalharam no SophStar, um jogo produzido aqui no Brasil. Foi bem legal ver como os dois tentaram fazer algo que tivesse a ver com o jogo, mas isso tornou ainda mais evidente os casos em que os produtores simplesmente não se importam
+[2024-12-17 17:55:05] Pablo Vasques Bravo-Villalba: Você curte as trilhas dos Lords of Shadow?
+[2024-12-17 17:55:16] Shideravan: Acho que o último respiro de criatividade na indústria (e não só para música, mas arte, game design, etc também) tem sido nos jogos indies
+[2024-12-17 17:56:11] Shideravan: Desculpa, para esses eu não tenho uma opinião formada
+[2024-12-17 17:56:21] Shideravan: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-12/33622-nao-sou.mp4
+[2024-12-17 17:56:51] Shideravan: É que eu sou fã do Kojimão, mas mesmo assim LoS não é castlevania
+[2024-12-17 17:56:54] Pablo Vasques Bravo-Villalba: Castlevania: Symphony of the Night é perfeição
+[2024-12-17 17:57:08] Pablo Vasques Bravo-Villalba: Meus pensamentos exatamente
+[2024-12-17 17:57:18] Shideravan: Não to dizendo necessariamente que a série LoS seja ruim, só não é Castlevania
+[2024-12-17 17:57:26] Shideravan: E eu joguei muito pouco
+[2024-12-17 17:57:49] Pablo Vasques Bravo-Villalba: Pra mim lembra mais aquele do Kratos
+[2024-12-17 17:57:52] Shideravan: Maravilhoso!
+[2024-12-17 17:58:23] Shideravan: Que não é ruim, mas sei lá, se eu fosse jogar ele preferia já ir direto no God of War original kkkkkkkkkkk
+[2024-12-17 17:58:35] Pablo Vasques Bravo-Villalba: Pois é
+[2024-12-17 17:59:35] Shideravan: Não me apeteceu de ir atrás, mesmo eu tendo ido atrás de tudo sobre Castlevania kkkkkkkkk
+[2024-12-17 18:00:15] Shideravan: Eu já joguei Judgement, mas ainda não joguei mais de 5 minutos de Lord of Shadows
+[2024-12-17 18:00:40] Shideravan: Talvez eu até esteja cometendo injustiças, porque dizem que o Mirror of Fate é metroidvania
+[2024-12-17 18:01:09] Shideravan: Mas é como se fosse metroidvania de uma série aleatória do PS3, não de Castlevania (em relação ao meu hype)
+[2024-12-17 18:02:39] Shideravan: Estranha essa sensação, né? kkkkkkkk
+[2024-12-17 18:02:52] Pablo Vasques Bravo-Villalba: Haha, nem sabia da existência desse
+[2024-12-17 18:03:03] Pablo Vasques Bravo-Villalba: Confesso que fiquei bem desgostoso com o primeiro LoS
+[2024-12-17 18:03:05] Shideravan: Saiu para 3DS depois portaram para outras coisas
+[2024-12-17 18:03:37] Shideravan: Eu joguei o demo dele no 3DS e tipo... nhé, jogo 1734 talvez algum dia que eu ficar sem o que jogar eu experimente kkkkkkkkkk
+[2024-12-17 18:05:52] Shideravan: E o engraçado é que a galera que gosta dessa série (que são os fãs dessa série, não são necessariamente os fãs de Castlevania) falam que esse jogo é bom, os outros que caíram na qualidade kkkkkkkkkk
+[2024-12-17 18:06:22] Shideravan: Então se você não gostou do LoS1, imagina o 2? kkkkkkkkkkkkkkk
+[2024-12-17 18:06:58] Pablo Vasques Bravo-Villalba: Eu acho que me senti ofendido de chamarem de Castlevania. Se tivesse outro nome eu pensaria, ah, beleza, a Konami quis lançar o seu próprio God of War e tudo bem.
+[2024-12-17 18:07:17] Shideravan: Não deve ser ruim tem o Kojima por trás e o cara é bom
+[2024-12-17 18:07:42] Pablo Vasques Bravo-Villalba: Mas ele é só o produtor. Tudo foi feito pela MercurySteam
+[2024-12-17 18:07:50] Shideravan: Mas eles provavelmente pegaram um projeto do cara e falaram: "Vamos chamar isso daqui de Castlevania para poder vender. Coloca uma história qualquer e chama os personagens de Belmont"
+[2024-12-17 18:08:20] Shideravan: Ahhh... De qualquer forma, acho que foi isso que aconteceu quando a Konami viu o projeto kkkkkkkkkkkkkkkkk
+[2024-12-17 18:08:31] Shideravan: Não era para ser Castlevania, mas "virou" kkkkkkkkkkkk
+[2024-12-17 18:08:42] Shideravan: Pelo menos no nome kkkkkkkk
+[2024-12-17 18:09:57] Shideravan: "Como vamos atualizar a série Castlevania para uma nova geração de gamers? Pega um jogo qualquer aí e chama de Castlevania, vai que eles se interessam pela marca e podemos vender bonequinhos de Alucard depois" kkkkkkkkkkk
+[2024-12-17 18:11:14] Pablo Vasques Bravo-Villalba: Diz que a história desse jogo é meio conturbada. Que era pra ser um remake, depois não era pra ser nada de Castlevania, depois virou um reboot, enfim
+[2024-12-17 18:17:08] Shideravan: Essa a história de desenvolvimento. A história da saga LoS também é bem conturbada. O protagonista do primeiro jogo vira o Dracula mas ele é pai do Trevor, que aí depois alguém avisou a equipe "o Alucard é o filho do Dracula" e aí eles "ahhh é? Ahhh então o Trevor é o Alucard" e ele se junta com a Sylpha e nasce o Simon....
+[2024-12-17 18:17:39] Pablo Vasques Bravo-Villalba: Fanfic 😝
+[2024-12-17 18:17:41] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-12/33654.jpg

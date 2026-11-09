@@ -1,0 +1,17 @@
+[2019-05-04 17:07:16] L.: https://hackaday.com/2019/04/12/cyphercon-badge-has-a-paper-tape-reader-built-in/
+[2019-05-04 17:16:14] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-05/9387-sticker.webp
+[2019-05-04 17:45:32] pitanga: Versão patinho feio djá
+[2019-05-04 18:25:34] Felipe "Juca" Sanches: advinha o que eu estou fazendo no Garoa nesse momento...
+[2019-05-04 18:25:42] Felipe "Juca" Sanches: (não, não é o Patinho Feio)
+[2019-05-04 18:26:07] Felipe "Juca" Sanches: Estou instalando mais luzes piscantes no playfield da máquina de pinball
+[2019-05-04 18:26:35] Felipe "Juca" Sanches: resolvi fazer uma gambiarra esperta usando um controlador de matriz de LEDs 8x8
+[2019-05-04 18:26:42] Felipe "Juca" Sanches: pra não ter que multiplexar por software
+[2019-05-04 18:26:53] Felipe "Juca" Sanches: e também pra não ter que usar trocentos shift-registers
+[2019-05-04 18:27:17] Felipe "Juca" Sanches: nessa solução, uso apenas um chip, o MAX7219
+[2019-05-04 18:27:26] Felipe "Juca" Sanches: pra controlar todas as luzes do playfield
+[2019-05-04 18:27:49] Felipe "Juca" Sanches: bem... não é exatamente uma gambiarra. É mais um hack mesmo 😃
+[2019-05-04 19:28:26] pitanga: Tenho um monte aqui, se precisar eu levo quinta.
+[2019-05-04 19:28:43] pitanga: Comprei na China
+[2019-05-04 19:28:48] pitanga: Da outra vez :P
+[2019-05-04 21:39:13] Felipe "Juca" Sanches: Tô com 10 max7219 aqui
+[2019-05-04 21:39:51] Felipe "Juca" Sanches: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-05/9402.mp4

@@ -1,0 +1,22 @@
+[2022-05-28 01:36:59] Pedro de Medeiros 👾: @fsanches tornou o acesso ao repositório público lá?
+[2022-05-28 05:48:09] Felipe "Juca" Sanches: Ainda não. Mas o farei pela manhã de hoje, sábado
+[2022-05-28 05:49:12] Felipe "Juca" Sanches: Nota-se que eu tive uma pequena distração hoje, né?! Kkkk
+[2022-05-28 06:14:02] Augusto Almeida: 🌞
+[2022-05-28 06:14:15] Augusto Almeida: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-05/20747-AnimatedSticker.tgs
+[2022-05-28 11:01:29] Felipe "Juca" Sanches: tornei publico agora
+[2022-05-28 11:01:45] Felipe "Juca" Sanches: ainda não tem nada, só um README e um arquivo da licença "GPLv2 (or later)"
+[2022-05-28 11:02:03] Felipe "Juca" Sanches: mais tarde pretendo subir algum rascunho inicial alí
+[2022-05-28 11:15:35] Pedro de Medeiros 👾: Como serão múltiplas arquiteturas, acho que convém separar primeiro em pastas pra MSX, Commodore 64, MSDOS e outros...
+[2022-05-28 11:19:14] Felipe "Juca" Sanches: sim, vou tentar fazer essa estrutura inicial
+[2022-05-28 11:33:12] Pedro de Medeiros 👾: Podemos conversar sobre o sistema de build do projeto. Porque o default pra mim seria usar Makefile, mas pra usuários de windows talvez seja melhor considerar algo mais... inclusivo? Ninja por exemplo? https://ninja-build.org/
+[2022-05-28 11:48:50] Felipe "Juca" Sanches: eu tava pensando em Makefile também
+[2022-05-28 12:08:32] Anne Isabelle: Entrei agora na discussão. Isso me lembra hexagonal architecture
+[2022-05-28 12:09:55] Anne Isabelle: Não manjo nada de MSX mas queria contribuir tb
+[2022-05-28 12:55:07] Pedro de Medeiros 👾: Tem uns PDFs de livros sobre a arquitetura no histórico se você procurar um pouco
+[2022-05-28 13:48:18] Ismael Luceno: MSYS para quem use Windows
+[2022-05-28 16:40:13] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital/Mines/issues/1#issuecomment-1140319707
+[2022-05-28 17:29:11] Leonardo Roman: Tem foto desse synth em algum lugar?
+[2022-05-28 17:31:13] Felipe "Juca" Sanches: https://www.lcs.poli.usp.br/~gstolfi/synthpage2.htm
+[2022-05-28 17:35:19] Felipe "Juca" Sanches: Aos 30 minutos e 40 segundos desse documentário Eletronica:mentes disponível na plataforma SESC-digital (no link abaixo) aparece o professor Guido Stolfi mostrando o synth:
+https://sesc.digital/conteudo/cinema-e-video/cinema-em-casa-com-sesc/eletronica-mentes
+[2022-05-28 22:24:16] L.: https://www.gamingalexandria.com/wp/2022/05/lost-canceled-squaresoft-game-3156-coro-coro-located-and-preserved/

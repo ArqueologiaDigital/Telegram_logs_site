@@ -1,0 +1,51 @@
+[2019-06-26 00:48:00] Erin Pinheiro 🐿: quais as voltagens da fonte de arcade?
+[2019-06-26 00:50:09] Erin Pinheiro 🐿: algumas placas ISA (placa de som me vem em mente) precisa do pino -5v
+[2019-06-26 00:50:13] Erin Pinheiro 🐿: https://pinouts.ru/Power/MotherboardPower_pinout.shtml
+[2019-06-26 00:52:15] Felipe "Juca" Sanches: Já verifiquei aqui que a fonte de arcade não serve pois só dá gnd, +5 e +12. O PC 5150 requer  -5 e -12 também
+[2019-06-26 00:54:50] Erin Pinheiro 🐿: dependendo da placa mãe até dá pra bootar sem -5v acho, mas certas placas não vão funcionar
+[2019-06-26 00:56:03] Felipe "Juca" Sanches: É... Eu tava pensando mesmo em algo assim aqui...
+[2019-06-26 01:02:17] Emerson Moura: Há algum tempo, tinha alguém vendendo adaptador de fonte ATX para AT no FB. Não me lembro quem, mas tinha.
+[2019-06-26 01:03:38] Erin Pinheiro 🐿: nota que fonte atx não tem -5v, esse adaptador converte de alguma forma ou só adapta a conexão?
+[2019-06-26 01:16:55] Emerson Moura: Acho que adapta apenas o formato físico. Tem só os conectores no cabinho, sem nenhum cirtuito extra.
+[2019-06-26 01:29:18] Emerson Moura: https://www.ebay.com/itm/ATX-Power-Adapter-to-Classic-P8-P9-AT-Board-20cm/352239618676?hash=item52031e0a74:g:7EcAAOSw9KhaP7Iy
+[2019-06-26 01:32:14] Erin Pinheiro 🐿: é, não ajuda sem os -5V.
+[2019-06-26 01:32:41] Erin Pinheiro 🐿: a especificação ATX em 2002 deixou -5V "opcional" e em 2004 tirou completamente
+[2019-06-26 01:33:40] Felipe "Juca" Sanches: Que desgraça! E agora? Como fazer?
+[2019-06-26 01:33:49] Erin Pinheiro 🐿: compra uma fonte AT ué :P
+[2019-06-26 01:33:54] Felipe "Juca" Sanches: Ah
+[2019-06-26 01:34:13] Erin Pinheiro 🐿: fonte "de 486"
+[2019-06-26 01:34:23] Felipe "Juca" Sanches: Fontes AT e XT são compatíveis?
+[2019-06-26 01:34:31] Felipe "Juca" Sanches: Eu não manjo nada ainda.
+[2019-06-26 01:34:46] Felipe "Juca" Sanches: É tudo novidade para mim
+[2019-06-26 01:34:57] Erin Pinheiro 🐿: dando uma olhada bem rápida AT e XT só mudaram a potência da fonte
+[2019-06-26 01:35:04] Erin Pinheiro 🐿: AT é o padrão do plugue na sua placa
+[2019-06-26 01:35:12] Felipe "Juca" Sanches: Ah legal!
+[2019-06-26 01:35:27] Felipe "Juca" Sanches: Então agora ficou mais fácil, eu acho
+[2019-06-26 01:35:34] Erin Pinheiro 🐿: eu tinha uma fonte AT de uma 486 antigo... não sei que fim levou
+[2019-06-26 01:35:51] Erin Pinheiro 🐿: uma andada pela sta ifigênia deve achar uma
+[2019-06-26 01:35:53] Erin Pinheiro 🐿: ou ML
+[2019-06-26 01:36:02] Felipe "Juca" Sanches: Yeah
+[2019-06-26 01:36:13] Emerson Moura: Pelo que já vi por ai, fazer um circuito que gera -5V é simples.
+[2019-06-26 01:36:54] Felipe "Juca" Sanches: Eu adorarei aprender. Mas não quero correr risco de ferrar essa placa se eu fizer errado
+[2019-06-26 01:37:01] Erin Pinheiro 🐿: https://produto.mercadolivre.com.br/MLB-985443578-fonte-at-troni-300-w-usada-_JM
+[2019-06-26 01:37:32] Erin Pinheiro 🐿: usada, sem testar, mas se não tiver capacitor estufado não deve dar bizu
+[2019-06-26 01:37:56] Felipe "Juca" Sanches: :-D
+[2019-06-26 01:38:55] Erin Pinheiro 🐿: por mais money você leva uma testada https://produto.mercadolivre.com.br/MLB-1231969695-fontes-at-para-computadores-antigos-ou-uso-industrial-leia-_JM
+[2019-06-26 01:41:19] Emerson Moura: Já que tocou no assunto, mesmo que a fonte esteja funcionando, um recap é recomendável. São esquipamentos eletrônicos analógicos com mais de 20 anos!!!
+[2019-06-26 01:41:33] Erin Pinheiro 🐿: sim com certeza
+[2019-06-26 01:42:03] Erin Pinheiro 🐿: eu concordo 100% mas ainda não fiz recap do meu amiga 600 ._.
+[2019-06-26 01:42:44] Erin Pinheiro 🐿: fora trocar só um capacitor que já tinha estourado com o antigo dono, e não fiz por motivos de não tenho os caps SMD corretos e, preguiça
+[2019-06-26 02:03:13] L.: https://github.com/baldengineer/bit-preserve  "
+          Project for capturing vintage, classic, aka old computer schematics in KiCad." (não tem muito ainda)
+[2019-06-26 10:38:40] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2019/2019-06/9732.jpg
+[2019-06-26 10:38:40] Felipe "Juca" Sanches [forwarded]: Instalei todos os chips não-raros nos soquetes.
+[2019-06-26 10:38:40] Felipe "Juca" Sanches [forwarded]: Assim que chegar a fonte AT que comprei no mercado livre, devo testar a fonte e em seguida ligar na placa e ver se não sai fumaça-mágica
+[2019-06-26 10:38:40] Felipe "Juca" Sanches [forwarded]: se parecer OK e estiver com as tensões todas na faixa nominal, vou inserir os chips mais raros, plugar a placa CGA e ligar na TV via video-composto e dar o primeiro boot
+[2019-06-26 10:40:55] Felipe "Juca" Sanches: Eu estou exatamente nessa etapa de montagem do projeto: https://www.youtube.com/watch?v=PRo1Yoz6coo
+[2019-06-26 12:36:38] Erin Pinheiro 🐿: lembre-se que fontes às vezes não mostram tensão nominal sem carga
+[2019-06-26 12:37:34] Leonardo Roman: Presente. Não tenho mais, mas comprei pelo ali express: https://pt.aliexpress.com/item/32991134049.html?spm=a2g0s.9042311.0.0.720eb90aXgQAMp&fbclid=IwAR0Hrq_CiXQyNFW1EKC3pWaJj0vss_Up_yJqys5NvcX7q515N73eSK33uOg
+[2019-06-26 12:38:53] Leonardo Roman: E é só um conversor físico. Quando preciso de -5V eu uso um 7905 na linha de -12V que todas as fontes ainda tem.
+[2019-06-26 12:39:55] Felipe "Juca" Sanches: por isso que eu espetei os chips menos raros primeiro. Pra dar alguma carga e testar a fonte
+[2019-06-26 16:17:29] L.: 🤘
+[2019-06-26 22:37:26] L.: https://github.com/stepleton/5100NonExecutableROSDecode/blob/master/WRITEUP.md
+[2019-06-26 23:03:44] Felipe "Juca" Sanches: Caramba. Esse cara é completamente maluco.

@@ -1,0 +1,24 @@
+[2021-07-29 00:24:44] Felipe "Juca" Sanches: Descobri que tem um pacote no PyPI chamado lzss 😉
+[2021-07-29 00:25:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13765.jpg
+[2021-07-29 00:27:22] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13766.jpg
+[2021-07-29 00:27:22] Felipe "Juca" Sanches: A codificação não é exatamente a mesma que a do arquivo original de update de firmware. Mas talvez isso seja apenas uma abordagem diferente do compressor.
+
+E pelo jeito ficou mais otimizado mesmo, pois o arquivo resultante ficou um pouquinho menor que o original 😉
+[2021-07-29 00:30:17] Felipe "Juca" Sanches: inspecionando os 2 arquivos no hexdump vi onde tem uma das diferenças (conto mais sobre isso depois) e também percebi que grande parte da codificacao ficou idêntica.
+
+Resolvi tentar instalar pra ver se funciona.
+
+Ficou parado numa tela preta que me fez achar que tivesse travado. Mas depois apareceu a spash screen, ou seja bootou. Só achei estranho esse tempinho extra pro boot.
+[2021-07-29 00:30:41] Felipe "Juca" Sanches: Aí percebi que os instrumentos estão todos com uma mensagem de erro no lugar do nome:
+[2021-07-29 00:31:27] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13769.jpg
+[2021-07-29 00:31:27] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-07/13770.jpg
+[2021-07-29 00:31:41] Felipe "Juca" Sanches: E o teclado não faz som nenhum
+[2021-07-29 00:32:59] Felipe "Juca" Sanches: ou seja, o algoritmo de compressão do pacote lzss disponível no PyPI é semelhante o suficiente para ter conseguido carregar a flash de programa, mas deve ter feito algo ligeiramente incompatível no trecho em que ficam armazenados os dados dos instrumentos.
+[2021-07-29 00:33:33] Felipe "Juca" Sanches: vou ter que revisar e adaptar a implementacao desse módulo
+[2021-07-29 00:57:11] Felipe "Juca" Sanches: notei agora que a diferença é que na minha implementacao o buffer circular de 4kbytes é inicializado com bytes 0x00 e no módulo lzss do PyPI é inicializado com caracteres de espaço (0x20).
+[2021-07-29 12:39:53] Felipe "Juca" Sanches: O arquivo comprimido tem um pequeno cabeçalho contendo apenas 11 bytes: a string SLIDE4K seguida dos valores 0x00 0x20 0x00 0x00
+
+* o nome SLIDE4K como assinatura faz muito sentido, já que o algoritmo de compressão (o LZSS) usa uma janela deslizante de 4 kbytes (o ring buffer)
+* A CPU TLCS900H é de 32 bits.
+* Estou achando que esses 4 bytes aí são um número de 32 bits e que são usados pelo algorítmo como valor de inicializacao da memória do ring buffer
+[2021-07-29 12:40:29] Felipe "Juca" Sanches: apesar de eu achar isso, ontem tentei modificar a implementação pra fazer essa inicializacao e ainda não funcionou. 😞

@@ -1,0 +1,116 @@
+[2018-08-08 08:00:43] FTMaciel: Qual o modelo?
+[2018-08-08 08:02:54] FTMaciel: São os preferidos dos Retrogamers. Antes esses monitores iam pro lixo.
+[2018-08-08 08:28:03] Ronaldo: Provavelmente
+[2018-08-08 08:28:23] Ronaldo: O que tiver o sincronismo é o verde
+[2018-08-08 08:29:19] Ronaldo: Eu fiz um cabo pra uma Indy usando só quatro fios: R, G, B e GND
+[2018-08-08 08:29:24] Silas: A maquina eh VAXstation 4000/90. A placa eh LCSPX.
+[2018-08-08 08:30:00] Ronaldo: Se vocês não acharem o conector eu tenho uma sugestão
+[2018-08-08 08:30:30] Silas: Liga como num monitor moderno? Sou total ignorante em eletronica
+[2018-08-08 08:31:04] Ronaldo: Soldem os fios por baixo do conector e puxem um conector por um buraco no gabinete.
+[2018-08-08 08:32:32] Ronaldo: Pelo conector VGA. Entre os pinos tem terra (geralmente ligados juntos, apesar de originalmente cada sinal ter um terra separado), R, G e B.
+[2018-08-08 08:34:18] Ronaldo: Esses três pinos, não dá pra ver direito, mas de duas uma: ou a parte central de cada pino tem o sinal e a parte externa tem o terra, como num cabo coaxial, ou o terra é a parte externa do conector, a "moldura"
+[2018-08-08 08:35:12] Ronaldo: O conector de vídeo da Indy é assim:
+[2018-08-08 08:35:16] Ronaldo: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/6811.jpg
+[2018-08-08 08:36:12] Ronaldo: Se chama DB13W3
+[2018-08-08 08:40:59] Silas: Hmmmm to comecando a entender!
+[2018-08-08 08:42:48] Silas: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/6814.jpg
+[2018-08-08 08:42:56] Silas: Os pinos do meio nao.sao usados?
+[2018-08-08 08:46:42] Ronaldo: No Indy ou no VGA?
+[2018-08-08 08:46:52] Silas: No VGA
+[2018-08-08 08:47:47] Ronaldo: O 5, 6, 7 e 8 são ligados juntos, ao terra, se eu não me engano
+[2018-08-08 08:47:58] Ronaldo: Tem que conferir
+[2018-08-08 08:48:44] Ronaldo: Acho que alguns monitores detectam se tem um cabo conectado verificando se tem contato entre esses pinos
+[2018-08-08 08:49:24] Ronaldo: Se não tiver nada ligando um ao outro o monitor pensa que não tem nada conectado
+[2018-08-08 08:49:54] Ronaldo: Daí não mostra imagem
+[2018-08-08 08:57:57] Silas: Ah ta
+[2018-08-08 08:58:02] FTMaciel: The LCSPX is a 2D accelerated 8 plane framebuffer. It has a 3W3 connector and uses sync-on-green.
+[2018-08-08 09:17:00] Rodrigo Tadeu: Deveria existir um orgão mundial para definir padrão... pqp, isso so dificulta a vida... 😉
+[2018-08-08 09:19:58] Ronaldo: Sabe o que é pior? A Silicon Graphics usava esse conector numa época, e a Sun Microsystems também. Mas... a pinagem era diferente, hahahaha
+[2018-08-08 09:22:40] Rodrigo Tadeu: Fácil para queimar equipamentos
+[2018-08-08 09:23:44] Ronaldo: Eu sempre achei ruim que o PS/2 tivesse o mesmo conector pro teclado e pro mouse
+[2018-08-08 09:25:38] Ronaldo: Mas isso é reserva de mercado, digamos. Como a Apple fazia, só os acessórios que ela fabricava funcionavam com o hardware dela.
+[2018-08-08 09:27:32] Ronaldo: Quem quisesse usar um monitor comum não tinha opção, precisava comprar um monitor caríssimo.
+[2018-08-08 09:30:13] Ronaldo: Aliás, pra quem mexe um pouquinho com eletrônica, existe um CI chamado LM1881 que serve pra extrair sinal de sincronismo. Daí, fazendo uma plaquinha com ele, dá pra usar o sinal sync-on-green em qualquer monitor.
+[2018-08-08 09:30:41] Ronaldo: Só vai ter que ter uma fonte extra pra plaquinha.
+[2018-08-08 09:31:08] Ronaldo: A placa necessária é muito simples.
+[2018-08-08 10:18:45] Silas: Uma ultima duvida: na pinout do VGA ta falando q tem dois sinais de sincronismo (horizontal e vertical). Como faz?
+[2018-08-08 10:21:23] Ronaldo: Os dois estão misturados
+[2018-08-08 10:21:29] Ronaldo: Tudo no verde
+[2018-08-08 10:22:14] Ronaldo: O sinal de sincronismo horizontal e vertical têm um nível de tensão diferente no vídeo conposto
+[2018-08-08 10:22:20] Ronaldo: Composto*
+[2018-08-08 10:23:09] Ronaldo: Um CI separador de sincronismo, como o LM1881, separa cada um no seu pino
+[2018-08-08 10:23:49] Ronaldo: A diferença deles em relação ao sinal de vídeo é a tensão, a diferença entre um e outro é a duração
+[2018-08-08 11:25:33] Affonso Amendola: Esse monitor que eu mostrei suporta sog
+[2018-08-08 11:27:31] Ronaldo: Eu ia dizer isso, mas provavelmente esse monitor não suporta a resolução desse computador
+[2018-08-08 11:27:59] Ronaldo: Esse monitor deve aceitar só resolução de TV, entrelaçado e progressivo
+[2018-08-08 11:31:56] Affonso Amendola: Justo
+[2018-08-08 11:32:08] Affonso Amendola: 400 e alguma coisa linhas
+[2018-08-08 11:32:10] Affonso Amendola: Ou 600
+[2018-08-08 12:20:53] FTMaciel: Cata por aí um multisync de tubo. Tem à rodo sendo jogado fora
+[2018-08-08 12:44:51] Ronaldo: Não é tão fácil achar os multisync
+[2018-08-08 12:45:37] Ronaldo: Os que se acha aos montes são os que aceitam frequência horizontal a partir de 31 KHz, VGA
+[2018-08-08 12:46:09] Ronaldo: Os multisync aceitam frequência de TV, 15 KHz
+[2018-08-08 12:47:05] Ronaldo: Eu diria pra tentar um monitor LCD furreco de 50 reais
+[2018-08-08 12:47:55] Ronaldo: Ou, montar um separador de sincronismo com LM1881 e aí sim usar qualquer monitor
+[2018-08-08 12:49:02] Ronaldo: Eu montei um separador de sincronismo em placa padrão
+[2018-08-08 12:49:16] Ronaldo: Não sei se eu tenho uma foto...
+[2018-08-08 12:54:15] Ronaldo: Aqui
+[2018-08-08 12:54:31] Ronaldo: O soquete era o único que eu tinha à mão
+[2018-08-08 12:54:41] Ronaldo: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/6857.jpg
+[2018-08-08 12:54:58] Ronaldo: Super complicado o circuito
+[2018-08-08 13:10:30] FTMaciel: Só funciona se for gambiarrado
+[2018-08-08 14:08:57] Silas: legal pessoal, mais pra frente quando eu tiver um tempo (e aprender um pouco de eletrônica que já to aprendendo com o pessoal do wikilab) eu vou tentar ligar esse placa sync-on-green
+[2018-08-08 14:08:58] Silas: valeu!!!
+[2018-08-08 14:54:07] Affonso Amendola: Depois de 15 minutos de esforco, um cabo bnc doidao que eu tinha em casa (da placa targa) e um cabo serial que tava aqui no museu
+[2018-08-08 14:54:14] Affonso Amendola: Olha só que maravilha
+[2018-08-08 14:54:26] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/6864.jpg
+[2018-08-08 14:54:39] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/6865.jpg
+[2018-08-08 14:55:23] Affonso Amendola: Agora da pra focar nos problemas do tk3000
+[2018-08-08 14:55:53] Affonso Amendola: A unica coisa que aparece na tela é TK3000IIE e esse cedilha
+[2018-08-08 14:56:07] Affonso Amendola: Com um cursor piscando
+[2018-08-08 14:56:13] Affonso Amendola: Nada no teclado faz algo
+[2018-08-08 14:56:37] Affonso Amendola: Ctrl reset parece resetar
+[2018-08-08 14:56:41] Affonso Amendola: Mas fica meio estranho
+[2018-08-08 14:57:13] Affonso Amendola: Depois de uns 5 resets
+[2018-08-08 14:57:28] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/6873.jpg
+[2018-08-08 14:59:15] Affonso Amendola: Can confirm
+[2018-08-08 14:59:20] Affonso Amendola: A imagem é beeem daora
+[2018-08-08 14:59:27] Affonso Amendola: Quero ver um megadrive rodando sonic aqui
+[2018-08-08 14:59:33] Affonso Amendola: Deve ficar lindo
+[2018-08-08 15:11:34] Deleted Account: Trinitron era usado em monitores de câmera de TV. No Mackenzie tinha um estúdio profissional, dava pra ver os poros da pele
+[2018-08-08 15:32:33] Felipe "Juca" Sanches: Eu usava um monitor igual a esse na Poli em 2004, no LSI
+[2018-08-08 15:32:45] Felipe "Juca" Sanches: eu testava nele uma implementação de MSX em FPGA
+[2018-08-08 16:38:30] DQ: Você está com alguma placa de expansão espetada?
+[2018-08-08 16:50:39] Affonso Amendola: Nenhuma
+[2018-08-08 16:52:31] DQ: Se lembro direito, deveria cair no Basic, com prompt ]
+[2018-08-08 16:53:51] DQ: Faz muito tempo que eu não mexo no meu TK 3000. mas um aperto nas eproms não deve fazer mal.
+[2018-08-08 16:54:56] DQ: Parece que a quase tudo está funcionando.
+[2018-08-08 16:55:58] DQ: Experimente também insistir um pouco nas teclas, as do meu estavam falhando muito e só funcionavam depois de algumas tentativas
+[2018-08-08 16:56:55] DQ: Pode ser que o ] vire ç por alguma adaptação para o português
+[2018-08-08 17:21:19] Affonso Amendola: Tentarei amanha
+[2018-08-08 17:21:19] Affonso Amendola: Chegaram varias coisas interessantes hoje e eu acabei me distraindo um poco do 3000
+[2018-08-08 17:21:30] Affonso Amendola: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/6890.mp4
+[2018-08-08 17:22:00] Affonso Amendola: E isso aqui
+[2018-08-08 17:22:13] Affonso Amendola: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-08/6892.jpg
+[2018-08-08 17:22:33] Affonso Amendola: Mais pros interessados em musica esse ultimo
+[2018-08-08 17:22:38] Affonso Amendola: Still cool :)
+[2018-08-08 17:23:07] Deleted Account: *__*
+[2018-08-08 17:23:45] Affonso Amendola: Só fica nisso
+[2018-08-08 17:23:56] Affonso Amendola: Nada que eu clico faz alguma coisa
+[2018-08-08 17:24:19] Affonso Amendola: E a gambiarra que eu fiz pra ligar na tv n ajudou muito na definicao da imagem
+[2018-08-08 17:32:01] Deleted Account: o TK90X precisa de monitor de 15khz, igual os MSX
+http://www.tk90x.com.br/Projetos_TK90X_ConversorVGA.html
+[2018-08-08 17:34:30] Leonardo Roman: Parece memória. Tem umas dicas no site do Victor Trucco:
+[2018-08-08 17:34:33] Leonardo Roman: https://www.victortrucco.com/TK/ConsertoTK90X/ConsertoTK90X
+[2018-08-08 17:34:38] Leonardo Roman: https://www.victortrucco.com/TK/TK90XReparos/TK90XReparos
+[2018-08-08 17:50:04] Deleted Account: Pano macio e carinho
+[2018-08-08 18:54:40] Ronaldo: O TK90X, por padrão, só tem saída de RF
+[2018-08-08 18:55:17] Ronaldo: Tem que ligar numa TV, na entrada de antena, e tentar entre os canais 3 e 4
+[2018-08-08 18:56:15] Ronaldo: Sim, o cedilha aparece quando se aperta uma tecla, que ativa letras minúsculas e acentuadas
+[2018-08-08 18:56:30] Ronaldo: Tem um led no teclado pra essa tecla
+[2018-08-08 19:01:45] FTMaciel: Bem bonito esse cce, pena que é um cce
+[2018-08-08 19:06:31] Ronaldo: Aliás, o TK3000 tem uma combinação de teclas que dá reset nele e vai pra um auto teste
+[2018-08-08 19:07:43] Affonso Amendola: Ahhh, preciso disso
+[2018-08-08 19:10:03] Ronaldo: A tecla que liga os acentos é mode
+[2018-08-08 19:10:13] Ronaldo: Isso deve fazer a cedilha desaparecer
+[2018-08-08 20:03:04] Leonardo Roman: o auto teste é ctrl + bola cheia + reset se não me engano

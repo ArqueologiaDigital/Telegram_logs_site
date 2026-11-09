@@ -1,0 +1,53 @@
+[2026-10-08 00:42:08] RicBit: 51 -> 34
+[2026-10-08 00:42:43] RicBit: 34 bytes são duas rotinas pequenas
+[2026-10-08 00:42:50] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41231.jpg
+[2026-10-08 00:42:50] RicBit: parte 1
+[2026-10-08 00:43:12] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41232.jpg
+[2026-10-08 00:43:12] RicBit: parte 2
+[2026-10-08 00:43:57] RicBit: só isso, 34 bytes. não consigo tirar mais nada só com golf, agora é largar na mão de namagiri e rezar
+[2026-10-08 00:50:07] RicBit: 34 -> 28
+[2026-10-08 00:50:12] RicBit: go namagiri go
+[2026-10-08 06:41:14] Felipe "Juca" Sanches: vejam que interessante isso... no KN5000 eu sei que é possível executar código arbitrário por meio de um ponto de entrada lido durante o boot de uma ROM instalada numa placa de extensão opcionalmente instalada em um conector da placa-mãe. A única placa que sei dizer que foi desenvolvida pro KN5000 foi a HDAE5000, que adiciona uma saída de áudio a mais, uma porta paralela e uma interface ATA-IDE. O propósito principal dessa placa era aumentar capacidade de armazenamento com um HD de 1gigabyte.
+
+Eu desenvolvi soluções de dump de firmware da placa principal do KN5000 por meio dessa placa de extensão.
+
+
+Agora estou com um KN7000 em mãos e preciso fazer o dump do firmware dele também. Só que como ele tem driver de cartão SD já instalado direto da fábrica, não incluiram esse conector de expansão nele...
+[2026-10-08 06:42:11] Felipe "Juca" Sanches: entretanto... hoje descobri que existiu um produto que nitidamente rodava código custom por meio da interface de sd-card, e essa é uma ótima notícia!
+
+https://www.keysoftservice.ch/kn7000/SD-PLUG-iN7000.htm
+[2026-10-08 06:44:03] Felipe "Juca" Sanches: Mas... a interface de sd card tem um processador próprio, cuja rom eu não dumpei ainda. Então isso dificulta muito eu descobrir como se faz para preparar um disco sd de boot.
+
+Então é um problema de ovo-e-galinha...
+[2026-10-08 06:46:06] Felipe "Juca" Sanches: https://www.keysoftservice.ch/kn7000/QandA.htm#PLUG-iN
+[2026-10-08 06:58:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41240.jpg
+[2026-10-08 07:00:13] Felipe "Juca" Sanches: na imagem aparece um drive de sdcard externo. Não tá claro se a habilidade de rodar codigo arbitrário depende desse hardware extra
+[2026-10-08 07:00:35] Felipe "Juca" Sanches: e nunca vi instruções de instalação do hardware
+[2026-10-08 07:00:40] Felipe "Juca" Sanches: ou manual de usuário
+[2026-10-08 07:00:52] Felipe "Juca" Sanches: e muito menos um desses pra comprar
+[2026-10-08 07:01:32] Felipe "Juca" Sanches: eu nem sabia que isso existia. Mas agora fazendo buscas no ebay, não achei nada. Nem mesmo resultados de anúncios antigos
+[2026-10-08 07:01:43] Felipe "Juca" Sanches: deve ter tido uma tiragem muito pequena
+[2026-10-08 18:51:06] Pablo Vasques Bravo-Villalba: Allwinner? R36S deveria ser Rockchip. Deve ser um clone então, não suportado pelo Batocera. Você sabe qual o OS que veio originalmente nele, se foi o ArkOS ou o EmuELEC?
+[2026-10-08 19:39:40] L.: Tem SDIO. Alguns PDAs tinham placa WiFi em cartão formato SD
+[2026-10-08 19:53:56] RicBit: 28 -> 10, mas eu ainda não estou confiante
+[2026-10-08 20:04:17] Shideravan: Só 10? Mas tem certeza que está funcional?
+[2026-10-08 20:04:43] Pablo Vasques Bravo-Villalba: Boa sorte!
+[2026-10-08 20:04:53] Shideravan: Namagiri não consegue espremer mais um pouquinho? Tá quaaaaase
+[2026-10-08 20:23:37] RicBit: da ultima vez foram 48h para tirar 8. ainda nem chegou no 8.
+[2026-10-08 20:24:27] RicBit: o algoritmo mais last hope que eu tenho está tirando 1 bit a cada 10 minutos.
+[2026-10-08 21:37:00] RicBit: 10 -> 6 !!!!
+[2026-10-08 21:37:28] RicBit: achei um grau de liberdade animal, alguns shr podem ser sar.
+[2026-10-08 21:39:23] Felipe "Juca" Sanches: PQP!
+
+Tropecei em um ex-funcionario da Technics Japao
+[2026-10-08 21:40:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41262.jpg
+[2026-10-08 21:40:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41263.jpg
+[2026-10-08 21:40:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41264.jpg
+[2026-10-08 21:40:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41265.jpg
+[2026-10-08 21:40:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41266.jpg
+[2026-10-08 21:40:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41267.jpg
+[2026-10-08 21:40:02] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41268.jpg
+[2026-10-08 21:41:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-10/41269.jpg
+[2026-10-08 21:41:57] Felipe "Juca" Sanches: primeiro prototipo do Technics KN2000
+[2026-10-08 21:50:45] Felipe "Juca" Sanches: o cara se chama Phil Leader e algumas postagens dele estao disponiveis aqui: https://www.facebook.com/groups/3328386171/user/100002310340396
+[2026-10-08 21:50:59] Felipe "Juca" Sanches: mas eu nao consido mandar mensagem direta pra ele

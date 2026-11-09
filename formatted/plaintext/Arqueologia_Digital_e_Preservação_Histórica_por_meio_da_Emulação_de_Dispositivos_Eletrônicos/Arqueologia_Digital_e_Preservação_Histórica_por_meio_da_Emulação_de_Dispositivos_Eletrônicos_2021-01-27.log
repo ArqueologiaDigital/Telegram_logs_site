@@ -1,0 +1,79 @@
+[2021-01-27 10:43:44] Ricardo Bánffy: Gostei da idéia de ler isso como "Pense bem, Pocahontas"...
+[2021-01-27 13:25:10] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12290.jpg
+[2021-01-27 13:25:10] Felipe "Juca" Sanches: http://datassette.org/livros/br-brasil-pense-bem-livros/disney-maravilhas-do-mundo
+[2021-01-27 13:25:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12291.jpg
+[2021-01-27 13:25:31] Felipe "Juca" Sanches: http://datassette.org/livros/us-estados-unidos-pense-bem-livros/book-03
+[2021-01-27 13:58:45] Leonardo Roman: Coloquei o título completo: http://datassette.org/livros/us-estados-unidos-pense-bem-livros/smart-start-matchbook-book-03
+[2021-01-27 13:59:14] Leonardo Roman: Esses internacionais não tem nada na internet
+[2021-01-27 14:03:18] Felipe "Juca" Sanches: eu comprei todos livros de Smart Start exceto o 4 e o 5, que só tem uma pessoa vendendo no reino unido, mas tá absurdamente caro
+[2021-01-27 14:03:59] Erin Pinheiro 🐿: joga no archive.org tbm, n vale?
+[2021-01-27 14:04:03] Erin Pinheiro 🐿: ou vghf
+[2021-01-27 14:04:09] Felipe "Juca" Sanches: sim, com certeza
+[2021-01-27 14:05:00] Felipe "Juca" Sanches: pretendo mandar um email para o Internet Archive pedindo pra eles abrirem pra mim uma colecao "VTECH SMART START" pra eu catalogar os itens todos debaixo dessa categoria
+[2021-01-27 14:05:05] Felipe "Juca" Sanches: pra ficar organizado
+[2021-01-27 14:05:10] Felipe "Juca" Sanches: mas vou fazer isso depois
+[2021-01-27 14:05:10] Erin Pinheiro 🐿: nice
+[2021-01-27 14:05:24] Felipe "Juca" Sanches: por enquanto to mandando pro pessoal do Datassette
+[2021-01-27 14:05:49] Felipe "Juca" Sanches: e guardando meus backups aqui em casa também, é claro
+[2021-01-27 14:46:45] RicBit: eu baixei um mas nao consegui entender
+[2021-01-27 14:55:35] Felipe "Juca" Sanches: não conseguiu entender o que?
+[2021-01-27 14:55:40] Felipe "Juca" Sanches: como funciona um Pense Bem?
+[2021-01-27 14:56:15] Felipe "Juca" Sanches: você digita o código do livro no aparelho e ele já sabe qual é o gabarito das respostas certas
+[2021-01-27 14:56:22] Felipe "Juca" Sanches: aí o livro é diagramado usando esse gabarito
+[2021-01-27 14:56:39] Felipe "Juca" Sanches: vc lê a pergunta no livro e responde no aparelho
+[2021-01-27 15:04:08] RicBit: é que no seu gabarito tem a b c d e no manual tem cores
+[2021-01-27 15:04:19] RicBit: eu baixei um e não consegui achar correspondencia
+[2021-01-27 15:04:20] Felipe "Juca" Sanches: AH!
+[2021-01-27 15:04:46] Felipe "Juca" Sanches: as teclas A B C e D do Pense Bem são coloridas
+[2021-01-27 15:05:25] RicBit: sao sempre as mesmas cores no gabarito ?
+[2021-01-27 15:05:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12315.jpg
+[2021-01-27 15:05:47] RicBit: em principio ele poderia mudar a correspondencia junto com o livro
+[2021-01-27 15:05:48] Felipe "Juca" Sanches: sim. A=vermelho B=amarelo C=azul e D=verde
+[2021-01-27 15:05:52] RicBit: mas nao sei se faz isso
+[2021-01-27 15:05:59] RicBit: deixa ver aqui
+[2021-01-27 15:06:50] Felipe "Juca" Sanches: nosso simulador de pense bem em javascript ainda está gerando o gabarito errado. Mas daqui alguns dias o Acidx Leandro deve terminar de revisar e consertar um pull request que fiz lá consertando isso
+[2021-01-27 15:07:37] RicBit: entao olha só
+[2021-01-27 15:07:47] RicBit: nesse aqui
+[2021-01-27 15:07:48] RicBit: https://datassette.nyc3.cdn.digitaloceanspaces.com/livros/pense_bem_-_especial_-_disney_-_maravilhas_do_mundo.pdf
+[2021-01-27 15:07:55] RicBit: o certo é comecar com aad né ?
+[2021-01-27 15:08:06] RicBit: mas nao tem nenhuma linha no seu gabarito que começa com aad
+[2021-01-27 15:08:48] Felipe "Juca" Sanches: peraí que já vejo
+[2021-01-27 15:09:33] L.: Tá rodando em casa já mas tão rolando uns problemas esquisitos. Não sei o que é ainda.
+[2021-01-27 15:10:08] Felipe "Juca" Sanches: sim, comeca com 1-A, 2-A, 3-D
+[2021-01-27 15:10:59] Felipe "Juca" Sanches: esse é o livro 09, e essas perguntas ficam na sessao 1
+
+com isso o código digitado no pense bem  é LIVRO 0 9 1 ENTER
+[2021-01-27 15:11:50] L.: A primeira seção no simulador online é pra estar certa
+[2021-01-27 15:12:06] RicBit: entao acho que tem algum offset que eu nao entendo
+[2021-01-27 15:12:11] Felipe "Juca" Sanches: sim, aqui você não vê aad. Mas o pattern1 é o gabarito do livro 01. Os gabaritos dos demais livros são gerados algoritmicamente modificando iterativamente o gabarito do 01
+[2021-01-27 15:12:37] RicBit: eu estou usando aquele gigante que voce mandou
+[2021-01-27 15:13:05] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12334-lixo
+[2021-01-27 15:13:22] RicBit: tá certo isso ou eu separei as linhas erradas?
+[2021-01-27 15:13:37] Felipe "Juca" Sanches: leia o algoritmo aqui: 
+
+https://github.com/felipesanches/Pense-Bem/blob/43399bf897aeff425939380800dbf12faba7e074/calcanswer.py#L7-L67
+[2021-01-27 15:14:57] Felipe "Juca" Sanches: sim, você separou em 151 respostas por linha
+[2021-01-27 15:15:03] Felipe "Juca" Sanches: deveria ser 150
+[2021-01-27 15:16:01] RicBit: ah agora sim
+[2021-01-27 15:16:09] RicBit: com 150 a linha 9 comeca com aad
+[2021-01-27 15:16:09] RicBit: thx
+[2021-01-27 15:16:42] Felipe "Juca" Sanches: 😉
+[2021-01-27 15:17:52] RicBit: agora acho que consigo montar a equacao
+[2021-01-27 15:26:16] Felipe "Juca" Sanches: maravilha 😊
+[2021-01-27 21:38:02] RicBit: nao tem nenhum polinomio pequeno que explica a string inteira
+[2021-01-27 21:38:18] RicBit: se eu tento interpolar, o polinomio fica do tamanho da sequencia
+[2021-01-27 21:38:34] RicBit: acho que devem ser dois lfsr de periodos diferentes xorados
+[2021-01-27 22:17:45] Leonardo Roman: Ainda não entendi por que todos os livros são divididos em cinco "seções" de 30 perguntas. A cada seção precisamos programar aquele código de 3 dígitos de novo, como se não houvesse dependência entre elas.
+[2021-01-27 22:18:59] Leonardo Roman: Uma coisa que nunca tentei: iniciar em algum livro e depois de 30 questões digitar um código de outro livro. Algo como 011 e depois 021
+[2021-01-27 22:24:29] RicBit: a seção deve ser o segundo lfsr
+[2021-01-27 22:24:44] RicBit: tem um lfsr de periodo 15 que é claro na sequencia
+[2021-01-27 22:25:09] RicBit: ou talvez seja um de periodo 30 com offset opcional de 15, que bate mais com os dados
+[2021-01-27 22:25:39] RicBit: alternativamente tem um truque velho que o pessoal usava
+[2021-01-27 22:25:53] RicBit: que era botar um monte de and da saida pro reset do ff
+[2021-01-27 22:26:03] RicBit: assim seu periodo nao precisa ser potencia de dois
+[2021-01-27 22:26:24] RicBit: e periodo 15 é igual a x0 and x1 and x2 and x3 né
+[2021-01-27 22:26:58] RicBit: ai tem dois periodos com um lfsr só
+[2021-01-27 22:27:08] RicBit: deixa desenhar aqui
+[2021-01-27 22:29:10] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2021/2021-01/12359.jpg
+[2021-01-27 22:30:24] RicBit: os primeiros 15 bits da sequencia eu tiro com o polinomio 1+x^6 (um tap no bit 6 só)
+[2021-01-27 22:30:32] RicBit: mas o segundo periodo nao bate

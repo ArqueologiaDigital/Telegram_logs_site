@@ -1,0 +1,105 @@
+[2022-05-02 17:53:23] Shideravan: @fsanches tem uma parada que eu sinto que a comunidade de desenvolvimento de emuladores falha em passar a mensagem
+[2022-05-02 17:53:59] Shideravan: 2022 e ainda existe a lenda que se um console/sistema é baseado em arquitetura x86 ele por consequencia é "fácil de emular"
+[2022-05-02 17:54:37] Shideravan: Gente, se fosse trivial assim, a emulação de sistemas x86 seria perfeita kkkkkkkkkkkk
+[2022-05-02 17:55:52] Shideravan: Se fosse trivial, existiriam vários emuladores de XBox Clássico, XBox 360, One, Series X, PS4, PS5, tudo bonitinho rodando tudo por aí
+[2022-05-02 17:57:07] Shideravan: Não sei o que faz essa mensagem errada parar na cabeça de usuários
+[2022-05-02 17:58:12] Shideravan: Se é por causa desses "emuladores" de arcade x86 que na verdade não são propriamente "emuladores". Eles só pegam jogos que foram feitos para rodar em arcades que são PCs e só trabalham para jogo por jogo ser executável. Mas aí está longe, muito longe de ser emulação
+[2022-05-02 18:01:32] Shideravan: Se for isso, também é resultado de informação comunicada errado para os usuários hahahaha
+[2022-05-02 18:39:54] Felipe "Juca" Sanches: eu não sei. Mas acho que uma explicação possível é o fato da arquitetura X86 ser ubíqua nos desktops de hoje em dia e, portanto, as pessoas devem pensar: "Ah, é só rodar o programa nativamente. Não precisa de mais nada."
+[2022-05-02 18:43:32] Shideravan: Poxa, mas se não precisasse, era só rodar nativamente então. Abria a mídia e executava huauhahuahua
+[2022-05-02 18:44:11] Shideravan: A Sony recentemente portou o GoW4
+[2022-05-02 18:44:35] Shideravan: Não precisava gastar tempo e dinheiro portando, só é só pegar e rodar huahuahuauha
+[2022-05-02 18:44:48] Shideravan: Tem um salto lógico aí
+[2022-05-02 18:54:15] Shideravan: E tipo, por usuário, nem falo só de usuário bem leigo não
+[2022-05-02 18:54:53] Shideravan: Tem dev que se colocou no desafio de emular o PS4, tenta durante uns meses, percebe que o sistema não é tão simples de emular quanto ele achou que fosse. E desiste
+[2022-05-02 18:55:31] Shideravan: Aconteceram váarios casos assim
+[2022-05-02 18:56:14] Shideravan: Tem vários emuladores por aí que conseguem "tirar uma tela do jogo x com problemas diversos rodando a 2 fps"
+[2022-05-02 18:56:30] Shideravan: ou rodam marromenos um jogo homebrew
+[2022-05-02 19:02:39] Shideravan: Eu não entendo isso, porque tirando isso dos """emuladores de arcade x86""" que apenas dão um jeito do jogo de arcade x86 ser executado e a partir daí ele está rodando nativamente, não conheço nenhum paralelo disso de que "hmmm é x86 também, é trivial". O Xbox Classico mesmo, com 21 anos nas costas não tem um emulador que rode realmente bem até hoje e olha que a biblioteca é relativamente pequena
+[2022-05-02 20:54:44] Ismael Luceno: ninguem vai chegar muito longe com a Microsoft atrás deles ;-)
+[2022-05-02 21:31:16] Shideravan: Ahhh nem
+[2022-05-02 21:31:33] Shideravan: A Microsoft na verdade não liga quanto a isso
+[2022-05-02 21:31:36] Shideravan: Na verdade
+[2022-05-02 21:32:06] Shideravan: O Phil Spencer outro dia até falou a importância da emulação apra preservação, deixa eu ver se eu acho
+[2022-05-02 21:32:40] Shideravan: https://dropsdejogos.uai.com.br/noticias/industria/phil-spencer-chefao-da-xbox-e-a-favor-da-emulacao-para-preservar-jogos-antigos
+[2022-05-02 21:32:43] Shideravan: Tá na mão
+[2022-05-02 21:34:03] Shideravan: https://www.tecmundo.com.br/voxel/228985-phil-spencer-sugere-preservar-games-antigos-emuladores.htm
+[2022-05-02 21:35:26] Shideravan: Para ser sincero, eu queria que todo mundo na indústria tivesse essa noção que o Phil tem, que a emulação não visa prejudicar ninguém, pelo contrário, é um esforço tanto para preservar a história como um desafio em termos técnicos que garante muito aprendizado para quem participa da comunidade
+[2022-05-02 21:36:23] Shideravan: Eu tenho meus problemas com a Microsoft (e quem não tem) mas recentemente eles melhoraram bastante
+[2022-05-02 21:36:45] Shideravan: Até patrocinar distros de Linux eles tem patrocinado
+[2022-05-02 21:37:27] Shideravan: Só faltam abrir o código do Windows para eu gostar mais kkkkk
+[2022-05-02 21:37:42] Shideravan: Mas pelo menos, já abriram o código de versões antigas do DOS
+[2022-05-02 21:38:12] Shideravan: https://github.com/microsoft/MS-DOS
+[2022-05-02 21:42:43] Felipe "Juca" Sanches: Que bosta esse site "drops de jogos", hein!? Tem só umas 3 ou 4 frases curtas sobre o tema e acaba sem contextualizar nada. Saí mais confuso do que quando cheguei para tentar me informar.
+[2022-05-02 21:43:04] Shideravan: Desculpa, eu joguei no google e peguei a primeira que apareceu
+[2022-05-02 21:43:36] Shideravan: Mas esse assunto teve bastante cobertura no mundo inteiro na época
+[2022-05-02 21:44:19] Shideravan: Talvez porque os sites de tecnologia esperavam que o Phill fosse dizer algo como "emuladores são um crime 1111!!!onze!!!" e se surpreenderam com o posicionamento
+[2022-05-02 21:46:34] Shideravan: Na gringa também abordaram isso, mas em geral as matérias foram todas bem curtas mesmo
+[2022-05-02 21:46:34] Shideravan: https://www.vg247.com/phil-spencer-legal-game-emulation-preservation
+[2022-05-02 21:47:00] Shideravan: De qualquer forma, eu acho um posicionamento bastante válido
+[2022-05-02 22:04:11] Felipe "Juca" Sanches: o texto do tecmundo é uma bosta também.
+
+Traduziu "within reason" como "sem exceção"
+[2022-05-02 22:08:27] Felipe "Juca" Sanches: Sobre essa questão... o Nintendo Switch tem alguns emuladores de SNES/NES e até SEGA Genesis. Mas estão exclusivamente disponíveis mediante assinatura de uma conta Nintendo Switch Online. Se tivesse emulador que eu pudesse comprar avulso na loja eu compraria.
+
+Mas mesmo assim seria inefetivo para o propósito de preservação, pois com certeza trata-se de uma coleção de alguns jogos mais populares. A preservação pra valer acontece onde estão os jogos (e equipamentos) mais obscuros e que não tem praticamente nada de viabilidade comercial para as empresas
+[2022-05-02 22:09:41] Felipe "Juca" Sanches: E a preservação PRA VALER só se faz com emulador escrito como software livre
+[2022-05-02 22:10:08] Felipe "Juca" Sanches: caso contrário, é só mais uma caixa preta, um truque de mágica
+[2022-05-02 22:11:34] Anne Isabelle: Isso me lembra o trabalho que o pessoal do no$ teve pra fazer a rom do SNES-CD funcionar no emulador
+[2022-05-02 23:02:13] RicBit: Eu lembro do autor do no$ achando que meu emulador era magica, foi engraçado. Ele mandou um email meio puto pra mim haha
+[2022-05-02 23:05:45] RicBit: Ele mandou um email dizendo que tinha absoluta certeza que o emulador de z80 dele era o mais rápido do mundo e não entendia como mesmo assim o meu emulador rodava melhor.
+[2022-05-02 23:05:54] RicBit: Ele devia estar certo mesmo
+[2022-05-02 23:06:18] RicBit: Mas o truque nunca foi o emulador de cpu, era o emulador do vdp
+[2022-05-02 23:26:01] Shideravan: hahahahaha
+[2022-05-02 23:28:03] Shideravan: tu usou a especificação do MSU-1 do byuu?
+[2022-05-02 23:28:10] Shideravan: Ou foi outro tipo de implementação?
+[2022-05-02 23:28:32] Felipe "Juca" Sanches: suspeito que o emulador do RicBit seja muito mais antigo que isso 😉
+[2022-05-02 23:28:39] Shideravan: Boto fé
+[2022-05-02 23:28:49] Shideravan: Aí eu fiquei curioso
+[2022-05-02 23:31:30] Shideravan: A maior vantagem é que o emulador acaba sendo um tipo de documentação minuciosa do hardware
+[2022-05-02 23:31:38] Shideravan: Se tiver o código aberto, claro
+[2022-05-02 23:31:53] Shideravan: O melhor tipo de documentação, aquela que a gente vê funcionando hahahaha
+[2022-05-02 23:32:16] Shideravan: Se for proprietário ou código fechado, isso se perde totalmente
+[2022-05-02 23:32:27] Felipe "Juca" Sanches: mas é justamente disso que tô falando. Preservar os fatos técnicos do hardware não se faz com emulador de implementação proprietária e uns 20 ou 30 jogos famosos
+[2022-05-02 23:33:00] Shideravan: Eu gosto do que o autor do no$ faz, que ele lança/lançava os projetos dele fechado, mas se dava ao trabalho de escrever uma documentação detalhada depois
+[2022-05-02 23:33:04] Shideravan: Mas não é a mesma coisa
+[2022-05-02 23:33:08] Felipe "Juca" Sanches: o código-fonte do emulador é a preservação em si
+[2022-05-02 23:33:17] Pablo Vasques Bravo-Villalba: Abrir o código do Windows me passa a mesma sensação de abrir a Arca da Aliança 😳
+[2022-05-02 23:33:20] Shideravan: Se tivesse a descrição E o código aberto, seria uma beleza para estudos
+[2022-05-02 23:33:38] Shideravan: Né? Quando abriram o DOS a sensação foi essa hahahaha
+[2022-05-02 23:34:49] Shideravan: Tem uma vantagem real de não abrirem o código hoje em dia, que é não facilitar o trabalho de quem fica caçando vulnerabilidade
+[2022-05-02 23:35:21] Shideravan: Mas o Windows é uma coisa, que mesmo sem postar o fonte, já acham vulnerabilidade que é um negócio kkkkkkkkkk
+[2022-05-02 23:35:57] Shideravan: E mesmo com código aberto, as distros de Linux continuam mais seguras kkkkkkkkk
+[2022-05-02 23:36:29] Shideravan: Então é questionável se isso realmente ajuda...
+[2022-05-02 23:37:41] Shideravan: Passam anos a vulnerabilidade conhecida e amplamente divulgada, para depois de algum tempo reconhecerem e tentarem corrigir
+[2022-05-02 23:37:56] Shideravan: Quando a vulnerabilidade vem num update então, ferrou
+[2022-05-02 23:39:06] Shideravan: Forçam o update e depois todo mundo descobre a vulnerabilidade fica um deus nos acuda de tentar bloquear, aí meu deus, esse windows tem baidu e já instalou o update sem eu ver, ahhh a correção tá pronta mas não são todas as máquinas suportadas pelo novo update ainda....
+[2022-05-02 23:39:32] Shideravan: Um caos... O fato de terem uma base instalada grande aumenta ainda mais esse caos hahahaha
+[2022-05-02 23:40:52] Shideravan: Acho que também o Linux seria mais visado se fosse mais usado por usuário comum, tanto que o Android que é baseado em Linux também é cheio de vulnerabilidades conhecidas...
+[2022-05-02 23:43:05] Felipe "Juca" Sanches: mas cuidado pra não divergir muito do tema principal aqui do grupo 😉
+[2022-05-02 23:43:40] Shideravan: Faz parte do ecossistema do escopo também, não faz?
+[2022-05-02 23:44:49] Shideravan: Quando a gente fala de preservação por meio de emulação "sistemas operacionais" e portabilidade, bem como software aberto fazem totalmente parte do assunto
+[2022-05-02 23:45:43] Felipe "Juca" Sanches: sim sim... apenas senti o risco da conversa virar um papo sobre vulnerabilidades de sistemas de software livre versus proprietários
+[2022-05-02 23:45:56] Felipe "Juca" Sanches: bora focar na preservação em si das coisas
+[2022-05-02 23:46:06] Shideravan: Hoje mais cedo, estávamos falando de emulação do PS4, né?
+[2022-05-02 23:46:13] Shideravan: Olha que interessante
+[2022-05-02 23:46:57] Shideravan: Tem esse projeto chamado Spine que parte intrinseca do projeto é que ele só vai ser desenvolvido para Linux
+[2022-05-02 23:47:09] Shideravan: O motivo é bem menos ideológico do que parece
+[2022-05-02 23:49:00] Shideravan: Que o fato do SO do PS4 ser uma distro do Linux, faria que emular em qualquer outro SO demandaria criar uma outra camada de emulação para gerir a máquina virtual para rodar linux só para tratar da I/O
+[2022-05-02 23:49:51] Shideravan: Claro, é um problema que pode levar o projeto a impossibilidade de manutenção no futuro, se o Linux deixar de dar suporte a algumas coisas
+[2022-05-02 23:50:35] RicBit: Eu nem sei o que é um msu-1
+[2022-05-02 23:51:01] Shideravan: MSU-1 é uma descrição desenvolvida pelo Byuu para simular o que seria um SNES-CD
+[2022-05-02 23:51:25] Shideravan: Ele permite que você coloque, por exemplo, trilha sonora de CD e aberturas nos jogos
+[2022-05-02 23:51:33] Felipe "Juca" Sanches: suspeito que o emulador do RicBit não tenha nada a ver com o SNES-CD
+[2022-05-02 23:51:51] Felipe "Juca" Sanches: ele não falou explicitamente, mas, por ter citado Z80 acho que ele se referia a um emulador de MSX
+[2022-05-02 23:51:55] Shideravan: Esse padrão foi adotado pela comunidade a tal ponto que hoje muitos flashcards de SNES têm suporte ao MSU-1
+[2022-05-02 23:52:48] Shideravan: Ao que se referia esse SNES-CD aqui?
+[2022-05-02 23:53:02] Shideravan: Agora boiei uhahuahuahua
+[2022-05-02 23:53:21] RicBit: Era um emu de msx sim. Se me lembro bem, o no$ fez o emu de game boy, depois adaptou para zx81, depois adaptou para msx.
+[2022-05-02 23:54:15] Shideravan: Olha que maneiro
+[2022-05-02 23:54:24] Shideravan: Nossa, isso é antigo para dedeu
+[2022-05-02 23:56:26] Shideravan: Se for o No$GMB é do tempo do guaraná com rolha hahaha
+[2022-05-02 23:57:02] Shideravan: A emulação do z80 dele era muito boa para a época sim
+[2022-05-02 23:57:11] Shideravan: em termos de performance era ótima
+[2022-05-02 23:57:31] Shideravan: Mas desconfio que não era muito boa em accuracy
+[2022-05-02 23:58:44] Shideravan: É uma característica do no$, os emuladores dele são bons em performance mas péssimos em precisão

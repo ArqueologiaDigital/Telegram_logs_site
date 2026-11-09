@@ -1,0 +1,62 @@
+[2026-10-21 01:29:26] Felipe "Juca" Sanches: sim, eu pensei nessa possibilidade. Mas o aspect ratio nao ajuda muito. Mesmo que aumente um pouco na vertical, ainda vai sobrar tela sem uso nas laterais.
+[2026-10-21 01:30:00] Felipe "Juca" Sanches: 😂
+[2026-10-21 01:31:15] Felipe "Juca" Sanches: o foco agora é desvendar o resto dos detalhes do hardware para melhorar a emulação
+[2026-10-21 01:32:05] Felipe "Juca" Sanches: Reparem nos nomes e descrições dos outros programas que estão nesse SD. É tudo parte da investigação.
+[2026-10-21 07:19:53] Nelson Lima: Bom dia. Hei @fsanches vi aqui vídeo no YT vc rodando a VM do Another World no teclado. Kkkk muito bom. Q top. Sucesso e parabéns!
+[2026-10-21 07:22:13] Felipe "Juca" Sanches: bacana, né?
+
+E hoje de madrugada eu consegui fazer tocar os sons originais do jogo. A solução foi implementar o mixer de 4 canais da VM em assembly do chip DSP do KN7000 sendo controlado por um buffer de comandos alimentado pelas instrucoes de audio da VM
+[2026-10-21 07:23:56] Felipe "Juca" Sanches: E a emulacao disso no MAME ta rolando tambem. So que o som fica zoado por que nao ta dando conta de rodar em tempo real. Aparentemente o layout grafico ta comendo muito processamento. Precisaria otimizar a parte grafica para tirar o gargalo perceptivel no audio
+[2026-10-21 07:28:54] Nelson Lima: QQ coisa digital q se transforma imagem eu tenho um certo fascínio. Eu não conheço nada da arquitetura do KN7000 mas imagino q ele deve ter pelo menos uma CPU dsp dedicada ao som e outra para o display.
+[2026-10-21 07:31:24] Felipe "Juca" Sanches: https://github.com/mamedev/mame/blob/master/src/mame/matsushita/kn7000.cpp#L990
+[2026-10-21 07:31:43] Felipe "Juca" Sanches: https://github.com/mamedev/mame/blob/master/src/mame/matsushita/kn7000.cpp#L891
+[2026-10-21 07:32:07] Felipe "Juca" Sanches: da uma olhadinha no codigo fonte do mame que la explica os componentes do hardware
+[2026-10-21 07:33:42] Nelson Lima: Vou olhar. Muito obrigado.
+[2026-10-21 08:28:35] Felipe "Juca" Sanches: me desculpa de ter mandado mensagens curtas e rapidas aqui, mas eh que eu tava na correria pra nao queimar o almoco que eu tava cozinhando aqui
+[2026-10-21 08:28:50] Felipe "Juca" Sanches: (no meu timezone agora eh meio dia e meia)
+[2026-10-21 08:29:50] Felipe "Juca" Sanches: mas enfim... acabei de perceber que tinha um bug meio bobo que tava comprometendo a performance. Agora melhorou um pouco, mas ainda nao ta 100%
+[2026-10-21 08:32:14] Felipe "Juca" Sanches: o firmware fica perguntando pro tone generator, que é um chip de som custom da technics, quais sao as vozes que ainda estao tocando. E no MAME o meu driver tava simplesmente emulando errado o tone generator e ele respondia zero pra todas essas perguntas. Ai saturava, enchia a fila de polifonia e isso resultava num peso maior pra mixar todos os samples encalhados juntos
+[2026-10-21 08:32:45] Felipe "Juca" Sanches: agora desencalhei as vozes e o som no emulador melhou muito
+[2026-10-21 08:32:59] Felipe "Juca" Sanches: mas ainda gagueja um pouco...
+[2026-10-21 09:11:18] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/16552
+[2026-10-21 09:12:39] Felipe "Juca" Sanches: Pura coincidencia ambos meus drives terem "7 mil" no nome:
+Technics KN7000 e Itautec i7000
+[2026-10-21 13:31:04] Felipe "Juca" Sanches: Posso gerar uma imagem de disquete pro KN5000 pra você testar aí...
+[2026-10-21 13:38:22] Felipe "Juca" Sanches: O @meleu_zord entrou aqui a meu convite depois que ele viu uma mensagem minha de uns 6 meses atrás em que ofereci amplamente ajuda para qualquer pessoa interessada em desenvolvimento de emuladores.
+
+Eu fico sempre pensando sobre como nós podemos participar mais ativamente nesse processo de espalhar o conhecimento e trazer mais gente para esses esforços de preservação histórica.
+
+Por exemplo, tento fazer esse papel de "role model" compartilhando ao vivo os progressos das pesquisas.
+
+E estou muito feliz de ver outras pessoas, como o RicBit, fazendo o mesmo.
+
+Eu adoraria ouvir opiniões. Falem! :-)
+[2026-10-21 13:45:08] meleu: criar um wiki (ou algo do genero) e começar a compilar material em português pode ser uma boa.
+[2026-10-21 13:46:55] meleu: foda que esse tipo de projeto precisa de alguém com disposição pra encabeçar...
+era assim que funcionava quando eu tava ativo no RetroAchievements.
+
+atualmente eu não consigo mais... Real Life chegou marcando presença 😔
+[2026-10-21 13:51:00] Felipe "Juca" Sanches: Um wiki... interessante. Sempre fui fã de wkis... você sabe cuidar de um wiki? Qual é o seu favorito? Eu sou fã de mediawiki ;-)
+[2026-10-21 13:51:48] Felipe "Juca" Sanches: O que os demais pensam sobre wikis?
+[2026-10-21 13:58:42] RicBit: fiz o ys 3 no v9990 com scroll parallax fino- > https://www.ilafox.com.br/ricbit/ys3/
+[2026-10-21 13:58:53] RicBit: embaixo tem o link com a versão original pra comparar
+[2026-10-21 13:59:00] meleu: minha experiência é com wiki de repositório no github.
+eu curto pq ele próprio é um repositório que pode ser clonado e editado localmente
+(assim consigo escrever no conforto do vim, btw)
+
+existe alguma org no github relacionada a essa galera aqui?
+(não tenho contexto de como é o grau de envolvimento das pessoas desse grupo)
+[2026-10-21 13:59:03] RicBit: o original roda a 2 fps
+[2026-10-21 14:00:04] RicBit: a versão 9990 ainda tá bem bugada, é mais um poc mesmo pra ver como fazer
+[2026-10-21 14:00:19] RicBit: a conclusão é que tem que ser cena a cena, não tem como automatizar
+[2026-10-21 14:00:42] RicBit: o original tem mais layers que o 9990 consegue fazer então é preciso um pouco de magia
+[2026-10-21 14:04:02] Felipe "Juca" Sanches: https://github.com/ArqueologiaDigital
+[2026-10-21 14:23:43] Pablo Vasques Bravo-Villalba: Qual modo?
+[2026-10-21 15:12:06] Jecel Assumpcao Jr: um projeto para ressucitar o trabalho de escola de 1988 (uma implementação da linguagem Smalltalk-80 para o Macintosh em C) - https://gitlab.com/web-fx/qmc-smalltalk
+[2026-10-21 15:27:21] L.: https://gamehistory.org/williamson-photos/
+[2026-10-21 15:49:43] RicBit: P1
+[2026-10-21 16:00:36] RicBit: o mega drive tem window então é um pouco mais facil. tipo eu falo scroll 2px pra direita mas só dentro dessa regiao aqui x1y1-x2y2
+[2026-10-21 16:01:14] RicBit: no 9990 nao tem, então fazer o scroll fino do cenario sem mexer o frame que está em volta é tenso
+[2026-10-21 16:01:23] RicBit: daria pra tirar o frame mas eu gosto dele
+[2026-10-21 16:05:12] Pablo Vasques Bravo-Villalba: E se usasse o B1 com blitter?
+[2026-10-21 16:05:44] RicBit: B1 é bitmap, sem chance

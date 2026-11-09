@@ -1,0 +1,12 @@
+[2018-07-15 08:08:45] * Felipe "Juca" Sanches added Deleted Account
+[2018-07-15 10:51:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6152.jpg
+[2018-07-15 10:51:45] Felipe "Juca" Sanches: Por onde eu começo pra conseguir entender como funciona esse circuito?
+[2018-07-15 11:14:16] Felipe "Juca" Sanches: @DQuadros alguma ideia?
+[2018-07-15 11:18:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-07/6154.jpg
+[2018-07-15 11:18:46] Felipe "Juca" Sanches [forwarded]: Esse é o chip. Entendo pra que serve e como se usa. Mas gostaria também de entender como funciona por dentro, e é aí que entra aquele esquemático do circuito interno...
+[2018-07-15 11:18:46] Felipe "Juca" Sanches [forwarded]: https://img.ozdisan.com/ETicaret_Dosya/485105_9303808.PDF
+[2018-07-15 11:28:51] Aylons Hazzud: Precisa conhecer alguns blocos básicos, como o amplificador diferencial e a fonte de corrente, para separar os sub circuitos. Aí vai restar alguns blocos mais específicos, que você pode ir entendendo a partir de princípios básicos e da função pretendida.
+[2018-07-15 11:29:23] Felipe "Juca" Sanches: maravilha! Essas palavras chaves já me direcionam as buscas
+[2018-07-15 11:29:28] Aylons Hazzud: Isso de maneira genérica. Não vi esse chip, não vai rolar ver nos próximos dias.
+[2018-07-15 11:29:38] Felipe "Juca" Sanches: ok
+[2018-07-15 11:30:20] Aylons Hazzud: Ali no transitor mais à direita é o começo de um espelho de corrente, por exemplo.

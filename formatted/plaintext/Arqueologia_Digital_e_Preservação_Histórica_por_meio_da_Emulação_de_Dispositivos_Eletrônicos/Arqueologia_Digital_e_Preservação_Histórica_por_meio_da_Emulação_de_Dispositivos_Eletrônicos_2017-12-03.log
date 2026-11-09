@@ -1,0 +1,117 @@
+[2017-12-03 16:25:14] Ismael Luceno: @wmoecke @fsanches se tem swap device, o driver zswap é muito melhor
+[2017-12-03 16:28:20] Werner: estamos falando sobre driver de vídeo
+[2017-12-03 16:30:17] Ismael Luceno: DirectFB morreu faz muito tempo...
+[2017-12-03 16:30:32] Werner: tbm sabemos...
+[2017-12-03 16:30:47] Felipe "Juca" Sanches: e se usa algo equivalente hoje em dia?
+[2017-12-03 16:36:00] Ismael Luceno: acho que não tem
+[2017-12-03 16:36:22] Ismael Luceno: directfb na verdade não é muito melhor que usar o fbdev direto
+[2017-12-03 16:36:54] Werner: http://www.sci.fi/~syrjala/gl/readme.txt
+[2017-12-03 16:37:15] Werner: É aquela sugestão, tentar compilar a última versão do DFB pra ARM...
+[2017-12-03 16:37:27] Werner: Outra coisa, não achei.
+[2017-12-03 16:37:47] Ismael Luceno: SDL 1.2 sim tem suporte para fbdev direto
+[2017-12-03 16:37:51] Werner: Parece q era o único jeito de ter uma boa biblioteca gráfica com footprint baixo.
+[2017-12-03 16:46:46] Werner: Segue um artigo q estou lendo, até agora parece pertinente: https://www.mess.org/howto/sdlmame_sdlmess_framebuffer#sdl_library_with_a_modified_directfb_driver
+[2017-12-03 16:51:16] Werner: Algo me diz q esse parece ser o caminho para usar o MAME no RPi: http://rbelmont.mameworld.info/?page_id=163
+[2017-12-03 18:17:39] Felipe "Juca" Sanches: esses artigos parecem bem antigos
+[2017-12-03 18:18:05] Felipe "Juca" Sanches: falam de patches na SDL, mas hoje a SDL se entendi bem ja suportaria fbdev nativamente, sem precisar de patches
+[2017-12-03 18:18:37] Felipe "Juca" Sanches: o que me dá nó na cabeça é que do lado do kernel acho que já tá tudo certo pois aparece um /dev/fb0
+[2017-12-03 18:19:13] Felipe "Juca" Sanches: e cat /proc/fb me diz: BCM2708
+[2017-12-03 18:20:37] Felipe "Juca" Sanches: entretanto, do lado da SDL, quando rolo o MAME com SDL_VIDEODRIVER=directfb recebo uma mensagem "SDL directfb not available"
+[2017-12-03 18:20:48] Werner: Então. Mas é td velho msm.. Agora eu t pergunto, a versão do mame q vc compilou, ela é otimizada pra usar fb ou está usando X?
+[2017-12-03 18:21:14] Felipe "Juca" Sanches: supostamente tem suporte às duas coisas
+[2017-12-03 18:21:22] Felipe "Juca" Sanches: quando tento rodar com fb não rola
+[2017-12-03 18:21:31] Felipe "Juca" Sanches: mas com X rola com performance ruim
+[2017-12-03 18:21:47] Werner: jogando essa msg no Google, i q aparece?
+[2017-12-03 18:21:59] Felipe "Juca" Sanches: quase nada
+[2017-12-03 18:22:05] Werner: Sim o X não é adequado pra embedded
+[2017-12-03 18:22:45] Werner: Essa versao do mame q vc está usando é a última?
+[2017-12-03 18:23:00] Felipe "Juca" Sanches: git master
+[2017-12-03 18:23:12] Werner: Pq se for, será q ela ainda mantém suporte ao fb sdl?
+[2017-12-03 18:23:20] Felipe "Juca" Sanches: (eu nunca uso nada além de git master)
+[2017-12-03 18:23:46] Werner: Não seria melhor nesse caso, vc usar uma versão mais otimizada, mesmo q antiga?
+[2017-12-03 18:24:15] Felipe "Juca" Sanches: não, por que eu preciso fazer meus próprios patches no MAME do git
+[2017-12-03 18:24:26] Werner: Bom...
+[2017-12-03 18:24:29] Felipe "Juca" Sanches: não entou interessado em ficar preso no passado
+[2017-12-03 18:24:44] Felipe "Juca" Sanches: meu interesse é entender o problema de verdade e lidar com ele no presente e futuro
+[2017-12-03 18:24:46] Werner: Nesse caso acho q não tem solução.
+[2017-12-03 18:24:58] Felipe "Juca" Sanches: sempre tem solução!
+[2017-12-03 18:25:03] Werner: Vc não vai conseguir rodar esse mame no Arm.
+[2017-12-03 18:25:21] Felipe "Juca" Sanches: nunca diga que eu não vou conseguir ! hahaha
+[2017-12-03 18:25:34] Werner: Acho q não. O hardware nao comporta o overhead desse Mame q vc está compilando.
+[2017-12-03 18:25:52] Felipe "Juca" Sanches: com todo o respeito? Bullshit!
+[2017-12-03 18:25:53] Werner: Como vc já comprovou.
+[2017-12-03 18:26:18] Felipe "Juca" Sanches: tá cheio de gente rodando MAME em RPi
+[2017-12-03 18:26:25] Felipe "Juca" Sanches: o que falta é descobrir qual é otruque
+[2017-12-03 18:27:24] Felipe "Juca" Sanches: o que é que essas distros tunadas fazem? Como é que rodam o MAME no RetroPie, por exemplo ?
+[2017-12-03 18:30:07] Werner: Nao rodam
+[2017-12-03 18:30:24] Werner: Rodam Retroarch
+[2017-12-03 18:30:55] Werner: 🤷‍♂
+[2017-12-03 18:32:03] Werner: É lógico q vc pode pegar esse Mame q vc tem aí e ir tunando ele pra rodar em ARM. O q vai acabar resultando em um port igual ao SDLMAME...
+[2017-12-03 18:33:26] Felipe "Juca" Sanches: o MAME de hoje em dia é o SDLMAME de antigamente !
+[2017-12-03 18:33:50] Felipe "Juca" Sanches: não existe mais SDLMAME, por que o port para SDL foi integrado ao git do mame oficial.
+[2017-12-03 18:34:43] Felipe "Juca" Sanches: https://github.com/RetroPie/RetroPie-Setup/wiki/MAME
+[2017-12-03 18:41:13] Werner: Todos versões antigas do MAME... 0.37b5
+[2017-12-03 18:41:35] Werner: Mas então pq não roda?
+[2017-12-03 18:41:53] Werner: Se estão integrados, pq o erro?
+[2017-12-03 18:42:13] Felipe "Juca" Sanches: não sei...
+[2017-12-03 18:42:29] Felipe "Juca" Sanches: tem MAME 0.174 lá também.
+[2017-12-03 18:43:10] Werner: E não é antigo?
+[2017-12-03 18:43:27] Felipe "Juca" Sanches: é do ano passado
+[2017-12-03 18:43:33] Werner: Vc falou q não quer antigo
+[2017-12-03 18:43:35] Felipe "Juca" Sanches: ou seja, é relativamente recente
+[2017-12-03 18:43:43] Werner: É passado!
+[2017-12-03 18:44:01] Felipe "Juca" Sanches: o que eu quis dizer é que não são só versões jurássicas de MAME que o pessoal tá rodando em RPi
+[2017-12-03 18:44:25] Felipe "Juca" Sanches: então deve haver um jeito de eu rodar MAME do git no RPi com performance decente também
+[2017-12-03 18:44:40] Felipe "Juca" Sanches: quero saber qual é o truque de configuração que é feito nessas distros
+[2017-12-03 18:51:00] Werner: http://docs.mamedev.org/commandline/sdlconfig.html
+[2017-12-03 19:21:17] Felipe "Juca" Sanches: to tentando compilar o DirectFB no RPi3 aqui. Mas tá dando essa mensagem de erro logo no ./autogen.sh (que por sua vez chama o ./configure automaticamente):
+[2017-12-03 19:21:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2551.jpg
+[2017-12-03 19:24:00] Felipe "Juca" Sanches: parece que tem a ver com isso aqui:
+[2017-12-03 19:24:06] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2553.jpg
+[2017-12-03 19:24:37] Felipe "Juca" Sanches: acho que o código foi migrado pra outro repo, mas a mensagem de erro permaneceu com a URL do repo antigo
+[2017-12-03 19:27:04] Felipe "Juca" Sanches: ok, estou compilando o tal do flux
+[2017-12-03 19:27:11] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2556.jpg
+[2017-12-03 19:27:58] Felipe "Juca" Sanches: pronto. Compilei e instalei o flux e agora vou tentar de novo compilar o DirectFB
+[2017-12-03 19:31:20] Werner: 👍 é parece q tem essa dependência mesmo. Tem q resolver. Torcendo aqui.
+[2017-12-03 19:31:39] Felipe "Juca" Sanches: resolveu a questão da dependencia
+[2017-12-03 19:31:45] Felipe "Juca" Sanches: to agora compilando o DirectFB
+[2017-12-03 19:34:10] Werner: 😁
+[2017-12-03 21:00:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2562.jpg
+[2017-12-03 21:00:18] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2563.jpg
+[2017-12-03 21:00:53] Felipe "Juca" Sanches: recompilando SDL agora com suporte a directfb
+[2017-12-03 21:01:07] Felipe "Juca" Sanches: ou seja... re-recompilando :-P
+[2017-12-03 21:01:37] Werner: Agora vai!!!
+[2017-12-03 21:01:45] Werner: 🙈
+[2017-12-03 21:01:47] Felipe "Juca" Sanches: sim, talvez
+[2017-12-03 21:02:16] Werner: Pensamento positivo cazzo
+[2017-12-03 21:25:57] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2570.jpg
+[2017-12-03 21:47:22] Felipe "Juca" Sanches: bom... ao menos agora ele tá tentendo
+[2017-12-03 21:47:27] Felipe "Juca" Sanches: tentando
+[2017-12-03 21:47:32] Felipe "Juca" Sanches: mas át dando segfault
+[2017-12-03 21:47:36] Felipe "Juca" Sanches: instalei o gdb aqui
+[2017-12-03 21:47:43] Felipe "Juca" Sanches: e fiz um backtrace do segfault
+[2017-12-03 21:48:01] Felipe "Juca" Sanches: ele quebra durante o device probe
+[2017-12-03 21:48:08] Felipe "Juca" Sanches: "hot plug"
+[2017-12-03 21:48:40] Felipe "Juca" Sanches: ele basicamente tenta inicializar cada um dos drivers até um dar um OK no método de probe do hardware
+[2017-12-03 22:18:51] Werner: Essa msg de hot plug detection enabled
+[2017-12-03 22:19:02] Werner: Vem desse Fusion dispatcher?
+[2017-12-03 22:19:35] Werner: Aliás q setup é esse seu?? (curiosidade)
+[2017-12-03 22:20:40] Felipe "Juca" Sanches: Raspberry Pi 3 ligado via HDMI na TV da sala. (E via ethernet no roteador wifi da sala)
+[2017-12-03 22:21:32] Felipe "Juca" Sanches: nao tenho ideia ainda do que seja esse fusion dispatcher
+[2017-12-03 22:21:46] Werner: Vc consegue localizar essa string nos fontes do FB?
+[2017-12-03 22:22:28] Felipe "Juca" Sanches: mas me peguei com a seguinte questão... talvez o directfb não tenha um driver para o framebuffer do rpi (modelo Broadcom BCM2708)
+[2017-12-03 22:22:57] Felipe "Juca" Sanches: não achei nada no código fonte do directfb que pareça suportar esse chip de video usado no rpi
+[2017-12-03 22:23:52] Werner: E na SDL?
+[2017-12-03 22:24:22] Felipe "Juca" Sanches: na SDL o código deve ser genérico usando alguma API
+[2017-12-03 22:28:48] Werner: Qual é a versão desse directfb q vc está compilando?
+[2017-12-03 22:29:53] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2017/2017-12/2590.jpg
+[2017-12-03 22:29:55] Felipe "Juca" Sanches: git master
+[2017-12-03 22:30:39] Werner: Mas qual é o número da versão?
+[2017-12-03 22:31:02] Felipe "Juca" Sanches: não sei, teria que ver, por que?
+[2017-12-03 22:32:19] Werner: Pq eu to lendo uma thread onde o cara tentando compilar directfb 1.6.0 pro RPi e passou desse erro. Ele reconhece o chip da broadcom. O problema dele parece estar relacionado com o fusion.
+[2017-12-03 22:32:43] Werner: https://www.raspberrypi.org/forums/viewtopic.php?t=11772&p=144694
+[2017-12-03 22:37:18] Werner: Pela info na tela vc está com a v1.8.0
+[2017-12-03 22:37:50] Werner: Eu suspeito q isso nao deve ter relação com o problema.
+[2017-12-03 22:39:47] Werner: Só resta a esperança q nas configs do cara tenha alguma pista do q pode estar faltando nas suas.
+[2017-12-03 22:52:18] Werner: Isso aqui acho q pode ser útil: http://www.lanedo.com/cross-compiling-directfb-for-an-embedded-device/
+[2017-12-03 22:52:43] Werner: Tá bem estilo tuto

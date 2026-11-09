@@ -1,0 +1,7 @@
+[2026-07-09 07:18:20] Felipe "Juca" Sanches: One note on the process: the firmware-update research agent initially failed because the workflow ran it on Opus 4.8, whose cybersecurity classifier flagged the word "trojan" despite this being legitimate work on your own hardware. I re-ran it on Fable 5, which handles the preservation/dual-use context correctly.
+[2026-07-09 07:51:21] Felipe "Juca" Sanches: Tô sentindo que vai sair um emulador completo do KN7000
+[2026-07-09 07:52:06] Felipe "Juca" Sanches: O Claude Code tá muito bom em desvendar os mistérios por meio de disassembly das ROMs e leitura dos esquemáticos e datasheets
+[2026-07-09 07:52:49] Felipe "Juca" Sanches: Hoje ele encontrou o payload do chip DSP e em questão de uns 40 minutos gerou uma listagem de todos os subprogramas de efeitos de reverb/chorus/flanger/etc...
+[2026-07-09 12:17:51] RicBit: o fable está configurado para falso positivo. se aparecer a mensagem do opus é só imediatamente voltar pro fable que funciona.
+[2026-07-09 14:43:09] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-07/39582.jpg
+[2026-07-09 14:43:09] Felipe "Juca" Sanches: Vai nascer um Patinho Feio de verdade!

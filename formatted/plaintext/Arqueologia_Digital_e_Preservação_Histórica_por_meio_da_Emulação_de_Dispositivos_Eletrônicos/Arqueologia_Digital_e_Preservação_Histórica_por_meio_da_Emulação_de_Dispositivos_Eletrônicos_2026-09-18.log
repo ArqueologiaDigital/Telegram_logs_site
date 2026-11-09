@@ -1,0 +1,61 @@
+[2026-09-18 02:02:39] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40563-minigb.zip
+[2026-09-18 02:02:39] RicBit: Agora ele roda o Pinball Fantasies, que é o jogo mais dificil de emular do GB. Ainda 4kb.
+[2026-09-18 02:03:32] RicBit: deu bastante trabalho, foram 3 dias pra descobrir por que o pinball não funcionava. depois de achar o bug, amassar até ficar 4kb foi de boa.
+[2026-09-18 14:07:39] RicBit: eu estou receoso de soltar o codigo da namagiri, porque se eu soltar o povo vai começar a usar, e se tiver gente usando eu vou ter que congelar a sintaxe. Mas eu ainda estou mudando a sintaxe em tempo real, toda hora eu mudo alguma coisa.
+[2026-09-18 14:08:07] Shideravan: E como está o progresso do GBC?
+[2026-09-18 14:10:54] Shideravan: Ele é muito dependente da precisão dos subciclos e de manter a sequencia exata das interrupções de vídeo, né? kkkk
+Acho que Pinball Deluxe tem o mesmo problema
+[2026-09-18 14:12:01] RicBit: é o mesmo core, muda só o data
+[2026-09-18 14:12:05] RicBit: nem mexi em gbc
+[2026-09-18 14:12:43] Shideravan: Muito emulador menos preciso entra em halt no início do Pinball Fantasies por não emular corretamente os tempos dos subciclos
+[2026-09-18 14:13:06] Shideravan: Eu adoro ele como estudo de caso no DMG
+[2026-09-18 14:14:36] RicBit: eu acho que o meu som está errado no pinball fantasies, vou fazer umas capturas para comparar
+[2026-09-18 14:15:56] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40573.jpg
+[2026-09-18 14:15:56] RicBit: src escrito em namagiri hoje. eu preciso repetir o nome do alt para lidar com nesting,  a alternativa seria colocar braces, mas parece estranho braces em um assembler.
+[2026-09-18 14:16:01] Shideravan: GBC tem uns mappers bem chatinhos e uns casos bem emblemáticos tipo Alone in the Dark e Shantae que servem para mostrar que o GBC não é o DMG hahaha
+[2026-09-18 14:16:24] Shideravan: Vai ser bem divertido quando você começar a espremer GBC junto
+[2026-09-18 14:16:54] RicBit: eu ainda nao tenho todos os mappers nem do dmg. falta uns da hudson que só 2 jogos usam
+[2026-09-18 14:17:12] RicBit: e eu ainda nao emulo sram, se o som ficar bom o proximo é sram
+[2026-09-18 14:17:25] RicBit: esta com 14 bytes livres eu acho
+[2026-09-18 14:17:40] Shideravan: Você acha que consegue suportar 100% da biblioteca "sem acessórios especiais" mantendo os 4kb?
+[2026-09-18 14:18:31] RicBit: eu parei de perguntar isso porque namagiri faz milagre. eu sempre acho que nao vai dar e dá
+[2026-09-18 14:19:22] RicBit: quando comecei o pinball fantasies estava com 4 livre e o bugfix eram 40 bytes. namagiri conseguiu virar os 40 e ainda sobrou 14
+[2026-09-18 14:20:01] Shideravan: Eu no início tava achando que você iria conseguir suportar o DMG fácil, agora não sei hahaha
+[2026-09-18 14:21:15] Shideravan: Acho que o mais fácil você já fez tudo, agora o que vai sobrando vai ficando mais difícil
+[2026-09-18 14:21:31] Shideravan: To vendo que o GBC vai ser um módulo a parte
+[2026-09-18 14:21:35] Pablo Vasques Bravo-Villalba: Congela a sintaxe associada à versão, e avisa que vai continuar a desenvolver em uma versão 2 ou coisa assim
+[2026-09-18 14:22:31] RicBit: vai ser o jeito pelo visto
+[2026-09-18 14:22:43] RicBit: quando terminar o gb eu limpo a sintaxe
+[2026-09-18 14:23:16] Shideravan: No seu projeto do MSX você deu suporte só ao MSX1 mesmo?
+[2026-09-18 14:24:33] RicBit: sim. msx está com 50 bytes livres, mas msx2 acho que nem em 8kb daria. os comandos do vdp sao complexos, e mais 4 modos de video novos, nao rola
+[2026-09-18 14:24:45] RicBit: namagiri tem opcodes novos tambem
+[2026-09-18 14:24:50] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40591.jpg
+[2026-09-18 14:24:50] RicBit: known
+[2026-09-18 14:25:40] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40592.jpg
+[2026-09-18 14:25:40] RicBit: trash
+[2026-09-18 14:26:36] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40593.jpg
+[2026-09-18 14:26:36] RicBit: meu predileto, eat
+[2026-09-18 14:27:10] Shideravan: Eu curto muito esse seu conceito de emulação compacta, porque propicia muitos estudos de otimização
+[2026-09-18 14:27:36] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40595.jpg
+[2026-09-18 14:27:36] RicBit: fora uns comandos que o 8086 nativo não tem, tipo ret z
+[2026-09-18 14:27:42] Shideravan: Mas acho que você não precisava só se prender em 4kb, porque perde o potencial de fazer esse estudo em sistemas mais complexos
+[2026-09-18 14:27:58] Shideravan: Que ao meu ver é onde isso poderia se beneficiar mais
+[2026-09-18 14:28:56] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40598.jpg
+[2026-09-18 14:28:56] RicBit: push set
+[2026-09-18 14:30:58] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40599.jpg
+[2026-09-18 14:30:58] RicBit: header de funcao eu vou mudar com certeza
+[2026-09-18 14:32:14] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-09/40600.jpg
+[2026-09-18 14:32:14] RicBit: res e holds
+[2026-09-18 14:38:53] Shideravan: Depois que você terminar o GB e a namagiri, qual seu próximo passo? Pensou em ir para o famicom? To curioso para ver você espremendo centenas de mappers hahaha
+[2026-09-18 14:40:56] Shideravan: Ou você iria tentar suportar só a biblioteca oficial?
+[2026-09-18 14:41:37] RicBit: famicom parece divertido, mas nao sei ainda. minha experiencia com o gb é que o mapper em si é facil de colocar, o que é dificil é detectar o mapper.
+[2026-09-18 14:42:18] RicBit: se bem que mapper do nes nao é só mapper, tem hardware adicional tambem
+[2026-09-18 14:42:39] Shideravan: Sim
+[2026-09-18 14:43:20] Shideravan: No ares a gente trabalha com hash mesmo para detectar o mapper, mas isso talvez fique custoso em termos de espaço para seus emuladores compactos kkkkkk
+[2026-09-18 14:45:08] Shideravan: Como você tem detectado o mapper no gb?
+[2026-09-18 14:49:23] Shideravan: Eu acho que quando você chegar nessa parte vai ser o mais divertido de compactar, porque cada chip extra como VRC6 ou Sunsoft 5B vai ser uma vitória
+[2026-09-18 14:49:35] Shideravan: A namagiri vai suar hahaha
+[2026-09-18 15:21:17] Felipe "Juca" Sanches: meet.google.com/jdv-nyuz-tii
+[2026-09-18 15:56:16] RicBit: eu faco uma busca exaustiva por um byte que as roms do mapper x tem, e que as não-x não tem
+[2026-09-18 15:56:22] RicBit: é um hash de um byte só
+[2026-09-18 15:57:22] RicBit: tipo todas as rom com mapper mmm01 tem ce01 no addr 4103

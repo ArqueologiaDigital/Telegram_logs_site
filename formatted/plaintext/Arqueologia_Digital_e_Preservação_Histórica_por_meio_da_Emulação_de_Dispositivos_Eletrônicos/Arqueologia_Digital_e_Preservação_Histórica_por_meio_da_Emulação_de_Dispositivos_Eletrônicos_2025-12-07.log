@@ -1,0 +1,36 @@
+[2025-12-07 15:31:30] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36589.jpg
+[2025-12-07 15:37:06] Felipe "Juca" Sanches: @pvm_NoCryptoScams e @mrparn, lembram que estávamos no Calango Hacker Clube tentando fazer rodar um código nosso de desenhar na placa VGA do KN5000 e o código funcionava no MAME, mas não funcionava no KN5000 de verdade? Lembro que a tela ficava preta, não mostrava nada...
+[2025-12-07 15:37:26] Felipe "Juca" Sanches: Ainda não testei no hardware real, mas ontem de noite vi isso aqui no disasm da Program ROM:
+[2025-12-07 15:37:37] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36592.jpg
+[2025-12-07 15:37:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36593.jpg
+[2025-12-07 15:37:59] Felipe "Juca" Sanches: Suspeito que seja esse registrador que habilite o vídeo
+[2025-12-07 15:38:25] Felipe "Juca" Sanches: Em breve devo tentar isso pra checar se funciona
+[2025-12-07 15:42:36] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36596.jpg
+[2025-12-07 15:42:36] Felipe "Juca" Sanches: Ahá! E não é que faz todo sentido?!
+[2025-12-07 15:50:36] Pablo Vasques Bravo-Villalba: Esses valores é que estão um pouco estranhos, não acha? 1 e 21?
+[2025-12-07 15:53:28] Pablo Vasques Bravo-Villalba: Bom, 1 faz sentido
+[2025-12-07 15:53:31] Felipe "Juca" Sanches: é hexadecimal
+[2025-12-07 15:53:43] Felipe "Juca" Sanches: 0x21
+[2025-12-07 15:54:00] Pablo Vasques Bravo-Villalba: Mesmo sem o 0x na frente é hexa?
+[2025-12-07 15:54:12] Felipe "Juca" Sanches: é cagada minha não ter escrito o 0x
+[2025-12-07 15:54:16] Felipe "Juca" Sanches: isso é disasm manual
+[2025-12-07 15:54:33] Pablo Vasques Bravo-Villalba: Bom, aí faz 100% de sentido
+[2025-12-07 15:54:47] Felipe "Juca" Sanches: não estou montando esse código. Estou apenas documentando e lendo com os olhos
+[2025-12-07 15:55:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36606.jpg
+[2025-12-07 15:55:51] Felipe "Juca" Sanches: exemplo de um trecho mais longo
+[2025-12-07 15:57:36] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36607.jpg
+[2025-12-07 15:57:46] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36608.jpg
+[2025-12-07 15:57:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36609.jpg
+[2025-12-07 16:00:05] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-12/36610.jpg
+[2025-12-07 16:00:35] Macabeus: Hey, alguém teria os seguintes modelos de clones brasileiros do ZX, disponíveis para compra?
+
+- Apply 300
+- AS-1000
+- NE-Z8000 (ou outro clone feito pela Nova Eletrônica)
+
+Razão da pergunta: gostaria de comprar um para fazer doação pra um museu dedicado ao ZX Spectrum que fica em Portugal.
+Seria bacana expor ainda lá mais computadores nacionais
+[2025-12-07 16:34:23] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=Gv4sDL9Ljww
+[2025-12-07 18:17:54] L.: Modo fast dos tk85 😆
+[2025-12-07 18:18:18] L.: Essa mina trampa num time irmão do meu!
+[2025-12-07 19:23:47] Leonardo Roman: Se você se contenta com uma reprodução atual do NE Z8000, tem esse cara fazendo: https://ekaww4.wixsite.com/tecnologia/post/projeto-21-grande-lan%C3%A7amento-em-2025-nez-8000

@@ -1,0 +1,29 @@
+[2026-08-12 00:35:35] RicBit: estou rodando um algoritmo genetico para abrir mais espaço
+[2026-08-12 13:43:19] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40008-minimsx.zip
+[2026-08-12 13:43:19] RicBit: agora o emulador tem tambem suporte a disco, dá pra rodar elite. ainda 4kb
+[2026-08-12 14:13:08] RicBit: eu nao sei mais o que colocar no emulador, já roda qualquer jogo
+[2026-08-12 14:15:04] Hugo (Agaelebê): Roda doom? :D Pergunta meio óbvia... :)
+[2026-08-12 14:17:11] RicBit: doom em 4kb seria um projeto a parte, nao sei se dá
+[2026-08-12 14:17:28] RicBit: i mean o emulador de 4kb só roda megarom dee até 256kb
+[2026-08-12 14:17:40] RicBit: megarom de 5122kb nao cabe por culpa do bill gates
+[2026-08-12 14:18:28] RicBit: rom 512 + bios 32 + disco 16 + ram 64 + vram 16 = 640. 640 nao é suficiente para rom de 512 no 8086
+[2026-08-12 14:21:56] Pablo Vasques Bravo-Villalba: Não dá pra posicionar alguma coisa dessas nos UMBs?
+[2026-08-12 14:23:23] RicBit: nao tentei, talvez dê
+[2026-08-12 14:50:21] Hugo (Agaelebê): é, teria quer ser uma versão bem capada :D
+[2026-08-12 14:58:55] RicBit: alguem chegou a testar pra ver se funciona pra voces ou só pra mim ?
+[2026-08-12 16:36:37] Leonardo Roman: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40019.jpg
+[2026-08-12 16:36:37] Leonardo Roman: Tentei rodar no 86box com o processadores 8086 e 80286, mas só dá tela preta depois que inicia o msx.com. Testei com DOS 5.0.
+[2026-08-12 16:45:27] Pablo Vasques Bravo-Villalba: Experimenta colocar a Sound Blaster
+[2026-08-12 16:52:00] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40021-minimsx.zip
+[2026-08-12 16:52:00] RicBit: tenta essa versao, ao inves de travar ela da um erro se faltam memoria, e ignora o som se nao detectar soundblaster
+[2026-08-12 16:52:17] RicBit: está usando o umb quando disponivel tambem, a ideia do umb foi boa, thanks
+[2026-08-12 16:55:25] RicBit: eu ainda tenho 20 bytes sobrando se precisar de mais algum fix
+[2026-08-12 17:06:10] Leonardo Roman: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40024.jpg
+[2026-08-12 17:06:10] Leonardo Roman: E
+[2026-08-12 17:19:37] RicBit: E é falta de memoria, deixa eu ver aqui
+[2026-08-12 17:20:10] RicBit: o que ele mostra no mem /f ?
+[2026-08-12 17:23:23] RicBit: (a mensagem de erro é E, porque E é um byte e Error são 5)
+[2026-08-12 22:17:13] Leonardo Roman: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40028.jpg
+[2026-08-12 22:17:13] Leonardo Roman: Dessa vez testei em um 386. Liberando mais de 600K de RAM ele consegue rodar, mas beeem lento.
+[2026-08-12 22:17:31] Leonardo Roman: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40029.jpg
+[2026-08-12 22:17:31] Leonardo Roman: 620K liberados

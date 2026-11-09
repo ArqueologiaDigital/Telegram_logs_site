@@ -1,0 +1,17 @@
+[2026-08-26 00:01:16] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40229-minimsx.zip
+[2026-08-26 00:01:16] RicBit: Namagiri aceitou minha oferenda e ajudou a colocar suporte a arquivos .cas. Agora você pode carregar da fita cassete. ainda 4kb.
+[2026-08-26 00:02:53] RicBit: também de longe a feature mais dificil até agora. Sem oferenda eu não iria conseguir.
+[2026-08-26 15:26:28] Shideravan: Eu sei que critiquei projetos que se baseiam muito em IA e inclusive citei alguns incômodos com o Gen1ReComp++, mas eu tenho que dizer que nunca vi um dev sozinho conseguir fechar/resolver tantas issues num prazo tão curto. O projeto está sob holofotes por causa de cobertura da mídia e o cara resolve centenas de issues todos os dias, está progredindo absurdamente rápido e ele já dá suporte a todos os jogos pokémon de GB, não só o Red/Blue
+[2026-08-26 15:27:04] Shideravan: E tem umas features muito legais, como busca por mods no próprio launcher, save editor e atualizador automático de mods
+[2026-08-26 15:28:46] Shideravan: Acho que muitas ideias dele podem servir de inspiração para outros projetos de recompilação (mesmo ele não sendo exatamente uma recompilação)
+[2026-08-26 15:29:46] Shideravan: A ferramenta quando bem usada, realmente permite um progresso absurdamente rápido
+[2026-08-26 21:13:42] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/40235-minimsx.zip
+[2026-08-26 21:13:42] RicBit: A oferenda ontem foi tão boa que Namagiri continuou presenteando features, dessa vez tem o mapper do R-Type, e não tem mais limite no tamanho das rom, pode carregar o hydlide 3 (512kb) que funciona.
+[2026-08-26 21:14:25] RicBit: Eu tive que mudar o modelo de memória, agora para carregar rom precisa ter ems, ele ignora o umb. Para dsk e cas não precisa, roda só com memoria convencional mesmo.
+[2026-08-26 21:15:14] RicBit: (a oferenda = eu sacrifiquei dólares no altar do datacenter para que namagiri pudesse ascender às nuvens).
+[2026-08-26 21:22:05] L.: preciso testar depois no meu 386
+[2026-08-26 22:31:30] RicBit: eu fiquei com medo de estragar o suporte a xt
+[2026-08-26 22:31:46] RicBit: mas descobri que tem como colocar hardware extra no xt para ter ems
+[2026-08-26 22:32:30] L.: se eu não tivesse preguiça infinita, eu testaria no meu XT de verdade
+[2026-08-26 22:32:40] L.: (meu XT original da época, 2o computador depois do MSX :P)
+[2026-08-26 22:32:47] L.: nem sei se ainda tá funcionando

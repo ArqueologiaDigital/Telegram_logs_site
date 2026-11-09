@@ -1,0 +1,26 @@
+[2026-04-01 05:39:43] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/37980.jpg
+[2026-04-01 05:39:43] Felipe "Juca" Sanches: O Patinho Feio inteiro está dentro dessa caixa de uns 800 chips que eu trouxe do Brasil, quando me mudei pra Inglaterra, no início de Fevereiro. (E ainda sobram chips!) Estou abrindo a caixa hoje, para organizar os chips separando eles em um saquinho plástico para cada uma das 18 PCBs do computador.
+[2026-04-01 05:41:19] Felipe "Juca" Sanches: Enquando isso, continuo avançando na emulação do KN5000. Isso se chama TDAH. :-P
+[2026-04-01 07:11:06] Alexandre Villares: https://genomic.social/@Psy_Fer_/116328888669679899
+[2026-04-01 07:40:58] Hilton Fernandes: Uma coisa muito triste -- ou chata -- do Brasil é o pensamento de quase todos brasileiros de que nada do que se faz aqui é bom ou pelo menos tão bom quanto o que a galera faz fora daqui.
+[2026-04-01 09:21:00] Pedro de Medeiros 👾: Primeiro de abril! 🥳
+[2026-04-01 09:22:59] Pedro de Medeiros 👾: Isto aqui foi demais e entregou tudo:
+
+Going forward, MAME's primary development target is a PC running a recent version of Windows, equipped with a GPU compliant with at minimum DirectX 11 (SM5)
+[2026-04-01 09:26:16] L.: É só emular uma GPU compatível com dx11 no próprio mame
+[2026-04-01 09:29:27] Pedro de Medeiros 👾: A migração pra Rust foi excessiva também
+[2026-04-01 09:37:13] Pablo Vasques Bravo-Villalba: O que dá medo é a parte de IA não ter sido a mais implausível
+[2026-04-01 18:28:44] Pablo Vasques Bravo-Villalba: https://github.com/mcolom/arkanoid_msx_disasm
+[2026-04-01 18:54:18] RicBit: ugh
+[2026-04-01 18:54:28] RicBit: o codigo é tao ruim que só pode ser sido compilado
+[2026-04-01 18:57:53] RicBit: o arcade é 6805, devem ter usado um tradutor automatico pro z80
+[2026-04-01 18:58:17] RicBit: eu lembro de ter olhado o rally-x certa vez e tive a mesma impressão
+[2026-04-01 19:11:37] Pablo Vasques Bravo-Villalba: O fliperama é Z80, não 6805
+[2026-04-01 19:12:04] RicBit: Vixe o lugar que eu vi estava errado então
+[2026-04-01 19:20:18] RicBit: Hum no mame tem um 6805, controlando o input.
+[2026-04-01 19:34:46] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=QOsSRRBMNoc
+[2026-04-01 19:34:49] Felipe "Juca" Sanches: offtopic
+[2026-04-01 19:34:52] Felipe "Juca" Sanches: mas é agora
+[2026-04-01 20:26:49] Pablo Vasques Bravo-Villalba: Acompanhei o lançamento. Foi bacana demais
+[2026-04-01 22:29:22] Lord Spy: "Equipe do Artemis II, temos uma notícia pra dar pra vocês. O país que enviou vocês pro espaço não existe mais." 😄
+[2026-04-01 23:46:13] RicBit: Isso já aconteceu uma vez

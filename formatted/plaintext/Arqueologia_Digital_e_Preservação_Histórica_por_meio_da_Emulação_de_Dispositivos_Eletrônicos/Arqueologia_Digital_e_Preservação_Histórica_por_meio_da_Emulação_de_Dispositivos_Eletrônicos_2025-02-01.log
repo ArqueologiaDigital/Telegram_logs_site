@@ -1,0 +1,121 @@
+[2025-02-01 01:13:07] Felipe "Juca" Sanches: https://youtube.com/shorts/CYNF4M8odtE?si=ya2Z8HYecQW2cXpy
+[2025-02-01 01:13:55] Felipe "Juca" Sanches: @mynameiserin @netoarmando
+[2025-02-01 13:17:14] Erin Pinheiro 🐿: rsrs
+[2025-02-01 13:18:04] Erin Pinheiro 🐿: comprei mais uma FD-71 esses dias porque descobri que é praticamente idêntica a minha FD-75 mas com foco manual
+[2025-02-01 13:25:50] Felipe "Juca" Sanches: Alguém aqui poderia me ajudar a fazer cross-build de um código em rust para rodar num raspberry pi zero w?
+[2025-02-01 13:26:24] Felipe "Juca" Sanches: É essa reimplementação do Pinball Fantasies escrito em  Rust.
+[2025-02-01 13:27:37] Felipe "Juca" Sanches: Eu já consegui compilar com cargo build --release --target=arm-unknown-linux-gnueabihf
+
+mas na hora de rodar no raspberry pi, recebo a mensagem "./pfr: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.39' not found (required by ./pfr)"
+[2025-02-01 13:28:55] Felipe "Juca" Sanches: Acho que é por que no meu Debian (sid) o pacote libc6-dev:armhf está na versão 2.39 enquanto no RPi (bookworm) está na versão 2.36
+[2025-02-01 13:29:58] Felipe "Juca" Sanches: copiei o sistema de arquivos do RPi pro meu laptop e tentei fazer o cargo passar ao rustc as flags a serem repassadas ao linker para fazer o linking com as bibliotecas do rpi,  mas algo está se perdendo no meio do caminho
+[2025-02-01 15:30:16] L.: cê instalou rust com rustup?
+[2025-02-01 15:30:34] L.: dá pra botar o target pra musl e linkar estático
+[2025-02-01 15:31:35] L.: alguma coisa tipo 
+
+rustup target add arm-unknown-linux-musl
+cargo build --target=arm-unknown-linux-musl
+[2025-02-01 15:32:03] Felipe "Juca" Sanches: Sim
+[2025-02-01 15:32:29] Felipe "Juca" Sanches: Vou experimentar
+[2025-02-01 15:32:43] L.: não sei se esses nomes tão certos
+[2025-02-01 15:32:55] L.: mas a ideia é por aí
+[2025-02-01 15:38:27] Felipe "Juca" Sanches: Ok
+[2025-02-01 16:20:51] Felipe "Juca" Sanches: rustup target add arm-unknown-linux-musleabihf
+cargo build --release --target=arm-unknown-linux-musleabihf
+[2025-02-01 16:21:01] Felipe "Juca" Sanches: mas...
+[2025-02-01 16:21:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34175.jpg
+[2025-02-01 16:22:03] Felipe "Juca" Sanches: crt1.o: relocations in generic ELF (EM: 40)
+crt1.o: error adding symbols: file in wrong format
+[2025-02-01 16:25:46] Felipe "Juca" Sanches: Acho que tinha também faltado eu colocar isso no ~/.cargo/config.toml:
+
+target.arm-unknown-linux-musleabihf]
+linker = "arm-linux-musleabihf-gcc"
+[2025-02-01 16:26:17] Felipe "Juca" Sanches: vou tentar
+[2025-02-01 16:30:52] Felipe "Juca" Sanches: error: linker arm-linux-musleabihf-gcc not found
+[2025-02-01 16:31:04] Felipe "Juca" Sanches: sudo apt install musl-dev
+[2025-02-01 16:31:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34181.jpg
+[2025-02-01 16:32:03] L.: ahhh, o negócio é que linka com sdl e tudo mais né
+[2025-02-01 16:32:19] L.: aí teria que compilar tudo com musl também.
+[2025-02-01 16:32:44] L.: mó trampo (a não ser que cê use uma distro que tudo é musl, tipo alpine num container)
+[2025-02-01 16:33:04] L.: mas até aí cê instalou rust na pi e compilou lá 😆
+[2025-02-01 16:33:17] L.: eu odeio fazer setup de compilação cruzada
+[2025-02-01 16:33:20] Felipe "Juca" Sanches: hmmmm
+[2025-02-01 16:35:41] Felipe "Juca" Sanches: instalando rust no rpi AGORA kkkk
+[2025-02-01 16:45:16] Felipe "Juca" Sanches: compilando pinball fantasies...
+[2025-02-01 16:46:39] Felipe "Juca" Sanches: A compilação no RPi é bem mais lenta, mas se isso me economizar o trampo de um final de semana inteiro dando murro em ponta de faca, tá valendo!
+[2025-02-01 16:47:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34191.jpg
+[2025-02-01 16:47:45] Felipe "Juca" Sanches: Louco que são 212 crates! No fim vira um binário de uns 10 MBytes!
+[2025-02-01 16:49:01] Felipe "Juca" Sanches: Pra fazer num computador moderno o que se fazia com um floppy de 1.44Mb num 286
+[2025-02-01 17:19:52] L.: hehehe, pois é
+[2025-02-01 17:20:15] L.: de 16bit pra 64bit tem um overhead razoável já
+[2025-02-01 17:23:41] RicBit: quanto dos 10mb são codigo?
+[2025-02-01 17:24:35] Felipe "Juca" Sanches: os assets do jogo não entram nessa conta,  pois são carregados dos arquivos originais do  MSDOS
+[2025-02-01 17:25:46] Felipe "Juca" Sanches: Dá um total de 212 crates por que isso inclui compilar todas as dependências de dependências de dependências...
+[2025-02-01 17:26:07] RicBit: eu queria dizer que faz sentido mas eu estou meio sem noção
+[2025-02-01 17:26:37] RicBit: eu acho que aumentar 4x so de codigo deve estar certo mesmo, os opcodes sao mais compridos e os ponteiros 4x maiores
+[2025-02-01 17:26:42] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34200.jpg
+[2025-02-01 17:26:42] Felipe "Juca" Sanches: Rodei aqui o cargo tree com depth=1 e ele mostra só  os crates imediatos, que é um  número bem  menor
+[2025-02-01 17:27:04] RicBit: e no disquete nao tem a bios, voce está compilando estaticamente uma libc inteira né ?
+[2025-02-01 17:27:14] Felipe "Juca" Sanches: sim
+[2025-02-01 17:27:33] RicBit: acho que nao está muito diferente entao
+[2025-02-01 17:27:57] RicBit: 10Mb/1.44Mb = 7x
+[2025-02-01 17:28:07] RicBit: e deve ter coisa que era hardware no original
+[2025-02-01 17:28:32] RicBit: tipo se ele esta lendo os assets de fm, então precisa ter um emulador inteiro de opl dentro
+[2025-02-01 17:28:41] RicBit: ou de mod, nao sei qual ele usa
+[2025-02-01 17:28:51] Felipe "Juca" Sanches: MOD player
+[2025-02-01 17:29:05] Felipe "Juca" Sanches: mas tem coisas nada a ver nessa compilação,por exemplo o crate ttf-parser
+[2025-02-01 17:29:32] Felipe "Juca" Sanches: que tá compilado junto só por conta de ser dependencia de algo da lib gráfica usada
+[2025-02-01 17:29:37] Felipe "Juca" Sanches: mas o jogo de fato não usa
+[2025-02-01 17:30:40] Felipe "Juca" Sanches: não sei dizer se o linker teria alguma esperteza pra não incluir no build estático coisas que nunca são alcançáveis pelo programa que está sendo  compilado
+[2025-02-01 17:30:44] RicBit: e ele nao consegue perceber isso?
+[2025-02-01 17:31:10] RicBit: eu acho que provavelmente voce consegue diminuir seu binario se comprimir e anexar o descompressor junto
+[2025-02-01 17:32:56] RicBit: vou compilar aqui, fiquei curioso
+[2025-02-01 17:33:16] Felipe "Juca" Sanches: Eu não estou realmente preocupado com o tamanho do binário. Estou apenas fazendo observações diletantes...
+[2025-02-01 17:38:24] RicBit: 24Mb local
+[2025-02-01 17:39:35] Felipe "Juca" Sanches: rpi aqui sofrendo pra compilar um crate chamado x11rb-protocol 😭
+[2025-02-01 17:39:56] Felipe "Juca" Sanches: https://crates.io/crates/x11rb-protocol
+[2025-02-01 17:43:32] RicBit: strip já abaixou para 8mb
+[2025-02-01 17:43:46] Felipe "Juca" Sanches: boa!
+[2025-02-01 17:49:12] RicBit: 4.7Mb compilando para code size
+[2025-02-01 17:53:14] RicBit: comprimindo com upx ficou 1.69Mb
+[2025-02-01 17:57:03] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34224.jpg
+[2025-02-01 17:57:03] RicBit: a versao de 1.6Mb rodou, abaixar para 1.44 deve dar
+[2025-02-01 17:57:07] L.: tem que considerar alinhamentos também 
+
+vários nops pra alinhar começo de função em 32 bytes, loops etc
+[2025-02-01 17:57:35] L.: ainda assim, o jogo original era feito em asm também
+[2025-02-01 18:07:38] RicBit: pronto 1.2Mb e ainda funciona
+-rwxrwxr-x 1 ricbit ricbit 1196996 Feb  1 18:05 target/x86_64-unknown-linux-gnu/release/pfr
+[2025-02-01 18:12:11] RicBit: eu segui metade desse tutorial, se for até o fim deve cair mais:
+https://github.com/johnthagen/min-sized-rust
+[2025-02-01 18:16:01] Felipe "Juca" Sanches: da hora!
+[2025-02-01 18:16:40] Felipe "Juca" Sanches: será que daria muito trabalho adaptar esse pfr para fazer cross-compiling pra MSDOS com rotinas de VGA igual ao original?
+[2025-02-01 18:17:56] L.: provavelmente teria que compilar pra modo protegido pra DOS, não sei se tem rust pra 16bit
+[2025-02-01 18:21:20] L.: https://www.japheth.de/HX.html pode ser uma opção
+[2025-02-01 18:22:16] RicBit: eu nao sei o hardware original dá conta tambem
+[2025-02-01 18:22:33] RicBit: o codigo original faz scroll por hardware, o rust faz por software
+[2025-02-01 18:22:38] L.: ahan
+[2025-02-01 18:23:28] Felipe "Juca" Sanches: terminou a compilação aqui no RPi. Levou 51 minutos kkk
+[2025-02-01 18:23:32] Felipe "Juca" Sanches: Agora testar...
+[2025-02-01 18:24:24] L.: uma vez tava com preguiça pra setupar ambiente de compilação cruzada
+
+compilei o webkit na plaquinha arm
+
+linkar (nem compilar!), demorou mais de 24h
+[2025-02-01 18:24:54] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34239.jpg
+[2025-02-01 18:25:10] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34240-rage-comics-table-flip.mp4
+[2025-02-01 18:26:43] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34241.jpg
+[2025-02-01 18:28:08] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34242.jpg
+[2025-02-01 18:36:01] L.: arregaçar as mangas e abrir o gdb hehe
+[2025-02-01 18:45:01] Felipe "Juca" Sanches: todos os binários estão funcionando, exceto o principal
+[2025-02-01 18:45:18] Felipe "Juca" Sanches: consegui tocar MOD no RPi com o mod player standalone que tem nesse repo
+[2025-02-01 18:45:49] Felipe "Juca" Sanches: consegui extrair todos assets de todas mesas (são salvos em imagens PNG) com  o programa dissect_table
+[2025-02-01 18:46:11] Felipe "Juca" Sanches: tem um similar para as telas de intro e menu chamado dissect_intro
+[2025-02-01 18:46:24] Felipe "Juca" Sanches: que também tá funcionando OK
+[2025-02-01 18:52:21] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34249.jpg
+[2025-02-01 18:52:21] Felipe "Juca" Sanches: libvulkan fazendo JIT para o instruction-set errado
+[2025-02-01 19:22:27] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-02/34250.jpg
+[2025-02-01 19:22:27] Felipe "Juca" Sanches: Não sei se essa é a forma de corrigir. E vai levar mais uma horinha pra eu descobrir, pois a mudança nas flags faz o build recomeçar do zero...
+[2025-02-01 19:27:11] Felipe "Juca" Sanches: ...e eu suspeito que essa não seja a solução, já que a desgraça da libvulkan já deveria saber que é pra fazer JIT pra ARMv7 quando a compilação é pro target armv7-unknown-linux-gnueabihf
+[2025-02-01 19:28:13] Felipe "Juca" Sanches: não sei de onde saiu a decisão da lib de fazer JIT pra ARMv8-a
+[2025-02-01 20:47:34] Shideravan: https://www.youtube.com/watch?v=q455wCtuj0A

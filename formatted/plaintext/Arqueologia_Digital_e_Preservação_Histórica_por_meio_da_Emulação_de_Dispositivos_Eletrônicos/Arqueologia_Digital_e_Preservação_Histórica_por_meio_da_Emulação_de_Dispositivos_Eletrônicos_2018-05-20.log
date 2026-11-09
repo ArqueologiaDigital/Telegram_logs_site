@@ -1,0 +1,6 @@
+[2018-05-20 18:05:42] Felipe "Juca" Sanches: me foquei em outras coisas de lá pra cá
+[2018-05-20 18:06:14] Felipe "Juca" Sanches: sim, acho que é isso
+[2018-05-20 18:06:52] Felipe "Juca" Sanches: acho que um passo bom seria implementar o esquema de slots do MAME e fazer ele funcionar com o hello world que imprime na teletype
+[2018-05-20 18:07:06] Felipe "Juca" Sanches: acho que é bom seguir esse caminho por que hoje em dia a emulação disso já funciona
+[2018-05-20 18:07:27] Felipe "Juca" Sanches: então seria só uma questão de refatorar o código pra ele continuar funcionando só que com a modularidade do sistema de slots do MAME
+[2018-05-20 18:08:31] Felipe "Juca" Sanches: o hello world é o exemplo que se vê aqui: http://felipesanches.github.io/emuladores/patinho.html

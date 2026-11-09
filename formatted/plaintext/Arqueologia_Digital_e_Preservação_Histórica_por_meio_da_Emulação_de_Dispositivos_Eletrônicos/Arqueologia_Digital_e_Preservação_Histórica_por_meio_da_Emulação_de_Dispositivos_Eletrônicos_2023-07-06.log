@@ -1,0 +1,39 @@
+[2023-07-06 09:59:32] Alexandre Villares: https://www.theguardian.com/games/2023/jul/06/people-competing-to-make-the-worst-computer-games-possible
+[2023-07-06 19:31:56] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-07/27202.jpg
+[2023-07-06 19:31:56] Felipe "Juca" Sanches: https://www.instagram.com/reel/CuUW10ER6Pi/
+[2023-07-06 19:36:38] Shideravan: Galaga é incrível!
+[2023-07-06 19:37:36] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-07/27204.jpg
+[2023-07-06 19:37:36] Felipe "Juca" Sanches: Fiquei com vontade de investigar a respeito desse bug:
+[2023-07-06 19:38:41] Felipe "Juca" Sanches: Verificar se realmente funciona. E, em caso positivo, determinar o motivo exato do bug. Como seria um bug fix. E quanto tempo realmente é preciso esperar (pois 20 minutos parece exagero, deve existir uma resposta exata, uma forma otimizada de explorar o bug em tempo mínimo)
+[2023-07-06 19:38:47] Shideravan: "Ok, I realize that absolutely nobody is gonna care about this"
+Realidade: a gente falando num grupo completamente aleatório do que dever ser o público alvo dela, falando desse vídeo dela aqui, sem nem saber quem ela é kkkkk
+[2023-07-06 19:39:31] Felipe "Juca" Sanches: daria um bom conteúdo para um vídeo técnico fazendo essa análise
+[2023-07-06 19:40:59] Shideravan: Acredito que deva ser relativamente fácil de testar no MAME. Ao menos tem como acelerar e salvar o estado. Também deve dar para saltar direto ao level 255 só para testar e certificar que funcione, antes de estudos mais aprofundados
+[2023-07-06 19:42:23] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=dtYQB3JOFoc
+[2023-07-06 19:44:41] Shideravan: É no primeiro level. Eu não sei por que eu tava achando que era no 255. Deve ser o sono
+[2023-07-06 19:46:44] Shideravan: 7 minutos e pouco é um tempo muito mais tranquilo
+[2023-07-06 19:47:16] Shideravan: Mas eu acho péssimo o momento que ele solta o timer, eu teria feito desde o início
+[2023-07-06 19:48:19] Felipe "Juca" Sanches: pois é... depende. Provavelmente é algum overflow de algum contador. Se o contador reseta a cada inicio de nova fase, então faria mesmo sentido contar desde o início do jogo
+[2023-07-06 19:48:23] Felipe "Juca" Sanches: mas pode ser alguma outra coisa
+[2023-07-06 19:48:46] Felipe "Juca" Sanches: eu adoraria ver de fato qual é a rotina em assembly onde está o bug e entender o motivo a fundo
+[2023-07-06 19:49:28] Shideravan: Correção: como o tempo para destruir as naves é mais ou menos variável dependendo do jogador, eu teria feito pelo menos a partir do momento que tivesse terminado de destruir as outras naves
+[2023-07-06 19:51:26] Shideravan: https://github.com/hackbar/galaga
+[2023-07-06 19:53:32] Shideravan: Pelo que eu estou vendo em fóruns, o tempo para parar de atirar é variável 🤔
+[2023-07-06 19:54:51] Shideravan: Christopher Cantrell examined a ROM dump of the game back in 2005 and picked apart the code - you can read his analysis here: https://www.computerarcheology.com/Arcade/Galaga/ What he found was that the cheat was caused by a subtle design flaw in the logic of the game that allows the two left (or right) bees to fill up and clog a shot buffer used by enemy Galaga. But, was this intentional or not? All cheats must be subtle to pass validation ;-)
+[2023-07-06 19:56:07] Shideravan: É bem interessante o conteúdo desse link aí
+[2023-07-06 20:00:26] Felipe "Juca" Sanches: sim, tô lendo
+[2023-07-06 20:15:13] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2023/2023-07/27222.jpg
+[2023-07-06 20:15:13] Shideravan: Segundo a revista Joystick, que possui um dos primeiros registros do "truque", você pode deixar uma nave azul só também
+[2023-07-06 20:16:27] Shideravan: É uma teoria da conspiração interessante pensar que os devs podem ter deixado isso aí de propósito para eles mesmos poderem quebrar os recordes nas máquinas de Galaga que visitassem hahahaha
+[2023-07-06 20:17:27] Shideravan: Mas se isso não foi proposital, é interessante pensar em que contexto alguma pessoa descobriu isso da primeira vez
+[2023-07-06 20:18:29] Felipe "Juca" Sanches: pois é... quem descobriu deve ter notado a falha direto no código. Ou foi algum desocupado brincando de driblar naves infinitamente
+[2023-07-06 20:19:09] Shideravan: "Vou fazer a ficha render ao máximo, olha. Se eu deixar uma nave só e colocar a nave nesse sweet spot, posso deixar bastante tempo aqui e a nave inimiga não consegue me acertar. Pera... Ela parou de atirar? Deixa eu passar de fase. Nossa, nas outras não estão atirando também, interessante..."
+[2023-07-06 20:19:30] Felipe "Juca" Sanches: é
+[2023-07-06 20:19:34] Felipe "Juca" Sanches: acho que foi algo assim mesmo
+[2023-07-06 20:19:40] Shideravan: O sweet spot é fácil de encontrar
+[2023-07-06 20:21:07] Shideravan: Qualquer jogador entusiasta de arcade dos anos 80 estava buscando frequentemente esse tipo de coisa. Então tudo o que precisava seria alguém desocupado o bastante para fazer uma navezinha da fase 1 ficar rodando sozinha kkkkkkkkk
+[2023-07-06 20:21:31] Shideravan: Eu acho bem mais provável terem descoberto com uma nave primeiro do que com duas
+[2023-07-06 20:22:11] Shideravan: Mas o truque realmente só funciona com aquelas naves específicas ou isso é feito porque o range delas não te acertam naquele sweet spot?
+[2023-07-06 20:25:37] Felipe "Juca" Sanches: pois é... não sei
+[2023-07-06 20:25:41] Shideravan: Esse primeiro registro já falava que o tempo poderia variar entre 5 a 20 minutos
+[2023-07-06 20:25:46] Felipe "Juca" Sanches: teria que testar. Ou estudar o código

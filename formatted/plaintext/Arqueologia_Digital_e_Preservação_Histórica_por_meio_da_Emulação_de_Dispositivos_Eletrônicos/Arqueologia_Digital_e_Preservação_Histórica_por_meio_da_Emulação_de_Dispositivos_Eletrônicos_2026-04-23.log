@@ -1,0 +1,60 @@
+[2026-04-23 09:47:26] Guilherme Ranoya: Olha aí... acabei de esbarrar aqui no Microsoft Works, e no Framework:
+[2026-04-23 09:47:51] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38431.jpg
+[2026-04-23 09:47:51] Guilherme Ranoya: Microsoft Works 2.0 - DOS
+[2026-04-23 09:48:06] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38432.jpg
+[2026-04-23 09:48:06] Guilherme Ranoya: Framework III
+[2026-04-23 09:48:06] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38433.jpg
+[2026-04-23 10:25:38] L.: Bem curiosos esse último screenshot aí. Mistura gráfico e texto. Provavelmente é modo gráfico, só que usando os caracteres de desenhar caixinha ao invés de, de fato, desenhar a UI com linhas/etc.
+[2026-04-23 10:26:18] Pablo Vasques Bravo-Villalba: Interessante que essas interfaces janeladas de texto apareceram vários anos depois das primeiras interfaces gráficas de janelas. Acho que esse tipo de coisa ajudava a dar uma certa ideia de que o PC era primitivo diante de concorrentes como o Mac, o Amiga e até o Atari ST. E de certa forma era mesmo, pelo menos antes da década de 1990
+[2026-04-23 10:26:32] Pablo Vasques Bravo-Villalba: Eu fiquei pensando sobre isso 😅
+[2026-04-23 10:27:33] L.: Eu curtia demais essas interfaces assim. Principalmente as do Norton Utilities, que chegavam a redefinir caracteres pra deixar sem aquele espaço próximo das bordas.
+[2026-04-23 10:29:20] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38442.jpg
+[2026-04-23 10:29:20] L.: Eu também gostava demais do efeito de sombra. Depois eu descobri que era fácil de fazer (só trocar o byte de atributo daquele caracter!)
+[2026-04-23 10:29:20] L.: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38443.jpg
+[2026-04-23 10:30:01] L.: O NU também fazia um negócio legal que era ter cursor de mouse em formato de seta em modo texto, na maior gambiarra de ter cursor com vários caracteres e ir redefinindo na medida que você movimenta o mouse
+[2026-04-23 10:31:20] L.: Demoraram anos até PC ter sombra nas janelas/menus de novo :P
+[2026-04-23 10:32:49] Pablo Vasques Bravo-Villalba: Eu ia falar isso. Legal também 😊
+[2026-04-23 10:47:54] Guilherme Ranoya: Não faço ideia de como eles faziam, mas era gráfico mesmo dentro de uma janela de texto.
+O Framework I era definitivamente texto. O II também me parece que era. Se quiserem ver, tá aqui o link:
+https://namco.vercel.app/interfaces/?rom=fw2
+
+É difícil de replicar por que ele não aceitava mouse ainda, e o acesso ao menu era feito clicando na tecla INS do teclado padrão 101 teclas da IBM, e acho que ele detectava isso de uma forma muito específica (talvez direto pelo hardware), por que no DOSBox não consegue emular direito. O III eu nunca instalei... acho que era apenas uma versão colorida do II. Já o Framework IV é gráfico tentando fingir que é texto 😂 (https://namco.vercel.app/interfaces/?rom=fw4) que é uma coisa bem bizarra... do tipo como piorar um produto só para fazer com que o público corporativa se sinta familiarizado com o que já usava antes.
+[2026-04-23 10:55:29] Guilherme Ranoya: A explicação de por que faziam isso é bem simples... tem vários posts por aí, geralmente falando do Turbo Vision, que explicam por que os softwares de PC criavam janelas em modo texto. O tempo que levava para construir uma interface gráfica, mesmo nos Macs, era longo. Eram muitas considerações gráficas, e os desenvolvedores estavam mais focados em resolver questões funcionais dos softwares, principalmente as coisas ligadas às necessidades dos negócios. Não era gente focada em computação gráfica para resolver os aspectos visuais. O contexto do modo texto tinha dimensões fixas (acho que 80x25 nos PCs e 40x21 nos outros computadores 8-bit da Apple, Commodore, Atari, etc.) e você tinha um conjunto definido e limitado de cores, cujas combinações eram fáceis de lidar. Isso fazia com que a criação de uma interface fosse algo muito mais fácil e rápido de resolver, principalmente quando usava um Turbo Vision ou a biblioteca da Microsoft (que não vou me lembrar o nome).... a biblioteca do Peter Norton para o NU, o Norton Commander, e depois os produtos da Symantec eram próprias dele mesmo... ninguém tinha como usar.
+[2026-04-23 10:56:49] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38449.jpg
+[2026-04-23 10:57:39] Guilherme Ranoya: E tinha também o PC Tools, que era concorrente do Norton, e misturava o NU e o NC em uma coisa só. Mas eu preferia as ferramentas do Norton mesmo.
+[2026-04-23 10:58:08] L.: eu gostava que nessa época as pessoas não tinham medo de cor
+[2026-04-23 10:58:40] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38452.jpg
+[2026-04-23 10:58:40] Guilherme Ranoya: Essa é a interface do PC Tools 7 (a outra que mandei antes é do 8)
+[2026-04-23 10:58:46] L.: tinha coisa feia? tinha. demais. mas era esse mar de cinza que foi um bom tempo as UIs de PC? não :)
+[2026-04-23 10:59:30] L.: é, o PC tools tinha uma UI legal! eu não tinha essa UI no meu PC que tinha PC tools (era um XT com CGA, aí não rolava redefinir caracteres). esses ícones lembram bastante o dosshell da MS quando rodando em modo gráfico.
+[2026-04-23 11:01:07] Guilherme Ranoya: O do PC Tools 7 dá pra perceber a influência do Norton Commander com o prompt do DOS em baixo para você rodar qualquer comando na mão.
+[2026-04-23 11:01:25] Guilherme Ranoya: Depois eles cortaram... deve ter dado processo 😆
+[2026-04-23 11:01:34] L.: a biblioteca que a central point usava foi usada no MSAV também né? (o MSAV era o CPAV que a microsoft licenciou deles.)
+[2026-04-23 11:02:30] Guilherme Ranoya: E talvez no próprio DOS Shell...
+[2026-04-23 11:02:43] L.: possível
+[2026-04-23 11:05:00] Pablo Vasques Bravo-Villalba: Hoje em dia é difícil até comprar cueca colorida. Você vai na Lupo e pede pra ver as opções: cinza, preto, grafite, azul marinho (quase preto), branco. Com sorte pode ter algo marrom. Vai procurar um carro e a única cor saturada é vermelho, o resto é tudo cinza, preto, prata, branco e tons intermediários.
+[2026-04-23 11:07:08] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38461.jpg
+[2026-04-23 11:07:29] Guilherme Ranoya: Essa aqui é a interface o Framework IV. Talvez não seja gráfico não... seja um modo texto do VGA.
+[2026-04-23 11:08:10] Guilherme Ranoya: Quando arrasta a janela ele não move ponto a ponto... move coluna de caracter por coluna de caracter.
+[2026-04-23 11:10:25] Guilherme Ranoya: Ou talvez a Ashton-Tate tenha criado toda uma interface gráfica própria que se comporta como se fosse uma interface de texto para facilitar o processo.
+[2026-04-23 11:11:26] Guilherme Ranoya: A gente vê que esse tipo de coisa parece absurda, mas pode não ser, quando descobre componentes em React para aplicações modernas que tentam reproduzir as interfaces de texto dessa época:
+
+https://www.sacred.computer/
+[2026-04-23 11:13:50] Guilherme Ranoya: Mas acho que de todas essas interfaces de modo texto, a mais curiosa é a do Visual Basic para DOS (acreditem se quiser, houve um Visual Basic para DOS):
+[2026-04-23 11:13:54] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38467.jpg
+[2026-04-23 11:14:34] Guilherme Ranoya: Ela tenta simular o efeito de emboss dos botões do windows com caracteres de texto e cores em alto contraste para onde bate a luz e onde fica sombreado.
+[2026-04-23 11:14:45] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38469.jpg
+[2026-04-23 11:15:08] Guilherme Ranoya: https://namco.vercel.app/interfaces/?rom=vb
+[2026-04-23 11:16:00] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38471.jpg
+[2026-04-23 11:16:29] Guilherme Ranoya: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-04/38472.jpg
+[2026-04-23 11:16:40] Guilherme Ranoya: Minimize em modo texto 😂
+[2026-04-23 11:24:47] Pablo Vasques Bravo-Villalba: Eu acho engraçado que tem caracteres em itálico e negrito
+[2026-04-23 11:25:31] Pablo Vasques Bravo-Villalba: Eu mexi com esse treco, achei bem estranho na época 😅
+[2026-04-23 12:07:39] L.: https://retool.com/visual-basic
+[2026-04-23 12:08:31] Guilherme Ranoya: Conheço bem esse texto/página... é muito bom.
+[2026-04-23 12:08:39] L.: né?
+[2026-04-23 12:09:35] Pablo Vasques Bravo-Villalba: A L. esqueceu de compartilhar em 2024, mas está perdoada por essa falha. 😉 É legal demais. 😊
+[2026-04-23 12:10:02] L.: Hehe, eu acho que mandei aqui
+[2026-04-23 12:10:23] Pablo Vasques Bravo-Villalba: Sim, em 2023 e 2025. Mas não estou reclamando 😊
+[2026-04-23 12:10:43] L.: Eu gostava do VB! Embora o Delphi fosse melhor em vários quesitos, eu gostava da esquisitice do VB
+[2026-04-23 22:23:43] L.: https://fitsonafloppy.com/ <-- screensaver pra Mac com disquetes!

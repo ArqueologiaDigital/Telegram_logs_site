@@ -1,0 +1,36 @@
+[2026-08-10 03:52:21] Felipe "Juca" Sanches: qual foi a técnica que você usou pra fazer isso?
+[2026-08-10 05:14:31] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/39962.jpg
+[2026-08-10 05:14:31] Felipe "Juca" Sanches: Houston, we have a problem!
+[2026-08-10 05:19:58] Felipe "Juca" Sanches: Isso é uma captura feita no VLC da saída de vídeo do Technics KN7000 mostrando um debugger que descobri que existe no firmware original.
+
+Em tese, eu posso segurar o botão de avanço de página e filmar o dump. E depois processar as imagens para transcrever os bytes.
+
+O problema é que tem muito ruído nesse sinal de vídeo!
+[2026-08-10 07:13:40] RicBit: eu pedi um esqueleto pro claude e depois fui otimizando.
+[2026-08-10 07:14:11] RicBit: usei um monte de truques que aprendi disassemblando jogo
+[2026-08-10 07:21:30] Pablo Vasques Bravo-Villalba: Será que não dá pra extrair um vídeo mais limpo, talvez mesmo RGB, em um estágio anterior do circuito?
+[2026-08-10 07:22:14] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/39967.jpg
+[2026-08-10 07:22:41] Felipe "Juca" Sanches: Talvez. Mas não manjo muito. Preciso estudar.
+[2026-08-10 07:25:46] Pablo Vasques Bravo-Villalba: Eu lembro de você ter falado que o Technics usava um controlador VGA, ou algo similar, aí seria de se esperar que tenha um sinal RGB em algum ponto. Mas eu também não sei muito sobre esses caras; por exemplo, será que eles têm um DAC integrado, como um VDP de MSX? Ou é um componente externo? 🤔
+[2026-08-10 07:26:59] Pablo Vasques Bravo-Villalba: Tem pinos "red", "green" e "blue". 🤔
+[2026-08-10 08:04:47] Felipe "Juca" Sanches: o KN5000 tem um controlador VGA. Esse KN7000 tem um controlador de LCD não documentado que o Claude desvendou como funciona. Suspeito que seja VGA também, mas com toda sinceridade, não tenho certeza.
+[2026-08-10 08:05:11] Felipe "Juca" Sanches: O doido desse diagrama é que só o pino do sinal verde está ligado na saída de vídeo... :-P
+[2026-08-10 08:05:38] Pablo Vasques Bravo-Villalba: Talvez ele esteja puxando o sincronismo daí
+[2026-08-10 08:08:54] Pablo Vasques Bravo-Villalba: Não sei se faz sentido nesse contexto
+[2026-08-10 08:16:12] Felipe "Juca" Sanches: não tenho idéia!
+[2026-08-10 10:20:28] L.: https://ethw.org/Milestones:Parametron,_1954
+
+The Parametron, a logic element using ferrite cores and parametric oscillation, was invented in 1954 by Eiichi Goto at the University of Tokyo. 4,200 parametrons went into the PC-1, Japan’s first university-built stored-program computer which became the nation's then-fastest in 1958
+.
+[2026-08-10 10:30:18] Felipe "Juca" Sanches: O cara se chamava GOTO ?!?! kkkk
+[2026-08-10 10:37:40] RicBit: Goto é um nome comum no jp
+[2026-08-10 10:55:27] L.: Eu nem cheguei a ligar o sobrenome do cara ao comando até você fazer a piada :P
+[2026-08-10 10:58:34] Felipe "Juca" Sanches: GOTO e JP são mesmo parecidos ;-)
+[2026-08-10 11:02:54] Leonardo Roman: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/39981.jpg
+[2026-08-10 11:02:54] Leonardo Roman: Todos os sinais de vídeo RGB estão ali. HRTC e VRTC são os sincronismos vertical e horizontal. Resta testar se é RGB (15 khz) ou VGA (31 khz).
+[2026-08-10 11:03:12] L.: Deve ser por isso que a maior companhia férrea do Japão é a JR
+[2026-08-10 17:36:39] L.: https://jackschaedler.github.io/handwriting-recognition/
+[2026-08-10 20:27:35] RicBit: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-08/39984-minimsx.zip
+[2026-08-10 20:27:35] RicBit: versão 2 do emulador de msx em 4kb
+[2026-08-10 20:28:04] RicBit: dessa vez, ao inves de mandar o psg pro opl2, eu sintetizo a forma de onda na soundblaster.
+[2026-08-10 20:28:17] RicBit: eu nao achei que iria conseguir, mas coube!

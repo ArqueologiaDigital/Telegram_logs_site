@@ -1,0 +1,29 @@
+[2021-03-15 03:36:45] Felipe "Juca" Sanches: pessoal... passei o domingão esboçando um driver de emulação pro teclado musical Technics KN1500 no MAME:
+
+https://github.com/mamedev/mame/commit/0fba2cdaaaef90a1032087eb4deabce53ff1ab5b
+[2021-03-15 03:37:00] Felipe "Juca" Sanches: tá longe de funcionar, mas já me diverti bastante 😊
+[2021-03-15 03:38:27] Felipe "Juca" Sanches: e tá servindo de aquecimento pra quando chegarem os chips dessoldados do KN5000 (que deve ser bem mais complicado de emular, mas deve ter muitas semelhanças na arquitetura de hardware, pois são modelos diferentes de teclados de uma mesma linha)
+[2021-03-15 03:43:48] Flávio Amieiro: Boa!
+[2021-03-15 03:44:46] Flávio Amieiro: Não sei se esse emulador é um bom ponto de partida, mas uma ideia pro happy hacking video blog é fazer um walkthrough de um emulador do mame
+Ia ser maneiro ter uma visão geral de como funciona um emulador dentro do mame
+[2021-03-15 04:02:09] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=0RyvZmUwDLA
+[2021-03-15 04:02:35] Felipe "Juca" Sanches: mas posso gravar mais vídeos sobre o tema, é claro!
+[2021-03-15 04:02:35] Flávio Amieiro: Ah! Boa!
+[2021-03-15 04:03:00] Flávio Amieiro: Vou ver esse agora no café
+[2021-03-15 04:03:02] Flávio Amieiro: Valeu!
+[2021-03-15 04:03:04] Felipe "Juca" Sanches: ;-D
+[2021-03-15 04:03:20] Felipe "Juca" Sanches: é de 2014. Naquela época o MAME não era estritamente software livre ainda
+[2021-03-15 04:03:25] Felipe "Juca" Sanches: hoje é
+[2021-03-15 04:03:46] Felipe "Juca" Sanches: to indo dormir. Depois conversamos mais
+[2021-03-15 04:24:47] Flávio Amieiro: Pô, não sabia disso! Achei que tinha começado como um projeto de software livre
+[2021-03-15 04:24:58] Flávio Amieiro: Falou!
+[2021-03-15 07:18:57] Felipe "Juca" Sanches: sempre foi um software desenvolvido colaborativamente. Mas o licenciamento usado proibia uso comercial (acho que por que tinham cagaço de tomar processo das empresas de jogos)
+[2021-03-15 07:38:58] Flávio Amieiro: É, vi aqui no video
+[2021-03-15 07:39:09] Flávio Amieiro: Imaginei que fosse por receio de ser processado mesmo
+[2021-03-15 07:39:25] Flávio Amieiro: Mas mudou, então? Mudou pra gpl?
+[2021-03-15 07:45:01] Felipe "Juca" Sanches: mudou para majoritariamente BSD-3-clause. Mas tem trechos em GPL, então "o todo" é GPL.
+[2021-03-15 07:45:15] Flávio Amieiro: Saquei
+[2021-03-15 07:45:22] Flávio Amieiro: Maneiro. Acho bom que tenha mudado
+[2021-03-15 07:45:38] Flávio Amieiro: Mas também entendo o que provavelmente era a preocupação original
+[2021-03-15 07:46:00] Felipe "Juca" Sanches: 100% do código central de infra-estrutura é BSD. Eles só aceitam GPL pra drivers, ou seja, emulacao de dispositivos especificos. Para emulacao de chips que serao uteis para uso em multiplos drivers eles pedem que seja BSD-3-clause
+[2021-03-15 07:46:26] Flávio Amieiro: Saquei

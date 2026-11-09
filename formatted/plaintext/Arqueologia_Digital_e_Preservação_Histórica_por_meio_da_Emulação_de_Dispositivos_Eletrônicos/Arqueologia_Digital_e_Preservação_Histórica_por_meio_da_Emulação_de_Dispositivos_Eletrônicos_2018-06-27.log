@@ -1,0 +1,62 @@
+[2018-06-27 00:55:11] Felipe "Juca" Sanches: hoje eu fui lá no Garoa e comecei a montar um circuito usando um desses osciladores.
+[2018-06-27 00:56:14] Felipe "Juca" Sanches: soldei junto um contador de 8 bits e verifiquei no contador de frequencias que o circuito estava gerando corretamente as frequencias derivadas de 25,175MHz
+[2018-06-27 00:56:25] Felipe "Juca" Sanches: o contador funciona como um divisor de frequencias
+[2018-06-27 06:15:45] Rodrigo Tadeu: Queria morar perto do garoa, fazer uns cursos por la
+[2018-06-27 06:16:01] Rodrigo Tadeu: Tenho muita vontade de aprender eletrônica e aplicar em algo
+[2018-06-27 07:33:56] Alexandre Villares: https://computer-literacy-project.pilots.bbcconnectedstudio.co.uk/
+[2018-06-27 07:37:06] Alexandre Villares: https://computer-literacy-project.pilots.bbcconnectedstudio.co.uk/beeb
+[2018-06-27 07:37:40] Alexandre Villares: 👆 emulador e programas do BBC Micro
+[2018-06-27 07:48:11] Rodrigo Tadeu: Tenho isso no meu hyperspin. Acron. Mas dá medo de ruim kkk
+[2018-06-27 07:59:27] Ronaldo: Como eles funcionam? Entra alimentação em um lado e sai onda quadrada no outro?
+[2018-06-27 08:41:25] Felipe "Juca" Sanches: sim. Dos 4 pinos, um não é usado. Dois pinos recebem terra e 5 volts, respectivamente. O último pino solta uma onda quadrada na frequencia nominal do oscilador (25.175 MHz nesse caso).
+[2018-06-27 08:43:25] Felipe "Juca" Sanches: Normalmente um circuito oscilador baseado em cristal é feito ligando um amplificador ao cristal e mais uns dois capacitores. No caso desse invólucro metálico de 4 pinos, tanto o cristal quanto esse circuito básico de amplificador e capacitores já estão dentro do encapsulamento prontos pra usar.
+[2018-06-27 08:46:31] Felipe "Juca" Sanches: ou seja...
+[2018-06-27 08:46:45] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5500.jpg
+[2018-06-27 08:46:45] Felipe "Juca" Sanches: Isso aqui é um cristal.
+[2018-06-27 08:47:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5501.jpg
+[2018-06-27 08:47:17] Felipe "Juca" Sanches: E isso aqui é um oscilador (e contém um cristal).
+[2018-06-27 08:52:02] Felipe "Juca" Sanches: Uma coisa importante de se ressaltar aqui é que o Garoa não costuma oferecer cursos. De vez enquando alguém resolve organizar algum curso sobre algum tema. Mas o mais comum é as pessoas simplesmente usarem o espaço para fazerem seus próprios projetos pessoais, bater papo, tirar dúvidas informalmente com os amigos, tomar cerveja e falar besteira, etc. Tá mais pra um clube do que pruma escola.
+[2018-06-27 08:52:31] Felipe "Juca" Sanches: De fato é um clube! Garoa Hacker Clube 😃
+[2018-06-27 08:53:42] Felipe "Juca" Sanches: Dito isso, acho que seria muito legal receber você lá no Garoa, @rodrigotadeu! Me avisa quando você quiser conhecer o clube e eu farei questão de estar lá para recebê-lo e fazer um tour pelo espaço. O mesmo vale para todos aqui que tiverem interesse em conhecer o Garoa algum dia.
+[2018-06-27 08:55:54] Felipe "Juca" Sanches: Esse vídeo aqui mostra isso muito bem: https://www.youtube.com/watch?v=onkZz_VdQ4Q
+[2018-06-27 08:57:20] Felipe "Juca" Sanches: https://www.reddit.com/r/MAME/comments/8u67wc/mame_0199/
+[2018-06-27 08:58:13] Felipe "Juca" Sanches: MAME 0.199
+
+Today’s the day for our mid-year MAME release. MAME 0.199 includes support for the incredibly elusive Spanish arcade title El Fin Del Tiempo, and the rare Pac-Man hack Titan. Other rare bootlegs added include Come-Cocos (derived from Ms. Pac-Man) and Gran Rally (a Spanish bootleg of Pole Position II).
+
+There are some pretty big improvements to Tatsumi games (Apache 3, Cycle Warriors, Round Up 5), some NMK mahjong games work substantially better (Urashima Mahjong, Mahjong Daireikai, Mahjong Channel Zoom In), and Big Run looks better than ever. War: The Final Assault no longer crashes thanks to a fix in Voodoo emulation.
+
+Floppy drive emulation has been further improved, and a fairly major issue with Apple IIgs and Mac 3.5" drives has been fixed. Sound Blaster direct DAC mode is now supported. Improved Dreamcast GD-ROM emulation allows Daytona USA 2001 to boot. The HP 9000/300 series can now boot from floppy, and the medium-resolution colour graphics option is supported. Tiger Electronics fans can enjoy Battle Arena Toshinden for R-Zone.
+
+Of course we’ve also added more alternate versions of supported systems, software list updates, bug fixes, and internal improvements. You can get source and Windows binaries from the download page.
+[2018-06-27 08:59:50] VictorEmm 🐸 @VictorEmmX: Opaaa. Quero conhecer esse Garoa também!!!
+[2018-06-27 09:00:43] Felipe "Juca" Sanches: Eu estou por lá umas 3 ou 4 vezes por semana. É só combinarmos que eu faço o tour 😊
+[2018-06-27 09:45:02] Alexandre Villares: E vocês vão poder conhecer a incrível sala de jogos...
+[2018-06-27 09:45:36] Felipe "Juca" Sanches: https://garoa.net.br/wiki/Sala_de_Jogos
+[2018-06-27 09:46:17] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5512.jpg
+[2018-06-27 11:12:03] Rodrigo Tadeu: pode deixar, quando for para SP, lhe aviso!
+[2018-06-27 11:12:34] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5514-sticker.webp
+[2018-06-27 11:50:21] Leonardo Roman: Falando nisso, já viram esse vídeo do EEVblog? https://www.youtube.com/watch?v=dkdLWronrlk
+[2018-06-27 11:50:56] Leonardo Roman: Ele faz um circuitinho básico pra monstrar como funciona.
+[2018-06-27 11:50:59] Felipe "Juca" Sanches: ah, que legal! Eu fiquei morrendo de vontade de abrir o meu pra ver por dentro, mas gastei uma nota nele.
+[2018-06-27 11:51:03] Leonardo Roman: *demonstrar
+[2018-06-27 11:51:15] Felipe "Juca" Sanches: uns 15 reais cada eu acho
+[2018-06-27 11:51:20] Felipe "Juca" Sanches: deixa eu verificar aqui
+[2018-06-27 11:52:54] Felipe "Juca" Sanches: isso mesmo, 15 reais por unidade + 16,90 de frete :-P
+[2018-06-27 11:56:42] Leonardo Roman: caro
+[2018-06-27 12:01:47] Felipe "Juca" Sanches: eu também achei
+[2018-06-27 12:01:52] Felipe "Juca" Sanches: mas acabei comprando
+[2018-06-27 12:51:07] Felipe "Juca" Sanches: Estou embasbacado com esse vídeo aqui: https://www.youtube.com/watch?v=wxL4ElboiuA
+[2018-06-27 12:51:14] Ronaldo: Frete tá sempre caro. Eu quero comprar um cabo no ML. O mais barato que eu achei custa 8 reais, mas tem um frete de 50. Tem gente cobrando 25 no cabo e enviando por 30...
+[2018-06-27 13:15:02] Leonardo Roman: Também já vi. Realmente muito bom e didático.
+[2018-06-27 17:45:44] * Fractal joined the group via invite link
+[2018-06-27 17:55:54] Rodrigo Tadeu: Bem vindo ravazzi
+[2018-06-27 17:58:41] Fractal: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5530-sticker.webp
+[2018-06-27 21:59:57] Alexandre Villares: Check out @matseng’s Tweet: https://twitter.com/matseng/status/1011598444409114624?s=09
+[2018-06-27 22:00:35] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2018/2018-06/5532-sticker.webp
+[2018-06-27 22:01:08] Felipe "Juca" Sanches: passei várias horas essa semana pensando sobre isso
+[2018-06-27 22:01:17] Felipe "Juca" Sanches: onde eu arranjo uma cópia disso aí?
+[2018-06-27 22:02:18] Felipe "Juca" Sanches: achei! https://www.amazon.com/design-build-your-custom-games/dp/0830698590
+[2018-06-27 22:26:28] Felipe "Juca" Sanches: Comprei 😊
+[2018-06-27 22:27:04] Felipe "Juca" Sanches: chega pelos correios lá pra metade/final de Julho
+[2018-06-27 22:55:30] Alexandre Villares: :)))

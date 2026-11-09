@@ -1,0 +1,99 @@
+[2025-10-20 00:07:43] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36070.jpg
+[2025-10-20 00:07:43] Felipe "Juca" Sanches: O arquivo src/devices/video/tms9928a.cpp contém a implementação de todos esses modelos de chips
+[2025-10-20 00:10:59] Felipe "Juca" Sanches: eu cheguei a pensar a mesma coisa haha. Mas tem também a explicação de que TMS significa Tecnologia em Micro Sistemas
+[2025-10-20 00:11:26] Felipe "Juca" Sanches: e TMS Micro Sistemas seria um caso de PNS Syndrome
+[2025-10-20 00:11:50] L.: aí descobre que o dono era algo tipo Tiago M. Silva
+[2025-10-20 00:12:22] L.: tipo os TK da Microdigital, que eram as iniciais do dono
+[2025-10-20 00:13:30] Felipe "Juca" Sanches: PIN number significa Personal Identification Number number.
+[2025-10-20 00:13:46] Felipe "Juca" Sanches: E PNS syndrome significa PIN Number Syndrome syndrome.
+[2025-10-20 00:14:23] Felipe "Juca" Sanches: Que por sua vez significa Personal Identification Number number Syndrome syndrome.
+[2025-10-20 00:14:52] L.: Ah, sim. Digitar seu PIN Number na ATM Machine
+[2025-10-20 00:15:38] Felipe "Juca" Sanches: Sim! E onde é que está a ATM Machine? Subindo pra cima naquela escada!
+[2025-10-20 00:16:10] Felipe "Juca" Sanches: Tomas Kovari
+[2025-10-20 00:33:12] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36081.jpg
+[2025-10-20 00:33:26] Felipe "Juca" Sanches: https://github.com/mamedev/mame/pull/14213#issuecomment-3420406633
+[2025-10-20 00:38:17] Ismael Carvalho: meu amigo... o cara achou a parada XD
+[2025-10-20 00:38:24] Ismael Carvalho: eu rodei a internet atrás disso
+[2025-10-20 00:38:26] Ismael Carvalho: deixa eu ver
+[2025-10-20 00:43:30] Felipe "Juca" Sanches: ;-)
+[2025-10-20 00:44:40] Felipe "Juca" Sanches: sugiro você tentar procurar os outros jogos em sites parecidos pra achar os nomes originais quando for adicioná-los ao driver
+[2025-10-20 00:45:48] Felipe "Juca" Sanches: mas entendo que talvez o ajrhacker só tenha conseguido achar isso por que talvez ele saiba um pouco de japonês
+[2025-10-20 00:46:27] Ismael Carvalho: continuei dando uma procurada, agora que ele mencionou a gametech, vi menção a mini tetlin que também parece com esse que eu tô olhando
+[2025-10-20 00:46:34] Ismael Carvalho: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36090-image.png
+[2025-10-20 00:47:46] Ismael Carvalho: mas acho que esse que ele mencionou é o mais próximo mesmo por causa do 55 no ideograma
+[2025-10-20 00:48:14] Ismael Carvalho: vou tentar procurar mais nos próximos
+[2025-10-20 00:48:28] Felipe "Juca" Sanches: E, de fato, a busca no Google por "ピコリンブロス" dá um monte de resultados relevantes
+[2025-10-20 00:49:38] Ismael Carvalho: de fato
+[2025-10-20 00:51:23] L.: (btw, não é ideograma! isso é katakana, é só sílaba mesmo. não tem outro significado a não ser o som.)
+[2025-10-20 00:51:56] L.: esse aí romanizado fica pikorinburosu
+[2025-10-20 00:53:21] L.: é fácil de ler! o primeiro por exemplo tem a bolinha (maru), que transforma a sílaba "hi" em "pi". o quinto tem um que parecem aspas (tenten), que transforma "fu" em "bu"
+[2025-10-20 00:54:30] Felipe "Juca" Sanches: L., ontem eu tava com fome às 3:30 da madrugada e não tinha nada em casa além de molho de tomate, macarrão, cebola e sal. Me trouxe lembranças daquela vez (acho que uns quase 10 anos atrás) que a gente virou um final de semana no Garoa fazendo hackeragens e macarronada improvisada.
+[2025-10-20 00:54:59] L.: hahaha, sim, indo naquele mercado 24h perto do garoa, desviando dos zumbis
+[2025-10-20 00:55:10] Felipe "Juca" Sanches: exatamente!
+[2025-10-20 00:55:22] Felipe "Juca" Sanches: eu adorava dormir na rede da sala ;-D
+[2025-10-20 00:56:15] Felipe "Juca" Sanches: Foi de uma dessas madrugadas lá que nasceu o nosso simulador de Pense Bem  com SVG e javascript que depois me levou a começar a contribuir pro MAME
+[2025-10-20 00:56:50] Felipe "Juca" Sanches: se bobear, já deve estar mais pra quase 15 anos já...
+[2025-10-20 00:57:04] Felipe "Juca" Sanches: o Garoa fará 15 anos em fevereiro do ano que vem
+[2025-10-20 00:57:10] L.: tem mais, o LHC nem existia ainda e fez 14 anos esse mês
+[2025-10-20 00:57:20] Felipe "Juca" Sanches: pois é
+[2025-10-20 00:57:33] L.: é, dormi várias vezes naquelas redes da CCD. ou nas almofadas
+[2025-10-20 00:57:47] Felipe "Juca" Sanches: é... tinha as almofadas também!
+[2025-10-20 00:57:51] L.: com é bom ser jovem e poder dormir onde quiser hauehauhe
+[2025-10-20 00:58:03] Felipe "Juca" Sanches: E tomar banho no chuveiro do terceiro andar
+[2025-10-20 00:58:07] L.: ahan
+[2025-10-20 00:58:26] L.: as vezes pegar um pastel com garapa na feira ali do lado
+[2025-10-20 00:59:02] Felipe "Juca" Sanches: tô querendo fazer uma conferência estilo Tosconf pra celebrar os 15 anos do Garoa
+[2025-10-20 00:59:17] Felipe "Juca" Sanches: mas tenho zero experiência em organizar esse tipo de evento
+[2025-10-20 00:59:39] L.: dá um trampo razoável
+[2025-10-20 00:59:41] Felipe "Juca" Sanches: cheguei a mencionar isso numa conversa mês passado com o @LucianoRamalho
+[2025-10-20 00:59:54] L.: aliás, mês que vem tem gambiconf, e eu vou colar aí
+[2025-10-20 01:00:19] Felipe "Juca" Sanches: E eu serei keynote speaker da Gambiconf esse ano! ;-D
+[2025-10-20 01:00:29] Felipe "Juca" Sanches: Enorme honra!
+[2025-10-20 01:00:30] L.: massa!
+[2025-10-20 01:00:47] L.: a gambiconf tá crescendo bastante! tá muito legal a conferencia
+[2025-10-20 01:01:04] Felipe "Juca" Sanches: Minha palestra tem o título "Dirty Hacks e Gambiarras Elegantes"
+[2025-10-20 01:01:05] L.: uma hora a gente junta a bsides sp, tosconf e gambiconf e faz um congress tipo o alemão aheuaheaue
+[2025-10-20 01:01:15] Felipe "Juca" Sanches: Mas ainda não sei exatamente o que vou falar. kkkk
+[2025-10-20 01:02:05] L.: eu partiria pra definição de elegância e usaria isso pra dizer que toda gambiarra é por definição elegante
+[2025-10-20 01:02:33] Felipe "Juca" Sanches: Bom, a única certeza que tenho é que na palestra vai ter Software Livre e MAME. O resto é detalhe.
+[2025-10-20 01:03:28] Felipe "Juca" Sanches: por MAME entenda-se: Arqueologia Digital, Patinho Feio, etc etc etc
+[2025-10-20 01:04:08] Felipe "Juca" Sanches: Mas tô pensando em começar lá do começo, com meus hacks mais antigos... de quando eu era pirralho
+[2025-10-20 01:04:28] Felipe "Juca" Sanches: desses pirralhos que abrem as coisas e depois não fecham
+[2025-10-20 01:05:20] L.: tenho as fotos de quando começamos o bagulho do pense bem
+[2025-10-20 01:05:26] L.: não sei se já te mandei
+[2025-10-20 01:05:26] Felipe "Juca" Sanches: Eu tenho até hoje um saquinho plástico com (suponho que todas) as peças de um minigame After Burner da Tiger Electronics que eu desmontei sei lá... uns 20 anos atrás?!
+[2025-10-20 01:05:33] Felipe "Juca" Sanches: Algum dia tento re-montar e ligar
+[2025-10-20 01:05:59] Felipe "Juca" Sanches: Me manda!!!!
+[2025-10-20 01:06:05] Felipe "Juca" Sanches: Isso é muito importante
+[2025-10-20 01:06:09] Felipe "Juca" Sanches: eu quero ver
+[2025-10-20 01:06:28] L.: calma aí
+[2025-10-20 01:06:37] Felipe "Juca" Sanches: tô calmo
+[2025-10-20 01:11:35] L.: https://fotos.lhc.net.br/share/KVSaTwEUn9F_Ne5LzbL5plVUVWnSd-fzgopQ10c2qcvVxzsgcjoxf-weBfk7MQpXW-o
+[2025-10-20 01:12:18] L.: tem até o party land nos fundos de brinde heuaheuahe
+[2025-10-20 01:13:50] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36141.jpg
+[2025-10-20 01:14:46] Felipe "Juca" Sanches: https://garoa.net.br/wiki/Noites_do_Pinball
+[2025-10-20 01:16:00] L.: hehehe, eventos de 1000 anos atrás
+[2025-10-20 01:19:43] L.: https://github.com/Gillou68310/DukeNukemZeroHour
+[2025-10-20 01:22:47] Ismael Carvalho: Sobre o processo para a emulação do VET3000 eu fiz algumas anotações aqui que vou tentar ver se consigo algum momento amanhã pra organizar direito
+[2025-10-20 01:23:00] Ismael Carvalho: tem algum padrão que eu precise deixar pra contribuir aqui a nível de documentação?
+[2025-10-20 01:29:53] Felipe "Juca" Sanches: Penso em publicar no arqueologia digital hospedado em github pages
+[2025-10-20 01:29:56] Felipe "Juca" Sanches: acho que html serve
+[2025-10-20 01:30:01] Felipe "Juca" Sanches: talvez role markdown
+[2025-10-20 01:31:01] Felipe "Juca" Sanches: hoje tentei compilar o vet3000 com emscripten mas tropecei numa dificuldade documentada aqui: https://github.com/mamedev/mame/issues/14376
+[2025-10-20 03:06:15] Felipe "Juca" Sanches: Uma coisa que eu venho aprendendo gradativamente, mas sempre me traz alegria é o seguinte... Eu gosto de computadores. E eu gosto de música. E eu gosto de emuladores. E eu gosto de tipografia e design e gráficos vetoriais. E de alguma forma ao longo dos anos eu acabei chegando nesse momento em que eu desenho layouts gráficos em SVG para sintetizadores musicais para depois convertê-los em arquivos de interface (em formato .lay) para o MAME, onde outros nerds estão emulando sintetizadores.
+E com isso eu estou aos poucos amplianto meu conhecimento sobre synths. É um universo que eu não conhecia. Mas (principalmente) nesse último ano, tomei conhecimento de vários aparelhos muito interessantes que foram usados por bandas que definiram a estética da música eletrônica (ou da música em geral, que tenha usado sintetizadores)
+[2025-10-20 03:06:27] Felipe "Juca" Sanches: Alguns anos atrás comprei um Yamaha DX7
+[2025-10-20 03:06:44] Felipe "Juca" Sanches: E recentemente adquiri um módulo Roland D-550
+[2025-10-20 03:07:58] Felipe "Juca" Sanches: Mas, além desses, também tenho conhecido muita coisa legal por meio da emulação sem ter os equipamentos de fato em mãos. Como, por exemplo, o Access Virus B, para o qual fiz um layout esse mês. E o Roland PG-1000 do mês passado.
+[2025-10-20 03:08:32] Felipe "Juca" Sanches: E o meu hobby no momento é assistir aos vídeos do Alex Ball para descobrir outros equipamentos incríveis dos anos 80 e 90
+[2025-10-20 03:08:46] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=v7qgyiOT3RA
+[2025-10-20 04:29:28] Felipe "Juca" Sanches: @figur8 faça um commit adicional para o driver do 55in1 (https://github.com/mamedev/mame/pull/14213) substituindo "<unknown>" por "Gametech" no campo COMPANY e substituindo "Brick game: Keychain 55 in 1" por "ピコリン55 (Pikorin 55)" no campo FULLNAME
+[2025-10-20 04:30:04] Felipe "Juca" Sanches: por favor 🥰
+[2025-10-20 08:41:39] Ismael Carvalho: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36160-image.png
+[2025-10-20 08:41:39] Ismael Carvalho: feito, tomei a liberdade de padronizar também o nome na nos comentários que ficam acima dos drivers, por que o padrão está usar o fullname
+[2025-10-20 08:42:20] Ismael Carvalho: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36161-image.png
+[2025-10-20 09:25:20] Felipe "Juca" Sanches: faça o ajuste de espaços pra ficarem todos os campos alinhados como em uma tabela
+[2025-10-20 09:40:43] Felipe "Juca" Sanches: merged! (layout pro Access Virus B)
+[2025-10-20 12:16:39] L.: https://github.com/Piddewitt/Loderunner
+[2025-10-20 23:36:27] Leonardo Roman: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2025/2025-10/36165-conector%20CN1%20VET3000.txt
+[2025-10-20 23:36:27] Leonardo Roman: Consegui mapear o conector do VET

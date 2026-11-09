@@ -1,0 +1,8 @@
+[2023-10-23 00:02:44] Giga: Alguém no grupo trabalhou na Prológica? Ou conhece alguém que tenha trabalhado? Mais precisamente no projeto do CP500 M80C, ou Turbo.
+[2023-10-23 00:03:33] Giga: Estou tentando levantar dados técnicos sobre dois CIs customizados na placa P-24
+[2023-10-23 00:04:42] Giga: Alguém que já teve ou tem um M80C sabe que os CIs 17 e 59 são insubstituíveis. Não existem no mercado.
+[2023-10-23 14:18:07] RicBit: Não dá pra deduzir como funciona?
+[2023-10-23 22:41:53] Giga: Sei somente por testes que o CI 59 é para gerar vídeo. E o 17 também tem parte em organizar o vídeo, mas se ramifica a outras partes da placa. Creio que seja tipo a MMU do TK3000
+[2023-10-23 22:43:06] Giga: Resgatar o que há nesses CIs, seria uma descoberta e tanto. Placas de M80C são descartadas por conta destes CIs.
+[2023-10-23 23:47:42] RicBit: Tem o esquemático?
+[2023-10-23 23:48:32] RicBit: De repente é só uma pla, bota no osciloscópio e mede.

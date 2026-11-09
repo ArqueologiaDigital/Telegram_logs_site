@@ -1,0 +1,25 @@
+[2022-06-09 01:17:11] Pedro de Medeiros 👾: https://github.com/ArqueologiaDigital/Mines/pull/50
+[2022-06-09 01:37:07] Pedro de Medeiros 👾: SDCC 4.1.0 com --opt-code-speed não tá atualizando o bit 5 no tabuleiro que diz se a célula está aberta, mas usando --opt-code-size faz o problema ir embora, então deve ser alguma coisa com a otimização.
+[2022-06-09 10:27:19] Pedro de Medeiros 👾: @fsanches pensando em renomear arquivos .z80 pra .s ou .asm (que eu prefiro) porque os editores não reconhecem a extensão pra fazer highlight e o github não soma às estatísticas de tipo de código fonte (mas o crt0.z80 a gente poderia deixar como está). O que você acha?
+[2022-06-09 10:30:13] Pedro de Medeiros 👾: Isso eliminaria a necessidade de fazer esse tipo de remendo no Makefile:
+OBJECTS := $(filter-out $(BUILDDIR)/crt0.rel,$(OBJECTS))
+[2022-06-09 10:51:14] Pedro de Medeiros 👾: Vi que o gunsmoke não usa arquivos .z80 fora o crt0.z80, então só afeta o MSX2, o que me incentivou a mandar logo o PR: https://github.com/ArqueologiaDigital/Mines/pull/51
+[2022-06-09 10:56:58] L.: https://twitter.com/forestillusion/status/1534884292035112961?t=FMbzIc5A0aPUfqN2b5LCEw&s=09
+[2022-06-09 15:34:42] Felipe "Juca" Sanches: Ok. Só vi suas mensagens agora.
+
+Merged!
+[2022-06-09 15:37:10] Pedro de Medeiros 👾: @fsanches é complicado alterar os tiles de fundo do gunsmoke?
+[2022-06-09 15:37:20] Felipe "Juca" Sanches: Ontem comecei a rascunhado um refactoring para fazer aquele sisteminha genérico de vídeo tilebased
+[2022-06-09 15:38:19] Felipe "Juca" Sanches: Muitos anos atrás eu comecei a escrever código pra fazer isso, mas acho que não terminei de implementar
+[2022-06-09 15:39:10] Felipe "Juca" Sanches: Acho que o que tenho é o que tá naquele arquivo tools/patxhBGROM.py
+[2022-06-09 15:40:13] Pedro de Medeiros 👾: Estão comprimidos de alguma forma?
+[2022-06-09 15:41:21] Felipe "Juca" Sanches: Se me lembro bem acho que só tá embaralhado de uma forma específica, mas nada demais
+[2022-06-09 16:14:19] Felipe "Juca" Sanches: seria bacana para fazer uma tela de abertura bonitona, né?
+[2022-06-09 16:14:42] L.: Bota aquele trailer do filme campo minado em EVA
+[2022-06-09 16:14:55] Felipe "Juca" Sanches: Se alguém desenhar uma arte, pode ser útil para eu voltar a testar o algoritmo de geração das ROMs de background
+[2022-06-09 16:15:46] L.: Mas falando sério, campo minado pra mim sempre me lembra daquela cena dos coelhinhos do Full Throttle
+[2022-06-09 16:16:46] L.: Com a Marcha das Valquírias
+[2022-06-09 16:32:43] Felipe "Juca" Sanches: https://www.youtube.com/watch?v=EqsOTcrJUqs
+[2022-06-09 16:34:56] L.: Quando o jogo estiver pronto, botar um coelho amarelo de easter egg
+[2022-06-09 23:08:51] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-06/21472.jpg
+[2022-06-09 23:08:51] Felipe "Juca" Sanches: Alguém criou uma conta no GitHub e postou isso no issue tracker do MAME. Atenção: Não fui eu!

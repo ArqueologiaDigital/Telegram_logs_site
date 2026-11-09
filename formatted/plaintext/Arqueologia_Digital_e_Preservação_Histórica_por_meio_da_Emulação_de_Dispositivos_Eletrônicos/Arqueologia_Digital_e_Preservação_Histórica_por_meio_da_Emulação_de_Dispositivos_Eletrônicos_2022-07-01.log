@@ -1,0 +1,85 @@
+[2022-07-01 01:48:24] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22502.jpg
+[2022-07-01 01:48:24] Felipe "Juca" Sanches: Que orgulho! Meu driver de GranTrak10 no MAME que tava pela metade, agora tá sendo aprimorado por outra pessoa. Continua quebrado, como se vê na imagem. Mas tá "menos quebrado" kkkkk
+
+E agora já dá pra ver o carrinho e uma parte da pista 😉
+[2022-07-01 01:54:43] Felipe "Juca" Sanches: A minha contribuição original da simulação do circuito discreto desse arcade no MAME tinha sido em Julho de 2018... tava lá dormente o driver pela metade até que apareceu essa pessoa que fez aprimoramentos hoje (4 anos depois!).
+
+https://github.com/mamedev/mame/commit/e88ec6a7a52d8578bdb611c4942d96101704a7a3
+[2022-07-01 14:19:09] Anne Isabelle: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22504.jpg
+[2022-07-01 14:19:09] Anne Isabelle: To montando um cabo serial pra tentar rodar o código do PlayStation no hardware real :)
+[2022-07-01 14:37:43] Augusto Almeida: É exatamente a proposta do NetYaroze
+[2022-07-01 14:37:49] Augusto Almeida: Ou PlayStation preto
+[2022-07-01 14:38:58] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22507.jpg
+[2022-07-01 14:39:35] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22508.jpg
+[2022-07-01 15:01:33] Anne Isabelle: Lindo demais
+[2022-07-01 15:02:28] Anne Isabelle: A gente usa algumas funções do yaroze, só a assinatura, mas com a sdk open source
+[2022-07-01 15:17:18] Felipe "Juca" Sanches: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22511-sticker.webp
+[2022-07-01 15:18:42] Felipe "Juca" Sanches: CÊ TÁ ZUANDO QUE É SÓ UM CABO FTDI....
+
+É isso mesmo que eu entendi?!
+[2022-07-01 15:18:57] Anne Isabelle: Siiiiim, é um cp2102 mesmo :)
+[2022-07-01 15:19:16] Anne Isabelle: Basicamente tenho q conectar rx tx e gnd
+[2022-07-01 15:19:38] Felipe "Juca" Sanches: cp2102 é a mesma coisa que os conversores de serial-USB da FTDI?
+[2022-07-01 15:19:44] Anne Isabelle: Isso
+[2022-07-01 15:19:48] Felipe "Juca" Sanches: perfeito!
+[2022-07-01 15:19:51] Anne Isabelle: Usb to ttl
+[2022-07-01 15:20:08] Felipe "Juca" Sanches: eu tenho um PSX aqui. Se pá posso fazer isso aí também por aqui só de farra kkkk
+[2022-07-01 15:20:14] Felipe "Juca" Sanches: preciso ver se acho o PSX aqui primeiro
+[2022-07-01 15:20:17] Anne Isabelle: Hahaha o difícil é achar o cabo
+[2022-07-01 15:20:21] Felipe "Juca" Sanches: ah
+[2022-07-01 15:20:23] Anne Isabelle: Comprei o último do mercadolivre hahaha
+[2022-07-01 15:20:26] Felipe "Juca" Sanches: como é isso?
+[2022-07-01 15:20:33] Felipe "Juca" Sanches: manda foto aí do cabo
+[2022-07-01 15:20:36] Anne Isabelle: Se o vendedor tiver mais eu aviso
+[2022-07-01 15:20:45] Anne Isabelle: É um link cable, cheu pegar
+[2022-07-01 15:20:50] Felipe "Juca" Sanches: tem alguma página descrevendo o setup?
+[2022-07-01 15:21:19] Anne Isabelle: Siii, vou pegar
+[2022-07-01 15:21:30] Anne Isabelle: https://www.schnappy.xyz/?building_a_serial_psx_cable
+[2022-07-01 15:21:39] Felipe "Juca" Sanches: da hora
+[2022-07-01 15:22:28] Anne Isabelle: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22533.jpg
+[2022-07-01 15:23:48] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22534.jpg
+[2022-07-01 15:23:48] Felipe "Juca" Sanches: kkkk
+
+Amei esse setup!
+[2022-07-01 15:24:36] Anne Isabelle: Siiiiim hauahaua
+[2022-07-01 15:25:03] Anne Isabelle: Pena que tô sem gravador de dvd, ainda não consegui testar o meu
+[2022-07-01 15:26:05] Felipe "Juca" Sanches: E pra fazer o upload de um programa precisa colocar um CD no PSX?
+[2022-07-01 15:26:13] Anne Isabelle: Isso
+[2022-07-01 15:26:19] Felipe "Juca" Sanches: como funciona isso?
+[2022-07-01 15:26:59] Anne Isabelle: https://psx.arthus.net/starting.html
+
+Tem o unirom que você carrega no console e o nops que você usar no PC pra carregar e debugar
+[2022-07-01 15:27:11] Anne Isabelle: Eu procurei informação do unirom mas não entendi exatamente como funciona
+[2022-07-01 15:27:33] Anne Isabelle: Eles são baseados no psxserial, que era outro programinha pra carregar jogos no psx
+[2022-07-01 15:29:11] Anne Isabelle: Uma coisa que talvez eu esteja esquecendo é o action replay
+[2022-07-01 15:30:06] Anne Isabelle: Vou testar sem
+[2022-07-01 15:58:55] Augusto Almeida: A Action replay em cartucho (o psone não tem entrada pra isso) tem atrás dela uma porta paralela (ou serial) que dá pra fazer uma brincadeira ali, principalmente se estiver usando a UNIROM
+[2022-07-01 16:20:07] Anne Isabelle: Acho que é uma porta paralela, mas meu PS1 só tem a serial
+[2022-07-01 16:34:09] Augusto Almeida: Não, a porta fica no Action replay
+[2022-07-01 16:34:13] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22548.jpg
+[2022-07-01 16:35:07] Augusto Almeida: Mas lendo o site que passou, percebi que é mais vantajoso você soldar o FTDI direto na placa do PSX e disponibilizar uma saída USB na carcaça
+[2022-07-01 16:35:58] Augusto Almeida: Ou então o cabo USB pra ligar direto no computador
+[2022-07-01 16:36:21] Augusto Almeida: Isso irá evitar Osmar Contato
+[2022-07-01 16:43:24] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22552.jpg
+[2022-07-01 16:43:24] Augusto Almeida: Deixa o FTDI mais ou menos nessa região já soldado, e com a USB pro lado dos conectores, ou já o cabo USB já soldado no FTDI, ficaria mais pratico de usar o PSX pra rodar código, e evitaria mal contatos
+[2022-07-01 19:35:24] Anne Isabelle: Bom saber, pena que eu sou um cone com solda hahaha
+[2022-07-01 19:36:06] Felipe "Juca" Sanches: um cone ?!
+[2022-07-01 19:36:25] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22555-peekaboo-boo.mp4
+[2022-07-01 19:36:56] Felipe "Juca" Sanches: ah! Um cone!
+[2022-07-01 19:37:01] Felipe "Juca" Sanches: gif: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22557-cone-swimming.mp4
+[2022-07-01 19:37:12] Felipe "Juca" Sanches: kkkk
+[2022-07-01 19:42:39] Leonardo Roman: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22559.jpg
+[2022-07-01 19:44:33] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22560.jpg
+[2022-07-01 19:55:31] Anne Isabelle: KKKKKKK
+[2022-07-01 19:55:43] Anne Isabelle: KAJSKAJSKAJSKA
+[2022-07-01 19:56:41] Anne Isabelle: Assim, eu já soldei coisas e deu certo, mas foi na tomada do banheiro que era 220 e da forma mais perigosa possível
+[2022-07-01 19:57:52] Anne Isabelle: Mas deu bom e tenho orgulho kkkk
+[2022-07-01 19:57:52] Anne Isabelle: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22565.jpg
+[2022-07-01 20:24:40] Felipe "Juca" Sanches: E isso quer dizer que o emulador do Patinho Feio agora fica em src/mame/usp/patinho_feio.cpp 😃
+[2022-07-01 20:26:39] Augusto Almeida: Tá doido, vai que o cone seja esse
+[2022-07-01 20:26:44] Augusto Almeida: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22568.jpg
+[2022-07-01 20:27:51] Augusto Almeida: sticker: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2022/2022-07/22569-AnimatedSticker.tgs
+[2022-07-01 23:07:55] Augusto Almeida: Essa é pra quem tem GameCube
+[2022-07-01 23:08:01] Augusto Almeida: https://youtu.be/qwL4ZSa0xMo
+[2022-07-01 23:08:39] Augusto Almeida: Pelo que entendi essa iniciativa poderá ser adaptada para outros VGs
+[2022-07-01 23:53:09] Anne Isabelle: Sabe, ter videogames com modchip me faz ter felicidade de ter nascido no Brasil

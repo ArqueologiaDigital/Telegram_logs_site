@@ -1,0 +1,11 @@
+[2020-11-22 10:07:34] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-11/11644.jpg
+[2020-11-22 10:07:34] Felipe "Juca" Sanches: E o esforço diário de levantamento empírico dos esquemáticos do I7000 continua... Em ritmo acelerado no final de semana! 😃
+[2020-11-22 14:38:32] L.: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-11/11645-Screenshot%20from%202020-11-22%2009-36-23.png
+[2020-11-22 14:38:57] L.: Emulador de Chip-8 tá funcionando com a ROM de teste já. Vou usar isso aí de benchmark pra aprender Rust. :D
+[2020-11-22 14:39:05] Felipe "Juca" Sanches: ;-D
+[2020-11-22 15:08:06] L.: document: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2020/2020-11/11648-Screenshot%20from%202020-11-22%2009-54-25.png
+[2020-11-22 15:08:16] L.: Esse aí é o opcode de desenhar na tela :D
+[2020-11-22 16:11:58] Ismael Luceno: Leandro já pensou em fazer um compilador do chip8 para libgcc/llvm?
+[2020-11-22 16:12:12] L.: Não
+[2020-11-22 16:12:32] L.: Talvez faça algo com Rust e wasm
+[2020-11-22 16:12:44] L.: Vamos ver o quanto consigo me entusiasmar com isso

@@ -1,0 +1,10 @@
+[2024-01-29 03:31:28] Felipe "Juca" Sanches: Acabei de comprar uma mainboard de kn5000 com o firmware versão 2 e mandei entregar na casa de um amigo meu (pois o vendedor não envia pro Brasil)
+[2024-01-29 03:31:41] Felipe "Juca" Sanches: Com isso, só vai faltar a versão 1, que nunca vi em lugar nenhum
+[2024-01-29 03:32:36] Felipe "Juca" Sanches: o legal dessa placa é que ela tem um layout diferente. Não é só o conteúdo das ROMs que muda. E com isso talvez eu consiga mais insights sobre os chips custom
+[2024-01-29 03:34:21] Felipe "Juca" Sanches: por exemplo, o service manual refere-se a 2 chips como "DSP" mas com um código numérico que não bate com nenhum datasheet público (pelo menos até agora não achei nenhum). Mas na placa mais antiga, tem um DSP da Analog Devices, modelo ADSP-21065L
+
+https://www.analog.com/en/products/adsp-21065l.html#product-overview
+[2024-01-29 03:38:43] Felipe "Juca" Sanches: E o MAME emula (não sei quão bem) algumas variantes dessa família:
+[2024-01-29 03:38:52] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2024/2024-01/29133.jpg
+[2024-01-29 05:06:28] Felipe "Juca" Sanches: Suspeito que eu tenha comprado uma placa de Kn6500 achando que era de Kn5000. Talvez o vendedor tenha anunciado errado.
+[2024-01-29 05:07:12] Felipe "Juca" Sanches: Isso justificaria a diferença significativa no layout da placa
