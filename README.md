@@ -78,12 +78,13 @@ Needs `pip install -r requirements.txt` in `../.venv` (pagefind, which ships the
 
 ### Tests and probes
 
-| script                       | question it answers                                                                    | run                                                                                                       |
-|------------------------------|----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| `tests/compare_old_pages.py` | do the 2018 pages' messages all appear, in order, on the same-numbered new pages?      | `python3 -I tests/compare_old_pages.py ../Telegram_logs-2018-private/formatted/html build/formatted/html` |
-| `tests/search_churn.py`      | how many index files does a rebuild change when N messages arrive?                     | `../.venv/bin/python -I tests/search_churn.py SCRATCH_DIR 20`                                             |
-| `tests/cdp_eval.mjs`         | what does a page show once its scripts ran? (headless Chromium, polls a JS expression) | serve the build (`python3 -m http.server 8765` in `build/`), then the command below                       |
-| `tests/cdp_shot.mjs`         | what does a page look like? (headless Chromium screenshot, lazy images loaded)         | `node --experimental-websocket tests/cdp_shot.mjs URL out.png 800 1100 4000`                              |
+| script                         | question it answers                                                                        | run                                                                                                       |
+|--------------------------------|--------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| `tests/compare_old_pages.py`   | do the 2018 pages' messages all appear, in order, on the same-numbered new pages?          | `python3 -I tests/compare_old_pages.py ../Telegram_logs-2018-private/formatted/html build/formatted/html` |
+| `tests/search_churn.py`        | how many index files does a rebuild change when N messages arrive?                         | `../.venv/bin/python -I tests/search_churn.py SCRATCH_DIR 20`                                             |
+| `tests/cdp_eval.mjs`           | what does a page show once its scripts ran? (headless Chromium, polls a JS expression)     | serve the build (`python3 -m http.server 8765` in `build/`), then the command below                       |
+| `tests/cdp_shot.mjs`           | what does a page look like? (headless Chromium screenshot, lazy images loaded)             | `node --experimental-websocket tests/cdp_shot.mjs URL out.png 800 1100 4000`                              |
+| `tests/pagefind_meta_probe.py` | which parts of a page does Pagefind make searchable? (meta: yes; filters, path, title: no) | `../.venv/bin/python -I tests/pagefind_meta_probe.py`                                                     |
 
 ```
 node --experimental-websocket tests/cdp_eval.mjs \
