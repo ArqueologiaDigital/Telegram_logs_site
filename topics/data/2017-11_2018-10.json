@@ -1,7 +1,9 @@
 {
  "meta": {
+  "year": 1,
+  "from": "2017-11",
+  "to": "2018-10",
   "period": "2017-11-06..2018-10-31",
-  "period_label": "Primeiro ano do grupo: novembro de 2017 a outubro de 2018",
   "messages": 7808,
   "made": "2026-11-09",
   "model": "claude-opus-5-5 (workflow agents, inherited from the session)",

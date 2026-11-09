@@ -31,3 +31,8 @@ details.conv .weight { color: #d0a000; font-size: .8em; }
 .profile table.years td:nth-child(2) { width: 60%; }
 .profile .bar { display: inline-block; height: .8em; background: hsl(var(--h) 50% 60%); border-radius: 2px; }
 .profile .toc { columns: 1; }
+.years-nav { font-size: .9em; color: #666; margin: 0 0 .6em; }
+.topics .year { margin: 1.2em 0; }
+.topics .year h2 { border-bottom: none; margin-bottom: .2em; }
+details.profile-year { margin: .5em 0; }
+details.profile-year > summary { cursor: pointer; }
