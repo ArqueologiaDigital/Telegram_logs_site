@@ -1,0 +1,58 @@
+# Telegram_logs_site: views of the @arqueologiadigital archive
+
+Layer 4 of the archive of the Telegram group [@arqueologiadigital](https://t.me/arqueologiadigital).
+`build.py` turns the raw data in [`Telegram_logs`](https://github.com/ArqueologiaDigital/Telegram_logs)
+and [`Telegram_logs_media`](https://github.com/ArqueologiaDigital/Telegram_logs_media) into static
+HTML. It only reads those repos; everything here can be regenerated, and `build/` is not committed.
+
+## Drop-in replacement for the 2018 pages
+
+The 2018 pages (`telegram-history-dump`) lived at
+`arqueologiadigital.org/Telegram_logs/formatted/html/<LEGACY_NAME>-N.html`. The build keeps:
+
+| what       | kept as                                                                                                                              |
+|------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| file names | `formatted/html/index.html`, `formatted/html/<LEGACY_NAME>-N.html`, `formatted/plaintext/<LEGACY_NAME>/<LEGACY_NAME>_YYYY-MM-DD.log` |
+| pagination | 1000 archived messages per page, oldest first, so page N covers the same messages as in 2018                                         |
+| look       | the original `telegram-history-dump.css`, plus a few additions at its end                                                            |
+| timestamps | local time (America/Sao_Paulo) in each bubble's `title`, a date row every 10 messages                                                |
+
+`tests/compare_old_pages.py` checks the first point against the 2018 HTML: every message bubble
+of old pages 0..4 appears, in order, on the new page with the same number (on 2026-11-09: 5 of 5
+pages pass; page 4, partial in 2018, is now full).
+
+New compared with 2018: formatting (bold, code, quotes, spoilers), replies linking to the replied
+message, a `#m<id>` anchor on every message, forwarded-from names, video/audio players, document
+links with sizes, polls, service events as centered rows, an index table of pages and dates, and
+sender names in the plaintext logs. Users whose Telegram account was deleted are shown with their
+last known name.
+
+## Building
+
+```
+python3 -I build.py --out build                 # local preview; media linked from ../Telegram_logs_media
+python3 -I build.py --out build --media-base https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/
+python3 -I tests/compare_old_pages.py ../Telegram_logs-2018-private/formatted/html build/formatted/html
+```
+
+Preview with a local web server from the directory that holds all repos (browsers block media
+from `file://` pages): `python3 -m http.server 8765` there, then open
+<http://127.0.0.1:8765/Telegram_logs_site/build/formatted/html/index.html>.
+
+| option         | values                                  | meaning                                                                                                                                     |
+|----------------|-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| `--deleted`    | `placeholder` (default), `show`, `omit` | deleted messages: "[message deleted on … by …]", full content with a note, or nothing. Pagination always counts them, so pages never shift. |
+| `--phones`     | `review` (default), `mask`, `show`      | phone numbers typed into messages; see below                                                                                                |
+| `--media-base` | URL                                     | prefix for media links (default: relative path to the local media repo)                                                                     |
+
+Media over 10 MB link to archive.org once uploaded (`ia_url` in the manifest); until then the
+page says "large file, not yet published".
+
+## Phone numbers in message text
+
+Telegram tags things that look like phone numbers (`MessageEntityPhone`), but most tags in this
+group are year ranges ("1980/1990"), prices or file names. `phone_review.json` records a human
+verdict per message id: `show` (not a phone number) or `mask` (hidden on the site as
+"[phone number]"). The build masks any tag that is not in the file yet and prints a warning
+listing those message ids: add them to the file after looking at them. On 2026-11-09: 10 tags,
+1 real number (masked), 9 false positives.

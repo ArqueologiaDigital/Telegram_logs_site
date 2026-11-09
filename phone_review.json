@@ -1,0 +1,13 @@
+{
+  "_doc": "Telegram's MessageEntityPhone tags, reviewed by hand. 'show': not a phone number (year range, price, file name...). 'mask': a real phone number, hidden on the site. Unreviewed tags are masked and listed by build.py. Reviewed 2026-11-09.",
+  "1133":  "show",
+  "10175": "show",
+  "11590": "mask",
+  "16340": "show",
+  "16365": "show",
+  "20240": "show",
+  "24772": "show",
+  "27120": "show",
+  "35579": "show",
+  "41566": "show"
+}
