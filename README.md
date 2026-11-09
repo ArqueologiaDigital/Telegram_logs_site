@@ -27,6 +27,18 @@ links with sizes, polls, service events as centered rows, an index table of page
 sender names in the plaintext logs. Users whose Telegram account was deleted are shown with their
 last known name.
 
+## Publishing
+
+`./publish.sh` rebuilds into the `gh-pages` branch (a worktree at `../Telegram_logs_site-gh-pages`)
+with media linked from `raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/`,
+runs the 2018 compatibility test, and commits if the output changed. It never pushes; the daily
+job in `Telegram_logs` calls it. GitHub Pages serves `gh-pages` at
+<https://arqueologiadigital.org/Telegram_logs_site/>.
+
+The 2018 URLs under `/Telegram_logs/formatted/html/` are **not** redirected: the site moved to
+`/Telegram_logs_site/formatted/html/` with the same file names, so an old link works after
+replacing `Telegram_logs` with `Telegram_logs_site` in it.
+
 ## Building
 
 ```
