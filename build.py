@@ -457,7 +457,7 @@ def head(title):
 
 
 # The same header on every page of the site (chat pages, index, topics, projects, community).
-SITE_HEADER = ("\t<header class=\"site\"><a class=\"brand\" href=\"topicos.html\">Arqueologia Digital</a><nav><a href=\"topicos.html\">Tópicos</a><a href=\"projetos.html\">Projetos</a><a href=\"comunidade.html\">Comunidade</a><a href=\"index.html\">Log do chat</a><a href=\"search.html\">Busca</a><a href=\"http://arqueologiadigital.org/galeria.html\">Galeria</a></nav></header>\n")
+SITE_HEADER = ("\t<header class=\"site\"><a class=\"brand\" href=\"topicos.html\">Arqueologia Digital</a><nav><a href=\"topicos.html\">Tópicos</a><a href=\"projetos.html\">Projetos</a><a href=\"comunidade.html\">Comunidade</a><a href=\"index.html\">Log do chat</a><a href=\"search.html\">Busca</a><a href=\"https://arqueologiadigital.org/galeria.html\">Galeria</a></nav></header>\n")
 
 
 def write(path, text):

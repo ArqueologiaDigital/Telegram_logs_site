@@ -317,7 +317,7 @@ def front_page(years, X, L):
              "<p class='group-links'>O grupo: <a href='https://t.me/arqueologiadigital'>Telegram</a> · "
              "<a href='projetos.html'>Projetos no GitHub</a> · "
              "<a href='https://forum.fiozera.com.br/'>Fórum Fiozera</a> · "
-             "<a href='http://arqueologiadigital.org/galeria.html'>Galeria de fotos</a> · "
+             "<a href='https://arqueologiadigital.org/galeria.html'>Galeria de fotos</a> · "
              "<a href='comunidade.html'>Comunidade</a></p>\n",
              year_nav(years, None)]
     if X.topics:

@@ -173,7 +173,7 @@
      "name": "technics-docs",
      "title": "Site de documentação dos teclados Technics",
      "about": "Como funciona o hardware dos teclados e sintetizadores Technics, sua emulação no MAME e o desenvolvimento de homebrew.",
-     "site": "http://arqueologiadigital.org/technics-docs/"
+     "site": "https://arqueologiadigital.org/technics-docs/"
     },
     {
      "name": "technics-roms-disasm",
@@ -212,7 +212,7 @@
      "name": "another-world-archaeology",
      "title": "Another World: arqueologia",
      "about": "Cataloga cada lançamento e port do jogo, extrai seus dados e compara as versões para reconstruir a genealogia do código.",
-     "site": "http://arqueologiadigital.org/another-world-archaeology/"
+     "site": "https://arqueologiadigital.org/another-world-archaeology/"
     },
     {
      "name": "another-world-source-reconstruction",
