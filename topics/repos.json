@@ -1,0 +1,375 @@
+{
+ "note": "Catalogue of the organisation's public repositories for projetos.html and the topic pages. Written on 2026-11-10 from each repo's description, README and file listing. topics/repos_check.py lists repos that are missing here.",
+ "org": "ArqueologiaDigital",
+ "groups": [
+  {
+   "slug": "patinho-feio",
+   "title": "Patinho Feio",
+   "intro": "O computador construído na Escola Politécnica da USP em 1971 e inaugurado em 1972: documentação, esquemáticos redesenhados, réplicas do painel, emuladores e leitura de fitas perfuradas.",
+   "topics": [
+    "patinho-feio"
+   ],
+   "repos": [
+    {
+     "name": "PatinhoFeio",
+     "title": "Documentação técnica do Patinho Feio",
+     "about": "O ponto de partida: reúne e descreve os documentos históricos do projeto (dissertações, relatórios, manuais, fitas), com links para as digitalizações."
+    },
+    {
+     "name": "PatinhoFeio_KICAD",
+     "title": "Esquemáticos da CPU no KiCad",
+     "about": "Os circuitos da CPU do Patinho Feio redesenhados no KiCad, placa por placa, para fabricar réplicas."
+    },
+    {
+     "name": "PatinhoFeio_Painel_KICAD",
+     "title": "PCBs da réplica do painel",
+     "about": "Projeto no KiCad das placas da réplica do painel frontal, com Raspberry Pi Pico."
+    },
+    {
+     "name": "Patinho_Feio_Painel_RPi_Pico",
+     "title": "Firmware do painel (Raspberry Pi Pico)",
+     "about": "Código em Python para o Raspberry Pi Pico do painel-réplica, incluindo o acionamento dos LEDs (MAX7219)."
+    },
+    {
+     "name": "PatinhoFeio_Arduino",
+     "title": "Emulador em Arduino",
+     "about": "Código de Arduino que emula o Patinho Feio e faz a interface com uma réplica do painel frontal."
+    },
+    {
+     "name": "Patinho-Feio-Emulator",
+     "title": "Emulador em C (SDL e Dear ImGui)",
+     "about": "Emulador do Patinho Feio para PC, com interface gráfica."
+    },
+    {
+     "name": "PunchedTapeScanner",
+     "title": "Leitor de fitas perfuradas por imagem",
+     "about": "Programa com OpenCV que extrai os dados de uma fita perfurada de 8 canais a partir da imagem de um scanner.",
+     "topics": [
+      "patinho-feio",
+      "midias-e-recuperacao"
+     ]
+    },
+    {
+     "name": "Facit4021",
+     "title": "Leitora de fita Facit 4021",
+     "about": "Código de Arduino para ler fitas de papel com a leitora Facit 4021."
+    },
+    {
+     "name": "Montador_do_Patinho_Feio__Julho1977",
+     "title": "Montador do Patinho Feio (julho de 1977)",
+     "about": "Digitalização do documento do montador (assembler) do Patinho Feio."
+    },
+    {
+     "name": "Anexos_Cross-Montador_MariaAliceFerreira_1973",
+     "title": "Cross-montador de 1973",
+     "about": "Código-fonte e documentação do cross-assembler do Patinho Feio que rodava num IBM 1130, de Maria Alice Grigas Varella Ferreira."
+    }
+   ]
+  },
+  {
+   "slug": "teses-poli-usp",
+   "title": "Teses e dissertações da Poli/USP (anos 1970)",
+   "intro": "Digitalizações dos trabalhos acadêmicos em torno do Patinho Feio e dos minicomputadores projetados na Escola Politécnica da USP. Cada repositório guarda as imagens originais do escaneamento.",
+   "topics": [
+    "patinho-feio",
+    "acervo-poli-usp"
+   ],
+   "repos": [
+    {
+     "name": "Projeto_Logico_da_Unidade_de_Controle_de_um_Minicomputador__EFregni_1972",
+     "title": "Projeto Lógico da Unidade de Controle de um Minicomputador",
+     "about": "Dissertação de mestrado de Edson Fregni (1972)."
+    },
+    {
+     "name": "Fonte_de_Alimentacao_Chaveada_para_um_Minicomputador__MPessoa_1972",
+     "title": "Fonte de Alimentação Chaveada para um Minicomputador",
+     "about": "Tese de mestrado de Marcelo Schneck de Paula Pessôa (1972)."
+    },
+    {
+     "name": "Sistema_de_Programacao_Cross-Montador_para_um_Minicomputador__MariaAliceFerreira__1974",
+     "title": "Sistema de Programação “Cross-Montador” para um Minicomputador",
+     "about": "Tese de mestrado de Maria Alice Grigas Varella Ferreira (1974)."
+    },
+    {
+     "name": "Automacao_de_Projetos_de_Sistemas_Digitais__Simulacao_em_Nivel_de_Portas_Logicas__Massola_1974",
+     "title": "Automação de Projetos de Sistemas Digitais: Simulação em Nível de Portas Lógicas",
+     "about": "Tese de doutorado de Antonio Marcos de Aguirra Massola (1974)."
+    },
+    {
+     "name": "Aspectos_do_Projeto_de_Software_de_um_Minicomputador__JJNeto_1975",
+     "title": "Aspectos do Projeto de Software de um Minicomputador",
+     "about": "Tese de João José Neto (1975)."
+    },
+    {
+     "name": "Projeto_de_um_Processador_Central_Microprogramado__WRuggiero_1975",
+     "title": "Projeto de um Processador Central Microprogramado",
+     "about": "Dissertação de mestrado de Wilson Ruggiero (1975)."
+    },
+    {
+     "name": "Procedimentos_Microprogramados_num_Minicomputador__EGrassiani_1975",
+     "title": "Procedimentos Microprogramados num Minicomputador",
+     "about": "Dissertação de mestrado de Edit Grassiani (1975)."
+    },
+    {
+     "name": "Software_de_um_Minicomputador__Sistema_Basico_de_Controle__BenicioJSouza_1976",
+     "title": "Software de um Minicomputador: Sistema Básico de Controle",
+     "about": "Dissertação de mestrado de Benício José de Souza (1976)."
+    },
+    {
+     "name": "Automacao_de_Projetos_de_Sistemas_Digitais__Posicionamento_de_Componentes__Selma_Shimizu_1977",
+     "title": "Automação de Projetos de Sistemas Digitais: Posicionamento de Componentes",
+     "about": "Dissertação de mestrado de Selma Shin Shimizu Melnikoff (1977)."
+    }
+   ]
+  },
+  {
+   "slug": "sintetizador-guido-stolfi",
+   "title": "Sintetizador de Guido Stolfi",
+   "intro": "O sintetizador musical criado nos anos 1970 na Poli/USP pelo professor Guido Stolfi, que tocava partituras lidas pelo Patinho Feio.",
+   "topics": [
+    "sintetizador-guido-stolfi"
+   ],
+   "repos": [
+    {
+     "name": "SintetizadorGuidoStolfi",
+     "title": "Documentação técnica do sintetizador",
+     "about": "Documentação do sintetizador, com as digitalizações do material original."
+    },
+    {
+     "name": "Manual_do_Sintetizador__Guido_Stolfi",
+     "title": "Caderno “Manual do Sintetizador”",
+     "about": "Digitalização do caderno do professor Guido Stolfi (também identificado como “Anexo 6.11”)."
+    },
+    {
+     "name": "Software_para_o_Sintetizador__Guido_Stolfi",
+     "title": "Caderno “Software para o Sintetizador”",
+     "about": "Digitalização do caderno do professor Guido Stolfi (também identificado como “Anexo 6.12”)."
+    },
+    {
+     "name": "Manuscrito_Programa_de_Codificacao_de_uma_Partitura",
+     "title": "Manuscrito “Programa de Codificação de uma Partitura”",
+     "about": "Digitalização do manuscrito, supostamente de Guido Stolfi e/ou João José Neto, por volta de 1975."
+    }
+   ]
+  },
+  {
+   "slug": "technics",
+   "title": "Teclados Technics (KN5000 e outros)",
+   "intro": "Engenharia reversa dos teclados e sintetizadores Technics: documentação do hardware, disassembly das ROMs, emulação no MAME e desenvolvimento de software novo para o KN5000.",
+   "topics": [
+    "technics-teclados"
+   ],
+   "repos": [
+    {
+     "name": "technics-docs",
+     "title": "Site de documentação dos teclados Technics",
+     "about": "Como funciona o hardware dos teclados e sintetizadores Technics, sua emulação no MAME e o desenvolvimento de homebrew.",
+     "site": "http://arqueologiadigital.org/technics-docs/"
+    },
+    {
+     "name": "technics-roms-disasm",
+     "title": "Disassembly das ROMs",
+     "about": "Disassembly comentado das ROMs dos teclados Technics, remontável para binários idênticos aos originais."
+    },
+    {
+     "name": "KN5000",
+     "title": "Technics KN5000: ponto central do projeto",
+     "about": "Reúne os subprojetos de engenharia reversa e de homebrew para o teclado arranjador Technics KN5000."
+    },
+    {
+     "name": "MAME_Technics_Research",
+     "title": "Pesquisa para o MAME",
+     "about": "Trabalho em andamento sobre a emulação dos teclados Technics no MAME, organizado como uma camada sobre o código-fonte do MAME."
+    },
+    {
+     "name": "external_artwork_for_emulators",
+     "title": "Painéis vetoriais para emuladores",
+     "about": "Desenhos vetoriais (Inkscape) e arquivos de layout do MAME para teclados e sintetizadores, em domínio público (CC0)."
+    }
+   ]
+  },
+  {
+   "slug": "another-world",
+   "title": "Another World",
+   "intro": "Pesquisa sobre a história do desenvolvimento do jogo Another World, de Eric Chahi, em todas as suas versões.",
+   "topics": [
+    "another-world"
+   ],
+   "repos": [
+    {
+     "name": "another-world-archaeology",
+     "title": "Another World: arqueologia",
+     "about": "Cataloga cada lançamento e port do jogo, extrai seus dados e compara as versões para reconstruir a genealogia do código.",
+     "site": "http://arqueologiadigital.org/another-world-archaeology/"
+    },
+    {
+     "name": "another-world-source-reconstruction",
+     "title": "Another World: reconstrução do código-fonte",
+     "about": "Código-fonte reconstruído que gera binários idênticos, byte a byte, aos de cada versão catalogada."
+    }
+   ]
+  },
+  {
+   "slug": "jogos-e-programacao",
+   "title": "Jogos e programação para máquinas antigas",
+   "intro": "Jogos escritos pelo grupo para computadores e consoles antigos, e estudos de videogames feitos só com lógica digital.",
+   "topics": [
+    "mines",
+    "programacao-retro",
+    "arcades-e-pinball"
+   ],
+   "repos": [
+    {
+     "name": "Mines",
+     "title": "Mines: campo minado para muitas plataformas",
+     "about": "Campo minado escrito em conjunto pelo grupo, com ports para MSX2, MS-DOS, terminal, OpenGL, a placa de arcade do GunSmoke, PlayStation e outros. Aceita novos ports.",
+     "topics": [
+      "mines"
+     ]
+    },
+    {
+     "name": "wumpusvga",
+     "title": "Hunt the Wumpus para VGA",
+     "about": "Versão do clássico Hunt the Wumpus para PCs com VGA e DOS, escrita em 2018.",
+     "topics": [
+      "programacao-retro"
+     ]
+    },
+    {
+     "name": "GranTrak10",
+     "title": "Atari Gran Trak 10",
+     "about": "Transcrição dos esquemáticos do arcade Gran Trak 10 (1974), para estudar eletrônica digital e técnicas de projeto de placas de arcade.",
+     "topics": [
+      "arcades-e-pinball"
+     ]
+    },
+    {
+     "name": "How_to_Design_and_Build_Your_Own_Custom_TV_Games",
+     "title": "Livro “How to Design and Build Your Own Custom TV Games”",
+     "about": "Digitalização do livro de David L. Heiserman (1978): imagens originais, PDF e OCR.",
+     "topics": [
+      "arcades-e-pinball"
+     ]
+    },
+    {
+     "name": "Custom_TV_Games",
+     "title": "Grupo de estudos do livro Custom TV Games",
+     "about": "Material do grupo de estudos sobre o livro, com os circuitos redesenhados no KiCad para fabricação de placas.",
+     "topics": [
+      "arcades-e-pinball"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "computadores-nacionais",
+   "title": "Computadores e publicações brasileiras",
+   "intro": "Documentos, esquemáticos e emuladores de equipamentos fabricados no Brasil.",
+   "topics": [
+    "scopus-nexus",
+    "computadores-nacionais",
+    "memoria-informatica-brasileira"
+   ],
+   "repos": [
+    {
+     "name": "Documentos_Scopus",
+     "title": "Documentos da Scopus",
+     "about": "Digitalização de documentos sobre a empresa Scopus e seus equipamentos.",
+     "topics": [
+      "scopus-nexus"
+     ]
+    },
+    {
+     "name": "Scopus_30_anos",
+     "title": "Livreto “Scopus 30 anos”",
+     "about": "Digitalização do livreto comemorativo de 2005.",
+     "topics": [
+      "scopus-nexus"
+     ]
+    },
+    {
+     "name": "TK3000",
+     "title": "Esquemático do TK3000",
+     "about": "Esquemático do computador TK3000, da Microdigital, redesenhado no KiCad a partir do original.",
+     "topics": [
+      "computadores-nacionais",
+      "acervo-poli-usp"
+     ]
+    },
+    {
+     "name": "tk3000e",
+     "title": "Emulador do TK3000 //e",
+     "about": "Emulador do TK3000 //e, clone brasileiro do Apple II fabricado pela Microdigital em 1986.",
+     "topics": [
+      "computadores-nacionais",
+      "acervo-poli-usp"
+     ]
+    },
+    {
+     "name": "Saber_Eletronica",
+     "title": "Revistas Saber Eletrônica",
+     "about": "Digitalizações de edições da revista Saber Eletrônica.",
+     "topics": [
+      "memoria-informatica-brasileira"
+     ]
+    }
+   ]
+  },
+  {
+   "slug": "o-grupo",
+   "title": "O grupo e este site",
+   "intro": "O arquivo do grupo no Telegram e os programas que geram este site. Tudo pode ser reconstruído a partir destes repositórios.",
+   "topics": [
+    "organizacao-do-grupo"
+   ],
+   "repos": [
+    {
+     "name": "Telegram_logs",
+     "title": "Arquivo do grupo: mensagens",
+     "about": "As mensagens do grupo desde 2017, em formato aberto, e as ferramentas que as sincronizam todos os dias."
+    },
+    {
+     "name": "Telegram_logs_media",
+     "title": "Arquivo do grupo: fotos e arquivos",
+     "about": "Fotos, documentos e outros arquivos enviados no grupo."
+    },
+    {
+     "name": "Telegram_logs_site",
+     "title": "Gerador deste site",
+     "about": "Gera as páginas do log, a busca, o índice de tópicos e a galeria da comunidade."
+    },
+    {
+     "name": "ArqueologiaDigital.github.io",
+     "title": "Site arqueologiadigital.org",
+     "about": "A página de entrada do site, a galeria de fotos e os endereços curtos."
+    },
+    {
+     "name": "EmuHC",
+     "title": "Emulação e História da Computação",
+     "about": "Planejamento das atividades do grupo junto ao acervo da Mostra de Tecnologia da Informação, no prédio do LASSU, PCS/EPUSP."
+    }
+   ]
+  },
+  {
+   "slug": "outros",
+   "title": "Outros",
+   "intro": "",
+   "topics": [],
+   "repos": [
+    {
+     "name": "sscontroller",
+     "title": "Controle de Sega Saturn",
+     "about": "Arquivos de um projeto de controle para o Sega Saturn."
+    },
+    {
+     "name": "mame",
+     "title": "MAME (fork do grupo)",
+     "about": "Cópia do MAME usada em 2018 para desenvolver o driver do Patinho Feio.",
+     "topics": [
+      "patinho-feio"
+     ]
+    }
+   ]
+  }
+ ]
+}

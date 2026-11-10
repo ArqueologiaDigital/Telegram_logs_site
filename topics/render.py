@@ -11,6 +11,8 @@ Writes into <out>/formatted/html/, next to the chat pages it links to:
   topico-<slug>.html              one cross-year topic (topics/crossyear.json): a summary of all the
                                   work on it across the years, then year by year its subtopics and
                                   conversations
+  projetos.html                   the organisation's GitHub repositories (topics/repos.json), grouped by
+                                  subject; topic pages also list the repositories related to them
   comunidade.html                 community gallery: a card per member in topics/profiles_optin.json
                                   (photo, name, role, active years, message count, links to the
                                   profile and to a search of their messages)
@@ -170,7 +172,7 @@ def head(title):
 
 def nav():
     return ("\t<div class='navigation-top'><a href=\"topicos.html\">Tópicos</a> | "
-            "<a href=\"comunidade.html\">Comunidade</a> | "
+            "<a href=\"projetos.html\">Projetos</a> | <a href=\"comunidade.html\">Comunidade</a> | "
             "<a href=\"index.html\">Páginas do log</a> | <a href=\"search.html\">Busca</a> |</div>\n")
 
 
@@ -225,7 +227,7 @@ def theme_page(L, y, years, t, profiles, X):
     return "".join(parts)
 
 
-def topic_page(L, years, X, tp, profiles):
+def topic_page(L, years, X, tp, profiles, R):
     span = f"{tp['years'][0]}" if len(tp["years"]) == 1 else f"{tp['years'][0]} a {tp['years'][-1]}"
     notes = {n["year"]: n["note"] for n in tp.get("year_notes", [])}
     parts = [head(f"{tp['title']}: tópicos do grupo Arqueologia Digital"), nav(),
@@ -240,6 +242,7 @@ def topic_page(L, years, X, tp, profiles):
         parts.append(f"<figure class='topic-image'><a href='{q(img[0])}'><img src='{q(img[0])}' alt=''></a>"
                      f"<figcaption>{L.msg(img[1], cap)}</figcaption></figure>")
     parts += [f"<p class='lead'>{esc(par)}</p>" for par in tp.get("summary", "").split("\n\n") if par.strip()]
+    parts.append(R.box(tp["slug"]))
     parts.append("<p class='years-nav'>Ano a ano: " + " · ".join(
         f"<a href='#ano-{n}'>Ano {n}</a>" for n in tp["years"]) + "</p>\n")
     by_year = {}
@@ -309,7 +312,7 @@ def front_page(years, X, L):
              "Cada assunto e cada ano têm um resumo; abaixo deles estão as conversas, e cada conversa leva às "
              "mensagens originais.</p>\n",
              "<p class='group-links'>O grupo: <a href='https://t.me/arqueologiadigital'>Telegram</a> · "
-             "<a href='https://github.com/ArqueologiaDigital/'>GitHub</a> · "
+             "<a href='projetos.html'>Projetos no GitHub</a> · "
              "<a href='https://forum.fiozera.com.br/'>Fórum Fiozera</a> · "
              "<a href='http://arqueologiadigital.org/galeria.html'>Galeria de fotos</a> · "
              "<a href='comunidade.html'>Comunidade</a></p>\n",
@@ -334,6 +337,65 @@ def front_page(years, X, L):
                      f"<p>{esc(y.tax['intro'])}</p><p class='subs'>Temas: {top}"
                      f"{' …' if len(y.tax['themes']) > 5 else ''}</p></div>\n")
     parts.append(method_note())
+    parts.append("</div>\n  </body>\n</html>\n")
+    return "".join(parts)
+
+
+class Repos:
+    """The organisation's repositories: topics/repos.json, written by hand."""
+
+    def __init__(self, path, X, problems):
+        self.groups, self.org = [], ""
+        if os.path.exists(path):
+            with open(path, encoding="utf-8") as f:
+                doc = json.load(f)
+            self.groups, self.org = doc["groups"], doc["org"]
+        slugs = {tp["slug"] for tp in X.topics}
+        self.by_topic = {}
+        for g in self.groups:
+            for r in g["repos"]:
+                for t in r.get("topics", g["topics"]):
+                    if X.topics and t not in slugs:
+                        problems.append(f"repos.json: {r['name']} names unknown topic {t}")
+                    self.by_topic.setdefault(t, []).append(r)
+
+    def url(self, r):
+        return f"https://github.com/{self.org}/{r['name']}"
+
+    def item(self, r):
+        site = f" · <a href='{q(r['site'])}'>site</a>" if r.get("site") else ""
+        return (f"<li><a href='{q(self.url(r))}'>{esc(r['title'])}</a>{site}<br>"
+                f"<span class='scope'>{esc(r['about'])}</span></li>")
+
+    def box(self, slug):
+        """Repositories related to a topic, for its page."""
+        rs = self.by_topic.get(slug)
+        if not rs:
+            return ""
+        return ("<aside class='repos-box'><h2>Repositórios do grupo sobre este assunto</h2><ul class='repos'>"
+                + "".join(self.item(r) for r in rs)
+                + "</ul><p class='meta'><a href='projetos.html'>Todos os projetos ›</a></p></aside>\n")
+
+
+def projects_page(R, X):
+    n = sum(len(g["repos"]) for g in R.groups)
+    titles = {tp["slug"]: tp for tp in X.topics}
+    parts = [head("Projetos: Arqueologia Digital"), nav(),
+             "\t<div class='topics'><h1>Projetos do grupo</h1>"
+             f"<p class='period'>{n} repositórios públicos em "
+             f"<a href='https://github.com/{R.org}'>github.com/{R.org}</a></p>"
+             "<p class='lead'>O que o grupo produz fica em repositórios abertos: documentos históricos digitalizados, "
+             "esquemáticos redesenhados, emuladores, engenharia reversa e jogos. Use, estude e contribua.</p>\n"
+             "<ul class='toc'>" + "".join(f"<li><a href='#{q(g['slug'])}'>{esc(g['title'])}</a> "
+                                          f"<span class='n'>{len(g['repos'])}</span></li>" for g in R.groups) + "</ul>\n"]
+    for g in R.groups:
+        rel = " · ".join(f"<a href='{X.page(titles[t])}'>{esc(titles[t]['title'])}</a>" for t in g["topics"] if t in titles)
+        parts.append(f"<section id='{q(g['slug'])}'><h2>{esc(g['title'])}</h2>"
+                     + (f"<p>{esc(g['intro'])}</p>" if g["intro"] else "")
+                     + (f"<p class='meta'>Conversas do grupo sobre isto: {rel}</p>" if rel else "")
+                     + "<ul class='repos'>" + "".join(R.item(r) for r in g["repos"]) + "</ul></section>\n")
+    parts.append("<p class='method'>Quer ajudar? Cada repositório aceita issues e pull requests no GitHub, "
+                 "e as conversas acontecem no <a href='https://t.me/arqueologiadigital'>grupo do Telegram</a>.</p>")
     parts.append("</div>\n  </body>\n</html>\n")
     return "".join(parts)
 
@@ -453,13 +515,15 @@ def main():
         optin = {int(k): v for k, v in json.load(f).items()}
     profiles = {d.name(uid): member_page(uid, info) for uid, info in optin.items()}
     X = Cross(os.path.join(HERE, "crossyear.json"), years, problems)
+    R = Repos(os.path.join(HERE, "repos.json"), X, problems)
+    B.write(os.path.join(hdir, "projetos.html"), projects_page(R, X))
     B.write(os.path.join(hdir, "topicos.html"), front_page(years, X, L))
     for y in years:
         B.write(os.path.join(hdir, y.page()), year_page(L, y, years, X))
         for t in y.tax["themes"]:
             B.write(os.path.join(hdir, y.theme_page(t)), theme_page(L, y, years, t, profiles, X))
     for tp in X.topics:
-        B.write(os.path.join(hdir, X.page(tp)), topic_page(L, years, X, tp, profiles))
+        B.write(os.path.join(hdir, X.page(tp)), topic_page(L, years, X, tp, profiles, R))
     for uid, info in optin.items():
         page = member_page(uid, info)
         B.write(os.path.join(hdir, page), profile_page(L, years, uid, info, opts, X))

@@ -85,3 +85,16 @@ photos of people. `render.py` shows the photo on the topic page (left of the sum
 caption linking to the message) and in the front page's topic list: a grid of cards, up to 4
 columns, on wide screens; one column with thumbnails alternating left and right on phones.
 To change a topic's image, put another photo message id in `topic_images.json`.
+
+## Projects: the organisation's repositories
+
+`repos.json` is a hand-written catalogue of the public repositories of
+[github.com/ArqueologiaDigital](https://github.com/ArqueologiaDigital): groups, a Portuguese title
+and one-line description per repository, an optional project site, and the cross-year topics each
+relates to (per group, or per repository with its own `topics`). `render.py` writes
+`projetos.html` (all of them, by group, each group linking to the group's conversations on the
+subject) and puts a "Repositórios do grupo sobre este assunto" box on each related topic page.
+It shows no stars or dates, so nothing goes stale between builds.
+
+`python3 -I topics/repos_check.py` lists repositories missing from the catalogue (one GitHub API
+request); on 2026-11-10: 47 public repositories, 47 in the catalogue.
