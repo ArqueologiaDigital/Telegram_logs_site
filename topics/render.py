@@ -514,6 +514,8 @@ def main():
     p.add_argument("--media-repo", default=os.path.join(HERE, "..", "..", "Telegram_logs_media"))
     p.add_argument("--media-base")
     p.add_argument("--deleted", choices=["placeholder", "show", "omit"], default="placeholder")
+    p.add_argument("--drafts", action="store_true",
+                   help="also render profiles marked \"published\": false (local previews only)")
     opts = p.parse_args()
     hdir = os.path.join(os.path.abspath(opts.out), "formatted", "html")
     if opts.media_base is None:
@@ -526,7 +528,7 @@ def main():
     years = sorted((Year(f, d, opts, problems) for f in glob.glob(os.path.join(HERE, "data", "*.json"))),
                    key=lambda y: y.n)
     with open(os.path.join(HERE, "profiles_optin.json"), encoding="utf-8") as f:
-        optin = {int(k): v for k, v in json.load(f).items()}
+        optin = {int(k): v for k, v in json.load(f).items() if v.get("published", True) or opts.drafts}
     profiles = {d.name(uid): member_page(uid, info) for uid, info in optin.items()}
     X = Cross(os.path.join(HERE, "crossyear.json"), years, problems)
     R = Repos(os.path.join(HERE, "repos.json"), X, problems)
