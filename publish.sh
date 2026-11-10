@@ -52,8 +52,23 @@ fi
 
 # Topic index pages (topics/render.py), only once topics/publish exists: the agent-written
 # index is reviewed by a maintainer before it goes public.
+# They are then published at short addresses (arqueologiadigital.org/topicos/, /comunidade/,
+# /projetos/) by copying them into the main site's repository, committed there locally; the
+# copies left here become redirects to those addresses (export_pretty.py).
+MAIN="$HERE/../ArqueologiaDigital.github.io"
 if [ -f "$HERE/topics/publish" ]; then
   python3 -I "$HERE/topics/render.py" --out "${WT:?}" --media-base "$MEDIA_BASE"
+  if [ -f "$MAIN/CNAME" ]; then
+    python3 -I "$HERE/export_pretty.py" --flat "${WT:?}/formatted/html" --out "$MAIN" --stubs
+    git -C "$MAIN" add -A -- topicos comunidade projetos
+    if git -C "$MAIN" diff --cached --quiet; then
+      echo "main site: short-address pages unchanged"
+    else
+      git -C "$MAIN" commit -q -m "Topic, community and project pages $(date -u +%F)" \
+        -m "Built by Telegram_logs_site/publish.sh (export_pretty.py); do not edit by hand."
+      echo "main site committed: $(git -C "$MAIN" rev-parse --short HEAD)"
+    fi
+  fi
 fi
 
 DATA_SHA=$(git -C "$HERE/../Telegram_logs" rev-parse --short HEAD)

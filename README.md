@@ -34,6 +34,19 @@ sender's profile photo beside the name, or their initials when there is no publi
 photos come from `Telegram_logs/tools/tg_avatars.py` (`media/avatars.jsonl`, files in the media
 repo's `avatars/`).
 
+## Short addresses
+
+The topic, community and project pages are published at short addresses on the main site:
+`arqueologiadigital.org/topicos/`, `/topicos/<slug>/`, `/topicos/ano-<N>/`, `/comunidade/`,
+`/comunidade/<handle>/` and `/projetos/`. `publish.sh` runs `export_pretty.py`, which copies those
+pages into the main site's repository (`../ArqueologiaDigital.github.io`, directories `topicos/`,
+`comunidade/`, `projetos/`), rewrites their links, and commits there locally. The copies left in
+`gh-pages` under `/Telegram_logs_site/formatted/html/` become redirects to the short addresses, so
+links published earlier keep working. The chat pages, the log index and the search stay under
+`/Telegram_logs_site/formatted/html/` (`/busca` and `/log` forward to them from the main site's
+`404.html`). Push both repositories together: the redirects in `gh-pages` point to pages that
+exist only once the main site is pushed.
+
 ## Design
 
 Every page shares one header (`SITE_HEADER` in `build.py`: Tópicos, Projetos, Comunidade, Log do
