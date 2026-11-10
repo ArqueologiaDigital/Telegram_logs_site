@@ -12,6 +12,10 @@
   	  .search-page p.hint { color: #555; margin-top: 0; }
   	  .search-page .ordem { margin: .5em 0 1em; }
   	  .search-page .pagefind-ui__result-thumb { width: 90px; }
+  	  #autor-list h2 { font-size: 1.1em; }
+  	  #autor-list ol { list-style: none; padding: 0; }
+  	  #autor-list li { border-top: 1px solid #eee; padding: .5em 0; }
+  	  #autor-list li p { margin: .2em 0 0; }
   	</style>
   </head>
   <body>
@@ -29,6 +33,7 @@
 	  </select>
 	</label>
 	<div id="search"></div>
+	<div id="autor-list" hidden><h2></h2><ol></ol><button type="button">Mostrar mais</button></div>
 	</div>
 	<script>
 	  // Built by search_index.py: one Pagefind record per message, with no metadata (Pagefind
@@ -59,11 +64,41 @@
 	    sort: ordem ? { data: ordem } : null,
 	    processResult: toMessage
 	  });
+	  // ?autor=NAME preselects the sender filter (used by the community gallery, comunidade.html).
+	  // Pagefind's UI shows nothing until a word is typed, so without ?q= that person's messages
+	  // are listed here with Pagefind's API (newest first unless "ordem" says otherwise).
+	  var autor = params.get("autor");
+	  if (autor) ui.triggerFilters({ autor: [autor] });
+	  if (autor && !params.get("q")) listByAuthor(autor);
+	  async function listByAuthor(name) {
+	    var box = document.getElementById("autor-list"), list = box.querySelector("ol"),
+	        more = box.querySelector("button"), shown = 0;
+	    var pf = await import("./pagefind/pagefind.js");
+	    var found = await pf.search(null, { filters: { autor: [name] }, sort: { data: ordem || "desc" } });
+	    box.querySelector("h2").textContent = found.results.length + " mensagens com texto de " + name;
+	    box.hidden = false;
+	    async function show() {
+	      var part = found.results.slice(shown, shown + 30);
+	      shown += part.length;
+	      (await Promise.all(part.map(function (r) { return r.data(); }))).forEach(function (d) {
+	        d = toMessage(d);
+	        var li = document.createElement("li"), a = document.createElement("a"), p = document.createElement("p");
+	        a.href = d.url; a.textContent = d.meta.title;
+	        p.innerHTML = d.excerpt;      // escaped by Pagefind, as its own UI renders it
+	        li.append(a, p); list.append(li);
+	      });
+	      more.hidden = shown >= found.results.length;
+	    }
+	    more.addEventListener("click", show);
+	    show();
+	    document.querySelector("#search input").addEventListener("input", function (e) { box.hidden = !!e.target.value; });
+	  }
 	  if (params.get("q")) ui.triggerSearch(params.get("q"));
 	  document.getElementById("ordem").addEventListener("change", function (e) {
 	    var p = new URLSearchParams(), box = document.querySelector("#search input");
 	    if (box && box.value) p.set("q", box.value);
 	    if (e.target.value) p.set("ordem", e.target.value);
+	    if (params.get("autor")) p.set("autor", params.get("autor"));
 	    location.search = p.toString();
 	  });
 	</script>

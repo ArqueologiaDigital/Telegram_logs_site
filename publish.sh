@@ -29,7 +29,7 @@ if [ -d "$SEARCH_DIR" ] && [ -f "${WT:?}/formatted/html/search.html" ] \
    && [ "$(date -u +%u)" != 7 ] && [ "${SEARCH:-0}" != 1 ]; then
   REBUILD_SEARCH=no
   mkdir "$KEEP"
-  mv "$SEARCH_DIR" "${WT:?}/formatted/html/search.html" "$KEEP/"
+  mv "$SEARCH_DIR" "$KEEP/"
 fi
 
 # Full rebuild: remove everything in the worktree except its .git file (and a kept search
@@ -39,8 +39,10 @@ python3 -I "$HERE/build.py" --out "${WT:?}" --media-base "$MEDIA_BASE"
 if [ "$REBUILD_SEARCH" = yes ]; then
   "$HERE/../.venv/bin/python" -I "$HERE/search_index.py" --out "${WT:?}" --media-base "$MEDIA_BASE"
 else
-  mv "$KEEP/pagefind" "$KEEP/search.html" "${WT:?}/formatted/html/"
+  mv "$KEEP/pagefind" "${WT:?}/formatted/html/"
   rmdir "$KEEP"
+  # the search page itself is small and always rebuilt (python3: --page-only needs no pagefind)
+  python3 -I "$HERE/search_index.py" --out "${WT:?}" --media-base "$MEDIA_BASE" --page-only
   echo "search index kept (rebuilt on Sundays, or run with SEARCH=1)"
 fi
 if [ -d "$LEGACY_HTML" ]; then

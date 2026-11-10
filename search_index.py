@@ -141,12 +141,21 @@ def main():
     p.add_argument("--media-base")
     p.add_argument("--deleted", choices=["placeholder", "show", "omit"], default="placeholder")
     p.add_argument("--phones", choices=["review", "mask", "show"], default="review")
+    p.add_argument("--page-only", action="store_true",
+                   help="only rewrite search.html (from static/search.html); keep the existing index")
     opts = p.parse_args()
     hdir = os.path.join(os.path.abspath(opts.out), "formatted", "html")
     if opts.media_base is None:
         opts.media_base = urllib.parse.quote(os.path.relpath(os.path.abspath(opts.media_repo), hdir)) + "/"
     elif not opts.media_base.endswith("/"):
         opts.media_base += "/"
+    with open(os.path.join(HERE, "static", "search.html"), encoding="utf-8") as f:
+        page = f.read()
+    config = {"pagePrefix": B.page_href(0)[:-len("0.html")], "mediaBase": opts.media_base}
+    B.write(os.path.join(hdir, "search.html"), page.replace("/*CONFIG*/{}", json.dumps(config)))
+    if opts.page_only:
+        print("search: search.html rewritten, index kept")
+        return
     d = B.Data(opts.data)
     B.mark_phones(d, opts)
     recs = list(records(d, opts))
@@ -155,10 +164,6 @@ def main():
         assert os.path.basename(bundle) == "pagefind" and os.path.dirname(bundle) == hdir
         shutil.rmtree(bundle)
     write_index(recs, bundle)
-    with open(os.path.join(HERE, "static", "search.html"), encoding="utf-8") as f:
-        page = f.read()
-    config = {"pagePrefix": B.page_href(0)[:-len("0.html")], "mediaBase": opts.media_base}
-    B.write(os.path.join(hdir, "search.html"), page.replace("/*CONFIG*/{}", json.dumps(config)))
     n_files = sum(len(f) for _, _, f in os.walk(bundle))
     size = sum(os.path.getsize(os.path.join(r, x)) for r, _, f in os.walk(bundle) for x in f)
     print(f"search: {len(recs)} of {len(d.records)} messages indexed -> {n_files} files, "

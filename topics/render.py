@@ -11,6 +11,9 @@ Writes into <out>/formatted/html/, next to the chat pages it links to:
   topico-<slug>.html              one cross-year topic (topics/crossyear.json): a summary of all the
                                   work on it across the years, then year by year its subtopics and
                                   conversations
+  comunidade.html                 community gallery: a card per member in topics/profiles_optin.json
+                                  (photo, name, role, active years, message count, links to the
+                                  profile and to a search of their messages)
   membro-<user id>.html           a profile, only for user ids listed in topics/profiles_optin.json;
                                   its bio is shown only once "bio_approved" is true
 
@@ -146,6 +149,7 @@ def head(title):
 
 def nav():
     return ("\t<div class='navigation-top'><a href=\"topicos.html\">Tópicos</a> | "
+            "<a href=\"comunidade.html\">Comunidade</a> | "
             "<a href=\"index.html\">Páginas do log</a> | <a href=\"search.html\">Busca</a> |</div>\n")
 
 
@@ -298,11 +302,42 @@ def front_page(years, X):
     return "".join(parts)
 
 
+def messages_of(d, uid):
+    return [r for r in d.records if r.get("raw") and d.sender_id(r["raw"]) == uid
+            and r["raw"]["_"] != "MessageService" and not r["archive"].get("deletion")]
+
+
+def gallery_page(L, optin, opts):
+    """Community gallery: only members who asked to be listed (profiles_optin.json)."""
+    d = L.d
+    cards = []
+    for uid, info in sorted(optin.items(), key=lambda kv: (kv[1].get("opted_in", ""), kv[0])):
+        name = d.name(uid)
+        mine = messages_of(d, uid)
+        ys = sorted({B.local(r["date"]).year for r in mine})
+        active = "" if not ys else (str(ys[0]) if len(ys) == 1 else f"{ys[0]}–{ys[-1]}")
+        search = "search.html?" + urllib.parse.urlencode({"autor": name})
+        big = B.avatar(d, uid, name, opts).replace("'avatar", "'avatar big")
+        cards.append(
+            f"<div class='card' style='--h:{B.hue(uid)}'><a href='membro-{uid}.html'>{big}</a>"
+            f"<h3><a href='membro-{uid}.html'>{esc(name)}</a></h3>"
+            f"<p class='role'>{esc(info.get('role') or '')}</p>"
+            f"<p class='meta'>{len(mine)} mensagens{' · ativo em ' + active if active else ''}</p>"
+            f"<p class='meta'><a href='membro-{uid}.html'>Perfil</a> · <a href='{q(search)}'>Mensagens</a></p></div>\n")
+    return "".join([
+        head("Comunidade: Arqueologia Digital (Telegram)"), nav(),
+        "\t<div class='topics'><h1>Comunidade</h1>"
+        "<p class='lead'>Membros do grupo que pediram para aparecer aqui. Cada cartão leva ao perfil da pessoa "
+        "e às mensagens dela no log.</p>\n<div class='gallery'>", "".join(cards), "</div>"
+        "<p class='method'>Esta galeria é opt-in: só entra quem pede. Quer aparecer aqui, ou sair? "
+        "Fale com os administradores do grupo no Telegram.</p>"
+        "</div>\n  </body>\n</html>\n"])
+
+
 def profile_page(L, years, uid, info, opts, X):
     d = L.d
     name = d.name(uid)
-    mine = [r for r in d.records if r.get("raw") and d.sender_id(r["raw"]) == uid
-            and r["raw"]["_"] != "MessageService" and not r["archive"].get("deletion")]
+    mine = messages_of(d, uid)
     per_year = Counter(B.local(r["date"]).year for r in mine)
     top = max(per_year.values()) if per_year else 1
     bars = "".join(f"<tr><td>{yy}</td><td><span class='bar' style='width:{100 * n / top:.0f}%'></span></td><td>{n}</td></tr>"
@@ -381,13 +416,15 @@ def main():
         B.write(os.path.join(hdir, X.page(tp)), topic_page(L, years, X, tp, profiles))
     for uid, info in optin.items():
         B.write(os.path.join(hdir, f"membro-{uid}.html"), profile_page(L, years, uid, info, opts, X))
+    B.write(os.path.join(hdir, "comunidade.html"), gallery_page(L, optin, opts))
     shutil.copy(os.path.join(HERE, "topicos.css"), os.path.join(hdir, "topicos.css"))
     idx = os.path.join(hdir, "index.html")     # link the front page from the log's index page
     with open(idx, encoding="utf-8") as f:
         page = f.read()
     if "topicos.html" not in page:
         page = page.replace("</form>\n", "</form>\n\t<p class='topics-link'><a href='topicos.html'>"
-                            "Tópicos das conversas</a>: o que o grupo conversou e fez, ano a ano.</p>\n", 1)
+                            "Tópicos das conversas</a>: o que o grupo conversou e fez, por assunto e ano a ano. "
+                            "<a href='comunidade.html'>Comunidade</a>: membros do grupo.</p>\n", 1)
         B.write(idx, page)
     print(f"topics: {len(years)} year(s), {sum(len(y.convs) for y in years)} conversations, "
           f"{sum(len(y.tax['themes']) for y in years)} themes, {len(X.topics)} cross-year topics, "

@@ -22,12 +22,15 @@ left out. Their output is data, committed here, so the pages can be rebuilt with
 
 Numbers per year (conversations, corrections, size of the theme tree): `python3 -I topics/stats.py`.
 
-## Profiles: opt-in only
+## Profiles and the community gallery: opt-in only
 
-A member gets a profile page (`membro-<id>.html`: photo, message counts per year, themes and
-conversations they took part in, an optional short bio) only if their Telegram user id is in
-`profiles_optin.json`, with the date they asked. Names in conversation lists link to a profile only
-for those people.
+A member gets a profile page (`membro-<id>.html`: photo, message counts per year, topics and
+conversations they took part in, an optional short bio shown once `bio_approved` is true) and a
+card in the community gallery (`comunidade.html`: photo, name, role, active years, message count,
+links to the profile and to a search of their messages) only if their Telegram user id is in
+`profiles_optin.json`, with the date they asked. Names in conversation lists link to a profile
+only for those people. To add someone who asked: add their user id (see `users/users.jsonl` in
+`Telegram_logs`) with `role` and `opted_in`; to remove someone, delete their entry.
 
 ## Running
 

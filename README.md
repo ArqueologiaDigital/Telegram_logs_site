@@ -68,7 +68,11 @@ through its command-line indexer (the Python API manages ~10 records/s), and rec
 Pagefind metadata (Pagefind makes metadata searchable; the page, id, date and has-photo flag
 travel in the record's path instead, and `search.html` turns them back into a link and title).
 
-`publish.sh` rebuilds the index on Sundays, when it is missing, or with `SEARCH=1
+`search.html?autor=NAME` preselects the sender filter and, when no word is given, lists that
+person's messages newest first (Pagefind's UI shows nothing until a word is typed); the community
+gallery links to it. `search.html?q=WORDS` runs a search.
+
+`publish.sh` always rewrites `search.html` (`search_index.py --page-only`) and rebuilds the index on Sundays, when it is missing, or with `SEARCH=1
 ./publish.sh`; other days keep the previous index. Each rebuild rewrites about 3.6 MB of index
 files however few messages arrived (measured with `tests/search_churn.py`: 20 new messages changed 94 of 163 word-index chunks), so a daily rebuild would grow the
 `gh-pages` history by ~1.3 GB a year; weekly is ~190 MB. Links in an older index stay valid
