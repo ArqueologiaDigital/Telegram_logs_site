@@ -29,7 +29,9 @@ conversations they took part in, an optional short bio shown once `bio_approved`
 card in the community gallery (`comunidade.html`: photo, name, role, active years, message count,
 links to the profile and to a search of their messages) only if their Telegram user id is in
 `profiles_optin.json`, with the date they asked. Names in conversation lists link to a profile
-only for those people. To add someone who asked: add their user id (see `users/users.jsonl` in
+only for those people. Every profile gets a bio (Felipe's request, 2026-11-10): a short summary of what the person
+contributed, written from the topic index with every claim traced to conversations listed in
+`bio_basis`, and changed or removed if the person asks. To add someone who asked: add their user id (see `users/users.jsonl` in
 `Telegram_logs`) with `role`, `opted_in` and optionally a `handle` (lowercase letters, digits, `_`; the profile is then
 `membro-<handle>.html`, short address `arqueologiadigital.org/comunidade/<handle>`); to remove someone,
 delete their entry.
