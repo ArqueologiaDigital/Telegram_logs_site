@@ -111,6 +111,24 @@ class Cross:
             tp["years"] = sorted({y.n for _, y, t, s in tp["members"]})
         for sid in sorted(set(known) - set(self.of)):
             problems.append(f"subtopic {sid} is in no cross-year topic")
+        ipath = os.path.join(os.path.dirname(path), "topic_images.json")
+        if os.path.exists(ipath):          # one photo per topic, chosen by hand (image_candidates.py)
+            with open(ipath, encoding="utf-8") as f:
+                images = json.load(f)["images"]
+            for tp in self.topics:
+                tp["image"] = (images.get(tp["slug"]) or {}).get("msg_id")
+
+    @staticmethod
+    def image(L, tp):
+        """(url, message id) of the topic's photo, or None when there is none or it is unusable."""
+        mid = tp.get("image")
+        entry = L.d.media.get(mid)
+        rec = L.d.by_id.get(mid)
+        if not entry or entry["store"] != "git" or rec is None or rec["archive"].get("deletion"):
+            if mid:
+                L.problems.append(f"topic {tp['slug']}: image message #{mid} has no usable photo")
+            return None
+        return L.opts.media_base + urllib.parse.quote(entry["path"]), mid
 
     @staticmethod
     def page(tp):
@@ -215,6 +233,12 @@ def topic_page(L, years, X, tp, profiles):
              f"<p class='crumbs'><a href='topicos.html'>Tópicos</a> › {esc(tp['title'])}</p>"
              f"<h1>{esc(tp['title'])}</h1>"
              f"<p class='period'>{len(tp['convs'])} conversas · anos {span} do grupo</p>"]
+    img = X.image(L, tp)
+    if img:
+        rec = L.d.by_id[img[1]]
+        cap = f"Foto enviada por {L.d.sender(rec['raw'])} em {pt_date(rec)}"
+        parts.append(f"<figure class='topic-image'><a href='{q(img[0])}'><img src='{q(img[0])}' alt=''></a>"
+                     f"<figcaption>{L.msg(img[1], cap)}</figcaption></figure>")
     parts += [f"<p class='lead'>{esc(par)}</p>" for par in tp.get("summary", "").split("\n\n") if par.strip()]
     parts.append("<p class='years-nav'>Ano a ano: " + " · ".join(
         f"<a href='#ano-{n}'>Ano {n}</a>" for n in tp["years"]) + "</p>\n")
@@ -274,10 +298,10 @@ def method_note():
             "originais. Para procurar palavras específicas, use a <a href='search.html'>busca</a>.</p>")
 
 
-def front_page(years, X):
+def front_page(years, X, L):
     n_conv = sum(len(y.convs) for y in years)
     n_msg = sum(y.messages for y in years)
-    parts = [head("Tópicos: Arqueologia Digital (Telegram)"), nav(),
+    parts = [head("Tópicos: Arqueologia Digital (Telegram)").replace("<body>", "<body class=\"wide\">"), nav(),
              "\t<div class='topics'><h1>Arqueologia Digital: tópicos das conversas</h1>"
              f"<p class='period'>{len(years)} anos do grupo, de {years[0].span.split(' a ')[0]} a "
              f"{years[-1].span.split(' a ')[1]} · {n_conv} conversas em {n_msg} mensagens</p>"
@@ -291,8 +315,12 @@ def front_page(years, X):
         for tp in X.topics:
             ys = tp["years"]
             span = f"ano {ys[0]}" if len(ys) == 1 else f"anos {ys[0]}–{ys[-1]}"
-            parts.append(f"<li><a href='{X.page(tp)}'>{esc(tp['title'])}</a> <span class='n'>{len(tp['convs'])} "
-                         f"conversas, {span}</span><br><span class='scope'>{esc(tp['scope'])}</span></li>")
+            img = X.image(L, tp)
+            thumb = (f"<a class='thumb' href='{X.page(tp)}' tabindex='-1' aria-hidden='true'>"
+                     f"<img src='{q(img[0])}' alt='' loading='lazy'></a>" if img else "")
+            parts.append(f"<li>{thumb}<div class='text'><a href='{X.page(tp)}'>{esc(tp['title'])}</a> "
+                         f"<span class='n'>{len(tp['convs'])} conversas, {span}</span><br>"
+                         f"<span class='scope'>{esc(tp['scope'])}</span></div></li>")
         parts.append("</ul><h2>Ano a ano</h2>")
     for y in years:
         top = ", ".join(f"<a href='{y.theme_page(t)}'>{esc(t['title'])}</a>" for t in y.tax["themes"][:5])  # noqa
@@ -420,7 +448,7 @@ def main():
         optin = {int(k): v for k, v in json.load(f).items()}
     profiles = {d.name(uid): member_page(uid, info) for uid, info in optin.items()}
     X = Cross(os.path.join(HERE, "crossyear.json"), years, problems)
-    B.write(os.path.join(hdir, "topicos.html"), front_page(years, X))
+    B.write(os.path.join(hdir, "topicos.html"), front_page(years, X, L))
     for y in years:
         B.write(os.path.join(hdir, y.page()), year_page(L, y, years, X))
         for t in y.tax["themes"]:

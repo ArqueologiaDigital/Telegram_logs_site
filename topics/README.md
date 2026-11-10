@@ -74,3 +74,14 @@ Known gap: the taxonomy step is not verified. Its theme summaries can reintroduc
 verifier removed (the MAME theme says "Werner aprendeu a compilar o MAME", which the 2017-11
 verifier had corrected to "conseguiu compilar o MAME no Windows"). The full run should add a
 verify pass over the theme and subtopic summaries.
+
+## Topic images
+
+Each cross-year topic has one photo, posted by a member inside one of its conversations:
+`topic_images.json` (slug → message id). `python3 topics/image_candidates.py --out SCRATCH` makes a
+numbered contact sheet per topic with the 12 best-ranked candidate photos (`--skip 12` shows the
+next ones); the choice is made by looking at the sheets, preferring machines and screens over
+photos of people. `render.py` shows the photo on the topic page (left of the summary, with a
+caption linking to the message) and in the front page's topic list: a grid of cards, up to 4
+columns, on wide screens; one column with thumbnails alternating left and right on phones.
+To change a topic's image, put another photo message id in `topic_images.json`.

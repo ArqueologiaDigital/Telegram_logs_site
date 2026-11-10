@@ -36,10 +36,32 @@ details.conv .weight { color: #d0a000; font-size: .8em; }
 .topics .year h2 { border-bottom: none; margin-bottom: .2em; }
 details.profile-year { margin: .5em 0; }
 details.profile-year > summary { cursor: pointer; }
-ul.cross-topics { list-style: none; padding: 0; columns: 2; column-gap: 2em; }
-@media (max-width: 600px) { ul.cross-topics { columns: 1; } }
-ul.cross-topics li { break-inside: avoid; margin: 0 0 .7em; }
+/* Front page topic list. Wide screens: a grid of cards, up to 4 columns, photo on top.
+   Phones: one column, thumbnail beside the text, alternating left and right. */
+body.wide { max-width: 1240px; }
+body.wide .topics > * { max-width: 700px; }
+body.wide .topics > ul.cross-topics { max-width: none; }
+ul.cross-topics { list-style: none; padding: 0; display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+ul.cross-topics li { border: 1px solid #e3e3e3; border-radius: 6px; overflow: hidden; background: #fcfcfc; }
+ul.cross-topics .thumb { display: block; }
+ul.cross-topics .thumb img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+ul.cross-topics .text { padding: 8px 10px 10px; }
 ul.cross-topics .scope { color: #666; font-size: .85em; }
+@media (max-width: 600px) {
+  ul.cross-topics { grid-template-columns: 1fr; gap: 10px; }
+  ul.cross-topics li { display: flex; align-items: stretch; }
+  ul.cross-topics li:nth-child(even) { flex-direction: row-reverse; }
+  ul.cross-topics .thumb { flex: 0 0 34%; }
+  ul.cross-topics .thumb img { height: 100%; aspect-ratio: auto; min-height: 96px; }
+  ul.cross-topics .text { flex: 1; }
+}
+/* Topic page: the topic's photo to the left of the summary */
+figure.topic-image { float: left; width: 280px; margin: .3em 1.2em .6em 0; }
+figure.topic-image img { width: 100%; border-radius: 4px; display: block; }
+figure.topic-image figcaption { font-size: .8em; color: #666; margin-top: .3em; }
+.topics .years-nav { clear: both; }
+@media (max-width: 600px) { figure.topic-image { float: none; width: 100%; margin: .5em 0; } }
 .topic-year { margin-top: 1.4em; }
 .topic-year h3 { font-size: 1.02em; margin: 1em 0 .2em; }
 .topic-year .subsum { margin: .2em 0 .5em; color: #333; }

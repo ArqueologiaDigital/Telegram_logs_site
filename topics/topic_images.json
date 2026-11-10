@@ -1,0 +1,157 @@
+{
+ "note": "One photo per cross-year topic, posted by a member inside one of the topic's conversations. Chosen on 2026-11-10 by looking at the contact sheets of topics/image_candidates.py (12 best-ranked candidates per topic); machines and screens preferred over photos of people.",
+ "images": {
+  "patinho-feio": {
+   "msg_id": 17158,
+   "from_conversation": "Edith Ranzini e a réplica do painel do Patinho Feio"
+  },
+  "technics-teclados": {
+   "msg_id": 30228,
+   "from_conversation": "Layout do painel do KN5000 em SVG para o MAME"
+  },
+  "pense-bem": {
+   "msg_id": 31564,
+   "from_conversation": "Atividade no Garoa para levantar o esquemático do Pense Bem"
+  },
+  "mines": {
+   "msg_id": 23203,
+   "from_conversation": "Mines MSX2: blitter mais rápido, novo tileset 16x16 e troca de temas"
+  },
+  "another-world": {
+   "msg_id": 28993,
+   "from_conversation": "Programa homebrew na placa de extensão do KN5000 e conector da HD-AE5000"
+  },
+  "scopus-nexus": {
+   "msg_id": 2783,
+   "from_conversation": "Scopus Nexus 2600 no acervo da Poli: boot, teclado e identificação das placas"
+  },
+  "acervo-poli-usp": {
+   "msg_id": 5167,
+   "from_conversation": "Repositório tk3000e e o TK3000 de DQ na BSidesSP"
+  },
+  "sintetizador-guido-stolfi": {
+   "msg_id": 4494,
+   "from_conversation": "Fotos do evento e leitura dos cadernos de Guido Stolfi"
+  },
+  "msx": {
+   "msg_id": 28388,
+   "from_conversation": "Exposição de 40 anos do MSX na Canal 3 Expo 2023"
+  },
+  "desmontagens-msx-e-emuladores-4kb": {
+   "msg_id": 41348,
+   "from_conversation": "Port do Galaga para o V9990"
+  },
+  "mame-desenvolvimento": {
+   "msg_id": 15766,
+   "from_conversation": "Matéria da Retro Gamer e a cultura da comunidade do MAME"
+  },
+  "mame-drivers": {
+   "msg_id": 19138,
+   "from_conversation": "Emulação de impressoras no MAME e o simulador de papel da Epson"
+  },
+  "instrumentos-musicais": {
+   "msg_id": 18316,
+   "from_conversation": "Órgão eletrônico sem identificação na Casa da Memória"
+  },
+  "itautec": {
+   "msg_id": 11636,
+   "from_conversation": "Esquemáticos do Itautec I-7000 desenhados em KiCad para o MAME"
+  },
+  "computadores-nacionais": {
+   "msg_id": 27759,
+   "from_conversation": "TRS-80 à venda no Brasil e o MicroProfessor"
+  },
+  "memoria-informatica-brasileira": {
+   "msg_id": 16355,
+   "from_conversation": "Cartucho Telebradesco Residência e o preço dos PCs nos anos 90"
+  },
+  "zeebo-tectoy": {
+   "msg_id": 38860,
+   "from_conversation": "Servidor para o cartucho TeleBradesco do Mega Drive"
+  },
+  "vet3000-brick-games": {
+   "msg_id": 36286,
+   "from_conversation": "Outro aparelho aparece num grupo de TK"
+  },
+  "ia-engenharia-reversa": {
+   "msg_id": 37702,
+   "from_conversation": "Debate sobre IA, engenharia reversa e aprendizagem"
+  },
+  "dumps-e-decapping": {
+   "msg_id": 16809,
+   "from_conversation": "Programadores de EPROM baratos e o TL866II Plus"
+  },
+  "ferramentas-engenharia-reversa": {
+   "msg_id": 9876,
+   "from_conversation": "Suporte ao processador do Game Boy no Ghidra"
+  },
+  "descompilacao": {
+   "msg_id": 37184,
+   "from_conversation": "Mizuchi: pipeline de matching decompilation com LLMs"
+  },
+  "arcades-e-pinball": {
+   "msg_id": 9437,
+   "from_conversation": "Arcades de parede com tela LCD"
+  },
+  "restauracao-de-hardware": {
+   "msg_id": 10609,
+   "from_conversation": "Sega Teradrive com overclock improvisado"
+  },
+  "homebrew-kits-replicas": {
+   "msg_id": 19589,
+   "from_conversation": "Miniatura funcional de um Expert (MSX)"
+  },
+  "programacao-retro": {
+   "msg_id": 6615,
+   "from_conversation": "PortableWumpus e oficinas de retroprogramação para Mega Drive no Garoa"
+  },
+  "musica-e-chips-de-som": {
+   "msg_id": 9038,
+   "from_conversation": "Snark Barker: réplica open source da Sound Blaster 1.0"
+  },
+  "organizacao-do-grupo": {
+   "msg_id": 5853,
+   "from_conversation": "Primeiro encontro de Arqueologia Digital no Garoa"
+  },
+  "eventos-e-palestras": {
+   "msg_id": 13512,
+   "from_conversation": "RetroSC 8 Online"
+  },
+  "preservacao-de-jogos-e-direitos": {
+   "msg_id": 23065,
+   "from_conversation": "Processo contra o Internet Archive e debate sobre copyright e patentes"
+  },
+  "museus-e-acervos": {
+   "msg_id": 32724,
+   "from_conversation": "Computerspielemuseum e museu de espionagem em Berlim"
+  },
+  "codigo-fonte-historico": {
+   "msg_id": 10226,
+   "from_conversation": "Código-fonte do Photoshop 1.0 e links perdidos"
+  },
+  "midias-e-recuperacao": {
+   "msg_id": 25848,
+   "from_conversation": "Cartuchos de 8 pistas encontrados"
+  },
+  "emuladores": {
+   "msg_id": 24271,
+   "from_conversation": "Homebrew de Cavaleiros do Zodíaco para Game Boy Color"
+  },
+  "consoles-e-videogames": {
+   "msg_id": 30707,
+   "from_conversation": "Castle of Illusion: versões de Mega Drive e Master System"
+  },
+  "demoscene-e-arte": {
+   "msg_id": 11101,
+   "from_conversation": "Quadro decorativo com disquetes coloridos"
+  },
+  "tipografia": {
+   "msg_id": 10684,
+   "from_conversation": "Fonte da ROM do PC portátil Corona/Cordata"
+  },
+  "historia-da-computacao": {
+   "msg_id": 30905,
+   "from_conversation": "Chegada e reparo do Macintosh Plus de Anne Isabelle"
+  }
+ }
+}
