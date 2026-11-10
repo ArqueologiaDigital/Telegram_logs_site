@@ -176,6 +176,8 @@ def nav():
 
 def resource(r):
     ref = r["ref"]
+    if ref.startswith("http://arqueologiadigital.org"):      # posted before the site had HTTPS
+        ref = "https" + ref[4:]
     if ref.startswith(("http://", "https://")):
         return f"<li><a target='_blank' href='{B.safe_href(ref)}'>{esc(r['what'])}</a></li>"
     return f"<li>{esc(r['what'])} <span class='ref'>({esc(ref)})</span></li>"
