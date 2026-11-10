@@ -22,5 +22,13 @@
     "bio": "Ramiro Polla aparece em 8 conversas do índice, entre 2024 e 2026, quase sempre em torno do MAME e dos teclados Technics. Lembrou que o MAME já permite depuração em nível de código-fonte via gdbstub, com gdb ou VS Code, contou que o FFmpeg usa IA na revisão de código, com um humano fazendo o merge, e perguntou se o método de carregar programas por disquete descoberto no KN7000 serviria também para o KN5000. Também procurou no grupo uma cópia do GRASS (RT/1) para DOS, a pedido de um amigo artista.",
     "bio_basis": "Escrito a partir do índice de tópicos (conversas #34684, #40734, #41660, #31887). Publicado em 2026-11-10 a pedido de Felipe, seguindo o modelo do perfil dele, que serviu de exemplo para o opt-in; Ramiro pode pedir mudanças ou a retirada do texto.",
     "bio_approved": true
+  },
+  "176090168": {
+    "handle": "ismaelluceno",
+    "role": "",
+    "opted_in": "2026-11-10",
+    "bio": "Ismael Luceno está no grupo desde o primeiro dia, em novembro de 2017, e aparece em 90 conversas do índice. Suas contribuições mais frequentes são sobre PCs antigos, MS-DOS e ferramentas de software livre: explicou o cabeçalho e a carga de arquivos .EXE no MS-DOS, a origem histórica do CR+LF e do LF como fim de linha e a compressão usada em firmwares x86, e procurou ajuda para portar para o GCC 12 o suporte a x86 de 16 bits. Contribuiu com o modo de código e a navegação do HexItch, clone livre do editor hexadecimal HexIt, por meio de um pull request, e contou que, com Francisco Castro Regueira, fazia ferramentas para analisar código de BIOS. Nos projetos de outros membros, sugeriu caminhos técnicos, como mapear as interrupções usadas pelo Alley Cat, ligar a porta serial dos terminais VT emulados no MAME a um pseudo-tty e desduplicar repositórios git com alternates. Também contou que preserva gerenciadores de janelas antigos na distribuição Source Mage e, mais recentemente, comparou modelos de IA para código e propôs um repositório comum de regras para agentes.",
+    "bio_basis": "Escrito a partir do índice de tópicos (conversas #16192, #22584, #22715, #20198, #16287, #5448, #8016, #10246, #35004, #14809, #37810). Publicado em 2026-11-10 seguindo o modelo dos demais perfis; Ismael pode pedir mudanças ou a retirada do texto.",
+    "bio_approved": true
   }
 }
