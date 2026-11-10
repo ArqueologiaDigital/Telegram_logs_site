@@ -87,3 +87,52 @@ figure.topic-image.small { width: 220px; }
 section.project-group { clear: both; overflow: hidden; }
 section.project-group ul.repos { overflow: hidden; }
 @media (max-width: 600px) { figure.topic-image.small { width: 100%; } }
+
+/* ---- Desktop layout. Every topic-type page is body.wide (1240 px). Text keeps a readable
+   line length; the extra width goes to side-by-side blocks. Phones (under 700 px) keep one
+   column, which is what the rules above already give. */
+body.wide .topics > * { max-width: none; }
+body.wide .topics p, body.wide .topics li { max-width: 92ch; }
+body.wide .gallery p, body.wide ul.cross-topics li, body.wide ul.repos li, body.wide .conv-body p,
+body.wide .themes p, body.wide .year p { max-width: none; }
+.toc { columns: 3 240px; }
+@media (min-width: 900px) {
+  /* topic page: repositories box at the right, photo at the left, summary between them */
+  aside.repos-box { float: right; clear: right; width: 320px; margin: .3em 0 1em 1.5em; }
+  figure.topic-image { width: 300px; }
+  /* conversations two by two */
+  .convs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; align-items: start; }
+  .convs details.conv { margin: 0; }
+  .convs details.conv[open] { grid-column: 1 / -1; }
+  /* front page: the years two by two */
+  .topics > .year { display: inline-block; vertical-align: top; width: calc(50% - 14px); margin: .6em 10px .6em 0; }
+  /* year page: themes as cards, highlights in two columns */
+  .themes { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 6px 24px; }
+  ul.highlights { columns: 2 420px; column-gap: 2em; }
+  ul.highlights li { break-inside: avoid; }
+  /* projects: repositories in columns beside the group's photo */
+  section.project-group ul.repos { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2px 20px; }
+  /* profile: yearly chart beside the bio */
+  .profile table.years { min-width: 420px; }
+  details.profile-year { clear: both; }
+}
+.topic-year, .topics h2, .topics .method { clear: both; }
+
+/* ---- Site style (2026-11), as in telegram-history-dump.css: dark cards instead of white ones */
+.topics { background: transparent; padding: 0 0 3em; }
+.topics h2 { border-bottom-color: var(--line); font-weight: normal; }
+.topics .period, .topics .crumbs, .topics .meta, .topics .method, .topics .n, .topics .date,
+.themes .subs, ul.cross-topics .scope, ul.repos .scope, .years-nav, .topics .group-links,
+.conv-body .ref, .profile .role, .gallery .card .role, .topic-year .subsum,
+figure.topic-image figcaption { color: var(--dim); }
+.topics .method { border-top-color: var(--line); }
+.themes .theme { border-left-color: var(--accent); }
+ul.cross-topics li, .gallery .card { background: var(--card); border-color: var(--line); box-shadow: 0 1px 3px rgba(0,0,0,.5); }
+.gallery .card { border-top-color: hsl(var(--h) 50% 55%); }
+ul.cross-topics .text > a:first-child { font-size: 1.05em; }
+details.conv { border-color: var(--line); background: var(--card); }
+details.conv[open] { background: #232a2f; }
+details.conv .weight { color: #e0b84a; }
+ul.repos li { border-left-color: var(--accent); }
+aside.repos-box { background: var(--card); border-color: var(--line); }
+.profile .bar { background: hsl(var(--h) 45% 55%); }

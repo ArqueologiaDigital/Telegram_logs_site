@@ -128,7 +128,11 @@ body {
 
 /* ---- Additions for the 2026 archive (Telegram_logs_site); everything above is the 2018
    telegram-history-dump stylesheet (MIT, https://github.com/tvdstaaij/telegram-history-dump). */
-body { width: auto; max-width: 700px; padding: 0 16px; }
+/* Chat pages: up to 980 px on a desktop screen (the 2018 pages were 700 px); bubbles keep a
+   readable width; on phones the page takes the full width. */
+body { width: auto; max-width: 980px; padding: 0 16px; }
+.msg { max-width: min(80%, 720px); }
+@media (max-width: 700px) { body { padding: 0 8px; } .msg { max-width: 92%; padding: 6px 14px; } }
 .msg img, .msg video { max-width: 100%; }
 .msg pre { white-space: pre-wrap; background: rgba(0,0,0,0.06); padding: 4px 6px; border-radius: 4px; }
 .msg code { background: rgba(0,0,0,0.06); padding: 0 2px; border-radius: 3px; }
@@ -161,3 +165,45 @@ form.search-box button { font-size: 1em; padding: .4em .8em; }
 .msg .avatar.initials { display: inline-flex; align-items: center; justify-content: center;
   background: hsl(var(--h) 40% 45%); color: #fff; font-size: 11px; font-weight: bold; }
 .msg .fwd { font-style: italic; color: #666152; }
+
+/* ---- Site style (2026-11): the look of the photo gallery (arqueologiadigital.org/galeria.html)
+   on every page: dark background, serif text, green links, cards. It overrides the colours of
+   the rules above; the markup of the chat pages is unchanged. */
+:root { --bg: #14171a; --card: #1e2327; --line: #2c3338; --ink: #e8e6e1; --dim: #9aa0a6; --accent: #7fd38a; }
+html { background: var(--bg); }
+body { background: var(--bg); color: var(--ink); font: 16px/1.5 Georgia, "Times New Roman", serif; margin-top: 0; }
+a { color: var(--accent); }
+h1 { font-weight: normal; font-size: 1.7em; letter-spacing: .01em; }
+header.site { padding: 22px 0 14px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 28px; }
+header.site .brand { color: var(--ink); text-decoration: none; font-size: 1.35em; }
+header.site nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: .95em; }
+header.site nav a { text-decoration: none; border-bottom: 1px solid transparent; }
+header.site nav a:hover { border-bottom-color: var(--accent); }
+.navigation-top, .navigation-bottom { color: var(--dim); font-size: .9em; padding: 4px 0 10px; }
+/* message bubbles become cards tinted with the sender's colour */
+.msg { background: var(--card); background-image: none; border: 1px solid var(--line); border-radius: 10px;
+       box-shadow: 0 1px 3px rgba(0,0,0,.5); padding: 7px 16px 8px; }
+.msg:before, .msg:after { display: none; }
+.msg[style] { background: hsl(var(--h) 26% 16%); border-color: hsl(var(--h) 22% 26%);
+              border-left: 3px solid hsl(var(--h) 45% 52%); }
+.msg .author { margin-left: -4px; }
+.msg .author .name { color: hsl(var(--h) 62% 74%); }
+.msg .avatar.initials { background: hsl(var(--h) 40% 40%); }
+.msg-service .inner { background: #23292e; color: var(--dim); font-size: .85em; padding: 3px 10px; }
+.msg pre, .msg code { background: rgba(255,255,255,.07); }
+.msg blockquote { border-left-color: #556; }
+.msg .reply { color: var(--dim); border-left-color: #4f6f8f; }
+.msg .webpage, .msg .geo, .msg .contact { border-left-color: #4a5258; color: #cfcdc7; }
+.msg .file.missing, .masked, .msg .fwd { color: var(--dim); }
+.msg img:not(.avatar), .msg video { border-radius: 6px; }
+.deleted-note { color: #e08a8a; }
+.spoiler { background: #666; color: #666; }
+.msg:target { outline: 3px solid var(--accent); }
+table.pages td, table.pages th { border-bottom: 1px solid var(--line); padding: 4px 14px; }
+.dialog.msg { background: var(--card); }
+.dialog .icon { filter: invert(1); }
+.index-info, .index-info p { color: var(--ink); }
+form.search-box input, form.search-box button { background: var(--card); color: var(--ink); border: 1px solid #3a4248;
+  border-radius: 4px; font-family: inherit; }
+form.search-box button { background: var(--accent); color: var(--bg); border-color: var(--accent); cursor: pointer; }
+@media (max-width: 700px) { h1 { font-size: 1.3em; } header.site { padding: 14px 0 8px; } }
