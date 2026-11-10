@@ -308,6 +308,11 @@ def front_page(years, X, L):
              "<p class='lead'>O que o grupo conversou e fez, por assunto ao longo de todos os anos ou ano a ano. "
              "Cada assunto e cada ano têm um resumo; abaixo deles estão as conversas, e cada conversa leva às "
              "mensagens originais.</p>\n",
+             "<p class='group-links'>O grupo: <a href='https://t.me/arqueologiadigital'>Telegram</a> · "
+             "<a href='https://github.com/ArqueologiaDigital/'>GitHub</a> · "
+             "<a href='https://forum.fiozera.com.br/'>Fórum Fiozera</a> · "
+             "<a href='http://arqueologiadigital.org/galeria.html'>Galeria de fotos</a> · "
+             "<a href='comunidade.html'>Comunidade</a></p>\n",
              year_nav(years, None)]
     if X.topics:
         parts.append("<h2>Assuntos</h2><p class='period'>Cada assunto reúne tudo o que o grupo conversou e fez "
