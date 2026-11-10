@@ -14,6 +14,9 @@ that stay in the address bar:
   comunidade.html              -> /comunidade/
   membro-<handle>.html         -> /comunidade/<handle>/
   projetos.html                -> /projetos/
+  index.html                   -> /logs/     (the index of the chat pages)
+  <chat name>-<N>.html         -> /logs/<N+1>/   (chat page N, numbered as it is titled: "Page N+1")
+  search.html                  -> /busca/    (the search page; its index stays under --base)
 
 Every relative link in a copied page is rewritten: to the short address when it points to one of
 these pages, otherwise to its place under --base (chat pages, search, stylesheets, the index).
@@ -23,15 +26,16 @@ links end up on the short ones.
 
     python3 -I export_pretty.py --flat WT/formatted/html --out ../ArqueologiaDigital.github.io --stubs
 
-The directories topicos/, comunidade/ and projetos/ of --out are rebuilt from scratch.
+The directories topicos/, comunidade/, projetos/, logs/ and busca/ of --out are rebuilt from scratch.
 """
 import argparse
 import os
 import re
 import shutil
 import sys
+import urllib.parse
 
-OWNED = ("topicos", "comunidade", "projetos")       # directories of --out this script rebuilds
+OWNED = ("topicos", "comunidade", "projetos", "logs", "busca")       # directories of --out this script rebuilds
 ATTR = re.compile(r"""\b(href|src|action)=(['"])([^'"]*)\2""")
 
 
@@ -46,10 +50,14 @@ def pretty(name):
     m = re.fullmatch(r"topico-([a-z0-9-]+)\.html", name)
     if m:
         return f"topicos/{m.group(1)}"
+    m = re.fullmatch(r"Arqueologia_Digital_e_.*-(\d+)\.html", name)
+    if m:
+        return f"logs/{int(m.group(1)) + 1}"
     m = re.fullmatch(r"membro-([a-z0-9_]+)\.html", name)
     if m:
         return f"comunidade/{m.group(1)}"
-    return {"topicos.html": "topicos", "comunidade.html": "comunidade", "projetos.html": "projetos"}.get(name)
+    return {"topicos.html": "topicos", "comunidade.html": "comunidade", "projetos.html": "projetos",
+            "index.html": "logs", "search.html": "busca"}.get(name)
 
 
 def main():
@@ -84,6 +92,7 @@ def main():
         if not url or url.startswith(("#", "/", "http:", "https:", "mailto:", "data:", "javascript:")):
             return m.group(0)
         file, sep, rest = re.match(r"([^?#]*)([?#]?)(.*)", url, re.S).groups()
+        file = urllib.parse.unquote(file)          # chat page names are percent-encoded in links
         new = target[file] + sep + rest if file in target else a.base + url
         return f"{attr}={quote}{new}{quote}"
 
@@ -95,13 +104,19 @@ def main():
     for name, (path, text) in pages.items():
         dest = os.path.join(out, path, "index.html")
         os.makedirs(os.path.dirname(dest), exist_ok=True)
+        text = ATTR.sub(rewrite, text)
+        if name == "search.html":       # paths the search page uses from its script, not from attributes
+            for old, new in (('"./pagefind/pagefind.js"', f'"{a.base}pagefind/pagefind.js"'),
+                             ('"pagePrefix": "', f'"logsBase": "/logs/", "pagePrefix": "{a.base}')):
+                assert text.count(old) == 1, old
+                text = text.replace(old, new)
         with open(dest, "w", encoding="utf-8") as f:
-            f.write(ATTR.sub(rewrite, text))
+            f.write(text)
     if a.stubs:
         for name, to in target.items():
             with open(os.path.join(flat, name), "w", encoding="utf-8") as f:
                 f.write(f'<!DOCTYPE html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url={to}">'
-                        f'<link rel="canonical" href="{to}"><script>location.replace("{to}" + location.hash);</script>'
+                        f'<link rel="canonical" href="{to}"><script>location.replace("{to}" + location.search + location.hash);</script>'
                         f'<a href="{to}">{to}</a>\n')
     print(f"short addresses: {len(pages)} pages -> {out}/{{{','.join(OWNED)}}}/"
           + (f"; {len(target)} redirects left in {flat}" if a.stubs else ""))

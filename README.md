@@ -40,11 +40,12 @@ The topic, community and project pages are published at short addresses on the m
 `arqueologiadigital.org/topicos/`, `/topicos/<slug>/`, `/topicos/ano-<N>/`, `/comunidade/`,
 `/comunidade/<handle>/` and `/projetos/`. `publish.sh` runs `export_pretty.py`, which copies those
 pages into the main site's repository (`../ArqueologiaDigital.github.io`, directories `topicos/`,
-`comunidade/`, `projetos/`), rewrites their links, and commits there locally. The copies left in
+`comunidade/`, `projetos/`, `logs/`, `busca/`), rewrites their links, and commits there locally. The copies left in
 `gh-pages` under `/Telegram_logs_site/formatted/html/` become redirects to the short addresses, so
-links published earlier keep working. The chat pages, the log index and the search stay under
-`/Telegram_logs_site/formatted/html/` (`/busca` and `/log` forward to them from the main site's
-`404.html`). Push both repositories together: the redirects in `gh-pages` point to pages that
+links published earlier keep working. The log index, the chat pages and the search page are
+published the same way, as `/logs/`, `/logs/<page number>/` and `/busca/`, so no address a visitor
+sees contains `/Telegram_logs_site/formatted/html/`. Only files that pages load stay there: the
+stylesheets, the search index (`pagefind/`) and the plaintext logs. Push both repositories together: the redirects in `gh-pages` point to pages that
 exist only once the main site is pushed.
 
 ## Design

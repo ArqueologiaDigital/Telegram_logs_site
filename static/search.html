@@ -49,7 +49,9 @@
 	    var m = PATH.exec(r.url);
 	    if (!m) return r;
 	    var who = (r.filters && r.filters.autor && r.filters.autor[0]) || "";
-	    r.url = CONFIG.pagePrefix + m[1] + ".html#m" + m[2];
+	    // logsBase is set on the copy published at /busca/ (export_pretty.py): chat page N is /logs/<N+1>/
+	    r.url = CONFIG.logsBase ? CONFIG.logsBase + (parseInt(m[1], 10) + 1) + "/#m" + m[2]
+	                            : CONFIG.pagePrefix + m[1] + ".html#m" + m[2];
 	    r.meta = { title: who + " · " + m[3] + "-" + m[4] + "-" + m[5] + " " + m[6] + ":" + m[7] };
 	    if (m[8]) {
 	      r.meta.image = CONFIG.mediaBase + m[3] + "/" + m[3] + "-" + m[4] + "/" + m[2] + ".jpg";

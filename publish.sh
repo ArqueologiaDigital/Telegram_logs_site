@@ -53,14 +53,14 @@ fi
 # Topic index pages (topics/render.py), only once topics/publish exists: the agent-written
 # index is reviewed by a maintainer before it goes public.
 # They are then published at short addresses (arqueologiadigital.org/topicos/, /comunidade/,
-# /projetos/) by copying them into the main site's repository, committed there locally; the
+# /projetos/, and /logs/ and /busca/ for the log index and the search) by copying them into the main site's repository, committed there locally; the
 # copies left here become redirects to those addresses (export_pretty.py).
 MAIN="$HERE/../ArqueologiaDigital.github.io"
 if [ -f "$HERE/topics/publish" ]; then
   python3 -I "$HERE/topics/render.py" --out "${WT:?}" --media-base "$MEDIA_BASE"
   if [ -f "$MAIN/CNAME" ]; then
     python3 -I "$HERE/export_pretty.py" --flat "${WT:?}/formatted/html" --out "$MAIN" --stubs
-    git -C "$MAIN" add -A -- topicos comunidade projetos
+    git -C "$MAIN" add -A -- topicos comunidade projetos logs busca
     if git -C "$MAIN" diff --cached --quiet; then
       echo "main site: short-address pages unchanged"
     else
