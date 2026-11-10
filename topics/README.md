@@ -95,6 +95,8 @@ relates to (per group, or per repository with its own `topics`). `render.py` wri
 `projetos.html` (all of them, by group, each group linking to the group's conversations on the
 subject) and puts a "Repositórios do grupo sobre este assunto" box on each related topic page.
 It shows no stars or dates, so nothing goes stale between builds.
+Each group may have an `image`, a photo from the chat shown left of its text: `{"topic": slug}`
+reuses that topic's image, `{"msg_id": N}` names a photo message.
 
 `python3 -I topics/repos_check.py` lists repositories missing from the catalogue (one GitHub API
 request); on 2026-11-10: 47 public repositories, 47 in the catalogue.

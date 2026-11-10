@@ -1,5 +1,5 @@
 {
- "note": "Catalogue of the organisation's public repositories for projetos.html and the topic pages. Written on 2026-11-10 from each repo's description, README and file listing. topics/repos_check.py lists repos that are missing here.",
+ "note": "Catalogue of the organisation's public repositories for projetos.html and the topic pages. Written on 2026-11-10 from each repo's description, README and file listing. topics/repos_check.py lists repos that are missing here. A group's \"image\" is a photo from the chat: {\"topic\": slug} reuses that topic's image (topic_images.json), {\"msg_id\": N} names a photo message.",
  "org": "ArqueologiaDigital",
  "groups": [
   {
@@ -64,7 +64,10 @@
      "title": "Cross-montador de 1973",
      "about": "Código-fonte e documentação do cross-assembler do Patinho Feio que rodava num IBM 1130, de Maria Alice Grigas Varella Ferreira."
     }
-   ]
+   ],
+   "image": {
+    "msg_id": 36410
+   }
   },
   {
    "slug": "teses-poli-usp",
@@ -120,7 +123,10 @@
      "title": "Automação de Projetos de Sistemas Digitais: Posicionamento de Componentes",
      "about": "Dissertação de mestrado de Selma Shin Shimizu Melnikoff (1977)."
     }
-   ]
+   ],
+   "image": {
+    "msg_id": 30276
+   }
   },
   {
    "slug": "sintetizador-guido-stolfi",
@@ -150,7 +156,10 @@
      "title": "Manuscrito “Programa de Codificação de uma Partitura”",
      "about": "Digitalização do manuscrito, supostamente de Guido Stolfi e/ou João José Neto, por volta de 1975."
     }
-   ]
+   ],
+   "image": {
+    "topic": "sintetizador-guido-stolfi"
+   }
   },
   {
    "slug": "technics",
@@ -186,7 +195,10 @@
      "title": "Painéis vetoriais para emuladores",
      "about": "Desenhos vetoriais (Inkscape) e arquivos de layout do MAME para teclados e sintetizadores, em domínio público (CC0)."
     }
-   ]
+   ],
+   "image": {
+    "topic": "technics-teclados"
+   }
   },
   {
    "slug": "another-world",
@@ -207,7 +219,10 @@
      "title": "Another World: reconstrução do código-fonte",
      "about": "Código-fonte reconstruído que gera binários idênticos, byte a byte, aos de cada versão catalogada."
     }
-   ]
+   ],
+   "image": {
+    "topic": "another-world"
+   }
   },
   {
    "slug": "jogos-e-programacao",
@@ -259,7 +274,10 @@
       "arcades-e-pinball"
      ]
     }
-   ]
+   ],
+   "image": {
+    "topic": "mines"
+   }
   },
   {
    "slug": "computadores-nacionais",
@@ -313,7 +331,10 @@
       "memoria-informatica-brasileira"
      ]
     }
-   ]
+   ],
+   "image": {
+    "topic": "scopus-nexus"
+   }
   },
   {
    "slug": "o-grupo",
@@ -348,7 +369,10 @@
      "title": "Emulação e História da Computação",
      "about": "Planejamento das atividades do grupo junto ao acervo da Mostra de Tecnologia da Informação, no prédio do LASSU, PCS/EPUSP."
     }
-   ]
+   ],
+   "image": {
+    "topic": "organizacao-do-grupo"
+   }
   },
   {
    "slug": "outros",

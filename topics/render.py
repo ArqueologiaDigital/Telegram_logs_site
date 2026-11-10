@@ -377,7 +377,7 @@ class Repos:
                 + "</ul><p class='meta'><a href='projetos.html'>Todos os projetos ›</a></p></aside>\n")
 
 
-def projects_page(R, X):
+def projects_page(R, X, L):
     n = sum(len(g["repos"]) for g in R.groups)
     titles = {tp["slug"]: tp for tp in X.topics}
     parts = [head("Projetos: Arqueologia Digital"), nav(),
@@ -390,7 +390,18 @@ def projects_page(R, X):
                                           f"<span class='n'>{len(g['repos'])}</span></li>" for g in R.groups) + "</ul>\n"]
     for g in R.groups:
         rel = " · ".join(f"<a href='{X.page(titles[t])}'>{esc(titles[t]['title'])}</a>" for t in g["topics"] if t in titles)
-        parts.append(f"<section id='{q(g['slug'])}'><h2>{esc(g['title'])}</h2>"
+        im = g.get("image") or {}
+        if im.get("topic") in titles:
+            img = X.image(L, titles[im["topic"]])
+        else:
+            img = X.image(L, {"slug": "projetos/" + g["slug"], "image": im.get("msg_id")})
+        fig = ""
+        if img:
+            rec = L.d.by_id[img[1]]
+            cap = f"Foto enviada por {L.d.sender(rec['raw'])} em {pt_date(rec)}"
+            fig = (f"<figure class='topic-image small'><a href='{q(img[0])}'><img src='{q(img[0])}' alt='' "
+                   f"loading='lazy'></a><figcaption>{L.msg(img[1], cap)}</figcaption></figure>")
+        parts.append(f"<section class='project-group' id='{q(g['slug'])}'><h2>{esc(g['title'])}</h2>{fig}"
                      + (f"<p>{esc(g['intro'])}</p>" if g["intro"] else "")
                      + (f"<p class='meta'>Conversas do grupo sobre isto: {rel}</p>" if rel else "")
                      + "<ul class='repos'>" + "".join(R.item(r) for r in g["repos"]) + "</ul></section>\n")
@@ -516,7 +527,7 @@ def main():
     profiles = {d.name(uid): member_page(uid, info) for uid, info in optin.items()}
     X = Cross(os.path.join(HERE, "crossyear.json"), years, problems)
     R = Repos(os.path.join(HERE, "repos.json"), X, problems)
-    B.write(os.path.join(hdir, "projetos.html"), projects_page(R, X))
+    B.write(os.path.join(hdir, "projetos.html"), projects_page(R, X, L))
     B.write(os.path.join(hdir, "topicos.html"), front_page(years, X, L))
     for y in years:
         B.write(os.path.join(hdir, y.page()), year_page(L, y, years, X))
