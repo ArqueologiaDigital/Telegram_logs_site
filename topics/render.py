@@ -14,7 +14,9 @@ Writes into <out>/formatted/html/, next to the chat pages it links to:
   comunidade.html                 community gallery: a card per member in topics/profiles_optin.json
                                   (photo, name, role, active years, message count, links to the
                                   profile and to a search of their messages)
-  membro-<user id>.html           a profile, only for user ids listed in topics/profiles_optin.json;
+  membro-<handle>.html            a profile, only for user ids listed in topics/profiles_optin.json
+                                  (handle = the "handle" the member chose there, else the user id;
+                                  with a handle, membro-<user id>.html is a redirect to it);
                                   its bio is shown only once "bio_approved" is true
 
 Every message id the agents cite is checked against the archive: an id that does not exist, or a
@@ -27,6 +29,7 @@ import argparse
 import glob
 import json
 import os
+import re
 import shutil
 import sys
 import urllib.parse
@@ -161,7 +164,7 @@ def resource(r):
 
 
 def conversation(L, c, profiles):
-    people = ", ".join(f"<a href='membro-{profiles[n]}.html'>{esc(n)}</a>" if n in profiles else esc(n)
+    people = ", ".join(f"<a href='{profiles[n]}'>{esc(n)}</a>" if n in profiles else esc(n)
                        for n in c["participants"])
     keys = [k for k in c.get("key_ids", []) if k != c["first_id"]]
     keylinks = " · ".join(L.msg(k, f"#{k}") for k in keys)
@@ -302,6 +305,15 @@ def front_page(years, X):
     return "".join(parts)
 
 
+def member_page(uid, info):
+    """File name of a member's profile: by the handle they chose, else by user id."""
+    handle = info.get("handle")
+    if handle:
+        assert re.fullmatch(r"[a-z0-9_]{2,40}", handle), handle
+        return f"membro-{handle}.html"
+    return f"membro-{uid}.html"
+
+
 def messages_of(d, uid):
     return [r for r in d.records if r.get("raw") and d.sender_id(r["raw"]) == uid
             and r["raw"]["_"] != "MessageService" and not r["archive"].get("deletion")]
@@ -318,12 +330,13 @@ def gallery_page(L, optin, opts):
         active = "" if not ys else (str(ys[0]) if len(ys) == 1 else f"{ys[0]}–{ys[-1]}")
         search = "search.html?" + urllib.parse.urlencode({"autor": name})
         big = B.avatar(d, uid, name, opts).replace("'avatar", "'avatar big")
+        page = member_page(uid, info)
         cards.append(
-            f"<div class='card' style='--h:{B.hue(uid)}'><a href='membro-{uid}.html'>{big}</a>"
-            f"<h3><a href='membro-{uid}.html'>{esc(name)}</a></h3>"
+            f"<div class='card' style='--h:{B.hue(uid)}'><a href='{page}'>{big}</a>"
+            f"<h3><a href='{page}'>{esc(name)}</a></h3>"
             f"<p class='role'>{esc(info.get('role') or '')}</p>"
             f"<p class='meta'>{len(mine)} mensagens{' · ativo em ' + active if active else ''}</p>"
-            f"<p class='meta'><a href='membro-{uid}.html'>Perfil</a> · <a href='{q(search)}'>Mensagens</a></p></div>\n")
+            f"<p class='meta'><a href='{page}'>Perfil</a> · <a href='{q(search)}'>Mensagens</a></p></div>\n")
     return "".join([
         head("Comunidade: Arqueologia Digital (Telegram)"), nav(),
         "\t<div class='topics'><h1>Comunidade</h1>"
@@ -405,7 +418,7 @@ def main():
                    key=lambda y: y.n)
     with open(os.path.join(HERE, "profiles_optin.json"), encoding="utf-8") as f:
         optin = {int(k): v for k, v in json.load(f).items()}
-    profiles = {d.name(uid): uid for uid in optin}
+    profiles = {d.name(uid): member_page(uid, info) for uid, info in optin.items()}
     X = Cross(os.path.join(HERE, "crossyear.json"), years, problems)
     B.write(os.path.join(hdir, "topicos.html"), front_page(years, X))
     for y in years:
@@ -415,7 +428,12 @@ def main():
     for tp in X.topics:
         B.write(os.path.join(hdir, X.page(tp)), topic_page(L, years, X, tp, profiles))
     for uid, info in optin.items():
-        B.write(os.path.join(hdir, f"membro-{uid}.html"), profile_page(L, years, uid, info, opts, X))
+        page = member_page(uid, info)
+        B.write(os.path.join(hdir, page), profile_page(L, years, uid, info, opts, X))
+        if page != f"membro-{uid}.html":       # the address by user id keeps working
+            B.write(os.path.join(hdir, f"membro-{uid}.html"),
+                    f"<!DOCTYPE html><meta charset=\"utf-8\"><meta http-equiv=\"refresh\" content=\"0; url={page}\">"
+                    f"<link rel=\"canonical\" href=\"{page}\"><a href=\"{page}\">{esc(d.name(uid))}</a>\n")
     B.write(os.path.join(hdir, "comunidade.html"), gallery_page(L, optin, opts))
     shutil.copy(os.path.join(HERE, "topicos.css"), os.path.join(hdir, "topicos.css"))
     idx = os.path.join(hdir, "index.html")     # link the front page from the log's index page

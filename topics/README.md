@@ -30,7 +30,9 @@ card in the community gallery (`comunidade.html`: photo, name, role, active year
 links to the profile and to a search of their messages) only if their Telegram user id is in
 `profiles_optin.json`, with the date they asked. Names in conversation lists link to a profile
 only for those people. To add someone who asked: add their user id (see `users/users.jsonl` in
-`Telegram_logs`) with `role` and `opted_in`; to remove someone, delete their entry.
+`Telegram_logs`) with `role`, `opted_in` and optionally a `handle` (lowercase letters, digits, `_`; the profile is then
+`membro-<handle>.html`, short address `arqueologiadigital.org/comunidade/<handle>`); to remove someone,
+delete their entry.
 
 ## Running
 
