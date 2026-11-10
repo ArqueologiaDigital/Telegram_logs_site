@@ -166,14 +166,12 @@ class Links:
 
 
 def head(title):
-    return (B.head(title).replace("<html>", "<html lang=\"pt\">")
+    return (B.head(title).replace("<html>", "<html lang=\"pt\">").replace("<body>", "<body class=\"wide\">")
             .replace("</head>", "  \t<link rel=stylesheet href=\"topicos.css\">\n  </head>"))
 
 
 def nav():
-    return ("\t<div class='navigation-top'><a href=\"topicos.html\">Tópicos</a> | "
-            "<a href=\"projetos.html\">Projetos</a> | <a href=\"comunidade.html\">Comunidade</a> | "
-            "<a href=\"index.html\">Páginas do log</a> | <a href=\"search.html\">Busca</a> |</div>\n")
+    return ""      # the site header comes from build.head() (B.SITE_HEADER)
 
 
 def resource(r):
@@ -199,6 +197,11 @@ def conversation(L, c, profiles):
             f"{'<ul class=res>' + res + '</ul>' if res else ''}</div></details>\n")
 
 
+def conv_list(items):
+    """A list of conversations: one column on phones, two on wide screens (topicos.css)."""
+    return "<div class='convs'>" + "".join(items) + "</div>"
+
+
 def year_nav(years, cur):
     items = []
     for y in years:
@@ -221,7 +224,7 @@ def theme_page(L, y, years, t, profiles, X):
                          for tp in X.of.get(y.sid(t, s), []))
         parts.append(f"<section id='{q(s['slug'])}'><h2>{esc(s['title'])}</h2><p>{esc(s['summary'])}</p>"
                      f"{'<p class=meta>' + cross + '</p>' if cross else ''}\n")
-        parts += [conversation(L, y.convs[i], profiles) for i in s["conversation_ids"] if i in y.convs]
+        parts.append(conv_list(conversation(L, y.convs[i], profiles) for i in s["conversation_ids"] if i in y.convs))
         parts.append("</section>\n")
     parts.append("</div>\n  </body>\n</html>\n")
     return "".join(parts)
@@ -235,6 +238,7 @@ def topic_page(L, years, X, tp, profiles, R):
              f"<p class='crumbs'><a href='topicos.html'>Tópicos</a> › {esc(tp['title'])}</p>"
              f"<h1>{esc(tp['title'])}</h1>"
              f"<p class='period'>{len(tp['convs'])} conversas · anos {span} do grupo</p>"]
+    parts.append(R.box(tp["slug"]))
     img = X.image(L, tp)
     if img:
         rec = L.d.by_id[img[1]]
@@ -242,7 +246,6 @@ def topic_page(L, years, X, tp, profiles, R):
         parts.append(f"<figure class='topic-image'><a href='{q(img[0])}'><img src='{q(img[0])}' alt=''></a>"
                      f"<figcaption>{L.msg(img[1], cap)}</figcaption></figure>")
     parts += [f"<p class='lead'>{esc(par)}</p>" for par in tp.get("summary", "").split("\n\n") if par.strip()]
-    parts.append(R.box(tp["slug"]))
     parts.append("<p class='years-nav'>Ano a ano: " + " · ".join(
         f"<a href='#ano-{n}'>Ano {n}</a>" for n in tp["years"]) + "</p>\n")
     by_year = {}
@@ -257,7 +260,7 @@ def topic_page(L, years, X, tp, profiles, R):
         for t, s in subs:
             parts.append(f"<h3>{esc(s['title'])} <span class='n'>no tema <a href='{y.theme_page(t)}#{q(s['slug'])}'>"
                          f"{esc(t['title'])}</a></span></h3><p class='subsum'>{esc(s['summary'])}</p>\n")
-            parts += [conversation(L, y.convs[i], profiles) for i in s["conversation_ids"] if i in y.convs]
+            parts.append(conv_list(conversation(L, y.convs[i], profiles) for i in s["conversation_ids"] if i in y.convs))
         parts.append("</section>\n")
     parts.append(method_note())
     parts.append("</div>\n  </body>\n</html>\n")
@@ -304,7 +307,7 @@ def method_note():
 def front_page(years, X, L):
     n_conv = sum(len(y.convs) for y in years)
     n_msg = sum(y.messages for y in years)
-    parts = [head("Tópicos: Arqueologia Digital (Telegram)").replace("<body>", "<body class=\"wide\">"), nav(),
+    parts = [head("Tópicos: Arqueologia Digital (Telegram)"), nav(),
              "\t<div class='topics'><h1>Arqueologia Digital: tópicos das conversas</h1>"
              f"<p class='period'>{len(years)} anos do grupo, de {years[0].span.split(' a ')[0]} a "
              f"{years[-1].span.split(' a ')[1]} · {n_conv} conversas em {n_msg} mensagens</p>"
@@ -494,7 +497,7 @@ def profile_page(L, years, uid, info, opts, X):
                 themes.append(f"<a href='{y.theme_page(t)}'>{esc(t['title'])}</a> ({k})")
         blocks.append(f"<details class='profile-year'><summary><b>{y.label}</b> ({y.span}): "
                       f"{len(convs)} conversas</summary><p class='subs'>Temas: {', '.join(themes)}</p>"
-                      + "".join(conversation(L, c, {}) for c in sorted(convs, key=lambda c: c["first_id"]))
+                      + conv_list(conversation(L, c, {}) for c in sorted(convs, key=lambda c: c["first_id"]))
                       + "</details>\n")
     if blocks:
         parts.append(f"<h2>Conversas em que participou ({total})</h2>" + "".join(blocks))

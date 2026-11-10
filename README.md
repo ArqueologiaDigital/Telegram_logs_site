@@ -14,7 +14,7 @@ The 2018 pages (`telegram-history-dump`) lived at
 |------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | file names | `formatted/html/index.html`, `formatted/html/<LEGACY_NAME>-N.html`, `formatted/plaintext/<LEGACY_NAME>/<LEGACY_NAME>_YYYY-MM-DD.log` |
 | pagination | 1000 archived messages per page, oldest first, so page N covers the same messages as in 2018                                         |
-| look       | the original `telegram-history-dump.css`, plus a few additions at its end                                                            |
+| look       | the 2018 markup and class names; since 2026-11 the colours follow the site's dark style (see "Design" below)                         |
 | timestamps | local time (America/Sao_Paulo) in each bubble's `title`, a date row every 10 messages                                                |
 
 `tests/compare_old_pages.py` checks the first point against the 2018 HTML: every message bubble
@@ -33,6 +33,21 @@ its sender's own colour (a hue fixed per Telegram user id, `hue()` in `build.py`
 sender's profile photo beside the name, or their initials when there is no public photo. The
 photos come from `Telegram_logs/tools/tg_avatars.py` (`media/avatars.jsonl`, files in the media
 repo's `avatars/`).
+
+## Design
+
+Every page shares one header (`SITE_HEADER` in `build.py`: Tópicos, Projetos, Comunidade, Log do
+chat, Busca, Galeria) and one style, taken from the photo gallery of the main site: dark
+background, serif text, green links, cards. It lives at the end of
+`static/telegram-history-dump.css` (chat pages, index, shared variables) and in
+`topics/topicos.css` (topic, year, project, community and profile pages).
+
+Layouts adapt to the screen. On desktop the chat pages are up to 980 px wide and the topic-type
+pages 1240 px, with text kept to a readable line length and the extra width used for side-by-side
+blocks: topic cards in up to 4 columns, a topic's photo and repositories box beside its summary,
+conversations and yearly summaries two by two, themes and repositories in card grids. On phones
+(under 700 to 900 px, depending on the block) everything is one column. Checked in Chromium at
+1300 px and 390 px with `tests/cdp_shot.mjs`.
 
 ## Publishing
 

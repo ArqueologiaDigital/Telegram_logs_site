@@ -23,4 +23,4 @@ await sleep(+wait);
 const shot = await send("Page.captureScreenshot", { format: "png" });
 writeFileSync(out, Buffer.from(shot.result.data, "base64"));
 const exited = new Promise(r => chrome.once("exit", r));
-chrome.kill(); await exited; rmSync(prof, { recursive: true, force: true, maxRetries: 10, retryDelay: 200 }); process.exit(0);
+chrome.kill(); await exited; for (let i = 0; i < 20; i++) { try { rmSync(prof, { recursive: true, force: true }); break; } catch { await new Promise(r => setTimeout(r, 200)); } }; process.exit(0);

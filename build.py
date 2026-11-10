@@ -452,7 +452,12 @@ def nav(cls, n, last):
 def head(title):
     return ("<!DOCTYPE html>\n<html>\n  <head>\n  \t<meta charset=\"utf-8\">\n"
             "  \t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
-            f"  \t<title>{esc(title)}</title>\n  \t<link rel=stylesheet href=\"{CSS}\">\n  </head>\n  <body>\n")
+            f"  \t<title>{esc(title)}</title>\n  \t<link rel=stylesheet href=\"{CSS}\">\n  </head>\n  <body>\n"
+            + SITE_HEADER)
+
+
+# The same header on every page of the site (chat pages, index, topics, projects, community).
+SITE_HEADER = ("\t<header class=\"site\"><a class=\"brand\" href=\"topicos.html\">Arqueologia Digital</a><nav><a href=\"topicos.html\">Tópicos</a><a href=\"projetos.html\">Projetos</a><a href=\"comunidade.html\">Comunidade</a><a href=\"index.html\">Log do chat</a><a href=\"search.html\">Busca</a><a href=\"http://arqueologiadigital.org/galeria.html\">Galeria</a></nav></header>\n")
 
 
 def write(path, text):

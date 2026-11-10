@@ -7,7 +7,7 @@ import { join } from "node:path";
 const [url, expr, tmo = "40", pre = ""] = process.argv.slice(2);
 const port = 9300 + Math.floor(Math.random() * 500);
 const prof = mkdtempSync(join(tmpdir(), "cdp-"));
-process.on("exit", () => { try { rmSync(prof, { recursive: true, force: true, maxRetries: 10, retryDelay: 200 }); } catch {} });
+process.on("exit", () => { for (let i = 0; i < 50; i++) { try { rmSync(prof, { recursive: true, force: true }); break; } catch {} } });
 const chrome = spawn("chromium", ["--headless", "--disable-gpu", "--no-sandbox", `--remote-debugging-port=${port}`,
   `--user-data-dir=${prof}`, "about:blank"], { stdio: "ignore" });
 const sleep = ms => new Promise(r => setTimeout(r, ms));
