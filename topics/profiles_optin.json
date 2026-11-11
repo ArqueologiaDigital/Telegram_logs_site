@@ -38,5 +38,13 @@
     "bio": "Toy participa do grupo desde agosto de 2021 e aparece em 15 conversas do índice. Acompanhou de perto o AnotherWorld_VMTools, as ferramentas de Felipe para o disassembly do bytecode do Another World: Felipe lhe pediu que examinasse uma issue relatada por um usuário e lhe indicou outras em aberto, como a comparação das versões de Amiga e MS-DOS. Trouxe ao grupo material sobre a preservação e a história dos jogos, como o episódio do podcast Ludoravia sobre o desafio de preservar a memória dos jogos brasileiros e uma entrevista com Aaron Giles, ex-programador do MAME, e comentou com ironia o marketing do Zeebo como \"primeiro console nacional\", um aparelho desenhado na Califórnia. Também combinou com Felipe ir ao RetroFest UK, em Swindon.",
     "bio_basis": "Escrito a partir do índice de tópicos (conversas #14029, #19344, #17610, #25318, #15453, #38655). Publicado em 2026-11-11 com autorização de Toy, seguindo o modelo dos demais perfis; ele pode pedir mudanças ou a retirada do texto.",
     "bio_approved": true
+  },
+  "158875400": {
+    "handle": "mrparn",
+    "role": "",
+    "opted_in": "2026-11-11",
+    "bio": "Pablo Vasques Bravo-Villalba participa do grupo desde setembro de 2021 e aparece em 291 conversas do índice. Boa parte das suas contribuições é sobre o MSX: explicou as interfaces SD Mapper e o Nextor, comparou os modelos do Hotbit e do Expert, apontou que a Wikipedia erra a razão de aspecto dos pixels do TMS9918 (8:7 em NTSC, não 1:1) e mediu-a no WebMSX e no openMSX, e sugeriu o V9990 para viabilizar o Another World no MSX. No port do Mines, o campo minado de Felipe, desenhou um tileset de 13 cores para o MSX2 e protótipos com metatiles de 16x16, um deles dentro das restrições do TMS9918 do MSX1. Também faz música com chips de som: publicou arranjos de trilhas de jogos para os chips VRC6 e VRC7 da Konami, fez uma versão OPL3 da música de Hype, do MSX, e participou do Mofadocast sobre música de videogame. Ajudou a identificar peças de hardware em fotos, como o VDP TMS9128 do titulador VET 3000, o CRTC MC6845P do Itautec I-7000 e o gravador Akai X-100D usado por Guido Stolfi em 1973, sugeriu o Dear ImGui para o emulador do Patinho Feio de Lucas Alberto e apontou erros de OCR na digitalização do cross-assembler do Patinho Feio.",
+    "bio_basis": "Escrito a partir do índice de tópicos (conversas #15555, #16936, #33409, #25886, #21277, #21766, #25920, #34855, #26408, #36054, #38778, #34896, #29891, #36818). Publicado em 2026-11-11 com autorização de Pablo, seguindo o modelo dos demais perfis; ele pode pedir mudanças ou a retirada do texto.",
+    "bio_approved": true
   }
 }
