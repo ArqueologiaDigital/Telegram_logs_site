@@ -30,5 +30,13 @@
     "bio": "Ismael Luceno está no grupo desde o primeiro dia, em novembro de 2017, e aparece em 90 conversas do índice. Suas contribuições mais frequentes são sobre PCs antigos, MS-DOS e ferramentas de software livre: explicou o cabeçalho e a carga de arquivos .EXE no MS-DOS, a origem histórica do CR+LF e do LF como fim de linha e a compressão usada em firmwares x86, e procurou ajuda para portar para o GCC 12 o suporte a x86 de 16 bits. Contribuiu com o modo de código e a navegação do HexItch, clone livre do editor hexadecimal HexIt, por meio de um pull request, e contou que, com Francisco Castro Regueira, fazia ferramentas para analisar código de BIOS. Nos projetos de outros membros, sugeriu caminhos técnicos, como mapear as interrupções usadas pelo Alley Cat, ligar a porta serial dos terminais VT emulados no MAME a um pseudo-tty e desduplicar repositórios git com alternates. Também contou que preserva gerenciadores de janelas antigos na distribuição Source Mage e, mais recentemente, comparou modelos de IA para código e propôs um repositório comum de regras para agentes.",
     "bio_basis": "Escrito a partir do índice de tópicos (conversas #16192, #22584, #22715, #20198, #16287, #5448, #8016, #10246, #35004, #14809, #37810). Publicado em 2026-11-10 seguindo o modelo dos demais perfis; Ismael pode pedir mudanças ou a retirada do texto.",
     "bio_approved": true
+  },
+  "229073163": {
+    "handle": "toymak3r",
+    "role": "",
+    "opted_in": "2026-11-11",
+    "bio": "Toy participa do grupo desde agosto de 2021 e aparece em 15 conversas do índice. Acompanhou de perto o AnotherWorld_VMTools, as ferramentas de Felipe para o disassembly do bytecode do Another World: Felipe lhe pediu que examinasse uma issue relatada por um usuário e lhe indicou outras em aberto, como a comparação das versões de Amiga e MS-DOS. Trouxe ao grupo material sobre a preservação e a história dos jogos, como o episódio do podcast Ludoravia sobre o desafio de preservar a memória dos jogos brasileiros e uma entrevista com Aaron Giles, ex-programador do MAME, e comentou com ironia o marketing do Zeebo como \"primeiro console nacional\", um aparelho desenhado na Califórnia. Também combinou com Felipe ir ao RetroFest UK, em Swindon.",
+    "bio_basis": "Escrito a partir do índice de tópicos (conversas #14029, #19344, #17610, #25318, #15453, #38655). Publicado em 2026-11-11 com autorização de Toy, seguindo o modelo dos demais perfis; ele pode pedir mudanças ou a retirada do texto.",
+    "bio_approved": true
   }
 }
