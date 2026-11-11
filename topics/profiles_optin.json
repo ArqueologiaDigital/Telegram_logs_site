@@ -54,5 +54,13 @@
     "bio": "Leonardo Roman está no grupo desde janeiro de 2018 e aparece em 122 conversas do índice. Seu projeto mais visível é o VET 3000, titulador de vídeo brasileiro de 1988: mostrou o aparelho ao grupo, publicou o dump da ROM no Datassette e mapeou o teclado e o conector de expansão para o driver que Felipe escreveu no MAME; depois publicou um repositório de engenharia reversa com o disassembly comentado do firmware, documentação do hardware e um cartucho demo, e enviou ao MAME uma correção do clock do VDP. Para o projeto do KN5000, encontrou no Internet Archive o compilador oficial da Toshiba para o TLCS-900 e compartilhou o manual da CPU de 1994. Digitalizou com OCR o livro \"How to Design and Build Your Own Custom TV Games\" (1978), fez o dump do Spy Hunter de ColecoVision traduzido no Brasil e da ROM do modem do cartucho Meganet, e mostrou manuais do SOX, o Unix da Cobra, que pretende digitalizar. É frequente ele apontar onde está a documentação: esquemas de computadores nacionais e firmwares do Itautec I-7000 no Datassette, manuais de serviço, edições antigas de revistas. Também indicou ferramentas de preservação, como a KryoFlux, que ofereceu emprestar, o FluxEngine e gravadores de EPROM, e trouxe ao grupo Clemar Folly Jr, que recria placas do TK2000 e do Top Game.",
     "bio_basis": "Escrito a partir do índice de tópicos (conversas #35847, #36054, #40857, #14173, #25553, #8402, #12882, #23798, #29996, #38491, #38697, #3793, #12484, #30120, #33228) e conferido com as mensagens dele #14182, #38493, #38707, #40857 e #40956 (PR 16276 do MAME). Publicado em 2026-11-11 com autorização de Leonardo, seguindo o modelo dos demais perfis; ele pode pedir mudanças ou a retirada do texto.",
     "bio_approved": true
+  },
+  "82071256": {
+    "handle": "aurium",
+    "role": "",
+    "opted_in": "2026-11-11",
+    "bio": "Aurélio Heckert (Aurélio GNU no Telegram) escreve no grupo desde fevereiro de 2026 e aparece em 2 conversas do índice. Compartilhou a matéria do Hackaday sobre o x86CSS, emulador de 8086 escrito só em CSS, e um vídeo sobre por que os primeiros computadores eram feitos de válvulas, e sugeriu que o suporte a Web Serial no Firefox poderia dar origem a sites para interagir com hardware antigo.",
+    "bio_basis": "Escrito a partir do índice de tópicos (conversas #37649, #38991) e das mensagens dele #37669, #37884 e #38991. Publicado em 2026-11-11 com autorização de Aurélio, seguindo o modelo dos demais perfis; ele pode pedir mudanças ou a retirada do texto.",
+    "bio_approved": true
   }
 }
