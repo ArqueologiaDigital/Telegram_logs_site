@@ -75,6 +75,45 @@ The 2018 URLs under `/Telegram_logs/formatted/html/` are redirected to the same 
 `/Telegram_logs_site/formatted/html/` by the `404.html` of the main site's repo
 (`ArqueologiaDigital.github.io`), which GitHub Pages serves for any path no repo serves.
 
+## Previewing before pushing
+
+`preview_site.py` serves the local checkouts exactly as GitHub Pages will serve them once pushed,
+so a change can be looked at in the browser before anything leaves the machine. It only reads
+files; it never builds, commits or pushes.
+
+```
+cd Telegram_logs_site
+TMPDIR=~/compartilhado/tmp ./publish.sh          # build and commit locally (no push)
+python3 -I preview_site.py                        # then open http://127.0.0.1:8000/
+python3 -I preview_site.py --port 8080 --remote-media
+```
+
+Stop it with Ctrl-C (or, if it was started in the background, by killing that process). Nothing
+needs cleaning up afterwards. Because it serves what `publish.sh` committed, rerun `publish.sh`
+after a change and reload the page; the server itself does not need restarting.
+
+| URL path                | served from                                 | on the live site                                              |
+|-------------------------|---------------------------------------------|---------------------------------------------------------------|
+| `/`                     | `../ArqueologiaDigital.github.io`           | main site: `/topicos/`, `/comunidade/`, `/logs/N/`, `/busca/` |
+| `/Telegram_logs_site/`  | `../Telegram_logs_site-gh-pages` (worktree) | chat pages, CSS, search index                                 |
+| `/Telegram_logs_media/` | `../Telegram_logs_media`                    | not served; media comes from GitHub                           |
+
+| option           | default     | meaning                                                                                 |
+|------------------|-------------|-----------------------------------------------------------------------------------------|
+| `--port`         | `8000`      | port to listen on                                                                       |
+| `--bind`         | `127.0.0.1` | address to listen on; keep the default so the preview is not reachable from the network |
+| `--remote-media` | off         | keep the `raw.githubusercontent.com` media links, so only already pushed media shows    |
+
+Without `--remote-media`, every HTML page has the media base
+`https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/` rewritten to
+`/Telegram_logs_media/`, so photos and link-preview thumbnails not yet pushed show too. Like
+GitHub Pages, it lists no directories, and it refuses `.git` paths and paths outside the three
+directories.
+
+To look at a branch that must not be published (such as `pagina-arquivos`), do not run
+`publish.sh` on it: the daily job publishes whatever branch is checked out. Build it into
+`build/` instead and use the plain `http.server` preview under [Building](#building).
+
 ## Search
 
 `search_index.py` builds a full-text search with [Pagefind](https://pagefind.app):
@@ -141,12 +180,8 @@ python3 -I tests/compare_old_pages.py ../Telegram_logs-2018-private/formatted/ht
 Preview with a local web server from the directory that holds all repos (browsers block media
 from `file://` pages): `python3 -m http.server 8765` there, then open
 <http://127.0.0.1:8765/Telegram_logs_site/build/formatted/html/index.html>.
-
-To see the site as it will be published, before pushing: run `./publish.sh` (it only commits
-locally), then `python3 -I preview_site.py` and open <http://127.0.0.1:8000/>. It serves the main
-site repository at `/` and the gh-pages worktree at `/Telegram_logs_site/`, as GitHub Pages does,
-and points the media links at the local `../Telegram_logs_media`, so unpushed media shows too
-(`--remote-media` keeps the GitHub links).
+To see the whole site as it will be published, use `preview_site.py` instead (see
+[Previewing before pushing](#previewing-before-pushing)).
 
 | option         | values                                  | meaning                                                                                                                                     |
 |----------------|-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
