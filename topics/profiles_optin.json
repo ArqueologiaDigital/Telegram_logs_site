@@ -136,7 +136,8 @@
     "opted_in": "2026-11-12",
     "bio": "Emerson, o BrancoRP2000, escreve no grupo desde agosto de 2026 e aparece em 5 conversas do índice. Participa sobretudo com perguntas, que costumam render explicações. Quando Felipe mostrou uma prova de conceito do Wacky Gator em 3D no MAME, perguntou se uma emulação não deveria reproduzir todas as peças do movimento, e a resposta foi que toda emulação é um gradiente de fidelidade. Quando RicBit contou que seu Ys III para o V9990 ficava ruim no WebMSX, sugeriu falar com Paulo Peccin, autor do emulador; e quando RicBit disse que um bug do seu TMNT aparecia só no hardware real e não no openMSX, perguntou se a falha seria do openMSX, o que RicBit confirmou: se falha no hardware e não no emulador, quem está errado é o emulador. Na conversa sobre o turbo R, lembrou a revista CPU MSX que trazia um carro de Fórmula 1 na capa e falava do turbo R.",
     "bio_basis": "Escrito a partir do índice de tópicos (conversas #40362, #41742, #41807, #41866, #41987) e conferido com as mensagens dele #40502, #41808, #41815 e #42051 e com as respostas #40503 (Felipe), #41807, #41810 e #41816 (RicBit). Paulo Peccin como autor do WebMSX vem da conversa #28388 do índice (exposição de 40 anos do MSX na Canal 3 Expo). Publicado em 2026-11-12 com autorização de Emerson, seguindo o modelo dos demais perfis; ele pode pedir mudanças ou a retirada do texto.",
-    "bio_approved": true
+    "bio_approved": true,
+    "picture": "pictures/brancorp2000.jpg"
   },
   "147061344": {
     "handle": "eduloos",
