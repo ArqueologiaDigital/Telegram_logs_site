@@ -1082,6 +1082,93 @@
    "unchecked": false
   },
   {
+   "slug": "sony-video",
+   "title": "Equipamentos de vídeo da Sony",
+   "scope": "Equipamentos profissionais de vídeo da Sony (monitores PVM, mesa de controle PVE-500, switchers DFS-500 e DFS-700, VCRs BETACAM-SP, U-Matic e UVW) e a sua emulação no MAME.",
+   "subtopics": [
+    "3/emulacao-no-mame/sony-dfs-500",
+    "4/outros-projetos/sony-dfs-500"
+   ],
+   "picks": [
+    {
+     "subtopic": "1/acervo-poli-usp/pecas-do-acervo",
+     "conversations": [
+      6770
+     ]
+    },
+    {
+     "subtopic": "4/msx/cabos-turbo-r",
+     "conversations": [
+      17018
+     ]
+    },
+    {
+     "subtopic": "4/hardware-dos-membros/midias-e-dados",
+     "conversations": [
+      17179
+     ]
+    },
+    {
+     "subtopic": "6/technics-kn5000/disassembler-tlcs900",
+     "conversations": [
+      25553
+     ]
+    },
+    {
+     "subtopic": "7/preservacao-e-direito/fitas-e-midias",
+     "conversations": [
+      30537
+     ]
+    },
+    {
+     "subtopic": "8/emulacao-engenharia-reversa-e-hardware/hardware-e-replicas",
+     "conversations": [
+      35451
+     ]
+    },
+    {
+     "subtopic": "9/outros-drivers-mame/outras-noticias-mame",
+     "conversations": [
+      40370
+     ]
+    }
+   ],
+   "summary": "O tema reúne o interesse do grupo por equipamentos profissionais de vídeo da Sony, quase sempre a partir dos aparelhos que Felipe \"Juca\" Sanches coleciona e emula no MAME. No ano 1 do grupo (2017-2018), Affonso Amendola salvou do descarte na USP um monitor profissional PVM-1350, que funcionava, e ligou nele o TK3000 com um cabo BNC improvisado; os participantes comentaram a qualidade dos tubos Trinitron, e Felipe contou que tinha usado um monitor igual na Poli para testar um MSX em FPGA.\n\nNo ano 3 (2019-2020), Felipe contou que tinha comprado vários equipamentos de vídeo profissionais da Sony (unidades da mesa de controle PVE-500, VCRs UVW e U-Matic e o switcher DFS-500) e que os estava emulando no MAME. A PVE-500, doada anos antes por Marquinho, ficou muito tempo no Garoa Hacker Clube, onde Felipe chegou a emulá-la parcialmente. O DFS-500 converte o vídeo analógico para um buffer digital, aplica efeitos de transição como os da TV dos anos 90 e converte o resultado de volta; é controlado por duas CPUs NEC V20 e uma NEC V30. Felipe limpou uma placa com bateria vazada, fez os primeiros testes do hardware e enviou o driver ao MAME como \"non-working\" no PR #7346, quando o emulador já gerava sinal de vídeo a partir de uma imagem estática.\n\nNo ano 4 (2020-2021), Felipe planejou compilar o port do GCC para x86 de 16 bits para escrever ROMs homebrew para o painel de controle do DFS-500, que usa uma NEC V20. RicBit mostrou um cabo RGB para o MSX turbo R com seis conectores BNC, para uso com um monitor PVM, e a conversa passou pelos PVM vindos de emissoras de TV e por um leilão de monitores Sony em Brasília. Felipe também contou que comprou dezenas de fitas BETACAM-SP supostamente virgens para testar seus players e gravadores e encontrou nelas gravações com qualidade de estúdio de um encontro internacional da Igreja Adventista dos anos 90.\n\nNo ano 6 (2022-2023), ao comparar o TLCS-900 com o Z80, Felipe lembrou que a mesa PVE-500 usa duas CPUs da linha TLCS-Z80 e tem driver no MAME. No ano 7 (2023-2024), anunciou que pretendia fazer o dump das ROMs de meia dúzia de aparelhos Sony que tinha guardados (players, gravadores e mixers de vídeo) e emulá-los, e convidou interessados para um intensivão de emulação. No ano 8 (2024-2025), comprou um switcher DFS-700 com a unidade de efeitos e compartilhou o manual. Quer emular o painel e a unidade de efeitos e escrever um firmware que transforme o painel em controle para outros usos, como livestreams no OBS ou trackers de chiptune, e sugeriu usá-lo, com um player BETACAM-SP, nas fitas da convenção adventista. No ano 9 (2025-2026), numa conversa sobre emular sistemas com VHS e laserdisc, Felipe contou que tinha contribuído ao MAME, anos antes, com esqueletos de drivers para gravadores e players BETACAM-SP da Sony, com as ROMs dumpadas e catalogadas, mas sem a decodificação do sinal.",
+   "year_notes": [
+    {
+     "year": 1,
+     "note": "Affonso Amendola salvou do descarte na USP um monitor profissional Sony PVM-1350."
+    },
+    {
+     "year": 3,
+     "note": "Felipe \"Juca\" Sanches comprou equipamentos de vídeo profissionais da Sony e enviou ao MAME o driver do switcher DFS-500 (PR #7346, \"non-working\")."
+    },
+    {
+     "year": 4,
+     "note": "Felipe planejou ROMs homebrew para o painel do DFS-500 com o GCC para x86 de 16 bits; RicBit mostrou um cabo RGB do turbo R para monitores PVM; fitas BETACAM-SP compradas como virgens tinham gravações dos anos 90."
+    },
+    {
+     "year": 6,
+     "note": "Felipe lembrou que a mesa PVE-500 usa CPUs TLCS-Z80 e tem driver no MAME."
+    },
+    {
+     "year": 7,
+     "note": "Felipe convidou interessados a fazer o dump e a emulação dos aparelhos Sony que tinha guardados."
+    },
+    {
+     "year": 8,
+     "note": "Felipe comprou um switcher DFS-700 com a unidade de efeitos e planejou emulá-lo e reaproveitar o painel."
+    },
+    {
+     "year": 9,
+     "note": "Felipe lembrou os esqueletos de drivers de gravadores e players BETACAM-SP da Sony que contribuiu ao MAME."
+    }
+   ],
+   "corrections": [],
+   "origin": "Tema criado à mão em 2026-11-12, a pedido de Felipe, fora do workflow (não passou pelo agente verificador). As conversas vieram de uma busca no índice e nas mensagens por Sony, PVM, PVE-500, DFS-500/700, BETACAM, U-Matic e UVW; o resumo foi conferido com as mensagens originais #6770, #11390-#11439, #13519-#13523, #17190, #25621-#25623, #30542-#30544, #35451-#35464 e #40374-#40377. Ficaram de fora conversas que só citam a Sony de passagem (Mavica, SMC-70, PlayStation, CXA1145).",
+   "unchecked": false
+  },
+  {
    "slug": "ia-engenharia-reversa",
    "title": "IA generativa na engenharia reversa",
    "scope": "Uso de LLMs e IA em disassembly, emulação e preservação, debates, recusas e erros de conteúdo gerado.",

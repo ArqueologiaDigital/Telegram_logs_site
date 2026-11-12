@@ -107,10 +107,26 @@ class Cross:
                 if sid not in known:
                     problems.append(f"cross-year topic {tp['slug']} lists unknown subtopic {sid}")
                     continue
-                tp["members"].append((sid,) + known[sid])
+                y, t, s = known[sid]
+                tp["members"].append((sid, y, t, s, s["conversation_ids"], False))
                 self.of.setdefault(sid, []).append(tp)
-            tp["convs"] = {i for _, y, t, s in tp["members"] for i in s["conversation_ids"] if i in y.convs}
-            tp["years"] = sorted({y.n for _, y, t, s in tp["members"]})
+            # "picks": chosen conversations of a subtopic whose other conversations are about something
+            # else (added by hand for a topic that cuts across subtopics, e.g. sony-video). A pick does
+            # not place the subtopic: that stays the job of the topic listing it in "subtopics".
+            for pk in tp.get("picks", []):
+                sid = pk["subtopic"]
+                if sid not in known:
+                    problems.append(f"cross-year topic {tp['slug']} picks from unknown subtopic {sid}")
+                    continue
+                y, t, s = known[sid]
+                bad = [i for i in pk["conversations"] if i not in s["conversation_ids"]]
+                if bad:
+                    problems.append(f"cross-year topic {tp['slug']}: conversations {bad} are not in {sid}")
+                tp["members"].append((sid, y, t, s, [i for i in pk["conversations"] if i not in bad], True))
+            if tp.get("picks"):
+                tp["members"].sort(key=lambda m: (m[1].n, min(m[4], default=0)))
+            tp["convs"] = {i for _, y, t, s, ids, _ in tp["members"] for i in ids if i in y.convs}
+            tp["years"] = sorted({y.n for _, y, t, s, ids, _ in tp["members"]})
         for sid in sorted(set(known) - set(self.of)):
             problems.append(f"subtopic {sid} is in no cross-year topic")
         ipath = os.path.join(os.path.dirname(path), "topic_images.json")
@@ -251,18 +267,23 @@ def topic_page(L, years, X, tp, profiles, R):
     parts.append("<p class='years-nav'>Ano a ano: " + " · ".join(
         f"<a href='#ano-{n}'>Ano {n}</a>" for n in tp["years"]) + "</p>\n")
     by_year = {}
-    for sid, y, t, s in tp["members"]:
-        by_year.setdefault(y.n, (y, []))[1].append((t, s))
+    for sid, y, t, s, ids, part in tp["members"]:
+        by_year.setdefault(y.n, (y, []))[1].append((t, s, ids, part))
     for n in sorted(by_year):
         y, subs = by_year[n]
         parts.append(f"<section id='ano-{n}' class='topic-year'><h2><a href='{y.page()}'>{y.label}</a> "
                      f"<span class='n'>{y.span}</span></h2>")
         if notes.get(n):
             parts.append(f"<p>{esc(notes[n])}</p>")
-        for t, s in subs:
-            parts.append(f"<h3>{esc(s['title'])} <span class='n'>no tema <a href='{y.theme_page(t)}#{q(s['slug'])}'>"
-                         f"{esc(t['title'])}</a></span></h3><p class='subsum'>{esc(s['summary'])}</p>\n")
-            parts.append(conv_list(conversation(L, y.convs[i], profiles) for i in s["conversation_ids"] if i in y.convs))
+        for t, s, ids, part in subs:
+            where = f"no tema <a href='{y.theme_page(t)}#{q(s['slug'])}'>{esc(t['title'])}</a>"
+            if part:        # only some conversations of the subtopic: its summary is about the others too
+                k, n = len(ids), len(s["conversation_ids"])
+                parts.append(f"<h3>{esc(s['title'])} <span class='n'>{where}: {k} de {n} conversas</span></h3>\n")
+            else:
+                parts.append(f"<h3>{esc(s['title'])} <span class='n'>{where}</span></h3>"
+                             f"<p class='subsum'>{esc(s['summary'])}</p>\n")
+            parts.append(conv_list(conversation(L, y.convs[i], profiles) for i in ids if i in y.convs))
         parts.append("</section>\n")
     parts.append(method_note())
     parts.append("</div>\n  </body>\n</html>\n")
@@ -477,7 +498,7 @@ def profile_page(L, years, uid, info, opts, X):
                  + (f", desde {L.msg(first['id'], pt_date(first))}" if first else "") + ".</p>"
                  f"<table class='years'>{bars}</table>\n")
     if X.topics:
-        mine_t = [(tp, sum(1 for _, y, t, s in tp["members"] for i in s["conversation_ids"]
+        mine_t = [(tp, sum(1 for _, y, t, s, ids, _ in tp["members"] for i in ids
                            if i in y.convs and name in y.convs[i]["participants"])) for tp in X.topics]
         mine_t = [(tp, k) for tp, k in mine_t if k]
         if mine_t:

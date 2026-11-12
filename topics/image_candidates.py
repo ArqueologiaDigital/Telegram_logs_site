@@ -58,8 +58,12 @@ def main():
         if only and tp["slug"] not in only:
             continue
         cands = {}
-        for sid in tp["subtopics"]:
+        picked = [(sid, None) for sid in tp["subtopics"]] + [(pk["subtopic"], set(pk["conversations"]))
+                                                              for pk in tp.get("picks", [])]
+        for sid, keep in picked:
             for c in years.get(sid, []):
+                if keep is not None and c["first_id"] not in keep:
+                    continue
                 for mid in photos:
                     if not c["first_id"] <= mid <= c["last_id"]:
                         continue

@@ -77,6 +77,10 @@
    "msg_id": 38584,
    "from_conversation": "Minigame de Tetris em forma de McNugget"
   },
+  "sony-video": {
+   "msg_id": 11422,
+   "from_conversation": "Emulação do mixer de vídeo Sony DFS-500 no MAME"
+  },
   "ia-engenharia-reversa": {
    "msg_id": 37702,
    "from_conversation": "Debate sobre IA, engenharia reversa e aprendizagem"
