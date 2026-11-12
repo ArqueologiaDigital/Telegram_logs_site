@@ -81,6 +81,21 @@ def human_size(n):
 
 # ---------------------------------------------------------------- data
 
+def chosen_pictures():
+    """{user id: (source file, published name)} for members who chose a picture to show instead of
+    their Telegram photo ("picture" in topics/profiles_optin.json; drafts are left out). The file is
+    published next to the pages as perfil-<handle>.<ext> and used on every page that shows the avatar."""
+    path = os.path.join(HERE, "topics", "profiles_optin.json")
+    out = {}
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            for uid, info in json.load(f).items():
+                if info.get("picture") and info.get("published", True):
+                    out[int(uid)] = (os.path.join(HERE, "topics", info["picture"]),
+                                     f"perfil-{info.get('handle') or uid}{os.path.splitext(info['picture'])[1]}")
+    return out
+
+
 class Data:
     def __init__(self, data_dir):
         self.records = []
@@ -108,6 +123,7 @@ class Data:
                     a = json.loads(line)
                     if a.get("path"):
                         self.avatars[a["user_id"]] = a["path"]
+        self.pictures = chosen_pictures()
         self.page_of = {r["id"]: i // PER_PAGE for i, r in enumerate(self.records)}
         self.by_id = {r["id"]: r for r in self.records}
 
@@ -312,6 +328,8 @@ def initials(name):
 
 
 def avatar(d, uid, name, opts):
+    if uid in d.pictures:
+        return f"<img class='avatar' src='{q(d.pictures[uid][1])}' alt='' loading='lazy'>"
     path = d.avatars.get(uid)
     if path:
         return f"<img class='avatar' src='{q(opts.media_base + urllib.parse.quote(path))}' alt='' loading='lazy'>"
@@ -507,6 +525,8 @@ def build_html(d, out, opts):
           "\t<table class='pages'><tr><th>page</th><th>from</th><th>to</th><th>messages</th></tr>\n\t"
           + "\n\t".join(rows) + "\n\t</table></div>\n  </body>\n</html>\n")
     shutil.copy(os.path.join(HERE, "static", CSS), os.path.join(hdir, CSS))
+    for src, name in d.pictures.values():
+        shutil.copy(src, os.path.join(hdir, name))
     return len(pages)
 
 

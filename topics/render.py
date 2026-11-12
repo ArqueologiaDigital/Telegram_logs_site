@@ -451,19 +451,9 @@ def messages_of(d, uid):
             and r["raw"]["_"] != "MessageService" and not r["archive"].get("deletion")]
 
 
-def picture_file(uid, info):
-    """Published name of the picture a member chose for the profile ("picture" in profiles_optin.json,
-    a file under topics/), or None to use the Telegram avatar."""
-    if not info.get("picture"):
-        return None
-    return "perfil-" + member_page(uid, info)[len("membro-"):-len(".html")] + os.path.splitext(info["picture"])[1]
-
-
 def profile_avatar(d, uid, name, opts, info):
-    """The big avatar of the profile page and the gallery card: the chosen picture, else the Telegram one."""
-    pic = picture_file(uid, info)
-    if pic:
-        return f"<img class='avatar big' src='{q(pic)}' alt='' loading='lazy'>"
+    """The big avatar of the profile page and the gallery card (a picture the member chose, if any:
+    build.chosen_pictures)."""
     return B.avatar(d, uid, name, opts).replace("'avatar", "'avatar big")
 
 
@@ -582,8 +572,6 @@ def main():
     for uid, info in optin.items():
         page = member_page(uid, info)
         B.write(os.path.join(hdir, page), profile_page(L, years, uid, info, opts, X))
-        if picture_file(uid, info):
-            shutil.copy(os.path.join(HERE, info["picture"]), os.path.join(hdir, picture_file(uid, info)))
         if page != f"membro-{uid}.html":       # the address by user id keeps working
             B.write(os.path.join(hdir, f"membro-{uid}.html"),
                     f"<!DOCTYPE html><meta charset=\"utf-8\"><meta http-equiv=\"refresh\" content=\"0; url={page}\">"

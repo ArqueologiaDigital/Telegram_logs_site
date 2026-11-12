@@ -41,7 +41,8 @@ person). To add someone who asked: add their user id (see `users/users.jsonl` in
 delete their entry.
 A member who wants another picture than their Telegram photo on the profile and the gallery card
 gets `"picture": "pictures/<handle>.jpg"` (a file under `topics/`, which `render.py` publishes as
-`perfil-<handle>.jpg` next to the pages); the chat pages keep the Telegram photo.
+`perfil-<handle>.jpg` next to the pages); it replaces the Telegram photo everywhere: chat pages,
+profile and gallery card (`build.py`, `chosen_pictures`).
 
 ## Running
 
