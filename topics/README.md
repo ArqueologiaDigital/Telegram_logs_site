@@ -31,7 +31,7 @@ links to the profile and to a search of their messages) only if their Telegram u
 `profiles_optin.json`, with the date they asked. Names in conversation lists link to a profile
 only for those people. Every profile gets a bio (Felipe's request, 2026-11-10): a short summary of what the person
 contributed, written from the topic index with every claim traced to conversations listed in
-`bio_basis`, and changed or removed if the person asks. Profiles waiting for the person's approval live on the branch `perfis-aguardando-aprovacao`, not on
+`bio_basis`, and changed or removed if the person asks. `topics/profile_material.py --uid ID --name NAME --out SCRATCH/x` gathers the material: the message count and years, the number of index conversations the person is in (the "aparece em N conversas do índice" of the bios), the index sentences naming them, and their own messages to check each claim against. Profiles waiting for the person's approval live on the branch `perfis-aguardando-aprovacao`, not on
 `main` (see that branch's `topics/profiles_optin.json`); merge an entry into `main` once approved.
 An entry with `"published": false` is a draft: it is left out of the site and rendered only with
 `render.py --drafts`, for a local preview (`tests/cdp_pdf.mjs` saves a page as a PDF to send to the
