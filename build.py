@@ -37,7 +37,7 @@ import re
 import shutil
 import sys
 import urllib.parse
-from collections import defaultdict
+from collections import Counter, defaultdict
 from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -127,6 +127,11 @@ class Data:
         self.pictures = chosen_pictures()
         self.page_of = {r["id"]: i // PER_PAGE for i, r in enumerate(self.records)}
         self.by_id = {r["id"]: r for r in self.records}
+        # The archiving account: the sender of the messages Telegram marks "out". Needed for
+        # reactions, where Telegram leaves the account's own reaction out of recent_reactions.
+        outs = Counter(self.sender_id(r["raw"]) for r in self.records
+                                   if (r.get("raw") or {}).get("out"))
+        self.self_id = outs.most_common(1)[0][0] if outs else None
 
     def name(self, uid):
         """Current name, else the last known one (deleted accounts), else the id."""
@@ -466,9 +471,40 @@ def render_message(rec, d, page, opts):
     parts.append(body)
     if med and is_preview:
         parts.append(med)
+    parts.append(render_reactions(raw, d))
     if dl:
         parts.append(f"<div class='deleted-note'>[{esc(deletion_note(dl, d))}]</div>")
     return f"<div class='msg {cls}' id='m{rec['id']}' title='{q(title)}'{style}>{''.join(parts)}</div>\n"
+
+
+def render_reactions(raw, d):
+    """Emoji reactions as chips ("👍 3"), in Telegram's order; hovering a chip names who reacted.
+
+    raw["reactions"] is as of the last sync that scanned the message (the daily sync rescans the
+    last 30 days; older messages keep what the last full sync saw). recent_reactions names the
+    reactors; when it lists fewer than the count (Telegram returns only the latest few), the
+    tooltip says how many more. Telegram leaves the archiving account's own reaction out of
+    recent_reactions and marks it with chosen_order instead; it is named from d.self_id. A custom emoji is a sticker document we do not fetch: shown as ✱.
+    """
+    rx = raw.get("reactions") or {}
+    chips = []
+    for res in rx.get("results") or []:
+        r = res.get("reaction") or {}
+        emo = r.get("emoticon") if r.get("_") == "ReactionEmoji" else None
+        who = []
+        for p in rx.get("recent_reactions") or []:
+            if p.get("reaction") == r:
+                pid = p.get("peer_id") or {}
+                who.append(d.name(pid.get("user_id") or pid.get("channel_id")))
+        if res.get("chosen_order") is not None and d.self_id:
+            who.insert(0, d.name(d.self_id))
+        n = res.get("count", 0)
+        tip = ", ".join(who) + (f" and {n - len(who)} more" if who and n > len(who) else "")
+        tip = tip or f"{n} reaction{'s' * (n != 1)}"
+        if emo is None:
+            tip = "custom emoji: " + tip
+        chips.append(f"<span class='reaction' title='{q(tip)}'>{esc(emo or '✱')} {n}</span>")
+    return f"<div class='reactions'>{''.join(chips)}</div>" if chips else ""
 
 
 # ---------------------------------------------------------------- pages

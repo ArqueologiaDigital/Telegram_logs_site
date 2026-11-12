@@ -137,6 +137,9 @@ body { width: auto; max-width: 980px; padding: 0 16px; }
 .msg .webpage img.preview { display: block; margin-top: 6px; max-width: min(100%, 320px); height: auto; }
 .msg .webpage { display: flow-root; }
 .msg .webpage img.preview.small { float: right; margin: 0 0 4px 10px; max-width: 80px; max-height: 80px; width: auto; object-fit: cover; }
+/* emoji reactions: one chip per emoji with its count; the title names who reacted */
+.msg .reactions { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.msg .reaction { font-size: 85%; padding: 1px 8px; border-radius: 999px; background: rgba(0,0,0,.07); cursor: default; white-space: nowrap; }
 .msg pre { white-space: pre-wrap; background: rgba(0,0,0,0.06); padding: 4px 6px; border-radius: 4px; }
 .msg code { background: rgba(0,0,0,0.06); padding: 0 2px; border-radius: 3px; }
 .msg blockquote { margin: 4px 0; padding-left: 8px; border-left: 3px solid #999; }
@@ -200,6 +203,7 @@ header.site nav a:hover { border-bottom-color: var(--accent); }
 .msg .file.missing, .masked, .msg .fwd { color: var(--dim); }
 .msg img:not(.avatar), .msg video { border-radius: 6px; }
 .deleted-note { color: #e08a8a; }
+.msg .reaction { background: rgba(255,255,255,.08); border: 1px solid var(--line); color: var(--ink); }
 .spoiler { background: #666; color: #666; }
 .msg:target { outline: 3px solid var(--accent); }
 table.pages td, table.pages th { border-bottom: 1px solid var(--line); padding: 4px 14px; }

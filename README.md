@@ -192,6 +192,14 @@ To see the whole site as it will be published, use `preview_site.py` instead (se
 Media over 10 MB link to archive.org once uploaded (`ia_url` in the manifest); until then the
 page says "large file, not yet published".
 
+Emoji reactions show under the message as chips ("👍 3"), in Telegram's order; hovering a chip
+lists who reacted (a `title`, so not on touch screens). They come from `raw.reactions` as of the
+last sync that scanned the message: the daily sync rescans the last 30 days, so reactions added
+later to older messages appear only after a `tg_sync.py sync --full`. Telegram names reactors in
+`recent_reactions`, leaving out the archiving account's own reaction (marked by `chosen_order`,
+named by `build.py`) and, on busy messages, all but the latest few ("… and 2 more"). A custom
+emoji is a sticker we do not fetch and shows as ✱.
+
 ## Phone numbers in message text
 
 Telegram tags things that look like phone numbers (`MessageEntityPhone`), but most tags in this
