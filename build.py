@@ -109,12 +109,13 @@ class Data:
                 u = json.loads(line)
                 self.users[u["id"]] = u
         self.media = {}
-        mpath = os.path.join(data_dir, "media", "manifest.jsonl")
+        self.previews = {}      # link-preview thumbnails (manifest kind "preview"), kept apart from
+        mpath = os.path.join(data_dir, "media", "manifest.jsonl")   # the message's own media
         if os.path.exists(mpath):
             with open(mpath, encoding="utf-8") as f:
                 for line in f:
                     e = json.loads(line)
-                    self.media[e["msg_id"]] = e
+                    (self.previews if e["kind"] == "preview" else self.media)[e["msg_id"]] = e
         self.avatars = {}
         apath = os.path.join(data_dir, "media", "avatars.jsonl")
         if os.path.exists(apath):
@@ -262,19 +263,34 @@ def doc_filename(doc):
 def render_media(rec, d, opts):
     raw = rec["raw"]
     m = raw.get("media")
-    if not m:
-        return ""
+    prev = d.previews.get(rec["id"])
+    if not m or m["_"] == "MessageMediaWebPage":
+        w = (m or {}).get("webpage") or {}
+        if w.get("_") != "WebPage":
+            w = {}
+        thumb = ""
+        if prev and media_url(prev, opts):
+            link = w.get("url") or media_url(prev, opts)
+            if prev.get("via") == "ytimg":       # i.ytimg.com/vi/<id>/mqdefault.jpg -> the video
+                link = "https://www.youtube.com/watch?v=" + prev["source_url"].split("/")[-2]
+            size = f" width='{prev['w']}' height='{prev['h']}'" if prev.get("w") else ""
+            # like Telegram: a big image under the text only when the preview has large media
+            # (videos, most articles); otherwise a small thumbnail beside it (site logos, avatars)
+            small = w and not w.get("has_large_media")
+            thumb = (f"<a target='_blank' href='{safe_href(link)}'><img class='preview{' small' if small else ''}' "
+                     f"loading='lazy' src='{q(media_url(prev, opts))}'{size} alt=''></a>")
+        if not (thumb or w.get("title") or w.get("description")):
+            return ""
+        title = f"<b>{esc(w['title'])}</b>" if w.get("title") else ""
+        desc = plain(w.get("description") or "")
+        text = title + ("<br><br>" if title and desc else "") + desc
+        if "preview small" in thumb:
+            return f"<div class=\"webpage\">{thumb}{text}</div>"
+        return f"<div class=\"webpage\">{text}{'<br>' if text and thumb else ''}{thumb}</div>"
     t = m["_"]
     entry = d.media.get(rec["id"])
     url = media_url(entry, opts)
     kind = entry["kind"] if entry else None
-
-    if t == "MessageMediaWebPage":
-        w = m.get("webpage") or {}
-        if w.get("_") != "WebPage" or not (w.get("title") or w.get("description")):
-            return ""
-        title = f"<b>{esc(w['title'])}</b><br><br>" if w.get("title") else ""
-        return f"<div class=\"webpage\">{title}{plain(w.get('description') or '')}</div>"
     if t == "MessageMediaPoll":
         poll = m.get("poll") or {}
         qtext = poll.get("question")
@@ -444,7 +460,7 @@ def render_message(rec, d, page, opts):
         parts.append(f"<div class='reply'>{f'<a href={chr(39)}{href}{chr(39)}>{text}</a>' if href else text}</div>")
     med = render_media(rec, d, opts)
     body = render_text(raw.get("message") or "", raw.get("entities"), opts)
-    is_preview = (raw.get("media") or {}).get("_") == "MessageMediaWebPage"
+    is_preview = (raw.get("media") or {}).get("_") in ("MessageMediaWebPage", None)
     if med and not is_preview:
         parts.append(("<br>" if parts else "") + med + ("<br>" if body else ""))
     parts.append(body)

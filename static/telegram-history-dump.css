@@ -134,6 +134,9 @@ body { width: auto; max-width: 980px; padding: 0 16px; }
 .msg { max-width: min(80%, 720px); }
 @media (max-width: 700px) { body { padding: 0 8px; } .msg { max-width: 92%; padding: 6px 14px; } }
 .msg img, .msg video { max-width: 100%; }
+.msg .webpage img.preview { display: block; margin-top: 6px; max-width: min(100%, 320px); height: auto; }
+.msg .webpage { display: flow-root; }
+.msg .webpage img.preview.small { float: right; margin: 0 0 4px 10px; max-width: 80px; max-height: 80px; width: auto; object-fit: cover; }
 .msg pre { white-space: pre-wrap; background: rgba(0,0,0,0.06); padding: 4px 6px; border-radius: 4px; }
 .msg code { background: rgba(0,0,0,0.06); padding: 0 2px; border-radius: 3px; }
 .msg blockquote { margin: 4px 0; padding-left: 8px; border-left: 3px solid #999; }
