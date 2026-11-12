@@ -69,7 +69,8 @@
     "opted_in": "2026-11-12",
     "bio": "Pedro de Medeiros participa do grupo desde setembro de 2021 e aparece em 241 conversas do índice. No Mines, o campo minado multiplataforma do grupo, escreveu o sistema de build e a leitura de teclado para MSX e foi o principal autor do port para o MSX2: vídeo em SCREEN 5 com os comandos LMMM e HMMM do VDP, cursor por sprite, mouse, joystick, semente aleatória pelo relógio do MSX2, timer, contador de minas e o fim de jogo. Também criou a interface de depuração baseada no debugdevice do openMSX, os releases automáticos da ROM pelo GitHub Actions e a documentação da API gerada com pandoc. Contribui com o openMSX: teve aceito um debugger escrito em Tcl que substitui o sdcdb do SDCC, corrigiu bugs antigos do depurador e enviou pull requests com breakpoints por slot e subslot, um dispositivo programável e um profiler. Escreveu uma série de artigos sobre o modo SCREEN 4 do MSX2, mostrou uma prova de conceito de preenchimento de polígonos no VDP V9990, publicou o vgm-data-xtractor, que extrai amostras de arquivos VGM, e criou um repositório para arquivar o código do Palo Alto Tiny BASIC v3. Em Brasília, tentou com Felipe adaptar um drive de disquete comum ao KN5000 no Calango Hacker Clube.",
     "bio_basis": "Escrito a partir do índice de tópicos (conversas #20565, #20678, #20968, #21158, #21241, #21330, #21416, #21599, #21645, #22151, #22359, #23142, #23196, #23265, #23297, #25745, #32374, #34314, #34673, #37149, #18806, #34605, #33797, #18931, #29202) e conferido com as mensagens dele #34314 e #37149. Publicado em 2026-11-12 com autorização de Pedro, seguindo o modelo dos demais perfis; ele pode pedir mudanças ou a retirada do texto.",
-    "bio_approved": true
+    "bio_approved": true,
+    "picture": "pictures/pvm_nocryptoscams.jpg"
   },
   "356978424": {
     "handle": "shideravan",
