@@ -21,7 +21,8 @@
     "opted_in": "2026-11-10",
     "bio": "Ramiro Polla aparece em 8 conversas do índice, entre 2024 e 2026, quase sempre em torno do MAME e dos teclados Technics. Lembrou que o MAME já permite depuração em nível de código-fonte via gdbstub, com gdb ou VS Code, contou que o FFmpeg usa IA na revisão de código, com um humano fazendo o merge, e perguntou se o método de carregar programas por disquete descoberto no KN7000 serviria também para o KN5000. Também procurou no grupo uma cópia do GRASS (RT/1) para DOS, a pedido de um amigo artista.",
     "bio_basis": "Escrito a partir do índice de tópicos (conversas #34684, #40734, #41660, #31887). Publicado em 2026-11-10 a pedido de Felipe, seguindo o modelo do perfil dele, que serviu de exemplo para o opt-in; Ramiro pode pedir mudanças ou a retirada do texto.",
-    "bio_approved": true
+    "bio_approved": true,
+    "picture": "pictures/ramiropolla.jpg"
   },
   "176090168": {
     "handle": "ismaelluceno",
