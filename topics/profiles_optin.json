@@ -81,5 +81,13 @@
     "bio_basis": "Escrito a partir do índice de tópicos (conversas #14837, #16074, #15822, #18382, #26722, #16133, #17689, #38070, #41425, #29564, #33216, #33236, #26558, #40100, #41406). Shideravan viu o rascunho em PDF antes de publicar, aprovou o texto e pediu para usar no perfil uma imagem escolhida por ele; publicado em 2026-11-12. Ele pode pedir mudanças ou a retirada do texto.",
     "bio_approved": true,
     "picture": "pictures/shideravan.jpg"
+  },
+  "63340646": {
+    "handle": "kretcheu",
+    "role": "",
+    "opted_in": "2026-11-12",
+    "bio": "Kretcheu escreve no grupo desde junho de 2019 e aparece em 17 conversas do índice. Felipe se lembra dele como professor do curso de empacotamento para Debian que fez, e no grupo ele compartilhou um vídeo do seu canal Lab GNU em que relata uma primeira experiência de programar com IA e apresenta o sectordump, programa em bash para analisar setores de disco. Acompanha de perto os projetos de Felipe: pediu notícias do disassembler do Technics KN5000, perguntou pelo código do compactador logo depois que Felipe desvendou a compressão do firmware do teclado e sugeriu fazer OCR das telas de hexdump para extrair a ROM. Sua sugestão de um \"Pense Bem GNU\", com perguntas sobre GNU, levou à ideia de um firmware livre para o Pense Bem. Também indicou o pev, pacote de Fernando Mercês para analisar arquivos PE, e, numa conversa sobre o simulador de urna eletrônica do TSE, questionou se abrir o código-fonte de fato traz risco à segurança.",
+    "bio_basis": "Escrito a partir do índice de tópicos (conversas #12391, #14401, #16192, #23599, #29343) e conferido com as mensagens dele #12396, #13692, #14401, #16194, #16198, #23622, #29354, #40136 e #40143 e a de Felipe #21715 (\"curso de empacotamento para debian do professor @kretcheu\"). Publicado em 2026-11-12 com autorização de Kretcheu, seguindo o modelo dos demais perfis; ele pode pedir mudanças ou a retirada do texto.",
+    "bio_approved": true
   }
 }
