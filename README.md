@@ -157,6 +157,7 @@ Needs `pip install -r requirements.txt` in `../.venv` (pagefind, which ships the
 | `tests/cdp_eval.mjs`           | what does a page show once its scripts ran? (headless Chromium, polls a JS expression)     | serve the build (`python3 -m http.server 8765` in `build/`), then the command below                       |
 | `tests/cdp_shot.mjs`           | what does a page look like? (headless Chromium screenshot, lazy images loaded)             | `node --experimental-websocket tests/cdp_shot.mjs URL out.png 800 1100 4000`                              |
 | `tests/pagefind_meta_probe.py` | which parts of a page does Pagefind make searchable? (meta: yes; filters, path, title: no) | `../.venv/bin/python -I tests/pagefind_meta_probe.py`                                                     |
+| `tests/reaction_counts.py`     | how many messages have reactions, and how many chips can name who reacted?                 | `python3 -I tests/reaction_counts.py ../Telegram_logs`                                                    |
 
 ```
 node --experimental-websocket tests/cdp_eval.mjs \
