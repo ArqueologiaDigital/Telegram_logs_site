@@ -142,6 +142,12 @@ Preview with a local web server from the directory that holds all repos (browser
 from `file://` pages): `python3 -m http.server 8765` there, then open
 <http://127.0.0.1:8765/Telegram_logs_site/build/formatted/html/index.html>.
 
+To see the site as it will be published, before pushing: run `./publish.sh` (it only commits
+locally), then `python3 -I preview_site.py` and open <http://127.0.0.1:8000/>. It serves the main
+site repository at `/` and the gh-pages worktree at `/Telegram_logs_site/`, as GitHub Pages does,
+and points the media links at the local `../Telegram_logs_media`, so unpushed media shows too
+(`--remote-media` keeps the GitHub links).
+
 | option         | values                                  | meaning                                                                                                                                     |
 |----------------|-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | `--deleted`    | `placeholder` (default), `show`, `omit` | deleted messages: "[message deleted on … by …]", full content with a note, or nothing. Pagination always counts them, so pages never shift. |
