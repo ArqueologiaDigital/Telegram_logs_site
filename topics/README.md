@@ -39,6 +39,9 @@ person). To add someone who asked: add their user id (see `users/users.jsonl` in
 `Telegram_logs`) with `role`, `opted_in` and optionally a `handle` (lowercase letters, digits, `_`; the profile is then
 `membro-<handle>.html`, short address `arqueologiadigital.org/comunidade/<handle>`); to remove someone,
 delete their entry.
+A member who wants another picture than their Telegram photo on the profile and the gallery card
+gets `"picture": "pictures/<handle>.jpg"` (a file under `topics/`, which `render.py` publishes as
+`perfil-<handle>.jpg` next to the pages); the chat pages keep the Telegram photo.
 
 ## Running
 

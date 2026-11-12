@@ -451,6 +451,22 @@ def messages_of(d, uid):
             and r["raw"]["_"] != "MessageService" and not r["archive"].get("deletion")]
 
 
+def picture_file(uid, info):
+    """Published name of the picture a member chose for the profile ("picture" in profiles_optin.json,
+    a file under topics/), or None to use the Telegram avatar."""
+    if not info.get("picture"):
+        return None
+    return "perfil-" + member_page(uid, info)[len("membro-"):-len(".html")] + os.path.splitext(info["picture"])[1]
+
+
+def profile_avatar(d, uid, name, opts, info):
+    """The big avatar of the profile page and the gallery card: the chosen picture, else the Telegram one."""
+    pic = picture_file(uid, info)
+    if pic:
+        return f"<img class='avatar big' src='{q(pic)}' alt='' loading='lazy'>"
+    return B.avatar(d, uid, name, opts).replace("'avatar", "'avatar big")
+
+
 def gallery_page(L, optin, opts):
     """Community gallery: only members who asked to be listed (profiles_optin.json)."""
     d = L.d
@@ -461,7 +477,7 @@ def gallery_page(L, optin, opts):
         ys = sorted({B.local(r["date"]).year for r in mine})
         active = "" if not ys else (str(ys[0]) if len(ys) == 1 else f"{ys[0]}–{ys[-1]}")
         search = "search.html?" + urllib.parse.urlencode({"autor": name})
-        big = B.avatar(d, uid, name, opts).replace("'avatar", "'avatar big")
+        big = profile_avatar(d, uid, name, opts, info)
         page = member_page(uid, info)
         cards.append(
             f"<div class='card' style='--h:{B.hue(uid)}'><a href='{page}'>{big}</a>"
@@ -490,7 +506,7 @@ def profile_page(L, years, uid, info, opts, X):
     first = mine[0] if mine else None
     parts = [head(f"{name}: membro do grupo Arqueologia Digital"), nav(),
              f"\t<div class='topics profile' style='--h:{B.hue(uid)}'>"
-             f"<div class='who'>{B.avatar(d, uid, name, opts).replace(chr(39) + 'avatar', chr(39) + 'avatar big')}"
+             f"<div class='who'>{profile_avatar(d, uid, name, opts, info)}"
              f"<div><h1>{esc(name)}</h1><p class='role'>{esc(info.get('role') or '')}</p></div></div>\n"]
     if info.get("bio") and info.get("bio_approved"):
         parts.append(f"<p class='lead'>{esc(info['bio'])}</p>\n")
@@ -566,6 +582,8 @@ def main():
     for uid, info in optin.items():
         page = member_page(uid, info)
         B.write(os.path.join(hdir, page), profile_page(L, years, uid, info, opts, X))
+        if picture_file(uid, info):
+            shutil.copy(os.path.join(HERE, info["picture"]), os.path.join(hdir, picture_file(uid, info)))
         if page != f"membro-{uid}.html":       # the address by user id keeps working
             B.write(os.path.join(hdir, f"membro-{uid}.html"),
                     f"<!DOCTYPE html><meta charset=\"utf-8\"><meta http-equiv=\"refresh\" content=\"0; url={page}\">"

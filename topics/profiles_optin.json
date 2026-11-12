@@ -77,6 +77,7 @@
     "opted_in": "2026-11-10",
     "bio": "Shideravan participa do grupo desde setembro de 2021 e aparece em 237 conversas do índice. Apresentou-se como membro da equipe do Datassette, colaborador do MAME e ajudante na implementação de mappers de NES no emulador ares, para cuja lista de compatibilidade contribuiu. No grupo, propôs criar material em português para ensinar o desenvolvimento de emuladores e defendeu priorizar a emulação de equipamentos brasileiros, como o Zeebo, para o qual propôs um driver no MAME. Localizou no Datassette o manual do Montador do Patinho Feio, de 1977, e publicou lá o anúncio do Super NASA, clone argentino do Super Nintendo, achado numa revista dos anos 1990. Mais recentemente, propôs adicionar ao MAME os Brick Games baseados no Holtek HT1130. Acompanha de perto e traz ao grupo as notícias sobre a situação legal da emulação e da preservação, como os casos Yuzu e Ryujinx e a disputa judicial contra o Internet Archive, e participou dos debates sobre o uso de IA em projetos de descompilação e no MAME.",
     "bio_basis": "Escrito a partir do índice de tópicos (conversas #14837, #16074, #15822, #18382, #26722, #16133, #17689, #38070, #41425, #29564, #33216, #33236, #26558, #40100, #41406). Shideravan viu o rascunho em PDF antes de publicar, aprovou o texto e pediu para usar no perfil uma imagem escolhida por ele; publicado em 2026-11-12. Ele pode pedir mudanças ou a retirada do texto.",
-    "bio_approved": true
+    "bio_approved": true,
+    "picture": "pictures/shideravan.jpg"
   }
 }
