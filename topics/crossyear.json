@@ -1027,34 +1027,57 @@
    "unchecked": false
   },
   {
-   "slug": "vet3000-brick-games",
-   "title": "VET 3000 e brick games",
-   "scope": "Drivers do titulador de vídeo VET 3000 e dos brick games com HT1130 no MAME.",
+   "slug": "vet3000",
+   "title": "Titulador de vídeo VET 3000",
+   "scope": "O titulador de vídeo brasileiro VET 3000 (TMS Microsistemas, 1988): dump, engenharia reversa e driver no MAME.",
    "subtopics": [
     "8/vet3000-e-brick-games/vet-3000",
-    "8/vet3000-e-brick-games/brick-games",
-    "9/outros-drivers-mame/brick-games-ht1130",
     "9/outros-drivers-mame/vet3000"
    ],
-   "summary": "O tema surgiu no ano 8 do grupo (2024-2025) com duas frentes no MAME. Nos brick games, Ismael Carvalho chegou ao grupo por indicação de Felipe \"Juca\" Sanches, que explicou que o driver hh_ht11xx não emulava o som por falta do dump da biblioteca de sons embutida na CPU, enquanto o emulador em Python BrickEmuPy já tinha som. Ismael abriu o PR #14213 com o brick game \"keychain 55 in 1\"; num comentário no PR, ajrhacker identificou o produto como Pikorin 55 (ピコリン55), da Gametech, e o PR foi aceito em 22 de outubro de 2025, a primeira contribuição de Ismael ao MAME. Clemar Folly Jr compartilhou o trabalho de azya, que fez engenharia reversa de um brick game lendo opticamente a ROM decapada, e Ismael começou a portá-lo para o MAME, primeiro os modelos com processador Holtek de 4 bits e depois o 88 in 1.\n\nNo mesmo ano, Leonardo Roman mostrou o titulador de vídeo VET 3000 (TMS Microsistemas) e publicou o dump da ROM no Datassette. Felipe suspeitou de uma CPU 6809, o que Robson França confirmou com um disassembler, e Pablo Vasques Bravo-Villalba identificou o VDP TMS9128, funcionalmente igual ao TMS9928A já implementado no MAME. Leonardo mapeou o teclado e o conector de expansão CN1, no qual Felipe identificou barramentos de dados e endereços, alimentação, enable e IRQ, supondo cartuchos de RAM ou ROM. Também foram estudados o preto \"transparente\" do fundo do TMS, os cabeçalhos de cartucho FONT e OBJECT e a codificação das fontes. Felipe escreveu o driver e o layout (PR #14364), aceito em 22 de outubro de 2025. Depois apareceu outro aparelho num grupo sobre TK, e Felipe perguntou se o dono colaboraria com um dump.\n\nNo ano 9 (2025-2026), o VET 3000 e o Pikorin foram citados num vídeo sobre as novidades do MAME 0.282. Ismael quis fazer o botão de reset do pikorin55in1 funcionar, e Felipe sugeriu levar primeiro ao driver o que já existia no emulador em Python. Shideravan propôs adicionar ao MAME brick games baseados no Holtek HT1130, ainda sem som; na conversa foram citados o BrickEmuPy, de azya52, e um artigo russo de engenharia reversa. Ismael conseguiu som nos handhelds HT11xx usando IA para acelerar o estudo e abriu o PR #15350. Felipe enviou uma proposta de LFSR feita com Claude, e os dois discutiram tabela pré-computada versus cálculo fiel. Ismael mostrou depois avanços no E88. Mais tarde, Shideravan voltou a propor emular brick games com ajuda de IA a partir dos hardwares do BrickEmuPy, e Felipe sugeriu juntar forças com figur8. Ismael, que já tinha uma prova de conceito, juntou-se ao esforço.\n\nAinda no ano 9, Leonardo Roman publicou seu repositório de engenharia reversa do VET3000 (de 1988), com disassembly comentado do firmware, documentação do hardware e um cartucho demo, e relatou evidência de que o aparelho implementa um titulador publicado na Radio-Electronics de dezembro de 1985. Ele submeteu um PR que corrige o clock do VDP; Felipe notou que 10,738635 MHz dividido por 3 dá exatamente o cristal NTSC de 3,579545 MHz, e Leonardo trouxe a explicação do ChatGPT de que um PLL na placa (MC4044 e MC4024) multiplica a frequência do cristal para gerar o master clock. O PR 16276 foi merged por rb6502, com o OK de Felipe.",
+   "summary": "O tema surgiu no ano 8 do grupo (2024-2025), quando Leonardo Roman mostrou o titulador de vídeo VET 3000 (TMS Microsistemas) e publicou o dump da ROM no Datassette. Felipe suspeitou de uma CPU 6809, o que Robson França confirmou com um disassembler, e Pablo Vasques Bravo-Villalba identificou o VDP TMS9128, funcionalmente igual ao TMS9928A já implementado no MAME. Leonardo mapeou o teclado e o conector de expansão CN1, no qual Felipe identificou barramentos de dados e endereços, alimentação, enable e IRQ, supondo cartuchos de RAM ou ROM. Também foram estudados o preto \"transparente\" do fundo do TMS, os cabeçalhos de cartucho FONT e OBJECT e a codificação das fontes. Felipe escreveu o driver e o layout (PR #14364), aceito em 22 de outubro de 2025. Depois apareceu outro aparelho num grupo sobre TK, e Felipe perguntou se o dono colaboraria com um dump.\n\nNo ano 9 (2025-2026), o VET 3000 foi citado, ao lado do Pikorin, num vídeo sobre as novidades do MAME 0.282. Leonardo Roman publicou seu repositório de engenharia reversa do VET3000 (de 1988), com disassembly comentado do firmware, documentação do hardware e um cartucho demo, e relatou evidência de que o aparelho implementa um titulador publicado na Radio-Electronics de dezembro de 1985. Ele submeteu um PR que corrige o clock do VDP; Felipe notou que 10,738635 MHz dividido por 3 dá exatamente o cristal NTSC de 3,579545 MHz, e Leonardo trouxe a explicação do ChatGPT de que um PLL na placa (MC4044 e MC4024) multiplica a frequência do cristal para gerar o master clock. O PR 16276 foi merged por rb6502, com o OK de Felipe.",
    "year_notes": [
     {
      "year": 8,
-     "note": "Leonardo Roman publicou o dump do titulador VET 3000. O grupo identificou a CPU 6809 e o VDP TMS9128 e mapeou o teclado e o conector CN1, e o driver de Felipe \"Juca\" Sanches (PR #14364) foi aceito em 22 de outubro de 2025. No mesmo dia, Ismael Carvalho teve aceito o PR #14213 com o brick game Pikorin 55, da Gametech, e começou a portar para o MAME o trabalho de engenharia reversa de azya."
+     "note": "Leonardo Roman publicou o dump do titulador VET 3000. O grupo identificou a CPU 6809 e o VDP TMS9128 e mapeou o teclado e o conector CN1, e o driver de Felipe \"Juca\" Sanches (PR #14364) foi aceito em 22 de outubro de 2025."
     },
     {
      "year": 9,
-     "note": "Ismael Carvalho conseguiu som nos handhelds HT11xx e abriu o PR #15350, e Shideravan propôs novos drivers de brick games, primeiro baseados no HT1130 e depois nos hardwares do BrickEmuPy. Leonardo Roman publicou a engenharia reversa do VET3000, e seu PR 16276, que corrige o clock do VDP, foi merged."
+     "note": "Leonardo Roman publicou a engenharia reversa do VET3000, e seu PR 16276, que corrige o clock do VDP, foi merged."
+    }
+   ],
+   "corrections": [
+    "Resumo, parágrafo 2: \"o fundo 'transparente' do TMS\" passou a \"o preto 'transparente' do fundo do TMS\", mais fiel à #35847.",
+    "Resumo, parágrafo 4: a explicação do PLL (MC4044 e MC4024) deixou de ser apresentada como fato e passou a ser atribuída ao ChatGPT, trazida por Leonardo. Foi acrescentada a observação de Felipe sobre a divisão por 3 que liga os dois clocks.",
+    "Resumo, parágrafo 4: \"Ele submeteu o PR 16276\" passou a \"Ele submeteu um PR\", e o número fica na frase sobre o merge, que é como o material apresenta.",
+    "Tema dividido em dois em 2026-11-12, a pedido de Felipe: \"VET 3000 e brick games\" virou \"Titulador de vídeo VET 3000\" e \"Brick games no MAME\". Os parágrafos do resumo foram repartidos sem mudar o conteúdo; só as frases de abertura e a menção ao vídeo do MAME 0.282 foram reescritas."
+   ],
+   "unchecked": false
+  },
+  {
+   "slug": "brick-games",
+   "title": "Brick games no MAME",
+   "scope": "Drivers de brick games (handhelds com CPU Holtek HT11xx) no MAME, a partir do BrickEmuPy e da engenharia reversa de azya.",
+   "subtopics": [
+    "8/vet3000-e-brick-games/brick-games",
+    "9/outros-drivers-mame/brick-games-ht1130"
+   ],
+   "summary": "O tema surgiu no ano 8 do grupo (2024-2025). Ismael Carvalho chegou ao grupo por indicação de Felipe \"Juca\" Sanches, que explicou que o driver hh_ht11xx não emulava o som por falta do dump da biblioteca de sons embutida na CPU, enquanto o emulador em Python BrickEmuPy já tinha som. Ismael abriu o PR #14213 com o brick game \"keychain 55 in 1\"; num comentário no PR, ajrhacker identificou o produto como Pikorin 55 (ピコリン55), da Gametech, e o PR foi aceito em 22 de outubro de 2025, a primeira contribuição de Ismael ao MAME. Clemar Folly Jr compartilhou o trabalho de azya, que fez engenharia reversa de um brick game lendo opticamente a ROM decapada, e Ismael começou a portá-lo para o MAME, primeiro os modelos com processador Holtek de 4 bits e depois o 88 in 1.\n\nNo ano 9 (2025-2026), o Pikorin foi citado, ao lado do VET 3000, num vídeo sobre as novidades do MAME 0.282. Ismael quis fazer o botão de reset do pikorin55in1 funcionar, e Felipe sugeriu levar primeiro ao driver o que já existia no emulador em Python. Shideravan propôs adicionar ao MAME brick games baseados no Holtek HT1130, ainda sem som; na conversa foram citados o BrickEmuPy, de azya52, e um artigo russo de engenharia reversa. Ismael conseguiu som nos handhelds HT11xx usando IA para acelerar o estudo e abriu o PR #15350. Felipe enviou uma proposta de LFSR feita com Claude, e os dois discutiram tabela pré-computada versus cálculo fiel. Ismael mostrou depois avanços no E88. Mais tarde, Shideravan voltou a propor emular brick games com ajuda de IA a partir dos hardwares do BrickEmuPy, e Felipe sugeriu juntar forças com figur8. Ismael, que já tinha uma prova de conceito, juntou-se ao esforço.",
+   "year_notes": [
+    {
+     "year": 8,
+     "note": "Ismael Carvalho teve aceito em 22 de outubro de 2025 o PR #14213, com o brick game Pikorin 55, da Gametech, e começou a portar para o MAME o trabalho de engenharia reversa de azya."
+    },
+    {
+     "year": 9,
+     "note": "Ismael Carvalho conseguiu som nos handhelds HT11xx e abriu o PR #15350, e Shideravan propôs novos drivers de brick games, primeiro baseados no HT1130 e depois nos hardwares do BrickEmuPy."
     }
    ],
    "corrections": [
     "Resumo, parágrafo 1: \"engenharia reversa de brick games\" passou a \"engenharia reversa de um brick game\", como diz a conversa #35834.",
-    "Resumo, parágrafo 2: \"o fundo 'transparente' do TMS\" passou a \"o preto 'transparente' do fundo do TMS\", mais fiel à #35847.",
     "Resumo, parágrafo 3: a citação do BrickEmuPy e do artigo russo deixou de ser atribuída a Shideravan (o material diz só \"foram citados\"). Também foi acrescentado \"ainda sem som\", como está na #38070.",
-    "Resumo, parágrafo 4: a explicação do PLL (MC4044 e MC4024) deixou de ser apresentada como fato e passou a ser atribuída ao ChatGPT, trazida por Leonardo. Foi acrescentada a observação de Felipe sobre a divisão por 3 que liga os dois clocks.",
-    "Resumo, parágrafo 4: \"Ele submeteu o PR 16276\" passou a \"Ele submeteu um PR\", e o número fica na frase sobre o merge, que é como o material apresenta.",
     "Nota do ano 8: \"a engenharia reversa de brick games feita por azya\" passou a \"o trabalho de engenharia reversa de azya\", porque o material fala de um único brick game.",
-    "Nota do ano 9: \"brick games baseados no HT1130 e no BrickEmuPy\" passou a separar as duas propostas de Shideravan (#38070 e #41425)."
+    "Nota do ano 9: \"brick games baseados no HT1130 e no BrickEmuPy\" passou a separar as duas propostas de Shideravan (#38070 e #41425).",
+    "Tema dividido em dois em 2026-11-12, a pedido de Felipe: \"VET 3000 e brick games\" virou \"Titulador de vídeo VET 3000\" e \"Brick games no MAME\". Os parágrafos do resumo foram repartidos sem mudar o conteúdo; só as frases de abertura e a menção ao vídeo do MAME 0.282 foram reescritas."
    ],
    "unchecked": false
   },

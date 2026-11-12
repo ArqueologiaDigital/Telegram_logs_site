@@ -69,9 +69,13 @@
    "msg_id": 38860,
    "from_conversation": "Servidor para o cartucho TeleBradesco do Mega Drive"
   },
-  "vet3000-brick-games": {
+  "vet3000": {
    "msg_id": 36286,
    "from_conversation": "Outro aparelho aparece num grupo de TK"
+  },
+  "brick-games": {
+   "msg_id": 38584,
+   "from_conversation": "Minigame de Tetris em forma de McNugget"
   },
   "ia-engenharia-reversa": {
    "msg_id": 37702,
