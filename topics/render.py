@@ -21,7 +21,8 @@ Writes into <out>/formatted/html/, next to the chat pages it links to:
                                   with a handle, membro-<user id>.html is a redirect to it);
                                   its bio is shown only once "bio_approved" is true
 
-Every message id the agents cite is checked against the archive: an id that does not exist, or a
+Names of online resources inside the summaries link to them at their first mention on a page
+(inline_links.json, written by inline_links.py). Every message id the agents cite is checked against the archive: an id that does not exist, or a
 deleted message (when --deleted is placeholder), is reported and its link left out. Conversations
 that no subtopic lists are reported too. Also links the front page from the log's index page.
 
@@ -39,7 +40,9 @@ from collections import Counter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
+sys.path.insert(1, HERE)
 import build as B  # noqa: E402
+import inline_links as IL  # noqa: E402
 
 esc, q = B.esc, B.q
 MONTHS = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"]
@@ -72,6 +75,7 @@ class Year:
         for chunk in self.raw["chunks"]:
             for c in chunk["conversations"]:
                 self.convs.setdefault(c["first_id"], c)
+                c["_place"] = f"conv:{self.n}:{c['first_id']}"      # its key in inline_links.json
         self.tax = self.raw["taxonomy"]
         listed = {i for t in self.tax["themes"] for s in t["subtopics"] for i in s["conversation_ids"]}
         for i in sorted(set(self.convs) - listed):
@@ -84,6 +88,9 @@ class Year:
 
     def theme_page(self, t):
         return f"topico-ano-{self.n}-{t['slug']}.html"
+
+    def tid(self, t):
+        return f"{self.n}/{t['slug']}"
 
     def sid(self, t, s):
         return f"{self.n}/{t['slug']}/{s['slug']}"
@@ -181,6 +188,46 @@ class Links:
         return pt_date(rec) if rec else "?"
 
 
+class Inline:
+    """Links inside summaries (inline_links.json, see inline_links.py): a resource is linked at its
+    first mention on a page; a conversation card, opened and read on its own, links its own."""
+
+    def __init__(self, problems):
+        self.problems = problems
+        self.links = {}
+        if not os.path.exists(IL.PATH):
+            return
+        with open(IL.PATH, encoding="utf-8") as f:
+            links = json.load(f)["links"]
+        texts = {}
+        for place, ts, convs in IL.places(os.path.dirname(HERE)):
+            texts[place] = "\n".join(ts)
+            cands = IL.candidates(convs, IL.org_repos(os.path.dirname(HERE)) if not place.startswith("conv:") else [])
+            for e in links.get(place, []):
+                if IL.allowed(e["url"], cands):
+                    self.links.setdefault(place, []).append(e)
+                else:
+                    problems.append(f"inline link {place} {e['phrase']!r}: {e['url']} is not cited there")
+        for place in sorted(set(links) - set(texts)):
+            problems.append(f"inline links for {place}, which is no text")
+        self.seen = set()
+
+    def page(self):
+        self.seen = set()
+
+    def __call__(self, place, text, own=False):
+        entries = [e for e in self.links.get(place, []) if own or e["url"] not in self.seen]
+        out, missing = IL.linkify(text, entries, esc, B.safe_href)
+        for ph in missing:
+            self.problems.append(f"inline link {place}: {ph!r} is no longer in the text")
+        if not own:
+            self.seen |= {e["url"] for e in entries if e["phrase"] not in missing}
+        return out
+
+
+INL = Inline([])
+
+
 def head(title):
     return (B.head(title).replace("<html>", "<html lang=\"pt\">").replace("<body>", "<body class=\"wide\">")
             .replace("</head>", "  \t<link rel=stylesheet href=\"topicos.css\">\n  </head>"))
@@ -208,7 +255,7 @@ def conversation(L, c, profiles):
     w = c.get("weight", 1)
     return (f"<details class='conv w{w}'><summary><span class='date'>{L.when(c['first_id'])}</span> "
             f"<span class='title'>{esc(c['title'])}</span> <span class='weight' title='relevância'>{'★' * w}</span></summary>"
-            f"<div class='conv-body'><p>{esc(c['summary'])}</p>"
+            f"<div class='conv-body'><p>{INL(c['_place'], c['summary'], own=True)}</p>"
             f"<p class='meta'>Participantes: {people}</p>"
             f"<p class='meta'>{L.msg(c['first_id'], 'Ir para o início da conversa', 'go')}"
             f"{' · mensagens-chave: ' + keylinks if keylinks else ''}</p>"
@@ -229,10 +276,11 @@ def year_nav(years, cur):
 
 
 def theme_page(L, y, years, t, profiles, X):
+    INL.page()
     parts = [head(f"{t['title']} ({y.label}): tópicos do grupo Arqueologia Digital"), nav(),
              "\t<div class='topics'>", year_nav(years, y),
              f"<p class='crumbs'><a href='topicos.html'>Tópicos</a> › <a href='{y.page()}'>{y.label}</a> › "
-             f"{esc(t['title'])}</p><h1>{esc(t['title'])}</h1><p class='lead'>{esc(t['summary'])}</p>"
+             f"{esc(t['title'])}</p><h1>{esc(t['title'])}</h1><p class='lead'>{INL('theme:' + y.tid(t), t['summary'])}</p>"
              f"<p class='period'>{y.label}: {y.span}</p>\n"]
     parts.append("<ul class='toc'>" + "".join(
         f"<li><a href='#{q(s['slug'])}'>{esc(s['title'])}</a> <span class='n'>{len(s['conversation_ids'])}</span></li>"
@@ -240,7 +288,7 @@ def theme_page(L, y, years, t, profiles, X):
     for s in t["subtopics"]:
         cross = " ".join(f"<a class='cross' href='{X.page(tp)}'>{esc(tp['title'])}: todos os anos ›</a>"
                          for tp in X.of.get(y.sid(t, s), []))
-        parts.append(f"<section id='{q(s['slug'])}'><h2>{esc(s['title'])}</h2><p>{esc(s['summary'])}</p>"
+        parts.append(f"<section id='{q(s['slug'])}'><h2>{esc(s['title'])}</h2><p>{INL('sub:' + y.sid(t, s), s['summary'])}</p>"
                      f"{'<p class=meta>' + cross + '</p>' if cross else ''}\n")
         parts.append(conv_list(conversation(L, y.convs[i], profiles) for i in s["conversation_ids"] if i in y.convs))
         parts.append("</section>\n")
@@ -249,6 +297,7 @@ def theme_page(L, y, years, t, profiles, X):
 
 
 def topic_page(L, years, X, tp, profiles, R):
+    INL.page()
     span = f"{tp['years'][0]}" if len(tp["years"]) == 1 else f"{tp['years'][0]} a {tp['years'][-1]}"
     notes = {n["year"]: n["note"] for n in tp.get("year_notes", [])}
     parts = [head(f"{tp['title']}: tópicos do grupo Arqueologia Digital"), nav(),
@@ -263,7 +312,8 @@ def topic_page(L, years, X, tp, profiles, R):
         cap = f"Foto enviada por {L.d.sender(rec['raw'])} em {pt_date(rec)}"
         parts.append(f"<figure class='topic-image'><a href='{q(img[0])}'><img src='{q(img[0])}' alt=''></a>"
                      f"<figcaption>{L.msg(img[1], cap)}</figcaption></figure>")
-    parts += [f"<p class='lead'>{esc(par)}</p>" for par in tp.get("summary", "").split("\n\n") if par.strip()]
+    lead = INL(f"topic:{tp['slug']}", tp.get("summary", ""))      # links never span paragraphs
+    parts += [f"<p class='lead'>{par}</p>" for par in lead.split("\n\n") if par.strip()]
     parts.append("<p class='years-nav'>Ano a ano: " + " · ".join(
         f"<a href='#ano-{n}'>Ano {n}</a>" for n in tp["years"]) + "</p>\n")
     by_year = {}
@@ -274,7 +324,7 @@ def topic_page(L, years, X, tp, profiles, R):
         parts.append(f"<section id='ano-{n}' class='topic-year'><h2><a href='{y.page()}'>{y.label}</a> "
                      f"<span class='n'>{y.span}</span></h2>")
         if notes.get(n):
-            parts.append(f"<p>{esc(notes[n])}</p>")
+            parts.append(f"<p>{INL('note:' + tp['slug'] + f':{n}', notes[n])}</p>")
         for t, s, ids, part in subs:
             where = f"no tema <a href='{y.theme_page(t)}#{q(s['slug'])}'>{esc(t['title'])}</a>"
             if part:        # only some conversations of the subtopic: its summary is about the others too
@@ -282,7 +332,7 @@ def topic_page(L, years, X, tp, profiles, R):
                 parts.append(f"<h3>{esc(s['title'])} <span class='n'>{where}: {k} de {n} conversas</span></h3>\n")
             else:
                 parts.append(f"<h3>{esc(s['title'])} <span class='n'>{where}</span></h3>"
-                             f"<p class='subsum'>{esc(s['summary'])}</p>\n")
+                             f"<p class='subsum'>{INL('sub:' + y.sid(t, s), s['summary'])}</p>\n")
             parts.append(conv_list(conversation(L, y.convs[i], profiles) for i in ids if i in y.convs))
         parts.append("</section>\n")
     parts.append(method_note())
@@ -296,18 +346,19 @@ def themes_block(y, X):
         n = sum(len(s["conversation_ids"]) for s in t["subtopics"])
         subs = ", ".join(f"<a href='{X.link(y, t, s)}'>{esc(s['title'])}</a>" for s in t["subtopics"])
         out.append(f"<div class='theme'><h3><a href='{y.theme_page(t)}'>{esc(t['title'])}</a> "
-                   f"<span class='n'>{n}</span></h3><p>{esc(t['summary'])}</p><p class='subs'>{subs}</p></div>\n")
+                   f"<span class='n'>{n}</span></h3><p>{INL('theme:' + y.tid(t), t['summary'])}</p><p class='subs'>{subs}</p></div>\n")
     out.append("</div>")
     return "".join(out)
 
 
 def year_page(L, y, years, X):
+    INL.page()
     parts = [head(f"{y.label} ({y.span}): tópicos do grupo Arqueologia Digital"), nav(),
              "\t<div class='topics'>", year_nav(years, y),
              f"<p class='crumbs'><a href='topicos.html'>Tópicos</a> › {y.label}</p>"
              f"<h1>{y.label} do grupo</h1>"
              f"<p class='period'>{y.span} · {len(y.convs)} conversas em {y.messages} mensagens</p>"
-             f"<p class='lead'>{esc(y.tax['intro'])}</p>\n<h2>Temas</h2>", themes_block(y, X)]
+             f"<p class='lead'>{INL(f'year:{y.n}', y.tax['intro'])}</p>\n<h2>Temas</h2>", themes_block(y, X)]
     if y.tax.get("highlights"):
         parts.append("<h2>Momentos marcantes</h2><ul class='highlights'>")
         for h in y.tax["highlights"]:
@@ -328,6 +379,7 @@ def method_note():
 
 
 def front_page(years, X, L):
+    INL.page()
     n_conv = sum(len(y.convs) for y in years)
     n_msg = sum(y.messages for y in years)
     parts = [head("Tópicos: Arqueologia Digital (Telegram)"), nav(),
@@ -360,7 +412,7 @@ def front_page(years, X, L):
         top = ", ".join(f"<a href='{y.theme_page(t)}'>{esc(t['title'])}</a>" for t in y.tax["themes"][:5])  # noqa
         parts.append(f"<div class='year' id='ano-{y.n}'><h2><a href='{y.page()}'>{y.label}</a> "
                      f"<span class='n'>{y.span} · {len(y.convs)} conversas</span></h2>"
-                     f"<p>{esc(y.tax['intro'])}</p><p class='subs'>Temas: {top}"
+                     f"<p>{INL(f'year:{y.n}', y.tax['intro'])}</p><p class='subs'>Temas: {top}"
                      f"{' …' if len(y.tax['themes']) > 5 else ''}</p></div>\n")
     parts.append(method_note())
     parts.append("</div>\n  </body>\n</html>\n")
@@ -486,6 +538,7 @@ def gallery_page(L, optin, opts):
 
 
 def profile_page(L, years, uid, info, opts, X):
+    INL.page()
     d = L.d
     name = d.name(uid)
     mine = messages_of(d, uid)
@@ -553,6 +606,8 @@ def main():
         opts.media_base += "/"
     d = B.Data(opts.data)
     problems = []
+    global INL
+    INL = Inline(problems)
     L = Links(d, opts, problems)
     years = sorted((Year(f, d, opts, problems) for f in glob.glob(os.path.join(HERE, "data", "*.json"))),
                    key=lambda y: y.n)

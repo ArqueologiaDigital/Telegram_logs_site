@@ -96,6 +96,41 @@ caption linking to the message) and in the front page's topic list: a grid of ca
 columns, on wide screens; one column with thumbnails alternating left and right on phones.
 To change a topic's image, put another photo message id in `topic_images.json`.
 
+## Links inside the summaries
+
+Summaries name online resources ("o repositório kn5000_homebrew"); `inline_links.py` turns those
+names into links, as a style guide would: at the first mention on a page (`render.py`, class
+`Inline`). A conversation card is opened and read on its own, so it links its own first mention
+too. The list of resources under each conversation stays as it is. A phrase links only to a URL
+posted in the conversations the text summarizes (their `resources`), or to a repository of the
+organisation (`repos.json`), and render reports any link that breaks that rule or whose phrase is
+gone from the text.
+
+```
+python3 -I topics/inline_links.py propose     # rules -> inline_links.json (keeps "by": "hand" entries)
+python3 -I topics/inline_links.py show topic: # each link in context, for reading
+```
+
+The rules (docstring of `inline_links.py`) name a resource by its GitHub repository, pull request
+or issue number, Wikipedia title, site name or last path segment; a name that would also be a
+person, company, product or common word is skipped (`NOT_LINKS`, read and judged on 2026-11-13).
+On 2026-11-13: 660 links in 467 texts, to 292 distinct URLs.
+
+| rule                                             | links |
+|--------------------------------------------------|-------|
+| GitHub repository name ("FlashFloppy")           | 258   |
+| site name ("Datassette", "Garoa")                | 213   |
+| last segment of the URL path ("ULX3S")           | 108   |
+| pull request ("PR #126")                         | 46    |
+| Wikipedia title ("Zezinho")                      | 33    |
+| issue                                            | 2     |
+
+By text: 257 conversation summaries, 80 subtopics, 67 per-year topic notes, 37 cross-year
+topic summaries, 19 themes, 7 year intros. A random sample of 45 links was read in context and all
+were right. The rules miss what a text names only by description ("o documento público", "o vídeo
+no YouTube"); those need someone (or an agent) to read the text and its resources, and go into
+`inline_links.json` with `"by": "hand"`.
+
 ## Projects: the organisation's repositories
 
 `repos.json` is a hand-written catalogue of the public repositories of

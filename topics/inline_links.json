@@ -1,0 +1,4239 @@
+{
+ "links": {
+  "conv:1:1023": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org",
+    "rule": "site"
+   }
+  ],
+  "conv:1:1317": [
+   {
+    "phrase": "ArqueologiaDigital",
+    "url": "http://arqueologiadigital.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "ArqueologiaDigital.github.io",
+    "url": "https://github.com/ArqueologiaDigital/ArqueologiaDigital.github.io",
+    "rule": "repo"
+   }
+  ],
+  "conv:1:1555": [
+   {
+    "phrase": "Documentos_Scopus",
+    "url": "https://github.com/ArqueologiaDigital/Documentos_Scopus",
+    "rule": "repo"
+   }
+  ],
+  "conv:1:1580": [
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/t/tirando-da-caixa-um-cp-400-color-ii-da-prologica/88/4",
+    "rule": "site"
+   }
+  ],
+  "conv:1:1931": [
+   {
+    "phrase": "sd2iec",
+    "url": "http://www.retrocomputaria.com.br/tag/sd2iec/",
+    "rule": "path"
+   }
+  ],
+  "conv:1:2974": [
+   {
+    "phrase": "Megaprocessor",
+    "url": "http://www.megaprocessor.com/",
+    "rule": "site"
+   }
+  ],
+  "conv:1:3398": [
+   {
+    "phrase": "Facit4021",
+    "url": "https://github.com/ArqueologiaDigital/Facit4021",
+    "rule": "repo"
+   }
+  ],
+  "conv:1:3690": [
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/t/recuperacao-de-dados-de-fitas-cassette-msx/177",
+    "rule": "site"
+   }
+  ],
+  "conv:1:3793": [
+   {
+    "phrase": "EmuHC",
+    "url": "https://github.com/ArqueologiaDigital/EmuHC",
+    "rule": "repo"
+   },
+   {
+    "phrase": "KryoFlux",
+    "url": "https://www.kryoflux.com/?page=kf_formats",
+    "rule": "site"
+   }
+  ],
+  "conv:1:3983": [
+   {
+    "phrase": "MICRO80",
+    "url": "https://www.padrim.com.br/MICRO80",
+    "rule": "path"
+   },
+   {
+    "phrase": "Padrim",
+    "url": "https://www.padrim.com.br/MICRO80",
+    "rule": "site"
+   }
+  ],
+  "conv:1:3986": [
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/t/leitora-de-fita-perfurada-modelo-facit-4021-suecia-1974/186",
+    "rule": "site"
+   }
+  ],
+  "conv:1:4101": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/softwares/ibm-pc/prologica-solution-16-rom-bios",
+    "rule": "site"
+   }
+  ],
+  "conv:1:4259": [
+   {
+    "phrase": "Psion Organiser",
+    "url": "https://en.m.wikipedia.org/wiki/Psion_Organiser",
+    "rule": "wikipedia"
+   }
+  ],
+  "conv:1:4273": [
+   {
+    "phrase": "Gizmodo",
+    "url": "https://gizmodo.com/this-engineer-obsessively-restores-his-gigantic-collect-1824989776",
+    "rule": "site"
+   }
+  ],
+  "conv:1:4383": [
+   {
+    "phrase": "xt-hd-imager",
+    "url": "https://github.com/affonsoamendola/xt-hd-imager",
+    "rule": "repo"
+   }
+  ],
+  "conv:1:4412": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/wiki/Garoa_Demo_Party_2017",
+    "rule": "site"
+   }
+  ],
+  "conv:1:5014": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/wiki/Sala_de_Jogos",
+    "rule": "site"
+   }
+  ],
+  "conv:1:5040": [
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/t/imageamento-do-hd-de-um-pc-xt-scopus-nexus-2600/210",
+    "rule": "site"
+   }
+  ],
+  "conv:1:5143": [
+   {
+    "phrase": "gendev",
+    "url": "https://github.com/kubilus1/gendev",
+    "rule": "repo"
+   }
+  ],
+  "conv:1:5165": [
+   {
+    "phrase": "ArqueologiaDigital/tk3000e",
+    "url": "https://github.com/ArqueologiaDigital/tk3000e",
+    "rule": "repo"
+   }
+  ],
+  "conv:1:5171": [
+   {
+    "phrase": "INT 13h",
+    "url": "https://en.wikipedia.org/wiki/INT_13H",
+    "rule": "wikipedia"
+   }
+  ],
+  "conv:1:531": [
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/t/terminais-seriais-da-scopus-modelos-sagitta-150-e-sagitta-180/154",
+    "rule": "site"
+   }
+  ],
+  "conv:1:5483": [
+   {
+    "phrase": "EEVblog",
+    "url": "http://www.eevblog.com/forum/projects/oscilloscope-pong-for-1-or-2-players/",
+    "rule": "site"
+   }
+  ],
+  "conv:1:5490": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/wiki/Sala_de_Jogos",
+    "rule": "site"
+   }
+  ],
+  "conv:1:5607": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/manuais/ibm-pc/solution-16-manual-de-operacao",
+    "rule": "site"
+   }
+  ],
+  "conv:1:5683": [
+   {
+    "phrase": "EmuHC",
+    "url": "https://github.com/ArqueologiaDigital/EmuHC",
+    "rule": "repo"
+   }
+  ],
+  "conv:1:5852": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/wiki/Arqueologia_Digital",
+    "rule": "site"
+   }
+  ],
+  "conv:1:5955": [
+   {
+    "phrase": "kbdbabel",
+    "url": "http://kbdbabel.org/",
+    "rule": "site"
+   }
+  ],
+  "conv:1:5979": [
+   {
+    "phrase": "RetroSC",
+    "url": "https://datassette.org/retrosc",
+    "rule": "path"
+   }
+  ],
+  "conv:1:6018": [
+   {
+    "phrase": "libstickbridge",
+    "url": "https://github.com/felipesanches/libstickbridge",
+    "rule": "repo"
+   }
+  ],
+  "conv:1:635": [
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/t/arqueologia-digital-resgate-historico-dos-computadores-pioneiros-do-brasil/156",
+    "rule": "site"
+   }
+  ],
+  "conv:1:6426": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/wiki/PenseBem",
+    "rule": "site"
+   }
+  ],
+  "conv:1:6519": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/wiki/Retroprogramação",
+    "rule": "site"
+   },
+   {
+    "phrase": "PortableWumpus",
+    "url": "https://github.com/felipesanches/PortableWumpus",
+    "rule": "repo"
+   }
+  ],
+  "conv:1:7545": [
+   {
+    "phrase": "PiGFX",
+    "url": "https://github.com/fbergama/pigfx",
+    "rule": "repo"
+   },
+   {
+    "phrase": "TellyMate",
+    "url": "http://www.batsocks.co.uk/products/Other/TellyMate.htm",
+    "rule": "path"
+   }
+  ],
+  "conv:1:7711": [
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/",
+    "rule": "site"
+   }
+  ],
+  "conv:1:7793": [
+   {
+    "phrase": "Adventure",
+    "url": "https://github.com/Neko250/adventure",
+    "rule": "repo"
+   }
+  ],
+  "conv:1:7926": [
+   {
+    "phrase": "Konami Game Master",
+    "url": "https://en.wikipedia.org/wiki/Konami_Game_Master",
+    "rule": "wikipedia"
+   }
+  ],
+  "conv:1:7952": [
+   {
+    "phrase": "Hershey",
+    "url": "http://paulbourke.net/dataformats/hershey/",
+    "rule": "path"
+   }
+  ],
+  "conv:2:8016": [
+   {
+    "phrase": "booterify",
+    "url": "https://github.com/raphnet/booterify",
+    "rule": "repo"
+   },
+   {
+    "phrase": "mcsema",
+    "url": "https://github.com/trailofbits/mcsema",
+    "rule": "repo"
+   }
+  ],
+  "conv:2:8402": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/livros/diversos-eletronica/how-design-and-build-your-own-custom-tv-games",
+    "rule": "site"
+   }
+  ],
+  "conv:2:8704": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "SourceBox",
+    "url": "https://garoa.net.br/wiki/Custom_TV_Games/SourceBox",
+    "rule": "path"
+   }
+  ],
+  "conv:2:8778": [
+   {
+    "phrase": "FontStruct",
+    "url": "https://fontstruct.com/news/2018/10/19/the-video-game-font-preservation-society/",
+    "rule": "site"
+   }
+  ],
+  "conv:2:8919": [
+   {
+    "phrase": "OPL3LPT",
+    "url": "https://www.serdashop.com/OPL3LPT",
+    "rule": "path"
+   }
+  ],
+  "conv:2:9270": [
+   {
+    "phrase": "Kickante",
+    "url": "https://www.kickante.com.br/campanhas/loading",
+    "rule": "site"
+   }
+  ],
+  "conv:2:9420": [
+   {
+    "phrase": "open-roms",
+    "url": "https://github.com/MEGA65/open-roms",
+    "rule": "repo"
+   }
+  ],
+  "conv:2:9421": [
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/t/magnavox-odyssey-1/109",
+    "rule": "site"
+   }
+  ],
+  "conv:2:9452": [
+   {
+    "phrase": "technikum29",
+    "url": "https://www.technikum29.de/en/",
+    "rule": "site"
+   }
+  ],
+  "conv:2:9731": [
+   {
+    "phrase": "bit-preserve",
+    "url": "https://github.com/baldengineer/bit-preserve",
+    "rule": "repo"
+   }
+  ],
+  "conv:2:9945": [
+   {
+    "phrase": "bootOS",
+    "url": "https://github.com/nanochess/bootOS",
+    "rule": "repo"
+   }
+  ],
+  "conv:3:10370": [
+   {
+    "phrase": "8bitworkshop",
+    "url": "https://8bitworkshop.com/",
+    "rule": "site"
+   }
+  ],
+  "conv:3:10390": [
+   {
+    "phrase": "Zezinho",
+    "url": "https://pt.wikipedia.org/wiki/Zezinho",
+    "rule": "wikipedia"
+   }
+  ],
+  "conv:3:10575": [
+   {
+    "phrase": "LibrePlanet",
+    "url": "https://libreplanet.org/2020/speakers/#2778",
+    "rule": "site"
+   }
+  ],
+  "conv:3:10709": [
+   {
+    "phrase": "zorrom",
+    "url": "https://github.com/SiliconAnalysis/zorrom",
+    "rule": "repo"
+   }
+  ],
+  "conv:3:10750": [
+   {
+    "phrase": "Memories",
+    "url": "http://www.sizecoding.org/wiki/Memories",
+    "rule": "path"
+   }
+  ],
+  "conv:3:10768": [
+   {
+    "phrase": "ULX3S",
+    "url": "https://www.crowdsupply.com/radiona/ulx3s",
+    "rule": "path"
+   }
+  ],
+  "conv:3:10876": [
+   {
+    "phrase": "EmuOS",
+    "url": "https://emupedia.net/beta/emuos/",
+    "rule": "path"
+   }
+  ],
+  "conv:3:10883": [
+   {
+    "phrase": "João José Neto",
+    "url": "https://pt.wikipedia.org/wiki/Jo%C3%A3o_Jos%C3%A9_Neto",
+    "rule": "wikipedia"
+   }
+  ],
+  "conv:3:10911": [
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/",
+    "rule": "site"
+   }
+  ],
+  "conv:3:10967": [
+   {
+    "phrase": "DOjS",
+    "url": "https://github.com/SuperIlu/DOjS",
+    "rule": "repo"
+   }
+  ],
+  "conv:3:11122": [
+   {
+    "phrase": "Gumroad",
+    "url": "https://gumroad.com/rtabajara?recommended_by=library",
+    "rule": "site"
+   }
+  ],
+  "conv:3:11157": [
+   {
+    "phrase": "AtomBusMon",
+    "url": "https://github.com/hoglet67/AtomBusMon",
+    "rule": "repo"
+   }
+  ],
+  "conv:4:11744": [
+   {
+    "phrase": "ClassicMacBr",
+    "url": "https://groups.google.com/g/classicmacbr",
+    "rule": "path"
+   },
+   {
+    "phrase": "wrp",
+    "url": "https://github.com/tenox7/wrp",
+    "rule": "repo"
+   }
+  ],
+  "conv:4:12110": [
+   {
+    "phrase": "binxelview",
+    "url": "https://github.com/bbbradsmith/binxelview",
+    "rule": "repo"
+   }
+  ],
+  "conv:4:12191": [
+   {
+    "phrase": "Pense-Bem",
+    "url": "https://github.com/felipesanches/Pense-Bem",
+    "rule": "repo"
+   }
+  ],
+  "conv:4:12430": [
+   {
+    "phrase": "Omega",
+    "url": "https://github.com/skiselev/omega",
+    "rule": "repo"
+   }
+  ],
+  "conv:4:12436": [
+   {
+    "phrase": "Tek4010",
+    "url": "https://github.com/rricharz/Tek4010",
+    "rule": "repo"
+   }
+  ],
+  "conv:4:12458": [
+   {
+    "phrase": "FOSDEM",
+    "url": "https://fosdem.org/2021/schedule/room/demulator/",
+    "rule": "site"
+   }
+  ],
+  "conv:4:12484": [
+   {
+    "phrase": "FluxEngine",
+    "url": "http://cowlark.com/fluxengine/",
+    "rule": "path"
+   }
+  ],
+  "conv:4:12936": [
+   {
+    "phrase": "PascalSyntaxPoster",
+    "url": "https://github.com/felipesanches/PascalSyntaxPoster",
+    "rule": "repo"
+   },
+   {
+    "phrase": "pikchr",
+    "url": "https://pikchr.org/home/doc/trunk/homepage.md",
+    "rule": "site"
+   },
+   {
+    "phrase": "spectrum-poster",
+    "url": "https://github.com/aylons/spectrum-poster",
+    "rule": "repo"
+   }
+  ],
+  "conv:4:13070": [
+   {
+    "phrase": "Elifoot",
+    "url": "http://www.elifoot.net/",
+    "rule": "site"
+   }
+  ],
+  "conv:4:13283": [
+   {
+    "phrase": "RC2014",
+    "url": "https://rc2014.co.uk/1716/basic-cp-m-romwbw-or-small-computer-monitor/",
+    "rule": "site"
+   }
+  ],
+  "conv:4:13405": [
+   {
+    "phrase": "Glasgow",
+    "url": "https://www.crowdsupply.com/1bitsquared/glasgow",
+    "rule": "path"
+   }
+  ],
+  "conv:4:13677": [
+   {
+    "phrase": "Bitnamic",
+    "url": "https://www.bitnamic.com.br/produto/40-anos-desenhando-aventuras/",
+    "rule": "site"
+   }
+  ],
+  "conv:4:13702": [
+   {
+    "phrase": "kn5000_homebrew",
+    "url": "https://github.com/felipesanches/kn5000_homebrew",
+    "rule": "repo"
+   },
+   {
+    "phrase": "LZSS",
+    "url": "http://multimedia.ufp.pt/codecs/compressao-sem-perdas/codificacao-baseada-em-dicionarios/lzss/",
+    "rule": "path"
+   }
+  ],
+  "conv:4:13786": [
+   {
+    "phrase": "WebOne",
+    "url": "https://github.com/atauenis/webone",
+    "rule": "repo"
+   }
+  ],
+  "conv:4:13834": [
+   {
+    "phrase": "pypenwriter",
+    "url": "https://github.com/Lana-chan/pypenwriter",
+    "rule": "repo"
+   }
+  ],
+  "conv:4:14173": [
+   {
+    "phrase": "libcpu",
+    "url": "https://github.com/libcpu/libcpu",
+    "rule": "repo"
+   },
+   {
+    "phrase": "tlcs900archc",
+    "url": "https://code.google.com/archive/p/tlcs900archc/",
+    "rule": "path"
+   }
+  ],
+  "conv:4:14409": [
+   {
+    "phrase": "MetroBoy",
+    "url": "https://github.com/aappleby/MetroBoy",
+    "rule": "repo"
+   }
+  ],
+  "conv:4:14714": [
+   {
+    "phrase": "SmolSoft3D",
+    "url": "https://github.com/Lana-chan/SmolSoft3D",
+    "rule": "repo"
+   }
+  ],
+  "conv:4:14809": [
+   {
+    "phrase": "WindowMaker",
+    "url": "https://www.windowmaker.org/",
+    "rule": "site"
+   }
+  ],
+  "conv:4:14837": [
+   {
+    "phrase": "Mesen",
+    "url": "https://www.mesen.ca/",
+    "rule": "site"
+   }
+  ],
+  "conv:4:14908": [
+   {
+    "phrase": "GranTrak10",
+    "url": "https://github.com/ArqueologiaDigital/GranTrak10",
+    "rule": "repo"
+   }
+  ],
+  "conv:4:15078": [
+   {
+    "phrase": "FPGASID",
+    "url": "https://www.fpgasid.de/",
+    "rule": "site"
+   }
+  ],
+  "conv:4:15266": [
+   {
+    "phrase": "tripleoxygen",
+    "url": "https://www.tripleoxygen.net/",
+    "rule": "site"
+   }
+  ],
+  "conv:4:15393": [
+   {
+    "phrase": "tripleoxygen",
+    "url": "https://www.tripleoxygen.net/wiki/console/zeebo/hospital",
+    "rule": "site"
+   }
+  ],
+  "conv:4:15533": [
+   {
+    "phrase": "VGMRips",
+    "url": "https://vgmrips.net/packs/",
+    "rule": "site"
+   }
+  ],
+  "conv:4:15665": [
+   {
+    "phrase": "BYTE",
+    "url": "https://vintageapple.org/byte/",
+    "rule": "path"
+   }
+  ],
+  "conv:4:15766": [
+   {
+    "phrase": "Haze",
+    "url": "https://mamedev.emulab.it/haze/",
+    "rule": "path"
+   }
+  ],
+  "conv:4:16133": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/manuais/br-brasil-hardware-diversos-manuais/montador-do-patinho-feio",
+    "rule": "site"
+   }
+  ],
+  "conv:4:16172": [
+   {
+    "phrase": "Jacobin",
+    "url": "https://jacobin.com.br/2021/10/a-historia-perdida-do-computador-socialista-estilo-faca-voce-mesmo/",
+    "rule": "site"
+   },
+   {
+    "phrase": "uBASIC",
+    "url": "https://github.com/adamdunkels/ubasic",
+    "rule": "repo"
+   }
+  ],
+  "conv:4:16396": [
+   {
+    "phrase": "vga2ansi",
+    "url": "https://github.com/lpereira/vga2ansi",
+    "rule": "repo"
+   }
+  ],
+  "conv:4:16658": [
+   {
+    "phrase": "AnotherWorld_JAMMA",
+    "url": "https://github.com/felipesanches/AnotherWorld_JAMMA",
+    "rule": "repo"
+   }
+  ],
+  "conv:4:16774": [
+   {
+    "phrase": "ditz",
+    "url": "https://github.com/jashmenn/ditz",
+    "rule": "repo"
+   },
+   {
+    "phrase": "git-issues",
+    "url": "https://github.com/duplys/git-issues",
+    "rule": "repo"
+   },
+   {
+    "phrase": "sourcehut",
+    "url": "https://sourcehut.org/",
+    "rule": "site"
+   }
+  ],
+  "conv:4:16809": [
+   {
+    "phrase": "open-tl866",
+    "url": "https://github.com/ProgHQ/open-tl866",
+    "rule": "repo"
+   }
+  ],
+  "conv:5:17689": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/revistas/ar-argentina-videogames-revistas/supergames-01",
+    "rule": "site"
+   }
+  ],
+  "conv:5:18004": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/softwares/ibm-pc/tecnoponta-park",
+    "rule": "site"
+   }
+  ],
+  "conv:5:18043": [
+   {
+    "phrase": "scamp-cpu",
+    "url": "https://github.com/jes/scamp-cpu",
+    "rule": "repo"
+   }
+  ],
+  "conv:5:18455": [
+   {
+    "phrase": "ImGui",
+    "url": "https://github.com/ocornut/imgui",
+    "rule": "repo"
+   }
+  ],
+  "conv:5:18990": [
+   {
+    "phrase": "museudocomputador",
+    "url": "https://sketchfab.com/museudocomputador",
+    "rule": "path"
+   },
+   {
+    "phrase": "Sketchfab",
+    "url": "https://sketchfab.com/museudocomputador",
+    "rule": "site"
+   }
+  ],
+  "conv:5:19513": [
+   {
+    "phrase": "SIGBOVIK",
+    "url": "http://sigbovik.org/",
+    "rule": "site"
+   }
+  ],
+  "conv:5:19626": [
+   {
+    "phrase": "CHIP-8",
+    "url": "https://en.wikipedia.org/wiki/CHIP-8",
+    "rule": "wikipedia"
+   }
+  ],
+  "conv:5:19653": [
+   {
+    "phrase": "Chipophone",
+    "url": "http://www.linusakesson.net/chipophone/",
+    "rule": "path"
+   }
+  ],
+  "conv:5:19956": [
+   {
+    "phrase": "Unicomp",
+    "url": "https://ricbitpermanente.blogspot.com/2022/05/unicomp.html",
+    "rule": "path"
+   }
+  ],
+  "conv:5:20229": [
+   {
+    "phrase": "Oldplayers",
+    "url": "https://oldplayers.com.br/wp/2022/05/10/oldplayers-entrevista-luciano-sturaro/",
+    "rule": "site"
+   }
+  ],
+  "conv:5:20262": [
+   {
+    "phrase": "RetroWiFiModem",
+    "url": "https://github.com/mecparts/RetroWiFiModem",
+    "rule": "repo"
+   }
+  ],
+  "conv:5:20565": [
+   {
+    "phrase": "ArqueologiaDigital/Mines",
+    "url": "https://github.com/ArqueologiaDigital/Mines",
+    "rule": "repo"
+   }
+  ],
+  "conv:5:21061": [
+   {
+    "phrase": "PR #28",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/28",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21072": [
+   {
+    "phrase": "PR #29",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/29",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21123": [
+   {
+    "phrase": "PR #31",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/31",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21130": [
+   {
+    "phrase": "123elf",
+    "url": "https://github.com/taviso/123elf",
+    "rule": "repo"
+   }
+  ],
+  "conv:5:21136": [
+   {
+    "phrase": "PR #32",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/32",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21158": [
+   {
+    "phrase": "PR #34",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/34",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21192": [
+   {
+    "phrase": "PR #36",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/36",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21231": [
+   {
+    "phrase": "PR #37",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/37",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21241": [
+   {
+    "phrase": "PR #38",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/38",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21254": [
+   {
+    "phrase": "PR #39",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/39",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #40",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/40",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21277": [
+   {
+    "phrase": "PR #41",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/41",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21330": [
+   {
+    "phrase": "PR #44",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/44",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21416": [
+   {
+    "phrase": "PR #45",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/45",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21439": [
+   {
+    "phrase": "PR #49",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/49",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21452": [
+   {
+    "phrase": "PR #51",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/51",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21475": [
+   {
+    "phrase": "PR #52",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/52",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21599": [
+   {
+    "phrase": "PR #61",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/61",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #62",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/62",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #65",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/65",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21645": [
+   {
+    "phrase": "PR #71",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/71",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21709": [
+   {
+    "phrase": "PR #75",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/75",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21797": [
+   {
+    "phrase": "PR #112",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/112",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #88",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/88",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21803": [
+   {
+    "phrase": "PR #78",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/78",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21859": [
+   {
+    "phrase": "PR #87",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/87",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:21890": [
+   {
+    "phrase": "issue #97",
+    "url": "https://github.com/ArqueologiaDigital/Mines/issues/97",
+    "rule": "issues"
+   }
+  ],
+  "conv:5:21957": [
+   {
+    "phrase": "issue #102",
+    "url": "https://github.com/ArqueologiaDigital/Mines/issues/102",
+    "rule": "issues"
+   }
+  ],
+  "conv:5:21991": [
+   {
+    "phrase": "PR #111",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/111",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:22075": [
+   {
+    "phrase": "PR #114",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/114",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:22104": [
+   {
+    "phrase": "gdbstub",
+    "url": "https://github.com/mborgerson/gdbstub",
+    "rule": "repo"
+   }
+  ],
+  "conv:5:22151": [
+   {
+    "phrase": "PR #122",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/122",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #126",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/126",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:22174": [
+   {
+    "phrase": "PR #128",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/128",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:22193": [
+   {
+    "phrase": "PR #127",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/127",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:22272": [
+   {
+    "phrase": "Computerspielemuseum",
+    "url": "https://www.computerspielemuseum.de/1210_Home.htm",
+    "rule": "site"
+   }
+  ],
+  "conv:5:22359": [
+   {
+    "phrase": "PR #130",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/130",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #134",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/134",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:22504": [
+   {
+    "phrase": "PR #127",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/127",
+    "rule": "pull"
+   }
+  ],
+  "conv:5:23116": [
+   {
+    "phrase": "monobit",
+    "url": "https://robhagemans.github.io/monobit/",
+    "rule": "path"
+   }
+  ],
+  "conv:5:23164": [
+   {
+    "phrase": "pico-zxspectrum",
+    "url": "https://github.com/fruit-bat/pico-zxspectrum",
+    "rule": "repo"
+   }
+  ],
+  "conv:5:23200": [
+   {
+    "phrase": "OpenGOAL",
+    "url": "https://opengoal.dev/",
+    "rule": "site"
+   }
+  ],
+  "conv:5:23224": [
+   {
+    "phrase": "ROMulator",
+    "url": "https://bitfixer.com/product/romulator/",
+    "rule": "path"
+   }
+  ],
+  "conv:5:23676": [
+   {
+    "phrase": "Bitnamic",
+    "url": "https://www.bitnamic.com.br/produto/insira-ficha-o-fliperama-no-brasil-ontem-e-hoje/",
+    "rule": "site"
+   }
+  ],
+  "conv:5:23986": [
+   {
+    "phrase": "cpm65",
+    "url": "https://github.com/davidgiven/cpm65",
+    "rule": "repo"
+   }
+  ],
+  "conv:5:24050": [
+   {
+    "phrase": "retrowin32",
+    "url": "https://github.com/evmar/retrowin32",
+    "rule": "repo"
+   }
+  ],
+  "conv:5:24262": [
+   {
+    "phrase": "gb-research",
+    "url": "https://github.com/Gekkio/gb-research",
+    "rule": "repo"
+   }
+  ],
+  "conv:5:24361": [
+   {
+    "phrase": "Ruffle",
+    "url": "https://ruffle.rs/#downloads",
+    "rule": "site"
+   }
+  ],
+  "conv:6:24568": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/manuais/box-jogos-neo-geo",
+    "rule": "site"
+   }
+  ],
+  "conv:6:25084": [
+   {
+    "phrase": "AnotherWorld_VMTools",
+    "url": "https://github.com/felipesanches/AnotherWorld_VMTools",
+    "rule": "repo"
+   }
+  ],
+  "conv:6:25116": [
+   {
+    "phrase": "fiozera",
+    "url": "https://forum.fiozera.com.br/",
+    "rule": "site"
+   }
+  ],
+  "conv:6:25240": [
+   {
+    "phrase": "Tecnoblog",
+    "url": "https://tecnoblog.net/noticias/2023/01/20/codigo-fonte-do-lendario-apple-lisa-e-liberado-para-download/?utm_term=Autofeed&utm_medium=Social&utm_source=Facebook#Echobox=1674231364",
+    "rule": "site"
+   }
+  ],
+  "conv:6:25303": [
+   {
+    "phrase": "WolfensteinCGA",
+    "url": "https://github.com/jhhoward/WolfensteinCGA",
+    "rule": "repo"
+   }
+  ],
+  "conv:6:25338": [
+   {
+    "phrase": "FogCam",
+    "url": "https://www.fogcam.org/",
+    "rule": "site"
+   }
+  ],
+  "conv:6:25641": [
+   {
+    "phrase": "zelda3",
+    "url": "https://github.com/snesrev/zelda3",
+    "rule": "repo"
+   }
+  ],
+  "conv:6:25643": [
+   {
+    "phrase": "ArqueologiaDigital/PatinhoFeio",
+    "url": "https://github.com/ArqueologiaDigital/PatinhoFeio",
+    "rule": "repo"
+   }
+  ],
+  "conv:6:25936": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/wiki/CPU_do_Zero",
+    "rule": "site"
+   }
+  ],
+  "conv:6:26090": [
+   {
+    "phrase": "dethrace",
+    "url": "https://github.com/dethrace-labs/dethrace",
+    "rule": "repo"
+   }
+  ],
+  "conv:6:26350": [
+   {
+    "phrase": "BassoonTracker",
+    "url": "https://www.stef.be/bassoontracker/",
+    "rule": "path"
+   }
+  ],
+  "conv:6:26722": [
+   {
+    "phrase": "Imageon",
+    "url": "https://en.wikipedia.org/wiki/Imageon",
+    "rule": "wikipedia"
+   }
+  ],
+  "conv:6:26764": [
+   {
+    "phrase": "Lockpick_RCM",
+    "url": "https://github.com/shchmue/Lockpick_RCM",
+    "rule": "repo"
+   }
+  ],
+  "conv:6:26786": [
+   {
+    "phrase": "hekate",
+    "url": "https://github.com/CTCaer/hekate",
+    "rule": "repo"
+   }
+  ],
+  "conv:6:27318": [
+   {
+    "phrase": "mt32-pi",
+    "url": "https://github.com/dwhinham/mt32-pi",
+    "rule": "repo"
+   }
+  ],
+  "conv:6:27392": [
+   {
+    "phrase": "Nuked-MD-FPGA",
+    "url": "https://github.com/nukeykt/Nuked-MD-FPGA",
+    "rule": "repo"
+   }
+  ],
+  "conv:6:27523": [
+   {
+    "phrase": "PatinhoFeio",
+    "url": "https://github.com/ArqueologiaDigital/PatinhoFeio",
+    "rule": "repo"
+   }
+  ],
+  "conv:6:28345": [
+   {
+    "phrase": "Epson QX-10",
+    "url": "https://en.wikipedia.org/wiki/Epson_QX-10",
+    "rule": "wikipedia"
+   }
+  ],
+  "conv:6:28447": [
+   {
+    "phrase": "UltraFP64",
+    "url": "http://www.ultrafp64.com/",
+    "rule": "site"
+   }
+  ],
+  "conv:7:28701": [
+   {
+    "phrase": "Cathode-Retro",
+    "url": "https://github.com/DeadlyRedCube/Cathode-Retro",
+    "rule": "repo"
+   }
+  ],
+  "conv:7:28887": [
+   {
+    "phrase": "Pascal-P2",
+    "url": "https://github.com/jzelinskie/pascal-p2",
+    "rule": "repo"
+   }
+  ],
+  "conv:7:29324": [
+   {
+    "phrase": "arXiv",
+    "url": "https://arxiv.org/pdf/2306.02546.pdf",
+    "rule": "site"
+   }
+  ],
+  "conv:7:29891": [
+   {
+    "phrase": "ImGui",
+    "url": "https://github.com/ocornut/imgui",
+    "rule": "repo"
+   }
+  ],
+  "conv:7:30079": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/wiki/Hackerspaces_Brasileiros",
+    "rule": "site"
+   }
+  ],
+  "conv:7:30120": [
+   {
+    "phrase": "minipro",
+    "url": "https://gitlab.com/DavidGriffith/minipro/",
+    "rule": "path"
+   },
+   {
+    "phrase": "XGECU",
+    "url": "http://xgecu.com/EN/index.html",
+    "rule": "site"
+   }
+  ],
+  "conv:7:30144": [
+   {
+    "phrase": "KN5000_MAME_artwork",
+    "url": "https://github.com/ArqueologiaDigital/KN5000_MAME_artwork",
+    "rule": "repo"
+   }
+  ],
+  "conv:7:30150": [
+   {
+    "phrase": "adbuino",
+    "url": "https://github.com/akuker/adbuino",
+    "rule": "repo"
+   }
+  ],
+  "conv:7:30814": [
+   {
+    "phrase": "kn5000_homebrew",
+    "url": "https://github.com/felipesanches/kn5000_homebrew",
+    "rule": "repo"
+   }
+  ],
+  "conv:7:30945": [
+   {
+    "phrase": "SymbOS",
+    "url": "https://symbos.org/cpvm.htm",
+    "rule": "site"
+   }
+  ],
+  "conv:7:31004": [
+   {
+    "phrase": "z80-open-silicon",
+    "url": "https://github.com/rejunity/z80-open-silicon",
+    "rule": "repo"
+   }
+  ],
+  "conv:7:31105": [
+   {
+    "phrase": "FreeBee",
+    "url": "https://github.com/philpem/freebee",
+    "rule": "repo"
+   }
+  ],
+  "conv:7:31316": [
+   {
+    "phrase": "Sony SMC-70",
+    "url": "https://en.m.wikipedia.org/wiki/Sony_SMC-70",
+    "rule": "wikipedia"
+   }
+  ],
+  "conv:7:31324": [
+   {
+    "phrase": "KOI8-R",
+    "url": "https://en.m.wikipedia.org/wiki/KOI8-R",
+    "rule": "wikipedia"
+   }
+  ],
+  "conv:7:31745": [
+   {
+    "phrase": "siliconpr0n",
+    "url": "https://siliconpr0n.org/map/bandai/tamagotchi-v1/mcmaster_rom_mit100x_x/",
+    "rule": "site"
+   }
+  ],
+  "conv:7:32103": [
+   {
+    "phrase": "Turbo9",
+    "url": "https://github.com/turbo9team/turbo9",
+    "rule": "repo"
+   }
+  ],
+  "conv:7:32348": [
+   {
+    "phrase": "MicroMac",
+    "url": "https://axio.ms/projects/2024/06/16/MicroMac.html",
+    "rule": "path"
+   }
+  ],
+  "conv:7:32417": [
+   {
+    "phrase": "maciNTosh",
+    "url": "https://github.com/Wack0/maciNTosh",
+    "rule": "repo"
+   }
+  ],
+  "conv:7:32894": [
+   {
+    "phrase": "Fuzebox",
+    "url": "http://www.ladyada.net/make/fuzebox/",
+    "rule": "path"
+   }
+  ],
+  "conv:7:32990": [
+   {
+    "phrase": "CA-Software",
+    "url": "http://www.ca-software.com/technics/downloads/",
+    "rule": "site"
+   }
+  ],
+  "conv:7:33322": [
+   {
+    "phrase": "itxllama",
+    "url": "https://github.com/eivindbohler/itxllama",
+    "rule": "repo"
+   }
+  ],
+  "conv:8:33395": [
+   {
+    "phrase": "ChipWits",
+    "url": "https://chipwits.com/2024/11/16/chipwits-40th-birthday-original-forth-code-open-sourced/",
+    "rule": "site"
+   }
+  ],
+  "conv:8:33552": [
+   {
+    "phrase": "OS2Museum",
+    "url": "https://www.os2museum.com/wp/slovenian-os-2-warp-4/",
+    "rule": "site"
+   }
+  ],
+  "conv:8:33797": [
+   {
+    "phrase": "vgm-data-xtractor",
+    "url": "https://github.com/pvmm/vgm-data-xtractor",
+    "rule": "repo"
+   }
+  ],
+  "conv:8:33844": [
+   {
+    "phrase": "DoomPDF",
+    "url": "https://github.com/ading2210/doompdf",
+    "rule": "repo"
+   }
+  ],
+  "conv:8:33902": [
+   {
+    "phrase": "Souper",
+    "url": "https://github.com/google/souper",
+    "rule": "repo"
+   }
+  ],
+  "conv:8:34057": [
+   {
+    "phrase": "pfr",
+    "url": "https://github.com/wanda-phi/pfr",
+    "rule": "repo"
+   }
+  ],
+  "conv:8:34088": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/wiki/Patinho_Feio",
+    "rule": "site"
+   }
+  ],
+  "conv:8:34433": [
+   {
+    "phrase": "NESFab",
+    "url": "https://pubby.games/nesfab.html",
+    "rule": "path"
+   }
+  ],
+  "conv:8:34508": [
+   {
+    "phrase": "nes86",
+    "url": "https://github.com/decrazyo/nes86",
+    "rule": "repo"
+   }
+  ],
+  "conv:8:34543": [
+   {
+    "phrase": "Spice86",
+    "url": "https://github.com/OpenRakis/Spice86",
+    "rule": "repo"
+   }
+  ],
+  "conv:8:34564": [
+   {
+    "phrase": "File-Hunter",
+    "url": "https://download.file-hunter.com/assets/webmsx.html?url=https%3A%2F%2Fdownload.file-hunter.com%2FGames%2FMSX1%2FDSK%2FAquarela%2520(1989)(Paulisoft%2520Informatica)(pt)(Disk%25201%2520of%25202).zip",
+    "rule": "site"
+   },
+   {
+    "phrase": "WebMSX",
+    "url": "https://download.file-hunter.com/assets/webmsx.html?url=https%3A%2F%2Fdownload.file-hunter.com%2FGames%2FMSX1%2FDSK%2FAquarela%2520(1989)(Paulisoft%2520Informatica)(pt)(Disk%25201%2520of%25202).zip",
+    "rule": "path"
+   }
+  ],
+  "conv:8:34584": [
+   {
+    "phrase": "86Box",
+    "url": "https://86box.net/2025/02/25/riva128-part-1.html",
+    "rule": "site"
+   }
+  ],
+  "conv:8:34797": [
+   {
+    "phrase": "Evertop",
+    "url": "https://github.com/ericjenott/Evertop",
+    "rule": "repo"
+   }
+  ],
+  "conv:8:34914": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/wiki/How_to_Design_and_Build_Your_Own_Custom_TV_Games",
+    "rule": "site"
+   }
+  ],
+  "conv:8:35213": [
+   {
+    "phrase": "RetrOS-32",
+    "url": "https://github.com/joexbayer/RetrOS-32",
+    "rule": "repo"
+   }
+  ],
+  "conv:8:35561": [
+   {
+    "phrase": "BrickEmuPy",
+    "url": "https://github.com/azya52/BrickEmuPy",
+    "rule": "repo"
+   }
+  ],
+  "conv:8:35569": [
+   {
+    "phrase": "mv950toy",
+    "url": "https://git.sr.ht/~nkali/mv950toy",
+    "rule": "path"
+   }
+  ],
+  "conv:8:35847": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/node/106385",
+    "rule": "site"
+   }
+  ],
+  "conv:8:36098": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/wiki/Noites_do_Pinball",
+    "rule": "site"
+   }
+  ],
+  "conv:8:36177": [
+   {
+    "phrase": "pasta80",
+    "url": "https://github.com/pleumann/pasta80",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:36481": [
+   {
+    "phrase": "GambiConf",
+    "url": "https://gambiconf.dev/",
+    "rule": "site"
+   }
+  ],
+  "conv:9:36501": [
+   {
+    "phrase": "Processador-ICMC",
+    "url": "https://github.com/simoesusp/Processador-ICMC",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:36503": [
+   {
+    "phrase": "GameTank",
+    "url": "https://www.crowdsupply.com/clydeware/gametank",
+    "rule": "path"
+   }
+  ],
+  "conv:9:36568": [
+   {
+    "phrase": "Level9-Public",
+    "url": "https://github.com/MikeTheTechie/Level9-Public",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:36659": [
+   {
+    "phrase": "kn5000-roms-disasm",
+    "url": "https://github.com/ArqueologiaDigital/kn5000-roms-disasm",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:36676": [
+   {
+    "phrase": "LI-MA",
+    "url": "https://li-ma.nl/",
+    "rule": "site"
+   }
+  ],
+  "conv:9:36814": [
+   {
+    "phrase": "amitools",
+    "url": "https://github.com/cnvogelg/amitools",
+    "rule": "repo"
+   },
+   {
+    "phrase": "emu2",
+    "url": "https://github.com/dmsc/emu2",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:36898": [
+   {
+    "phrase": "ProgramListOCR",
+    "url": "https://github.com/eighttails/ProgramListOCR",
+    "rule": "repo"
+   },
+   {
+    "phrase": "screenCR",
+    "url": "https://github.com/Lana-chan/screenCR",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:36939": [
+   {
+    "phrase": "tlcs900asm",
+    "url": "https://github.com/felipesanches/tlcs900asm",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:37183": [
+   {
+    "phrase": "Mizuchi",
+    "url": "https://github.com/macabeus/mizuchi",
+    "rule": "repo"
+   },
+   {
+    "phrase": "opencode",
+    "url": "https://github.com/anomalyco/opencode",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:37198": [
+   {
+    "phrase": "PS2Recomp",
+    "url": "https://github.com/ran-j/PS2Recomp",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:37261": [
+   {
+    "phrase": "fullbucket",
+    "url": "https://www.fullbucket.de/music/vst.html",
+    "rule": "site"
+   }
+  ],
+  "conv:9:37614": [
+   {
+    "phrase": "Beads",
+    "url": "https://github.com/steveyegge/beads",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:37649": [
+   {
+    "phrase": "x86CSS",
+    "url": "https://lyra.horse/x86css/",
+    "rule": "path"
+   }
+  ],
+  "conv:9:37770": [
+   {
+    "phrase": "Mizuchi",
+    "url": "https://github.com/macabeus/mizuchi",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:37807": [
+   {
+    "phrase": "BasicBox",
+    "url": "https://github.com/mikechambers84/BasicBox",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:37837": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/softwares/ibm-pc/tecnoponta-park",
+    "rule": "site"
+   }
+  ],
+  "conv:9:38070": [
+   {
+    "phrase": "BrickEmuPy",
+    "url": "https://github.com/azya52/BrickEmuPy",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:38178": [
+   {
+    "phrase": "pg_6502",
+    "url": "https://github.com/lasect/pg_6502",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:38294": [
+   {
+    "phrase": "decomp-permuter",
+    "url": "https://github.com/simonlindholm/decomp-permuter",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Transmuter",
+    "url": "https://github.com/macabeus/transmuter",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:38416": [
+   {
+    "phrase": "wsl9x",
+    "url": "https://codeberg.org/hails/wsl9x",
+    "rule": "path"
+   }
+  ],
+  "conv:9:38491": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/pt-br/manuais",
+    "rule": "site"
+   }
+  ],
+  "conv:9:38519": [
+   {
+    "phrase": "Antarctic",
+    "url": "https://github.com/ricbit/antarctic",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:38644": [
+   {
+    "phrase": "Lupinho",
+    "url": "https://github.com/pvmm/lupinho",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:38653": [
+   {
+    "phrase": "GambiConf",
+    "url": "https://gambiconf.dev/",
+    "rule": "site"
+   }
+  ],
+  "conv:9:38655": [
+   {
+    "phrase": "RetroFest",
+    "url": "https://www.retrofest.uk/",
+    "rule": "site"
+   }
+  ],
+  "conv:9:38697": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/pt-br/softwares/itautec-i-7000/firmwares/br-brasil/itautec-i7000-roms",
+    "rule": "site"
+   }
+  ],
+  "conv:9:38708": [
+   {
+    "phrase": "DigitaltMuseum",
+    "url": "https://digitaltmuseum.se/021026362048/kassettbandspelare",
+    "rule": "site"
+   }
+  ],
+  "conv:9:38811": [
+   {
+    "phrase": "Uniscope",
+    "url": "https://en.wikipedia.org/wiki/Uniscope",
+    "rule": "wikipedia"
+   }
+  ],
+  "conv:9:38848": [
+   {
+    "phrase": "Antarctic",
+    "url": "https://github.com/ricbit/antarctic",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:38927": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/pt-br/softwares/ibm-pc/sistemas-operacionais/br-brasil/sisne-plus-330-r05",
+    "rule": "site"
+   }
+  ],
+  "conv:9:39203": [
+   {
+    "phrase": "winevdm",
+    "url": "https://github.com/otya128/winevdm",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:39317": [
+   {
+    "phrase": "BruCON",
+    "url": "https://www.brucon.org/",
+    "rule": "site"
+   }
+  ],
+  "conv:9:39407": [
+   {
+    "phrase": "LinuxMD",
+    "url": "https://github.com/LinuxMD/linuxmd",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:39857": [
+   {
+    "phrase": "Aesthedes",
+    "url": "https://bitsavers.org/pdf/aesthedes/",
+    "rule": "path"
+   },
+   {
+    "phrase": "bitsavers",
+    "url": "https://bitsavers.org/",
+    "rule": "site"
+   }
+  ],
+  "conv:9:39955": [
+   {
+    "phrase": "msxzin",
+    "url": "https://ricbit.github.io/msxzin",
+    "rule": "path"
+   }
+  ],
+  "conv:9:40100": [
+   {
+    "phrase": "SymphonyRecomp",
+    "url": "https://github.com/BlackLabelHQ/SymphonyRecomp",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:40979": [
+   {
+    "phrase": "No-Intro",
+    "url": "https://no-intro.org/",
+    "rule": "site"
+   }
+  ],
+  "conv:9:40984": [
+   {
+    "phrase": "Chip8CSS",
+    "url": "https://github.com/trustsig-eu/Chip8CSS",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:41062": [
+   {
+    "phrase": "rayon",
+    "url": "https://docs.rs/rayon/latest/rayon/",
+    "rule": "path"
+   }
+  ],
+  "conv:9:41151": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/pt-br/revistas/informatica",
+    "rule": "site"
+   }
+  ],
+  "conv:9:41162": [
+   {
+    "phrase": "pfantedit",
+    "url": "https://github.com/felipesanches/pfantedit",
+    "rule": "repo"
+   },
+   {
+    "phrase": "pfr",
+    "url": "https://github.com/wanda-phi/pfr",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:41187": [
+   {
+    "phrase": "hhugboy",
+    "url": "https://github.com/tzlion/hhugboy",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:41519": [
+   {
+    "phrase": "FoxScript",
+    "url": "https://foxscript.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "ps2-web-recomp",
+    "url": "https://github.com/snuri00/ps2-web-recomp",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:41580": [
+   {
+    "phrase": "pi-mame",
+    "url": "https://github.com/Xalior/pi-mame",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:41630": [
+   {
+    "phrase": "zeebx-emu",
+    "url": "https://github.com/ZeebxTeam/zeebx-emu",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:41707": [
+   {
+    "phrase": "Cepecdbr",
+    "url": "https://github.com/robsonfr/Cepecdbr",
+    "rule": "repo"
+   }
+  ],
+  "conv:9:41794": [
+   {
+    "phrase": "Aftermath",
+    "url": "https://aftermath.site/ai-slop-hobbies-in-software-emulation/",
+    "rule": "site"
+   }
+  ],
+  "conv:9:41912": [
+   {
+    "phrase": "KN7000",
+    "url": "https://arqueologiadigital.org/technics-docs/kn7000/",
+    "rule": "path"
+   }
+  ],
+  "note:acervo-poli-usp:1": [
+   {
+    "phrase": "EmuHC",
+    "url": "https://github.com/ArqueologiaDigital/EmuHC",
+    "rule": "repo"
+   }
+  ],
+  "note:another-world:3": [
+   {
+    "phrase": "ULX3S",
+    "url": "https://www.crowdsupply.com/radiona/ulx3s",
+    "rule": "path"
+   }
+  ],
+  "note:another-world:4": [
+   {
+    "phrase": "AnotherWorld_JAMMA",
+    "url": "https://github.com/felipesanches/AnotherWorld_JAMMA",
+    "rule": "repo"
+   }
+  ],
+  "note:another-world:7": [
+   {
+    "phrase": "kn5000_homebrew",
+    "url": "https://github.com/felipesanches/kn5000_homebrew",
+    "rule": "repo"
+   }
+  ],
+  "note:arcades-e-pinball:1": [
+   {
+    "phrase": "libstickbridge",
+    "url": "https://github.com/felipesanches/libstickbridge",
+    "rule": "repo"
+   }
+  ],
+  "note:arcades-e-pinball:2": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "SourceBox",
+    "url": "https://garoa.net.br/wiki/Custom_TV_Games/SourceBox",
+    "rule": "path"
+   }
+  ],
+  "note:arcades-e-pinball:8": [
+   {
+    "phrase": "pfr",
+    "url": "https://github.com/wanda-phi/pfr",
+    "rule": "repo"
+   }
+  ],
+  "note:codigo-fonte-historico:5": [
+   {
+    "phrase": "OpenGOAL",
+    "url": "https://opengoal.dev/",
+    "rule": "site"
+   }
+  ],
+  "note:codigo-fonte-historico:6": [
+   {
+    "phrase": "dethrace",
+    "url": "https://github.com/dethrace-labs/dethrace",
+    "rule": "repo"
+   },
+   {
+    "phrase": "zelda3",
+    "url": "https://github.com/snesrev/zelda3",
+    "rule": "repo"
+   }
+  ],
+  "note:codigo-fonte-historico:8": [
+   {
+    "phrase": "ChipWits",
+    "url": "https://chipwits.com/",
+    "rule": "site"
+   }
+  ],
+  "note:codigo-fonte-historico:9": [
+   {
+    "phrase": "Level9-Public",
+    "url": "https://github.com/MikeTheTechie/Level9-Public",
+    "rule": "repo"
+   }
+  ],
+  "note:computadores-nacionais:3": [
+   {
+    "phrase": "Zezinho",
+    "url": "https://pt.wikipedia.org/wiki/Zezinho",
+    "rule": "wikipedia"
+   }
+  ],
+  "note:demoscene-e-arte:1": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "note:demoscene-e-arte:3": [
+   {
+    "phrase": "Memories",
+    "url": "http://www.sizecoding.org/wiki/Memories",
+    "rule": "path"
+   }
+  ],
+  "note:demoscene-e-arte:8": [
+   {
+    "phrase": "DoomPDF",
+    "url": "https://github.com/ading2210/doompdf",
+    "rule": "repo"
+   }
+  ],
+  "note:descompilacao:9": [
+   {
+    "phrase": "ps2-web-recomp",
+    "url": "https://github.com/snuri00/ps2-web-recomp",
+    "rule": "repo"
+   },
+   {
+    "phrase": "PS2Recomp",
+    "url": "https://github.com/ran-j/PS2Recomp",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Transmuter",
+    "url": "https://github.com/macabeus/transmuter",
+    "rule": "repo"
+   }
+  ],
+  "note:desmontagens-msx-e-emuladores-4kb:9": [
+   {
+    "phrase": "Antarctic",
+    "url": "https://github.com/ricbit/antarctic",
+    "rule": "repo"
+   }
+  ],
+  "note:emuladores:3": [
+   {
+    "phrase": "8bitworkshop",
+    "url": "https://8bitworkshop.com/",
+    "rule": "site"
+   },
+   {
+    "phrase": "DOjS",
+    "url": "https://github.com/SuperIlu/DOjS",
+    "rule": "repo"
+   },
+   {
+    "phrase": "EmuOS",
+    "url": "https://emupedia.net/beta/emuos/",
+    "rule": "path"
+   }
+  ],
+  "note:emuladores:4": [
+   {
+    "phrase": "n6502",
+    "url": "https://gitlab.com/nanogennari/n6502",
+    "rule": "path"
+   }
+  ],
+  "note:emuladores:5": [
+   {
+    "phrase": "CHIP-8",
+    "url": "https://en.wikipedia.org/wiki/CHIP-8",
+    "rule": "wikipedia"
+   }
+  ],
+  "note:emuladores:8": [
+   {
+    "phrase": "86Box",
+    "url": "https://86box.net/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Evertop",
+    "url": "https://github.com/ericjenott/Evertop",
+    "rule": "repo"
+   },
+   {
+    "phrase": "nes86",
+    "url": "https://github.com/decrazyo/nes86",
+    "rule": "repo"
+   }
+  ],
+  "note:emuladores:9": [
+   {
+    "phrase": "emu2",
+    "url": "https://github.com/dmsc/emu2",
+    "rule": "repo"
+   }
+  ],
+  "note:eventos-e-palestras:1": [
+   {
+    "phrase": "RetroSC",
+    "url": "https://datassette.org/retrosc",
+    "rule": "path"
+   }
+  ],
+  "note:eventos-e-palestras:4": [
+   {
+    "phrase": "FOSDEM",
+    "url": "https://fosdem.org/",
+    "rule": "site"
+   }
+  ],
+  "note:eventos-e-palestras:7": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "note:eventos-e-palestras:9": [
+   {
+    "phrase": "BruCON",
+    "url": "https://www.brucon.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "GambiConf",
+    "url": "https://gambiconf.dev/",
+    "rule": "site"
+   },
+   {
+    "phrase": "RetroFest",
+    "url": "https://www.retrofest.uk/",
+    "rule": "site"
+   }
+  ],
+  "note:ferramentas-engenharia-reversa:8": [
+   {
+    "phrase": "Spice86",
+    "url": "https://github.com/OpenRakis/Spice86",
+    "rule": "repo"
+   }
+  ],
+  "note:historia-da-computacao:1": [
+   {
+    "phrase": "MICRO80",
+    "url": "https://www.padrim.com.br/MICRO80",
+    "rule": "path"
+   }
+  ],
+  "note:historia-da-computacao:4": [
+   {
+    "phrase": "WebOne",
+    "url": "https://github.com/atauenis/webone",
+    "rule": "repo"
+   }
+  ],
+  "note:historia-da-computacao:5": [
+   {
+    "phrase": "monobit",
+    "url": "https://robhagemans.github.io/monobit/",
+    "rule": "path"
+   }
+  ],
+  "note:historia-da-computacao:6": [
+   {
+    "phrase": "Epson QX-10",
+    "url": "https://en.wikipedia.org/wiki/Epson_QX-10",
+    "rule": "wikipedia"
+   }
+  ],
+  "note:historia-da-computacao:7": [
+   {
+    "phrase": "Sony SMC-70",
+    "url": "https://en.m.wikipedia.org/wiki/Sony_SMC-70",
+    "rule": "wikipedia"
+   }
+  ],
+  "note:homebrew-kits-replicas:6": [
+   {
+    "phrase": "Nuked-MD-FPGA",
+    "url": "https://github.com/nukeykt/Nuked-MD-FPGA",
+    "rule": "repo"
+   }
+  ],
+  "note:homebrew-kits-replicas:7": [
+   {
+    "phrase": "XGECU",
+    "url": "http://xgecu.com/",
+    "rule": "site"
+   }
+  ],
+  "note:ia-engenharia-reversa:9": [
+   {
+    "phrase": "Cepecdbr",
+    "url": "https://github.com/robsonfr/Cepecdbr",
+    "rule": "repo"
+   },
+   {
+    "phrase": "tlcs900asm",
+    "url": "https://github.com/felipesanches/tlcs900asm",
+    "rule": "repo"
+   }
+  ],
+  "note:itautec:9": [
+   {
+    "phrase": "Uniscope",
+    "url": "https://en.wikipedia.org/wiki/Uniscope",
+    "rule": "wikipedia"
+   }
+  ],
+  "note:mame-drivers:9": [
+   {
+    "phrase": "Aesthedes",
+    "url": "https://bitsavers.org/pdf/aesthedes/",
+    "rule": "path"
+   }
+  ],
+  "note:memoria-informatica-brasileira:3": [
+   {
+    "phrase": "João José Neto",
+    "url": "https://pt.wikipedia.org/wiki/Jo%C3%A3o_Jos%C3%A9_Neto",
+    "rule": "wikipedia"
+   }
+  ],
+  "note:memoria-informatica-brasileira:4": [
+   {
+    "phrase": "Elifoot",
+    "url": "http://www.elifoot.net/",
+    "rule": "site"
+   }
+  ],
+  "note:memoria-informatica-brasileira:5": [
+   {
+    "phrase": "Unicomp",
+    "url": "https://ricbitpermanente.blogspot.com/2022/05/unicomp.html",
+    "rule": "path"
+   }
+  ],
+  "note:memoria-informatica-brasileira:9": [
+   {
+    "phrase": "Lupinho",
+    "url": "https://github.com/pvmm/lupinho",
+    "rule": "repo"
+   }
+  ],
+  "note:midias-e-recuperacao:4": [
+   {
+    "phrase": "FluxEngine",
+    "url": "http://cowlark.com/fluxengine/",
+    "rule": "path"
+   },
+   {
+    "phrase": "Glasgow",
+    "url": "https://www.crowdsupply.com/1bitsquared/glasgow",
+    "rule": "path"
+   }
+  ],
+  "note:mines:5": [
+   {
+    "phrase": "Mines",
+    "url": "https://github.com/ArqueologiaDigital/Mines",
+    "rule": "repo"
+   }
+  ],
+  "note:museus-e-acervos:1": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   }
+  ],
+  "note:museus-e-acervos:2": [
+   {
+    "phrase": "technikum29",
+    "url": "https://www.technikum29.de/",
+    "rule": "site"
+   }
+  ],
+  "note:museus-e-acervos:5": [
+   {
+    "phrase": "Computerspielemuseum",
+    "url": "https://www.computerspielemuseum.de/",
+    "rule": "site"
+   }
+  ],
+  "note:museus-e-acervos:8": [
+   {
+    "phrase": "OS2Museum",
+    "url": "https://www.os2museum.com/",
+    "rule": "site"
+   }
+  ],
+  "note:museus-e-acervos:9": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "LI-MA",
+    "url": "https://li-ma.nl/",
+    "rule": "site"
+   }
+  ],
+  "note:musica-e-chips-de-som:2": [
+   {
+    "phrase": "OPL3LPT",
+    "url": "https://www.serdashop.com/OPL3LPT",
+    "rule": "path"
+   }
+  ],
+  "note:musica-e-chips-de-som:8": [
+   {
+    "phrase": "vgm-data-xtractor",
+    "url": "https://github.com/pvmm/vgm-data-xtractor",
+    "rule": "repo"
+   }
+  ],
+  "note:organizacao-do-grupo:1": [
+   {
+    "phrase": "ArqueologiaDigital",
+    "url": "http://arqueologiadigital.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "note:patinho-feio:4": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   }
+  ],
+  "note:patinho-feio:7": [
+   {
+    "phrase": "ImGui",
+    "url": "https://github.com/ocornut/imgui",
+    "rule": "repo"
+   }
+  ],
+  "note:pense-bem:1": [
+   {
+    "phrase": "garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "note:pense-bem:8": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "note:preservacao-de-jogos-e-direitos:2": [
+   {
+    "phrase": "open-roms",
+    "url": "https://github.com/MEGA65/open-roms",
+    "rule": "repo"
+   }
+  ],
+  "note:programacao-retro:1": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "PortableWumpus",
+    "url": "https://github.com/felipesanches/PortableWumpus",
+    "rule": "repo"
+   }
+  ],
+  "note:programacao-retro:2": [
+   {
+    "phrase": "bootOS",
+    "url": "https://github.com/nanochess/bootOS",
+    "rule": "repo"
+   }
+  ],
+  "note:programacao-retro:4": [
+   {
+    "phrase": "PascalSyntaxPoster",
+    "url": "https://github.com/felipesanches/PascalSyntaxPoster",
+    "rule": "repo"
+   }
+  ],
+  "note:programacao-retro:5": [
+   {
+    "phrase": "Palmdle",
+    "url": "https://github.com/Lana-chan/palmdle",
+    "rule": "repo"
+   }
+  ],
+  "note:programacao-retro:7": [
+   {
+    "phrase": "Pascal-P2",
+    "url": "https://github.com/jzelinskie/pascal-p2",
+    "rule": "repo"
+   },
+   {
+    "phrase": "SymbOS",
+    "url": "https://symbos.org/",
+    "rule": "site"
+   }
+  ],
+  "note:programacao-retro:8": [
+   {
+    "phrase": "NESFab",
+    "url": "https://pubby.games/nesfab.html",
+    "rule": "path"
+   },
+   {
+    "phrase": "pasta80",
+    "url": "https://github.com/pleumann/pasta80",
+    "rule": "repo"
+   }
+  ],
+  "note:programacao-retro:9": [
+   {
+    "phrase": "GameTank",
+    "url": "https://www.crowdsupply.com/clydeware/gametank",
+    "rule": "path"
+   },
+   {
+    "phrase": "zeebx-emu",
+    "url": "https://github.com/ZeebxTeam/zeebx-emu",
+    "rule": "repo"
+   }
+  ],
+  "note:restauracao-de-hardware:4": [
+   {
+    "phrase": "pypenwriter",
+    "url": "https://github.com/Lana-chan/pypenwriter",
+    "rule": "repo"
+   }
+  ],
+  "note:restauracao-de-hardware:5": [
+   {
+    "phrase": "ROMulator",
+    "url": "https://bitfixer.com/product/romulator/",
+    "rule": "path"
+   }
+  ],
+  "note:technics-teclados:4": [
+   {
+    "phrase": "kn5000_homebrew",
+    "url": "https://github.com/felipesanches/kn5000_homebrew",
+    "rule": "repo"
+   },
+   {
+    "phrase": "LZSS",
+    "url": "http://multimedia.ufp.pt/codecs/compressao-sem-perdas/codificacao-baseada-em-dicionarios/lzss/",
+    "rule": "path"
+   }
+  ],
+  "note:technics-teclados:9": [
+   {
+    "phrase": "KN7000",
+    "url": "https://arqueologiadigital.org/technics-docs/kn7000/",
+    "rule": "path"
+   }
+  ],
+  "sub:1/acervo-poli-usp/acesso-e-prioridades": [
+   {
+    "phrase": "EmuHC",
+    "url": "https://github.com/ArqueologiaDigital/EmuHC",
+    "rule": "repo"
+   }
+  ],
+  "sub:1/arcades/netlist-ttl-fpga": [
+   {
+    "phrase": "libstickbridge",
+    "url": "https://github.com/felipesanches/libstickbridge",
+    "rule": "repo"
+   }
+  ],
+  "sub:1/demoscene-e-retroprogramacao/oficinas-de-mega-drive": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "PortableWumpus",
+    "url": "https://github.com/felipesanches/PortableWumpus",
+    "rule": "repo"
+   }
+  ],
+  "sub:1/organizacao-do-grupo/encontros-no-garoa": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "sub:1/organizacao-do-grupo/github-e-site": [
+   {
+    "phrase": "ArqueologiaDigital",
+    "url": "http://arqueologiadigital.org/",
+    "rule": "site"
+   }
+  ],
+  "sub:1/patinho-feio/palestras-patinho-feio": [
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/",
+    "rule": "site"
+   }
+  ],
+  "sub:1/pense-bem-e-engenharia-reversa/pense-bem": [
+   {
+    "phrase": "garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "sub:1/preservacao-digital-e-historia/eventos-de-retrocomputacao": [
+   {
+    "phrase": "RetroSC",
+    "url": "https://datassette.org/retrosc",
+    "rule": "path"
+   }
+  ],
+  "sub:1/preservacao-digital-e-historia/internet-archive-e-iniciativas": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   }
+  ],
+  "sub:1/preservacao-digital-e-historia/livros-revistas-e-podcasts": [
+   {
+    "phrase": "MICRO80",
+    "url": "https://www.padrim.com.br/MICRO80",
+    "rule": "path"
+   }
+  ],
+  "sub:1/restauracao-e-eletronica/restauracao-de-placas": [
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/",
+    "rule": "site"
+   }
+  ],
+  "sub:2/noticias-eventos-e-museus/museus-e-visitas": [
+   {
+    "phrase": "technikum29",
+    "url": "https://www.technikum29.de/",
+    "rule": "site"
+   }
+  ],
+  "sub:2/programacao-dos-e-som-no-pc/clones-de-placas-de-som": [
+   {
+    "phrase": "OPL3LPT",
+    "url": "https://www.serdashop.com/OPL3LPT",
+    "rule": "path"
+   }
+  ],
+  "sub:2/programacao-dos-e-som-no-pc/setor-de-boot": [
+   {
+    "phrase": "bootOS",
+    "url": "https://github.com/nanochess/bootOS",
+    "rule": "repo"
+   }
+  ],
+  "sub:2/restauracao-kits-e-replicas/kits-e-replicas": [
+   {
+    "phrase": "bit-preserve",
+    "url": "https://github.com/baldengineer/bit-preserve",
+    "rule": "repo"
+   }
+  ],
+  "sub:2/videogames-e-video-em-logica-discreta/livro-custom-tv-games": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "SourceBox",
+    "url": "https://garoa.net.br/wiki/Custom_TV_Games/SourceBox",
+    "rule": "path"
+   }
+  ],
+  "sub:2/videogames-e-video-em-logica-discreta/magnavox-odyssey": [
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/",
+    "rule": "site"
+   }
+  ],
+  "sub:3/another-world-e-fpga/placas-fpga": [
+   {
+    "phrase": "ULX3S",
+    "url": "https://www.crowdsupply.com/radiona/ulx3s",
+    "rule": "path"
+   }
+  ],
+  "sub:3/emulacao-no-mame/zezinho-ita": [
+   {
+    "phrase": "Zezinho",
+    "url": "https://pt.wikipedia.org/wiki/Zezinho",
+    "rule": "wikipedia"
+   }
+  ],
+  "sub:3/engenharia-reversa-e-ferramentas/chips-e-depuracao": [
+   {
+    "phrase": "AtomBusMon",
+    "url": "https://github.com/hoglet67/AtomBusMon",
+    "rule": "repo"
+   }
+  ],
+  "sub:3/homebrew-e-replicas/homebrew-mc6800": [
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/",
+    "rule": "site"
+   }
+  ],
+  "sub:3/leituras-e-links/demoscene-e-curiosidades": [
+   {
+    "phrase": "Memories",
+    "url": "http://www.sizecoding.org/wiki/Memories",
+    "rule": "path"
+   }
+  ],
+  "sub:3/leituras-e-links/emuladores-e-ferramentas": [
+   {
+    "phrase": "8bitworkshop",
+    "url": "https://8bitworkshop.com/",
+    "rule": "site"
+   },
+   {
+    "phrase": "DOjS",
+    "url": "https://github.com/SuperIlu/DOjS",
+    "rule": "repo"
+   },
+   {
+    "phrase": "EmuOS",
+    "url": "https://emupedia.net/beta/emuos/",
+    "rule": "path"
+   }
+  ],
+  "sub:3/pense-bem/dump-mask-rom-z8": [
+   {
+    "phrase": "zorrom",
+    "url": "https://github.com/SiliconAnalysis/zorrom",
+    "rule": "repo"
+   }
+  ],
+  "sub:3/preservacao-e-acervos/memoria-da-computacao-brasileira": [
+   {
+    "phrase": "João José Neto",
+    "url": "https://pt.wikipedia.org/wiki/Jo%C3%A3o_Jos%C3%A9_Neto",
+    "rule": "wikipedia"
+   }
+  ],
+  "sub:4/comunidade-de-emulacao/emuladores-dos-membros": [
+   {
+    "phrase": "n6502",
+    "url": "https://gitlab.com/nanogennari/n6502",
+    "rule": "path"
+   }
+  ],
+  "sub:4/eventos/lives-e-palestras": [
+   {
+    "phrase": "FOSDEM",
+    "url": "https://fosdem.org/",
+    "rule": "site"
+   }
+  ],
+  "sub:4/hardware-dos-membros/midias-e-dados": [
+   {
+    "phrase": "FluxEngine",
+    "url": "http://cowlark.com/fluxengine/",
+    "rule": "path"
+   }
+  ],
+  "sub:4/hardware-dos-membros/plotters": [
+   {
+    "phrase": "pypenwriter",
+    "url": "https://github.com/Lana-chan/pypenwriter",
+    "rule": "repo"
+   }
+  ],
+  "sub:4/historia-brasileira/jogos-e-servicos-brasileiros": [
+   {
+    "phrase": "Elifoot",
+    "url": "http://www.elifoot.net/",
+    "rule": "site"
+   }
+  ],
+  "sub:4/historia-brasileira/patinho-feio": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   }
+  ],
+  "sub:4/historia-e-preservacao/sistemas-e-ferramentas": [
+   {
+    "phrase": "Miniforth",
+    "url": "https://niedzejkob.p4.team/bootstrap/miniforth/",
+    "rule": "path"
+   },
+   {
+    "phrase": "WebOne",
+    "url": "https://github.com/atauenis/webone",
+    "rule": "repo"
+   }
+  ],
+  "sub:4/outros-projetos/another-world": [
+   {
+    "phrase": "AnotherWorld_JAMMA",
+    "url": "https://github.com/felipesanches/AnotherWorld_JAMMA",
+    "rule": "repo"
+   }
+  ],
+  "sub:4/outros-projetos/poster-pascal": [
+   {
+    "phrase": "PascalSyntaxPoster",
+    "url": "https://github.com/felipesanches/PascalSyntaxPoster",
+    "rule": "repo"
+   }
+  ],
+  "sub:4/technics-kn5000/binutils-tlcs900": [
+   {
+    "phrase": "libcpu",
+    "url": "https://github.com/libcpu/libcpu",
+    "rule": "repo"
+   }
+  ],
+  "sub:4/technics-kn5000/compressao-do-firmware": [
+   {
+    "phrase": "kn5000_homebrew",
+    "url": "https://github.com/felipesanches/kn5000_homebrew",
+    "rule": "repo"
+   },
+   {
+    "phrase": "LZSS",
+    "url": "http://multimedia.ufp.pt/codecs/compressao-sem-perdas/codificacao-baseada-em-dicionarios/lzss/",
+    "rule": "path"
+   }
+  ],
+  "sub:4/zeebo/placa-e-conserto": [
+   {
+    "phrase": "tripleoxygen",
+    "url": "https://www.tripleoxygen.net/",
+    "rule": "site"
+   }
+  ],
+  "sub:5/comunidade-eventos-links/museus": [
+   {
+    "phrase": "Computerspielemuseum",
+    "url": "https://www.computerspielemuseum.de/",
+    "rule": "site"
+   }
+  ],
+  "sub:5/emulacao-e-preservacao/aprender-emulacao": [
+   {
+    "phrase": "CHIP-8",
+    "url": "https://en.wikipedia.org/wiki/CHIP-8",
+    "rule": "wikipedia"
+   }
+  ],
+  "sub:5/emulacao-e-preservacao/decompilacao": [
+   {
+    "phrase": "OpenGOAL",
+    "url": "https://opengoal.dev/",
+    "rule": "site"
+   }
+  ],
+  "sub:5/emulacao-e-preservacao/emuladores-e-codigo-liberado": [
+   {
+    "phrase": "123elf",
+    "url": "https://github.com/taviso/123elf",
+    "rule": "repo"
+   },
+   {
+    "phrase": "retrowin32",
+    "url": "https://github.com/evmar/retrowin32",
+    "rule": "repo"
+   }
+  ],
+  "sub:5/equipamentos-brasileiros/clones": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   }
+  ],
+  "sub:5/equipamentos-brasileiros/historia-e-pesquisa": [
+   {
+    "phrase": "Unicomp",
+    "url": "https://ricbitpermanente.blogspot.com/2022/05/unicomp.html",
+    "rule": "path"
+   }
+  ],
+  "sub:5/historia-dos-videogames/homebrew-e-ports": [
+   {
+    "phrase": "Palmdle",
+    "url": "https://github.com/Lana-chan/palmdle",
+    "rule": "repo"
+   }
+  ],
+  "sub:5/mame/artworks-3d": [
+   {
+    "phrase": "Sketchfab",
+    "url": "https://sketchfab.com/",
+    "rule": "site"
+   }
+  ],
+  "sub:5/mines-jogo-coletivo/build-ci-depuracao": [
+   {
+    "phrase": "gdbstub",
+    "url": "https://github.com/mborgerson/gdbstub",
+    "rule": "repo"
+   }
+  ],
+  "sub:6/outros-assuntos/micros-historicos": [
+   {
+    "phrase": "Epson QX-10",
+    "url": "https://en.wikipedia.org/wiki/Epson_QX-10",
+    "rule": "wikipedia"
+   }
+  ],
+  "sub:6/outros-assuntos/projetos-de-hardware": [
+   {
+    "phrase": "Nuked-MD-FPGA",
+    "url": "https://github.com/nukeykt/Nuked-MD-FPGA",
+    "rule": "repo"
+   }
+  ],
+  "sub:6/patinho-feio-e-maquinas-nacionais/livro-fregni-langdon": [
+   {
+    "phrase": "PatinhoFeio",
+    "url": "https://github.com/ArqueologiaDigital/PatinhoFeio",
+    "rule": "repo"
+   }
+  ],
+  "sub:6/preservacao-e-acervos/codigo-fonte": [
+   {
+    "phrase": "dethrace",
+    "url": "https://github.com/dethrace-labs/dethrace",
+    "rule": "repo"
+   },
+   {
+    "phrase": "zelda3",
+    "url": "https://github.com/snesrev/zelda3",
+    "rule": "repo"
+   }
+  ],
+  "sub:7/eventos-e-comunidade/hackerspaces-e-eventos": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "sub:7/historia-da-computacao/emuladores-e-maquinas-diversas": [
+   {
+    "phrase": "Sony SMC-70",
+    "url": "https://en.m.wikipedia.org/wiki/Sony_SMC-70",
+    "rule": "wikipedia"
+   }
+  ],
+  "sub:7/historia-da-computacao/linguagens-e-software": [
+   {
+    "phrase": "SymbOS",
+    "url": "https://symbos.org/",
+    "rule": "site"
+   }
+  ],
+  "sub:7/historia-da-computacao/macintosh-e-interfaces-graficas": [
+   {
+    "phrase": "MicroMac",
+    "url": "https://axio.ms/projects/2024/06/16/MicroMac.html",
+    "rule": "path"
+   }
+  ],
+  "sub:7/patinho-feio/emulador-lucas-alberto": [
+   {
+    "phrase": "ImGui",
+    "url": "https://github.com/ocornut/imgui",
+    "rule": "repo"
+   }
+  ],
+  "sub:7/technics-kn5000/kn5000-homebrew": [
+   {
+    "phrase": "kn5000_homebrew",
+    "url": "https://github.com/felipesanches/kn5000_homebrew",
+    "rule": "repo"
+   }
+  ],
+  "sub:8/codigo-fonte-e-preservacao/acervos-e-instituicoes": [
+   {
+    "phrase": "OS2Museum",
+    "url": "https://www.os2museum.com/",
+    "rule": "site"
+   }
+  ],
+  "sub:8/codigo-fonte-e-preservacao/codigo-fonte-liberado": [
+   {
+    "phrase": "ChipWits",
+    "url": "https://chipwits.com/",
+    "rule": "site"
+   }
+  ],
+  "sub:8/emulacao-engenharia-reversa-e-hardware/emuladores-e-portes": [
+   {
+    "phrase": "86Box",
+    "url": "https://86box.net/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Evertop",
+    "url": "https://github.com/ericjenott/Evertop",
+    "rule": "repo"
+   },
+   {
+    "phrase": "mv950toy",
+    "url": "https://git.sr.ht/~nkali/mv950toy",
+    "rule": "path"
+   },
+   {
+    "phrase": "nes86",
+    "url": "https://github.com/decrazyo/nes86",
+    "rule": "repo"
+   }
+  ],
+  "sub:8/emulacao-engenharia-reversa-e-hardware/engenharia-reversa": [
+   {
+    "phrase": "Spice86",
+    "url": "https://github.com/OpenRakis/Spice86",
+    "rule": "repo"
+   }
+  ],
+  "sub:8/eventos-palestras-e-cultura/demoscene-e-curiosidades": [
+   {
+    "phrase": "DoomPDF",
+    "url": "https://github.com/ading2210/doompdf",
+    "rule": "repo"
+   }
+  ],
+  "sub:8/msx/micros-e-software-nacionais": [
+   {
+    "phrase": "WebMSX",
+    "url": "https://download.file-hunter.com/assets/webmsx.html?url=https%3A%2F%2Fdownload.file-hunter.com%2FGames%2FMSX1%2FDSK%2FAquarela%2520(1989)(Paulisoft%2520Informatica)(pt)(Disk%25201%2520of%25202).zip",
+    "rule": "path"
+   }
+  ],
+  "sub:8/musica-e-som/extracao-e-analise-de-som": [
+   {
+    "phrase": "vgm-data-xtractor",
+    "url": "https://github.com/pvmm/vgm-data-xtractor",
+    "rule": "repo"
+   }
+  ],
+  "sub:8/patinho-feio-e-garoa/garoa-pense-bem-e-divulgacao": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "sub:8/programacao-e-projetos-pessoais/compiladores-para-8-bits": [
+   {
+    "phrase": "NESFab",
+    "url": "https://pubby.games/nesfab.html",
+    "rule": "path"
+   },
+   {
+    "phrase": "pasta80",
+    "url": "https://github.com/pleumann/pasta80",
+    "rule": "repo"
+   }
+  ],
+  "sub:8/programacao-e-projetos-pessoais/pinball-fantasies-rust": [
+   {
+    "phrase": "pfr",
+    "url": "https://github.com/wanda-phi/pfr",
+    "rule": "repo"
+   }
+  ],
+  "sub:8/technics-kn5000/compiladores-tlcs900": [
+   {
+    "phrase": "RetrOS-32",
+    "url": "https://github.com/joexbayer/RetrOS-32",
+    "rule": "repo"
+   }
+  ],
+  "sub:8/vet3000-e-brick-games/brick-games": [
+   {
+    "phrase": "BrickEmuPy",
+    "url": "https://github.com/azya52/BrickEmuPy",
+    "rule": "repo"
+   }
+  ],
+  "sub:8/vet3000-e-brick-games/vet-3000": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   }
+  ],
+  "sub:9/comunidade-e-preservacao/acervos-e-instituicoes": [
+   {
+    "phrase": "LI-MA",
+    "url": "https://li-ma.nl/",
+    "rule": "site"
+   }
+  ],
+  "sub:9/comunidade-e-preservacao/eventos": [
+   {
+    "phrase": "BruCON",
+    "url": "https://www.brucon.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "GambiConf",
+    "url": "https://gambiconf.dev/",
+    "rule": "site"
+   },
+   {
+    "phrase": "RetroFest",
+    "url": "https://www.retrofest.uk/",
+    "rule": "site"
+   }
+  ],
+  "sub:9/descompilacao/ferramentas-e-benchmarks": [
+   {
+    "phrase": "Transmuter",
+    "url": "https://github.com/macabeus/transmuter",
+    "rule": "repo"
+   }
+  ],
+  "sub:9/descompilacao/recompilacao-e-terminologia": [
+   {
+    "phrase": "ps2-web-recomp",
+    "url": "https://github.com/snuri00/ps2-web-recomp",
+    "rule": "repo"
+   },
+   {
+    "phrase": "PS2Recomp",
+    "url": "https://github.com/ran-j/PS2Recomp",
+    "rule": "repo"
+   }
+  ],
+  "sub:9/emuladores-4kb-e-v9990/minigb": [
+   {
+    "phrase": "No-Intro",
+    "url": "https://no-intro.org/",
+    "rule": "site"
+   }
+  ],
+  "sub:9/informatica-brasileira/datassette": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   }
+  ],
+  "sub:9/links-e-noticias/ensino-e-ferramentas": [
+   {
+    "phrase": "Processador-ICMC",
+    "url": "https://github.com/simoesusp/Processador-ICMC",
+    "rule": "repo"
+   }
+  ],
+  "sub:9/links-e-noticias/homebrew-e-consoles": [
+   {
+    "phrase": "GameTank",
+    "url": "https://www.crowdsupply.com/clydeware/gametank",
+    "rule": "path"
+   }
+  ],
+  "sub:9/outros-drivers-mame/itautec-i7000": [
+   {
+    "phrase": "Uniscope",
+    "url": "https://en.wikipedia.org/wiki/Uniscope",
+    "rule": "wikipedia"
+   }
+  ],
+  "sub:9/outros-drivers-mame/outras-noticias-mame": [
+   {
+    "phrase": "Aesthedes",
+    "url": "https://bitsavers.org/pdf/aesthedes/",
+    "rule": "path"
+   },
+   {
+    "phrase": "pi-mame",
+    "url": "https://github.com/Xalior/pi-mame",
+    "rule": "repo"
+   }
+  ],
+  "sub:9/teclados-technics/kn7000-aplicacoes": [
+   {
+    "phrase": "KN7000",
+    "url": "https://arqueologiadigital.org/technics-docs/kn7000/",
+    "rule": "path"
+   }
+  ],
+  "theme:1/demoscene-e-retroprogramacao": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "PortableWumpus",
+    "url": "https://github.com/felipesanches/PortableWumpus",
+    "rule": "repo"
+   }
+  ],
+  "theme:1/organizacao-do-grupo": [
+   {
+    "phrase": "ArqueologiaDigital",
+    "url": "http://arqueologiadigital.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "theme:1/pense-bem-e-engenharia-reversa": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "theme:2/pc-minimo-e-pc-retro": [
+   {
+    "phrase": "booterify",
+    "url": "https://github.com/raphnet/booterify",
+    "rule": "repo"
+   }
+  ],
+  "theme:2/programacao-dos-e-som-no-pc": [
+   {
+    "phrase": "OPL3LPT",
+    "url": "https://www.serdashop.com/OPL3LPT",
+    "rule": "path"
+   }
+  ],
+  "theme:2/videogames-e-video-em-logica-discreta": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "theme:3/emulacao-no-mame": [
+   {
+    "phrase": "Zezinho",
+    "url": "https://pt.wikipedia.org/wiki/Zezinho",
+    "rule": "wikipedia"
+   }
+  ],
+  "theme:4/historia-brasileira": [
+   {
+    "phrase": "Elifoot",
+    "url": "http://www.elifoot.net/",
+    "rule": "site"
+   }
+  ],
+  "theme:4/zeebo": [
+   {
+    "phrase": "tripleoxygen",
+    "url": "https://www.tripleoxygen.net/",
+    "rule": "site"
+   }
+  ],
+  "theme:5/hardware-restauracao-instrumentos": [
+   {
+    "phrase": "ROMulator",
+    "url": "https://bitfixer.com/product/romulator/",
+    "rule": "path"
+   }
+  ],
+  "theme:6/another-world": [
+   {
+    "phrase": "AnotherWorld_VMTools",
+    "url": "https://github.com/felipesanches/AnotherWorld_VMTools",
+    "rule": "repo"
+   }
+  ],
+  "theme:7/patinho-feio": [
+   {
+    "phrase": "ImGui",
+    "url": "https://github.com/ocornut/imgui",
+    "rule": "repo"
+   }
+  ],
+  "theme:8/patinho-feio-e-garoa": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "theme:9/comunidade-e-preservacao": [
+   {
+    "phrase": "GambiConf",
+    "url": "https://gambiconf.dev/",
+    "rule": "site"
+   }
+  ],
+  "theme:9/descompilacao": [
+   {
+    "phrase": "Transmuter",
+    "url": "https://github.com/macabeus/transmuter",
+    "rule": "repo"
+   }
+  ],
+  "theme:9/emuladores-4kb-e-v9990": [
+   {
+    "phrase": "No-Intro",
+    "url": "https://no-intro.org/",
+    "rule": "site"
+   }
+  ],
+  "theme:9/informatica-brasileira": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   }
+  ],
+  "theme:9/links-e-noticias": [
+   {
+    "phrase": "GameTank",
+    "url": "https://www.crowdsupply.com/clydeware/gametank",
+    "rule": "path"
+   }
+  ],
+  "theme:9/teclados-technics": [
+   {
+    "phrase": "KN7000",
+    "url": "https://arqueologiadigital.org/technics-docs/kn7000/",
+    "rule": "path"
+   }
+  ],
+  "topic:acervo-poli-usp": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "EmuHC",
+    "url": "https://github.com/ArqueologiaDigital/EmuHC",
+    "rule": "repo"
+   },
+   {
+    "phrase": "KryoFlux",
+    "url": "https://www.kryoflux.com/",
+    "rule": "site"
+   }
+  ],
+  "topic:another-world": [
+   {
+    "phrase": "AnotherWorld_JAMMA",
+    "url": "https://github.com/felipesanches/AnotherWorld_JAMMA",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "kn5000_homebrew",
+    "url": "https://github.com/felipesanches/kn5000_homebrew",
+    "rule": "repo"
+   },
+   {
+    "phrase": "ULX3S",
+    "url": "https://www.crowdsupply.com/radiona/ulx3s",
+    "rule": "path"
+   }
+  ],
+  "topic:arcades-e-pinball": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "libstickbridge",
+    "url": "https://github.com/felipesanches/libstickbridge",
+    "rule": "repo"
+   },
+   {
+    "phrase": "pfr",
+    "url": "https://github.com/wanda-phi/pfr",
+    "rule": "repo"
+   },
+   {
+    "phrase": "SourceBox",
+    "url": "https://garoa.net.br/wiki/Custom_TV_Games/SourceBox",
+    "rule": "path"
+   }
+  ],
+  "topic:codigo-fonte-historico": [
+   {
+    "phrase": "ChipWits",
+    "url": "https://chipwits.com/",
+    "rule": "site"
+   },
+   {
+    "phrase": "dethrace",
+    "url": "https://github.com/dethrace-labs/dethrace",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Level9-Public",
+    "url": "https://github.com/MikeTheTechie/Level9-Public",
+    "rule": "repo"
+   },
+   {
+    "phrase": "OpenGOAL",
+    "url": "https://opengoal.dev/",
+    "rule": "site"
+   },
+   {
+    "phrase": "pfantedit",
+    "url": "https://github.com/felipesanches/pfantedit",
+    "rule": "repo"
+   },
+   {
+    "phrase": "zelda3",
+    "url": "https://github.com/snesrev/zelda3",
+    "rule": "repo"
+   }
+  ],
+  "topic:computadores-nacionais": [
+   {
+    "phrase": "Zezinho",
+    "url": "https://pt.wikipedia.org/wiki/Zezinho",
+    "rule": "wikipedia"
+   }
+  ],
+  "topic:consoles-e-videogames": [
+   {
+    "phrase": "UltraFP64",
+    "url": "http://www.ultrafp64.com/",
+    "rule": "site"
+   }
+  ],
+  "topic:demoscene-e-arte": [
+   {
+    "phrase": "Cathode-Retro",
+    "url": "https://github.com/DeadlyRedCube/Cathode-Retro",
+    "rule": "repo"
+   },
+   {
+    "phrase": "DoomPDF",
+    "url": "https://github.com/ading2210/doompdf",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Memories",
+    "url": "http://www.sizecoding.org/wiki/Memories",
+    "rule": "path"
+   },
+   {
+    "phrase": "sd2iec",
+    "url": "http://www.retrocomputaria.com.br/tag/sd2iec/",
+    "rule": "path"
+   }
+  ],
+  "topic:descompilacao": [
+   {
+    "phrase": "decomp-permuter",
+    "url": "https://github.com/simonlindholm/decomp-permuter",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Mizuchi",
+    "url": "https://github.com/macabeus/mizuchi",
+    "rule": "repo"
+   },
+   {
+    "phrase": "opencode",
+    "url": "https://github.com/anomalyco/opencode",
+    "rule": "repo"
+   },
+   {
+    "phrase": "ps2-web-recomp",
+    "url": "https://github.com/snuri00/ps2-web-recomp",
+    "rule": "repo"
+   },
+   {
+    "phrase": "PS2Recomp",
+    "url": "https://github.com/ran-j/PS2Recomp",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Transmuter",
+    "url": "https://github.com/macabeus/transmuter",
+    "rule": "repo"
+   }
+  ],
+  "topic:desmontagens-msx-e-emuladores-4kb": [
+   {
+    "phrase": "Antarctic",
+    "url": "https://github.com/ricbit/antarctic",
+    "rule": "repo"
+   },
+   {
+    "phrase": "No-Intro",
+    "url": "https://no-intro.org/",
+    "rule": "site"
+   }
+  ],
+  "topic:dumps-e-decapping": [
+   {
+    "phrase": "open-tl866",
+    "url": "https://github.com/ProgHQ/open-tl866",
+    "rule": "repo"
+   },
+   {
+    "phrase": "siliconpr0n",
+    "url": "https://siliconpr0n.org/",
+    "rule": "site"
+   }
+  ],
+  "topic:emuladores": [
+   {
+    "phrase": "123elf",
+    "url": "https://github.com/taviso/123elf",
+    "rule": "repo"
+   },
+   {
+    "phrase": "86Box",
+    "url": "https://86box.net/",
+    "rule": "site"
+   },
+   {
+    "phrase": "8bitworkshop",
+    "url": "https://8bitworkshop.com/",
+    "rule": "site"
+   },
+   {
+    "phrase": "BasicBox",
+    "url": "https://github.com/mikechambers84/BasicBox",
+    "rule": "repo"
+   },
+   {
+    "phrase": "CHIP-8",
+    "url": "https://en.wikipedia.org/wiki/CHIP-8",
+    "rule": "wikipedia"
+   },
+   {
+    "phrase": "Chip8CSS",
+    "url": "https://github.com/trustsig-eu/Chip8CSS",
+    "rule": "repo"
+   },
+   {
+    "phrase": "DOjS",
+    "url": "https://github.com/SuperIlu/DOjS",
+    "rule": "repo"
+   },
+   {
+    "phrase": "emu2",
+    "url": "https://github.com/dmsc/emu2",
+    "rule": "repo"
+   },
+   {
+    "phrase": "EmuOS",
+    "url": "https://emupedia.net/beta/emuos/",
+    "rule": "path"
+   },
+   {
+    "phrase": "Evertop",
+    "url": "https://github.com/ericjenott/Evertop",
+    "rule": "repo"
+   },
+   {
+    "phrase": "mv950toy",
+    "url": "https://git.sr.ht/~nkali/mv950toy",
+    "rule": "path"
+   },
+   {
+    "phrase": "n6502",
+    "url": "https://gitlab.com/nanogennari/n6502",
+    "rule": "path"
+   },
+   {
+    "phrase": "nes86",
+    "url": "https://github.com/decrazyo/nes86",
+    "rule": "repo"
+   },
+   {
+    "phrase": "pg_6502",
+    "url": "https://github.com/lasect/pg_6502",
+    "rule": "repo"
+   },
+   {
+    "phrase": "retrowin32",
+    "url": "https://github.com/evmar/retrowin32",
+    "rule": "repo"
+   },
+   {
+    "phrase": "wsl9x",
+    "url": "https://codeberg.org/hails/wsl9x",
+    "rule": "path"
+   },
+   {
+    "phrase": "x86CSS",
+    "url": "https://lyra.horse/x86css/",
+    "rule": "path"
+   }
+  ],
+  "topic:eventos-e-palestras": [
+   {
+    "phrase": "BruCON",
+    "url": "https://www.brucon.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "FOSDEM",
+    "url": "https://fosdem.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Gambiconf",
+    "url": "https://gambiconf.dev/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "RetroFest",
+    "url": "https://www.retrofest.uk/",
+    "rule": "site"
+   },
+   {
+    "phrase": "RetroSC",
+    "url": "https://datassette.org/retrosc",
+    "rule": "path"
+   }
+  ],
+  "topic:ferramentas-engenharia-reversa": [
+   {
+    "phrase": "AtomBusMon",
+    "url": "https://github.com/hoglet67/AtomBusMon",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Spice86",
+    "url": "https://github.com/OpenRakis/Spice86",
+    "rule": "repo"
+   }
+  ],
+  "topic:historia-da-computacao": [
+   {
+    "phrase": "Epson QX-10",
+    "url": "https://en.wikipedia.org/wiki/Epson_QX-10",
+    "rule": "wikipedia"
+   },
+   {
+    "phrase": "KOI8-R",
+    "url": "https://en.m.wikipedia.org/wiki/KOI8-R",
+    "rule": "wikipedia"
+   },
+   {
+    "phrase": "Megaprocessor",
+    "url": "http://www.megaprocessor.com/",
+    "rule": "site"
+   },
+   {
+    "phrase": "MICRO80",
+    "url": "https://www.padrim.com.br/MICRO80",
+    "rule": "path"
+   },
+   {
+    "phrase": "MicroMac",
+    "url": "https://axio.ms/projects/2024/06/16/MicroMac.html",
+    "rule": "path"
+   },
+   {
+    "phrase": "Miniforth",
+    "url": "https://niedzejkob.p4.team/bootstrap/miniforth/",
+    "rule": "path"
+   },
+   {
+    "phrase": "monobit",
+    "url": "https://robhagemans.github.io/monobit/",
+    "rule": "path"
+   },
+   {
+    "phrase": "Padrim",
+    "url": "https://www.padrim.com.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Processador-ICMC",
+    "url": "https://github.com/simoesusp/Processador-ICMC",
+    "rule": "repo"
+   },
+   {
+    "phrase": "ProgramListOCR",
+    "url": "https://github.com/eighttails/ProgramListOCR",
+    "rule": "repo"
+   },
+   {
+    "phrase": "screenCR",
+    "url": "https://github.com/Lana-chan/screenCR",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Sony SMC-70",
+    "url": "https://en.m.wikipedia.org/wiki/Sony_SMC-70",
+    "rule": "wikipedia"
+   },
+   {
+    "phrase": "WebOne",
+    "url": "https://github.com/atauenis/webone",
+    "rule": "repo"
+   }
+  ],
+  "topic:homebrew-kits-replicas": [
+   {
+    "phrase": "booterify",
+    "url": "https://github.com/raphnet/booterify",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "minipro",
+    "url": "https://gitlab.com/DavidGriffith/minipro/",
+    "rule": "path"
+   },
+   {
+    "phrase": "pico-zxspectrum",
+    "url": "https://github.com/fruit-bat/pico-zxspectrum",
+    "rule": "repo"
+   },
+   {
+    "phrase": "RetroWiFiModem",
+    "url": "https://github.com/mecparts/RetroWiFiModem",
+    "rule": "repo"
+   },
+   {
+    "phrase": "XGECU",
+    "url": "http://xgecu.com/",
+    "rule": "site"
+   }
+  ],
+  "topic:ia-engenharia-reversa": [
+   {
+    "phrase": "arXiv",
+    "url": "https://arxiv.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Cepecdbr",
+    "url": "https://github.com/robsonfr/Cepecdbr",
+    "rule": "repo"
+   },
+   {
+    "phrase": "tlcs900asm",
+    "url": "https://github.com/felipesanches/tlcs900asm",
+    "rule": "repo"
+   }
+  ],
+  "topic:instrumentos-musicais": [
+   {
+    "phrase": "Chipophone",
+    "url": "http://www.linusakesson.net/chipophone/",
+    "rule": "path"
+   }
+  ],
+  "topic:itautec": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Uniscope",
+    "url": "https://en.wikipedia.org/wiki/Uniscope",
+    "rule": "wikipedia"
+   }
+  ],
+  "topic:mame-desenvolvimento": [
+   {
+    "phrase": "Haze",
+    "url": "https://mamedev.emulab.it/haze/",
+    "rule": "path"
+   }
+  ],
+  "topic:mame-drivers": [
+   {
+    "phrase": "Aesthedes",
+    "url": "https://bitsavers.org/pdf/aesthedes/",
+    "rule": "path"
+   }
+  ],
+  "topic:memoria-informatica-brasileira": [
+   {
+    "phrase": "Elifoot",
+    "url": "http://www.elifoot.net/",
+    "rule": "site"
+   },
+   {
+    "phrase": "João José Neto",
+    "url": "https://pt.wikipedia.org/wiki/Jo%C3%A3o_Jos%C3%A9_Neto",
+    "rule": "wikipedia"
+   },
+   {
+    "phrase": "Lupinho",
+    "url": "https://github.com/pvmm/lupinho",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Unicomp",
+    "url": "https://ricbitpermanente.blogspot.com/2022/05/unicomp.html",
+    "rule": "path"
+   }
+  ],
+  "topic:midias-e-recuperacao": [
+   {
+    "phrase": "FluxEngine",
+    "url": "http://cowlark.com/fluxengine/",
+    "rule": "path"
+   },
+   {
+    "phrase": "Glasgow",
+    "url": "https://www.crowdsupply.com/1bitsquared/glasgow",
+    "rule": "path"
+   },
+   {
+    "phrase": "PunchedTapeScanner",
+    "url": "https://github.com/ArqueologiaDigital/PunchedTapeScanner",
+    "rule": "repo"
+   }
+  ],
+  "topic:mines": [
+   {
+    "phrase": "PR #111",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/111",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #126",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/126",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #127",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/127",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #128",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/128",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #134",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/134",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #28",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/28",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #34",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/34",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #37",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/37",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #41",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/41",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #61",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/61",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #75",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/75",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #78",
+    "url": "https://github.com/ArqueologiaDigital/Mines/pull/78",
+    "rule": "pull"
+   },
+   {
+    "phrase": "gdbstub",
+    "url": "https://github.com/mborgerson/gdbstub",
+    "rule": "repo"
+   }
+  ],
+  "topic:msx": [
+   {
+    "phrase": "WebMSX",
+    "url": "https://download.file-hunter.com/assets/webmsx.html?url=https%3A%2F%2Fdownload.file-hunter.com%2FGames%2FMSX1%2FDSK%2FAquarela%2520(1989)(Paulisoft%2520Informatica)(pt)(Disk%25201%2520of%25202).zip",
+    "rule": "path"
+   }
+  ],
+  "topic:museus-e-acervos": [
+   {
+    "phrase": "Computerspielemuseum",
+    "url": "https://www.computerspielemuseum.de/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "LI-MA",
+    "url": "https://li-ma.nl/",
+    "rule": "site"
+   },
+   {
+    "phrase": "OS2Museum",
+    "url": "https://www.os2museum.com/",
+    "rule": "site"
+   },
+   {
+    "phrase": "technikum29",
+    "url": "https://www.technikum29.de/",
+    "rule": "site"
+   }
+  ],
+  "topic:musica-e-chips-de-som": [
+   {
+    "phrase": "BassoonTracker",
+    "url": "https://www.stef.be/bassoontracker/",
+    "rule": "path"
+   },
+   {
+    "phrase": "OPL3LPT",
+    "url": "https://www.serdashop.com/OPL3LPT",
+    "rule": "path"
+   },
+   {
+    "phrase": "vgm-data-xtractor",
+    "url": "https://github.com/pvmm/vgm-data-xtractor",
+    "rule": "repo"
+   }
+  ],
+  "topic:organizacao-do-grupo": [
+   {
+    "phrase": "ArqueologiaDigital",
+    "url": "http://arqueologiadigital.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "topic:patinho-feio": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "ImGui",
+    "url": "https://github.com/ocornut/imgui",
+    "rule": "repo"
+   },
+   {
+    "phrase": "PatinhoFeio",
+    "url": "https://github.com/ArqueologiaDigital/PatinhoFeio",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Teletype Model 33",
+    "url": "https://en.wikipedia.org/wiki/Teletype_Model_33",
+    "rule": "wikipedia"
+   }
+  ],
+  "topic:pense-bem": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "zorrom",
+    "url": "https://github.com/SiliconAnalysis/zorrom",
+    "rule": "repo"
+   }
+  ],
+  "topic:preservacao-de-jogos-e-direitos": [
+   {
+    "phrase": "hekate",
+    "url": "https://github.com/CTCaer/hekate",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Lockpick_RCM",
+    "url": "https://github.com/shchmue/Lockpick_RCM",
+    "rule": "repo"
+   },
+   {
+    "phrase": "open-roms",
+    "url": "https://github.com/MEGA65/open-roms",
+    "rule": "repo"
+   }
+  ],
+  "topic:programacao-retro": [
+   {
+    "phrase": "bootOS",
+    "url": "https://github.com/nanochess/bootOS",
+    "rule": "repo"
+   },
+   {
+    "phrase": "GameTank",
+    "url": "https://www.crowdsupply.com/clydeware/gametank",
+    "rule": "path"
+   },
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "gendev",
+    "url": "https://github.com/kubilus1/gendev",
+    "rule": "repo"
+   },
+   {
+    "phrase": "NESFab",
+    "url": "https://pubby.games/nesfab.html",
+    "rule": "path"
+   },
+   {
+    "phrase": "Palmdle",
+    "url": "https://github.com/Lana-chan/palmdle",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Pascal-P2",
+    "url": "https://github.com/jzelinskie/pascal-p2",
+    "rule": "repo"
+   },
+   {
+    "phrase": "PascalSyntaxPoster",
+    "url": "https://github.com/felipesanches/PascalSyntaxPoster",
+    "rule": "repo"
+   },
+   {
+    "phrase": "pasta80",
+    "url": "https://github.com/pleumann/pasta80",
+    "rule": "repo"
+   },
+   {
+    "phrase": "PortableWumpus",
+    "url": "https://github.com/felipesanches/PortableWumpus",
+    "rule": "repo"
+   },
+   {
+    "phrase": "SmolSoft3D",
+    "url": "https://github.com/Lana-chan/SmolSoft3D",
+    "rule": "repo"
+   },
+   {
+    "phrase": "SymbOS",
+    "url": "https://symbos.org/",
+    "rule": "site"
+   }
+  ],
+  "topic:restauracao-de-hardware": [
+   {
+    "phrase": "Fiozera",
+    "url": "https://forum.fiozera.com.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "pypenwriter",
+    "url": "https://github.com/Lana-chan/pypenwriter",
+    "rule": "repo"
+   },
+   {
+    "phrase": "ROMulator",
+    "url": "https://bitfixer.com/product/romulator/",
+    "rule": "path"
+   }
+  ],
+  "topic:scopus-nexus": [
+   {
+    "phrase": "Documentos_Scopus",
+    "url": "https://github.com/ArqueologiaDigital/Documentos_Scopus",
+    "rule": "repo"
+   }
+  ],
+  "topic:technics-teclados": [
+   {
+    "phrase": "kn5000-roms-disasm",
+    "url": "https://github.com/ArqueologiaDigital/kn5000-roms-disasm",
+    "rule": "repo"
+   },
+   {
+    "phrase": "kn5000_homebrew",
+    "url": "https://github.com/felipesanches/kn5000_homebrew",
+    "rule": "repo"
+   },
+   {
+    "phrase": "KN5000_MAME_artwork",
+    "url": "https://github.com/ArqueologiaDigital/KN5000_MAME_artwork",
+    "rule": "repo"
+   },
+   {
+    "phrase": "KN7000",
+    "url": "https://arqueologiadigital.org/technics-docs/kn7000/",
+    "rule": "path"
+   },
+   {
+    "phrase": "LZSS",
+    "url": "http://multimedia.ufp.pt/codecs/compressao-sem-perdas/codificacao-baseada-em-dicionarios/lzss/",
+    "rule": "path"
+   },
+   {
+    "phrase": "TLCS900_ExecTrace",
+    "url": "https://github.com/felipesanches/TLCS900_ExecTrace",
+    "rule": "repo"
+   }
+  ],
+  "topic:tipografia": [
+   {
+    "phrase": "FontStruct",
+    "url": "https://fontstruct.com/",
+    "rule": "site"
+   }
+  ],
+  "topic:vet3000": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   }
+  ],
+  "topic:zeebo-tectoy": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "tripleoxygen",
+    "url": "https://www.tripleoxygen.net/",
+    "rule": "site"
+   }
+  ],
+  "year:1": [
+   {
+    "phrase": "ArqueologiaDigital",
+    "url": "http://arqueologiadigital.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "year:2": [
+   {
+    "phrase": "booterify",
+    "url": "https://github.com/raphnet/booterify",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "year:3": [
+   {
+    "phrase": "Zezinho",
+    "url": "https://pt.wikipedia.org/wiki/Zezinho",
+    "rule": "wikipedia"
+   }
+  ],
+  "year:4": [
+   {
+    "phrase": "LZSS",
+    "url": "http://multimedia.ufp.pt/codecs/compressao-sem-perdas/codificacao-baseada-em-dicionarios/lzss/",
+    "rule": "path"
+   },
+   {
+    "phrase": "pypenwriter",
+    "url": "https://github.com/Lana-chan/pypenwriter",
+    "rule": "repo"
+   }
+  ],
+  "year:7": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "year:8": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   }
+  ],
+  "year:9": [
+   {
+    "phrase": "Antarctic",
+    "url": "https://github.com/ricbit/antarctic",
+    "rule": "repo"
+   },
+   {
+    "phrase": "KN7000",
+    "url": "https://arqueologiadigital.org/technics-docs/kn7000/",
+    "rule": "path"
+   }
+  ]
+ },
+ "rejected": []
+}
