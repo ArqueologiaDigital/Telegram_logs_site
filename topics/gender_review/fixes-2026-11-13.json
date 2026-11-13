@@ -1,0 +1,146 @@
+[
+ {
+  "n": 138,
+  "old": "Ele também recomendou",
+  "new": "Ela também recomendou",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "'Ele' continues the previous sentence whose subject is L. (comentou o livro de Sanglard)"
+ },
+ {
+  "n": 273,
+  "old": "perguntou se ele já havia pensado",
+  "new": "perguntou se ela já havia pensado",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "Ismael asked L. (author of the CHIP-8 emulator) whether she had thought of a compiler"
+ },
+ {
+  "n": 348,
+  "old": "Ele notou que o fddEMU",
+  "new": "Ela notou que o fddEMU",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "'Ele' refers to L., subject of the previous sentence (divulgou o fddEMU)"
+ },
+ {
+  "n": 425,
+  "old": "no RC2014, que ele tem",
+  "new": "no RC2014, que ela tem",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "the RC2014 owner is L., subject of the sentence"
+ },
+ {
+  "n": 414,
+  "old": "L. removido dos participantes",
+  "new": "L. removida dos participantes",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "masculine participle agreeing with L."
+ },
+ {
+  "n": 537,
+  "old": "L. removido dos participantes",
+  "new": "L. removida dos participantes",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "masculine participle agreeing with L."
+ },
+ {
+  "n": 236,
+  "old": "L. (participante listado)",
+  "new": "L. (participante listada)",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "masculine participle agreeing with L."
+ },
+ {
+  "n": 501,
+  "old": "e o resumo os citava",
+  "new": "e o resumo as citava",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "'os' refers to L. and Erin together (both women), the two who posted after #24217"
+ },
+ {
+  "n": 206,
+  "old": "mask ROMs que, segundo ele, processam",
+  "new": "mask ROMs que, segundo ela, processam",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "L. indicou o zorrom; \"segundo ele\" refers to L."
+ },
+ {
+  "n": 222,
+  "old": "Perguntado por Leonardo Roman, L.",
+  "new": "Perguntada por Leonardo Roman, L.",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "participle agrees with L."
+ },
+ {
+  "n": 271,
+  "old": "Ele concluiu que precisaria de um depurador",
+  "new": "Ela concluiu que precisaria de um depurador",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "subject is L., who opened the firmware in Ghidra"
+ },
+ {
+  "n": 578,
+  "old": "Ele citou um trecho segundo o qual",
+  "new": "Ela citou um trecho segundo o qual",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "subject is L., who recalled the Telejogo variant"
+ },
+ {
+  "n": 847,
+  "old": "Ele conhece alguém que supostamente tem discos.",
+  "new": "Ela conhece alguém que supostamente tem discos.",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "subject is L., who made the LAI request"
+ },
+ {
+  "n": 20,
+  "old": "da coleção de L. em Campinas, que ele pretende doar",
+  "new": "da coleção de L. em Campinas, que ela pretende doar",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "'ele' = L., dona da coleção que pretende doá-la"
+ },
+ {
+  "n": 234,
+  "old": "L. removido dos participantes",
+  "new": "L. removida dos participantes",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "participle agrees with L."
+ },
+ {
+  "n": 234,
+  "old": "a única mensagem dele no intervalo",
+  "new": "a única mensagem dela no intervalo",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "'dele' = L., whose message (#10463) is about SOX"
+ },
+ {
+  "n": 275,
+  "old": "Ele encontrou o Omega",
+  "new": "Ela encontrou o Omega",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "subject continues from 'L. planeja retomar o projeto de um MSX2 caseiro'"
+ },
+ {
+  "n": 469,
+  "old": "e L. acrescentado, com",
+  "new": "e L. acrescentada, com",
+  "who": "L.",
+  "confidence": "sure",
+  "why": "participle agrees with L.; found by the mechanical sweep after the agent reviews"
+ }
+]

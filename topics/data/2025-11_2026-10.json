@@ -5030,7 +5030,7 @@
       39767
      ],
      "title": "Recuperação do sistema operacional brasileiro Sox/Cobra",
-     "summary": "L. relata que seu pedido via LAI à BB Tecnologia sobre o Sox, sistema operacional da Cobra, não deu resultado e que não há binário disponível. Ele conhece alguém que supostamente tem discos. Felipe defende extrair a imagem e publicá-la. L. supõe que o sistema de arquivos seja próprio, provavelmente no estilo Unix com superbloco e inodes, e cogita montá-lo via FUSE. RicBit sugere fazer o disassembly do boot para descobrir o formato.",
+     "summary": "L. relata que seu pedido via LAI à BB Tecnologia sobre o Sox, sistema operacional da Cobra, não deu resultado e que não há binário disponível. Ela conhece alguém que supostamente tem discos. Felipe defende extrair a imagem e publicá-la. L. supõe que o sistema de arquivos seja próprio, provavelmente no estilo Unix com superbloco e inodes, e cogita montá-lo via FUSE. RicBit sugere fazer o disassembly do boot para descobrir o formato.",
      "participants": [
       "L.",
       "RicBit",

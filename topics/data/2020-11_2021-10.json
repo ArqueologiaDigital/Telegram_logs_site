@@ -441,7 +441,7 @@
       11694
      ],
      "title": "Firmware AVR do Pense Bem 2017 no Ghidra",
-     "summary": "L. abriu no Ghidra o dump do firmware AVR do Pense Bem 2017 e apontou a função em 0x0b60 como possível gerador de números pseudoaleatórios. Ele concluiu que precisaria de um depurador para avançar.",
+     "summary": "L. abriu no Ghidra o dump do firmware AVR do Pense Bem 2017 e apontou a função em 0x0b60 como possível gerador de números pseudoaleatórios. Ela concluiu que precisaria de um depurador para avançar.",
      "participants": [
       "L.",
       "Felipe \"Juca\" Sanches"
@@ -463,7 +463,7 @@
       11649
      ],
      "title": "Emulador de CHIP-8 escrito por L.",
-     "summary": "L. mostrou o emulador de CHIP-8 que escreve em C, com plano de reescrevê-lo em Rust para aprender a linguagem. A saída inicial estava errada por causa do opcode de desenho; dias depois o emulador já funcionava com a ROM de teste. Ismael Luceno perguntou se ele já havia pensado em um compilador de CHIP-8 para gcc/llvm, e L. mencionou Rust com wasm.",
+     "summary": "L. mostrou o emulador de CHIP-8 que escreve em C, com plano de reescrevê-lo em Rust para aprender a linguagem. A saída inicial estava errada por causa do opcode de desenho; dias depois o emulador já funcionava com a ROM de teste. Ismael Luceno perguntou se ela já havia pensado em um compilador de CHIP-8 para gcc/llvm, e L. mencionou Rust com wasm.",
      "participants": [
       "L.",
       "Ismael Luceno",
@@ -582,7 +582,7 @@
       12462
      ],
      "title": "Projeto de MSX2 em formato mini-ITX",
-     "summary": "L. planeja retomar o projeto de um MSX2 caseiro, aprender KiCad e mandar fazer a placa, possivelmente em formato mini-ITX para usar um gabinete de PC. Ele encontrou o Omega, um MSX2 de hardware aberto, e outros projetos do mesmo autor (Micro 8088, tiny_z80).",
+     "summary": "L. planeja retomar o projeto de um MSX2 caseiro, aprender KiCad e mandar fazer a placa, possivelmente em formato mini-ITX para usar um gabinete de PC. Ela encontrou o Omega, um MSX2 de hardware aberto, e outros projetos do mesmo autor (Micro 8088, tiny_z80).",
      "participants": [
       "L.",
       "Erin Pinheiro 🐿"
@@ -5097,7 +5097,7 @@
       16796
      ],
      "title": "fddEMU: emulador de drive de disquete livre",
-     "summary": "L. divulgou o fddEMU, emulador de drive de disquete de código aberto, que pensa usar se terminar o MSX2 que monta do zero. Ele notou que o fddEMU só suporta discos HD (MFM), sem DD.",
+     "summary": "L. divulgou o fddEMU, emulador de drive de disquete de código aberto, que pensa usar se terminar o MSX2 que monta do zero. Ela notou que o fddEMU só suporta discos HD (MFM), sem DD.",
      "participants": [
       "L."
      ],

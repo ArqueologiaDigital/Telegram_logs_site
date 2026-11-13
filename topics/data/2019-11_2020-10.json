@@ -690,7 +690,7 @@
       11451
      ],
      "title": "Decapagem e leitura de mask ROMs por imagem (John McMaster, zorrom)",
-     "summary": "FTMaciel indicou a Felipe \"Juca\" Sanches um vídeo sobre decapagem de chips sem produtos químicos e depois uma palestra de John McMaster sobre captura de mask ROMs. L. indicou o zorrom, utilitários para decodificar mask ROMs que, segundo ele, processam a saída de ferramentas que tratam fotos. Felipe lembrou a ideia de usar ácido no Z8 do Pense Bem, e L. disse que um dia mandaria um Z8 para alguém com equipamento para isso. L. também mencionou que McMaster vinha extraindo por imagens a ROM de boot do Game Boy.",
+     "summary": "FTMaciel indicou a Felipe \"Juca\" Sanches um vídeo sobre decapagem de chips sem produtos químicos e depois uma palestra de John McMaster sobre captura de mask ROMs. L. indicou o zorrom, utilitários para decodificar mask ROMs que, segundo ela, processam a saída de ferramentas que tratam fotos. Felipe lembrou a ideia de usar ácido no Z8 do Pense Bem, e L. disse que um dia mandaria um Z8 para alguém com equipamento para isso. L. também mencionou que McMaster vinha extraindo por imagens a ROM de boot do Game Boy.",
      "participants": [
       "FTMaciel",
       "L.",
@@ -1492,7 +1492,7 @@
       11114
      ],
      "title": "Terminal portátil Motorola MDT9100T",
-     "summary": "Perguntado por Leonardo Roman, L. identificou seu aparelho como um Motorola MDT9100T, um 386 portátil usado como terminal serial. FTMaciel comentou o uso desses terminais em viaturas policiais nos EUA e disse que a primeira versão da criptografia era fraca demais.",
+     "summary": "Perguntada por Leonardo Roman, L. identificou seu aparelho como um Motorola MDT9100T, um 386 portátil usado como terminal serial. FTMaciel comentou o uso desses terminais em viaturas policiais nos EUA e disse que a primeira versão da criptografia era fraca demais.",
      "participants": [
       "Leonardo Roman",
       "L.",
@@ -1939,7 +1939,7 @@
     "Overview: 'L. converteu o GW-BASIC' trocado por 'escreveu um conversor'; a conversão estava em andamento (#11051, #11063), não concluída.",
     "Overview: a limpeza do Itautec foi só da placa-mãe (#10507), e completar a emulação era uma intenção (#10512); texto ajustado. 'Pandemia' trocado por 'quarentena', como dizem as mensagens (#10833, #10836).",
     "Overview: 'disassembly feita por RicBit' trocado por 'compartilhada por RicBit'; ele diz apenas 'disasm comentado' (#11499).",
-    "Itautec: só a placa-mãe foi limpa (#10507), não as três placas. Registrado que o I-7000 não estava na pasta de FTMaciel (#10460). L. removido dos participantes: a única mensagem dele no intervalo (#10463) trata do SOX, não do Itautec.",
+    "Itautec: só a placa-mãe foi limpa (#10507), não as três placas. Registrado que o I-7000 não estava na pasta de FTMaciel (#10460). L. removida dos participantes: a única mensagem dela no intervalo (#10463) trata do SOX, não do Itautec.",
     "Sony DFS-500: a PVE-500 já tinha sido emulada parcialmente anos antes, depois de ser doada (#11436); as CPUs são duas NEC V20 e uma V30 (#11395); resumo ajustado.",
     "Z8 do Pense Bem: acrescentados os '6 ciclos' do modo de teste (#11418). 'Fidelity' retirado porque o nome não aparece no transcript (só 'jogo de xadrez' e fidel_msc.cpp). A discussão sobre o LFSR foi atribuída a quem falou: aposta de Felipe (#11474), observação de RicBit (#11482).",
     "Zezinho: '2017' precisado para 'novembro de 2017' (#10424), e a explicação da emulação incompleta foi reescrita para ficar fiel a #10423/#10428.",
@@ -1953,7 +1953,7 @@
     "Curso de arqueojogos: retirados 'Museu de Arqueologia e Etnologia' e 'MAE-USP', que não aparecem no texto (#11262 diz 'museu de arqueologia da usp'). A divulgação foi um repasse de Felipe (#11254-11255), não 'o grupo'.",
     "Fabien Sanglard: acrescentado que Felipe disse ainda não ter avanços (#10357).",
     "Another World VM: retirada a afirmação de que a série trata da implementação 'numa placa JAMMA', que é uma inferência a partir do título do EP. 10; título da conversa ajustado.",
-    "João José Neto: last_id passado de 10887 para 10888, porque L. (participante listado) só postou em #10888.",
+    "João José Neto: last_id passado de 10887 para 10888, porque L. (participante listada) só postou em #10888.",
     "Mask ROMs: first_id movido para #10709, onde FTMaciel indica a Felipe um vídeo de decapagem; recurso desse vídeo adicionado. A descrição do zorrom agora segue o que L. diz (#11205). key_id #11450 trocado por #11451, que traz a informação. last_id passado para #11452.",
     "Livro de Mechner: 'Jordan' retirado do título, porque o transcript só diz 'Mechner'. O livro foi comprado antes de setembro e chegou no fim de agosto (#11314), então o resumo foi corrigido. 'Lançado em abril' precisado para 'fim de abril'. last_id passado para #11315.",
     "EmuOS: FTMaciel removido dos participantes; ele não posta entre #10876 e #10882.",
