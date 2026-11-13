@@ -11,7 +11,8 @@ links to something that was posted in the conversations it summarizes (or to a r
 
 PLACE names the text: `conv:<year>:<first id>` (a conversation summary), `sub:<year>/<theme>/<sub>`,
 `theme:<year>/<theme>`, `year:<year>` (a year's intro), `topic:<slug>` (a cross-year summary),
-`note:<slug>:<year>` (a cross-year topic's note for one year). `render.py` links the first
+`note:<slug>:<year>` (a cross-year topic's note for one year), `bio:<user id>` (a profile's bio,
+from the conversations its `bio_basis` cites). `render.py` links the first
 occurrence of each phrase in its text, and reports a phrase that is no longer in the text or a URL
 that none of the place's conversations cite.
 
@@ -156,6 +157,17 @@ def places(root):
         for note in tp.get("year_notes", []):
             ycs = [c for n, scs in members if n == note["year"] for c in scs]
             yield f"note:{tp['slug']}:{note['year']}", [note["note"]], ycs
+    # a profile bio: what its "bio_basis" cites (conversations by first id, or the person's own
+    # messages, which stand for the conversations that contain them)
+    allconv = [c for _, convs, _ in years for c in convs.values()]
+    with open(os.path.join(root, "topics", "profiles_optin.json"), encoding="utf-8") as f:
+        profiles = json.load(f)
+    for uid, info in profiles.items():
+        if info.get("bio"):
+            ids = {int(x) for x in re.findall(r"#(\d+)", info.get("bio_basis", ""))}
+            bcs = [c for c in allconv if c["first_id"] in ids
+                   or any(c["first_id"] <= i <= c["last_id"] for i in ids)]
+            yield f"bio:{uid}", [info["bio"]], bcs
 
 
 def candidates(convs, repos):

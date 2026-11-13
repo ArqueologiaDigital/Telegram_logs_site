@@ -559,7 +559,7 @@ def profile_page(L, years, uid, info, opts, X):
              f"<div class='who'>{profile_avatar(d, uid, name, opts, info)}"
              f"<div><h1>{esc(name)}</h1><p class='role'>{esc(info.get('role') or '')}</p></div></div>\n"]
     if info.get("bio") and info.get("bio_approved"):
-        parts.append(f"<p class='lead'>{esc(info['bio'])}</p>\n")
+        parts.append(f"<p class='lead'>{INL(f'bio:{uid}', info['bio'])}</p>\n")
     parts.append(f"<h2>Mensagens no grupo</h2><p>{len(mine)} mensagens"
                  + (f", desde {L.msg(first['id'], pt_date(first))}" if first else "") + ".</p>"
                  f"<table class='years'>{bars}</table>\n")

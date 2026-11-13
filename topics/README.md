@@ -164,7 +164,10 @@ On 2026-11-13: 660 links in 467 texts, to 292 distinct URLs.
 
 By text: 257 conversation summaries, 80 subtopics, 67 per-year topic notes, 37 cross-year
 topic summaries, 19 themes, 7 year intros. A random sample of 45 links was read in context and all
-were right. The rules miss what a text names only by description ("o documento público", "o vídeo
+were right. Profile bios get links too (place `bio:<user id>`), from the conversations their `bio_basis`
+cites (or that contain the messages it cites); the text the person approved is unchanged. On
+2026-11-13: 23 links in 16 of the 24 bios, all read; one more was rejected ("a organização
+ArqueologiaDigital no GitHub" is not the site). The rules miss what a text names only by description ("o documento público", "o vídeo
 no YouTube"); those need someone (or an agent) to read the text and its resources, and go into
 `inline_links.json` with `"by": "hand"`.
 

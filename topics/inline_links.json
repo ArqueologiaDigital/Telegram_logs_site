@@ -1,5 +1,152 @@
 {
  "links": {
+  "bio:112310772": [
+   {
+    "phrase": "Elifoot",
+    "url": "http://www.elifoot.net/",
+    "rule": "site"
+   }
+  ],
+  "bio:11620993": [
+   {
+    "phrase": "Aesthedes",
+    "url": "https://bitsavers.org/pdf/aesthedes/",
+    "rule": "path"
+   }
+  ],
+  "bio:147061344": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "RetroSC",
+    "url": "https://datassette.org/retrosc",
+    "rule": "path"
+   }
+  ],
+  "bio:1523027006": [
+   {
+    "phrase": "LI-MA",
+    "url": "https://li-ma.nl/",
+    "rule": "site"
+   }
+  ],
+  "bio:156804818": [
+   {
+    "phrase": "BruCON",
+    "url": "https://www.brucon.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "GambiConf",
+    "url": "https://gambiconf.dev/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Mizuchi",
+    "url": "https://github.com/macabeus/mizuchi",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Transmuter",
+    "url": "https://github.com/macabeus/transmuter",
+    "rule": "repo"
+   }
+  ],
+  "bio:158875400": [
+   {
+    "phrase": "ImGui",
+    "url": "https://github.com/ocornut/imgui",
+    "rule": "repo"
+   }
+  ],
+  "bio:159502243": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   },
+   {
+    "phrase": "FluxEngine",
+    "url": "http://cowlark.com/fluxengine/",
+    "rule": "path"
+   },
+   {
+    "phrase": "KryoFlux",
+    "url": "https://www.kryoflux.com/",
+    "rule": "site"
+   }
+  ],
+  "bio:211957704": [
+   {
+    "phrase": "Cepecdbr",
+    "url": "https://github.com/robsonfr/Cepecdbr",
+    "rule": "repo"
+   }
+  ],
+  "bio:229073163": [
+   {
+    "phrase": "RetroFest",
+    "url": "https://www.retrofest.uk/",
+    "rule": "site"
+   }
+  ],
+  "bio:29497353": [
+   {
+    "phrase": "vgm-data-xtractor",
+    "url": "https://github.com/pvmm/vgm-data-xtractor",
+    "rule": "repo"
+   }
+  ],
+  "bio:356978424": [
+   {
+    "phrase": "Datassette",
+    "url": "https://datassette.org/",
+    "rule": "site"
+   }
+  ],
+  "bio:56348427": [
+   {
+    "phrase": "LibrePlanet",
+    "url": "https://libreplanet.org/",
+    "rule": "site"
+   }
+  ],
+  "bio:625709632": [
+   {
+    "phrase": "Antarctic",
+    "url": "https://github.com/ricbit/antarctic",
+    "rule": "repo"
+   }
+  ],
+  "bio:68792465": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
+  "bio:8148848": [
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "spectrum-poster",
+    "url": "https://github.com/aylons/spectrum-poster",
+    "rule": "repo"
+   }
+  ],
+  "bio:82071256": [
+   {
+    "phrase": "x86CSS",
+    "url": "https://lyra.horse/x86css/",
+    "rule": "path"
+   }
+  ],
   "conv:10:42029": [
    {
     "phrase": "rustyworld",
@@ -4337,5 +4484,12 @@
    }
   ]
  },
- "rejected": []
+ "rejected": [
+  {
+   "place": "bio:64762480",
+   "phrase": "ArqueologiaDigital",
+   "url": "http://arqueologiadigital.org/",
+   "why": "the text names the GitHub organisation ('criou a organização ArqueologiaDigital no GitHub'), not the site (2026-11-13)"
+  }
+ ]
 }
