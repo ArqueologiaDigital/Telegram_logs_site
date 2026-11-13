@@ -1,0 +1,36 @@
+[2026-11-13 00:03:33] Felipe "Juca" Sanches: Ouvi dizer que teve reunião sobre isso em mesas da lanchonete do prédio da Engenharia Elétrica da Poli onde listagens impressas foram colocadas lado-a-lado...
+[2026-11-13 00:14:08] Jecel Assumpcao Jr: Na época eu estava trabalhando com o pessoal da Softec que vendia o Analix (QNX) e por isso não eram afetados pelas brigas do DOS
+[2026-11-13 02:29:49] Shideravan: Acho que eu tomei uma boa decisão de não estar enviando PR no MAME agora
+[2026-11-13 02:30:19] Shideravan: Olha as ideias que os dinossauros tem para diminuir o backlog de PR que vão se acumulando
+[2026-11-13 02:31:03] Shideravan: Implementar boas ferramentas como CI/CD? Melhorar o workflow de revisão? Aumentar o time que pode fazer revisão e aprovar?
+[2026-11-13 02:31:33] Shideravan: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42402.jpg
+[2026-11-13 02:31:33] Shideravan: Não... Limitar as contribuições para "50 slots por mês" kkkkkkkkk
+[2026-11-13 02:32:05] Shideravan: Esse é o compromisso com a preservação do projeto? Diminuir artificialmente o fluxo de contribuição?
+[2026-11-13 02:32:35] Shideravan: Isso quando a "solução" não é ficar humilhando quem envia PR até a galera desistir de contribuir com o projeto
+[2026-11-13 02:35:29] Shideravan: Tem dia que dá vontade de mandar esses caras de volta para 97
+[2026-11-13 02:35:43] Shideravan: Um projeto com o escopo que o MAME tem
+[2026-11-13 02:45:28] Felipe "Juca" Sanches: eu não levaria esse cara a sério
+[2026-11-13 02:45:58] Felipe "Juca" Sanches: ele não é mantenedor do projeto
+[2026-11-13 02:46:18] Felipe "Juca" Sanches: eu já tive interações com ele nuns PRs e a coisa foi feia
+[2026-11-13 02:48:57] Felipe "Juca" Sanches: se o Cuavas, ou o hap, ou o olivier galibert, ou o rb6502 estivessem sugerindo isso... aí eu ficaria preocupado. Esse gurudumps aí... nem se preocupe.
+[2026-11-13 02:58:16] Shideravan: Mas é cada ideia de gerico que a gente lê, pqp
+[2026-11-13 02:58:42] Felipe "Juca" Sanches: sim...
+[2026-11-13 02:59:52] Felipe "Juca" Sanches: pra ser sincero, eu nao sei direito como é a relação do gurudumps com o resto dos devs. Suspeiro que ele esteja envolvido há mais de 20 anos no processo de coletar dumps. Mas não me parece ser um contribuidor de códigos de emulação
+[2026-11-13 03:00:23] Shideravan: Ele é um cara envolvido com dumps, galera mandava hardware para ele dumpar
+[2026-11-13 03:00:43] Shideravan: Mas o fato é que ele dá pitaco no projeto desde 1999
+[2026-11-13 03:00:52] Felipe "Juca" Sanches: é... era essa a minha percepção, mesmo
+[2026-11-13 03:00:57] Shideravan: Ele deve ser uma das pessoas que mais dumparam coisas
+[2026-11-13 03:01:10] Felipe "Juca" Sanches: o que é importante, claro
+[2026-11-13 03:01:17] Shideravan: Teve uma época que ele se meteu numa treta colossal, uma das maiores que o MAME já teve
+[2026-11-13 03:01:31] Shideravan: Ele tinha conseguido um cara que fazia recaps "barato"
+[2026-11-13 03:02:01] Felipe "Juca" Sanches: mas não significa que ele tenha qualquer tipo de influência no código, ou nas políticas de moderação do issue tracker
+[2026-11-13 03:02:09] Shideravan: Então ele recebeu hardwares e doações para caramba, com o intuito de muito hardware que era raríssimo, até protótipos coisas únicas
+[2026-11-13 03:02:27] Shideravan: Mas ele mandou para o cara e ele sumiu com o dinheiro e com o hardware da galera
+[2026-11-13 03:03:05] Shideravan: Ele teve contribuições no código sim, não é a "especialidade" dele, mas como disse, ele é dinossauro e participa
+[2026-11-13 03:03:23] Shideravan: É um cara importante, tá lá desde a fundação do projeto
+[2026-11-13 03:03:29] Felipe "Juca" Sanches: sim, mas não me causa preocupação
+[2026-11-13 03:03:51] Shideravan: Me causa preocupação dessas ideias de gerico sequer serem ventiladas
+[2026-11-13 03:04:05] Shideravan: E eu não ando com paciencia de entrar lá no forum e tretar
+[2026-11-13 03:04:34] Shideravan: O problema é sério sim, mas essa é uma das piores soluções que alguém poderia dar
+[2026-11-13 03:04:51] Shideravan: Só perde para a solução que eu tenho visto gente como o cuavas implementar na prática
+[2026-11-13 03:05:11] Shideravan: Que é humilhar galera que faz contribuição até a pessoa desistir de contribuir com o projeto
