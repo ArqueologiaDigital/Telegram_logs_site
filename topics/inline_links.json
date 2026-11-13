@@ -206,6 +206,38 @@
     "rule": "site"
    }
   ],
+  "bio:42956362": [
+   {
+    "phrase": "compilador otimizador para 6502",
+    "url": "https://pubby.games/codegen.html",
+    "by": "hand"
+   },
+   {
+    "phrase": "artigos clássicos da Byte sobre Smalltalk",
+    "url": "https://archive.org/details/byte-magazine-1981-08/mode/2up",
+    "by": "hand"
+   },
+   {
+    "phrase": "leilão de retrocomputação e retro games",
+    "url": "https://www.rtleiloes.com.br/catalogo.asp?Num=59785",
+    "by": "hand"
+   },
+   {
+    "phrase": "A Turma da Cozinha",
+    "url": "https://archive.org/details/aturma-da-cozinha",
+    "by": "hand"
+   },
+   {
+    "phrase": "um vídeo",
+    "url": "https://youtu.be/fSS629rAUwY?si=4fqg3spMAVh4gU_J",
+    "by": "hand"
+   },
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   }
+  ],
   "bio:56348427": [
    {
     "phrase": "bitmap2ttf",
