@@ -53,6 +53,78 @@
     "rule": "path"
    }
   ],
+  "bio:149994769": [
+   {
+    "phrase": "Manfred Mohr",
+    "url": "https://twitter.com/manfredemohr/status/969304818710917121?s=19",
+    "by": "hand"
+   },
+   {
+    "phrase": "ReCode Project",
+    "url": "http://recodeproject.com/translation/chris-allick-direct-random-squares-charles-csuri",
+    "by": "hand"
+   },
+   {
+    "phrase": "trabalho de Waldemar Cordeiro e Giorgio Moscati",
+    "url": "http://www5.usp.br/18320/giorgio-moscati-e-waldemar-cordeiro-quando-o-computador-encontrou-a-arte/",
+    "by": "hand"
+   },
+   {
+    "phrase": "análise de arqueologia de software do Spacewar!",
+    "url": "http://www.masswerk.at/spacewar/inside/",
+    "by": "hand"
+   },
+   {
+    "phrase": "história da ARM",
+    "url": "https://tedium.co/2018/06/07/acorn-arm-holdings-history/",
+    "by": "hand"
+   },
+   {
+    "phrase": "BBC Computer Literacy Project",
+    "url": "https://computer-literacy-project.pilots.bbcconnectedstudio.co.uk/beeb",
+    "by": "hand"
+   },
+   {
+    "phrase": "livro de John Aycock",
+    "url": "https://mastodon.social/@herrprofdr/110029031989211775",
+    "by": "hand"
+   },
+   {
+    "phrase": "manual de preservação digital",
+    "url": "https://www.dpconline.org/handbook",
+    "by": "hand"
+   },
+   {
+    "phrase": "reportagem sobre o Museu do Computador",
+    "url": "https://www1.folha.uol.com.br/tec/2023/12/museu-do-computador-completa-25-anos-com-perda-de-95-do-acervo.shtml",
+    "by": "hand"
+   },
+   {
+    "phrase": "colapso do arquivo alemão de jogos",
+    "url": "https://www.tomshardware.com/video-games/retro-gaming/germanys-1-5-million-project-to-build-the-worlds-largest-game-archive-collapses-after-funding-dries-up",
+    "by": "hand"
+   },
+   {
+    "phrase": "FifteenTwenty",
+    "url": "https://github.com/scruss/FifteenTwenty",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Hershey",
+    "url": "http://paulbourke.net/dataformats/hershey/",
+    "rule": "path"
+   },
+   {
+    "phrase": "LI-MA",
+    "url": "https://li-ma.nl/",
+    "rule": "site"
+   },
+   {
+    "phrase": "Psion Organiser",
+    "url": "https://en.m.wikipedia.org/wiki/Psion_Organiser",
+    "rule": "wikipedia"
+   }
+  ],
   "bio:1523027006": [
    {
     "phrase": "LI-MA",
