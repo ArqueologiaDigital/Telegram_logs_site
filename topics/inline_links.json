@@ -1,5 +1,38 @@
 {
  "links": {
+  "conv:10:42029": [
+   {
+    "phrase": "rustyworld",
+    "url": "https://github.com/EdMcBane/rustyworld",
+    "rule": "repo"
+   }
+  ],
+  "conv:10:42165": [
+   {
+    "phrase": "phoboslab",
+    "url": "https://phoboslab.org/log/2026/11/n64-ulc-codec",
+    "rule": "site"
+   }
+  ],
+  "conv:10:42174": [
+   {
+    "phrase": "PR #2267",
+    "url": "https://github.com/openMSX/openMSX/pull/2267",
+    "rule": "pull"
+   },
+   {
+    "phrase": "PR #2270",
+    "url": "https://github.com/openMSX/openMSX/pull/2270",
+    "rule": "pull"
+   }
+  ],
+  "conv:10:42271": [
+   {
+    "phrase": "PR #2280",
+    "url": "https://github.com/openMSX/openMSX/pull/2280",
+    "rule": "pull"
+   }
+  ],
   "conv:1:1023": [
    {
     "phrase": "Datassette",
@@ -1961,6 +1994,13 @@
     "rule": "repo"
    }
   ],
+  "note:another-world:10": [
+   {
+    "phrase": "rustyworld",
+    "url": "https://github.com/EdMcBane/rustyworld",
+    "rule": "repo"
+   }
+  ],
   "note:another-world:3": [
    {
     "phrase": "ULX3S",
@@ -2091,6 +2131,13 @@
     "rule": "repo"
    }
   ],
+  "note:desmontagens-msx-e-emuladores-4kb:10": [
+   {
+    "phrase": "PR #2280",
+    "url": "https://github.com/openMSX/openMSX/pull/2280",
+    "rule": "pull"
+   }
+  ],
   "note:desmontagens-msx-e-emuladores-4kb:9": [
    {
     "phrase": "Antarctic",
@@ -2203,6 +2250,13 @@
     "phrase": "MICRO80",
     "url": "https://www.padrim.com.br/MICRO80",
     "rule": "path"
+   }
+  ],
+  "note:historia-da-computacao:10": [
+   {
+    "phrase": "phoboslab",
+    "url": "https://phoboslab.org/",
+    "rule": "site"
    }
   ],
   "note:historia-da-computacao:4": [
@@ -2504,6 +2558,13 @@
     "rule": "path"
    }
   ],
+  "note:technics-teclados:10": [
+   {
+    "phrase": "rustyworld",
+    "url": "https://github.com/EdMcBane/rustyworld",
+    "rule": "repo"
+   }
+  ],
   "note:technics-teclados:4": [
    {
     "phrase": "kn5000_homebrew",
@@ -2602,6 +2663,20 @@
    {
     "phrase": "Fiozera",
     "url": "https://forum.fiozera.com.br/",
+    "rule": "site"
+   }
+  ],
+  "sub:10/kn7000-tlcs-900-engenharia-reversa/another-world-kn7000": [
+   {
+    "phrase": "rustyworld",
+    "url": "https://github.com/EdMcBane/rustyworld",
+    "rule": "repo"
+   }
+  ],
+  "sub:10/links-e-datas/artigos-e-videos": [
+   {
+    "phrase": "phoboslab",
+    "url": "https://phoboslab.org/",
     "rule": "site"
    }
   ],
@@ -3345,6 +3420,11 @@
     "rule": "repo"
    },
    {
+    "phrase": "rustyworld",
+    "url": "https://github.com/EdMcBane/rustyworld",
+    "rule": "repo"
+   },
+   {
     "phrase": "ULX3S",
     "url": "https://www.crowdsupply.com/radiona/ulx3s",
     "rule": "path"
@@ -3488,6 +3568,11 @@
    }
   ],
   "topic:desmontagens-msx-e-emuladores-4kb": [
+   {
+    "phrase": "PR #2280",
+    "url": "https://github.com/openMSX/openMSX/pull/2280",
+    "rule": "pull"
+   },
    {
     "phrase": "Antarctic",
     "url": "https://github.com/ricbit/antarctic",
@@ -3681,6 +3766,11 @@
    {
     "phrase": "Padrim",
     "url": "https://www.padrim.com.br/",
+    "rule": "site"
+   },
+   {
+    "phrase": "phoboslab",
+    "url": "https://phoboslab.org/",
     "rule": "site"
    },
    {
@@ -4129,6 +4219,11 @@
     "rule": "path"
    },
    {
+    "phrase": "rustyworld",
+    "url": "https://github.com/EdMcBane/rustyworld",
+    "rule": "repo"
+   },
+   {
     "phrase": "TLCS900_ExecTrace",
     "url": "https://github.com/felipesanches/TLCS900_ExecTrace",
     "rule": "repo"
@@ -4170,6 +4265,13 @@
     "phrase": "Garoa",
     "url": "https://garoa.net.br/",
     "rule": "site"
+   }
+  ],
+  "year:10": [
+   {
+    "phrase": "rustyworld",
+    "url": "https://github.com/EdMcBane/rustyworld",
+    "rule": "repo"
    }
   ],
   "year:2": [

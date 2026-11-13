@@ -68,6 +68,11 @@ class Year:
         lo, hi = meta["from"], meta["to"]
         self.span = (f"{MONTHS_LONG[int(lo[5:]) - 1]} de {lo[:4]} a "
                      f"{MONTHS_LONG[int(hi[5:]) - 1]} de {hi[:4]}")
+        if meta.get("in_progress"):       # the year so far (topics/workflow_increment.js): up to a day
+            u = meta["until"]             # YYYY-MM-DD, date of the last indexed message
+            end = f"{int(u[8:])} de {MONTHS_LONG[int(u[5:7]) - 1]} de {u[:4]}"
+            start = ("1º" if u[:7] == lo else MONTHS_LONG[int(lo[5:]) - 1] + ("" if u[:4] == lo[:4] else f" de {lo[:4]}"))
+            self.span = f"{start} a {end} (ano em andamento)"
         self.label = f"{ORD[self.n]} ano"
         self.messages = meta["messages"]
         self.d, self.opts, self.problems = d, opts, problems
@@ -382,10 +387,12 @@ def front_page(years, X, L):
     INL.page()
     n_conv = sum(len(y.convs) for y in years)
     n_msg = sum(y.messages for y in years)
+    done = (f"{len(years) - 1} anos completos e o {ORD[len(years)].lower()} em andamento"
+            if years[-1].raw["meta"].get("in_progress") else f"{len(years)} anos")
     parts = [head("Tópicos: Arqueologia Digital (Telegram)"), nav(),
              "\t<div class='topics'><h1>Arqueologia Digital: tópicos das conversas</h1>"
-             f"<p class='period'>{len(years)} anos do grupo, de {years[0].span.split(' a ')[0]} a "
-             f"{years[-1].span.split(' a ')[1]} · {n_conv} conversas em {n_msg} mensagens</p>"
+             f"<p class='period'>{done} do grupo, de {years[0].span.split(' a ')[0]} a "
+             f"{years[-1].span.split(' a ')[1].removesuffix(' (ano em andamento)')} · {n_conv} conversas em {n_msg} mensagens</p>"
              "<p class='lead'>O que o grupo conversou e fez, por assunto ao longo de todos os anos ou ano a ano. "
              "Cada assunto e cada ano têm um resumo; abaixo deles estão as conversas, e cada conversa leva às "
              "mensagens originais.</p>\n",

@@ -4,6 +4,7 @@
     python3 -I topics/material.py --list                 every yearly subtopic, one line each:
                                                          id | year | theme | subtopic | n conversations | summary
     python3 -I topics/material.py --ids                  just the subtopic ids, comma-separated
+    python3 -I topics/material.py --topic SLUG            a cross-year topic's current summary and year notes
     python3 -I topics/material.py --subtopics ID,ID,...  the full material of those subtopics, by year:
                                                          subtopic summaries and every conversation
                                                          (#id, date, title, summary, participants)
@@ -14,6 +15,7 @@ import argparse
 import glob
 import json
 import os
+import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -41,7 +43,17 @@ def main():
     g.add_argument("--list", action="store_true")
     g.add_argument("--ids", action="store_true")
     g.add_argument("--subtopics")
+    g.add_argument("--topic", help="a cross-year topic's current summary and year notes (crossyear.json)")
     a = p.parse_args()
+    if a.topic:
+        with open(os.path.join(HERE, "crossyear.json"), encoding="utf-8") as f:
+            tp = next((t for t in json.load(f)["topics"] if t["slug"] == a.topic), None)
+        if tp is None:
+            sys.exit(f"!! unknown topic: {a.topic}")
+        print(f"=== {tp['slug']}: {tp['title']} — {tp['scope']}\n\nResumo atual:\n{tp['summary']}\n\nNotas por ano:")
+        for n in tp.get("year_notes", []):
+            print(f"- ano {n['year']}: {n['note']}")
+        return
     years = load()
     if a.list:
         for sid, meta, t, s, convs in subtopics(years):

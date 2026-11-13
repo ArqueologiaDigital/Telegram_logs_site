@@ -96,6 +96,43 @@ caption linking to the message) and in the front page's topic list: a grid of ca
 columns, on wide screens; one column with thumbnails alternating left and right on phones.
 To change a topic's image, put another photo message id in `topic_images.json`.
 
+## Updating the year in progress
+
+The daily job (`Telegram_logs/tools/daily.sh`) archives messages and rebuilds the pages, but it
+runs no agents: new conversations reach the index only when someone runs this, in Claude Code,
+for example once a month. The year so far is redone as a whole each time; the cross-year topics
+only grow.
+
+```
+python3 -I topics/transcript.py --out SCRATCH --chunks 2026-11..2026-11       # first month of the year .. last
+# Workflow topics/workflow_increment.js, args {stage: "year", year, span, chunks: [...]}  (span in pt-BR,
+# e.g. "de 1º a 12 de novembro de 2026"); save its result as SCRATCH/stage1.json, then:
+python3 -I topics/increment.py year SCRATCH/stage1.json --year 10 --from 2026-11 --until-id ID --messages N --run RUN
+python3 -I topics/increment.py ids --year 10                                   # the year's subtopic ids
+# restore crossyear.json from the last commit before an earlier increment of the same year, then
+# Workflow topics/workflow_increment.js, args {stage: "topics", root, year, span, subtopics, topics: [{slug, title, scope}]}
+python3 -I topics/increment.py topics SCRATCH/stage2.json --year 10 --run RUN
+python3 -I topics/inline_links.py propose
+python3 -I topics/render.py --out build                                        # must report no CHECK lines
+```
+
+Read the result before committing: the year's text in `data/<period>.json`, and what
+`increment.py topics` prints (each topic's addition and note). The data file is marked
+`"in_progress"` up to the date of the last indexed message, and the pages say "ano em andamento".
+A topic summary was read by a person, so the agents never rewrite it: they return only the
+sentences to add, and `increment.py` appends them. Their writing rules include the gender rule
+(feminine forms only for the women Felipe has named, masculine for Jecel; neutral wording for
+everyone else).
+
+First run, 2026-11-13, for year 10 up to message #42296 (12 November 2026, 250 messages):
+
+| stage  | run             | agents | tokens  | result                                                                                       |
+|--------|-----------------|--------|---------|----------------------------------------------------------------------------------------------|
+| year   | wf_93eac5c6-2ad | 4      | 194,445 | 19 conversations (18 verifier corrections); 5 themes, 14 subtopics (18 taxonomy corrections) |
+| topics | wf_4c740c82-286 | 25     | 974,808 | 14 subtopics placed in 12 existing topics; 12 additions and notes checked                    |
+
+Changed by hand afterwards, each logged in the corrections of its text: one note that opened with an empty framing sentence, and five sentences that stated as fact what RicBit had said ("nenhum emulador reproduzia"), now attributed to RicBit.
+
 ## Links inside the summaries
 
 Summaries name online resources ("o repositório kn5000_homebrew"); `inline_links.py` turns those

@@ -21,8 +21,8 @@ that none of the place's conversations cite.
 `propose` finds phrases by rules on the URL: a GitHub repository's name ("FlashFloppy"), a pull
 request or issue number ("#16552"), a Wikipedia article's title ("CHIP-8"), an Internet Archive
 item id, a site's name from its domain ("datassette"). A phrase is linked only when exactly one
-of the place's URLs yields it, and never when it is a word of a participant's name ("RicBit" is
-a person, not his Twitch channel). Links in "rejected" (read and judged wrong) are not proposed
+of the place's URLs yields it, and never when it is a word of a participant's name ("RicBit" names a person, not a Twitch
+channel). Links in "rejected" (read and judged wrong) are not proposed
 again; links with `"by": "hand"` are kept as they are.
 """
 import argparse

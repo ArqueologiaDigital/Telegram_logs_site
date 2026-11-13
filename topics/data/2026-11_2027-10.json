@@ -1,0 +1,747 @@
+{
+ "meta": {
+  "year": 10,
+  "from": "2026-11",
+  "to": "2027-10",
+  "period": "2026-11..2027-10",
+  "messages": 250,
+  "in_progress": true,
+  "until": "2026-11-12",
+  "until_id": 42296,
+  "made": "2026-11-13",
+  "model": "claude-opus-5-5 (workflow agents, inherited from the session)",
+  "workflow": "topics/workflow_increment.js stage year (run wf_93eac5c6-2ad)",
+  "transcripts": "topics/transcript.py --chunks 2026-11..2026-11"
+ },
+ "chunks": [
+  {
+   "overview": "A primeira quinzena de novembro de 2026 girou em torno do MSX turbo R e do V9990. RicBit consertou um turbo R e, ao testar no hardware real a versão de Ys III para V9990, achou um comportamento não documentado: no modo P1, os comandos do V9990 escrevem nos dois chips de VRAM ao mesmo tempo. Daí saíram vários PRs de correção para o openMSX. Felipe \"Juca\" Sanches corrigiu, com replay de entradas comparado a uma implementação de referência, o último bug da VM de Another World no teclado Technics KN7000 e passou aos ajustes finais. Também contou que o Claude identificou o kernel μITRON num sistema que Felipe investiga há cinco anos, e começou um backend LLVM para TLCS-900 baseado no kit de desenvolvimento da Toshiba. O grupo discutiu os atrasos nos lançamentos do MAME, a fila de 400 PRs sem revisão e propostas de automação no CI. Houve ainda a emulação do Consul 2717 no MAME, o jingle do caminhão de gás e sua versão em Z80, a escolha de nome para uma linguagem de programação com alvos retrô e links como o catálogo de CD-ROMs do Portal Digerati.",
+   "conversations": [
+    {
+     "first_id": 42020,
+     "last_id": 42053,
+     "key_ids": [
+      42022,
+      42024,
+      42045
+     ],
+     "title": "Conserto do MSX turbo R de RicBit",
+     "summary": "RicBit relatou que, depois de deixar um programa BASIC rodando por uma hora, o flash cart de 2 MB voltou a funcionar no turbo R. A IDE do Carchano não funcionou. Sobre o cartucho V9990, que não tem ROM, RicBit observou que ?inp(&h66) não retornou 255, sinal de que a porta estava no barramento. RicBit mostrou as pilhas antigas da máquina, ainda da marca National, e o capacitor C10, que não estava estufado, e disse que ainda ia examiná-lo com o osciloscópio. Érico Andrei se perguntou se o Brasil seria hoje o país com mais exemplares do turbo R depois do Japão. Emerson BRANCORP2000 lembrou a capa da revista CPU MSX com um carro de Fórmula 1 falando do turbo R, e Felipe \"Juca\" Sanches citou uma capa antiga de revista que chamava o 486 DX4 de \"a Ferrari dos PCs\".",
+     "participants": [
+      "RicBit",
+      "Érico Andrei",
+      "Emerson BRANCORP2000",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "MSX turbo R",
+      "V9990",
+      "restauração de hardware"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 42029,
+     "last_id": 42047,
+     "key_ids": [
+      42030,
+      42033,
+      42046
+     ],
+     "title": "VM de Another World no KN7000: bug de shift right e acabamento",
+     "summary": "Felipe \"Juca\" Sanches jogou Another World inteiro na VM implementada para o teclado KN7000 e achou, perto do fim, um bug que impedia concluir o jogo. Para localizá-lo, o Claude gerou uma versão que registrava as entradas; Felipe usou a tela de códigos de fase para começar na fase problemática e jogou até o bug aparecer. O Claude então reproduziu esse log de entradas no MAME e na implementação de referência rustyworld, calculando checksums de todos os quadros e registrando as 256 variáveis da VM. O ponto de divergência levou a uma instrução de shift right implementada de forma errada; com a correção, Felipe conseguiu zerar o jogo. Depois vieram ajustes finais: tela preta nas transições de fase em vez da interface do KN7000, renderização num buffer de 384x240 em vez de 320x200 e um efeito estilo ambilight com truques de paleta nas áreas laterais da tela.",
+     "participants": [
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Technics KN7000",
+      "Another World",
+      "MAME"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/EdMcBane/rustyworld",
+       "what": "rustyworld, implementação em Rust da engine de Another World usada como referência"
+      }
+     ],
+     "weight": 3
+    },
+    {
+     "first_id": 42037,
+     "last_id": 42037,
+     "key_ids": [
+      42037
+     ],
+     "title": "Catálogo de CD-ROMs do Portal Digerati",
+     "summary": "L. compartilhou o catálogo de CD-ROMs do Portal Digerati.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "CD-ROM",
+      "Digerati"
+     ],
+     "resources": [
+      {
+       "ref": "https://digerati.vinizinho.net/cds.html",
+       "what": "Catálogo de CD-ROMs do Portal Digerati"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 42048,
+     "last_id": 42082,
+     "key_ids": [
+      42050,
+      42060,
+      42070
+     ],
+     "title": "Atrasos nos lançamentos do MAME",
+     "summary": "Shideravan brincou que o MAME passou de lançamentos mensais a nenhum lançamento. Diante da sugestão de RicBit de compilar a partir do HEAD, Felipe \"Juca\" Sanches defendeu os lançamentos como forma de atender usuários que não sabem compilar, receber mais feedback, celebrar um ciclo concluído e criar um prazo. Shideravan acrescentou que frontends e mantenedores dos extras do MAME dependem das versões oficiais e disse esperar um novo ciclo antes de contribuir; Felipe citou um driver de impressora 3D que não considerava adequado enviar às vésperas de um lançamento. Felipe relatou que a política mudou de lançamentos mensais para bimestrais, que houve atraso até o terceiro mês e que o ciclo atual já entra no quarto. Os dois também especularam sobre a condução do projeto, o que Felipe apresentou como especulação própria.",
+     "participants": [
+      "Shideravan",
+      "RicBit",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "MAME",
+      "lançamentos"
+     ],
+     "resources": [],
+     "weight": 2
+    },
+    {
+     "first_id": 42061,
+     "last_id": 42163,
+     "key_ids": [
+      42113,
+      42133,
+      42134
+     ],
+     "title": "Ys III no V9990: escrita dupla não documentada no modo P1",
+     "summary": "RicBit, que antes atribuía ao WebMSX os problemas do Ys III, passou a suspeitar do openMSX e testou o jogo no hardware: no Hotbit, a imagem saía com glitches e em preto e branco, do mesmo jeito que no turbo R, e os sprites apareciam com um pixel sim, outro não. RicBit suspeitou de entrelaçamento de pixels ligado ao modo P1; Pedro de Medeiros 👾 sugeriu o bit de transparência da paleta, hipótese que RicBit descartou. A causa: no V9990, os comandos sempre escrevem nos dois chips ao mesmo tempo, mesmo no modo P1, e com os registros 46 e 47 ambos em FF o pixel escrito no plano A vaza para o plano B. RicBit observou que nenhum emulador reproduzia isso e que o problema só aparecia no Ys III por ser o único dos seus jogos a usar comandos do VDP. O jogo passou a funcionar no hardware, e RicBit achou mais dois erros no openMSX. Na conversa, Pedro elogiou o debugger com visualizador de tiles, bitmaps e sprites do V9990 que RicBit tinha enviado, e RicBit descreveu o plano de pôr um agente para controlar o MSX diretamente, criando e verificando casos de teste, inclusive para medir os tempos dos comandos do VDP.",
+     "participants": [
+      "RicBit",
+      "Pedro de Medeiros 👾",
+      "Pablo Vasques Bravo-Villalba",
+      "Felipe \"Juca\" Sanches",
+      "L.",
+      "Shideravan"
+     ],
+     "tags": [
+      "V9990",
+      "Ys III",
+      "openMSX",
+      "MSX"
+     ],
+     "resources": [],
+     "weight": 3
+    },
+    {
+     "first_id": 42091,
+     "last_id": 42112,
+     "key_ids": [
+      42096,
+      42107,
+      42110
+     ],
+     "title": "Nome para nova linguagem com alvos retrô",
+     "summary": "Ismael Luceno pediu sugestões de nome para uma linguagem compilada em desenvolvimento, que já gera código x86_64 e deve ganhar suporte completo a x86 de 16 e 32 bits e depois a alguma CPU de 8 bits. RicBit sugeriu Capivara e Guarda-chuva. Jecel Assumpcao Jr citou Self e Go como nomes difíceis de buscar e apresentou a Bla, linguagem que definiu para o processador de 8 bits Baby8, que também criou. RicBit contou ter acompanhado no Google a escolha do nome Go e o lançamento do Android, quando teve de retirar da busca um aviso associado a um remédio chamado Android. RicBit também compartilhou a descrição de Namagiri, a última linguagem que fez.",
+     "participants": [
+      "Ismael Luceno",
+      "RicBit",
+      "L.",
+      "Jecel Assumpcao Jr"
+     ],
+     "tags": [
+      "linguagens de programação",
+      "compiladores",
+      "Baby8"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/jeceljr/baby8/blob/main/examples/bla/bla.md",
+       "what": "Documentação da linguagem Bla para o processador Baby8"
+      },
+      {
+       "ref": "https://gist.github.com/ricbit/9c6caa08682de26a2771cf4451070da6",
+       "what": "NAMAGIRI.md, descrição da linguagem Namagiri"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 42153,
+     "last_id": 42171,
+     "key_ids": [
+      42153,
+      42171
+     ],
+     "title": "Contribuições ao Pinball Fantasies Encore",
+     "summary": "Felipe \"Juca\" Sanches compartilhou uma issue sobre a fonte ARCADE (MICR) e um PR de sua autoria que nomeia endereços, registros e flags da engine no projeto pinball-fantasies-encore.",
+     "participants": [
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "Pinball Fantasies",
+      "engenharia reversa"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/pedrocatalao/pinball-fantasies-encore/issues/63",
+       "what": "Issue #63: fonte ARCADE (Magnetic Ink Character Recognition)"
+      },
+      {
+       "ref": "https://github.com/pedrocatalao/pinball-fantasies-encore/pull/66",
+       "what": "PR #66: nomeação de endereços, registros e flags da engine"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 42161,
+     "last_id": 42161,
+     "key_ids": [
+      42161
+     ],
+     "title": "Projeto para jogar Wing Commander de DOS em conjunto",
+     "summary": "L. compartilhou o relato \"An 11 year journey to play DOS Wing Commander together\", sobre um projeto de 11 anos para jogar Wing Commander de DOS em conjunto.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "DOS",
+      "Wing Commander"
+     ],
+     "resources": [
+      {
+       "ref": "https://fireflyk64.github.io/wcmulti/",
+       "what": "An 11 year journey to play DOS Wing Commander together"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 42164,
+     "last_id": 42164,
+     "key_ids": [
+      42164
+     ],
+     "title": "Patch de step_back no openMSX aprovado",
+     "summary": "Pedro de Medeiros 👾 informou que seu patch para a função step_back do depurador do openMSX foi aprovado.",
+     "participants": [
+      "Pedro de Medeiros 👾"
+     ],
+     "tags": [
+      "openMSX",
+      "depuração"
+     ],
+     "resources": [],
+     "weight": 1
+    },
+    {
+     "first_id": 42165,
+     "last_id": 42165,
+     "key_ids": [
+      42165
+     ],
+     "title": "Artigo do phoboslab sobre o codec ULC para N64",
+     "summary": "L. compartilhou um artigo do phoboslab sobre o codec ULC para Nintendo 64.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "Nintendo 64"
+     ],
+     "resources": [
+      {
+       "ref": "https://phoboslab.org/log/2026/11/n64-ulc-codec",
+       "what": "Artigo do phoboslab sobre o codec ULC para N64"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 42166,
+     "last_id": 42168,
+     "key_ids": [
+      42166,
+      42168
+     ],
+     "title": "Dia Mundial da Preservação Digital",
+     "summary": "Guilherme Ranoya lembrou que 5 de novembro é o Dia Mundial da Preservação Digital; Felipe \"Juca\" Sanches perguntou a fonte, e Pablo Vasques Bravo-Villalba indicou a página do evento.",
+     "participants": [
+      "Guilherme Ranoya",
+      "Felipe \"Juca\" Sanches",
+      "Pablo Vasques Bravo-Villalba"
+     ],
+     "tags": [
+      "preservação digital",
+      "Digital Preservation Coalition"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.dpconline.org/events/world-digital-preservation-day",
+       "what": "Página do World Digital Preservation Day"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 42172,
+     "last_id": 42182,
+     "key_ids": [
+      42173,
+      42178,
+      42180
+     ],
+     "title": "Emulação do Consul 2717 no MAME",
+     "summary": "Felipe \"Juca\" Sanches compartilhou imagens e o PR #16710 do MAME referentes ao Consul 2717, computador de uma empresa estatal da República Tcheca usado em escolas. Felipe contou que a emulação foi pedida por alguém de Praga, indicado por meio de um vídeo sobre software tcheco antigo em disquetes de 8 polegadas.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Shideravan"
+     ],
+     "tags": [
+      "Consul 2717",
+      "MAME",
+      "computadores tchecos"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/mamedev/mame/pull/16710",
+       "what": "PR #16710 do MAME"
+      },
+      {
+       "ref": "https://www.youtube.com/watch?v=bqpZoSFTap0",
+       "what": "Vídeo Vintage Czech software on 8-inch floppies"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 42174,
+     "last_id": 42208,
+     "key_ids": [
+      42175,
+      42194,
+      42195
+     ],
+     "title": "PRs de correção do V9990 no openMSX",
+     "summary": "RicBit enviou ao openMSX o PR #2267, que emula a escrita dupla não documentada no modo P1, como primeira de três partes previstas. Em seguida, o bug que estava sendo corrigido se desdobrou em 11, e RicBit enviou o PR #2270, com 11 commits, um por bug, para corrigir os registros do V9990 após o término de um comando. Pedro de Medeiros 👾 comentou que, até onde lembra, os comandos do V9990 não podem ser cancelados; RicBit respondeu que iniciar um comando novo antes do fim do anterior talvez o cancele e que só testando para saber.",
+     "participants": [
+      "RicBit",
+      "Pedro de Medeiros 👾"
+     ],
+     "tags": [
+      "V9990",
+      "openMSX",
+      "MSX"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/openMSX/openMSX/pull/2267",
+       "what": "PR #2267 do openMSX: escrita dupla não documentada no modo P1 do V9990"
+      },
+      {
+       "ref": "https://github.com/openMSX/openMSX/pull/2270",
+       "what": "PR #2270 do openMSX: correção de registros do V9990 após o fim de um comando"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 42181,
+     "last_id": 42181,
+     "key_ids": [
+      42181
+     ],
+     "title": "Vídeo do lft sobre efeito de demo de C64",
+     "summary": "L. compartilhou um vídeo do lft que explica o efeito de chuva com bump mapping da demo Lunatico para Commodore 64.",
+     "participants": [
+      "L."
+     ],
+     "tags": [
+      "Commodore 64",
+      "demoscene"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.youtube.com/watch?v=F2TkzDaa8A4",
+       "what": "C64 Demo Effect Explained: The Bumpmapped Rain in Lunatico"
+      }
+     ],
+     "weight": 1
+    },
+    {
+     "first_id": 42183,
+     "last_id": 42201,
+     "key_ids": [
+      42183,
+      42187,
+      42201
+     ],
+     "title": "Kernel μITRON identificado",
+     "summary": "Felipe \"Juca\" Sanches perguntou se alguém conhecia o sistema operacional μITRON e compartilhou um artigo sobre o μITRON 3.0. Contou que o Claude reconheceu nomes de funções da API e, por eles, identificou o kernel e até a versão específica usada no sistema que Felipe investiga há cinco anos. Jecel Assumpcao Jr contou ter acompanhado o projeto TRON na época, incluindo o BTRON e processadores japoneses projetados para ele. L. observou que hoje o sistema é usado em nichos de produtos no Japão, mas já foi uma resposta japonesa aos sistemas operacionais ocidentais.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "Jecel Assumpcao Jr",
+      "L."
+     ],
+     "tags": [
+      "ITRON",
+      "TRON",
+      "engenharia reversa"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.semanticscholar.org/paper/uITRON-3.0-%3A-an-open-and-portable-real-time-system-%E5%9D%82%E6%9D%91/b3fa39096772f7ef4fb2f9c2dc45b2e13d275e4d",
+       "what": "Artigo sobre o μITRON 3.0"
+      },
+      {
+       "ref": "https://www.xda-developers.com/japan-tried-build-operating-system-entire-world-us-government-intervened/",
+       "what": "Artigo da XDA sobre a história do projeto TRON"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 42209,
+     "last_id": 42248,
+     "key_ids": [
+      42210,
+      42219,
+      42238
+     ],
+     "title": "Fila de PRs sem revisão no MAME e propostas para o CI",
+     "summary": "Shideravan apontou que o MAME acumula 400 PRs sem revisão; Tataizinha observou que há PRs de 2018 e que eles ficam incompatíveis com o código atual, e RicBit respondeu que a IA é boa para fazer rebase. Shideravan propôs ampliar o CI com análise estática, testes de regressão nos drivers alterados e resumos automáticos com ferramentas como CodeRabbit ou PR-Agent; quando Felipe \"Juca\" Sanches perguntou o quanto isso equivalia à skill /mame-review, Shideravan respondeu que quase nada se sobrepõe, pois a skill roda do lado do cliente, e que uma coisa complementa a outra. Felipe pediu um protótipo; Shideravan apontou os workflows em .github/workflows, e Paulo lembrou que mudanças no CI exigem demonstrar domínio do assunto. Felipe sugeriu um fork amigável para testar outros métodos de revisão e criticou o fechamento, sem orientação a quem o enviou, do PR #16695 sobre bitmap_printer.",
+     "participants": [
+      "Shideravan",
+      "Tataizinha",
+      "RicBit",
+      "Felipe \"Juca\" Sanches",
+      "Paulo"
+     ],
+     "tags": [
+      "MAME",
+      "revisão de código",
+      "CI"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/mamedev/mame/tree/master/.github/workflows",
+       "what": "Workflows de CI do repositório do MAME"
+      },
+      {
+       "ref": "https://github.com/mamedev/mame/pull/16695",
+       "what": "PR #16695 do MAME (bitmap_printer), fechado"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 42242,
+     "last_id": 42270,
+     "key_ids": [
+      42249,
+      42250,
+      42261
+     ],
+     "title": "Jingle do caminhão de gás e sua versão em Z80",
+     "summary": "Felipe \"Juca\" Sanches compartilhou fotos e um áudio do jingle tocado pelos caminhões de gás e perguntou se ele era usado só na capital paulista. RicBit lembrou que a primeira versão do equipamento da Ultragaz usava um Z80 e perguntou se alguém havia refeito o projeto; Felipe citou Guido Stolfi. L. contou que em Campinas era buzina até a troca pela música e mencionou uma versão em Z80 do Carchano, que não tinha nem RAM. Leonardo Roman relatou o jingle em Florianópolis, Pablo Vasques Bravo-Villalba disse que em Brasília não havia, e Shideravan lembrou de outras músicas, como Für Elise. Felipe compartilhou uma entrevista com o compositor, Hélio Ziskind.",
+     "participants": [
+      "Felipe \"Juca\" Sanches",
+      "RicBit",
+      "L.",
+      "Shideravan",
+      "Pablo Vasques Bravo-Villalba",
+      "Leonardo Roman"
+     ],
+     "tags": [
+      "Ultragaz",
+      "Z80",
+      "eletrônica embarcada"
+     ],
+     "resources": [
+      {
+       "ref": "https://www.instagram.com/reel/DOQldYyDi37",
+       "what": "Entrevista com o compositor Hélio Ziskind"
+      }
+     ],
+     "weight": 2
+    },
+    {
+     "first_id": 42263,
+     "last_id": 42269,
+     "key_ids": [
+      42263,
+      42266,
+      42268
+     ],
+     "title": "Kit de desenvolvimento Toshiba TLCS-900 e backend LLVM",
+     "summary": "Felipe \"Juca\" Sanches pediu ao Claude que comparasse o CD-ROM de ferramentas de desenvolvimento da Toshiba para TLCS-900 com as ROMs dos teclados e sintetizadores Technics que emula no MAME, e o Claude encontrou semelhanças. Com o código-fonte C e os binários do kit, Felipe está inferindo detalhes da ABI para criar um backend LLVM que sirva como substituto direto, útil para homebrew de Neo Geo Pocket. Depois, uma flag que altera o comportamento do backend deve permitir compilar trechos das ROMs do KN5000 e do WSA1R, abrindo caminho para decompilar esses instrumentos.",
+     "participants": [
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "TLCS-900",
+      "LLVM",
+      "Technics KN5000",
+      "Neo Geo Pocket"
+     ],
+     "resources": [],
+     "weight": 3
+    },
+    {
+     "first_id": 42271,
+     "last_id": 42286,
+     "key_ids": [
+      42271,
+      42286
+     ],
+     "title": "Carga da VRAM no Ys III e efeito snow do V9990",
+     "summary": "RicBit explicou que, mesmo em cartucho, o Ys III demora para carregar porque precisa preencher os 512 KB de VRAM do V9990, e cogitou uma tela de carregamento; L. lembrou a animação de tambor do Windows. Mais tarde, RicBit achou mais um bug, desta vez no próprio chip: o efeito snow quando um registro de paleta muda durante o traço, e enviou o PR #2280 ao openMSX para emulá-lo.",
+     "participants": [
+      "RicBit",
+      "L.",
+      "Felipe \"Juca\" Sanches"
+     ],
+     "tags": [
+      "V9990",
+      "Ys III",
+      "openMSX"
+     ],
+     "resources": [
+      {
+       "ref": "https://github.com/openMSX/openMSX/pull/2280",
+       "what": "PR #2280 do openMSX: snow quando um registro de paleta muda durante o traço"
+      }
+     ],
+     "weight": 2
+    }
+   ],
+   "corrections": [
+    "Overview: 'catálogo de CD-ROMs da revista Digerati' corrigido para 'Portal Digerati' (o link fala em portal, não em revista).",
+    "Overview: 'mais de 400 PRs' corrigido para '400 PRs' (#42210 diz que a fila atingiu 400).",
+    "Overview: 'concluiu a VM de Another World' trocado por correção do último bug e passagem aos ajustes finais (#42032 fala em controle de qualidade final, não em conclusão).",
+    "Overview: 'kernel μITRON 3.0 em firmware' suavizado; quem identificou o kernel foi o Claude, e a versão 3.0 aparece apenas no título do artigo compartilhado; 'seu port de Ys III' trocado por 'versão de Ys III para V9990'.",
+    "Turbo R: o cartucho V9990 não 'respondeu' com certeza (#42024: RicBit só viu que ?inp(&h66) não retornou 255); separado o que Érico Andrei disse (popularidade no Brasil) do que disse Emerson BRANCORP2000 (capa da CPU MSX); acrescentada a fala de Felipe sobre o 486 DX4, que justifica a participação de Felipe.",
+    "Another World: first_id movido de 42028 para 42029, porque #42028 responde a #41714, fora deste arquivo, e não é claramente o mesmo assunto; detalhado que o Claude gerou a versão com log de entradas e Felipe jogou para gerar o log.",
+    "Atrasos no MAME: acrescentados o argumento de Shideravan, a espera por um novo ciclo e o driver de impressora 3D citado por Felipe; registrado que a especulação foi apresentada como tal (#42079).",
+    "Ys III/V9990: removida a atribuição falsa 'com sugestões de Pedro de Medeiros e Pablo Vasques Bravo-Villalba'. A hipótese do modo P1 foi de RicBit (#42120), Pedro sugeriu o bit de transparência, que RicBit descartou, e Pablo só perguntou qual era o cartucho; removido 'enviado ao openMSX' para o debugger, que o transcript não especifica (#42143).",
+    "Linguagem: Namagiri identificada como linguagem criada por RicBit (#42109), não apenas 'especificação compartilhada'; acrescentadas as sugestões Capivara e Guarda-chuva e o contexto do caso Android.",
+    "Wing Commander: 'modo cooperativo' trocado por 'em conjunto' (o título diz 'play together'; 'cooperativo' não está no transcript).",
+    "Dia da Preservação Digital: incluída a pergunta de Felipe (#42167), que justifica a participação.",
+    "Consul 2717: título 'Driver' trocado por 'Emulação'; 'amigo' e 'autor do vídeo' reescritos de forma neutra e menos assertiva (#42179-#42180 só dizem 'esse cara aqui' e linkam o vídeo); 'tcheca' alinhado a 'República Tcheca', como em #42178.",
+    "PRs V9990: acrescentadas as 'três partes previstas' (#42176) e a origem dos 11 bugs (#42192); 'só testando no hardware' trocado pela resposta real de RicBit em #42208.",
+    "μITRON: título e resumo não afirmam mais a versão 3.0 como identificada (ela vem apenas do artigo em #42184); 'firmware' trocado por 'sistema', pois #42201 não diz o que é; resumo de L. ajustado ao texto de #42197.",
+    "Fila de PRs do MAME: 'alguns de 2018' atribuído a Tataizinha (#42216), não a Shideravan; incluídas as falas de RicBit (rebase) e de Paulo; 'sem orientação ao autor' trocado por 'a quem o enviou' (forma neutra quanto a gênero).",
+    "Jingle do gás: Brasília não teve relato de uso; Pablo disse que lá não havia (#42262). Corrigidas também a pergunta de Felipe (só na capital paulista?) e a fala de L. sobre Campinas.",
+    "TLCS-900: last_id movido de 42277 para 42269 e key_id 42277 trocado por 42268, porque #42276-#42277 são fotos sem relação clara com o backend; 'variante do backend' trocado por 'flag que altera o comportamento' (#42266); incluídos os sintetizadores.",
+    "Ys III/snow: o título não liga mais o bug de snow ao Ys III, pois #42286 o descreve como bug do chip; acrescentadas a ideia da tela de carregamento e a sugestão de L. (#42274), que justifica a participação."
+   ]
+  }
+ ],
+ "taxonomy": {
+  "intro": "No décimo ano, iniciado em novembro de 2026 e ainda em andamento, as primeiras semanas (de 1º a 12 de novembro) giraram em torno do MSX turbo R e do V9990. RicBit trabalhou no conserto de um turbo R e, ao testar no hardware a versão de Ys III para V9990, descobriu que os comandos do V9990 escrevem nos dois chips ao mesmo tempo, mesmo no modo P1. Segundo RicBit, nenhum emulador reproduzia esse comportamento não documentado. RicBit enviou ao openMSX uma série de PRs de correção, entre eles um que emula o efeito snow, outro comportamento do chip encontrado depois. Na VM de Another World para o teclado Technics KN7000, um bug que impedia concluir o jogo foi localizado reproduzindo um log de entradas no MAME e na implementação de referência rustyworld, e com a correção Felipe \"Juca\" Sanches zerou o jogo. Felipe também contou que o Claude identificou o kernel μITRON num sistema que investiga há cinco anos, e está inferindo detalhes da ABI a partir do kit de desenvolvimento da Toshiba para TLCS-900 para criar um backend LLVM. O grupo discutiu ainda os atrasos nos lançamentos do MAME e a fila de 400 PRs sem revisão, com propostas de automação no CI, acompanhou a emulação do Consul 2717 no MAME e conversou sobre o jingle do caminhão de gás e sua versão em Z80 e sobre o nome de uma nova linguagem com alvos retrô.",
+  "themes": [
+   {
+    "slug": "msx-turbo-r-e-v9990",
+    "title": "MSX turbo R e V9990",
+    "summary": "RicBit trabalhou no conserto de um MSX turbo R e, ao testar no hardware o Ys III para V9990, encontrou um comportamento do chip que, segundo RicBit, nenhum emulador reproduzia, além de erros no openMSX. As descobertas viraram PRs de correção para o openMSX, que também aprovou um patch de depuração enviado por Pedro de Medeiros 👾.",
+    "subtopics": [
+     {
+      "slug": "conserto-turbo-r",
+      "title": "Conserto do turbo R",
+      "summary": "RicBit relatou que o flash cart de 2 MB voltou a funcionar depois de um programa BASIC rodar por uma hora, enquanto a IDE do Carchano não funcionou. RicBit verificou que a porta do cartucho V9990 respondia no barramento, mostrou as pilhas antigas e o capacitor C10, que ainda ia examinar com o osciloscópio. Emerson BRANCORP2000 lembrou a capa da revista CPU MSX sobre o turbo R, e Felipe \"Juca\" Sanches, uma capa que chamava o 486 DX4 de \"a Ferrari dos PCs\".",
+      "conversation_ids": [
+       42020
+      ]
+     },
+     {
+      "slug": "ys-iii-v9990",
+      "title": "Ys III e o V9990 no hardware real",
+      "summary": "No Hotbit e no turbo R, o Ys III mostrava glitches até RicBit descobrir que os comandos do V9990 escrevem nos dois chips ao mesmo tempo, mesmo no modo P1. Depois RicBit explicou a demora para carregar os 512 KB de VRAM e encontrou no chip o efeito snow, que aparece quando um registro de paleta muda durante o traço.",
+      "conversation_ids": [
+       42061,
+       42271
+      ]
+     },
+     {
+      "slug": "correcoes-openmsx",
+      "title": "Correções no openMSX",
+      "summary": "RicBit enviou ao openMSX os PRs #2267 (escrita dupla no modo P1), #2270 (11 correções nos registros do V9990 depois do fim de um comando) e #2280 (efeito snow). O openMSX também aprovou um patch de Pedro de Medeiros 👾 para a função step_back do depurador.",
+      "conversation_ids": [
+       42164,
+       42174,
+       42271
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "kn7000-tlcs-900-engenharia-reversa",
+    "title": "KN7000, TLCS-900 e engenharia reversa",
+    "summary": "Felipe \"Juca\" Sanches conseguiu zerar Another World na VM do KN7000 depois da correção de um bug localizado por replay de entradas, e está inferindo a ABI do kit de desenvolvimento da Toshiba para criar um backend LLVM para TLCS-900. Também contou que o Claude identificou o kernel μITRON num sistema que Felipe investiga há cinco anos e compartilhou uma issue e um PR seu no projeto pinball-fantasies-encore.",
+    "subtopics": [
+     {
+      "slug": "another-world-kn7000",
+      "title": "Another World no KN7000",
+      "summary": "Felipe \"Juca\" Sanches gravou as entradas de uma partida, e o Claude as reproduziu no MAME e na implementação de referência rustyworld comparando checksums dos quadros. Assim foi localizada uma instrução de shift right implementada de forma errada. Com a correção, Felipe conseguiu zerar o jogo, e vieram os ajustes finais: tela preta nas transições de fase, buffer de 384x240 e um efeito estilo ambilight nas laterais.",
+      "conversation_ids": [
+       42029
+      ]
+     },
+     {
+      "slug": "kernel-uitron",
+      "title": "Kernel μITRON",
+      "summary": "Felipe \"Juca\" Sanches contou que, pelos nomes de funções da API, o Claude identificou o kernel μITRON, e até a versão usada, no sistema que Felipe investiga há cinco anos. Jecel Assumpcao Jr contou ter acompanhado o projeto TRON na época, incluindo o BTRON, e L. comentou o uso atual do sistema em nichos de produtos no Japão.",
+      "conversation_ids": [
+       42183
+      ]
+     },
+     {
+      "slug": "backend-llvm-tlcs-900",
+      "title": "Backend LLVM para TLCS-900",
+      "summary": "O Claude encontrou semelhanças entre o kit de desenvolvimento da Toshiba para TLCS-900 e as ROMs dos instrumentos Technics. Com o kit, Felipe \"Juca\" Sanches infere detalhes da ABI para um backend LLVM útil para homebrew de Neo Geo Pocket; depois, uma flag no backend deve permitir compilar trechos das ROMs do KN5000 e do WSA1R, abrindo caminho para decompilá-las.",
+      "conversation_ids": [
+       42263
+      ]
+     },
+     {
+      "slug": "pinball-fantasies-encore",
+      "title": "Pinball Fantasies Encore",
+      "summary": "Felipe \"Juca\" Sanches compartilhou uma issue sobre a fonte ARCADE (MICR) e um PR de sua autoria que nomeia endereços, registros e flags da engine do jogo.",
+      "conversation_ids": [
+       42153
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "mame",
+    "title": "Desenvolvimento do MAME",
+    "summary": "O grupo discutiu os atrasos nos lançamentos do MAME, cuja política, segundo Felipe \"Juca\" Sanches, passou de mensal a bimestral e cujo ciclo atual já entra no quarto mês. Também discutiu a fila de 400 PRs sem revisão e propostas de automação no CI, e Felipe compartilhou a emulação do Consul 2717.",
+    "subtopics": [
+     {
+      "slug": "atrasos-nos-lancamentos",
+      "title": "Atrasos nos lançamentos",
+      "summary": "Felipe \"Juca\" Sanches defendeu as versões oficiais para atender quem não sabe compilar, receber feedback, celebrar um ciclo concluído e criar prazos. Shideravan acrescentou que frontends e mantenedores dos extras dependem dessas versões.",
+      "conversation_ids": [
+       42048
+      ]
+     },
+     {
+      "slug": "fila-de-prs-e-ci",
+      "title": "Fila de PRs sem revisão e o CI",
+      "summary": "Shideravan propôs ampliar o CI com análise estática, testes de regressão nos drivers alterados e resumos automáticos, como complemento à skill /mame-review. Felipe \"Juca\" Sanches pediu um protótipo e sugeriu um fork amigável para testar outros métodos de revisão.",
+      "conversation_ids": [
+       42209
+      ]
+     },
+     {
+      "slug": "consul-2717",
+      "title": "Consul 2717",
+      "summary": "Felipe \"Juca\" Sanches compartilhou imagens e o PR #16710 com a emulação do Consul 2717, computador tcheco usado em escolas, pedida por alguém de Praga.",
+      "conversation_ids": [
+       42172
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "linguagens-e-eletronica-embarcada",
+    "title": "Linguagens de programação e eletrônica embarcada",
+    "summary": "Ismael Luceno pediu sugestões de nome para uma linguagem compilada com alvos retrô. O grupo também comparou o jingle dos caminhões de gás em várias cidades e lembrou o equipamento da Ultragaz baseado em Z80.",
+    "subtopics": [
+     {
+      "slug": "nome-de-linguagem-retro",
+      "title": "Nome para uma linguagem com alvos retrô",
+      "summary": "A linguagem de Ismael Luceno já gera código x86_64 e deve ganhar suporte completo a x86 de 16 e 32 bits e depois a alguma CPU de 8 bits. Jecel Assumpcao Jr apresentou a Bla, linguagem que definiu para o processador Baby8, e RicBit contou ter acompanhado no Google a escolha do nome Go.",
+      "conversation_ids": [
+       42091
+      ]
+     },
+     {
+      "slug": "jingle-do-caminhao-de-gas",
+      "title": "Jingle do caminhão de gás",
+      "summary": "RicBit lembrou que a primeira versão do equipamento da Ultragaz usava um Z80, e L. citou uma versão em Z80 do Carchano sem RAM. Felipe \"Juca\" Sanches compartilhou uma entrevista com o compositor, Hélio Ziskind.",
+      "conversation_ids": [
+       42242
+      ]
+     }
+    ]
+   },
+   {
+    "slug": "links-e-datas",
+    "title": "Links e datas",
+    "summary": "Foram compartilhados links sobre um catálogo de CD-ROMs, Wing Commander de DOS, um codec para Nintendo 64 e uma demo de Commodore 64, e o grupo lembrou o Dia Mundial da Preservação Digital.",
+    "subtopics": [
+     {
+      "slug": "artigos-e-videos",
+      "title": "Artigos, vídeos e catálogos",
+      "summary": "L. compartilhou o catálogo de CD-ROMs do Portal Digerati, o relato de um projeto de 11 anos para jogar Wing Commander de DOS em conjunto, um artigo do phoboslab sobre o codec ULC para Nintendo 64 e um vídeo do lft sobre um efeito da demo Lunatico para Commodore 64.",
+      "conversation_ids": [
+       42037,
+       42161,
+       42165,
+       42181
+      ]
+     },
+     {
+      "slug": "dia-mundial-da-preservacao-digital",
+      "title": "Dia Mundial da Preservação Digital",
+      "summary": "Guilherme Ranoya lembrou que 5 de novembro é o Dia Mundial da Preservação Digital, e Pablo Vasques Bravo-Villalba indicou a página do evento.",
+      "conversation_ids": [
+       42166
+      ]
+     }
+    ]
+   }
+  ],
+  "highlights": [
+   {
+    "first_id": 42029,
+    "why": "Um log de entradas reproduzido no MAME e na implementação de referência rustyworld localizou o bug que impedia concluir Another World na VM do KN7000; com a correção, o jogo foi zerado."
+   },
+   {
+    "first_id": 42061,
+    "why": "Testando o Ys III no hardware, RicBit descobriu que os comandos do V9990 escrevem nos dois chips ao mesmo tempo, mesmo no modo P1, comportamento não documentado que, segundo RicBit, nenhum emulador reproduzia."
+   },
+   {
+    "first_id": 42174,
+    "why": "A correção virou PRs para o openMSX, entre eles o #2270, com 11 commits, um por bug, para corrigir os registros do V9990 depois do fim de um comando."
+   },
+   {
+    "first_id": 42263,
+    "why": "Felipe \"Juca\" Sanches está inferindo a ABI a partir do kit de desenvolvimento da Toshiba para criar um backend LLVM para TLCS-900, útil para homebrew de Neo Geo Pocket e, mais adiante, para abrir caminho à decompilação do KN5000 e do WSA1R."
+   }
+  ]
+ },
+ "taxonomy_check": {
+  "corrections": [
+   "intro: adicionado 'ainda em andamento' para dizer explicitamente que o ano está em curso.",
+   "intro e resumo do tema msx-turbo-r-e-v9990: 'RicBit consertou um turbo R' trocado por 'trabalhou no conserto', porque a IDE do Carchano não funcionou e o capacitor C10 ainda seria examinado (42020).",
+   "intro, ys-iii-v9990 e destaque 42061: 'dois chips de VRAM' trocado por 'dois chips', e 'no modo P1' por 'mesmo no modo P1', como diz o resumo de 42061.",
+   "intro: 'a descoberta levou a uma série de PRs... entre eles a emulação do efeito snow' corrigido, porque o efeito snow é outro comportamento, encontrado depois (42271) e não decorrente da escrita dupla.",
+   "intro, tema kn7000 e destaque 42029: removido 'último bug', sem apoio no resumo (era um bug que impedia concluir o jogo), e removido 'Felipe corrigiu', pois quem corrigiu não é dito. Incluído o MAME ao lado da rustyworld na comparação.",
+   "intro e destaque 42263: 'começou um backend LLVM' trocado por 'está inferindo detalhes da ABI para criar um backend LLVM'. Na intro a frase também foi refeita porque podia atribuir o backend ao Claude.",
+   "destaque 42263 e backend-llvm-tlcs-900: a decompilação do KN5000/WSA1R passa a ser apresentada como plano futuro (uma flag que deve permitir compilar trechos das ROMs, abrindo caminho para decompilar).",
+   "tema msx-turbo-r-e-v9990: 'comportamentos do chip que nenhum emulador reproduzia' reduzido a um comportamento (a escrita dupla), mais os erros no openMSX. O resumo não diz que o efeito snow era ausente de todos os emuladores.",
+   "conserto-turbo-r: 'RicBit fez o flash cart voltar a funcionar' trocado por 'relatou que voltou a funcionar depois de um programa BASIC rodar por uma hora'. 'Examinou as pilhas e o capacitor' trocado por 'mostrou', com a nota de que o C10 ainda seria examinado no osciloscópio. Mencionada a IDE que não funcionou.",
+   "conserto-turbo-r: 'O grupo lembrou capas de revistas sobre o turbo R' corrigido, porque a capa citada por Felipe era sobre o 486 DX4, não sobre o turbo R. As duas capas agora aparecem atribuídas cada uma a quem a citou.",
+   "tema kn7000: 'compartilhou contribuições ao projeto' precisado como 'uma issue e um PR seu'. O resumo de 42153 não diz que a issue é de Felipe.",
+   "kernel-uitron: a identificação pelo Claude passa a ser apresentada como relato de Felipe ('contou que'). 'Jecel lembrou o projeto TRON' trocado por 'contou ter acompanhado o projeto TRON na época'.",
+   "tema mame: a mudança de política e o ciclo no quarto mês passam a ser atribuídos ao relato de Felipe. 'Apresentou' trocado por 'compartilhou' (42172).",
+   "atrasos-nos-lancamentos: acrescentado 'celebrar um ciclo concluído' entre os motivos de Felipe; 'lembrou' trocado por 'acrescentou' (42048).",
+   "nome-de-linguagem-retro: 'RicBit contou como foi escolhido o nome Go' trocado por 'contou ter acompanhado no Google a escolha do nome Go'. A ordem dos alvos foi alinhada ao resumo (x86 de 16 e 32 bits completo e depois alguma CPU de 8 bits), e foi dito que Jecel definiu a Bla.",
+   "tema links-e-datas: 'links sobre CD-ROMs, jogos e demos de outras plataformas' substituído pela lista do que foi de fato compartilhado. O artigo do ULC é sobre um codec, não sobre um jogo.",
+   "another-world-kn7000: o resultado foi atribuído a Felipe ('Felipe conseguiu zerar o jogo'), e 'transições' passou a 'transições de fase', como no resumo.",
+   "destaque 42174: 'A descoberta virou PRs' trocado por 'A correção virou PRs', porque o #2270 veio do desdobramento do bug em 11, não diretamente da descoberta da escrita dupla.",
+   "Verificados sem alteração: todos os ids pertencem ao ano, as 19 conversas aparecem em pelo menos um subtópico, os slugs são únicos e em ASCII minúsculo com hífens, e não há termos que marquem gênero de pessoas fora da lista.",
+   "Revisão (2026-11-13): 'nenhum emulador reproduzia' atribuído a RicBit ('segundo RicBit'), como no resumo da conversa #42061."
+  ],
+  "by": "agent"
+ }
+}
