@@ -12,7 +12,8 @@ links to something that was posted in the conversations it summarizes (or to a r
 PLACE names the text: `conv:<year>:<first id>` (a conversation summary), `sub:<year>/<theme>/<sub>`,
 `theme:<year>/<theme>`, `year:<year>` (a year's intro), `topic:<slug>` (a cross-year summary),
 `note:<slug>:<year>` (a cross-year topic's note for one year), `bio:<user id>` (a profile's bio,
-from the conversations its `bio_basis` cites). `render.py` links the first
+from the conversations its `bio_basis` cites; a bio may also link to any URL posted in those
+conversations or in the messages it cites, read from the archive, see message_urls). `render.py` links the first
 occurrence of each phrase in its text, and reports a phrase that is no longer in the text or a URL
 that none of the place's conversations cite.
 
@@ -57,7 +58,7 @@ GENERIC = {
 NOT_LINKS = {
     "adafruit", "aliexpress", "analog", "apple", "arduino", "arm11", "bloomberg", "claude", "dmitry",
     "downloads", "dump", "fapesp", "fuse", "galaga", "gnome", "homebrew", "hypercard", "infocom",
-    "irdeto", "libreoffice", "mainframes", "mamedev", "marcan", "microsoft", "mitxela", "molex", "msx1",
+    "irdeto", "libreoffice", "live", "mainframes", "mamedev", "marcan", "microsoft", "mitxela", "molex", "msx1",
     "multicore", "nintendo", "nsc800", "overscan", "patinho", "playlist", "second", "simcity",
     "tectoy", "tms9918", "twitch", "unicode", "unitron", "vectrex", "vision", "wired", "zilog",
 }
@@ -127,8 +128,11 @@ def org_repos(root):
             for g in doc["groups"] for r in g["repos"]]
 
 
-def places(root):
-    """Yield (place, [texts], [conversation dicts]) for every summary the topic pages show."""
+def places(root, data=None):
+    """Yield (place, [texts], [conversation dicts]) for every summary the topic pages show.
+
+    With data (the Telegram_logs directory), a bio may also link to the URLs posted in the
+    messages it is based on (message_urls)."""
     years = load_years(root)
     sub = {}
     for n, convs, tax in years:
@@ -167,7 +171,41 @@ def places(root):
             ids = {int(x) for x in re.findall(r"#(\d+)", info.get("bio_basis", ""))}
             bcs = [c for c in allconv if c["first_id"] in ids
                    or any(c["first_id"] <= i <= c["last_id"] for i in ids)]
+            if data:
+                spans = [(c["first_id"], c["last_id"]) for c in bcs] + [(i, i) for i in ids]
+                bcs = bcs + [{"participants": [], "resources": [{"ref": u, "what": f"#{mid}"}], "_msg": True}
+                             for mid, u in message_urls(data, spans)]
             yield f"bio:{uid}", [info["bio"]], bcs
+
+
+_ARCHIVE = {}
+URL_RE = re.compile(r"https?://[^\s<>\"'`]+")
+
+
+def message_urls(data, spans):
+    """[(message id, URL)] posted in the archive's messages whose ids fall in any (lo, hi) span:
+    URLs in the text, hidden links (MessageEntityTextUrl) and link previews. Deleted messages
+    are left out."""
+    if data not in _ARCHIVE:
+        recs = {}
+        for f in glob.glob(os.path.join(data, "messages", "*", "*.jsonl")):
+            with open(f, encoding="utf-8") as fh:
+                for line in fh:
+                    r = json.loads(line)
+                    if not (r.get("archive") or {}).get("deletion"):
+                        recs[r["id"]] = r["raw"]
+        _ARCHIVE[data] = recs
+    recs = _ARCHIVE[data]
+    out = []
+    for mid in sorted({i for lo, hi in spans for i in range(lo, hi + 1) if i in recs}):
+        raw = recs[mid]
+        urls = [u.rstrip(".,;:!?)]}") for u in URL_RE.findall(raw.get("message") or "")]
+        urls += [e.get("url", "") for e in raw.get("entities") or [] if e.get("_") == "MessageEntityTextUrl"]
+        w = ((raw.get("media") or {}).get("webpage") or {})
+        if w.get("_") == "WebPage" and w.get("url"):
+            urls.append(w["url"])
+        out += [(mid, u) for u in dict.fromkeys(urls) if u.startswith(("http://", "https://"))]
+    return out
 
 
 def candidates(convs, repos):
@@ -193,26 +231,30 @@ def allowed(url, cands):
     return any(url == link for u in cands for _, link, _ in tokens(u))
 
 
-def propose(root, doc):
+def propose(root, doc, data=None):
     repos = org_repos(root)
     rejected = {(r["place"], r["phrase"], r["url"]) for r in doc.get("rejected", [])}
     old = doc.get("links", {})
     links = {}
-    for place, texts, convs in places(root):
+    for place, texts, convs in places(root, data):
         text = "\n".join(texts)
-        cited = candidates(convs, [])
+        cited = candidates([c for c in convs if not c.get("_msg")], [])
+        posted = [u for u in candidates([c for c in convs if c.get("_msg")], []) if u not in cited]
         names = name_words(convs)
         tags = {t.lower() for c in convs for t in c.get("tags", [])}
         by_phrase = collections.defaultdict(set)
-        for u in list(cited) + ([] if place.startswith("conv:") else [u for u, _ in repos if u not in cited]):
+        fallback = collections.defaultdict(set)   # URLs only posted in messages: used for a phrase
+        for u in list(cited) + ([] if place.startswith("conv:") else [u for u, _ in repos if u not in cited]) + posted:
             for ph, link, rule in tokens(u):
                 if len(ph) >= 3 and ph.lower() not in names and ph.lower() not in NOT_LINKS:
                     # a repository named like the thing it is about ("KN5000", "TK3000") is linked
                     # only where the text says it is the repository; so is one the conversations
                     # never cite (an organisation repository)
-                    need_repo = rule == "repo" and bool(u not in cited or ph.lower() in tags
+                    need_repo = rule == "repo" and bool((u not in cited and u not in posted) or ph.lower() in tags
                                                     or re.fullmatch(r"[A-Z0-9-]+", ph))
-                    by_phrase[ph.lower()].add((ph, link, rule, need_repo))
+                    (fallback if u in posted else by_phrase)[ph.lower()].add((ph, link, rule, need_repo))
+        for key, opts in fallback.items():         # ... that the conversations' resources do not name
+            by_phrase.setdefault(key, opts)
         found = []
         for key, opts in sorted(by_phrase.items()):
             if len({o[1] for o in opts}) != 1:
@@ -286,6 +328,8 @@ def main():
     ap.add_argument("cmd", choices=["propose", "show"])
     ap.add_argument("prefix", nargs="?", default="")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--data", default=os.path.join(HERE, "..", "..", "Telegram_logs"),
+                    help="the archive, for the URLs posted in the messages a bio is based on")
     a = ap.parse_args()
     root = os.path.dirname(HERE)
     doc = {"links": {}, "rejected": []}
@@ -293,7 +337,7 @@ def main():
         with open(PATH, encoding="utf-8") as f:
             doc = json.load(f)
     if a.cmd == "propose":
-        links = propose(root, doc)
+        links = propose(root, doc, a.data)
         kinds = collections.Counter(p.split(":")[0] for p in links)
         n = sum(len(v) for v in links.values())
         print(f"{n} links in {len(links)} texts:", dict(sorted(kinds.items())))
@@ -304,7 +348,7 @@ def main():
                 f.write(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
             os.replace(PATH + ".tmp", PATH)
     else:
-        texts = {p: "\n".join(t) for p, t, _ in places(root)}
+        texts = {p: "\n".join(t) for p, t, _ in places(root, a.data)}
         for place, entries in doc["links"].items():
             if place.startswith(a.prefix):
                 for e in entries:

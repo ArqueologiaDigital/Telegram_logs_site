@@ -1,5 +1,32 @@
 {
  "links": {
+  "bio:1045293098": [
+   {
+    "phrase": "QMC Smalltalk",
+    "url": "https://gitlab.com/web-fx/qmc-smalltalk",
+    "by": "hand"
+   },
+   {
+    "phrase": "Baby8",
+    "url": "https://github.com/jeceljr/baby8",
+    "by": "hand"
+   },
+   {
+    "phrase": "Bla",
+    "url": "https://github.com/jeceljr/baby8/blob/main/examples/bla/bla.md",
+    "by": "hand"
+   },
+   {
+    "phrase": "folha de dados",
+    "url": "https://www.cryptomuseum.com/spy/fs5000/files/NSC800.pdf",
+    "by": "hand"
+   },
+   {
+    "phrase": "TRON",
+    "url": "https://www.xda-developers.com/japan-tried-build-operating-system-entire-world-us-government-intervened/",
+    "by": "hand"
+   }
+  ],
   "bio:112310772": [
    {
     "phrase": "Elifoot",
@@ -109,6 +136,16 @@
   ],
   "bio:56348427": [
    {
+    "phrase": "bitmap2ttf",
+    "url": "https://github.com/ali1234/bitmap2ttf",
+    "rule": "repo"
+   },
+   {
+    "phrase": "Garoa",
+    "url": "https://garoa.net.br/",
+    "rule": "site"
+   },
+   {
     "phrase": "LibrePlanet",
     "url": "https://libreplanet.org/",
     "rule": "site"
@@ -119,6 +156,18 @@
     "phrase": "Antarctic",
     "url": "https://github.com/ricbit/antarctic",
     "rule": "repo"
+   }
+  ],
+  "bio:64762480": [
+   {
+    "phrase": "ArqueologiaDigital",
+    "url": "https://github.com/ArqueologiaDigital",
+    "by": "hand"
+   },
+   {
+    "phrase": "Mines",
+    "url": "https://github.com/ArqueologiaDigital/Mines",
+    "by": "hand"
    }
   ],
   "bio:68792465": [

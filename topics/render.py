@@ -197,7 +197,7 @@ class Inline:
     """Links inside summaries (inline_links.json, see inline_links.py): a resource is linked at its
     first mention on a page; a conversation card, opened and read on its own, links its own."""
 
-    def __init__(self, problems):
+    def __init__(self, problems, data=None):
         self.problems = problems
         self.links = {}
         if not os.path.exists(IL.PATH):
@@ -205,7 +205,7 @@ class Inline:
         with open(IL.PATH, encoding="utf-8") as f:
             links = json.load(f)["links"]
         texts = {}
-        for place, ts, convs in IL.places(os.path.dirname(HERE)):
+        for place, ts, convs in IL.places(os.path.dirname(HERE), data):
             texts[place] = "\n".join(ts)
             cands = IL.candidates(convs, IL.org_repos(os.path.dirname(HERE)) if not place.startswith("conv:") else [])
             for e in links.get(place, []):
@@ -614,7 +614,7 @@ def main():
     d = B.Data(opts.data)
     problems = []
     global INL
-    INL = Inline(problems)
+    INL = Inline(problems, opts.data)
     L = Links(d, opts, problems)
     years = sorted((Year(f, d, opts, problems) for f in glob.glob(os.path.join(HERE, "data", "*.json"))),
                    key=lambda y: y.n)
