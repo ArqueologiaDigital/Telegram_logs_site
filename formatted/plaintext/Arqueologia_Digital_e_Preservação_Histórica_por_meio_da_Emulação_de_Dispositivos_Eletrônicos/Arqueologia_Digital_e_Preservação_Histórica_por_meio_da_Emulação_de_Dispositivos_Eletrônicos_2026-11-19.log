@@ -1,2 +1,29 @@
 [2026-11-19 01:16:41] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42542.jpg
 [2026-11-19 01:16:41] Felipe "Juca" Sanches: De tempos em tempos eu me meto numa dessas...
+[2026-11-19 20:34:45] Robson França: Esse jogo não me é estranho...
+[2026-11-19 20:35:50] Felipe "Juca" Sanches: Mesa "Ignition" do jogo Pinball Dreams, predecessor do Pinball Fantasies
+[2026-11-19 20:46:15] Felipe "Juca" Sanches: Nesses últimos dias eu usei o Claude pra fazer uma reimplementação do motor do Pinball Dreams que usa os dados dos arquivos originais, seguindo a mesma metodologia de desenvolvimento do Pinball Fantasies Encore
+[2026-11-19 20:47:06] Felipe "Juca" Sanches: O resultado saiu impressionantemente rápido. Em cerca de uma ou duas horas eu já estava rodando a nova implementação com perfeição
+[2026-11-19 20:48:23] Felipe "Juca" Sanches: mas depois disso comecei a fazer alterações, pois a física da bola é meio ruim do Pinball Dreams. Então comecei a misturar os motores dos dois jogos, fazendo backport de características boas do pinball fantasies pro pinball dreams
+[2026-11-19 20:48:44] Felipe "Juca" Sanches: e tá bem mais gostoso agora de jogar nessas mesas
+[2026-11-19 20:49:46] Felipe "Juca" Sanches: e nesse meio tempo resolvi desenhar o SVG da arte da mesa para retomar mey hobby de montar réplicas em miniatura
+[2026-11-19 22:13:23] RicBit: tartaruga de msx, primeira fase completa -> https://www.ilafox.com.br/ricbit/tmnt/
+[2026-11-19 22:20:09] Felipe "Juca" Sanches: Isso é port do arcade?
+[2026-11-19 22:20:26] Felipe "Juca" Sanches: tinha pra SNES também, né?
+[2026-11-19 22:20:27] RicBit: sim
+[2026-11-19 22:20:40] RicBit: o do snes é outro jogo
+[2026-11-19 22:21:42] Felipe "Juca" Sanches: no arcade, se me lembro bem, rolava um efeito da tartaruga sendo esmagada por aquelas bolas pretas que caem da escada, né?
+[2026-11-19 22:31:15] RicBit: nope, só no snes
+[2026-11-19 22:31:38] RicBit: eu coloquei todos os frames do arcade
+[2026-11-19 22:36:17] L.: nossa, eu lembro dos teus primeiros protótipos!
+[2026-11-19 22:36:44] RicBit: levou só 30 anos pra ficar pronto
+[2026-11-19 22:37:04] RicBit: quer dizer, a primeira fase pelo menos
+[2026-11-19 22:37:21] L.: 30 anos? eu tô véia demais lmfao
+[2026-11-19 22:37:48] L.: o efeito do foguinho ficou legal!
+[2026-11-19 22:38:02] L.: vou tentar jogar no pc depois, no celular é zoado
+[2026-11-19 22:38:04] RicBit: sim tem o foguinho e a fumaça no teto na parte 2
+[2026-11-19 23:00:58] Pedro de Medeiros 👾: TurboR é obrigatório mesmo?
+[2026-11-19 23:18:16] RicBit: Sim, por vários motivos.
+[2026-11-19 23:18:42] RicBit: O principal é o timer
+[2026-11-19 23:49:21] Shideravan: Não tem. Esse jogo tinha para NES, mas o de SNES é uma continuação, o Turtles in Time
+[2026-11-19 23:59:38] Pablo Vasques Bravo-Villalba: São cinco jogos de TMNT em consoles (três no NES, um no SNES e um no Mega Drive) e dois no fliperama. O segundo jogo de NES é uma versão mais tecnicamente limitada do primeiro TMNT do fliperama. O de SNES é um port do segundo TMNT do fliperama e o de Mega Drive é uma espécie de remix do segundo TMNT do fliperama com fases diferentes e algumas músicas exclusivas.
