@@ -11,3 +11,57 @@
 [2026-11-22 00:57:40] Pedro de Medeiros 👾: TDF2_FINAL_FINAL2_AGORA_VAI [ASCII16] (999).rom
 [2026-11-22 01:03:54] Pedro de Medeiros 👾: video: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42648.mp4
 [2026-11-22 01:03:54] Pedro de Medeiros 👾: Olha como está ficando
+[2026-11-22 14:46:54] RicBit: Quatro versões da música da fase 2, qual a melhor? (Ou nenhuma está boa?) https://www.ilafox.com.br/ricbit/tmnt2/musictest
+[2026-11-22 15:44:34] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42650.jpg
+[2026-11-22 15:44:34] RicBit: Tem o i-7000 aqui no c3
+[2026-11-22 18:47:37] Pablo Vasques Bravo-Villalba: Quais diferenças é para prestarmos atenção? Pessoalmente não gosto da sonoridade do baixo e acho difícil até ouvir os outros canais de som quando o baixo está tocando
+[2026-11-22 19:51:00] RicBit: tem um instrumento, 33h, que eu nao consigo reproduzir. no original ele sao 4 senoides, e tem dois canais tocando esse instrumento, entao sao oito senoides. no msx audio eu consigo só duas senoides por canal, entao fica bem zuado. eu tentei ate colocar 3 canais de msx audio + 2 canais de opll e neem assim ficou bom
+[2026-11-22 19:51:20] RicBit: mas se quiser mexer no balanço das notas eu super topo
+[2026-11-22 19:51:27] RicBit: os sfx eu fiz um pagina pra mexer
+[2026-11-22 19:52:12] RicBit: https://www.ilafox.com.br/ricbit/tmnt2/samples.html
+[2026-11-22 19:52:49] RicBit: foi tudo de ouvido, levando conta que minha msx audio tem só 32kb, entao dá pra colocar só uns 5 ou 6 sons no adpcm, o resto é emulado com opll ou psg
+[2026-11-22 19:55:03] RicBit: pros instrumentos eu nao tenho uma pagina ainda mas posso fazer se quiser
+[2026-11-22 19:59:00] Pablo Vasques Bravo-Villalba: Uma coisa que eu sempre senti falta no TMNT é poder ouvir os canais de som individualmente. Atualmente o formato VGM suporta o PCM usado nesse jogo, mas o chip é uma adição recente e ainda não tem um pack VGM disponível
+[2026-11-22 20:00:02] Pablo Vasques Bravo-Villalba: Acho que seria possível criar uma definição melhor para o baixo. E talvez fazer layering, se estiverem sobrando canais de som. O jogo usa todos os canais do YM2151?
+[2026-11-22 20:21:54] Pablo Vasques Bravo-Villalba: Ricbit, o favicon do site está disparando meu antivírus aqui. Será alarme falso?
+[2026-11-22 20:24:42] RicBit: Sim, é falso positivo.
+[2026-11-22 20:25:42] RicBit: Eu acho que no music test da ver quais canais estão sendo usados em cada música, tem view por canal e por instrumento.
+[2026-11-22 20:25:52] L.: https://eaw.app/tranzputer/
+
+Bagulhos pra trocar a CPU de micros véios, permitindo até debug via USB na máquina real
+[2026-11-22 20:28:47] Pablo Vasques Bravo-Villalba: Digo na versão original
+[2026-11-22 20:29:10] Pablo Vasques Bravo-Villalba: Isso que você chama de baixo no PCM não é o orchestra hit?
+[2026-11-22 20:30:19] Pablo Vasques Bravo-Villalba: Olha, eu acho que é sim
+[2026-11-22 20:30:35] Pablo Vasques Bravo-Villalba: Estou achando a música mais agradável com esse canal desativado
+[2026-11-22 20:30:49] Pablo Vasques Bravo-Villalba: Talvez com uma definição totalmente diferente fique mais legal
+[2026-11-22 20:31:55] RicBit: Ah eu posso colocar o original no site também, daqui a pouco eu mando, vai precisar renderizar antes
+[2026-11-22 20:32:11] Pablo Vasques Bravo-Villalba: Acho que não precisa ter esse trabalho no momento não
+[2026-11-22 20:32:26] Pablo Vasques Bravo-Villalba: Estou bem seguro de que o que está tocando no canal 8 é o orchestra hit, não é outro baixo
+[2026-11-22 20:32:58] Pablo Vasques Bravo-Villalba: Acho que nas músicas de fase o baixo mesmo está no canal 5
+[2026-11-22 20:33:42] RicBit: nao é trabalho, é um prompt pra ai, ela que faz
+[2026-11-22 20:34:05] Pablo Vasques Bravo-Villalba: Sim, o que eu quis dizer é que não acho que precise
+[2026-11-22 20:34:28] Pablo Vasques Bravo-Villalba: Pode me passar as definições do instrumento que você está usando como baixo no canal 8?
+[2026-11-22 20:40:13] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42676.jpg
+[2026-11-22 20:40:37] Pablo Vasques Bravo-Villalba: Interessante a análise
+[2026-11-22 20:40:39] RicBit: é um best fit em cima do sample original
+[2026-11-22 20:41:28] Pablo Vasques Bravo-Villalba: Eu acho que fica muito diferente. Inclusive os DR e RR têm valores baixos, então a envoltória é lenta. Isso é estranho para um orchestra hitt
+[2026-11-22 20:44:39] Pablo Vasques Bravo-Villalba: Experimenta
+
+Modulador
+MULT 1, KSL 1, TL 10, AR 14, DR 4, SL 5, RR 7
+
+Portadora
+MULT 2, KSL 1, AR 13, DR 5, SL 15, RR 15
+
+Estou indo no chute porque não sei se isso vai soar bem misturado com os outros instrumentos, mas é uma definição com um pouquinho de ruído no ataque (para tentar simular a mistura de instrumentos) e uma pegada mais onda dente de serra, que lembre muito de longe instrumento de corda tocado por arco
+[2026-11-22 20:45:02] RicBit: tem duas alternativas, aumentar o spec pra msx audio 128 e jogar como sample, ou ir pro opl4 de uma vez
+[2026-11-22 20:45:38] RicBit: eu vou fazer um editor ai voce mesmo pode testar
+[2026-11-22 20:45:50] Pablo Vasques Bravo-Villalba: Acho que vale a pena testar
+[2026-11-22 20:46:26] Pablo Vasques Bravo-Villalba: Eu tinha pedido para criar um visualizador de parâmetros FM para o OpenMSX, mas era pra OPLL. Não sei se fizeram para o MSX-Audio.
+[2026-11-22 20:46:52] RicBit: uai fala como voce quer eu faço a pr
+[2026-11-22 20:48:07] RicBit: hum fazer um editor implica em portar todo o codigo do msx audio pra javascript
+[2026-11-22 20:48:11] RicBit: demora um pouco
+[2026-11-22 20:48:33] RicBit: deixa o music test arcade original terminar antes
+[2026-11-22 21:14:32] RicBit: dá um reload que tem o arcade agora -> https://ilafox.com.br/ricbit/tmnt2/musictest/
+[2026-11-22 21:18:37] RicBit: acho que ele jogou o orchestra hit pro fm porque o msx audio só toca um adpcm por vez, e a music parece que usa o hit + drum/etc ao mesmo tempo
+[2026-11-22 21:22:50] Pablo Vasques Bravo-Villalba: Muito legal
