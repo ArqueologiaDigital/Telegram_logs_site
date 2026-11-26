@@ -1,0 +1,4 @@
+[2026-11-26 00:05:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42783.jpg
+[2026-11-26 00:05:58] Felipe "Juca" Sanches: Resolvi juntar PCBs pequenas para reduzir a necessidade de cabos interconectando as placas. Na prática simplifica a montagem e não fica muito mais caro, pois gasta só um ou dois centímetros a mais de área no painel de PCBs.
+[2026-11-26 00:05:58] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42784.jpg
+[2026-11-26 00:26:06] Felipe "Juca" Sanches: Na maioria dos casos desse tipo, o MAME carrega a ROM embaralhada e desembaralha dinamicamente, pois o driver documenta o esquema de embaralhamento de sinais.

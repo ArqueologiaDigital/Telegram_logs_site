@@ -1,0 +1,19 @@
+[2026-11-25 07:38:15] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42768.jpg
+[2026-11-25 07:38:28] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42769.jpg
+[2026-11-25 07:39:48] Felipe "Juca" Sanches: chegaram os displays de 14 segmentos. Por conta disso, redimensionei o playfield e acho que as bolinhas de 7mm ficaram pequenas. Vou comprar bolas de 9mm pra ver se fica melhor nessa escala.
+[2026-11-25 18:38:29] Felipe "Juca" Sanches: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42771.jpg
+[2026-11-25 18:38:29] Felipe "Juca" Sanches: Desenhando PCBs...
+[2026-11-25 20:13:18] RicBit: No meio do ano eu estava com uma teoria de que os jogos da namco tinham a15 e a13 trocados.
+[2026-11-25 20:14:01] RicBit: photo: https://raw.githubusercontent.com/ArqueologiaDigital/Telegram_logs_media/main/2026/2026-11/42773.jpg
+[2026-11-25 20:14:01] RicBit: Aí nesse último evento eu comprei um rallyx pra conferir, é trocado mesmo, confirmado.
+[2026-11-25 20:15:08] RicBit: eu dei sorte, não tinha como testar, então tinha 50% de chance de ser a versão 2, que não troca as linhas.
+[2026-11-25 20:43:48] Emerson BRANCORP2000: E isso causava algum mau funcionamento?
+[2026-11-25 20:44:37] L.: Geralmente fazem isso pra facilitar o layout da placa. A ROM é gravada considerando isso então na prática não faz diferença
+[2026-11-25 20:46:42] L.: (se você for dumpar a ROM para usar em emulador ou coisas tipo megaram, aí precisa desembaralhar, claro.)
+[2026-11-25 20:55:16] RicBit: Se for bem feito não muda nada, mas esse é mal feito e não funciona em slot expandido.
+[2026-11-25 21:15:06] Jecel Assumpcao Jr: Isso me lembra do lançamento do PC no Brasil. A Softec lançou seu Ego PC em maio de 1983 e a Scopus e Microtec seus Nexus 1600 e PC2001 em outubro de 1983. O pessoal gosta de contar a história do BIOS e da engenharia reversa da Compaq mas na época o pessoal tinha mais medo da Microsoft do que da IBM. A maior parte das ROMs do PC eram para o BASIC da Microsoft e muitos dos primeiros programas dependiam delas. O Ego copiou todas as ROMs mas o Nexus e PC2001 vinham com soquetes vazios e conselho do vendedor: "arruma um amigo que tenha um Ego e copia o BASIC dele". O Hélio (dono da Softec) ficou bravo com isso e fez os engenheiros mudarem o layout do Ego para que duas linhas de dados de uma das ROMs do BASIC fossem trocadas e na hora de gravar as EPROMs eles usavam um flag especial para compensar. Ai se alguém seguisse o conselho do vendedor não daria certo
+[2026-11-25 21:16:43] Jecel Assumpcao Jr: No fim foi a IBM quem processou as 3 pela cópia do BIOS mas aceitou umas mudanças mínimas (muito menos do que tinha feito a Compaq)
+[2026-11-25 21:21:47] Emerson BRANCORP2000: Q história bacana
+[2026-11-25 22:04:50] L.: https://aresluna.org/ui-style-guides/
+
+Guias para criação de UIs de vários ambientes/OSes diferentes
